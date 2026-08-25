@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260608.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260608</span>
+</p>
+<p>每日一谚：Go&#39;s pointer syntax is simple. Learn it well and use it appropriately. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/08/the-real-reason-big-tech-is-switching-to-go">2026年，大厂重构核心系统为何集体投向 Go？</a><br>在近期的技术演进中，我们看到了一股明显的趋势：全球科技巨头与快速成长的 AI 独角兽们，正在不约而同地将核心系统向 Go 语言（Golang）收敛，这并非盲目的技术跟风，而是一场基于运行成本、高并发能力和工程维护性的理性重构。今天，我们就通过这些大厂的真实工程案例，深入拆解大厂重构核心系统时，集体投向 Go 的底层逻辑与技术启示。</p> 
+
+<p><a href="https://tonybai.com/2026/06/06/geohot-slams-ai-agents-as-the-most-expensive-software-disaster">传奇黑客 Geohot 炮轰 AI Agent：这是软件工程史上代价最昂贵的灾难!</a><br>最近，Geohot 在他的个人博客上发表了一篇名为《The Eternal Sloptember（永恒的垃圾九月）》的文章。在这篇文章里，他用极其冰冷且辛辣的笔触写道： “我在这里立个 flag：在软件开发中引入 AI Agent，将是行业历史上代价最昂贵的错误之一。因为 Agent 根本不会写程序，而人们需要花越 来越长的时间才能意识到这一点。” </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/x61Pw_GHbqYPqbgG69locA">【AI 时代软件工程师的算法图谱】08 树的遍历：层级数据的处理范式</a><br>处理这些数据的通用范式，就是树的遍历（Tree Traversal）。 无论是深搜（DFS）还是广搜（BFS），它们不仅是算法题的考点，更是序列化（Serialization）、渲染引擎和配置解析器的底层逻辑。 今天，我们将从最基础的递归，一路实战到手写一个简易的 DOM 渲染器。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-runtime-stacktraces/">理解Go运行时：堆栈跟踪</a><br>理解Go运行时(第9部分)。本文介绍了Go运行时的启动过程、内存分配器和调度器等核心组件。</p> 
+
+<p><a href="https://log.pfad.fr/2026/self-calling-executable/">自调用可执行文件</a><br>自调用可执行文件是一种技术，当前运行的可执行文件可以直接或间接启动自身的另一个版本。</p> 
+
+<p><a href="https://x.com/lemire/status/2063358266885685710">amd64微架构层次在Go中有多少帮助？</a><br>64位Intel和AMD处理器已经发展了几十年。当您为64位Intel或AMD处理器编译Go程序时，编译器默认针对近20年前的指令集。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/doing-nothing-at-work/">工作中无所事事</a><br>我相信过于乐于助人会让自己容易受到掠夺者的攻击。科技公司充满了想要从软件工程师身上榨取无偿工作的人。</p>
+
+<p><a href="http://antirez.com/news/168">软件测试的新时代</a><br>自动编程在特定用例和合适的手中可以大大加快软件编写速度。根据我的经验，其输出无法达到最佳手写软件的结构质量和复杂度经济性。</p>
+
+<p><a href="https://ladybird.org/posts/changing-how-we-develop-ladybird/">改变Ladybird的开发方式</a><br>今天我们正在改变代码进入Ladybird项目的方式。我们将不再接受公开的拉取请求，从现在起，对Ladybird代码库的更改只能由项目维护者引入。</p>
+
+<p><a href="https://justinjackson.ca/hard-thing">做最难的事</a><br>上周，我在多伦多布卢尔街步行去咖啡店，收听了《Mostly Technical》播客。这个播客讨论了为什么应该专注于解决最困难的问题。</p>
+
+<p><a href="https://andersmurphy.com/2026/06/05/the-perils-of-uuid-primary-keys-in-sqlite.html">SQLite中UUID主键的危险</a><br>在数据库中使用随机UUID作为主键很常见。随机UUID的一个已知缺点是它们的无序性(UUID4)可能导致聚集索引的大量额外分页。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1076018/16f01bbbb8e0d1f0/">超越fork() &#43; exec() [LWN.net]</a><br>文章探讨了Linux系统中替代传统fork() &#43; exec()模式的新方法，以及这些方法如何提高系统效率和资源利用率。</p>
+
+<p><a href="https://mukul0x9.pages.dev/blog/memdb/">我以为Redis只是一个HashMap</a><br>在使用Redis或Memcached这样的内存数据库时，我曾想——这不就是一个带有set/get/del操作的全局哈希表吗？为什么人们不直接使用他们语言内置的map，托管在云端，然后就此作罢？</p>
+
+<p><a href="https://sumnerevans.com/posts/software-engineering/stop-using-conventional-commits/">停止使用常规提交</a><br>作者建议停止使用常规提交(conventional commits)，认为这种提交方式限制了开发者的表达自由，并且可能对团队协作产生负面影响。</p>
+
+<p><a href="https://00f.net/2026/04/11/config-flags/">配置标志是软件腐烂的地方</a><br>人们喜欢可配置的软件。他们说灵活性总是好的。但配置标志通常只是传递不确定性的一种礼貌方式。</p>
+
+<p><a href="https://performance.dev/how-is-linear-so-fast-a-technical-breakdown">Linear为何如此快速？技术解析</a><br>本文深入分析了Linear应用程序为何如此快速，探讨了其架构设计、性能优化策略和技术实现细节。</p>
+
+<p><a href="https://x.com/intuitiveml/status/2062699747224568212">构建云智能体基础设施：有何不同，以及我们学到了什么</a><br>大多数智能体框架今天都假设使用桌面环境，即一个用户、一台机器、一个进程。云智能体基础设施需要考虑多用户、多机器、多进程的复杂环境。</p>
+
+<p><a href="https://jpountz.github.io/2026/06/04/an-ode-to-self-optimizing-query-plans.html">自我优化数据库查询计划</a><br>普遍观点认为数据库应该在查询规划阶段做出决策，然后将计划交给一个简单的执行器。这种方法具有几个很好的特性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint">编码不再是限制：在Spotify扩展开发者体验至团队和智能体 | Spotify工程</a><br>当编码不再是瓶颈时，会发生什么？Spotify分享了如何将开发者体验扩展到团队和AI智能体，以提高整体开发效率。</p>
+
+<p><a href="https://www.saturnci.com/my-agent-skill-for-test-driven-development.html">我的智能体测试驱动开发技能</a><br>作者分享了如何训练AI智能体进行测试驱动开发，尽管目前(2026年5月)AI智能体在编写测试方面表现不佳，测试往往模糊、复杂且组织混乱。</p>
+
+<p><a href="https://www.0xkato.xyz/how-llms-actually-work/">LLM实际工作原理</a><br>本文详细解释了大型语言模型(LLM)的工作原理，包括其架构、训练方法和推理过程，帮助读者深入理解AI技术。</p>
+
+<p><a href="https://writings.stephenwolfram.com/2026/06/games-between-programs-the-ruliology-of-competition/">程序之间的游戏：竞争的规则学—Stephen Wolfram著作</a><br>本文探讨了程序之间的竞争策略，分析了有限状态机的策略空间和获胜的复杂性，揭示了计算系统中的竞争规律。</p>
+
+<p><a href="https://reactjava.substack.com/p/i-have-read-20-books-on-ai-and-llm">我已阅读20多本AI和LLM工程书籍：以下是2026年的前5名推荐</a><br>作者分享了2026年开发者必读的AI和LLM工程书籍推荐，这些书籍涵盖了从基础理论到实践应用的各个方面。</p>
+
+<p><a href="https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/">LLMs正在侵蚀我的软件工程生涯，我不知道该怎么办</a><br>作为一名即将完成10年专业经验的软件工程师，作者分享了LLMs对其职业生涯的影响以及面对AI技术变革的困惑与思考。</p>
+
+<p><a href="https://walkinglabs.github.io/learn-harness-engineering/en/">欢迎使用学习Harness工程</a><br>Learn Harness Engineering是一门专注于AI编码智能体工程的课程，深入研究和总结了业界最先进的Harness工程理论和实践。</p>
+
+<p><a href="https://x.com/addyosmani/status/2059844244907696186">智能体编排税</a><br>现在启动更多AI智能体很容易。然而，更多的智能体运行并不意味着你有更多的可用资源——你的认知带宽无法并行化。</p>
+
+<p><a href="https://x.com/rasbt/status/2063649136323252397">AGENTS.md文件真的对编码智能体有帮助吗？</a><br>作者关注了一篇关于AGENTS.md的研究论文，探讨了添加仓库级指令文件(如AGENTS.md或CLAUDE)是否对编码智能体有帮助。</p>
+
+<p><a href="https://x.com/0xchromium/status/2062515355306631467">如何构建无需您参与的Claude工作流</a><br>目前您正在手动完成机器可以在您睡觉时完成的工作。每天早上检查相同来源的趋势，为三个平台重写相同的帖子，将相同的数字拉入相同的报告。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/dolthub/dolt">dolthub/dolt</a><br>Dolt – Git for Data</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/goravel/goravel">goravel/goravel</a><br>The full-featured Golang Development Framework skeleton</p>
+
+<p><a href="https://github.com/Ed1s0nZ/CyberStrikeAI">Ed1s0nZ/CyberStrikeAI</a><br>CyberStrikeAI is an AI-native security testing platform built in Go. It integrates 100&#43; security tools, an intelligent orchestration engine, role-based testing with predefined security roles, a skills</p>
+
+<p><a href="https://github.com/HexmosTech/git-lrc">HexmosTech/git-lrc</a><br>Free, Micro AI Code Reviews That Run on Commit</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API is an open-source relay platform that unifies Claude, OpenAI, Gemini, and Antigravity subscriptions into a single endpoint. It supports account sharing and cost-sharing, with seamless native t</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260701.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260701</span>
+</p>
+<p>每日一谚：Go&#39;s error handling is explicit. This is a strength, not a weakness </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://ngrok.com/blog/i-ported-kubernetes-to-the-browser">我将Kubernetes移植到浏览器</a><br>作者成功将Kubernetes系统移植到浏览器环境中运行。这一创新使开发者能够在浏览器中直接体验和测试Kubernetes功能。</p> 
+
+<p><a href="https://tonybai.com/2026/07/01/hashicorp-creator-define-taste">HashiCorp 创始人：AI 时代，我们为什么越来越需要有“品味”的程序员？</a><br>在生成式 AI 以前所未有的速度接管代码生成的今天，软件工程的核心价值正在发生剧变。HashiCorp 创始人 Mitchell Hashimoto 撰文指出，当“生产代码”的门槛趋近于零时，“品味（Taste）”——即在缺乏客观标准时做出高质量定性判断的能力——正在成为工程师最后的护城河 。本文深度拆解了“品味”在架构设计、API 规划及产品打磨中的具体体现，探讨了 AI 时代如何避免陷入同质化的“工业垃圾（Slop）”陷阱，并为 开发者在自动化狂潮中如何捍卫技术尊严、提升工程品味提供了务实的建议。</p> 
+
+<p><a href="https://victoriametrics.com/blog/victorialogs-internals-columnar-storage-on-disk/">VictoriaLogs如何以列式布局存储日志</a><br>VictoriaLogs采用列式布局在磁盘上高效存储日志数据。这种存储方式优化了查询性能，特别适合大规模日志分析场景。</p> 
+
+<p><a href="https://colobu.com/2026/06/30/baidu-network-monitor-evr-vxlan-probe/">百度网络监控工具开源第四弹：evr — 构造 VXLAN 探测</a><br>百度开源了evr网络监控工具，用于VXLAN网络探测。该工具展示了发送侧和回程侧的网络结构，包括外层IP、UDP端口和VXLAN封装。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/30/kepler-re-architected-improved-power-accuracy-and-a-community-call-to-action/">Kepler重新架构：提高功率精度并呼吁社区参与！</a><br>Kepler已重新架构，提高了功率准确性并引入了GPU功率监控的实验性功能。这对AI和加速器密集型工作负载至关重要，需要用户测试和验证。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/06/30/dragonfly-v2-5-0-is-released/">Dragonfly v2.5.0 发布</a><br>Dragonfly v2.5.0版本发布，新增Manager中ExternalRedis的TLS支持功能。同时移除了已弃用的V1预热API端点，将健康检查整合到统一的/healthy端点。</p>
+
+<p><a href="https://engineering.fb.com/2026/06/30/open-source/10-years-of-metas-commitment-to-python/">Meta对Python的十年承诺</a><br>Meta回顾了对Python十年的承诺与贡献。组织通过年度赞助支持PSF，除了受益于Python语言的持续成功外，还能根据赞助金额获得一系列额外福利。</p>
+
+<p><a href="https://tailscale.com/blog/aperture-audit-AI-agents">如何审核AI智能体的访问内容</a><br>AI智能体执行大量操作，Aperture工具可以帮助保持对这些操作的审计跟踪，确保AI活动的透明度和安全性。</p>
+
+<p><a href="https://www.buraksen.dev/articles/internals-of-postgresql-db-cluster-and-tables">阅读PostgreSQL内部结构：数据库集群、数据库和表</a><br>作者深入研究PostgreSQL内部结构，包括数据库集群、数据库和表的实现机制。通过撰写学习笔记，帮助自己保持学习动力并内化所学知识。</p>
+
+<p><a href="https://buttondown.com/hillelwayne/archive/stroustrups-rule/">Stroustrup规则</a><br>Stroustrup规则指出：初学者需要明确的语法，而专家则偏好简洁的语法。作者在完成两周的工作坊后分享了这一观点。</p>
+
+<p><a href="https://blog.sao.dev/structural-correctness/">结构正确性</a><br>类型系统非常强大，能在编译时捕获大量错误，并为应用程序的发展提供语法和词汇支持。结构正确性是构建可靠软件的关键原则。</p>
+
+<p><a href="https://smist08.wordpress.com/2026/06/25/linux-kills-strncpy/">Linux内核弃用strncpy</a><br>Linux内核决定弃用strncpy函数，推荐使用更安全的字符串处理替代方案。这一变化反映了系统编程中对安全性和可靠性的持续追求。</p>
+
+<p><a href="https://github.blog/open-source/git/highlights-from-git-2-55/">Git 2.55亮点</a><br>Git 2.55版本发布了多项重要更新和改进。新版本增强了性能、修复了多个bug，并引入了开发者期待已久的新功能。</p>
+
+<p><a href="https://polykit.rocks/peerseek-federated-peertube-search/">Peerseek - 联邦式PeerTube视频搜索引擎</a><br>Peerseek是一个联邦式视频搜索引擎，旨在使整个PeerTube网络中的视频更易于被发现和访问。该工具增强了去中心化视频平台的可用性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything">Nano Banana 2 Lite</a><br>Nano Banana 2 Lite引入了一个新功能，允许用户创建&#34;找浣熊&#34;风格的图片挑战。用户可以设置&#34;拿着火腿无线电的浣熊在哪里&#34;的寻宝游戏。</p>
+
+<p><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything">使用shot-scraper视频让你的智能体记录工作演示</a><br>shot-scraper video功能允许AI智能体记录其工作的视频演示。开发者可以使用此功能创建自动化演示，展示AI智能体完成任务的整个过程。</p>
+
+<p><a href="https://www.anthropic.com/news/claude-sonnet-5">介绍Claude Sonnet 5 \ Anthropic</a><br>Anthropic正式推出Claude Sonnet 5，这是一款具有百万token上下文窗口和改进功能的大型语言模型。新模型在性能和效率方面都有显著提升。</p>
+
+<p><a href="https://x.com/AndrewYNg/status/2071988145667928442">Andrew Ng在X上分享：&#34;循环工程&#34;</a><br>Andrew Ng在社交媒体上讨论了&#34;循环工程&#34;这一热门概念。随着Boris Cherny和Peter Steinberger的相关分享走红，循环已成为AI智能体构建软件的关键方法。</p>
+
+<p><a href="https://tensor4all.org/blog/introducing-tenferro-rs/">介绍tenferro-rs | tensor4all</a><br>tenferro-rs是一个Rust原生的密集张量堆栈，专为智能体AI时代的科学计算设计。它提供了线性代数、PyTorch风格的自动微分和JAX风格的跟踪转换等功能。</p>
+
+<p><a href="https://claude.com/blog/getting-started-with-loops">loop工程入门 | Claude by Anthropic</a><br>Claude Code团队详细介绍了智能体循环的概念，提供了从简单交互到复杂目标的实用指导。这一方法帮助AI智能体更有效地迭代和构建软件。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/palemoky/chinese-poetry-api">palemoky/chinese-poetry-api</a><br>📜 诗泉：高性能中国古诗词 API 服务</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧 Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/canopy-network/canopy">canopy-network/canopy</a><br>The official go implementation of the Canopy Network protocol</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/AgentWrapper/agent-orchestrator">AgentWrapper/agent-orchestrator</a><br>Agentic orchestrator for parallel coding agents — plans tasks, spawns agents, and autonomously handles CI fixes, merge conflicts, and code reviews.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

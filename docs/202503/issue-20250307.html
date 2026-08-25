@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250307.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250307</span>
+</p>
+<p>每日一谚：Avoid context.Background(), make your goroutines promisable </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/cleanups-and-weak">Go官博：从unique到cleanups和weak：提升效率的新型底层工具</a><br>Go 1.24 中引入了弱指针和改进的终结器。文章详细介绍了 `runtime.AddCleanup` 函数和 `weak.Pointer` 类型，它们可以用来构建自定义的 `unique` 包，并讨论了如何使用这些高级功能来提高效率，以及需要注意的细节和潜在问题。</p> 
+
+<p><a href="https://www.datadoghq.com/blog/go-memory-metrics">Go内存指标详解</a><br>本文旨在帮助负责支持Go应用程序的工程师诊断和解决内存问题，例如OOM终止或内存泄漏。文章内容涵盖Go应用程序内存概述、如何分析Go内存使用情况以及新的APM运行时指标仪表板。</p> 
+
+<p><a href="https://zuplo.com/blog/2025/03/04/holistic-view-of-apis">API 整体视角：将其视为一个生态系统</a><br>本文探讨了将 API 视为完整生态系统的原因，涵盖了开发、部署、维护和使用等方面。文章指出，简单的 API 实现无法满足实际应用的需求，并提出了一个理想的解决方案，该方案强调始终保持最新的文档，消费者与提供者的规范同步，以及简化开发流程，并通过 OpenAPI 规范将整个生态系统联系在一起。同时，文章还介绍了使用 Go 语言开发的 Gleece 工具，该工具可以自动生成 OpenAPI 规范和路由，简化 API 开发和维护。</p> 
+
+<p><a href="https://4rkal.com/posts/deploy-go-htmx-templ-tailwind-to-production">将 Go &#43; Templ &#43; HTMX &#43; TailwindCSS 部署到生产环境</a><br>本文将向您展示如何将 GoTTH 技术栈（Go Templ htmx tailwind）部署到生产环境。它包含一个与交易所交互的 API（使用 Go 和 gin 编写）和一个使用 Go、HTML、HTMX、TailwindCSS、CSS 和 Javascript 的 Web UI（使用 templ 模板）。这个技术栈的优势在于可以生成单个二进制文件，包含所有组件，并将其部署到服务器。</p> 
+
+<p><a href="https://cloud.google.com/blog/topics/threat-intelligence/gostringungarbler-deobfuscating-strings-in-garbled-binaries">GoStringUngarbler：解混淆被篡改的二进制文件中的字符串</a><br>本文讨论了威胁参与者如何使用 garble 混淆来保护恶意软件，以及自动解混淆 garble 的过程。文中还介绍了 GoStringUngarbler，这是一个用 Python 编写的命令行工具，可自动解密在 garble 混淆的 Go 二进制文件中找到的字符串。该工具可以通过生成一个已恢复所有字符串且以纯文本显示的解混淆二进制文件来简化反向工程过程，从而简化静态分析、恶意软件检测和分类。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-02-14-simple-github-test-ci-with-go">在 GitHub 持续集成中运行 Go 测试</a><br>本文介绍了如何在 GitHub Actions 中设置持续集成 (CI) 以运行 Go 测试，并以 Dolt 项目为例，详细讲解了如何配置 GitHub Actions 工作流程文件，以及如何使用 Docker 运行更复杂的测试，例如数据库复制测试。</p> 
+
+<p><a href="https://rednafi.com/go/middleware_vs_delegation">Go中的中间件模式 vs.嵌入式委托模式</a><br>Go HTTP 服务器通常使用中间件模式来调整请求行为。本文探讨了堆叠中间件和嵌入式委托两种模式，并解释了为什么在需要修改 Go 服务中的 HTTP 请求时，通常会优先选择委托模式。文章通过代码示例比较了两种模式的优缺点，并展示了如何混合使用这两种方法。</p> 
+
+<p><a href="https://www.mejaz.in/posts/build-a-minimal-tcp-server-in-go">用Go构建一个最小的TCP服务器</a><br>本文将构建一个简单的TCP服务器，并尝试发送和接收消息。文章首先介绍了TCP协议的特点，例如连接导向、可靠的消息传递和低开销，然后逐步讲解了如何在Go语言中创建一个TCP服务器，包括监听连接、处理连接以及使用netcat进行测试。最后，作者还推荐了自己的Go语言入门书籍。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/comparing-vitess-tidb-cross-shard-queries-consistency-az-outages/">Vitess 与 TiDB 的比较：分片、一致性和更多</a><br>Vitess 与 TiDB 的比较并非难事。探索我们的指南，深入了解分片方法、一致性等等。</p>
+
+<p><a href="https://blog.ipfs.tech/2025-03-static-web-manifesto/">静态网站宣言</a><br>这篇文章最初发表在Orbiter的博客上。文章认为，网站建设曾经是一件很有趣的事情，让我们用IPFS等开放协议重新找回将工作成果发布到网上的乐趣。文章探讨了IPFS的优势，例如其点对点存储协议和内容寻址特性，以及现代Web开发的复杂性问题。文章最后介绍了Orbiter平台，这是一个旨在简化静态网站托管的平台，它使用IPFS和IPCM将网站映射到Base智能合约。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/03/06/too-complex-its-not-kubernetes-its-what-it-does/">过于复杂：问题不在于 Kubernetes 本身，而在于它的用途</a><br>开源容器编排系统 Kubernetes 用于自动化软件部署、扩展和管理，因过于复杂而声名狼藉。本文探讨这种说法是否属实。Kubernetes 的学习曲线陡峭，它引入了一套全新的术语（Pod、Deployment、Service 和 Ingress 等），对于没有分布式系统或容器化基础的工程师来说很容易迷失方向。然而，Kubernetes 的复杂性是其在任何规模下有效管理超大工作负载能力的必然结果。在电子商务等行业中，Kubernetes 的高可用性和可扩展性至关重要，因为它可以协调更新、回滚更改并自动从崩溃中恢复。对于需要处理突发流量高峰的电子商务平台，Kubernetes 可以有效地扩展容器化微服务，处理更大的流量，并保持正常运行时间。要掌握 Kubernetes，需要进行实践练习，例如使用 Minikube 在本地进行探索，然后转向托管云解决方案。此外，Kubernetes 生态系统中的各种工具（如 Helm、Kustomize、Istio 和 Argo CD）进一步增强了其优势，但也增加了复杂性。最终，Kubernetes 的复杂性是其强大功能的必然结果，只有通过对分布式系统的扎实理解、对每个 Kubernetes 概念的系统学习以及在实际环境中的持续实践，才能真正掌握它。</p>
+
+<p><a href="https://blog.startifact.com/posts/succinct">简洁的数据结构</a><br>本文概述了一类作者之前不了解的数据结构。文章探讨了简洁数据结构的概念，将其与压缩进行了比较，并解释了它们如何以紧凑的方式存储数据，同时保留有用的属性。文章重点介绍了位向量、Rank/Select 位向量、小波矩阵、FM-索引和平衡括号等几种简洁数据结构，并讨论了它们在系统编程中的潜在应用，特别是使用 Rust 编程语言。文章还介绍了几个有用的 Rust 库，例如 `vers` 和 `sucds`，它们实现了这些数据结构。最后，文章总结了简洁数据结构的潜力及其在不同领域（如生物信息学和编程语言编译器）中的潜在应用。</p>
+
+<p><a href="https://blog.codingconfessions.com/p/a-software-engineers-guide-to-reading-papers">软件工程师阅读研究论文指南</a><br>本文介绍了一个软件工程师阅读研究论文的个人框架。作者认为阅读研究论文对于软件工程师的工作至关重要，但许多人会发现这些技术文档令人生畏。文章提出了一种多阶段方法：第一遍快速浏览摘要、引言、结果和结论，了解论文大意；第二遍深入阅读其余部分，列出不熟悉的术语和需要查阅的参考文献；第三遍结合背景研究，连接各个部分，加深理解；最后，通过向他人讲解来巩固理解。文章还讨论了如何谨慎地使用AI辅助阅读论文，建议将其视为一个帮助理清思路的伙伴，而非完全依赖其生成的摘要或解释。</p>
+
+<p><a href="https://david-delassus.medium.com/distributed-systems-without-raft-part-1-a6b0b43db7ee">无需 Raft 的分布式系统（第一部分）</a><br>FlowG 如何实现复制？一篇关于 Go 语言分布式系统设计的简短介绍。本文介绍了一种无需使用 Raft 等传统分布式一致性协议的分布式系统设计方案，并探讨了其在高可用性和性能方面的优势。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://weaviate.io/blog/query-agent">介绍Weaviate Query Agent</a><br></p>
+
+<p><a href="https://getstream.io/blog/cursor-ai-large-projects">大型项目的cursor使用</a><br></p>
+
+<p><a href="https://mistral.ai/news/mistral-ocr">Mistral OCR发布</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/kubernetes/dashboard">kubernetes/dashboard</a><br>General-purpose web UI for Kubernetes clusters</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge.</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/casibase/casibase">casibase/casibase</a><br>AI Cloud OS: ⚡️Open-source RAG knowledge database with admin UI, user management and Single-Sign-On⚡️, supports ChatGPT, Claude, DeepSeek R1, Llama, Gemini, HuggingFace, etc., chat bot demo: https://ai.casibase.com, admin UI demo: https://ai-admin.casibase.com</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers (AWS Route53, Google CloudDNS and others) for Kubernetes Ingresses and Services</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

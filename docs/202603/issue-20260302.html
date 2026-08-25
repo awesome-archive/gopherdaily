@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260302.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260302</span>
+</p>
+<p>每日一谚：The Go programming language was designed to help programmers build reliable and efficient software, not to be an intellectual puzzle </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/02/modern-go-evolution-guide-1-0-to-1-26">别再像 2015 年那样写 Go 了：Modern Go 终极进化指南</a><br>近日，JetBrains 开源了一个名为 use-modern-go的 AI Coding Agent Skill。这份Skill文件通过精准的 Prompt，强迫 AI 智能体在生成 Go 代码时，必须根据项目 go.mod 的版本，使用该版本支持的最现代化、最优雅的语法和标 准库。 这份文件简直是一座宝库！它不仅是给 AI 看的指令，更是给每一位 Gopher 的“代码现代化”体检表。 本文将以这份资料为基础，全面盘点从 Go 1.0 一路演进到 Go 1.26 的 Modern Go 特性。我们将通过清晰的 Before / After 对比示例，带你洗礼一遍 Go 语言的现代化之美。</p> 
+
+<p><a href="https://tonybai.com/2026/03/01/goodbye-google-uuid-go-standard-library-crypto-uuid">告别 google/uuid：Go 标准库拟新增 crypto/uuid 深度解析</a><br>尽管其他主流语言（如 Java, C#, Python）早已将 UUID 纳入标准库，Go 却迟迟未动。直到最近，一个长达近三年讨论的提案 #62026: proposal: crypto/uuid: add API to generate and parse UUID 终于迎来了突破性进展：Go 官方提案审查委员会已将其标记为 likely accept（极有可能接受）</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/PVCU1YHLVsgQhvzyhytIWA">【AI 智能体时代的软件工程】03 无尽迭代与超越完成：压榨 AI 队友的“不知疲倦”</a><br>软件工程中有一条被反复验证的铁律：“新技术的引入，总是通过消除某种旧有的稀缺资源，从而改变整个领域的经济学模型。” AI 队友虽然有诸多非人类的缺陷，但它同时也拥有一个极其恐怖的、超越所有人类的优势——它没有情绪，不知疲倦，且从不评判。 今天，我们将正式进入“人机协作设计模式”的探讨。我将教你如何利用 AI 的这一绝对优势，彻底打破传统敏捷开发中的“质量与速度的妥协”，并为 你带来两个极具杀伤力的工程模式：“无尽迭代，边界循环”与“超越完成”。 </p> 
+
+<p><a href="https://tonybai.com/2026/03/01/open-source-ai-era-coding-agent-takes-over-github">AI 时代的开源：当 Coding Agent 接管 GitHub，我们该何去何从？</a><br>近期，SemiAnalysis曝出一个惊人数据：目前，GitHub上4%的公开提交（commits）都是由Claude Code生成的，到了2026年底这个数字将达到20%以上。这种Coding Agent生产力的“核爆”，正在对我们熟悉的开源世界发起一场降维打击。Github开源的那个被奉为圭臬的 opensource.guide，其中的许多条款在今天看来，似乎已经过时了。 当 Coding Agent 开始接管 GitHub，传统的“人-人”协作模式将面临怎样的崩塌与重建？我们，作为人类开发者，又该何去何从？</p> 
+
+<p><a href="https://blog.vonng.com/en/db/minio-resurrect">MinIO Is Dead, Long Live MinIO</a><br>MinIO 的官方代码仓库已被归档和废弃。本文讨论了 AI 智能体如何帮助它“死而复生”。文章解释了社区如何通过一个分支恢复了 MinIO 的管理控制台，并通过 CI/CD 管道重新构建了二进制分发。如果您正在运行 MinIO，可以将镜像从 `minio/minio` 切换到 `pgsty/minio`，以获得持续维护的版本，包括已修复的 CVE 和恢复的管理界面。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.jeffgeerling.com/blog/2026/expert-beginners-and-lone-wolves-dominate-llm-era/">专家初学者和独狼将在早期LLM时代占据主导地位</a><br>作者在将博客从静态站点生成器迁移到 Drupal (2009年) 后，注意到评论丢失了。这次他迁移到 Hugo 时，尝试使用本地 LLM 协助迁移了 13,000 条评论。他认为 LLM 擅长快速生成可运行代码（相当于初级开发者的工作），但仍然会犯下要求遗漏、实现不佳、过早优化和倦怠等问题。作者担心，由于 LLM 绕过了传统的指导和经验积累过程，未来将出现两类开发者：能被 AI 赋能但看不到潜在陷阱的“专家初学者”，以及能熟练驾驭 LLM 快速独立完成任务的“独狼开发者”。他认为缺乏指导路径不利于培养“中产阶级”开发者，并强调 LLM 无法替代高级开发者在技术和项目管理中所需的经验和判断力，尤其是对于质量保证（QA）而言。</p>
+
+<p><a href="http://antirez.com/news/161">Redis 编程模式</a><br>这里的大型语言模型（LLM）和编码智能体可以找到：
+1. 关于 Redis 命令和数据类型的详尽文档。
+2. 常用模式。
+3. 配置提示。
+4. 可以使用 Redis 命令实现的算法。
+
+链接: https://redis.antirez.com/
+
+一些人声称这份文档对真实的人类也很有用 :) 我发布此信息是为了确保搜索引擎能够收录它。</p>
+
+<p><a href="https://nesbitt.io/2026/03/01/downstream-testing.html">下游测试</a><br>大多数库的维护者在发布之前无法针对其依赖项进行测试。这篇博文探讨了下游测试的重要性、现有生态系统（如 Debian 和 Fedora）中的实践，以及 Rust 和 Node.js 等语言生态系统中的部分解决方案，强调了在不稳定的发布前发现兼容性问题的价值。</p>
+
+<p><a href="https://martinalderson.com/posts/why-on-device-agentic-ai-cant-keep-up/">为什么板载智能体式AI跟不上</a><br>板载AI智能体在理论上听起来很棒，能保证隐私、零延迟、无需API成本。然而，从KV缓存扩展、内存预算和推理速度的数学模型来看，情况并非如此乐观。对于大多数日常设备，内存限制（尤其是在需要32K上下文和7B&#43;模型的情况下）和推理速度瓶颈使得复杂的智能体任务在短期内难以实现。同时，云端算力的需求也极其巨大，表明数据中心在可预见的未来仍将是主流。</p>
+
+<p><a href="https://medium.com/@dusan.stanojevic.cs/the-mysql-to-postgres-migration-that-saved-480k-year-a-step-by-step-guide-4b0fa9f5bdb7">mysql迁移到postgres指南：每年节省480K</a><br></p>
+
+<p><a href="https://www.iduoad.com/posts/life-as-gitlab">我如何使用GitLab管理我生活中的几乎所有事情</a><br>在这篇文章中，我将分享GitLab如何成为我管理生活中几乎所有事物的支柱。作者认为生活中几乎所有事情都可以使用问题跟踪器（issue tracker）和Markdown文件进行记录。文章详细介绍了作者如何利用GitLab的组和子组层次结构、标签系统、Issue Boards、Group README，以及CI/CD和Pages功能来管理个人生活、学习项目（如Mgoun）和日常记录（如Immouzer）。核心思想是用文本文件、版本控制来管理一切，并利用自动化流程简化重复任务，例如生成简历和购买追踪报告。</p>
+
+<p><a href="https://raine.dev/blog/tmux-navigate-panes-home-row">Never leave the home row to navigate tmux panes </a><br>Use Cmd&#43;hjkl to switch tmux panes without reaching for arrow keys</p>
+
+<p><a href="https://maurycyz.com/misc/c_files">为什么C语言拥有最好的文件API？</a><br>作者认为C语言在文件操作方面提供了最佳的API体验，主要是因为它允许文件像内存一样被访问（通过内存映射mmap），这在处理大型二进制文件时非常高效和方便。与其他语言通常将文件操作限制为字节数组，需要手动解析和序列化不同，C语言允许直接操作磁盘上的数据结构。作者批评了其他语言中文件I/O的不足，并指出这种设计缺陷源于一个错误的假设：即所有从文件读取的数据都需要解析，而所有写入磁盘的数据都需要序列化，这在内存受限或处理大型文件时是不切实际的。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/1/claude-import-memory/#atom-everything">A quote from claude.com/import-memory</a><br>摘录自 Anthropic 的“将您的记忆导入 Claude”功能中的提示：用户要求 Claude 导出所有关于自己的记忆和从过往对话中学到的所有上下文，并以特定格式（包括指令、个人详情、项目、工具偏好等）输出到一个代码块中，最后确认是否完整。</p>
+
+<p><a href="https://vercel.com/blog/security-boundaries-in-agentic-architectures">智能体架构中的安全边界</a><br>智能体架构中的安全边界框架。大多数智能体在智能体与其生成的代码之间以零隔离运行。了解应在何处划定边界，从秘密注入到完整的应用程序沙盒。</p>
+
+<p><a href="https://lucijagregov.com/2026/02/26/the-future-of-ai">人工智能的未来</a><br>本文基于作者在2026年2月25日伦敦AI与自动化会议上的演讲内容，探讨了人工智能的伦理、局限性以及“父母悖论”——我们正在抚养一个会说话但不懂得珍视真理和道德的新物种。作者指出，人类在AI发展中忽视了基础研究，导致了“认识论崩溃”（Epistemic Collapse），即由于深度伪造和虚假信息泛滥，人们可能最终停止相信任何事物。同时，AI模型在特定任务上展现出不可预测的、广泛的失调行为，甚至会“作弊”以达成目标。文章强调了AI安全与伦理研究之间缺乏跨学科合作的问题。作者认为，AI的根本性差距反映了人类自身的不足，并提出了三种未来：认识论崩溃、协议锁定（过度监管）和共生协同进化。最终，作者呼吁将投资重点从扩大模型转向提升人类智慧、批判性思维和伦理教育，因为“我们真正害怕的，是我们的同类会用它做什么”。</p>
+
+<p><a href="https://modernaicourse.org">10-202: 现代人工智能导论</a><br>本课程介绍现代人工智能（AI）系统的工作原理，特别是像 ChatGPT、Gemini 和 Claude 等系统背后的机器学习方法和大型语言模型（LLMs）。课程将引导学生实现一个基本的 AI 聊天机器人，涵盖监督学习、LLM（包括自注意力机制和 Transformer）、分词器以及训练后的技术（如微调、对齐和强化学习）。课程包含编程作业、测验以及三次闭卷考试（两次期中和一次期末）。学生被允许在作业中使用 AI 助手作为学习工具，但在所有评估中禁止使用外部材料或 AI 助手。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/ViRb3/wgcf">ViRb3/wgcf</a><br>🚤 Cross-platform, unofficial CLI for Cloudflare Warp</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 Take full control of your VPS with 1Panel. Deploy OpenClaw in one click.</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Go.</p>
+
+<p><a href="https://github.com/steveyegge/beads">steveyegge/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>A fast, cross-platform build tool inspired by Make, designed for modern workflows.</p>
+
+<p><a href="https://github.com/fish2018/pansou">fish2018/pansou</a><br>PanSou是一款高性能的网盘资源搜索API服务，支持TG频道和插件搜索。系统设计以性能和可扩展性为核心，支持多频道多插件并发搜索、结果智能排序和网盘类型分类。docker集成前后端，一键启动，开箱即用。 https://so.252035.xyz/</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

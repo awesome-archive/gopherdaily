@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251203.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251203</span>
+</p>
+<p>每日一谚：Keep dependencies up to date to avoid security vulnerabilities </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/03/go-2025-cloud-native-observability-report">Go 2025云原生与可观测年度报告：底层性能革新与生态固防</a><br>技术世界没有永远的王座。2025年，面对日益复杂的云原生挑战——如容器资源的极致限制、大规模并发状态管理，以及来自 Rust 等追求极致 性能的新生代语言的“围剿”——Go 语言并非高枕无忧。 面对挑战，Go 在 2025 年交出了一份怎样的答卷？它是如何通过 Go 1.25 的底层性能革新、Kubernetes 的架构演进以及 OpenTelemetry 的生态防御来巩固壁垒的？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/4b-9b0DCeEHkgzAowPUAJA">【Google ADK 实战】01 思维转变：为什么 Google ADK 提倡“代码优先”？</a><br></p> 
+
+<p><a href="https://antonz.org/accepted/errors-astype">Go 提案：类型安全的错误检查</a><br>errors.AsType 是 errors.As 的现代替代方案。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/building-ai-agents-shouldnt-be-hard-according-to-thecube-research-docker-makes-it-easy/">构建 AI 代理不应如此困难</a><br>从 Docker 专家那里学习，以简化和推进您使用 Docker 的应用程序开发和管理。随时了解 Docker 活动和新版本</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1046084/4c048ee008e1c70e">Zig 的新异步程序方案</a><br>Zig 编程语言的设计者一直在努力为异步代码找到合适的设计方案。 Zig 是一种经过精心设计的极简主义语言，其最初的异步 I/O 设计与它的其他特性不太相符。现在，该项目在一个 Zig SHOWTIME 视频中宣布了一种新的异步 I/O 方法，该方法有望解决函数着色问题，并允许编写代码，这些代码将使用同步或异步 I/O 正确执行。</p>
+
+<p><a href="https://xania.org/202511/advent-of-compiler-optimisation">Introducing the Advent of Compiler Optimisations 2025</a><br>我今天宣布一个大约一年前就开始的项目。由于我的休假即将结束，我一直在研究一个“Advent of”类型的项目，该项目将于12月1日至25日每天发布一次。今年十二月将是编译器优化之旅：我将每天发布一篇博文和视频，详细介绍编译器可以做的有趣且有吸引力的 C 或 C&#43;&#43; 优化。我将深入研究它适用的细节、如何解释汇编，以及同样重要的是，它不适用的情况。
+我将涵盖一些非常底层的、特定于体系结构的技巧以及更大、更高级别的优化。虽然我主要涵盖 x86-64，但我也会涉及 64 位和 32 位 ARM。</p>
+
+<p><a href="https://andersmurphy.com/2025/12/02/100000-tps-over-a-billion-rows-the-unreasonable-effectiveness-of-sqlite.html">100000 TPS over a billion rows: the unreasonable effectiveness of SQLite</a><br>本文介绍了SQLite在处理大量数据时的高性能表现，尤其是在单机环境下。文章通过对比Postgres和SQLite，展示了SQLite在没有网络延迟的情况下，能够达到更高的TPS（每秒事务数）。通过使用批处理和嵌套事务，SQLite进一步提升了性能。同时，文章也强调了Amdahl定律对网络数据库性能的限制。最后，文章还讨论了并发读写、`synchronous`设置以及Postgres连接池大小对性能的影响，并提供了一些关于SQLite和网络数据库的额外阅读资源。</p>
+
+<p><a href="https://dolthub.com/blog/2025-12-02-announcing-doltlab-on-kubernetes/">DoltLab on Kubernetes 发布</a><br>DoltLab Enterprise 现在可以使用安装程序部署到单个 K8s 命名空间。</p>
+
+<p><a href="https://infrequently.org/2025/11/performance-inequality-gap-2026">The Performance Inequality Gap, 2026</a><br>本文探讨了2026年性能差距问题，重点关注设备和网络环境。文章指出，尽管设备和网络有所进步，但网站的性能并未达到预期。作者认为浏览器和开发者工具需要提供更强有力的激励措施，以引导用户远离臃肿的网站。</p>
+
+<p><a href="https://blog.ploeh.dk/2025/12/01/treat-test-code-like-production-code">像对待生产代码一样对待测试代码</a><br>您也必须阅读和维护测试代码。</p>
+
+<p><a href="https://simonwillison.net/2025/Dec/3/til-dependency-groups-and-uv-run/#atom-everything">TIL：依赖组和 uv run</a><br>我撰写了关于我用于各种 Python 项目仓库的新模式，以使它们尽可能容易使用 uv 进行 hack。诀窍是使用一个名为 dev 的 PEP 735 依赖组，在 pyproject.toml 中声明，像这样：</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://red.anthropic.com/2025/smart-contracts">AI 代理发现价值 460 万美元的区块链智能合约漏洞</a><br>我们评估了 AI 代理利用智能合约的能力，使用了一个新的基准，该基准由实际被利用的合约组成。对于知识截止日期之后的被利用的合约，Claude Opus 4.5、Claude Sonnet 4.5 和 GPT-5 发现了总价值 460 万美元的漏洞，这一发现突显了主动采用 AI 进行防御的必要性。</p>
+
+<p><a href="https://spectrum.ieee.org/ai-agents-safety">AI Agents Break Rules Under Everyday Pressure - IEEE Spectrum</a><br>Several recent studies have shown that artificial-intelligence agents sometimes decide to misbehave, for instance by attempting to blackmail people who plan to replace them. But such behavior often occurs in contrived scenarios. Now, a new study presents PropensityBench, a benchmark that measures an agentic model’s choices to use harmful tools in order to complete assigned tasks. It finds that somewhat realistic pressures (such as looming deadlines) dramatically increase rates of misbehavior.</p>
+
+<p><a href="https://archive.casouri.cc/note/2025/practical-intro-ot">操作转换的实用介绍</a><br>本文介绍了操作转换 (OT) 的基本概念，旨在以简单易懂的方式解释其工作原理，并引导读者进一步阅读相关资料。文章还包含了一个简单的 OT 算法，供读者参考。文章还比较了 OT 与 CRDT(无冲突复制数据类型) 的优缺点，并介绍了 OT 的发展历史和相关资源。</p>
+
+<p><a href="https://mainstreetautonomy.com/blog/2025-08-29-all-about-automotive-lidar">All about automotive lidar</a><br>本文将全面概述汽车激光雷达技术。激光雷达用于自动驾驶汽车和机器人技术，因为它是一项很酷的技术。
+激光雷达是一种通过将光反射到周围表面来工作的传感器。 激光雷达通常量化：
+- 距离，通过测量光反射回来的时间
+- 方位，通过照射光或将检测器指向特定方向
+- 反射率，通过测量有多少光反射回来
+- 速度，通过测量反射光的多普勒频移。
+- 环境，通过测量特定方向的环境中的光量。
+一般来说，我们对距离和方位最感兴趣。表面反射率也很有价值，因为它允许在汽车情况下检测道路线。通过测量多个方向的距离，自动驾驶汽车可以感知其环境。每个测量值对应于空间中的一个离散 3D 点。经过十年的稳定研究，工程师设计了能够利用这个 3D 点云解锁空间理解的算法。障碍物避让和精确定位只是这项技术的两个直接结果。
+本文还介绍了测量距离，确定方位，激光类型，常见的激光雷达问题等等。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

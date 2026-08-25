@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250705.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250705</span>
+</p>
+<p>每日一谚：Be explicit rather than implicit </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/05/go-is-8020-language">读懂Go的设计哲学：为什么说它是“恰到好处”的80:20语言？</a><br>有人因此热爱 Go，有人因此“憎恨” Go。但这种“爱”与“恨”的背后，其实都指向了 Go 语言一个最核心、也最常被误解的设计哲学。最近，一篇精彩的博文《Go is 80/20 language》用一个简单而强大的心智模型，完美地诠释了这一切。这个模型就是——Go 是一门“80/20”语言。</p> 
+
+<p><a href="https://tonybai.com/2025/07/04/slm-is-the-future-of-agentic-ai">NVIDIA的颠覆性观点：AI Agent的未来，属于小模型(SLM)</a><br>在 AI 的世界里，“越大越好”似乎已经成为一种颠扑不破的信仰。我们见证了参数量从数十亿飙升至万亿，也习惯了将最强大的通用大语言模型（LLM）视为驱动一切 AI 应用的核心引擎。然而，就在这股追逐“巨无霸”模型的浪潮之巅，全球 AI 硬件的领导者 NVIDIA，其研究部门却发表了一篇重磅论文，提出了一个看似反直觉，却可能重塑行业的颠覆性观</p> 
+
+<p><a href="https://medium.com/@aynacialiriza/google-oauth2-login-in-go-a-minimal-and-complete-guide-0e9af75908de">Go语言中的Google OAuth2登录：一个简洁完整的指南</a><br>在构建我的副项目RLaaS（一个使用Go语言的多租户限速服务）时，我需要一种简单安全的用户身份验证方法——理想情况下，使用他们现有的Google帐户。这时，我决定从头开始实现Google OAuth2登录，只使用net/http和官方的Go库。我注意到，尽管有很多关于OAuth2的教程，但大多数教程要么使用不必要的框架使事情过于复杂，要么跳过关键的设置步骤——尤其是在Google Cloud Console中的部分。因此，在本指南中，我将引导你完成我遵循的完整流程：从在Google Cloud Console中创建OAuth凭据到处理Go中的登录流程并提取用户信息。</p> 
+
+<p><a href="https://www.alexedwards.net/blog/how-to-manage-configuration-settings-in-go-web-applications">如何在Go Web应用程序中管理配置设置</a><br>本文介绍了在Go Web应用程序中管理配置设置的几种模式，包括使用命令行标志、环境变量和配置文件。文章详细解释了如何解析配置设置，并将它们传递到Web应用程序代码的其余部分。此外，文章还讨论了不同方法的优缺点。</p> 
+
+<p><a href="https://dev.to/abhirockzz/scaling-multi-tenant-go-applications-choosing-the-right-database-partitioning-approach-2amd">扩展多租户 Go 应用程序：选择合适的数据库分区方法</a><br>多租户应用程序面临着一个根本性的挑战：如何有效地存储和查询规模差异巨大的租户数据？本文探讨了使用 Azure Cosmos DB 解决 Go 应用程序中多租户扩展挑战的方法，重点介绍如何实现高效的数据分发和查询性能，并提供代码示例。</p> 
+
+<p><a href="https://dev.to/leapcell/implementing-enum-types-in-go-527l">在 Go 语言中实现枚举类型</a><br>Go 语言没有内置的枚举类型，本文介绍了使用常量和自定义类型来实现类似枚举功能的几种方法，并讨论了类型安全和约束问题。文章还演示了如何使用 `iota` 常量生成器简化枚举值的定义，以及如何为自定义枚举类型添加 `Name()`、`Original()`、`String()` 和 `ValueOf()` 方法来增强其功能。</p> 
+
+<p><a href="https://blog.fillmore-labs.com/posts/zerosized-2">golang.org/x/sync 中的零大小 Bug 狩猎</a><br>这篇文章延续了上一篇关于 Go 语言中零大小类型的文章。作者使用自己编写的 zerolint 和 cmplint 工具检查了 500 多个流行的 Go 项目，并以 golang.org/x/sync/singleflight 为例，展示了这些工具的实用性。文章分析了一个测试用例，指出该测试用例存在错误，并对测试用例进行了改进。最后，作者总结道，zerolint 和 cmplint 可以发现测试无法检测到的真实错误。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-07-02-the-agentic-software-engineer">智能体软件工程师</a><br>本文探讨了进入代理未来后软件工程将如何变化。哪些技能变得更有价值？哪些技能的价值下降？学习如何最好地为即将到来的代理人工智能浪潮做好软件工程师的准备。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://mangohost.net/blog/self-hosted-monitoring-with-victoriametrics-grafana-a-lightweight-alternative">使用 VictoriaMetrics &#43; Grafana 进行自托管监控：轻量级替代方案</a><br>本文介绍了如何使用 VictoriaMetrics 和 Grafana 构建一个轻量级、高效的自托管服务器监控系统。VictoriaMetrics 是一款高效的时间序列数据库，Grafana 则提供易于使用的可视化仪表板。文章包含了详细的安装步骤、常见问题解答以及一些实用的脚本示例，帮助用户快速搭建和使用该监控系统，节省资源成本并避免传统监控方案的缺点。</p>
+
+<p><a href="https://planetscale.com/blog/the-principles-of-extreme-fault-tolerance">极致容错的原则 — PlanetScale</a><br>PlanetScale 的速度和可靠性兼具。其速度在云端中名列前茅，这要归功于其共享无状态架构，该架构使 PlanetScale 能够利用本地存储而不是网络附加存储。PlanetScale 的容错能力建立在易于理解的原则、流程和架构之上，但要做好却需要细致的工作。本文详细阐述了 PlanetScale 如何通过隔离、冗余和静态稳定性等原则，以及控制平面、数据平面和数据库集群等架构，以及持续故障转移、同步复制和渐进式交付等流程来实现极高的容错性，并解释了这些方法如何应对各种故障模式，包括非查询路径故障、云提供商故障和 PlanetScale 自身引发的故障。</p>
+
+<p><a href="https://www.infoq.com/news/2025/06/linkedin-northguard-xinfra">LinkedIn 发布 Northguard 和 Xinfra：超越 Kafka 的日志存储和发布/订阅方案</a><br>LinkedIn 今日宣布推出 Northguard，一个可替代 Kafka 的可扩展日志存储系统，以及 Xinfra，一个虚拟化的发布/订阅层。Northguard 提供分片数据和元数据、日志条带化、强一致性和自平衡集群，其规模超过 Kafka；而 Xinfra 则支持在 Kafka 和 Northguard 之间进行无缝迁移和统一访问。</p>
+
+<p><a href="https://richardscollin.github.io/tmux-rs">介绍 tmux-rs</a><br>作者在六个月的时间里将 tmux 从 C 语言移植到 Rust 语言，代码行数从大约 67000 行增加到 81000 行（不包括注释和空行）。这是一个业余项目，作者尝试了 C2Rust 工具，但最终手动完成了移植工作。文章详细介绍了移植过程中的经验，包括构建过程、遇到的有趣错误以及在 Rust 中处理 C 语言模式的方法，例如原始指针、goto 语句、侵入式宏和 yacc 解析器。作者还分享了使用 Vim 和 AI 工具的开发过程。虽然代码现在是 100% Rust 代码，但仍存在许多 bug，下一个目标是将代码转换为安全的 Rust 代码。</p>
+
+<p><a href="https://developer.apple.com/videos/play/wwdc2025/308">使用 Instruments 优化 CPU 性能 - WWDC25 - 视频 - Apple 开发者</a><br>学习如何使用 Instruments 中的两个新的硬件辅助工具来优化你的应用以适应 Apple 芯片。我们将首先介绍如何分析你的应用，然后通过显示使用处理器跟踪的每个调用的函数来深入探讨。我们还将讨论如何使用 CPU 计数器的模式来分析你的代码以查找 CPU 瓶颈。</p>
+
+<p><a href="https://theexceptioncatcher.com/2025/06/kafka-in-2025-a-clean-docker-compose-setup-without-zookeeper">2025 年 Kafka：无需 ZooKeeper 的简洁 Docker Compose 设置</a><br>近年来 Kafka 发生了很大的变化。ZooKeeper 已被移除，一个 Kafka Docker 容器制造商已停止制作容器，并且配置也发生了变化。最新的托管 Kafka 容器版本可以使用以下 docker compose：services:…  文章还提到了 kafkacat 工具的新名称 kcat，以及一个名为 awesome-kafka 的资源库。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/4/identify-solve-verify/#atom-everything">识别、解决、验证</a><br>我使用大型语言模型（LLM）编写代码的时间越长，我就越不担心自己的职业生涯——即使它们的编码能力不断提高。将LLM作为我工作流程的一部分，帮助我理解我的工作有多少不仅仅是编写代码。我的工作是识别可以用代码解决的问题，然后解决这些问题，然后验证解决方案有效并且确实解决了问题。更高级的LLM最终可能能够完全处理中间部分。它可以帮助完成第一部分和最后一部分，但只有在理解要解决的问题以及如何与LLM交互以帮助解决问题的人员操作下才能实现。无论这些工具变得多么优秀，它们仍然需要有人为它们找到要解决的问题，定义这些问题并确认这些问题已得到解决。这是一份工作——其他人类乐于将其外包给专业人员的工作。这也已经是我作为软件开发人员所做工作的80%。</p>
+
+<p><a href="https://sutro.sh/blog/the-end-of-moore-s-law-for-ai-gemini-flash-offers-a-warning">摩尔定律的终结？Gemini Flash 给出了警告</a><br>近年来，人工智能行业一直遵循着自身版本的摩尔定律：一种坚定的信念，即智能的成本每年都会以数量级的速度持续下降。但谷歌最近悄然打破了这一趋势，大幅提高了其流行的 Gemini 2.5 Flash 模型的价格。这标志着人工智能成本下降的趋势可能已经触底，未来的发展将面临新的经济现实，成本控制将成为核心架构决策。文章分析了 LLM 定价的实际运作方式、谷歌涨价的原因，以及这一新经济现实对所有使用人工智能进行构建的人意味着什么，并强调了批量推理和开源模型的经济优势。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/yusing/godoxy">yusing/godoxy</a><br>Easy to use reverse proxy with docker integration</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/patrickmn/go-cache">patrickmn/go-cache</a><br>An in-memory key:value store/cache (similar to Memcached) library for Go, suitable for single-machine applications.</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/google/pprof">google/pprof</a><br>pprof is a tool for visualization and analysis of profiling data</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

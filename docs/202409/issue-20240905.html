@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240905.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-05</span>
+</p>
+<p>每日一谚：Keep dependencies up to date to avoid security vulnerabilities </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/09/06/go-doc-add-http-support/">重拾精髓：go doc -http让离线包文档浏览更便捷</a><br>Go语言团队近期接受了Go团队成员、Go圣经《The Go Programming Language》合著者Alan Donovan的新提案，旨在进一步提升开发者体验。这个提案为go doc命令新增了一个强大的功能：通过go doc -http，开发者可以快速启动一个本地的文档服务器，并自动在浏览器中打开Go包的参考文档</p> 
+
+<p><a href="https://threedots.tech/post/database-transactions-in-go/">Go中的数据库事务与分层架构</a><br>Three Dots Labs 的博客文章深入探讨了在 Go 中管理数据库事务的复杂性，强调了理解可能被忽视的基本概念的重要性。作者主张使用层将关键代码（逻辑）与实现细节（如 SQL 查询）分离，特别强调了 Repository 模式以保持这种分离。该博文使用 go-web-app-antipatterns 存储库中的示例说明了如何将事务保留在存储库层中，而不是将它们与应用程序逻辑混合。它还探讨了 Transaction Provider 模式作为需要将显式 transaction 对象与 logic 混合而不影响可读性的情况的解决方案。最后，作者暗示了未来关于跨服务事务的讨论，建议继续这个话题。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-09-04-faster-than-mysql/">我们如何比 MySQL 更快地计数</a><br>在最近的一篇博客文章中，DoltHub 详细介绍了版本控制数据库 Dolt 如何在特定的查询执行场景中超越 MySQL。性能提升是通过一系列旨在加快小范围读取的更改实现的，包括优化索引查找和连续范围读取的使用。尽管有这些增强功能，但随后的聚合测试出乎意料地加快了 Dolt 的性能，使其比 MySQL 快 70%。该博客还深入分析了 MySQL 的执行情况以及 Dolt 的执行情况，揭示了 Dolt 中的解析、优化和刷新阶段较慢。然而，发现 Dolt 的反序列化过程比 MySQL 慢四倍，这凸显了有待改进的领域。</p> 
+
+<p><a href="https://blog.gitguardian.com/a-comprehensive-guide-to-sops/">SOPS 综合指南：像有远见的人而不是工作人员一样管理您的秘密</a><br>SOPS 是一个开源加密文件编辑器，通过将加密和解密工具与各种密钥管理服务集成来自动化管理密钥的过程。它最初是作为 Mozilla 项目开发的，后来被 CNCF 接受。SOPS 在保存之前对文件进行加密，将加密方法存储为文件元数据的一部分，这样无需指定方法即可轻松解密。该工具是高度可定制的，并支持各种加密方法，包括 PGP、AWS KMS、HashiCorp Vault 等。虽然 SOPS 简化了加密文件的存储和共享，但它并不是一个全面的密钥管理解决方案，因为它缺乏专用密钥管理器的灵活性和策略实施功能。</p> 
+
+<p><a href="https://www.saybackend.com/blog/02-golang-dockerfile">适用于 Golang 的最佳 Dockerfile，优化您的 Dockerfile</a><br>本文提供了针对 Golang 应用程序的优化 Dockerfile，提供了增强构建过程的最佳实践和性能提示。它引入了一个适用于 Golang 的通用 Dockerfile，然后提供了一个使用多阶段构建的优化版本，从而产生更小、更高效的最终映像。作者还提供了其他优化策略，例如使用“.dockerignore”文件排除不必要的文件、缓存依赖项、最小化层，以及将“scratch”基础映像用于尽可能小的映像。本文强调了持续优化 Dockerfile 的重要性，并警告不要直接在 Dockerfile 中包含密钥。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.bitsrc.io/micro-frontend-architecture-a-guide-28f78ce825ad">微前端架构：指南</a><br>微前端架构是一份指南，讨论了通过将整体式前端分解为更小的独立组件（称为微前端）所带来的前端开发转型。这种方法增强了可扩展性和灵活性，使团队能够更快地进行创新和迭代。该指南涵盖了实施微前端的关键要求，包括解耦开发的需求，其中每个微前端都可以独立开发、部署和更新。Bit 和 Webpack Module Federation 被强调为通过实现独立的版本控制、依赖项管理和微前端部署来促进这些需求的工具。此外，该指南还强调了像 Bit.cloud 这样的平台对于在组织内发现、共享和集成这些组件以及跟踪其使用情况和采用的重要性。</p>
+
+<p><a href="https://blog.joshsoftware.com/2024/09/05/a-guide-for-manual-vulnerability-testing/">手动漏洞测试指南</a><br>该指南深入探讨了手动漏洞测试，强调了保护数字资产免受网络威胁的重要性。它涵盖了各种测试方法，包括身份验证和授权测试、密码管理、SQL 注入、会话 ID 操作和 URL 操作。该指南还介绍了特定的攻击技术，例如暴力攻击、弱口令利用以及使用脚本进行跨站点脚本 （XSS） 和路径遍历。此外，它还提供了增强安全性的建议，例如实施内容安全策略标头、使用参数化查询以及执行定期安全审计。该指南强调了手动测试的必要性，以有效识别和缓解 Web 应用程序中的安全风险。</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2024/09/ddia-chp-4-encoding-and-evolution-part-2.html">DDIA： 第 4 章。编码和演变（第 2 部分）</a><br>源文档是主要关注分布式系统、数据库设计和云计算的各种帖子和论文的汇编。它深入探讨了分布式系统中数据流的复杂性，强调了数据编码和架构演变的重要性。本文档还探讨了消息代理在异步消息传递中的作用，以及并发中的参与者模型。此外，它还讨论了数据库中存储计算分解的新兴趋势，强调了它对云环境的好处。最后，该文档包括 Pat Helland 关于云 OLTP 系统可扩展性的论文，质疑其规模的局限性。</p>
+
+<p><a href="https://blog.devops.dev/stop-writing-terraform-if-you-dont-know-this-085c2e76fc5b">Stop Writing Terraform If You Don’t Know This</a><br>Akhilesh Mishra, a DevOps engineer, addresses the common issue of repetitive code in Terraform configurations through his article &#34;Stop Writing Terraform If You Don&#39;t Know This | by Akhilesh Mishra&#34;. He emphasizes the importance of keeping code DRY (Don&#39;t Repeat Yourself) and introduces Terraform&#39;s powerful features like &#39;count&#39;, &#39;for_each&#39;, and dynamic blocks to manage multiple similar resources efficiently. These tools enable the creation of multiple instances of resources such as servers or databases without duplicating code, thus enhancing the flexibility and maintainability of infrastructure code. The article serves as a comprehensive guide for readers to utilize these features and streamline their Terraform codebase.</p>
+
+<p><a href="http://security.googleblog.com/2024/09/deploying-rust-in-existing-firmware.html">在现有固件代码库中部署 Rust</a><br>2024 年 9 月 4 日的 Google 安全博客文章讨论了 Rust 在现有固件代码库中的部署，强调了其增强安全性的潜力。该博客文章是 Google 对 Internet 安全做出的更广泛承诺的一部分，面向对 Google 的安全更新、Android 安全和开源项目感兴趣的受众。该帖子还涉及各种相关主题，例如安全奖励计划、漏洞和安全供应链的重要性。此外，该博客还为读者提供了一个平台，让他们可以与 Google 的产品论坛互动以获得反馈和讨论。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/04/kubernetes-turns-10-a-ditty-dedicated-to-a-decade-of-container-orchestration/">Kubernetes 10 岁了：一首专门讲述十年容器编排的小曲</a><br>10 年前，Kubernetes 只是一个 Google 内部项目，启动了它的第一个 pod。如今，它已发展成为容器编排的核心工具，因其在云原生架构中的创新和不可或缺的作用而广受赞誉。尽管 SRE 团队面临挑战，例如排查 PagerDuty 警报和处理容器故障，但 Kubernetes 实现了更顺畅的部署和更可恢复的系统。EKS 和其他基于 Kubernetes 的解决方案的出现简化了编排，尽管掌握 Kubernetes 仍然是一项复杂的任务。在 Kubernetes 庆祝成立 10 周年之际，它不断发展，有望在容器编排领域取得更多进步。</p>
+
+<p><a href="https://thenewstack.io/how-heroku-is-positioned-to-help-ops-engineers-in-the-genai-era/">Heroku 如何定位以帮助 GenAI 时代的运营工程师</a><br>Heroku 的首席执行官 Bob Wise 在 The New Stack Makers 上表示，虽然生成式 AI 编码助手令人印象深刻，但它们并没有减轻运营团队在测试、部署和生产软件交付方面的负担。他将这些工具的影响比作 Kubernetes 的影响，后者自动化了后端流程，但并不主要关注开发人员体验。Wise 强调，Heroku 的战略定位是利用 GenAI 革命，提供有助于弥合人工驱动和全自动软件开发之间差距的解决方案。他还指出，虽然代码生成工具可以提高开发人员的工作效率，但它们目前对运营效率没有贡献。Wise 预测，随着生成工具的发展，像 Heroku 这样固执己见的系统将显着增长。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://unchartedterritories.tomaspueyo.com/p/how-ai-disrupts-tech-investing">AI 如何颠覆科技投资</a><br>Tomas Pueyo 的文章深入探讨了人工智能对科技投资和数字经济的变革性影响。它凸显了 AI 初创公司蓬勃发展的世界的转变，到 2024 年，Y Combinator 的初创公司中有很大一部分专注于 AI。这种 AI 驱动的演变正在推动创建以前无法实现的新服务，并加快初创公司的开发过程。然而，AI 能力的激增和软件开发的民主化对传统的商业模式和投资策略构成了挑战。文章指出，虽然人工智能正在颠覆行业并可能取代工作岗位，但它也为个体创业者和内容创作者创造了机会，以较低的资本要求建立成功的企业。</p>
+
+<p><a href="https://spin.atomicobject.com/ai-llms-knowledge-management/">利用 AI 和大型语言模型进行下一代知识管理</a><br>本文讨论了人工智能 （AI） 和大型语言模型 （LLM） 在革新知识管理方面发挥的变革性作用。由于信息过载，传统方法通常会导致关键见解被忽视。但是，AI 支持的知识管理可以通过捕获、汇总和丰富信息来缓解此问题，从而提高工作效率。本文还强调了逐步将 AI 工具集成到现有工作流程中以补充和增强实践的重要性。此外，它还提供了有关如何使用 AI 来培养主题专家和增强软件开发流程的见解。</p>
+
+<p><a href="https://blog.scottlogic.com/2024/09/04/lessons-on-data-quality.html">检测 AI 编写的代码：关于数据质量重要性的经验教训 作者：Amy Laws</a><br>本文档探讨了使用双筒望远镜（一种零镜头方法）检测 AI 编写的代码所面临的挑战和发现。初步研究表明，双筒望远镜可以区分人类和 AI 生成的代码，AI 代码通常得分较低。然而，对代码生成管道和数据集质量的进一步调查表明，糟糕的数据质量会导致结果出现偏差。通过改进代码生成过程并利用更清晰的数据集，随后的研究表明，双筒望远镜在区分代码类型方面的准确性显着降低，几乎是随机的。这表明最初的成功是受数据集质量差的影响，而不是双筒望远镜模型本身的有效性。</p>
+
+<p><a href="https://simonwillison.net/2024/Sep/4/qwen2-vl/#atom-everything">Qwen2-VL： 更清晰地看世界</a><br>源文档讨论了 Simon Willison 的博客 Qwen2-VL，该博客专门用于阿里云的大型语言模型 （LLM） 训练。Qwen2-VL 被强调为获得积极关注的愿景 LLM。该文档还提到了 Qwen 模型的许可变化，较小的模型现在使用 Apache 2.0 许可证。此外，它还解决了 Qwen GitHub 组织的神秘失踪问题，该事件后来得到了解决。本文档最后演示了 Qwen2-VL 从手写图像中提取文本的能力及其与 NVIDIA GPU 的兼容性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>在 Kubernetes 上运行 Ray 应用程序的工具包</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>极快的 Web 捆绑器</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>后端大师课：用 Go 构建一个简单的银行服务</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+<p><a href="https://github.com/go-co-op/gocron">go-co-op/gocron</a><br>简单流畅的 Go cron 调度。这是 https://github.com/jasonlvhit/gocron 的分支</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS 提供商使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>分布式可靠键值存储，用于分布式系统中最关键的数据</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator 在 Kubernetes 上创建/配置/管理 Prometheus 集群</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/openfga/openfga">openfga/openfga</a><br>专为开发人员构建的高性能和灵活的授权/权限引擎，其灵感来自 Google Zanzibar</p>
+
+<p><a href="https://github.com/GoogleContainerTools/kaniko">GoogleContainerTools/kaniko</a><br>在 Kubernetes 中构建容器镜像</p>
+
+<p><a href="https://github.com/linkerd/linkerd2">linkerd/linkerd2</a><br>适用于 Kubernetes 的超轻量级、安全优先的服务网格。Linkerd 2.x 的主存储库。</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>访问和保护所有基础设施的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>连接、保护、控制和观察服务。</p>
+
+<p><a href="https://github.com/encoredev/encore">encoredev/encore</a><br>开发平台，用于构建具有声明式基础设施的健壮类型安全的分布式系统</p>
+
+<p><a href="https://github.com/golang/protobuf">golang/protobuf</a><br>Go 支持 Google 的协议缓冲区</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>将 Envoy 代理作为独立或基于 Kubernetes 的应用程序网关进行管理</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter 是一款专为灵活性、性能和简单性而构建的 Kubernetes Node Autoscaler。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

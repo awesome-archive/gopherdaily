@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241115.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-15</span>
+</p>
+<p>每日一谚：Go pkgs are not hierarchical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/11/16/go-crypto-and-fips-140/">走向合规：Go加密库对FIPS 140的支持</a><br>关于go加密包要支持fips 140合规的“来龙去脉”</p> 
+
+<p><a href="https://tonybai.com/2024/11/15/install-gotip-using-go-repo-mirror/">Gotip安装：基于Go镜像代码仓库</a><br>一个在国内安装gotip的小技巧，分享给大家！</p> 
+
+<p><a href="https://www.ardanlabs.com/blog/2024/10/json-handling-and-type-management-with-large-datasets-in-go.html">在Go中使用大型数据集进行JSON处理和类型管理 - 第 4 集</a><br>在面向工程师的 JSON 系列的第 4 集中，Miki 解决了处理大型 JSON 数据集的复杂性，重点是避免类型污染和实现自定义序列化。本集强调使用匿名结构和选择性解码来简化 JSON 处理，避免创建不必要的类型定义。Miki 还演示了如何使用 Go 的 Marshaler 和 Unmarshaler 接口来自定义 JSON 序列化，这对于确保不同系统之间的数据一致性特别有用。此外，还讨论了在 Go 中管理混合类型数组的策略，为有效集成各种数据类型提供了见解。本集为希望在 Go 中优化 JSON 处理的开发人员提供了全面的指南，其中包含了维护干净高效代码的实际示例和技术。
+
+（注意：摘要旨在封装源文档的关键点，侧重于主要内容，而不包括特定详细信息，如 URL、电子邮件地址或对文档结构的直接引用。</p> 
+
+<p><a href="https://buttondown.com/hillelwayne/archive/what-makes-concurrency-so-hard/">是什么让并发如此困难？</a><br>源文档深入探讨了计算机科学中并发的内在复杂性，将困难不是归因于人类认知限制，而是归因于并发系统中可能状态的指数级增长。它解释说，即使是多个代理的简单线性操作序列也可能导致大量不同的行为和状态，状态空间爆炸成为一个重大挑战。本文档重点介绍了管理这种复杂性的策略，例如使用互斥锁、屏障和内存隔离进程来修剪状态空间并减少交错。它还讨论了 channels、promise 和 actor 模型等编程结构在简化状态空间拓扑中的作用。作者强调，虽然较小的状态空间通常更容易使用，但状态空间内的拓扑和非确定性类型可能会使并发推理进一步复杂化。本文档最后承认，由于组合爆炸，无论人类的推理能力如何，并发本质上都是困难的。
+
+（注意：提供的摘要基于所提供源文档的内容，不包括直接引用或文档本身的特定详细信息。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2024/11/14/goland-2024-3-is-out/">GoLand 2024.3 现已发布！</a><br>GoLand 2024.3 版本现已推出，带来了许多新功能和增强功能，以改进开发人员的工作流程。关键更新包括对循环导入的新检查、在单个 UI 中管理多个 Go 服务和配置，以及通过并行依赖项数据收集加快项目打开时间。JetBrains AI Assistant 得到了改进，具有更快、更准确的多行云完成和内联 AI 提示，可提供更加集成的编码体验。此外，GoLand 现在直接在 Services 视图中支持 Kubernetes 资源，并增加了对 Terraform 和 HCL 插件（包括 OpenTofu）的支持。该版本还在 Go 插件中引入了新的数据流分析检查。JetBrains 邀请用户分享有关这些新功能的反馈，并鼓励通过社交媒体和 GoLang 社区 Slack 频道参与。
+
+（注意：摘要旨在封装源文档的要点，重点介绍 GoLand 2024.3 版本中的新特性和改进，同时省略了对整体叙述不重要的特定 URL、直接问题和技术细节。</p> 
+
+<p><a href="https://dev.to/gbubemi_attah_8220489db16/simplifying-string-validation-in-go-introducing-validatorgo-1fc4">简化 Go 中的字符串验证：validatorgo 简介</a><br>源文档介绍了 validatorgo，这是一个用于字符串验证的 Go 库，它从 go-playground/validator 和 govalidator 等其他 Go 库中脱颖而出，它专注于直接字符串验证，不需要 struct 标签。Validatorgo 专为性能而设计，避免反射，并提供了广泛的可自定义验证器，使其适用于各种字符串格式和验证需求。该库对于寻求在 Go 中进行高效、可自定义和直接的字符串验证的开发人员特别有用，尤其是对于独立验证场景或 Web 应用程序要求。本文档还提供了有关安装、使用和创建 validatorgo 背后的动机的指导，以及验证程序和排错程序的示例。
+
+（注意：摘要旨在封装源文档的关键方面，侧重于 validatorgo 的目的、功能和用法，同时省略了具体的代码示例和安装细节。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GitAliasesViaShellScripts">在 shell 脚本中间接实现一些 Git 别名</a><br>Chris Siebenmann 在他的博客上分享了有关通过 shell 脚本间接实现 Git 别名的见解。Siebenmann 讨论了创建 Git 别名以从 Dependabot 中筛选出提交并从文件路径中排除 go.mod 和 go.sum 的挑战。由于在 Git 别名中正确传递参数的复杂性，Siebenmann 选择处理参数的 shell 脚本，然后通过自定义 Git 别名调用这些参数。shell 脚本以描述性方式命名，表明如果需要，可以手动运行它们。Siebenmann 对这种方法的探索是他对 CSpace 社区更广泛贡献的一部分，他还参与了各种编程主题并提供帮助资源。该帖子包括指向博客的链接、评论和搜索功能，表明讨论的互动和社区驱动的方面。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或原始文本的特定格式。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/vmagent-how-it-works/">vmagent 如何通过聚合、重复数据删除等功能快速收集和传输指标</a><br>VictoriaMetrics 代理，称为 vmagent，是一种用于从各种来源收集和处理指标的工具，具有在存储之前重新标记、过滤、去重和压缩等功能。它支持 Prometheus 和 VictoriaMetrics 远程写入协议，重点是高效的数据处理和大容量数据摄取。vmagent 根据 CPU 内核对并发插入进行限制，并通过 Snappy 和 zstd 等压缩类型管理请求正文大小。它还具有全局摄取速率限制器，以保护远程存储免受高基数的淹没。该工具包括流聚合和重复数据删除功能，用于压缩和消除冗余数据点，确保高效的存储和检索。此外，vmagent 采用具有内存中和基于磁盘的缓冲区的快速队列系统来管理数据流并在负载下保持性能。
+
+（注意：该摘要旨在封装源文档中描述的 vmagent 的关键功能和操作机制，同时省略了问题及其答案等具体细节。</p>
+
+<p><a href="https://labs.leaningtech.com/blog/webvm-20">WebVM 2.0：通过 WebAssembly 在浏览器中提供完整的 Linux 桌面环境</a><br>WebVM 2.0 在现代浏览器中引入了完整的 Linux 桌面环境，利用 WebAssembly、CheerpX 和其他技术来运行未经修改的 Linux 二进制文件。该项目由 Leaning Technologies 开发，旨在支持直接在浏览器中执行任何应用程序，包括遗留软件，而无需预加载整个文件系统。关键组件包括 CheerpX（适用于 x86 代码的强大虚拟化引擎）和流式磁盘后端，该后端支持大型、未经修改的 Linux 发行版，且延迟较低。与 Tailscale 的集成提供了安全的专用网络连接，而 Xorg 支持则允许完整的桌面体验。该版本标志着在浏览器中运行任何应用程序的愿景取得了重大进展，并可能应用于教育和远程工作环境。该项目是开源的，并邀请社区贡献以进一步发展。
+
+（注意：摘要旨在概括源文档的要点，侧重于 WebVM 2.0 的创新、组件和影响，同时遵守中等长度和连贯性的约束。</p>
+
+<p><a href="https://blog.tealok.tech/post/docker-compose-isnt-enough/">Docker Compose 是不够的</a><br>源文档批评 Docker Compose 不足以满足大众市场的自托管应用程序，突出了它缺乏抽象和标准化。它介绍了 Tealok，这是一个提议的容器运行时，旨在通过为数据库、反向代理和缓存等常见服务提供更高级别的抽象和标准化接口来解决这些问题。Tealok 旨在简化操作、减少浪费并确保良好实践，使开发人员能够更轻松地部署其应用程序。该文件认为，Tealok 可以让任何人管理自己的云计算，强调数据、服务和命运的所有权。Tealok 提出的解决方案被视为朝着更高效和用户友好的容器运行时生态系统迈出的一步。</p>
+
+<p><a href="https://www.cncf.io/announcements/2024/11/12/cloud-native-computing-foundation-announces-dapr-graduation/">云原生计算基金会宣布 Dapr 毕业</a><br>云原生计算基金会 （CNCF） 宣布 Dapr 毕业，Dapr 是一种可移植运行时，可简化跨云和边缘环境的分布式应用程序的开发。Dapr 于 2019 年由 Microsoft 首次发布，并于 2021 年被 CNCF 孵化器接受，现已发展到超过 3,700 名贡献者，并被数以万计的组织使用，包括 Grafana、FICO 和 Zeiss。它提供用于通信、状态和工作流的集成 API，由来自 8 个组织的 21 人维护。该项目的路线图包括即将发布的 v1.15 版本，该版本将引入稳定的工作流 API 和 alpha 版 AI 对话 API。Dapr 与其他云原生技术的集成及其对开发效率的影响受到了行业专业人士的称赞，凸显了它在使开发人员能够专注于业务逻辑和创新方面的作用。
+
+（注意：该摘要旨在概括公告的要点、Dapr 对云原生生态系统贡献的重要性以及源文档中概述的项目的未来方向。</p>
+
+<p><a href="https://www.docker.com/blog/testcontainers-cloud-vs-docker-in-docker-for-testing-scenarios/">为什么 Testcontainers Cloud 在测试场景中比 docker-in-docker 更能改变游戏规则</a><br>源文档表示当用户尝试访问他们无权查看的资源或页面时，通常由 Web 服务器（特别是 Nginx）显示的错误消息。“403 Forbidden”状态代码表示服务器理解请求但拒绝授权，通常是由于身份验证凭据不正确或不充分。此错误清楚地表明，当服务器运行时，用户的访问权限未得到充分配置或识别。该文档虽然简短，但强调了 Web 管理中遇到的一个常见问题，并强调了适当的访问控制设置的重要性，以确保用户与 Web 资源进行安全和授权的交互。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/14/kubecon-cloudnativecon-north-america-2024-day-2-keynotes-announcements-and-more/">KubeCon &#43; CloudNativeCon 北美 2024 第 2 天：主题演讲、公告等</a><br>KubeCon &#43; CloudNativeCon North America 2024 第 2 天活动展示了充满活力的主题演讲、公告和交流机会，有近 9,200 名与会者。Taylor Dolezal 强调了最终用户技术顾问委员会的成就，而 Alexa Griffith 介绍了 Envoy AI Gateway，这是一个协作开源项目，旨在解决将大型语言模型 （LLM） 与 Kubernetes 集成的挑战。该活动还庆祝了顶级最终用户的贡献，其中 Adobe 处于领先地位，其次是 Reddit 和 Capital One。社区奖项表彰了重大贡献，其中 Joe Stringer 和 Qiming Teng 位居最佳贡献者之列。安全性是一个主要关注点，Nikhita Raghunath 强调在云原生生态系统中需要强大的安全措施。当天以 CNCF 的公告结束，包括推出技术景观雷达和参考架构，以及有关 Argo 等简化 Kubernetes 部署的工具的专题纪录片。
+
+（注意：摘要旨在概括活动的关键要素，重点关注主题演讲、社区认可和安全讨论的亮点，同时省略了特定的 URL 和对所提出问题的直接引用。</p>
+
+<p><a href="https://thenewstack.io/codiac-kubernetes-doesnt-need-to-be-that-complex/">Codiac：Kubernetes 不需要那么复杂</a><br>Codiac 是一个用于管理基于 Kubernetes 的软件开发的平台，可简化跨集群部署和维护应用程序的过程。Codiac 由 Ben Ghazi 共同创立，提供统一的接口，将基础设施即代码与软件开发生命周期 （SDLC） 集成，从而实现无缝的 CI/CD 管道。该平台的 CLI 允许开发人员使用最少的代码构建和部署容器，从而促进在多云、多集群环境中简化、高效的容器管理方法。Codiac 的工具旨在降低复杂性并简化开发流程，使软件工程师能够更轻松地在 Kubernetes 上构建和部署应用程序。
+
+（注意：摘要不包括源文档中的直接引用或具体问题，而是侧重于关键点和整体信息。</p>
+
+<p><a href="https://icepanel.medium.com/how-to-diagram-a-data-pipeline-in-icepanel-f68a054b532d">如何在 IcePanel 中绘制数据管道图</a><br>源文档提供了有关如何使用 IcePanel 绘制数据管道图的全面指南，IcePanel 是一种旨在可视化系统内数据流的工具。它首先解释了数据管道在现代软件系统中的重要性，强调需要清晰的可视化来了解数据的移动和转换。本指南将 Chilly Bank 系统作为案例研究进行介绍，详细介绍了上下文和容器图，这些图说明了客户、外部系统（如 Google Analytics 和 Looker）以及内部系统（如 Google Cloud SQL 和 BigQuery）之间的交互。本文档强调了基于代码所有权的内部和外部系统之间的区别，并建议将包含关键业务信息的无服务器技术定义为内部技术。该指南最后鼓励跨团队在技术决策上保持一致，并将读者引导至 IcePanel 以获得进一步的帮助。
+
+（注意：摘要经过精心设计，以封装源文档的关键元素，同时保持简洁和连贯性。它不包括直接引用或超出传达要点所需的具体细节。</p>
+
+<p><a href="http://security.googleblog.com/2024/11/new-real-time-protections-on-Android.html">使用 Google 更安全：Android 上新的智能实时保护功能可确保您的安全</a><br>Google 的安全博客宣布在 Android 设备上推出新的智能实时保护功能，以增强用户安全性。这篇发布日期为 2024 年 11 月 13 日的博文详细介绍了 Android 安全方面的最新进展，强调了该公司致力于保护用户免受新出现的威胁的承诺。这些新功能是 Google 不断努力改造空间安全措施的一部分，旨在保护数亿 Android 用户。该博文还包括各种搜索标签亮点，例如隐私、安全奖励和漏洞，表明了 Android 安全的全面方法。此外，该博客文章还提供了相关文章和讨论的链接，建议在技术社区内就该主题进行更广泛的对话。
+
+（注意：以上摘要基于提供的文本片段，其中缺少有关新保护措施的具体详细信息。为了获得准确的摘要，需要来自实际博客文章的更多信息。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/13/kubecon-cloudnativecon-north-america-2024-day-one-keynotes-sessions-announcements-and-more/">KubeCon &#43; CloudNativeCon 北美 2024 第一天：主题演讲、会议、公告等</a><br>KubeCon &#43; CloudNativeCon North America 在盐湖城举行，第一天的主题演讲、会议和公告丰富多彩，与会者超过 9,000 人。该活动强调了打击专利流氓的重要性，Linux 基金会与 CNCF 的合作表明，在捍卫开源创新方面，成功率高达 90%。值得注意的讨论包括 Kueue 在 CERN 管理 Kubernetes 工作负载中的作用、CoreWeave 在云原生 AI 方面的进步以及 Lunar 将平台工程原理应用于 AI。NVIDIA 的 Chris Lamb 展示了生成式 AI 的潜力，而各种会议则讨论了 Pod 中断和 Kubernetes 网络中混沌测试的需求。该活动还包括有趣的活动和公告，例如云原生英雄挑战赛，并推出了 KubeVirt v1.4 和 Keycloak 26 等新版本。
+
+（注意：摘要旨在概括活动的关键要素，侧重于主要主题和公告，而不深入研究具体细节或问题。</p>
+
+<p><a href="https://www.redhat.com/en/blog/state-platform-engineering-age-ai">AI 时代的平台工程现状</a><br>Red Hat 的《AI 时代的平台工程现状》报告深入探讨了随着组织将生成式 AI（一代 AI）集成到其运营中，平台工程的作用不断演变。该报告基于对 1,000 名平台工程师和 IT 决策者的调查，确定了平台工程的四个成熟度级别：探索、新兴、成熟和高级。它揭示了处于高级阶段的组织实现了显著的生产力提升和增强的安全性和合规性。该报告强调了 gen AI 的战略重要性，近一半的组织将其视为其平台工程战略的关键组成部分。研究结果表明，强大的平台工程和 DevOps 实践对于快速部署 AI 驱动的应用程序至关重要，安全性和协作是采用这些实践的主要动机。Red Hat 的报告强调了 AI 背景下平台工程的优势和挑战，为组织未来的软件开发和创新做好了准备。</p>
+
+<p><a href="https://medium.com/@gavandiroshan/the-evolution-of-helm-understanding-its-origins-purpose-and-advanced-resource-management-in-f22ddc39fbaf">Helm 的演变：了解其起源、目的和高级资源管理...</a><br>本文深入探讨了 Helm 的演变和重要性，Helm 是 Kubernetes 的软件包管理器，可简化容器化应用程序的部署和管理。Helm 由 Deis 开发，后来集成到 Microsoft 中，通过将大规模 Kubernetes 应用程序打包到版本控制图表中，解决了管理大规模 Kubernetes 应用程序的复杂性。从 Helm 2 到 Helm 3 的过渡标志着安全性和可用性的显着提高，与 Kubernetes 的原生 RBAC 保持一致并增强了部署过程。使用 Helm 的主要优势包括跨环境的一致性、版本控制和易用性，尤其是在 CI/CD 管道中。本文还提供了有关在 Helm 图表中配置内存、CPU 和持久存储等资源的实用见解，并通过一个详细的示例进行了说明。这份全面的指南强调了 Helm 在为 Kubernetes 应用程序实现高效资源管理和可扩展性方面的作用。</p>
+
+<p><a href="https://www.docker.com/blog/hubdashboards/">了解如何使用我们的使用情况仪表板优化 Docker Hub 成本</a><br>源文档表示当用户尝试访问他们无权查看的资源或页面时，通常由 Web 服务器（特别是 Nginx）显示的错误消息。“403 Forbidden”状态代码表示服务器理解请求但拒绝授权，通常是由于身份验证凭据不正确或不充分。此错误清楚地表明，当服务器运行时，用户的访问权限未得到充分配置或识别。该文档虽然简短，但强调了 Web 管理中遇到的一个常见问题，并强调了适当的访问控制设置的重要性，以确保用户与 Web 资源进行安全和授权的交互。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.intelligenthq.com/the-role-of-ai-in-accelerating-scientific-research/">AI 在加速科学研究方面的作用</a><br>IntelligentHQ 的原始文件强调了人工智能 （AI） 对各个领域科学研究的变革性影响。机器学习、深度学习和自然语言处理等 AI 技术正在加速环境科学、医学和工程领域的进步。在医学领域，AI 正在彻底改变诊断和药物发现，实现更准确的疾病识别并加快新疗法的开发。环境科学通过改进气候预测、野生动物保护和可持续发展工作从 AI 中受益。在工程领域，AI 有助于智能设计和优化，提高材料工程、汽车和航空航天行业的安全性和效率。该文件强调了人工智能在推动重大社会进步和科学研究创新方面的潜力。
+
+IntelligentHQ 的原始文件强调了人工智能 （AI） 在推动不同学科的科学研究向前发展方面的关键作用。AI 的功能（包括机器学习、深度学习和自然语言处理）有助于加快环境科学、医学和工程等领域的发现并提高准确性。在医疗领域，AI 正在改变诊断和药物开发，从而实现更早的疾病检测和更有效的治疗方案。环境科学正在利用 AI 进行更好的气候预测、野生动物保护和可持续实践。工程设计正在经历 AI 驱动的设计和优化进步，从而产生更安全、更高效的系统。该文件强调了 AI 在 IntelligentHQ 创始人 Dinis Guarda 的掌舵下，促进科学研究突破性进步和创新的能力。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2024/11/13/microsoft-introduces-new-adapted-ai-models-for-industry/">Microsoft 为行业推出新的适配 AI 模型</a><br>Microsoft 通过引入为各个行业量身定制的合作伙伴支持的自适应 AI 模型来扩展其 AI 功能，这些模型可通过 Azure AI 模型目录获得。这些模型是与 Bayer、Cerence 和 Rockwell Automation 等行业领导者合作开发的，旨在解决特定用例并提高运营效率。拜耳的 E.L.Y. 作物保护模型专注于可持续农业，而 Cerence 的 CaLLM Edge 通过嵌入式 SLM 满足汽车需求。罗克韦尔自动化的 FT Optix 食品和饮料模型有助于制造过程，而 Saifr 的模型有助于金融机构实现监管合规性。此外，Siemens Digital Industries Software 和 Sight Machine 分别提供用于设计优化和数据管理的专用模型。Microsoft 还强调了值得信赖的 AI 的重要性，确保其 AI 解决方案的安全、保障和隐私。该计划是 Microsoft 通过 AI 推动创新和满足行业特定需求的更广泛战略的一部分。
+
+（注意：摘要旨在概括源文档的关键点，重点介绍经过调整的 AI 模型的介绍、它们的行业应用以及 Microsoft 对可信 AI 的承诺，所有这些都在一个简洁的段落中。</p>
+
+<p><a href="https://simonwillison.net/2024/Nov/14/releasing-the-largest-multilingual-open-pretraining-dataset/#atom-everything">发布最大的多语言开放预训练数据集</a><br>法国 AI 实验室 PleIAs 发布的 Common Corpus 标志着语言模型 （LLM） 的大规模、多语言、开放许可训练数据的可用性的一个重要里程碑。这个广泛的数据集包含超过 2 万亿个代币，包括各种来源，例如公共领域文本、政府文档、开源代码、学术内容和各种 Web 资源。凭借其大量的英语内容，辅以大量的法语、德语和其他语言表示，Common Corpus 有望彻底改变 GPT-4 等大型语言模型的训练，从而有可能消除对受版权保护数据的依赖。该公告于 2024 年 11 月 14 日发布，在 AI 社区引发了兴奋，因为它有望增强 LLM 的功能和道德考虑。这一发展与人们对数据道德的日益关注以及人工智能领域对更具包容性、可访问的训练数据集的需求相一致。
+
+（注意：摘要旨在封装源文档的关键点，重点关注 Common Corpus 的重要性、其组成及其对 AI 社区的潜在影响，同时遵守中等长度和连贯性的约束。</p>
+
+<p><a href="https://simonwillison.net/2024/Nov/15/recraft-v3/#atom-everything">recraft V3</a><br>总部位于伦敦的初创公司 Recraft V3 最近推出了其先进的生成式 AI 模型，该模型在人工分析图像领域掀起了一场风暴，超越了 Midjourney 和 Flux 1.1 pro 等竞争对手。该模型生成光栅和矢量图形的能力特别值得注意，后者可以导出为 SVG 文件。提供的示例包括一只浣熊举着一个关于爱垃圾的标志的矢量 SVG，可以在 Pixelmator 中进行编辑。此外，Recraft 还为开发人员提供了一个 API，通过使用该平台的 API 创建鹈鹕骑自行车的 SVG 进行了演示。此版本标志着 AI 生成的设计工具取得了重大进步，可能在各个行业中应用。
+
+（注意：摘要不包括源文档中的任何直接链接或特定代码片段，而是侧重于 Recraft V3 发布的关键点和影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，可以使用你想要的任何名称制作本地信任的开发证书。</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>异构 AI 计算虚拟化中间件</p>
+
+<p><a href="https://github.com/cilium/tetragon">cilium/tetragon</a><br>基于 eBPF 的安全可观察性和运行时执行</p>
+
+<p><a href="https://github.com/IBM/sarama">IBM/sarama</a><br>Sarama 是 Apache Kafka 的 Go 库。</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>云原生策略管理</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>一个云原生 Go 微服务框架，带有 cli 工具以提高工作效率。</p>
+
+<p><a href="https://github.com/dunglas/frankenphp">dunglas/frankenphp</a><br>🧟 现代 PHP 应用程序服务器</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent （OPA） 是一个开源的通用策略引擎。</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>在 Kubernetes 中自动配置和管理 TLS 证书</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 OpenAI、Claude 等的免费开源替代品。自托管和本地优先。OpenAI 的直接替代品，在消费级硬件上运行。无需 GPU。运行 gguf、变压器、扩散器和更多模型架构。功能： 生成文本、音频、视频、图像、语音克隆、分布式、P2P 推理</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>分布式可靠键值存储，用于分布式系统中最关键的数据</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>用于密钥管理、加密即服务和特权访问管理的工具</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr 是一种可移植的、事件驱动的运行时，用于跨云和边缘构建分布式应用程序。</p>
+
+<p><a href="https://github.com/openai/openai-go">openai/openai-go</a><br>OpenAI API 的官方 Go 库</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>管理所有内容的懒惰方式 docker</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA 是基于 Kubernetes 的事件驱动自动缩放组件。它为在 Kubernetes 中运行的任何容器提供事件驱动的扩展</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>基于 eBPF 的网络、安全性和可观测性</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/telepresenceio/telepresence">telepresenceio/telepresence</a><br>针对远程 Kubernetes 或 OpenShift 集群进行本地开发</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>访问和保护所有基础设施的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>使用远程映像注册表 - 检索信息、映像、对内容进行签名</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

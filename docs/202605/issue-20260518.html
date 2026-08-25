@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260518.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260518</span>
+</p>
+<p>每日一谚：Go makes it easy to write correct concurrent code. But it&#39;s still concurrent code. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/18/go-performance-optimization-over-rust-rewrites">别神话Rust重写了：搞定1%热路径，Go性能照样起飞</a><br>最近，几位硅谷顶级的技术大佬——前 Tailscale CTO David Crawshaw、开源时序数据库 VictoriaMetrics CTO Aliaksandr Valialkin，以及资深 底层代码大牛 Stewart Lynch，在 X（原推特）上掀起了一场关于“现代软件复杂性与性能优化”的讨论。 仔细研读他们的观点后，我得出了一个可能有些“反直觉”的结论： 对于绝大多数商业项目而言，盲目追求去 GC 化和无脑 Rust 重写，是一场灾难。真正顶级的性能优化，往往只需要对那 1% 的“热路径”动刀。</p> 
+
+<p><a href="https://dev.to/mujib77/how-i-built-a-real-time-postgresql-wal-reader-in-go-4568">如何用 Go 构建一个实时的 PostgreSQL WAL 读取器</a><br>大多数开发者每天都在使用 PostgreSQL，却不知道运行 INSERT 时底层发生了什么。我想一探究竟，于是构建了 pgstream——一个直接从 PostgreSQL 内部日志实时读取所有数据库变更的工具。</p> 
+
+<p><a href="https://rednafi.com/go/typesafe-slogging/">类型安全的slog</a><br>通常在旧项目中，我不太关心日志库，直接使用现有的即可。在 slog 出现之前，我曾多年是 zap/zerolog 的忠实用户。但自从 Go 1.21 以来，我放弃了第三方日志库，转而使用 slog。我甚至在 r/golang 上发牢骚，吐槽大家在 slog 触手可及的情况下还要引入第三方库。大家对 slog 的常见抱怨是：- 典型的用法不是类型安全的。- 它比 zap 或 zerolog 分配更多内存。在处理相当大规模的部署（1000&#43; 个 k8s pod，提供 250rps）时，我从未遇到过因为 slog 的额外分配导致内存压力或尾部延迟的情况。因此，现在选择标准库对我来说是不言而喻的。一旦掌握了一些模式，API 也不错。这篇文章剩下的部分是我默认使用的小工作流，它不是 slog API 的导览。标准库文档比我讲得更好，我之前关于 slog 的文章介绍了基础知识。</p> 
+
+<p><a href="https://oblique.security/blog/mcp/">使用Go实现一个MCP Server</a><br>如今，MCP（模型上下文协议）对于产品来说是标配。一切皆是 AI，代理将以某种方式查询你的数据。在构建 Oblique 时，一个核心原则是不拥有内部 API。用户在 UI 中能做的任何事情都应该可以通过 Terraform 或 REST 实现 —— 现在，也包括 MCP。我们从 gRPC 接口生成了大量绑定，目的是随着新功能的添加，它们能够渗透到我们所有的集成点中。等等，MCP 不是死了吗？向代理公开能力的方法有无数种。命令行工具、SQL 接口、转换为 TypeScript。如果存在某种查询或修改数据的方法，就有人将其作为 MCP 的替代方案进行过试验。无论技术如何，模型都需要理解暴露给它的能力以及如何使用它们。对于命令行工具，这意味着保持“--help”输出的准确性。对于 MCP，这就是工具描述和输入模式。从根本上说，如果你向代理提供原语，你就有责任保持这些接口的文档更新，并在出错时进行调试。MCP 不可替代之处在于自主代理的选择越来越多。比如 Claude Code Routines 和 Codex Automations。当然，你可能选择通过自定义工具为内部工作流实现原始工具调用，或者 shell 到笔记本电脑上的二进制文件。但如果你想向客户工作流公开数据，你就必须使用 MCP。它已成为与代理协作的最小公分母。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/the-just-say-no-engineer-was-a-zirp-phenomenon/">“说不”的工程师是 ZIRP 时代的产物</a><br>总是说“不”的工程师在资深和专家级工程师中是一个真实的典型。他们的角色是减缓节奏，阻止增加复杂性的功能开发，并确保尽可能少写代码（因为代码是一种负债）。我们可以将其视为“说不”的工程师，与之相对的是“说 yes”的工程师。“说 yes”的工程师痴迷于快速行动，默认批准代码更改，重视 MTTR（平均修复时间）而非 MTBF（平均故障间隔时间），并且倾向于发布大量代码。“说不”的工程师痴迷于质量，乐于缓慢行动，并默认阻止代码更改。大多数工程师处于这个范围的中间。我所说的“说不”的工程师，是指那些最强烈认同这一原型的群体。在 AI 时代，“说不”的工程师日子不好过。过去，他们只需要对初级工程师手写的 PR 说不，但现在他们必须对源源不断的 AI 生成代码说不，其中一些还是由那些在政治上难以拒绝的经理和副总裁生成的。这是他们职业生涯中第一次承受巨大的压力，不得不降低标准并开始说 yes。然而，这并不是因为 AI，而是因为 ZIRP 的终结。</p>
+
+<p><a href="https://www.billjings.com/posts/title/git-is-not-fine/">Git 并不好</a><br>这是一篇关于 git 的文章，但我写它是为了 jj。关于 jj 的事情是，我爱上了它。我爱它，并且我确信你也会爱上它。我认为如果 jj 对你来说没有任何无法接受的缺陷，你应该认真尝试一下。但如果你认为 git 已经很好了，你可能不会尝试。这很不幸，因为 git 并不好。你看，Git 做了两项工作：它是一个分布式源代码存储库，也是一个分布式工作流工具。它在第一项工作上做得非常出色，以至于我们大多数人都没看到它在第二项工作上的解决方案大多是事后补救的。如果你确实以一种有意义的分布式方式工作（无论你是否意识到，你确实都在这样做——跨越时间，与自己或他人协作），那么你无论如何都能感受到痛苦。因为异步开发是目前的基础门槛。## 关于 Git 的一些开场白如果你不熟悉 git（实际上你很熟悉），git 是一个分布式版本控制系统，是第一个达到临界规模的 DVCS，实际上也是现在每个人都在使用的唯一 VCS。几乎每个知道什么是 rebase 的工程师都是在使用 git 命令、从 git 构造的角度学习的。它仍然是一个小小的工具奇迹，经济且快速。结果，我们大多数人都见过或画过看起来像这样的图（表示处于稳定状态的本地功能分支）：（图略）像这样的图是 git 思考的核心：提交和分支。提交是源代码及其历史，它们是不可变的。分支是带有日志的可变指针。在这些完美的图表背后隐藏着魔鬼，即 git 在我们如何处理代码的模型上的不完美。让我们揭开它们。</p>
+
+<p><a href="https://traefik.io/blog/traefik-proxy-3-7-is-available">traefik proxy 3.7发布</a><br></p>
+
+<p><a href="https://labs.iximiuz.com/tutorials/unikernels-intro-93976514">unikernels入门</a><br>本教程由社区作者创建。社区内容由 iximiuz Labs 团队尽力审核。Unikernels 动手入门虚拟机构建了一种任何 Linux 容器都无法企及的“隔离”级别。虚拟化技术在业界被广泛采用，以应对严格的安全要求，特别是在多个租户共享硬件且“必须”保证这些租户之间存在“不透明边界”的环境中。云超大规模提供商以各种形式的虚拟机访问计算资源，而不是在共享操作系统内核之上进行某种抽象，这并不令人惊讶。但是，获得虚拟机的安全效益通常需要牺牲性能方面。冷启动整个操作系统所花费的时间“显著长于”生成操作系统进程，这阻碍了动态应用程序的扩展。此外，由于每个 VM 的内核在相同的硬件资源（CPU、内存、网络、GPU 等）之上做出独立的调度决策，因此并排运行多个通用操作系统（如 Linux）需要</p>
+
+<p><a href="https://reclaimsre.com/">重申 SRE网站可靠性工程是有意义的</a><br>重申 SRE网站可靠性工程是有意义的。在某种程度上，它已成为监控和事件响应的代名词。</p>
+
+<p><a href="https://remenos.codes/building-on-gits-primitives">构建在 Git 的原语之上</a><br>构建在 Git 的原语之上学习 git 的四种对象类型如何引导我构建了一个没有数据库、没有服务器、没有抽象层的工单跟踪系统。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://rockdarko.dev/posts/grafana-dashboard-for-claude-code-on-prometheus/">用于 Prometheus 上 Claude Code 的 Grafana 仪表板</a><br>用于 Prometheus 上 Claude Code 的 Grafana 仪表板。Anthropic 发布了指标名称。所以，如果你运行 Prometheus 兼容的后端，所缺少的只是一个仪表板。这是一个移植，而不是原创。</p>
+
+<p><a href="https://jacobharr.is/personal/i-dont-vibe-code">我不搞氛围编码</a><br>对为什么氛围编码作为开发者对我个人来说从未产生共鸣的各种原因的“简短”说明。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>高性能、自托管的简报和邮件列表管理器，带有现代仪表板。单二进制应用程序。</p>
+
+<p><a href="https://github.com/j3ssie/osmedeus">j3ssie/osmedeus</a><br>一种现代化的安全编排引擎</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 自托管的文件管理和共享系统，支持多种存储提供商</p>
+
+<p><a href="https://github.com/bruin-data/dac">bruin-data/dac</a><br>DaC 是一个代码即仪表板工具。使用 YAML 和 JSX 构建交互式仪表板。内置语义层。让你的代理构建标准化的、可审查的仪表板。</p>
+
+<p><a href="https://github.com/sleuth-io/sx">sleuth-io/sx</a><br>sx 是一个用于 AI 编码助手的包管理器</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器拦截 DNS 服务器</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric 是一个开源框架，旨在通过 AI 增强人类能力。它提供了一个模块化系统，使用众包的 AI 提示词来解决特定问题，这些提示词可以在任何地方使用。</p>
+
+<p><a href="https://github.com/Agent-Field/agentfield">Agent-Field/agentfield</a><br>像 API 和微服务一样构建、运行和扩展 AI 代理 —— 从第一天起就具备可观测性、可审计性和身份识别能力。</p>
+
+<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP 服务器</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

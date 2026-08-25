@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250210.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250210</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@jamal.kaksouri/beyond-chatgpt-how-deepseek-chatbot-engineers-microsecond-level-golang-optimizations-for-elite-f634be3442f6">超越ChatGPT：看DeepSeek如何进行微秒级Go优化</a><br>DeepSeek 聊天机器人通过 Go 语言优化超越了 ChatGPT/Copilot，提供了微架构级别的见解。对于构建纳秒级响应时间至关重要的精英工程师而言，DeepSeek 是不可或缺的工具。文章通过多个案例研究，详细讲解了 DeepSeek 如何进行代码优化，包括缓存行对齐策略、sync.Pool 自定义、无锁分片、零分配 JSON 解析、eBPF 增强的 Goroutine 调度分析以及 C 兼容的 Go 结构体编写等。</p> 
+
+<p><a href="https://udaykishoreresu.medium.com/mastering-build-automation-with-mage-a-modern-make-alternative-for-go-86f8d0c2dae9">掌握使用Mage进行构建自动化：Go的现代Make替代方案</a><br>Mage 是一个功能强大的基于 Go 的构建工具，它结合了传统 make 的灵活性和 Go 的类型安全性和生态系统。本指南探讨了如何在 Go 项目中利用 Mage，涵盖交叉编译、依赖管理、高级工作流程和部署策略。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/comprehensive-guide-implementing-error-handling-in-golang-microservices-with-best-practices-44m8">Go微服务中错误处理的完整指南及最佳实践</a><br>本文探讨了在Golang微服务中实现有效错误处理的方法。文章涵盖自定义错误类型、断路器、重试机制以及构建弹性分布式系统的最佳实践，并包含代码示例和实现策略。文中强调了与单体应用相比，微服务中的错误处理需要考虑不同的因素，例如网络故障、超时和部分系统故障等。文章还介绍了错误分类、上下文感知、错误日志记录和监控、以及优雅降级等重要概念，并提供了相应的代码示例。</p> 
+
+<p><a href="https://rezmoss.com/blog/building-terminal-system-monitor-golang">使用Go构建实时系统监视器</a><br>本文介绍了如何使用Go语言和gopsutil库构建一个实时系统监视器，该监视器可以在终端显示CPU使用率、内存消耗、网络活动和资源密集型进程等信息。文章详细讲解了每个部分的实现细节，包括内存信息、CPU使用率、网络统计信息和进程信息，并使用了tcell库创建终端用户界面，包含进度条、格式化文本和表格等可视化组件，使系统监控信息更直观易懂。最后，文章还介绍了如何使监视器实时更新，并提供完整的代码链接。</p> 
+
+<p><a href="https://dev.to/truongpx396/db-migration-for-golang-services-why-it-matters-17a">Go 语言服务中的数据库迁移，为什么重要？</a><br>本文探讨了 Go 语言服务中数据库迁移的重要性，并讲解了如何在使用 GORM 和 MySQL 的 Go 项目中实现数据库迁移，包括项目结构、数据库配置、模型定义、迁移文件创建、迁移执行、回滚以及与 Makefile 的集成等。文中还详细介绍了数据库备份的重要性及在云端（AWS EKS）进行数据库备份的方法。</p> 
+
+<p><a href="https://www.techspot.com/news/106687-hidden-backdoor-go-package-remained-undetected-years.html">Go语言包中隐藏的后门多年未被发现</a><br>Go 语言（也称为 Golang），是与 Python、C 和 Visual Basic 等“传统”标准一样流行的编程语言之一，被利用来将合法的开源项目变成恶意软件。问题的核心在于 Google 拥有的 proxy.golang.org 服务，该服务充当镜像，供开发人员快速获取和安装 Go 模块，而无需访问其原始 GitHub 存储库。安全公司 Socket Inc. 最近发现了这种供应链攻击，并在消除恶意软件包方面发挥了关键作用。Google 的代理服务为了性能原因优先考虑缓存，即使原始源代码已被修改，它也会保留缓存的包。网络犯罪分子使用错字劫持技术在 GitHub 上创建了一个新的存储库 (boltdb-go/bolt)，其 URL 与原始的干净 URL (boltdb/bolt) 相似。恶意模块包含一个后门有效负载，该有效负载由攻击者通过外部命令和控制服务器进行管理。在 Google 的 Go 模块镜像获取该模块后，网络犯罪分子通过将软件包恢复到干净版本来修改 GitHub 存储库。这使得后门能够在代理服务器中隐藏多年而未被发现。该后门旨在创建一个隐藏的 IP 和端口地址，用于检查 C2 服务器以获取进一步的指令和命令。该 IP 地址属于托管公司 Hetzner Online，这是一个合法且值得信赖的基础设施提供商，它为恶意软件提供了额外的“隐身”层。Socket 解释说，与其他“不加选择”的恶意操作不同，这个特定的 Go 后门旨在最大限度地提高成功攻击的可能性，并在尽可能长的时间内保持未被发现。该公司还在努力使恶意软件包下线时面临来自 Google 的阻力。安全企业上周首次请求代理管理员删除带有后门的模块，但问题仍未解决。在本周跟进之后，Google 的 Go 模块镜像几天前终于解决了这个问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://cacm.acm.org/blogcacm/21st-century-c">21世纪的C&#43;&#43;</a><br>本文探讨了 C&#43;&#43; 语言在过去 45 年中的发展历程，并着重介绍了现代 C&#43;&#43; 的关键机制，例如资源管理、生命周期管理、错误处理、模块化和泛型编程，以提高代码的可表达性、性能、可靠性和可维护性。文章还介绍了如何通过遵循指南和配置文件来确保代码的现代化，避免使用过时、不安全且难以维护的技术。</p>
+
+<p><a href="https://antirez.com/news/145">我们正在破坏软件</a><br>我们正在通过在添加功能或优化某些维度时不再考虑复杂性来破坏软件；我们正在通过复杂的构建系统破坏软件；我们正在通过荒谬的依赖链破坏软件，使一切都变得臃肿和脆弱；我们告诉新程序员“不要重新发明轮子！”，但重新发明轮子是学习事物如何运作的方式，也是制造新的、不同的轮子的第一步；我们正在通过不再关心向后兼容的API来破坏软件；我们正在通过推动对有效事物的重写来破坏软件；我们正在通过跳到每种新的语言、范例和框架上来破坏软件；我们总是低估了使用现有的复杂库与创建我们自己的东西相比有多难；我们总是认为XYZ的事实上的标准比我们能够为我们的用例量身定制的更好；我们声称代码注释是无用的；我们把它误认为是一种纯粹的工程学科；我们正在创建不再缩小的系统：任何系统中简单的任务都应该易于完成；我们试图尽可能快地生成代码，而不是尽可能好地设计代码；我们正在破坏软件，剩下的东西将不再给我们带来黑客的乐趣。</p>
+
+<p><a href="https://medium.com/@koshea-il/architecture-diagrams-as-code-mermaid-vs-architecture-as-code-d7f200842712">架构图即代码：Mermaid 与架构即代码的比较</a><br>作者多年来一直使用 Miro 来直观地记录软件并与团队协作。这是一个很棒的工具，就像现代白板一样。但是，作者很少在最初的头脑风暴会议后返回白板。这可能是该产品的优点也是缺点。它非常适合协作和分享想法。为什么它不是作者用来回顾文档的地方呢？
+
+作者认为问题在于变更管理。文档如果过期就毫无用处，谁会回去更新 Miro 白板上的内容来反映软件的演变？即使他们做了，你又如何审查发生了哪些更改呢？
+
+作者的研究目标是将这些图以代码的形式记录下来。在研究可能的解决方案时，作者考虑了三个标准：可读性和速度、专业的演示以及集成性。
+
+作者测试了两个符合这三个标准的选项：“架构即代码”Python 包和 Javascript 选项“Mermaid”。文章对这两个工具进行了比较，并分析了各自的优缺点，例如代码的可读性、图表呈现的专业性、以及与开发环境的集成度。最终，作者表示目前尚未确定会使用哪个工具，并对这两个项目的未来发展表示关注。</p>
+
+<p><a href="https://dev.to/ashenblade/postgresql-planner-development-and-debugging-47mc">PostgreSQL规划器开发和调试</a><br>本文翻译自我在2024年PGBootCamp会议上提交的报告“调试PostgreSQL规划器”。你可以在这里找到包含源代码和其他资料的代码库。本文将探讨PostgreSQL规划器的代码级工作原理（函数和数据结构），以及如何对其规划器进行修改。我们将介绍规划器使用的主要函数、主管道、节点类型系统及其子节点、查询在代码中的表示方式以及表示其各个部分的不同数据结构。在一些理论知识之后，我们将实现一个小功能并将其添加到规划器中。  文中包含了设置开发环境的步骤、规划器的高级架构、数据结构详解（节点、树、List、Expr等），以及一个具体的约束排除（Constraint Exclusion）优化的实现示例，并通过调试器一步步演示了代码的执行过程。最后，文章还提供了一些规划器开发的技巧，例如禁用密码提示、显示后端PID以及一些PostgreSQL调试工具的使用方法。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.samaltman.com/three-observations">三个观察</a><br>山姆奥特曼的最新文章以及观点</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 Top-Rated Web-Based Linux Server Management Tool. 1Panel features an intuitive web interface that seamlessly integrates server management and monitoring, container management, database administration, website management, system backup and restoration, and more.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/dlvhdr/gh-dash">dlvhdr/gh-dash</a><br>A beautiful CLI dashboard for GitHub 🚀</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight personal bookkeeping app hosted by yourself.</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go, the easiest way to write LLM-based programs in Go</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps</p>
+
+<p><a href="https://github.com/v2rayA/v2rayA">v2rayA/v2rayA</a><br>A web GUI client of Project V which supports VMess, VLESS, SS, SSR, Trojan, Tuic and Juicity protocols. 🚀</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/fastenhealth/fasten-onprem">fastenhealth/fasten-onprem</a><br>Fasten is an open-source, self-hosted, personal/family electronic medical record aggregator, designed to integrate with 100,000&#39;s of insurances/hospitals/clinics</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>An open-source UI-first Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, RADIUS, Google Workspace, Active Directory and Kerberos</p>
+
+<p><a href="https://github.com/EndlessCheng/codeforces-go">EndlessCheng/codeforces-go</a><br>算法竞赛模板库 by 灵茶山艾府 💭💡🎈</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

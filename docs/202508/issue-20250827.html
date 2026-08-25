@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250827.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250827</span>
+</p>
+<p>每日一谚：Do not declare an interface just for testing. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/27/go-interface-embrace-data">Go语言的“灵魂拷问”：接口只关乎行为，还是也应拥抱数据？</a><br>在 Go 语言的世界里，接口（interface）一直被视为其设计哲学的基石之一——它只关心一个类型能做什么（行为），而不关心它是什么（结构）。这种基于方法集的鸭子类型，赋予了 Go 独一无二的灵活性和解耦能力。然而，随着 Go 1.18 泛型的到来，一个深刻的问题被摆上了台面：当我们需要编写对数据的结构而非行为具有通用性的代码时，现有的约束机制是否足够？</p> 
+
+<p><a href="https://eli.thegreenplace.net/2025/implementing-forth-in-go-and-c/">使用 Go 和 C 实现 Forth</a><br>作者分享了使用 Go 和 C 实现 Forth 的经验。 Forth 是一种基于栈的编程语言，作者探讨了 Forth 的用户级和黑客级实现，并详细介绍了 goforth 和 ctil 两个项目。文章也讨论了 Forth 的特点、优势和局限性，以及 Forth 在历史背景下的适用性。最后，作者提供了学习 Forth 和相关实现的资源链接。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-08-26-debugging-dolt-login">调试 `dolt login`</a><br>`dolt login` 允许你针对 DoltHub 或 DoltLab 验证一个 `dolt` 客户端。它通常是有效的，但如果失败，本文将帮助你进行调试。</p> 
+
+<p><a href="https://www.ardanlabs.com/blog/2019/07/garbage-collection-in-go-part3-gcpacing.html">Go 语言中的垃圾回收：第三部分 - GC 步调</a><br>虽然 Context 包最初于 2014 年推出，但它仍然是 Go 编程的一个关键组成部分，可以有效地管理请求范围的数据、截止日期和取消信号。随着 Go 生态系统的不断发展，了解 Context 包的语义对于开发可靠且可维护的软件至关重要。本文深入探讨了 Context 包的语义，重点介绍了最佳实践和常见陷阱，以帮助开发人员有效地利用这个强大的工具。
+
+序幕
+
+这是三部分系列文章的第三篇，将帮助您了解 Go 中垃圾收集器的机制和语义。这篇文章重点介绍了 GC 如何调整自身步调。
+
+三部分系列的索引：
+
+垃圾收集在 Go 中：第一部分 - 语义
+垃圾收集在 Go 中：第二部分 - GC 跟踪
+垃圾收集在 Go 中：第三部分 - GC 步调
+
+介绍
+
+在第二篇文章中，我向您展示了垃圾收集器的行为以及如何使用工具来查看收集器对您正在运行的应用程序造成了哪些延迟。我向您演示了如何运行一个真正的 Web 应用程序，并向您展示了如何生成 GC 跟踪和应用程序配置文件。然后我向您展示了如何解释这些工具的输出，以便您找到改进应用程序性能的方法。
+
+这篇文章的最终结论与第一篇文章相同：如果您减少堆上的压力，您将减少延迟成本，从而提高应用程序的性能。与垃圾收集器保持一致的最佳策略是减少每项工作执行的分配数量或数量。在本文中，我将展示步调算法如何随时间推移识别给定工作负载的最佳步调。</p> 
+
+<p><a href="https://dev.to/leapcell/gos-unsafe-unlocking-performance-hacks-with-a-risk-4dgl">Go’s unsafe: Unlocking Performance Hacks with a Risk</a><br>Leapcell: The Best of Serverless Web Hosting           Go&#39;s unsafe Package: The &#34;Double-Edged...&#34;</p> 
+
+<p><a href="https://jesseduffield.com/Gos-Shortcomings-1">Go&#39;ing Insane Part One: 无尽的错误处理</a><br>我一直在使用 Go 几年了，主要是在我的开源项目 Lazygit 中。在我的日常工作中，我使用 Ruby 和 Typescript，并且也花了一些时间使用 Rust。每种语言都有设计上的怪癖，可能会磨损开发人员的齿轮，尽管我自己的宝贵齿轮已经被我使用的每种语言磨损过，但 Go 是唯一让我感到愤慨的语言。
+
+本系列是我试图阐明确切原因的尝试。我的目标不是说服你 Go 是一门客观上糟糕的语言（我没有资格做出这个判断），而是要说服你，对于某些人来说，使用 Go 工作感觉就像是不断地与愚蠢的约束作斗争。
+
+Go 的一些缺点将在未来得到解决，但我将专注于今天使用该语言的感觉。
+
+这篇文章是关于 Go 的错误处理。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/dynamic-client-registration-dcr-for-mcp-ai">Easy, Secure Dynamic Client Registration for MCP AI Agents</a><br>Digging into MCP authorization, DCR, and making it all easier with Tailscale.</p>
+
+<p><a href="https://www.p99conf.io/2025/08/27/rust-rewrites-optimizations-at-p99-conf-25/">Rust Rewrites Optimizations at P99 CONF 25</a><br>P99 CONF 2025 will be rather Rusty, yet again. Here’s a sneak peek into some of the Rust-focused talks we’ll be featuring.</p>
+
+<p><a href="https://www.docker.com/blog/docker-desktop-updates-every-two-weeks/">Docker Desktop Accelerates Innovation with Faster Release Cadence</a><br>Docker Desktop will move to releases every two weeks, with the goal of reaching weekly releases by the end of 2025. This change aims to provide faster access to new features, bug fixes, and security updates.</p>
+
+<p><a href="https://netflixtechblog.medium.com/unlocking-dynamic-pages-the-evolution-of-netflixs-client-server-graphql-apis-8b4631a59b39">解锁动态页面：Netflix 的客户端-服务器 GraphQL API 的演变</a><br>当用户打开 Netflix 应用程序时，后台会发生一系列活动。 该应用程序从服务器请求主页，服务器使用业务规则、计算和机器学习模型的组合来组装个性化页面。 从那时起，在不断变化的业务需求的推动下，我们朝着这个目标取得了重大进展。 在这篇博文中，我们将分享我们在 GraphQL API 和触发器方面的工作。 从设备的角度来看，这两者协同工作以实现动态更新——用于获取页面数据和后续更新的 API，以及用于启动这些页面更新的触发器。</p>
+
+<p><a href="https://blog.codingnow.com/2025/08/lua_class.html">在 Lua 中定义类型的简单方法</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/08/26/use-envoy-gateway-as-the-unified-ingress-gateway-and-waypoint-proxy-for-ambient-mesh/">使用 Envoy Gateway 作为统一的入口网关和 Ambient Mesh 的航点代理</a><br>在本文中，我们将探讨如何在使用 Ambient 模式时，将 Envoy Gateway（一个 Envoy 项目开源解决方案）与 Istio 结合使用。这使您能够轻松地利用 Envoy 的 L7 功能，通过易于使用的 CRD 来处理网格中的入口和东西向流量。</p>
+
+<p><a href="https://engineering.fb.com/2025/08/26/open-source/enabling-kotlin-incremental-compilation-on-buck2/">Enabling Kotlin incremental compilation on Buck2</a><br>Kotlin 增量编译器是开发人员追求更快编译的真正瑰宝。现在，我们很高兴将其优势带到 Buck2 – Meta 的构建系统 – 为 Kotlin 开发人员释放更多速度和效率。</p>
+
+<p><a href="https://newsletter.systemdesign.one/p/how-to-do-code-review">如何进行代码审查</a><br></p>
+
+<p><a href="https://blog.livekit.io/deploy-and-scale-agents-on-livekit-cloud">在 LiveKit Cloud 上部署和扩展代理</a><br>在过去的两年中，随着越来越多的团队将 LiveKit 语音代理推向生产环境，出现了相同的问题：
+
+* 我应该为我的代理池分配多少 CPU 和内存？
+* 如何处理突如其来的流量高峰？
+* 如何跨会话衡量和优化性能？
+
+我们的代理框架让构建语音或视频代理变得容易，但在大规模运行代理方面仍然存在挑战。 今天，我们让它变得简单。</p>
+
+<p><a href="https://webrtc.ventures/2025/08/the-webrtc-monitoring-gap-when-dashboards-look-perfect">WebRTC 监测差距：为什么当你的仪表板看起来完美时，用户会抱怨</a><br>了解为什么传统的 APM 工具会遗漏关键的 WebRTC 通话质量问题，以及专门的监控如何揭示隐藏的问题，例如数据包丢失、视频冻结和音频中断，这些问题会使用户感到沮丧，而您的服务器看起来很健康。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/26/piloting-claude-for-chrome/#atom-everything">Chrome 版 Claude 试用</a><br>两天前我说：我强烈预感代理浏览器扩展的整个概念存在致命缺陷，无法安全构建。今天 Anthropic 宣布了他们自己的类似方案，作为一个仅限邀请的预览版 Chrome 扩展程序实现。</p>
+
+<p><a href="https://chaoticgood.management/why-ai-probably-wont-help-your-team-ship-more-product">为什么人工智能可能无法帮助你的团队交付更多产品</a><br>这篇文章不是一篇关于人工智能的帖子，也不是一篇关于工具好坏的推测文章。 而是关于理解你的流程。 领导者们经常认为：如果我们可以构建得更快，我们就可以交付更多的大量积压产品。 但这很可能就像早餐机器人一样。 你正在让多个步骤中的一个步骤变得更快，但你可能没有解决系统的真正约束。 工程领导者应该小心地教育他们的利益相关者，并且 参与领导产品开发工作的所有人员都应该定期对他们的流程进行衡量和审查，以找到真正减慢其产出的隐藏瓶颈。 优化约束条件可以帮助您的团队交付更多产品。 其他任何事情都只是更快的早餐。</p>
+
+<p><a href="https://martinfowler.com/articles/convo-llm-abstractions.html">对话：LLM与构建抽象</a><br>几周前，我们分享了一些关于程序员如何使用LLM的邮件。我们发现对话很有启发性，并认为与更广泛的受众分享是值得的。我们从邮件切换到在一个文件中建立这个对话，并做了一些编辑以改善流程（并使我们听起来更连贯）。</p>
+
+<p><a href="https://www.indiehackers.com/post/lifestyle/the-leverage-paradox-ksRiX6y6W7NzfBE57dzt">The leverage paradox</a><br>新技术降低了执行任务所需的努力，同时也增加了保持竞争力的难度。对于人工智能尤其如此。</p>
+
+<p><a href="https://www.anthropic.com/news/anthropic-education-report-how-educators-use-claude">Anthropic 教育报告：教育工作者如何使用 Claude</a><br>对 74,000 次教育工作者对话的研究表明，教师如何使用 Claude 进行教学、研究和构建交互式学习工具。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/beam-cloud/beta9">beam-cloud/beta9</a><br>Secure, high-performance AI infrastructure in Python.</p>
+
+<p><a href="https://github.com/nucleuscloud/neosync">nucleuscloud/neosync</a><br>Open Source Data Security Platform for Developers to Monitor and Detect PII, Anonymize Production Data and Sync it across environments.</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/google/osv-scalibr">google/osv-scalibr</a><br>OSV-SCALIBR: A library for Software Composition Analysis</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>Get JSON values quickly - JSON parser for Go</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/snail007/goproxy">snail007/goproxy</a><br>🔥 Proxy is a high performance HTTP(S) proxies, SOCKS5 proxies,WEBSOCKET, TCP, UDP proxy server implemented by golang. Now, it supports chain-style proxies,nat forwarding in different lan,TCP/UDP port forwarding, SSH forwarding.Proxy是golang实现的高性能http,https,websocket,tcp,socks5代理服务器,支持内网穿透,链式代理,通讯加密,智能HTTP,SOCKS5代理,黑白名单,限速,限流量,限连接数,跨平台,KCP支持,认证API。</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

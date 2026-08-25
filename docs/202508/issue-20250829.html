@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250829.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250829</span>
+</p>
+<p>每日一谚：Define interfaces in the consumer package, not the producer </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/29/good-api-design">无聊的API是最好的API：从系统设计到接口契约的九条法则</a><br>对于身处云原生和微服务浪潮之巅的Go开发者而言，API是我们日常呼吸的空气。本文将再次进入Goedecke的思想空间，学习他的API设计精髓，并将 其提炼为九条具体的、可操作的法则。我们将探讨，如何通过拥抱“无聊”，在开发者熟悉性与系统灵活性之间找到完美平衡，构建出真正经得起时间 考验的Go API。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/3sAcBZanKZkXbHZLjQo2EA">【AI应用开发第一课】01 LLM 即操作系统：理解 AI 应用开发的新范式</a><br>本微专栏的核心目标，是帮助你——一位经验丰富的 Go 开发者——掌握利用大语言模型（LLM）强大能力进行应用开发的核心技能。为此，我们需要建立一个坚实的认知基础。在本讲，我们将一起告别传统：深入理解什么是“AI 原生应用”，它与我们熟悉的经典应用有何本质区别。 探寻核心：认识驱动新一代应用的“智能内核”——大语言模型 (LLM) 的发展脉络与核心能力。建立范式：引入本系列课程的核心隐喻——“LLM OS 范式”。我们将学习像理解传统操作系统（Host OS）一样，来理解 LLM 及其应用开发生态，为你后续的学习构建一个清晰的思维框架</p> 
+
+<p><a href="https://dolthub.com/blog/2025-08-28-how-i-use-multiple-agents-in-parallel">我如何并行使用多个代理</a><br>作为一名使用 AI 代理的软件工程师，我开发了一个同时使用多个代理的工作流程，以提高生产力！</p> 
+
+<p><a href="https://dev.to/lucasdecamargo/go-beyond-viper-and-cobra-declarative-field-driven-configuration-for-go-apps-4k4a">Go Beyond Viper and Cobra: Declarative Field-Driven Configuration for Go Apps</a><br>生产 Go 应用程序不断需要引入新的配置参数。基于 Open-Closed 原则，一旦我们定义了管理配置字段的策略，引入新值就变成了小小的扩展。在本文中，我建议定义一个 Field 结构，用于声明易于与 CLI 补全和文档生成集成的配置设置。</p> 
+
+<p><a href="https://dev.to/leapcell/applying-kiss-dry-and-lod-principles-in-go-1ikf">在 Go 中应用 KISS、DRY 和 LOD 原则</a><br>除了众所周知的 SOLID 原则之外，实际上还有其他有用的且被广泛认可的设计原则。本文介绍了这些设计原则，主要包括以下三个： KISS 原则； DRY 原则； LOD 原则。</p> 
+
+<p><a href="https://blog.fillmore-labs.com/posts/errors-1">理解 Go 错误类型：指针 vs. 值</a><br>本文探讨了 Go 中指针和值类型错误处理之间的微妙差异，以及如何通过文档和使用 linters 来避免可能导致程序行为意外更改的常见陷阱。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.joshsoftware.com/2025/08/29/code-less-query-more-graphql-power-in-rails-apis/">代码更少，查询更多：Rails APIs 中的 GraphQL 力量</a><br>更简单的请求、更智能的响应和更快乐的开发人员！ 曾经试过构建一些看似简单的事情——比如展示用户资料及其帖子和喜欢——然后突然你开始处理 5 个 API 调用、3 个加载微调器，以及我在你脑海里呼吸并问道：“为什么还在加载？” 是的……一样，如果你曾经有过这种痛苦，你就会喜欢我们即将探索的内容。 让我们聊聊 GraphQL &#43; Rails，以及它如何通过一个智能端点将你的 API 混乱变成干净、专注的查询。</p>
+
+<p><a href="https://www.docker.com/blog/a-shift-left-approach-with-docker/">Secure by Design: A Shift-Left Approach with Docker | Docker</a><br>Examine the security aspect of the shift-left approach and how Docker can move security earlier in the development lifecycle.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/08/28/building-a-scalable-flexible-cloud-native-genai-platform-with-open-source-solutions/">构建可扩展、灵活的、云原生 GenAI 平台与开源解决方案</a><br>AI 工作负载很复杂，而未经管理的复杂性会扼杀速度。 您的架构是掌握它的关键。 随着生成式 AI (GenAI) 成为现代软件产品的基础……</p>
+
+<p><a href="https://kubernetes.io/blog/2025/08/28/kubernetes-v1-34-kubectl-kuberc-beta/">Kubernetes v1.34：用户偏好设置 (kuberc) 可以在 kubectl 1.34 中进行测试</a><br>您是否曾经希望在 kubectl 中默认启用交互式删除功能？或者，您是否希望定义自定义别名，但不一定需要手动生成数百个别名？SIG-CLI 一直致力于在 kubectl 中添加用户偏好设置，我们很高兴地宣布，作为 Kubernetes v1.34 版本的一部分，此功能已进入测试阶段。该功能的完整描述可在我们的官方文档中找到。</p>
+
+<p><a href="https://levelup.gitconnected.com/how-your-program-actually-runs-from-c-to-cpu-86e7d7ba299a">你的程序如何实际运行：从 C 到 CPU</a><br>你输入类似英语的单词，点击编译，然后数十亿个微型开关开始完美地协同工作。这听起来像是魔术——但实际上，这是一个令人难以置信的翻译链...</p>
+
+<p><a href="https://wickstrom.tech/2025-08-28-findings-bugs-coding-agent-lightweight-dst.html">使用轻量级 DST 在编码代理中查找错误</a><br>Amp 是一个编码代理，作者在过去六个月一直在研究它。最近几周，作者一直在构建一个受确定性模拟测试（DST）启发的测试装置，以测试该系统的最关键部分。DST 与模糊测试和基于属性的测试密切相关。目标是将 Amp 最核心的部件之一 ThreadWorker 置于严格的审查之下。</p>
+
+<p><a href="https://opensourcesecurity.io/2025/08-oss-one-person">开源就是一个人</a><br>The Register 最近发表了一篇题为“代码中的普京：国防部据报道依赖俄罗斯开发者编写的实用程序”的文章。他们应该为这篇文章感到羞耻。这个可怜的开源开发者现在正在被打压以获得一些互联网积分。这非常令人沮丧。
+但无论如何，让我们看看一些收据。
+如果你不是真正的聪明人，那么指出一个开源项目是由你所不喜欢的一个国家的一个人编写的似乎是一件坏事。可能是这样。但它也可能是运行整个 F*CKING 地球的软件是由一个人编写的。在一个国家。但我们不知道是哪个国家。请记住，这并非同一个人，而是一个人。</p>
+
+<p><a href="https://martinfowler.com/articles/black-box-to-blueprint.html">从黑盒到蓝图</a><br>企业常遇到的问题：关键的遗留系统成为“黑盒”——对运营至关重要，但晦涩难懂且触碰风险。我们与一位客户合作，使用人工智能辅助逆向工程，从UI元素、二进制文件和数据谱系中重建功能规范，以克服分析瘫痪。我们开发了一种有条不紊的“多视角”方法——从可见工件开始，逐步丰富信息，三角定位逻辑，并始终保留谱系。人工验证仍然是确保提取的功能准确性和信心的核心。这次合作表明，将一个系统从黑盒转变为蓝图，有助于做出现代化决策并加速迁移工作。</p>
+
+<p><a href="https://newsletter.posthog.com/p/tech-lead-failure-modes">工程团队负责人失败模式</a><br>作为团队负责人，很容易养成拖慢团队、扼杀积极性并阻碍进步的习惯。以下是我们在PostHog看到的团队负责人的一些失败模式，以及如何避免这些问题。</p>
+
+<p><a href="https://hybridhacker.email/p/career-frameworks">职业框架</a><br>它们有什么用，如何使用它们，以及各种风格和例子</p>
+
+<p><a href="https://adamsmith.cc/the-four-styles-of-confidence-on-a-team">团队中四种自信的风格</a><br>本文探讨了团队中四种自信风格：过度自信、缺乏自信、中等自信和比例自信。作者认为，比例自信是最佳风格，因为它能准确估计并传达自信程度。文章提供了个人和团队如何培养比例自信的建议，包括学习评估正确可能性、修复过度自信和鼓励团队文化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/29/lossy-encyclopedia/#atom-everything">有损百科全书</a><br>由于我喜欢收集 LLM 的可疑类比，这里有一个我刚刚想到的新类比：LLM 是一个有损百科全书。它们拥有大量压缩成的事实，但这种压缩是有损的（另见 Ted Chiang）。关键是要培养一种直觉，即哪些问题可以有效地回答，而哪些问题的细节会影响到有损性。</p>
+
+<p><a href="https://martinfowler.com/articles/202508-ai-thoughts.html">关于 LLM 和软件开发的一些想法</a><br>文章讨论了对 LLM 和人工智能在软件开发中的应用的一些看法。作者认为，关于人工智能对软件开发影响的早期调查存在问题，因为它们没有考虑到人们使用 LLM 的方式。作者还探讨了编程的未来、人工智能是否是一个泡沫以及 LLM 的局限性。文章还讨论了 LLM 的一个重要特性——幻觉，以及 LLM 带来的安全风险。</p>
+
+<p><a href="https://dsyme.net/2025/08/27/on-continuous-test-improvement">On Continuous AI for Test Improvement</a><br>Ever since we started working on “task-oriented programming” (aka vibe coding) in 2023, our group at GitHub Next have been throwing around ideas related to “continuous” tasks in software repositories: Continuous Code Cleanup, or Continuous Documentation and so on. This finally bubbled up as the Continuous AI project, locating it within the tradition of Continuous Integration/Continuous Deployment (CI/CD).</p>
+
+<p><a href="https://piccalil.li/blog/are-peoples-bosses-really-making-them-use-ai">人们的老板真的让他们使用人工智能工具吗？ - Piccalilli</a><br>安迪·贝尔听说一些公司正在强迫员工使用人工智能工具，所以他与开发人员交谈以确定是否属实，并在这个过程中了解了一些可怕的事情。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Model swapping for llama.cpp (or any local OpenAI API compatible server)</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>Prometheus instrumentation library for Go applications</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>An IPFS implementation in Go</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go is a Go package that makes it simple to create and clean up container-based dependencies for automated integration/smoke tests. The clean, easy-to-use API enables developers to programmatically define containers that should be run as part of a test and clean up those resources when the test is done.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

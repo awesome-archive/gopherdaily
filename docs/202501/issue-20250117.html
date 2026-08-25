@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250117.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250117</span>
+</p>
+<p>每日一谚：There should be one way to do it, but seriously this time </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.assembled.com/blog/scaling-llms-with-golang-how-we-serve-millions-of-llm-requests">使用Go语言服务数百万个llm请求</a><br>虽然大型语言模型生态系统主要以 Python 为主，但我们发现 Go 非常适合生产环境部署。我们的基于 Go 的基础设施每月处理数百万个大型语言模型请求，并且只需要最少的性能调整。除了 Go 的诸多优点（参见 Rob Pike 出色的关于 Go 优势的概述）之外，还有三个功能对大型语言模型工作负载特别有价值：用于处理模型输出的静态类型检查、用于管理并发 API 调用的 Goroutine 以及用于构建可组合响应管道的接口。以下是我们在生产堆栈中如何实现这些功能的方法。</p> 
+
+<p><a href="https://dev.to/siddheshk02/how-to-paginate-api-responses-in-go-4cga">如何在 Go 语言中对 API 响应进行分页</a><br>本文介绍了 Go 语言中 API 响应分页的原理和方法。当应用程序数据库包含大量记录时，分页可以提高 API 速度，减少带宽消耗，并改善用户体验。文章通过一个 PostgreSQL 数据库和 Go API 的示例，演示了如何使用 LIMIT 和 OFFSET 子句实现分页，并解释了分页参数（页码和每页记录数）以及偏移量计算的逻辑。最后，文章还讨论了一些常见问题和优化建议。</p> 
+
+<p><a href="https://blog.devgenius.io/video-streaming-with-go-f2a27b37c35f">使用 Go 进行视频流式传输</a><br>本文简要介绍了如何使用 Go 实现视频流。作者首先回顾了视频内容消费方式的演变，然后解释了现代浏览器视频流的工作原理，包括 HTTP Range 请求和 Content-Range 响应头。最后，作者给出了一个使用 Go 构建 HTTP 视频流服务器的示例代码，包括视频存储接口、HTTP 处理程序以及一个简单的测试程序。虽然该示例代码简化了某些方面，例如只支持单范围请求以及将视频数据加载到内存中，但它仍然清晰地展示了使用 Go 进行视频流式传输的基本概念。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/KsHnKhnaeLWvwUNmOg69CQ">字节跳动观测数据埋点标准化实践</a><br>本文聚焦字节跳动观测数据埋点标准化，剖析挑战与思路，助力提升数据质量、排障效率。文章从埋点标准化的重要性出发，分析了字节跳动在观测数据埋点标准化过程中遇到的挑战，例如历史埋点质量偏低、数据不一致等。并详细介绍了字节跳动采用的分层、向后兼容的策略，以及语义化指标替换、Metrics前缀分流等配套工具，最终实现了观测数据质量的显著提升，并总结了其赋能效果。</p>
+
+<p><a href="https://tailscale.com/blog/video-beszel">轻量级服务器监控：使用 Beszel 监控你的 Tailscale 网络</a><br>本视频中，Alex 演示了如何在 Tailscale 网络上设置 Beszel，这是一个简单轻量级的监控解决方案。Beszel 可用于监控设备的温度、磁盘使用率等基本指标。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/01/17/what-is-gitlab-runner/">什么是 GitLab Runner？</a><br>本文由 CNCF 大使 Natalia Granato 撰写，介绍了 GitLab Runner，这是一个开源应用程序，用于运行 GitLab CI/CD 管道中定义的作业。它可以安装在不同的平台上，包括虚拟机、裸机服务器和 Kubernetes。</p>
+
+<p><a href="https://engineering.fb.com/2025/01/16/developer-tools/measuring-productivity-impact-with-diff-authoring-time/">使用差异编写时间衡量生产力影响</a><br>类型实际上是否会提高开发人员的生产力？或者只是在键盘上打字更多？为了回答这个问题，我们重新审视了差异编写时间 (DAT)——Meta 如何衡量提交代码库更改所需的时间。DAT 只是我们衡量开发人员生产力的一种方式，Meta Tech Podcast 的最新剧集探讨了 DAT 的两个具体用例，包括 Hack 中的类型安全模拟框架。收听以了解我们如何利用指标来运行我们 Meta 内部代码库的生产力实验。您可以收听或下载以下播客剧集，也可以在您收听播客的任何地方找到它，包括 Spotify、Apple Podcasts、Pocket Casts 和 Overcast。</p>
+
+<p><a href="https://www.jmeiners.com/lc3-vm">编写你自己的虚拟机</a><br>本教程将教你如何编写你自己的虚拟机 (VM)，它可以运行汇编语言程序。即使你只了解基本的C或C&#43;&#43;编程和二进制算术，你也能完成这个项目。虚拟机模拟CPU和其他硬件组件，允许它执行算术运算、读写内存以及与I/O设备交互，就像真实的计算机一样。本教程以LC-3架构为例，它拥有简化的指令集，适合学习计算机架构和汇编语言。教程涵盖虚拟机的内存、寄存器、指令集、条件标志、汇编示例、程序执行、指令实现、中断例程、程序加载、内存映射寄存器、平台细节等方面。最终代码约250行C代码（unix版本和windows版本）。</p>
+
+<p><a href="https://lwn.net/Articles/1003780">2025 年值得期待的一些事情</a><br>本文是 LWN.net 网站对 2025 年的预测，主要涵盖以下几个方面：可扩展调度类 (sched-ext) 将带来变革；Rust 代码将越来越多地出现在内核中；新的类似 XZ 的后门攻击尝试将会出现；单维护者项目将被认为风险更高；大型项目可能会发现自己合并了大量 AI 生成的代码；将有更多努力创造真正免费的生成式 AI 系统；将有更多针对维护者的基金会；支持自由软件工作的基金会将继续面临挑战；越来越多的基于云的产品将因制造商破产或停止维护而变成废物；将会有更多完全开放的硬件；移动设备发行版将再次受到关注；全球冲突将对我们的社区产生影响。LWN 将继续报道这些事件，并希望传播一些光和理解。</p>
+
+<p><a href="https://github.blog/changelog/2025-01-16-linux-arm64-hosted-runners-now-available-for-free-in-public-repositories-public-preview">Linux arm64 托管运行器现已在公共仓库中免费提供（公开预览）</a><br>GitHub 公开预览版现已推出 Linux arm64 托管运行器，可在公共仓库中免费使用。继 6 月份发布 arm64 大型托管运行器之后，此版本现已扩展到开源社区。这些基于 Cobalt 100 处理器的 4 个 vCPU 运行器与 Microsoft Azure 的上一代基于 Arm 的 VM 相比，性能提升高达 40%，为您的工作负载提供了高效的计算层。Arm 原生开发者现在可以在 arm64 架构中完全构建、测试和部署 Actions 运行，无需虚拟化。要使用 arm64 托管运行器，请在您的公共仓库工作流运行中添加以下标签：`ubuntu-24.04-arm` 和 `ubuntu-22.04-arm`。请注意，这些标签在私有仓库中无效。所有公共仓库中的运行都将遵守我们的标准运行器使用限制，并发最大值取决于您的计划类型。在 arm64 运行器处于公开预览期间，您可能在高峰使用时段遇到更长的排队时间。</p>
+
+<p><a href="https://ohshitgit.com">我的天哪，Git？！</a><br>Git很难：犯错很容易，而弄清楚如何纠正错误却非常困难。Git文档存在一个先有鸡还是先有蛋的问题，你无法搜索如何摆脱困境，除非你已经知道解决问题所需内容的名称。因此，这里有一些我遇到的糟糕情况，以及我最终如何用简单的英语解决这些问题。文章列举了几个常见的Git问题，并提供了相应的解决方法，包括使用`reflog`恢复之前的状态、修改最近提交的内容、处理意外提交到错误分支的情况、撤销提交以及撤销对文件的修改等。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.yfzhou.fyi/posts/tdd-llm">结合大型语言模型进行测试驱动开发，兼顾乐趣与收益</a><br>本文是博主新博客的第一篇文章，讨论了软件开发、站点可靠性工程（SRE）和其他有趣的事情。文章探讨了将人工智能自动补全代码的潜在危害，以及如何利用大型语言模型（LLM）和测试驱动开发（TDD）来构建更可靠的软件。作者分享了利用LLM进行TDD的经验，包括自动化流程、处理模型错误和管理认知负荷等方面，并建议在项目结构设计中考虑LLM的工作流程，以最大限度地提高代码的可维护性。</p>
+
+<p><a href="https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html">构建生成式 AI 应用程序时的常见陷阱</a><br>由于我们仍处于使用基础模型构建应用程序的早期阶段，犯错是很正常的。这是一篇简短的笔记，其中列举了一些我从公开案例研究和个人经验中看到的常见陷阱的示例。这些陷阱很常见，如果您从事过任何 AI 产品的工作，您可能以前就见过它们。本文主要介绍了以下几个方面：1. 在不需要生成式 AI 时使用生成式 AI；2. 将糟糕的产品与糟糕的 AI 混淆；3. 起步过于复杂；4. 过度关注早期成功；5. 放弃人工评估；6. 众包用例。</p>
+
+<p><a href="https://www.theregister.com/2025/01/16/google_ai_code_migration">AI服务的代码迁移</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>An extremely fast bundler for the web</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/SpecterOps/BloodHound">SpecterOps/BloodHound</a><br>Six Degrees of Domain Admin</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/prometheus-community/postgres_exporter">prometheus-community/postgres_exporter</a><br>A PostgreSQL metric exporter for Prometheus</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>Backend master class: build a simple bank service in Go</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/rhysd/actionlint">rhysd/actionlint</a><br>Static checker for GitHub Actions workflow files</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

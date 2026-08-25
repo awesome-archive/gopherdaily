@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250317.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250317</span>
+</p>
+<p>每日一谚：Using Unexported Empty Struct as Context Key </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.cubed.run/what-go-got-right-that-rust-got-wrong-5e0d1c8e951c">Go做对的地方以及Rust做错的地方</a><br>微软选择 Go 而不是 Rust 来为 TypeScript 编译器进行重写，旨在提升 10 倍的性能。文章探讨了 Go 在简洁性、并发模型、编译速度和标准库稳定性等方面优于 Rust 的原因，并分析了 Go 的局限性。</p> 
+
+<p><a href="https://herecomesthemoon.net/2025/03/multiple-return-values-in-go">Go语言的多返回值是其最大的错误吗？</a><br>一篇关于Go语言错误处理的又一篇文章。</p> 
+
+<p><a href="https://blog.cubed.run/most-people-dont-understand-why-go-uses-pointers-instead-of-references-bad755dea39f">大多数人都不理解为什么 Go 使用指针而不是引用</a><br>本文解释了 Go 语言为什么选择使用指针而不是引用。指针更清晰、速度更快，并且使用更简单。文章通过对比 Java、Python 等语言的引用机制，并结合 Go 语言中的实际代码示例，详细阐述了指针的优势和使用方法，包括在结构体、函数、goroutine 和切片中的应用。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/choosing-expanding-evolving-communities">Fallthrough | 选择、扩展和发展社区</a><br>社区在我们技术和非技术生活中都扮演着至关重要的角色，但我们对是什么让这些空间变得有价值的思考有多少呢？在本集中，Kris 与小组成员和 Kelsey Hightower 一起讨论了社区及其与数字和非数字世界的交集。付费支持者可以收听与 Kelsey 扩展对话的完整内容，我们讨论了他对人工智能的看法以及他在退休后的生活！你可以在 https://fallthrough.fm/subscribe 注册成为付费支持者。感谢收听，祝您聆听愉快！</p> 
+
+<p><a href="https://dev.to/leapcell/why-is-rust-so-far-behind-go-45cd">Go和Rust语法的比较</a><br>本文对Go和Rust这两种编程语言的代码编写进行了详细的比较，涵盖了循环结构、函数式编程、并发控制、语法糖、面向对象编程和元编程等多个方面。Go语言以其简洁性、效率和出色的并发性能而闻名，适用于构建高性能网络服务和云计算平台；Rust语言以其内存安全性和高性能而闻名，适用于构建对性能和安全性要求极高的系统。文章最后还推荐了一个适合部署Go和Rust服务的平台：Leapcell。</p> 
+
+<p><a href="https://medium.com/@hocineelhadj/building-a-simple-backend-with-modular-monolith-architecture-in-go-e2ec7b59bc58">使用 Go 构建具有模块化整体架构的简单后端</a><br>在开始后端项目时，很容易将所有内容都放入单个文件或混乱的文件夹结构中。但是，随着应用程序的增长，这种方法很快就会成为维护噩梦。模块化整体架构是一种设计模式，它可以使您的代码井然有序、可扩展且易于理解，所有这些都在单个部署单元中完成。在本文中，我们将使用 Go、Fiber 框架和抽象层（存储库和服务）为图书馆系统构建一个简单的后端。我们将将其拆分为两个域——图书和用户——每个域都有一个路由，并展示这种架构即使对于小型项目也能如何发挥作用。最终，您将拥有一个干净、模块化的代码库，可以轻松扩展为更大的项目——无论是更多功能还是转向微服务。</p> 
+
+<p><a href="https://thefridaydeploy.substack.com/p/my-6-months-with-the-goth-stack-building">我在 GoTH 技术栈上的 6 个月：使用 Go、HTML 和少量胶带构建前端</a><br>为了寻找长期 Gopher 的理想前端体验，我从去年夏末开始使用 Templ、Tailwind 和 HTMX。现在我已经使用了一段时间，这里是我的印象。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-03-17-dolt-agentic-workflows/">Dolt 用于代理工作流程</a><br>本文探讨了生成式人工智能 (AI) 如何改进现有工作流程，特别是代理工作流程。文章指出，Dolt（首个也是唯一一个版本控制的 SQL 数据库）通过其版本控制功能（差异、回滚、分支和合并）能够显著增强 AI 代理在各种应用中的操作范围和规模，从而提高效率并降低成本。文章以客户服务和软件开发为例，说明了版本控制如何帮助管理 AI 代理的错误，并通过“人工参与循环”和“共识审查”等策略提高了工作流程的可靠性。</p>
+
+<p><a href="https://www.bartoszsypytkowski.com/is-rust-a-good-fit-for-business-apps">Rust 适用于商业应用程序吗？</a><br>本文探讨了 Rust 作为商业应用程序开发语言的适用性。作者认为，尽管 Rust 在系统编程方面表现出色，但在商业应用程序领域却并非最佳选择。文章详细分析了 Rust 标准库的不足、抽象级别不够高、借用检查器的问题以及多线程编程的痛点等方面，并比较了 Rust 与其他语言（如 Go、Java、.NET）在性能和开发效率方面的差异。作者最终得出结论：Rust 的高性能上限在商业应用程序中并不一定能转化为实际优势，反而可能因其复杂性和开发难度而降低开发效率。</p>
+
+<p><a href="https://www.benkuhn.net/pjm">如何运行大型项目</a><br>本文作者分享了其在Anthropic公司高效运行大型项目的经验，强调了专注、制定详细计划、快速运行OODA循环（观察、定向、决策、行动）、过度沟通、分解子项目以及享受乐趣的重要性。文章还提供了一个项目负责人入门工具包，包括制定目标、每周会议、落地页/工作文档、计划/路线图/里程碑、人员分工、Slack规范、每周更新广播和回顾等内容。</p>
+
+<p><a href="https://medium.com/@prestonblckbrn/deploying-rag-on-kubernetes-lessons-learned-17c09138ca6c">在 Kubernetes 上部署 RAG：经验教训</a><br>尽管检索增强生成 (RAG) 最近已被大型语言模型 (LLM) 代理所掩盖，但在需要高级搜索功能时，RAG 仍然是一个不错的选择。我最近的一个项目是为课堂文档设置一个定制的生产 RAG 系统。该生成式 AI 项目的目标是帮助大学生更轻松地查找课堂信息，以改善学生体验和成果。这是一个 RAG 的良好用例，因为它需要增强的搜索功能。本篇文章重点介绍生成式 AI 应用的开发、部署和架构。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Mar/16/john-naughton/#atom-everything">现在你甚至不需要代码就能成为程序员，但你仍然需要专业知识</a><br>我最近关于[如何使用大型语言模型来帮助我编写代码](https://simonwillison.net/2025/Mar/11/using-llms-for-code/)的文章在本周末《卫报》约翰·诺顿关于氛围编码的专栏中得到了正面评价。我关于[苹果智能Siri功能因提示注入而被推迟](https://simonwillison.net/2025/Mar/8/delaying-personalized-siri/)的[预感]也在《纽约时报》Hard Fork播客的最新一集中被提及。</p>
+
+<p><a href="https://www.nickcraux.com/blog/cursor-tips">我每天都使用 Cursor——如何避免它的缺点</a><br>本文介绍了如何充分利用 Cursor AI 编码助手并避免其缺陷的技巧和窍门。作者分享了个人经验，包括使用 `.cursorrules` 文件、提供代码上下文以获得最佳输出，以及其他一些技巧，例如如何更好地与AI交互，以及何时手动解决问题更有效率。文章还强调了不要盲目接受AI生成的代码，并定期手动检查和重构代码的重要性。</p>
+
+<p><a href="https://lethain.com/career-advice-2025">2025 年职业建议</a><br>这篇博文探讨了 2025 年软件专业人士的职业现状。作者指出，大型语言模型 (LLM) 的兴起并未取代软件专业人员的核心作用，但它确实改变了工作性质和所需的技能。许多在 2010 年至 2020 年期间晋升到高级职位的专业人士发现，目前的工作不如以前有趣，因为市场对技能的要求发生了变化。技术向基础模型/LLM 的转变使许多高级领导者辛苦积累的经验变得无效。此外，估值和融资对非人工智能公司来说比三年前更难以获得，导致招聘减少，晋升机会减少，薪资增长放缓。作者建议，在当前市场中，个人需要在人际关系、声望和学习之间权衡利弊，并努力使当前工作更有意义。</p>
+
+<p><a href="https://www.seangoedecke.com/good-times-are-over">科技行业的黄金时代已结束</a><br>过去十年的大部分时间里，做一名软件工程师都非常有趣。每家公司都提供很多福利，裁员和解雇几乎闻所未闻……但在过去两年里，这种情况发生了变化。2023年的第一轮科技行业裁员令人震惊，但至少公司都在争先恐后地提供丰厚的遣散费和充满泪水的CEO信函，表达他们的遗憾。两年后，Meta公司明确表示其裁员是针对“表现最差的员工，与其告别”。这究竟发生了什么？这对我们意味着什么？文章探讨了科技行业氛围转变的原因，以及对软件工程师的影响，并指出公司现在正试图专注于核心业务，工程师的兴趣与公司利益之间的冲突，以及适应新环境的建议。</p>
+
+<p><a href="https://antirez.com/news/147">大型语言模型权重是一段历史</a><br>互联网正在逐渐失去一部分信息：每年都有部分旧网页永久消失。作者认为互联网档案馆是现代历史上最有价值的部分之一，但许多公司和机构却在阻碍其生存和积累信息。作者感叹互联网上许多宝贵信息正在丢失，例如老程序员的代码、早期的网络讨论、90年代的亚文化、个人博客、科学论文、早期数字艺术、电子游戏和气候数据等。虽然保存所有信息在实践中面临巨大挑战，但作者认为大型语言模型（LLM）压缩信息的能力，即使不精确，也胜过彻底丢失。他建议应努力支持互联网档案馆等机构，并确保公开发布的LLM权重不会丢失，且档案馆是预训练数据集的一部分。</p>
+
+<p><a href="https://huggingface.co/posts/Kseniase/624548696865407">Hugging Face 上的@Kseniase：「15 种注意力机制」，注意力机制使模型能够……</a><br>本文总结了 AI 模型中使用的 15 种注意力机制，包括软注意力、硬注意力、自注意力、交叉注意力、多头注意力、多头潜在注意力、基于记忆的注意力等，并提供了相应的论文链接。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB is an open-source, fast, reactive, in-memory database optimized for modern hardware.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps</p>
+
+<p><a href="https://github.com/marcopiovanello/yt-dlp-web-ui">marcopiovanello/yt-dlp-web-ui</a><br>A terrible web ui and RPC server for yt-dlp. Designed to be self-hosted.</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - Infrastructure as Code in any programming language 🚀</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/danielgtaylor/huma">danielgtaylor/huma</a><br>Huma REST/HTTP API Framework for Golang with OpenAPI 3.1</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/go-jet/jet">go-jet/jet</a><br>Type safe SQL builder with code generation and automatic query result data mapping</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/miniflux/v2">miniflux/v2</a><br>Minimalist and opinionated feed reader</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

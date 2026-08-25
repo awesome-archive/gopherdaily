@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241209.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-09</span>
+</p>
+<p>每日一谚：Write tests that are easy to understand and maintain </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://k33g.hashnode.dev/developing-generative-ai-applications-in-go-with-ollama-and-tiny-models">使用Ollama（和微型模型）在Go中开发生成式AI应用</a><br>该文档讨论了使用Ollama开发生成性AI应用程序的过程。Ollama是一个开源工具，可以在本地运行语言模型。文中强调了在标准计算机上运行“幼儿LLM”的能力，作者专注于使用Go的Ollama API进行交互。通过示例，作者演示了如何提示一个微型语言模型提供对世界上最佳披萨的看法，甚至对模型进行拟人化，以表达特定观点。这些示例展示了如何配置系统指令和上下文，以指导模型的响应，尽管模型有时会与指令相矛盾。整体叙述作为一个教育指南，介绍了如何通过直接与Go中的语言模型接口创建专业的AI助手。文档最后以幽默的方式提到AI的不确定性之魅力，尽管尝试引导其响应。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-go-memory-optimization-20-expert-techniques-for-efficient-applications-4bjc">掌握Go 内存优化：实现高效应用程序的20种专业技术</a><br>来自 DEV Community 的文章提供了优化 Go 应用程序中内存使用的专业技术，强调了了解 Go 的垃圾回收器和高效数据结构的重要性。它建议使用预先分配的切片 sync.pool 用于重用对象，并避免不必要的分配，尤其是字符串和字节切片。建议使用 pprof 等分析工具来识别内存瓶颈，并且可以针对特定情况实施自定义内存管理策略。本文还介绍了在固定大小的集合中使用数组而不是切片，为 map 提供大小提示，以及为某些数据类型使用自定义类型或 bitsets 来提高内存效率。讨论了处理大型数据集、并发操作和将静态数据嵌入二进制文件的技术。首要信息是对 Go 的内存模型有深入的理解，并持续监控和优化代码，同时对不安全的做法保持谨慎。</p> 
+
+<p><a href="https://k33g.hashnode.dev/generating-json-with-an-llm-the-old-method-and-the-new-method">使用LLM生成JSON：旧方法和新方法</a><br>本文讨论了使用大型语言模型（LLM）生成结构化JSON响应的两种方法，特别关注&#34;granite3-moe:1b&#34;模型。第一种方法涉及构建详细的提示，指示LLM提供有关动物的特定信息，生成的JSON响应可能并不总是与现实相符。第二种方法利用Ollama对&#34;结构化输出&#34;的支持，定义JSON架构以确保响应遵循特定结构，包含科学名称、主要物种和动物分布国家等字段。文章提供了两种方法的Go代码示例，强调了温度和流式传输等参数在生成过程中的重要性。还提及使用上下文数据来指导LLM生成更准确响应的潜力。讨论总结了从LLM提取结构化数据的实用指南，适合对生成性AI应用感兴趣的开发者。</p> 
+
+<p><a href="https://danp.net/posts/synctest-experiment/">即将推出的Go 1.24：testing/synctest实验用于时间和并发测试</a><br>Go 1.24发布周期引入了实验性的`testing/synctest`包，以解决涉及时间或并发的代码测试中的挑战。该实验特性旨在通过在&#34;泡沫&#34;内控制时间进程，使测试更加精确和快速，允许goroutine在时间推进之前处于空闲状态。这可以解决在进行一秒睡眠或涉及并发操作（例如定时器）的测试中常见的波动性和慢速执行时间问题。`synctest`的引入预计将显著改善测试实践，文章中展示了一些实际示例及其稳定波动测试的潜力。用户可以通过使用`gotip`和`GOEXPERIMENT=synctest`来实验此特性，尽管在Go 1.24发布时仍需使用此实验设置。该提案和初始实现正在积极审查中，鼓励其他人分享他们的经验。</p> 
+
+<p><a href="https://encore.dev/blog/queueing">排队策略的交互式研究</a><br>Sam Rose 的博客文章深入探讨了排队策略在处理 HTTP 请求中的重要性和应用，说明了 FIFO、LIFO、优先级队列和主动队列管理 （AQM）（如随机早期检测 （RED））的使用。通过交互式示例，该文章演示了队列如何管理请求负载，防止用户请求在确定重要任务的优先级时超时。它强调，虽然 FIFO 队列很常见，但 LIFO 队列可能对某些工作负载有益，而带有 AQM 的优先级队列可以确保快速处理关键请求。该博文旨在介绍不同队列的细微差别、它们对请求处理的影响以及优化它们的策略，最终鼓励读者更多地探索该主题。Sam 在后端和 SRE 领域的经验增加了讨论的深度，为理解队列在分布式系统中的关键作用提供了理由。该博文对 Web 环境中队列管理的复杂性进行了引人入胜的介绍。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.developing.dev/p/why-leetcode-is-so-popular">为什么 Leetcode 如此受欢迎</a><br>Leetcode 在科技公司中的受欢迎程度源于它能够有效地过滤大量求职者，尽管它的问题没有完全测试特定工作的技能。Ryan Peterman 认为，虽然 Leetcode 并不完美，但它为来自不同背景的候选人提供了一条精英途径来展示他们的编码能力。建议采用实际面试问题或工作试验等替代方案，但在可扩展性和实施方面存在挑战。尽管存在缺点，但 Leetcode 仍然是许多大型科技公司面试过程的重要组成部分，小公司逐渐纳入更多实际问题。在大公司中维护 Leetcode 样式评估的势头很强劲，尽管该过程仍有改进的余地。Ryan 的观点强调了招聘实践的复杂性，并建议候选人仍然可以通过 ade0 取得成功。Leetcode 准备可能是一项有价值的投资，不一定是因为 Leetcode 的全面性，而是因为大量科技公司使用类似的流程。</p>
+
+<p><a href="https://restofworld.org/2024/unexpected-global-tech-winners-of-2024/">2024 年最令人惊讶的科技冠军</a><br>2024 年见证了西方以外的全球科技成功案例激增，突出了在不断变化的全球格局中蓬勃发展的创新公司。印度蓬勃发展的电动汽车市场见证了三轮车的销量显着增长，而孟加拉国将电动人力车合法化，促进了它们的日益普及。在越南，社交媒体应用程序 Threads 在年轻用户中获得了关注，尽管政治观念限制了 X 的主流成功。与此同时，Game Science 的中国游戏《黑神话：悟空》成为一种文化和商业现象，Bluesky 成为巴西被禁平台的流行替代品。NoMindBhutan 展示了不丹 AI 初创公司的潜力，Zello 成为肯尼亚抗议活动期间必不可少的沟通工具。这些例子突显了不同地区在技术采用和成功案例方面的动态变化。</p>
+
+<p><a href="https://thenewstack.io/how-to-install-windows-subsystem-for-linux-on-windows-11/">如何在 Windows 11 上安装适用于 Linux 的 Windows 子系统</a><br>该指南提供了在 Windows 11 上安装适用于 Linux 的 Windows 子系统 （WSL） 的详细演练，为开发人员提供了一种无需双启动或使用虚拟机即可运行 Linux 发行版的替代方法。它重点介绍了 WSL 与 Powershell 的集成，将安装过程简化为默认安装 Ubuntu 的单个命令。建议用户登录他们的 Windows 11 机器，打开 Powershell，然后执行安装命令，然后重新启动。重新登录后，用户可以为其 Linux 环境选择用户名并确认密码，从而产生类似于 Linux 的提示。该指南还建议了根据需要安装不同 Linux 发行版的选项，并谈到了 WSL 的好处，例如真正的 Windows/Linux 互操作性以及从 Windows 探索 Linux 文件系统的能力，反之亦然。虽然主要关注点是安装 WSL，但本文档还引用了与开发人员相关的其他主题和工具，如提到各种技术和 The New Stack 中的新闻所示。</p>
+
+<p><a href="https://eieio.games/blog/writing-down-every-uuid/">记下（并搜索）每个 UUID</a><br>该文档详细介绍了一个项目，其中作者面临的挑战是在没有浏览器限制的情况下以可读和可搜索的格式显示大量 UUID（超过 5 万亿个）。他们实施了一个自定义解决方案，包括一个固定高度的页面、一个虚拟滚动和一个 Feistel 密码，以加扰和反转 UUID，同时保留搜索和收藏特定 UUID 的能力。作者通过手动处理这些方面并添加搜索函数来查找包含特定子字符串的 UUID，从而克服了浏览器滚动和呈现的限制。尽管在理解和实现所需功能方面存在困难，但作者成功地创建了一个系统，该系统以有趣的顺序显示 UUID，从而使查看和搜索如此大型数据集的任务变得易于管理。该项目突出了浏览器限制的复杂性，以及显示海量数据集并与之交互的创造性解决方案。作者的方法虽然是技术性的，但展示了一种有效处理和利用大量 UUID 的方法。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://addyo.substack.com/p/the-70-problem-hard-truths-about">70%问题：关于AI辅助编码的严酷真相</a><br>本文讨论了AI辅助编码工具对软件开发的细微影响，强调了一个现象，即&#34;70%问题&#34;，用户在使用AI进行编码任务时迅速达到收益递减的点。虽然AI可以加速开发，但往往导致脆弱的系统，缺乏深入理解，形成一种依赖，阻碍学习基本编程概念。作者认为，AI工具对经验丰富的开发者或作为学习辅助最为有效，但作为普遍编码民主化的工具则显得不足。展望未来，预计将出现自主软件工程的崛起，AI不仅能够响应提示，还能以更大的自主性规划、执行和迭代解决方案。本文呼吁重新关注精致软件的制作艺术，强调与真实用户测试和关注AI通常忽视的细节。它暗示了一个个人软件开发蓬勃发展的未来，以那些深切关心用户体验和工艺的开发者为特征。</p>
+
+<p><a href="https://www.raymondcamden.com/2024/12/03/using-transformersjs-for-ai-in-the-browser">在浏览器中使用 Transformers.js for AI</a><br>本文档展示了 Transformers.js 的使用， 是一个在浏览器中启用 AI 功能的库，可以更轻松地直接在 Web 应用程序中集成情感分析和对象检测等模型。作者演示了如何使用 Transformers.js 快速设置情感分析管道和对象检测模型，提供了文本情感分类和检测图像中的对象等示例，重点介绍了客户服务和视觉识别等实际应用。作者还讨论了在浏览器中使用这些模型对性能和存储的影响，强调了逐步增强的必要性。提供了代码示例和 GitHub 存储库以供进一步探索，作者鼓励通过赞助或访问 Amazon 愿望单来支持内容。总体基调表明，尽管存在潜在的存储和速度限制，但可以在 Web 浏览器中嵌入 AI 功能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>1 个文件中的开源实时后端</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>电话号码的信息收集框架</p>
+
+<p><a href="https://github.com/wagoodman/dive">wagoodman/dive</a><br>用于浏览 Docker 映像中每一层的工具</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism 是以太坊，可扩展。</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>适用于 Web 应用程序的 Single Sign-On Multi-Factor 门户</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器公开给 Internet。</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>用 Go 编写的目录/文件、DNS 和 VHost 清除工具</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>面向开发人员的单元和集成测试生成。为您的应用程序生成实际有效的测试和存根！</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>太阳能充电 ☀️🚘</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>充当反向代理，保护您的 Web 服务免受攻击和利用。</p>
+
+<p><a href="https://github.com/slimtoolkit/slim">slimtoolkit/slim</a><br>Slim（toolkit）：不要更改容器镜像中的任何内容，并将其缩小多达 30 倍（对于编译语言甚至更多），使其也安全！（免费和开源）</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI 工具从现有基础设施生成 terraform 文件（反向 Terraform）。基础设施到代码</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/D3Ext/Hooka">D3Ext/Hooka</a><br>具有多个功能的 Shellcode 加载器生成器</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细访问控制将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/42wim/matterbridge">42wim/matterbridge</a><br>使用 REST API 在 Mattermost、IRC、gitter、xmpp、slack、Discord、Telegram、Rocketchat、twitch、ssh-chat、zulip、whatsapp、keybase、matrix、Microsoft Teams、Nextcloud、mumble、vk 等之间架起桥梁（不需要 mattermost！</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

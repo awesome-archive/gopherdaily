@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251006.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251006</span>
+</p>
+<p>每日一谚：Keep dependencies up to date to avoid security vulnerabilities </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@ankur_anand/killing-o-n-how-timing-wheels-expire-10-million-keys-effortlessly-in-golang-9a6b8709fd91">Killing O(n): 如何在Go中轻松地让 1000 万个键过期</a><br>如何让数百万个缓存条目过期而不损害性能。您的缓存有 1000 万个条目。每个条目都会在一定的时间（TTL）后过期。每秒都需要删除数千个条目。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/8EBn_6WBcvn1qyA0jlAoSA">【Go开发者的数据库设计之道】05 落地篇：Go 语言四种数据访问方案深度对比</a><br>学完这一讲，你将不再对 Go 的数据库访问方案感到迷茫。你将能够根据自己的项目需求，自信地选择最合适的“武器”，并写出优雅、高效、可维护的数据层代码。</p> 
+
+<p><a href="https://gaultier.github.io/blog/how_to_reproduce_and_fix_an_io_data_race_with_dtrace.html">如何使用 Go 和 DTrace 重现和修复 I/O 数据竞争</a><br>这篇文章讲述了在 Go 中使用 DTrace 重现和修复 I/O 数据竞争问题的方法。作者通过模拟磁盘延迟，重现了并发读写文件导致的错误，并给出了避免使用 stat() 系统调用的修复方案。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/ai-engineer-paris-build-secure-ai-agents/">AI Engineer Paris: Build Secure AI Agents | Docker</a><br>Highlights from AI Engineer Paris: how Docker’s MCP Toolkit &amp; Catalog and cagent help teams build, run, and secure AI agents—from local dev to production.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/06/kubecon-cloudnativecon-north-america-2025-co-located-event-deep-dive-open-source-securitycon/">KubeCon &#43; CloudNativeCon 北美 2025 年联合活动深度剖析：开源安全大会</a><br>开源安全大会一直致力于汇聚各方人士，以增强对开源的信任。 从其在 TAG 安全领域的初创阶段，到发展成为一个独立的会议，再到现在与开源安全基金会 (OpenSSF) 一起回归 KubeCon &#43; CloudNativeCon，该活动已成为任何热衷于保护我们共享生态系统的人的聚集地。作为联合活动，它将汇集软件开发人员、安全工程师、公共部门领导者、首席信息安全官、首席信息官和技术创新者。通过互动讨论、专家主导的会议和实践活动，参与者将深入研究新兴的安全挑战，探索最新的行业创新，并分享正在塑造安全软件开发未来的最佳实践。</p>
+
+<p><a href="https://www.databricks.com/blog/high-performance-ratelimiting-databricks">Databricks: 高性能速率限制</a><br>本工程博客文章将深入探讨 Databricks 如何改造其速率限制架构。本工程博客文章将深入探讨 Databricks 如何改造其速率限制架构。</p>
+
+<p><a href="https://greenido.wordpress.com/2025/09/25/scaling-engineering-teams-lessons-from-google-facebook-and-netflix">Scaling Engineering Teams: Lessons from Google, Facebook, and Netflix</a><br>After spending over a decade in engineering leadership roles at some of the world’s most chaotic innovation factories—Google, Facebook, and Netflix—I’ve learned one universal truth: scaling engineering teams is like raising teenagers. They grow fast, develop personalities of their own, and if you don’t set boundaries, suddenly they’re setting the house on fire at 3am.</p>
+
+<p><a href="https://overreacted.io/open-social">开放社交</a><br></p>
+
+<p><a href="https://nvartolomei.com/oswald">OSWALD—Object Storage Write-Ahead Log Device</a><br>OSWALD 是一个 Write-Ahead Log (WAL) 设计，完全基于对象存储原语构建。它适用于任何提供读后写一致性和比较并交换操作的对象存储服务，包括 AWS S3、Google Cloud Storage 和 Azure Blob Storage。该设计支持检查点和垃圾回收，使其适用于状态机复制。该设计已使用 P 编程语言进行了形式化规范和验证。支持代码可在 github.com/nvartolomei/oswald 找到。</p>
+
+<p><a href="https://blog.muni.town/personal-data-storage-idea">个人数据存储是一个时候已到的想法</a><br>当数据主要存在于由人民管理的机构而非公司时，关于数据所有权的讨论将会改变。</p>
+
+<p><a href="https://distinctplace.com/2024/09/11/five-years-as-startup-cto-was-it-all-worth-it">作为创业公司 CTO 的五年：如何、为什么以及是否值得？</a><br>我简直不敢相信距离我上次发帖已经过去了五年……
+
+自从我决定作为 CTO / “技术人员”加入一家早期创业公司以来，已经过去了五年。
+
+自从我上次乘坐火车上班以来，已经过去了五年。</p>
+
+<p><a href="https://vitalik.eth.limo/general/2025/10/05/memory13.html">Memory access is O(N^[1/3])</a><br>In this post, I will argue that this choice for memory access is wrong. Memory access, both in theory and in practice, takes O(N^⅓) time: if your memory is 8x bigger, it will take 2x longer to do a read or write to it. I will also show an example of an application where this concretely matters.</p>
+
+<p><a href="https://www.seangoedecke.com/how-to-influence-politics">作为一名资深软件工程师，我如何影响科技公司的政治</a><br>许多软件工程师对公司政治持宿命论。 他们认为参与其中毫无意义，因为技术决策通常是出于完全自私的原因，无法受到有良知的工程师的影响。 此外，有影响力的利益相关者通常非常愚蠢和功能失调，以至于你根本不可能识别他们的需求并向他们提供解决方案。 但是，有很多方法可以在不进行阴谋的情况下参与政治。 最简单的方法是积极努力使一个备受瞩目的项目获得成功。 稍难一点的方法是让您的想法可用于现有的政治活动。 您应该为公司准备多种技术工作方案，并且应该等待合适的时机。</p>
+
+<p><a href="https://murmurationstwo.substack.com/p/the-stablecoin-duopoly-is-ending">The stablecoin duopoly is ending - by Nic Carter</a><br>Circle equity is worth $30.5b. Tether’s topco is reportedly raising capital at $500b. Together, the two stablecoins boast $245b in supply, or about 85 percent of the stablecoin market. Since inception, only Tether and Circle have maintained meaningful market share. No one else has even come close. Dai peaked at $10b in early 2022. Terra’s doomed UST did surge to $18b in May 2022 but accounted for only about 10% of the market, and then only ephemerally. The most ambitious attempt to dethrone Tether/Circle was Binance’s BUSD, which peaked at $23b in late 2022 for 15% of the market, before being effectively shuttered by NYDFS.
+
+The dominance of the big two peaked in March 2024 at 91.6% overall of stablecoin supply but has been slipping since then. (I am computing market share in supply terms since that’s easy to compute, but if you were to do it by transaction value, number of pairs traded against, real world payments, active addresses, or real-world payment volume, it would undoubtedly be bigger.) It has however fallen to 86% since its peak last year and I believe it will keep falling. The reasons are new assertiveness by intermediaries, a race to the bottom with yield, and new regulatory dynamics post-GENIUS.</p>
+
+<p><a href="https://www.bharath.sh/writing/vercel-vs-cloudflare">Vercel vs Cloudflare：开发者构建的两种哲学</a><br>对 Vercel 与 Cloudflare 争夺边缘计算和开发者市场份额的中立观察</p>
+
+<p><a href="https://www.abortretry.fail/p/the-qnx-operating-system">QNX 操作系统</a><br>Quantum Software 和微内核 UNIX</p>
+
+<p><a href="https://www.spinellis.gr/blog/20250926">我为什么选择电子邮件而不是消息传递</a><br>我的同事和朋友都知道，我更喜欢通过电子邮件而不是聊天消息与他们交流。这种选择有很多好处。您可能需要考虑它们并采取相同的立场。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.improvingagents.com/blog/best-input-data-format-for-llms">哪种表格格式 LLM 理解最佳？（11 种格式的结果）</a><br>我们对 11 种数据格式进行了基准测试，包括 Markdown 表格、JSON、CSV、YAML、XML 等，以了解 LLM 最佳理解哪种格式。我们发现了令人惊讶的准确性和令牌成本权衡。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/yonahd/kor">yonahd/kor</a><br>A Golang Tool to discover unused Kubernetes Resources</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria is a powerful, lightning fast and censorship resistant proxy.</p>
+
+<p><a href="https://github.com/donetick/donetick">donetick/donetick</a><br>Donetick an open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/drk1wi/Modlishka">drk1wi/Modlishka</a><br>Modlishka. Reverse Proxy.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

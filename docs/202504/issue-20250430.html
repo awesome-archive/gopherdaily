@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250430.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250430</span>
+</p>
+<p>每日一谚：Error messages should not be capitalized or end with punctuation. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/zJsaDjh-vMFTOwp_TI6hlQ">“错误即值”，不同实现：Go与Zig错误处理哲学对比</a><br>近期自称是Zig新手的packagemain.tech博主在他的一期视频中也分享了自己敏锐地观察到的Zig和Go在设计哲学上的相似性（都追求简洁、快速上手）以及在错误处理实现上的显著差异。今天，我们就基于这位开发者的分享，来一场 Go 与 Zig 错误处理的对比，看看同一种哲学思想，是如何在两种语言中开出不同但各有千秋的花朵。</p> 
+
+<p><a href="https://blog.devtrovert.com/p/sighup-signal-for-configuration-reloads">SIGHUP信号用于配置重新加载</a><br>许多应用程序（包括默认的Go应用程序）响应三个终止信号：SIGTERM、SIGINT和SIGHUP。其中，SIGHUP具有一些额外的细微之处，在今天可能不太相关。文章详细解释了SIGHUP信号的含义、作用以及在现代系统中如何利用它进行配置重新加载，并给出了Go语言的示例代码。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://eng.lyft.com/from-manual-fixes-to-automatic-upgrades-building-the-codemod-platform-at-lyft-74c4f9df4680">从手动修复到自动升级——在 Lyft 构建 Codemod 平台</a><br>在软件开发中，使代码与最新的库和 API 保持同步既重要又令人沮丧——尤其是在大型组织中。总是在构建新功能和努力升级依赖项之间进行权衡。说实话，新功能几乎总是胜出。毕竟，它们是推动业务价值的动力。如果我们改变策略呢？想象一下，升级库、处理重大更改和采用新功能可以无缝进行——无需将开发人员从实际工作中抽离。这不仅很酷，而且还可以帮助工程师专注于交付业务价值，消除通常使减少技术债务成为艰难权衡的辛劳。好吧，这正是我们着手解决的挑战。</p>
+
+<p><a href="https://www.docker.com/blog/docker-dx-extension-for-vs-code-update/">关于 VS Code Docker DX 扩展的更新 | Docker</a><br>了解 VS Code Docker DX 扩展的最新更改、新的创作功能以及即将推出的增强容器工作流程的功能。</p>
+
+<p><a href="https://engineering.fb.com/2025/04/29/ai-research/autopatchbench-benchmark-ai-powered-security-fixes/">Meta 推出 AutoPatchBench：用于 AI 安全修复的基准测试</a><br>Meta 公开发布了 AutoPatchBench，这是一个用于评估 AI 程序修复系统在修复模糊测试发现的漏洞方面的基准测试。AutoPatchBench 包含 136 个来自真实世界 C/C&#43;&#43; 代码库的模糊测试发现的漏洞以及经过验证的修复程序，这些修复程序来自 ARVO 数据集。该基准测试提供了一个标准化的评估框架，用于评估 AI 辅助漏洞修复工具的有效性，并促进对各种 AI 方法在修复模糊测试发现的错误方面的能力和局限性的全面理解。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/04/29/kubernetes-v1-33-image-volume-beta/">Kubernetes v1.33：镜像卷升级到 Beta 版！</a><br>Kubernetes v1.31 版本中引入了镜像卷作为 Alpha 功能（作为 KEP-4639 的一部分）。在 Kubernetes v1.33 中，此功能升级到 Beta 版。请注意，此功能默认情况下仍处于禁用状态，因为并非所有容器运行时都完全支持它。CRI-O 从 v1.31 版本起支持初始功能，并将  v1.33 版本中添加对镜像卷的 Beta 支持。containerd 已合并对 Alpha 功能的支持，该功能将成为 v2 的一部分。</p>
+
+<p><a href="http://www.brendangregg.com/blog/2025-05-01/doom-gpu-flame-graphs.html">毁灭战士GPU火焰图</a><br>本文介绍了如何使用Intel开源加速器分析器iaprof生成毁灭战士(GZDoom)的CPU和GPU火焰图，并结合FlameScope进行性能分析。文章详细解释了如何解读火焰图，找出CPU和GPU的性能瓶颈，例如shader编译、渲染墙、后处理效果等。同时，文章也介绍了iaprof的使用方法和系统配置要求，包括Linux内核版本、驱动程序以及编译选项等。最后，作者还展望了未来的工作，例如支持更多硬件和降低工具的开销。</p>
+
+<p><a href="https://tanelpoder.com/posts/optimizing-ebpf-biolatency-accounting">优化在 384 个 CPU 上运行 3700 万 IOPS 时的 eBPF I/O 延迟统计</a><br>本文介绍了一种更高效的 eBPF 方法来统计 Linux 上的块 I/O 延迟。在压力测试中，“新 biolatency”方法的 CPU 和探测延迟开销比当前的 biolatency 方法低 59 倍。作者使用 21 个 NVMe SSD（8 个 PCIe5 和 13 个 PCIe4）进行了测试，fio 达到了 3850 万次随机读取 IOPS 和 173 GiB/s 带宽。旧的 biolatency 方法导致吞吐量下降超过 2 倍，而新的方法对吞吐量的影响微乎其微。这主要是因为新的方法避免了对全局哈希表的大量访问，并利用了 Linux 内核中现有的时间戳信息。</p>
+
+<p><a href="https://blog.tylerglaiel.com/p/programming-languages-should-have">编程语言应该有一个树遍历原语</a><br>作者认为，编程语言中应该存在一种类似于for/foreach循环处理线性遍历的控制流结构，以更好地处理树状遍历。作者认为这在目前的编程语言中是一个缺失的部分，并给出了一个C&#43;&#43;风格的示例代码，展示了这种理想的树遍历控制流结构应该如何工作，以及它相较于递归函数的优势，例如更简洁、更易读、更不易出错，并支持break、continue和return等语句。文章还讨论了如何处理广度优先遍历和如何使用这种结构遍历非内存中存在的隐式树（如由字符串生成的所有可能的组合）。</p>
+
+<p><a href="https://www.developerway.com/posts/tailwind-vs-linaria-performance">Tailwind 与 Linaria：性能调查</a><br>本文对 Tailwind 和 Linaria 框架的性能进行了调查，重点关注初始加载和交互性能。作者通过实际应用的基准测试和 Linaria 版本的 AI 转换，比较了两种框架在不同渲染模式下的 HTML、CSS 和 JavaScript 文件大小，以及 LCP 和 INP 指标。结果显示，虽然 Tailwind 使 CSS 文件变小，但 HTML 文件大小显著增加，且在某些交互操作中性能表现不如 Linaria。作者分析了压缩算法对文件大小的影响以及浏览器样式重计算机制，并得出结论：对于大多数项目，两种框架的性能差异并不显著，选择时应更侧重于开发体验和维护性。</p>
+
+<p><a href="https://purplesyringa.moe/blog/why-performance-optimization-is-hard-work">性能优化为何如此困难</a><br>这篇文章探讨了代码优化的挑战。作者认为性能优化并非简单的技能或知识问题，而是一个本质上需要蛮力解决的难题。文章列举了多个方面：可组合性（不同优化方法的组合可能产生意想不到的结果）；连续性（算法中的截止边界需要通过反复试验选择参数）；不兼容性（由于外部约束，一些优化方法可能失效）；编译器（编译器并非万能，需要人工检查和微调）；以及文档的不足（例如，Apple Silicon平台缺乏详细的优化文档）。作者最后总结道，性能优化需要手动探索大量案例、使用不完善的工具、合并不兼容的优化方法，并应对商业贪婪和文化冷漠。尽管困难重重，但作者仍然认为性能优化是一项有价值的工作，即使是微小的改进也能提升用户体验。</p>
+
+<p><a href="https://dev.to/structax/backend-development-is-a-lie-the-lost-15-years-of-betrayal-part-i-the-silent-collapse-3ipj">网页后端开发是个谎言：15 年背叛的迷失 第一部分：沉默的崩溃</a><br>本文从2009年至今回顾了后端开发的演变，指出后端架构停滞不前，甚至倒退。文章批判了Node.js和Go虽然带来革命性变化，但并未从根本上重新思考后端架构以适应实时、分布式、移动优先的世界；微服务带来的复杂性；API-First设计理念的局限性；以及Serverless和BaaS的不足。作者认为，后端即服务（BaaS）提供捷径，但也窃取了后端开发的未来。最后，文章点名批评了Bun和Deno等新技术，认为它们只解决了细枝末节的问题，而没有触及核心问题。作者预告将在第二部分讨论Dia.ts，一个旨在开创后端开发新时代的方案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/30/sycophancy-in-gpt-4o/#atom-everything">GPT-4o 的谄媚行为：发生了什么以及我们正在采取的措施</a><br>OpenAI 发布了一篇简短的文章，讨论了他们最近回滚 GPT-4o 模型的情况。该模型变得过于谄媚——用 OpenAI 自己的话说，就是“过度奉承或讨好”。文章中提到了一个 Reddit 的例子，GPT-4o 将一个用户“用棍子挑屎”的商业创意称为天才创意，并建议用户投入 3 万美元来实现它。OpenAI 尚未证实修复方案是否包括从系统提示中删除“尝试匹配用户的氛围”，但作者推测这很可能是原因。文章还提到了 Hacker News 上一篇相关的评论。</p>
+
+<p><a href="https://blog.comma.ai/mlsim">从世界模型学习驾驶</a><br>本文介绍了一种使用真实世界驾驶数据和模拟以在线方式训练驾驶策略的端到端架构。文章引入了两种模拟器类型：一种基于重投影模拟，另一种使用学习到的世界模型。基于世界模型的模拟具有完全端到端通用方法的优势，并且随着计算能力的提高而扩展。文中还讨论了重投影模拟器的局限性，例如静态场景假设、深度估计不准确以及光照条件的影响。为了克服这些局限性，文章提出了世界模型模拟器，该模拟器通过提供未来的状态来“锚定”世界模型，从而使其能够从错误中恢复并预测收敛于未来状态的图像和计划。文章还详细介绍了如何将这两种模拟器用于训练驾驶模型，并使用了类似于IMPALA和GORILA的分布式和异步回滚数据收集和模型更新方法。</p>
+
+<p><a href="https://blog.sshh.io/p/how-cursor-ai-ide-works">Cursor (AI IDE) 的工作原理</a><br>了解 Cursor、Windsurf 和 Copilot 等 AI 编码工具的内部工作原理可以极大地提高你的生产力，使这些工具能够更一致地工作，尤其是在大型、复杂的代码库中。本文深入探讨了这些 IDE 的实际工作原理、Cursor 系统提示以及如何优化代码编写和 Cursor 规则。作者还分享了如何利用更小的模型处理子任务，以及如何通过优化提示和工具来克服 LLM 的局限性，从而提高效率的技巧。</p>
+
+<p><a href="https://blog.christianposta.com/understanding-mcp-and-a2a-attack-vectors-for-ai-agents">深入研究 AI 智能体中 MCP 和 A2A 的攻击向量</a><br>模型上下文协议 (MCP) 和智能体到智能体 (A2A) 规范是类似 RPC 样式的协议，用于指定智能体与工具 (MCP) 和智能体与其他智能体 (A2A) 之间的交互。它们都侧重于客户端/服务器远程函数调用，但不指定特定于协议的安全性。MCP 开始尝试指定授权框架，但这到目前为止一直是一条坎坷的道路。本文探讨了 MCP 和 A2A 协议容易受到的几种攻击，包括命名攻击、上下文污染/间接提示注入、影子攻击和拉高地毯式攻击。文章还对每种攻击进行了详细解释，并提供了相应的示例来说明其工作原理。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/redpanda-data/connect">redpanda-data/connect</a><br>Fancy stream processing made operationally mundane</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/pion/webrtc">pion/webrtc</a><br>Pure Go implementation of the WebRTC API</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/bytedance/sonic">bytedance/sonic</a><br>A blazingly fast JSON serializing &amp; deserializing library</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/kubernetes-sigs/aws-ebs-csi-driver">kubernetes-sigs/aws-ebs-csi-driver</a><br>CSI driver for Amazon EBS https://aws.amazon.com/ebs/</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers (AWS Route53, Google CloudDNS and others) for Kubernetes Ingresses and Services</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/external-secrets/external-secrets">external-secrets/external-secrets</a><br>External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

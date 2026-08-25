@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250519.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250519</span>
+</p>
+<p>每日一谚：It is easier to optimize readable code than make heavily optimized code readable  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/05/19/shardedvalue-per-cpu-proposal/">原子操作的瓶颈与Go的多核扩展性之痛：深入剖析sync.ShardedValue及per-CPU提案</a><br>即使是看似轻量级的原子操作，在多核“混战”中也可能成为性能的阿喀琉斯之踵。那么，这背后的深层原因是什么？ Go 社区又在如何探索解决之道呢？今天，我们就来深入剖析这个问题，并解读 Go 项目 issue 中几个重要的相关提案，同时看看社区是如何先行一 步尝试解决这类问题的。 </p> 
+
+<p><a href="https://tonybai.com/2025/05/17/java-at-30/">Java屹立30年，Go的“少年壮志”如何续写辉煌？——来自Java之父的“长寿秘诀”</a><br>Java 30周年之际，NewStack对Java之父的采访，谈谈对Go后续长久发展的启示</p> 
+
+<p><a href="https://medium.com/@linz07m/zero-allocation-in-go-writing-faster-code-7b9b91f4f899">Go语言中的零分配：编写更快的代码</a><br>Go 语言的垃圾收集器 (GC) 简化了内存管理，防止内存泄漏并使开发人员无需手动释放内存。但 GC 也有成本。在高性能程序中，即使是小的 GC 暂停也会增加延迟并导致不可预测的延迟。对于实时系统，即使需要额外的工作，也最好避免 GC 开销。本文介绍如何编写零分配的 Go 代码——仔细管理内存以避免触发垃圾收集器。我们将介绍减少或消除堆分配、有效使用内存以及编写更快的 Go 程序的实用方法。</p> 
+
+<p><a href="https://www.alexisbouchez.com/blog/docker-engine-in-go">使用 Go 与 Docker 引擎交互</a><br>这篇博文介绍了一个小的 Go 程序，该程序与 Docker 引擎交互，并将其与等效的 CLI 命令进行比较。它涵盖了使用 Docker Go SDK 的步骤，包括引导 Go 模块、连接到 Docker、列出和分组容器、打印服务摘要、拉取和运行 Alpine 容器以及在容器内执行命令。还提供了完整的代码示例。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/introducing-docker-hardened-images/">Docker 推出强化镜像：安全、精简且适用于生产环境</a><br>Docker 一直专注于帮助开发者高效安全地构建、共享和运行软件。为了进一步提升安全性，Docker 推出了 Docker 强化镜像 (DHI)，这是一种为现代生产环境量身打造的默认安全容器镜像。与其他精简或“安全”镜像不同，DHI 从一开始就拥有极低的攻击面（最多减少 95%），并由 Docker 持续维护更新，以确保几乎没有已知的 CVE。它支持 Alpine 和 Debian 等广泛使用的发行版，因此团队可以在不重新调整工具或影响兼容性的情况下集成它们。此外，DHI 还与许多领先的安全和 DevOps 平台（包括 Microsoft、NGINX、Sonatype、GitLab、Wiz、Grype、Neo4j、JFrog、Sysdig 和 Cloudsmith）合作，确保与扫描工具、注册表和 CI/CD 管道的无缝集成。</p>
+
+<p><a href="https://ebellani.github.io/blog/2025/the-principles-of-database-design-or-the-truth-is-out-there">数据库设计的原则，或者，真相就在那里</a><br>每个软件项目都需要表达其所嵌入业务的现实情况。我们作为有限理性的存在，表达现实的方式是通过命题，即肯定或否定关于现实的陈述。当这样的命题集合存储在计算机系统中时，我们称之为数据库。
+这样的数据库需要设计成能够恰当地反映现实。这无法自动化，因为情境的语义需要以计算机可以处理的方式进行编码。数据库设计的目标就是这样：以数据库管理系统 (DBMS) 可以正确处理的方式对命题进行编码。
+文章列举并解释了数据库设计的几个重要原则，例如正交设计原则、表达完整性原则、完全规范化原则以及信息原则等，并提出了一个新的原则：基本表示原则 (PED)，建议使用自然键来标识关系，而不是使用任意或代理值。文章通过SQL代码片段示例对比了不使用和使用PED的区别，强调了良好的数据库设计对于构建可靠信息系统的重要性。</p>
+
+<p><a href="https://amberwilliams.io/blogs/building-my-own-pkms">放弃 Obsidian 并构建我自己的笔记系统</a><br>厌倦了迁移笔记应用，例如 Obsidian 或 Evernote？学习如何使用自托管的 Directus 构建你自己的私有、长期的个人知识管理系统 (PKM)，以实现控制和持久性。文章详细介绍了作者放弃Obsidian的原因，以及如何构建一个安全、私密且易于使用的PKM系统，并分享了使用经验和心得。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1017720/7155ecb9602e9ef2">内核开发者体验Home Assistant：总体印象</a><br>本文是关于一位内核开发者使用Home Assistant一年后的总体体验的两部分系列文章的第一部分。文章探讨了Home Assistant项目的健康状况、安装和设置、安全性以及实际使用中的经验。作者指出Home Assistant是一个活跃的项目，拥有广泛的开发者基础，并且不太可能在未来发生负面转变。虽然安装过程并非像其他Linux应用程序那样简单，但一旦设置完成，它就能提供关于家庭状态的详细信息以及对设备的控制。文章还讨论了Home Assistant的安全性，以及集成质量的差异。文章最后预告了第二部分，将详细介绍Home Assistant的实际应用。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/18/llm-pdf-to-images/#atom-everything">使用LLM将PDF转换为图像</a><br>本文介绍了一个名为llm-pdf-to-images的LLM插件，该插件可以将PDF文件转换为每页一张图像。这使得那些支持图像输入但不支持PDF输入的模型能够处理PDF文件。该插件使用PyMuPDF库，核心代码是将PDF页面转换为JPEG图像。作者还测试了该插件与GPT-4.1 mini和完整版GPT-4.1的兼容性，并讨论了不同版本模型输出结果的差异，其中GPT-4.1 mini出现了一些幻觉现象，而完整版GPT-4.1则给出了更合理的结果。</p>
+
+<p><a href="https://ollama.com/blog/multimodal-models">Ollama 的多模态模型新引擎</a><br>Ollama 现在通过其新引擎支持多模态模型，首先支持新的视觉多模态模型，包括 Meta Llama 4、Google Gemma 3、Qwen 2.5 VL、Mistral Small 3.1 等。新引擎提高了 Ollama 本地推理的可靠性和准确性，并为支持未来的模态（如语音、图像生成、视频生成）奠定了基础。该引擎具有模型模块化、改进的准确性和内存管理（包括图像缓存和内存估算）等特点，并支持更长的上下文大小、推理能力以及工具调用。</p>
+
+<p><a href="https://www.speakeasy.com/mcp/mcp-tutorial">深入了解 MCP 教程</a><br>这篇教程深入介绍了模型上下文协议 (MCP)：它是做什么的、它是如何工作的，以及一个完整的演练示例，展示了所有内容是如何组合在一起的，以及每个步骤中究竟发生了什么。我们使用 MCP 解决了一个实际问题：修复一个 Cloudflare Worker 中的错误，该错误在 Sentry 中被检测到，并通过在 VS Code 中运行的 AI 助手 (Cline) 来修复，该助手通过托管的 Sentry MCP 服务器和本地的 GitHub MCP 服务器来完成整个流程，所有操作都在人工监督下进行。</p>
+
+<p><a href="https://cloud.google.com/blog/products/databases/techniques-for-improving-text-to-sql">让AI编写高质量SQL：详解文本转SQL技术</a><br>企业依赖快速准确的数据驱动见解来做出决策，而SQL是他们访问这些数据的核心。借助Gemini，Google可以直接从自然语言（即文本转SQL）生成SQL。此功能可提高开发人员和分析师的生产力，并使非技术用户能够直接与他们需要的数据进行交互。本文探讨了Google Cloud文本转SQL代理的技术内部结构，涵盖了上下文构建和表检索的最新方法、如何使用LLM作为评判者来有效评估文本转SQL质量、LLM提示和后处理的最佳方法，以及我们如何采用允许系统提供几乎经过认证的正确答案的技术。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/qdm12/gluetun">qdm12/gluetun</a><br>VPN client in a thin Docker container for multiple VPN providers, written in Go, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/mark3labs/mcphost">mark3labs/mcphost</a><br>A CLI host application that enables Large Language Models (LLMs) to interact with external tools through the Model Context Protocol (MCP).</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

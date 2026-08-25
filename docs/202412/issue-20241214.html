@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241214.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-14</span>
+</p>
+<p>每日一谚：Don not panic; handle errors gracefully </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://ashwingopalsamy.substack.com/p/go-peek-behind-entry-point">Go入口点背后的一瞥 - 从初始化到退出</a><br>本文档深入探讨了 Go 程序中经常被忽视的初始化过程，揭示了在 &#39;main&#39; 函数执行之前发生的 soph0nstructured 编排。它解释了 Go 如何使用空白导入和“sync.Once“，同时警告不要使用复杂的”init“函数，这些函数可能会从放在”main“中中受益。该讨论强调了理解 Go 执行模型的重要性，包括特殊的 &#39;main&#39; 协程和初始化过程中的 panic 行为，这可能会突然终止程序。作者是一名 Go 开发人员，旨在为读者揭开这些方面的神秘面纱，提供编写健壮的 Go 应用程序和优雅处理错误的见解。本文档还谈到了循环依赖关系的潜在陷阱和对初始化顺序的误解。总的来说，它为 Go 开发人员提供了一篇教育文章，以加深他们对语言 dedition 过程的理解。</p> 
+
+<p><a href="https://jarosz.dev/code/organizing-your-golang-code-tips-for-beginners/">组织Go代码：初学者提示</a><br>本文为 Go 初学者提供了如何组织代码的指导，首先创建一个以项目命名的模块，例如 &#39;godan&#39;，然后使用 &#39;go mod init&#39; 初始化模块。它提出了一种极简主义的方法，专注于基本要素：模块目录、测试文件和用于潜在 CLI 开发的主 Go 文件。作者强调简单性、可读性以及 KISS （Keep It Simple， Stupid） 和 YAGNI （You Aren&#39;t Going to Need It） 原则，建议推迟设计决策，直到需要额外的结构，如子目录或复杂生成器，变得明显。Go 开发过程被比作园艺，从小处着手，只在需要时增加复杂性，促进项目结构的有机增长。总体主题是保持初始 Go 项目组织简单灵活，允许将来的扩展，而不会过早地使代码库复杂化。这种方法旨在为 Go 应用程序奠定坚实的基础，这些应用程序可以随着时间的推移而增长和适应。</p> 
+
+<p><a href="https://dev.to/kuvambhardwaj/i-tried-every-hot-programming-language-514f">我尝试了所有热门编程语言：Go vs. Rust vs. Zig</a><br>比较讨论了三种编程语言：GoLang、Zig 和 Rust，基于作者使用每种语言开发重要项目的经验。作者很快就精通了 GoLang，并欣赏它的简单性和强大的生态系统，尽管它可能不会用复杂的内存模型来挑战大脑。Zig 最初被选为类似 Redis 的项目，因为它的明确性，但作者尽管理解了内存安全概念，但仍在与内存安全概念作斗争。最终，作者喜欢 Rust 的基于所有权和借用的内存模型，尽管它最初具有挑战性的语法和内存规则，但它施加了安全保证，可以防止常见的并发问题。作者承认 GoLang 的可靠性和易用性，使其适合许多后端工程师，但也强调了 Rust 的心智模型和错误处理优势。不同的开发人员表达了不同的偏好，一些人使用 GoLang，另一些人探索 Zig，还有一些人对 Rust 的复杂性感到沮丧，但欣赏它的安全功能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://opensource.googleblog.com/2024/12/bazelcon-2024-bazel-8-launch.html">BazelCon 2024：社区庆典和 Bazel 8 发布</a><br>BazelCon 2024 标志着 Bazel 社区的一个重要里程碑，在加利福尼亚州山景城展示了破纪录的出席人数和大量贡献。该会议由 Linux 基金会组织并由主要技术实体赞助，强调了社区驱动型开发对 Bazel 的重要性，并提供了来自行业领导者和顶级贡献者的重要见解。与会者参与了现场演示、讨论和交流机会，同时推出了 Bazel 8，引入了模块化改进，弃用了传统的 WORKSPACE 机制，并引入了符号宏以更好地管理构建文件。该活动不仅庆祝了过去的成就，还为未来的发展奠定了基础，并特别强调持续的社区参与和反馈。</p>
+
+<p><a href="https://avi.im/blag/2024/faster-sqlite/">In search of a faster SQLite</a><br>Researchers from the University of Helsinki and Cambridge, through their work on &#34;Limbo,&#34; a Rust-based rewrite of SQLite, have significantly reduced SQLite&#39;s tail latency by up to 100x by implementing asynchronous I/O and disaggregated storage. They highlighted SQLite&#39;s synchronous I/O as a bottleneck for concurrent database access in serverless environments, often leading to resource contention and increased latency. By leveraging io_uring and rewriting SQLite&#39;s VM and BTree components to support async I/O, they decoupled the query execution from the storage engine, allowing for better resource utilization. Their benchmarks, simulating a multi-tenant serverless runtime, demonstrated a dramatic decrease in tail latency, though they noted the benefits become prominent at higher percentiles. The Limbo project, now a Turso project, offers an open-source solution to these challenges, with the potential to greatly enhance SQLite&#39;s performance in serverless and edge computing scenarios. The researchers plan to conduct further benchmarks, including scenarios with multiple readers and writers.</p>
+
+<p><a href="https://www.cncf.io/blog/2024/12/13/reconsidering-kubernetes-deployments-when-operators-are-overkill/">重新考虑 Kubernetes 部署：当 Operator 矫枉过正时</a><br>本文讨论了使用 Kubernetes Operator 进行简单部署可能有点矫枉过正，并提出了 Helm、ArgoCD 和 Devtron 等替代方案。它解释说，虽然 Kubernetes Operator 为复杂应用程序提供了高级自动化功能，但它们可能会带来不必要的复杂性，并且需要大量的专业知识和资源。作者认为，可以通过内置的 Kubernetes 资源或更简单的工具来满足更简单的部署需求，并强调了评估 Operator 的好处与开销的重要性。通过探索其他选项，组织可以有效地简化其 Kubernetes 部署，避免 Operator 过度使用的陷阱，同时实现自动化目标。本文还提出了行动呼吁，鼓励读者与 Devtron 社区联系以获得支持，并分享对专业网络的见解。它得出的结论是，务实的部署方法可以防止 Kubernetes 环境中不必要的复杂性。</p>
+
+<p><a href="https://thenewstack.io/apache-pinot-brings-real-time-analysis-to-columnar-data/">Apache Pinot 为列式数据提供实时分析</a><br></p>
+
+<p><a href="https://gyliu513.medium.com/query-language-with-observability-today-and-tomorrow-e22c588c5e20">具有可观测性的查询语言：现在和明天</a><br>本文讨论了查询语言在可观测性方面的现状和未来方向，强调了由于现有工具特定语言的局限性，需要一种标准化的方法。它概述了 CNCF 可观察性 TAG 的 QLS 工作组通过提议的标准化查询语言统一可观察性实践的努力，解决了缺乏标准化、供应商锁定和跨域集成受限等问题。本文还涉及新兴趋势，例如 UI 查询生成器、多方言网关和 AI 驱动的自然语言界面，这些趋势旨在提高可观察性的可访问性和工作效率。展望未来，统一查询语言有望简化遥测数据访问，提高开发人员的工作效率，并标准化用于查询执行的 API，最终支持可扩展且高性能的可观测性解决方案。可观测性的未来体现在简化用户体验、实现声明式可观测性以及促进跨不同环境的联合查询。这些进步旨在改变团队与遥测数据的交互方式，提高可观测性的效率，降低认知要求。</p>
+
+<p><a href="https://blog.kloudmate.com/understanding-ebpf-a-new-frontier-in-observability-e55a7735ebf6">了解 eBPF：一种新的可观测性方法</a><br>本文档深入介绍了 eBPF，该技术使程序能够在 Linux 内核中执行以实现可观察性，而无需更改内核代码或模块。它强调了 eBPF 在网络处理、NAT 优化方面的能力及其对 Kubernetes 可观测性的变革性影响，提供了对系统资源和事件的精细洞察。强调了该技术对高性能环境的好处，以及其非侵入式调试潜力和增强的安全功能。但是，也存在仅限 Linux 的支持、沙盒限制和资源限制等挑战。该文档还展示了 KloudMate 使用 eBPF 收集遥测数据，这些数据可以使用预构建的仪表板进行可视化。本概要概括了 eBPF 在推进系统级可观测性方面的作用、其实际应用以及有效部署所需的考虑因素。</p>
+
+<p><a href="https://www.docker.com/blog/tackle-software-engineering-challenges-to-boost-efficiency/">使用 Docker 应对这些关键软件工程挑战以提高效率</a><br>源文档指示 Nginx Web 服务器在无法访问或提供请求的网页时通常显示的错误消息，从而导致 403 Forbidden 状态代码。虽然该文档没有提供有关错误的上下文或内容的具体详细信息，但它暗示了服务器拒绝用户访问的权限问题。此错误表明由于服务器上设置的权限或限制不足，无法访问请求的资源。要解决此问题，可能需要审查服务器配置或访问控制并相应地进行调整。文档本身是 Nginx 上下文中 403 错误的通用表示，提醒用户或管理员需要注意的访问问题。了解根本原因对于纠正这种情况和恢复对所需网页的访问至关重要。</p>
+
+<p><a href="https://www.simplethread.com/your-software-is-rusting/">你的软件生锈了</a><br>本文将老化的机械对象和软件系统进行了类比，说明了如果忽视它们，两者会随着时间的推移而退化。它强调了一个常见的误解，即软件与物理对象不同，它不会磨损，但由于过时的依赖项、已弃用的库和不断发展的外部标准，它可能会“生锈”。作者使用老爷钟、旋转电话和汽车的类比来解释软件维护的不同方面：稳定性、与不断变化的环境的集成以及导致故障的复杂性。核心信息是，定期更新、维护和文档对于保持软件处于良好状态至关重要，就像汽车和机械设备一样。文章最后强调了拥抱变化和自动化流程的重要性，以有效管理软件系统的持续发展。基本主题是主动维护和调整对于软件的使用寿命和相关性至关重要，这反映了车辆维护的原则。</p>
+
+<p><a href="https://www.pingcap.com/blog/scalable-system-design-future-proof-architecture/">定义可扩展系统：“面向未来”的真正含义</a><br>在 2024 年 HTAP 峰会上，PingCAP 的软件架构师 Sunny Bains 讨论了构建可扩展且面向未来的系统的关键方面，重点介绍了 TiDB 应对可扩展性挑战的能力。TiDB 是一个开源的分布式 SQL 数据库，提供强大的架构，可实现灵活的扩展、高可用性和高效的数据分片，使其成为数据密集型应用程序的解决方案。Bains 重点介绍了 TiDB 的功能，如自动数据分片、多区域支持以及高级备份和恢复机制，这些功能有助于最大限度地降低操作复杂性和成本。该会议还谈到了 TiDB 处理 Schema 更改、数据重新分发和灾难恢复的能力，展示了其在保持性能和成本效益的同时支持组织扩展系统的潜力。正如 Bains 所概述的那样，可扩展性的未来涉及水平扩展、稳定的延迟和经济高效的增长，所有这些都由 TiDB 提供。本演示文稿强调了可扩展系统在当今永远在线的世界中的重要性，以及 TiDB 在满足这些需求方面的作用。</p>
+
+<p><a href="https://engineering.fb.com/2024/12/12/virtual-reality/how-to-build-a-mixed-reality-headset/">How to build a mixed reality headset</a><br>In a discussion on the Meta Tech Podcast, Alfred Jones from Meta Reality Labs delves into the complex process of developing a mixed reality headset. He outlines the challenges of choice paralysis in selecting the appropriate technologies for displays, battery, and thermal management, all while maintaining cost-effectiveness. Jones also touches upon the difficulties of implementing passthrough technology and provides insights into Meta&#39;s internal use of MR hardware, known as &#34;dogfooding.&#34; The episode, part of a series highlighting Meta engineers&#39; work, is available on multiple platforms and is accompanied by visuals related to Meta&#39;s virtual reality efforts. The document also serves as a bridge to Meta&#39;s career opportunities and its commitment to open-source technology across various domains, including virtual reality. This podcast episode not only informs about the technical aspects but also Meta&#39;s culture and community engagement.</p>
+
+<p><a href="https://www.ardanlabs.com/blog/2024/12/optimizing-databases-on-kubernetes-ep1-automating-database-maintenance-with-Kubernetes-and-cnpg.html">在 Kubernetes 上优化数据库 Ep.2：使用 Kubernetes 和 CNPG 实现数据库维护自动化</a><br>在本集中，Jérôme Petazzoni 讨论了 Kubernetes 和 CNPG 的集成以自动化数据库维护，确保数据库在节点维护期间保持运行。重点是无缝故障转移过程，其中主数据库节点被耗尽，辅助节点提升为主节点，Kubernetes 功能（如 Pod 中断预算）保护关键 Pod。简要解决了故障转移期间的连接重置问题，并采用连接池等策略最大限度地减少了应用程序中断。本集旨在指导观众在 Kubernetes 环境中管理数据库操作，提供对支持大规模部署的自动化维护解决方案的见解。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/12/12/continued-security-improvements-to-cncf-projects-with-ostif-audits/">通过 OSTIF 审计对 CNCF 项目进行持续的安全改进</a><br>开源技术改进基金 （OSTIF） 与云原生基金会 （CNCF） 合作，对 CNCF 项目进行安全审计，从而显着增强了项目安全性。自 2021 年开始合作以来，已有 13 个项目成功完成了 OSTIF 审计，CNCF 在过去三年中为这些项目投资了数百万美元。此次合作凸显了 CNCF 对项目成熟度和安全性的承诺，OSTIF 的参与为重大改进做出了贡献。这些审计的全部影响在一份报告中进行了详细说明，可以访问该报告以进一步了解，并且 CNCF 继续通过各种平台宣传这些审计的好处，为转变云原生技能和节省成本提供了机会。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/12/13/memory-manager-goes-ga/">Kubernetes v1.32：内存管理器正式发布</a><br>Kubernetes v1.32 更新标志着内存管理器正式发布 （GA） 的一个重要里程碑，为容器化应用程序提供了改进的内存分配。自 Beta 阶段以来，内存管理器一直保持稳定，并与 CPU 管理相辅相成，最近的更改侧重于错误修复、内部重构和可观察性增强，包括用于跟踪内存分配模式的新指标。已努力解决与重启后 Pod 排序相关的问题，确保内存管理器的健壮性和一致性。未来的发展旨在将内存管理器支持扩展到 Windows，而社区驱动的 SIG Node 继续促进对此功能的参与和反馈。</p>
+
+<p><a href="https://thenewstack.io/why-are-so-many-developers-out-of-work-in-2024/">为什么 2024 年有这么多开发人员失业？</a><br>The New Stack 讨论了科技行业的悖论，尽管越来越多的人认为自己是开发人员，但由于可用技能和雇主需求不匹配，许多人目前失业。尽管全球越来越多地采用云技术，但公司仍在努力寻找精通该领域的工程师，因此重点正在转向云原生技能。为了解决这个问题，Andela 和云原生计算基金会 （CNCF） 正在合作，在未来十年内培训至少 20,000 名云原生计算技术人员，特别强调非洲，该地区以前在云原生认证方面落后。该对话强调了全球技术人才发展和技能调整的需求，以满足就业市场不断变化的需求，尤其是在云原生环境中。根本问题指向技术领域的一个更广泛趋势，即在快速变化的技能要求中，持续学习对于保持相关性至关重要。该计划代表了缩小技术教育与雇主寻求的实用技能之间差距的战略努力。</p>
+
+<p><a href="https://www.docker.com/blog/lets-get-containerized/">让我们实现容器化：简化现代企业的复杂性</a><br>源文档指示 Nginx Web 服务器在无法访问或提供请求的网页时通常显示的错误消息，从而导致 403 Forbidden 状态代码。虽然该文档没有提供有关错误的上下文或内容的具体详细信息，但它暗示了服务器拒绝用户访问的权限问题。此错误表明由于服务器上设置的权限或限制不足，无法访问请求的资源。要解决此问题，可能需要审查服务器配置或访问控制并相应地进行调整。文档本身是 Nginx 上下文中 403 错误的通用表示，提醒用户或管理员需要注意的访问问题。了解根本原因对于纠正这种情况和恢复对所需网页的访问至关重要。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git 喝杯茶！轻松的自托管一体化软件开发服务，包括 Git 托管、代码审查、团队协作、包注册表和 CI/CD</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/terrastruct/d2">terrastruct/d2</a><br>D2 是一种现代图表脚本语言，可将文本转换为图表。</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>在 Kubernetes 中自动配置和管理 TLS 证书</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ 用 Go 编写的受 Express 启发的 Web 框架</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度和管理</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>用于管理密钥的简单灵活的工具</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>用 Go 编写的任务运行器 / 更简单的 Make 替代方案</p>
+
+<p><a href="https://github.com/charmbracelet/bubbles">charmbracelet/bubbles</a><br>用于珍珠奶茶🫧的 TUI 组件</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>一个强大的小 TUI 框架 🏗</p>
+
+<p><a href="https://github.com/ariga/atlas">ariga/atlas</a><br>将数据库架构作为代码进行管理</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - 任何编程语言🚀的基础设施即代码</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器公开给 Internet。</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>Kubernetes 包管理器</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate 是一个开源向量数据库，可存储对象和向量，允许将向量搜索与结构化过滤与云原生数据库的容错和可扩展性相结合。</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria 是一个功能强大、快如闪电且抗审查的代理。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>适用于 NATS.io、云和边缘原生消息传递系统的高性能服务器。</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>在容器中运行管道的引擎</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

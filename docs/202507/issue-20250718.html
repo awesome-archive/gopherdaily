@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250718.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250718</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dev.to/pullflow/go-vs-python-vs-rust-which-one-should-you-learn-in-2025-benchmarks-jobs-trade-offs-4i62">Go、Python 和 Rust：2025 年你应该学习哪一种？基准测试、就业和权衡</a><br>2025 年选择编程语言不再仅仅关乎语法或偏好；它还关乎性能、可扩展性、开发速度，甚至团队的云计算费用。本文比较了 Go、Python 和 Rust 在执行速度、内存使用、开发效率、生态系统和工具以及薪资趋势和职位需求等方面的优缺点，并最终总结了何时使用每种语言以及为什么聪明的团队会混合使用它们。</p> 
+
+<p><a href="https://mcyoung.xyz/2025/07/16/hyperpb">前所未有的 Protobuf 解析</a><br></p> 
+
+<p><a href="https://plakar.io/posts/2025-07-11/introducing-go-cdc-chunkers-chunk-and-deduplicate-everything">go-cdc-chunkers：对所有内容进行分块和重复数据删除</a><br></p> 
+
+<p><a href="https://zed.dev/blog/agentic-engineering-with-mitchell-hashimoto">Hashicorp创始人谈智能体工程</a><br></p> 
+
+<p><a href="https://blog.mptcp.dev/2025/07/14/TCP-in-UDP.html">介绍 TCP-in-UDP 解决方案</a><br>MPTCP 协议复杂，主要为了能够在互联网上生存，在互联网上，NAT、防火墙、IDS 或代理等中间盒可能会修改 TCP 数据包的部分内容。最坏的情况是，MPTCP 连接应该回退到“普通”TCP。如今，这种回退比以前少见——可能是因为自 2013 年以来，MPTCP 已在全球数百万部 Apple 智能手机上使用——但它们仍然可能存在，例如，在使用性能增强代理 (PEP) 的某些移动网络上，MPTCP 连接不会被绕过。在这种情况下，继续受益于 MPTCP 的解决方案是隧道 MPTCP 连接。存在不同的解决方案，但它们通常会添加额外的层，并且需要在客户端和服务器之间设置虚拟专用网络 (VPN) 并使用私有 IP 地址。这里介绍了一种更简单的解决方案：TCP-in-UDP。此解决方案依赖于 eBPF，不会为每个数据包添加额外的数据，也不需要虚拟专用网络。继续阅读以了解更多信息！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-07-17-distributed-audit-logs">分布式稽核日志</a><br></p>
+
+<p><a href="https://www.docker.com/blog/go-local-dev-fiber-v3-testcontainers/">GoFiber v3 &#43; Testcontainers: Production-like Local Dev with Air</a><br></p>
+
+<p><a href="https://kubernetes.io/blog/2025/07/18/pqc-in-k8s/">Kubernetes后量子密码学</a><br></p>
+
+<p><a href="https://www.beam.cloud/blog/agentic-apps">用于 AI 产品的云平台</a><br>这是一个用于 AI 产品的云平台应用程序。</p>
+
+<p><a href="https://www.lorenstew.art/blog/always-architect-with-contraints">在约束条件下进行架构设计：实用指南</a><br>为什么从约束条件开始，而不是从你最喜欢的框架开始，能构建出更好、更高效的 Web 应用程序。不要急于求成使用你最喜欢的框架，让我们探讨一下基于约束的思维模式如何帮助你为任务选择合适的工具，并避免过度工程。</p>
+
+<p><a href="https://medium.chuklee.com/argo-rollouts-canary-deployment-with-istio-b432bc141ba9">Argo Rollouts — 使用 Istio 进行金丝雀部署</a><br>本文是关于 Argo Rollouts 系列文章中的一篇，重点介绍不同的部署策略或功能。文章将讨论实现细节，并探讨使用它们的各种方法。文章介绍了如何使用 Istio 进行流量管理，以及如何使用 `setHeaderRoute`、`setMirrorRoute` 和 `setWeight` 等操作来定义金丝雀行为。</p>
+
+<p><a href="https://jimmysong.io/en/blog/leaving-tetrate">回顾旅程：从 Tetrate 到下一个目标</a><br>在我结束在 Tetrate 的难忘旅程之际，我回顾了从 Hadoop 到服务网格再到 AI 的历程，并展望了在开发者体验和社区建设方面的新可能性。</p>
+
+<p><a href="https://promlabs.com/blog/2025/07/17/why-i-recommend-native-prometheus-instrumentation-over-opentelemetry">我为什么推荐原生 Prometheus 度量而不是 OpenTelemetry</a><br>本文探讨了在 Prometheus 中使用度量时，原生 Prometheus 度量库优于 OpenTelemetry SDK 的原因。作者认为，使用 OpenTelemetry 会导致丢失 Prometheus 核心功能，例如目标健康监控，并带来度量转换和转义问题以及其他低效和复杂性。文章详细比较了两种方法的优缺点，包括范围、数据传输、度量名称和标签、Prometheus 配置设置以及 SDK 复杂性和性能。最终结论是，如果主要关注度量指标并在 Prometheus 中使用它们，则应优先使用 Prometheus 原生工具。</p>
+
+<p><a href="https://inedo.com/proget/vs-snyk">ProGet 与 Snyk 的比较 - Inedo</a><br>了解 ProGet 如何在开源风险管理方面超越 Snyk。Snyk 是一款受开发者欢迎的安全工具，但它本质上是一款静态分析 (SAST) 工具，旨在查找源代码中的潜在错误和安全问题。然后，它指导并教育开发者如何修复其代码。使用第三方开源库管理风险是完全不同的问题。它涉及漏洞评估、许可证合规性和整体质量验证——这些都与您的源代码无关。ProGet 专注于托管、管理和跟踪开源包的使用，同时降低风险，而 Snyk 则专注于源代码分析，其开源附加组件与其 SAST 功能存在冲突。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/17/vibe-scraping/#atom-everything">通过手机进行氛围式抓取和氛围式编码，为 Open Sauce 2025 创建日程应用程序</a><br>作者在咖啡店仅使用手机，通过 OpenAI Codex 和 Claude Artifacts 结合，抓取了一个会议网站，并构建了一个替代界面来与日程安排进行交互。该应用程序提供更快的加载速度和更有用的日程视图，更重要的是，它包含一个“下载日历 (ICS)”选项，允许移动电话用户（Android 和 iOS）轻松地将日程事件直接导入他们选择的日历应用程序。文章详细介绍了构建过程，包括使用 Codex 抓取日程数据和使用 Claude 构建 Web 应用程序的步骤，并分享了过程中遇到的挑战和解决方案。最终，作者成功在手机上完成了整个项目，并展示了 AI 辅助编程的强大功能。</p>
+
+<p><a href="https://aimode.substack.com/p/the-ai-replaces-services-myth">AI 替代服务的神话</a><br>本文作者驳斥了科技界普遍认为AI将取代人类服务业的观点。作者基于自身经验，从风险投资公司（VC）的叙事和客户的期望两个方面论证了这一观点的谬误。作者认为，VC公司为了筹集更多资金和获得更多佣金，夸大了AI的市场规模，而客户则将AI视为软件而非人力替代品，因此AI产品的定价应遵循软件定价的规则。最终，作者指出，AI可以提高效率，但其经济效益远低于预期，我们应更关注AI带来的增量价值而非简单替代。</p>
+
+<p><a href="https://leaddev.com/velocity/ai-doesnt-make-devs-as-productive-as-they-think-study-finds">研究发现，人工智能并没有让开发者像他们想象的那样高效</a><br></p>
+
+<p><a href="https://newsletter.vickiboykis.com/archive/my-favorite-use-case-for-ai-is-writing-logs">我最喜欢的 AI 用例是写日志</a><br></p>
+
+<p><a href="https://ymichael.com/2025/07/15/claude-code-unleashed.html">释放claude code</a><br></p>
+
+<p><a href="https://openai.com/index/introducing-chatgpt-agent">介绍Chatgpt Agent</a><br></p>
+
+<p><a href="https://huggingface.co/blog/MaziyarPanahi/open-health-ai">开放健康AI模型</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/hypermodeinc/ristretto">hypermodeinc/ristretto</a><br>A high performance memory-bound Go cache</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/hypermodeinc/badger">hypermodeinc/badger</a><br>Fast key-value DB in Go.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/getzep/zep">getzep/zep</a><br>Zep | Examples, Integrations, &amp; More</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+<p><a href="https://github.com/oapi-codegen/oapi-codegen">oapi-codegen/oapi-codegen</a><br>Generate Go client and server boilerplate from OpenAPI 3 specifications</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/expr-lang/expr">expr-lang/expr</a><br>Expression language and expression evaluation for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

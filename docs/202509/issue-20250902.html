@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250902.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250902</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://destel.dev/blog/preserving-order-in-concurrent-go">并发Go应用程序中如何保持顺序：三种方法比较</a><br>并发设计打破了顺序，但有时我们需要两者兼得。 探讨了在并发 Go 应用程序中保持顺序的三种方法，从标准的 ReplyTo 通道到复杂的权限传递，并附有基准测试和实际的权衡。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ou5bIB1ToRnZhVfcK136Sg">【AI应用开发第一课】04 实时交互的魅力：在 Go 中实现流式响应（Streaming）</a><br></p> 
+
+<p><a href="https://tonybai.com/2025/09/02/amazon-cto-werner-vogels-9-commandments">亚马逊CTO Werner Vogels的9条军规</a><br>最近，在一次私密的炉边谈话中，亚马逊CTO、互联网基础设施的奠基人之一Werner Vogels，分享了他二十年来构建高可用系统的核心经验。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/09/01/jaeger-at-10-forged-in-community-reborn-in-opentelemetry/">Jaeger，10岁了</a><br>在软件的快节奏世界中，达到 10 年是项目韧性、实用性和社区实力的证明。 五年前，我们庆祝了Jaeger 的五周年，对其从一个新兴想法发展成为可观察性堆栈中的关键组件感到惊叹。 今天，在庆祝 10 年之际，我们不仅仅是在庆祝长寿；我们也在庆祝深刻的演变。Jaeger 浴火重生，拥抱基于协作、标准化和 OpenTelemetry 令人难以置信的势头构建的未来。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/01/kubernetes-v1-34-dra-updates/">Kubernetes v1.34: DRA 已升级到 GA</a><br>Kubernetes 1.34 版本现已推出，它为动态资源分配 (DRA) 带来了大量增强功能！此版本标志着一个重要的里程碑，&lt;code&gt;resource.k8s.io&lt;/code&gt; 组中的许多 API 已升级到正式发布 (GA)，释放了您管理 Kubernetes 上设备潜力的全部潜力。除此之外，一些关键功能已移至 Beta 版，而一批全新的 Alpha 功能有望带来更强大的表达能力和灵活性。</p>
+
+<p><a href="https://aigateway.envoyproxy.io/blog/openinference-for-ai-observability">增强 AI 网关可观察性 - OpenTelemetry 追踪技术已在 Envoy AI 网关中推出</a><br>Envoy AI 网关的 v0.3 版本带来了全面的 OpenTelemetry 追踪支持，并采用 OpenInference 语义规范，扩展了现有的指标基础，从而可以全面了解 LLM 应用程序的行为。 这使您能够通过允许您了解请求旅程的完整上下文，从而提高 AI 集成应用程序的质量和安全性，因为您的 LLM 追踪将告知应用程序改进和防护需求。</p>
+
+<p><a href="https://www.daemonology.net/blog/2025-09-01-Thoughts-on-Amazonian-Leadership.html">关于 (亚马逊) 领导力的思考</a><br>作者分享了他对亚马逊领导力原则的看法，特别是关于客户至上、责任感和行动导向这三个原则。他认为，亚马逊在实践这些原则时存在一些问题，例如过于关注客户需求而非客户真正需要的，以及内部沟通的封闭性。他建议亚马逊应更注重长远利益，打破部门间的壁垒，并在发布新服务前进行更严格的审核。</p>
+
+<p><a href="https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge">Effective learning: Twenty rules of formulating knowledge - SuperMemo</a><br>这篇文章将帮助你克服在尝试加速学习时将面临的最大困难之一：构建知识。
+学习的速度将取决于你构建材料的方式。如果构建得好，同样的材料可以学习得快得多！速度上的差异可能令人震惊！
+这些规则按重要性顺序列出。那些列在前面的，如果遵守的话，通常最容易被违反或带来最大的好处！
+这里有一个基本的假设，你将使用间隔重复进行学习，也就是说，你不仅会学习一次，而且会优化地重复材料（如SuperMemo）。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1035727/4837b0d3dccf1cbb">内核中 32 位支持的未来</a><br>Arnd Bergmann 在 2025 年欧洲开源峰会上明确表示，32 位系统在任何类型的新产品中都已过时。 只有在需要支持现有的硬件和软件时才应该使用它们。 由于 Bergmann 是内核中架构支持的总体维护者，因此他经常被问到是否可以删除 32 位支持。 因此，他总结说，是时候更多地讨论这种可能性了。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.aleksagordic.com/blog/vllm">深入 vLLM：高吞吐量 LLM 推理系统的剖析</a><br>从分页注意力、连续批处理、前缀缓存、specdec 等，到大规模多 GPU、多节点动态服务。</p>
+
+<p><a href="https://cognition.ai/blog/dont-build-multi-agents">不要构建多智能体</a><br>LLM 智能体的框架令人失望。 我想根据我们自己的反复试验，提出一些构建智能体的原则，并解释为什么一些诱人的想法实际上在实践中非常糟糕。</p>
+
+<p><a href="https://www.newsletter.swirlai.com/p/breaking-down-context-engineering">打破上下文工程</a><br>您需要了解有关该实践的所有挑战。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/expr-lang/expr">expr-lang/expr</a><br>Expression language and expression evaluation for Go</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/BishopFox/sliver">BishopFox/sliver</a><br>Adversary Emulation Framework</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>An IPFS implementation in Go</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/quii/learn-go-with-tests">quii/learn-go-with-tests</a><br>Learn Go with test-driven development</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

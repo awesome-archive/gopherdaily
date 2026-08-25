@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241022.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-22</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://evilmartians.com/chronicles/a-taste-of-go-code-generator-magic-a-quick-guide-to-getting-started">体验Go代码生成器的魔力：入门快速指南</a><br>这篇博文由 Evil Martians 的后端工程师 Valentin Kiselev 撰写，为有兴趣创建自己的代码生成器的 Go 开发人员提供指南。作者首先解释了 Go 中元编程的挑战，与其他语言相比，用于代码生成的工具和概念的记录较少。Kiselev 概述了一个简单的程序，该程序为类型方法生成包装函数，它可以作为更复杂的生成器的起点。该过程包括访问包和类型元数据、使用 &#39;jen&#39; 包生成代码以及确保性能的可读性。作者强调了使用环境变量查找包含 &#39;//go：generate&#39; 注释的文件的重要性，并演示了如何收集和保存生成的代码。该文章以行动号召结束，邀请读者探索 &#39;jen&#39; 和 &#39;go/types&#39; 包，以进一步开发他们自己的代码生成工具。该帖子旨在激励和帮助 Go 开发人员通过自动化重复的代码任务来简化他们的开发过程。</p> 
+
+<p><a href="https://www.bwplotka.dev/2024/go-microbenchmarks-benchstat/">在Go Benchmark Analysis 中利用benchstat预测！</a><br>本文档介绍了 &#39;benchstat&#39; 工具，这是一个用于分析 Go 基准测试结果的强大命令行工具，它通过投影、过滤和分组等功能得到了显著增强。它指导用户完成新的基准测试工作流程，通过比较各种条件下的不同版本代码（例如不同的压缩和编码器）来强调可重复性和可靠性。更新的过程包括创建遵循特定命名约定的基准，运行它们，然后使用“benchstat”直接从单个运行中比较各个维度的结果。这种方法解决了传统迭代基准测试的局限性，例如意外更改和环境不一致，但也带来了挑战，例如更长的反馈循环和更复杂的基准测试代码。本文档提供了一个使用“benchstat”比较两个版本的 Remote Write 协议效率的实际示例，突出了新工作流程对协作和持续基准测试的好处。</p> 
+
+<p><a href="https://pehringer.info/go_plan9_memo.html">Go Plan9 备忘录，计算速度提高 450%</a><br>本文档详细介绍了在 Go 中创建自定义 SIMD（单指令多数据）包，旨在通过硬件级别的并行处理来提高计算效率。作者 Jacob Ray Pehringer 指出了 Go 中缺乏原生 SIMD 支持的原因，并选择使用 Plan9 的内部汇编语言实现解决方案，该语言允许直接操作硬件指令。该软件包旨在通过利用特定于架构的 Plan9 实现，在构建标签的帮助下确保兼容性，从而跨不同的架构工作。该文档包含该软件包中的代码片段，演示了如何检查 SIMD 支持、加载数据以及对浮点数执行 SIMD 操作。作者的方法涉及一个指向软件或硬件实现的私有函数指针，后者是根据架构的功能选择的。这种设计使该封装能够在 SIMD 运算上提供一个薄抽象层，从而促进在 Go 应用程序中使用并行处理。</p> 
+
+<p><a href="https://dev.to/brunociccarino/how-i-wrote-express-go-in-19-hours-3ndh">我如何在 19 小时内编写 Express-Go</a><br>作者 Bruno Cicarino 分享了他在 19 小时内创建“express-go”的经验，这是一个受 Express.js 启发的微框架。该项目的动机是将 Express.js 的易用性与 Go 的性能和极简主义相结合。该框架具有简单的路由映射、请求和响应处理程序，旨在简化 Go 中的 HTTP 请求处理。作者还讨论了开发过程中面临的挑战，以及在如此短的时间内构建框架所获得的满足感。Bruno 邀请其他人为该项目做出贡献，并强调了需要改进的领域，例如实现各种 HTTP 方法、用于 CSRF 和身份验证的中间件、超时系统和增强的错误管理。该项目对贡献开放，作者鼓励其他人分享他们的想法和建议，以进一步发展。</p> 
+
+<p><a href="https://blog.connectly.ai/implement-a-distributed-state-machine-with-redis-to-migrate-billions-of-records-9b135ab60773">使用 Redis 实现分布式状态机以迁移数十亿条记录</a><br>本文档概述了使用 Redis 进行状态管理的策略，将数十亿条记录从 PostgreSQL 数据库迁移到 DynamoDB。迁移过程旨在实现快速、并行和弹性，重点是高效处理大型数据集。该方法涉及将数据拆分为可管理的 1 小时时隙，每个时隙由多个工作人员独立处理。Redis 用于管理这些槽中的状态，确保进度跟踪并防止数据丢失。该系统结合了重试机制和指数退避来处理瞬态故障，并在迁移后包含一个验证步骤以确认数据完整性。该架构非常强大，只有一个活动的 Keeper 来监督进度，并且能够从最后完成的插槽重新启动迁移。该文档还对重试逻辑和状态管理进行了详细说明，确保迁移过程的顺利和可靠。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/BourneQuotingCommandSubstitution">在 Bourne shell 中引用和不引用命令替换</a><br>源文档讨论了 Chris Siebenmann 观察到的 Bourne shell 中命令替换引用的细微差别。Chris 分享了来自 Fediverse 帖子和 shellcheck 建议的见解，强调虽然 Bourne shell 通常不执行多单词扩展，但引用命令替换以避免意外行为通常更安全。作者反思了个人经历和在脚本中使用引用的命令替换的倾向，尽管未来的读者可能会感到困惑。Chris 还谈到了社区的评论和 CSpace wiki 中更广泛的讨论背景。本文档为使用 Bourne shell 脚本的程序员提供了指南，强调了一致的引用实践对于清晰度和可维护性的重要性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.frankel.ch/ajax-ssr/7/">AJAX 框架比较总结</a><br>源文档提供了各种 AJAX 框架的全面比较，重点介绍了它们对服务器端渲染 （SSR） 的适用性以及与后端开发的集成。作者是一名后端开发人员，他根据所需的前端技能、团队组织、易于设置和样式功能评估 Vue.js、Alpine.js、HTMX 和 Vaadin 等框架。对于包含表单的业务应用程序，建议使用 Vaadin，因为它具有生产力优势和商业许可。当涉及到需要视觉上吸引人的小部件的应用程序时，尽管它的许可成本很高，但也建议使用 Vaadin。对于旨在从一开始就提供 API 或跨多个渠道分发应用程序的项目，建议使用 Vue 或 Alpine.js，因为它们在最初几个月对生产力的影响较低。本文档最后呼吁在选择框架时考虑开发人员的技能和学习前端技术的意愿。GitHub 上提供了完整的源代码和进一步的见解，作者在 Twitter 上分享了他的专业知识。</p>
+
+<p><a href="https://mitchellh.com/writing/ghostty-is-coming">Ghostty 1.0 即将来临</a><br>Ghostty 1.0 是一个开源终端仿真器项目，经过近两年的开发和私有 Beta 测试，定于 2024 年 12 月发布。该项目旨在成为 macOS 和 Linux 上当前终端仿真器的最佳直接替代品，专注于速度、功能丰富性和平台原生 GUI。开发人员优先考虑广泛的私有 beta 测试，以确保稳定性和用户满意度，从而产生快速、功能丰富且原生于其支持的平台的产品。展望未来，Ghostty 团队对终端仿真的核心库 libghostty 有着雄心勃勃的计划，并扩展了终端应用程序功能，以增强开发人员体验并吸引更多用户。该项目通过非营利结构在财务上可持续，开发商将他们的工作视为一种技术慈善形式。</p>
+
+<p><a href="https://dolthub.com/blog/2024-10-22-how-to-publish-a-mac-desktop-app-outside-the-app-store/">如何在 App Store 之外发布 Mac 桌面应用程序</a><br>DoltHub 的博客文章指导用户完成打包、签署和公证 Electron 应用程序以在 Mac App Store 之外分发的过程。它首先解释了生成 Developer ID 证书和配置具有强化运行时和特定权利的 Electron Builder 的必要性。该博文详细介绍了使用 codesign 对应用程序进行签名并使用 xcrun notarytool 对其进行公证的步骤，包括创建应用程序特定密码。公证成功后，将使用 xcrun stapler 装订应用程序。该博文最后重申了适用于 Mac 和 Windows 的 Dolt Workbench 桌面应用程序的可用性，并鼓励用户在 GitHub 或 Discord 上提出问题或功能请求。这份全面的指南确保用户可以在 App Store 生态系统之外合法地分发他们的 Electron 应用程序。</p>
+
+<p><a href="https://blog.jetbrains.com/idea/2024/10/bridging-the-gap-between-the-classic-and-new-uis/">弥合经典 UI 和新 UI 之间的差距</a><br>JetBrains 博客文章讨论了其 IDE 向新 UI 的过渡，这标志着从经典界面的重大演变。新 UI 于 2020 年 JetBrains 成立 20 周年左右启动，旨在与当前的行业趋势保持一致，同时保留用户习惯的强大功能。新 UI 在经过一段时间的可选使用和广泛的用户反馈收集后，成为 JetBrains IDE 2024.2 版本的默认 UI。尽管一些用户最初持怀疑态度，但新 UI 已获得大量采用，98.8% 的 JetBrains 开发团队都在使用它。经典 UI 至少在 2025 年 7 月之前仍作为插件提供，JetBrains 计划解决仍然存在的可用性问题并纳入用户反馈。该博文还为用户提供了一些提示，以配置新 UI 以使其类似于经典 UI，从而为适应新设计的用户解决问题并简化过渡。</p>
+
+<p><a href="https://icepanel.medium.com/comparison-icepanel-flows-vs-uml-sequence-diagrams-4b3b190051a0">比较：IcePanel Flows 与 UML 序列图</a><br>本文将 IcePanel Flows 与 UML 序列图进行了比较，强调了理解复杂图的挑战以及软件架构中交互式叙事的必要性。IcePanel Flows 是一种更易于访问和吸引人的替代方案，它建立在现有图表之上，并提供交互性来引导查看者了解系统的架构。本文概述了 IcePanel Flows 的好处，例如更短的学习曲线、更少的创建和维护工作以及增强的交互性。它还提供了一个备忘单，供读者快速掌握两种图表类型的区别。作者强调了 IcePanel Flows 在改善软件工程和产品团队内部沟通和决策方面的重要性，并倡导将其用于入门、上下文共享和外部审计。文章最后呼吁进一步改进软件故事讲述和跨团队协调。</p>
+
+<p><a href="https://www.docker.com/blog/using-docker-ai-tools-for-devs-to-provide-context-for-better-code-fixes/">使用面向开发人员的 Docker AI 工具为更好的代码修复提供上下文</a><br>源文档指示 403 Forbidden 错误消息，这是一个标准的 HTTP 响应状态代码，表示服务器拒绝访问请求的资源。当用户尝试访问不可公开访问的页面或资源时，通常会发生此错误，这通常是由于服务器上设置的权限或限制不正确。在 Nginx 这种广泛使用的 Web 服务器软件的上下文中，此错误表明服务器配置可能阻止用户访问某些页面或目录。该文档对 Nginx 的简要提及意味着它与服务器配置和 Web 管理有关，管理员需要查看和调整其设置以解决访问问题。该摘要概括了错误的本质及其对 Web 服务器管理的影响，但未深入研究具体的故障排除步骤或配置。</p>
+
+<p><a href="https://blog.devops.dev/how-to-connect-accross-different-docker-compose-container-network-in-the-same-host-9269f963a5c6">如何在同一主机中跨不同的 docker compose 容器网络进行连接？</a><br>King Chun O 分享了有关在同一主机中连接不同 Docker Compose 容器网络的综合指南。本文首先强调了共享网络的必要性，可以使用 &#39;docker network create&#39; 命令建立共享网络。然后，King Chun O 指示读者更新他们的 Docker Compose 文件，以将服务链接到这个共享网络，确保所有项目都可以相互通信。该指南包括具体示例，例如配置“n8n”服务并将其链接到“postgres”服务。此外，King Chun O 还提供了对这种方法的好处的见解，例如简化网络管理和提高安全性。文章以各种社交媒体链接结尾，表明景俊澳正在积极与社区互动，并鼓励读者关注他的内容并与之互动。总之，对于希望通过无缝容器间通信来增强其 Docker Compose 项目的开发人员来说，本文是实用资源。</p>
+
+<p><a href="https://thenewstack.io/architecture-inversion-scale-by-moving-computation-not-data/">架构反转：通过移动计算而不是数据进行扩展</a><br>New Stack 的文章讨论了架构反转的概念，其中计算更接近数据存储而不是数据传输，以扩展 TikTok 和 Google 等大型系统。这种方法解决了高速、高容量交付个性化内容的挑战，而传统的暴力方法由于在大规模上不切实际而无法处理。通过将评分计算直接与数据索引集成，这些科技巨头避免了移动大量数据以进行详细评分的需要，从而在保持质量的同时显着减少数据传输负载。本文还强调了随着机器学习算法和本地计算能力的提高，以及语言模型 （LLM） 对高质量数据的需求增加，这项技术的重要性日益增加。The New Stack 邀请读者就他们认为与自己的工作角色最相关的内容发表他们的见解，表明专注于为其受众量身定制的内容。</p>
+
+<p><a href="https://blog.frankel.ch/ajax-ssr/7/">AJAX 框架比较总结</a><br>源文档提供了各种 AJAX 框架的全面比较，重点介绍了它们对服务器端渲染 （SSR） 的适用性以及与后端开发的集成。作者是一名后端开发人员，他根据所需的前端技能、团队组织、易于设置和样式功能评估 Vue.js、Alpine.js、HTMX 和 Vaadin 等框架。对于包含表单的业务应用程序，建议使用 Vaadin，因为它具有生产力优势和商业许可。当涉及到需要视觉上吸引人的小部件的应用程序时，尽管它的许可成本很高，但也建议使用 Vaadin。对于旨在从一开始就提供 API 或跨多个渠道分发应用程序的项目，建议使用 Vue 或 Alpine.js，因为它们在最初几个月对生产力的影响较低。本文档最后呼吁在选择框架时考虑开发人员的技能和学习前端技术的意愿。GitHub 上提供了完整的源代码和进一步的见解，作者在 Twitter 上分享了他的专业知识。</p>
+
+<p><a href="https://pranavms13.medium.com/ebpf-the-most-under-appreciated-piece-of-technology-968a2e8a7cd0">eBPF：最被低估的技术。</a><br>Pranav M S 在 Medium 上的文章深入探讨了 eBPF（扩展伯克利数据包过滤器）对系统性能监控、安全和网络的变革性影响。eBPF 最初是为数据包过滤而设计的，现在已经发展成为一种多功能工具，使开发人员能够直接在 Linux 内核中运行程序，从而增强可观察性和操作效率，而无需更改内核源代码或模块重新加载。本文重点介绍了 eBPF 的优势，包括其性能效率、安全性和灵活性，这些优势可实现实时洞察和动态可编程性。它展示了 Netflix 的 eBPF 在检测嘈杂邻居以确保一致的流媒体性能方面的实际应用，以及 Cloudflare 在通过快速响应功能缓解 DDoS 攻击方面的实际应用。文章最后强调了 eBPF 彻底改变系统管理的潜力，以及它在各种应用的技术堆栈中日益增长的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/news/3-5-models-and-computer-use">介绍计算机使用、新的 Claude 3.5 十四行诗和 Claude 3.5 俳句</a><br>Anthropic 宣布推出升级后的 Claude 3.5 十四行诗和新的 Claude 3.5 俳句模型，展示了编码和工具使用任务的重大改进。升级后的 Sonnet 模型在代理编码方面表现出色，超越了之前的基准测试，并在各种智能基准测试中优于其他模型。Claude 3.5 Haiku 是下一代型号，其性能与其前身 Claude 3 Opus 相当，同时以相似的成本和速度提供增强功能。还强调了计算机使用的引入，这是一项允许 AI 使用标准工具和软件与计算机交互的新功能。此功能目前处于测试阶段，早期反馈表明有可能自动执行复杂任务。Anthropic 强调负责任的部署，使用新的分类器来识别和减轻与计算机使用相关的潜在危害。该公司计划在其 API、Amazon Bedrock 和 Google Cloud 的 Vertex AI 中发布这些模型，并不断进行研究以改进和改进该技术。</p>
+
+<p><a href="https://www.docker.com/blog/using-docker-ai-tools-for-devs-to-provide-context-for-better-code-fixes/">使用面向开发人员的 Docker AI 工具为更好的代码修复提供上下文</a><br>源文档指示 403 Forbidden 错误消息，这是一个标准的 HTTP 响应状态代码，表示服务器拒绝访问请求的资源。当用户尝试访问不可公开访问的页面或资源时，通常会发生此错误，这通常是由于服务器上设置的权限或限制不正确。在 Nginx 这种广泛使用的 Web 服务器软件的上下文中，此错误表明服务器配置可能阻止用户访问某些页面或目录。该文档对 Nginx 的简要提及意味着它与服务器配置和 Web 管理有关，管理员需要查看和调整其设置以解决访问问题。该摘要概括了错误的本质及其对 Web 服务器管理的影响，但未深入研究具体的故障排除步骤或配置。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2024/10/21/new-autonomous-agents-scale-your-team-like-never-before/">新的自主代理以前所未有的方式扩展您的团队</a><br>Microsoft 博客宣布了 Copilot 的新功能，Copilot 是 Microsoft 365 中集成的 AI 助手，旨在为团队提供各种职能。借助 Copilot Studio，用户可以创建简化业务流程的自主代理，示例包括销售资格代理、供应商沟通代理和客户意向代理。这些代理旨在提高生产力、降低成本和加速流程，如Clifford Chance、McKinsey &amp; Company、Pets at Home和Thomson Reuters等公司的成功案例证明了这一点。该博客还强调了 Microsoft 内部对 Copilot 的使用情况，展示了销售业绩、客户案例解决时间、转化率和员工自助服务准确性方面的重大改进。这些代理的推出标志着向 AI 优先业务流程的转变，Microsoft 通过内置控件确保强大的数据治理和安全性。该博客最后呼吁用户开始使用 Copilot Studio 构建自己的代理，强调 AI 在业务运营中的变革潜力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>用 Go 编写的目录/文件、DNS 和 VHost 清除工具</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go 是一个 Go 包，它使创建和清理基于容器的依赖项变得简单，用于自动集成/冒烟测试。这个干净易用的 API 使开发人员能够以编程方式定义应作为测试的一部分运行的容器，并在测试完成后清理这些资源。</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB 是一个开源、云原生、分布式、兼容 MySQL 的数据库，用于弹性扩展和实时分析。免费试用 AI 驱动的 Chat2Query：https://www.pingcap.com/tidb-serverless/</p>
+
+<p><a href="https://github.com/jpillora/chisel">jpillora/chisel</a><br>基于 HTTP 的快速 TCP/UDP 隧道</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock 是 Go 编程语言的模拟框架。</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>适用于 Go 编程语言的 AWS 开发工具包。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，可以使用你想要的任何名称制作本地信任的开发证书。</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>数据库迁移工具。支持 SQL 迁移和 Go 函数。</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Go 中简单、可靠、高效的分布式任务队列</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator 在 Kubernetes 上创建/配置/管理 Prometheus 集群</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>用于管理密钥的简单灵活的工具</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu 允许您以声明方式管理您的云基础设施。</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>[WIP]：用于学习可观察性的存储库</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向代理,DDNS,WOL,ipv4 stun内网穿透,cron,acme,阿里云盘,ftp,webdav,filebrowser</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>轻量级 Kubernetes</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>快速获取 JSON 值 - 适用于 Go 的 JSON 解析器</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

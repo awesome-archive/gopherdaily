@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251031.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251031</span>
+</p>
+<p>每日一谚：Avoid repetition in naming </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/31/deep-into-go-green-tea-gc">Go官方详解“Green Tea”垃圾回收器：从对象到页，一场应对现代硬件挑战的架构演进</a><br>就在最近，Go 运行时和编译器团队的一项决议，更是将这一趋势推向了高潮：他们计划在 Go 1.26 版本中，将实验性的“绿茶”GC 作为默认的 垃圾回收器正式落地。为了帮助大家深入理解这一重大变更背后的技术原理与深层思考，我翻译了 Go 官方博客10月29日的最新文章《The Green Tea Garbage Collector》。该文是基于 Go 团队核心成员 Michael Knyszek 在 GopherCon 2025 大会上的演讲整理而成。在这篇极具技术深度的原理文章中，没有人能比官方团队的讲解更为专业和权威。因此，为了最大程度地保留其“原汁原味”，我选择以全文翻译 的形式，将其最真实、最精确的面貌呈现给大家。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/jfvMx7zSc-UphVl1gMDLUg">【Go模块构建与依赖管理】01 前世今生：从 GOPATH 的“混乱”到 Go Modules 的“秩序”</a><br></p> 
+
+<p><a href="https://victoriametrics.com/blog/opentelemetry-without-grpc-go">抛弃 gRPC-Go：VictoriaTraces 中 OTLP/gRPC 支持背后的故事</a><br>为什么 VictoriaTraces 在没有使用 gRPC-Go 的情况下构建 gRPC 支持？ 采用简单的 HTTP/2 服务器和 easyproto 有什么好处？</p> 
+
+<p><a href="https://dolthub.com/blog/2025-10-30-karpathy-agents-need-diffs/">Andrej Karpathy 认为 Agent 需要 Diffs</a><br>在 Dwarkesh 播客最近的一次采访中，Andrej Karpathy 谈到了 Agent 如何需要 diffs。我们很羡慕我们没有想到这一点，所以我们写了一篇文章来赞扬 Andrej 的观点。</p> 
+
+<p><a href="https://safedep.io/curious-case-of-dependency-change-with-embedded-binary-stringish">新引入的传递依赖中的嵌入可执行文件 — 实时开源软件供应链安全</a><br>一次常规的依赖升级引入了一个可疑的传递依赖，其中包含一个嵌入的可执行文件。虽然手动分析证实它并非恶意软件，但这次事件突出了我们对开源代码的隐式信任，以及攻击者如何通过看似无害的依赖更改来利用软件供应链。</p> 
+
+<p><a href="https://dev.to/aris_georgatos/go-faster-cutting-the-slack-in-gc-with-smart-memory-allocation-304h">🚀 Go Faster: Cutting the Slack in GC with Smart Memory Allocation</a><br>我的最后几篇文章深入探讨了并发（竞争条件）和系统可扩展性的问题。现在，让我们来谈谈引擎盖下的引擎：&lt;u&gt;Go的内存管理&lt;/u&gt;。
+
+**Go的垃圾收集器**非常棒，并发的，非代际的，并且设计为低延迟。但即使是最好的GC也会使用CPU周期并导致短暂的*“停止世界”*暂停，这在对延迟敏感、高吞吐量的应用程序中可能很重要。
+
+最好的GC是**与任何事情无关的GC**。通过最大限度地减少我们在堆上创建临时对象的频率，我们可以显着减少GC开销。
+
+**在本文中，我们将介绍**
+
+*   堆栈与堆分配如何影响性能
+*   逃逸分析以及如何将数据保存在堆栈上
+*   实用策略：`sync.Pool`，预分配和避免Goroutine泄漏
+*   何时以及如何在生产环境中调整GC设置</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/building-tsidp">构建在 Tailscale 之上：我们如何制作一个微型身份提供者</a><br>如何快速构建和配置在 tailnet 内部和外部都可运行的安全应用程序。</p>
+
+<p><a href="https://imagekit.io/blog/video-encoding">视频编码101：全面指南</a><br>视频编码是实现出色流媒体体验的基础。 了解更多关于其内部工程和潜在益处的信息。</p>
+
+<p><a href="https://www.dotcom.press/history-of-domains">域名的历史</a><br>域名简史。在过去的四十年里，注册了近10亿个域名。让我们回顾一下过去四十年来的域名里程碑，并思考一下未来会发生什么。</p>
+
+<p><a href="https://columnar.tech/blog/announcing-columnar">宣布 Columnar</a><br>回到数据连接的未来</p>
+
+<p><a href="https://workweave.dev/blog/the-price-of-mandatory-code-reviews">The price of mandatory code reviews</a><br>Weave combines LLMs and domain-specific machine learning to understand engineering work. We understand how much work was done by AI vs. humans. How much AI is helping your team ship faster, if it&#39;s having an impact on code quality and code reviews.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.theatlantic.com/technology/2025/10/data-centers-ai-crash/684765">Here’s How the AI Crash Happens</a><br>美国正成为一个英伟达州。</p>
+
+<p><a href="https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook">The Smol Training Playbook: The Secrets to Building World-Class LLMs - a Hugging Face Space by HuggingFaceTB</a><br>Discover amazing ML apps made by the community</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/envoyproxy/ai-gateway">envoyproxy/ai-gateway</a><br>Manages Unified Access to Generative AI Services built on Envoy Gateway</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/korotovsky/slack-mcp-server">korotovsky/slack-mcp-server</a><br>The most powerful MCP Slack Server with no permission requirements, Apps support, multiple transports Stdio and SSE, DMs, Group DMs and smart history fetch logic.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

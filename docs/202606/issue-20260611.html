@@ -1,0 +1,130 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260611.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260611</span>
+</p>
+<p>每日一谚：Go&#39;s error handling is explicit. This is a strength, not a weakness. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/11/writing-idiomatic-go-make-you-better">写地道的 Go 语言，是否能让你成为了一个更好的开发者？</a><br>然而，在技术社区 Reddit 的 r/golang 板块中，一个极其深刻的问题引发了全网热议：“写地道的 Go 语言（Idiomatic Go），是否让你成为了一个更好的整体开发者？” 令人惊讶的是，那些在业界摸爬滚打多年的大厂架构师、技术主管和多语言老兵们，几乎给出了高度一致的肯定回答。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/qAK0A7LpiZa7DUjWrpIEtQ">Go 1.27 JSON/v2 转正背后的坚持与妥协</a><br>备受瞩目的 json/v2 终于在 Go 1.27 尘埃落定，正式转正。更令人兴奋的是，旧的 encoding/json 在底层直接被替换为了 v2 实现，这意味着，你不需要修改一行 import 代码，旧项目就能免费获得极大的反序列化性能提升！</p> 
+
+<p><a href="#ZgotmplZ">从 Node 迁移到 Go 的经验</a><br>在 Node.js 中，我们有许多端点负责从客户端接收 PDF 或 Excel 文件，提取其中的内容，计算相关结果，然后将这些数据存储起来。这些任务占据了主线程的资源，导致服务器无法处理更多的请求。我们是一家金融科技公司，因此任何的延迟都会产生严重的后果。我在代码库中引入了 Go 语言作为微服务框架。这个方案很简单：将所有需要大量 CPU 资源的计算任务迁移到 Go 语言编写的微服务中</p> 
+
+<p><a href="https://medium.com/@davidshuaiche/onnx-runtime-go-binding-zero-cgo-calls-via-purego-fd81b6db41e0">ONNX 运行时 Go 绑定：通过 purego 实现零次 GC 调用</a><br>Raven-OnnxRuntime 如何利用 purego 从 Go 语言中调用 ONNX 运行时 C 语言接口，从而避免了 CGO 的依赖问题，并简化了跨平台的编译和部署过程。</p> 
+
+<p><a href="https://titpetric.com/2026/06/09/implementation-contracts-in-go/">Go 语言中的实现契约</a><br></p> 
+
+<p><a href="https://jiteshcodes.com/blog/open-sourcing-vim-royale/">开源Go实现的 Vim Royale</a><br>本文讲述了 Vim Royale 项目的开源历程，包括项目起源、用户连接机制、工作流程以及匹配系统设计等内容。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.cloudflare.com/private-origins-dns-routing/">使用 Cloudflare 将公共流量路由到私有应用程序</a><br>Cloudflare 推出了一项新功能，允许用户将公共流量安全地路由到私有应用程序，增强了云服务的安全性和灵活性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://x.com/chuhaiqu/status/2064879033159131586">你的团队还在手动改 Bug 吗？来看看 Anthropic 是如何用 Claude 消灭了 1000 倍的报错</a><br>公开数据与 Anthropic 首次披露的内部文件共同证实：AI 正在疯狂加速 AI 系统的迭代。目前 Anthropic 工程师每季度提交的代码量，已经暴涨至 2021 年至 2025 年平均水平的 8 倍。这种能力可能会在科学探索和医疗健康领域释放巨大潜力，同时极其容易导致人类对系统彻底失去控制。如果 AI 真的能全权打造自己的继任者，如何保障安全、实施监控并引导其行为，将成为关乎人类命运的核心议题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed.</p>
+
+<p><a href="https://github.com/kunchenguid/no-mistakes">kunchenguid/no-mistakes</a><br>git push no-mistakes</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API is an open-source relay platform that unifies Claude, OpenAI, Gemini, and Antigravity subscriptions into a single endpoint. It supports account sharing and cost-sharing, with seamless native t</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Multi Account, Webhooks, and MCP, and Chatwoot. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/docker/docker-agent">docker/docker-agent</a><br>AI Agent Builder and Runtime by Docker Engineering</p>
+
+<p><a href="https://github.com/vllm-project/aibrix">vllm-project/aibrix</a><br>Cost-efficient and pluggable Infrastructure components for GenAI inference</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/terrastruct/d2">terrastruct/d2</a><br>D2 is a modern diagram scripting language that turns text to diagrams.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

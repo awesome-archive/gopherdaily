@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251013.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251013</span>
+</p>
+<p>每日一谚：Start with concrete types first. Let interfaces emerge organically. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/13/string-and-rune-in-go">string与rune的设计哲学：为什么Go程序员很少为“乱码”烦恼？</a><br>作为 Go 开发者，我们站在了巨人的肩膀上。Go 语言在设计之初，就以一种“独断”而富有远见的方式，为我们解决了大部分历史遗留的字符编码难题。然而，理解其背后的设计哲学，特别是 string 与 rune 这对“双子星”的共舞，依然是区分一名普通 Gopher 与一名优秀 Gopher 的关键 </p> 
+
+<p><a href="">从“键盘牛仔”到“规范工程师”，AI浪潮下的程序员身份危机</a><br>作者笔锋一转，指出现代 AI 浪潮正以前所未有的力量，威胁着这份传承了近 70 年的技艺（Craft）和身份认同。曾经那个充满奇迹、成就感和优雅解谜的编程未来，如今正被一层“不祥的黑暗、骗局和不确定性”所笼罩。这是一篇警示性的檄文，它迫使我们每一个技术从业者去思考一个根本性问题：当 AI 接管了“思考”，我们还剩下什么？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/GIyQwgxxTsbASgKYUvbtEg">【Go 网络编程全解】02 TCP 可靠流编程：Go 中的数据边界与错误处理</a><br></p> 
+
+<p><a href="https://www.infoq.com/articles/go-channels-happens-before-concurrency/">Go Channels: Understanding Happens-Before for Safe Concurrency</a><br>This article dives into the happens-before semantics of Go channels, explaining how they relate to memory visibility, synchronization, and concurrency correctness. We&#39;ll examine subtle pitfalls, illustrate them with examples, and explore the architectural implications for system designers.</p> 
+
+<p><a href="https://www.glukhov.org/post/2025/10/using-ollama-in-go">Ollama 的 Go 客户端：SDK 比较和 Qwen3/GPT-OSS 示例</a><br>使用 Go 集成 Ollama：SDK 指南、示例和生产最佳实践。</p> 
+
+<p><a href="https://clipperhouse.com/go-unicode">在 Go 中快速处理 Unicode</a><br>本文探讨了在 Go 中使用前缀 trie 数据结构来加速处理 UTF-8 编码的 Unicode 字符串的方法，与传统的基于 rune 的方法相比，这种方法可以提高 30%-50% 的速度。文章还介绍了如何使用 x/text 模块中的 triegen 包来生成 trie。</p> 
+
+<p><a href="https://ngerakines.leaflet.pub/3m326qo4w522w">构建使用 ATProtocol 的不可伪造的专业认可</a><br>传统的 LinkedIn 等平台上的专业认可缺乏密码学证明——任何人都可以伪造它们，并且平台控制着真相。 本文介绍了一种使用 ATProtocol 的内容标识符 (CID) 和去中心化标识符 (DID) 创建数学上不可伪造的相互证明的双记录架构。 通过将证明创建与认可接受分开，并利用消防水管进行分布式验证，我们构建了一个双方在密码学上同意并且任何中央机构都无法操纵记录的系统。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/high-performance-golang-websocket-server-complete-production-ready-implementation-guide-14od">高性能 Golang WebSocket 服务器：完整的生产就绪实施指南</a><br>学习使用 Go 构建高性能 WebSocket 服务器，其中包含优化的连接池、高效的消息路由和内存意识处理。完整的实施指南。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://feelingof.com/episodes/078">让我们认真对待深奥的编程语言</a><br>本集讨论了 Jeremy Singer 和 Steve Draper 撰写的论文预印本《让我们认真对待深奥的编程语言》，并努力理解赋予深奥语言应有地位的意义。</p>
+
+<p><a href="https://neilmadden.blog/2025/09/12/rating-26-years-of-java-changes">Rating 26 years of Java changes – Neil Madden</a><br>I first started programming Java at IBM back in 1999 as a Pre-University Employee. If I remember correctly, we had Java 1.1.8 installed at that time, but were moving to Java 1.2 (“Java 2”), which w…</p>
+
+<p><a href="https://www.johndcook.com/blog/2025/10/06/a-quiet-change-to-rsa">为什么RSA用Carmichael函数代替欧拉函数</a><br>多年来，RSA 实现逐渐用 Carmichael 函数代替了欧拉函数。</p>
+
+<p><a href="https://dorotac.eu/posts/fosswon">自由软件尚未获胜</a><br>本文讨论了自由软件在当今世界的地位。作者认为，虽然开源软件已经取得了显著的成就，但真正的自由软件——能够赋予用户完全控制权的软件——尚未完全获胜。文章探讨了软件对生活各个领域的影响，以及缺乏自由软件选择可能带来的问题，特别是在设备和硬件层面。作者强调了用户自由的重要性，并呼吁采取行动，通过政治压力和支持自由软件友好的制造商来推动自由软件的胜利。</p>
+
+<p><a href="https://mitchellh.com/writing/non-trivial-vibing">Vibing a Non-Trivial Ghostty Feature</a><br>我最近发布了一个 Ghostty 的新功能（不显眼的 macOS 自动更新），该功能主要由人工智能开发。 这篇文章将分享我在开发此功能时进行的每一个基于人工智能的编码会话，未经编辑且完整呈现。 同时，我将提供一些关于我的过程和推理的额外背景信息。 并且，对于那些对此感兴趣的人，我也会分享相关的代币成本。</p>
+
+<p><a href="https://shreyanjain.net/2024/07/05/nostr-and-atproto.html">Nostr and ATProto</a><br>这篇文章比较了Nostr和ATProto这两种协议，讨论了它们与Twitter、ActivityPub和Secure Scuttlebutt的关系，以及它们在身份验证、数据、信任、隐私、开发和应用方面的不同方法。文章还探讨了它们之间的趋同，以及桥接技术如何使社交媒体实现协议无关性。</p>
+
+<p><a href="https://www.joanwestenberg.com/p/996-just-means-you-have-no-leverage">996 只是意味着你没有杠杆</a><br>工作绩效并非工作</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.fsck.com/2025/10/09/superpowers">超能力：2025 年 10 月我如何使用编码智能体</a><br>我过去常常写更多东西。我花了过去的几周时间开发了一套工具，以便更好地提取和系统化我的流程，并帮助更好地引导我的代理伙伴。我本来计划在本周末开始记录该系统，但今天早上，Anthropic 发布了用于 Claude 代码的插件系统。如果你想停止阅读并玩一下我的新玩具，它们是足够自驱动的。</p>
+
+<p><a href="https://blog.robbowley.net/2025/10/12/after-the-ai-boom-what-might-we-be-left-with">After the AI boom: what might we be left with?</a><br>有些人认为，即使当前的 AI 繁荣导致过度建设，也可能并非坏事——就像互联网泡沫留下了推动未来几十年增长的互联网基础设施一样。
+这是一个诱人的比较，但相似之处仅止于此。
+互联网时代建立了耐用的、开放的基础设施——基于 TCP/IP 和 HTTP 等开放标准的纤维网络和互连。 这些系统具有数十年的寿命，并且可以重复用于后续的任何用途。</p>
+
+<p><a href="https://www.latent.space/p/tiny">The Tiny Teams Playbook</a><br>我们在调查世界博览会上顶尖的“微型团队”后学到了什么。</p>
+
+<p><a href="https://buttondown.com/hillelwayne/archive/three-ways-formally-verified-code-can-go-wrong-in">三种形式验证的代码在实践中可能出错的方式</a><br>&#34;正确&#34; 并不意味着 &#34;正确&#34;，当正确使用 &#34;正确&#34; 时</p>
+
+<p><a href="https://kk.org/thetechnium/paying-ais-to-read-my-books">付费让 AI 阅读我的书</a><br>一些作者的想法是错误的。他们认为 AI 公司应该为他们用他们的书来训练 AI 付费。但我预测，在很短的时间内，作者将向 AI 公司付费，以确保他们的书被纳入 AI 的教育和训练中。作者（和他们的出版商）将付费，以便对 AI 提供的答案和服务产生影响。如果你的作品不被 AI 认可和欣赏，它将基本上不为人知。</p>
+
+<p><a href="https://rakhim.exotext.com/examples-are-the-best-documentation">示例是最好的文档</a><br>当我在搜索文档时，95% 的时间一个简单的示例就足够了。然而，95% 的时间我无法在任何官方来源找到一个示例。作者认为，正式的技术文档通常面向那些深入了解生态系统的人。但是许多开发人员每天都不得不在脑海中处理很多“世界”。在项目、语言和框架之间切换时，恢复上下文并理解正在发生的事情需要大量的脑力。作者以 Python 的 max() 函数为例，说明了示例的重要性。作者认为，像 clojuredocs.org 这样的社区项目提供了很好的实践，用户贡献内置函数的示例，并且示例通常包括相关函数。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/centrifugal/centrifugo">centrifugal/centrifugo</a><br>Scalable real-time messaging server in a language-agnostic way. Self-hosted alternative to Pubnub, Pusher, Ably, socket.io. Set up once and forever.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>A BNB Smart Chain client based on the go-ethereum fork</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/bootdotdev/bootdev">bootdotdev/bootdev</a><br>A CLI used to complete coding challenges and lessons on Boot.dev</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

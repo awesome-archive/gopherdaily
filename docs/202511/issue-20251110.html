@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251110.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251110</span>
+</p>
+<p>每日一谚：Returning early is a good thing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/10/rob-pike-on-complexity">来自Go创始人的忠告：这五条关于“复杂性”的法则，比算法更重要</a><br>Go 语言的联&gt;合创始人 Rob Pike 早在其1989年的一篇C 语言编程笔记中，就为我们留下了一份更根本的“忠告”。这份忠告，凝练为五条（或者说六条？）关于如何对抗软件“复杂性”的黄金法则。这些法则，诞生于一个需要手动管理内存的时代，却惊人地预言并塑造了 Go 语言的设计哲学。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/GE_zQi86TpfLEq9WF-Plrg">【Go模块构建与依赖管理】06 依赖关系“手术刀”：replace, exclude 与 retract</a><br></p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-11-07-profiling-on-mac-is-broken">MacOS 上的 Go CPU Profiling 已损坏</a><br>在 MacOS 上进行性能分析会给出意想不到且具有误导性的结果。</p> 
+
+<p><a href="https://www.naps62.com/posts/custom-doorbell-app-with-homeassistant">使用 Home Assistant 定制门铃应用程序</a><br>我为 Home Assistant 编写了一个自定义用户界面，以及一个与新门铃集成的现代 WebRTC local-first 集成。完整代码和现场演示均可用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.evacchi.dev/posts/2025/11/09/the-return-of-language-oriented-programming">面向语言编程的回归</a><br>作者探讨了LLMs对语言设计和实现的影响，以及LLMs是否可能降低构建新编程语言的成本。文章介绍了域特定语言（DSLs）和语言导向编程（LOP）的概念，强调了通过LLMs生成DSL的实现、文档和示例的潜力。作者还讨论了TOON（Token-Oriented Object Notation）等token效率更高的DSL，并提到了维护DSL时LLMs的优势。文章最后认为，LLMs的出现可能引发对语言设计的新一轮热情。</p>
+
+<p><a href="https://rona.substack.com/p/becoming-a-compiler-engineer">成为一名编译器工程师</a><br>我找到工作了！</p>
+
+<p><a href="https://valyala.medium.com/wal-usage-looks-broken-in-modern-time-series-databases-b62a627ab704">WAL usage looks broken in modern Time Series Databases?</a><br>Write-ahead logging (WAL) is a common practice among modern time series databases — Prometheus uses WAL, InfluxDB uses WAL, TimescaleDB…</p>
+
+<p><a href="https://urlahmed.com/2025/11/05/work-after-work-notes-from-an-unemployed-new-grad-watching-the-job-market-break">工作之后：一个失业的新毕业生观察就业市场崩溃的笔记</a><br>作者分享了自己作为一名失业新毕业生的经历，观察到就业市场中“白领衰退”的现象，特别是计算机科学等热门专业也面临高失业率。文章探讨了自动化对就业的影响，认为传统就业机会正在减少，竞争加剧，毕业生面临的挑战是与自动化和全球劳动力竞争。文章还探讨了“分布之外的人”的概念，即那些从事不易被自动化取代的工作的人。作者认为，政治和社会机构尚未完全适应这种变化，需要重新思考工作在社会中的地位。文章最后提到了自动化对未来就业的影响，以及如何应对这种挑战。</p>
+
+<p><a href="https://nilostolte.github.io/tech/articles/ZigCool.html">Zig语言很酷</a><br></p>
+
+<p><a href="https://aifoc.us/dead-framework-theory">死框架理论</a><br>作者认为，随着越来越多的开发者使用LLM和框架来构建Web，React已经成为平台。 构建一个新的框架、库或浏览器功能时，需要了解您不仅仅是在与React竞争，而是在与LLM训练数据、系统提示和开发人员输出之间建立的自我强化的反馈循环竞争，这使得取代React在功能上是不可能的。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@anindyaju99/ai-assisted-coding-quicker-code-doesnt-mean-higher-velocity-d8bc92a107dd">AI辅助编程编码快不代表生产力加速</a><br></p>
+
+<p><a href="https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1">1,500&#43; PRs Later: Spotify’s Journey with Our Background Coding Agent (Part 1)</a><br>多年来，开发者生产力通过更好的工具得到了提高。 我们拥有更智能的 IDE、更快的构建、更好的测试和更可靠的部署。 但即便如此，维护代码库、保持依赖项的更新以及确保代码遵循最佳实践也需要大量的手工工作。 在 Spotify，我们的  自动化了大部分的繁琐工作，但任何适度复杂的迁移仍然需要许多人手。</p>
+
+<p><a href="https://awesomeclaude.ai/code-cheatsheet">Claude Code 2.0速查表</a><br>Comprehensive Claude Code reference guide with commands, keyboard shortcuts, configuration, slash commands, hooks, MCP servers, plugins, agent skills, checkpointing, headless mode, git worktrees, subagents, and permissions. Ready-to-use templates and examples.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/lima-vm/lima">lima-vm/lima</a><br>Linux virtual machines, with a focus on running containers</p>
+
+<p><a href="https://github.com/NexaAI/nexa-sdk">NexaAI/nexa-sdk</a><br>Run the latest LLMs and VLMs across GPU, NPU, and CPU with PC (Python/C&#43;&#43;) &amp; mobile (Android &amp; iOS) support, running quickly with OpenAI gpt-oss, Granite4, Qwen3VL, Gemma 3n and more.</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. Its modular and versatile design satisfies a broad range of industry use cases. It offers a unique approach to consensus that enables performance at scale while preserving privacy.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>A task runner / simpler Make alternative written in Go</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>Powerful system container and virtual machine manager</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/kimdre/doco-cd">kimdre/doco-cd</a><br>Docker Compose Continuous Deployment</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

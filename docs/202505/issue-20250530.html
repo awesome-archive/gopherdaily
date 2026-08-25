@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250530.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250530</span>
+</p>
+<p>每日一谚：Simplicity is key; embrace the Go way </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/05/30/gopher-girlfriend">当Gopher拥有了“Go语言女友”：一张图带你读懂Go的那些“可爱”特性</a><br>最近，一张名为gopher gf的 Meme 图在开发者社区悄然流传，引得无数 Gopher 会心一笑。这张图用拟人化的“女友”特质，巧妙地描绘了 Go 语言的诸多优点和社区文化梗。那么，这位集万千宠爱于一身的“Go 语言女友”，究竟有哪些令人着迷的“可爱”特性呢？今天，就让我们化身“恋爱观察员”，逐条“解密”这张 Meme图，看看 Go 语言是如何成为许多开发者心中“理想型”的。</p> 
+
+<p><a href="https://atlasgo.io/blog/2025/05/26/gophercon-scalable-multi-tenant-apps-in-go">在 Go 中构建可扩展的多租户应用程序</a><br>本文探讨了在 Go 中构建可扩展多租户应用程序的不同策略，基于我们在构建 Atlas Cloud 后端的经验。文章涵盖了多租户的挑战，以及如何通过利用逻辑隔离、ORM 中间件、行级安全性 (RLS) 和每租户架构来克服这些挑战。</p> 
+
+<p><a href="https://jub0bs.com/posts/2025-05-29-pure-vs-impure-iterators-in-go">Go语言中纯迭代器与非纯迭代器的比较</a><br>Go 语言现在已经标准化了迭代器。迭代器功能强大，作为底层函数，迭代器可以是闭包。文档中建议的迭代器分类不明确。我认为将迭代器分为两类，“纯”和“非纯”，更好。是否应尽可能将迭代器设计为“纯”尚不清楚。Go 语言中迭代器的出现：迭代器模式由经典的“四人帮”书籍推广，它提供了一种按顺序访问聚合对象元素而不暴露其底层表示的方法。直到最近，通过for-range循环迭代的数据结构仅限于数组（直接或通过指针）、切片、字符串、映射、通道和整数。然而，在Go 1.18支持参数多态性（又名“泛型”）之后，Go 1.23标准化了定义自定义迭代器的方式，在标准库中添加了iter包，并在slices和maps包中添加了一些迭代器工厂（即返回迭代器的函数或方法）。Go 1.24标志着标准库中更多迭代器工厂的诞生，例如strings.SplitSeq。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/grants-ga">Tailscale 访问控制的新一代方案</a><br>Tailscale 正式发布 Grants，这是下一代访问控制系统，它将网络和应用程序功能结合到一个语法中。Grants 是 ACL 的超集，任何可以用 ACL 编写的规则都可以用 Grants 来表达，两者可以完美共存。Grants 简化了 ACL 语法，并添加了新的功能，例如应用程序能力扩展和使用 via 字段进行路由控制。</p>
+
+<p><a href="https://dolthub.com/blog/2025-05-29-building-a-linux-electron-app">构建 Linux Electron 应用</a><br>这篇博文全面介绍了如何为 Linux 系统适配 Dolt Workbench，涵盖了打包选择、配置细节以及平台特定问题的解决方案。Dolt Workbench 是一款现代化的开源 SQL 工作台，兼容任何与 MySQL 和 PostgreSQL 兼容的数据库，包括 Dolt 和 DoltgreSQL 等版本控制数据库。文章详细阐述了选择 AppImage 作为打包格式的原因，以及在 Linux 构建配置中需要进行的关键调整，例如目标规范和架构支持、Linux 文件系统区分大小写等问题。此外，文章还探讨了 Chromium 的 /dev/shm 限制以及相应的解决方案，并介绍了针对 Ubuntu 和 NixOS 系统运行 AppImage 的方法。最后，文章还重点介绍了社区贡献者 Joop Kiefte 为 NixOS 系统创建的无缝集成方案。</p>
+
+<p><a href="https://www.pingcap.com/blog/how-flipkart-scales-over-1m-qps-with-zero-downtime-maintenance/">Flipkart 如何在零停机时间的情况下扩展到超过 100 万 QPS</a><br>本文介绍了 Flipkart 如何从 900 多个 MySQL 集群迁移到 TiDB，克服了可扩展性、可用性和运维方面的挑战。Flipkart 利用 TiDB 的分布式架构、高可用性和云原生特性，实现了每秒超过 100 万次查询的处理能力，读操作的 P99 延迟为 7.4 毫秒，写操作为 13 毫秒，并通过自定义的 Kubernetes 运算符实现了零停机维护。</p>
+
+<p><a href="https://www.mooncake.dev/blog/htap-is-dead">HTAP已死</a><br>我花了十年时间构建，然后拯救HTAP数据库。它们的精髓如今在Lakehouse中延续。</p>
+
+<p><a href="https://hamatti.org/posts/as-a-developer-my-most-important-tools-are-a-pen-and-a-notebook">作为开发者，我的最重要的工具是笔和笔记本</a><br>作者Juha-Matti Santala分享了他作为软件开发者的经验，他认为撰写代码只是软件开发的一部分，更重要的是弄清楚要编写什么代码以及如何编写。他喜欢远离电脑，用笔和笔记本思考问题，将抽象的想法转化为具体的文字和图画，帮助自己理清思路，发现代码中的问题。他还分享了如何利用写作来改进代码，以及如何记录思考过程以便日后查阅。</p>
+
+<p><a href="https://clickhouse.com/blog/building-a-distributed-cache-for-s3">为 S3 构建分布式缓存</a><br>ClickHouse Cloud 现在拥有一个用于对象存储的分布式缓存：共享的、低延迟的，并且构建速度很快。这篇文章深入探讨了其架构、重要性以及性能。</p>
+
+<p><a href="https://antirez.com/news/153">人类编码员仍然比大型语言模型更好</a><br>这篇文章讲述了人类在编码能力上仍然比大型语言模型（LLM）强得多的一个案例。作者并非反AI，而是日常使用LLM进行代码审查、测试想法等。作者通过修复Redis Vector Sets中的一个复杂bug的经历，说明了LLM在解决复杂问题时，其创造力和突破性思维能力与人类相比仍有很大差距。虽然LLM可以提供一些有用的建议，但最终是人类想出了一个更有效、更巧妙的解决方案。这个解决方案涉及使用一个带随机种子、经过哈希处理的累加器来检测非互反链接，从而解决了O(N^2)复杂度的问题。作者认为，人类的创造力仍然具有优势，能够构思出奇特且不精确的解决方案，而这对于LLM来说非常困难。</p>
+
+<p><a href="https://xania.org/202505/compiler-explorer-urls-forever">编译器资源管理器和永久 URL 的承诺</a><br>本文讲述了编译器资源管理器 (Compiler Explorer) 如何处理 Google URL 缩短服务 goo.gl 即将停用的问题。由于 goo.gl 即将在 2025 年 8 月停止服务，作者 Matt Godbolt 正在努力迁移大约 12000 个依赖于 goo.gl 的旧链接，以确保这些链接的长期有效性。这篇文章还强调了依赖第三方服务构建关键基础设施的风险，并说明了作者如何通过构建自己的存储解决方案来保证编译器资源管理器链接的永久性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/29/saying-bye-to-glitch/#atom-everything">向 Glitch 说再见</a><br>Glitch 的联合创始人 Pirijan 回顾了这个平台的兴衰，它曾经允许用户轻松创建和托管网站和 Node.js 服务器。Pirijan 认为，尽管市场对简单易用的网络开发和托管仍有需求，但这类产品需要付费的资深用户和爱好者。Glitch 将于 7 月 8 日关闭项目托管和用户资料，代码可在年底前下载。文章还提到了 Glitch 前社区总监 Jenn Schiffer 对其关闭的评论，以及作者本人对 Glitch 关闭的惋惜之情，因为它曾是帮助人们快速开始托管自己项目的绝佳方式。</p>
+
+<p><a href="https://memgraph.com/blog/nasa-memgraph-people-knowledge-graph">美国宇航局如何使用图技术和大型语言模型构建人员知识图谱</a><br>美国宇航局（NASA）利用图数据库和大型语言模型（LLM）来构建其人员知识图谱，从而更好地识别顶级专家、组建高绩效团队并规划未来的技能需求。该图谱连接人员、项目和技能，支持主题专家发现、项目相似性分析以及实时组织洞察的生成，所有这些都可通过Cypher查询和基于GraphRAG的聊天机器人界面访问。该系统运行在NASA安全的内部AWS云上，并从多个来源提取数据，包括人员数据仓库、AI/ML项目数据和简历技能。未来，NASA计划扩展该图谱，纳入员工学习目标、偏好的项目类型和技能分类等更多信息。</p>
+
+<p><a href="https://llm-d.ai/blog/llm-d-announce">llm-d 社区发布公告！</a><br>llm-d 是一个 Kubernetes 原生的高性能分布式大型语言模型 (LLM) 推理框架，它为任何人在任何规模上提供服务提供了一条清晰的路径，并为大多数模型和大多数硬件加速器提供了具有竞争力的性价比。借助 llm-d，用户可以使用模块化、高性能的端到端服务解决方案来实现生成式 AI 部署，该解决方案利用了最新的分布式推理优化技术，例如 KV 缓存感知路由和解耦服务，并与 Kubernetes 中的运维工具集成。</p>
+
+<p><a href="https://simonwillison.net/2025/May/27/llm-tools">大型语言模型可以通过 LLM 0.26 在您的终端运行工具</a><br>LLM 0.26 发布，自项目启动以来最大的新功能：支持工具。您现在可以使用 LLM 命令行工具和 Python 库为来自 OpenAI、Anthropic、Gemini 和 Ollama 的本地模型提供访问权限，访问任何可以用 Python 函数表示的工具。LLM 现在还具有工具插件，因此您可以安装一个插件，为当前使用的任何模型添加新功能。文章详细介绍了如何尝试使用新功能，包括从插件安装更有趣的工具、使用 --functions 选项进行临时命令行工具、在 LLM Python API 中使用工具以及一些其他的问题。</p>
+
+<p><a href="https://every.to/thesis/knowledge-work-is-dying-here-s-what-comes-next">知识工作正在消亡——接下来会发生什么</a><br>随着人工智能吞噬基于信息的角色，OpenAI、Alphabet和Apple正在投资智慧型工作——你也可以。本文探讨了在人工智能时代，情商、洞察力和连接能力的重要性，以及如何培养这些能力以保持在职场中的不可替代性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/fD6rDkDV</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>CLI tool for spawning and running containers according to the OCI specification</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/manusa/kubernetes-mcp-server">manusa/kubernetes-mcp-server</a><br>Model Context Protocol (MCP) server for Kubernetes and OpenShift</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. Its modular and versatile design satisfies a broad range of industry use cases. It offers a unique approach to consensus that enables performance at scale while preserving privacy.</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/krillinai/KlicStudio">krillinai/KlicStudio</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/erigontech/erigon">erigontech/erigon</a><br>Ethereum implementation on the efficiency frontier</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

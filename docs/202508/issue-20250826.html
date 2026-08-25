@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250826.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250826</span>
+</p>
+<p>每日一谚：Go is not magical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/26/go-concurrency-cost-hierarchy">告别性能猜谜：一份Go并发操作的成本层级清单</a><br>最近，我读到一篇5年前的，名为《A Concurrency Cost Hierarchy》的C&#43;&#43;性能分析文章，该文通过精妙的实验，为并发操作的性能成本划分了六个清晰的、成本呈数量级递增的层级。这个模型如同一份性能地图， 为我们提供了告别猜谜、走向系统化优化的钥匙。</p> 
+
+<p><a href="https://mcyoung.xyz/2025/08/25/go-default-methods">Go 中的默认方法</a><br>Go 的接口非常有趣。 它们不是像 Java 或 Rust 中那样显式实现的，而仅仅是具体类型必须碰巧拥有的方法（“方法集”）的集合。 这被称为结构类型，与标称类型相反。
+
+Go 接口非常可爱，但这种概念上的简单性导致了很多实现问题（老实说，这是 Go 的一个主题）。 它消除了很多来自实现接口的意图，而且没有规范的方法来记录 A 满足 B，您也无法避免符合接口，尤其是一个接口在您身上强制使用特定方法时。
+
+对于语言运行时，它也有非常奇怪的结果。 要将接口值转换为另一种接口类型（通过类型断言语法 a.(B)），运行时本质上必须使用反射来遍历 a 的具体类型的方法集。 我在这里详细介绍了如何实现这一点。
+
+由于其结构性质，这也意味着您无法在不破坏现有代码的情况下向接口添加新方法，因为无法将默认实现附加到接口方法。 这会导致非常愚蠢的 API，因为有人搞砸了接口。</p> 
+
+<p><a href="https://marianogappa.github.io/software/2025/08/24/i-made-two-card-games-in-go">用 Go 制作游戏：3 个月没有 LLM vs 3 天有 LLM！</a><br>作者分享了他使用Go语言制作卡牌游戏的经验，对比了在没有LLM（大型语言模型）和使用LLM的情况下开发游戏的速度差异。他用3个月的时间在没有LLM的情况下制作了Truco游戏，而使用LLM则在3天内完成了Escoba游戏的开发。文章还提供了制作游戏的逐步指南，包括后端和前端的开发，以及使用TinyGo编译WASM的说明。</p> 
+
+<p><a href="https://packagemain.tech/p/fuzzing-http-services-golang">Fuzz 测试 Go HTTP 服务</a><br>作为一名开发人员，您无法预见您的程序或函数可能收到的所有可能输入。 即使您可以定义主要的极端情况，您仍然无法预测您的程序在某些奇怪的意外输入的情况下将如何表现。 换句话说，您只能找到您期望找到的错误。 这就是模糊测试或模糊测试发挥作用的地方。</p> 
+
+<p><a href="https://alexsanderhamir.medium.com/atomic-vs-mutex-vs-cond-vs-channels-benchmarking-the-hot-path-with-go-primitives-c36c1d48b7c5">Atomic vs Mutex vs Cond vs Channels: Benchmarking the Hot Path with Go Primitives</a><br>选择适合您用例的同步原语并非工作的终点。在大多数系统中，同步机制最终会成为瓶颈。许多开发人员认为，除非他们构建的系统中的每一滴性能都很重要，否则他们对此无能为力。实际上，虽然探索新的同步机制是一种选择，但在许多情况下，所选择的原语可能已经是最合适的，真正的改进必须在其他地方找到。</p> 
+
+<p><a href="https://www.digitaltorque.com/articles/makercad-1">Introducing MakerCAD</a><br>MakerCAD是一款针对创客的新型CAD软件。它是免费的开源软件，由创客为其他所有创客设计。MakerCAD目前包括以下功能：创建基本图形、布尔运算、在表面/平面上绘图、2D约束求解、拉伸和旋转、拓扑探索、倒角和倒圆角、模型导出以及用Golang进行开发等。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/08/26/use-envoy-gateway-as-the-unified-ingress-gateway-and-waypoint-proxy-for-ambient-mesh/">Use Envoy Gateway as the Unified Ingress Gateway and Waypoint Proxy for Ambient Mesh</a><br>在本文中，我们将探讨如何将 Envoy Gateway（一个 Envoy 项目开源解决方案）与 Istio 结合使用，以便在 Ambient 模式下运行。 这使您可以轻松利用 Envoy 的 L7 功能，通过易于使用的 CRD 来管理网格中的 Ingress 和东西向流量。</p>
+
+<p><a href="https://engineering.block.xyz/blog/jack-dorseys-vibe-coding-tips">杰克·多西的 Vibe 编程技巧</a><br>从观察杰克·多尔西使用 AI 工具进行 Vibe 编程中获得的见解</p>
+
+<p><a href="https://www.infoq.com/articles/green-microservices">理解和减轻微服务中的高能耗问题</a><br>由于分布式开销，微服务通常比单体应用消耗更多的能源。架构师可以做出改进可持续性的设计决策。本文介绍了几种技术，例如定义清晰的服务边界、优化服务粒度、使用节能的部署区域以及整合工作负载。</p>
+
+<p><a href="https://underlap.org/developers-block">开发者阻塞</a><br>Writer’s block is the paralysis induced by a blank page, but software developers experience a similar block and it can even get worse over time. 让我们来看看不同类型的开发者阻塞、导致它们的原因以及如何解决阻塞问题。</p>
+
+<p><a href="https://www.ducktyped.org/p/an-illustrated-guide-to-oauth">An Illustrated Guide to OAuth - by Aditya Bhargava</a><br>OAuth was first introduced in 2007.</p>
+
+<p><a href="https://scottstuff.net/posts/2025/05/19/ntp-limits">Linux 上 NTP 精度的限制</a><br>最近，我一直在尝试寻找（并理解）Linux 系统之间的时间同步的限制。你能获得多高的精度？需要什么才能实现这一点？哪些因素容易增加可测量的时间误差？经过大约一个月的时间 (!)，我开始理解一些事情。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.dbreunig.com/2025/06/26/how-to-fix-your-context.html">如何修复你的上下文</a><br>关于修复上下文和交付更好的代理的 6 种策略。正如 Karpathy 所说，构建由 LLM 驱动的应用程序意味着学习“正确打包上下文窗口”——智能地部署工具、管理信息和维护上下文卫生。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/ibnaleem/gosearch">ibnaleem/gosearch</a><br>🔍 Search anyone&#39;s digital footprint across 300&#43; websites</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/google/pprof">google/pprof</a><br>pprof is a tool for visualization and analysis of profiling data</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go is a Go package that makes it simple to create and clean up container-based dependencies for automated integration/smoke tests. The clean, easy-to-use API enables developers to programmatically define containers that should be run as part of a test and clean up those resources when the test is done.</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向代理,DDNS,WOL,ipv4 stun内网穿透,cron,acme,阿里云盘,ftp,webdav,filebrowser</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/karmada-io/karmada">karmada-io/karmada</a><br>Open, Multi-Cloud, Multi-Cluster Kubernetes Orchestration</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/bytedance/sonic">bytedance/sonic</a><br>A blazingly fast JSON serializing &amp; deserializing library</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

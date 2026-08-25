@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251201.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251201</span>
+</p>
+<p>每日一谚：Do not rely solely on unit tests; include integration and end-to-end tests </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/01/proposal-sync-v2">Brad Fitzpatrick 也等不及了！sync.Map 的泛型进化与 sync/v2 的诞生之路</a><br>随着 math/rand/v2 在 Go 1.22, json/v2 在 Go 1.25 中的成功落地，Go 标准库的 v2 化进程似乎已经按下了 加速键。今年1月份，Go 核心团队成员 Ian Lance Taylor 就提交了sync/v2 的提案 #71076。 这可不仅仅是一次简单的版本号升级，它标志着 Go 语言最核心的并发原语包，也终于要拥抱泛型，告别 interface{} 时代了。</p> 
+
+<p><a href="https://tonybai.com/2025/11/30/ice-assertion-failed-with-append">Go 编译器崩溃背后：一个 append 函数引发的语言规范修正案</a><br>近期，Go 社区报告的一个 Bug #76220 和 Go 核心团队的后续跟进 ，为我们上演了一出精彩的“技术侦探剧”。这个故事不仅关乎一个 Bug 的修复，更深刻地揭示了 Go 语言规范的演进哲学：在语言的设计中，没有不言自明的“常识”，只有需要被精确定义的“规范”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/sqZz-rUfeAHtokgx2T5o8g">【Go 测试之道】09 Go 测试的“黑魔法”：覆盖率、Fuzzing 与 Golden Files</a><br></p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoStillGopathModeForBuilds">Go 仍然支持使用 GOPATH 构建非模块化程序</a><br>Go 1.18 发布时， 我曾说过它强制要求使用模块模式 ，我并不喜欢这一点，因为它在实践中可能会破坏向后兼容性 （而且将程序切换到 Go 模块并非易事 ）。最近在 Fediverse 上， @thepudds 非常有帮助地让我明白我的想法并不完全正确，Go 仍然以某种方式支持非模块 GOPATH 的使用 ，事实上，根据 issue 60915 ，当前的支持将无限期地保留下来。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.freecodecamp.org/news/the-architecture-of-mathematics-and-how-developers-can-use-it-in-code">数学的架构——以及开发者如何在代码中使用它</a><br>“理解就是感知模式。” - 伊赛亚·柏林
+
+数学不仅仅是数字。它是寻找塑造我们世界的复杂模式的科学。这意味着要真正理解它，我们需要超越数字、公式和定理，并理解它的结构。
+
+这篇文章的主要目的是展示数学就像一棵不断增长的创意之树。我想展示数学是一个活生生的逻辑系统，而不仅仅是需要记住的公式。通过类比、历史和代码示例，我想帮助您更深入地理解数学以及如何将其应用于编程。
+
+我还在这里包含了一些代码示例，以帮助您将理论与实践联系起来。我展示它们是为了演示如何将数学思想应用于实际问题。无论您是刚接触更高级的数学还是经验更丰富，这些代码示例都将帮助您了解如何在编程中应用数学。</p>
+
+<p><a href="https://www.iankduncan.com/engineering/2025-11-27-crdt-dictionary">CRDT字典：无冲突复制数据类型的领域指南</a><br>一份关于CRDT及其权衡的综合指南，从计数器到序列。以Typeclassopedia的精神编写，探讨了不同的CRDT如何解决分布式共识难题。</p>
+
+<p><a href="https://www.docker.com/blog/do-you-really-need-microservices">你真的需要微服务吗？</a><br>在您默认使用微服务之前，请权衡隐藏的成本，并考虑模块化整体架构或 SOA。了解 Docker 在没有蔓延的情况下，何时提供一致性和规模。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://sankalp.bearblog.dev/how-prompt-caching-works">Propmt缓存的工作原理</a><br></p>
+
+<p><a href="https://www.humanlayer.dev/blog/writing-a-good-claude-md">编写好的 CLAUDE.md</a><br>`CLAUDE.md` 是 Claude 代码的一个高杠杆配置点。学习如何编写一个好的 `CLAUDE.md`（或 `AGENTS.md`）是基于代理的软件工程的关键技能。</p>
+
+<p><a href="https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai">麦肯锡：智能体、机器人与我们：人工智能时代的技能伙伴关系</a><br></p>
+
+<p><a href="https://pub.sakana.ai/ctm">连续思维机器</a><br>引入连续思维机器：一种新型的神经网络模型，它展开并使用神经动力学作为一种强大的思维表示方式。该模型的核心在于将时间整合到人工智能中，通过神经动力学来增强其理解和交互能力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

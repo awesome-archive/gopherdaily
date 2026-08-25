@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260513.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260513</span>
+</p>
+<p>每日一谚：Goroutines are cheap, but they aren&#39;t free. Respect your system&#39;s limits </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/13/go-mod-hidden-features-7-secret-switches-in-go-version">别再瞎写 go.mod 了！一行 go 1.xx，竟藏着 7 个足以颠覆你认知的“秘密开关”</a><br>我们可能会花几天时间去争论 GOMAXPROCS 该设成多少，或者为了一个微小的性能优化而重构代码，但很少有人会去深究这行看似“平平无奇”的指 令，到底在 Go 的世界里扮演着怎样的角色。 但如果我今天告诉你，这行被我们忽视了近 8 年的“魔法咒语”，在 Go 工具链的底层，其实悄悄地控制着多达 **7 个维度**的编译和运行时行为 呢？ 从你能不能用泛型，到 go mod tidy 的工作模式，再到你的程序在生产环境中的默认行为……这一切，都由这行代码说了算。 最近，我扎进了 Go 语言的源码，试图去解开这个“最熟悉的陌生人”的秘密。而我发现的真相，足以颠覆多数 Gopher 的认知。</p> 
+
+<p><a href="https://pvs-studio.com/en/blog/posts/go/1371/">Go中错误处理的常见陷阱</a><br>Go语言中的错误处理：常见陷阱对于从Java或C#等使用try/catch结构语言转而学习Go的开发者来说，可能会感到有些困惑。内心可能会倾向于使用“recover”配合“defer”作为最接近的替代方案，但这被认为是糟糕的做法。本文介绍了原因，并分析了Go中常见的错误处理错误。介绍：本文的灵感来自于我在为PVS-Studio的新Go语言分析器构建诊断规则时，在测试真实开源项目时，我反复遇到相同的错误处理问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/12/a-decade-of-governance-cloud-custodian-at-10-and-its-role-in-the-agentic-ai-era/">治理十年：Cloud Custodian的10年历程及其在智能体AI时代的角色</a><br>什么是Cloud Custodian？它是一个开源的无状态策略引擎，用于通过统一的DSL管理公有云环境、Kubernetes和基础设施即代码。作为CNCF的一个孵化项目，它允许组织在多个提供商之间定义和强制执行FinOps、安全和合规性策略。为什么Cloud Custodian 10周年意义重大：它已从云管理工具转变为AI时代基础性的成本优化和安全层。随着智能体AI的兴起（自主智能体生成并部署基础设施代码），实时自动化治理成为必要。此外，AI工作负载（如GPU集群、模型服务端点等）带来了更大的攻击面和更高的成本风险。Cloud Custodian对AI治理至关重要的原因：- 自动化护栏：为AI智能体管理基础设施提供结构化、可编程的边界。- 实时执行：在AI生成的资源部署后立即强制执行行业最佳实践，降低成本和安全风险。- 厂商中立：确保在AWS、Azure、GCP、Kubernetes和Terraform等不同平台间实现一致的治理。</p>
+
+<p><a href="https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/">Meta规模下的数据摄取系统迁移</a><br>- Meta的数据摄取系统（工程团队用于获取社交图谱的最新快照）最近进行了重大改进，以增强其在规模化环境下的可靠性。- 从遗留系统迁移到新架构需要对整个数据摄取系统进行大规模迁移。- 我们分享了实现成功大规模系统迁移的解决方案和策略，以及影响我们架构决策的关键因素。在Meta，我们的社交图谱由全球最大的MySQL部署之一提供支持。每天，我们的数据摄取系统会将数PB的社交图谱数据从MySQL增量抓取到数据仓库中，以支持分析、报告和下游数据产品。我们最近重新架构了数据摄取系统，从客户拥有的管道转变为更简单的自管理数据仓库服务，在超大规模下依然运行高效。</p>
+
+<p><a href="https://seangoedecke.com/space-ai-datacenters-do-not-have-a-cooling-problem/">太空中的AI数据中心没有散热问题</a><br>今年，埃隆·马斯克开始大肆宣传在太空中建立AI数据中心。作为同时拥有成功的航天公司和（中等）成功的AI公司的人，这似乎是提升他影响力和净资产的合理方式。但这是建立数据中心的合理方式吗？散热问题：大多数讨论的第一个反应是“你显然不能在太空中建立AI数据中心，因为在太空中散热非常困难”。为什么太空中散热是可能的：虽然太空本身非常寒冷，但冷却很棘手，因为你想冷却的一切都被真空包围。热传递有三种方式：原子碰撞、物质对流、辐射。真空是一个极好的绝缘体，因为它阻断了前两种热传递方式。但文章认为，复杂因素的存在使得简单的“不能散热”结论不一定正确。</p>
+
+<p><a href="https://www.docker.com/blog/docker-ai-governance-unlock-agent-autonomy-safely/">Docker AI治理：安全地解锁智能体自主权</a><br>介绍Docker AI治理：对智能体如何执行、它们可以访问的网络资源、它们可以使用哪些凭据以及它们可以调用哪些MCP工具进行集中控制，以便公司中的每位开发人员无论在哪里工作都能安全地运行AI智能体。笔记本电脑是新的生产环境：智能体是现代职场一代人中最大的生产力释放点。开发人员正在使用它们读取整个代码库、在服务间进行重构以及端到端地交付整个产品。然而，智能体生活在企业花费二十年时间加固的系统之外。它们不在CI/CD管道之后，也不在VPC内。它们在开发人员的机器上运行，使用开发人员的凭据。笔记本电脑成为了企业中功能最强大但也最暴露的节点，因此需要像生产环境一样进行治理。</p>
+
+<p><a href="https://nesbitt.io/2026/05/12/not-a-security-issue.html">不是安全问题</a><br>Daniel Stenberg昨天写道关于Mythos发现了一个真实的curl漏洞，这促使我使用一些AI辅助扫描工具对curl代码库进行了一番探索。结果比预期要好，一个显著的原因是：这些扫描工具阅读了项目文档中的漏洞披露策略并应用了它。一整类结果被标记为“真实的错误，值得修复，但根据项目自身的政策不是安全问题”：例如只有在能够控制命令行时才会触发的空指针解引用或小内存泄漏。工具能够根据curl已发布的规则自动降低这些发现的严重性等级，并将它们归类为质量问题。</p>
+
+<p><a href="https://matklad.github.io/2026/05/12/software-architecture.html">学习软件架构</a><br>回复一封关于物理研究员如何学习软件设计技能的邮件：我认为“软件设计”最好的学习方式是在实践中学习。虽然我在大学里学过一些正式的“设计”课程，但那些大多是假把式。真正教会我的是职业生涯中的巧合，第二个真实项目将我推向了软件领导岗位，使设计成为了我的问题。软件工程足够简单，聪明的头脑可以通过基本原理和阅读博客文章摸索出来。关于康威定律：软件架构复制了生产软件的组织的社会架构。正如有人雄辩地总结道：我们谈论编程就像是在谈论写代码，但代码最终并不如架构重要，而架构最终并不如社会问题重要。</p>
+
+<p><a href="https://duckdb.org/2026/05/12/quack-remote-protocol">Quack远程协议</a><br>简述：DuckDB实例现在可以使用Quack远程协议相互通信。这使您可以在具有多个并发写入者的客户端-服务器设置中运行DuckDB。秉承DuckDB的精神，Quack易于设置，并建立在经过验证的技术（如HTTP）之上。它速度很快，能够支持从批量操作到小事务的各种工作负载。背景：数据库架构。当数据库最初出现时，没有“客户端”和“服务器”的区别。后来Sybase首先引入了概念。虽然DuckDB一直主张进程内架构（无客户端/服务器），但Quack协议的引入提供了一种新的扩展选择。</p>
+
+<p><a href="https://www.java67.com/2026/05/the-data-engineers-reading-list-7-sql-books-that-matter.html">数据工程师必读：7本重要的SQL书籍</a><br>各位好，如果您是一名经验丰富的程序员或数据科学家，了解如何编写SQL查询和数据库基础知识，但想将SQL和数据库技能提升到一个新的水平，那么您来对地方了。我将分享一些高级SQL书籍，任何经验丰富的专业人士都可以阅读以提升他们的技能。</p>
+
+<p><a href="https://nerds.xyz/2026/05/google-quantum-ai-biology/">谷歌的量子计算</a><br>谷歌正在向量子计算的未来投入更多资金，但这一次这家搜索巨头表示，它希望利用该技术更好地理解生物学并改善人类健康。今天，该公司宣布了一项名为REPLIQA的新计划，即生命科学与量子人工智能交叉研究项目。该项目结合了量子科学、人工智能和生物学，这听起来既有可能永远改变医学，也可能成为另一个耗时几十年的昂贵科学实验。</p>
+
+<p><a href="https://jacobasper.com/blog/killing-a-cow-made-my-json-formatter-42-percent-faster/">干掉一个“Cow”让我的JSON格式化程序快了42%</a><br>干掉一个“Cow”让我的JSON格式化程序快了42%。格式化程序通常会一致地设置代码样式，从而提高人类的可读性。JavaScript生态系统中存在一个缺口：大多数格式化程序要么功能丰富，要么速度快。Prettier是JavaScript生态系统的标准，但它不是最快的。我的格式化程序JJPWRGEM在处理2MB JSON文件时只需约30毫秒，而Prettier和Oxfmt需要超过一秒。虽然JJPWRGEM在功能上还没达到Prettier的水平，但这是一个很好的基础，我相信在实现功能的同时还能找到性能提升的空间。</p>
+
+<p><a href="https://dormoshe.io/trending-news/the-story-of-how-i-built-a-vpn-protocol-part-1-35d0-90889">关于我如何构建VPN协议的故事（第一部分）</a><br></p>
+
+<p><a href="https://www.nair.sh/guides-and-opinions/communicating-your-expertise/why-senior-developers-fail-to-communicate-their-expertise">为什么资深开发者无法传达他们的专业知识</a><br>如果您是一名资深开发者，并且认为“AI智能体是软件开发的未来，我们不再需要开发者来减慢业务进度”这句话是正确的，我对您的专业知识表示怀疑。文案工作的本质是匹配受众，同样的信息对不同受众意味着不同的事情。这篇文章探讨了为什么即使是经验丰富的开发者，在面对AI时代的变革时，在沟通专业判断时会产生分歧，以及如何表达你的直觉。</p>
+
+<p><a href="https://blog.cloudflare.com/quic-death-spiral-fix/">当“空闲”并非空闲：Linux内核优化如何变成了一个QUIC bug</a><br>CUBIC是Linux中默认的拥塞控制器，它支配着互联网上大多数TCP和QUIC连接如何探测可用带宽。在Cloudflare，我们的开源QUIC实现quiche使用CUBIC作为默认拥塞控制器。本文讲述了一个关于CUBIC拥塞窗口被永久锁定在其最小值，且无法从拥塞崩溃事件中恢复的bug。故事始于一次旨在使CUBIC符合RFC标准的Linux内核更改，这是一个针对TCP实际问题的修复，但在移植到我们的QUIC实现时引发了问题。</p>
+
+<p><a href="https://lpar.ath0.com/posts/2026/05/the-vi-family/">Vi系列编辑器简史</a><br>Linux用户的投票显示，vi系列编辑器是最受欢迎的。vi是一个源自1977年的基于终端的文本编辑器。如果你想知道为什么这么多人会选择使用一个有50年历史且学习曲线陡峭的编辑器，那是因为一旦你学会了它，你的编辑效率将会极其高效。此外，它几乎随处可见，大多数IDE都提供vi键绑定。文章列举了多种vi克隆版本和衍生产品，并整理了一份清单供参考。</p>
+
+<p><a href="https://obsidian.md/blog/future-of-plugins/">obsidian插件的未来</a><br>Obsidian插件的未来。今天我们很高兴推出Obsidian Community，这是Obsidian插件和主题的新目录及开发者仪表板。自2020年发布Obsidian API以来，我们惊人的社区已经创建了超过4000个插件和主题，总下载量超过1.2亿次！我们的目标是让任何人都能轻松安全地构建、分发、发现和使用插件及主题。今天推出的内容只是更大计划的开始。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://claude.com/blog/claude-platform-on-aws">AWS上的Claude平台</a><br>AWS上的Claude平台现已全面可用，为AWS客户提供了一种通过AWS身份验证、计费和承诺退还来访问全套Claude平台功能的新方式。Claude也将继续在Amazon Bedrock上提供。从今天开始，客户可以使用Claude托管智能体大规模部署智能体，并利用代码执行、技能、顾问策略等工具进行构建。AWS客户首次获得完整的Claude API功能集合。</p>
+
+<p><a href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/">Gemini 智能系统</a><br>更智能、更主动的Android系统与Gemini Intelligence。随着Android从操作系统转变为智能系统，你的设备正变得更加有用。Gemini Intelligence即将登陆Android设备，以自动执行复杂任务、总结网络内容和简化表单填写。你还可以使用诸如Rambler之类的工具来润色口述信息，或使用自然语言构建自定义小部件。这些功能将于今年夏天在部分三星和谷歌手机上推出，并于今年晚些时候在其他设备上更广泛地提供。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria是一个功能强大、闪电般快速且抗审查的代理工具。</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>支持多协议、多用户、过期时间、流量限制及IP限制的Xray面板（Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun）</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/go-acme/lego">go-acme/lego</a><br>用Go语言编写的Let&#39;s Encrypt/ACME客户端和库</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>一个用于聚合与分发的统一AI模型中心。它支持将各种LLM交叉转换为OpenAI、Claude或Gemini兼容格式。一个用于个人的集中式网关。</p>
+
+<p><a href="https://github.com/BenedictKing/ccx">BenedictKing/ccx</a><br>Claude / Codex / Gemini API代理 - CCX</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>一个开放且可靠的容器运行时</p>
+
+<p><a href="https://github.com/chenhg5/cc-connect">chenhg5/cc-connect</a><br>连接本地AI编码智能体（Claude Code, Cursor, Gemini CLI, Codex）到消息平台（飞书/Lark, 钉钉, Slack, Telegram, Discord, LINE, 企业微信）。从消息平台与你的AI开发助手聊天。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry采集器</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

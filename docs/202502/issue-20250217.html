@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250217.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250217</span>
+</p>
+<p>每日一谚：A constructor should often ONLY return a new value. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/02/16/some-changes-in-go-1-24/">Go 1.24中值得关注的几个变化</a><br>Go 1.24正式发布，解读Go 1.24版本在语法、编译器与运行时、工具链以及标准库方面都有哪些最新值得大家关注的新特性</p> 
+
+<p><a href="https://boyter.org/posts/searchcode-bigger-sqlite-than-you">searchcode.com的 SQLite 数据库可能比你的大 6TB</a><br>博主 Ben E. C. Boyter 的文章介绍了其项目 searchcode.com 将数据库从 MySQL 迁移到 SQLite 的过程。searchcode.com 的 SQLite 数据库大小达到了惊人的 6.4TB，这可能是世界上最大的公共网站 SQLite 数据库之一。文章详细描述了迁移过程中的挑战和解决方案，包括数据库锁问题、跨编译问题以及数据压缩策略（最终使用了 BTRFS 文件系统级的 zstd 压缩）。迁移后，searchcode.com 的性能得到了显著提升，搜索速度更快，并且作者还升级了服务器硬件以更好地支持更大的数据库。</p> 
+
+<p><a href="https://blog.lawrencejones.dev/ai-dont-need-python">你不需要 Python 来构建 AI 产品</a><br>许多人认为构建 AI 产品需要使用 Python，但这并不正确。作者认为，如果团队不使用 Python，为了 AI 生态系统而切换编程语言可能是个糟糕的决定。Python 的并发性可能很棘手，静态类型系统可以为非确定性模型带来急需的结构。作者所在的团队在 incident.io 使用 Go 构建 AI 系统，并取得了不错的效果。他们构建了一些简洁的抽象，使使用 AI 变得非常容易。文章还介绍了他们如何使用 Go 的泛型来实现更灵活的 prompt，并说明了为什么坚持使用同一编程语言构建 AI 功能和核心产品更有效。</p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/filesystems">漫步于文件系统：Go 的新 fs.FS 接口</a><br>Go 1.16 及更高版本中的新 io/fs 包为我们提供了一种强大的新方法来处理文件系统。让我们一起探索新的 fs.FS 接口及其功能。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/patching-problems-with-persnickety-proxies-purveyed-by-paternalistic-princes">Fallthrough | Go模块镜像中的一个后门</a><br>最近一篇Ars Technica的文章概述了Go模块镜像中的一个后门。虽然它被描述为后门，并可能是一个漏洞，但它实际上是对模块镜像设计者做出的设计选择的利用。Kris 与Matthew、Dylan和客座主持人Jamie Tanna一起讨论了这个漏洞（实际上是功能），它对Go社区的影响，以及导致这种情况发生的更广泛的原因。我们踏上了模块历史、Go社区以及更多内容的旅程。我们知道这是一个漫长的过程，但我们相信你会喜欢的！有什么想法？在社交媒体上与我们联系，让我们听到你的声音！</p> 
+
+<p><a href="https://arschles.svbtle.com/orthogonality-in-go">Go语言中的正交性</a><br>本文讨论了Go语言中的正交性概念。正交性意味着代码的不同部分相互独立，修改一个部分不会影响其他部分。Go语言通过其标准库的设计、Unix哲学（“做好一件事”，“保持简单”，“标准的通信方式”）以及接口的使用来实现正交性。文章还提到了Go语言的标准库、GoDoc以及一些常用的包，例如`net/http`、`encoding/json`等，并鼓励读者参与Go社区的建设。</p> 
+
+<p><a href="https://dev.to/leapcell/why-gos-functional-programming-is-the-ultimate-coding-style-53ee">Go的函数式编程为何是终极编码风格</a><br>本文探讨了 Go 语言中的函数式编程，打破了 Go 不适合函数式编程的传统认知。文章详细解释了 Go 中的高阶函数、柯里化、不变性、函子、内函子以及单子的概念和应用，并以代码示例进行说明。最后，文章推荐了 Leapcell 这一用于部署 Golang 代码的平台，并介绍了该平台的多语言支持、免费部署无限项目、极具竞争力的成本效益、简化的开发者体验以及轻松扩展性和高性能等优势。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.youtube.com/watch?v=XWO_3My2eVU">容器化你的智能体！</a><br>Dagger（以及Docker）的联合创始人Solomon Hykes提出了一种更模块化和开放的AI智能体架构，该架构使用容器技术。他通过仅用几行代码现场编写一个玩具“编程智能体”来演示这个概念。</p>
+
+<p><a href="https://fly.io/blog/wrong-about-gpu">我们对GPU的错误认识</a><br>Fly.io 正在构建一个公共云，他们之前押注于GPU，认为互联网用户会需要GPU来进行AI/ML 推理任务。然而，事实证明，这个押注并没有带来预期的回报。开发者更关注LLM，而非GPU。Fly.io 虽然不会放弃GPU机器，但也不会对其进行大规模的投资。文章总结了他们在这方面的经验教训，并反思了在AI/ML快速发展的背景下，对技术趋势的判断和公司战略的制定。</p>
+
+<p><a href="https://www.cs.otago.ac.nz/cosc345/resources/nasa-10-rules.htm">NASA的10个编程规则</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/decodingml/an-end-to-end-framework-for-production-ready-llm-systems-by-building-your-llm-twin-2cc6bb01141f">构建你的LLM分身：端到端生产就绪型 LLM 系统框架</a><br>本免费课程将指导您如何设计、训练、部署和监控一个由 LLM、向量数据库和 LLMOps 良好实践驱动的生产就绪型 LLM 系统，方法是构建您的 LLM 分身。课程涵盖从数据收集到 LLM 生产的整个流程，并运用 LLMOps 的最佳实践。</p>
+
+<p><a href="https://www.ruder.io/secret-word2vec">关于词嵌入 - 第三部分：word2vec的秘密成分</a><br>这篇文章讨论了导致word2vec成功的因素及其与更传统模型的联系。文章首先介绍了GloVe模型，然后强调了词嵌入模型与分布式语义模型之间的联系。随后，文章介绍了四个用于衡量不同因素影响的模型，概述了除算法选择外，学习词表示的其他因素。最后，文章介绍了Levy等人的研究结果、结论和建议，指出超参数设置通常比算法选择更重要。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens.</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>Simple and easy to use DDNS. Support Aliyun, Tencent Cloud, Dnspod, Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, Namecheap, NameSilo...</p>
+
+<p><a href="https://github.com/qdm12/ddns-updater">qdm12/ddns-updater</a><br>Container to update DNS records periodically with WebUI for many DNS providers</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/superseriousbusiness/gotosocial">superseriousbusiness/gotosocial</a><br>Fast, fun, small ActivityPub server.</p>
+
+<p><a href="https://github.com/lucaslorentz/caddy-docker-proxy">lucaslorentz/caddy-docker-proxy</a><br>Caddy as a reverse proxy for Docker</p>
+
+<p><a href="https://github.com/loft-sh/vcluster">loft-sh/vcluster</a><br>vCluster - Create fully functional virtual Kubernetes clusters - Each vcluster runs inside a namespace of the underlying k8s cluster. It&#39;s cheaper than creating separate full-blown clusters and it offers better multi-tenancy and isolation than regular namespaces.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/yusing/go-proxy">yusing/go-proxy</a><br>Easy to use reverse proxy with docker integration</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

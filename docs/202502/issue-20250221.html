@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250221.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250221</span>
+</p>
+<p>每日一谚：How to structure Go code? There are no hard and fast rules. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.alexedwards.net/blog/how-to-manage-tool-dependencies-in-go-1.24-plus">如何在Go 1.24&#43;中管理工具依赖项</a><br>Go 1.24 的一个我最喜欢的功能是管理开发工具依赖项的新功能。本文介绍了如何使用 Go 1.24 中的新功能来更有效地管理开发工具依赖项，包括添加、使用、列出、验证、管理和删除工具等。文章通过示例演示了如何使用 `go get -tool` 命令添加工具、使用 `go tool` 命令运行工具以及使用 `go mod` 命令管理工具依赖项。</p> 
+
+<p><a href="https://meroxa.com/blog/from-java-to-go-a-developers-journey-pt-1">从 Java 到 Go：开发人员的旅程（第一部分）</a><br>本文是作者分享从 Java 转向 Go 语言的经验之谈的第一部分。文章涵盖了学习 Go 的方法，对 Go 语言进行了简要概述，并重点比较了 Java 和 Go 在接口和函数方面的差异。作者分享了他学习 Go 的过程，包括使用在线教程和书籍，以及参与实际项目和代码审查的经验。文章还解释了 Go 的隐式接口、多返回值函数和基于值的错误处理机制，并与 Java 的显式接口、单返回值函数和基于异常的错误处理机制进行了对比。</p> 
+
+<p><a href="https://medium.com/@ksandeeptech07/improved-finalizers-in-go-1-24-d663ed55015e">Go 1.24 中改进的终结器：引入 runtime.AddCleanup</a><br>Go 1.24 引入了一种新的改进的终结机制，它使用 runtime.AddCleanup。此函数是对 runtime.SetFinalizer 的重大改进，它提供了更大的灵活性和更好的效率，并提高了安全性。文章探讨了 runtime.AddCleanup 如何改进终结器，为什么它优于 runtime.SetFinalizer，以及如何在实际场景中应用它。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/prometheus-monitoring-metrics-counters-gauges-histogram-summaries">Prometheus 指标详解：计数器、仪表盘、直方图和摘要</a><br>本文介绍了 Prometheus 指标的不同类型：仅增长的计数器、波动的仪表盘、显示值分布的直方图和预先计算统计数据的摘要。文章解释了指标的表示方式，包括名称、标签、值和时间戳，并详细阐述了计数器、仪表盘、直方图和摘要的用途和特点，以及如何使用它们来监控系统性能。</p>
+
+<p><a href="https://dolthub.com/blog/2025-02-20-mysql-primary-keys/">MySQL主键：使用方法、用途及示例</a><br>本教程将讲解MySQL主键的概念、使用方法和用途。主键用于唯一标识SQL表中的单条记录，每个记录都有一个不同的主键来唯一标识它。教程还比较了自然主键和合成主键，并介绍了自动生成合成主键的方法以及使用主键的益处，例如确保数据唯一性、加快查找速度和排序速度以及改进连接操作的性能。</p>
+
+<p><a href="https://jazco.dev/2025/02/19/imperfection">当不完美的系统实际上很好：Bluesky 的有损时间线</a><br>本文探讨了在系统设计中权衡一致性、可用性、延迟和吞吐量等属性的策略。作者以 Bluesky 的时间线为例，介绍了一种名为“有损时间线”的技术，通过牺牲部分一致性来提高写入性能，从而有效解决了“热点分片”问题，并显著降低了 P99 延迟。</p>
+
+<p><a href="https://benjamintoll.com/2022/02/04/on-running-systemd-nspawn-containers">关于运行 systemd-nspawn 容器</a><br>本文详细介绍了一种名为systemd-nspawn的容器技术，它允许运行完整的操作系统或命令在目录树中。与chroot相比，它更加安全，因为它提供了cgroups和namespaces的安全优势。文章概述了使用systemd-nspawn启动容器的几种方法，包括使用docker export、debootstrap、mkosi、machinectl pull-tar和machinectl pull-raw，并解释了systemd-nspawn容器设置文件的作用。此外，文章还提供了更多命令，例如列出正在运行的容器、列出所有容器、列出传输、查询容器状态以及删除容器等。最后，文章还介绍了如何使用fzf来简化容器的启动过程。</p>
+
+<p><a href="https://blog.pragmaticengineer.com/software-engineer-jobs-five-year-low">软件工程职位空缺降至五年低点？</a><br>Indeed 的数据显示，与五年前相比，现在的软件开发人员职位空缺减少了 35%。与其他行业相比，软件工程师的职位空缺在 2021-2022 年增长更快，但此后下降得更快。本文探讨了造成这种情况的可能原因以及未来的走向。文章分析了多种因素，包括生成式AI的影响、利率变化、行业对工程师需求的转变以及Indeed 数据的局限性等。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/subtrace/subtrace">subtrace/subtrace</a><br>Wireshark for Docker containers</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit and Integration Test generation for Developers. Generate tests and stubs for your application that actually work!</p>
+
+<p><a href="https://github.com/k8sgpt-ai/k8sgpt">k8sgpt-ai/k8sgpt</a><br>Giving Kubernetes Superpowers to everyone</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/kubernetes/test-infra">kubernetes/test-infra</a><br>Test infrastructure for the Kubernetes project.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers (AWS Route53, Google CloudDNS and others) for Kubernetes Ingresses and Services</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

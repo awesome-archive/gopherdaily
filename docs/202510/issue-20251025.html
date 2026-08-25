@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251025.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251025</span>
+</p>
+<p>每日一谚：Make your errors clear with fmt.Errorf, do not just leave them bare. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/25/go-iota-flaw-or-magic">Go的iota：设计缺陷还是“黑魔法”？—— 从一条“咆哮”推文谈起</a><br>对 iota 的困惑，几乎是每一位 Gopher 在学习之路上都曾遇到过的“成年礼”。它那看似“不合逻辑”的行为，让许多初学者和来自其他语言的开 发者感到费解，甚至愤怒。那么，iota 究竟是一个彻头彻尾的设计缺陷，还是一种被误解了的“黑魔法”？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/EjXatiBTxCK80ssyPFf4Mw">【Go 网络编程全解】10 广播与多播：一对多的通信模式</a><br></p> 
+
+<p><a href="https://tailscale.com/blog/nat-traversal-improvements-pt3-looking-ahead">NAT穿越改进，第 3 部分：展望未来</a><br>Tailscale 如何思考 NAT 穿越、对等连接和中继的未来。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-10-24-go-switch/">Go 中的 Switch 语句</a><br>Go 中的 Switch 语句具有独特的特性，使其易于编写复杂的流程控制。阅读这篇博文，了解是什么让它们如此特别。</p> 
+
+<p><a href="https://priver.dev/blog/we-rebuilt-our-integration-service-using-postgres-and-go">我们使用Postgres和Go重建了我们的集成服务</a><br>我们如何将集成服务从GCP Pub/Sub重建到PostgreSQL和Go，实现了横向扩展和分布式速率限制。</p> 
+
+<p><a href="https://gthulhu.github.io/docs">Gthulhu</a><br>Gthulhu 是一个高级的 Linux 调度程序，旨在利用 Linux 调度程序扩展（sched_ext）框架来优化云原生工作负载。Gthulhu 由两个主要组件构成：BPF 组件和 Go 组件。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.salesforce.com/multi-table-predictions-in-data-cloud-enabling-machine-learning-across-related-data-objects/">数据云中的多表预测：启用机器学习</a><br>了解 Salesforce 如何通过大量的反复试验测试来平衡功能与 SQL 查询性能，以及更多内容。</p>
+
+<p><a href="https://netflixtechblog.com/post-training-generative-recommenders-with-advantage-weighted-supervised-finetuning-61a538d717a9">Post-Training Generative Recommenders with Advantage-Weighted Supervised Finetuning</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/24/cloud-native-sustainability-month-2025-a-global-community-movement-for-greener-tech/">2025 年云原生可持续发展月：全球社区推动更环保技术</a><br>继前几年取得成功之后，CNCF的可持续发展月活动又回来了——规模更大，也更环保。 这项为期一个月的全球性倡议由 TAG 运营弹性社区组织，汇集了从业人员、开发人员和倡导者，共同探讨可持续的云原生实践，并推动真正的变革。</p>
+
+<p><a href="https://aiven.io/blog/apache-kafkas-80-percent-problem">Kafka 的 80% 问题</a><br>为什么大多数 Kafka 部署为小数据流支付大数据价格，以及如何解决这个问题</p>
+
+<p><a href="https://www.tinybird.co/blog/flink-is-95-problem">Flink 的 95% 问题</a><br>Flink 听起来像是流数据处理的圣杯，但对于我们 95% 的人来说，它只是一个我们不需要的复杂难题。</p>
+
+<p><a href="https://blog.sesse.net/blog/tech/2025-10-23-21-23_modern_perfect_hashing.html">现代完美Hash</a><br>作者讨论了现代完美哈希在字符串处理中的应用，特别是在优化编译时已知字符串集合的查找效率方面。他分享了自己实现完美哈希的经验，探讨了使用magic bitboards的技巧，并提到了针对不同长度的字符串采用的策略，以及如何通过尝试不同的magic值来优化性能。文章还提到了在Arm架构上实现该技术的挑战，以及与gperf等工具的对比，最后呼吁有人来开发更现代化的gperf替代品。</p>
+
+<p><a href="https://rkirov.github.io/posts/why_lean">为什么形式化数学——不仅仅是捕捉错误</a><br>我读了伊莎贝尔定理证明器的一位作者写的一篇好文章，这让我开始思考。作者劳伦斯·保尔森观察到，大多数数学证明都是微不足道的，但写下来（最好是用证明助手）是一项有价值的活动，原因类似于安全检查清单——“并非所有显而易见的陈述都是正确的”。
+
+正如我一直痴迷于形式化数学，这让我开始思考为什么我最近很兴奋地花了几个小时用Lean编写形式化的证明，用于陶氏的《实分析》练习（以及最近尝试编写Riehl的《情境中的范畴论》的伴侣）。从个人层面来说，我就是喜欢数学、计算机和谜题，用Lean编写证明感觉就像同时做这三件事。但我确实相信形式化在像我这样的极客之外也很重要。</p>
+
+<p><a href="https://www.geoffreylitt.com/2025/10/24/code-like-a-surgeon">像外科医生一样写代码</a><br>作者探讨了使用人工智能辅助编程，将程序员的角色比作外科医生，专注于核心设计工作，并委托AI处理次要任务，例如编写代码库指南、进行大型更改的初步尝试、修复错误以及编写文档。文章强调了AI在辅助程序员完成重复性工作、提高效率方面的潜力，并提到了“自主滑块”的概念，即在核心设计和次要任务中使用AI时采用不同的工作方式。</p>
+
+<p><a href="https://lwn.net/Articles/1041316">Debian技术委员会覆盖systemd更改</a><br>Debian打包程序在配置他们打包的软件方面有很大的自由度；例如，他们可以选择禁用他们认为存在安全隐患的软件中的默认功能。 然而，打包程序被期望确保他们的软件包符合 Debian 策略，无论上游的偏好如何。如果打包程序未能遵守该策略，Debian 技术委员会 (TC) 可以介入覆盖他们，就像最近 systemd 更改的情况一样，该更改破坏了几个依赖于世界可写 /run/lock 目录的程序。</p>
+
+<p><a href="https://deyaa1251.github.io/deyaa1251/posts/b_tree">搜索问题：为什么你的电脑查找东西比你快 - Imposter</a><br>这篇文章深入探讨了B树在文件系统设计中的应用，解释了为什么B树比二叉搜索树在处理大量数据和磁盘I/O时更有效。文章通过对比分析、基准测试和实例，详细介绍了B树的结构、优势以及在数据库索引、文件系统目录查找、Git版本控制等领域的实际应用，旨在帮助读者理解系统设计的核心思想，以及如何在实际场景中选择合适的数据结构，以优化性能。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/kagent-dev/kagent">kagent-dev/kagent</a><br>Cloud Native Agentic AI | Discord: https://bit.ly/kagentdiscord</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/litmuschaos/litmus">litmuschaos/litmus</a><br>Litmus helps SREs and developers practice chaos engineering in a Cloud-native way. Chaos experiments are published at the ChaosHub (https://hub.litmuschaos.io). Community notes is at https://hackmd.io/a4Zu_sH4TZGeih-xCimi3Q</p>
+
+<p><a href="https://github.com/rcourtman/Pulse">rcourtman/Pulse</a><br>A responsive monitoring platform for Proxmox VE, PBS, and Docker with real-time metrics across nodes and containers</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/smallstep/certificates">smallstep/certificates</a><br>🛡️ A private certificate authority (X.509 &amp; SSH) &amp; ACME server for secure automated certificate management, so you can use TLS everywhere &amp; SSO for SSH.</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>A database migration tool. Supports SQL migrations and Go functions.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Simple, reliable, and efficient distributed task queue in Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

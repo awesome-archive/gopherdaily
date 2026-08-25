@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250929.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250929</span>
+</p>
+<p>每日一谚：Only use a buffered channel if you know the exact buffer size. Or, you would be only gambling with a ticking time bomb </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/29/synctest-bugs-in-go-1-25">并发测试神器synctest的“成人礼”：从goroutine泄漏到微妙的竞态，Go团队如何修复三大“首日bug”？</a><br>Go 1.25的发布，为我们带来了一个期待已久的“并发测试神器”—— testing/synctest。这个在Go 1.24中作为实验性功能首次亮相的包，承诺将我们从time.Sleep、channel和各种脆弱的同步技巧中解放出来，让我们能够编写出快速、可靠、确定性的并发测试。然而，任何强大的新工具在投入真实世界的熔炉后，都必然会经历一场严酷的“成人礼”。Go 1.25发布后，社区的早期使用者们迅速将其应用于各种复杂的并发场景，并遇到了一些隐藏在“气泡”（bubble）之下的微妙问题 本文将聚焦于三个典型的、由社区报告的synctest“首日bug” ，它们分别涉及了io.Pipe、context和sync.WaitGroup这三个常用并发原语</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/w-yQROLfCMi5b7vYZbGKrA">【Go开发者的数据库设计之道】00 不懂数据库设计，你走不远</a><br>我们将以一个 Go 开发者的视角，用一套现代的、可落地的、系统化的方法，重新审视和掌握数据库设计这门核心手艺。我们将一起证明：优秀、深思熟虑的数据库设计，不是敏捷开发的敌人，而是其最坚实的盟友</p> 
+
+<p><a href="https://nghiant3223.github.io/2025/05/29/fundamental_of_virtual_memory.html">虚拟内存基础</a><br>本文介绍了虚拟内存的基本概念，包括其作用、实现方式和在操作系统中的应用。主要内容包括：
+
+*   虚拟内存的作用及与物理内存的区别。
+*   简单的内存分配策略及其问题，如外部碎片。
+*   内存分页的原理，包括物理内存、虚拟内存、页面、帧、页表等概念。
+*   需求分页的机制及其流程，以及RSS 和 VSZ 等内存度量指标。
+*   虚拟内存布局，包括内核虚拟内存、栈、内存映射区域、堆、数据段和代码段等。
+*   栈的分配与管理，包括栈帧、栈指针、基址指针等概念，以及栈和线程的关系。
+*   堆的分配与管理，包括程序断点、sbrk、malloc 的工作方式。
+*   内存映射的概念及其两种类型：文件映射和匿名映射，以及它们的特性。
+
+本文还包括相关参考资料。</p> 
+
+<p><a href="https://thenewstack.io/go-experts-i-dont-want-to-maintain-ai-generated-code">Go专家: 我不想维护AI生成的代码</a><br>Two Go programming experts discuss the rise of AI-generated code, exploring its impact on Go&#39;s popularity, the challenges of low-quality code, and the future.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://medium.com/airbnb-engineering/building-a-next-generation-key-value-store-at-airbnb-0de8465ba354">在 Airbnb 构建下一代键值存储</a><br>我们如何完全重新设计了 Mussel，即我们用于派生数据的存储引擎，以及从 Mussel V1 迁移到 V2 的经验教训。</p>
+
+<p><a href="https://netflixtechblog.com/building-a-resilient-data-platform-with-write-ahead-log-at-netflix-127b6712359a">使用WAL构建可靠数据平台</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://chrisloy.dev/post/2025/09/28/the-ai-coding-trap">AI编码陷阱</a><br>如果你曾经观察过某人“编码”，你可能会看到他们花在凝视虚空上的时间远远多于在键盘上打字的时间。这篇文章探讨了人工智能编码工具的兴起，以及开发人员如何才能避免人工智能编码陷阱。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Done-0/fuck-u-code">Done-0/fuck-u-code</a><br>Legacy-Mess Detector – assess the “legacy-mess level” of your code and output a beautiful report | 屎山代码检测器，评估代码的“屎山等级”并输出美观的报告</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/francoismichel/ssh3">francoismichel/ssh3</a><br>SSH3: faster and rich secure shell using HTTP/3, checkout our article here: https://arxiv.org/abs/2312.08396 and our Internet-Draft: https://datatracker.ietf.org/doc/draft-michel-ssh3/</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>A BNB Smart Chain client based on the go-ethereum fork</p>
+
+<p><a href="https://github.com/slackhq/nebula">slackhq/nebula</a><br>A scalable overlay networking tool with a focus on performance, simplicity and security</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/eduardolat/pgbackweb">eduardolat/pgbackweb</a><br>🐘 Effortless PostgreSQL backups with a user-friendly web interface! 🌐💾</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kind">kubernetes-sigs/kind</a><br>Kubernetes IN Docker - local clusters for testing Kubernetes</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - Infrastructure as Code in any programming language 🚀</p>
+
+<p><a href="https://github.com/rivo/tview">rivo/tview</a><br>Terminal UI library with rich, interactive widgets — written in Golang</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

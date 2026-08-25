@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241127.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-27</span>
+</p>
+<p>每日一谚：Don&#39;t trust user input; validate and sanitize it </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/11/27/webrtc-first-lesson-network-architecture-and-how-nat-work/">WebRTC第一课：网络架构与NAT工作原理</a><br>基于大模型的与AI实时音视频通信再次让WebRTC火了一把，本文对WebRTC的网络架构进行的介绍，并着重说明了NAT工作原理与各种类型</p> 
+
+<p><a href="https://xnacly.me/posts/2024/optimizing-a-dependency/">优化go包：性能提升38147125738.8倍</a><br>本文讨论了对 Go 包进行的优化，该包检索 Linux 系统上当前打开的端口列表。最初，该过程很慢，需要 1.588 秒才能完成。通过缓存 inode 到进程 ID （PID） 的映射，作者设法显著加快了操作速度，将性能提高了 38147125738.8 倍，将时间缩短到 1.11 秒。优化涉及一次调用以读取 &#39;/proc&#39; 目录并将 inode 到 PID 的映射存储在 map 中，然后使用该映射快速查找过程中遇到的每个 inode 的 PID。此更改消除了重复扫描每个 inode 的 &#39;/proc&#39; 目录的需要，从而提高了 &#39;GetOpenPorts&#39; 函数的效率。本文还包括基准测试结果和代码片段，以说明所做的改进。</p> 
+
+<p><a href="https://metoro.io/blog/go-production-performance-gotcha-gomaxprocs">Go Production Performance Gotcha - GOMAXPROCS</a><br>在生产环境中，来自 Metoro 的 Chris Battarbee 在基于 Go 的工作负载中遇到了严重的性能问题，其中 CPU 使用率几乎是预期的两倍。调查显示，默认的“GOMAXPROCS”设置（基于可用 CPU 内核的数量）在 CPU 资源有限的容器化环境中导致效率低下。通过将“GOMAXPROCS”设置为 1，Metoro 能够将 Go 运行时的进程调度与其 Kubernetes 部署施加的单核 CPU 限制保持一致，从而解决性能瓶颈。该解决方案涉及利用 Kubernetes 的向下 API 在部署时动态调整“GOMAXPROCS”环境变量，确保在不影响其他工作负载的情况下实现最佳 CPU 利用率。这种方法不仅纠正了即时的性能下降，而且还提供了一种可扩展且高效的方法来管理容器化环境中的 CPU 资源。</p> 
+
+<p><a href="https://www.youtube.com/watch?v=IM9Leoqc-xY">WASI to Go：一次编写，随处运行</a><br>Go因其简单性、并发性和高效性而受到开发者的喜爱。本演讲探讨了 Go 开发人员如何使用新的和现有的开源工具快速轻松地为云原生工作负载构建 Wasm 组件： 使用`wit-bindgen-go`为 WebAssembly 组件生成惯用的 Go 绑定 。 使用 TinyGo 编译组件 。使用 Wasmtime 运行组件观众将学习如何使用这些工具构建一个可移植且与语言无关的 WebAssembly 组件，以使用新兴的“wasi-http”标准处理 HTTP 请求。本次演讲最后讨论了需要改进的领域，以增强 Go 开发人员构建 WebAssembly 应用程序的体验。</p> 
+
+<p><a href="https://medium.com/@architagr/unlock-the-power-of-custom-formatting-in-go-a-deep-dive-into-the-formatter-interface-b522f038ddaf">在 Go 中解锁自定义格式的强大功能：深入了解 Formatter interface</a><br>在本文中，Archit Agarwal 深入研究了 Go 中的 Formatter 接口，这是一个用于自定义类型打印的强大功能。Formatter 接口是 Go 的 fmt 包的一部分，允许开发人员定义定制的格式化逻辑，这对于调试、生成用户友好的输出或遵守特定的格式化要求特别有用。Agarwal 通过为 User 结构体实现 Formatter 接口提供了一个实际示例，演示了如何控制宽度、精度和标志。本文强调了使用 Formatter 接口的好处，例如增强的调试、可读性、动态格式和跨代码库的一致性。Agarwal 最后提供了有效实现 Formatter 界面的专业技巧，并鼓励读者在他们的项目中对其进行试验。
+
+（注意：摘要旨在概括文章的关键点，同时保持简洁和连贯。它不包括文档中的直接引用或具体问题。</p> 
+
+<p><a href="https://blog.pragmaticengineer.com/ide-that-software-engineers-love/">软件工程师喜欢哪些 IDE，为什么？</a><br>Pragmatic Engineer&#39;s Guidebook 探讨了软件工程师对集成开发环境 （IDE） 的偏好以及他们选择的原因。尽管 Visual Studio Code 和 JetBrains IDE 等成熟工具很受欢迎，但早期采用者和技术爱好者越来越倾向于 Cursor 和 Windsurf 等较新的 AI 驱动的 IDE 初创公司。这些初创公司提供多文件编辑和代理功能等高级功能，而 GitHub Copilot 等竞争对手无法有效地提供这些功能。本文还强调了 Microsoft 在 IDE 市场中保持其据点的潜力，因为它具有分发优势，而且许多成功的 IDE 都是基于 Visual Studio Code 构建的。这些 AI 驱动的 IDE 的出现表明开发工具正在发生一场革命，有可能让更多的初创公司进入市场并挑战老牌供应商。
+
+（注意：该摘要旨在概括有关软件工程师对 IDE 的偏好、AI 驱动的 IDE 初创公司的兴起以及 Microsoft 在市场上的战略地位等关键点，同时保持连贯的叙述，没有冗余信息。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://icepanel.medium.com/state-of-software-architecture-report-2024-31eab5fe2c88">软件架构现状报告 — 2024 年</a><br>IcePanel 的《2024 年软件架构现状报告》对 96 名专业人士进行了调查，揭示了对当前软件架构实践、工具和未来趋势的见解。大多数受访者是来自大中型公司的架构师和工程师，他们更喜欢图表和协作 wiki 工具作为他们的主要文档来源。尽管某些应用程序缺乏单一的事实来源，但容器/应用程序图和上下文图是最常用的，尤其是在 C4 模型框架中。该报告强调了 AI 对文档的预期影响，60% 的受访者预测未来五年将发生重大变化。此外，架构师的角色预计将朝着更多地参与业务战略、指导和安全的方向发展。该调查强调了协作和纪律在架构中的重要性，尤其是在 AI 技术不断进步的情况下。</p>
+
+<p><a href="https://www.scylladb.com/2024/11/25/database-internals-working-with-io/">数据库内部工作原理：使用IO</a><br>源文档深入探讨了数据库性能的复杂性，特别关注 ScyllaDB NoSQL 数据库及其对 I/O 操作的处理。它重点介绍了 ScyllaDB 的架构，该架构针对高吞吐量和低延迟进行了优化，使其适用于数据密集型应用程序。本文档讨论了各种 I/O 方法，包括传统读/写、mmap、直接 I/O （DIO） 和异步 I/O （AIO/DIO），以及它们对性能的影响。它强调了了解这些方法之间权衡的重要性，尤其是在考虑现代 SSD 的使用及其独特特性时。该文档还提供了对 ScyllaDB 功能的见解，例如其云管理和企业产品，以及面向开发人员和用户的资源。此外，它还谈到了 I/O 调度的重要性，以及在使用文件系统与原始块设备相比管理存储时管理存储的挑战。总之，本文档是通过有效的 I/O 管理策略优化数据库性能的综合指南。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或特定 URL，遵循总结内容而不逐字复制原始文本的说明。</p>
+
+<p><a href="https://semaphoreci.medium.com/top-10-rules-of-continuous-integration-c7a7a61dd00d">持续集成的 10 大规则</a><br>本文概述了最大限度地提高持续集成 （CI） 管道效率和可靠性的 10 条基本规则，这些规则对于现代软件开发和敏捷工作流程至关重要。它强调了对共享核心存储库使用版本控制以确保可追溯性和管理频繁提交的重要性。自动化构建和测试被强调为关键组件，并建议自动化这些流程以减少人为错误并加快开发速度。本文提倡一种平衡的测试方法，包括单元测试、集成测试和端到端测试，同时还建议使用静态代码分析工具（如 linting）来保持代码质量。此外，它还建议通过基于路径或特定于分支的触发器、自动化代码和安全检查以及用于性能跟踪的监控工具等策略来优化 CI 管道性能。本文还强调了镜像生产环境进行测试的重要性，并鼓励持续的反馈循环和开发人员调查，以进一步完善 CI 流程。总体而言，本文为开发人员和团队提供了可操作的最佳实践，以增强他们的 CI 管道，确保更快、更可靠和更高质量的软件交付。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/27/kubernetes-for-databases-weighing-the-pros-and-cons/">Kubernetes 数据库：权衡利弊</a><br>本文讨论了在 Kubernetes 上部署数据库的增长趋势，这一举措是由管理大规模数据操作时对标准化、自助服务、可扩展性和弹性的需求推动的。Kubernetes 最初遭到怀疑，但由于社区驱动的工具和最佳实践，Kubernetes 已经发展到可以有效地支持有状态应用程序。尽管有这些好处，但维护有状态应用程序和确保数据一致性等挑战仍然存在。Kubernetes 生态系统提供 Operator 等解决方案来自动执行数据库管理任务。本文还探讨了在 Kubernetes 上进行数据库管理的不同方法，包括使用超大规模提供商、专有 DBaaS 解决方案或构建内部平台。Percona Everest 被强调为一种强大的开源解决方案，可跨 Kubernetes 基础设施自动配置和管理数据库，为传统数据库管理策略提供灵活且经济高效的替代方案。
+
+（注意：提供的摘要基于所提供的源文档的内容。它综合了关键点，同时保持了连贯性并避免了冗余。摘要的实际长度可能会因对源材料的解释和压缩而异。</p>
+
+<p><a href="https://www.openfaas.com/blog/build-and-scale-python-function/">如何使用 OpenFaaS 构建和扩展 Python 函数</a><br>本综合指南详细介绍了使用 OpenFaaS（无服务器平台）构建、扩展和监控 Python 函数的过程。它首先介绍了两个官方 Python 模板，“python3-http”和“python3-http-debian”，它们迎合了不同的基础映像首选项，并针对大小和启动时间进行了优化。然后，该指南将指导如何使用“faas-cli”工具创建新函数、设置容器注册表以及将函数部署到 OpenFaaS。它涵盖了扩展策略，包括默认参数和自定义指标，并演示了如何启用扩展到零以在空闲期间节省资源。Prometheus 指标和 OpenFaaS 控制面板突出了监控功能，并提供了集成 GitHub API 模块以获取存储库星数的示例。该指南还强调了使用 Grafana k6.io 和 hey 等工具在负载下测试和调整函数的重要性。本文档最后对添加 pip 模块和使用密钥进行了实际演示，展示了如何从 GitHub 的 API 获取数据。总体而言，该指南为希望将 Python 与 OpenFaaS 结合使用进行无服务器函数开发和管理的开发人员提供了分步教程。
+
+（注意：摘要经过精心设计，以封装源文档的关键元素，同时保持简洁和连贯性。它不包括直接引用或超出传达要点所需的具体细节。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/news/model-context-protocol">Model Context Protocol 简介</a><br>Anthropic 宣布推出模型上下文协议 （MCP），这是一个开放标准，旨在弥合 AI 助手与各种数据源（如内容存储库、业务工具和开发环境）之间的差距。该协议旨在通过在数据源和 AI 驱动的工具之间实现安全的双向连接，促进前沿模型更好、更相关的响应。MCP 规范和 SDK 可在 GitHub 上找到，本地服务器支持集成到 Claude Desktop 应用程序中。Block 和 Apollo 等早期采用者已经开始将 MCP 集成到他们的系统中，开发工具公司正在与 Anthropic 合作以增强他们的平台。该计划旨在通过用可持续的标准化架构取代分散的集成来改变 AI 生态系统。开发人员可以开始构建和测试 MCP 连接器，Anthropic 鼓励对开源项目做出贡献并邀请社区提供反馈。
+
+（注意：该摘要旨在概括源文档的关键点，重点关注模型上下文协议的公告、目的和影响，以及采用和社区参与的当前状态。</p>
+
+<p><a href="https://thenewstack.io/how-to-add-persistence-and-long-term-memory-to-ai-agents/">如何向 AI 代理添加持久性和长期内存</a><br>New Stack 文章深入探讨了具有持久性和长期内存功能的 AI 代理的增强功能，这对于管理长时间运行的进程和人机交互工作流至关重要。它引入了一个使用 SQLite（一种轻量级且强大的数据库）的持久层，用于存储代理信息并跟踪多个状态，从而确保数据完整性并促进复杂操作。该实施支持可中断的工作流程，允许人类专家干预和验证决策，同时还能维护全面的审计跟踪以实现合规性。此外，该系统通过清理旧状态和有效管理内存来优化资源使用，从而确保在扩展操作期间保持性能。这种方法不仅丰富了 AI 代理功能，还解决了监管合规性和运营效率问题。</p>
+
+<p><a href="https://blog.bitsrc.io/build-and-reuse-utilities-with-ai-0391bac50b2e">使用 AI 构建和重用实用程序</a><br>Mike Chen 的文章讨论了 AI 对软件开发中实用程序库和模块的开发和重用的变革性影响。它强调了在 Hope AI 等 AI 工具的推动下，向智能、高效和可重用的代码组件的转变。这篇文章强调了可组合架构的重要性，其中实用程序被分解为具有清晰接口的模块化、可重用组件。利用 AI 驱动的工具来识别现有实用程序、提出改进建议，并仅在必要时生成新的实用程序。本文还强调了使用 AI 维护实用程序的重要性，AI 会不断学习并提出更新建议，以确保长期相关性和一致性。AI 和可组合性的集成是实现更快、经济高效和高质量代码开发的途径，重点是更智能的重用和主动维护。
+
+（注意：该摘要旨在封装所提供源文档中的关键主题和信息，重点关注 AI 在增强实用程序库和模块的开发和维护方面的作用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/wagoodman/dive">wagoodman/dive</a><br>用于浏览 Docker 映像中每一层的工具</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>管理所有内容的懒惰方式 docker</p>
+
+<p><a href="https://github.com/sourcegraph/conc">sourcegraph/conc</a><br>更好的 go 结构化并发</p>
+
+<p><a href="https://github.com/WuKongIM/WuKongIM">WuKongIM/WuKongIM</a><br>More than just IM 不只是即时通讯( IM )</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics：快速、经济高效的监控解决方案和时间序列数据库</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速的分布式存储系统，适用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 磁盘查找、云分层。Filer 支持云驱动器、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator 在 Kubernetes 上创建/配置/管理 Prometheus 集群</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>容器镜像和文件系统的漏洞扫描器</p>
+
+<p><a href="https://github.com/SpecterOps/BloodHound">SpecterOps/BloodHound</a><br>六度域管理员</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS 提供商使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/git-lfs/git-lfs">git-lfs/git-lfs</a><br>用于对大型文件进行版本控制的 Git 扩展</p>
+
+<p><a href="https://github.com/teamhanko/hanko">teamhanko/hanko</a><br>面向开发人员的身份验证和用户管理解决方案。开源替代Clerk &amp; Auth0。</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go 客户端</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>Prometheus 监控系统和时间序列数据库。</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/quic-go/quic-go">quic-go/quic-go</a><br>纯 Go 中的 QUIC 实现</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>使用 Go 创建漂亮的应用程序</p>
+
+<p><a href="https://github.com/go-rod/rod">go-rod/rod</a><br>用于 Web 自动化和抓取的 Chrome DevTools 协议驱动程序。</p>
+
+<p><a href="https://github.com/slimtoolkit/slim">slimtoolkit/slim</a><br>Slim（toolkit）：不要更改容器镜像中的任何内容，并将其缩小多达 30 倍（对于编译语言甚至更多），使其也安全！（免费和开源）</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

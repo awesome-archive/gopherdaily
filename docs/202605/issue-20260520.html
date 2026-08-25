@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260520.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260520</span>
+</p>
+<p>每日一谚：Go&#39;s slice syntax is powerful but can be confusing. Understand it well </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/20/ai-coding-win-rate-rankings-go-and-rust-vs-cpp">AI 编码胜率榜：Go 与 Rust 完胜 C&#43;&#43;</a><br>随着 GPT、Claude、Gemini 等模型的发布与能力更迭，各种“AI 几秒钟写出小游戏”、“AI 自动化修复 Bug”的新闻充斥屏幕。在各种传统的代码补全基准测试（如 HumanEval）中，大模型们动辄刷出 90% 以上的惊人通过率。一时间，“程序员是夕阳行业”、“架构师即将下岗”的言论甚嚣尘上。 然而，这只是硬核工程世界的冰山一角。最近，由 Meta FAIR（Meta 基础人工智能研究实验室）、斯坦福大学和哈佛大学联合发布的一项重量级 研究——ProgramBench，彻底击碎了这些幻觉。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-05-20-adaptive-encoding-in-dolt/">Dolt 2.0 中的自适应编码</a><br>本月初我们发布了 Dolt 2.0，这是全球首个也是唯一一个支持版本控制的数据库的第二个重大版本。它包含了许多优于 1.0 的酷炫功能和增强，今天我们要深入探讨其中之一：自适应编码。什么是自适应编码？数据库将值以紧凑的结构存储在磁盘上，以便查询执行器在执行查询时能快速且可预测地读取大量数据。数据库系统限制了这些结构的最大大小，以确保性能。但是，当你想要存储一个远大于这些结构限制的值（例如《白鲸记》全文）时会发生什么呢？在大多数数据库系统中，有专门用于大值的类型，它们被存储在主行结构之外的独立文件中，并由主行结构中的指针指向该文件。在 MySQL 中，这适用于几种不同的类型：- TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT- BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB- JSON- GEOMETRY对于这些类型，由于数据库不强制限制长度，也无法确保值能放入磁盘上的主行结构中，因此这些类型的所有值都存储在行外。这种方式运行良好，但带来了严重的性能损失：查询引擎在读取或写入每个值时必须执行额外的磁盘操作。自适应编码是一种针对大类型的存储优化。它利用了这样一个事实：这些类型的许多值都很小，可以与其它行数据内联存储，而不是存储在单独的文件中。对于这些小值，数据与 INT 和 VARCHAR 等类型的数据一起内联存储。大值则像以前一样存储在行外。只要值很小，这就消除了与这些类型相关的性能损失。</p> 
+
+<p><a href="https://www.clarityboss.com/blog/go-http2-cleartext-h2c-cloud-run">配置用于传输未加密的 HTTP/2 协议的 Go HTTP 服务器</a><br>在我们的应用程序中，我们使用长连接的服务器发送事件流 (SSE)。在我们的设置中，这些流配置了很长的超时时间和生命周期，长达 15 分钟。然而，Google Cloud Run 有一个已知问题：当使用 HTTP/1.1 与后端服务通信时，客户端断开连接不会传播到 Cloud Run。因此，我开始研究如何为服务使用 HTTP/2。Cloud Run 在前端终止 TLS，但可以将流量转发为 HTTP/1.1 或 HTTP/2 明文 (h2c) 流量。通常，HTTP/2 总是使用 TLS，但 HTTP 客户端和服务器通常可以配置为使用该协议的明文版本。Cloud Run 还需要你选择要使用的协议。这基本上是 RFC 9113 第 3.3 节中提到的“具有先验知识的 HTTP/2”设置。配置 Go 服务器以支持 HTTP/2 明文我们第一版的 h2c 支持早于我在下面详细介绍的 Go 1.24 的更改。互联网上的大多数文章和指南都会指向陈旧的旧方法，但我将其包含在下面，以便更易于查看前后对比，并根据需要迁移你自己的代码。Go 1.24 之前（旧方法）要使用 h2c，你必须使用 golang.org/x/net/http 包，并经历复杂的设置。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/20/introducing-prempti-policy-and-visibility-for-ai-coding-agents/">介绍 Prempti：AI 编码智能体的策略与可见性</a><br>AI 编码智能体已成为开发者工作流程的真正组成部分。像 Claude Code 这样的工具驻留在终端中，读取文件、运行 shell 命令、发出网络请求并编写代码，所有这些都是代表你执行的。它们速度快、能力强，并且在真实机器上处理真实任务时越来越受到信任。但伴随着这种信任，有一个问题值得认真对待：你的编码智能体到底在你的机器上做什么？5 月 12 日，Falco 团队推出了 Prempti，这是 Falco 生态系统中的一个新实验项目。Falco 是一个 CNCF 毕业项目，也是云原生运行时安全的行业标准，长期以来一直为容器、Kubernetes 和主机提供策略驱动的检测。Prempti 将相同的模型扩展到了一个新的领域：AI 智能体工具调用生命周期。智能体在运行时是一个黑盒当编码智能体运行 bash 命令、写入文件或读取配置时，这些操作都在你的用户会话中、在你的权限下、在你的文件系统中、针对你的凭据进行。大多数使用这些工具的开发人员对该活动没有结构化的可见性。你看到了智能体的聊天输出，但你没看到后台发生了什么。这是一个简单的场景：你让你的编码智能体重构一个模块。它读取你的源文件。它进行编辑。然后，也许是受到恶意依赖项或刚刚解析的文件中意外指令的提示，它试图读取 ~/.ssh/known_hosts 或将文件写入 ~/.aws/。应该允许它这样做吗？如果它尝试了，你甚至知道吗？Falco 博客上的演示捕捉到了这种情况。智能体试图读取和写入它不允许访问的部分，结果都被阻止了。智能体本身收到了一条解释原因的结构化消息。这是在工具调用级别协同工作的检测和护栏。</p>
+
+<p><a href="https://seangoedecke.com/prompts-are-technical-debt-too/">提示词也是技术债</a><br>说“所有代码都是技术债”是普遍且正确的。添加代码是开发新功能时的必要恶行：你几乎总是不得不这样做，但每一行代码都会增加系统的复杂性和维护负担。系统未来的所有更改都必须与现有代码配合，或者至少避免破坏它。一旦系统积累了足够的代码，单个人就无法理解它：你不能通过阅读代码来了解它做了什么，而必须依赖猜测、理论和启发式方法。明智的工程师会尽可能少写代码。不过，他们写了很多提示词！许多大型项目现在都有一套特定于代码库的提示词文件：AGENTS.md、CLAUDE.md、子目录中的相同文件以及技能。如果你正在构建一个使用 AI 的程序，你将拥有针对能力和每个工具的单独提示词，以及一整套系统提示词。提示词很重要。对 LLM 的提示词进行微调可以解锁显著的性能提升。如果同一个模型在 Codex、Cursor、OpenCode 和 Copilot 中感觉不同，那几乎肯定是因为提示词的细微差异。AI 公司花费大量时间测试和调整他们的提示词，所以工程师花费大量时间为他们的项目调整 AGENTS.md 文件是有道理的。我甚至会将切换工具或工作流程称为一种提示词形式。如果我开始将我的智能体包装在 Ralph 循环中，引入一个新的技能文件，或者加入...</p>
+
+<p><a href="https://www.docker.com/blog/meet-gordon-dockers-ai-agent-for-your-entire-container-workflow/">遇见 Gordon：Docker 为你整个容器工作流程提供的 AI 智能体</a><br>Gordon 了解你的环境，提出修复建议，并采取行动横跨你的整个 Docker 工作流程。现已全面发布。图片 1：Docker Desktop 中的 Gordon为什么会有 Gordon开发人员比以往任何时候都更有效率。AI 编码助手正在编写代码、合并 PR 并缩短审查周期。但一旦容器中出现故障，或者队友把服务交给你并说“发布它”，你就只能靠自己了。容器不会按预期方式崩溃。构建缓存无缘无故失效。Postgres 看不到 Redis。镜像在本地运行但在 CI 中崩溃。或者错误消息指向 2017 年的 Stack Overflow 帖子。现代软件开发是一堆摩擦叠加在另一堆摩擦之上。而你已经使用的 AI 工具帮不上忙。Cursor 不知道正在运行什么。Copilot 看不到你的日志。Claude Code 无法检查你的 Compose 文件。它们擅长应用逻辑，但并非为代码编写后发生的所有事情而构建。它们根据你粘贴的内容工作。它们不了解你的系统。Docker 的 AI 智能体 Gordon 了解。关键要点- Gordon 是 Docker 为你整个容器工作流程提供的 AI 智能体，内置于 Desktop 4.74&#43; 和 CLI 中。- 它已经能看到你的环境，因此你可以在几分钟内从问题解决到修复，而不是四处寻找上下文。- 每个操作都需要你的明确批准，并且权限会在会话关闭时重置。- 使用任何 Docker 账户免费开始，并在 Gordon 成为你日常工作流程的一部分时扩展至 20 倍容量。遇见 GordonGordon 是 Docker 为开发人员实际工作而构建的 AI 智能体。不是解释该怎么做的聊天机器人。它是一个在你的批准下，横跨整个 Docker 工作流程采取行动的智能体。Gordon 读取你正在运行的容器日志、镜像、compose 文件和工作环境。</p>
+
+<p><a href="https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-project-to-die.html">开源项目消亡的愚蠢方式</a><br>《Weekend at Bernie’s》表明，很大一部分被严重依赖的开源包已经死亡，而且一个项目以这种方式结束的方式有很多种。维护者离开了幽灵维护者。最简单且最常见的情况：最后一次人类提交是在几年前，问题积压且无人回答，仓库未归档，因此它不会出现在任何会标记它的过滤器中。通常维护者只是转向了其它事情，而该项目对他们来说不够重要，不足以正式移交或关闭，尽管同样的沉默掩盖了从维护者去世到包括去世在内的一切情况，而注册表和仓库都没有办法表示这一点。从外面看，这与长假无法区分，直到堆积了足够多未回答的问题，使这种沉默变得显而易见，而处于 Bernie 死亡名单顶部的 npm 工具大多如此。企业孤儿。一家公司构建并开源了它，并配备了一个团队来运行它，然后一次业务调整或裁员轮次消除了该团队，没有人更新 README。GitHub 组织保留了公司徽标，拥有管理权限的最后一些人已经离开，所以公司里通常没有人知道该项目是他们的。谷歌的各个墓地是著名的案例，但每家超过一定规模的公司都有几个这样的项目，而那些属于基础设施而不是产品的项目往往甚至没有收到弃用通知。论文孤儿。由研究生为硕士项目或博士章节构建，他们毕业后就离开了。托管它的实验室名义上拥有该仓库，但那里的没有人有继续它的背景，学术界也没有理由尝试：维护别人的软件无法获得引用，在评审中比发表新东西更一文不值。研究软件充满了这些，往往还有一篇论文在...</p>
+
+<p><a href="https://emptysqua.re/blog/intro-to-tla-plus-for-the-llm-era/">LLM时代的TLA&#43;入门</a><br>大多数工程师对使用 TLA&#43; 的第一个反对意见是，语法太不友好了。它看起来像 LaTeX，不像代码。但现在，前沿 LLM 可以轻松生成 TLA&#43;。理解你的系统并定义什么是“正确性”仍然是你的责任，并且你需要对时序逻辑有一个高层次的理解。我将在本文中解释时序逻辑。最后，我将展示一个用 Claude 启动 TLA&#43; 规范的示例提示词。一个玩具问题这是一个经典的谜题。你有一罐豆子。每颗豆子要么是白色要么是黑色。罐子开始时非空。当至少有 2 颗豆子时：- 选择 2 颗豆子。- 如果它们颜色相同：丢弃两者，添加 1 颗白豆。- 如果它们颜色不同：丢弃两者，添加 1 颗黑豆。两个问题：1. 豆子的数量有可能达到零吗？2. 如果算法以 b = 1 终止，开始时必须为真的条件是什么？你可以非常努力地思考。或者你可以把它写在 TLA&#43; 中，让模型检查器自动回答这两个问题。重点是为了避免思考——或者至少让机器验证你的思考是正确的。或者让你的朋友相信你的思考是正确的，或者说服你的研究论文同行评审小组。逻辑公式如何生成状态机TLA&#43; 是 Leslie Lamport 在 20 世纪 90 年代发明的。TLA 代表“动作时序逻辑”，TLA&#43; 是特定语言的名称。TLA&#43; 具有基本的布尔逻辑，它有集合和函数，以及量化（“对于所有”和“存在”）。它还有时序运算符，我们很快就会看到。当你用 TLA&#43; 编写规范时，你是在编写一个定义状态机的逻辑公式。机器有一组固定的变量，每个状态都是变量的值分配。对于罐子问题，有变量：w（数量）...</p>
+
+<p><a href="https://luciofranco.com/blog/tonic-joins-grpc/">Tonic加入gRPC</a><br>在接下来的一周内，hyperium/tonic 将成为 grpc/grpc-rust，我们将发布新的 grpc crate 的预览版本。这标志着 tonic 项目以及所有 Rust 中 gRPC 用户的重大一步，因为它将被上游合并到官方 gRPC 项目中。gRPC 项目是云原生计算基金会（CNCF，Linux 基金会的一个部门）的一部分。tonic 是如何走到这一步的在进入细节之前，我首先想简要总结一下 tonic 的历史。我于 2019 年夏天创建该项目，主要是因为我想用 Rust 编写一些分布式系统。最初，Carl Lerche 编写了 tower-grpc，当时在 Buoyant 使用，这为开始编写真正的 Rust gRPC 库提供了完美的初始框架。这一切都在 async/await 即将发布的时候，所以我给自己设定了一个目标，要创建第一个生产就绪的 async/await Rust 库。我把我所有的空闲时间都花在构建项目上，试图把它推向市场。最终在 2019 年秋天，我发布了第一个 0.1 版本。从那时起，剩下的就是历史了，该项目现在在 GitHub 上积累了超过 12k 个星标，并被许多大型工程组织使用。虽然我非常感谢项目给社区和我自己带来的成长和支持，但维护它变得非常困难。构建新功能需要大量的时间投入，而且随着项目可用的维护资源有限，审查新的更改已变得不可持续。最重要的是，prost 项目一直没有维护，我们 tonic 维护者别无选择，只能将其纳入我们的大家庭，因为它是一个核心依赖项。这显著增加了维护负担。随着岁月的流逝和我的生活发生变化，我开始失去完全维护项目所需的时间，并且我在努力...</p>
+
+<p><a href="https://headlamp.dev/blog/2026/05/15/kubernetes-dashboard-migration">kubernetes dashboard 迁移</a><br>重要提示：在运行 Headlamp 桌面应用时，Mac 和 Windows 发出的警告。阅读有关未签名应用的更多信息。随着 Kubernetes Dashboard 现在被归档，团队需要一条明确的前进道路，且不干扰他们现有的工作方式。本指南就是为这一时刻而编写的，因此转换感觉是常规的，而不是有风险的。Kubernetes Dashboard 一直是 Kubernetes 世界的支柱，帮助团队进行构建和学习。它提供了一种查看运行内容、检查 pod 并减少迷茫感的方法。现在 Dashboard 已被归档，许多团队都在问同样的问题：替代方案是什么，如何才能在不破坏工作流程的情况下进行迁移？本指南介绍了这一迁移。它保持步骤清晰，但也解释了每一步为什么重要。最后，你将拥有一个可用的 Headlamp 设置，并能干净利落地退出 Dashboard。1. 开始之前：了解发生了什么变化Kubernetes Dashboard 和 Headlamp 都能显示集群中运行的内容，但它们的工作方式不同。- 当 Headlamp 在桌面上运行时，它使用你现有的 kubeconfig 连接到一个或多个集群，并且可以通过插件进行扩展。- 当 Headlamp 在集群内运行时，它使用 Kubernetes ServiceAccount 访问 API 并遵循 RBAC 规则。- 相比之下，Kubernetes Dashboard 只在集群内运行，并且始终依赖 ServiceAccount 令牌。尽早了解这些模型有助于你选择正确的设置和权限。回顾：- Dashboard 在集群内运行，通常通过 port-forward 或 Ingress 访问。它通常依赖...</p>
+
+<p><a href="https://remy.wang/blog/si.html">简单且正确的快照隔离机制</a><br>简单且正确的快照隔离快照隔离 (SI) 是一种流行的数据库系统并发控制方法。它避免了多种形式的异常，同时提供了高度的并发性，特别是在读密集型工作负载中。然而，正如一篇经典论文 (Berenson et al. 1995) 所展示的那样，SI 并不保证可串行化。一组事务的并发执行如果等同于按顺序执行这些事务，则称为可串行化。因此，可串行化是数据库事务正确性的最强保证，类似于通用并发编程中的顺序一致性。这导致了对 SI 进行“修补”的尝试，包括序列化快照隔离 (SSI) (Cahill, Röhm, and Fekete 2009)，它在标准 SI 实现之上增加了额外的检查。SSI 已被主流系统采用，包括 PostgreSQL。个人认为，SSI 令人不满意，因为它感觉像是为了修复已经损坏的 SI 而打的补丁。因此，我很高兴偶然发现了《A Critique of Snapshot Isolation》(Yabandeh and Gómez Ferro 2012)，它描述了一种通过解决根本原因并保证可串行化来修复 SI 的方法，所有这些只需更改一行代码。我将在本文的其余部分提炼 WSI 的核心思想，希望读完后，你会觉得你自己也能想出这个算法。快照隔离SI 的另一个好处是实现起来非常简单：你在事务开始时分叉 DB，在分叉上运行查询，然后尝试将 DB 合并回来。如果你使用过 git，这会感觉就像合并一个分支，而且你的感觉是正确的。在 SI 下，每个 DB 项（比如一行）都有一个记录最后提交更新的时间戳，然后在每个事务提交时，我们检查该事务...</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything">Gemini 3.5 Flash：更贵，但谷歌计划将它用于一切</a><br>今天在 Google I/O 上，谷歌发布了 Gemini 3.5 Flash。这个版本跳过了 -preview 修饰符，直接进入了全面可用阶段，谷歌似乎正在将其用于其许多关键产品：3.5 Flash 今天已在全球范围内向数十亿人开放：- 通过 Gemini 应用和 Google 搜索中的 AI 模式向所有人开放- 为我们以智能体为先的开发平台 Google Antigravity 中的开发人员以及 Google AI Studio 和 Android Studio 中的 Gemini API 开放- 为 Gemini Enterprise Agent Platform 和 Gemini Enterprise 中的企业开放。像往常一样，Gemini 最有趣的细节被隐藏在 Gemini 3.5 Flash 开发者文档的新增功能中。它基本上具有与之前的 Gemini 3.x 系列相同的平台功能集，尽管没有计算机使用功能。模型 ID 为 gemini-3.5-flash。知识截止日期为 2025 年 1 月，它支持 1,048,576 个输入 token 和 65,536 个最大输出 token。谷歌还在推广一个新的 Interactions API（目前处于测试阶段），在我看来，这看起来像是他们对 OpenAI Responses 引入的模式的版本，特别是服务器端历史管理。价格上涨了Gemini 3.5 Flash 伴随着明显的价格上涨。Flash 系列中之前的模型是 Gemini 3 Flash Preview 和 Gemini 3.1 Flash-Lite。新的 3.5 Flash 的价格是 3 Flash Preview 的 3 倍，是 3.1 Flash-Lite 的 6 倍。</p>
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/">发布Gemini 3.5 flash</a><br>Gemini 3.5：具有行动力的前沿智能2026 年 5 月 19 日Gemini 3.5 旨在帮助你执行复杂的智能体式工作流程。</p>
+
+<p><a href="https://deepmind.google/models/gemini-omni/">发布Gemini Omni</a><br>Gemini Omni通过任何输入创建任何内容——从视频开始通过自然、循序渐进的对话编辑任何视频将 Gemini Omni 想象成 Nano Banana，但针对视频。你所做的每一次编辑都建立在前一次编辑的基础上——保持一致、连贯的场景。应用现实世界知识Gemini Omni 将对物理的直观理解与 Gemini 在历史、科学和文化背景方面的知识相结合——弥合了从照片级真实感到有意义的故事讲述之间的鸿沟。</p>
+
+<p><a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/">将 Gemini CLI 过渡到 Antigravity CLI</a><br>去年我们发布 Gemini CLI 时，我们的目标是将 Gemini 的魔力直接带到你的终端。在此过程中，我们从数百万用户组成的社区中学到了很多，拥有超过 100,000 个 GitHub 星标、6,000 个合并的 pull 请求和数百名贡献者，包括：你喜欢好的终端 UI，你感谢我们每周发布版本，而你的工作流程已经超越了 2025 年的早期阶段。Gemini CLI 证明了终端可以成为智能体式任务的绝佳界面，但你的需求发生了变化。你现在需要多个智能体相互通信以分担工作并解决复杂问题。这意味着你的终端工具需要与你工作流程的其余部分共享一个统一的后端。倾听你们的反馈明确了一点：通过将我们的精力投入到一个为当今多智能体现实而构建的单一产品中，我们可以更好地为你服务。为了提供你构建未来所需的单一平台，我们将我们的努力统一为 Google Antigravity，这是我们首要的以智能体为先的开发平台，其中包括强大的服务器端工具和全新的终端体验：Anti...</p>
+
+<p><a href="https://martinfowler.com/articles/sensors-for-coding-agents.html">sensors for coding agents</a><br>编码智能体的可维护性传感器在最近一篇关于编码智能体用户工具工程的文章中，我提出了一个扩展编码智能体工具的心理模型：一个由指南和传感器组成的系统，可以提高良好智能体输出的概率，并使在问题到达人类视线之前实现自我纠正。这篇文章是一个更实用的后续行动，我分享了我使用帮助保持代码库可维护性的传感器的经验。2026 年 5 月 19 日我们通常希望在代码库中实现和监控多个维度：功能正确性（按预期工作）、架构适应性（足够快/安全/可用）和可维护性。我在此将可维护性定义为使代码库随时间推移的更改变得容易且风险低——也称为“内部质量”。因此，我不仅希望今天能快速做出更改，也希望在未来能做到。而且我不想...</p>
+
+<p><a href="https://blog.cloudflare.com/cyber-frontier-models/">Glasswing 项目：Mythos 向我们展示的内容</a><br>在过去的几个月里，我们一直在我们自己的基础设施上测试一系列专注于安全的 LLM。这些 LLM 有助于识别我们自己系统中的潜在漏洞，以便我们修复它们——它们也向我们展示了攻击者将能够利用最新模型做什么。这些 LLM 中没有一个比 Anthropic 的 Mythos Preview 引起更多关注。几周前，我们受邀将 Mythos Preview 用作 Glasswing 项目的一部分。我们很快将其指向了我们自己的五十多个仓库——看看它会发现什么，以及它是如何工作的。这篇文章分享了我们的观察，模型做得好和不好的地方，以及围绕它们的架构和流程需要如何改变，以便它们可以大规模使用。Mythos Preview 有什么变化Mythos Preview 是真正的一大进步，在深入研究任何其它内容之前，值得明确指出这一点。我们一直在针对我们的代码运行模型...</p>
+
+<p><a href="https://www.linkedin.com/pulse/ai-native-its-birthright-decision-jeff-clarke-6x74c">AI 原生：这不是与生俱来的权利，这是一个决定</a><br>AI 原生：这不是与生俱来的权利。这是一个决定。下一个十年获胜的企业将是 AI 原生的。这不是与生俱来的权利。它是一个运营模型——这是一个现在必须做出的战略决策。为什么？因为每个企业运营模型都是建立在认知输出随人类工时扩展的假设之上的。需要更多分析，就聘请更多分析师。需要更多代码，就聘请更多开发人员。智能体式 AI 打破了这一比例。这就是没有人愿意大声说出来的部分——我们的大多数运营模型都是为一个不再存在的世界而构建的。那么，实际上需要什么才能实现这一转型？本周在 Dell Technologies World 上，我为 AI 原生企业提出了五个要求：1. 通过将 AI 移动到数据而不是相反，构建 AI 就绪的数据基础。2. 构建能够支持训练和推理的分布式 AI 基础设施，这是两种具有不同物理特性的不同工作负载。3. 保护自主系统。在一个 A...</p>
+
+<p><a href="https://antirez.com/news/166">LLM 智能体 EDIT 工具的替代方案</a><br>当然，过去已经有人这样做过了！我几乎没有怀疑，但人们在 Twitter 上向我证实了这一点 :) 但是，继续阅读：最后的 CRC32 妥协是一个有趣的权衡，这是一个通常值得讨论的好话题。目前我正在为我的 DS4 项目开发一个智能体。本地推理 token 匮乏，这是一个优化至关重要的战场。我感到非常惊讶的是，每个人目前使用的 EDIT 工具强制 LLM 逐字输出旧版本的文本。这种 CAS（检查并设置）操作模式（我说 EDIT old=&#34;foo&#34; new=&#34;bar&#34;）是必要的，因为经常会有碰撞的编辑（用户也在编辑，或者检出了不同的分支等等），而且因为 LLM 可以产生幻觉，认为给定的行具有给定的内容。这意味着，基本上，仅使用行号非常脆弱</p>
+
+<p><a href="https://huggingface.co/blog/huggingface/agent-traces-as-memory">agent traces as memory</a><br>软件会遗忘：智能体踪迹就是记忆社区文章 发布于 2026 年 5 月 19 日即使在智能体编写了一半代码之前，代码库也很难解释。原始作者很少记得为什么。有时原始作者就是我。大部分工作被压缩成提交消息和 PR 描述。有时是一个再也没人更新的文档。其余部分留在某人的脑海里，直到那个人离开或干脆忘记。我们尝试过的用于保持上下文存活的工具（评论、文档、blame、维基、决策日志）都需要有人来维护它们。这种维护就是粘合工作，而粘合工作通常输给功能工作。与此同时，越来越多本可以产生该上下文的对话现在私下发生，在...</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/zakirullin/files.md">zakirullin/files.md</a><br>🌱 私密的、安静的思考空间。一个简单的 .md 文件应用。</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br></p>
+
+<p><a href="https://github.com/Gentleman-Programming/engram">Gentleman-Programming/engram</a><br>用于 AI 编码智能体的持久内存系统。与智能体无关的 Go 二进制文件，包含 SQLite &#43; FTS5、MCP 服务器、HTTP API、CLI 和 TUI。</p>
+
+<p><a href="https://github.com/charmbracelet/bubbles">charmbracelet/bubbles</a><br>Bubble Tea 的 TUI 组件 🫧</p>
+
+<p><a href="https://github.com/envoyproxy/ai-gateway">envoyproxy/ai-gateway</a><br>管理构建在 Envoy Gateway 上的生成式 AI 服务的统一访问</p>
+
+<p><a href="https://github.com/gastownhall/gastown">gastownhall/gastown</a><br>Gas Town - 多智能体工作空间管理器</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>一个开源的、集成了 AI 的跨平台终端，用于无缝工作流程</p>
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>使用 AI 智能体群进行自主渗透测试。编排侦察、分类、利用和报告专家，并结合 ReAct 推理——支持漏洞赏金、持续监控</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>使用 Docker 定义和运行多容器应用程序</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>用于 git 命令的简单终端 UI</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260305.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260305</span>
+</p>
+<p>每日一谚：Design the architecture, name the components, document the details -- John Ousterhout </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/05/modern-go-protobuf-dev-in-2026">2026 年了，写 Go &#43; Protobuf 还在手敲 protoc 命令？是时候换用这种新姿势了！</a><br>就在最近，技术社区 Reddit 的 r/golang 板块上出现了一则引发大家共鸣的帖子。一位开发者提出下面拷问： 我想知道 2026 年 Go &#43; protobuf 的首选开发方式是什么？我是否仍然必须下载 protoc，或者 Go 编译器有没有内置原生的支持？ 这不仅是这位开发者的困惑，更是无数长期忍受繁琐工具链的 Gopher 们的心声。在跟帖回复中，社区开发者们给出了一个相对主流的的答案：Go 编译器本身并没有，也不打算内置解析 .proto 的功能，但是，所有严肃的现代工程团队都开始在用 Buf (buf.build) 替代原生 protoc 工具链了 。本文将深入剖析 2026 年的现代 Protobuf 工程化实践。我将带你领略为什么 buf CLI 是当之无愧的现代化首选，以及它是如何彻底终结“手敲 protoc 命令”这一痛苦历史的。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/4_9xVEN7DFhor8m0MRZ0gg">【AI 智能体时代的软件工程】04 沟通降本：把“脏乱差”的意图转化为精准的研发契约</a><br>我们学习了如何利用 AI 队友“不知疲倦”的特质，通过“无尽迭代，边界循环”和“超越完成”模式，把枯燥的测试修复和代码重构工作外 包出去，极大地拉高了工程质量的基线。 但是，细心的你可能已经发现了一个隐藏的前提：这一切运作良好的基础，是我们给出了一个极其清晰、毫无歧义的“验收契约”（Contract）。 然而，回到真实的软件工程世界，闭上眼睛回想一下，你平时接到的需求或者技术优化任务，都是清晰完美的吗？ 现实往往是骨感的：产品经理在经过你工位时随口提了一句“那个导出功能太慢了，加个缓存吧”；或者前端同学在飞书里贴了一张截图，附带一句“这里的状态没同步，帮我改下后端的接口”；又或者你自己在一张白纸上画了几个圈和箭头，拍了个照，这就成了重构复杂微服务的“架构设计图”。 这就是软件工程中最大的“摩擦力”来源——人类是极其优秀的模糊意图产生者，却是极其糟糕的精准规范说明书（Spec）撰写者。那么，有没有一种方法，既能保留人类随性、快速表达想法的自由，又能获得机器执行所必需的绝对严谨呢？</p> 
+
+<p><a href="https://dolthub.com/blog/2026-03-04-application-specific-tools/">为你的 Agent 构建特定应用的工具</a><br>Claude Agent SDK 的一个功能是能够将自定义工具直接嵌入到你的应用程序中，使你的 Agent 能够直接修改应用程序状态。本文将讨论这对 Agentic 应用意味着什么，以及我们如何将其用于 Dolt Workbench 中。文章重点介绍了用户自定义的客户端工具，特别是那些完全在应用程序边界内操作的工具，并以一个“切换分支”工具的实现为例，展示了如何使用 SDK 的 `tool()` 和 `createSdkMcpServer()` 函数来实现应用状态的直接修改。</p> 
+
+<p><a href="https://fulmenflux.co/blog/go/complete-guide-to-profile-golang-services-in-production">Go服务在生产环境中性能分析的完整指南</a><br>这是一篇实用的指南，涵盖了pprof的五种分析类型——CPU、内存、goroutine、阻塞和互斥锁。内容讲解了何时使用每种类型，如何在生产环境中安全收集它们，以及揭示80%Go性能问题的具体模式。指南提供了从症状识别、选择合适的分析工具到重复执行优化的完整工作流程。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.livekit.io/build-agent-experiences-faster-with-session-apis/">使用 LiveKit Session APIs 更快地构建座席体验</a><br>LiveKit Session APIs 是一套新的 API，旨在简化座席的开发工作，内置了令牌管理、会话处理、座席状态以及统一的消息和记录功能。这些 API 提供了管理房间连接和座席状态的工具，包括 TokenSource（用于简化令牌生成和刷新）、Session（用于连接和管理座席会话）、Agent（提供结构化的座席状态信息）以及 SessionMessages（用于处理聊天消息和转录）。这些 API 现已支持 Web、Swift、Android、Flutter 和 React Native 等平台。</p>
+
+<p><a href="https://idiallo.com/blog/interruption-driven-development">Interruption-Driven Development</a><br>作者认为软件开发生命周期中应该包括不被打扰的工作时间，而敏捷和Scrum仪式常常妨碍工作。作者描述了被音乐播放、同事的临时询问或紧急会议打断所带来的专注力损失和重建心智模型的成本，并将其类比为医院里不断被打断的休息。核心观点是：工作本身需要不间断的努力才能完成，当前的工作环境（如频繁的会议和打扰）正在与此相悖。</p>
+
+<p><a href="https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html">包管理器需要冷静一下</a><br>本文是对主流包管理器和更新工具中依赖项“冷却时间”（dependency cooldown）支持情况的调查。文章探讨了William Woodruff提出的在安装新版本包之前设置最小延迟时间的必要性，以应对供应链攻击。作者分析了JavaScript（pnpm、Yarn、Bun、npm、Deno）、Python（uv、pip）、Ruby（gem.coop）、Rust（Cargo）、Go、PHP和.NET等生态系统中冷却时间特性的采纳情况，指出JavaScript生态系统进展最快。文章还比较了语言包管理器与系统包管理器（如apt、brew）在安全审查机制上的区别，并讨论了使用绝对时间戳与相对时间段作为冷却机制的优缺点，以及由此带来的时间解析复杂性。</p>
+
+<p><a href="https://blog.yoshuawuyts.com/a-grand-vision-for-rust">Rust 的宏大愿景</a><br>本文作者分享了其对 Rust 语言未来发展的三个主要兴趣方向：增强对“效应（effects）”的支持（如保证函数不展开、终止、确定性或不进行 I/O）、引入“亚结构类型（substructural types）”以实现更严格的内存安全保证（线性类型和有序类型），以及增加对“精化类型（refinement types）”的支持（如模式类型和视图类型），以期使 Rust 成为最安全的生产级语言。</p>
+
+<p><a href="https://www.jlowin.dev/blog/fastmcp-3-1-code-mode">停止调用工具，开始编写代码（模式）</a><br>FastMCP 3.1 引入了服务端代码模式，解决了工具数量过多导致上下文窗口膨胀和每次工具调用带来的往返延迟问题。代码模式允许 LLM 编写脚本在沙箱中执行工具调用，中间结果保留在沙箱内，保持上下文窗口的简洁。默认流程为三阶段（搜索、获取 Schema、执行），但可配置为两阶段或更简单的模式。该模式作为可堆叠的转换（Transform）工作，可灵活应用于整个服务器或特定提供者，甚至可以代理远程服务器并为其添加代码执行接口。代码执行使用 Pydantic 的 Monty 项目作为沙箱，资源限制（超时、内存等）可配置，且沙箱本身可替换。</p>
+
+<p><a href="https://turbopuffer.com/blog/zero-cost">Rust 零成本抽象与 SIMD 的较量</a><br>一个客户的查询比预期慢了 4 倍以上。分析器指向了我们本以为是免费的 Rust 代码。我们顺着线索一直追溯到汇编代码，才发现了真正的开销所在。</p>
+
+<p><a href="https://pebblebed.com/blog/kernel-bugs-part2">谁写了这些 Bug？深入分析 12.5 万个linux内核漏洞</a><br>本文深入分析了 12.5 万个 Linux 内核漏洞，重点关注引入漏洞的作者、时间以及修复效率。主要发现包括：117 位“超级审阅者”修复漏洞的速度比平均水平快 47%；由原作者修复的 Bug 存活时间短 3 倍；周末提交的代码引入漏洞的概率略低，但修复时间长 45%；以及竞态条件（Race conditions）的平均存活时间是死锁的两倍（5.0 年 vs 2.4 年）。研究指出，通过流程改进（如优先分配给超级审阅者、针对特定子系统训练模型、调整 CI/CD 时段），平均 Bug 存活时间有望减少 35%。同时，文章强调了邮件列表（LKML）在开发流程中的关键作用，这是 Git 历史记录未能完全捕获的部分。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/#atom-everything">反模式：应避免的行为 - Agentic工程模式</a><br>本文讨论了在Agentic工程领域中应避免的一些行为，即“反模式”。其中一个主要的反模式是“将未经审查的代码强加给协作者”。作者强调，不要提交自己未经验证的代码（尤其是大量由代理生成的代码），因为这相当于将实际工作委托给了审阅者。一个好的Agentic工程Pull Request（PR）应包含可以正常工作且经过作者自己确认的代码，变更应足够小以便于高效审查，并附带足够的上下文信息来解释变更的目的。作者建议附带手动测试的证据或实现细节的注释，以证明审阅者的时间不会被浪费。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>Video translation and dubbing tool powered by LLMs. The video translator offers 100 language translations and one-click full-process deployment. The video translation output is optimized for platforms like YouTube，TikTok. AI视频翻译配音工具，100种语言双向翻译，一键部署全流程，可以生抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube等形态的内容成适配</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 Take full control of your VPS with 1Panel. Deploy OpenClaw in one click.</p>
+
+<p><a href="https://github.com/chaos-mesh/chaos-mesh">chaos-mesh/chaos-mesh</a><br>A Chaos Engineering Platform for Kubernetes.</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/NVIDIA/KAI-Scheduler">NVIDIA/KAI-Scheduler</a><br>KAI Scheduler is an open source Kubernetes Native scheduler for AI workloads at large scale</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/rishikanthc/Scriberr">rishikanthc/Scriberr</a><br>Self-hosted AI audio transcription</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

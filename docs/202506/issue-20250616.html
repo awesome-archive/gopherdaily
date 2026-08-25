@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250616.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250616</span>
+</p>
+<p>每日一谚：Write Go code as Gophers write code. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/16/go-avoid-critical-incident">GCP大面积故障，Go语言是“元凶”还是“背锅侠”？</a><br>科技圈的每一次“风吹草动”，尤其是大型云服务的故障，总能引发我们技术人无数的讨论与反思。最近，一则关于“Google Cloud Platform (GCP) Service Control 在 2025 年 6 月发生重大故障”的消息，及其事后分析报告中直指的“null pointer crash loop”，在技术社区掀起了不小的波澜。 故障报告中还提到了几个雪上加霜的因素：没有特性标志 (Feature Flags) 进行高风险部署、缺乏优雅的错误处理（二进制文件直接崩溃而非优雅降级）、以及没有回退机制导致系统过载。考虑到 Go 语言在 Google 内部（如 Kubernetes, Cloud Run 等）以及整个云原生领域的广泛应用，一个自然而然的疑问浮出水面：Go语言是否是这次 GCP 故障的“元凶”？或者说，Go 的某些特性，是否在某种程度上“助长”了这类问题的发生？反过来，Go 的设计又是否本可以帮助避免这样的灾难</p> 
+
+<p><a href="https://dev.to/leapcell/mvc-vs-ddd-go-language-architecture-deep-dive-466f">MVC 与 DDD：Go 语言架构深度剖析</a><br>本文详细比较了 Go 语言中 MVC 和 DDD 分层架构的差异。MVC（模型-视图-控制器）是一种设计模式，主要用于分离用户界面、业务逻辑和数据模型，以便于解耦和分层；而 DDD（领域驱动设计）是一种架构方法，旨在通过构建业务领域模型来解决复杂系统中的设计和维护难题。文章还比较了两者的主要区别，并给出了 Go 语言下 MVC 和 DDD 的目录结构示例以及代码实现和最佳实践。</p> 
+
+<p><a href="https://codehakase.com/shorts/parsing-not-guessing">解析，而非猜测</a><br>终端中的 Markdown 渲染通常使用字符串替换或正则表达式完成，但这无法扩展。Goldmark 提供了一个合适的 AST。每个节点都有类型、位置和内容。渲染变成了遍历树：这更好。您无需猜测 * 是否表示强调或列表。您知道。语法高亮由 Chroma 处理。它不支持 jsonc、tsx、zsh 等别名。我添加了一个开关。不是理想的，但有效：终端主题：没有可移植的 API。某些终端公开 COLORFGBG。其他则没有。解析它（如果存在）：分页器集成使用 less：这些是我最近使用名为 md 的工具时的一些笔记。它在终端中渲染 Markdown，并支持语法高亮和主题。重点不在此。重点是：解析，而非猜测。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2025/06/16/changes-to-kubernetes-slack/">Kubernetes Slack 的变更</a><br>Kubernetes 的 Slack 频道将于 6 月 20 日失去其特殊状态，并变为标准的免费 Slack 频道。今年晚些时候，我们的社区可能会迁移到新的平台。如果您负责某个频道或私有频道，或者您是用户组的成员，则需要尽快采取一些措施。在过去的十年里，Slack 通过一个免费的定制企业帐户支持我们的项目。</p>
+
+<p><a href="https://gametorch.app/blog/software-engineering-talent">软件工程人才现在是金子</a><br>软件工程师的就业市场状况不佳，但软件工程人才能够提供非凡的杠杆作用和生产力。作者以自身为例，讲述了如何利用软件工程技能自动化营销流程，例如每天制作并分享免费的精灵图包，并使用ChatGPT自动化创建宣传视频等。作者认为，软件工程技能赋予人们超能力，可以解决许多令人厌烦的问题，并提高效率。</p>
+
+<p><a href="https://fallthrough.transistor.fm/episodes/gos-error-handling-is-handled">Fallthrough | Go的错误处理已解决</a><br>Go语言的错误处理一直是该语言中最具争议的话题之一。它在每次Go开发者调查中都排名很高，许多不同的人提出了许多不同的解决方案来解决人们认为存在的问题。Go团队最近改变了其对错误处理问题的立场，声明不会接受任何关于更改Go错误处理语法的提案。在本集中，Kris与Ian和Matt一起讨论了这一新闻。他们讨论了错误处理是否曾经真正成为一个问题，Go团队究竟是什么，以及决定不为错误处理提供语法支持的好处。对于我们的支持者，本集包含扩展的讨论。通过在[https://fallthrough.fm/subscribe](https://fallthrough.fm/subscribe)注册即可访问。感谢收听，祝您收听愉快！</p>
+
+<p><a href="https://thenewstack.io/kubernetes-vs-docker-compose">Kubernetes vs. Docker-compose</a><br></p>
+
+<p><a href="https://kristaps.bsd.lv/devsecflops">源码沙箱</a><br>本文探讨了2025年开发者沙箱程序的难易程度。沙箱是指开发者在源代码中限制程序可用的系统资源。文章调查了现代Unix系统上的沙箱工具，包括Linux的seccomp和landlock、Mac OS X的seatbelt、FreeBSD/DragonFlyBSD的Capsicum、OpenBSD的pledge以及Java的JSM。文章通过图表比较了不同工具的文档长度和示例代码长度，分析了不同沙箱工具的易用性和维护难度，并以OpenSSH为例进行了案例研究。最后，文章对不同沙箱工具的采用情况进行了调查，并总结了研究结果。</p>
+
+<p><a href="https://henrikwarne.com/2025/06/15/lessons-from-9-more-years-of-tricky-bugs">从 9 年多的棘手错误中汲取的教训</a><br>自 2002 年以来，我一直记录下遇到的所有棘手错误。九年前，我写了一篇博文，总结了到那时为止从错误中吸取的教训。现在，我回顾了此后跟踪的所有错误，想看看自己是否吸取了上次总结的教训，以及此后都遇到了哪些类型的错误。与之前一样，我将这些教训分为编码、测试和调试三个类别。</p>
+
+<p><a href="https://zed.dev/blog/software-craftsmanship-in-the-era-of-vibes">软件工艺在“氛围”时代的重要性</a><br>本文探讨了在代码生产不再是瓶颈的时代，追求高质量软件的重要性。作者认为，软件工程师应该关注可靠、设计良好的系统，而不是仅仅追求代码数量。文章还强调了系统设计的重要性以及利用AI工具提升软件质量的方法，并介绍了“Agentic Engineering”这一概念，旨在结合人工工艺和AI工具，构建更好的软件。</p>
+
+<p><a href="https://www.jsbarretto.com/blog/software-is-joy">编写玩具软件是一件令人快乐的事</a><br>作者认为编写玩具程序是学习和享受编程乐趣的绝佳方式，文中列举了多个玩具软件项目，并按难度和时间进行了评估，涵盖了正则表达式引擎、x86操作系统内核、游戏模拟器、物理引擎、编译器、文本编辑器等。作者鼓励读者尝试这些项目，并避免过度依赖人工智能工具，强调在实践中学习的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/#atom-everything">AI 智能体的致命三要素：私有数据、不可信内容和外部通信</a><br>如果您是使用工具的 LLM 系统的用户（如果您愿意，可以称它们为“AI 智能体”），那么您必须充分理解将工具与以下三个特征相结合的风险。如果不理解这一点，**可能会让攻击者窃取您的数据**。这三个能力的**致命组合**是：访问您的私有数据；接触不可信内容；能够进行外部通信（我经常称之为“数据泄露”，但我并不确定这个术语是否广为人知）。如果您的智能体同时具备这三个特性，攻击者可以**轻松地诱骗它**访问您的私有数据并将其发送给攻击者。文章详细解释了这种风险，并列举了多个实际案例，强调了避免这种致命组合的重要性。</p>
+
+<p><a href="https://simonwillison.net/2025/Jun/14/multi-agent-research-system">Anthropic：我们是如何构建多智能体研究系统的</a><br>本文介绍了Anthropic公司如何构建其“Claude Research”多智能体大型语言模型（LLM）系统。该系统通过多个智能体并行工作，利用工具在循环中自主运行，从而显著提高了研究效率，尤其是在处理需要同时探索多个方向的广度优先查询方面。虽然这种架构会消耗更多token，但其在处理超过单个上下文窗口限制的大量信息以及与多个复杂工具交互的任务中表现出色。文章详细介绍了提示工程过程、智能体间的协作方式以及评估方法，并提供了实际的提示工程示例，对于多智能体系统的设计具有很高的参考价值。</p>
+
+<p><a href="https://thenewstack.io/introduction-to-vllm-a-high-performance-llm-serving-engine">高性能推理引擎vllm简介</a><br></p>
+
+<p><a href="https://www.understandingai.org/p/metas-llama-31-can-recall-42-percent">Meta 的 Llama 3.1 模型能够回忆起《哈利·波特》第一本书的 42% 内容</a><br>新的研究结果可能对针对生成式 AI 的版权诉讼产生重大影响。研究发现，Meta 的 Llama 3.1 70B 模型能够记住《哈利·波特与魔法石》42% 的内容，这比其他模型高得多，这引发了关于生成式 AI 是否侵犯版权的讨论，并提出了训练模型使用受版权保护的作品是否构成合理使用的疑问。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/securego/gosec">securego/gosec</a><br>Go security checker</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

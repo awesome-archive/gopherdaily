@@ -1,0 +1,189 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251104.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251104</span>
+</p>
+<p>每日一谚：Go is not magical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://internals-for-interns.com/posts/the-go-parser">理解 Go 编译器：解析器</a><br>在前一篇博文中，我们探讨了扫描器——将源代码从字符流转换为令牌流的组件。
+现在我们准备好进入下一步：解析器。
+这是解析器要解决的挑战：现在，我们有一个扁平的令牌列表，它们之间没有任何关系。扫描器给了我们包、主函数、{、fmt、.、Println…但它不知道 Println 属于 fmt 包，或者整个 fmt.Println(&#34;Hello world&#34;) 语句位于主函数中。
+解析器的任务是获取该扁平的令牌流并赋予它结构。它通过构建所谓的抽象语法树（或简称 AST）来做到这一点。</p> 
+
+<p><a href="https://tonybai.com/2025/11/04/microservice-disasters">微服务灾难清单：从技术深坑到组织泥潭的 10 个惨痛教训</a><br>资深工程师 João Alves 在他的系列文章中，以亲身经历为蓝本，为我们整理了一份包含 10 个灾难的“血泪清单”。这份清单，系统性地揭示了从技术深坑到组织泥潭的各种陷阱，对于任何一个身处微服务浪潮中的团队来说，都极具警示价值。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/-rzeUkOaYxzLrHQRllZLhQ">【Go模块构建与依赖管理】03 兼容性的承诺：深入 go 与 toolchain 指令</a><br></p> 
+
+<p><a href="https://axiom.co/blog/building-haydex">Haydex：30 天内从零到每秒 178,600,000,000 行</a><br>这是我们如何将一个失败的过滤器原型转化为一个生产系统，该系统在 30 天内以每秒 1786 亿行的速度运行的故事。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/how-to-use-multimodel-ai-with-model-runner/">简化多模态 AI 模型的使用方法</a><br>使用 Docker Model Runner 运行理解文本、图像和音频的多模态 AI 模型。探索 CLI 和 API 示例，运行 Hugging Face 模型，并尝试实时网络摄像头视觉演示。</p>
+
+<p><a href="http://notes.eatonphil.com/2025-11-03-an-individual-can-change-an-organization.html">个人可以改变一个组织</a><br>作者分享了他在职业生涯早期从 Drew DeVault 身上学到的一个重要教训：即使在整个组织似乎都反对的情况下，个人也可以通过逻辑和意志来改变组织。 他学会了不要过分看重资历，要敢于辩论，做好准备，坚持不懈，并且认识到适时放手的重要性。</p>
+
+<p><a href="https://www.0xkato.xyz/linux-process-memory">Linux 进程内存友好之旅</a><br>深入探讨 Linux 如何管理进程内存、页表和虚拟地址空间</p>
+
+<p><a href="https://jellyfin.org/posts/SQLite-locking">SQLite 并发以及你为什么应该关注它</a><br>SQLite 是一种强大的数据库引擎，但由于其设计，它存在一些不容忽视的局限性。</p>
+
+<p><a href="https://alfy.blog/2025/10/16/hidden-cost-of-url-design.html">URL设计的隐藏成本</a><br>URL设计会影响应用程序架构、性能和成本。案例研究：扁平URL如何导致后端负载增加2倍，以及我们如何优化它。</p>
+
+<p><a href="https://alfy.blog/2025/10/31/your-url-is-your-state.html">你的URL就是你的状态</a><br>深入探讨周全的 URL 设计如何提升可用性、可分享性和性能。 了解哪些状态应保留在 URL 中，避免哪些常见的陷阱，以及现代 Web 应用程序的实用模式。</p>
+
+<p><a href="https://github.blog/changelog/2025-10-28-immutable-releases-are-now-generally-available">现在全面推出不可变版本</a><br>GitHub 版本现在支持不可变性，增加了供应链安全的新层级。 使用不可变版本，资产和标签在发布后会受到保护，防止篡改，因此您发布——以及您的用户使用的——软件仍然安全可靠。</p>
+
+<p><a href="https://lalitm.com/perfetto-swiss-army-knife">Perfetto：Linux 客户端追踪的瑞士军刀</a><br>在 2025 年 10 月，我在 Tracing Summit 上发表了一场题为“Perfetto：Linux 客户端/嵌入式追踪的瑞士军刀”的演讲。 我在这次演讲中的目标是展示 Linux 内核、系统和嵌入式开发人员如何在调试和查找其各自领域内的性能问题时使用 Perfetto。 尽管 Perfetto UI 主要用于查看 Android 或 Chrome 跟踪，但它是一个灵活的工具，可以用于许多其他方式！ 演讲已被录制，并在 YouTube 上提供。 受到 Simon Willison 的启发，这篇文章是一个带注释的演示文稿，其中包含我的幻灯片以及关于它们的详细笔记。 演讲也有很多 UI 演示：对于这些演示，我将提供屏幕截图以及指向视频相关部分的链接（视频在 UI 方面是无与伦比的！）。</p>
+
+<p><a href="https://software.rajivprab.com/2018/04/29/myths-programmers-believe-about-cpu-caches">Myths Programmers Believe about CPU Caches</a><br>作为一名计算机工程师，我在英特尔和昇阳公司从事缓存工作已有五年时间，我对缓存一致性有所了解。这是我在大学里学过的最难的概念之一——但一旦你真正理解了它，你就会对系统设计原则有很大的体会。</p>
+
+<p><a href="https://piccalil.li/blog/nan-the-not-a-number-number-that-isnt-nan">NaN，不是 NaN</a><br>我们普遍意识到 JavaScript 很奇怪，但您知道“非数字”(NaN) 是一种数字类型吗？Mat Marquis 向我们介绍了为什么会这样，以及如何在您的代码库中很好地处理 NaN。</p>
+
+<p><a href="https://victoriametrics.com/blog/dont-default-to-microservices-you-will-thank-us-later">不要默认使用微服务：你以后会感谢我们！</a><br>我们认为微服务不应该作为默认选择，公司应该从单体架构开始，直到现实真正需要它们扩展并从一个节点转移到一组节点。因此，我们提供开源的集群，因为我们希望支持现实的增长。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Nov/4/steve-francia/#atom-everything">Quoting Steve Francia</a><br></p>
+
+<p><a href="https://www.lesswrong.com/posts/gabPgK9e83QrmcvbK/what-s-up-with-anthropic-predicting-agi-by-early-2027-1">What&#39;s up with Anthropic predicting AGI by early 2027?</a><br>正如我所知，Anthropic 是唯一一家拥有官方 AGI 时间表的 AI 公司[1]:他们预计 AGI 将在 2027 年初出现。在他们向 OSTP 提出的建议（来自 2025 年 3 月）中，他们说：正如我们的首席执行官 Dario Amodei 在《机器之爱》中所写的那样，我们预计强大的 AI 系统将在 2026 年底或 2027 年初出现。强大的 AI 系统将具有以下属性： 1. 智力能力匹配或超过大多数学科（包括生物学、计算机科学、数学和工程学）的诺贝尔奖获得者。 [...]他们经常将这种能力水平描述为“数据中心中的一群天才”。 这种预测在其他地方也被重复，并且 Jack Clark 证实了 Anthropic 在某种程度上仍然保持这种观点（截至 2025 年 9 月）。当然，仅仅因为这是 Anthropic 的官方预测&lt;sup class=&#34;footnote-ref&#34;&gt;[2]&lt;/sup&gt; 并不意味着 Anthropic 的所有员工甚至大多数员工都持有相同的观点。&lt;sup class=&#34;footnote-ref&#34;&gt;[3]&lt;/sup&gt; 然而，我确实认为我们可以合理地说，Dario Amodei、Jack Clark 和 Anthropic 本身都在做出这一预测。&lt;sup class=&#34;footnote-ref&#34;&gt;[4]&lt;/sup&gt; 我认为创造具有变革性力量的 AI 系统——能力与 Anthropic 所定义的强大 AI 相当或更强的系统——在 5 年内是可能的，并且在 10 年内更有可能。相应地，我认为社会为与此类 AI 系统相关的风险做好了充分的准备。 然而，&lt;strong&gt;我认为 Anthropic 的预测不太可能成为现实&lt;/strong&gt;（根据我下面对强大 AI 的操作定义，我认为到 2027 年初出现强大 AI 的可能性约为 6%）。我确实认为他们应该为做出预测而获得一些赞赏（尽管我希望这些预测更精确、操作性更好，并且他们也在出现强大 AI 之前做出了一些中间预测）。在这篇文章中，我将尝试更精确地对 Anthropic 的预测进行操作，以便它可以被证伪或证明为真，讨论我所认为的到 2027 年的时间线，需要是什么样的，以便使这一预测更有可能，并解释为什么我认为这一预测不太可能成为现实。 &lt;em&gt;[感谢 Ajeya Cotra、Ansh Radhakrishnan、Buck Shlegeris、Daniel Kokotajlo、Eli Lifland、James Bradbury、Lukas Finnveden 和 Megan Kinniment 提供的评论和/或讨论。]&lt;/em&gt;</p>
+
+<p><a href="https://www.wreflection.com/p/ai-dial-up-era">AI&#39;s Dial-Up Era</a><br>现在是1995年。 人们很快就分成了两派。 一派警告说，人工智能将在几年内消灭整个职业并导致大规模失业。 另一派则声称，人工智能将创造比它摧毁的更多的就业机会。 一方认为人工智能是被过度炒作的注定要破灭的泡沫，而另一方则预测它将在十年内自动化所有知识任务并重塑文明。</p>
+
+<p><a href="https://jetxu-llm.github.io/posts/low-noise-code-review">淹没在 AI 代码审查噪音中？衡量信号与噪音的框架</a><br>大多数 AI 代码审查工具每 PR 生成 10-20 条评论。问题是？80% 是噪音。这里有一个衡量代码审查中信噪比的框架——以及为什么它比你想象的更重要。</p>
+
+<p><a href="https://www.anthropic.com/research/introspection">在大型语言模型中涌现的内省意识</a><br>Anthropic 关于大型语言模型内省能力的的研究</p>
+
+<p><a href="https://yusufaytas.com/ai-broke-interviews"></a><br></p>
+
+<p><a href="https://danielmiessler.com/blog/humans-need-entropy">人类需要熵</a><br>关于 Karpathy 对人类崩溃的观察以及接触新输入的重要性</p>
+
+<p><a href="https://dolthub.com/blog/2025-11-03-i-learned-dolt-with-claude-as-my-tutor/">我用 Claude 从零开始学习 Dolt</a><br>一位没有命令行经验的营销专业人士如何通过会话式 AI 助手学习 Git 和 Dolt，并在此过程中构建一个真实的数据库项目。</p>
+
+<p><a href="https://www.cubic.dev/blog/the-real-problem-with-ai-coding">cubic blog: The real problem with AI coding</a><br>Tech debt and comprehension debt</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/raghavyuva/nixopus">raghavyuva/nixopus</a><br>Open Source Alternative to vercel, heroku, netlify with simplified workflows</p>
+
+<p><a href="https://github.com/hajimehoshi/ebiten">hajimehoshi/ebiten</a><br>A dead simple 2D game engine for Go</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/qualifire-dev/rogue">qualifire-dev/rogue</a><br>Agents testing framework made easy</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250123.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250123</span>
+</p>
+<p>每日一谚：Go is opinionated; follow the idiomatic guidelines. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/01/23/the-hidden-details-of-go-exported-identifiers">Go导出标识符：那些鲜为人知的细节</a><br>Go的导出标识符机制是否允许在某些情况下，即使类型本身是非导出的，其导出字段依然可以被包外的代码访问呢？该类型的导出方法呢 ？这些关于Go导出标识符的细节可能是鲜少人探讨的，在这篇博文中，我们将系统地了解这些机制，希望能为各位小伙伴带来更深入的理解。</p> 
+
+<p><a href="https://www.alexedwards.net/blog/11-tips-for-structuring-your-go-projects">Go项目结构的11个技巧</a><br>本文介绍了 Go 项目结构的 11 个技巧，涵盖了文件、包和模块的组织，以及如何根据项目规模和需求选择合适的结构。文章强调了没有完美的项目结构，重要的是找到有效的方案，并根据实际情况不断调整。文章还建议从简单的结构开始，逐步演进，并列举了一些需要注意的警告信号，例如循环依赖、难以查找代码、难以进行修改等。</p> 
+
+<p><a href="https://www.infoq.com/articles/go-pointers-references-graphs-tutorial/">使用Go指针、引用和反向索引建模复杂数据结构</a><br>Go 语言中的指针对于刚接触低级编程语言的开发者来说可能具有挑战性。在本文中，我将带您逐步了解一个使用指针创建基于图的权限系统的程序。</p> 
+
+<p><a href="https://www.datadoghq.com/blog/memory-leak-workflow">使用 Datadog 的引导工作流程调查内存泄漏和OOM</a><br>了解 Datadog 的服务页面如何提供逐步调查工作流程，帮助您轻松识别内存泄漏和其他问题的根本原因。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/keeping-alive-with-go">我如何使用Go语言维持生命</a><br>这篇博文中，作者探讨了如何运用事故管理思维来应对复杂的医疗状况（1型糖尿病）。作者详细描述了使用 Go 语言构建一个系统，该系统利用血糖监测设备的数据，实时监控血糖水平，并通过 Grafana 仪表盘和 Telegram 机器人实现可视化和警报功能，从而在血糖过低时及时预警并采取措施。该系统还集成 Incident.io 用于事故管理，实现自动化流程和升级机制，确保在紧急情况下能够及时获得帮助。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/github-secret-scanning">使用 GitHub 保护 Tailscale 密钥安全</a><br>Tailscale 宣布与全球最大的源代码托管平台 GitHub 集成密钥扫描功能。 此次合作是我们在持续努力保护客户 tailnet 的过程中建立的第四个密钥扫描合作关系。GitHub 密钥扫描现在会扫描您的源代码、问题、拉取请求、Wiki 和其他数据，查找任何 Tailscale 密钥。 发现潜在匹配项后，GitHub 会与 Tailscale 验证密钥的真实性。如果密钥处于活动状态，Tailscale 将撤销密钥并通过电子邮件通知用户。</p>
+
+<p><a href="http://notes.eatonphil.com/2025-01-22-embedding-python-rust-tests.html">在Rust中嵌入Python（用于测试）</a><br>这是一篇我的外部文章。文章介绍了如何在Rust中嵌入Python以进行测试。如果未自动跳转，请点击此处查看文章。</p>
+
+<p><a href="https://dolthub.com/blog/2025-01-23-dolt-basics/">Dolt 入门：Dolt 基础知识</a><br>Dolt 就像 Git 和 MySQL 的结合体。这在实践中意味着什么？本文旨在帮助 Dolt 新手快速入门，涵盖安装、创建数据库、Git 操作、启动服务器和 SQL 操作等基础知识。通过学习基础知识，你将清楚地了解 Dolt 如何结合 Git 和 MySQL 的优势。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/01/22/kubernetes-in-2025-are-you-ready-for-these-top-5-trends-and-predictions/">2025 年的 Kubernetes：你准备好迎接这五大趋势和预测了吗？</a><br>Kubernetes 已经发展了 10 年，它已成为云原生部署的基石。展望 2025 年，我们预计 Kubernetes 和云原生生态系统将继续发展壮大。本文基于 Fairwinds 的经验和 DZone 的《企业中的 Kubernetes》报告，预测了 Kubernetes 生态系统在未来一年中的五大关注重点：容器和容器管理、Kubernetes 的用例、开发人员情绪、监控和可观察性，以及 Kubernetes 对其他开发趋势的影响（成本优化技术、安全性和微服务）。文章最后还给出了 Fairwinds 对 2025 年的五个预测。</p>
+
+<p><a href="https://terriblesoftware.org/2025/01/22/the-7-most-influential-papers-in-computer-science-history">计算机科学史上七篇最具影响力的论文</a><br>这篇文章回顾了七篇具有里程碑意义的计算机科学论文，它们塑造了技术和通信方式。这些论文的基础概念激发了持续的创新，突出了了解我们根基对未来发展的重要性。文章还列举了另外五篇差点入选的论文。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/8NS15_fkuR_gSLG50MNtMQ">数据库即架构</a><br>文章探讨了将数据库作为业务架构本身的可能性，即在数据库中编写后端逻辑甚至运行HTTP服务器。作者认为，在AI和硬件性能提升的背景下，这种非主流做法值得探索，因为它简化了架构并提高了效率，并以Supabase为例进行了说明，最后讨论了这种方法的利弊。</p>
+
+<p><a href="https://dev.to/ynaumenko/the-kubernetes-troubleshooting-handbook-3cfn">Kubernetes故障排除手册</a><br>调试Kubernetes应用程序可能感觉像是在迷宫中导航。凭借其分布式特性和众多组件，在Kubernetes中识别和解决问题需要强大的工具和技术。本文将探讨各种Kubernetes故障排除和调试技术和工具。无论您是经验丰富的Kubernetes用户还是刚刚入门，本指南都将提供对高效调试实践的宝贵见解。</p>
+
+<p><a href="https://www.edgedb.com/blog/c-stdlib-isn-t-threadsafe-and-even-safe-rust-didn-t-save-us">C 标准库不是线程安全的，即使安全的 Rust 也无法拯救我们</a><br>EdgeDB 将网络 I/O 代码从 Python 移植到 Rust 的过程中，遇到了一个隐藏的难题：在 ARM64 CI 运行器上，测试会间歇性地失败，表现为死锁，实际上是由于 `setenv` 函数在多线程环境中不安全导致的竞态条件。  `openssl-probe` 库在 Linux 上使用 `rust-native-tls`/`openssl` 后端，调用 `setenv` 设置环境变量，而另一个线程同时调用 `getenv` 读取环境变量，导致 `environ` 内存块被重新分配，从而造成崩溃。最终，解决方案是迁移到 `rustls`，避免使用不安全的 `libc` 函数。</p>
+
+<p><a href="https://duckdb.org/2025/01/22/parquet-encodings">查询引擎：Parquet 文件格式的守护者</a><br>主流查询引擎不支持读取较新的 Parquet 编码，迫使像 DuckDB 这样的系统默认写入较旧的编码，从而牺牲压缩率。本文探讨了 Parquet 格式的更新、编码以及主流查询引擎对新编码支持不足导致的存储空间浪费问题，并提出了相应的解决方案。</p>
+
+<p><a href="https://dropbox.tech/infrastructure/infrastructure-messaging-system-model-async-platform-evolution">通过 Dropbox 中的消息系统模型发展我们的基础设施</a><br>Dropbox 的异步平台集成了众多服务，使任务和工作流程能够独立运行，而无需相互等待。这对于我们作为开发人员的工作非常重要：它使 Dropbox 中的任何服务都能启动和安排任务，无缝地支持 400 多个产品用例（包括 Dropbox Dash 和我们的其他 AI 创新），并高效地每分钟路由超过 3000 万个任务。它还处理更改数据捕获 (CDC) 用例，其中底层存储系统（包括文件系统）中的更改会转发到各种产品 lambda 和流程。简而言之，它有助于我们确保有效和高效的业务运营。本文介绍了一个开放的消息系统模型 (MSM)，它在发展我们的平台方面发挥了关键作用。它帮助我们构建了一个统一的事件驱动系统，能够协调各种异步任务并满足未来的需求，尤其是在我们关注 AI 的时候。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.tecmint.com/ai-for-linux-users">Linux 用户人工智能入门指南</a><br>本文将为您提供一个简单易懂的人工智能入门介绍，涵盖其应用以及对 Linux 用户的重要性。文章解释了人工智能、机器学习、深度学习、自然语言处理和计算机视觉等关键概念，并阐述了人工智能的工作原理以及在日常生活中的应用，例如语音助手、自动驾驶汽车和推荐系统等。最后，文章还讨论了 Linux 系统在人工智能开发中的优势，例如开源性、强大的开发工具、更好的性能以及对人工智能框架的支持。</p>
+
+<p><a href="https://simonwillison.net/2025/Jan/23/llm-020/#atom-everything">LLM 0.20</a><br>我的LLM CLI工具和Python库的新版本发布。自12月初以来积累了许多修复和功能，最值得注意的是：
+- 支持OpenAI的o1模型——与其前身o1-preview相比，这是一个重大升级，因为它拥有200,000个输入令牌和100,000个输出令牌（o1-preview为128,000/32,768）。
+- 支持gpt-4o-audio-preview和gpt-4o-mini-audio-preview模型，它们可以接受音频输入。
+- 一个新的llm -x/--extract选项，用于提取并返回响应中第一个带围栏的代码块的内容。这对于生成代码的提示很有用。
+- 一个新的llm models -q &#39;search&#39;选项，用于搜索可用的模型——如果您安装了许多插件，这将非常有用。搜索不区分大小写。</p>
+
+<p><a href="https://www.ai-supremacy.com/p/chatgpt-robotics-moment-in-2025">2025 年的“ChatGPT 时刻”：机器人技术</a><br>世界模型、人形机器人、合成数据以及改进的精细手部动作和灵活性标志着一个新的开始。🤖2025 年将开启新的机器人军备竞赛。深入探讨🧐Unitree 公司。</p>
+
+<p><a href="https://seanfalconer.medium.com/a-practical-guide-to-choosing-prompts-workflows-or-agents-6d5fb88f9e69">选择提示、工作流程或代理的实用指南</a><br>本文探讨了提示、工作流程和 AI 代理之间的区别，并学习如何为您的业务选择正确的方法。本博文探讨了代理成功的领域、构建和部署代理的挑战，以及为什么从简单开始通常是最明智的策略。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>Work with remote images registries - retrieving information, images, signing content</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/docker/buildx">docker/buildx</a><br>Docker CLI plugin for extended build capabilities with BuildKit</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, cross-DC active-active replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Phi 4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

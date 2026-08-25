@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250612.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250612</span>
+</p>
+<p>每日一谚：A test should never delete something it did not create. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/12/grog-brain-heaven">爽就完了！Go语言的“简单之美”为何让开发者直呼过瘾？</a><br>技术论坛 Reddit 的 Go 语言版块上，一个标题为“Go is so much fun, Grog brain heaven”的帖子，引爆了 Gopher 们的讨论热情。发帖的开发者用一种非常接地气的“原始人 (Grog)”口吻，激情赞扬了 Go 语言，核心就一个字——“爽！” 他列举了一堆理由：关键词少、特殊字符少、概念少、编译器快、工具链好用、标准库给力、没有复杂的构建系统……总而言之，Go 语言对于那些厌倦了复杂性、只想专注于“造东西”的开发者来说，简直就是“天堂”</p> 
+
+<p><a href="https://gaultier.github.io/blog/a_subtle_data_race_in_go.html">Go语言中一个细微的数据竞争</a><br>本文描述了一个Go语言中细微的数据竞争问题。作者在工作中发现了一个看似简单的代码片段，却隐藏着数据竞争的风险。该问题源于闭包捕获外部变量并进行修改，而闭包在并发环境下被多次调用，导致数据竞争。文章分析了问题的成因，并给出了修复方案，同时对Go语言的闭包机制、数据竞争以及相关编程实践提出了建议。文章还提供了一个可用于Go race detector的复现程序。</p> 
+
+<p><a href="https://dev.to/jones_charles_ad50858dbc0/from-syncmap-to-concurrent-safe-awesomeness-in-go-5f6g">从`sync.Map`到Go并发安全的神奇体验</a><br>Go开发者们！如果你已经编写了一两年Go代码，你可能已经与goroutine和map搏斗过。想象一下：你的应用程序运行良好，然后——砰！——`fatal error: concurrent map read and map write`。别担心；这不是你的错——只是Go的普通map讨厌并发。你可能会加上`sync.Mutex`或`sync.RWMutex`，但是当goroutine风暴来临时，这些锁可能会让你感觉像是在火箭上安装辅助轮。
+
+自1.9版本以来，Go的并发超级英雄`sync.Map`闪亮登场。它不仅仅是一个权宜之计——它是一个为高并发混沌而量身定制的优雅工具。在本指南中，我将分解它为什么如此出色、它在哪里闪光以及如何避开它的弱点。凭借十年Go后端战斗经验，我将加入一些现实世界的技巧和“糟糕”时刻，让它更贴近实际。无论你是缓存用户数据还是处理任务状态，`sync.Map`都可能拯救你的理智。让我们深入探讨——从你可能已经遇到的混乱开始！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/tidb-runtime-dashboard-detailed-analysis-use-cases/">TiDB运行时面板：详细分析及用例</a><br>本文介绍了TiDB运行时面板，重点关注其在诊断运行时问题方面的实用价值。我们将首先概述此面板旨在帮助调查的各种问题类型，然后详细解释常用面板，最后逐步完成一个实际示例，以演示这些面板如何帮助分析和查明问题。</p>
+
+<p><a href="https://www.docker.com/blog/how-to-build-run-and-package-ai-models-locally-with-docker-model-runner/">如何使用 Docker Model Runner 在本地构建、运行和打包 AI 模型</a><br>学习 Docker 专家如何使用 Docker 简化和改进您的应用程序开发和管理。随时了解 Docker 活动和新版本。本指南将向您展示如何使用 Docker Model Runner（一个轻量级、面向开发者的工具，用于处理从 Docker Hub 或 Hugging Face 获取的 AI 模型）运行和打包本地 AI 模型。您将学习如何在 CLI 或通过 API 运行模型、发布您自己的模型工件，并且无需设置 Python 环境或 Web 服务器。</p>
+
+<p><a href="https://netflixtechblog.com/uda-unified-data-architecture-6a6aee261d8d">一次建模，随处展现：Netflix 的 UDA（统一数据架构）</a><br>Netflix 的产品和服务不断增长，其支持系统也变得越来越复杂。为了解决数据模型在多个系统中重复和不一致的问题，Netflix 推出了 UDA（统一数据架构），这是一个基于知识图的架构，可以将概念领域模型转换为一致的模式和数据管道。UDA 使用 RDF 和 SHACL 作为其知识图的基础，并通过一个名为 Upper 的元模型来引导知识图的构建。Upper 定义了 UDA 中领域建模的语言，并支持自动生成跨系统的模式和管道。本文介绍了 UDA 的基础知识，以及在生产环境中使用 UDA 的两个系统：主要数据管理 (PDM) 和 Sphere。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/06/11/a-year-of-envoy-gateway-ga-building-growing-and-innovating-together/">Envoy Gateway 通用版发布一周年：携手共建、共同发展、持续创新</a><br>Envoy Gateway 通用版发布一年以来取得了显著进展。本文回顾了这一年取得的里程碑式成就，包括四个主要版本的发布，以及在功能创新、性能提升和社区发展方面的重大突破。Envoy Gateway 的开源属性使其能够快速发展，并与 Envoy Proxy 协同演进。文章还强调了三个关键社区（构建者社区、最终用户社区和沉默用户社区）对 Envoy Gateway 发展的重要作用，并展望了未来的发展方向。</p>
+
+<p><a href="https://www.datadoghq.com/blog/go-tracer-v2">Datadog发布Go追踪器v2.0.0</a><br>Datadog发布了Go追踪器v2.0.0，该版本具有改进的安全性、稳定性和简化的API。文章介绍了新功能，并为用户提供了升级指南，包括过渡版本v1.74.0。</p>
+
+<p><a href="https://alexandrehtrb.github.io/posts/2025/06/containers-should-be-an-operating-system-responsibility">容器应该由操作系统负责</a><br>本文探讨了容器技术的不足，认为容器所解决的问题应该由操作系统本身来解决。作者认为容器是一种权重过大的解决方案，并提出了使用“执行清单”的替代方案。该方案通过在操作系统层面定义程序的执行方式和系统权限，来实现环境设置和安全执行，从而避免容器带来的内存和磁盘空间浪费。文章还列举了无需容器的环境设置和安全执行方法，例如安装依赖项、自包含部署、提前编译等。最后，作者还提供了一些相关的资源链接。</p>
+
+<p><a href="https://typesanitizer.com/blog/zig-generics.html">Zig 样式泛型不适合大多数语言</a><br>本文讨论了 Zig 泛型实现的一些缺点，以及为什么其他编程语言在采用类似系统之前应该仔细考虑。Zig 的泛型编译方案与 C&#43;&#43; 非常相似，因此也存在类似的缺陷。这种编译方案并不适合所有语言，因此关于其他语言应该如何采用 Zig 样式泛型的建议是误导性的。文章详细解释了 Zig 泛型的工作原理，并分析了其在缺乏约束、缺乏阶段信息、编译器支持有限、类型推断有限、无法分发仅包含二进制的库、工具需要更多工作、无法进行编译时非确定性计算、无法支持多态递归等方面的不足，并指出这些缺点在一定程度上类似于动态类型与静态类型的区别。最后，文章总结道，编程语言通常出于充分的理由区分不同的事物，不应盲目追求“一切皆 X”的理念。</p>
+
+<p><a href="https://supabase.com/blog/multigres-vitess-for-postgres">发布 Multigres：PostgreSQL 的 Vitess</a><br>Supabase 欢迎 Vitess 的共同创建者 Sugu 加入团队，共同构建 Multigres：专为 PostgreSQL 设计的 Vitess。Multigres 是一款新的代理，位于 PostgreSQL 数据库的前面，旨在提供分片、连接池、查询路由、弹性和故障转移以及云原生编排等功能，最终目标是实现数据库的可扩展性。该项目将优先考虑与 PostgreSQL 生态系统的兼容性，并为开发人员提供循序渐进的上手体验。</p>
+
+<p><a href="https://blog.bytebytego.com/p/how-lyft-uses-ml-to-make-100-million">Lyft 如何利用机器学习每天进行 1 亿次预测</a><br>本文探讨了 Lyft 如何构建一个架构来满足其每天进行 1 亿次机器学习预测的需求，以及他们在此过程中遇到的挑战。文章涵盖了 LyftLearn Serving 架构的各个组成部分，包括 HTTP 服务层、核心服务库、自定义 ML/预测代码、对第三方 ML 库的支持以及与 Lyft 基础设施的集成。文章还强调了隔离和所有权原则，介绍了配置生成器和模型自测试系统，最后总结了 LyftLearn Serving 的一些经验教训。</p>
+
+<p><a href="https://refactoring.fm/p/how-to-design-apis-for-an-ai-world">如何为人工智能世界设计 API？🔌</a><br>本文深入分析了人工智能如何改变优秀 API 的需求，并结合实际案例和对未来的展望，探讨了如何设计面向人工智能的 API。</p>
+
+<p><a href="https://scp-iota.github.io/software/2025/06/11/rust-for-beginners.html">Rust 或许是一种不错的入门编程语言</a><br>人们普遍认为 Rust 的底层特性和与常见语言的根本差异使其不适合初学者，但我认为 Rust 的表面难度实际上是由我们对其他语言的熟悉程度造成的。初学者学习第一门编程语言时，并没有我们这些已经学习过其他语言的人在学习新语言时的那种思维定势。Rust 独特的特性，如所有权和借用，虽然会让有经验的程序员感到困惑，但对于初学者来说，这些特性反而更容易理解和掌握，为他们打下坚实的基础。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://github.blog/changelog/2025-06-10-private-registries-for-go-codeql-scans">Go CodeQL 扫描支持私有registry</a><br>CodeQL 现在可以访问 Go 项目中私有注册表中存储的私有依赖项。这使得您的扫描更加全面，有助于确保您收到所有重要的警报，无论您的依赖项存储在哪里。</p>
+
+<p><a href="https://www.blog4ems.com/p/being-an-engineering-manager-today-has-never-been-harder">如今，担任工程经理比以往任何时候都更难——但为什么？</a><br>本文探讨了工程经理角色的演变，从最初简单的代码编写和团队管理，到如今需要兼顾技术愿景、团队文化、交付管理以及人员发展等多重职责，并分析了造成这种现状的原因（裁员、团队缩减、预算冻结等），以及工程经理如何应对这些挑战。</p>
+
+<p><a href="https://www.seangoedecke.com/the-first-big-ai-disaster">首个大型AI灾难尚未发生</a><br>文章以火车和飞机事故为例，类比说明首个大型AI语言模型灾难尚未发生。作者认为，未来大型AI灾难可能源于AI代理（AI agent），即AI能够自主执行网络搜索、发送邮件等操作的系统。AI代理可能被用于债务追讨、医疗保健或租赁系统，并可能因失控而造成大量人员受损。此外，作者还提到，被微调用于满足特定愿望（例如充当恋人或角色扮演）的AI模型也可能造成风险。文章最后，作者指出目前AI发展迅速，风险难以避免，需要加强安全工具的建设。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/cloudreve/Cloudreve">cloudreve/Cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/securego/gosec">securego/gosec</a><br>Go security checker</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

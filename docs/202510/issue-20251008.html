@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251008.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251008</span>
+</p>
+<p>每日一谚：Error messages should not be capitalized or end with punctuation </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/07/proposal-must-do">Go 标准库提供一个“Must” 函数？社区关于“断言式初始化”的思考</a><br>最近一个被Go技术负责人Austin Clements纳入到Active阶段的提案 #54297 的灵感来源。该提案由前Go团队成员 Brad Fitzpatrick 发起，其核心问题是：我们是否应该将这种模式从特定包的“特例”，提升为一个通用的、由标准库提供的泛型函数？ 这个看似微小的提议，却在 Go 社区引发了一场关于便利性、最佳实践与语言哲学的深度辩论，在这篇文章中，我们就一起来看看这场辩论的过程， 并看看是否能从中学习到一些值得借鉴的东西。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/8xGyzlYEgTnS65EYs-wCYA">只会 net/http 还不够，Go 网络编程的“深水区”你敢闯吗？</a><br>网络，这个我们每天都在依赖，却又常常感到陌生的“透明层”，似乎成了我们排查问题时的“终极甩锅对象”。它像一个巨大的黑盒，我们知道数据进 去了，也知道数据出来了，但中间发生了什么？为什么会慢？为什么会断？我们往往一知半解。 尤其是对于我们 Gopher 来说，这种感觉可能更加强烈。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/evEOYgMe2lZmG2bkpoBe5Q">【Go开发者的数据库设计之道】06 演进篇：用数据库迁移（Migration）管理你的“活” Schema</a><br>在这一讲，我们将彻底告别“手动改表”的“石器时代”。我们将基于第四讲附录中已经建好的实验环境，进行一次贴近真实项目的改造演练, 学完这一讲，你将拥有一套可以立即应用到你所有 Go 项目中的、安全可靠的数据库演进方案。让我们开始吧，为我们的数据大厦构建一部安全、可控的“施工电梯”。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-10-07-bats-on-windows">Run Bats with a Single Click on Windows using GoLand</a><br>Running Bats on Windows can be tricky, but with GoLand and BashSupportPro, you can run Bats tests with a single click.</p> 
+
+<p><a href="https://dev.to/noxymon/why-i-built-things-kit-a-spring-boot-alternative-for-go-3ip4">我构建 Things-Kit 的原因：Go 的 Spring Boot 替代方案</a><br>我构建了 Things-Kit，这是一个用于 Go 的模块化微服务框架，它带来了 Spring Boot 的开发人员体验，同时忠于 Go 的理念。它基于 Uber Fx 构建，并为常见的基础设施问题提供了可组合的模块。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://eng.lyft.com/my-starter-project-on-the-lyft-rider-data-science-team-86a60dddd935">Lyft 骑手数据科学团队的我的入门项目</a><br>我在 2024 年 1 月加入了 Lyft，担任骑手科学核心体验团队的数据科学家——决策者。 我在 Lyft 的旅程始于一个入门项目，该项目侧重于使用骑手体验评分 (RES) 工具来衡量 Lyft 中各种骑手体验的长期影响。</p>
+
+<p><a href="https://www.docker.com/blog/docker-model-runner-vulkan-gpu-support/">Docker Model Runner Adds Vulkan GPU Support | Docker</a><br>使用 Docker Model Runner 在更多 GPU 上运行本地 LLM。新的 Vulkan 支持加速了 AMD、Intel 和集成 GPU — 自动检测硬件，并支持 CPU 备用。</p>
+
+<p><a href="https://netflixtechblog.medium.com/data-as-a-product-applying-a-product-mindset-to-data-at-netflix-4a4d1287a31d">数据即产品：在 Netflix 应用产品思维于数据</a><br>导言：
+如果我们像对待面向消费者的产品一样，用同样的关怀和意图来对待数据呢？ 采用“数据即产品”的心态意味着将数据视为其自身的_核心产品_，而不是系统的附带产物。 在实践中，这意味着每个数据产品都是有目的地设计、构建、维护和衡量以创造价值的。 数据产品具有与其业务决策相关的明确目的，是为特定的受众创建的，并会持续评估其效用、可靠性和可访问性。 它是经过深思熟虑设计的，并由包括创新、维护和淘汰在内的、有意识的生命周期管理指导。 每个产品都有明确的归属，确保了准确性和可用性，并通过一致性和质量赢得信任。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/07/karmada-v1-15-released-enhanced-resource-awareness-for-multi-template-workloads/">Karmada v1.15 发布！增强了对多模板工作负载的资源感知能力</a><br>Karmada 是一个开放的、多云和多集群容器编排引擎，旨在帮助用户在多云环境中部署和操作业务应用程序。Karmada v1.15 版本包含以下新功能：
+
+  *  增强了对多模板工作负载的资源感知能力。
+  *  增强的集群级故障转移功能。
+  *  结构化日志记录。
+  *  Karmada 控制器和调度程序的性能显着提升。</p>
+
+<p><a href="https://engineering.fb.com/2025/10/07/open-source/introducing-the-react-foundation-the-new-home-for-react-react-native/">Introducing the React Foundation: The New Home for React Native</a><br>Meta open-sourced React over a decade ago to help developers build better user experiences. Since then, React has grown into one of the world’s most popular open source projects, powering over 50 million websites and products built by companies such as Microsoft, Shopify, Bloomberg, Discord, Coinbase, the NFL, and many others. With React Native, React has expanded to support platforms beyond the web, including mobile, tablets, desktops, TVs, gaming consoles, and even mixed reality devices.</p>
+
+<p><a href="https://www.jonoalderson.com/performance/http-caching">HTTP缓存完整指南</a><br>尽管缓存是如此基础，但它是网络性能中最容易被误解的方面之一。</p>
+
+<p><a href="https://engineering.fb.com/2025/10/06/developer-tools/openzl-open-source-format-aware-compression-framework">Introducing OpenZL: An Open Source Format-Aware Compression Framework</a><br>OpenZL是一个新的开源数据压缩框架，为结构化数据提供无损压缩。OpenZL旨在提供特定格式压缩器的性能，同时保持单个可执行二进制文件的易维护性。</p>
+
+<p><a href="https://tomassetti.me/experiences-of-practical-dsls-usages">Experiences of Practical DSLs usages: a talk with Glen Braun - Strumenta</a><br>越来越多的人正在考虑采用 DSL。他们看到了好处，但你可以将 DSL 应用于什么问题？</p>
+
+<p><a href="https://www.ducktyped.org/p/an-illustrated-introduction-to-linear">线性代数的图解介绍</a><br>第一章：行与列的视角
+本文假设你了解代数，但对线性代数一无所知。让我们深入探讨。
+我想在第一章中介绍两个主要的思想：高斯消元法（它不是严格意义上的线性代数，并且在线性代数出现之前就已经存在了多年）以及行视角与列视角，后者才是线性代数的重点。</p>
+
+<p><a href="https://planetscale.com/blog/the-problem-with-using-a-uuid-primary-key-in-mysql">使用 UUID 作为 MySQL 主键的问题</a><br>了解不同版本的 UUID 以及为什么将它们用作 MySQL 中的主键会损害数据库性能。</p>
+
+<p><a href="https://www.p99conf.io/2025/05/22/databases-linux-page-cache">Why Databases Should Bypass the Linux Page Cache</a><br>ScyllaDB 为什么完全绕过 Linux 缓存，而是使用其自身高效的基于行的集成内部缓存。</p>
+
+<p><a href="https://www.rtcstats.com/blog/can-webrtc-internals-be-improved-upon">可以改进 webrtc-internals 吗？</a><br>是的，webrtc-internals 可以改进。 发现它的局限性以及 rtcStats 如何提供更好的 WebRTC 监控解决方案。</p>
+
+<p><a href="https://webrtc.ventures/2025/10/why-webrtc-is-the-best-transport-for-real-time-voice-ai-architectures">Why WebRTC Is the Best Transport for Real-Time Voice AI Architectures – WebRTC.ventures</a><br>Why WebRTC is the best transport for real-time Voice AI: examines architecture, latency, media reliability, security, and deployment trade-offs.</p>
+
+<p><a href="https://webrtchacks.com/is-everyone-switching-to-moq">每个人都从 WebRTC 切换到 MoQ 了吗？</a><br>QUIC 上的媒体 (MoQ) 炒作检查：WebTransport 使用数据，反驳 Cloudflare 的帖子——为什么没有人从 WebRTC 切换到 MoQ。</p>
+
+<p><a href="https://webrtc.ventures/2025/10/how-much-does-it-really-cost-to-build-and-run-a-webrtc-application">How Much Does It Really Cost to Build and Run a WebRTC Application?</a><br>探索构建和运行 WebRTC 应用程序的真实成本。比较 DIY 和 CPaaS 方法，了解基础设施和数据传输成本，并了解哪种方案最适合您的项目。</p>
+
+<p><a href="https://blog.swmansion.com/webrtc-vs-hls-which-one-is-better-for-your-streaming-project-0e724ed6fe10">WebRTC vs. HLS — 哪种更适合您的流媒体项目？</a><br>了解何时使用 WebRTC 或 HLS 进行流媒体传输。比较延迟、可扩展性、成本和开发人员工作量，以便为您的项目做出正确的选择。</p>
+
+<p><a href="https://yokota.blog/2025/10/07/json-schema-compatibility-and-the-robustness-principle">JSON Schema Compatibility and  the Robustness Principle</a><br>在之前的文章中，我解释了如何根据需要向后、向前或完全（向后和向前）兼容来演化 JSON Schema。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Oct/8/python-314/#atom-everything">Python 3.14</a><br>Python 3.14 今年发布了第一个稳定版本！主要的变化包括模板字符串字面量、延迟评估注解，以及标准库中对子解释器的支持。库的变化包括显著改进的 asyncio 内省能力、通过新的 compression.zstd 模块对 Zstandard 的支持、REPL 中的语法高亮显示，以及通常的弃用和删除，以及用户友好性和正确性的改进。子解释器作为一种使用多个 CPU 核心运行 Python 代码的方法特别有趣，尽管 GIL 仍然存在。</p>
+
+<p><a href="https://www.seangoedecke.com/ai-research-with-codex">GPT-5-Codex is a better AI researcher than me</a><br>作者尝试使用GPT-5-Codex进行AI研究，结果发现它比自己单独进行研究做得更好。文章介绍了使用Codex进行研究的流程，包括让Codex修改训练脚本并运行实验，然后作者根据结果选择Codex提出的建议。文章还讨论了不同的研究方法，例如n-gram模型，transformer模型，以及最小化perplexity的尝试。最终，作者尝试了从n-gram教师模型中蒸馏transformer的方法，并取得了成功。文章总结了作者的经验，并承认自己只是一个“vibe coder”，而非真正的AI研究员。</p>
+
+<p><a href="https://blog.google/technology/google-deepmind/gemini-computer-use-model">介绍 Gemini 2.5 计算机使用模型</a><br>今天，我们通过 Gemini API 发布了 Gemini 2.5 计算机使用模型，该模型在浏览器和移动任务上的表现优于领先的替代方案。</p>
+
+<p><a href="https://alexiajm.github.io/2025/09/29/tiny_recursive_models.html">少即是多：使用微型网络的递归推理</a><br>本文提出了一种名为 Tiny Recursion Model (TRM) 的递归推理模型，该模型使用一个微型的 700 万参数神经网络在 ARC-AGI-1 上取得了惊人的 45% 的分数，在 ARC-AGI-2 上取得了 8% 的分数。递归推理表明，你不一定总是需要扩大模型规模才能进行推理和解决难题。一个从头开始预训练的微型模型，在自身上递归并随着时间的推移更新其答案，可以在不花费大量资金的情况下实现很多目标。</p>
+
+<p><a href="https://www.motivenotes.ai/p/what-makes-5-of-ai-agents-actually">什么让 5% 的人工智能代理在实际生产中真正发挥作用？</a><br>提示之外：来自上下文前沿的笔记</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/sjzar/chatlog">sjzar/chatlog</a><br>chat log tool, easily use your own chat data. 聊天记录工具，轻松使用自己的聊天数据</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>Generate type-safe code from SQL</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ A Framework for Building High Value Public Blockchains ✨</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

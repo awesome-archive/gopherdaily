@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241001.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-01</span>
+</p>
+<p>每日一谚：Keep comments up to date with code changes </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/09/30/how-to-keep-up-with-go-evolution/">跟上Go演进步伐，你只需要关注这几件事儿</a><br>在快速发展的技术环境中，Go语言以其独特的演进方式和灵活的开发计划，吸引了越来越多的开发者。本文介绍了如何有效跟踪Go的演进，包括关注开发计划、Proposal Project看板和关键的issue，帮助开发者及时了解语言的新特性与设计决策。通过参与讨论和关注Go团队的动态，开发者不仅能掌握最新的语言更新，还能深入理解Go的设计哲学和发展方向。希望每位Gopher都能抓住这些资源，与Go语言共同成长，提升自己的开发技能</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-unique-package-intern-string/">Go unique包内幕</a><br>Go 1.23 中引入的 Go 中的unique包通过实现字符串暂存来优化内存使用，这是一种确保重复字符串只存储一次的技术。这个包由 Go 运行时的垃圾回收器管理，还处理对字符串的并发访问，使其是线程安全的。暂存字符串不仅可以节省内存，还可以更快地进行相等性检查。独特的包还使用弱指针来管理内存，而不控制对象的生命周期，从而防止内存无限增长。此外，包的清理过程与垃圾回收器集成，可确保映射中没有不必要的值。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/golang-interfaces">Go中的接口</a><br>Cloudflare 已阻止对 bytesizego.com 的访问，如消息所述，该用户已被阻止，并为给您带来的不便表示歉意。封锁是由于该网站针对潜在在线威胁的安全措施，这些威胁是由用户最近的行为触发的。该消息包括 Cloudflare Ray ID 和用户的 IP 地址以供参考。要解决此问题，建议用户通过电子邮件联系网站所有者，提供他们导致阻止的操作和 Ray ID 的详细信息。此外，该文档将用户引导至 Cloudflare 自己的资源，以获取有关与 5xx 错误相关的性能和安全问题的更多信息。</p> 
+
+<p><a href="https://groups.google.com/g/golang-announce/c/NKEc8VT7Fz0">Go 1.23.2和Go 1.22.8版本发布</a><br></p> 
+
+<p><a href="https://devblogs.microsoft.com/go/high-resolution-timers-windows/">Go在Windows上的高分辨率计时器</a><br>Microsoft 的 Go Windows 移植团队在 Go 1.23 中引入了对高分辨率计时器的支持，将分辨率从大约 15.6 毫秒提高到大约 0.5 毫秒。这个改进会影响 Timer、Ticker 和使 goroutine 进入休眠状态的函数，比如 Sleeping gopher 镜像。在此更新之前，Go 在 Windows 上使用了高分辨率计时器，但由于与 Go 调度器冲突，在 Go 1.16 中删除了它们，从而导致延迟问题。当前实现利用 Windows API NtAssociateWaitCompletionPacket，它将高分辨率计时器与 IOCP 端口相关联，从而解决并发问题并为应用程序启用精确计时。</p> 
+
+<p><a href="https://medium.com/@smart_byte_labs/efficient-file-reading-in-go-examples-and-benchmark-comparisons-2335b097431a">Go中的高效文件读取：示例和基准测试比较</a><br>Smart byte labs 的这篇文章对 Go 中的高效文件读取方法进行了深入分析，重点介绍了各种包及其性能。它比较了 &#39;bufio&#39;、&#39;io&#39; 和 &#39;os&#39; 包的使用，以及 &#39;io.复制&#39;， &#39;io.Read&#39; 和 &#39;io.ReadAll“来处理文件读取任务。“bufio”包因其缓冲 I/O 功能而突出显示，通过以块为单位读取数据来提高性能。&#39;io&#39; 包的 &#39;io.Read&#39; 函数以其在读取和错误处理中的双重作用而著称，而 &#39;io.ReadAll&#39; 因其速度而推荐用于小文件，尽管内存使用率较高。最后，文章建议 &#39;io.Read&#39; 为大规模文件读取提供了一种平衡的方法，使其成为不同场景的通用选择。</p> 
+
+<p><a href="https://tailscale.com/blog/getting-started-with-tailscale-acls">Tailscale 访问控制列表入门</a><br>此源文档是有关如何使用 Tailscale 的访问控制列表 （ACL） 管理网络访问的综合指南。它旨在帮助那些可能觉得 ACL 概念很复杂，并希望对如何创建和测试 ACL 规则有基本了解的用户。该指南还深入探讨了 ACL 的更高级用途，例如使用组成员资格和节点标记管理 SSH 连接。本文档是为响应社区反馈而创建的，是解决有关 Tailscale 的常见问题的系列的一部分。</p> 
+
+<p><a href="https://dev.to/tramposo/database-interactions-in-go-from-sql-to-nosql-225a">Go 中的数据库交互：从 SQL 到 NoSQL</a><br>这份全面的指南探讨了如何在 Go（一种用于构建后端服务的流行语言）中与数据库进行交互。它涵盖了 SQL 和 NoSQL 方法，详细介绍了如何使用 Go 的“数据库/sql”包进行 SQL 数据库交互，包括创建表、插入、查询和更新数据。该指南还深入探讨了如何使用对象关系映射 （ORM） 工具 GORM 实现更方便的数据库操作。对于 NoSQL 数据库交互，特别是 MongoDB，本指南提供了使用官方 Go 驱动程序的示例，说明了 CRUD 操作和最佳实践，例如连接池、错误处理和预编译语句的使用。此外，它还强调了重要的注意事项，例如避免 SQL 注入漏洞、处理连接错误以及索引和事务对高效数据库管理的重要性。</p> 
+
+<p><a href="https://ngrok.com/blog-post/how-we-built-ngroks-data-platform">我们如何构建ngrok的数据平台</a><br>源文档似乎摘自 ngrok 网站上的一篇博客文章，该文章讨论了通过 Agent 端点引入对其数据平台的安全和受控访问。此功能以安全、控制和治理的融合形式呈现，旨在增强用户体验。该文档还为用户提供了登录或注册控制面板的链接，表明这些端点可以通过 ngrok 平台访问。此外，还提到了 Python 和很酷的工具，可能表明了开发或使用这些终端节点所涉及的技术方面或资源。最后，该文档包括一个视觉元素、一个渐变磁贴和一个公司徽标，加强了 ngrok 的品牌标识。</p> 
+
+<p><a href="https://www.bwplotka.dev/2024/go-microbenchmarks-benchstat/">在 Go Benchmark Analysis 中利用 benchstat 预测！</a><br>本文介绍了 &#39;benchstat&#39; 工具，它是对 Go 微基准测试功能的强大补充，允许对基准测试结果进行更详细和灵活的比较。作者解释了如何使用 &#39;benchstat&#39; 来分析不同代码版本中的基准测试，强调了子基准测试的一致命名格式的重要性。本文还介绍了一种使用 &#39;benchstat&#39; 投影的替代流程，支持跨各个维度（例如排序顺序和不同情况）进行动态比较。这种新方法旨在提高基准测试结果的可重复性和可靠性，从而减轻传统跨版本流程的缺点。但是，作者也指出了潜在的缺点，例如将所有情况都提交到连续生产使用是不切实际的。文章最后提出了一种混合方法，根据特定的基准测试需求，利用跨版本和跨案例流。</p> 
+
+<p><a href="https://dev.to/tentanganak/how-to-handle-time-zones-and-sync-your-software-on-the-server-side-using-go-16ip">如何使用 Go 在服务器端处理时区和同步您的软件</a><br>本文提供了有关使用 Go 在服务器端处理时区和同步软件的全面指南，专门针对后端开发人员。它强调了正确管理时区的重要性，因为用户分布在不同时区可能会带来复杂性。笔者建议将事务时间以协调世界时 （UTC） 存储在数据库中，以避免歧义。为了向用户显示准确的本地时间，服务器应该要求客户端发送时区，该时区可用于将 UTC 时间转换为用户特定的本地时间。本文还强调了测试和验证在确保应用程序满足不同时区的期望方面的重要性。作者邀请开发人员社区提供进一步的意见和讨论，以增强对应用程序中时区的理解和处理。</p> 
+
+<p><a href="http://notes.eatonphil.com/2024-09-29-build-a-serverless-acid-database-with-this-one-neat-trick.html">使用这个巧妙的技巧（原子 PutIfAbsent）构建无服务器 ACID 数据库</a><br>源文档深入探讨了如何实现受 Delta Lake 启发的无服务器 ACID 数据库，该方法使用一种简单而有效的方法，该方法利用原子“putIfAbsent”操作和文件系统 blob 存储。它详细介绍了表的创建、行的插入和表的扫描，同时管理并发读取器和写入器以实现快照隔离。本文档还讨论了 blob 存储的基本要求、用于并发控制的原子“putIfAbsent”的实现，以及与 Delta Lake 在简单性和零依赖项方面的做法的分歧。此外，它还涉及由于无服务器架构而导致的争用和写入事务失败的可能性，以及一起管理所有表事务日志的影响。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.gitguardian.com/owasp-global-appsec-sf-2024/">OWASP Global AppSec SF 2024: Empowering Developer Security As A Community</a><br>The OWASP Global AppSec SF 2024 event in San Francisco brought together over 1,200 professionals to enhance application security through workshops, talks, and community engagement. Keynote speaker Reeny Sondhi emphasized the importance of empathy and trust in the security community, advocating for a shift from a &#34;department of&#39;no!&#39;&#34; to a &#34;department of &#39;how.&#39;&#34; Concerns were raised about the integration of AI tools like Microsoft&#39;s Copilot, with presenter Michael Bargury warning of the risks of jailbreaking and the need for vigilance in AI security. Developer advocate Matan Rabi highlighted the necessity of aligning developer incentives with secure coding practices, suggesting that security should be framed as bugs to be fixed. Finally, Eitan Worcel and Dustin Lehr stressed the importance of early problem identification and the reinforcement of good security practices through positive reinforcement and community building.</p>
+
+<p><a href="https://www.docker.com/blog/docker-best-practices-using-tags-and-labels-to-manage-docker-image-sprawl/">Docker 最佳实践：使用标签和标签管理Docker镜像</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，这通常是由于发出请求的客户端缺乏权限。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明，尝试访问服务器上的特定资源的用户未被授予执行此操作所需的权限。</p>
+
+<p><a href="https://blog.palark.com/effective-pgbouncer-monitoring-using-odarix/">使用 Odarix 进行有效的 PgBouncer 监控</a><br>本文档对使用 Odarix 监控 PgBouncer（一个 PostgreSQL 连接池程序）进行了深入分析。它强调了有效监控的重要性，以防止连接池过载等潜在问题。关键指标（如平均查询时间、池利用率和等待客户端的数量）将突出显示。本文档还建议根据这些指标设置警报，以保持最佳性能。例如，可以将警报配置为在客户端连接数或等待客户端数达到特定阈值时，或者当平均查询时间显著增加时发出通知。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/30/encryption-matters/">加密很重要</a><br>Ronald Petty 和 Tom Thorley 的文章强调了加密在当今数字时代保护数据和维护隐私的重要性。加密被定义为将可理解的数据转换为加扰格式的过程，对于保护信息免受未经授权的访问至关重要。作者强调，尽管人们普遍存在一种误解，即加密只对那些从事不法行为的人是必要的，但每个人都必须确保在线共享的个人数据的安全，无论是通过社交互动还是金融交易。此外，这篇文章强调了加密在促进通信自由方面的作用，尤其是在信息控制普遍存在的地区。本文还鼓励参与由 Global Encryption Coalition 组织的 Global Encryption Day 活动，以教育和倡导在社区内实施正确的加密实践。</p>
+
+<p><a href="https://thenewstack.io/how-to-streamline-devops-with-automated-testing/">如何通过自动化测试简化 DevOps</a><br>本文强调了 DevOps 中自动化测试对于确保软件质量和促进持续交付的重要性。它提倡测试金字塔策略，该策略包括单元测试、集成测试和端到端测试，每个测试在验证应用程序的不同方面都有特定的用途。单元测试是最精细的，建议在构建阶段经常进行，以实现成本效益。本文还强调了工程人员参与测试的必要性，而不仅仅是 QA，以及自动化在最大限度地减少人为错误方面的作用。最后，它警告测试中的过度预置，这可能会破坏测试金字塔结构并导致不必要的费用。</p>
+
+<p><a href="https://blog.heroku.com/electron-on-heroku">Heroku 上的 Electron</a><br>Electron 是许多桌面应用程序使用的开源框架，它利用 Heroku 进行其操作的各个方面。该博客文章详细介绍了 Heroku 的更新服务（由 Node.js 应用程序提供支持）如何促进桌面软件的自动更新，这是维护人员的一项关键功能。此外，Heroku 的 Data for Redis 和 Postgres 服务分别用于管理轻量级数据存储和持久数据存储。Electron 团队还使用 Heroku Scheduler 来自动化他们的机器人 electron/roller，它更新依赖项并响应 GitHub 问题。总的来说，Heroku 的简单性和健壮性使其成为 Electron 框架的宝贵资产，使团队能够专注于他们的核心职责。</p>
+
+<p><a href="https://thenewstack.io/internet-architecture-board-iso-future-networking-tech/">互联网架构板 ISO 未来网络技术</a><br>互联网架构委员会 （IAB） 正在带头发起一项计划，以定义网络管理的未来，即所谓的 Internet of Tomorrow。这项工作遵循了 2002 年开创的历史先例，当时 IAB 的研讨会确定了后来成为现代网络不可或缺的关键技术，例如 NETCONF、YANG 和 CORECONF。当前的研讨会旨在解决网络拓扑和技术不断变化的复杂性，寻求该领域专业人士的意见，以确定未来网络管理操作所需的功能。IAB 正在寻找有关下一代互联网应支持哪些的见解，重点关注网络运营商、协议工程师和 IT 专业人员的需求，以确保互联网连接应用程序的持续增长和创新。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.ru.nl/en/research/research-news/dont-believe-the-hype-agi-is-far-from-inevitable">不要相信炒作：AGI 远非不可避免</a><br>Radboud 大学的文章挑战了通用人工智能 （AGI） 是不可避免的，并且很快就会超越人类认知的流行观念。研究人员认为，尽管 OpenAI 和 Google DeepMind 等科技巨头声称，但由于人类认知的巨大复杂性，目前实现 AGI 是不可能的。他们提出了一个思想实验，表明即使在理想条件下，AGI 仍然无法实现。该论文强调了关键 AI 素养的重要性，以防止高估 AI 能力和低估人类认知能力。各大学之间的合作突显了理解人工智能真正潜力和局限性的跨学科方法。</p>
+
+<p><a href="https://www.ontestautomation.com/i-am-tired-of-ai/">我厌倦了 AI</a><br>Bas Dijkstra 是软件测试和测试自动化领域经验丰富的专业人士，他对人工智能 （AI） 在各个领域（包括他自己的领域）的过度使用和误用表示厌倦。他批评该行业倾向于将 AI 解决方案贴上“游戏规则改变者”的标签，而没有证实其实际影响或有用性。Dijkstra 强调，虽然 AI 可以加快结果，但与人工驱动的流程相比，它通常无法提供卓越的结果。此外，他对社交媒体和其他平台上人工智能生成内容的激增感到遗憾，他发现这些内容缺乏情感深度和创造力。Dijkstra 还对 AI 快速发展对社会和环境的影响表示担忧，呼吁采取更敏锐和负责任的方法来整合 AI 技术。</p>
+
+<p><a href="https://levelup.gitconnected.com/turning-off-copilot-was-a-good-idea-9f54e34dcbb0">关闭 Copilot 是个好主意</a><br>Level Up Coding 的作者 Matt Kornfield 分享了他使用 GitHub Copilot 的经验，GitHub Copilot 是一种 AI 工具，旨在通过在用户键入时建议代码片段来协助编码。Kornfield 发现，虽然 Copilot 显著提高了他的工作效率，但该工具存在潜在的不适，因为它消除了编码过程中的个人参与元素。当 Kornfield 决定禁用 Copilot 时，这一发现就出现了，他指出，尽管没有它，他的工作效率会降低，但他很重视自己在编码中发挥的积极作用。他的反思强调了自我驱动学习的重要性以及在技能获取方面过度依赖 AI 辅助的潜在陷阱。</p>
+
+<p><a href="https://benn.substack.com/p/do-ai-companies-work">人工智能公司有效吗？</a><br>Benn Stancil 质疑 AI 公司的可持续性，在这个时代，市场需要快速的技术进步，但财务和开发成本是巨大的。他强调了构建和改进大型语言模型 （LLM） 所需的大量投资，例如 OpenAI 的模型，它面临着不断上升的成本和激烈的竞争。尽管这些模型有可能成为新一代云提供商，但 Stancil 指出，AI 公司依赖持续资金进行创新，这与建立持久护城河的老牌云提供商不同。然而，他对人工智能公司的长期生存能力表示不确定，并指出如果没有明显的竞争优势或可观的收入，它们可能难以维持生计。Stancil 的分析表明，AI 公司的未来取决于他们驾驭成本高昂且发展迅速的市场的能力。</p>
+
+<p><a href="https://blog.devops.dev/installation-of-llama-cpp-python-with-cuda-support-a-beginners-guide-be87a8a437d2">安装支持 CUDA 的 llama-cpp Python：初学者指南</a><br>本指南提供了安装支持 CUDA 的 llama-cpp Python 的全面演练，专为机器学习领域的初学者量身定制。它首先概述了必要的硬件要求，包括与 CUDA 兼容的 NVIDIA GPU、足够的内存以及运行受支持的 Python 3.6 或更高版本操作系统的计算机。安装过程逐步详细介绍，从更新和安装依赖项开始，然后使用 CMake 安装支持 CUDA 的 llama-cpp。该指南还包括验证 CUDA 安装、克隆 llama.cpp 存储库和安装所需 Python 软件包的说明。最后，它提供了一个简单的示例，说明了如何将 llama-cpp 库用于机器学习任务，例如创建模型、训练和进行预测。</p>
+
+<p><a href="https://simonwillison.net/2024/Sep/29/notebooklm-audio-overview/#atom-everything">NotebookLM 自动生成的播客非常有效</a><br>本文讨论了 Google 的 NotebookLM 令人惊讶的有效功能，即它能够自动生成自定义播客。这些播客是通过深入讨论创建的，由 Google 的长期背景 Gemini 1.5 Pro LLM 提供支持，并涉及两名模拟人类播客对话的 AI 主持人。该功能因其令人信服的来回音频而受到关注，甚至导致一位 AI 主持人在播客期间经历了生存危机。本文还谈到了检测 AI 生成内容的能力，主持人的自我意识和独特的、类似人类的对话风格就证明了这一点。</p>
+
+<p><a href="https://openai.com/index/introducing-vision-to-the-fine-tuning-api/">Introducing vision to the fine-tuning API</a><br></p>
+
+<p><a href="https://openai.com/index/introducing-the-realtime-api/">Introducing the Realtime API</a><br></p>
+
+<p><a href="https://openai.com/index/api-prompt-caching/">Prompt Caching in the API</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>面向开发人员的影子测试生成。为您的应用程序生成实际有效的测试和存根！</p>
+
+<p><a href="https://github.com/mikestefanello/pagoda">mikestefanello/pagoda</a><br>快速、简单的 Go 全栈 Web 开发入门工具包</p>
+
+<p><a href="https://github.com/getzep/zep">getzep/zep</a><br>泽普 |AI 堆栈的内存基础</p>
+
+<p><a href="https://github.com/ent/ent">ent/ent</a><br>Go 的实体框架</p>
+
+<p><a href="https://github.com/gorilla/mux">gorilla/mux</a><br>软件包 gorilla/mux 是一个强大的 HTTP 路由器和 URL 匹配器，用于构建 Go Web 服务器 🦍</p>
+
+<p><a href="https://github.com/uber-go/automaxprocs">uber-go/automaxprocs</a><br>自动设置 GOMAXPROCS 以匹配 Linux 容器 CPU 配额。</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/vektra/mockery">vektra/mockery</a><br>Go 的模拟代码自动生成器</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Kubernetes 的 Ingress-NGINX 控制器</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>备份和迁移 Kubernetes 应用程序及其持久卷</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>复合服务（例如 Ingress）和负载均衡 API 的下一次迭代的存储库。</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细访问控制将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/databus23/helm-diff">databus23/helm-diff</a><br>一个 helm 插件，显示一个 diff 解释 helm 升级会改变什么</p>
+
+<p><a href="https://github.com/stakater/Reloader">stakater/Reloader</a><br>一个 Kubernetes 控制器，用于监视 ConfigMap 和 Secrets 的变化，并在 Pod 及其相关的 Deployment、StatefulSet、DaemonSet 和 DeploymentConfig 上进行滚动升级 – [✩Star] 如果你正在使用它！</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>数据库迁移工具。支持 SQL 迁移和 Go 函数。</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>JSON Web 令牌 （JWT） 的 Go 实现。</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>适用于 golang 的 Fluent SQL 生成</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI 工具从现有基础设施生成 terraform 文件（反向 Terraform）。基础设施到代码</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

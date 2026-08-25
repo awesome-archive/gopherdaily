@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251224.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251224</span>
+</p>
+<p>每日一谚：Interface{} says nothing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/24/profiling-request-latency-with-critical-path-analysis">Go 性能分析的“新范式”：用关键路径分析破解高并发延迟谜题</a><br>“如果你喜欢快速的软件，那么你来对地方了。” 在 GopherCon 2025 上，来自 Datadog 的工程师、Go Performance and diagnostics小组成员 Felix Geisendörfer 以这样一句开场白，将我们带入了一个 Go 性能分析的全新领域。</p> 
+
+<p><a href="https://tonybai.com/2025/12/24/bash-vs-go-10x-code-100x-maintainability">Bash 虽好，但我选 Go：如何用 10 倍代码换来 100 倍的维护性？</a><br>在日常开发中，我们经常会写一些 Bash 脚本来处理本地环境配置、启动 Docker 容器、同步密钥等琐碎任务。起初，它们只是几行简单的命令；但 随着时间推移，它们逐渐膨胀成包含数百行 jq、sed、awk 的怪物，充斥着针对 macOS 和 Linux 的条件分支，以及“千万别动这行代码”的注释。 近日，一位开发者分享了他用 Go 重写这些 Bash 脚本的经历，引发了一场Go社区的关于工程可维护性与“胶水代码”治理的深度探讨。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/urT-ntYwkUOARqE9pvXnJg">【API 设计之道】07 幂等性设计：处理网络抖动与重复请求的“唯一真理” </a><br></p> 
+
+<p><a href="https://calmops.com/programming/golang/">Go 编程路线图</a><br>Go 编程综合教程区。该教程将引导您从入门基础知识逐步深入到高级主题，并按技能水平和应用领域进行分类。目前，所有三个核心级别（初级、中级、高级）均已完成，共包含 110 篇专业级文章。</p> 
+
+<p><a href="http://notes.eatonphil.com/2025-12-23-year-in-books.html">年度书籍回顾</a><br>作者分享了他在2025年阅读的50本书中，最推荐的11本非虚构类和7本虚构类书籍。非虚构类推荐包括《论写作的精妙》、《我，阿西莫夫》、《好莱坞》、《酋长》、《巴西》、《丝绸之路》、《路易斯·D·布兰代斯》、《个人往事》、《滚雪球》、《卡地亚家族史》和《秘密配方》。虚构类推荐包括《野牛猎人》、《使女的故事》、《艾迪·拉鲁的隐形生活》、《北境吸血鬼》、《不规范女巫的非常秘密社团》、《傲慢与偏见》和《詹姆斯》。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/nobody-knows-how-software-products-work/">大型软件产品是如何工作的，没有人知道</a><br>大型、快速发展的科技公司经常对其自身系统处于“战争迷雾”中。简单的问题，如特定类型的用户是否可以访问某个功能，往往只有组织内少数人知道答案，有时甚至没有人知道，需要有人像研究人员一样深入挖掘才能弄清楚。这背后的原因是大型软件产品极其复杂，特别是那些为了捕获更多价值而增加的、影响其他所有功能的复杂特性（如多语言支持、企业级策略控制、自托管等）。文档化也很困难，因为系统变化太快，文档编写速度赶不上系统变化的速率。因此，能够准确回答关于大型软件系统问题的能力变得非常宝贵，这可能是工程师在大型科技公司中拥有“制度权力”的结构性原因。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/23/kyverno-at-contribfest-community-collaboration-and-the-power-of-open-source-in-action/">Kyverno 在 ContribFest 的经历：社区、协作和开源力量的实践</a><br>几周前在亚特兰大举行的 KubeCon &#43; CloudNativeCon 北美站，Kyverno 社区有机会参加了 ContribFest，这是云原生生态系统中最具活力和社区驱动的活动之一。Kyverno 社区参与其中，旨在促进共享学习、跨公司协作，并为所有经验水平的人提供一个参与开源的友好入口。活动分为三个小组，分别针对入门级、中级和高级用户，以促进不同经验水平的参与者之间的交流和指导。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/12/23/kubernetes-v1-35-fine-grained-supplementalgroups-control-ga/">Kubernetes v1.35：细粒度补充组控制晋升为 GA</a><br>Kubernetes SIG Node 宣布，细粒度补充组控制功能已在 Kubernetes v1.35 中正式发布（GA）。</p>
+
+<p><a href="https://danburzo.ro/http-caching-refresher">HTTP 缓存</a><br>本文是对最新的 HTTP 缓存标准 RFC 9111 (2022) 的解读，主要关注 `Cache-Control` HTTP 头部，它规定了缓存（包括浏览器缓存、代理和 CDN 等中间缓存）如何存储和重用 HTTP 响应。文章详细解释了缓存的“新鲜度”判断机制，包括如何根据 `max-age`、`Expires` 和 `Last-Modified` 确定新鲜度时间线。</p>
+
+<p><a href="https://alperenkeles.com/posts/test-dont-verify">测试，而不仅仅是验证</a><br>人工智能正在使形式化验证主流化，这在提升软件工程标准方面具有巨大潜力。然而，作者强调了AI辅助验证的几个挑战：自动形式化的不确定性、证明助手固有的慢速、对难以获取的系统模型的依赖，以及验证本身无法指导开发方向。文章认为，测试（特别是随机测试）在发现错误和为复杂的验证过程提供反馈方面仍然不可或缺。最终，作者提倡将随机测试与形式化验证相结合（如验证引导开发VGD），以实现既正确又快速的系统，并认为两者在未来软件工程中都将发挥重要作用。</p>
+
+<p><a href="https://tomtunguz.com/2026-predictions">2026年12大预测</a><br>2026年将由代理系统（Agentic Systems）的崛起所定义，这些系统将打破现有数据库架构并使网络转向“代理优先”（Agent-First）设计。预计2026年将是流动性创纪录的一年，主要包括重大AI首次公开募股（IPO）以及稳定币在全球支付中占比达到30%。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://kevins981.github.io/blogs/teachagent_part1.html">教会你的智能体你所知道的（第 1 部分）</a><br>垂直领域 AI 智能体常因领域知识是隐性的且难以从静态系统提示或原始文档中获取而遇到困难。本文提出将智能体视为学生：人类领域专家通过迭代、互动的聊天来教导智能体，而智能体则将领域规则、定义和启发式方法提炼成一个持续改进的知识库。作者已在开源原型 Socratic 中实现了此工作流程。
+
+文章对比了现有方法（如提示工程和 RAG），指出它们在捕捉和应用复杂领域知识方面的局限性。作者提出的“教学”方法强调了互动的、迭代的过程，并将一个名为 Socratic 的原型系统付诸实践，该系统允许人类通过主动（用户发起）和被动（智能体发起）提问的方式来完善智能体的知识库。未来的目标是将教学视为新的训练方式，并探讨如何评估智能体提问的能力。</p>
+
+<p><a href="https://davegriffith.substack.com/p/claude-code-sees-like-a-software">Claude Code 像软件架构师一样看代码</a><br>语言服务器协议（LSP）的支持对智能体编码（Agentic Coding）意味着什么（以及所有在其上构建的人）？Claude Code 获得了与 IDE 相同的代码智能能力，这对其竞争对手构成了挑战，作者探讨了这种现象如何影响构建在 LLM 之上的生态系统。</p>
+
+<p><a href="https://outofdesk.netlify.app/blog/perfect-software">完美软件 - 为“单人”而生的软件</a><br>作者探讨了“完美软件”的概念，将其与“可塑软件”和“自制软件”区分开来，认为完美软件的关键在于它“感觉起来”如何，即它能精确地满足用户的需求，就像一杯“完美咖啡”一样。完美软件不追求规模或规模化，而是追求“足够”，即满足需求后的满足感。作者认为，借助LLM（大型语言模型），现在即便是普通开发者也能构建出为自己量身定制的完美软件（例如他自己构建的博客系统和Obsidian插件），这不仅能重拾软件开发的乐趣，还能恢复自主性。</p>
+
+<p><a href="https://spectrum.ieee.org/ai-models-locally">你的笔记本电脑尚未准备好运行大型语言模型。但这种情况即将改变</a><br>运行大型人工智能模型本地化的需求正驱动着数十年来笔记本电脑架构最大的变革。新的设计侧重于集成NPU、统一内存和优化的软件，以实现更高效、更私密的本地AI处理。</p>
+
+<p><a href="https://x.com/dongxi_nlp/status/2003574127211479442">X (formerly Twitter)</a><br>页面显示因浏览器禁用JavaScript而加载失败的提示信息。页面内容包含一个X（原Twitter）的SVG图标，并告知用户JavaScript不可用，建议启用JavaScript或切换到支持的浏览器。同时提供了帮助中心链接以及服务条款、隐私政策等法律信息链接。页面底部显示“© 2025 X Corp.”。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/qdm12/gluetun">qdm12/gluetun</a><br>VPN client in a thin Docker container for multiple VPN providers, written in Go, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.</p>
+
+<p><a href="https://github.com/qualifire-dev/rogue">qualifire-dev/rogue</a><br>Agents testing framework made easy</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+<p><a href="https://github.com/evilmartians/lefthook">evilmartians/lefthook</a><br>Fast and powerful Git hooks manager for any type of projects.</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Simple, reliable, and efficient distributed task queue in Go</p>
+
+<p><a href="https://github.com/go-sql-driver/mysql">go-sql-driver/mysql</a><br>Go MySQL Driver is a MySQL driver for Go&#39;s (golang) database/sql package</p>
+
+<p><a href="https://github.com/wtfutil/wtf">wtfutil/wtf</a><br>The personal information dashboard for your terminal</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>Generate type-safe code from SQL</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260605.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260605</span>
+</p>
+<p>每日一谚：Use embedding sparingly. Composition is preferred over deep embedding. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/05/stop-writing-go-like-java-avoid-over-architecting">别把 Go 写成 Java：毁掉项目从过度架构开始</a><br>如果你正在维护一个中大型的 Go 后端项目，你大概率经历过这样的绝望时刻：为了加一个极其简单的业务字段，你需要穿透 handler、usecase、domain、repository、adapter 等足足五层抽象结构；你的项目根目录下躺着一个 pkg 文件夹，里面又套着 internal，代码藏在七八级目录深处。你以为你在写出业界最高标准的“整洁架构（Clean Architecture）”，但实际上，你正在把 Go 语言写成你曾经最讨厌的“臃肿企业级 Java”。</p> 
+
+<p><a href="https://medium.com/@somtochukwuuchegbu/database-internals-bufferpool-a883b1178aaf">使用go实现DB bufferpool</a><br>bufferpool 缓冲池是一种缓存机制，它将数据页存储在内存中，这样在查询数据时就可以更快地获取结果。工作流程如下：当进行数据查询时，系统会检查缓冲池，看是否有该数据页被缓存到内存中。如果有的话，系统可以直接返回该数据页，而无需再从磁盘读取数据。不过，如果数据不在缓存中，系统就会从磁盘读取数据并将其写入缓存中。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/04/identity-and-access-management-whitepaper/">身份和访问管理白皮书</a><br>IAM为何是云原生安全的基础，如何使用现代标准验证用户和工作负载身份，以及何时使用基于边界与零信任架构。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/06/04/securing-ci-cd-for-an-open-source-project-controlling-who-runs-what/">为开源项目保护CI/CD：控制谁运行什么</a><br>不运行：步骤从不信任的检出中执行脚本。第二次检出后的每个shell块都以内联方式写入工作流YAML，没有内容从PR分支获取。</p>
+
+<p><a href="https://www.docker.com/blog/what-are-hardened-images/">强化镜像解析：更少的CVE，更小的攻击面</a><br>最小化镜像包含更少的软件包，但这只是强化的一面。强化镜像还包括具有明确SLA的持续补丁、可验证的构建来源和完整的SBOM。</p>
+
+<p><a href="https://nesbitt.io/2026/06/04/gittuf-a-signed-log-for-git-refs.html">gittuf - git refs的签名日志</a><br>验证在代码仓库之外运行，针对代码仓库不持有的策略和密钥。被入侵代码仓库上的攻击者可以生成有效提交，但无法生成有效RSL条目。</p>
+
+<p><a href="https://dev.to/amirsefati/from-elasticsearch-bottlenecks-to-weaviate-how-we-built-fast-hybrid-search-in-production-b4i">从Elasticsearch瓶颈到Weaviate：我们如何在生产中构建快速混合搜索 - DEV社区</a><br>多年来，Elasticsearch几乎是我自动选择的搜索工具。对于许多用例，它仍然非常出色，但我们也需要考虑其他解决方案。</p>
+
+<p><a href="https://wasmer.io/posts/ported-wasmer-backend-django-to-rust">将我们的Django后端移植到Rust使基础设施使用率提高了90% - Wasmer</a><br>我们将Django后端移植到Rust，使基础设施使用率提高了90%。这一迁移显著提升了性能并减少了资源消耗。</p>
+
+<p><a href="https://davidguerrero.fr/blog/tiniest-logging-stack/">最小的日志堆栈：Fluent Bit、Parquet和DuckDB</a><br>这是一个针对少量日志或更多日志的微型日志堆栈。常推荐的Loki设置起来可能相当复杂，而其高可用版本具有复杂的架构。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/4/ai-enthusiasts-ai-skeptics/#atom-everything">AI爱好者在与时间赛跑，AI怀疑论者在与熵增赛跑</a><br>AI爱好者们并非错误。我们开始看到那些积极与AI合作的团队在能力上实现了真实、非想象性的飞跃式发展。</p>
+
+<p><a href="https://dev.to/yash_sonawane25/the-ai-gold-rush-is-creating-two-types-of-developers-those-who-adapt-and-those-who-disappear-144c">AI淘金热正在创造两类开发者：适应者...和消失者</a><br>AI不会取代工程师，但使用AI的工程师将取代那些不适应的人。在软件历史上，平庸第一次变得危险，不是因为开发者才能下降。</p>
+
+<p><a href="https://claude.com/blog/using-llms-to-secure-source-code">使用LLM保护源代码</a><br>我们分享如何与Claude Opus合作构建威胁模型、发现漏洞的最佳实践。这些方法可以帮助您提高代码安全性。</p>
+
+<p><a href="https://www.anthropic.com/institute/recursive-self-improvement">当AI构建自身时 - Anthropic</a><br>我们向递归自我改进的进展及其影响。在Anthropic，我们将越来越多的AI开发工作委托给AI系统本身，这加速了我们的工作。</p>
+
+<p><a href="https://www.ashbyhq.com/blog/engineering/ai-ashby-engineering-and-the-future">AI、Ashby工程与未来 | Ashby</a><br>自2025年8月以来，进入Ashby生产系统的新代码中有一半以上是由AI生成的。这标志着AI在软件开发中的角色正在发生根本性转变。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/kagent-dev/kagent">kagent-dev/kagent</a><br>Cloud Native Agentic AI | Discord: https://bit.ly/kagentdiscord</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/grafana/pyroscope">grafana/pyroscope</a><br>Continuous Profiling Platform. Debug performance issues down to a single line of code</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

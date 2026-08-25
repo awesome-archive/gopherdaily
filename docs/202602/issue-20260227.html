@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260227.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260227</span>
+</p>
+<p>每日一谚：Cgo is not Go </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/27/go-mod-init-controversy-elitism-vs-democracy">Go mod init 降级撤回背后：精英主义正在杀死 Go 社区的民主？</a><br>仅仅在 Go 1.26 正式发布几周后，一场席卷 Go 社区的风暴迎来了戏剧性的转折 。面对广大开发者对 go mod init 默认降级为 1.(N-1) 的强烈不满，Go 核心团队技术负责人 Austin Clements（aclements）亲自下场“灭火”，并明确表示：官方正倾向于撤回这一改动，恢复 1.N 的默认行为</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/0RfVQk-WMvNud7FTSMtm_w">5 分钟零代码改造，让 Go 应用自动获得全链路可观测能力</a><br>还在为 Go 应用的可观测性改造而烦恼？还在手动埋点、修改代码、引入 SDK？还在担心埋点影响性能？今天，阿里云带来一个零代码改造的开源解决方案——Loongsuite Go Agent，让你的 Go 应用在编译时自动获得全链路可观测能力！</p> 
+
+<p><a href="https://www.docker.com/blog/docker-model-runner-vllm-metal-macos/">Docker Model Runner 为 macOS 上的 vLLM 增加支持</a><br>Docker Model Runner 现在支持 vllm-metal，这是一个利用 Apple Silicon 的 Metal GPU 实现高性能 LLM 推理的新后端。这意味着拥有 M 系列芯片的 Mac 用户现在可以在 Docker 工作流中使用 vLLM 运行 MLX 模型，并提供与 OpenAI 兼容的 API。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.livekit.io/prompting-voice-agents-to-sound-more-realistic/">提示语音智能体听起来更真实</a><br>本文探讨了如何提示级联的 STT-LLM-TTS 语音智能体，使其听起来更像人类，方法包括使用语塞（如“嗯”、“啊”）、SSML 停顿标签、情感标签以及将个性转化为可听见的行为。文章强调了在系统提示中提供具体示例和多角度的规则重申的重要性，以克服 LLM 倾向于生成过于书面化、不自然语言的问题。</p>
+
+<p><a href="https://www.pingcap.com/blog/distributed-database-backups-how-tidb-delivers-transactional-consistency/">分布式数据库备份：TiDB 的事务一致性</a><br>了解 TiDB 如何利用全局事务边界和已解决时间戳（Resolved Timestamps）来实现一致、确定的分布式数据库备份。</p>
+
+<p><a href="https://martinalderson.com/posts/using-opencode-in-cicd-for-ai-pull-request-reviews/">在 CI/CD 中使用 OpenCode 进行 AI Pull Request 审查</a><br>本文探讨了作者用 OpenCode 替换 SaaS 代码审查工具的原因，并介绍了如何在 CI/CD 管道中配置 OpenCode 来进行 AI Pull Request 审查。作者强调这种自托管方法更便宜、更安全，并且兼容任何 Git 提供商。文章详细说明了设置管道的步骤和一个简洁有效的审查提示（prompt），并讨论了这种方法在数据主权和成本效益上的优势。</p>
+
+<p><a href="https://tuananh.net/2026/02/25/buildkit-docker-hidden-gem">BuildKit：Docker的隐藏宝石，可以构建几乎任何东西</a><br>大多数人知道BuildKit是使docker build变快的原因。但BuildKit是一个通用的构建框架，具有可编程的架构，可以生成任何工件，而不仅仅是容器镜像。本文将介绍其工作原理以及我如何使用它来构建Alpine APK包。</p>
+
+<p><a href="https://hacks.mozilla.org/2026/02/making-webassembly-a-first-class-language-on-the-web">Making WebAssembly a first-class language on the Web</a><br>This post discusses how WebAssembly (Wasm) is currently a second-class language on the web compared to JavaScript, hindering its wider adoption. The key issues identified are the cumbersome loading process, the reliance on JavaScript glue code for Web API access (which introduces overhead and complexity), the dependence on unofficial toolchain distributions, and the predominantly JavaScript-focused documentation. The author proposes that the WebAssembly Component Model could solve these problems by offering a standardized, self-contained executable artifact that directly supports Web API usage without needing JavaScript intermediaries, potentially leading to a first-class experience for Wasm developers.</p>
+
+<p><a href="https://iggy.apache.org/blogs/2026/02/27/thread-per-core-io_uring">Apache Iggy 迁移到由 io_uring 驱动的每个核心线程架构的历程</a><br>Apache Iggy 团队分享了他们将系统从基于 Tokio 的工作窃取执行器迁移到每个核心线程（thread-per-core）的共享无状态（shared-nothing）架构的历程，该架构由 io_uring 提供支持。迁移的动机在于解决 Tokio 在处理块设备 I/O 时的性能瓶颈，以及在共享无状态模型中遇到的内部可变性（interior mutability）挑战。
+
+为解决这些问题，团队探索了各种异步运行时（monoio, glommio, compio），最终选择了 compio。他们还引入了 ECS（实体组件系统）的设计理念，将数据分离为状态组件（使用 RefCell）和存储组件，以更好地管理异步操作中的借用问题。最终，他们采用了“共享-某些（shared-something）”模型，其中强一致性资源（如 Streams 和 Topics）使用 single-writer/multi-reader 结构（left-right），而分片资源（如 Partition）则采用最终一致性。
+
+基准测试结果显示，新架构在不同负载（8、16、32 生产者/流）下，尤其在高负载和强制 fsync 的情况下，显著提升了 P95-P999 延迟，证明了该架构在性能上的优势。阅读数据方面的表现也十分出色。
+
+文章最后指出，实现 io_uring 的全部潜力需要大量系统调用批处理，并且当前的 Rust 异步运行时生态系统在抽象层面尚未完全跟上 io_uring 的高级特性，同时也提到了确定性模拟测试（DST）对 Executor 插件化的重要性。</p>
+
+<p><a href="https://sematext.com/blog/opentelemetry-production-monitoring-what-breaks-and-how-to-prevent-it">OpenTelemetry 生产监控：哪些地方会出问题，以及如何避免</a><br>OpenTelemetry 在暂存环境、演示和视频中几乎总是能完美运行。然而，生产环境的真实流量和压力会暴露其设置的不足。文章讨论了在真实生产环境中 OpenTelemetry 管道中可能出现的问题，包括高基数（Cardinality）导致的性能问题、扩展压力、采样策略（头采样 vs 尾采样）的权衡，以及 Agent 和 Collector 稳定性（如内存限制器配置）的风险，强调了将 OpenTelemetry 视为一等基础设施进行管理的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-02-26-claude-find-fraud/">Claude能找到欺诈行为吗？</a><br>美国联邦政府发布了一份非常有趣的医疗补助（Medicaid）支付数据集。我们能否利用人工智能（AI）从数据中发现可疑的计费模式？本文利用Claude AI智能体对该数据集进行了分析，识别出10个高风险的医疗补助提供者，并深入探讨了其中的潜在欺诈信号，包括一家被证实有欺诈历史的公司和三家来自缅因州的集体住所，这些住所的计费模式与当时正在接受调查的领域高度相关。</p>
+
+<p><a href="https://simonwillison.net/guides/agentic-engineering-patterns/hoard-things-you-know-how-to-do/#atom-everything">囤积你会做的事情 - 智能体工程模式</a><br>这篇文章是关于智能体工程模式之一：“囤积你会做的事情”。作者强调，在软件构建中，了解什么可行、什么不可行以及如何实现是关键技能。拥有关于这些问题的知识储备（例如，能否纯JavaScript执行OCR，或如何在不将100GB JSON文件完全加载到内存的情况下处理它）能让你发现用技术解决问题的独特机会。作者通过博客、TIL博客和GitHub仓库来积累这些知识，并指出使用LLM（大型语言模型）来扩展这些解决方案的集合。他特别提到了使用LLM将多个现有工作示例（如PDF.js用于渲染PDF页面和Tesseract.js用于OCR）组合成一个新工具（如浏览器OCR工具）的有效性。作者总结道，编码智能体使这种囤积行为更加强大，因为它们可以利用这些已有的工作代码片段和知识库来解决新的、相似形状的项目，意味着很多有用的技巧只需要“弄懂一次”。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/steveyegge/beads">steveyegge/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/dolthub/dolt">dolthub/dolt</a><br>Dolt – Git for Data</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Go.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>Work with remote images registries - retrieving information, images, signing content</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ A Framework for Building High Value Public Blockchains ✨</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

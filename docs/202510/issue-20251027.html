@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251027.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251027</span>
+</p>
+<p>每日一谚：Go is a get-things-done language </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/27/the-ultimate-guide-to-go-module">Go 模块构建与依赖管理：我们到底在“折腾”什么？</a><br>一份系统性梳理 Go 依赖管理“前世今生”，覆盖从 go.mod 原理、go.work 实践、Go模块作者和使用者工作流 到 K8s 案例解剖的终极指南。</p> 
+
+<p><a href="https://tonybai.com/2025/10/26/sqlite-say-no-to-go-and-rust">SQLite 对 Go 和 Rust 说“不”：揭示“安全语言”光环下的工程现实</a><br>SQLite，这个星球上部署最广泛的数据库引擎，顽固地坚守着 C 语言阵地。近日，其官网一篇详细阐述“Why Is SQLite Coded In C”的文章，在 Hacker News 等技术社区引发了轩然大波。 这篇文章，如同一把锋利的手术刀，无情地划开了“安全语言”耀眼的光环，为我们揭示了其背后，在极端可靠性工程中所面临的、不为人知的工程 现实。这不再是一场简单的语言之争，而是一次对“安全”真正含义的深刻追问。</p> 
+
+<p><a href="https://lucaguidi.com/2025/10/23/why-your-app-version-golang-cli-command-loads-your-database-client-and-how-to-fix-it/">为什么你的 app version CLI 命令会加载你的数据库客户端（以及如何修复它）</a><br>你输入 myapp version 来查看版本号。但在后台，你的应用程序会加载数据库客户端、git 服务、API 处理程序和文件系统监控器。所有这些代码都初始化为一个只打印版本字符串的命令。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/GBnn4bBAMjD8utUyz2sBDw">【Go 网络编程全解】11 Raw Sockets：用 Go 打造自己的 ping</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/replicate-tidb-mirrored-database-microsoft-fabric-ticdc/">将 TiDB 复制到 Microsoft Fabric 中的镜像数据库</a><br>使用 TiCDC 和 Open Mirroring 将 TiDB 复制到 Microsoft Fabric 中的镜像数据库，实现无缝数据同步和分析。</p>
+
+<p><a href="https://eugeneyan.com/writing/principal">给新任首席技术官的建议</a><br>本文基于我在亚马逊的榜样和导师那里学到的经验，为新晋 Principal 技术专家（IC）提供建议。主要内容包括：不同的 Principal 有不同的侧重，要找到适合自己的方向；要将以往成功的经验放在次要位置，专注于技术愿景、设计反馈、赞助等；同时，Principal 也要扮演技术上的“兼职 PM”；更重要的是，要善于沟通、影响他人、连接合适的人；要善于传授知识，培养他人；以及不要忽视自身需求。</p>
+
+<p><a href="https://thenewstack.io/ken-thompson-recalls-unixs-rowdy-lock-picking-origins">Ken Thompson Recalls Unix’s Rowdy, Lock-Picking Origins</a><br>Ken Thompson&#39;s vivid recollection of the rowdy roomful of geeks at Bell Labs who built the digital world in a spirit of open play.</p>
+
+<p><a href="https://www.brethorsting.com/blog/2025/10/engineering-managers-should-%28sometimes%29-write-code">工程经理有时应该编写代码</a><br>作者分享了他作为工程经理，偶尔亲自编写代码的经验。虽然管理层通常建议避免编写生产代码，但他认为偶尔的实践能够让他保持对软件开发的理解，并更好地管理团队。通过亲自修复UI错误和处理边缘情况，他能更深刻地体会到开发过程中的细节和挑战，从而优化他对工作的优先级、与团队沟通质量的方式，并对产品需求提出合理的建议。此外，在非正式的项目中编写代码也提供了试验新技术的空间，让他保持技术上的敏锐。总而言之，作者认为，虽然经理不应将大部分时间用于编码，但偶尔参与能够使其保持与软件开发的联系，从而成为更优秀的管理者。</p>
+
+<p><a href="https://www.youtube.com/watch?v=aStHTTPxlis">埃隆马斯克的职场原则</a><br></p>
+
+<p><a href="https://www.0xkato.xyz/linux-boot">Linux 启动过程：从电源按钮到内核</a><br>按下电源按钮后会发生什么？它并不是魔法，而是在小程序和真正的 CPU 之间进行的谨慎握手。本文将追溯该握手过程，直到 Linux 内核中运行第一行 C 代码。</p>
+
+<p><a href="https://amit.prasad.me/blog/before-main">The Journey Before main()</a><br>文章介绍了在 Linux 系统上，当内核被要求运行程序时，在程序 `main` 函数实际执行之前发生的一系列步骤，例如：`execve` 系统调用，ELF 格式文件，程序的栈的设置，以及程序的入口点。</p>
+
+<p><a href="https://systemssaturday.substack.com/p/systems-saturday-11-building-resilient">Systems Saturday 11: Building Resilient APIs</a><br>设计在压力下不会崩溃的接口</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Oct/26/genai-image-editing-showdown/#atom-everything">GenAI 图像编辑对决</a><br>Shaun Pedicini 收集了一系列有用的例子，测试了 Seedream 4、Gemini 2.5 Flash、Qwen-Image-Edit、FLUX.1 Kontext [dev]、FLUX.1 Kontext [max]、OmniGen2 和 OpenAI gpt-image-1，涉及 12 个图像编辑提示。</p>
+
+<p><a href="https://ceodinner.substack.com/p/the-ai-wildfire-is-coming-its-going">AI 野火即将来临。这将非常痛苦，但也令人难以置信地健康。</a><br>人工智能不会崩溃，它会燃烧。 就像每一个科技周期一样，大火将清除灌木丛，重新分配人才，并留下基础设施来驱动下一步的发展。 问题是： 你是什么样的植物？</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/Notifuse/notifuse">Notifuse/notifuse</a><br>Notifuse is an open-source &amp; modern emailing platform</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>Video translation and dubbing tool powered by LLMs. The video translator offers 100 language translations and one-click full-process deployment. The video translation output is optimized for platforms like YouTube，TikTok. AI视频翻译配音工具，100种语言双向翻译，一键部署全流程，可以生抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube等形态的内容成适配</p>
+
+<p><a href="https://github.com/apernet/OpenGFW">apernet/OpenGFW</a><br>OpenGFW is a flexible, easy-to-use, open source implementation of GFW (Great Firewall of China) on Linux</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/NexaAI/nexa-sdk">NexaAI/nexa-sdk</a><br>Run the latest LLMs and VLMs across GPU, NPU, and CPU with PC (Python/C&#43;&#43;) &amp; mobile (Android &amp; iOS) support, running quickly with OpenAI gpt-oss, Granite4, Qwen3VL, Gemma 3n and more.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/AlistGo/alist">AlistGo/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/rivo/tview">rivo/tview</a><br>Terminal UI library with rich, interactive widgets — written in Golang</p>
+
+<p><a href="https://github.com/rcourtman/Pulse">rcourtman/Pulse</a><br>A responsive monitoring platform for Proxmox VE, PBS, and Docker with real-time metrics across nodes and containers</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/JanDeDobbeleer/oh-my-posh">JanDeDobbeleer/oh-my-posh</a><br>The most customisable and low-latency cross platform/shell prompt renderer</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/terrastruct/d2">terrastruct/d2</a><br>D2 is a modern diagram scripting language that turns text to diagrams.</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

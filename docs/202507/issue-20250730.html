@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250730.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250730</span>
+</p>
+<p>每日一谚：Write Go code as Gophers write code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/29/slog-multihandler">slog如何同时输出到控制台和文件？MultiHandler提案或将终结重复造轮子</a><br>最近，一项编号为#65954 的提案，建议在 log/slog 中加入 MultiHandler，获得了 Go 官方的 likely accept 评级。本文将带您回顾该提案从被质疑到被接受的全过程，深入探讨其背后的设计权衡。</p> 
+
+<p><a href="https://doublefree.dev/go-race-mutex-blindspot">Go 的竞争检测器存在互斥盲点</a><br>我想起了 Go 的动态数据竞争检测中的一个怪癖，这个怪癖导致它错过执行代码中很容易被人类发现的数据竞争</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/07/28/interprocedural-analysis-catch-nil-dereferences-before-they-crash-your-code">防止panic：检测nil指针解引用的程序间代码分析</a><br>GoLand 2025.2 版本引入了强大的新功能和改进，旨在帮助你编写更安全、更可靠的 Go 代码。本文重点介绍其中一个最重要的功能：用于检测 nil 指针解引用的程序间代码分析。通过帮助你尽早发现代码审查和测试中经常出现的细微错误，此改进使你的生产代码更加稳定，更易于维护。GoLand 团队投入了大量精力来提供更深入、更智能的静态分析，以改善你的开发体验，并帮助防止那些令人沮丧的运行时 panic。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-07-29-dolt-2-0-preview">Previewing Dolt 2.0</a><br>Dolt 2.0 将带来以下改进：默认启用自动垃圾回收、默认启用存档压缩、sysbench 与 MySQL 性能持平、以及 Beta 向量支持。</p>
+
+<p><a href="https://www.docker.com/blog/accelerate-modernization-and-cloud-migration/">加速现代化和云迁移</a><br>从 Docker 专家那里学习，使用 Docker 简化和推进您的应用程序开发和管理。及时了解 Docker 活动和新版本。</p>
+
+<p><a href="https://jola.dev/posts/enough-focus-time">当软件工程师认为他们需要更多专注时间</a><br>你认为软件工程师需要更多专注时间吗？再想想吧。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/building-great-sdks">构建优秀的 SDK</a><br>一份关于创建开发者——以及 LLM——会发现使用起来很轻松的 SDK 的指南，以及构建和维护 SDK 的现代方法概述。由资深 SDK 工程师 Quentin Pradet 撰写</p>
+
+<p><a href="https://survey.stackoverflow.co/2025">2025 Stack Overflow 开发者调查</a><br>2025 年开发者调查是关于软件开发现状的权威报告。在第十五年，Stack Overflow 收到来自 177 个国家的超过 49,000 份回复，涵盖 62 个问题，重点关注 314 种不同的技术，包括对人工智能代理工具、LLM 和社区平台的新关注。这项年度开发者调查提供了对全球开发者社区需求的至关重要的快照，重点关注他们使用或希望了解更多信息的工具和技术。</p>
+
+<p><a href="https://www.usetusk.ai/resources/predictive-ci-is-the-future">预测性 CI：为什么智能团队已经开始转换 - Tusk</a><br>AI 编码代理正在改变开发，但审查 AI 代码比编写它更难。了解为什么具有智能测试的预测性 CI 至关重要。</p>
+
+<p><a href="https://www.lorenstew.art/blog/bookmarkable-by-design-url-state-htmx">设计之可书签化：HTMX 中的 URL 驱动状态</a><br>忘记复杂的状态库。在 HTMX 应用程序中使用 URL 作为过滤器、排序和分页的单一事实来源</p>
+
+<p><a href="https://fffej.substack.com/p/measuring-engineering">Measuring Software Engineering</a><br>Focus on the system, not the individuals?</p>
+
+<p><a href="https://www.suffsyed.com/futurememo/why-im-leaving-design">为什么我要放弃我的设计头衔——以及这说明了什么关于设计的未来 — Suff Syed</a><br>前产品设计主管 Suff Syed 宣布他将转到一个技术角色，他认为在人工智能时代设计已被商品化，而技术深度是现在发生创新的地方。他认为设计已经成为基线，而创新现在在于系统、代理和编排。</p>
+
+<p><a href="https://clickhouse.com/blog/clickhouse-gets-lazier-and-faster-introducing-lazy-materialization">ClickHouse 变得更“懒”（也更快）：介绍惰性物化</a><br>ClickHouse 学会了战略性地拖延。 了解惰性物化如何跳过不必要的列读取以加速查询。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/29/openai-introducing-study-mode/#atom-everything">OpenAI：介绍学习模式</a><br>新的ChatGPT功能，可以通过输入/study或访问chatgpt.com/studymode来触发。OpenAI表示：在幕后，学习模式由我们与教师、科学家和教育专家合作编写的自定义系统指令提供支持，以反映一套核心行为，这些行为支持更深入的学习，包括：鼓励积极参与、管理认知负荷、主动培养元认知和自我反思、培养好奇心，并提供可操作和支持性的反馈。</p>
+
+<p><a href="https://thenewstack.io/developer-walk-through-of-aider-an-open-source-agentic-cli">开发者逐步了解 Aider，一个开源的 Agentic CLI</a><br>Aider 与最近的 agentic CLI（如 Claude Code、Gemini CLI 和 Warp）相比，对终端的控制程度是否相同？</p>
+
+<p><a href="https://sajalsharma.com/posts/effective-ai-coding">有效使用像 Claude Code 这样的 AI 编码工具</a><br>一份关于有效使用像 Claude Code 这样的 AI 编码工具的实用指南，涵盖了思维模式转变、质量控制策略以及现代软件开发的团队协作工作流程。</p>
+
+<p><a href="https://rlancemartin.github.io/2025/06/23/context_engineering">代理的上下文工程</a><br>代理需要上下文来执行任务。上下文工程是使用恰当信息填充代理轨迹每一步的上下文窗口的艺术和科学。 在这篇文章中，我将上下文工程分为当今许多流行代理中常见的几种常见策略。</p>
+
+<p><a href="https://cthiriet.com/blog/nano-claude-code">A Full Code Agent in 200 行代码 - 演示如何实现</a><br>在这篇文章中，我们将构建一个轻量级的代码代理 CLI，类似于 Claude Code。</p>
+
+<p><a href="https://fika.bar/paoramen/ai-is-eating-the-internet-01K10JG1SHGZQHN61HPGWPXN60">AI 正在吞噬互联网</a><br>互联网广告已经变得非常出色，令人毛骨悚然。我们担心“他们”对我们了解多少，但作为交换，我们得到了后代可能没有的东西：免费内容和服务，以及一个基本开放的互联网。这是一个前所未有的浮士德式交易，现在正在崩溃。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Simple, reliable, and efficient distributed task queue in Go</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go is a Go package that makes it simple to create and clean up container-based dependencies for automated integration/smoke tests. The clean, easy-to-use API enables developers to programmatically define containers that should be run as part of a test and clean up those resources when the test is done.</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/cloudwego/eino-examples">cloudwego/eino-examples</a><br>Examples and demonstrations for using the Eino framework</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/envoyproxy/ai-gateway">envoyproxy/ai-gateway</a><br>Envoy AI Gateway is an open source project for using Envoy Gateway to handle request traffic from application clients to Generative AI services.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/kubeedge/kubeedge">kubeedge/kubeedge</a><br>Kubernetes Native Edge Computing Framework (project under CNCF)</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250315.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250315</span>
+</p>
+<p>每日一谚：test coverage != bug free </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/qVq9YGoEPvxTx9IGwFxr2g">typescript-go编译速度慢？Go团队连夜爆改提速5倍</a><br>Go编译器在编译TypeScript编译器的internal/checker包时，速度异常缓慢，多核利用率很低。经过分析，发现问题主要出在Go 编译器的逃逸分析阶段。这个issue迅速引起了Go团队和社区的重视。Go团队成员（包括 Jake Bailey, dr2chase, thepudds等）积极响应，展开了深入调查和优化工作。 经过Go团队成员的不懈努力，他们提交了多个代码变更（CL），成功地将TypeScript 编译器internal/checker包的编译速度提升了5倍</p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-03-14-go-import-cycle-strategies">Go循环导入的三种应对策略</a><br>本文讨论了 Go 语言中导入循环的问题，以及三种解决方法：良好的方法（引入接口并下移）、较差的方法（重构包以消除循环）和糟糕的方法（引入函数指针并在更高级别赋值）。作者最后呼吁 Go 语言能够提供一种更便捷的解决方法，以减少开发人员的工作量。</p> 
+
+<p><a href="https://nicolashery.com/decoding-json-sum-types-in-go">在 Go 中解码JSON sum类型而不会出现恐慌</a><br>Go 编程语言本身并不支持求和类型，但我们将了解如何模拟它们，如何将它们解码和编码成 JSON，以及在某些情况下它们如何帮助避免运行时恐慌异常。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-gos-error-handling-patterns-for-reliable-software-2140">掌握 Go 的错误处理：构建可靠软件的模式</a><br>学习提高应用程序可靠性的高级 Go 错误处理技术。探索自定义类型、错误包装、哨兵错误和结构化日志记录模式，以编写更健壮的代码。包含实际示例。</p> 
+
+<p><a href="https://medium.com/@aryanwdn/why-go-doesnt-need-classes-like-other-languages-8a91de27e99c">为什么 Go 不需要像其他语言那样的类</a><br>本文探讨了 Go 语言为什么不需要像 Java、C&#43;&#43; 或 Python 等其他语言那样的类，以及 Go 如何通过结构体、方法和接口重新构想面向对象编程，并阐述了这种方法的优势，例如代码更简洁、更灵活的组合、更清晰的依赖关系、更好的可测试性、更少的样板代码以及更快的编译速度。</p> 
+
+<p><a href="https://kdy1.dev/2022-1-26-porting-tsc-to-go">将tsc移植到go</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.allthingsdistributed.com/2025/03/in-s3-simplicity-is-table-stakes.html">在 S3 中，简单是基础</a><br>从简单的对象存储到复杂的表管理，构建者们一直都在塑造着 S3 的发展。Andy Warfield 讨论了为什么使复杂系统变得简单仍然是 AWS 的北极星。</p>
+
+<p><a href="https://blog.flipt.io/from-ffi-to-wasm">构建跨平台 SDK：从 FFI 到 WebAssembly</a><br>这篇文章描述了我们为 Flipt 构建可移植、跨语言 SDK 的历程，以及迫使我们多次重新思考方法的意想不到的技术挑战。最初一个相对简单的 FFI 实现，演变成对 C 标准库、静态链接的复杂探索，最终引导我们走向 WebAssembly。在此过程中，我们发现，即使在 2025 年，真正可移植库的梦想仍然出奇地难以实现——但结合 WASM 和原生代码的混合方法可能是跨平台 SDK 的关键。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Mar/14/styling-an-html-dialog/#atom-everything">今日学习：将 HTML 对话框模态样式设置为占据视口全高</a><br>今天我花了一些时间尝试弄清楚如何使模态`&lt;dialog&gt;`元素显示为占据全高的侧边面板，并从侧面进行动画。全高部分很难实现，直到Natalie帮我弄清楚浏览器应用了默认的`max-height: calc(100% - 6px - 2em);`规则，需要覆盖它。文章还包括：一些关于 HTML 规范的探索，以找出该`calc()`表达式首次引入的位置。答案是 2020 年 11 月。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/go-vgo/robotgo">go-vgo/robotgo</a><br>RobotGo, Go Native cross-platform RPA and GUI automation @vcaesar</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/rs/zerolog">rs/zerolog</a><br>Zero Allocation JSON Logger</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models.</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+<p><a href="https://github.com/Azure/azure-sdk-for-go">Azure/azure-sdk-for-go</a><br>This repository is for active development of the Azure SDK for Go. For consumers of the SDK we recommend visiting our public developer docs at:</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250605.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250605</span>
+</p>
+<p>每日一谚：Only use a buffered channel if you know the exact buffer size </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/rbDwmLnHoybvoiB63gI-Pw">征服Go并发测试：并发测试的“噩梦”：为何你的 Go 测试如此脆弱与缓慢？</a><br>当我们沉浸在并发编程带来的性能提升与架构灵活性时，一个潜藏的“梦魇”也悄然降临——并发测试。你是否也曾 遇到过这样的场景：本地运行千百遍都正常的测试，一到 CI 环境就莫名其妙地失败？或者某个测试用例时灵时不灵，像是在和你玩“捉迷藏”？又或者，为了确保某个并发操作的正确性，你的测试代码充斥着大量的 `time.Sleep`，不仅拖慢了整个测试套件的执行速度，还让测试结果充满了不确定性？ 如果这些场景让你感同身受，那么恭喜你，你并不孤单。并发测试的复杂性和不确定性，是许多 Go 开发者在日常工作中都会遇到的“拦路虎”。它们 不仅消耗着我们的时间和精力，更严重的是，它们会侵蚀我们对测试有效性的信心，甚至可能让潜在的并发 bug 悄悄溜进生产环境。 </p> 
+
+<p><a href="https://djwong.net/2025/05/28/cool-go-slog-tricks.html">Go语言slog.Logger技巧</a><br>本文介绍了Go语言标准库中slog.Logger的一些实用技巧，包括创建用于记录属性的专用包以保证属性命名的一致性，结合日志属性和错误日志以方便索引和查询，以及一种更简便地在应用程序中使用日志记录器的方法。文章通过代码示例演示了如何实现这些技巧，并解释了其好处。</p> 
+
+<p><a href="https://commaok.xyz/post/simple-backoff">更简单的指数退避</a><br>使用指数退避和抖动来进行服务调用是很常见的。这段代码，或者类似的代码，可能看起来非常熟悉：本文介绍了一种使用查找表来简化指数退避的方法，使其更易读、更易于维护和修改。</p> 
+
+<p><a href="https://dev.to/leapcell/caching-in-go-doing-it-right-25i5">Go 语言缓存：正确的方法</a><br>缓存对于加速 API 应用至关重要，如果需要高性能，则在设计阶段就必须重视缓存。本文讨论了 Go 语言中缓存的实现，包括 LRU 缓存策略、缓存更新策略（旁路缓存、直写、回写）以及本地缓存的更新策略（主动通知、等待缓存过期）。此外，文章还探讨了缓存预热以及在高并发场景下的缓存更新和回滚策略。</p> 
+
+<p><a href="https://dev.to/leapcell/applying-aop-concepts-in-go-4dn6">在 Go 中应用 AOP 概念</a><br>在 Java 开发中，AOP（面向切面编程）是一种非常流行的技术。它将诸如日志记录、权限检查和性能监控之类的横切关注点与核心业务逻辑解耦，使代码结构更清晰，职责更明确。接下来，我们将使用 Gin 框架的中间件和函数包装机制来演示如何实现此概念，并分析其与纯 AOP 的异同。</p> 
+
+<p><a href="https://dev.to/fahimfaisaal/synccond-in-go-efficient-goroutine-signaling-without-channels-2eh3">Go 中的 sync.Cond：无需 channel 的高效 Goroutine 信号传递</a><br>Go 语言中的并发编程经常会用到 channel，但在某些场景下，另一个同步原语 `sync.Cond` 可能正是你需要的。本文将解释何时选择 `sync.Cond` 而不是仅使用 channel，并通过一个简单的自定义实现来阐述其工作原理。`sync.Cond` 是一种轻量级的方式，可以在条件为真时阻塞一个或多个 goroutine，而无需传输实际数据。它比为每个 goroutine 分配一个 channel 更节省内存，尤其是在只需要信号的情况下。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.p99conf.io/2025/06/05/migrating-from-postgres-to-scylladb-with-349x-faster-query-processing/">从 Postgres 迁移到 ScyllaDB，查询处理速度提升 349 倍 - P99 大会</a><br>Coralogix 如何通过从 PostgreSQL 迁移到 ScyllaDB，将处理时间从 30 秒缩短到 86 毫秒。文章详细介绍了 Coralogix 为提高其实时流分析管道的查询速度而构建的元数据存储的演变过程，包括最初的 PostgreSQL 实现以及最终采用 ScyllaDB 后获得的显著性能提升。</p>
+
+<p><a href="https://vercel.com/blog/the-no-nonsense-approach-to-ai-agent-development">针对 AI 智能体开发的务实方法 - Vercel</a><br>学习如何通过手动模拟任务、使用代码构建逻辑以及通过实际反馈进行优化来构建可靠的、特定领域的 AI 智能体。这是一种清晰、实践性强的实用自动化方法。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/06/05/introducing-gateway-api-inference-extension/">Kubernetes 网关 API 推理扩展</a><br>现代生成式 AI 和大型语言模型 (LLM) 服务在 Kubernetes 上带来了独特的流量路由挑战。与典型的短暂、无状态 Web 请求不同，LLM 推理会话通常是长时间运行的、资源密集型的和部分有状态的。例如，单个基于 GPU 的模型服务器可能会保持多个推理会话处于活动状态，并维护内存中的令牌缓存。传统的专注于 HTTP 路径或轮循的负载均衡器缺乏这些工作负载所需的专业功能。它们也没有考虑模型标识或请求 критичность（例如，交互式聊天与批量作业）。组织经常将临时解决方案拼凑在一起，但缺少标准化的方法。Kubernetes 网关 API 推理扩展旨在通过利用现有的网关 API 来弥补这一差距，它增加了特定于推理的路由功能，同时保留了网关和 HTTPRoutes 的熟悉模型。通过向现有网关添加推理扩展，可以有效地将其转换为推理网关，从而能够以“模型即服务”的思维模式自托管 GenAI/LLM。该项目的目标是改进和标准化跨生态系统的推理工作负载的路由。主要目标包括启用模型感知路由、支持每个请求的 критичность、促进安全的模型推出以及根据实时模型指标优化负载均衡。通过实现这些目标，该项目旨在降低延迟并提高 AI 工作负载的加速器 (GPU) 利用率。</p>
+
+<p><a href="https://letsencrypt.org/2025/06/04/how-we-reduced-the-impact-of-zombie-clients">我们如何减少僵尸客户端的影响</a><br>每天晚上，大约午夜（主要是协调世界时 UTC），一群僵尸会醒来，吵着要……数字证书！这些僵尸指的是被遗弃或配置错误的互联网服务器和 ACME 客户端，它们被设置为向 Let&#39;s Encrypt 请求证书。由于我们的证书最长有效期为 90 天，这些僵尸客户端的软件知道它们的证书已过期，需要更换。它们没有意识到的是，它们寻找新证书的努力注定要失败！这些设备注定要一次又一次地寻求证书，却永远收不到。但它们确实在过程中消耗了大量的证书颁发机构资源。Let&#39;s Encrypt 通过速率限制系统解决了僵尸客户端问题，本文详细介绍了这一进展以及如何通过暂停帐户-主机名对来最大限度地减少资源浪费，同时允许用户通过自助服务轻松取消暂停。</p>
+
+<p><a href="https://medium.com/pinterest-engineering/adopting-docs-as-code-at-pinterest-4f18ad169c25">Pinterest 上的文档即代码实践</a><br>Pinterest 工程团队长期以来一直为文档质量和可发现性问题所困扰。文章介绍了他们如何通过采用“文档即代码”策略，构建内部文档系统 PDocs 来解决这些问题。PDocs 利用静态站点生成器，将 Markdown 文件自动整合到一个集中式文档站点，并提供协作、质量控制、可发现性等方面的改进，最终提升了文档质量和开发者体验。文章还详细介绍了 PDocs 的构建过程、UI 设计以及与 GenAI 的集成。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://langfuse.com/blog/2025-06-04-open-sourcing-langfuse-product">加倍投入开源 - Langfuse 博客</a><br>Langfuse 今天将所有剩余的产品功能在 MIT 许可下开源，其中包括基于模型的评估、标注队列、提示实验和游乐场等。此举旨在加快社区迭代速度，并获得更多反馈，从而更好地改进 Langfuse 平台。Langfuse 将核心功能完全开源，仅保留企业安全和平台团队的功能（如 SCIM、审计日志、数据保留策略）为商业授权。目前 Langfuse 拥有超过 8000 个活跃的自助托管实例，并鼓励用户升级到最新版本，并通过 Github 等渠道参与贡献。</p>
+
+<p><a href="https://sparktoro.com/blog/ai-will-replace-all-the-jobs-is-just-tech-execs-doing-marketing">“AI 将取代所有工作！”只是科技高管的营销手段 - SparkToro</a><br>周末，我努力寻找证据来证明 AI 可以、将会或已经取代很大一部分工作。这样的证据并不存在。更糟糕的是，实际上，数百年的证据和来自数百个来源的精密分析表明，事实恰恰相反：AI 几乎肯定会创造比它取代的工作更多的就业机会，就像之前出现的数千项非凡技术一样。大多数得到媒体报道的声明（在过去 5 年中有数十个）都集中在 AI 将使 20%-50% 的现有劳动力需求变得多余的论点上。我将尝试解决这些论点中每一个最可靠的观点，而不是试图争论任何一项创新或模型能力的提升还没有做到这一点（或不会做到这一点）。</p>
+
+<p><a href="https://ghuntley.com/mirrors">大型语言模型是操作员技能的反映</a><br>本文是作者之前博文“刻意练习”的后续文章。作者认为，人工智能是技能问题，大型语言模型（LLM）本质上是反映操作员技能的镜子。文章探讨了如何识别熟练的操作员，指出传统的软件面试流程已过时，并建议面试官观察候选人如何与LLM互动，例如他们是否了解LLM的工作原理、熟练使用各种LLM及其优缺点、是否拥有自己的提示库、以及是否具备构建代理的能力等。文章还强调了文化方面的问题，例如好奇心、抗压能力等。最后，作者指出，尽管观察候选人与LLM互动是评估技能的最佳方法，但成本较高，目前仍未找到令人满意的解决方案。</p>
+
+<p><a href="https://www.anthropic.com/ai-fluency/introduction-to-ai-fluency">AI流畅度：AI流畅度介绍</a><br>学习如何有效、高效、合乎道德和安全地与AI系统协作。本课程包含12个模块，时长3-4小时，涵盖AI流畅度的核心能力（4D），以及关键的技术和实践概念。学习完成后，你将掌握AI交互框架，能够自信地选择何时以及如何有效地与AI协作，具备实用的协作技能，并能够负责任地评估和传播AI辅助的工作成果。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/github/gh-ost">github/gh-ost</a><br>GitHub&#39;s Online Schema-migration Tool for MySQL</p>
+
+<p><a href="https://github.com/alpkeskin/mosint">alpkeskin/mosint</a><br>An automated e-mail OSINT tool</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Simple, reliable, and efficient distributed task queue in Go</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/bufbuild/protoc-gen-validate">bufbuild/protoc-gen-validate</a><br>Protocol Buffer Validation - replaced by https://github.com/bufbuild/protovalidate</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq is a portable command-line YAML, JSON, XML, CSV, TOML and properties processor</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/metallb/metallb">metallb/metallb</a><br>A network load-balancer implementation for Kubernetes using standard routing protocols</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

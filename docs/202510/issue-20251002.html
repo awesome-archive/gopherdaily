@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251002.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251002</span>
+</p>
+<p>每日一谚：Error messages should not be capitalized or end with punctuation </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/02/go-archaeology-slice">Go 考古：Slice 的“隐秘角落”——只读切片与扩容策略的权衡</a><br>今天，就让我们扮演一次“Go 语言考古学家”，带上放大镜和洛阳铲，深入 Go 官方的设计文档和 CL (Change List) 的历史尘埃中，去挖掘 slice 背后那两个鲜为人知的故事：一个是被遗弃的“只读切片”提案，另一个是 append 扩容策略的“精益求精”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/MKewWrDK3X7wo0qz49KR-A">【Go开发者的数据库设计之道】02 蓝图篇：将 ER 图转化为规范化的表结构</a><br>今天，我们的角色将从“架构师”转变为“结构工程师”。我们的任务，就是将这张 ER 图蓝图，精确地、科学地翻译成数据库能够理解和执行的“施工语言”——`CREATE TABLE` SQL 脚本。</p> 
+
+<p><a href="https://flak.tedunangst.com/post/slice-tails-dont-grow-forever">切片尾部不会永远增长</a><br>在垃圾回收语言中，需要注意由错误引用导致的内存泄漏，但谨慎会变成偏执。在 Go 语言中，我喜欢通过附加到切片的尾部来制作小的 FIFO 队列。但这会永远增长吗？本文通过代码测试，得出结论：使用切片头部做queue的方式，切片不会无限增长，使用内存很少，但将grow设置为true时，会占用大量内存。</p> 
+
+<p><a href="https://blog.dochia.dev/blog/json-isnt-json">JSON is not JSON Across Languages</a><br>JSON (JavaScript Object Notation) was designed as a simple, lightweight, and human-readable data interchange format. However, different programming languages and libraries interpret certain aspects of JSON differently. This leads to subtle inconsistencies, edge cases, and implementation details that developers need to be aware of. This article delves into these inconsistencies, covering topics such as integer precision, string encoding, object key ordering, handling of null/undefined/missing values, date and time formats, error handling, and offers mitigation strategies.</p> 
+
+<p><a href="https://samuelberthe.substack.com/p/why-your-optimized-code-is-still">Why Your &#39;Optimized&#39; Code Is Still Slow: Faster Time Comparison</a><br>在数据密集型应用程序中，每一纳秒都很重要。在关键路径中调用系统调用会降低软件的速度。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-10-01-vercel-v0-works-with-dolt">Vercel v0 Works with Dolt</a><br>我们一直在探索生成式 AI 工具，在这篇博文中，我们来看看 Vercel 的 v0.app 工具，它为你提供了一个用于生成 Web 应用程序的对话界面。我们构建了一个小的 Web 应用程序，它从 Dolt 数据库加载数据，并使用 Dolt 的版本控制功能在 Web 应用程序中公开版本信息。</p>
+
+<p><a href="https://blog.livekit.io/introducing-livekit-inference/">Introducing LiveKit Inference: 统一的语音 AI 模型接口</a><br>我们很高兴推出 LiveKit Inference，这是一个专为语音 AI 构建的低延迟模型网关。 仅需您的 LiveKit API 密钥，您就可以使用顶级的语音转文本 (STT)、大型语言模型 (LLM) 和文本转语音 (TTS) 模型。 您不再需要创建和管理多个提供商帐户和集成。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2025/10/01/accelerating-our-commercial-growth/">加速我们的商业增长</a><br>Satya Nadella，董事长兼首席执行官，今天上午与微软员工分享了以下信息。我们正处于一个巨大的 AI 平台转变之中，这要求我们既要管理和发展我们目前的大规模商业业务，又要建设新的前沿领域，并在两者之间完美执行。历史表明，通用技术，如人工智能，推动生产力和 GDP 的大幅增长，我们拥有独特的机会来帮助我们的客户和世界实现这一承诺。</p>
+
+<p><a href="https://www.docker.com/blog/ai-science-agents-research-workflows/">从 Shell 脚本到科学代理：AI 代理如何改变研究工作流程</a><br>了解 AI 科学代理如何使用 Docker 自动化文学搜索、ADMET 和分析，以及容器化、可重复的工作流程——从笔记本电脑到云端。</p>
+
+<p><a href="https://blog.dropbox.com/topics/work-culture/amanda-cupido-podcaster-language-translation-ai">这些人在内部制作了播客。 人工智能帮助他们覆盖了整个团队</a><br>Amanda Cupido不会说西班牙语或法语。 但是通过使用人工智能，她和她的团队帮助一家全球非营利组织使其内部播客更容易被尽可能多的员工访问。 
+
+</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/01/fluentd-to-fluent-bit-a-migration-guide/">Fluentd to Fluent Bit: A Migration Guide</a><br>Fluentd 在 14 年前被创建，至今仍是企业中应用最广泛的日志收集技术之一。Fluentd 的分布式插件架构和高度宽松的许可使其成为 云原生计算基金会 (CNCF) 的理想组成部分，现已成为一个毕业项目。然而，沉浸在遥测数据中的企业现在需要性能更高、更原生支持不断发展的模式和格式以及处理方面具有更大灵活性的解决方案。</p>
+
+<p><a href="https://www.allthingsdistributed.com/2025/10/better-with-age.html">随着年龄增长，开发变得更好</a><br>作者分享了他作为一名资深开发者的经验和见解。他观察到，年长的开发者拥有丰富的经验，能够识别并避免年轻开发者可能面临的问题。文章讨论了人工智能等新兴技术，以及如何运用经验来应对新技术带来的挑战，强调了经验在技术领域的重要性。</p>
+
+<p><a href="https://www.databricks.com/blog/intelligent-kubernetes-load-balancing-databricks">Intelligent Kubernetes Load Balancing at Databricks</a><br>Why Kubernetes’ default load balancing falls short for high-throughput, persistent connections like gRPC, especially at Databricks scale. How we built a client-side, control-plane-driven load balancing system using custom rpc client and xDS. Trade-offs of alternative approaches like headless services and Istio, and why we chose a lightweight, client-driven model.</p>
+
+<p><a href="https://www.webrtc-developers.com/interpreting-webrtc-statistics-with-rtcstats">Interpreting WebRTC Statistics with rtcStats</a><br>如果你一直在关注 webrtc-developers.com，你可能已经注意到新文章的发布速度最近有所放缓。首先，我要感谢你的支持。沉默并非源于缺乏想法，而是源于一项美妙而耗时的新冒险，我非常高兴与你分享。</p>
+
+<p><a href="https://www.amplifypartners.com/blog-posts/why-tigerbeetle-is-the-most-interesting-database-in-the-world">Why TigerBeetle is the most interesting database in the world</a><br>本文探讨了 TigerBeetle 数据库的独特性，包括其对代码编写速度、测试方法和依赖关系的独特方法。文章深入探讨了 TigerBeetle 的设计理念，例如其采用借方和贷方作为基本数据类型，并讨论了其在分布式、时钟容错和存储容错方面的优势。文章还介绍了 TigerBeetle 使用 Zig 编程语言、确定性模拟测试（DST）以及 TigerStyle 工程方法，并附有 TigerBeetle 的一个在线模拟游戏。</p>
+
+<p><a href="https://rakhim.exotext.com/examples-are-the-best-documentation">示例是最好的文档</a><br>当搜索文档时，95% 的时间一个例子就足够了。 然而，95% 的时间我无法在任何官方来源中找到一个例子。
+
+似乎默认情况下，正式的技术文档是针对那些深入沉浸在生态系统中的人。 但是许多开发人员每天都必须在脑海中处理很多“世界”。 在项目、语言和框架之间跳转时，恢复上下文和理解正在发生的事情需要大量的脑力。
+
+考虑一下来自 Python 3 文档的这个例子:
+
+max(iterable, /, *, key=None)
+返回可迭代对象中的最大项或两个或更多参数中最大的项.... [后面跟着 5 个短段落]。
+
+您需要对 Python 了解很多才能理解这一点：
+
+函数定义中 * 的含义。
+函数定义中 / 的含义。
+什么是“仅位置参数分隔符”
+什么是可迭代的。
+什么是仅关键字参数。
+key 通常意味着什么。
+然后，您必须阅读一些文本才能理解您可以传递哪些值以及如何实际调用该函数。
+
+当然，这些是不能为了简洁而省略的重要细节。 但是我敢打赌很多开发人员浏览那个页面仅仅是因为他们需要快速找出如何传递自定义排序函数。 这个例子会很快帮助他们：
+
+max(4, 6) # → 6
+
+max([1, 2, 3]) # → 3
+
+max([&#39;x&#39;, &#39;y&#39;, &#39;abc&#39;], key=len) # → &#39;abc&#39;
+
+max([]) # ValueError: max() arg is an empty sequence
+
+max([], default=5) # → 5
+简单吧？
+
+Clojure 世界中一个流行的基于社区的项目是 clojuredocs.org，一个人们为内置函数贡献示例的网站。 它是美妙的，并且根据我的经验，在日常编码中是必不可少的。 例如，查看关于 into 或 spit 或 map 的页面。 请注意，示例通常包括相关函数，而不仅仅是所讨论的函数。 这增加了实际的实用性和实用性。
+
+由于即使是主要软件项目也很少提供 4 种不同的文档，我常常犹豫是否要单击“文档”链接。 很有可能，它是一个简洁、难以阅读的自动生成的 API 参考。 我经常选择找一个教程，不是因为我需要一个演练，而是因为我需要例子。</p>
+
+<p><a href="https://abuseofnotation.github.io/category-theory-illustrated/11_natural_transformations">Category Theory Illustrated - Natural transformations</a><br>本章将介绍函子之间的态射，或称为*自然变换*。理解自然变换将使我们能够定义范畴的相等性和一些其他高级概念。自然变换确实是范畴论的核心，然而，它的重要性起初并不明显。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-coding-agent-101-getting-started-with-agentic-workflows-on-github">GitHub Copilot coding agent 101：在 GitHub 上开始使用代理工作流程</a><br>将任务委托给它，编码代理可以独立编写、运行和测试代码。以下是如何充分利用它的方法。</p>
+
+<p><a href="https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview">Introducing Microsoft Agent Framework（预览版）：让每个开发人员都能轻松构建 AI 代理</a><br>Microsoft Agent Framework（预览版）统一了代理创建、编排、工具、托管和可观察性，因此任何 .NET 开发人员都可以更快地发布生产 AI 代理。</p>
+
+<p><a href="https://codemanship.wordpress.com/2025/09/30/comprehension-debt-the-ticking-time-bomb-of-llm-generated-code">Comprehension Debt: The Ticking Time Bomb of LLM-Generated Code</a><br>越来越多的报道表明，开发人员修改或修复由大型语言模型生成的代码所花费的时间正在增加。文章指出，当团队生产代码的速度超过他们理解代码的速度时，就会产生所谓的“理解债务”。</p>
+
+<p><a href="https://www.builder.io/blog/codex-vs-claude-code">Codex vs Claude Code: 哪个是更好的 AI 编码代理？</a><br>我几个月来一直是 Cursor 代理的重度用户。我甚至写了&lt;a href=&#34;https://www.builder.io/blog/cursor-tips&#34;&gt;Cursor 技巧文章&lt;/a&gt;，每周都有成千上万的开发者参考。然后 Claude Code 出现了。它成为了我的首选。现在我的首选又变了。 我不想发生这种情况，但让我解释一下原因。让我们比较一下代理、功能、定价和用户体验。</p>
+
+<p><a href="https://www.tbray.org/ongoing/When/202x/2025/09/26/GenAI-Predictions">GenAI 预测</a><br>作者预测了 GenAI 的未来，包括关于幻觉、大规模裁员、金融损失、经济影响以及软件行业的变化。他认为 GenAI 在代码生成方面有潜力，但在交互设计和底层基础设施代码方面可能作用不大。</p>
+
+<p><a href="https://www.alephic.com/writing/the-magic-of-claude-code">The Magic of Claude Code</a><br>Claude Code 将基于终端的 Unix 命令界面与文件系统访问相结合，赋予了 LLM 持久的内存和无缝的工具链，将其转变为一个强大的编码和笔记记录的代理操作系统。它简单、可组合的方法为可靠的 AI 代理提供了一个蓝图，这些代理利用 Unix 哲学而不是复杂的多代理架构。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/ThreeDotsLabs/watermill">ThreeDotsLabs/watermill</a><br>Building event-driven applications the easy way in Go.</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock is a mocking framework for the Go programming language.</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.</p>
+
+<p><a href="https://github.com/Done-0/fuck-u-code">Done-0/fuck-u-code</a><br>Legacy-Mess Detector – assess the “legacy-mess level” of your code and output a beautiful report | 屎山代码检测器，评估代码的“屎山等级”并输出美观的报告</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>Simple and flexible tool for managing secrets</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250103.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250103</span>
+</p>
+<p>每日一谚：Go is not magical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://ffss.dev/articles/generic-validation">利用 Go 泛型进行输入验证</a><br>Go 的泛型可能不如其他语言中的泛型广泛，但它们仍然提供强大的功能。在本文中，我将演示如何利用泛型来简化和增强项目中的验证。</p> 
+
+<p><a href="https://pratt.im/notes/jj-go-gerrit.html">使用jj开发Go</a><br>本文档介绍了作者如何在 Go 项目中日常使用 jj 进行代码贡献的配置和工作流程。Go 使用 Gerrit 进行代码审查，这比 GitHub 更复杂。本文档主要介绍了处理 Gerrit 的三个关键问题：Gerrit 使用“神奇”的 refs；推送至 Go 的 Gerrit 需要 HTTP 身份验证 Cookie；Gerrit 需要 Change-Id 行。作者通过使用 colocated repository，并结合自定义 commit message 模板解决这些问题，并提供了详细的操作步骤和示例。此外，文章还讨论了工作流程、技巧以及下载 CL 的方法。</p> 
+
+<p><a href="https://kubuzetto.github.io/posts/go-axum-handlers">Go语言中Axum风格的魔法处理器函数（第一部分）</a><br>Rustaceans 使用 axum 框架可以采用“魔法函数”模式来编写非常具有描述性的处理器函数，而代码冗余很少。我们可以在 Go 中模仿它吗？让我们来试试！</p> 
+
+<p><a href="https://kubuzetto.github.io/posts/go-axum-handlers-pt2">Go语言中Axum风格的魔法处理器函数，第二部分</a><br>本文继续我们对无样板Go语言的探索，这次加入了更多结构体！上一篇文章中，我们尝试在Go中复制Axum的“魔法”，最终得到了这样的端点处理器：今天，我们继续对无样板Go语言的探索。现在有了更多结构体！问题在于：在我们之前的实现中，我们不得不使用反射来调用函数，因为我们的处理器可以有任意数量的参数。但反射有一些开销；特别是这种方式的函数调用非常慢。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-01-02-dolt-mysql-differences/">Dolt与MySQL的差异</a><br>DoltHub将Dolt描述为MySQL的替代品，但两者之间存在一些关键差异。本文重点介绍了三个主要差异和两个次要差异。主要差异包括：版本控制（Dolt是第一个也是唯一一个支持数据和模式完整版本控制的SQL数据库）、磁盘垃圾（Dolt会生成磁盘垃圾，而MySQL不会）以及并发写入行为（Dolt和MySQL在并发写入同一行时会产生不同的结果）。次要差异涉及信息模式和性能模式的有限支持。文章还简要介绍了即将推出的向量搜索功能。</p>
+
+<p><a href="https://www.docker.com/blog/mastering-software-development-efficiency/">Mastering Peak Software Development Efficiency with Docker</a><br></p>
+
+<p><a href="https://netflixtechblog.com/part-2-a-survey-of-analytics-engineering-work-at-netflix-4f1f53b4ab0f">第二部分：Netflix分析工程工作的调查</a><br>本文是多部分系列文章的第二部分，分享了Netflix分析工程工作的广度，最近作为我们年度内部分析工程会议的一部分发表。本文重点介绍了一些令人兴奋的分析业务应用，在最后一篇文章中，我们将深入探讨技术工艺的各个方面。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/01/02/unlocking-cloud-native-security-with-cilium-and-ebpf/">使用 Cilium 和 eBPF 解锁云原生安全</a><br>随着云原生应用程序规模的扩大，在保持性能的同时确保工作负载安全变得至关重要。这就是开源网络、可观察性和安全工具 Cilium 发挥作用的地方。在 eBPF（扩展 Berkeley Packet Filter）强大功能的支持下，Cilium 为 Kubernetes 环境中的微服务之间提供了安全、高性能的通信。本文介绍了 Cilium 的关键特性、工作原理以及部署方法，并探讨了其在金融服务、电子商务和医疗保健等领域的实际应用案例。</p>
+
+<p><a href="https://kaustavdm.in/nats-upspeak-app-framework">Go语言中基于NATS的超轻量级模块化应用程序框架</a><br>本文解释了作者为什么为Upspeak编写`app`包，为什么使用NATS以及它如何对您也有用。文章介绍了一个基于NATS的超轻量级Go语言模块化应用程序框架，它能够嵌入NATS服务器，并通过简单的模块接口实现模块化，从而构建易于维护和扩展的应用程序。  该框架支持嵌入式和外部NATS服务器模式，并对HTTP处理程序和消息处理程序进行了简单的抽象，使模块开发更加便捷。</p>
+
+<p><a href="https://linuxiac.com/best-linux-distro-of-2024-there-is-no-such-thing">2024年最佳Linux发行版？根本不存在！</a><br>本文反驳了“最佳Linux发行版”这一说法，认为最佳发行版取决于具体的使用场景。文章列举了影响发行版好坏的三个关键因素：范围、支持级别和学习曲线，并推荐了2024年一些优秀的桌面和服务器发行版，包括Linux Mint 22、Fedora 41、elementary OS 8、Rocky Linux 9.5和openSUSE Leap 15.6等，强调选择发行版应根据自身需求进行。</p>
+
+<p><a href="https://addyo.substack.com/p/future-proofing-your-software-engineering">让你的软件工程职业生涯面向未来</a><br>本文探讨了大型语言模型 (LLM) 对软件工程职业生涯的实际影响，并提出了应对未来挑战的实用策略。文章指出，LLM 擅长处理某些任务，例如生成样板代码和实现算法，但在处理复杂场景时存在局限性。作者认为，AI 工具正在改变我们的工作方式，但它们是增强而非取代人类工程师。文章针对初级、中级工程师分别提出了建议，并强调了深化计算机科学基础、系统设计专业知识、领域专业知识、开发运维能力以及沟通能力的重要性。此外，文章还鼓励工程师利用 AI 工具，并强调了设计思维在未来软件工程中的重要性。</p>
+
+<p><a href="https://blog.codingconfessions.com/p/linux-context-switching-internals">Linux上下文切换内部机制：进程状态和内存</a><br>本文探讨了Linux内核如何表示进程及其状态：对task_struct和mm_struct的细致分解。文章解释了内核如何使用task_struct和相关的结构来管理进程，以及如何组织和管理进程地址空间。此外，文章还介绍了与上下文切换密切相关的关键数据结构，例如thread_info和sched_entity。最后，文章概述了进程内存管理的实现，包括页表目录(PGD)、内存段边界以及特定于体系结构的内存状态(例如，针对X86-64的mm_context_t)。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jan/2/they-spy-on-you-but-not-like-that/#atom-everything">我不认为公司会通过你的麦克风监听你然后投放广告</a><br>作者认为，公司通过手机麦克风监听用户并投放定向广告的说法是阴谋论，并非事实。他以苹果公司因Siri“意外”录音而支付9500万美元和解为例，指出该说法未经法庭证实，并且苹果公司进行此类操作的可能性极低。作者认为，即使部分用户经历了看似相关的广告投放，也更可能是由于应用程序数据共享和基本的用户信息推断造成的，而非麦克风监听。他列举了几个原因来解释为什么人们容易相信这种阴谋论：人们只注意到了少数相关广告，而忽略了大量的无关广告；人们倾向于相信个人经历，即使证据不足；人们擅长寻找并强化模式匹配。最终，作者认为，苹果的这个案例将被阴谋论者用作“证据”很长一段时间。</p>
+
+<p><a href="https://composio.dev/blog/notes-on-new-deepseek-v3">关于新的 Deepseek v3 的笔记</a><br>这篇博文中，我们深入探讨了新的 Deepseek v3，并将其与 GPT-4o 和 3.5 Sonnet 在推理、数学、编码和写作任务上的表现进行了比较。Deepseek v3 是一个 607B 的混合专家模型，拥有 37B 的活动参数，目前是性能最佳的开源模型，在基准测试中与 OpenAI GPT-4o 和 Claude 3.5 Sonnet不相上下，甚至在某些任务上表现更好。其高效的训练归功于混合专家架构、FP8 混合精度训练和定制的 HAI-LLM 框架。Deepseek v3 在推理和数学方面尤其出色，超过了 GPT-4 和 Claude 3.5 Sonnet，但在写作和编码方面，Claude 3.5 Sonnet 仍略占优势。考虑到其强大的功能，Deepseek v3 也是目前最经济实惠的模型。</p>
+
+<p><a href="https://stackoverflow.blog/2024/12/31/generative-ai-is-not-going-to-build-your-engineering-team-for-you">生成式 AI 无法帮你组建工程团队</a><br>生成代码很容易，但生成好的代码却不容易。本文探讨了软件工程的本质，指出编写代码只是其中一小部分，更重要的是理解、维护、解释和管理大量的生产软件。作者认为，生成式 AI 能够帮助生成大量代码，但无法替代工程师在系统管理、理解和操作方面的作用，也不应取代培养初级工程师的必要性。公司应该重视组建具有不同技能和经验水平的团队，而不是仅仅关注雇佣资深工程师。</p>
+
+<p><a href="https://www.latent.space/p/2025-papers">2025 年人工智能工程阅读清单</a><br>这份清单由 Latent Space 策划，精选了 50 篇论文/模型/博客文章，涵盖了人工智能工程的 10 个领域：大型语言模型 (LLM)、基准测试、提示工程、检索增强生成 (RAG)、智能体、代码生成、视觉、语音、扩散模型和微调。无论你是从零开始，还是想提升技能，这份清单都是一个极好的起点。</p>
+
+<p><a href="https://borretti.me/article/how-i-use-claude">我如何使用 Claude</a><br>本文讲述了作者如何使用 Anthropic 的 AI 模型 Claude，特别是 3.6 版本发布后使用频率的显著增加。文章通过图表数据展现了使用次数、信息量等方面的量化变化，并从性能和情感两个方面分析了 Claude 3.6 版本的改进，例如减少幻觉、提高可靠性以及更具参与性和趣味性等。作者还分享了使用 Claude 的不同场景，例如寻求建议、探索想法、编写代码、写作和寻求特定领域的帮助。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/oapi-codegen/oapi-codegen">oapi-codegen/oapi-codegen</a><br>Generate Go client and server boilerplate from OpenAPI 3 specifications</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>Go library for accessing the GitHub v3 API</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 Top-Rated Web-Based Linux Server Management Tool. 1Panel features an intuitive web interface that seamlessly integrates server management and monitoring, container management, database administration, website management, system backup and restoration, and more.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Mistral, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>A Modern Testing Framework for Go</p>
+
+<p><a href="https://github.com/bytebase/bytebase">bytebase/bytebase</a><br>World&#39;s most advanced database DevSecOps solution for Developer, Security, DBA and Platform Engineering teams. The GitHub/GitLab for database DevSecOps.</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

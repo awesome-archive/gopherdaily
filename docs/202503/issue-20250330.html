@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250330.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250330</span>
+</p>
+<p>每日一谚：Optimize for correctness before performance. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-grpc-basic-streaming-interceptor">Go语言中的gRPC：流式RPC、拦截器和元数据</a><br>本文是关于gRPC通信协议系列文章的一部分，介绍了Go语言中gRPC的高性能实现，包括流式RPC、拦截器和元数据的用法。文章详细解释了protoc代码生成流程、gRPC命令、服务器和客户端的实现，以及如何在gRPC中使用元数据和拦截器来处理请求和响应。文章还涵盖了流式RPC的三种类型（服务器流式、客户端流式和双向流式），并深入探讨了拦截器链的使用以及go-grpc-middleware社区库。</p> 
+
+<p><a href="https://calabro.io/zig-cgo">使用 CGO 和 Zig 构建静态链接的 Go 可执行文件</a><br>这篇文章简要介绍了如何使用 Zig 创建一个调用 CGO 依赖项的静态链接 Go 可执行文件。文章提供了完整的代码示例，包括使用 Zig 创建静态库，编写调用该库的 Go 程序，以及使用特定命令进行构建和静态链接。最终验证了生成的 Go 可执行文件是静态链接的，并且成功调用了 Zig 库中的函数。</p> 
+
+<p><a href="https://medium.com/@val_deleplace/improved-benchmark-syntax-in-go-b1fc3869ffa2">Go 语言改进的基准测试语法</a><br>Go 语言的微基准测试工具非常棒，因为它易于使用，并且具有社区普遍理解的惯用形式。Go 1.24 中引入了新的 `Loop` 方法，简化了基准测试代码，无需再编写迭代器 `i`、`b.N`、`Sink` 变量以及 `ResetTimer`、`StopTimer` 函数。</p> 
+
+<p><a href="https://dev.to/rezmoss/monotonic-clocks-and-precise-time-measurement-210-2ah5">单调时钟和精确时间测量</a><br>本文探讨了软件系统中墙上时钟和单调时钟之间的区别。墙上时钟会受到系统时间变化的影响（例如，NTP同步、手动更改或夏令时转换），而单调时钟则始终以均匀的速度前进，非常适合测量持续时间。Go语言巧妙地将这两种时钟集成到`time.Now()`中，自动选择合适的时钟来进行时间显示或持续时间计算。文章还介绍了`Sub()`、`Since()`和`Until()`函数，并提供了处理系统时钟更改的策略。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://linebender.org/blog/towards-fearless-simd">7 年后的无畏 SIMD 之路</a><br>七年前，作者撰写了一篇博客文章《迈向无畏 SIMD》，概述了 Rust 作为编写快速 SIMD 程序的引人注目的语言的愿景。现在我们身处何方？本文探讨了在 Rust 中编写 SIMD 的现状和未来方向，包括多版本化、安全性和对 FP16 和 AVX-512 的支持等问题。文章还提供了一个简单的 sigmoid 函数示例，并比较了不同方法（例如，使用内建函数、Highway 库、multiversion 和 pulp 库）的优缺点。作者还讨论了 Rust 语言的演进，以及如何改进对 SIMD 的支持，例如改进 target_feature 和安全内建函数。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-03-29-vibin/">用Cursor体验编程</a><br>作者尝试使用 Cursor（一款 AI 代码编辑器）来提高编码速度，并尝试用它构建一个 Dolt 应用。在尝试过程中，作者发现 Cursor 在处理大型代码库和调试方面存在不足，但对于一些简单的任务，例如生成代码片段，Cursor 能提高效率。作者最终认为，虽然 Cursor 有其优势，但它并不能达到宣传的 10 倍生产力提升效果。</p>
+
+<p><a href="https://www.lucasaguiar.xyz/posts/vibe-coding-pitfalls">为什么我与“氛围编程”分手了</a><br>我们都有过这样的经历：戴着耳机，音乐播放着，手指在键盘上飞舞，沉浸在与你最喜欢的 AI 代理的“流程”中。我的朋友们，这就是氛围编程。当你处于最佳状态时，似乎毫不费力地就能编写代码。
+
+其理念是，你可以仅仅通过沉浸在编程的感觉中、信任你的直觉并驾驭灵感的浪潮来创建出色的软件。但最近我意识到，至少对我来说，这种氛围……不对劲了。感觉就像我在观看 AI 代理为我编写代码，偶尔会提出建议或更正，但通常只是在观察代码的展开而没有完全理解正在发生的事情的复杂性，这可能会导致我以后浪费时间。
+
+文章探讨了氛围编程的利弊，并比较了氛围编程、AI 聊天和网络搜索的优缺点。作者最终得出结论，需要在创造力和结构化开发之间找到更好的平衡，并推荐了一些工具和策略。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>An open-source runtime for composable workflows. Great for AI agents and CI/CD.</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB — the cloud native, distributed SQL database designed for high availability, effortless scale, and control over data placement.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/kubernetes/enhancements">kubernetes/enhancements</a><br>Enhancements tracking repo for Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/EndlessCheng/codeforces-go">EndlessCheng/codeforces-go</a><br>算法竞赛模板库 by 灵茶山艾府 💭💡🎈</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers (AWS Route53, Google CloudDNS and others) for Kubernetes Ingresses and Services</p>
+
+<p><a href="https://github.com/bufbuild/buf">bufbuild/buf</a><br>The best way of working with Protocol Buffers.</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

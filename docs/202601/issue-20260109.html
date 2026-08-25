@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260109.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260109</span>
+</p>
+<p>每日一谚：test coverage != bug free </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/09/the-most-popular-go-dependency-is/">谁才是 Go 生态的“幕后之王”？—— 深度挖掘 4000 万个节点后的惊人发现</a><br>在 Go 的世界里，我们每天都在引入各种 import。但你是否想过，整个 Go 生态系统中，究竟哪个包是被依赖次数最多的“基石”？ 通常，我们会参考 GitHub Stars 或 Awesome 列表，但这往往带有主观偏差。为了寻找最客观的答案，开发者 Thibaut Rousseau 做了一件疯狂的事：他下载了 Go Proxy 自 2019 年以来的所有模块元数据 ，构建了一个包含 4000 万个节点、4 亿条关系的巨大图谱。结果令人大开眼界。</p> 
+
+<p><a href="https://blog.gaborkoos.com/posts/2026-01-08-The-Go-Build-System-Optimised-for-Humans-and-Machines">Go 构建系统：为人类和机器优化</a><br>Go 的构建系统针对人类和机器进行了优化：更快、可重现的构建、智能缓存、无缝的 CI/CD，以及用于简化现代开发者工作流程的实用指南。本文深入探讨了 Go 工具链的内部机制，包括模块解析、包级别的编译、选择性链接以及构建缓存的工作原理，强调了其在保证可重现性和加速增量构建方面的作用。最后，文章讨论了这些特性对 CI/CD 和大型代码库的实际影响。</p> 
+
+<p><a href="https://preslav.me/2026/01/08/golang-structs-vs-pointers-pointer-first">停止过度思考 Go 中的结构体指针和值语义</a><br>作者对 Go 代码中对结构体进行值语义和指针语义的不一致处理感到厌倦，并提出了一个简单的规则来消除这种“决定疲劳”：对于基本类型，始终使用值语义；对于结构体，默认使用指针语义（Pointer-First），除非结构体非常小且仅包含原始字段。核心观点是，这关乎的是心智负担，而非性能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/01/08/kubernetes-v1-35-mutable-pv-nodeaffinity/">Kubernetes v1.35：可变持久卷节点亲和性 (Alpha)</a><br>Kubernetes v1.35 版本中，PersistentVolume (PV) 的节点亲和性（nodeAffinity）字段从不可变变为可变（alpha 阶段）。此更改旨在支持更灵活的在线卷管理，例如在存储提供商升级（如从区域磁盘迁移到区域外磁盘）或存储需求变化时，允许管理员更新 PV 上的节点亲和性以匹配卷的新可访问性，从而避免因调度冲突导致的 Pod 启动失败。文章探讨了这一变化的原因、使用场景以及未来与 CSI 集成的方向，并邀请用户和驱动开发者提供反馈。</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2026/01/the-sauna-algorithm-surviving.html">桑拿算法：在没有时钟的异步环境中生存</a><br>作者从在健身房桑拿房的经历中获得启发，提出了一个名为“桑拿算法”的概念，用以说明分布式系统中的“先于发生”（happened-before）关系。由于患有时间感知障碍（dyschronometria），作者无法可靠地感知时间，因此他通过观察后来者（第一个进入桑拿房的人A）的行动来决定自己何时离开：在他进来后，作者等待A离开，然后自己立即离开。这避免了依赖本地时钟，而是完全依赖因果关系进行同步。在分布式系统中，这类似于节点通过观察其他节点的事件来安全地确定事件顺序，从而在异步环境中无需依赖同步时钟即可协调一致。</p>
+
+<p><a href="https://pebblebed.com/blog/kernel-bugs">内核漏洞平均隐藏2年。有些隐藏了20年 </a><br>对Linux内核20年git历史中的125,183个漏洞修复（带有可追溯的“Fixes:”标签）进行了分析。结果显示，平均而言，内核漏洞在被发现前隐藏了2.1年。然而，不同子系统的表现差异很大，例如CAN总线驱动程序平均隐藏4.2年，SCTP网络隐藏4.0年。最长潜伏的漏洞隐藏了20.7年。虽然近年的漏洞发现速度有所提高（2010年引入的漏洞0%在一年内被发现，而2022年引入的有69%被发现），但仍然存在历史遗留问题。作者构建了一个名为VulnBERT的模型，该模型在2024年的测试集上召回率达到92.2%，误报率仅为1.2%，旨在帮助开发者更有效地筛选高风险提交。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.pragmaticengineer.com/the-grief-when-ai-writes-most-of-the-code">当AI编写大部分代码时的失落感</a><br>当AI几乎编写了所有的代码时，软件工程会发生什么变化？对于我们开发者来说，这无疑会带来一种失落感。作者回忆了学习编程和编写复杂代码的经历，并探讨了随着AI接管大部分编码工作，这种满足感是否会消失，以及“进入状态”的体验是否会转向更高层次的问题。</p>
+
+<p><a href="https://simonwillison.net/2026/Jan/8/llm-predictions-for-2026/#atom-everything">LLM 2026年预测，与Oxide and Friends分享</a><br>作者参加了Oxide and Friends播客的录制，讨论了对科技行业未来1年、3年和6年的预测。文章列出了作者分享的预测要点，包括：1年内，LLM编写良好代码将不可否认；我们将最终解决沙箱问题；以及针对代码代理安全将出现“挑战者号灾难”；此外，作者还对新西兰的鸮鹦鹉繁殖季节表示乐观。3年内，代码代理的杰文斯悖论将解决，并且有人将主要使用AI辅助编码来构建一个新的浏览器。6年后，手工编写代码将像打孔卡一样成为历史。作者基于在AI辅助编程方面的经验，认为2026年LLM生成代码的质量将不容否认。</p>
+
+<p><a href="https://www.oneusefulthing.org/p/claude-code-and-what-comes-next">Claude Code and What Comes Next</a><br>作者分享了对 Claude Code（一个AI编程工具）的试用体验，展示了它在完全自主完成一个小型创业项目（包括想法生成、网站创建和部署）方面的惊人能力。文章重点介绍了 Claude Code 如何通过“紧凑（compaction）”机制来管理有限的上下文窗口，以及使用“技能（Skills）”和“子代理（subagents）”来扩展其能力，使其能够执行复杂、持续性的任务。作者认为，这些基于“代理式框架”的AI工具预示着AI在未来将对所有知识工作者产生深远影响，尤其是在编程领域。</p>
+
+<p><a href="https://danielchasehooper.com/posts/code-agents">一位有经验的C程序员尝试AI代理</a><br>一位有25年C编程经验的开发者分享了自己对AI代码代理（如Claude Code和Codex）的体验和看法。尽管AI代理在代码质量上仍不如优秀程序员，但作者通过实验发现，将AI代理视为实习生使用，并专注于具体任务，可以显著提高项目级编辑和分析的生产力。文章探讨了AI代理的优势（如代码库理解和后台工作能力）、如何最大化其作用、反驳了常见的反对意见（如代码理解、“不喜欢管理AI”和法律风险），并提供了入门建议。</p>
+
+<p><a href="https://addyosmani.com/blog/code-review-ai">AI 编写代码更快。你的工作仍然是证明它有效。</a><br>人工智能并未扼杀代码审查。它使举证责任明确化。交付带有证据（如手动验证和自动化测试）的更改，然后使用审查来关注风险、意图和问责制。独立开发者依靠自动化来跟上 AI 的速度，而团队则使用审查来建立共享的上下文和所有权。如果你的拉取请求不包含证明它有效性的证据，你没有加快交付速度，只是将工作向下游转移了。</p>
+
+<p><a href="https://thezvi.substack.com/p/advancements-in-self-driving-cars">自动驾驶汽车的进展</a><br>本文讨论了自动驾驶汽车（尤其是 Waymo）的最新进展，包括其服务区域的扩展（扩展到旧金山湾区全境，并计划扩展到更多城市如圣地亚哥、达拉斯等地）、在高速公路上运行的挑战（遵守技术限速）、与人类驾驶员行为的对比、以及围绕安全性和监管的讨论。作者强调了自动驾驶汽车在提高安全性、为老年人和残障人士带来自由方面的巨大潜力，同时也指出了监管障碍（如纽约市）和对工人就业的担忧。文章引用了多位行业专家的观点，并对比了 Waymo 与特斯拉在自动驾驶领域的不同进展速度和策略。</p>
+
+<p><a href="https://sunilpai.dev/posts/context-is-the-work">上下文即工作（现在日常的样子）</a><br>随着编码代理（AI 助手）的普及，代码编写成本降低，但代码审查的难度似乎在增加。作者认为这是因为“工作”的重心发生了转移，从实现转移到了“上下文”的体现上：意图、假设、约束和权衡。Pull Request (PR) 的描述正成为远程团队和编码代理的“学徒期表面”，即记录和传达这些上下文信息的主要载体。好的 PR 描述应该包含执行意图、审查者指导和可追溯性（上下文清单）三个层次，以确保工作的一致性和可维护性。作者认为，在代理时代，对初级工程师而言，工作的重点不再是打字速度，而是掌握提问的艺术，将模糊性转化为约束，并使正确性变得清晰可读。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/memodb-io/Acontext">memodb-io/Acontext</a><br>Data platform for context engineering. Context data platform that stores, observes and learns. Join the community❤️: https://discord.acontext.io</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/Velocidex/velociraptor">Velocidex/velociraptor</a><br>Digging Deeper....</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/vllm-project/semantic-router">vllm-project/semantic-router</a><br>System Level Intelligent Router for Mixture-of-Models</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

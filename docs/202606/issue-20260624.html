@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260624.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260624</span>
+</p>
+<p>每日一谚：Don&#39;t use cgo unless absolutely necessary. It has real costs. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/24/go-1-27-foresight">Go 1.27新特性前瞻：泛型方法落地，标准库内建 UUID</a><br>随着 2026 年中 Go 1.27 开发分支的功能冻结与首个RC版本的发布，Go 语言生态再次迎来了一个令人瞩目的关键节点。 回望刚刚过去的半年，Go 语言在 Go 1.26 中通过 Green Tea GC和 逃逸分析升级实现了极致的性能压榨。而在即将到来的 Go 1.27 中，Go 团队 不仅在语言底层和编译器上完成了多项史诗级的长跑任务，更在标准库的现代化、安全性以及硬件级加速上进行了前所未有的大胆扩容。这是一次编译器抽象能力与云原生工程底座的全面双向进化</p> 
+
+<p><a href="https://words.filippo.io/vuln-reports/">漏洞报告不再特殊</a><br>这是作者离开谷歌后交给有能力的人接替的角色，尽管仍然参与Go项目的维护，但这都不是Go安全团队的官方立场。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/umzbxLCuZgiPeV90c1yyjg">【AI 时代软件工程师的算法图谱】12 字符串处理：模式匹配与哈希</a><br>在这第十二讲中，我们将超越暴力的 `str.Contains`，探索 KMP 和 Rabin-Karp 这两大神级算法，并手写一个基于滚动哈希（Rolling Hash）的字符串查重工具。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/23/agent-auth-a-lawyers-day-in-court/">智能体认证：律师在法庭上的一天</a><br>智能体网关和网格可以集中身份传播、委托验证、策略执行和审计等功能，而不是要求每个智能体独立实现这些功能。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/06/23/building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans/">构建Jaeger的ClickHouse后端：对1000万span实现8.6倍压缩</a><br>存储层如何解释属性查找可能是一个不明显的技术挑战，例如在搜索http时。</p>
+
+<p><a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/">Meta如何为AI眼镜设计超窄电池</a><br>传统的钢壳电池使用电极材料的卷绕&#34;果冻卷&#34;结构。Meta的工程师用冲压堆叠层替代了这种结构，类似于并联连接小电阻。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/">通过智能体可观测性重新思考云操作</a><br>最大的价值是速度！[Azure Copilot]可观测性智能体通过将日志、指标和追踪转换为纯英语见解，帮助我们更快地解决事件并减少运营开销。</p>
+
+<p><a href="https://www.docker.com/blog/what-is-an-sbom/">什么是SBOM（以及为什么没有它就无法发布）？</a><br>SBOM代表软件物料清单。它是软件工件中每个组件、依赖项和元数据元素的结构化清单，以SPDX或CycloneDX等机器可读标准格式化。</p>
+
+<p><a href="https://nesbitt.io/2026/06/23/sunsetting-a-package-manager.html">淘汰包管理器</a><br>这一切都不是免费的：必须有人负责维护渠道，决定哪些CVEs达到标准，并持有已被部分关闭系统的发布密钥，因为持有这些密钥已经变得危险。</p>
+
+<p><a href="https://sofiakodar.github.io/posts/becomingmanager/">关于成为管理者的真相</a><br>我清晰地记得自己多年来进入工程管理的旅程。在我的职业生涯中，我还指导了几位从工程师转变为工程经理的人。</p>
+
+<p><a href="https://00f.net/2026/06/23/webassembly-runtimes-2026/">2026年WebAssembly运行时的性能</a><br>我想知道WebAssembly运行时是否变得越来越快。这是对2019年、2021年以及更早的libsodium WebAssembly基准测试的后续研究。</p>
+
+<p><a href="https://github.blog/developer-skills/github/i-automated-my-job-and-it-made-me-a-better-leader/">我自动化了我的工作（这让我成为更好的领导者）</a><br>通过自动化日常工作，我能够将更多时间投入到战略思考和团队领导中，这显著提高了我的领导效能。</p>
+
+<p><a href="https://www.uber.com/us/en/blog/scaling-verify-wallet/">在Uber使用钱包扩展Verify进行身份验证</a><br>Uber通过集成钱包功能扩展了Verify身份验证系统，实现了大规模、安全的用户身份验证流程。</p>
+
+<p><a href="https://blog.exe.dev/ios-development">构建exe.dev iOS应用</a><br>我们开发了exe.dev iOS应用，为用户提供便捷的访问体验，应用已在App Store上架。</p>
+
+<p><a href="https://prokube.ai/en/blog/ai-gateway-api-gateway-gateway-api/">AI网关、API网关、网关API及其相关技术概述</a><br>文章探讨了不同类型网关技术的架构、功能和应用场景，帮助读者理解现代API管理生态系统。</p>
+
+<p><a href="https://blog.cloudflare.com/hyper-bug/">我们如何在hyper HTTP库中发现一个bug</a><br>Cloudflare团队通过系统性的测试和代码审查，在hyper HTTP库中发现并修复了一个潜在的安全漏洞。</p>
+
+<p><a href="https://questdb.com/blog/lies-damn-lies-and-database-benchmarks/">谎言、该死的谎言和数据库基准测试</a><br>QuestDB是为要求严苛的工作负载设计的开源时间序列数据库，提供超低延迟、高吞吐量和多级存储引擎。</p>
+
+<p><a href="https://guix.gnu.org/en/blog/2026/one-year-with-codeberg/">使用Codeberg一年</a><br>一年前，Guix迁移到Codeberg进行源代码托管、问题跟踪和拉取请求，这一年来运行良好。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.dshr.org/2026/06/ais-affordability-crisis.html">AI的负担能力危机</a><br>一年前，作者指出AI平台正在运行&#34;第一个免费&#34;的毒贩算法，导致AI成本不断上升。</p>
+
+<p><a href="https://arxiv.org/abs/2606.23050">无限OCR工作</a><br>研究人员提出了一种新的OCR方法，能够处理无限量的文本识别任务，准确率显著提高。</p>
+
+<p><a href="https://lucumr.pocoo.org/2026/6/23/the-coming-loop/">即将到来的循环</a><br>作者不再使用Claude进行提示，转而探索其他AI工具和方法，反映了AI技术领域的快速变化。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
+
+<p><a href="https://github.com/kunchenguid/no-mistakes">kunchenguid/no-mistakes</a><br>git push no-mistakes</p>
+
+<p><a href="https://github.com/esengine/DeepSeek-Reasonix">esengine/DeepSeek-Reasonix</a><br>DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/agent-sandbox">kubernetes-sigs/agent-sandbox</a><br>agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

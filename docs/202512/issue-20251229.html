@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251229.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251229</span>
+</p>
+<p>每日一谚：Close a channel from the producer side.  Do not close it from the consumer side. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/29/go-community-new-sum-type-end-interface-union-types/">告别 interface{} 模拟，Go 终于要有真正的 Union 类型了？</a><br>近日，Go 核心团队成员 neild 在 GitHub 上发起了一个非正式的讨论 (#76920)，抛出了一种全新的、非接口 (non-interface) 的联合类型设计构想。这个构想虽然只是一个“思想实验”，却迅速引爆了社区&gt;的热情，成为了近期最热门的话题之一。</p> 
+
+<p><a href="https://tonybai.com/2025/12/27/rob-pike-outburst-denounces-ai-companies-hypocritical-thanks">Rob Pike 罕见暴怒！痛斥 AI 公司的“伪善”致谢信，引爆技术圈</a><br>“在这个圣诞节，我想对您过去四十年来对计算机领域的杰出贡献表达深深的感谢……” 这是一封看似温情脉脉、充满敬意的邮件，发件人是 Claude Opus 4.5 Agent。收件人是 Unix、Plan 9 和 Go 语言的联合创始人，计算机界的 活传奇Rob Pike，然而，这封旨在“致敬”的邮件，却并未换来感动，反而点燃了一座火山。Rob Pike 在社交媒体上公开晒出了这封信，并附上了一段充满了愤怒、绝望与诅咒的回应。</p> 
+
+<p><a href="https://tonybai.com/2025/12/29/why-many-software-engineers-still-ignore-ai-programming">“为什么很多工程师还在无视 AI 编程？”—— 这里的答案，或许决定了你三年后的身价</a><br> 近日，Reddit 上的一篇热帖，再次引爆了关于“AI 编程”的讨论。显然，这不仅是一个技术问题，更是一场关于职业生存、工程伦理与未来选择的深刻辩论。 为什么在 AI 席卷全球的今天，仍有大量工程师选择“无视”甚至“抵制”它？这背后的原因，远比“懒惰”或“守旧”要复杂得多。</p> 
+
+<p><a href="https://tonybai.com/2025/12/27/code-review-hell-in-ai-age">AI 代码审查的“危”与“机”：从个体挣扎到 Uber 的系统化解法</a><br>在 Uber，每周有超过 65,000 个变更（相当于 PR）需要审查。当 AI 辅助编码成为常态，传统的 Code Review 流程已濒临崩溃。 但这究竟是末日，还是进化的前夜？答案是后者。这场危机，正催生一场深刻的变革——一方面，它要求架构师完成从“创作者”到“导演”的角色进化； 另一方面，它也催生了像 Uber uReview 这样复杂的、系统化的 AI 审查平台。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/2NdW75nrWaWpONvQN0dt1Q">【API 设计之道】10 面向 AI 的 API：长耗时任务 (LRO) 与流式响应</a><br></p> 
+
+<p><a href="https://www.infoq.com/news/2025/12/javascript-golang-wasm/">在 Go 中使用 QJS 和 WebAssembly 运行现代 ES2023 JavaScript</a><br>QJS 是一个无 CGO 的现代 Go JavaScript 运行时，它将 QuickJS-NG 引擎嵌入到 WebAssembly 模块中，并通过 Wazero 运行，为 Go 应用程序提供了一个沙盒化的 ES2023 环境，支持 async/await 和紧密的 Go-JS 互操作性。它允许 Go 代码评估 JavaScript、绑定函数以及交换数据结构。QJS 提供了性能优于 Goja 和 ModerncQuickJS 的基准测试结果，目标是为需要安全插件系统、用户提供的脚本或嵌入式业务逻辑的 Go 开发者提供服务，而无需在构建和部署管道中引入 C 工具链或 CGO。</p> 
+
+<p><a href="https://antonz.org/accepted/errors-astype">Go 特性：类型安全的错误检查</a><br>Go 1.26 引入了 errors.AsType，它是 errors.As 的现代、类型安全、更快且更易于使用的替代品。errors.AsType 使用泛型，允许直接在函数调用中指定目标错误类型，避免了 errors.As 所需的冗长变量声明和指针传递，同时消除了反射和潜在的运行时恐慌，提供了编译时类型安全和更少的内存分配。</p> 
+
+<p><a href="https://earthly.dev/blog/golang-monorepo">在 Golang 中构建单体仓库</a><br>了解如何在 Go 中成功构建单体仓库（Monorepo），其中每个模块独立管理自己的构建、测试和发布周期。本文使用 go.mod 中的“replace”特性来导入本地模块，并展示了如何使用 Earthly 来有效构建和测试 monorepo 中的各个微服务，同时实现高效的缓存。</p> 
+
+<p><a href="https://unskilled.blog/posts/lets-dive-a-tour-of-sync.pool-internals">让我们深入了解：同步池（sync.Pool）内部结构之旅</a><br>本文深入探讨了Go语言sync.Pool的内部机制，揭示了其并发机制、内存管理和实用的性能策略。文章首先通过一个简单示例说明了Pool的基本生命周期，然后详细解释了Pool如何与垃圾回收器协同工作，通过本地（local）和受害者（victim）缓存来释放未使用的对象。接着，文章深入讲解了sync.Pool如何利用proc pinning（处理器固定）机制实现无锁访问的快速路径，并分析了Put和Get方法的具体实现逻辑。最后，通过字节缓冲区（byte buffer）的案例，展示了如何避免因切片头部的逃逸到堆（escape to heap）问题，以实现更高效的内存重用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/a-little-bit-cynical/">软件工程师应该有点愤世嫉俗</a><br>作者认为，软件工程师在大型科技公司中，保持适度的“愤世嫉俗”是清晰思考和有效应对组织运作方式所必需的，而不是陷入更极端的、实际上更“理想主义”（实则更消极）的观点中。作者区分了两种观点：一种是认为工程师是“政治游戏中的工具”，另一种是认为工程师是专业的、解决有意义问题的专业人士。作者认为，在实践中，解决几乎所有有意义的问题都需要参与“政治游戏”，而这种参与本身可以被视为一种理想主义行为，因为它能对巨型组织产生积极影响。适度的愤世嫉俗可以防止人们采纳更具破坏性的、不切实际的过度愤世嫉俗的观点（例如阴谋论）。</p>
+
+<p><a href="https://www.marcohaber.dev/blog/git-worktrees">理解 Git Worktrees</a><br>这是一篇关于 Git worktrees 的实用指南，涵盖了其心智模型、实际应用场景，以及它对 AI 驱动工作流程的重要性。文章解释了 worktree 的概念（多个分支在不同文件夹中共享同一 Git 历史），并介绍了创建、列出和移除 worktree 的三个核心命令。作者通过一个真实的工作流程场景展示了如何避免使用繁琐的 stash/unstash 操作。最后，文章强调了 worktrees 在像 Cursor 这样的工具中运行并行 AI 代理时的关键作用，并提供了配置 .cursor/worktrees.json 文件以实现工作流程自动化的方法。</p>
+
+<p><a href="https://steipete.me/posts/2025/shipping-at-inference-speed">以推理速度进行交付</a><br>我为什么停止阅读代码并开始观看代码流过。文章探讨了作者如何利用 GPT-5 和 codex 等先进模型，将软件开发速度提升到接近推理速度的水平。作者详细介绍了其工作流程的变化，包括不再需要精细的“计划模式”，以及对依赖项选择、系统设计和代码提交策略的关注点转移。此外，作者还分享了自己构建的“Oracle”工具，以及如何通过让模型直接参考项目文档来管理复杂性。整体而言，文章强调了模型能力的飞跃如何极大地改变了软件工程实践，使开发主要受限于推理时间和核心架构思考，而不是编写样板代码。</p>
+
+<p><a href="https://evanhahn.com/scripts-i-wrote-that-i-use-all-the-time">我编写的且我经常使用的脚本</a><br>作者分享了他在多年维护点文件（dotfiles）过程中编写的一系列个人最喜欢的、经常日常使用的shell脚本。这些脚本涵盖了剪贴板操作、文件管理、互联网工具、文本处理、REPL启动器、日期时间、音视频处理、进程管理以及系统管理等多个方面。例如，用于复制内容的`copy`和`pasta`，快速创建目录并进入的`mkcd foo`，在临时目录工作的`tempe`，以及用于系统主题切换的`theme`等。</p>
+
+<p><a href="https://ohadravid.github.io/posts/2025-12-rav1d-faster-asm">为什么从 Rust 调用我的汇编函数比从 C 调用慢？</a><br>本文是关于将 rav1d 视频解码器提速 1% 的后续，作者比较了 rav1d（Rust 实现）和 dav1d（C 实现）的性能分析快照。作者发现一个特定的汇编函数在 Rust 版本中调用更慢，深入探究后发现，问题出在 Rust 抽象（特别是涉及 FFI 边界的复杂结构体使用）与 LLVM 编译器优化之间的交互上，最终通过修改结构体定义使其更符合 FFI 规范解决了性能问题。</p>
+
+<p><a href="https://blog.rastrian.dev/post/why-reliability-demands-functional-programming-adts-safety-and-critical-infrastructure">为什么可靠性要求函数式编程：ADT、安全性和关键基础设施</a><br>在银行业、电信和支付领域，可靠性是基础要求。本文探讨了函数式编程和代数数据类型（ADTs）如何通过将正确性推入类型系统，从而在代码运行前消除一整类错误。您将了解到无效状态在实际系统中出现的原因及代价、ADT如何编码业务规则以确保编译器强制执行、模式匹配如何使重构成为安全编辑，以及如何在TypeScript和OCaml中对银行和电信领域进行实际建模。</p>
+
+<p><a href="https://lauratacho.com/blog/using-metrics-to-measure-individual-developer-performance">使用指标衡量个人开发者的绩效</a><br>本文探讨了衡量个人开发者绩效时应避免使用（如代码行数、故事点完成数）的常见活动指标，并提出了如何超越这些数据，通过实际的、基于证据的方法来建立一个公平的绩效管理体系。作者强调软件开发是团队协作的结果，并建议根据角色（如初级 vs. 高级）的职责范围（关注产出还是成果）来选择合适的衡量标准，特别是对于高级技术领导者，可以考虑使用系统级指标来评估其对团队整体表现的影响。</p>
+
+<p><a href="https://arpitbhayani.me/blogs/clock-sync-nightmare">时钟同步是个噩梦</a><br>时间看似简单，但我们工程师却因为保持时钟同步这一基本问题而夜不能寐。本文探讨了时钟同步的复杂性，包括石英晶体振荡器的局限性、时钟偏斜对分布式系统（如构建系统和数据库）的影响，并介绍了从 Cristian 算法、Berkeley 算法到 NTP 和 PTP 等物理时钟同步方法。文章还讨论了 Lamport 时间戳和向量时钟等逻辑时钟，以及 Google Spanner 的 TrueTime 和 CockroachDB 的混合逻辑时钟（HLC）如何应对全球规模的同步挑战。最终强调了在准确性、延迟和复杂性之间进行权衡的重要性。</p>
+
+<p><a href="https://garnaudov.com/writings/how-i-think-about-kubernetes">我如何看待 Kubernetes</a><br>Kubernetes通常被描述为一种容器编排工具，但用这种思维模型来理解它并不总是最有用。作者倾向于将其视为一个具有类型系统的声明式基础设施运行时。这体现在它有一套明确的资源类型（如Pod、Deployment、Service）构成了其“类型系统”，并且它是一个“运行时”，通过持续的调节（reconciliation）确保实际状态与声明的期望状态相符。理解这一点有助于更好地操作集群，例如，应该改变期望状态而不是症状，并明确所有权（如使用GitOps）。</p>
+
+<p><a href="https://newsletter.manager.dev/p/the-shadow-work-in-engineering-teams">工程团队中的阴影工作</a><br>本文讨论了工程团队中存在的“阴影工作”的三个主要类型：看不见的生产支持、技术粘合工作和影子待办事项，并分析了这些未被记录的工作对团队效率和稳定的成本。作者引用了一个高级工程师的例子，指出他超过40%的时间花在了这些隐形工作上。解决方案在于让工作追踪变得更轻松（推荐使用Linear），并积极地将粘合工作和支持职责分配给团队成员，而不是让经验丰富的工程师承担所有重担。对于远程团队，作者强调了阴影工作可能导致绩效评估困难的问题。</p>
+
+<p><a href="https://nesbitt.io/2025/12/26/how-uv-got-so-fast.html">uv 如何变得如此快速</a><br>uv 比 pip 安装包快一个数量级。其速度的提升主要归功于工程决策，而非仅仅是 Rust 语言。这些决策包括：利用使能快速路径的现代标准（如 PEP 518, 517, 621, 658），放弃对旧格式（如 .egg）和不必要的特性（如 pip.conf、默认字节码编译）的支持，以及实施如并行下载、全局缓存、使用 PubGrub 解析器等优化。虽然 Rust 在零拷贝反序列化和线程级并行化方面有所帮助，但文章强调，设计上的取舍（即不做什么）比语言本身对速度的贡献更大。</p>
+
+<p><a href="https://blog.fogus.me/2025/12/23/the-best-things-and-stuff-of-2025.html">The Best Things and Stuff of 2025</a><br>这是作者 Fogus 在 2025 年底对他发现、学习、阅读和遇到的“最好的事物和东西”的年度回顾。内容涵盖了精彩的文章、视频、技术书籍、非技术书籍、最常浏览的帖子/视频、最喜欢的音乐专辑、电影、播客和游戏等。作者还讨论了 2025 年的计划进展和 2026 年的计划，并对技术（特别是 LLMs）进行了评估。
+
+亮点包括对递归实数算术的优秀文章、关于日本网吧生活的视频、对 David Lindsay 失落小说的研究、对 Cormac McCarthy 图书馆的深入了解、对 Clojure 发展的思考，以及阅读了 R. Austin Freeman 的《Osiris之眼》和 Charles Dickens 的《Edwin Drood之谜》等经典作品。作者还介绍了其新的任务跟踪系统——基于电子表格的方法。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents">我的Claude Code 2.0使用经验</a><br></p>
+
+<p><a href="https://www.turingpost.com/p/models2recap">你必须了解的模型 - AI 101 回顾</a><br>回顾或了解 2025 年下半年最杰出的 AI 模型。重点包括：
+
+1. **开源升级：** 讨论了 Kimi K2、DeepSeek-R1、Qwen3 (&#43;Coder) 和 GLM-4.5 等中国开源模型的突破及其对市场的影响。
+2. **Kimi K2 Thinking 的特殊之处：** 深入探讨了 Moonshot AI 在无损长上下文和智能体智能方面的进展。
+3. **GPT OSS 的全面介绍：** 分析了 OpenAI 首次认真进军开源领域带来的影响。
+4. **世界模型的兴起：** 介绍了 Meta 的代码世界模型 (CWM)、斯坦福大学的概率结构集成 (PSI) 以及 PAN（物理、智能体、嵌套）世界模型概念。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>AxonHub is a modern AI gateway system that provides a unified OpenAI ( Chat Completion, Responses), Anthropic, Gemini and AI SDK compatible API</p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>A powerful framework for faster, easier, and more efficient project development.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/charmbracelet/vhs">charmbracelet/vhs</a><br>Your CLI home video recorder 📼</p>
+
+<p><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a><br>MCP server for Grafana</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ A Framework for Building High Value Public Blockchains ✨</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/thomaspoignant/go-feature-flag">thomaspoignant/go-feature-flag</a><br>GO Feature Flag is a simple, complete and lightweight self-hosted feature flag solution 100% Open Source. 🎛️</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/nginx/nginx-gateway-fabric">nginx/nginx-gateway-fabric</a><br>NGINX Gateway Fabric provides an implementation for the Gateway API using NGINX as the data plane.</p>
+
+<p><a href="https://github.com/external-secrets/external-secrets">external-secrets/external-secrets</a><br>External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

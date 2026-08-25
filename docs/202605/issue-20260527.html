@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260527.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260527</span>
+</p>
+<p>每日一谚：Go&#39;s parallelism features are an implementation detail, not a language feature. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/27/migrate-go-to-rust">从 Go 迁移到 Rust</a><br>在现代后端系统编程领域，Go 和 Rust 无疑是最耀眼的两大双子星。它们都拥有静态类型、编译型、单二进制文件分发等优异特性。然而，这 两门语言在底层的设计哲学、运行时权衡以及开发者体验上，走向了截然不同的方向。 Matthias Endler（Corrode 咨询公司创始人）撰写的《从 Go 迁移到 Rust》（Migrating from Go to Rust）是近年来系统编程领域极具深度的一篇迁移指南。作为在生产环境中同时大规模部署过 Go 和 Rust 系统的 资深架构师，Matthias 并没有陷入单纯的“谁比谁快”的无意义争论，而是从**正确性保证、运行时权衡、工程重构成本**等多个维度，客观地 为准备进行语言迁移的团队提供了一份极其务实的工程路线图。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/hsP09sp_Usvh8PCNkM7Xbg">【AI 时代软件工程师的算法图谱】05 二分查找：在不确定性中定位边界</a><br>在有序数组里找一个数，那是幼儿园水平。 在并不显式存在的“答案空间”里，通过二分法逼近最优解，才是二分查找的高阶心法。这被称为 “值域二分” (Binary Search on Answer)。 今天，我们将从最基础的边界查找，一路进阶到解决复杂的资源分配问题。</p> 
+
+<p><a href="https://michael.stapelberg.ch/posts/2026-05-24-minimal-memory-safe-go-rsync-vulns/">我那个占用内存极小、且符合安全规范的 Go 语言 rsync 实现，是如何避免各种安全漏洞的</a><br>2025 年 1 月，多位安全研究人员共发现了 rsync 中的 6 个安全漏洞。其中一些漏洞会导致任意代码的执行和文件泄露。因此，我自然会想知道：我自己用 Go 语言实现的 rsync 是否也受到了影响。毕竟，Go 是一种现代的、注重内存安全的编程语言。那么，用 Go 来实现 rsync，真的就能避免所有类型的安全漏洞了吗？</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/26/three-tag-leads-walk-into-the-toc/">三位 TAG 负责人走进 TOC</a><br>2026 年 CNCF 技术监督委员会 (TOC) 出现了一个不同寻常的模式：三位新任成员——前 TAG 安全负责人 Brandt、前 TAG 运营韧性负责人 Mario 以及前 TAG 开发者体验联席主席 Mauricio Salatino——都直接来自 TAG 领导层。这并非巧合，目前 TAG 提名正在进行中，现在是分享关于内部晋升路径细节的最佳时机。因为 TAG 中开展的工作正是整个生态系统的驱动力。TAG 应用交付小组发布了平台白皮书，制定了 GitOps 原则，进行了项目评审，并建立了一个持续关注 CNCF 生态系统的从业者社区。正是这种产出改变了整个社区的方向。TOC 在不同层级运作——涉及项目生命周期决策、政策和基金会层面的战略，但它直接依赖于 TAG 所做的工作。这两个角色都很重要，只是工作职责不同。这不是一篇宣传稿。CNCF 治理规定 TOC 成员不能同时担任 TAG 领导职位，因此我们三人加入 TOC 时都卸任了 TAG 领导职务。该规则的存在是有充分理由的：TAG 负责人与特定社区有深厚联系，在基金会层面做出项目生命周期决策时，这些联系会造成真正的利益冲突。这种分离使 TAG 的工作扎根于从业者，而非政治。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/05/26/how-jaeger-is-evolving-to-trace-ai-agents-with-opentelemetry/">Jaeger 如何通过 OpenTelemetry 实现 AI 智能体链路追踪</a><br>随着软件架构的演进，可观测性工具也必须随之适应。当行业转向微服务时，分布式追踪成为必要。Jaeger 成为了工程师理解这些碎片化系统的核心工具。现在，随着组织将生成式 AI 应用和自主智能体集成到生产中，追踪需求再次发生变化。映射 AI 智能体的执行路径涉及提示词组装、向量数据库检索和多次外部工具调用。&gt; “通过采用模型上下文协议 (MCP)、智能体客户端协议 (ACP) 和智能体-用户交互协议 (AG-UI)，该项目正在构建一个工程师与 AI 智能体可以协作的环境。”Jaeger 正在演进以应对这些新的工作负载。这一转型涉及两个主要阶段：首先，项目在 Jaeger v2 中重构了核心架构，以原生集成 OpenTelemetry。其次，Jaeger 正超越标准的数据可视化。通过采用模型上下文协议 (MCP)、智能体客户端协议 (ACP) 和智能体-用户交互协议 (AG-UI)，该项目正在构建一个工程师与 AI 智能体可以协作的环境。这有助于映射那些经常突破传统追踪工具限制的 AI 流水线的复杂执行路径。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/05/26/reconciling-unfixed-kubernetes-cves/">纠正过去：更正未修复的 Kubernetes CVE 记录</a><br>Kubernetes 项目依靠透明度来赋能集群管理员和安全研究人员。发布 CVE 记录到通用漏洞披露数据库是我们实现这一目标的重要方式。作为不断完善官方 Kubernetes CVE 订阅源工作的一部分，我们发现了一些差异。一些旧的、未修复问题的 CVE 记录错误地包含了“已修复版本”字段。Kubernetes 安全响应委员会 (SRC) 将于 2026 年 6 月 1 日更正受影响的 CVE 记录。这可能导致漏洞扫描器在之前未检测到的地方识别出这些漏洞。为了减少混淆，本文提供了三个在往年披露但至今未修复的漏洞的技术更新：**CVE-2020-8561**、**CVE-2020-8562** 和 **CVE-2021-25740**。## 我们为什么要现在更新这些记录尽管这些漏洞已公开多年，但最近为生成官方开源漏洞 (OSV) 文件所做的工作显示，它们对应的 CVE 记录并没有准确反映其状态。具体而言，一些记录暗示存在“已修复”版本，而实际上，这些问题是架构设计上的权衡，在不破坏 Kubernetes 基础功能的情况下无法通过代码完全修复。更正这些记录对于社区至关重要，原因如下：- **自动化准确性**：现代漏洞扫描器依赖于精确的版本范围。不准确的“已修复”标签会导致假阴性，给用户带来虚假的安全感。- **风险记录**：通过将这些正式化为“未修复”，我们确保平台提供商和管理员意识到持续需要行政缓解措施的必要性。</p>
+
+<p><a href="https://www.docker.com/blog/untrusted-autonomous-workload-ai-sandboxes/">不受信任的自主工作负载：AI 编码智能体如何重塑隔离的必要性</a><br>今年早些时候，我使用 Claude Code 将我的博客迁移到了 Astro。146 篇文章、6,024 张图片、规范 URL、JSON-LD 标记、站点地图生成，整个堆栈。我花了几个小时编写技能文件来教智能体关于我博客架构、部署工作原理以及什么不能触碰的知识。它奏效了，Claude Code 重写了组件，修复了数百个页面上的后缀斜杠不匹配问题，并为数百个路由添加了 BreadcrumbList 结构化数据。性能 Lighthouse 分数达到了 97 分。博客看起来比以往任何时候都要好。问题在于，我开始不再理解我自己的代码库了。并不完全是，我仍然可以阅读这些文件。但在“修复上一次修复引入的错误”的第三轮迭代中，我发现自己将堆栈跟踪信息复制粘贴回 Claude，并盲目信任返回的任何结果。智能体会做出更改，其他东西就会坏掉，我会让智能体修复那个问题，几个循环后博客又可以运行了。我根本说不出 PostCSS 配置里到底有什么，或者为什么 GA4 集成是那样连接的。它确实工作了，看起来很棒，但我对底层逻辑的信心已经悄然蒸发。那种感觉（它能用，谢天谢地，别碰它）就是让自主智能体真正访问你的代码库后的感受。每个使用这些工具的开发者都知道这一点。供应商的博客文章中没人写这个。这让我深刻理解了 Docker 为什么要构建沙箱。因为我没考虑到的是：当 Claude Code 在重写我的 Astro 组件并修复数百个文件中的图片布局偏移时，它运行的每一个 `npm install` 都是在我笔记本电脑上进行的。它修改的每个文件和拉取的每个包也是如此。我的用户权限没有任何边界。如果智能体决定修改 Git 钩子或重写 CI 工作流，我根本不会注意到。</p>
+
+<p><a href="https://devforth.io/insights/why-llms-will-be-always-terrible-at-software-architecture/">为什么大模型 (LLM) 在软件架构方面永远表现糟糕</a><br>AI 可以编写代码，但在架构开始的地方它仍然会失败：权衡、边界、故障模式和长期责任。这就是为什么软件架构师不会消失的原因。</p>
+
+<p><a href="https://blog.jetbrains.com/teamcity/2026/05/how-ai-agents-can-work-with-teamcity/">AI 智能体如何与 TeamCity 协同工作</a><br>在某个时刻，我们跨越了一个有趣的门槛。AI 智能体现在可以设置 TeamCity 构建配置，甚至完整的构建链、添加构建功能并配置参数。这之所以有效，是因为 TeamCity 的文档是通过 Context7 结构化并可通过 MCP 访问的，而且智能体可以依赖于 TeamCity CLI 和 `teamcity-cli` 技能等工具。我最近做了一些实验，看看在实践中这能走多远。## #1 寻求解决方案首先，我要求 ChatGPT 为客户需求提出解决方案。ChatGPT 通过 Context7 阅读了 TeamCity 文档，并提出了一个包含以下内容的方案：- 多个构建配置- 两个聚合构建- 组合它们的两个构建链- 基于文件扩展名的触发器- 工件和快照依赖项到目前为止，这就是你对一个强大的 LLM 的预期：一个相当扎实的设计。然后，我将这个解决方案传给 Codex，并要求它在我的个人 TeamCity Nightly 中实际完成所有设置。</p>
+
+<p><a href="https://dbos.dev/blog/postgres-is-all-you-need-for-durable-execution">Postgres 是实现持久化执行所需的一切</a><br>Postgres 是持久化工作流执行所需的一切持久化执行是构建可靠程序的简单但强大的工具。其理念是：随着程序运行，你会定期将进度检查点保存到数据库中。这样，如果程序崩溃或失败，你可以从上一个检查点重新加载，从上次完成的步骤恢复。这就像电子游戏中的存档：定期保存进度，以便崩溃时可以从上次存档点恢复。这在重启工作流代价高昂（例如 AI 工作流中的大模型 Token 使用）或会导致错误（例如电子商务工作流中的重复下单）时最有价值。最常见的情况是，持久化执行通过外部编排来实现。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/26/the-pressure/#atom-everything">压力</a><br>Daniel Stenberg 谈到了由于大量（可信的）AI 辅助安全问题报告的涌入，`curl` 团队目前正面临前所未有的压力。</p>
+
+<p><a href="https://blog.fnil.net/tma1-v2-agent-loop/">TMA1 v2：让智能体循环真正循环起来</a><br>TMA1 v2 添加了一个 MCP 服务器，增强了可自动注入构建/会话/异常上下文的钩子，以及 Claude Code 和 Codex 之间的跨智能体上下文共享。我之前写过关于 [TMA1](https://tma1.ai) 的文章——这是一个用于编码智能体的完全本地化的可观测性工具，内置了用于会话、工具调用、大模型调用、成本和异常的仪表板。我没有对它进行任何营销，但它静悄悄地收获了 80 多个 star 和几百次安装。在使用 v1 一段时间后，我开始遇到它无法解决的问题。首先是智能体之间的通信。我通常的设置是 Claude Code 负责计划、编码和测试，Codex 负责计划和代码审查。它们互动很多，但没有简单的方法在它们之间共享会话状态或上下文。我尝试过一些群聊风格的智能体协作工具，但群聊并不适合编码——部分原因是 API 成本，部分原因是所有的废话。编码工作实际上非常专注。它是一个严密的循环：特性 → 计划 → 代码 → 验证/测试 → 审查。</p>
+
+<p><a href="https://every.to/guides/codex-for-knowledge-work">用于知识工作的 Codex</a><br>Codex 很容易被低估。乍一看，它看起来像是另一个 AI 编码工具；如果你不是工程师，自然的结论是它不适合你。这种看法错过了 Codex 所带来的巨大可能性。想象一个周一早晨：一份发布计划的请求出现在你的收件箱里。你把它转发给……</p>
+
+<p><a href="https://yy8402.github.io/blog/agentic-ai-workspace/">从聊天机器人到智能体端点，以及更远的发展方向</a><br>聊天是开始与 AI 协作的最简单方式，但这并不是所有 AI 工作需要发生的地方。对于推理、草拟、总结、头脑风暴和规划，对话本身就可以作为工作空间。但我可以打开聊天界面，描述我想要的，迭代想法，并产出有用的结果，而不需要太多除了提示词和响应之外的东西。但许多实际任务需要的不仅仅是对话。它们需要文件、仓库、已安装的工具、Shell 命令、凭据、私有数据、浏览器会话、内部服务、配置的网络和持久状态。一旦任务跨越了这个边界，AI 系统需要的就不仅仅是一个聊天机器人。它需要一种将工作路由到正确执行上下文的方法。这就是我在 ChatGPT、CodeX 和类似系统中看到的转变。聊天仍然是最自然的人类接口。AI 模型服务提供推理和生成。执行沙箱提供有界计算。主要智能体操作真实的工作环境。随着时间的推移，这些环境变得更加具体：**智能体端点**。这种演变并不是每个 AI 产品或企业架构的完整分类，而是一个视角：AI 工作似乎正走向远离纯对话交互，走向受治理的环境，在这里智能体可以安全地访问上下文、使用工具、保持状态、遵循政策并产出可审计的工作。</p>
+
+<p><a href="https://arxiv.org/abs/2604.25917">递归多智能体系统</a><br> 递归或循环语言模型最近作为一种新的缩放轴出现，通过在潜在状态上迭代细化相同的模型计算来深化推理。我们将这种缩放原则从单个模型扩展到多智能体系统，并提出：智能体协作本身可以通过递归缩放吗？为此，我们引入了 RecursiveMAS，一个递归多智能体框架，将整个系统视为一个统一的潜在空间递归计算。RecursiveMAS 通过轻量级 RecursiveLink 模块将异构智能体作为协作循环连接起来，实现了分布内潜在思维生成和跨智能体潜在状态迁移。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步工具</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>Prometheus 监控系统和时序数据库。</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的指挥官工具</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源、自托管实现</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>一个将你所有的订阅源汇集到一处的自托管仪表板</p>
+
+<p><a href="https://github.com/BenedictKing/ccx">BenedictKing/ccx</a><br>Claude / Codex / Gemini API 智能体 - CCX</p>
+
+<p><a href="https://github.com/GhostTroops/scan4all">GhostTroops/scan4all</a><br>官方漏洞扫描仓库：包含 15000&#43; PoC；23 种应用程序密码破解；7000&#43; Web 指纹；146 种协议和 90000&#43; 条规则的端口扫描；模糊测试、硬件扫描、超赞的漏洞赏金工具 ( ͡° ͜ʖ ͡°)...</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常用断言和 Mock 的工具包，与标准库完美兼容</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go 结构体和字段验证，支持跨字段、跨结构体、Map、切片和数组深度验证</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>功能强大的 Go 配置解决方案</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

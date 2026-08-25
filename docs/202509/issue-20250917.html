@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250917.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250917</span>
+</p>
+<p>每日一谚：Write tests that are easy to understand and maintain </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/17/some-things-i-keep-repeating-about-go">Dave Cheney复出首谈：那些我反复强调的Go编程模式</a><br>在阔别公众视野数年后，Go 社区的传奇人物 Dave Cheney 终于重返 GopherCon Europe 的舞台，发表了一场备受瞩目的复出首谈。这场题为《那些我反复强调的 Go 编程之事》的演讲，没有追逐时髦的技术热点，而是选择回归编程的本源，分享了他十五年 Go 编程生涯中，那些被反复实践、验证并沉淀下来的核心理念。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/Ea9WCC8PNl0MMyE1osZ4kw">【Go系统编程】05 经典管道：匿名管道与命名管道 (FIFO) 的 Go 实现</a><br>今天，我们将深入管道的世界，彻底揭秘两种经典的管道</p> 
+
+<p><a href="https://go.dev/blog/survey2025-announce">调查时间到！Go 对你来说好用吗？</a><br>帮助塑造 Go 的未来</p> 
+
+<p><a href="https://dev.to/andrei-polukhin/pgdbtemplate-fast-postgresql-test-databases-in-go-using-templates-138n">pgdbtemplate – 使用 Go 和模板快速进行 PostgreSQL 测试数据库</a><br>厌倦了等待您的测试套件缓慢地一遍又一遍地创建和迁移 PostgreSQL 数据库……</p> 
+
+<p><a href="https://tanelpoder.com/posts/optimizing-ebpf-biolatency-accounting">在 384 CPU 服务器上运行 37M IOPS 时优化 eBPF I/O 延迟计数</a><br>在这篇文章中，我将介绍一种在 Linux 上使用 eBPF 计算块 I/O 延迟的更有效的方法。在我的压力测试中，与当前的 biolatency 方法相比，新的 biolatency 计数方法具有 59 倍更低的 CPU 和探针延迟开销。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/mcp-security-explained/">MCP Security: Risks, Challenges, and How to Mitigate</a><br>MCP security refers to the controls and risks that govern how agents discover, connect to, and execute MCP servers.</p>
+
+<p><a href="https://blog.dropbox.com/topics/work-culture/shipwreck-hunting-ai-robots-katie-skinner-stephanie-gandulla">对于这些追寻沉船的“人类”，人工智能是船员的一部分</a><br>凯蒂·斯金纳开发机器人。 斯蒂芬妮·甘杜拉研究沉船。 借助人工智能，他们可以减少搜索时间，把更多时间花在探索上——正如人类所能做的那样。</p>
+
+<p><a href="https://blog.codingnow.com/2025/09/update_blog_utf8.html">有惊无险的一次网站系统升级</a><br>好消息是：这个 blog 终于是 UTF-8 编码了。前些年老有人问我能不能把 RSS 输出改成 UTF-8 的，很多 RSS 阅读器不支持 gbk ，这次终于改过来了。
+
+事情源于昨天下午的一次脑抽，我把网站机器的操作系统升级了。上次升级还是十多年前，真的是太老旧了。结果升完级一看，php 被强制升到了 7 ，我自己写的一些 php 程序（主要是留言板）坏掉了。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/16/kubernetes-v1-34-volume-group-snapshot-beta-2/">Kubernetes v1.34: 移动卷组快照到 v1beta2</a><br>卷组快照作为 Kubernetes 1.27 版本的 Alpha 功能引入，并在 Kubernetes 1.32 版本中移至 Beta。最近发布的 Kubernetes v1.34 将该支持移至第二个 Beta 版本。卷组快照的支持依赖于一组用于组快照的扩展 API。这些 API 允许用户为一组卷拍摄崩溃一致性快照。在幕后，Kubernetes 使用标签选择器对多个 PersistentVolumeClaims 进行分组以进行快照。</p>
+
+<p><a href="https://blog.codingconfessions.com/p/what-makes-system-calls-expensive">系统调用的代价：深入研究 Linux 内部机制</a><br>解释了 Linux 如何在 x86-64 架构上处理系统调用，以及为什么它们在性能分析中显示为昂贵的操作。</p>
+
+<p><a href="https://engineering.monday.com/from-8-years-down-to-6-months-how-we-built-ai-to-split-the-monday-com-monolith">从 8 年到 6 个月：我们如何构建 AI 来拆分 monday.com 单体架构</a><br>在 monday.com，我们面临着一个曾经看似不可能的挑战——拆分我们庞大的 JavaScript 客户端单体架构，这项任务最初估计需要 8 个人年的手动工作。借助 Morphex，我们的 AI 驱动的迁移系统，我们将这一可怕的时间表缩短至仅仅 6 个月。</p>
+
+<p><a href="https://davidbessis.substack.com/p/writing-is-hard-and-it-should-be">写作很难——而且应该如此</a><br>阐明你的思维的痛苦艺术</p>
+
+<p><a href="https://dayvster.com/blog/in-defense-of-cpp">C&#43;&#43;辩护</a><br>为什么C&#43;&#43;在当今的科技领域仍然是一种强大且相关的编程语言。</p>
+
+<p><a href="https://anthonybatt.com/the-creator-advantage">创作者的优势</a><br>停止学习编码。开始建立一个受众。 这就是为什么未来属于创作者。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-09-17-three-cheers-for-ai-image-generation">欢呼人工智能图像生成</a><br>创建好的营销文案很难，特别是与文案相关的图像。好消息是人工智能图像生成技术变得越来越好。虽然它还不足以制作出产品图像，但它足以帮助创意过程。我用它来向我们的设计师发送更充实的想法。本文介绍了两个例子。</p>
+
+<p><a href="https://github.blog/ai-and-ml/github-copilot/meet-the-github-mcp-registry-the-fastest-way-to-discover-mcp-servers">GitHub MCP 注册表：发现 MCP 服务器的最快方法</a><br>这是您发现 MCP 服务器的新家。了解我们如何与更广泛的社区合作进行 MCP 发布和发现。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/how-tech-companies-measure-the-impact-of-ai">科技公司如何衡量 AI 对软件开发的影响</a><br>GitHub、Google、Dropbox、Monzo、Atlassian 和其他 13 家公司如何衡量 AI 工具对开发者的作用？深入探讨，分享独家细节，与 CTO Laura Tacho 一起深入探讨。</p>
+
+<p><a href="https://www.latent.space/p/2025-papers">2025 年 AI 工程师阅读清单</a><br>我们挑选了涵盖 AI 工程领域 10 个领域的 50 篇论文/模型/博客：LLM、基准、提示、RAG、代理、代码生成、视觉、语音、扩散、微调。 如果你从头开始，请从这里开始。</p>
+
+<p><a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol">宣布代理商支付协议 (AP2)</a><br>了解有关代理商支付协议 (AP2) 的更多信息，这是一个基于 Agent to Agent Protocol 的开放协议。AP2 由 Google 与领先的支付和技术公司合作开发，用于在各个平台上安全地发起和处理代理商主导的支付。</p>
+
+<p><a href="https://moonshotai.github.io/checkpoint-engine">Kimi K2 如何实现高效 RL 参数更新</a><br>从10分钟到20秒的技术突破 - Checkpoint Engine 高性能参数更新方案</p>
+
+<p><a href="https://www.anthropic.com/research/anthropic-economic-index-september-2025-report">Anthropic Economic Index report: Uneven geographic and enterprise AI adoption \ Anthropic</a><br>为了研究早期AI的采用模式，我们从两个重要方面扩展了Anthropic经济指数，介绍了对Claude.ai对话的地域分析，以及对企业API使用的首次检查。我们展示了Claude的使用如何随着时间的推移而演变，不同地区的采用模式如何不同，以及——首次——公司如何部署前沿AI来解决业务问题。</p>
+
+<p><a href="https://blog.logrocket.com/vibe-coding-vs-prompt-engineering">杀死氛围编码并带回提示工程</a><br>氛围编码正在流行，但它可持续吗？探索为什么提示工程对于构建可靠、高质量的 AI 应用程序仍然重要。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>⛑ Automated developer-oriented status page</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>A task runner / simpler Make alternative written in Go</p>
+
+<p><a href="https://github.com/donetick/donetick">donetick/donetick</a><br>Donetick an open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/expr-lang/expr">expr-lang/expr</a><br>Expression language and expression evaluation for Go</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/prometheus/blackbox_exporter">prometheus/blackbox_exporter</a><br>Blackbox prober exporter</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

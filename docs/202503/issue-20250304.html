@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250304.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250304</span>
+</p>
+<p>每日一谚：Write code that is easy to optimize, not code that needs to be optimized. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://depot.dev/blog/go-remote-cache">Go 1.24远程缓存详解</a><br>Go 1.24 引入了外部缓存机制，允许编译器将缓存管理卸载到外部程序。这种细粒度的处理方法提高了构建效率。本文深入探讨了其底层工作原理，以及如何结合 Depot 提升 Go 编译速度。</p> 
+
+<p><a href="https://blog.devgenius.io/avro-vs-protocol-buffers-in-golang-20991b0b35d5">Go语言中Avro与Protocol Buffers的比较</a><br>分布式系统中的数据序列化是许多程序的重要组成部分。在选择最佳格式时，有多种解决方案。本文将讨论两种主要的数据序列化格式：Avro和Protocol Buffers。</p> 
+
+<p><a href="https://dev.to/esprit_codes/api-testing-through-simulations-2fgf">通过模拟进行 API 测试</a><br>API 测试是软件开发中一个具有挑战性的方面。本文探讨了针对真实 API（生产环境、登台环境或沙盒环境）进行测试的挑战，例如网络可靠性、延迟、资源消耗和环境稳定性。文章介绍了 Hoverfly——一个轻量级的开源 API 模拟工具，可以记录与真实 API 的交互，并将其用于未来的测试运行。文章还提供了一个使用 Go 语言、OpenAPI Generator 和 Docker 的示例，演示了如何设置测试环境、编写测试、使用 Hoverfly 记录和重放 API 交互，并验证设置。最后，文章概述了该方法的优点，例如提高测试可靠性、减少资源消耗，以及在所有环境中实现一致的测试执行。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.joshsoftware.com/2025/03/03/securely-connecting-a-local-postgresql-database-using-teleport-community-edition/">使用 Teleport 社区版安全连接本地 PostgreSQL 数据库</a><br>Teleport 是一个开源访问平台，旨在增强对服务器、Kubernetes 集群和数据库等基础设施组件的安全性和易访问性。它提供基于身份的访问管理、会话记录和基于角色的访问控制 (RBAC) 等功能。Teleport 简化了安全访问资源的过程，同时确保符合现代安全标准。本指南将介绍如何配置 Teleport 社区版以安全地连接到本地 PostgreSQL 数据库，步骤包括设置 Teleport、配置 TLS 身份验证、定义角色以及建立安全连接。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/03/04/sig-etcd-spotlight/">聚焦 SIG etcd | Kubernetes</a><br>本文介绍了 Kubernetes 特别兴趣小组 SIG etcd。文章采访了 James Blair、Marek Siarkowicz、Wenjia Zhang 和 Benjamin Wang，深入了解了该小组的成立背景、工作成果以及未来规划。SIG etcd 的成立是为了解决 etcd（Kubernetes 的数据存储）面临的维护人员变动和可靠性问题，并使其与云原生环境保持同步发展。成为 SIG 后，etcd 在开发流程、社区参与度和可靠性方面都取得了显著进步。未来，SIG etcd 将继续专注于 etcd 的可靠性、易用性和可扩展性，并将其发展成为一个独立的、适用于基础设施管理的解决方案。</p>
+
+<p><a href="https://rivet.gg/blog/2025-02-16-sqlite-on-the-server-is-misunderstood">服务器上的 SQLite 被误解了：在大规模应用中比小型应用更好</a><br>Rivet 团队分享了他们最近对服务器端 SQLite 的研究成果，认为 SQLite 的优势在于其在大规模应用中的可扩展性，而不是经常被提及的小型业余项目。文章比较了传统分片数据库（如 Cassandra、ScyllaDB 等）和基于 Cloudflare Durable Objects 和 Turso 的 SQLite 数据库，探讨了后者在动态扩展、成本、全局分发和数据一致性方面的优势，并指出了 SQLite 在大规模应用中仍面临的一些挑战，例如缺乏开源自托管解决方案以及有限的数据库工具。</p>
+
+<p><a href="https://travisdowns.github.io/blog/2019/06/11/speed-limits.html">性能速度限制</a><br>本文讨论了代码在 CPU 上执行时可能遇到的各种性能瓶颈，并提供了一些提高性能的建议。文章列举了诸如流水线宽度、端口/执行单元限制、内存相关限制（包括负载吞吐量限制、存储吞吐量限制、总访问次数限制、复杂寻址限制）、内存和缓存带宽、依赖链、前端效应、分支以及乱序执行限制等多种可能限制代码执行速度的因素。针对每种限制，文章都提供了一些具体的数字（主要来自 Intel x86 CPU），并提出了相应的解决方法，例如代码优化、向量化、微融合、指令替换、缓存优化、软件预取等。</p>
+
+<p><a href="https://bufferbuffer.com/why-writing-small-docs-is-a-game-changer">撰写简短文档为何能改变游戏规则</a><br>在软件开发中，许多人都提倡撰写简短的提交说明和文档。本文探讨了撰写简短文档的益处，例如更快的审查、更全面的反馈、更低的被拒风险以及更轻松的与其他工作整合。文章还介绍了如何撰写简短文档，包括关注单一主题、提供足够的背景信息以及避免过度简化等指导原则。此外，文章还提出了避免审查阻塞工作流程的策略，例如并行撰写、与审查者协作以及先撰写背景文档等。最后，文章还讨论了如何管理多个简短文档的挑战，例如有效的组织、链接相关内容以及维护文档整洁性等。</p>
+
+<p><a href="https://blog.joemag.dev/2025/03/the-trouble-with-leader-elections-in.html">分布式系统中领导者选举的难题</a><br>在分布式系统中，领导者选举算法通常用于选择一个或几个主机作为领导者来执行跨系统任务。文章探讨了基于租约的领导者选举算法的优缺点。主要缺点包括：爆炸半径（单个领导者故障影响整个系统）、活性与领导者分裂之间的张力（租约时间过短或过长带来的问题）、活性与伪领导者之间的张力（领导者能获取租约但无法执行任务）。文章建议，如果这些问题不构成严重威胁，领导者选举仍然是简单有效的方案；否则，可以考虑使用本地化领导者、幂等协同领导者或不同的架构（如消息队列、平台功能、事件驱动方法）来替代。</p>
+
+<p><a href="https://clickhouse.com/blog/json-bench-clickhouse-vs-mongodb-elasticsearch-duckdb-postgresql">十亿文档 JSON 挑战：ClickHouse 对比 MongoDB、Elasticsearch 等</a><br>本文探讨了 ClickHouse 新的 JSON 数据类型如何以无与伦比的存储效率和闪电般的查询速度超越领先的 JSON 数据库，同时将 JSON 数据存储在单个字段中，并忠实于 JSON 数据库的承诺。基准测试结果显示，ClickHouse 在存储和查询 10 亿个 JSON 文档方面，在存储效率和聚合速度上均显著优于 MongoDB、Elasticsearch、DuckDB 和 PostgreSQL。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Mar/4/llm-ollama-090/#atom-everything">llm-ollama 0.9.0</a><br>llm-ollama 0.9.0 版本发布，此版本增加了对模式的支持，这要感谢 Adam Compton 的 PR。Ollama 通过其结构化输出功能为此模式提供了非常强大的支持，该功能通过拦截输出下一个标记的逻辑并将其限制为仅在提供的模式上下文中有效的标记来实现。安装 Ollama 和 llm-ollama 后，甚至可以对本地模型的视觉提示运行结构化模式。</p>
+
+<p><a href="https://justin3go.com/posts/2025/03/03-front-end-self-sufficient-ui-design-claude-ai-version">前端自给自足UI设计稿（Claude AI 版本）</a><br>本文介绍了如何利用 Claude AI（特别是 3.5 版本）辅助前端开发者进行 UI 设计。作者以健康类 APP 为例，通过简单的提示词，引导 AI 分模块生成首页概览、运动计划、饮食管理和社区功能等界面设计。为了提高效率，提示词中特别强调了使用 Tailwind CSS、Lucide Static CDN 和将页面整合在同一个 HTML 文件中。文章还对比了 GPT-4o 和 DeepSeek 等其他模型在该场景下的表现，并分享了提示词和一些小技巧。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/eksctl-io/eksctl">eksctl-io/eksctl</a><br>The official CLI for Amazon EKS</p>
+
+<p><a href="https://github.com/kubernetes/dashboard">kubernetes/dashboard</a><br>General-purpose web UI for Kubernetes clusters</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge.</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/go-kit/kit">go-kit/kit</a><br>A standard library for microservices.</p>
+
+<p><a href="https://github.com/google/cadvisor">google/cadvisor</a><br>Analyzes resource usage and performance characteristics of running containers.</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

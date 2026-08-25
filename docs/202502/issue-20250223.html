@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250223.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250223</span>
+</p>
+<p>每日一谚：Go is not theoretically exciting on the surface, but it&#39;s very useful in real life. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://open-note-2uog.vercel.app/post/5cd44eb0-a52c-462b-8561-7404c1cf1af2">C、C&#43;&#43;、Go和Rust的性能基准测试：编译和运行时性能的深入探讨</a><br>这篇博文对C、C&#43;&#43;、Go和Rust这四种编程语言的编译和运行时性能进行了基准测试。测试使用了Hyperfine测量编译时间，并使用Perf Stat分析了执行时间、CPU利用率、指令、周期、分支行为和微体系结构瓶颈等运行时性能指标。结果显示，C语言的编译速度最快，而Go语言的运行速度最快。文章详细分析了每种语言的性能表现，并总结了每种语言在不同场景下的优缺点。</p> 
+
+<p><a href="https://medium.com/@timerring/go-cheatsheet-c05d7cace2c7">Go语言速查表</a><br>这份 Go 备忘清单涵盖了 Go 语言的语法、依赖管理（go get、go vendor、go module）、数据类型、运算符、if 语句、switch 语句、select 语句、for 语句、数组、切片、映射、range 关键字、函数（包括 lambda 函数和闭包）、defer 关键字、指针、结构体、异常处理、错误处理、字符串操作、fmt 包、json 包和 time 包以及 strconv 包和 os 包的使用方法。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2025/making-any-integer-with-four-2s/">用四个2表示任意整数</a><br>这篇文章介绍了一个有趣的数学谜题：使用四个2和任何数学运算来生成目标自然数，而不用其他数字。文章从简单的例子开始，逐步介绍更高级的数学方法，例如指数、阶乘、伽马函数和复数，最终给出了一个通用的公式，可以使用四个2表示任意整数。文章还提到了保罗·狄拉克找到了这个谜题的通用解法。</p> 
+
+<p><a href="https://dev.to/tuna99/go-124-and-the-swiss-table-revolution-a-new-era-for-maps-1pdj">Go 1.24和swiss table：map的新时代</a><br>Go 1.24 版本在性能优化方面取得了重大飞跃，这次的目标是其最基本的数据结构之一：map。受 Google 高性能瑞士表（在 C&#43;&#43; 的 Abseil 库中流行）的启发，Go 团队重新设计了其 map 实现的内部结构，以实现更快的查找、更低的内存开销和更好的缓存利用率。此更改标志着 Go 处理哈希表方式的关键转变，它解决了长期存在的低效率问题，同时采用了现代哈希表设计原则。让我们深入了解这种转换是如何工作的以及它为什么重要。</p> 
+
+<p><a href="https://dev.to/saleh_rahimzadeh/zero-allocation-in-go-golang-237k">Go语言中的零分配</a><br>Go语言的垃圾回收器（GC）是一个简化内存管理、防止内存泄漏并消除手动释放内存需求的关键特性。然而，GC是有代价的。在高性能应用程序中，即使短暂的GC暂停也会导致延迟和抖动，这可能会成为瓶颈。对于实时系统，通常需要优先考虑性能而不是GC的简单性。为了解决这个问题，开发者可以使用零分配编程——一种最大限度地减少或完全避免堆分配的技术，从而减少GC开销。这种方法包括通过高效的分配策略优化内存使用，从而实现更快、更可预测的Go应用程序。本文将探讨减少堆分配、优化内存效率以及编写高性能Go代码的实用方法。</p> 
+
+<p><a href="https://dev.to/ocodista/go-124-uses-swiss-table-what-are-they-3c2l">Go 1.24 使用 Swiss 表，它们是什么？</a><br>Go 1.24 版本用新的哈希表实现“Swiss 表”（或 flat_hash_map）取代了旧的 Map 实现。Swiss 表是一种更缓存友好、更高效（内存占用更少）的映射方式，它使比较和插入操作更快。它还使用不同的冲突处理策略：优化的线性探测，取代了之前的链式方法。文章详细解释了旧的 Map 实现（链式方法）以及新的 Swiss 表实现（线性探测），并对两种方法进行了比较，包括性能基准测试结果。此外，文章还介绍了 2025 年 1 月发表的一篇关于开放寻址的新论文，该论文提出了一种名为弹性哈希的新方法，理论上比线性探测更好。</p> 
+
+<p><a href="https://dev.to/micromax/beyond-basics-building-a-more-powerful-container-in-go-network-isolation-advanced-features-3674">Go语言进阶：构建更强大的容器——网络隔离和高级特性</a><br>本文深入探讨了使用Go语言构建容器的进阶技巧，重点介绍了网络隔离和高级特性。作者回顾了之前的文章，并介绍了一个更强大的容器架构，包括用户CLI、容器守护进程、容器运行时、镜像服务、网络管理器和存储驱动程序等核心组件及其功能。文章还详细解释了网络隔离的实现过程，包括创建网络命名空间、设置虚拟网络接口以及配置NAT规则等步骤，并提供了相应的Go代码示例。此外，文章还讨论了常见问题和调试方法，以及安全注意事项，例如网络隔离和资源清理。最后，文章提供了获取系统文件镜像和安装软件的方法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/revisiting-docker-hub-policies-prioritizing-developer-experience/">重新审视 Docker Hub 策略：优先考虑开发者体验</a><br>Docker 致力于确保 Docker Hub 仍然是开发者、工程团队和运营团队构建、共享和协作的最佳场所。为此，我们之前宣布了推出镜像拉取消费费用和基于存储的计费计划。在进一步评估开发者如何使用 Docker Hub 以及什么最能支持生态系统之后，我们已经改进 了我们的方法——一种优先考虑开发者体验并使开发者能够充满信心地扩展规模，同时巩固 Docker Hub 作为云原生生态系统基础的方法。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Feb/23/tailscale-exit-node-with-github-actions/#atom-everything">使用 Tailscale 出口节点与 GitHub Actions</a><br>一篇新的每日学习笔记。作者开始使用 git scraper 监控 doge.gov 网站的更改。由于 DOGE 网站位于 Cloudflare 后面，会阻止来自 GitHub Actions IP 范围的请求，作者找到了一个方法，即在其 Apple TV 上运行 Tailscale 出口节点，并用它来代理 shot-scraper 请求。该 scraper 运行在 simonw/scrape-doge-gov。它使用了作者在 shot-scraper 1.6（并在 shot-scraper 1.7 中改进）中添加的新 shot-scraper har 命令。</p>
+
+<p><a href="https://magazine.sebastianraschka.com/p/understanding-reasoning-llms">理解推理大型语言模型</a><br>本文介绍了构建推理模型的四种主要方法，以及如何增强大型语言模型的推理能力。作者希望本文能提供有价值的见解，帮助读者理解这一快速发展的领域。文章涵盖了推理模型的定义、优缺点，DeepSeek R1 的方法论，构建和改进推理模型的四种主要方法，以及在预算有限的情况下开发推理模型的技巧。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>An engine to run your pipelines in containers</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/veops/oneterm">veops/oneterm</a><br>Provide secure access and control over all infrastructure</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/beego/beego">beego/beego</a><br>beego is an open-source, high-performance web framework for the Go programming language.</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/subtrace/subtrace">subtrace/subtrace</a><br>Wireshark for Docker containers</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/loft-sh/vcluster">loft-sh/vcluster</a><br>vCluster - Create fully functional virtual Kubernetes clusters - Each vcluster runs inside a namespace of the underlying k8s cluster. It&#39;s cheaper than creating separate full-blown clusters and it offers better multi-tenancy and isolation than regular namespaces.</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit and Integration Test generation for Developers. Generate tests and stubs for your application that actually work!</p>
+
+<p><a href="https://github.com/teamhanko/hanko">teamhanko/hanko</a><br>The Complete Authentication and User Management Solution for the Passkey Era. Open Source Alternative to Clerk, Auth0, et al.</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.</p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>Generate type-safe code from SQL</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

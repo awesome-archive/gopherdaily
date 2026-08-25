@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260509.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260509</span>
+</p>
+<p>每日一谚：Use interfaces for what they are: contracts, not abstract classes. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/09/cli-printing-press-intro">火爆外网的 Go 开源神器 CLI Printing Press：一键生成 Agent 专属 CLI 工具</a><br>近日，一个名叫 cli-printing-press 的开源项目冲上了 X.com 热搜。它用 Go 写成，解决的是 AI Agent 时代最隐秘、也最致命的痛点——工具不够用，更不好用。</p> 
+
+<p><a href="https://blog.andr2i.com/posts/2026-05-03-notes-from-optimizing-cpu-bound-go-hot-paths">关于优化 CPU 密集型 Go 热路径的笔记</a><br>Go 在很多方面都做得很好，这也是我热爱 Go 的原因。但在将 Brotli 移植到纯 Go（go-brrr）的过程中，我不断遇到同样的模式：惯用的抽象使得热路径变慢，而最快的版本往往是手工重复和专门优化的。
+
+## 缺乏零成本抽象
+在优化的热循环中，泛型、多态调度（通过接口）和闭包往往阻止编译器产生与具体版本相同的代码。原因是 Go 在我使用的形态下不会内联这些调用。是的，编译器有时可以内联直接闭包调用或对接口调用进行去虚拟化，但在我实际遇到的模式中它没有这样做，我不得不承担调用的开销。接口调用无法内联的原因很清楚，它们支持在运行时而非编译时切换实现。但泛型允许在编译时切换实现。如果你来自 C&#43;&#43; 或 Rust 等语言，你会期望泛型函数被单态化（所有变体在编译时预先生成为具体函数），但在 Go 中至少在目前形式下不会发生。Go 使用了称为“GC Shape Stenciling”的方法，其中部分内容在编译时预生成，但类型参数的方法调用最终通过接口风格的调度进行。内联的不可能性在提案中已解决：一个例外是方法调用无法在编译时完全解析……在原本可以使用完全模板化的情况下，内联不会发生。</p> 
+
+<p><a href="https://moq.dev/blog/webrtc-is-the-problem/">WebRTC就是那个问题</a><br>OpenAI 最近发布了一篇技术博客，这让我很受触动。你不应该复制 OpenAI，我不认为你应该将 WebRTC 用于语音 AI。WebRTC 是个问题。
+
+大约 6 年前我在 Twitch 写过一个 WebRTC SFU，最初我们像 OpenAI 一样使用 Pion（Go），但在基准测试显示它太慢后进行了分叉。大约一年前，我在 Discord 用 Rust 重写了 WebRTC SFU。
+
+WebRTC 由 2000 年代初期的约 45 个 RFC 组成，还有一些实际上是草案的标准。WebRTC 不适合语音 AI。WebRTC 的设计初衷是在网络条件不佳时降级并丢弃数据包，如果你在电话会议中听到失真的音频，那就是 WebRTC。它的理念是会议依赖快速互动，因此暂停等待音频是不可接受的。</p> 
+
+<p><a href="https://entire.io/blog/new-cli-commands-recap-review-labs">新 CLI 命令回顾：review labs</a><br>使用 Agent 构建可以帮助你快速行动，但围绕审查生成的代码和理解过去会话的实践仍然是临时的。Entire CLI 现在包含三个新命令，为该循环带来了更多结构：entire recap、entire review 和 entire labs。
+
+## 回顾最近的 Agent 活动
+entire recap 是对你和你的团队如何在代码库中使用 AI 的逐个 Agent 分解。你可以选择日期窗口，并在个人、团队和并排比较视图之间切换。通过 entire login 登录后，entire recap 默认打开一个交互式 TUI。
+
+## 用多个 Agent 审查你的分支
+entire review 会针对当前分支运行你配置的审查技能。当运行开始时，命令会打印一个范围横幅，并将每个提交的检查点历史记录串联到 Agent 的提示词中。这为 Agent 提供了更改背后的上下文。你还可以配置多个 Agent，例如 Claude Code 和 Codex，entire review 将在实时的 TUI 仪表板中并行调度它们。</p> 
+
+<p><a href="https://blog.gaborkoos.com/posts/2026-05-08-The-Go-Compiler-a-Deep-Dive-Into-How-Your-Code-Becomes-a-Binary/">Go 编译器：深入探讨你的代码如何成为二进制文件</a><br>Go 编译器：深入探讨你的代码如何成为二进制文件。这是一篇很长的深度分析文章，涵盖了从词法分析、语法分析、类型检查到中间表示（IR）、SSA、优化阶段以及最终代码生成的全过程。</p> 
+
+<p><a href="https://blainsmith.com/articles/just-fucking-use-go/">就用Go语言好了，别他妈的废话了</a><br>你知道什么能在两秒内编译、作为单个二进制文件部署、并且不会在凌晨 3 点因为 npm 的传递依赖被撤回而崩溃吗？是 Go。Go 已经存在了十多年，就等着你停止把后端开发过度复杂化。
+
+## 语言特意设计的枯燥
+你知道为什么 Go 感觉枯燥吗？因为事实就是这样，这正是重点。没有装饰器、元类、宏或特征。只有结构体、函数、接口、Goroutines 和通道。仅此而已。枯燥意味着你上个月雇佣的初级工程师可以阅读两年前主管写的代码。它是为了生产力而生的。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/08/benchmarking-ai-agent-retrieval-strategies-on-kubernetes-bug-fixes/">在 Kubernetes 错误修复中基准测试 AI Agent 检索策略</a><br>我一直在日常工程工作流程中使用 AI 编码 Agent，并想了解它们在实际 Bug 上的表现。为了测试这一点，我使用 Kubernetes 仓库中的错误报告进行了一系列结构化实验。我最初的假设很简单：成功主要取决于检索。无论是通过检索增强生成（RAG）还是文件系统搜索，能找到正确代码的模型应该就能生成正确的修复。但事实证明并非如此，瓶颈不仅在于寻找代码，还在于在上下文中对其进行推理。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/05/08/kubernetes-v1-36-volume-group-snapshot-ga/">Kubernetes v1.36：将卷组快照推向 GA</a><br>卷组快照在 Kubernetes v1.27 发布时作为 Alpha 功能引入，并在 v1.32 进入 Beta，现在在 Kubernetes v1.36 中，卷组快照的支持已达到正式可用（GA）状态。卷组快照允许用户为一组卷进行崩溃一致性快照，这对于恢复基于崩溃一致性恢复点的工作负载至关重要。此功能仅支持 CSI 卷驱动程序。</p>
+
+<p><a href="https://seangoedecke.com/ai-makes-weak-engineers-less-harmful/">AI 让弱小的工程师变得不那么具有破坏性</a><br>软件工程能力呈现强烈的重尾分布。最强的工程师产出的有用成果远超平均水平，而最弱的工程师往往是负贡献。Claude Code 改变了这一点。虽然前沿 LLM 可能缺乏强力工程师的品味或系统熟悉度，但它们绝对提高了弱小工程师的下限。至少它们生成的代码在逐行层面上是功能性的，不再是那种明显错误且无法通过审查的垃圾。</p>
+
+<p><a href="https://cilium.io/blog/2026/05/06/securing-cicd-open-source-lessons-from-cilium/">确保开源项目的 CI/CD 流程安全：来自 Cilium 的启示</a><br>Cilium 被广泛应用于数百万个 Kubernetes 容器的核心网络架构中。如果我们的供应链遭到破坏，其影响范围将极为广泛。我们一直在努力加强项目对这种情况的防御能力，现在想详细记录下我们所采取的措施。其中大部分措施并非 Cilium 所独有：任何在 GitHub Actions 上使用 CI/CD 流程的开源项目都可以借鉴这些方法。同时，我们也指出了自己尚存在的不足之处，希望这些能成为他人改进工作的参考。</p>
+
+<p><a href="https://notnotp.com/notes/use-protocols-not-services/">使用协议，而不是服务</a><br># 使用协议，而不是服务
+互联网设计的初衷是匿名且保护隐私的。现在，通信集中在封闭平台上，导致身份识别成为可能。是时候再次开始使用协议而不是服务了。政府若想识别用户、审查内容，只需对一家公司发函。而在去中心化的协议（如 IRC, XMPP, ActivityPub, Nostr, Matrix）上，没有单一实体可被强制，政府将面临立法和执行上的不可能。</p>
+
+<p><a href="https://www.opu.rocks/blog/nginx-complete-guide-and-cheatsheet">nginx 完整指南和速查表</a><br>Nginx 是一个功能强大的高性能 Web 服务器和反向代理服务器，因其速度、可扩展性和灵活性而广受欢迎。在本指南中，我将尝试涵盖从安装到配置、安全和性能优化的所有必要知识。Nginx 采用事件驱动的异步架构，可以高效处理数千个并发连接。</p>
+
+<p><a href="https://www.notion.com/blog/how-we-made-notion-available-offline">我们是如何让 Notion 支持离线使用的</a><br>去年 8 月，我们宣布用户可以在没有网络连接的情况下创建、编辑和查看 Notion 页面。“离线模式”是我们多年来最受请求的功能，但 Notion 独特的块（Block）架构意味着我们必须解决关于引用跟踪、后台同步和富文本冲突解决等多个极具挑战的问题。这篇文章探讨了将离线模式从构思变为生产就绪功能的架构和数据模型。</p>
+
+<p><a href="https://www.sigops.org/2026/can-llms-model-real-world-systems-in-tla/">大模型可以用TLA&#43;为真实世界系统建模吗</a><br>AI 正在推动计算机系统应用形式化方法的边界。Specula 团队分享了他们评估 LLM 对系统代码进行建模的经验，特别是在使用 TLA&#43; 这种用于并发和分布式系统的规范语言进行代理模型检查时。他们发现测试 LLM 是否能从复杂的实现中抽象出逻辑并将其转化为正确的形式模型是一个极大的挑战。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything">使用 Claude Code：HTML 的不合理有效性</a><br>Thariq Shihipar（Anthropic Claude Code 团队成员）提倡使用 HTML 而非 Markdown 作为 Claude 的输出格式。他认为 HTML 允许 Claude 插入 SVG 图表、交互式小部件、页内导航等，使信息更易于阅读和导航。这引发了关于 Agent 交互方式的重新思考。</p>
+
+<p><a href="https://www.infoworld.com/article/4160404/small-language-models-rethinking-enterprise-ai-architecture.html">小语言模型：重新思考企业 AI 架构</a><br>随着 LLM 达到规模和成本的极限，专门化的小语言模型（SLM）正作为自主企业中更快、更便宜且更私密的主力军出现。</p>
+
+<p><a href="https://crawshaw.io/blog/agent-principal-agent">Agent 的委托人-代理问题</a><br>代码审查制度正处于崩溃边缘。传统的“审查-提交”流程在人类协作中运行良好，但当引入 AI Agent 时，审查工作量翻倍。如果我们只是在现有流程中插入一个 Agent，效率会降低。我们需要重新思考代码审查，以应对 Agent 时代带来的挑战。</p>
+
+<p><a href="https://www.anthropic.com/research/natural-language-autoencoders">自然语言自动编码器</a><br>我们将自然语言自动编码器（NLAs）引入为一种理解 AI 模型激活状态的方法。这些编码器将 Claude 内部复杂的神经网络激活数据直接转换为人类可读的自然语言文本，从而让我们能够直观地看到 AI 在完成任务时的思考过程，如在诗歌创作中提前规划押韵。</p>
+
+<p><a href="https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures">AI 正在打破两种漏洞文化</a><br>最近关于 Copy Fail 漏洞的披露再次凸显了“协同披露”与“漏洞即漏洞”两种文化之间的紧张关系。随着 AI 加速漏洞的发现和分析，传统的 embargo（禁运）披露方式正面临失效的风险，因为 AI 可以快速识别并利用哪怕是微小的代码更改。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>一个统一的 AI 模型聚合与分发中心。它支持将各种 LLM 转换为 OpenAI、Claude 或 Gemini 兼容格式。为个人提供集中式网关。</p>
+
+<p><a href="https://github.com/googleapis/mcp-toolbox">googleapis/mcp-toolbox</a><br>数据库 MCP 工具箱是一个用于数据库的开源 MCP 服务器。</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin 是一个用 Go 编写的高性能 HTTP Web 框架。它提供了类似 Martini 的 API，但性能显著提升（快达 40 倍）。</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>一个开放且可靠的容器运行时。</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>用于 Go 的 PostgreSQL 驱动程序和工具包。</p>
+
+<p><a href="https://github.com/chenhg5/cc-connect">chenhg5/cc-connect</a><br>将本地 AI 编码助手连接到即时通讯平台（飞书、钉钉、Slack、Telegram、Discord、LINE、企业微信）。</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，企业级业务AI&#43;开发解决方案，内置mcp辅助服务，内置skills管理，支持TS和JS混用。它集成了JWT鉴权、权限管理、</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>基于 eBPF 的网络、安全和可观测性工具。</p>
+
+<p><a href="https://github.com/harness/harness">harness/harness</a><br>Harness Open Source 是一个端到端的开发者平台，包含源码控制管理、CI/CD 流水线、托管开发环境和工件仓库。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

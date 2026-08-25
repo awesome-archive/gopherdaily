@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240906.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-06</span>
+</p>
+<p>每日一谚：Make the zero value useful </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-sync-waitgroup/">Go sync.WaitGroup工作原理及其对齐问题</a><br>本文深入探讨了 &#39;sync.WaitGroup“的 Git 中，特别关注对齐问题以及在不同版本的 Go 中如何解决这些问题。它解释了“sync.WaitGroup&#39; 用于等待一组 goroutines 完成，预计 &#39;WaitGroup&#39; 将跟踪的 goroutines 数量。本文强调了一个潜在的问题，即主协程可能在所有生成的协程之前完成，从而导致 &#39;WaitGroup&#39; 的内部结构错位。为了缓解这种情况，本文概述了 &#39;WaitGroup&#39; 的演变，从使用 12 字节数组来确保正确对齐到当前使用的 &#39;atomic.Uint64&#39; 表示状态，这保证了 8 字节的对齐方式，并避免了对 &#39;state（）&#39; 方法的需求。这篇文章还谈到了正确 goroutine 初始化的重要性，以及在不同批次的任务中重用 &#39;WaitGroup&#39; 的含义。</p> 
+
+<p><a href="https://medium.com/@crusty0gphr/tricky-golang-interview-questions-part-7-data-race-a746a30aacda">棘手的 Golang 面试问题 — 第 7 部分：数据竞态</a><br>本文讨论了 Go 程序中的数据竞争问题，其中多个 goroutine 同时访问和修改共享的 slice 缓冲区，从而导致不可预测的行为。发生争用是因为程序对每个数据块重用相同的缓冲区切片，导致多个 goroutine 访问并覆盖相同的底层数组内存。为了解决数据竞争问题，建议的解决方案包括为每个数据块创建一个新切片，确保每个数据块都有自己独立的内存空间。这是通过在将数据发送到 channel 之前将数据从 buffer 复制到新的 slice 来实现的。通过将每个 chunk 的内存与缓冲区解耦，该程序可以防止对同一内存的并发访问，从而消除数据竞争并确保跨 goroutine 的一致数据处理。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-09-05-rebase-conflict-resolution/">Dolt Rebase 冲突解决</a><br>Dolt Rebase Conflict Resolution 是一篇博客文章，介绍并解释了 Dolt 对 Git 样式版本控制的支持，特别关注其 rebase 功能。Dolt 允许用户对关系数据执行分支、合并、比较和变基等操作，类似于使用源代码完成这些操作的方式。该博客文章重点介绍了 Dolt 的 rebase 功能的最新改进，包括更好地处理空提交和解决交互式 rebase 期间的数据冲突。这些增强功能有助于维护干净和线性的提交历史记录，尤其有利于功能分支或开发分支。该博文还鼓励用户探索 Dolt 的冲突解决工具，并就不支持的功能提供反馈，例如 rebase 期间的架构冲突解决。</p> 
+
+<p><a href="https://dev.to/mr_destructive/safely-using-maps-in-golang-differences-in-declaration-and-initialization-2jfi">在 Golang 中安全使用 Map：声明和初始化的差异</a><br>本文深入探讨了与 Golang 中 map 的声明和初始化相关的常见陷阱，强调了这两个过程之间的区别。它解释说，虽然声明 map 使其在程序的范围内可用，但正确的初始化对于防止运行时错误（如 nil 指针取消引用）至关重要。作者通过示例说明了这一点，包括使用 &#39;make&#39; 函数进行 map 初始化的必要性以及访问 nil map 时可能出现的 panic。此外，本文建议不要在 nil 映射上使用 range 关键字，并建议了诸如 &#39;Type{}&#39; 之类的替代方法来初始化。总体目标是向 Golang 开发人员传授地图使用的最佳实践，以避免常见错误并确保高效编码。</p> 
+
+<p><a href="https://blog.devops.dev/ever-heard-of-the-thundering-herd-problem-heres-how-facebook-solved-it-48bd6a07c2b9">听说过 Thundering Herd 问题吗？这是 Facebook 的解决方法！</a><br>Sanim Khan 的文章深入探讨了被称为 Thundering Herd 问题的技术挑战，当许多用户同时请求相同的资源时，就会出现这种情况，这可能会使服务器不堪重负。这个问题在直播流媒体的背景下尤其相关，因为数百万人可能会同时访问内容。为了缓解这个问题，Facebook 采用了跨边缘服务器的分布式缓存和负载平衡等策略，这些策略在请求到达源服务器之前对其进行处理。这些服务器还利用 HTTP 代理和缓存层来检查缓存的内容，从而减少负载。此外，本文承诺在后续文章中探讨另一个相关问题 Cache Thrashing，重点介绍为保持系统效率和稳定性而做出的持续努力。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.platformatic.dev/ssr-performance-showdown">SSR 性能对决</a><br>本文对各种前端库的服务器端渲染 （SSR） 性能进行了基准测试分析，重点介绍了与 Node.js 兼容的库。基准测试使用复杂的螺旋绘图函数，适用于每个库的渲染引擎，从而生成具有 2398 个 &#39;&lt;div&gt;&#39; 元素的文档。Fastify-html 以每秒 1088 个请求领先，但由于它的简单性，它被认为是一个基线。Vue 和 Svelte 紧随其后，在 SSR 性能和丰富的生态系统之间实现了平衡，Vue 以每秒 1028 个请求略微领先。Svelte 以每秒 968 个请求给人留下深刻印象，尽管它是非 JSX 模板语法。Solid 和 React 的性能较低，Solid 为每秒 907 个请求，React 为每秒 572 个请求。此外，还比较了 Preact 和 React 的 19 个 RC，而 Preact 为每秒 717 个请求。结果突出了库生态系统的性能和成熟度之间的权衡。</p>
+
+<p><a href="https://sporks.space/2024/09/05/is-linux-collapsing-under-its-own-weight-on-rust-for-linux/">Linux 是否在自身重量下崩溃？在 Rust for Linux 上</a><br>Linux 内核是全球最大的自由软件项目，随着它的扩展而面临挑战，尤其是在集成 Rust 方面，Rust 是一种有望更安全的大规模系统开发的语言。Rust for Linux 项目旨在在内核中实现 Rust，当一名开发人员辞职时遇到了障碍，导致视频中捕捉到的激烈争论。这一事件，再加上另一位开发人员对维护者互动所表达的不满，凸显了 Linux 内核社区内部更深层次的问题。这些因素包括需要更好的文档和测试，以及社区的文化保守主义和碎片化性质，这使得处理重大变化变得复杂。Rust for Linux 的未来以及 Linux 内核对行业趋势的适应性仍然不确定，可能会对项目的方向和社区动态产生长期影响。</p>
+
+<p><a href="https://itnext.io/dockerfile-less-and-daemon-less-build-faa0513e320f">无 Dockerfile 和无守护程序的构建</a><br>Mahdi Mallaki 介绍了在没有 Docker 守护程序或 Dockerfile 的情况下构建 Docker 映像的概念，重点介绍了 CI/CD 管道的效率和安全性优势。他将传统方法与 Buildpack 和 Kaniko 等工具进行了对比，这些工具可以自动检测编程语言和构建工具，从而简化映像构建过程。Buildpack 因其能够在不需要 Dockerfile 的情况下为项目自动生成构建指令而备受瞩目，而 Kaniko 则需要 Dockerfile 而不是 Docker 守护程序。本文还将这些工具与 Docker BuildKit 进行了比较，后者是需要 Dockerfile 和守护进程的最古老的方法。Mallaki 最后强调了这些现代工具在增强软件开发实践方面的优势。</p>
+
+<p><a href="https://www.linuxjournal.com/content/unlocking-secrets-writing-custom-linux-kernel-drivers-smooth-hardware-integration">揭开编写自定义 Linux 内核驱动程序以实现平滑硬件集成的秘密</a><br>George Whittaker 在 Linux Journal 上发表的文章提供了有关编写自定义 Linux 内核驱动程序以实现无缝硬件集成的深入指南。它从先决条件开始，强调需要基本的 Linux 知识、C 语言编程技能以及了解内核开发基础知识。该指南进一步深入探讨了如何设置开发环境，包括获取 Linux 内核源代码和基本开发工具。它解释了典型 Linux 内核驱动程序的结构，详细说明了其初始化、退出函数和文件操作。本文还介绍了如何编写与硬件交互的驱动程序、处理中断、实现特定于设备的功能以及强大的错误处理。最后，它涉及并发、电源管理和设备树使用等高级主题，并总结了代码质量、性能注意事项和安全性的最佳实践。</p>
+
+<p><a href="https://thenewstack.io/ai-powered-observability-picking-up-where-aiops-failed/">AI 驱动的可观察性：发现 AIOps 失败的地方</a><br>本文回顾了 AI 进步背景下可观测性工具的演变，并与 AIOps 过去的炒作和随后面临的挑战进行了比较。它表明，虽然 GenAI 有可能通过使洞察访问民主化和增强异常检测来彻底改变可观察性，但组织必须吸取 AIOps 的经验教训，以充分利用这些工具。作者强调了战略性 AI 集成在可观测性解决方案中的重要性，这可以改变工程和 DevOps 团队的监控和故障排除实践。然而，文章也警告说，可观测性的真正力量在于它能够提供选择性遥测数据和实时指标，而不仅仅是结合 AI 进行异常检测。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>适用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行 Kubernetes</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman：用于管理 OCI 容器和 Pod 的工具。</p>
+
+<p><a href="https://github.com/encoredev/encore">encoredev/encore</a><br>开发平台，用于构建具有声明式基础设施的健壮类型安全的分布式系统</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git 喝杯茶！轻松的自托管一体化软件开发服务，包括 Git 托管、代码审查、团队协作、包注册表和 CI/CD</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>临时服务</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>Kubernetes 包管理器</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>一个反向代理，提供对 Google、Azure、OpenID Connect 和更多身份提供商的身份验证。</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>使用 fangs 的 Go 配置</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics：快速、经济高效的监控解决方案和时间序列数据库</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>使用 Gitleaks 🔑 保护和发现机密</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>使用 Go 和 JavaScript 的现代负载测试工具 - https://k6.io</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>将 Envoy 代理作为独立或基于 Kubernetes 的应用程序网关进行管理</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI 图像格式</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/wagoodman/dive">wagoodman/dive</a><br>用于浏览 Docker 映像中每一层的工具</p>
+
+<p><a href="https://github.com/golang/protobuf">golang/protobuf</a><br>Go 支持 Google 的协议缓冲区</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

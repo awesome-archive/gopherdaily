@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251009.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251009</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/09/json-isnt-json">Go开发者必读：JSON的跨语言陷阱与Go防御指南</a><br>当 JavaScript 前端、Go 后端、Python 数据管道、以及 Java 企业服务开始以各自的方式“解释”同 一个 JSON 时，一个现代版的“巴别塔”便悄然建起：每个人都在说 JSON，但每个人表达的意思却可能不尽相同。 这篇文章，是一份为 Go 开发者量身定制的“防御指南”，将为你全面揭示 JSON 在跨语言环境中最隐蔽、最危险的几大陷阱，并展示如何利用 Go 的 特性（包括实验性的 json/v2）来构建坚不可摧的防线。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/xBiBXgoTA_-VpTS_w77GkA">【Go开发者的数据库设计之道】07 诊断篇：SQL 性能诊断与问题排查</a><br>今天，我们将扮演一次“数据库侦探”的角色。我们将学习如何从纷繁复杂的线索中，揪出那些隐藏在我们自己亲手构建的“在线论坛系统”深处的 “性能窃贼”。 线上性能问题的排查能力，是区分普通开发者和高级工程师，尤其是后端和 SRE 工程师的核心能力之一。它直接决定了你的系统稳定性和用户体验。掌握了这套技能，你将不再对线上告警感到恐惧，而是能像一位经验丰富的医生一样，冷静地“望、闻、问、切”，最终对症下药。</p> 
+
+<p><a href="https://blog.cloudflare.com/how-we-found-a-bug-in-gos-arm64-compiler">我们如何在 Go 的 arm64 编译器中发现了一个错误</a><br>每秒 8400 万次请求意味着即使是罕见的错误也会经常出现。我们将揭示我们如何发现 Go arm64 编译器中的一个竞态条件并修复它。</p> 
+
+<p><a href="https://gopodcast.dev/episodes/061-as-a-gopher-im-excited-about-gleam-maybe-youll-too">go podcast() | 061: 作为 Gopher 我对 Gleam 感到兴奋，也许你也会</a><br>我终于认真研究了 Gleam，老天爷，我太兴奋了。很久以前，当 Gleam 刚开始使用类似 ML 的语法时，我就关注过它。我一直都是 Elm 的粉丝，我通过 Elm 发现了函数式编程。大约在 2016-2017 年，我尝试了 Elixir 和 Phoenix，并在随后的几年里多次尝试，但我不太确定为什么它从未完全打动我。作为过去 10 多年来一直从事 Go 的人，我不会否认我最近一直在寻找一些兴奋点。这并不是因为我厌倦了 Go 或其他什么，在过去的 3-4 年里，我一直在认真地尝试 Python/Django。但 Gleam，至少到目前为止，让我想起了 2014 年我开始使用 Go 时的那种感觉。如今有这么多的编程语言，我想这确实取决于个人的品味。我的确有一些最低限度的检查，一门语言必须通过这些检查，我才会考虑研究它，而 Gleam 已经通过了所有检查。在 Go 之后 10 年，它是一门令人耳目一新的语言。它只是工具箱中的另一个工具，但我对选择哪个工具放入我的工具箱非常挑剔，哈哈，所以现在 Gleam 还在评估阶段，但到目前为止我感到很兴奋，而且很久没有这种感觉了。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/introducing-tidb-x-a-new-foundation-distributed-sql-ai-era/">TiDB X：为 AI 时代分布式 SQL 构建新基础</a><br>今天，我们宣布推出 TiDB X：TiDB 的一项突破性新架构，它重新定义了分布式 SQL 数据库的扩展方式。</p>
+
+<p><a href="https://www.haproxy.com/blog/cve-2025-59303-haproxy-kubernetes-ingress-controller-secret-leak">CVE-2025-59303: Secret Leak in HAProxy Kubernetes Ingress Controller</a><br>Upgrade to the lastest version of HAProxy Kubernetes Ingress Controller (KIC) to address a vulnerability allowing privilege escalation.</p>
+
+<p><a href="https://www.docker.com/blog/lora-explained/">Low-Rank Adaptation (LoRA) Explained | Docker</a><br>LoRA is a method that freezes a base model and adds trainable adapters to teach pre-trained models new behaviors, without overwriting their existing knowledge.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/08/a-tpm-based-combined-remote-attestation-method-for-confidential-computing/">基于 TPM 的组合式远程证明方法，用于机密计算</a><br>英特尔 TDX 和 AMD SNP 等机密计算技术依赖于硬件控制的信任根 (RoT)，从而将远程证明与特定的 CPU 供应商内在绑定。</p>
+
+<p><a href="https://hojberg.xyz/the-programmer-identity-crisis">程序员身份危机</a><br>关于人工智能、创造力和工艺</p>
+
+<p><a href="https://shkspr.mobi/blog/2025/10/how-to-actually-test-your-readme">如何测试你的README文件</a><br>如果你花时间使用 Linux，你就会习惯于像这样安装软件： README 提示从这个链接下载。 额，我不确定如何解压缩 .tar.xz 文件 - 猜猜我得搜索一下。 对了，它说运行 setup.sh 额，这不起作用。 哦，我需要设置权限。 又是哪个 chmod 命令来着？ OK，这可行。 等等，它需要 sudo。 让我再运行一次。 等等，我是否在正确的目录中？ 开始了。 什么，它崩溃了。 我没有一些随机的库 - 我该如何安装它？ 我的发行版有 v21，但这需要 &amp;lt;=19。 啊，我还需要升级一些东西，这些东西不是由 repo 提供的。 差不多了，只需要从最初的开发人员的机器上无法解释地安装的 SourceForge 编译这个晦涩的项目，然后我就好了。 不行。 最好在 GitHub 上提出一个问题。 噢，你看，是明天了。</p>
+
+<p><a href="https://jack-vanlightly.com/blog/2025/10/8/beyond-indexes-how-open-table-formats-optimize-query-performance">Beyond Indexes: How Open Table Formats Optimize Query Performance</a><br>我的数据职业生涯始于 SQL Server 性能专家，这意味着我深入研究了索引、锁定和阻塞、执行计划分析和查询设计的细微差别。如今，我更多地涉足 Apache Iceberg 等开放表格式的世界。在学习了事务性和分析型数据库系统的内部结构后，我发现“索引”一词的用法很有趣，因为它们对不同的系统意味着截然不同的东西。
+
+当讨论开放表格式的性能时，我看到“索引”一词被松散地使用，无论是在其当前设计中，还是在对未来可能进入其规范的功能的推测中。但在这个世界上，什么才算作索引？
+
+某些格式，例如 Apache Hudi，确实维护了记录级索引，例如，主键到文件组的映射，使 upsert 和删除能够有效地定向到正确的文件组，以支持主键表。但它们无助于加速跨任意谓词的读取性能，就像我们在 OLTP 数据库中依赖的二级索引一样。
+
+传统的二级索引（如关系数据库中使用的 B 树）在 Iceberg、Delta Lake 甚至 Hudi 中都不存在。但为什么？如果我们只是向 Iceberg 规范添加二级索引，我们不能解决一些性能问题吗？
+
+简短的答案是：“不，这很复杂”。答案不仅仅是“我们还没有解决这个问题”，这有真正和实际的原因。
+
+这篇文章的目的是为了理解：
+1. 为什么我们不能像在 RDBMS 数据库中经常做的那样，仅仅添加更多二级索引来加速分析查询。
+2. 分析工作负载如何驱动表格式在核心结构和辅助文件方面的设计（以及这与 RDBMS 的不同之处）。
+
+在这篇文章中，我将尝试说服你的一个核心内容是，无论你的表是传统的 RDBMS 还是 Iceberg，读取性能都归结为减少执行的 IO 量，而这又归结为：
+1. 我们如何组织数据本身。
+2. 在该数据组织之上使用辅助数据结构。
+
+关键是工作负载决定了你如何组织数据以及使用哪种辅助数据结构。我们将首先了解 RDBMS 中的索引，然后切换到并将此与 Apache Iceberg 等开放表格式的工作方式进行对比。</p>
+
+<p><a href="https://parallelprogrammer.substack.com/p/why-we-need-simd-the-real-reason">Why We Need SIMD (The Real Reason) </a><br>tl/dr: it can deliver big performance speedups at modest area cost</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Oct/9/uv-test/#atom-everything">TIL: 使用 uv with-editable 和 uv-test 测试不同的 Python 版本</a><br>在尝试将各种项目升级以处理 Python 3.14 时，我终于找到了一个通用的 `uv` 方案，用于在任何指定的 Python 版本中运行当前项目的测试：</p>
+
+<p><a href="https://gregorygundersen.com/blog/2025/10/01/large-language-models">AI大模型发展史</a><br></p>
+
+<p><a href="https://blog.google/technology/developers/gemini-cli-extensions">现在开放构建：推出 Gemini CLI 扩展</a><br>通过扩展，您可以将 Gemini 的强大功能连接到您日常的工作流程和最常用的工具，使 Gemini CLI 成为您独有的工具。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/timelinize/timelinize">timelinize/timelinize</a><br>Store your data from all your accounts and devices in a single cohesive timeline on your own computer</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/rook/rook">rook/rook</a><br>Storage Orchestration for Kubernetes</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>Self-hosted, lightweight server and website monitoring and O&amp;M tool</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS / MPEG-TS / RTP media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

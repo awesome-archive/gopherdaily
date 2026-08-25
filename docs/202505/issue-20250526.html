@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250526.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250526</span>
+</p>
+<p>每日一谚：Runtime errors are better than bugs </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/05/25/go-at-googleio-2025">GoogleIO 2025 Go语言进展：生产力、生产就绪与AI赋能</a><br>在Google I/O 2025大会上，Go 产品负责人 Cameron Balahan 和开发者关系负责人 Marc Dougherty 详细阐述了 Go 语言在生产力、生产就绪度和开发者体验方面的最新进展及未来规划。演讲强调了 Go 语言以规模化为核心的设计理念及其三大指导原则：生产力、超越语言的完整体验和生产就绪。</p> 
+
+<p><a href="https://dev.to/mongodb/skip-the-ormodm-why-mongodbs-native-go-driver-is-the-best-choice-34cj">跳过 ORM/ODM：为什么 MongoDB 原生 Go 驱动程序是最佳选择</a><br>本教程由 Julia Tazin 撰写。在 Go 中使用 MongoDB 时，一个常见的问题是……是否使用 ORM 或 ODM，或者完全放弃它们。虽然 ORM 和 ODM 可以提供便利性和结构，但 Go 的核心理念是简洁和直接。本教程将探讨 ORM 和 ODM 的含义、它们的区别以及为什么许多 Go 开发人员更喜欢使用官方的 MongoDB Go 驱动程序。</p> 
+
+<p><a href="https://rednafi.com/go/di_frameworks_bleh">你可能不需要依赖注入框架</a><br>在工业环境下使用 Go 时，我感觉依赖注入 (DI) 因为 DI 框架而常常名声不好。但是 DI 作为一种技术非常有用。它只是倾向于用过多的面向对象术语来解释，并引发那些为了逃避 GoF 教义而转向 Go 的人的 PTSD。
+依赖注入是一个 25 美元的术语，代表着一个 5 美分的概念。——James Shore
+DI 基本上意味着将值传递给构造函数，而不是在构造函数内部创建它们。就是这样。文中通过示例代码讲解了在 Go 中使用接口进行 DI，以及为什么框架会将轻微的烦恼变成真正的痛苦，最后建议显式地连接依赖关系，避免使用框架。</p> 
+
+<p><a href="https://packagemain.tech/p/json-web-tokens-in-go">Go语言中的 JSON Web Tokens</a><br>本文深入探讨了 JSON Web Tokens (JWT) 标准，解释了 JWT 的工作原理，并使用 Go 语言实现了一个安全的 JWT 发行和验证服务器。此外，文章还介绍了安全使用 JWT 的一些最佳实践，包括使用 RS256 签名方法以及 HTTPS 等。文章还简要介绍了 JOSE 框架，并提供了一个 Go 服务器的示例代码以及相关资源链接。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://antonz.org/default-transport">http.DefaultTransport 的悲惨故事</a><br>即使您是一位经验丰富的 Go 开发人员，这个表达式也可能会让您愣一下：
+http.DefaultTransport.(*http.Transport)
+它展示了 Go 标准库中一些不太常见的特性。让我们回顾一下。文章讨论了 Go 标准库中 http.DefaultTransport 的一些特性，以及为什么将其声明为 RoundTripper 接口而不是具体的 *Transport 类型。还探讨了 Transport 泄漏问题以及改进建议。</p>
+
+<p><a href="https://self-issued.info/?p=2708">JSON Web令牌 (JWT) 十周年纪念及未来展望</a><br>本文回顾了 JSON Web 令牌 (JWT) 十周年，它于 2015 年 5 月成为 RFC 7519。文章总结了 JWT 及其相关规范的成功，并讨论了为确保未来十年 JWT 的安全而正在进行的工作，包括更新 JWT 最佳实践规范和解决令牌中受众值歧义导致的漏洞。</p>
+
+<p><a href="https://hynek.me/talks/design-pressure">设计压力</a><br>你是否曾经有过一种奇怪的直觉，感觉代码中有些地方不对劲，但却无法指出原因？你是否在项目伊始怀揣着最好的愿望，遵循着所有最佳实践，却仍然感觉你的架构最终会变得奇怪？本文探讨了软件设计中这种“设计压力”问题，并分享了作者在PyCon US 2025上的演讲内容，以及一些额外的阅读和观看材料，包括文章和视频，帮助读者更好地理解和解决软件设计中的难题。</p>
+
+<p><a href="https://paulgraham.com/goodwriting.html">优秀的写作</a><br>文章探讨了写作的两种含义：听起来好和想法正确。作者认为，听起来好的写作更有可能正确。作者通过类比装满不同物体的箱子被摇晃，说明了改进写作风格如何改进文章的思想。好的写作更容易阅读，作者作为第一读者，更容易发现其中的错误。文章进一步探讨了写作听起来好与想法正确的内在联系，并解释了即使是谎言，如果写作流畅，也会让人觉得内部一致。文章最后总结道，好的写作是同一事物的两端，很难改变其中一端而不改变另一端。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/26/github-issues-search/#atom-everything">GitHub Issues 搜索现已支持嵌套查询和布尔运算符：我们是如何（重新）构建它的</a><br>GitHub Issues 进行了重大搜索升级（1 月份）。Deborah Digges 提供了一些幕后细节，介绍了它的工作原理以及他们的部署方式。主要的新功能是复杂的布尔逻辑：你现在可以搜索诸如 `is:issue state:open author:rileybroughten (type:Bug OR type:Epic)` 之类的内容，最多可嵌套五层。查询使用 Ruby parslet PEG 语法库解析为 AST。然后将 AST 编译成嵌套的 Elasticsearch bool JSON 查询。GitHub Issues 搜索每秒处理大约 2000 个查询，因此强大的测试极其重要！团队将其隐形地部署到 1% 的实时流量中，通过队列运行新实现，并对返回的结果数量进行比较，以尝试发现与旧生产代码相比的任何性能下降。</p>
+
+<p><a href="https://www.ycombinator.com/launches/NJc-c-ua-docker-container-for-computer-use-agents">YC Launch：c/ua——面向计算机使用代理的 Docker 容器</a><br>c/ua 是一个开源框架，使 AI 代理能够在高性能、轻量级虚拟容器内控制完整的操作系统。它在 Apple 硅芯片上可提供高达 97% 的原生 CPU 速度，并可与任何语言模型配合使用。该框架解决了将 AI 代理与操作系统、桌面应用程序和浏览器安全交互的问题，无需牺牲性能。c/ua 集成了 Lume（高性能虚拟化层）、计算机使用界面 (CUI) 和计算机使用代理 (CUA)，可在虚拟环境中安全地执行操作，保护主机系统、文件和敏感数据。</p>
+
+<p><a href="https://www.anildash.com//2025/05/20/mcp-web20-20">MCP是Web 2.0 2.0的来临</a><br>本文讨论了模型上下文协议（MCP）的快速采用，认为它代表着Web 2.0精神的回归。MCP虽然规范本身不够完善，但却实现了不同应用程序和平台之间的互操作性，这与Web 2.0社区的开放数据和开放协议的理念相符。文章反思了Facebook等封闭平台扼杀了Web 2.0的开放性，并表达了对MCP推动Web重回开放的希望，同时指出了MCP在数据安全和透明度方面仍需改进。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/zerodha/kite-mcp-server">zerodha/kite-mcp-server</a><br>Zerodha Kite MCP server</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/chaos-mesh/chaos-mesh">chaos-mesh/chaos-mesh</a><br>A Chaos Engineering Platform for Kubernetes.</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB is an open-source, fast, reactive, in-memory database optimized for modern hardware.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/Xpl0itU/WiiUDownloader">Xpl0itU/WiiUDownloader</a><br>Allows to download encrypted wiiu files from nintendo&#39;s official servers</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

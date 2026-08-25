@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241010.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-10</span>
+</p>
+<p>每日一谚：Close channels to signal completion </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/plain-golang-tutorial/swisstable-a-high-performance-hash-table-implementation-3e13bfe8c79b">SwissTable：高性能哈希表实现</a><br>本文讨论了 Go 编程语言可能采用 SwissTable（一种高性能哈希表实现）作为其标准映射实现。这一考虑是在字节跳动提出 2022 年的问题之后出现的，建议 Go 应该考虑 SwissTable。2023 年，DoltHub 发表了一篇关于他们更小、更快的 swisstable 的博客文章，这引发了进一步的兴趣。Go 核心团队现在正在评估这个设计，并在运行时中包含了相关代码，这表明他们的地图实现可能会发生变化。作者是一位专门研究 Golang 的后端工程师，他提供了对这一发展的见解，但没有深入研究哈希或 swisstable 设计的细节。</p> 
+
+<p><a href="https://golangprojectstructure.com/interview-with-go-developer-jon-rafkind/">Go 开发者访谈：Jon Rafkind</a><br>Jon Rafkind 是一位在 Go 领域拥有丰富经验的高级软件工程师，他在一次采访中分享了他对编程语言的探索历程、其功能以及他的个人项目的见解。Rafkind 讲述了他在 1980 年代通过父亲的计算机早期接触编码的经历，这激发了他对编程的终生热情。他的学术背景，包括专门研究编程语言设计的博士学位，为他奠定了计算机科学的坚实基础。Rafkind 很欣赏 Go 的简单性、实用性和快速垃圾回收器的效率。他还强调了 Go 强大的类型系统、一流的函数及其生态系统是它的一些最佳功能。Rafkind 的采访还谈到了他在 NES 模拟器上的工作和他正在进行的个人项目，以及他的职业发展方法和对有抱负的程序员的建议。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/production-go-docker-image">如何为 Go 构建生产 Docker 镜像</a><br>Cloudflare 已阻止对 bytesizego.com 的访问，如声明用户已被阻止并提供 Cloudflare Ray ID 的消息所示。网站所有者被告知，该阻止是由可能被解释为安全威胁的操作触发的，例如提交特定的单词、命令或格式错误的数据。要解决此问题，建议用户通过电子邮件联系网站所有者，详细说明事件并包括提供的 Ray ID 以供参考。此外，该消息将用户引导至 Cloudflare 自己的资源，以获取有关情况的更多信息。</p> 
+
+<p><a href="https://depshub.com/blog/clean-architecture-in-go/">Go 中的clean架构</a><br>本文介绍了 Go 中的干净架构，强调了定义完善的架构对代码库的可维护性和可扩展性的重要性。它概述了一个具有不同层的结构：Entity、Repository、Service 和 Controller，解释了它们的角色和依赖关系反转的原理。作者提供了一个简化的 Todo List 应用程序示例，演示了如何在 Go 中实现 Clean Architecture，包括创建共享域模型以及使用内存存储和 PostgreSQL 作为存储层的替代方案。此外，本文还强调了由于 Clean Architecture 中固有的关注点分离，测试业务逻辑变得容易。最后，它谈到了随着应用程序的增长，体系结构进一步简化和灵活的可能性。</p> 
+
+<p><a href="https://medium.com/@sumit-paul/unlocking-the-power-of-golang-for-advanced-llm-applications-a-practical-guide-2e40de2ce00d">为高级 LLM 应用程序释放 Golang 的强大功能：实用指南</a><br>在文章中，Sumit Paul 从 LangChain 的 Python 实践中汲取灵感，指导读者如何利用 Golang 的功能使用大型语言模型 （LLM） 构建高级应用程序。他强调了 Golang 的性能和并发功能，非常适合需要可扩展性的复杂 AI 任务。Paul 演示了 Golang 中 LLM 链、内存合并和简单自主代理的实现，尽管 LangChain 的设计以 Python 为中心。本文为开发人员提供了实用指南，帮助他们创建超越基本文本生成的复杂 AI 系统，例如文档处理和智能聊天机器人。此外，Paul 还提供了一个全面的代码示例，并鼓励使用 Golang 进行实验以开发强大的 AI 应用程序。</p> 
+
+<p><a href="https://xnacly.me/posts/2024/fun-with-iterators/">Go迭代器的乐趣</a><br>这篇博文讨论了 Go 中迭代器的实现和使用，特别关注了 Go 1.23 和 &#39;iter&#39; 包中迭代器支持的引入。作者最初对迭代器创建过程和缺乏类似于 JavaScript 中的可链接功能操作表示不满。为了解决这些问题，作者提出了一个使用 &#39;Iterator&#39; 结构体的抽象，它允许迭代器函数的更清晰的链接。该博文还包括使用此抽象对迭代器执行倒车、映射和筛选等操作的示例。</p> 
+
+<p><a href="https://medium.com/@gnetkov/golang-application-template-gin-postgresql-mailhog-pgadmin-docker-compose-a243c29d0bee">Golang 应用程序模板（Gin、PostgreSQL、MailHog、PGAdmin、Docker Compose）</a><br>这份综合指南详细介绍了一个 Golang 应用程序模板，该模板专为使用 Gin 框架和 Gorm ORM 的快速后端开发而设计。该模板有助于使用 Docker Compose 轻松设置，从而支持单个命令启动所有服务。它包括带有 Gorm 的 ORM 模型、CRUD 操作、用户注册和使用 JWT 的身份验证。此外，该项目还具有电子邮件发送功能，其中为开发中的 MailHog 配置了 SMTP，以及用于 API 测试的 Swagger 文档。源代码还提供了 GitLab 存储库上的公共访问。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-10-08-how-to-build-a-vector-index-with-prolly-trees/">我们如何从 Prolly 树构建向量索引</a><br>Dolthub 正在探索使用 Prolly Trees 开发向量索引，Prolly Trees 是 Dolt 存储层不可或缺的一种新型数据结构。这项创新旨在实现矢量数据的分支和合并，这是 SQL 数据库中目前不存在的功能。Dolthub 的团队正在考虑三种主要的向量索引算法：倒排文件 （IVF） 索引、分层可导航小世界 （HNSW） 和第三种未指定类型。每种算法都有其权衡，需要考虑内存使用、速度和准确性等因素。最终目标是构建一个版本控制的向量数据库，可以轻松地跨版本进行比较、分叉和合并。</p> 
+
+<p><a href="https://dev.to/bhargab/understanding-parallelism-vs-concurrency-in-go-47ch">了解 Go 中的并行性与并发性</a><br>本文深入探讨了 Go 中并发和并行的细微差别，这两个概念经常被误解为可以互换。Go 中的并发性被比作处理多个任务，其中 goroutine 允许通过在它们之间快速切换来处理大量操作，从而给人一种同时执行的错觉。相比之下，并行性是任务的实际同时执行，它需要多个处理器或内核，并且是并发性的子集。本文进一步解释了 Go 如何通过在可用的 CPU 内核之间分配 goroutines 来实现并行性，以及如何使用 &#39;GOMAXPROCS&#39; 设置对其进行微调。提供的实际示例包括同时处理多个用户请求的 Web 服务器和利用并行性对视频进行转码的视频流平台。</p> 
+
+<p><a href="https://words.filippo.io/dispatches/accumulated/">累积测试向量</a><br>源文档详细讨论了累积测试向量在加密测试中的重要性和方法，特别是在抗量子算法的上下文中。作者 @filippo.abyssdomain.expert 介绍了累积的测试向量，作为一种有效测试加密组件的方法，而无需事先对潜在错误进行广泛的了解。这些向量是通过从 SHAKE128 等确定性函数中提取随机输入并根据预期结果验证输出而生成的。作者强调了累积的测试向量在加密系统开发和维护中的效用，尽管它们在测试失败时提供调试见解方面存在局限性。此外，该文件还谈到了作者在 Geomys 旗下多家公司的赞助，强调了在支持开源加密维护方面的协作努力。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://deno.com/blog/v2.0">Deno 2 发布</a><br>Deno 2.0 标志着 Deno 平台的一次重大更新，增强了它与 Node.js 和 npm 的兼容性，同时保留了吸引开发人员的核心功能。此更新引入了现代徽标、带有“deno install”、“deno add”和“deno remove”的简化包管理器，以及稳定的标准库。此外，Deno 2.0 还支持工作区和长期支持 （LTS） 版本，提供为期六个月的关键错误修复。尽管进行了这些增强，Deno 2.0 仍保持了其最初的愿景，即实现 JavaScript 现代化，为小型和大型 JavaScript 和 TypeScript 项目提供全面、安全和高效的工具链。</p>
+
+<p><a href="https://iq.thc.org/how-does-linux-start-a-process">Linux 如何启动进程</a><br>本文档深入解释了 Linux 内核如何启动进程，特别关注了 &#39;execve（）&#39; 系统调用和导致执行二进制文件的后续步骤。它首先详细介绍了内核从用户空间程序接收 &#39;SYS_execve（）&#39; 及其在准备堆栈、堆和信号中的作用。该过程包括编译一个简单的 C 程序，检查其 ELF 标头，以及了解堆栈、环境变量和参数的内存分配。还描述了内核加载 ELF 二进制文件的复杂步骤，无论是静态的还是需要解释器的。此外，本文档还介绍了内核的堆栈随机化实现以及 elf 辅助表在堆栈上的位置，从而提供了对在执行程序之前发生的低级操作的见解。</p>
+
+<p><a href="https://engineering.salesforce.com/zero-copy-revolutionizes-data-cloud-real-time-analysis-without-data-duplication-or-migration/">Zero Copy 彻底改变了数据云：无需数据重复或迁移的实时分析</a><br>Salesforce 软件工程副总裁 Srini Krishnamoorthy 领导了 Zero Copy 的开发，这是一项变革性功能，无需传统的数据迁移即可实现实时数据分析和决策。零复制有助于从 Snowflake 和 Databricks 等外部数据源直接查询，从而消除数据复制的需要并提高效率。这项创新是 Data Cloud 生态系统的基石，它打破了数据孤岛，并确保最新的客户数据以获得可操作的见解。为了应对可扩展性和一致性挑战，该团队实施了双向数据抽象模型，并投资了查询下推技术。客户反馈和测试对于优化 Zero Copy 至关重要，从而实现了显著的增强，例如在单个查询中支持超过 10 亿行。</p>
+
+<p><a href="https://blog.devops.dev/understanding-load-balancers-reverse-proxies-forward-proxies-and-api-gateways-10cf617b175c">了解负载均衡器、反向代理、正向代理和 API 网关</a><br>本文深入介绍了 Web 架构中的四个关键组件：负载均衡器、反向代理、正向代理和 API 网关。负载均衡器在多个服务器之间有效地分配 Web 流量，以提高应用程序可用性、可扩展性和性能。反向代理充当 Web 服务器的中介，通过管理 SSL 证书和定向客户端请求来提供安全性和负载平衡。转发代理代表客户端访问外部资源，提供匿名和缓存功能。最后，API 网关管理和保护 API，提供身份验证、速率限制和日志记录，以简化客户端交互并监控 API 使用情况。</p>
+
+<p><a href="https://thenewstack.io/rusts-expanding-horizons-memory-safe-and-lightning-fast/">Rust 的扩展范围：内存安全和快如闪电</a><br>Rust 编程语言因其内存安全性和速度而备受赞誉，在各个领域都经历了显着增长，包括系统编程、通过 WebAssembly 进行 Web 开发，甚至游戏开发。Rust 基金会的 Joel Marcey 在播客中强调了这一扩展，指出 Rust 在嵌入式系统和安全关键应用程序中的采用越来越多，以及它对 Linux 内核的潜在影响。随着 Rust 的性能关键型应用程序受到关注，它被视为 Go 等语言的有力竞争者，尤其是对于那些优先考虑执行速度的语言。正如在 RustConf 2024 上所展示的那样，Rust 社区仍然积极进取且充满活力，继续推动该语言的开发和采用。此外，Rust 的演变以最近的更新为标志，例如在 Rust 1.81 中引入了新的排序实现，未来的目标包括增强异步功能和进一步发挥 Rust 在 Linux 开发中的作用。</p>
+
+<p><a href="https://netflixtechblog.com/introducing-netflix-timeseries-data-abstraction-layer-31552f6326f8">Netflix TimeSeries 数据抽象层简介</a><br>Netflix 引入了 TimeSeries 数据抽象层，以有效地存储和管理大量临时事件数据，这对于其扩展服务（如视频点播和游戏）至关重要。该系统旨在每秒处理多达 1000 万次写入，可解决高吞吐量、可调配置、突发流量和成本效率等挑战。它采用独特的分区策略和事件存储桶来优化写入和读取操作，Apache Cassandra 确保了数据持久性，Elasticsearch 增强了搜索功能。该架构将数据平面和控制平面分开以保持高可用性，并通过自动预置工作流确定各种工作负载的最佳设置。TimeSeries 抽象层是 Netflix 提供无缝用户体验和可靠系统性能的关键组件。</p>
+
+<p><a href="https://thenewstack.io/my-5-favorite-command-line-tools/">我最喜欢的 5 个命令行工具</a><br>New Stack 通过提供最受欢迎的命令行工具的精选列表，突出了其由软件工程领导者和有抱负的开发人员组成的社区。在这些工具中，SDKMAN 因其管理多个 Java 开发工具包 （JDK） 的能力而脱颖而出，包括最近的 Java 23 版本。本文还介绍了 eza，这是 ls 命令的一个更具视觉吸引力的版本，它提供颜色编码的输出和附加功能，如识别符号链接和 Git。此外，命令行工具的瑞士军刀 ffmpeg 因其在处理音频和视频文件任务方面的多功能性而受到赞誉，有关调整视频文件大小的教程就是例证。最后，文章提到了 pueue，这是一种命令行任务管理工具，旨在按顺序或并行执行长时间运行的任务，从而有助于自动化和时间管理。</p>
+
+<p><a href="https://blog.hotstar.com/scaling-infrastructure-for-millions-from-challenges-to-triumphs-part-1-6099141a99ef">为数百万人扩展基础设施：从挑战到胜利（第 1 部分）</a><br>本文详细介绍了 Disney&#43; Hotstar 在 2023 年世界杯板球赛事期间实施的重大扩展挑战和解决方案。最初，该平台在扩展其基础设施以支持前所未有的 5900 万个并发流方面面临困难，与之前约 2500 万个的峰值相比有了明显的增加。为了解决这个问题，Disney&#43; Hotstar 对其基础设施进行了全面的重新评估，从而引入了新的 X 架构并对其外部 API 网关进行了战略性改革。该公司还创新地将其 API 分为可缓存和不可缓存的类别，优化安全性和速率控制以提高吞吐量。此外，Disney&#43; Hotstar 迁移到 Amazon EKS 以更好地管理控制平面，并微调其 VPC CNI 设置以减少 IP 地址浪费，从而在资源不短缺的情况下实现服务高效扩展。</p>
+
+<p><a href="https://itnext.io/self-hosting-a-container-registry-85ce16c0b7b2">自托管容器镜像服务</a><br>Alex Pliutau 在 Medium 上的文章探讨了自托管容器注册表的概念，这是管理容器镜像的关键组件。如前所述，容器注册表是容器映像的存储系统，容器映像是运行容器所需的文件、库和配置的捆绑包。本文深入探讨了使用 Dockerfile 创建容器映像的过程，以及使用 docker 命令推送和拉取这些映像的后续步骤。此外，Pliutau 还讨论了自托管注册表的原因，例如增强的安全性和对基础设施的控制，并提供了有关如何使用 Docker 和 Nginx 设置自托管注册表的全面指南。本文最后介绍了管理自托管注册表的各种选项，包括使用 Kubernetes 或 Harbor 等托管注册表服务。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.sequoiacap.com/article/generative-ais-act-o1/">生成式 AI 的 o1 法案</a><br>生成式 AI 正在迈向推理能力的新时代，标志着从当前的快速响应模型向优先考虑刻意推理的模型发生了重大转变。这种演变主要是由推理时间计算的扩展驱动的，OpenAI&#39;pts Strawberry 展示了真正的一般推理能力。推理云的出现预示着未来可以根据任务复杂性动态分配计算资源。此外，各个领域的代理应用程序的发展表明 AI 服务市场不断增长，公司不仅销售软件，还销售工作成果。这种转变可能会重新定义 SaaS 格局，为现有的云公司带来机遇和挑战。</p>
+
+<p><a href="https://blog.dropbox.com/topics/work-culture/how-ai-is-upending-archaeology-and-changing-the-way-we-understand-ourselves">AI 如何颠覆考古学并改变我们理解自己的方式</a><br>源文件讨论了 AI 对考古学的变革性影响，使劳动密集型任务实现自动化，并促进对历史之谜的更深入探索。Brent Seales 率先使用 AI 以虚拟方式展开卷轴，这种方法后来在机器学习工具的帮助下发展起来，以分析卫星数据、无人机图像和高分辨率地图。这项技术进步导致了计算考古学的出现，在这个领域，人工智能协助处理大量数据，从而使考古学家能够专注于解释意义和起源。该文件强调了 AI 通过以非常规方式应用这些工具来解决当代问题（例如英国的住房危机）的潜力。总体而言，计算考古学的曙光代表了向更高效、更有洞察力的考古研究的重大转变。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/9/openai-realtime-console/#atom-everything">openai/openai-real-time-console</a><br>源文档是 Simon Willison 的一篇博客文章，讨论了他设置和试验 OpenAI 实时控制台的经验，OpenAI 实时控制台是一种利用新 websocket 实时语音 API 的工具。Willison 将指导读者完成克隆存储库和启动演示应用程序的过程，该过程有助于语音输入和输出，并包括基本工具支持，如天气工具和地图平移功能。他还强调了使用演示的相关成本，并指出即使是简短的测试也可能产生高额费用。对于有兴趣探索新语音 API 的功能及其与 Web 应用程序集成的开发人员，该博文是一个实用教程。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>在容器中运行管道的引擎</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器公开给 Internet。</p>
+
+<p><a href="https://github.com/WuKongIM/WuKongIM">WuKongIM/WuKongIM</a><br>不只是即时通讯(IM)</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>使用 Docker 定义和运行多容器应用程序</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>一个固执己见的 GoLang 框架，用于加速微服务开发。内置对数据库和可观测性的支持。</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>[WIP]：用于学习可观察性的存储库</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>临时服务</p>
+
+<p><a href="https://github.com/open-policy-agent/gatekeeper">open-policy-agent/gatekeeper</a><br>🐊 Gatekeeper - Kubernetes 的策略控制器</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate 是一个开源向量数据库，可存储对象和向量，允许将向量搜索与结构化过滤与云原生数据库的容错和可扩展性相结合。</p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>GoFrame 是 Golang 的一个模块化、强大、高性能的企业级应用程序开发框架。</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>云原生应用程序代理</p>
+
+<p><a href="https://github.com/WireGuard/wireguard-go">WireGuard/wireguard-go</a><br>仅镜像。官方存储库位于 https://git.zx2c4.com/wireguard-go</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>适用于云原生时代的终极 Go 微服务框架。</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin的开发基础平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器【可AI辅助】、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes 虚拟化 API 和运行时，用于定义和管理虚拟机。</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO 是一个高性能、与 S3 兼容的对象存储，在 GNU AGPLv3 许可下开源。</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行 Kubernetes</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>将 Envoy 代理作为独立或基于 Kubernetes 的应用程序网关进行管理</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

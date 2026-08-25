@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241012.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-12</span>
+</p>
+<p>每日一谚：Write Go code as Gophers write code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/10/11/go-evolution-dual-insurance-goexperiment-godebug">Go语言演进的双保险：GOEXPERIMENT与GODEBUG</a><br>Go语言自诞生以来就以其简洁、高效和强大的并发支持而闻名，Go团队承诺保持Go1向后兼容性，以确保用户的代码在未来的版本中继续正常运行。然而，保持语言的稳定性与不断创新(增加新特性)之间的平衡一直是Go团队面临的挑战。为了应对这一挑战，Go语言引入了两个关键机制：GOEXPERIMENT和GODEBUG来平衡新功能的试验、稳定发布和向后兼容。这两个机制共同构成了Go语言特性发布的“双保险” ，确保语言能够稳步前进的同时，不会因为激进的改变而影响现有代码的稳定性。本文就来简单探讨一下这两个机制是如何保障Go语言新特性稳定发布的</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-io-reader-writer/">Go I/O Reader、Writer和移动中的数据</a><br>在这篇文章中，VictoriaMetrics 的软件工程师 Phuong Le 深入探讨了 Go 的 &#39;io 的复杂性。Reader&#39; 和 &#39;io.Writer 接口，这是输入和输出操作的基础。她解释说，这些接口用途广泛，可以为不同的任务（例如从文件、网络或缓冲区读取）量身定制各种实现。本文还涉及常见错误，例如与 &#39;io.ReadAll“函数。此外，Le 还介绍了其他几个 &#39;io.Reader“实现，包括 &#39;bufio.Reader“，用于缓冲输入以提高效率。最后，她简要讨论了 &#39;io.Writer“ 接口及其对应的 &#39;io.Reader“，强调它们在数据处理中的作用以及刷新缓冲数据的重要性。</p> 
+
+<p><a href="https://medium.com/@ZaradarTR/unpacking-ultron-a-deep-dive-1bfabb6a81e5">揭开Ultron的面纱：深入探究</a><br>Ultron 是一个开源应用程序，旨在优化多云 Kubernetes 环境中的工作负载放置。它通过使用结构化方法来处理缓存、证书管理和与外部 API 交互等任务来实现这一点。该应用程序的架构以基于 Go 的入口点为中心，该入口点编排服务初始化、HTTP 服务器设置和安全通信。Ultron 中的核心服务（如 CacheService、CertificateService 和 ComputeService）处理特定的职责，其中 ComputeService 是 Pod 变更和验证的关键。系统的内部处理程序管理核心变更和验证操作，确保 Pod 规格在部署前满足特定标准。总体而言，Ultron 是一个可扩展、安全的系统，它与 Kubernetes 紧密集成，为大规模工作负载管理提供了有价值的见解。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-10-11-dolt-with-jdbc/">将 Dolt 与 JDBC 结合使用</a><br>Dolt 是一个独特的 SQL 数据库，它集成了版本控制功能，支持使用 SQL 语法对数据进行分支、合并和查询。它与 MySQL 兼容，可以使用 JDBC API 进行访问，Java 应用程序利用该 API 来执行 SQL 查询和读取结果。GitHub 上的 Dolt JDBC 示例项目作为从 Java 应用程序连接到 Dolt 数据库的指南，演示了如何使用 MySQL Connector/J JDBC 驱动程序。此外，源文档概述了如何利用 Dolt 的版本控制功能，例如查询系统表和存储过程，以及使用函数比较跨分支的数据。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2024/implementing-raft-part-4-keyvalue-database/">实现 Raft：第 4 部分 - 键/值数据库</a><br>源文档深入探讨了如何使用 Raft 共识算法实现键/值数据库，作为 Eli Bendersky 描述的更大系统的一部分。它详细介绍了构建在 Raft 之上的复制状态机如何作为分布式键/值存储的基础。该文档解释说，所有命令，包括只读操作，都是通过 Raft log 提交的，以保持线性化和可序列化性，保证强一致性。此外，它还引入了一个 KV 客户端库，可简化与 KV 服务的交互，包括用于领导选举和命令提交的逻辑。客户端库设计为用户友好的，封装了复杂的操作，并为管理分布式数据库提供了一个方便的界面。</p> 
+
+<p><a href="https://cacm.acm.org/opinion/life-lessons-from-the-first-half-century-of-my-career/">我职业生涯前半个世纪的人生教训</a><br>计算机领域的先驱 David Patterson 回顾了他广泛的职业生涯，并传授了 16 条重要的人生经验，这些经验教训在专业和个人方面都为他提供了指导。他强调家庭、幸福以及拥有一个由朋友和亲人组成的支持网络的重要性。帕特森主张选择快乐而不是成功，认为快乐的性格对于实现职业目标至关重要。他强调了无私的重要性，敦促个人优先考虑他人的福祉，尤其是在面对不公正的情况下。此外，Patterson 强调了反馈的价值、个人基准的重要性以及克服恐惧的勇气的必要性。他的见解还涉及激情的重要性、紧急任务和重要任务之间的区别、领导力的作用以及积极心态在人际关系和职业努力中的力量。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.pragmaticengineer.com/wordpress-struggles/">开源商业模式在 WordPress 中苦苦挣扎</a><br>Automattic 和 WP Engine 之间正在进行的诉讼凸显了商业开源软件的复杂性及其对 Automattic 等公司的影响。WordPress 商标的所有者 Automattic 正在维护其权利以保护其商业利益，这可能会影响开源许可和商标执行的未来。这种冲突凸显了依赖开源软件获得收入的公司所面临的挑战，因为它们在开放式协作和商业可行性之间寻求平衡。这场法律斗争，以及结束零利率 （ZIRP） 的更广泛影响，可能会导致开源社区中更严格的许可或更严格的商标执法。</p>
+
+<p><a href="https://community.ops.io/eyalestrin/unpopular-opinion-about-moving-back-to-on-prem-29o3">Unpopular opinion about &#34;Moving back to on-prem&#34;</a><br>The author, Eyal Estrin, presents an opinion that challenges the trend of organizations moving their workloads back to on-premises infrastructure, asserting that such a shift is more myth than reality. He argues that the public cloud is the future for innovative solutions, with its scalability, data center management, hardware maintenance, and support for modern applications and technologies like GenAI. Estrin emphasizes the importance of strategic investment in cost, security, sustainability, and employee training to fully leverage public cloud benefits. He also touches on the significance of data residency and sovereigllty in the context of global cloud providers. Despite some organizations&#39; reluctance to change due to familiarity with on-prem solutions, Estrin believes that embracing the shift to the public cloud is essential for future success.</p>
+
+<p><a href="https://dolthub.com/blog/2024-10-10-yacc-union-types/">将 Yacc 延迟降低 80%</a><br>该博客文章讨论了对 Dolt 的 Yacc SQL 解析器所做的重大改进，重点是通过提高性能来减少延迟。该团队从使用静态类型的堆栈对象过渡到联合类型的接口类型，尽管引入了潜在的强制转换异常，但最终还是产生了更小的对象和更好的性能。此更改使解析速度估计提高了 80%，使最小查询的速度提高了约 30 微秒。该博文还强调，这些增强功能使之前目标的 3% 解析时间减少了 12%，从而改善了整体查询执行。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/10/three-ways-software-defined-storage-is-transforming-hybrid-cloud-architectures/">软件定义存储转变混合云架构的三种方式</a><br>MSys Technologies 高级营销总监 Sameer Danave 的文章深入探讨了软件定义存储 （SDS） 在混合云架构中的变革性作用。SDS 将存储软件从硬件中抽象出来，在全球范围内越来越多地部署，预计到 2024 年，全球存储容量的一半将是 SDS。本文重点介绍了 SDS 革新混合云架构的三种主要方式：增强灾难恢复和云备份、提高数据移动性以及提高存储效率。SDS 能够提供灵活、经济高效且高效的存储解决方案，使企业能够更好地管理各种环境中的数据，从而推动这些进步。</p>
+
+<p><a href="https://medium.com/@i210688/understanding-kyverno-a-kubernetes-native-policy-engine-d2ea5d3400bb">Understanding Kyverno: A Kubernetes-Native Policy Engine</a><br>Understanding Kyverno: A Kubernetes-Native Policy Engine is an article that introduces Kyverno, an open-source Kubernetes policy engine designed to manage policies declaratively within a Kubernetes environment. The engine facilitates validation, mutation, and generation of Kubernetes resources to ensure compliance, security, and governance. Kyverno operates using Kubernetes YAML, making it accessible without the need for additional programming languages. The article outlines Kyverno&#39;s key features, including validation rules, resource mutation, automatic generation of resources, and detailed policy violation reports. It also discusses Kyverno&#39;s installation process, either through Helm or by applying a YAML manifest, and provides a simple example of a policy requiring pods to have an &#34;app&#34; label.</p>
+
+<p><a href="https://dev.to/carrie_luo1/deploying-high-availability-safeline-waf-on-k3spart-4-4ac6">在 K3s 上部署高可用性 SafeLine WAF（第 4 部分）</a><br>该文档提供了有关在 Kubernetes 集群上部署高可用性 SafeLine Web 应用程序防火墙 （WAF） 的全面指南，特别侧重于将其与 Nginx-Ingress 集成以进行域保护。它详细介绍了配置 WAF 的过程，包括设置保护站点和代理配置以检索客户端的真实 IP 地址，以便有效阻止和实施规则。该指南进一步解释了如何使用 kubectl 命令应用必要的配置，并通过访问域和观察拦截页面来验证设置。此外，它还涵盖通过模拟攻击并在 SafeLine WAF 控制台中检查相应的事件通知来测试攻击防护。最后，本文档简要提到了其他主题，例如解决登录问题，并提供了指向 Dev Community 平台上相关内容的链接。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/teamhanko/hanko">teamhanko/hanko</a><br>面向开发人员的完整身份验证和用户管理解决方案。</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>在容器中运行管道的引擎</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一个符合 Redis 标准的内存实时反应式数据库，针对现代硬件以及构建和扩展真正的实时应用程序进行了优化。</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS 是一个构建在 Redis 和 S3 之上的分布式 POSIX 文件系统。</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator 在 Kubernetes 上创建/配置/管理 Prometheus 集群</p>
+
+<p><a href="https://github.com/fsnotify/fsnotify">fsnotify/fsnotify</a><br>Go 的跨平台文件系统通知。</p>
+
+<p><a href="https://github.com/IBM/sarama">IBM/sarama</a><br>Sarama 是 Apache Kafka 的 Go 库。</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes 虚拟化 API 和运行时，用于定义和管理虚拟机。</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>访问和保护所有基础设施的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/redpanda-data/connect">redpanda-data/connect</a><br>花哨的流处理在操作上变得平凡</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>适用于 Kubernetes 的开放且可扩展的持续交付解决方案。由 GitOps Toolkit 提供支持。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>在 Go 中实现极快、结构化、分级的日志记录。</p>
+
+<p><a href="https://github.com/dexidp/dex">dexidp/dex</a><br>OpenID Connect （OIDC） 身份和具有可插拔连接器的 OAuth 2.0 提供程序</p>
+
+<p><a href="https://github.com/WuKongIM/WuKongIM">WuKongIM/WuKongIM</a><br>不只是即时通讯(IM)</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>Kubernetes 包管理器</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/pion/webrtc">pion/webrtc</a><br>WebRTC API 的纯 Go 实现</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>受 Material Design 启发的 Go 跨平台 GUI 工具包</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

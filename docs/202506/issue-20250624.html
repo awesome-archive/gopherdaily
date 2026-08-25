@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250624.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250624</span>
+</p>
+<p>每日一谚：Not doing DDD or Clean A is not an anti-pattern. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/24/grab-rewrote-go-service-in-rust">Go vs. Rust再掀波澜：Grab真实案例复盘，Gopher如何看待这场“效率与代价”之争？</a><br>东南亚科技巨头、出行公司 Grab 的一篇技术博客《Counter Service: How we rewrote it in Rust》在技术圈引起了不小的震动。他们将一个高 QPS（每秒查询率）的 Go 微服务（Counter Service）用 Rust 进行了重写，结果令人瞩目：**在保持相似 P99 延迟性能的前提下，基础设施成本降低了高达 70%</p> 
+
+<p><a href="https://medium.com/@ashishkhuraishy/from-scarcity-to-abundance-how-go-changed-concurrency-forever-c88e50309c0a">从匮乏到富足：Go 如何永远地改变并发编程</a><br>几十年来，我们一直将线程视为昂贵的资源，因为它们确实如此。一个典型的操作系统线程大约占用 8MB 内存。启动一千个线程，在编写一行业务逻辑之前，就已经消耗了 8GB 的内存。大多数语言都将线程视为宝贵的资源——仔细地进行池化、谨慎地管理、谨慎地分配。但 Go 不在乎这些。Go 的设计者们审视了这一现状，并提出了一个问题：如果这些都不重要了呢？goroutine 以 2KB 的栈开始，而不是 2MB。它可以根据需要增长和缩小。Go 运行时使用一个调度器将数千个 goroutine 多路复用到少数几个操作系统线程上，这个调度器会让操作系统设计者羡慕不已。这不仅仅是性能优化，而是一种完全的哲学转变。当线程变得免费时，一切都会改变。</p> 
+
+<p><a href="https://mazzo.li/posts/go-asm-pointers.html">如何从汇编中存储 Go 指针</a><br>Go 标准工具链自带一个汇编器。该汇编器非常特殊，使用从 Plan 9 继承来的语法，并为特定于平台的指令和寄存器选择自己的名称。但它非常易于使用。更平凡的是，Go 带有一个垃圾收集器。这篇文章解释了如果我们想从汇编中操作 Go 指针，如何使这两个组件良好地协同工作。文章涵盖了 Go 的 GC 写屏障、如何解决从汇编存储指针时通知 Go GC 的问题，以及如何在 Go 中分配对齐的内存。</p> 
+
+<p><a href="https://dev.to/leapcell/learning-large-scale-go-project-architecture-from-k8s-59fa">从 K8s 学习大型 Go 项目架构</a><br>在尝试使用 Go 构建具有高可扩展性、可靠性和可维护性的大型项目之前，让我们首先研究 Kubernetes 的项目结构，了解它如何组织一系列功能模块来进行容器编排。文章详细介绍了 Kubernetes 的主要顶级目录（api、build、cmd、pkg、staging）及其功能，并与标准 Go 项目布局进行了比较，解释了 Kubernetes 为什么没有使用 `internal` 目录。文章还探讨了 Kubernetes 的声明式设计理念，以及如何避免过度工程设计，并以电子商务场景为例说明了模块设计和依赖管理的演变过程，强调了模块职责分离和事件驱动方法的重要性。</p> 
+
+<p><a href="https://medium.com/@sainageswar/go-lovers-the-fluent-way-to-build-ml-products-with-go-and-python-sidecars-b56d53192a2a">Go 爱好者：使用 Go 和 Python Sidecar 流畅构建 ML 产品</a><br>长期以来，构建生产 ML 系统意味着要在 Python 无与伦比的 ML 生态系统和 Go 优越的性能与部署方案之间做出选择。Python 提供了 PyTorch、NumPy、Transformers……而 Go 提供了闪电般快速的 API、优雅的并发性、简单的部署和可靠的稳定性。go-api-boot 和 agent-boot 框架结合了 Go 的速度和 Python 的 ML 生态系统，创建了终极的 AI 开发栈。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-06-23-vector-index-deep-dive">版本控制的向量索引：在最近邻索引中实现结构共享</a><br>本文探讨了Dolt如何使用一种新颖的数据结构实现高效的版本控制向量索引，从而节省空间。Dolt可以存储不同时间点的知识库快照，方便比较数据集和查询结果；如果搜索结果意外更改，可以轻松回滚数据库以恢复原始行为，然后比较分支以找出确切的更改原因和原因；可以使用分支在将更改合并回主分支之前探索数据集的更改，而无需维护单独索引的时间和存储成本。</p>
+
+<p><a href="https://engineering.salesforce.com/how-salesforce-engineering-operationalized-ai-productivity-at-scale/">Salesforce 如何大规模地实现 AI 生产力</a><br>Salesforce 工程团队最近通过为所有开发团队设定新的 AI 工具基线，启动了一项公司范围内的生产力转变。这项转变在短短三周内实现了 90% 以上的采用率，并在接下来的六周内持续保持，数千名工程师持续使用并体验到开发速度的显著提升。本文更详细地介绍了推动这一转变的系统、指标和用例，重点介绍了 AI 工具如何大规模地进行运营。</p>
+
+<p><a href="https://mlacast.com/projects/undo-redo">在复杂的视觉应用程序中实现撤销/重做系统</a><br>本文探讨了在 Alkemion Studio（一款面向 TTRPG 的可视化头脑风暴和写作工具）中设计和实现稳健且直观的撤销/重做系统所面临的挑战和经验。该系统需要处理多个上下文（例如棋盘上的标记移动、编辑器窗口中的富文本编辑和元数据调整），并确保撤销/重做操作直观且上下文相关，避免用户意外撤销或重做不可见的操作。文章详细介绍了系统的核心概念，包括动作类、动作栈、上下文和容器，并阐述了如何处理动作顺序和编年史以保持用户体验的一致性。最后，文章还指出了系统的潜在弱点以及未来的改进方向。</p>
+
+<p><a href="https://blog.julik.nl/2025/06/getting-conditionally">条件式 GET 请求 - 基础知识</a><br>文章讨论了 CDN 的缓存控制基础知识，以及如何正确使用 Cache-Control 头部来优化网站性能。作者指出，许多开发者并不了解缓存控制的基本原理，导致 CDN 提供商利用其不完善的缓存控制来提高性能，但这通常会增加成本。文章通过一个简单的 Rack 应用示例，演示了如何使用 rack-cache 来学习和实践缓存控制，并解释了 ETag 和 last-modified 的区别及使用方法，以及如何平衡缓存有效性和读写一致性。最后，作者建议开发者尽可能简化缓存配置，避免过度依赖 CDN 的高级功能。</p>
+
+<p><a href="https://jyn.dev/how-i-use-my-terminal">我如何使用我的终端</a><br>这篇文章详细描述了作者如何通过巧妙配置tmux和zsh等工具，实现高效的终端开发环境，包括快速搜索文件、在远程服务器上打开文件并在nvim中编辑等功能。文章还对比了VSCode等IDE，解释了作者选择这种终端工作方式的原因，并分享了一些替代方案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/23/phoenix-new/#atom-everything">Phoenix.new 是 Fly 进军提示驱动型应用开发领域的尝试</a><br>Fly.io 推出了一个名为 Phoenix.new 的新工具，这是一个基于 AI 的编程平台，允许用户通过提示来创建完整的 Phoenix 应用程序。该应用程序使用 SQLite 数据库并在 Fly 的平台上运行。文章详细介绍了 Phoenix.new 的工作原理，包括其对 Phoenix LiveView 的利用、强大的沙盒环境以及与大型语言模型（LLM）的集成。作者还分享了自己使用 Phoenix.new 创建笔记应用程序的亲身经历，并展示了该工具强大的代码生成、测试和迭代能力。Phoenix.new 目前定价为每月 20 美元，但 Fly 正在考虑将其扩展到其他框架和编程语言。</p>
+
+<p><a href="https://surma.dev/things/langgraph">LangGraph 用于复杂工作流程 — surma.dev</a><br>本文介绍了 LangGraph，一个用于构建复杂工作流程架构并将其编码为强大的自动化的工具。LangGraph 允许你构建多个 LLM 的编排，并通过工具调用扩展 LLM 的功能。文章还探讨了 LangGraph 中的循环、并行性和 reducer 等概念，以及如何构建 Agent 和 Agent 集群。</p>
+
+<p><a href="https://digitalseams.com/blog/the-ai-lifestyle-subsidy-is-going-to-end">AI生活补贴即将结束</a><br>本文探讨了AI生活补贴的终结及其对用户数字体验的影响。作者认为，尽管AI技术会不断进步，但由于投资者追求快速增长和盈利，AI应用的体验可能会恶化。文章以2022年关于千禧一代生活补贴结束的文章为例，指出当前AI产品也存在类似问题，并预测AI广告的兴起将导致信息质量下降和用户体验变差。作者最后指出，完全付费服务和开源模型将成为未来AI应用的两个主要发展方向。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/erigontech/erigon">erigontech/erigon</a><br>Ethereum implementation on the efficiency frontier</p>
+
+<p><a href="https://github.com/caarlos0/env">caarlos0/env</a><br>A simple, zero-dependencies library to parse environment variables into structs</p>
+
+<p><a href="https://github.com/weibaohui/k8m">weibaohui/k8m</a><br>一款轻量级、跨平台的 Mini Kubernetes AI Dashboard，支持大模型&#43;智能体&#43;MCP(支持设置操作权限)，集成多集群管理、智能分析、实时异常检测等功能，支持多架构并可单文件部署，助力高效集群管理与运维优化。</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/awslabs/diagram-as-code">awslabs/diagram-as-code</a><br>Diagram-as-code for AWS architecture.</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/a-h/templ">a-h/templ</a><br>A language for writing HTML user interfaces in Go.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/nomad">hashicorp/nomad</a><br>Nomad is an easy-to-use, flexible, and performant workload orchestrator that can deploy a mix of microservice, batch, containerized, and non-containerized applications. Nomad is easy to operate and scale and has native Consul and Vault integrations.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/kubernetes/kube-state-metrics">kubernetes/kube-state-metrics</a><br>Add-on agent to generate and expose cluster-level metrics.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>A BNB Smart Chain client based on the go-ethereum fork</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

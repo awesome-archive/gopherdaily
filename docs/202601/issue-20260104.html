@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260104.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260104</span>
+</p>
+<p>每日一谚：Reflection is never clear </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/04/stick-to-the-core-embrace-variables-2025-review-2026-outlook">坚守内核，拥抱变量：我的 2025 年终复盘与 2026 展望</a><br>今天，在这个2026年元旦后开工的第一天，我想和大家聊聊我的 2025，以及我对 2026 的硬核规划。</p> 
+
+<p><a href="https://tonybai.com/2026/01/04/stop-lying-to-the-compiler">让编译器成为你的副驾驶：告别“防御性编程”，拥抱“类型驱动开发”</a><br>最近，Daniel Beskin 的一篇深度好文《The Compiler Is Your Best Friend, Stop Lying to It》（编译器是你最好的朋友，别再对它撒谎了），为我们提供了一个全新的视角：这些运行时崩溃，本质上是因为我们在编译时对编译器撒了谎。</p> 
+
+<p><a href="http://notes.eatonphil.com/2026-01-03-distinguishing-yourself.html">作为开发人员在职业生涯早期脱颖而出</a><br>这篇文章针对刚毕业的软件开发人员如何在其职业生涯早期脱颖而出提出了建议，主要围绕求职的三个方面：知道在哪里申请、获得面试机会以及通过面试。作者将公司分为三类：本地/非VC/非金融类（薪资中等，竞争小）、VC支持的初创和公开科技公司（薪资较高，难以脱颖而出）、大型科技和金融公司（薪资最高，面试最难）。文章强调了在第1类和第2类公司中，通过写博客、做副项目、贡献开源、运营或参与社区活动等方式可以帮助展示热情和技能，从而在众多合格的候选人中脱颖而出，尤其是在第2类公司中。对于第3类公司，主要依赖准备和通过严格的面试。作者还建议，如果短期内难以直接获得开发职位，可以考虑从技术支持或质量保证（QA）职位开始，因为内部转岗通常比外部跳槽更容易。最后，作者总结说，持续建立社区关系和进行有意义的编码活动对长期的职业发展至关重要。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/the-go-ssa">Go编译器 SSA 阶段详解</a><br>在上一篇文章中，我们探讨了 IR——编译器的工作格式，其中发生函数去虚拟化、内联和逃逸分析。IR 在高级层面优化代码，对哪些函数进行内联以及值应该存在于哪里（堆还是栈）做出明智的决策。然而，IR 仍然很像源代码，具有可多次赋值的变量、复杂的控制流以及与 Go 语法紧密映射的操作。SSA（静态单赋值）阶段将优化后的 IR 转换为 SSA 形式，这是现代编译器（如 GCC、LLVM、Go 编译器）使用的中间表示形式，其核心思想是每个变量只被赋值一次，这极大地简化了优化分析。文章详细解释了 SSA 的构建块（值和块）、从 IR 到 SSA 的生成过程（包括 PHI 节点的引入来处理分支），以及 SSA 优化流水线如何通过多轮通用和特定于架构的优化，最终将代码转换为可生成机器代码的最终形式。最后，鼓励读者使用 GOSSAFUNC 环境变量查看自己代码的 SSA 转换过程。</p> 
+
+<p><a href="https://blog.gaborkoos.com/posts/2025-08-26-Go-Channels-A-Runtime-Internals-Deep-Dive">Go 语言channel：运行时内部深度解析</a><br>本文深入剖析了 Go 语言通道（Channel）的内部机制，这是 Go 语言并发模型的基石。文章从 CSP 理论背景讲起，详细解释了通道的内存布局（hchan 结构体）、阻塞操作（send/receive）如何通过 sudog 结构体与 Go 调度器（G/M/P 模型）交互。内容涵盖了发送和接收的生命周期、缓冲路径与直接堆栈拷贝的性能差异、关闭通道的行为（唤醒所有等待的 goroutine），以及 select 语句如何在底层实现非确定性选择和同步。最后，文章强调了通道在 Go 内存模型中作为 happens-before 关系建立者的重要性，确保了并发通信的内存可见性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/2025-wrapup/">2025 was an excellent year for this blog</a><br>In 2025, the author published 141 posts, with 33 making it to the front page of Hacker News or similar aggregators. The author was the third most popular blogger on Hacker News that year. They received hundreds of emails from readers and noted that traffic peaked in August with around 1.3 million monthly views. The blog also introduced email subscriptions via Buttondown, accumulating over 2,500 subscribers. A significant change was the increased cost of hosting and analytics services, such as Plausible, which the author is trialing due to the growth in traffic. The post concludes by thanking readers and looking forward to writing more in 2026. A related post mentioned is about the author&#39;s policy against allowing AI-generated content on the blog.</p>
+
+<p><a href="https://kubernetes.io/blog/2026/01/02/kubernetes-v1-35-restart-all-containers">Kubernetes v1.35: New level of efficiency with in-place Pod restart</a><br>Kubernetes 1.35 版本引入了一项强大的新功能，即能够触发 Pod 的完整、就地重启（Restart All Containers，Alpha 版）。此功能相较于删除和重新创建整个 Pod 这种资源密集型方法，提供了一种更高效的重置 Pod 状态的方式。该功能对于 AI/ML 工作负载特别有用，允许应用程序开发人员专注于核心训练逻辑，同时将复杂的故障处理和恢复机制推卸给 sidecars 和声明式的 Kubernetes 配置。</p>
+
+<p><a href="https://nullprogram.com/blog/2026/01/01">WebAssembly 作为 Python 扩展平台</a><br>本文探讨了使用 WebAssembly (Wasm) 作为 Python 扩展平台的可行性。作者讨论了两种主要用例：作为提速工具和提供嵌入式能力。使用 wasmtime-py 库，可以分发与架构无关的 Wasm 二进制文件，从而在宿主系统上无需原生工具链即可运行。文章深入分析了使用 wasmtime-py 时遇到的注意事项，特别是 Wasm 指针被解释为有符号整数带来的安全隐患，并提供了截断掩码（masking）的解决方案。对于性能提升，作者的基准测试显示 C 代码编译为 Wasm 后可以带来约 10 倍的速度提升。第二个用例是嵌入像 Monocypher 这样的 C 库，通过在 Wasm 中实现一个简单的内存分配器（bump allocator）和暴露接口，可以安全地在 Python 中使用这些加密功能，并确保敏感数据在清理后被擦除。</p>
+
+<p><a href="https://apenwarr.ca/log/20251120">系统设计3：大型语言模型与语义革命</a><br>作者回顾了互联网早期，一位高中化学/物理老师提出的关于全球计算机如何互联的深刻问题，这促使他思考协议标准化和“阿帕网”成功的秘诀。文章引出了波斯特尔定律（Postel&#39;s Law）：发送时保守，接收时开放，认为这是互联网高层通信的核心，因为它允许系统容忍错误。
+
+接着，文章回顾了技术发展史上的几次“系统互联”的尝试：
+1. **XML**：试图通过严格的语法和模式验证（Schemas）来分离结构和内容，但因其复杂性和验证的失败而最终被抛弃。
+2. **JSON**：因其简洁性、与JavaScript的兼容性以及避免了XML的复杂模式而成为API数据交换的首选。
+3. **区块链**：被视为一个昂贵但最终被证明多余的“分布式账本”尝试，其核心价值在于推动了企业级数据交换系统的更新，但最终“分布式”特性被证明是不必要的。
+
+最后，作者将当前热点**大型语言模型（LLMs）**置于这一历史背景下。LLMs被视为对波斯特尔定律的极端放大（发送完美的语法，接受任何输入）。与前几代技术不同，LLMs真正解决了长久以来困扰系统互联的**语义**问题。作者认为，LLMs的核心价值在于它们成为了“通用翻译器”，能够连接任何两个系统，解决了90%的语义鸿沟，这标志着应用层互联的“圣杯”的实现。然而，这种前所未有的互联速度和规模也意味着需要像互联网早期那样，快速建立起新的安全和防御机制。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/4/jaana-dogan/#atom-everything">A quote from Jaana Dogan</a><br>I&#39;m not joking and this isn&#39;t funny. We have been trying to build distributed agent orchestrators at Google since last year. There are various options, not everyone is aligned... I gave Claude Code a description of the problem, it generated what we built last year in an hour. It&#39;s not perfect and I&#39;m iterating on it but this is where we are right now. If you are skeptical of coding agents, try it on a domain you are already an expert of. Build something complex from scratch where you can be the judge of the artifacts. [...] It wasn&#39;t a very detailed prompt and it contained no real details given I cannot share anything propriety. I was building a toy version on top of some of the existing ideas to evaluate Claude Code. It was a three paragraph description.</p>
+
+<p><a href="https://www.youtube.com/watch?v=RFKCzGlAU6Q">Clade Code工作原理</a><br></p>
+
+<p><a href="https://foundationcapital.com/where-ai-is-headed-in-2026">2026年人工智能的走向</a><br>本文作者回顾了2025年关于人工智能的预测并给出了8项新的预测，同时总结了2025年持续存在的三个趋势。
+
+**2025年预测评分：**
+*   **正确之处 (🟢):** 推理模型和复合AI系统定义了这一年；AI重写软件经济学（“服务即软件”论点成为主流）；OpenAI的主导地位受到侵蚀；英伟达的垄断地位面临挑战；自动驾驶出租车赢得了公众信任。
+*   **过早 (⏳):** AI原生初创公司尚未取代现有巨头（谷歌强势回归）；AI界面超越聊天框的进展慢于预期；AI概述正在削弱传统搜索（10个蓝链的终结），但代理式商务才是真正的颠覆。
+*   **错误之处 (❌):** Llama未能成为“AI的Linux”，生态系统是分散的，而非集中于Meta的标准。
+
+**2026年8大预测：**
+1.  **企业AI终于投入生产：** 2026年是初创公司迎头赶上并为企业提供可靠的端到端工作流程自动化解决方案的一年，重点是解决企业内部非结构化工作流程的挑战。
+2.  **决策追踪成为新的数据护城河：** 记录代理执行工作流时的完整决策路径（输入、策略、异常处理、原因）将成为企业的新核心资产。
+3.  **AI相关安全问题成为焦点：** 随着代理获得敏感权限，安全风险改变了形态，AI安全将成为董事会关注的重点。
+4.  **SaaS巨头反击：** 现有SaaS平台将更积极地控制数据访问和分发，增加初创公司的依赖风险。
+5.  **代理将吞噬电子商务：** 消费者行为将转向代理驱动的采购，挑战以人工点击为基础的中间商和聚合器（如电商平台）。
+6.  **Gemini将超越ChatGPT：** 得益于谷歌在搜索、Chrome、Workspace和Android的巨大分发优势，Gemini在消费者使用量上将赶超OpenAI。
+7.  **一家AI实验室将上市：** 鉴于惊人的收入增长和巨大的基础设施投入需求，Anthropic或OpenAI可能在2026年进行IPO。
+8.  **类似Cursor的界面成为默认：** AI将嵌入到工作流中，提供“建议并请求批准”的模式，超越分离的聊天框UI，应用于法律、金融、营销等知识工作。
+
+**2025年持续的3大趋势：**
+*   **扩展定律变为乘法关系：** 预训练、后训练优化和测试时计算（推理时间）三者相互促进，带来复合式增长。
+*   **验证是瓶颈：** 只有在有明确成功定义的领域（如编码、数学），AI的进展才最快；无法验证的任务是自动化的主要限制。
+*   **定价转向结果导向：** 随着推理成本计入P&amp;L，企业对AI的投资将要求明确的投资回报率（ROI），定价将从按使用付费转向按结果付费。</p>
+
+<p><a href="https://www.chasewhughes.com/writing/beyond-the-replica-the-case-for-first-principles-agents">超越复制品：倡导第一性原理智能体</a><br>本文探讨了构建下一代AI智能体时，我们过度关注模仿人类工作流程（复制品智能体）的局限性。作者主张转向“第一性原理智能体”的设计，即不模仿人类的步骤，而是根据问题本身的客观函数来设计工作流程，以实现真正的效率。文章以AlphaGo的“第37手”和亚马逊仓库的“混乱存储”为例，说明了非人类的、基于数学和逻辑的解决方案如何超越人类的传统方法。文章总结道，我们应根据问题的性质选择合适的架构：在需要人工审核或与现有UI交互时使用仿生（复制品）设计；在追求纯粹结果效率时，则应采用第一性原理（异类）设计。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>The most advanced status page in the world</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/danielpaulus/go-ios">danielpaulus/go-ios</a><br>This is an operating system independent implementation of iOS device features. You can run UI tests, launch or kill apps, install apps etc. with it.</p>
+
+<p><a href="https://github.com/containers/kubernetes-mcp-server">containers/kubernetes-mcp-server</a><br>Model Context Protocol (MCP) server for Kubernetes and OpenShift</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>Simple and flexible tool for managing secrets</p>
+
+<p><a href="https://github.com/KaijuEngine/kaiju">KaijuEngine/kaiju</a><br>General purpose 3D and 2D game engine using Go (golang) and Vulkan with built in editor</p>
+
+<p><a href="https://github.com/autobrr/qui">autobrr/qui</a><br>A fast, single-binary qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers. Go &#43; React.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/ory/hydra">ory/hydra</a><br>Internet-scale OpenID Certified™ OpenID Connect and OAuth2.1 provider that integrates with your user management through headless APIs. Solve OIDC/OAuth2 user cases over night. Consume as a service on Ory Network or self-host. Trusted by OpenAI and many others for scale and security. Written in Go.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>Headless cloud-native authentication and identity management written in Go. Scales to a billion&#43; users. Replace Homegrown, Auth0, Okta, Firebase with better UX and DX. Passkeys, Social Sign In, OIDC, Magic Link, Multi-Factor Auth, SMS, SAML, TOTP, and more. Runs everywhere, runs best on Ory Network.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/nginx/nginx-gateway-fabric">nginx/nginx-gateway-fabric</a><br>NGINX Gateway Fabric provides an implementation for the Gateway API using NGINX as the data plane.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

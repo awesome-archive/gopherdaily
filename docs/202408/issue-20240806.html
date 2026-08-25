@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240806.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-06</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://groups.google.com/g/golang-announce/c/X4q_-Wf-5g4">Go 1.22.6和Go 1.21.13发布</a><br>Go 团队发布了 1.22.6 和 1.21.13 版本，这是次要的单点发布，并提供了从 Go 网站下载二进制和源代码分发的说明。</p> 
+
+<p><a href="https://github.com/golang/go/issues/43930#issuecomment-2271971585">Go 编译器和运行时会议纪要（2024-08-06）</a><br>该文档是关于 Go 编译器和运行时的会议的一系列评论和讨论，主要问题是 #43930，由 Jeremy faller 于 2021 年 1 月 26 日开启，该文档包括对文档所做的各种反应和更改。</p> 
+
+<p><a href="https://www.philipotoole.com/building-rqlite-9-0-cutting-disk-usage-by-half/">构建 rqlite 9.0：将磁盘使用量减半</a><br>rqlite 是一个用 Go 编写的开源分布式关系数据库，它正在开发一个新的 9.0 版本，旨在通过消除在 Raft 系统中存储工作 sqlite 数据库的快照副本的需要，并改善节点重启时间，将磁盘使用量减少约 50%。</p> 
+
+<p><a href="https://www.youtube.com/watch?v=y5utZCeHys0">5 级Go错误处理</a><br>该文件提供了 YouTube 的功能和政策的完整列表，包括其关于页面、新闻、版权、联系信息、广告、开发者、条款、隐私、政策和安全，以及 YouTube 的运作方式，所有这些都由 Google LLC 管理。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2024/08/05/data-center-engineering/roce-network-distributed-ai-training-at-scale/">用于大规模分布式 AI 训练的 RoCE 网络</a><br>Meta 开发了用于分布式 AI 训练的大规模 RoCE 网络，使用 RDMA Over Coherent Ethernet version 2（RoCEv2）进行通信，并成功扩展其网络以容纳数千个 GPU，策略包括 AI Zone、队列对缩放、拥塞控制和接收器驱动的流量准入。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/08/05/how-to-add-otel-instrumentation-to-a-react-native-app/">如何将 OTEL 插桩添加到 React Native 应用中</a><br>本文讨论了如何使用 OpenTelemetry 演示项目将 OpenTelemetry （OTel） 插桩添加到 React Native 应用，以获取有关应用程序性能的见解，并在不同平台和环境中改进它。</p>
+
+<p><a href="https://www.hashicorp.com/blog/hcp-packer-now-tracks-ci-cd-pipeline-metadata">HCP Packer 现在可跟踪 CI/CD 管道元数据</a><br>HCP Packer 是一款用于镜像生命周期管理的工具，它增加了流水线元数据跟踪功能，允许用户跟踪在镜像构建过程中使用了哪些 CI/CD 工具，从而增强了构建流水线的安全性和可见性。</p>
+
+<p><a href="https://thenewstack.io/make-data-governance-automation-suck-less-with-a-supergraph/">使用超级图减少数据治理自动化的干扰</a><br>New Stack 讨论了如何使用 Supergraph（一种数据治理自动化工具）来简化数据管理并改善数据交付，强调了 API 治理的重要性以及使用 GraphQL 进行数据定义和关系。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.bitsrc.io/how-to-design-a-codebase-optimized-for-ai-coding-assistants-e760569ae7b3">优化 AI 编码助手的代码库</a><br>Eden Ella 的文章讨论了设计针对 AI 编码助手优化的代码库的重要性，强调代码的可读性、可维护性以及使用 Bit 等可重用组件来增强 AI 的理解和贡献。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/xvzc/SpoofDPI">xvzc/SpoofDPI</a><br>一个用Go编写的简单快速的反审查工具</p>
+
+<p><a href="https://github.com/elastic/go-elasticsearch">elastic/go-elasticsearch</a><br>Elasticsearch 的官方 Go 客户端</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>适用于 Kubernetes 的 Ingress-NGINX 控制器</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>用于组合服务（例如 Ingress）和负载均衡 API 的下一次迭代的存储库。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/descheduler">kubernetes-sigs/descheduler</a><br>Kubernetes 的 Descheduler</p>
+
+<p><a href="https://github.com/encoredev/encore">encoredev/encore</a><br>Encore 是用于构建分布式系统和事件驱动应用程序的后端开发平台。</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go 客户端用于 Kubernetes。</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型SRT / WebRTC / RTSP / RTMP / LL-HLS媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>充当反向代理，保护您的 Web 服务免受攻击和利用。</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>通过 Terraform 预配远程开发环境</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，用于使用您想要的任何名称制作本地受信任的开发证书。</p>
+
+<p><a href="https://github.com/joho/godotenv">joho/godotenv</a><br>Ruby 的 dotenv 库的 Go 移植（从 .env 文件加载环境变量）</p>
+
+<p><a href="https://github.com/GoogleContainerTools/kaniko">GoogleContainerTools/kaniko</a><br>在 Kubernetes 中构建容器镜像</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>开放可靠的容器运行时</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>云原生策略管理</p>
+
+<p><a href="https://github.com/segmentio/kafka-go">segmentio/kafka-go</a><br>Go 中的 Kafka 库</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS 是一个构建在 Redis 和 S3 之上的分布式 POSIX 文件系统。</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA 是基于 Kubernetes 的事件驱动自动缩放组件。它为在 Kubernetes 中运行的任何容器提供事件驱动的缩放</p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>GoFrame 是 Golang 的一个模块化、功能强大、高性能的企业级应用开发框架。</p>
+
+<p><a href="https://github.com/99designs/aws-vault">99designs/aws-vault</a><br>用于在开发环境中安全存储和访问 AWS 凭证的保险库</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI 以时尚的方式管理您的集群！</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241018.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-18</span>
+</p>
+<p>每日一谚：Keep dependencies up to date to avoid security vulnerabilities </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/60eD5gN_QApnGkwITZRMpw">Go开发者的密码学导航：crypto库使用指南</a><br>对go crypto和golang.org/x/crypto的设计思路和子包结构的梳理，帮你在大脑中建立一幅“crypto地图”，在需要的时候，快速导航到最适合的密码学包</p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/programming-is-fun">Go培训师John Arundel专访：编程很有趣</a><br>John Arundel 是一位教师和 Go 书籍的作者，他讨论了他的教学方法、在编程中获得乐趣的重要性以及教授 Go 的挑战，强调了编写程序和分享内容以克服困难的重要性。</p> 
+
+<p><a href="https://valyala.medium.com/how-do-open-source-solutions-for-logs-work-elasticsearch-loki-and-victorialogs-9f7097ecbc2f">日志开源解决方案的工作原理：Elasticsearch、Loki 和 VictoriaLogs</a><br>本文讨论了开源日志记录解决方案（包括 ElasticSearch、Loki 和 VictoriaLogs）之间的差异和相似之处，重点介绍了它们的存储、查询和数据摄取方法，以及它们的性能和存储空间要求。</p> 
+
+<p><a href="https://www.ardanlabs.com/blog/2024/10/json-the-fine-print-ep-2-exploring-json-encoding-and-data-handling-in-go.html">探索Go中的JSON 编码和数据处理</a><br>面向工程师的 JSON 的第二集探讨了 JSON 作为无模式格式的独特特性、其优势和挑战，以及如何在 Go 和其他强类型语言中使用它，提供了实用的解决方案和实用的编码和解码技术。</p> 
+
+<p><a href="https://dev.to/embiem/how-to-consistently-retrieve-valid-json-from-claude-35-in-go-1g5b">如何在 Go 中一致地从 Claude 3.5 检索有效的 JSON</a><br>本文档提供了一个名为 &#39;CallClaudeForceTools&#39; 的 Golang 函数，可用于从 Claude 3.5 中检索结构化数据，该函数可用于函数、为 API 请求生成结构化数据、数据验证和转换以及一般文本提取或转换。</p> 
+
+<p><a href="https://lakin-mohapatra.medium.com/if-you-dont-know-c-or-assembly-do-you-really-understand-how-computers-work-8e5bc2eb9ef3">如果你不懂 C 或 Assembly，你真的了解计算机是如何工作的吗？</a><br>Lakin Mohaprasad 认为，了解 C 和汇编编程语言可以显着增强对计算机操作的理解，为优化、故障排除、安全性和更深入地了解硬件提供工具。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://medium.com/@simardeep.oberoi/cilium-advanced-network-policies-and-observability-in-kubernetes-fbb4fdd747ba">Cilium：Kubernetes 中的高级网络策略和可观测性</a><br>基于 eBPF 构建的 Cilium 在 Kubernetes 中引入了基于身份的安全模型，提供分层流量控制和深度可观测性，通过其在各个级别执行策略的能力改变网络空间，并提供传统 Kubernetes 网络策略无法比拟的安全性和可见性级别。</p>
+
+<p><a href="https://world.hey.com/dhh/our-cloud-exit-savings-will-now-top-ten-million-over-five-years-c7d9b5bd">我们下云预计将在五年内节省超1000万</a><br>37signals 是一家已将 7 个云应用程序从 AWS 迁移到自己的硬件的公司，预计五年内将节省超过 1000 万美元，其中节省的主要原因是使用了现有的数据中心机架和功率限制。</p>
+
+<p><a href="https://blog.gitguardian.com/owasp-top-10-for-mobile-secrets/">OWASP 表示 Secrets 安全是移动应用程序最重要的问题</a><br>开放全球应用程序安全项目 （OWASP） 已将凭证使用不当确定为移动应用程序最重要的安全风险，强调了硬编码凭证和不良密钥卫生的漏洞，并提出了管理密钥的最佳实践，包括使用安全存储、将密钥移动到后端、轮换和验证密钥以及实施密钥检测工具。</p>
+
+<p><a href="https://blog.kloudmate.com/best-practices-for-implementing-continuous-observability-in-ci-cd-workflows-08cbc15a70ca">在 CI/CD 工作流中实施持续可观测性的最佳实践</a><br>本文提供了在 CI/CD 工作流中实现持续可观测性的最佳实践，包括定义明确的目标、自动监控、版本控制、测试和安全验证、测量和优化管道性能，以及优先考虑持续反馈。</p>
+
+<p><a href="https://www.docker.com/blog/docker-terraform-provider/">新的 Docker Terraform 提供程序：轻松实现自动化、安全和扩展</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/17/keep-up-with-cloud-native-and-kubernetes-security-with-the-updated-cks-certification/">通过更新的 CKS 认证跟上云原生和 Kubernetes 安全性</a><br>随着云原生技术采用率的增加，云原生计算基金会 （CNF） 更新了认证 Kubernetes 安全专家 （CKS） 考试，以确保在保护 Kubernetes 和基于容器的应用程序方面具有最新的技能和知识。</p>
+
+<p><a href="https://vercel.com/blog/eval-driven-development-build-better-ai-faster">评估驱动的软件开发</a><br>Vercel 的首席技术官 Malte U BL 讨论了评估 （Evals） 在 AI 原生开发中的使用，强调了它们在评估输出质量、提供关键反馈以及实现不同 AI 模型和策略的快速测试方面的作用。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.google/inside-google/company-announcements/changes-knowledge-information-gemini-app-deepmind/">人工智能机会：我们的Gemini 和 Knowledge Information 团队的最新情况</a><br>Google首席执行官Sundar Pichai宣布了Gemini应用团队和知识与信息团队的变动，包括Gemini应用团队加入Google DeepMind，以及助理团队转向平台和设备，而前首席执行官Arun Prabhakar将成为首席技术专家。</p>
+
+<p><a href="https://thenewstack.io/how-to-build-an-ai-agent-to-control-household-devices/">如何构建 AI 代理来控制家用设备</a><br>新堆栈提供了一个教程，介绍如何构建 AI 代理，当 Sensecap 查看器检测到有人正在阅读书籍时，该代理会自动打开 Philips Wiz 智能灯泡，这是使用 Sensecraft 移动应用程序和 Python 3.12。</p>
+
+<p><a href="https://www.pingcap.com/blog/building-generative-ai-applications-with-tidb-and-amazon-bedrock/">使用 TiDB 和 Amazon Bedrock 构建生成式 AI 应用程序</a><br>该博客文章讨论了使用 TiDB Cloud Serverless 和 Amazon 基岩实现检索增强生成 （RAG） 问答机器人，演示了如何使用矢量搜索和文本生成功能来创建可扩展的 AI 驱动型问答机器人。</p>
+
+<p><a href="https://andrewmayne.com/2024/10/18/can-you-dramatically-improve-results-on-the-latest-large-language-model-reasoning-benchmark-with-a-simple-prompt/">您能否通过简单的提示显著改善最新的大型语言模型推理基准测试的结果？</a><br>Andrew Mayne 在最近的一篇论文中探讨了大型语言模型推理的局限性，认为一个简单的提示可以显著提高模型的性能，这表明问题可能与训练数据有关，而不是与推理有关。</p>
+
+<p><a href="https://blog.heroku.com/building-supercharged-agents-heroku-agentforce">使用 Heroku 和 Agentforce 构建 Supercharged Agent</a><br>Andrew Fawcett 讨论了如何利用 Heroku 的平台来增强 Salesforce 的 Agentforce AI 技术的功能，通过转换来自不同来源的数据并提供实时信息，如 Ultraconstruction 的一个用例所示。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>云原生网络和网络安全</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint 允许用户使用流行的框架快速启动一个 Go 项目</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>使用 Gitleaks 🔑 保护和发现机密</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS 提供商使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>开放可靠的容器运行时</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA 是基于 Kubernetes 的事件驱动自动缩放组件。它为在 Kubernetes 中运行的任何容器提供事件驱动的扩展</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/GreenmaskIO/greenmask">GreenmaskIO/greenmask</a><br>PostgreSQL 数据库匿名化和合成数据生成工具</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>具有可编程管道的 OpenTelemetry Collector 发行版</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI 以时尚的方式管理您的集群！</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go 客户端</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO 是一个高性能、与 S3 兼容的对象存储，在 GNU AGPLv3 许可下开源。</p>
+
+<p><a href="https://github.com/GoogleContainerTools/kaniko">GoogleContainerTools/kaniko</a><br>在 Kubernetes 中构建容器镜像</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI 网关 |AI Native API 网关</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>适用于 Windows 的 node.js 版本管理实用程序。具有讽刺意味的是，这是用 Go 编写的。</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

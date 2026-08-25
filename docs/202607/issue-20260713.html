@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260713.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260713</span>
+</p>
+<p>每日一谚：With unsafe package there are no guarantees. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/13/spf13-idiomatic-go">别再往 Go 里塞 Java 了：拆解 spf13 的 Idiomatic Go 信仰</a><br>随着 Go 语言的普及，大量带有 Java/Spring Boot 痕迹的过度抽象与分层设计（如 service/、repository/、复杂的 mock 框架等）被错误地包装为“Go 最佳实践”，甚至深刻污染了 AI 编程智能体的训练语料。为此，前 Google Go 核心团队成员、Cobra/Viper 作者 Steve Francia（spf13）开源了 go-skills 项目，旨在为 AI 和人类开发者提供一份硬核的“地道 Go（Idiomatic Go）”矫正教材。本文深度拆解了 spf13 的这套架构信仰，围绕“清晰胜于巧妙（Clear is better than clever）”的核心原则，详细梳理了包组织的扁平化策略、隐式接口的发现机制、将错 误视为值处理、基于 Channel 而非 Mutex 的并发编排、极简的表驱动测试、泛型的克制使用，以及 Command-First 的 CLI 架构设计。文章指出，真正的 Go 工程哲学在于摒弃不必要的抽象层，充分利用强大的标准库，回归代码的可预测性与高可读性。这不仅是指导 AI 编程智能体的规范，更是每一位高级 Go 工程师必备的技术品味与代码审查心法</p> 
+
+<p><a href="https://tonybai.com/2026/07/11/typescript-compiler-rewritten-in-go-agentic-ai-language">10倍速 TypeScript 7.0 正式发布，前Go产品经理：Go才是AI智能体时代的“天选语言”</a><br>微软近日正式发布了Go重写版的TypeScript 7.0版本，构建速度飙升 10 倍。这一举动印证了前 Go 语言产品经理 Steve Francia (spf13) 的最新“反直觉”论断：在 AI 智能体（Agentic AI）主导开发的时代，Go 才是真正的“天选语言”。文章深度剖析了其背后的工程逻辑：当 AI 取代人类成为高频“写作者”时，人类将退化为“阅读者”与“审查员”。此时，Go 语言在诞生之初押注的“为阅读优化”、“严格的依赖管理”、“极致的 编译速度”与“十年如一的向后兼容性”，完美契合了 AI 循环迭代对确定性、低上下文消耗和安全闸门的需求。相比之下，Python 与 TS 的动态性和 隐式依赖反而会成倍放大 AI 的纠错成本。文章强调，并非要用 Go 统一天下，但在构建 Agentic 时代的基础设施和后端服务层，Go 凭借更低的 API 成本和更高的迭代吞吐量，已经成为不可替代的默认选项。</p> 
+
+<p><a href="https://gomodvanityurls.com/zh/blog/why-not-github-import-path/">为什么你的 Go 私有模块不该直接用 GitHub 路径</a><br>从平台锁定到 IP 裸奔，直接用 GitHub/GitLab 路径做 Go 私有模块 import 有四大隐患。Vanity URL 是 Go 官方推荐的标准解法。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/3sG8qvUmJGoSRaj9qzd57Q">【AI 时代软件工程师的算法图谱】16 系统设计模式：从算法到架构</a><br>在前 15 讲中，我们拆解了双指针、滑动窗口、树、图、DP 等核心算法模式。今天，我们将跨越从“微观算法”到“宏观架构”的最后一道门槛。 在系统设计（System Design）面试或实际架构中，有些数据结构不仅仅是“算法辅助”，它们本身就是整个系统的核心骨架。这一讲，我们将不再局限于 LeetCode 的题目，而是直接动手实现两个工业级组件：前缀搜索服务 和 高性能本地缓存</p> 
+
+<p><a href="https://heyoncall.com/blog/fixing-kubernetes-kubelet-memory-leak">修复 Kubernetes 1.36 中的 kubelet 内存泄漏</a><br>本文介绍了如何修复 Kubernetes 1.36 中 kubelet 的内存泄漏问题。</p> 
+
+<p><a href="https://toonk.io/line-rate-packet-processing-in-go-with-af_xdp/">使用 AF_XDP 在 Go 中进行线速数据包处理</a><br>本文介绍了如何使用 AF_XDP 在 Go 语言中实现线速数据包处理。</p> 
+
+<p><a href="https://antonz.org/concurrency-in-c/">C 语言中的 Go 风格并发</a><br>Go 的并发模型是其受欢迎的主要原因之一。在 C 语言中实现类似的并发机制需要额外的工作，因为 C 没有内置的 goroutine 和 channel 机制。</p> 
+
+<p><a href="https://www.glukhov.org/app-architecture/integration-patterns/transactional-outbox-pattern-go/">使用 Go 和 PostgreSQL 实现事务性发件箱模式</a><br>文章介绍了如何在 Go 中使用 PostgreSQL 实现事务性发件箱模式，确保数据库写入和消息发布的原子性。</p> 
+
+<p><a href="https://eitamring.github.io/posts/gocudrv-ten-weekends.html">Go 中的十个 CUDA 周末：30 个函数变成了 106 个</a><br>作者分享了他如何在十个周末内使用纯 Go 语言实现 CUDA 驱动 API，无需 cgo 和构建时的工具包。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://ergo.org/courses/computation-as-a-universal-and-fundamental-concept">计算作为普遍和基本的概念</a><br>Tim Roughgarden 从一个看似简单的问题开始：计算机是否有什么事情做不到？他带我们回到 1936 年，当时图灵在计算机实际存在前十年就奠定了计算机科学的基础。</p>
+
+<p><a href="https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/">好的工具是隐形的</a><br>好的工具应该是隐形的，这是工具制造者的目标。作者反对将工具的缺点重新包装成有趣的谜题游戏，认为工具应该实用而非有趣。</p>
+
+<p><a href="https://serialc.github.io/altClocks/">替代性时钟设计和时间系统</a><br>文章探讨了为什么我们使用 24 小时制这种不一致的时间测量系统，并提出了替代性时间系统的可能性。</p>
+
+<p><a href="https://fazamhd.com/mental-models/networking/">网络与互联网，从基本原理出发</a><br>文章解释了当我们与不同大陆的朋友或同事进行短信、通话或视频聊天时，信息如何在瞬间传输，就像在同一房间一样。</p>
+
+<p><a href="https://toni.org/2026/07/10/staying-in-the-game/">保持游戏状态</a><br>作者作为 Bluesky 的临时 CEO 已经四个月，分享了公司近期的进展和更新。</p>
+
+<p><a href="https://research.google/blog/the-power-of-collaboration-how-we-can-reduce-traffic-congestion/">协作的力量：我们如何减少交通拥堵</a><br>Google 研究人员展示了在导航应用中使用网络感知路由的效果，通过协作可以显著减少交通拥堵。</p>
+
+<p><a href="https://softwaredoug.com/blog/2026/07/09/write-code">为什么在 2026 年编写代码</a><br>软件工程师的工作是构建软件工厂，而不仅仅是软件本身。他们建立基础设施，使智能体能够成功，并通过提示主动行动。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html">我喜欢 LLMs，但我讨厌炒作</a><br>作者分享了他对 AI 的热情，从 2007 年开始从事黑客活动，之后整个职业生涯都致力于 AI 发展，并对新的 LLM 技术感到兴奋。</p>
+
+<p><a href="https://evanhahn.com/prefer-strict-tables-in-sqlite/">在 SQLite 中优先使用 STRICT 表</a><br>作者推荐在 SQLite 中使用严格表，因为它们可以避免一些数据类型问题，例如将文本放入数字列中。</p>
+
+<p><a href="https://itnext.io/7-data-compaction-engines-for-apache-iceberg-in-2026-cc0107f6fe7d">2026 年 Apache Iceberg 的 7 个数据压缩引擎</a><br>文章介绍了 2026 年可用于 Apache Iceberg 的 7 个数据压缩引擎，以及如何选择最适合的解决方案。</p>
+
+<p><a href="https://lyra.horse/blog/2026/06/reddit-spam-internals/">一窥 Reddit 的反垃圾邮件内部机制</a><br>作者分享了五年前使用 Reddit 时遇到的一次不寻常经历，以及他对 Reddit 反垃圾邮件机制的分析。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/12/bump/#atom-everything">Fable 再次更新</a><br>过去 48 小时内，Codex 和 ChatGPT 工作经历了重要更新，包括暂时移除使用时间限制和推出 GPT-5 相关变更。</p>
+
+<p><a href="https://ai-2040.com/">AI 2040：计划 A</a><br>文章探讨了到 2040 年人工智能发展的可能路径和规划。</p>
+
+<p><a href="https://lsl.zone/blog/2026/a-taxonomy-of-self-evolving-agents/">自进化智能体的分类法</a><br>文章介绍了自进化智能体的分类方法，以及 Hermes Agent 如何实现自动可重用技能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray panel supporting multi-protocol multi-user expire day &amp; traffic &amp; IP limit (Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto)</p>
+
+<p><a href="https://github.com/perber/leafwiki">perber/leafwiki</a><br>LeafWiki - Self-hosted wiki. Single Go binary, SQLite, Markdown on disk. No external database required.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/AlistGo/alist">AlistGo/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/rcourtman/Pulse">rcourtman/Pulse</a><br>Monitoring for Proxmox, Docker, Kubernetes, TrueNAS, and vSphere that watches your infrastructure for you: smart alerts, AI patrols that catch silent failures, and verified fixes</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/Gentleman-Programming/engram">Gentleman-Programming/engram</a><br>Persistent memory system for AI coding agents. Agent-agnostic Go binary with SQLite &#43; FTS5, MCP server, HTTP API, CLI, and TUI.</p>
+
+<p><a href="https://github.com/pocket-id/pocket-id">pocket-id/pocket-id</a><br>An easy-to-use OpenID Connect Certified™ and OAuth 2.0 provider that lets users sign in to your applications with passkeys.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

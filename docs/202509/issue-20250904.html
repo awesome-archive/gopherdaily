@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250904.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250904</span>
+</p>
+<p>每日一谚：There should be one way to do it </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/04/simple-is-not-easy">“简单”不是“容易”：Go开发者应该懂的5个道理</a><br>Clojure语言的创造者Rich Hickey在2011年的Strange Loop大会上发表的“Simple Made Easy”, 正是这样一例。他以一种近乎哲学家的思辨，对我们行业中最被滥用、最被误解的两个词——“简单”（Simple）和“容易”（Easy）——进行了本源性的解构。时至今日，这场演讲对于以“简单”著称的Go语言社区，依然具有重要的警示意义。我们常常自豪于Go的语法“简单”，工具链“容易”上手，但我们追求 的，究竟是真正的“简单”，还是仅仅是表面的“容易”？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/447yozQ7_qFNGPJwuO27GA">【AI应用开发第一课】06 Prompt 工程入门：设计高效指令的核心原则</a><br>欢迎来到 Prompt Engineering（提示工程）的世界。这门技艺，是所有 AI 应用开发者都必须掌握的核心竞争力，它巧妙地融合了清晰的沟通 表达、迭代的实验精神和系统化的工程思维。 如果说 API 是连接 LLM 的“协议”，那么 Prompt 就是我们用来编写程序的“指令语言”。 本文中，我们将专注于 Prompt 工程的入门基础，学习那些被实践反复验证过的、能够极大提升 LLM 输出质量的核心设计原则。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/fD8DsApNq5MKswTsFrH2jw">【Go 1.25 重大更新】测试并发不再靠猜：time.Sleep 的终结者 synctest 来了！</a><br>讨论测试异步代码并探讨 `testing/synctest` 包。基于 GopherCon Europe 2025 上的同名演讲。</p> 
+
+<p><a href="https://quesma.com/blog/observability-in-go-what-real-engineers-are-saying-in-2025">Go 中的可观测性：2025 年真实工程师的看法</a><br>了解 Go 从业者如何在 2025 年交付遥测数据——哪些有效，哪些令人头疼，以及他们依赖于指标、跟踪和日志的工具、工作流程和防护措施。</p> 
+
+<p><a href="https://mtlynch.io/if-got-want-improve-go-tests">if got, want: 编写更好的 Go 测试的简单方法</a><br>有一个极好的 Go 测试模式，但很少有人知道。我可以在 30 秒内教会你。与其像这样编写 Go 测试： // 常见的，未优化的方式。 username := GetUser() if username != &#34;dummyUser&#34; { t.Errorf(&#34;unexpected username: got %s, want: %s&#34;, username, &#34;dummyUser&#34;) } 像这样编写你的测试，从每个断言开始 if got, want :=: // 未充分利用的优雅方式。 if got, want := GetUser(), &#34;dummyUser&#34;; got != want { t.Errorf(&#34;username=%s, want=%s&#34;, got, want) } if got, want :=: 模式在表格驱动测试中效果更好。以下是我用于解析社交媒体句柄的库中的一个例子：</p> 
+
+<p><a href="https://www.alexedwards.net/blog/the-9-go-test-assertions-i-use">我使用的 9 个 Go 测试断言（以及原因）</a><br>我分享了九个断言辅助函数，它们在各种项目中都对我很有用——它们可能也适合你。但最终它们是否合适取决于你的偏好、你的团队成员以及特定项目。如果你像这样使用一小部分基本的断言函数，而不是大型的第三方包，那么我认为 Go Wiki 对断言包的大部分批评并不真正适用。但你仍然需要接受断言函数打印的失败消息可能不如定制的、特定的失败消息那么有用。优点是，它们在编写测试时可以带来良好的开发体验。我特别欣赏它们编写速度快，并且可以让我的注意力集中在我正在测试的逻辑上。总而言之，任何鼓励我编写更多测试的事情可能都是一件好事：）</p> 
+
+<p><a href="https://deadprogram.github.io/gophercon-2025">TinyGo - GopherCon 2025</a><br>本次演讲介绍了TinyGo的最新进展，包括对Go 1.25的支持、在RP2350微控制器上的多核支持、以及对更多标准库包的编译支持。演讲还对比了TinyGo和Big Go的二进制文件大小，展示了TinyGo的优势。此外，演讲还提到了TinyGo在wasm、wasmvision、硬件开发等方面的应用，以及TinyGo社区的资源，例如TinyGo-Keebook， TinyGo Conference 2025 - Japan。演讲鼓励大家贡献TinyGo社区，并提供了相关链接。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-09-03-improving-vector-performance">Improving Performance of Vector Indexes Via VECTOR Columns</a><br>Dolt 现在支持 VECTOR 列，向量索引性能有了显著提升。</p>
+
+<p><a href="https://tailscale.com/blog/AI-endpoints-on-public-web">找到 1,000 个暴露的 AI 服务器，研究人员用了 10 分钟</a><br>思科安全研究人员证实，许多自托管 AI 只是希望没有人找到它们。</p>
+
+<p><a href="https://www.p99conf.io/2025/09/03/rogue-autoscaler/">当 VerticalPodAutoscaler 出问题时：自动缩放器如何摧毁我们的集群</a><br>Bug 追踪：在彻夜追查隐藏的 Vertical Pod Autoscaler (VPA) 配置错误</p>
+
+<p><a href="https://www.docker.com/blog/mcp-misconceptions-tools-agents-not-api/">Model Context Protocol (MCP): 3 Misconceptions and Fixes</a><br>Fix three Model Context Protocol (MCP) myths: MCP is not an API, tools are not agents, and MCP is more than tools. Get patterns for reliable agents and tracing.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/09/03/securing-the-node-a-primer-on-ciliums-host-firewall/">Securing the Node：Cilium主机防火墙入门</a><br>在讨论Kubernetes网络安全时，人们的注意力大多集中在pod到pod的流量、入口控制器和服务网格上。但是，底层的节点本身呢？Kubernetes节点暴露出来的攻击面是巨大的，如果置之不理，就可能成为恶意行为者的通行证。Cilium主机防火墙旨在精确、可见和可控地锁定主机网络命名空间，将相同的熟悉的声明式 Kubernetes 网络策略模型扩展到底层主机。在本篇博文中，我们将探讨 Cilium Host Firewall 是什么、它是如何工作的，以及为什么它应该成为您 Kubernetes 安全的核心部分。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/03/kubernetes-v1-34-sa-tokens-image-pulls-beta/">Kubernetes v1.34：服务账号令牌集成用于镜像拉取已升级到 Beta</a><br>Kubernetes 社区持续推进安全最佳实践，通过减少对长期凭据的依赖。继在 Kubernetes v1.33 中成功发布 Alpha 版本之后，用于 Kubelet 凭据提供程序的“服务帐户令牌集成”现已在 Kubernetes v1.34 中升级到 Beta 版，使我们更接近于从 Kubernetes 集群中删除长期存在的镜像拉取密钥。这一增强功能允许凭据提供程序使用特定于工作负载的服务帐户令牌来获取注册表凭据，从而提供了一种安全的、临时的替代传统镜像拉取密钥的方法。</p>
+
+<p><a href="https://johnnysswlab.com/memory-subsystem-optimizations">Memory Subsystem Optimizations</a><br>在这篇博客中，我写了 18 篇关于内存子系统优化的博文。 所谓内存子系统优化，是指旨在通过更好地使用内存子系统来使软件更快的优化。 它们中的大多数都适用于处理大型数据集的软件； 但其中一些也适用于处理任何数据的软件，而不管其大小如何。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://aunhumano.com/index.php/2025/09/03/on-evaluating-agents">On evaluating agents</a><br></p>
+
+<p><a href="https://andrewchen.substack.com/p/ai-will-change-how-we-build-startups">AI 将如何改变我们构建创业公司？</a><br>我们仍然知之甚少。一份问题的清单。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/sigstore/cosign">sigstore/cosign</a><br>Code signing and transparency for containers and binaries</p>
+
+<p><a href="https://github.com/google/mangle">google/mangle</a><br></p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/vllm-project/aibrix">vllm-project/aibrix</a><br>Cost-efficient and pluggable Infrastructure components for GenAI inference</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/dexidp/dex">dexidp/dex</a><br>OpenID Connect (OIDC) identity and OAuth 2.0 provider with pluggable connectors</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware(Project under CNCF)</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

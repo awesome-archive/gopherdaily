@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250108.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250108</span>
+</p>
+<p>每日一谚：Don not rely solely on unit tests; include integration and end-to-end tests. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mattjhall.co.uk/posts/go-is-well-designed-actually.html">Go实际上是一种设计良好的语言</a><br>本文反驳了 Go 语言设计糟糕的观点。作者认为，Go 语言的设计目标是简化大型并发服务器代码的编写和维护，尤其是在数千名不同技能水平的开发人员协作的情况下。文章分析了 Go 语言的一些常见批评，例如文件系统 API、缺乏运算符或函数重载、繁琐的错误处理以及糟糕的 FFI（外部函数接口），并解释了这些设计选择如何与 Go 的设计目标相符。作者承认 Go 语言存在一些缺点，但认为这些缺点是权衡的结果，并不代表 Go 语言设计不良。</p> 
+
+<p><a href="https://t.zsxq.com/qtyz0">Go陷阱与缺陷-理解短变量声明(sponsor)</a><br>语法陷阱第一篇，说明短变量声明可能带来的代码问题</p> 
+
+<p><a href="https://crawshaw.io/blog/programming-with-llms">我如何使用大型语言模型编程</a><br>本文总结了作者过去一年在编程中使用生成模型的个人经验。作者发现，大型语言模型（LLM）可以提高编程效率，尤其是在代码自动补全、代码搜索和基于聊天的编程方面。文章详细介绍了作者使用LLM的三个方面，并以一个具体的例子（编写一个用于计算浮点数四分位的蓄水池抽样器）说明了如何利用LLM进行高效编程。作者还讨论了LLM在编程中的优缺点，以及如何改进LLM的使用方法，并介绍了一个名为sketch.dev的工具，该工具旨在简化Go编程中的LLM使用。</p> 
+
+<p><a href="https://buttondown.com/jaffray/archive/channel-sharding-in-go">Go语言中的channel分片</a><br>在Go语言中，将I/O绑定任务分散到多个worker Goroutine是一个常见的模式。我们有一些需要完成的大批量工作，并将它们分配给每个执行阻塞I/O的worker。有几种自然的方法可以做到这一点，但让我们先谈谈一种不应该采用的方法。文章介绍了一种错误的通道分片方法，并分析了其两个主要问题：缺乏负载平衡和阻塞发送导致的性能瓶颈。然后，文章提出了两种改进的实现方式：一种是非阻塞发送，另一种是使用单个通道。通过模拟实验，文章比较了这三种方法的性能，并展示了在不同作业大小和分布下的结果。最后，文章还讨论了作业大小对通道竞争的影响，以及批处理技术在处理小型作业时的作用。</p> 
+
+<p><a href="https://blog.joshsoftware.com/2025/01/07/the-beginners-guide-to-go-memory-allocation-stack-heap-and-escape-analysis/">Go 内存分配初学者指南：栈、堆和逃逸分析</a><br>Go 编程中，理解变量如何在内存中分配对于编写高效且高性能的代码至关重要。本文深入探讨栈、堆和逃逸分析的概念，即使是初学者也能掌握这些基础知识。栈和堆：在 Go 中，变量分配在两个主要内存位置：栈和堆。让我们详细了解这些内容：栈：栈是内存区域，以后进先出 (LIFO) 的方式运行。程序中的每个函数调用都有自己的栈帧，其中包含函数的局部变量、参数和返回值。栈速度很快，因为它遵循简单的压入和弹出机制。它也是自动管理的，这意味着栈上分配的变量在函数退出后会被释放。栈非常适合存储仅限于函数范围内的短期变量。当调用一个函数时，它的栈帧会被压入栈中。当函数退出时，它的栈帧会被弹出，释放内存。堆：堆是用于动态分配的内存区域。与栈不同，堆没有与函数调用相关的严格生命周期。堆上分配的变量会持续存在，直到垃圾收集器确定它们不再使用为止。堆比栈慢，因为内存管理涉及垃圾收集器，并且可能需要更复杂的指针取消引用。堆用于存储生命周期超过创建它们的函数或 goroutine 范围的变量。</p> 
+
+<p><a href="https://dev.to/just_kojo/database-internals-building-a-file-manager-in-go-from-scratch-573">数据库内部机制：从零开始用 Go 构建文件管理器</a><br>让我们深入探讨数据库内部机制，方法是用 Go 构建一个文件管理器！学习数据库如何处理块存储、并发和文件操作。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-01-07-fetching-and-syncing-remotes-using-the-dolt-workbench/">使用 Dolt Workbench 获取和同步远程仓库</a><br>学习如何使用 Dolt Workbench 中新的获取和同步功能来同步你的分支和远程仓库。这篇指南将逐步指导你如何使用 Dolt Workbench 简化远程 Dolt 和 Doltgres 数据库的管理。</p>
+
+<p><a href="https://www.docker.com/blog/how-to-set-up-a-kubernetes-cluster-on-docker-desktop/">How to Set Up a Kubernetes Cluster on Docker Desktop</a><br></p>
+
+<p><a href="https://netflixtechblog.com/title-launch-observability-at-netflix-scale-19ea916be1ed">Netflix规模下的标题发布可观测性</a><br>本文是在第一部分的基础上进行的，第一部分探讨了Netflix标题发布可观测性挑战的“是什么”，本文将重点转向“怎么做”。我们如何确保每个标题都能顺利发布，并被合适的受众发现？文章探讨了理解全局、定义标题健康、问题类别以及评估方案等方面，最终决定优先关注主动问题检测。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/01/07/dragonfly-v2-2-0-has-been-released/">Dragonfly v2.2.0 发布 | CNCF</a><br>Dragonfly v2.2.0 版本发布！🎉🎉🎉 感谢所有为此次版本发布做出贡献的贡献者，欢迎访问 d7y.io 网站。客户端使用 Rust 编写……该版本包含许多新特性，例如使用 Rust 编写的客户端、支持预取的带宽速率限制、优化的 Nydus 小 I/O 处理性能、P2P 传输协议 V2 版本定义、增强的 Harbor 集成以及对使用自签名证书预热的支持等。</p>
+
+<p><a href="https://www.swequiz.com/blog/how-to-choose-the-right-database-in-a-system-design-interview">如何选择合适的数据库 - SWE测验</a><br>在系统设计面试中，你设计的质量和它扩展的能力很大程度上取决于你选择的数据库。通常，选择错误的数据库会导致以后的痛苦，因为在活跃用户和活跃数据的情况下进行迁移非常耗时，并且必须谨慎进行。本文将介绍系统设计面试中经常出现的一些常见用例，并探讨每个场景中最好的数据库。</p>
+
+<p><a href="https://htmx.org/essays/future">htmx 的未来</a><br>htmx 团队致力于使 htmx 成为一个稳定可靠的工具，像 jQuery 一样，在很长一段时间内为 Web 开发者提供服务。文章中阐述了 htmx 未来的发展方向：稳定性作为核心功能，减少新功能的添加，保持季度发布的节奏，以及推广超媒体技术。团队将专注于改进 htmx 的稳定性和易用性，并通过扩展 API 来支持新的功能，同时推动超媒体技术的研究和标准化，最终目标是将 htmx 的功能融入到 Web 平台本身。</p>
+
+<p><a href="https://bitfieldconsulting.com/posts/magic-function">魔法函数</a><br>如何在 Rust 中设计用户友好的 API？答案很简单：使用它们！让我们使用我称之为“魔法函数”的方法构建一个简单的 Rust CLI 工具。</p>
+
+<p><a href="https://www.seangoedecke.com/large-established-codebases">大型成熟代码库中工程师常犯的错误</a><br>本文作者总结了十年大型成熟代码库开发经验，指出最致命的错误是缺乏一致性。作者强调要尽可能地融入现有代码库，遵循既有模式，避免为了保持代码整洁而忽略整体一致性，因为这会带来难以预料的风险，并阻碍代码库的改进。文章还讨论了其他重要方面，例如理解服务的实际使用情况、谨慎添加依赖、积极移除代码、以及如何通过小的PR和预先处理影响其他团队的更改来降低风险。最后，作者反驳了将大型代码库拆分为小型服务的观点，认为大型代码库通常产生大部分价值，并且在拆分之前必须充分理解它。</p>
+
+<p><a href="https://curiouscoding.nl/posts/cpu-benchmarks">CPU性能 · CuriousCoding</a><br>这篇文章系列（计划中）的目标是编写一个用于后缀数组的高性能搜索算法。我们将从经典的二分搜索实现开始，并对其进行增量改进。但这计划在第三部分进行。在此之前，我们将回顾现有的二分搜索普通整数数组的方法作为热身练习。Khuong 和 Morin（2017）有一篇很棒的论文《基于比较的搜索的数组布局》，以及基于它的algorithmica.org案例研究，这将构成该研究的基础。见第二部分。首先，（在典型的书呆子式难题中，）我们必须了解我们的硬件。在这一部分中，我们将研究一些简单的基准测试，以了解现代 CPU 的功能和限制。这部分内容很大程度上受到algorithmica.org第9章的启发。事实上，为了教育目的（至少对我自己而言），我可能会最终直接复制其中的一些实验。Algorithmica 还列出了Igor Ostrovsky 的这篇博文以及Ulrich Drepper 的《每个程序员都应该了解的内存》作为有用的资源，但我自己还没有仔细阅读它们。即使在开始时，我已经可以告诉你每一部分都会有相同的结论：读取主内存的延迟非常高。批处理和预取读取可以隐藏延迟，并且可以将吞吐量提高 10 倍以上。在这篇文章（第一部分）中，我们将主要研究 L1/L2/L3 缓存和主内存在不同工作负载下的延迟和带宽。最终目标是开发一个支持高吞吐量只读查询的静态数据结构，因此现在我们专注于从内存读取而不是写入内存。代码可以在这个仓库中找到：github:RagnarGrootKoerkamp/cpu-benchmarks。</p>
+
+<p><a href="https://crowdhailer.me/2025-01-02/the-evolution-of-a-structural-code-editor">结构化代码编辑器的演变</a><br>这篇文章概述了 EYG 编辑器的演变历程，重点介绍了历次重大变化、设计思路和一些实现细节。该 Web 编辑器使用 Gleam 和 Lustre 构建；最初使用的是 Gleam 和 Svelte。还存在一个用 Go 构建的基于终端的结构化编辑器。文章讨论了构建结构化编辑器的理由，以及不同版本的迭代过程，包括对 AST 的简化，从直接编辑 AST 到基于文本的导航，再到添加语法糖和投影，最后是添加鼠标支持。作者还介绍了下一步计划，并邀请读者尝试使用该编辑器。</p>
+
+<p><a href="https://www.scottredig.com/blog/bonkers_comptime">Zig 的编译时计算功能强大无比</a><br>这篇文章探讨了 Zig 编程语言的编译时计算 (comptime) 功能。作者首先指出，comptime 的强大之处在于它允许开发者在不增加代码复杂度的情况下，实现高效的元编程。文章通过多个例子，展示了 comptime 的不同应用场景，包括忽略 comptime、将其视为泛型、编译时代码执行、编译时计算与运行时代码生成以及文本代码生成等。作者认为，Zig 的 comptime 功能结合了最大限度的强大性和简单性，使其成为一项非常优秀的特性。</p>
+
+<p><a href="https://martinfowler.com/articles/codemods-api-refactoring.html">使用 Codemods 重构以自动化 API 更改</a><br>重构是开发者一直都在做的事情——使代码更容易理解、维护和扩展。虽然 IDE 可以通过几个按键来处理简单的重构，但是当需要在大型或分布式代码库（尤其是不完全控制的代码库）中应用更改时，事情就会变得棘手。这就是 Codemods 的用武之地。通过使用抽象语法树 (AST)，Codemods 允许您以精确且最小的努力自动化大规模代码更改，这使得它们在处理破坏性 API 更改时尤其有用。本文探讨了 Codemods 如何帮助管理这些挑战，并提供了实际示例，例如移除特性切换或重构复杂的 React 组件。我们还将讨论在扩展使用 Codemods 时可能遇到的陷阱以及如何避免这些陷阱。</p>
+
+<p><a href="https://opencollective.com/pion/updates/support-an-exceptional-developer-and-make-pion-better">支持一位优秀的开发者，让 Pion 变得更好</a><br>Pion 积累了一些技术债务。我们的工具（golangci-lint）很久没有更新了，我们的问题积压已增长到各个代码库的 200 多个。Pion 需要一位英雄，我已经找到了这个人。Joe 开始在 Pion 上工作，他的工作非常出色。他是一位很棒的沟通者 [1]。他的代码/技术能力非常出色 [2]。我确信，如果他能在 Pion 上工作 3 个月，它将达到我从未能达到的水平。
+
+我需要你们的帮助才能实现这一点。我创建了一个总计 6000 美元的赏金列表。大约需要 3 个月的工作时间。你们的捐款将修复/实现以下内容。更重要的是，这将给 WebRTC 社区的一位优秀开发者一个机会！要捐款，请访问 [3]，非常感谢！</p>
+
+<p><a href="https://codingstuff.substack.com/p/if-gpus-are-so-good-why-do-we-still">如果GPU如此优秀，为什么我们仍然使用CPU？</a><br>本文通过一个2009年的病毒视频，解释了CPU和GPU之间的区别。视频中，CPU花了30秒绘制简单的笑脸，而GPU瞬间绘制了蒙娜丽莎。文章深入探讨了顺序程序和并行程序的概念，以及CPU和GPU在处理这两种程序类型时的优势。虽然GPU在并行计算方面速度更快，但CPU在处理复杂逻辑和适应变化的环境方面更胜一筹。现代芯片，如苹果的M3芯片，同时包含CPU和GPU，以结合两者的优势。</p>
+
+<p><a href="https://blog.cloudflare.com/topaz-policy-engine-design">我们如何使用形式化验证来防止权威 DNS 配置中的冲突</a><br>本文介绍了 Cloudflare 如何使用自定义类似 Lisp 的编程语言和形式化验证器（用 Racket 和 Rosette 编写）来防止权威 DNS 服务器行为中的逻辑矛盾。Cloudflare 的权威 DNS 服务器在收到 DNS 查询时会执行一系列程序，这些程序决定返回哪些 IP 地址。为了确保这些程序的正确性，Cloudflare 对其进行了形式化验证，以检查是否存在诸如一个程序覆盖另一个程序之类的错误。该形式化验证器在生产环境中运行，是名为 Topaz 的更大寻址系统的一部分。</p>
+
+<p><a href="https://ts00ey.bearblog.dev/mvcc-paper">MVCC论文</a><br>这篇博文总结了作者阅读一篇关于多版本并发控制（MVCC）的论文后的笔记。论文研究了不同设计决策对数据库性能的影响，包括并发控制协议、版本存储、垃圾回收和索引管理。作者详细介绍了时间戳排序、乐观并发控制和两阶段锁等并发控制协议，以及不同版本存储方案（追加式存储、时间旅行存储和增量存储）和垃圾回收机制（后台清理和协作清理）的权衡。此外，文章还讨论了索引管理中更新与B树数据结构的交互，以及逻辑指针和物理指针在不同版本存储方案中的作用。</p>
+
+<p><a href="https://www.jonashietala.se/blog/2025/01/06/first_impressions_of_ghostty">Ghostty 的第一印象</a><br>作者尝试了 Ghostty 终端，并分享了他的第一印象。他比较了 Ghostty 和 Alacritty，并重点介绍了 Ghostty 的一些特性，例如原生平台集成、最小对比度选项、隐藏打字时的光标以及更好的字体渲染。虽然遇到了一些小问题，例如与某些 Neovim 插件的冲突，但他总体上对 Ghostty 非常满意，并将其作为默认终端。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://huyenchip.com//2025/01/07/agents.html">智能体</a><br>许多人认为智能体是人工智能的最终目标。Stuart Russell 和 Peter Norvig 的经典著作《人工智能：一种现代方法》（普伦蒂斯·霍尔，1995 年）将人工智能研究领域定义为“理性智能体的研究和设计”。基础模型前所未有的能力为以前难以想象的智能体应用打开了大门。这些新能力使开发自主的智能体成为可能，它们可以作为我们的助手、同事和教练。它们可以帮助我们创建网站、收集数据、计划旅行、进行市场调查、管理客户账户、自动化数据输入、为面试做准备、面试候选人、谈判交易等等。可能性似乎是无限的，这些智能体的潜在经济价值是巨大的。 本节将首先概述智能体，然后继续讨论决定智能体能力的两个方面：工具和规划。智能体及其新的运作模式具有新的失效模式。本节最后将讨论如何评估智能体以发现这些失效。</p>
+
+<p><a href="https://www.gatesnotes.com/The-Coming-Wave">下一波浪潮</a><br>比尔盖茨对未来AI的预测</p>
+
+<p><a href="https://blog.val.town/blog/fast-follow">我们从复制最好的代码助手中学到的经验</a><br>Val Town 博客文章总结了其在复制各种最先进的代码生成工具（从 GitHub Copilot 到 ChatGPT，再到 Claude Artifacts 等）过程中的经验教训。文章详细介绍了他们尝试的不同方法，包括使用 ChatGPT 进行代码自动补全、构建基于 ChatGPT 的 Townie 聊天界面以及利用 Claude Artifacts 构建改进后的 Townie 版本。文章还讨论了他们对提高代码生成速度（例如使用差异）和自动检测错误的贡献，并探讨了与其他竞争对手（例如 Cursor 和 Windsurf）的合作与竞争关系。最后，文章还提出了关于 Val Town 未来发展方向的思考，例如是否应该专注于改进核心差异化功能，以及与其他 AI 代码编辑器的集成。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/loft-sh/devpod">loft-sh/devpod</a><br>Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Mistral, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

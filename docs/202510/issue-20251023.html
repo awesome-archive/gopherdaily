@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251023.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251023</span>
+</p>
+<p>每日一谚：Remember: error handling is your contract — don’t duplicate it with nil checks </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/23/go-ffi-new-paradigm">Go FFI的新范式：purego与libffi如何让我们无痛拥抱C生态</a><br>一场关于 Go FFI (Foreign Function Interface) 的变革正在悄然发生。以 ebitengine/purego 和 JupiterR-ider/ffi 为代表的一系列社区项目，正为我们开辟出一条全新的道路——一条旨在卸下这些枷锁、纯 Go 的 FFI 之路。这标志着 Go FFI 新范式的到来</p> 
+
+<p><a href="https://tonybai.com/2025/10/22/back-to-go-after-defection-to-java">从Go“叛逃”到Java，再回归：一位开发者关于“魔法”与“显式”的深度反思</a><br>近日，在 r/golang 社区，一篇标题为《一篇完全没有建设性但又无比真实的，关于 Go 和 Java 的咆哮》的帖子引发了热议。作者讲述了一个“Gopher 叛逆-回归”的经典故事：因不满 Go 社区对 ORM 和 DI 框架的“抵触”，以及 Go 语言本身的“繁琐”，他转投了企业级 Java 的怀抱。然而，在亲身体验了 Java 生态中无处不在的“魔法”之后，他如今“无比怀念 Golang”。</p> 
+
+<p><a href="https://tonybai.com/2025/10/23/go-language-leads-jetbrains-trends">Go语言观察：登顶“最受期待”榜首，JetBrains 2025报告洞悉未来趋势</a><br>近日，软件开发工具巨头 JetBrains 发布了其年2025度《开发者生态系统现状》报告，这份基于全球数万名开发者调研的数据报告，已成为洞察技术风向的关键参考之一。在今年的报告中，Go 语言的表现尤为亮眼，它不仅在“未来潜力”和“学习意愿”等前瞻性指标上独占鳌头，其在当前主流语言版图中的位置也愈发稳固。</p> 
+
+<p><a href="https://tonybai.com/2025/10/22/seven-kubernetes-pitfalls">7个常见的Kubernetes陷阱（以及我是如何学会避免它们的）</a><br>文章的作者Abdelkoddous Lhajouji 以第一人称视角，系统性地梳理了从资源管理、健康检查到安全配置等多个方面，新手乃至资深工程师都极易忽视的关键点。文中的每个“陷阱”都源于真实的生产经验，其规避建议更是极具实践指导意义。无论你是 K8s 初学者还是经验丰富的 SRE，相信都能从中获得启发，审视并改善自己的日常实践。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/8Pv0BQJqemmvE6xpujNyjQ">【Go 网络编程全解】08 DNS 与地址转换：程序如何找到它的“另一半”？</a><br></p> 
+
+<p><a href="https://internals-for-interns.com/posts/the-go-lexer">理解 Go 编译器：lexer</a><br>这是我将带您逐步了解整个 Go 编译器系列文章的一部分，涵盖从源代码到可执行文件的每个阶段。如果您曾经想知道运行 &lt;code&gt;go build&lt;/code&gt; 时会发生什么，那么您来对地方了。
+
+**注意**：本文基于 **Go 1.25.3**。编译器内部结构在未来版本中可能会发生变化，但核心概念可能保持不变。
+
+我将使用尽可能简单的示例来引导您完成这个过程——一个经典的“hello world”程序。</p> 
+
+<p><a href="https://mcyoung.xyz/2025/10/21/ssa-1">为什么选择 SSA？</a><br>如果你在过去二十年左右读过任何关于编译器的文章，你几乎肯定听说过 SSA 编译器，这是许多优化编译器（包括 LLVM、GCC、Go、CUDA (以及各种着色器编译器)、Swift 和 MSVC 等提前编译器，以及 HotSpot C2、V8、SpiderMonkey、LuaJIT 和 Android 运行时等即时编译器中都有的功能。SSA 非常受欢迎，以至于大多数编译器项目不再为了优化而使用其他 IR。这是因为 SSA 在编译器优化想要对你的代码执行的程序分析和转换类型方面非常灵活。但是，为什么呢？我的许多不做编译器工作的朋友经常说，编译器看起来像不透明的魔盒，而 SSA 在文献中经常出现，而且复杂得令人难以理解。但事实并非如此！一旦你忘记了你认为你的程序实际上在做什么，SSA 实际上非常简单。我们将开发 SSA 形式的概念，一个简单的 SSA IR，证明有关它的事实，并设计一些针对它的优化。</p> 
+
+<p><a href="https://pgaleone.eu/golang/vertexai/trading/2025/10/20/gemini-powered-stock-analysis-news-feeds">Gemini驱动的股票分析：解析金融新闻以实现自动交易决策</a><br>我构建了一个自动化股票分析系统，该系统利用Gemini解析意大利金融新闻提要，提供实时的交易建议。本文探讨了将人工智能驱动的新闻分析整合到基于Go的交易系统中的架构、挑战和实施细节。</p> 
+
+<p><a href="https://threedots.tech/post/sqlite-durable-execution">使用 Go 和 SQLite 进行持久的后台执行</a><br>DNS 中断就像一场突发洪水。它袭来，然后消失得无影无踪。“大概是 DNS” 成为了一个梗。但是，大多数时候，我们并不知道确切的原因。中断往往不够长，无法诊断、隔离、复制、模拟和测试故障情况。我们如何才能确定这种类型的故障将来不会再次损害我们的系统？</p> 
+
+<p><a href="https://qa.developer.vonage.com/en/blog/using-jwt-for-authentication-in-a-golang-application-dr">在 Gin 中使用 JWT 进行身份验证（Go）</a><br>在 Go 中使用 Gin 进行安全 JWT 身份验证：访问/刷新令牌、HttpOnly cookie、Redis 和 Vonage API。</p> 
+
+<p><a href="https://antonz.org/accepted/netip-prefix-compare">Go 提案：比较 IP 子网</a><br>以 IANA 和 Python 相同的方式比较 IP 子网。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/getting-started-docker-offload/">Docker Offload: 自动化云端工作流程</a><br>将繁重的构建和运行任务卸载到云端机器上，使用相同的 Docker 命令并在需要时启用 GPU。 了解如何通过 Docker Offload 快速入门。</p>
+
+<p><a href="https://dolthub.com/blog/2025-10-22-agentic-web-crawling">Agentic Web Crawling</a><br>在本篇文章中，我将带你了解我使用 AI 代理抓取网站的经验</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/22/lfx-insights-a-new-way-to-understand-open-source-projects/">LFX Insights: 了解开源项目的新方法</a><br>开源是现代技术生态系统的基础。从编排和可观察性到框架和开发工具，今天的技术选择都依赖于我们可能无法控制但每天都依赖的项目。LFX Insights 可以帮助组织就其所依赖的开源项目做出明智的决定。</p>
+
+<p><a href="https://www.polarsignals.com/blog/posts/2025/10/22/gpu-profiling/">生产环境中持续的 NVIDIA CUDA 剖析</a><br>使用 USDT 探针和 eBPF 对 GPU 进行低开销剖析</p>
+
+<p><a href="https://justoffbyone.com/posts/measuring-engineering-productivity">衡量工程生产力</a><br>一个轻量级的系统，用于衡量工程生产力，将开销放在管理者身上，而不是工程师身上——使用变更日志、站会和可见性而不是监视。</p>
+
+<p><a href="https://jack-vanlightly.com/blog/2025/10/22/a-fork-in-the-road-deciding-kafkas-diskless-future">A Fork in the Road: Deciding Kafka’s Diskless Future</a><br>这篇文章讨论了在 Apache Kafka 中实现直接到 S3 主题的两种主要方法：革命性方法（利用对象存储架构的优势，例如更高的弹性和更低的运营复杂性）和演进式方法（利用现有组件），以及它们各自的优缺点。文章还分析了 WarpStream、KIP-1150、Aiven Inkless 和 KIP-1176 等具体提案，并讨论了做出正确决定的重要性。</p>
+
+<p><a href="https://cacm.acm.org/opinion/computing-is-indeed-a-discipline-in-crisis">计算确实是一门处于危机的学科</a><br>尽管硅谷投入数百亿美元追逐AGI梦想，但美国的学术计算研究正面临严重的干旱。 在2024年7月，我提出了计算是否处于危机之中的问题。 触发这一问题的原因是2024年1月对数千名人工智能（AI）作者进行的关于AI未来的调查，其主要信息是，AI界对该领域的发展方向深感担忧，但感到无力影响这一主要由硅谷金钱驱动的方向。 自那以来，这种担忧愈演愈烈。 事实上，硅谷内部人士埃里克·施密特（Eric Schmidt）最近与塞琳娜·徐（Selina Xu）在《纽约时报》上发表了一篇题为“硅谷正在与美国其他地方脱节”的观点文章，文章中写道：“这种狂热让我们感到担忧。”</p>
+
+<p><a href="https://databento.com/blog/why-we-didnt-rewrite-our-feed-handler-in-rust">我们为什么没有用 Rust 重写我们的馈送处理程序</a><br>我们最近面临一个有趣的决定：我们应该使用什么语言来重写我们的市场数据馈送处理程序？尽管 Rust 在金融科技领域越来越受欢迎，并且我们自己也在其他系统中成功地使用了它，但我们选择了 C&#43;&#43;。</p>
+
+<p><a href="https://buttondown.com/jaffray/archive/the-death-of-thread-per-core">线程每核心的消亡</a><br>编程语言的异步运行时非常关注处理异步的、可能长时间运行的任务，这些任务可能因为各种原因而产生，这些原因本身可能会产生未来的工作。在像 Rust 的异步运行时中，模型是一个任务可以 yield，从概念上讲，这将创建一个新的工作，并将其推送到工作队列（即“恢复该任务”）。你可能不会把它看作是“这个任务被暂停并且稍后会恢复”，而更多地看作是“这部分工作已完成并且产生了新的工作”。这部分新的工作被推送到本地队列中，以便稍后由同一线程处理。线程每核心方法和工作窃取方法之间的主要区别在于，在工作窃取模型中，如果一个线程没有足够的工作要做，它可以“窃取”该任务并将其移到自己的队列中。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Oct/23/openai-no-longer-has-to-preserve/#atom-everything">OpenAI 不再需要保留其所有 ChatGPT 数据，但有一些例外</a><br>这是一个缓解：联邦法官 Ona T. Wang 于 10 月 9 日提交了一份新命令，免除了 OpenAI 义务，不再需要“保留和隔离所有将要删除的输出日志数据……”</p>
+
+<p><a href="https://www.ufried.com/blog/ai_assisted_coding">解决错误的问题</a><br>解决错误的问题。 我认为很多关于人工智能辅助和基于人工智能的编码。 前者是人类，在人工智能解决方案或多或少的支持下编写代码。 我们现在已经看到了这一点。 第二个是人类将编码部分留给一组人工智能代理人。 如果人类甚至没有查看创建的代码，而是将其视为一个黑匣子，并且仅从外部观察解决方案，即仅观察其正在做什么，通常称为氛围编码。</p>
+
+<p><a href="https://russmiles.substack.com/p/you-cannot-outsource-understanding">你不能外包理解</a><br>不要试图淘汰开发者；不要以此作为人工智能的承诺；设计能够增强他们理解力的平台和实践</p>
+
+<p><a href="https://linear.app/now/self-driving-saas">Self-driving SaaS: When software runs itself - Linear</a><br>Traditional business software has always existed to facilitate and guide human actions. It creates efficiency through its constraints, capabilities, and nudges, but its ultimate value is only as great as the effort users put into it.</p>
+
+<p><a href="https://tawandamunongo.dev/posts/2025/10/ai-work-more">AI is Making Us Work More</a><br>文章探讨了人工智能（AI）的兴起如何导致了996工作文化的复苏，以及这种现象对我们和工作未来的影响。文章指出，AI本应解放我们，减少工作量，但实际上却导致了我们比以往任何时候都工作得更多。作者认为，这种现象源于AI工具带来的心理压力，即不断工作的心理驱使，以及对休息和闲暇的负面看法。文章深入分析了这种现象对个人和社会的影响，包括工作时间增加、过劳和创造力下降等问题，并提出了将休息作为一种抵抗，以及如何以健康的方式与AI共存的建议。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/litmuschaos/litmus">litmuschaos/litmus</a><br>Litmus helps SREs and developers practice chaos engineering in a Cloud-native way. Chaos experiments are published at the ChaosHub (https://hub.litmuschaos.io). Community notes is at https://hackmd.io/a4Zu_sH4TZGeih-xCimi3Q</p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go, the easiest way to write LLM-based programs in Go</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>An open-source runtime for composable workflows. Great for AI agents and CI/CD.</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+<p><a href="https://github.com/base/node">base/node</a><br>Everything required to run your own Base node</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/smallstep/certificates">smallstep/certificates</a><br>🛡️ A private certificate authority (X.509 &amp; SSH) &amp; ACME server for secure automated certificate management, so you can use TLS everywhere &amp; SSO for SSH.</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/kagent-dev/kagent">kagent-dev/kagent</a><br>Cloud Native Agentic AI | Discord: https://bit.ly/kagentdiscord</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

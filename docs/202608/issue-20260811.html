@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260811.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260811</span>
+</p>
+<p>每日一谚：Use copy() to duplicate slice data safely. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/11/zuckerberg-superintelligence-for-everyone">扎克伯格罕见发万字长文：超级智能不能被少数人垄断，必须属于每一个人</a><br>扎克伯格在文中提出了三大核心理念——个人赋能是繁荣的源泉、发明是超级智能的首要目的、权力制衡是安全的根基，并据此反驳了 “训练出一个绝对安全、绝对善意的单一超级智能”这一行业主流叙事。他认为，历史上从未有过“仁慈的绝对权力”能带来安全和积极的结果，唯一现 实的路径是把超级智能尽可能广泛地分发给每一个普通人，通过人与人、企业与企业之间天然的相互制衡来实现安全。文章同时公布了Meta在个人智 能体、创作工具、创业工具、AI导师、科学发现、免费普惠六个方向的具体承诺，并逐一回应了就业冲击、数据中心与社区利益、网络与生物安全、 政府监控、中美AI竞争、对齐与递归自我改进失控等九大风险，最后落地为三项政策承诺：重启开源模型发布、建立独立董事会安全审查机制、推动 “实验室—政府”深度协作。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/yzma/">深入Yzma 推理工作原理</a><br>理解Go AI推理（第2部分）。本文是关于Go AI推理系列的第二部分，探讨了Yzma的概念和应用。</p> 
+
+<p><a href="https://www.repoflow.io/blog/go-1-19-to-1-26-benchmarks-how-performance-evolved-over-time">Go 1.19到1.26基准测试：性能如何随时间演变</a><br>RepoFlow团队分析了八个Go版本中的合成应用吞吐量、延迟、垃圾回收、CPU和内存性能，以及八个专注的微基准测试结果。</p> 
+
+<p><a href="https://robinhayer.dev/the-2-5-gb-wall">2.5 GB墙：我的tshark包装器为何崩溃，以及如何通过流式传输修复</a><br>作者探讨了处理2.5 GB数据时遇到的内存限制问题，以及如何通过实现流式处理来解决这个问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/08/10/learning-cloud-native-engineering-beyond-tutorials-through-lfx/">通过LFX超越教程学习云原生工程</a><br>作者分享了通过LFX项目学习云原生工程的经验，包括与导师团队合作解决问题，以及在承担责任的同时获得成长空间。</p>
+
+<p><a href="https://seangoedecke.com/local-models-will-not-win/">不，本地模型不会获胜</a><br>作者认为，尽管许多人否认，但事实是大多数人倾向于在价格范围内使用最强大的可用模型。如果AI进步停留在GPT-4，我们可能会围绕它构建强大的工具，但今天谁还会使用GPT-4呢？</p>
+
+<p><a href="https://www.pingcap.com/blog/agentic-ai-architecture/">为什么智能AI架构需要数据库，而不仅仅是向量存储</a><br>文章探讨了智能AI架构中不同层级的存储需求，解释了为什么仅使用向量存储无法满足推理、工具调用等核心功能的需求。</p>
+
+<p><a href="https://github.blog/engineering/using-the-github-copilot-sdk-for-java/">使用GitHub Copilot SDK for Java</a><br>文章介绍了如何使用GitHub Copilot SDK为Java应用程序开发AI辅助功能，包括克隆示例应用并亲自尝试。</p>
+
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1vkxssk/reddits_journey_to_http3_on_android_part_1/">Reddit在Android上采用HTTP/3的历程（第一部分）</a><br>Reddit工程师分享了将Android应用中的GraphQL流量从标准的OkHttp/HTTP/2设置迁移到HTTP/3的过程和挑战。</p>
+
+<p><a href="https://www.vectorware.com/blog/simd-on-gpu/">GPU上的Rust SIMD - VectorWare</a><br>VectorWare成功地在GPU上使用了Rust的可移植SIMD（core::simd），这是首个GPU原生软件公司的重要技术突破。</p>
+
+<p><a href="https://thewalrus.ca/google-search-is-dying/">谷歌搜索正在消亡。接下来更糟 | The Walrus</a><br>文章探讨了谷歌搜索的现状和未来，认为虽然搜索功能正在衰退，但替代方案可能带来更糟糕的用户体验。</p>
+
+<p><a href="https://bevy.org/news/bevys-sixth-birthday/">Bevy的六周年</a><br>Bevy游戏引擎庆祝其六周年，回顾了过去一年的重要里程碑、数据成就以及开发者引以为傲的成果。</p>
+
+<p><a href="https://flowg.cloud/blog/logs-into-metrics">将日志转换为指标</a><br>日志告诉你发生了什么，而指标告诉你多少、频率以及是否在恶化。FlowG v0.62版本通过统一日志和指标处理，帮助基础设施避免重复成本。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model">介绍Muse Glimmer：一个在您设备上运行的开源智能智能体模型 | Meta AI研究</a><br>Meta Superintelligence Labs今天推出了Muse Glimmer，这是一个300亿参数的模型，在Apache 2.0许可下开源，专为常驻本地智能体工作流程而优化。</p>
+
+<p><a href="https://towardsdatascience.com/how-cursor-actually-indexes-your-codebase/">Cursor如何实际索引您的代码库 | Towards Data Science</a><br>文章探讨了Cursor中的RAG管道，该管道为代码智能体提供代码索引和检索功能，帮助开发者更高效地理解和导航代码库。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Multi Account, Webhooks, and MCP, and Chatwoot. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/OpenListTeam/OpenList">OpenListTeam/OpenList</a><br>A new AList Fork to Anti Trust Crisis</p>
+
+<p><a href="https://github.com/pranshuparmar/witr">pranshuparmar/witr</a><br>Why is this running? Trace any process, port, container, or file back to what started it - CLI &#43; TUI.</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

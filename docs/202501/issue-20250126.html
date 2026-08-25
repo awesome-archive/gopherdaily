@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250126.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250126</span>
+</p>
+<p>每日一谚：A test should never delete something it did not create. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://opentelemetry.io/blog/2025/go-compile-time-instrumentation">阿里巴巴、Datadog和Quesma联手打造Go编译时instrument工具</a><br>标准只有在被广泛采用时才有用，而采用只有在可用工具能够促进它时才有效。如果必须自己制造秤来用千克称重，我想国际单位制在引入时就不会太流行！
+如果您在Go中使用OpenTelemetry，您就会熟悉配置检测库以自动从众所周知的开源组件生成遥测数据的挑战。由于该语言的编译特性，您目前有两个选择：
+
+* 使用单独的二进制文件来分析您的Go进程并将eBPF程序附加到应用程序中的钩子 - 请参见opentelemetry-go-instrumentation。
+* 在您的代码中手动配置检测库，例如参见检测HTTP服务器。
+
+由于各种原因，这些选项在您的环境中可能都不可行或并非最佳选择。但是，情况即将改变！
+阿里巴巴和Datadog向OpenTelemetry提交了捐赠提案，为上述问题提供解决方案，并在Go应用程序中启用零代码、厂商中立的编译时检测。这两个组织决定联手创建新的Go编译时检测SIG，目标是提供统一的、厂商中立的方法，整合每个解决方案的最佳方面，并使整个社区受益。Quesma也将提供进一步的贡献，带来在instrgen上的经验。</p> 
+
+<p><a href="http://notes.eatonphil.com/2025-01-25-an-explosion-of-transitive-dependencies.html">传递依赖的爆炸性增长</a><br>小型标准库会导致传递依赖的爆炸性增长。更全面的标准库有助于最大限度地减少依赖项。不要误解我的意思：在现实世界的项目中，几乎不可能没有依赖项。Rust 和 JavaScript 由于其极其精简的标准库，与这一理想背道而驰。相比之下，Go、Python、Java 和 C# 拥有完善的标准库，这有助于最大限度地减少传递依赖的爆炸性增长。</p> 
+
+<p><a href="https://blog.gregweber.info/blog/go-errors-library">Go语言错误处理：堆栈追踪和元数据</a><br>文章讨论了Go语言错误处理中的常见模式，例如堆栈追踪、添加元数据、多个错误、错误分类和错误报告。作者介绍了其维护的轻量级错误处理库github.com/gregwebs/errors，该库可以帮助处理堆栈追踪和元数据。文章比较了标准库的错误处理方法和该库提供的更简洁、更强大的方法，并介绍了如何使用该库添加结构化元数据，以及如何将结构化错误转换为slog记录。最后，文章还预告了后续文章将讨论多个错误和错误分类的处理方法。</p> 
+
+<p><a href="https://blog.howardjohn.info/posts/go-tools-command">探索 Go 1.24 中新的“go tool”支持</a><br>Go 1.24 引入了对“工具”的新支持，允许轻松地将用 Go 编写的工具作为项目的依赖项。这可以是 golangci-lint、protoc-gen-go 等任何工具。本文将介绍其用法和局限性。基本用法：添加工具与添加标准运行时依赖项几乎相同，只需添加 -tool 标志。添加工具后，可以通过 go tool &lt;name&gt; 来访问它。文章还讨论了一些问题，例如缓慢的构建速度、共享依赖项状态以及冗长的使用方式，并提出了一些缓解措施和实际使用策略。</p> 
+
+<p><a href="https://dev.to/kuroski/building-a-webhook-payload-delivery-service-in-go-31bg">使用 Go 构建 Webhook 负载交付服务</a><br>本文介绍如何构建一个 Webhook 代理 URL，用于将来自 GitHub 等服务的事件转发到本地应用程序，文中详细介绍了使用 Go 语言和 Server-sent events 技术实现该功能的过程，并附带了代码示例和部署说明。</p> 
+
+<p><a href="https://dev.to/akshitzatakia/easyjson-supercharge-json-performance-in-go-28">EasyJSON：提升 Go 语言中 JSON 性能</a><br>Go 语言中的 JSON 序列化和反序列化是许多应用程序的核心，但标准库在处理大型数据结构时性能通常较差。EasyJSON 通过在编译时生成序列化代码来解决这个问题，从而避免了运行时反射的开销。本文探讨了 EasyJSON 的工作原理，并将其与其他库进行了比较，展示了它如何显著提升性能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://restate.dev/blog/every-system-is-a-log-avoiding-coordination-in-distributed-applications">每个系统都是一个日志：避免分布式应用程序中的协调</a><br>构建弹性的分布式应用程序仍然是一个巨大的挑战。本文探讨了一个核心思想，通过避免分布式协调来解决许多问题，这很大程度上源于我们在构建Apache Flink时的经验教训。文章的核心观点是：每个系统都是一个日志。通过将所有系统（队列、数据库、锁等）都建立在同一个日志上，我们可以消除大多数协调问题，从而简化应用程序的构建，提高其可靠性和容错性。文章还介绍了Restate项目，这是一个基于此思想的开源项目，它使用共享日志方法来消除大部分协调问题。</p>
+
+<p><a href="https://dev.to/federico_bevione/transactions-in-microservices-part-1-saga-patterns-with-choreography-and-orchestration-4an9">微服务中的事务：第一部分——SAGA模式概述</a><br>分布式系统功能强大，但也极具挑战性，尤其是在确保多个服务之间的一致性方面。在微服务的世界里，传统的数据库事务往往力不从心。这就是分布式事务发挥作用的地方。分布式事务允许系统协调多个服务，同时优雅地处理故障。实现这一目标最有效的方法之一是SAGA模式，它提供了两种不同的实现：编排和协调。本文是探索分布式事务和SAGA模式系列文章中的第一篇。读完本文后，您将了解其核心概念、何时使用它以及如何在现实场景中应用它。文章中包含一个Go语言的实际示例来演示协调方法。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jan/26/chatgpt-operator-system-prompt/#atom-everything">ChatGPT Operator 系统提示词</a><br>Johann Rehberger 获取了 ChatGPT Operator 系统提示的副本。和往常一样，系统提示比任何官方资料都更像一份编写良好的文档。它会多次要求用户确认：在任何具有外部副作用的任务的最后一步之前，都会要求用户进行最终确认。这包括提交购买、删除、编辑数据、预约、发送消息、管理帐户、移动文件等。在将商品添加到购物车或其他中间步骤之前，不要进行确认。文中还介绍了允许的任务和“安全浏览”，以尝试避免针对恶意网页指令的提示注入攻击；以及关于不从照片中识别人员的大量规则，即使它能够做到这一点；最后介绍了浏览工具可以使用的一些工具，包括鼠标操作（移动、滚动、点击、双击、拖动）和键盘操作（按键、打字）。作者最后指出，正如之前在 DALL-E 中看到的那样，有趣的是，OpenAI 似乎没有将其 JSON 工具调用机制用于自己的产品。</p>
+
+<p><a href="https://magazine.ucsf.edu/building-a-silicon-brain">神经科学的未来：构建硅脑</a><br>人类大脑的数字孪生？这并非科幻小说。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Phi 4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.</p>
+
+<p><a href="https://github.com/mk6i/retro-aim-server">mk6i/retro-aim-server</a><br>Open-source instant messaging server that makes classic AIM and ICQ clients work again.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>Directory/File, DNS and VHost busting tool written in Go</p>
+
+<p><a href="https://github.com/burrowers/garble">burrowers/garble</a><br>Obfuscate Go builds</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Cost monitoring for Kubernetes workloads and cloud costs</p>
+
+<p><a href="https://github.com/yassinebenaid/bunster">yassinebenaid/bunster</a><br>Compile shell scripts to static binaries.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

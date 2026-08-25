@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250425.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250425</span>
+</p>
+<p>每日一谚：Choose your packages wisely, maintain them strictly </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/jeIPGn8VC7YowUlXMx9VZA">一个字符引发的30%性能下降：Go值接收者的隐藏成本与优化</a><br>这可不是什么虚构的故事，而是最近发生在Dolt（我长期关注的一个Go编写的带版本控制的SQL数据库）项目中的真实“性能血案”。一次旨在改进封装的重构，却意外触发了严重的性能衰退。经过一番追踪和性能分析（Profiling），罪魁祸首竟然隐藏在代码中一个极其微小的改动里。今天，我们就来解剖这个案例，看看Go语言的内存分配机制，特别是**值接收者（Value Receiver）**，是如何在这个过程中悄无声息地埋下性能地雷的。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ABi8hFdY7Wzozr1BTfDtTw">拯救你的Commit Log：Conventional Commits实践指南</a><br>Conventional Commits (约定式提交) 规范提供了一套清晰、简洁的指引，旨在将每一次提交都转化为有意义、结构化的信息单元，从而显著提升 Commit Log 的价值和可利用性。在这篇文章中，我们将探讨Conventional Commits如何作为一项关键指引，帮助开发者和团队构建更清晰、更一致、更具信息量的提交历史。</p> 
+
+<p><a href="https://tutorialedge.net/golang/testing-with-fake-http-services-in-go">使用伪造 HTTP 服务提升 Go 测试效率</a><br>学习如何通过使用伪造的 HTTP 服务来编写可靠的 Go 测试。本教程涵盖了 httptest 和 fakes 库的示例。使用伪造的 HTTP 服务可以在受控环境中模拟真实场景，确保测试快速、可靠且可重复。文中介绍了如何配置 HTTP 客户端、使用 httptest 编写 HTTP 测试，以及模拟错误等内容。</p> 
+
+<p><a href="https://herecomesthemoon.net/2025/04/pipelining">管道操作符可能是我最喜欢的编程语言特性</a><br>独立函数调用语法被认为效率低下。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/tidb-performance-hotspots-identifying-fixing-issues-using-topsql/">TiDB 性能热点：如何使用 Top SQL 识别和修复问题</a><br>分布式数据库中的热点问题常常会导致性能下降，本文介绍如何使用 TiDB Dashboard、Top SQL 和系统表来识别和诊断 TiDB 中的性能热点，无论其原因是模式设计、索引问题还是特定键上的集中流量，都能快速找到问题并解决。</p>
+
+<p><a href="https://engineering.salesforce.com/how-hyperforce-edge-networking-scales-to-handle-20-million-domains-on-just-30gb-of-ram/">Hyperforce 边缘网络如何在仅 30GB RAM 的情况下处理 2000 万个域名</a><br>了解 Hyperforce 边缘网络如何将域名容量扩展到 2000 万个，同时将内存使用量减少，并将文件提取时间从 50 多分钟缩短到 5 分钟以内。文章介绍了团队如何应对重大的可扩展性挑战，重新设计证书管理以大规模替换 Vault，并在不牺牲信任或安全性的情况下保持快速部署。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/04/25/fluent-bit-v4-0-celebrating-new-features-and-10th-anniversary/">Fluent Bit v4.0：庆祝新功能和十周年纪念 | CNCF</a><br>Fluent Bit维护者们分享了令人兴奋的消息！Fluent Bit 4.0版本发布，适逢该项目十周年纪念。旅程：从嵌入式日志记录到多信号可观测性……Fluent Bit 4.0版本在保持向后兼容性和用户期望的性能的同时，引入了改变游戏规则的功能，扩展了遥测代理的可能性。文中重点介绍了四个新功能：处理器的条件逻辑、跟踪的头尾采样、用于扩展Fluent Bit的Zig语言支持以及身份验证和TLS改进。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/04/24/endpoints-deprecation/">继续从 Endpoints 过渡到 EndpointSlices</a><br>自从在 v1.15 版本中以 alpha 版本添加 EndpointSlices (KEP-752)，并在 v1.21 版本中正式发布以来，Kubernetes 中的 Endpoints API 就已被弃用。像双栈网络和流量分配这样的新服务特性仅通过 EndpointSlice API 支持，因此所有服务代理、网关 API 实现和类似的控制器都必须从使用 Endpoints 迁移到使用 EndpointSlices。目前，Endpoints API 实际上只是为了避免破坏仍然使用它的最终用户工作负载和脚本。</p>
+
+<p><a href="https://thecreativeindependent.com/people/multi-disciplinary-artist-jack-rusher-on-the-need-to-sustain-your-creative-drive-in-the-face-of-technological-change">跨学科艺术家杰克·拉舍尔谈如何在技术变革面前保持创造力</a><br>跨学科艺术家杰克·拉舍尔讨论了习惯作为卓越的表现形式，科学家和艺术家之间的共同点，以及人工智能对创造力的影响。</p>
+
+<p><a href="https://www.coindesk.com/tech/2025/04/21/vitalik-buterin-proposes-replacing-ethereums-evm-with-risc-v">Vitalik Buterin 建议用 RISC-V 替换以太坊的 EVM</a><br>Buterin 认为，将以太坊迁移到开源 RISC-V 架构将“极大地提高以太坊执行层的效率”。</p>
+
+<p><a href="https://steveklabnik.com/writing/thoughts-on-bluesky-verification">关于Bluesky验证的一些想法</a><br>本文探讨了Bluesky平台的验证机制。作者获得了Bluesky的蓝V认证，并对该功能的实现机制进行了技术分析。文章的核心观点是，Bluesky的验证机制虽然看似中心化，因为只有少数“可信验证者”才能颁发蓝V，但实际上其底层协议是去中心化的。任何人都可以在自己的个人数据空间（PDS）中写入验证记录，只是Bluesky客户端选择仅显示来自可信验证者的验证。文章还阐述了atproto协议的“黄金法则”：只有用户自己才能写入自己的PDS记录，这决定了Bluesky中许多行为模式，包括验证和阻止用户等。作者认为，Bluesky的验证设计简洁且比预期的更去中心化，但蓝V可能被用户误认为是某种身份地位的象征，这有待观察。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dagger.io/blog/llm">Dagger | 软件工厂中的智能体：在 Dagger 中引入 LLM 原语</a><br>Dagger 现在将大型语言模型 (LLM) 直接集成到软件交付工作流程中，从而实现 AI 驱动的软件交付工作流程和受控的编码智能体环境，同时保持完全的控制、可观察性和可重复性。</p>
+
+<p><a href="https://blog.jim-nielsen.com/2025/i-dont-see-why-not">“我并不认为为什么不行”</a><br>博主对DeepMind首席执行官Demis Hassabis预测“在未来十年左右，我们可以借助人工智能治愈所有疾病”的言论表示质疑。博主认为，这种“我并不认为为什么不行”的说法过于乐观，往往会忽略实际问题。博主将此预测设为书签，并在2035年4月进行后续跟进，以此检验该预测的可信度，并探讨AI预测的可信度问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/joho/godotenv">joho/godotenv</a><br>A Go port of Ruby&#39;s dotenv library (Loads environment variables from .env files)</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/hashicorp/packer">hashicorp/packer</a><br>Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/cloudflare/cfssl">cloudflare/cfssl</a><br>CFSSL: Cloudflare&#39;s PKI and TLS toolkit</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/autokitteh/autokitteh">autokitteh/autokitteh</a><br>Durable workflow automation in just a few lines of code</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript - https://k6.io</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

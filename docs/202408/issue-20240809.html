@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240809.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-09</span>
+</p>
+<p>每日一谚：Sort your fields in your struct from largest to smallest </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-sync-mutex/">Go Sync互斥锁：正常和饥饿模式</a><br>该文档讨论了 Golang Sync 互斥锁，这是一种用于确保一次只有一个 goroutine 可以访问共享资源的机制，以及它的结构、锁定和解锁流程，以及它的两种模式：正常模式和饥饿模式。</p> 
+
+<p><a href="https://colobu.com/2024/08/08/access-the-unexported-fields/">没有什么不可能：修改 Go 结构体的私有字段</a><br>本文介绍了如何通过hack的方式访问外部结构体的私有字段,设置外部结构体の私有码,设置 unaddressable 的值,以及通过修改 `Value` 值的flag标志位,实现访问私有碼、设置私有笔的值、用私有筆设置值、给unaddressable码设置值。</p> 
+
+<p><a href="https://dev.to/aceld/golang-triad-ii-comprehensive-analysis-of-gos-hybrid-write-barrier-garbage-collection-3knh">Go的混合写入屏障垃圾回收综合分析</a><br>该文档讨论了 Golang 的垃圾回收 （GC） 机制的演变，重点介绍了其使用混合写入屏障机制，该机制结合了插入和删除写入屏障的优点，减少了对 Stop The World （STW） 机制的需求，并允许在不暂停程序的情况下并发垃圾收集。</p> 
+
+<p><a href="https://victoriametrics.com/blog/troubleshooting-tsdb/">时间序列数据库故障排除：我的指标去哪儿了？</a><br>这篇博客文章提供了有关使用 VictoriaMetrics 及其内置工具对时间序列数据库进行故障排除的指南，重点关注数据抓取、远程写入和存储问题，并建议使用 Grafana Dashboard 和 Victoria metric 社区以获得进一步的帮助。</p> 
+
+<p><a href="https://dev.to/aws/use-mistral-ai-to-build-generative-ai-applications-with-go-2hpa">使用 Mistral AI 通过 Go 构建生成式 AI 应用程序</a><br>该文档提供了有关如何使用 Mozilla 的 Mozilla 的 Mozilla Firefox 构建 AI 应用程序的指南，该指南使用 Amazon 的 Amazon 基岩和适用于 Go 的 AWS 开发工具包，解释了不同模型、提示令牌的使用以及使用流式处理进行交互式交互。</p> 
+
+<p><a href="https://coder.com/blog/websocket">nhooyr/websocket 的新家</a><br>开源 Web 套接字库 nhooyr/web socket 已被 Coder 采用，Coder 将继续将其作为开源库在自己的 GitHub 组织中维护，不会计划进行重大 API 更改。</p> 
+
+<p><a href="https://thenewstack.io/golang-for-webassembly-can-now-work-like-it-should/">用于 WebAssembly 的 Golang 现在可以像 IT 应有的那样工作</a><br>New Stack 宣布，由于 WASI 组件模型和 Go 的重大进步，尤其是 TinyGo，Golang 是一种编程语言，现在可以在 WebAssembly 上下文中使用，实现了 WebAssembly 的承诺，即更广泛地支持浏览器以外的各种设备的各种编程语言。</p> 
+
+<p><a href="https://www.ardanlabs.com/blog/2024/07/streamlining-prompt-engineering-and-context-handling-in-generative-ai-ep4.html">第 4 集：简化生成式 AI 中的提示工程和上下文处理</a><br>“生成式 AI 简介”系列的第四集讨论了提示工程在增强 AI 模型中的重要性，方法是创建动态和交互式提示、管理多个上下文以及构建实时响应用户输入的交互式 AI 系统。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://medium.com/@dmosyan/docker-images-explained-f741c742f2af">Docker镜像解析</a><br>David Mosyan 解释了 Docker 镜像、Docker 容器和 OCI 镜像，并解释说它们是只读包，包含应用程序代码、依赖项、最小操作系统构造和元数据，可用于启动容器，并从 Docker Hub 等注册表中提取，每一层代表一个或多个文件。</p>
+
+<p><a href="https://www.uber.com/blog/upgrading-ubers-mysql-fleet/">Upgrading Uber’s MySQL Fleet  to version 8.0</a><br>&#34;Not acceptable&#34; is a negative response to the statement &#34;Not acceptable&#34;.</p>
+
+<p><a href="https://tech.loveholidays.com/optimising-load-testing-in-production-d5a280a8411f">优化生产中的负载测试</a><br>Loveholidays 使用 Owlbot 针对其生产系统生成真实负载，但吞吐量问题被确定为开源负载生成器 Ripley 的瓶颈，然后对其进行优化以满足其需求。</p>
+
+<p><a href="https://hamy.xyz/labs/2024-04_htmx-in-production">在生产环境中运行 HTMX 的感觉 - 来自经验丰富的软件工程师的故事</a><br>这篇博文讨论了经验丰富的开发人员在生产中使用 HTMX 的经验，强调了其简单性、性能、易于添加到现有项目以及未来改进的潜力，同时还指出了它在不太有利的网络条件下的性能限制以及缺乏标准化方法。</p>
+
+<p><a href="https://about.gitlab.com/blog/2022/07/06/why-were-sticking-with-ruby-on-rails/">为什么我们坚持使用 Ruby on Rails</a><br></p>
+
+<p><a href="https://www.docker.com/blog/docker-best-practices-understanding-the-differences-between-add-and-copy-instructions-in-dockerfiles/">Docker 最佳实践：了解 Dockerfile 中 ADD 和 COPY 指令的差异</a><br>源文档是一条消息，指示来自系统的“403 Forbidden”错误消息，特别是来自服务器端，特别是来自“ns”（Nix）模块。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/08/08/score-accepted-as-a-cncf-sandbox-project/">Score被接受为 CNCF 沙盒项目</a><br>Humanitec 宣布，其项目 Score 已被接受为云原生计算基金会 （CNF） 沙盒项目，这标志着公司及其社区的一个重要里程碑，他们现在正在寻求与 CNCF 领域的其他平台和工具合作。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.pragmaticengineer.com/klarnas-ai-chatbot/">Klarna 的 AI 聊天机器人：它到底有多大的革命性？</a><br>Klarna 与 OpenAI 合作推出了一款 AI 聊天机器人，该公司声称将消除 2/3 的客户支持职位，但该文章质疑其取代工作的潜力以及对整个 IT 行业的影响。</p>
+
+<p><a href="https://simonwillison.net/2024/Aug/8/gpt-4o-system-card/#atom-everything">GPT-4o系统卡</a><br>GPT-4o 系统卡是 OpenAI AI 模型的安全报告，概述了防止该模型根据声音识别说话者、制作受版权保护的音频内容的复制品以及做出错误推断的措施，同时还解决了说服力和自我意识方面的潜在问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI 网关 |AI 原生 API 网关</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>用于 Go 的结构化、可插拔的日志记录。</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/pdfcpu/pdfcpu">pdfcpu/pdfcpu</a><br>用 Go 编写的 PDF 处理器。</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>Prometheus监控系统和时间序列数据库。</p>
+
+<p><a href="https://github.com/sashabaranov/go-openai">sashabaranov/go-openai</a><br>OpenAI ChatGPT、GPT-3、GPT-4、DALL·E， Go 的 Whisper API 包装器</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>云原生策略管理</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>分布式、可靠的键值存储，用于存储分布式系统中最关键的数据</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent （OPA） 是一个开源的通用策略引擎。</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Kubernetes 的渐进式交付</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA 是基于 Kubernetes 的事件驱动自动缩放组件。它为在 Kubernetes 中运行的任何容器提供事件驱动的缩放</p>
+
+<p><a href="https://github.com/sourcegraph/sourcegraph">sourcegraph/sourcegraph</a><br>带有 Code Search 和 Cody 的 Code AI 平台</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby Project - 一个容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/dunglas/frankenphp">dunglas/frankenphp</a><br>🧟 现代PHP应用服务器</p>
+
+<p><a href="https://github.com/IBM/sarama">IBM/sarama</a><br>Sarama 是 Apache Kafka 的 Go 库。</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB - 开源的云原生分布式 SQL 数据库。</p>
+
+<p><a href="https://github.com/external-secrets/external-secrets">external-secrets/external-secrets</a><br>External Secrets Operator 从第三方服务（如 AWS Secrets Manager）读取信息，并自动将值注入为 Kubernetes Secrets。</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>Golang 的 Database/SQL 的通用扩展</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>Go 的现代测试框架</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-google">hashicorp/terraform-provider-google</a><br>Google Cloud Platform 的 Terraform 提供商</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

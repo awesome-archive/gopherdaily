@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260403.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260403</span>
+</p>
+<p>每日一谚：程序员最大的敌人不是复杂的代码，而是昨天的自己写的代码 </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/03/agentic-api-in-action">REST 已老，AI 时代的智能体需要怎样的 API？</a><br>当我们步入 AI 时代，尤其是当各种大语言模型（LLM）驱动的智能体（AI Agent）开始接管我们的软件系统时，一个尖锐的矛盾浮出水面：这群“硅基同事”在面对我们精心设计的 REST API 时，表现得像个无所适从的笨蛋。今天，作为本专栏的开篇，我想和你探讨一个极其现实的工程问题：为什么在 AI 时代，统治后端十年的 REST 架构正在失效？我们又该如何为 AI 智能体设计下一代接口——Agentic API？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/yhZuzmGlycLvCID2X6840w">Rust狂飙，Go潜行：“简单”影响讨论热度？</a><br>一位国外开发者分析了过去 20 年 Hacker News 的数据，发现了一个有趣的现象： Rust 的讨论热度几乎要冲破天际，而 Go 却在底部表现得异常冷静。从图中看，即便是Go的鼎盛时期，依然话题热度不足</p> 
+
+<p><a href="https://benhoyt.com/writings/dependencies/">软件依赖：潜伏的供应链安全隐患</a><br>文章指出，项目添加的每一个外部依赖项都可能成为潜在的供应链攻击入口。依赖项的数量越多，且更新频率越高，系统的攻击面就越广，安全风险也随之增加。作者强调了软件开发中盲目引入第三方代码的危险性，提醒开发者在享受第三方库带来的便利时，必须审慎评估其背后的安全隐患，以降低系统遭受恶意攻击的可能性。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/04/02/code-like-a-pirate-with-junie-and-goland/">使用 GoLand 与 Junie AI 高效编程指南</a><br>本文由 Go 语言专家 John Arundel 撰写，介绍了如何利用 JetBrains 的 AI 编程助手 Junie 提升开发效率。作者提出了一套名为“PIRATE”的六步工作流，旨在帮助开发者更科学地引导 AI 完成编码任务。文章强调了在 AI 辅助编程中，明确任务目标（即“计划”）对于获得高质量代码产出的重要性，并以幽默风趣的海盗主题风格，为 Go 语言开发者提供了实用的 AI 使用技巧。</p> 
+
+<p><a href="https://vjerci.com/writings/clean/separation-of-concerns/">Golang 架构实践：关注点分离原则</a><br>本文探讨了软件架构中“关注点分离”的核心原则。文章指出，通过将不同职责的代码解耦，可以显著提升系统的可维护性，降低修改代码时的连锁反应。作者以 Golang 为例，对比了将所有逻辑堆砌在单一函数中的不良实践，并强调在 Go 语言中应利用结构体（struct）和接口（interface）来实现逻辑隔离，从而构建出更清晰、更具扩展性的系统架构。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/">KernelEvolve：Meta 如何利用智能体优化 AI 算力基础设施</a><br>随着 AI 模型架构与异构硬件（GPU、MTIA、CPU）数量的激增，传统的人工内核优化已难以满足生产需求。Meta 推出了 KernelEvolve 系统，作为其“排序工程师智能体”（Ranking Engineer Agent）的核心组件，旨在实现算力内核的自动化编写与性能调优。该系统能够自动生成针对特定硬件的高效指令，不仅极大缩短了研发周期，还提升了复杂模型在多样化硬件集群上的运行效率，为大规模 AI 基础设施的性能优化提供了可扩展的解决方案。</p>
+
+<p><a href="https://tailscale.com/blog/adult-in-the-room">技术行业的稳健之道：做那个“成熟的成年人”</a><br>在技术行业快速迭代的浪潮中，企业极易因盲目追求增长而迷失方向。本文指出，所谓“房间里成熟的成年人”，是指在喧嚣的环境中保持清醒与定力，不被短期趋势所裹挟。核心在于建立稳健的运营基石，平衡创新与风险，以长远的眼光审视业务发展。企业唯有脚踏实地、审慎决策，才能在充满变数的竞争中站稳脚跟，实现可持续的增长与长期价值。</p>
+
+<p><a href="https://seangoedecke.com/programming-with-ai-agents-as-theory-building/">编程的本质：AI 时代下的“理论构建”挑战</a><br>本文引用计算机科学家 Peter Naur 的观点，强调软件工程的核心产出并非代码本身，而是工程师脑中关于程序如何运作的“理论模型”。作者探讨了 AI 代理对这一过程的影响：虽然 AI 提升了开发效率，但也导致工程师在编码时减少了对系统逻辑的深度思考，从而削弱了对代码的理解深度。文章提醒开发者，过度依赖 AI 可能导致“理论构建”能力的退化，在享受工具便利的同时，不应忽视对系统核心逻辑的掌握。</p>
+
+<p><a href="https://www.docker.com/blog/defending-your-software-supply-chain-what-every-engineering-team-should-do-now/">软件供应链安全：工程团队的紧迫防御指南</a><br>近期，软件供应链攻击频发，从 Axios 库被劫持到各类自动化蠕虫病毒肆虐，攻击者通过窃取开发者凭证植入恶意代码，利用生态系统对开源组件的“隐性信任”造成严重威胁。文章指出，供应链攻击正呈现常态化、自动化及勒索化趋势。工程团队必须打破对第三方工具的盲目信任，从验证机制入手，建立严密的供应链安全防线，以应对日益严峻的生态安全挑战。</p>
+
+<p><a href="https://www.docker.com/blog/gemma4-dockerhub/">谷歌最新 Gemma 4 模型现已登陆 Docker Hub</a><br>谷歌最新轻量级开源模型 Gemma 4 已正式发布并入驻 Docker Hub。通过将模型封装为 OCI 镜像，开发者可以像使用容器一样，利用熟悉的 Docker 工具链轻松实现模型的版本管理、共享及快速部署。Gemma 4 提供多种架构选择，支持从边缘设备到高性能服务器的灵活扩展。此外，Docker 计划在未来几周内通过 Docker Model Runner 提供更深度的集成，进一步简化模型在 Docker Desktop 中的运行与管理流程。</p>
+
+<p><a href="https://www.docker.com/blog/docker-offload-now-generally-available-the-full-power-of-docker-for-every-developer-everywhere/">Docker Offload 正式发布：云端引擎赋能全环境开发</a><br>Docker 正式推出 Docker Offload 服务，旨在解决企业虚拟桌面基础设施（VDI）或受限环境无法运行 Docker Desktop 的难题。该服务将容器引擎迁移至 Docker 安全云端，开发者无需更改现有工作流、配置或终端习惯，即可在任何环境下通过 Docker Desktop 运行容器。此方案不仅消除了环境限制，还确保了数据传输的加密安全与合规审计，助力企业开发者提升开发效率，轻松实现跨环境的无缝开发体验。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/04/03/the-reckoning.html">AI 时代的“清算”与焦虑营销</a><br>本文作者 George Hotz 探讨了 AI 发展带来的社会冲击。他指出，当前 AI 产业的营销策略通过极度渲染“失业”与“人类灭绝”的恐惧来获利，这种做法加剧了公众的不安与社会割裂。作者反思了所谓超级智能并不等同于超级道德，并对现代社会中个人与集体责任感的缺失表示忧虑。他认为，AI 的发展现状更像是一场对社会精英阶层的清算，而当前的叙事逻辑正将人类引向无谓的恐慌。</p>
+
+<p><a href="https://slicker.me/sqlite/features.htm">SQLite 的三大进阶功能特性</a><br>本文介绍了 SQLite 的三项核心进阶功能：一是通过 JSON 扩展实现对半结构化数据的存储、查询及索引优化；二是利用 FTS5 扩展内置全文检索引擎，支持复杂的短语搜索与排名；三是通过支持窗口函数与公用表表达式（CTE），使 SQLite 能够处理复杂的分析型查询。这些特性无需依赖外部服务，即可在单一数据库文件中高效完成现代应用的数据处理需求。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/2/lennys-podcast/#atom-everything">AI 时代的工程变革：Lenny 播客对话精选</a><br>本文总结了作者 Simon Willison 在 Lenny Rachitsky 播客中的核心观点。文章深入探讨了 AI 代理工程的现状，指出我们已跨越技术拐点，软件开发正面临范式转移。作者重点分析了“氛围编程”（vibe coding）的崛起、自动化对信息工作者的冲击、软件测试瓶颈的转移，以及 AI 如何重塑开发者的工作流与评估体系。面对 AI 带来的高强度变化，作者反思了开发效率的重新定义及行业转型期对从业者的挑战。</p>
+
+<p><a href="https://deepmind.google/models/gemma/gemma-4/">Google 发布新一代开源模型 Gemma 4</a><br>Google DeepMind 正式推出新一代开源模型 Gemma 4。该系列模型基于 Gemini 3 的先进研究与技术构建，旨在实现极致的“单位参数智能效率”。Gemma 4 提供多种尺寸选择，包括针对移动端和物联网设备优化的 E2B/E4B 版本，以及具备卓越性能的 26B/31B 版本，在保持高计算与内存效率的同时，为开发者提供了更强大的开源 AI 能力。</p>
+
+<p><a href="https://cursor.com/blog/cursor-3">Cursor 3：重塑 AI 智能体协作的统一开发工作区</a><br>Cursor 3 标志着软件开发进入新阶段，旨在解决开发者在管理多个智能体、终端和工具时的碎片化痛点。该版本从底层重构了界面，打造了一个以智能体为核心的统一工作区。其核心亮点包括：支持多仓库协作、实现本地与云端智能体的无缝衔接、以及支持多个智能体并行运行。通过提供更高层级的抽象视角，Cursor 3 旨在让开发者从繁琐的微观管理中解放出来，专注于构建软件本身。</p>
+
+<p><a href="https://qwen.ai/blog?id=qwen3.6">通义千问 Qwen-3.5 系列模型发布：性能与效率的全面进化</a><br>本次更新推出了 Qwen-3.5 系列模型，在保持高效推理速度的同时，显著提升了模型在复杂推理、代码生成、数学解题及多语言处理等方面的性能。Qwen-3.5 不仅在多项权威基准测试中表现出色，还优化了长上下文处理能力，为开发者提供更强的逻辑建模与应用支持。此外，该系列进一步完善了模型在指令遵循和安全性方面的表现，旨在为企业及个人用户提供更可靠、更智能的生成式 AI 解决方案。</p>
+
+<p><a href="https://www.dardar.co/articles/skills-arent-just-context">如何通过自动化评估提升数据智能体的可靠性</a><br>本文介绍了 Dardar 平台如何通过自动化评估体系，确保企业级数据智能体在决策过程中输出准确的结果。通过建立基于业务事实的“基准真值（Ground Truth）”，系统能在智能体更新或架构变更后，自动检测性能偏差与回归问题。这种评估机制能够实时识别数据差异与覆盖缺口，在错误影响业务决策前进行修复，从而帮助团队构建可信赖的数据智能体，实现高效且准确的数据自助服务。</p>
+
+<p><a href="https://www.arcee.ai/blog/trinity-large-thinking">Arcee.ai 发布开源推理模型 Trinity-Large-Thinking</a><br>Arcee.ai 正式发布了高性能开源推理模型 Trinity-Large-Thinking，该模型基于 Apache 2.0 协议开源。作为 Trinity 系列的最新力作，它通过优化 SFT（监督微调）和 RL（强化学习）流水线，引入了“思维链”推理机制，显著提升了模型在复杂长跨度任务、多轮工具调用及上下文连贯性方面的表现。目前，该模型已上线 OpenRouter 并同步在 Hugging Face 提供权重，旨在为开发者和企业提供强有力的开源模型选择。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/777genius/claude-notifications-go">777genius/claude-notifications-go</a><br>🔔 Cross-platform smart notifications plugin for Claude Code. 6 types. Click-to-focus. 1 line installation. Instant. Analyze context. Zero dependencies. webhooks (ntfy, slack, telegram...). Linux, M</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>Video translation and dubbing tool powered by LLMs. The video translator offers 100 language translations and one-click full-process deployment. The video translation output is optimized for platforms</p>
+
+<p><a href="https://github.com/go-resty/resty">go-resty/resty</a><br>Simple HTTP, REST, and SSE client library for Go</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/kubernetes-sigs/cluster-api">kubernetes-sigs/cluster-api</a><br>Home for Cluster API, a subproject of sig-cluster-lifecycle</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

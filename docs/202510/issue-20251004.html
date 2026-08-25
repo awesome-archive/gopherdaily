@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251004.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251004</span>
+</p>
+<p>每日一谚：Do one thing and do it well. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/04/the-software-essays-that-shaped-me">超越时间的智慧：重读那些定义了现代软件开发的经典文章</a><br> 二十年前，一位年轻的程序员在还未踏入职场时，便开始沉浸于软件开发的博客文章与深刻思考之中。二十年后，他已成为一名资深工程师，回首望去，成千上万的文字中，只有寥寥数篇真正沉淀下来，如基石般塑造了他的思维方式和职业生涯。 这份由 Michael Lynch 精心筛选出的“思想塑造清单”，本身就是一 次对软件工程领域永恒智慧的巡礼。清单中的每一篇文章，都如同一个思想的火种，点燃了关于工程文化、代码哲学、乃至技术选型的深刻辩论。 今天，也让我们重新打开这些经典，逐一剖析其中的智慧，看看它们在瞬息万变的当下，能为我们——尤其是追求简约与高效的 Go 开发者——带来怎样 历久弥新的启示</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/a9pwvKwIHWsqqE-3ovHoZw">【Go开发者的数据库设计之道】04 性能篇：索引的艺术与“反范式”的智慧</a><br></p> 
+
+<p><a href="https://rednafi.com/go/subtest-grouping">Go中的子测试分组</a><br>Go 从 1.7 版本开始支持子测试。使用 t.Run，您可以嵌套测试，为测试用例分配名称，并让运行器通过在子测试中调用 t.Parallel（如果需要）来并行执行工作。 对于小型测试套件，一组平铺的 t.Run 调用通常就足够了。我倾向于从这里开始。随着测试套件的增长，您的设置和拆卸需求可能会需要子测试分组。有多种方法可以处理这个问题。</p> 
+
+<p><a href="https://mfbmina.dev/en/posts/2025-09-19_sync-break-down">深入解析 Go 的 sync 包</a><br>在我看来，Go 在并发工作方面提供了极好的支持，这不仅归功于 goroutine，还因为该语言的生态系统。一个很好的例子是 sync 包，它有助于同步并发例程。在这篇文章中，我们将深入探讨这个包所提供的一切。
+
+Waitgroups Waitgroups 用于协调多个例程的执行。它们使创建并确保所有子例程在主例程结束之前完成变得容易。在关于 waitgroups 的文章中，我更好地解释了它们的工作方式以及 Go 1.25 版本发生了什么变化。</p> 
+
+<p><a href="https://fly.io/blog/litestream-v050-is-here">Litestream v0.5.0 is Here · The Fly Blog</a><br>I’m Ben Johnson, and I work on Litestream at Fly.io. Litestream makes it easy to build SQLite-backed full-stack applications with resilience to server failure. It’s open source, runs anywhere, and it’s easy to get started.
+
+Litestream is the missing backup/restore system for SQLite. It runs as a sidecar process in the background, alongside unmodified SQLite applications, intercepting WAL checkpoints and streaming them to object storage in real time. Your application doesn’t even know it’s there. But if your server crashes, Litestream lets you quickly restore the database to your new hardware.
+
+The result: you can safely build whole full-stack applications on top of SQLite.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-10-03-100-real-world-postgres-dumps">加载 100 个真实的 Postgres 数据库转储失败</a><br>我们加载了 100 个真实的 Postgres 数据库转储，但几乎全部失败。 阅读更多内容以了解我们为什么这样做，以及我们如何解决这些问题。</p>
+
+<p><a href="https://www.haproxy.com/blog/october-2025-cve-2025-11230-haproxy-mjson-library-denial-of-service-vulnerability">CVE-2025-11230: Denial of service vulnerability in HAProxy mjson library</a><br>The latest versions of HAProxy Community and HAProxy Enterprise have patches for a high severity denial of service vulnerability in the mjson library.</p>
+
+<p><a href="https://sunshowers.io/posts/cancelling-async-rust">取消异步 Rust</a><br>本文是 RustConf 2025 关于异步 Rust 中取消的演讲的编辑和书面版本。本文分为三个部分：1. 什么是取消？2. 分析取消：深入研究其机制，并提供一些有用的思考方式。3. 可以做什么？解决方案，包括实际指导，以及我们在生产代码库中发现和修复的真实错误。在本文中，我们看到了未来是消极的，介绍了取消安全和取消正确性作为概念，检查了取消时可能发生的一些错误，并查看了一些您可以用来减轻取消缺点的建议。建议包括：避免 Tokio 互斥锁；重写 API 以使 futures 取消安全；寻找方法来确保取消不安全的 futures 被驱动到完成。</p>
+
+<p><a href="https://www.nango.dev/blog/lessons-learned-building-infrastructure-devtool">构建基础设施开发工具的经验教训</a><br>从构建 Nango 三年中学到的意想不到的经验教训</p>
+
+<p><a href="https://mitchellh.com/writing/zig-builds-getting-faster">Zig Builds Are Getting Faster</a><br>文章讨论了 Zig 编程语言的编译速度改进。作者分享了 Ghostty 项目升级到 Zig 0.15.1 后的编译时间，包括构建脚本编译、完全未缓存的 Ghostty 二进制文件以及增量构建时间。文章强调了在各种情况下，Zig 0.15.1 的构建速度都有所提高，即使尚未充分利用自托管后端，并且增量编译功能尚未完全实现。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Oct/3/litestream/#atom-everything">Litestream v0.5.0 is Here</a><br>我一直在生产中使用Litestream备份SQLite数据库已经有几年了，没有发生任何问题。新版本已经期待了很久——Ben Johnson……</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/openfga/openfga">openfga/openfga</a><br>A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar</p>
+
+<p><a href="https://github.com/rook/rook">rook/rook</a><br>Storage Orchestration for Kubernetes</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock is a mocking framework for the Go programming language.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/NVIDIA/gpu-operator">NVIDIA/gpu-operator</a><br>NVIDIA GPU Operator creates, configures, and manages GPUs in Kubernetes</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+<p><a href="https://github.com/charlie0129/batt">charlie0129/batt</a><br>Control and limit battery charging on Apple Silicon MacBooks.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

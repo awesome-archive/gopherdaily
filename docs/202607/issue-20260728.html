@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260728.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260728</span>
+</p>
+<p>每日一谚：Keep the main package thin; delegate logic to internal business packages. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/28/why-software-factories-fail-part-3-slopcodebench-opus-5-benchmark/">上次说“没有靠谱的尺子”，这次 Dex Horthy 找到了一把——Opus 5 实测通过率只有 24%</a><br>本文基于 Dex Horthy（HumanLayer 创始人）软件工厂为什么会失败系列第三篇《Benchmarking the new frontier》整理而成。文章介绍了 SlopCodeBench 这一新基准如何通过“检查点”机制模拟真实开发中需求逐步演进的过程，弥补了传统基准“一次性摊开问题”的缺陷。Dex 亲自用该基准的一个子集实测了 Opus 5、Sonnet 5、Opus 4.8 三个模型，最强的 Opus 5 严格通过率也只有 24%，且随着开发推进，几乎所有模型生成的代码都会触发“代码劣化”检测规则。文章最后给出了一个更有前瞻性的验证思路：把强模型维护过的代码库交给弱模型接手开发，用“能否被顺利接手”反向检验强模型的代码到底维不维护得住。</p> 
+
+<p><a href="https://gomodvanityurls.com/zh/blog/wildcard-routing/">通配路由：一条规则管理 50 个 Go 模块</a><br>别再一条一条添加 vanity URL 路由了。gvu 通配路由一条规则覆盖 GitHub org 下的所有仓库——或 monorepo 里的所有模块。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/">重新思考AI时代的安全</a><br>Project Perception基于一个简单的理念：有效防御需要持续理解攻击者如何看待世界、防御者如何评估风险以及保护措施如何随时间改进。为此，Perception协调三类专业智能体。</p>
+
+<p><a href="http://antirez.com/news/172">真正的AI风险在于实验室内部</a><br>Amodei在他最新的博客文章中写了一些可取的内容，但我认为有些内容错误地代表了AI真实风险的位置。我想关注为什么在所有风险中，开放权重模型是最轻微的一种。</p>
+
+<p><a href="https://nesbitt.io/2026/07/28/why-npm-dependency-trees-are-so-big.html">为什么npm依赖树如此庞大</a><br>Rails的每次主要发布都会在整个gem生态系统中引发一系列发布。尝试升级的应用程序运行`bundle update rails`，但Bundler会拒绝，因为树中的某些gem只允许activesupport到上一个主要版本。</p>
+
+<p><a href="https://internals-for-interns.com/posts/linux-kernel-block-layer/">深入理解linux 内核block层</a><br>这是理解Linux内核系列的第6部分，涵盖了Linux内核启动、系统调用和内存管理等内容。</p>
+
+<p><a href="https://en.andros.dev/blog/d7ed8b07/modern-email-can-be-built-from-borrowed-parts/">现代电子邮件可以用借来的部件构建</a><br>让我们在HTTP基础上设计电子邮件的替代品，修复SMTP拖了40年的设计缺陷。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything">关于使用AI做事情的独到指南</a><br>要使用AI公司提供的计算机，在ChatGPT中需要选择ChatGPT Work模式，在Claude中选择Cowork模式。使用AI最强大的方式是让它访问您的计算机。</p>
+
+<p><a href="https://benn.substack.com/p/brute-intelligence">蛮力智能</a><br>蛮力智能代表了尝试过程的工业化。</p>
+
+<p><a href="https://openrouter.ai/blog/announcements/classifiers/">分类器：跟踪您的智能体行为及其成本 — OpenRouter博客</a><br>您现在可以使用结构化元数据自动分类OpenRouter生成的内容，用于AI使用报告。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Open-source &amp; free — Battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, threa</p>
+
+<p><a href="https://github.com/larksuite/cli">larksuite/cli</a><br>The official Lark/Feishu CLI tool, maintained by the larksuite team — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Mee</p>
+
+<p><a href="https://github.com/benbjohnson/litestream">benbjohnson/litestream</a><br>Streaming replication for SQLite.</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/Ed1s0nZ/CyberStrikeAI">Ed1s0nZ/CyberStrikeAI</a><br>The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/black-ant/Ant-Browser">black-ant/Ant-Browser</a><br>指纹浏览器</p>
+
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

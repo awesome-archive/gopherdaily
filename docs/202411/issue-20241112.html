@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241112.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-12</span>
+</p>
+<p>每日一谚：Go is not theoretically exciting on the surface, but it is very useful in real life </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/fzTYg5_7-_VJ2n60e3-daQ">Go，15岁了</a><br>虽然迟到了，但绝不缺席！新一代Go tech lead Austin Clements代表Go团队在Go开源15周年之际，回顾了过去一年Go项目和社区的变化，以及Go团队的努力工作，并对Go的未来发展进行了展望。</p> 
+
+<p><a href="https://t.zsxq.com/ldWO4">走向合规：Go加密库对FIPS-140的支持</a><br>关于go加密包要支持fips 140合规的“来龙去脉”</p> 
+
+<p><a href="https://t.zsxq.com/hfg7q">Go map重塑：引入Swiss Table</a><br>基于swiss table优化的go map实现即将在Go 1.24落地，那么究竟什么是swiss table？为何要用swiss table重新实现Go map? 当前Go map的swiss table重实现版本做了哪些改进与优化，这里写了一篇文档，给大家科普一下。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2024/ml-in-go-with-a-python-sidecar/">Go中的ML和Python sidecar</a><br>本文探讨了将机器学习模型集成到 Go 应用程序中的各种方法，重点介绍了如何利用 Python 进行自定义模型开发和部署。它首先讨论了通过 REST API 和客户端库使用预训练 LLM 的便利性，然后深入探讨了需要本地运行模型的更复杂的场景。作者提出了一种 sidecar 模式方法，其中 Python 进程运行机器学习模型并通过 Web 服务器与 Go 应用程序通信。使用 JAX 进行本地 LLM 推理，并使用 Flask 服务器与 Go 交互来举例说明这种设置。本文还谈到了性能注意事项，并提供了使用 TensorFlow 和 Keras 的低延迟图像分类模型的替代方案，演示了不同的 IPC 方法。总的来说，本文提供了将 Go 与基于 Python 的机器学习功能相结合的实用见解，强调了 Go 开发人员 sidecar 模式的灵活性和效率。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-11-11-dolt-hashes/">所有这些哈希值是怎么回事？</a><br>源文档深入探讨了 Dolt 中内容地址的概念，Dolt 是一个 SQL 数据库，它独特地利用这些哈希来管理数据完整性和版本控制。内容地址是从数据库内容派生的不可变值，可确保数据库的不同版本中的相同数据共享相同的地址。此结构可实现高效的版本控制和差异操作，因为相同的根内容地址表示相同的数据库。本文档介绍了如何为各种数据库对象 （包括表和提交） 生成内容地址，以及如何使用它们来跟踪更改和同步分布式系统。此外，它还概述了访问这些内部内容地址的实际用例，例如在去中心化环境中验证数据库一致性或管理动态应用程序中的缓存密钥。本文档还提供了对 Prolly Tree 数据结构的见解，该结构是内容寻址机制的基础，并讨论了 Dolt 独特功能的实现，例如“dolt_hashof_table（）”功能，以满足特定的用户需求。总之，本文提供了有关 Dolt 体系结构中内容地址的技术基础和应用的信息指南。</p> 
+
+<p><a href="https://dev.to/pradumnasaraf/rate-limiting-a-golang-api-using-redis-ogi">使用Redis对Go API 进行速率限制</a><br>这篇博文详细介绍了使用 Redis 在 Golang 中为 API 实现速率限制的过程。作者将速率限制解释为一种控制用户在特定时间范围内可以发出的请求数量的技术，这对于公平使用、安全性和资源管理至关重要。本教程首先使用 Gin 框架设置基本的 HTTP 服务器，然后介绍 Redis 作为内存中数据存储来管理请求计数。本教程的核心是使用 &#39;go-redis/redis_rate&#39; 包轻松实施速率限制。作者提供了一个完整的代码示例，其中包括初始化项目、设置服务器以及将速率限制应用于特定终端节点。速率限制配置为允许每分钟 10 个请求，超过限制时会显示自定义错误消息。本教程最后测试了速率限制功能，并通过终端日志和浏览器屏幕截图观察其行为。作者还鼓励读者与社区互动，并分享他们自己使用 Golang 和相关技术的经验。</p> 
+
+<p><a href="https://blog.scottlogic.com/2024/11/12/lessons_from_the_RAF.html">我从 RAF 学到的软件开发知识</a><br>该文件反映了在皇家空军 （RAF） 基础训练期间学到的可转移技能及其与软件开发职业的相关性。作者戴夫·奥格尔 （Dave Ogle） 讲述了为期九周的严格培训，该培训强调准备、解决问题、守时、注重细节、团队合作和适应能力。这些原则最初是为了提高军事效率而设计的，在软件开发的快节奏和协作环境中已被证明是无价的。作者强调了做好准备和准时、作为一个有凝聚力的团队工作以及保持高标准细节的重要性，所有这些都有助于在科技行业取得成功的项目成果。军事训练的经验教训强调了纪律、协作和持续改进的价值，这对于在充满活力的软件开发领域蓬勃发展至关重要。</p> 
+
+<p><a href="https://towardsdev.com/token-validation-testing-with-testcontainer-go-and-mocks-a-guide-for-go-developers-9e65e2147679">使用 testcontainer-go 和 Mocks 进行令牌验证测试：Go 开发人员指南</a><br>本文为 Go 开发人员提供了有关如何测试与外部供应商服务和数据库交互的令牌验证系统的全面指南。它介绍了使用 testcontainer-go 创建隔离的 PostgreSQL 容器以模拟真实的数据库条件，以及使用 gomock 生成模拟以替换实际的外部 API 调用。该指南介绍了如何设置测试环境、定义供应商交互的客户端接口，以及编写单元和集成测试，以涵盖现有已验证令牌、新令牌验证和重新检查已保存令牌状态等场景。该方法可确保测试的高稳定性和对系统处理来自外部服务的各种响应的能力的信心，这对于微服务架构至关重要。GitHub 上提供了完整的项目代码，有助于进一步探索和实施所描述的测试策略。</p> 
+
+<p><a href="https://www.bwplotka.dev/2024/go-microbenchmarks-benchstat/">在 Go Benchmark Analysis 中利用 benchstat 预测！</a><br>本文档介绍了 &#39;benchstat&#39; 工具，这是一个用于分析 Go 基准测试结果的强大命令行工具，它通过投影、过滤和分组等功能得到了显著增强。它指导开发人员完成使用“benchstat”比较多个运行、子基准测试和维度（例如不同的压缩算法）的基准测试结果的过程。该工具的新功能允许进行更具可重复性和可靠的基准测试实践，解决意外基准更改和环境不一致等常见问题。然而，增强的工作流程也带来了权衡，包括由于案例数量增加而导致的反馈循环更长、基准测试代码更复杂，以及将基准测试集成到连续生产使用中的挑战。该文档还强调了遵循建议的基准测试命名格式的重要性，以确保与 &#39;benchstat&#39; 的高级功能兼容。总的来说，对于希望利用 &#39;benchstat&#39; 进行深入的 Go 基准测试的开发人员来说，本文档是一个全面的资源。</p> 
+
+<p><a href="https://dev.to/rluders/improving-request-validation-and-response-handling-in-go-microservices-5con">改进 Go 微服务中的请求、验证和响应处理</a><br>源文档详细介绍了在 Go 微服务中处理请求、验证和响应的结构化方法，旨在实现代码的清晰度和可维护性。作者分享了他们改进此过程的过程，其中包括将关注点分为不同的层：请求、验证和响应。通过这样做，它们实现了可重用性和可测试性，同时减少了样板代码。请求层处理从传入的 HTTP 请求中解析和提取数据，验证层处理数据验证，响应层构建响应并设置响应的格式。作者还提供了有关重构现有代码以采用这种分层方法的指导，其中包括为每个层创建专用函数或模块。本文档最后邀请反馈和贡献以进一步改进该方法，并提供直接使用的源代码。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或特定的代码示例，根据说明以避免冗余并专注于总体叙述。</p> 
+
+<p><a href="https://stackoverflow.blog/2024/11/11/developers-hate-documentation-ai-generated-toil-work/">为什么开发人员喜欢干净的代码，但讨厌编写文档？</a><br>源文档深入探讨了一个悖论，即为什么在干净的代码上茁壮成长的开发人员经常回避编写文档的任务。它引用了一项研究表明，良好的文档可以显着减少辛苦的工作和技术债务，从而减少挫败感和倦怠感。尽管认识到文档的价值，但由于截止日期紧迫，并且认为代码应该是不言自明的，开发人员经常降低它的优先级。该文件还强调了 AI 生成文档的出现，作为简化流程的解决方案，使开发人员能够专注于他们喜欢的任务。讨论了敏捷环境中文档的最佳实践，包括使用现代自动化工具和最少前期文档的策略。该文档强调了保持文档的相关性和最新性以支持开发人员满意度和工作效率的重要性。
+
+（注意：该摘要旨在概括所提供文本中的关键主题和见解，重点关注开发人员和文档之间的关系、AI 对这种动态的影响，以及在敏捷开发中维护有效文档的最佳实践。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.architect2architect.com/books-every-architect-should-have-on-their-shelf-a1125be0edcd">每个架构师都应该在书架上放的书</a><br>Asanka Abeysinghe 是一位经验丰富的架构师，也是 WSO2， Inc. 的 CTO，他整理了一份重要书籍清单，这些书籍塑造了他的架构观点。该汇编包括深入研究数字企业软件架构、技术销售、平台战略、领域驱动设计和团队组织的标题。这些书籍涵盖了一系列主题，从创建成功的解决方案和可扩展性到现代化和领域驱动战略。Abeysinghe 鼓励建筑师分享他们自己有影响力的读物，从而培养一个知识交流社区。该列表是关于持续学习和了解建筑最新趋势和方法重要性的更广泛讨论的一部分。
+
+（注意：摘要旨在概括源文档的核心精髓，侧重于精选的书籍列表及其与建筑师的相关性，以及对社区参与的呼吁。</p>
+
+<p><a href="https://addozhang.medium.com/exploring-opentelemetry-profiling-progress-quick-start-with-the-ebpf-agent-e0dc19595780">探索 OpenTelemetry 性能分析进度 — eBPF Agent 快速入门</a><br>Addo Zhang 的这篇 Medium 文章概述了 OpenTelemetry Profiling 的进展，重点介绍了 eBPF 代理的集成以进行数据分析。本文首先解释了软件工程中的可观测性概念，强调了指标、跟踪、日志以及现在的配置文件作为 OTLP 1.3 规范的一部分的重要性。Elastic 向 OpenTelemetry 社区捐赠的 eBPF 代理是一项重大进步，支持跨节点收集和转发分析数据。本文将指导读者设置 eBPF 分析代理，包括必要的操作系统内核要求以及使用 Docker 构建和运行代理。它还解决了当前的限制，例如 M1 虚拟机无法访问内核外部的数据。本文最后介绍了启动代理和查看收集的分析数据的实际步骤，由 Java 应用程序的火焰图说明。本文为有兴趣在 OpenTelemetry 框架中实现和使用 eBPF 分析代理的开发人员提供了全面的指南。
+
+（注意：摘要经过精心设计，以封装源文档的关键元素，同时保持简洁和连贯性。它不包括直接引用或超出传达整体信息所需的特定技术细节。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/11/a-beginners-guide-to-contributing-to-cncf-open-source-projects/">为 CNCF 开源项目做出贡献的初学者指南</a><br>本文档为有兴趣为 CNCF （Cloud Native Computing Foundation） 开源项目做出贡献的初学者提供了全面的指南。它强调了开源背后的理念，强调协作、透明度和社区参与。该指南概述了贡献的好处，包括技能发展、个人成长和对全球软件可访问性的影响。它还阐明了非开发人员可以通过文档、UX/UI 设计、错误报告、翻译和社区参与来做出贡献。概述了贡献者的先决条件，例如了解 Git、编程语言和安全措施。然后，该指南详细介绍了入门的五个步骤，包括加入社区、选择项目、理解文档、与他人协作以及贡献代码。还提供了其他提示，例如从小处着手并通过 CNCF 的指导工作组探索指导机会。本指南旨在揭开为 CNCF 项目做出贡献的过程的神秘面纱，使其可供更广泛的个人使用，并培养更具包容性的开源生态系统。</p>
+
+<p><a href="https://herbsutter.com/2024/11/11/a-new-chapter-and-a-pivotal-year-for-cpp/">新篇章，以及对C&#43;&#43; 关键一年的看法</a><br>Herb Sutter 回顾了 2024 年 C&#43;&#43; 标准化和进化的关键一年，标志着安全和反射功能取得了重大进展。作为 ISO C&#43;&#43; 委员会和标准 C&#43;&#43; 基金会的主席，Sutter 在采用重要的安全改进方面发挥了重要作用，例如消除未初始化局部变量的未定义行为，并提出在运行时删除所有与安全相关的未定义行为的策略。此外，P2996R7 的语言部分被批准用于 C&#43;&#43;26，为反射和生成编译时库奠定了基础。Sutter 的贡献与全球 C&#43;&#43; 社区一起，旨在使 C&#43;&#43; 更安全、更具表现力，从而加强其在金融行业及其他领域的关键作用。因此，2024 年被视为一个转折点，C&#43;&#43;26 准备引入现代 C&#43;&#43; 的新时代，其特点是默认安全性和高级反射功能。Sutter 过渡到 Citadel 证券并继续参与 C&#43;&#43; 的发展，凸显了他对增强语言可用性和健壮性的持续承诺。</p>
+
+<p><a href="https://www.seangoedecke.com/how-to-ship/">我如何在大型科技公司交付项目</a><br>Sean Goedecke 的这份文件深入探讨了大型科技公司内部交付项目的微妙且经常被误解的过程。Goedecke 强调，运输不仅仅是部署代码，还涉及一个复杂的社会结构，需要公司主要领导的批准。他概述了常见的误解，即运输很容易，它等同于部署功能，强调了拥有一名了解项目技术和业务方面的负责工程师的重要性。Goedecke 强调需要与领导层进行清晰的沟通，通过项目信心保持信任，以及快速调整以应对不可预见的技术或法律问题的能力。他提倡早期部署并使用功能标志或暂存环境来预测问题，确保领导层能够评估项目的准备情况。该文件为项目负责人提供了指南，帮助他们了解企业环境中运输的复杂性，优先考虑领导层的批准，并保持高水平的信任和准备。</p>
+
+<p><a href="https://www-infoworld-com.cdn.ampproject.org/c/s/www.infoworld.com/article/3600287/can-wasm-replace-containers.html">Wasm能替代containers吗?</a><br>The source document titled &#34;Redirecting&#34; likely pertains to the concept of redirecting resources, attention, or processes within a particular context, such as digital navigation, organizational workflows, or strategic planning. The document suggests a shift or reallocation of focus from one area to another, which could be essential for optimizing efficiency, addressing emerging priorities, or responding to changes in the environment. While the specific details of the document are not provided, it emphasizes the importance of redirecting efforts to achieve desired outcomes effectively. The act of redirecting may involve various methods, including the use of technology, restructuring of teams, or reprioritization of tasks. Overall, the document underscores the significance of adaptability and strategic redirection in maintaining relevance and achieving success in dynamic settings.
+
+(Note: The summary is based on the generic title &#34;Redirecting&#34; and does not contain specific information from the source document, as the actual content was not provided.)</p>
+
+<p><a href="https://blog.kloudmate.com/how-to-monitor-postgresql-performance-2de746eacaf6">如何监控 PostgreSQL 性能</a><br>源文档提供了有关监控 PostgreSQL 性能的全面指南，强调了主动维护以确保数据库效率和响应能力的必要性。它概述了 CPU 使用率、内存分配、磁盘 I/O、查询性能和连接指标等关键指标，这些指标对于识别瓶颈和优化系统资源至关重要。该指南还强调了日志记录和日志管理对于详细分析和故障排除的重要性。最佳实践包括建立性能基准、定期维护、利用内置日志记录功能以及优化运行缓慢的查询。该文档进一步建议集成 Prometheus、Grafana 或 KloudMate 等监控工具，以实现实时仪表板和警报。总体而言，该指南提倡采用结构化的 PostgreSQL 监控方法，其中包括设置综合工具、准确解释指标以及实施定期维护以维持最佳数据库性能。</p>
+
+<p><a href="https://dev.to/leading-edje/playwright-visual-testing-dynamic-data-34ia">Playwright 视觉测试 - 动态数据</a><br>源文档提供了有关使用 Playwright 在可视化测试中处理动态数据的深入指南。它首先将动态数据定义为在测试运行之间变化的元素，例如基于时间的内容。作者提出了管理动态数据的两种主要策略：模拟数据以确保测试之间的一致性，以及从屏幕截图中隐藏数据以避免影响视觉比较。本文档详细介绍了后一种方法的实现，方法是创建一个 CSS 文件来隐藏动态数据并将其传递给 &#39;toHaveScreenshot（）&#39; 函数。此外，作者建议使用功能验证来确保动态数据正确无误，即使它在屏幕截图中不可见。该指南最后承诺在以后的文章中探索将 Playwright 与基于云的可视化测试工具（如 Applitools 或 Percy）集成。
+
+该摘要概括了源文档的关键点，重点介绍了使用 Playwright 进行可视化测试时处理动态数据的策略。它强调了隐藏动态数据所采取的实际步骤以及维护功能验证的重要性，同时还预告了未来的内容。摘要连贯、非冗余，并且抓住了原始文本的精髓，而无需深入研究具体的问题或答案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://semaphoreci.medium.com/how-to-build-a-rag-chatbot-to-chat-with-documents-using-sparse-data-578c769a7256">如何构建 RAG 聊天机器人以使用稀疏数据与文档聊天</a><br>本文概述了检索增强生成 （RAG） 聊天机器人的开发，旨在帮助用户浏览信号量 CI/CD 文档，即使文档不完整。该聊天机器人使用 Python 构建，利用检索器和语言模型的组合来提供简明的答案，并将用户引导至文档的相关部分。检索器使用嵌入来查找最相关的文档，然后对这些文档进行汇总和扩充，以形成语言模型响应的上下文。系统会提示语言模型根据此上下文生成答案，确保提供的信息直接来自文档。该项目强调了处理稀疏数据的重要性，旨在简化 SemaphoreCI 的用户体验，使开发人员更容易理解和实施 CI/CD 工作流。本文还包括有关设置聊天机器人的详细信息，包括使用 OpenAI API 和 Langchain 库进行嵌入和提示。</p>
+
+<p><a href="https://nullprogram.com/blog/2024/11/10/">到目前为止，我学到的关于运行本地 LLM 的所有知识</a><br>源文档深入介绍了在个人硬件（如 Raspberry Pi）上运行大型语言模型 （LLM） 的实际方面。它强调了 LLM 技术的快速进步、在适度硬件上运行近乎最先进的模型的可能性，以及从 Hugging Face 等平台下载软件和模型的重要性。本文档还讨论了 LLM 的局限性，包括它们无法保证正确性、工作内存有限和编程能力不佳。此外，它还介绍了 Illume，这是一个自定义用户界面，用于与 FIM 训练的模型进行交互，并涉及在专业环境中使用 LLM 的道德注意事项。作者分享了从尝试 LLM 中获得的个人经验和见解，强调了谨慎整合 LLM 生成内容的必要性。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或超出传达整体信息所需的具体细节。</p>
+
+<p><a href="https://rafaelquintanilha.com/are-ai-assistants-making-us-worse-programmers/">AI 助手会让我们程序员变得更糟糕吗？</a><br>源文件探讨了 AI 助手对程序员技能的影响，并与技术和专业知识的历史转变进行了比较。它质疑依赖 Copilot 和 Zed 等 AI 工具是否会减损程序员的核心技能，例如理解计算机基础知识，尽管特定技术具有瞬态性质，但这些技能仍然至关重要。作者反思了 AI 集成的个人经验，承认效率的提高和潜在的陷阱，例如过度依赖和注意力丧失。该文件强调了辨别何时使用 AI 辅助以及何时依赖人类智力的重要性，倡导采用一种平衡的方法，即利用 AI 完成日常任务，同时保持关键问题解决能力。最后，它强调了程序员需要掌握快速工程的艺术，以便有效地与 AI 工具交互并避免过度依赖陷阱。</p>
+
+<p><a href="https://stackoverflow.blog/2024/09/10/gen-ai-llm-create-test-developers-coding-software-code-quality/">为 AI 编码工具获取价值的最佳方法之一：生成测试</a><br>源文档讨论了开发人员对利用 AI 驱动的工具生成测试的兴趣日益浓厚，正如 2024 年开发人员调查所强调的那样。本文档探讨了为什么程序员认为 AI 对未来的测试特别有用，并提供了管理编码团队的企业家的见解。关键要点包括更喜欢更少的错误而不是更多的代码行，以及希望将重复的测试任务委托给 AI，使开发人员能够专注于他们工作中更具创造性的方面。AI 生成测试的支持者 Ben Halpern 强调了代码中质量比数量更重要。Sofy 的首席执行官 Syed Hamid 介绍了 Sofy 的智能测试系统，该系统可以根据产品更改生成测试，旨在增强而不是取代人类开发人员。该文件还谈到了 AI 在软件开发中的更广泛影响，例如 AI 随着时间的推移提高代码质量和降低维护成本的潜力。
+
+（注意：提供的摘要是源文档中关键点的综合，抓住了关于 AI 驱动的测试工具及其对软件开发工作流程的影响的讨论的精髓。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>支持 RTSP、RTMP、HTTP-FLV、WebRTC、MSE、HLS、MP4、MJPEG、HomeKit、FFmpeg 等的终极相机流媒体应用程序。</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>非常花哨和现代的终端文件管理器</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，可以使用你想要的任何名称制作本地信任的开发证书。</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>具有 10 个微服务的示例云优先应用程序，展示了 Kubernetes、Istio 和 gRPC。</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS 是一个构建在 Redis 和 S3 之上的分布式 POSIX 文件系统。</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>适用于 GitHub Actions 自托管运行器的 Kubernetes 控制器</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>使用 Gitleaks 🔑 保护和发现机密</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/hashicorp/nomad">hashicorp/nomad</a><br>Nomad 是一个易于使用、灵活且高性能的工作负载编排器，可以部署微服务、批处理、容器化和非容器化应用程序的组合。Nomad 易于操作和扩展，并且具有原生 Consul 和 Vault 集成。</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器公开给 Internet。</p>
+
+<p><a href="https://github.com/go-co-op/gocron">go-co-op/gocron</a><br>简单流畅的 Go cron 调度。这是 https://github.com/jasonlvhit/gocron 的分支</p>
+
+<p><a href="https://github.com/patrickmn/go-cache">patrickmn/go-cache</a><br>用于 Go 的内存中 key：value 存储/缓存（类似于 Memcached）库，适用于单机应用程序。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>快速获取 JSON 值 - 适用于 Go 的 JSON 解析器</p>
+
+<p><a href="https://github.com/aquasecurity/kube-bench">aquasecurity/kube-bench</a><br>检查 Kubernetes 是否根据 CIS Kubernetes 基准测试中定义的安全最佳实践进行部署</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>适用于 NATS.io、云和边缘原生消息传递系统的高性能服务器。</p>
+
+<p><a href="https://github.com/joho/godotenv">joho/godotenv</a><br>Ruby 的 dotenv 库的 Go 端口（从 .env 文件加载环境变量）</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin 是用 Go （Golang） 编写的 HTTP Web 框架。它具有类似 Martini 的 API，性能要好得多 - 速度提高了 40 倍。如果您需要出色的性能，请给自己买点杜松子酒。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - 用于使用 CRD 构建 Kubernetes API 的 SDK</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

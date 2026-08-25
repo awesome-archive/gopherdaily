@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260427.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260427</span>
+</p>
+<p>每日一谚：A good Go program is like a good story: clear, concise, and to the point </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/27/render-why-we-wont-rewrite-in-rust-the-power-of-boring-go">“我们想用 Rust 重写的次数是：零”：云平台 Render 靠“无聊”的 Go 撑起了千亿流量</a><br>就在前些天，云平台 Render 的创始人兼 CEO Anurag Goel，在 X (Twitter) 上发布了一条看似平平无奇的“凡尔赛”推文，却意外地点燃了一场技术圈的论战。 他写道： “我们在 Render 用 Go 语言（@golang）写的负载均衡器，每月处理超过 1500 亿次 HTTP 请求。，而我们想用 Rust 重写它的次数是：零。”</p> 
+
+<p><a href="https://tonybai.com/2026/04/25/rust-popularity-vs-redmonk-ranking-reality-check">为什么人人爱 Rust，但 RedMonk 榜单却给它泼了一盆冷水？</a><br>如果只看社交媒体和社区讨论，你会觉得 Rust 已经“统治了世界”。在一片赞歌中，大家默认 Rust 杀进主流榜单前十、取代传统语言只是时间问题。 但就在 2026 年 4 月，一份来自权威分析机构 RedMonk 的2026.1编程语言排行榜，却给所有“Rust 狂热者”泼了一盆透心凉的冷水。数据呈现了一个极其残酷的反差： 在这份以“开发者真实选择”为核心指标的榜单上，Rust 的排名并没有像预期的那样一飞冲天，而是停滞在了第 20 位，甚至被曾被视为小众的 Dart 所超越。相比之下，那个常被调侃“无趣”的 Go 语言，依然稳稳地坐在第 12 位，并在云原生领域保持着统治地位。</p> 
+
+<p><a href="https://tonybai.com/2026/04/26/interview-martin-kleppmann-ddia-2nd-edition-ai-distributed-systems">对话 Martin Kleppmann：DDIA 第二版揭秘，以及 AI 将如何颠覆分布式系统</a><br>就在前几天，Martin Kleppmann 接受了一次的深度专访，正式官宣：DDIA 第二版，终于来了！在这场长达一个多小时的对话中，Martin 不仅首次揭秘了新版中那些颠覆性的内容更新（比如为什么他“杀死”了 MapReduce），更是重点探讨了一个让所有人脊背发凉的话题：AI，到底会如何颠覆我们苦心经营了几十年的分布式系统架构？今天，我们就来深度拆解这位分布式系统“教父级人物”的最新思考。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/VkTC-JyhdU74hcsl3QoLCw">【AI 工程师的 GPU 入门课】08 分布式推理：Tensor Parallelism (TP) 与通信墙</a><br>今天，我们将深入分布式推理的核心技术——Tensor Parallelism (TP)。我们将揭秘为什么 H100 必须要有 NVLink，以及为什么在消费级 显卡（如 4090/5090）上做 TP 往往得不偿失。</p> 
+
+<p><a href="https://rednafi.com/shards/2026/04/go-uuid/">已接受提案：UUID 进入 Go 标准库</a><br>很高兴看到 Go 终于在标准库中加入了 uuid。该提案已于 2026 年 4 月 8 日被接受。我之前并没有关注讨论串，而是从 Cup o’ Go 第 154 期中才得知此事。google/uuid 通常是我为需要连接数据库的 Go 服务添加的第一个额外导入，所以这感觉已经迟到了好几年。Python、Java 和 C# 多年来一直拥有原生的 UUID 支持。我经常在需要一次性 UUIDv4 时使用 python -m uuid，而 Python 3.14&#43; 添加了 python -m uuid -u uuid7 以获取 UUIDv7。因此，Go 的标准库中一直没有它，我总是觉得很奇怪。被接受的 API 比 google/uuid 小得多。讨论串最终确定了一个涵盖常见情况并保持简洁的包。uuid 包不是 crypto/uuid，这对我来说更有意义。标准库的 type UUID [16]byte 与 google/uuid 相匹配，因此转换基本上只需要一次强制类型转换。Parse 接受与 google/uuid 相同的字符串形式：带连字符的字符串、大括号、urn:uuid: 前缀以及纯 32 字符十六进制。如果有人更改导入路径，代码编译通过，它就应该能够运行。该 API 将生成和解析放在了核心位置。它添加了 NewV4() 和 NewV7()，并保留了一个普通的方法。</p> 
+
+<p><a href="https://benhoyt.com/writings/indecisive-ai-agent/">与一个优柔寡断的 AI 编码智能体的趣味经历</a><br>我在使用 AI 智能体协助修复 GoAWK 中非平凡漏洞方面取得了适度的成功。但它有时非常优柔寡断（Mitchell Hashimoto 前几天在推文中也注意到了这一点）。</p> 
+
+<p><a href="https://anirudhology.com/blog/building-raftly-reproducing-production-failures">Raftly：从零开始构建生产级 Raft 实现</a><br>2011 年 4 月 21 日，亚马逊的 US-East-1 区域瘫痪了。在一次常规容量升级期间，网络配置的更改意外地将 EBS 控制平面流量路由到了备份网络——一个并未设计用于承载该负载的网络。数千个 EBS 存储节点突然与它们的副本失去了联系。它们中的每一个都试图同时重新同步，从而用请求淹没了控制平面。控制平面无法跟上。由 EBS 支持的 RDS 数据库也开始失败。级联故障持续了超过三天。AWS 随后发布的公开事后分析（post-mortem）至今仍是关于分布式系统在大规模遇到局部网络故障时会发生什么的最优秀文档之一。当我第一次阅读那份事后分析时，我感到很不舒服。我读过 Raft 论文。我看过 MIT 6.824 讲座。我实现了一个足够简单的单节点 Raft，足以说服自己我理解它。但我无法通过我自己构建的心智模型来追踪 2011 年的事件。我了解 Raft 做了什么，但我并没有完全理解它防御的是什么。了解算法和了解其故障范围是两种完全不同的技能。我们可以在书中学习算法及其工作原理，但它在什么条件下会失败，只有通过破坏东西才能学到。所以我构建了 Raftly：一个 Go 语言编写的生产质量 Raft 实现，其主要目的是以可重复的方式反复失败，从而复现生产系统中实际发生的事件——并且……</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.iamvedant.in/containers-are-just-linux-wrapper-exploring-namespaces-and-cgroups-from-scratch-part-1">无中生有的容器</a><br></p>
+
+<p><a href="https://buttondown.com/blog/x400-vs-smtp-email">电子邮件本可以比现在好400 倍</a><br>如果电子邮件的历史走得稍微不同一点，你发送的最后一封邮件本可以在你意外写错内容时被撤回或由新版本替换。它本可以被设定为一小时后到达。如果午夜前未被阅读，它本可以自动销毁。你永远不需要输入“如我之前的消息所述”。相反，你可以将邮件串联成个人通讯的维基百科。你可以给整个组织或部门发送消息，你的电子邮件应用会确保消息在离开发件箱之前是可以送达的。你本可以在互联网电子邮件引入这些功能之前八年，就附加文件并写出超出 ASCII 128 个字符限制的多语言邮件。你本可以在邮件送达后获知已读回执，比现在的类似功能早整整 15 年。加密本应从一开始就内置，而不是等待 PGP、S/MIME 和 TLS 后来添加。所有这些以及更多内容，在 1984 年的 X.400 规范中被标准化为“人际通讯”。它就是我们今天称之为“电子邮件”的一切，甚至更多。“过去我们有一个更好的系统：X.400，”一位评论者回忆道。作为现代电子邮件发送标准的基础，SMTP（简单邮件传输协议），他认为“并没有因为‘更好’而胜出”，而“仅仅是因为更容易实现。就像一辆没有刹车或安全带的汽车。”</p>
+
+<p><a href="https://dubeykartikay.com/posts/sembed-engine-vector-search-performance/">sembed-engine 向量搜索性能</a><br>简而言之我更改了 sembed-engine，使热路径使用扁平数组、轻量级视图、平方距离和缓存候选项分数。Vamana 搜索仍然访问相同数量的节点并保持相同的召回率，但每个节点访问对 CPU 来说更便宜。实际结果是：- gvec 查询延迟：4.094ms -&gt; 0.631ms- w2v 查询延迟：25.15ms -&gt; 1.524ms- w2v 构建时间：17.91s -&gt; 1.889s- 召回率保持在 1.0主要经验：性能通常隐藏在数据布局中。如果 CPU 必须追逐指针、调用虚方法、运行标量循环、计算平方根以及在排序时重新计算相同的分数，即使是干净的对象模型也可能很慢。全文几个月前，我写过关于向量数据库和近似最近邻的内容。简而言之就是：我们将文本、图像或任何其他杂乱的数据转换为称为向量的数字列表。相似的事物在这个向量空间中靠得很近。因此，如果你搜索“古尔冈附近的狗收容所”，搜索引擎可以返回“德里附近的动物收容所”，因为这些想法的向量很接近。逐字实现算法很容易。使其变快才是真正工作的开始。在我的项目 sembed-engine 中，我正在用 C&#43;&#43; 构建这种向量搜索引擎。它使用了一种称为 Vamana 的基于图的索引。图有助于避免检查数据集中的每个向量。最近我对 Vamana 进行了改进。PR 使得查询延迟快了很多。有趣的部分是算法保持了……</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.infoq.com/news/2026/04/linkedin-cognitive-memory-agent/">设计 AI 智能体的内存：深入了解 LinkedIn 的认知记忆智能体</a><br>LinkedIn 引入了认知记忆智能体（CMA），作为其生成式 AI 应用栈的一部分，旨在实现有状态、上下文感知的 AI 系统，能够保留并在交互中重用知识。该系统旨在为诸如招聘助手等应用提供支持，解决了基于大语言模型的工作流的一个根本限制：无状态性以及由此导致的跨会话连续性丧失。CMA 作为应用程序智能体与底层语言模型之间的共享内存基础设施层。智能体无需通过重复提示来重构上下文，而是可以通过专用系统持久化、检索和更新内存。这实现了跨会话的连续性，减少了冗余推理，并在用户上下文不断演变的生产环境中改进了个性化。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed.</p>
+
+<p><a href="https://github.com/CJackHwang/ds2api">CJackHwang/ds2api</a><br>Deepseek to API: A lightweight, high-performance full-stack middleware converting client protocols to universal APIs. Supports multi-account rotation, compiled binaries, Vercel Serverless, and Docker.</p>
+
+<p><a href="https://github.com/dolthub/dolt">dolthub/dolt</a><br>Dolt – Git for Data</p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+<p><a href="https://github.com/ltaoo/wx_channels_download">ltaoo/wx_channels_download</a><br>微信视频号下载器</p>
+
+<p><a href="https://github.com/gastownhall/gascity">gastownhall/gascity</a><br>Orchestration-builder SDK for multi-agent coding workflows</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

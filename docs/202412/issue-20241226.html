@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241226.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20241226</span>
+</p>
+<p>每日一谚：Go is not magical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dev.to/souvikinator/generator-concurrency-pattern-in-go-a-comprehensive-guide-6om">Go语言中的生成器并发模式：完整指南</a><br>本系列文章将探讨Go语言的并发模式。本文介绍了生成器模式，它类似于一个持续产生值的喷泉，允许程序的其他部分按需接收这些值。文章通过示例代码和可视化图表，解释了生成器模式的工作原理、优势以及实际应用场景，例如逐行读取大型文件。此外，文章还指出了常见陷阱（例如忘记关闭通道和未处理错误）并提供了相应的解决方案。最后，文章预告了接下来将要讲解的流水线并发模式。</p> 
+
+<p><a href="https://dev.to/empiree/why-you-should-learn-go-in-2025-308l">为什么你应该在2025年学习 Go 语言</a><br>这篇文章探讨了为什么在 2025 年学习 Go 语言是明智之举。Go 语言（也称为 Golang）由 Google 创建，它结合了 Python 等脚本语言的简单性和 C&#43;&#43; 等编译语言的效率和性能。文章指出 Go 语言在就业市场上的需求量很大，Go 开发人员的薪资也很高，并且 Go 拥有一个充满活力的开发者社区和不断发展的生态系统。文章还提供了 Go 语言在云服务、Web 开发和命令行工具等项目类型中的应用案例以及全球 Go 开发人员需求的统计数据，并最终得出结论：2025 年是学习 Go 语言的绝佳时机。</p> 
+
+<p><a href="https://olivernguyen.io/w/go.tracker/">重构：GoroutineTracker中不必要的反射用法</a><br>本文讨论了在 Go 代码库中使用 GoroutineTracker 来追踪 goroutine 的一种实现，以及如何改进该实现以避免不必要的反射（reflect）的使用。原始代码使用反射来检查函数签名，然后调用函数，这既不必要，也可能导致运行时错误。文章建议改用函数字面量，提高类型安全性和可读性，并处理错误。改进后的代码更简洁、更易于理解，并且减少了潜在的运行时错误。此外，文章还介绍了如何通过添加全局追踪器来实现应用程序关闭前等待所有 goroutine 完成的功能。</p> 
+
+<p><a href="https://ashwingopalsamy.substack.com/p/go-generics-working-with-comparable">Go泛型：使用可比较类型</a><br>本文探讨了Go泛型中`comparable`约束的细微之处，解释了其作用以及如何利用它编写更简洁、类型安全的Go代码。文章以一个简单的例子开始，解释了`comparable`约束如何防止运行时错误，并比较了`any`和`interface{}`在泛型中的使用。最后，文章还介绍了使用`comparable`和`any`的实际场景，例如去重和构建灵活的实用程序，以及在使用过程中可能遇到的常见问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://buttondown.com/jaffray/archive/git-workflow-is-snapshot-isolated/">Git 工作流是快照隔离的</a><br>这篇文章探讨了 Git 工作流中的合并偏差问题，并将其与 SQL 数据库中的快照隔离进行了比较。合并偏差是指由于并发提交导致代码库出现不一致状态的情况。文章用代码示例说明了这种现象，并解释了快照隔离的概念及其在防止此类问题中的作用。文章最后比较了 Git 工作流和快照隔离的相似之处，指出两者都依赖于一致的快照视图，如果并发修改相同的资源，则可能导致偏差。
+</p>
+
+<p><a href="https://www.meetecho.com/blog/imquic/">imquic：一款用于实时媒体的实验性 QUIC 库</a><br>本文介绍了 imquic，一个用于实时媒体的实验性 QUIC 库，具有原生 RoQ/MoQ 支持。作者详细介绍了开发 imquic 的背景、命名由来以及 API 设计，并提供了代码库链接和演示程序，方便开发者学习和使用。imquic 支持多种平台，并计划在未来添加更多功能，例如拥塞控制和 QLOG 支持。</p>
+
+<p><a href="https://igorstechnoclub.com/server-sent-events-sse-are-underrated/">服务器发送事件 (SSE) 被低估了</a><br>大多数开发者都知道 WebSockets，但服务器发送事件 (SSE) 提供了一种更简单、常常被忽视的替代方案，值得更多关注。让我们探讨为什么这项技术被低估，以及它如何使您的应用程序受益。</p>
+
+<p><a href="https://css-tricks.com/a-css-wishlist-for-2025/">2025, CSS心愿单</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://nicholas.carlini.com/writing/2025/llms-write-my-bio.html">让语言模型编写我的网站</a><br>作者Nicholas Carlini在NeurIPS会议上与合作者讨论后，决定进行一项实验：连续十二天，每天使用不同的语言模型重写他的网站主页和个人简介。他使用一个Python脚本，提示模型编写他的个人介绍网页，并反复要求添加更多细节和更好的HTML和CSS。该实验旨在展示不同模型在事实准确性和网页生成能力方面的差异。首日使用的OpenAI o1-mini模型生成了视觉效果惊艳但事实错误率极高的网页，这凸显了语言模型在“技能”和“知识”方面的差距，以及其在不同任务上的能力差异。</p>
+
+<p><a href="https://www.knime.com/blog/how-to-leverage-open-source-llms-ollama">如何通过 Ollama 在本地利用开源大型语言模型 (LLM) | KNIME</a><br>本教程逐步指导您如何结合 Ollama 海量的模型库和 KNIME 的 GenAI 功能，在本地访问和提示 80 多个开源大型语言模型 (LLM)。赶快尝试一下！</p>
+
+<p><a href="https://baoyu.io/blog/ai/use-ai-to-assist-programming-like-an-intern">像用实习生一样用 AI 辅助你编程</a><br>作者分享了如何利用AI辅助编程的经验，建议将AI视为实习生，让其处理重复性、要求不高的体力活，例如创建页面、API，编写简单的数据库增删改查模块和单元测试等。  作者还建议提供类似的代码作为参考，以便AI更好地学习和完成任务；在架构设计和技术选型时，选择AI更容易上手的技术；将复杂任务分解成小的模块，让AI完成小的模块；并从AI生成的代码中学习新的思路。最后，作者强调要对AI生成的代码进行验证和测试。</p>
+
+<p><a href="https://medium.com/@ggarciabernardo/openai-webrtc-api-review-79adadb699ee">OpenAI WebRTC API 综述</a><br>OpenAI 实时模型添加了新的接口，现在支持 WebRTC！文章对 OpenAI WebRTC API 进行了综述，涵盖了连接建立、身份验证、连接性、音频传输和数据传输等方面，并对 API 的一些特性和可能的改进方向提出了建议。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/apache/incubator-answer">apache/incubator-answer</a><br>A Q&amp;A platform software for teams at any scales. Whether it&#39;s a community forum, help center, or knowledge management platform, you can always count on Apache Answer.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria is a powerful, lightning fast and censorship resistant proxy.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/shadow1ng/fscan">shadow1ng/fscan</a><br>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>An all-in-one observability solution which aims to combine the advantages of Prometheus and Grafana. It manages alert rules and visualizes metrics, logs, traces in a beautiful web UI.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>A BNB Smart Chain client based on the go-ethereum fork</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Mistral, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/getkin/kin-openapi">getkin/kin-openapi</a><br>OpenAPI 3.0 (and Swagger v2) implementation for Go (parsing, converting, validation, and more)</p>
+
+<p><a href="https://github.com/projectdiscovery/httpx">projectdiscovery/httpx</a><br>httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.</p>
+
+<p><a href="https://github.com/Mikaelemmmm/go-zero-looklook">Mikaelemmmm/go-zero-looklook</a><br>🔥基于go-zero(go zero) 微服务全技术栈开发最佳实践项目。Develop best practice projects based on the full technology stack of go zero (go zero) microservices.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

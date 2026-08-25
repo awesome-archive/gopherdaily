@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241102.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-02</span>
+</p>
+<p>每日一谚：sort your fields in your struct from largest to smallest </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-sync-once/">go sync.Once很简单...真的吗？</a><br>本文深入探讨了 &#39;sync.Once&#39; 来确保一个函数只运行一次，即使跨多个 goroutines。它解释了 &#39;sync.Once&#39; 提供延迟加载，通过延迟操作来提高性能，直到需要时。本文还介绍了 &#39;OnceFunc&#39;、&#39;OnceValue&#39; 和 &#39;OnceValues&#39; 作为包装器，它们在保持性能的同时增强了可用性。它详细介绍了 &#39;sync.Once“，包括使用原子操作和互斥锁，并强调了了解其行为以避免常见陷阱的重要性。讨论扩展到 &#39;sync.Once“，这简化了代码，但需要仔细考虑以避免争用条件。文章最后强调了正确使用和理解 &#39;sync.Once“，以确保 Go 应用程序中的高效和正确同步。</p> 
+
+<p><a href="https://blog.openziti.io/golang-aha-moments-oop">Go OOP的Aha时刻</a><br>本文探讨了 Go 的面向对象特性，将它们与传统的 OOP 语言（如 Java）进行了比较。它突出了 Go 对组合而不是继承的偏好，从而产生了更简洁、更易维护的代码。作者讨论了通过接口处理多态类型，强调了将接口保留在使用接口的包中以避免循环依赖关系的重要性。本文还谈到了 nil 接收器函数的使用以及函数与接口类型的灵活性。此外，它还解决了 Go 中结构体嵌入的限制，并建议使用策略模式来实现更灵活和可组合的设计。作者分享了从 Java 过渡到 Go 的个人见解，倡导 Go 鼓励符合语言设计理念的惯用的面向对象实践。本文最后讨论了 Go 面向对象方法的好处，例如降低脆弱性和增强代码清晰度。</p> 
+
+<p><a href="https://tailscale.com/blog/factorio-multiplayer-video">通过 Tailscale 共享多人异星工厂服务器</a><br>在这个视频中，Alex Kretzschmar 演示了如何使用 Tailscale（一种安全的点对点网络解决方案）设置多人异星工厂服务器。得益于其 NAT 穿越技术，Tailscale 使用户能够连接到他们的服务器，而无需打开端口或配置防火墙。本教程涵盖了在 Docker 和 Linux 上部署无头异星工厂服务器，然后通过 Tailscale 的共享节点功能与朋友分享的过程。这允许朋友通过互联网安全地加入游戏。该视频还深入介绍了 Tailscale 的功能（例如 WireGuard VPN）及其在各种使用案例（包括远程访问、Kubernetes 网络和 IoT 部署）中的优势。此外，Alex 通过评论、Reddit、Twitter 和 Mastodon 鼓励社区参与，突出了 Tailscale 的用户友好方法和围绕它的支持社区。
+
+（注意：摘要不包括文档中的直接引用或特定 URL，但捕获了本质和关键点。</p> 
+
+<p><a href="https://dev.to/crusty0gphr/tricky-golang-interview-questions-part-8-max-goroutine-number-1ep2">棘手的 Golang 面试问题 - 第 8 部分：最大协程数</a><br>源文档提供了有关在 Go 中可以生成的最大 goroutine 数量的面试问题的指导，Go 是一种以其轻量级并发模型而闻名的编程语言。它强调 Go 并没有对 goroutine 施加严格的上限，但实际限制是由系统资源（尤其是内存）决定的。每个协程消耗少量内存，虽然理论上可以产生数百万个内存，但在实践中，这受到可用内存和 Go 运行时调度器效率的限制。本文档还介绍了 &#39;GOMAXPROCS&#39;，它控制 goroutine 的 OS 线程数，并提出了 worker 池和限流等最佳实践，以有效管理 goroutine 的使用。此外，它还提供了一个粗略的计算方法，用于估计特定硬件上的最大 goroutines 数量，同时考虑内存和 CPU 限制。本文档最后提醒说，虽然 Go 允许高并发性，但了解系统的局限性对于高效的应用程序设计至关重要。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-10-31-sleuthing-resource-leaks-in-dolt/">侦查 Dolt 中的资源泄漏</a><br>Dolthub 博客文章详细介绍了 Dolt（托管在 Dolthub 上的数据库平台）中资源泄漏的调查和解决。CPU 泄漏最初观察到随机峰值达到 100%，可追溯到 SQL 查询在中断时无法终止，从而导致 CPU 持续使用率。Aaron Jones 将此问题确定为依赖项中的上下文错误，随后修复了该错误。随后，发现了内存泄漏，其中类似的 SQL 查询导致服务器消耗过多的内存，最终崩溃。内存泄漏也与上下文错误有关，但 Dolt 试图模仿 MySQL 行为的复杂性更高，该行为没有正确处理 kill 命令。这些错误已在 Dolt 版本 1.43.10 中得到解决，团队致力于快速修复错误。该博文重点介绍了如何使用 Dolt 的功能（例如 clone 命令和 Prometheus 图）来帮助调试过程。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://read.engineerscodex.com/p/how-google-takes-the-pain-out-of">Google 如何消除代码审查的痛苦，开发满意度达到 97%</a><br>Google 的代码审查工具 Critique 在工程师中受到高度评价，满意率为 97%。Critique 通过集成 AI 驱动的建议、专注于最新的代码更改以及提供熟悉的差异界面来简化代码审查流程。它还提供静态分析工具，可自动提供可操作的反馈，从而为代码作者和审阅者节省时间。该工具与 Google 的内部工具套件（如 IDE 和错误跟踪器）紧密集成，进一步提高了其可用性和效率。Google 代码审查实践的最新发展包括利用机器学习来提出改进建议并简化审查流程。该工具的功能（例如注意力集和 ML 支持的建议）一直是其在保持代码质量和开发人员满意度方面受欢迎和有效的关键因素。</p>
+
+<p><a href="https://orkes.io/blog/software-architecture-evolution/">软件架构的演变：从大型机和整体式应用到分布式计算</a><br>软件架构的演变反映了过去一个世纪的技术进步和不断变化的业务需求。从 20 世纪中叶的大型机和整体式结构开始，软件架构经历了不同的阶段，包括 1980 年代客户端-服务器模型的兴起、1990 年代面向服务的架构 （SOA） 的出现，以及 2000 年代虚拟机和云计算的出现。2010 年代标志着微服务的激增，容器促进了微服务的普及，从而允许更具可扩展性和独立的服务开发。这种向分布式计算的转变需要新的方法来管理服务之间的相互依赖关系，从而导致采用事件驱动架构和编排。Orkes Conductor 等编排平台在跨分布式系统管理复杂工作流方面发挥着重要作用，使开发人员能够构建具有弹性且可扩展的应用程序。适应新技术和业务需求的需求推动了软件架构的不断发展，Orkes Conductor 等工具在开发实践现代化方面发挥着关键作用。</p>
+
+<p><a href="https://labs.iximiuz.com/tutorials/docker-multi-stage-builds">如何构建较小的容器镜像：Docker 多阶段构建</a><br>本文讨论了使用 Docker Multi-Stage Builds 创建更小、更安全的容器镜像的好处，解决了生产镜像中不必要的膨胀的常见问题。它解释了构建时依赖项（通常包含在生产容器中）可以与运行时依赖项分开，以减少映像大小和潜在的攻击向量。本文提供了有关如何为各种编程语言和框架（如 Node.js、Go、Rust、Java 和 PHP）构建多阶段 Dockerfile 的示例，重点介绍了将构建工件直接复制到运行时映像以避免额外层的过程。多阶段构建是一项强大的功能，可简化 Dockerfile 管理、增强安全性并加快构建时间。本文还介绍了高级用例，包括条件 RUN 指令，展示了这种方法在现代容器化实践中的灵活性和效率。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/01/kubectl-logs-tail-a-guide-to-tailing-kubernetes-logs/">Kubectl logs tail：跟踪 Kubernetes 日志的指南</a><br>这份全面的指南深入探讨了 Kubernetes 日志记录的世界，强调了它在监控、故障排除和维护云原生应用程序运行状况方面的关键作用。它首先概述了 Kubernetes 中日志记录的重要性，强调了它在故障排除、合规性和性能优化方面的效用。然后，本指南探讨了 Kubernetes 中日志记录的架构，包括日志记录驱动程序和选项的作用，以及 Kubernetes 环境中的各种日志来源，例如应用程序日志、节点日志和集群日志。提供了一些实际示例，例如使用“kubectl logs”访问来自特定 Pod 和容器的日志，以及使用标签和选择器进行有针对性的日志过滤。此外，该指南还涉及通过脚本自动进行日志拖尾，以及将日志监控集成到 CI/CD 管道中，以实现持续的应用程序运行状况检查。本指南最后说明了如何使用尾部日志来监控关键性能指标，从而增强对负载下应用程序行为的理解。本摘要概括了本指南的精髓，清晰地概述了 Kubernetes 日志记录实践及其在管理云原生应用程序方面的重要性。</p>
+
+<p><a href="https://thenewstack.io/proactive-monitoring-will-maximize-your-cloud-storage-efficiency/">主动监控将最大限度地提高您的云存储效率</a><br>源文件强调了主动监控在最大限度地提高企业云存储效率方面的重要性。它强调需要采取警惕的安全措施来保护数据免受网络威胁、未经授权的访问和泄露，这可能导致财务和声誉损失。监控云存储对于维护系统性能至关重要，因为它可以深入了解延迟、吞吐量和存储利用率，有助于容量规划和成本优化。此外，它通过跟踪数据访问和生成必要的审计日志，在确保遵守行业法规方面发挥着至关重要的作用。该文件还谈到了由于未监控的数据而可能导致存储成本意外增加的可能性，强调了定期监控以识别和解决效率低下的问题。总体而言，该文件提倡采用主动的云存储管理方法，以保护数据、优化性能并遵守法规要求。</p>
+
+<p><a href="https://www.linuxjournal.com/content/why-linux-open-source-backbone-decentralized-applications-dapps-and-cryptocurrencies">为什么 Linux 是去中心化应用程序 （dApp） 和加密货币的开源支柱</a><br>Linux Journal 的文章讨论了 Linux 和区块链技术之间的协同作用，强调了 Linux 的开源性质、安全功能以及与开发工具的兼容性如何使其成为去中心化应用程序 （dApp） 和加密货币的理想平台。Linux 的模块化设计和强大的安全措施（如 SELinux 和 iptables）为区块链开发提供了安全的基础，这对于去中心化金融 （DeFi） 平台和社交媒体 dApp 等应用程序至关重要。本文还谈到了在 Linux 上运行去中心化系统时面临的可扩展性和能源效率挑战，同时提出了 Linux 在支持区块链创新（包括去中心化互联网项目和数字身份解决方案）方面的未来方向。总体而言，这篇文章强调了 Linux 在区块链生态系统的增长和发展中的关键作用，为开发人员和用户提供安全、高效和灵活的环境。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/31/opencost-advances-to-the-cncf-incubator/">OpenCost 进入 CNCF 孵化器</a><br>OpenCost 项目晋级 CNCF 孵化器，实现了一个重要的里程碑，凸显了该项目的发展和社区的支持。在 CNCF 中，从沙盒到孵化的转变意味着对 OpenCost 应对 Kubernetes 成本管理挑战的解决方案及其广泛采用潜力的认可。OpenCost 是一种开源工具，通过标准化成本分配的供应商中立框架，提供对多云环境中 Kubernetes 成本的实时可见性。该项目已经取得了一些重要的里程碑，例如更广泛的平台集成、社区驱动的开发以及开源插件框架的引入。作为一个孵化项目，OpenCost 为未来增长做好了准备，并计划为多云和混合云环境开发新的集成和支持。该项目的旅程得到了用户和贡献者社区的支持，并邀请参与和协作来塑造其未来。
+
+（注意：摘要旨在概括源文档的要点，重点关注 OpenCost 对 CNCF 孵化器的进步意义、其功能、社区参与和未来前景。</p>
+
+<p><a href="https://thenewstack.io/zero-trust-in-cloud-security-never-trust-always-verify/">云安全零信任：永不信任，始终验证</a><br>源文档讨论了云安全中的 Zero Trust 概念，强调了在 Identity and Access Management （IAM） 的上下文中永远不信任并始终验证的重要性。它强调了 IAM 的复杂性以及与过于宽泛的访问权限相关的风险，如果利用内部弱点，可能会导致违规。该文件强调了组织内部需要有意识和知识来实施有效的控制措施，尤其是在将组织策略转化为云技术时。它提出了一种分层安全方法，利用 AWS 等公有云提供商提供的工具和控件来限制访问和保护服务。该文件还讨论了监控安全合规性和安全管理访问密钥以防止未经授权的访问的必要性。总体而言，本文倡导严格的安全实践和持续警惕，以保护云环境免受潜在威胁。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://googleprojectzero.blogspot.com/2024/10/from-naptime-to-big-sleep.html">使用大型语言模型捕获实际代码中的漏洞</a><br>Big Sleep 团队是 Google Project Zero 和 Google DeepMind 之间的合作团队，宣布在广泛使用的开源数据库引擎 SQLite 中发现堆栈缓冲区下溢漏洞。这标志着 AI 代理在实际软件中识别以前未知的可利用内存安全问题的第一个实例。该漏洞与在索引类型字段中使用特殊 sentinel 值 （-1） 有关，OSS-Fuzz 等现有测试基础设施未检测到该漏洞。这一发现是通过使用针对已知漏洞进行训练的大型语言模型 （LLM） 实现的，展示了 AI 在识别传统模糊测试可能遗漏的复杂错误方面的潜力。尽管进行了大量的模糊测试工作，但该漏洞仍未被发现，这表明 AI 驱动的方法可以在漏洞被利用之前先发制人地识别和修复漏洞方面提供显着优势。该团队的工作强调了 AI 在网络安全中不断发展的作用，特别是在增强针对复杂攻击的防御策略方面。</p>
+
+<p><a href="https://blog.scottlogic.com/2024/11/01/Testing-GenerativeAI-Chatbots.html">测试 GenerativeAI Chatbot 模型 作者：Shikha Nandal</a><br>源文件深入探讨了测试生成式 AI （GenAI） 聊天机器人模型的复杂性，强调了它们的潜力和严格评估的必要性。GenAI 聊天机器人，如 GPT-4，能够自主生成类似人类的文本和内容，使其适用于各种应用程序。本文档概述了这些模型的两个关键方面：功能（包括自然语言理解和上下文感知）和学习能力（允许它们通过机器学习随着时间的推移而改进）。测试对于确保这些聊天机器人能够处理各种查询、保持用户参与度和安全运行至关重要，尤其是在敏感行业。测试中的挑战包括非确定性响应、需要大量训练数据、管理复杂的对话以及 AI 学习的动态性质。该文档提出了一种结构化的测试方法，包括定义明确的指标、关注对话流和持续的性能监控。Promptfoo 和 Botium 等工具因其在自动化测试方面的能力而受到强调，提供动态提示测试、跨平台支持以及与开发管道集成等功能。总体而言，该文件强调了全面测试以确保 GenAI 聊天机器人满足性能标准和用户期望的重要性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/containerd/nerdctl">containerd/nerdctl</a><br>contaiNERD CTL - 适用于 containerd 的 Docker 兼容 CLI，支持 Compose、Rootless、eStargz、OCIcrypt、IPFS 等</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>精选的 Go 框架、库和软件列表</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/moonD4rk/HackBrowserData">moonD4rk/HackBrowserData</a><br>提取和解密浏览器数据，支持多种数据类型，可在各种操作系统（macOS、Windows、Linux）上运行。</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速的分布式存储系统，适用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 磁盘查找、云分层。Filer 支持云驱动器、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+<p><a href="https://github.com/lionsoul2014/ip2region">lionsoul2014/ip2region</a><br>Ip2region （2.0 - xdb） 是一个离线 IP 地址管理器框架和定位器，支持数十亿个数据段，十微秒的搜索性能。适用于多种编程语言的 XDB 引擎实现</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>⛑ 面向开发人员的自动化状态页面</p>
+
+<p><a href="https://github.com/ent/ent">ent/ent</a><br>Go 的实体框架</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>有关数千 （！） 加密代币的全面、最新信息集合。</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>在本地🚀运行 GitHub Actions</p>
+
+<p><a href="https://github.com/shadow1ng/fscan">shadow1ng/fscan</a><br>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>适用于Windows、macOS和Linux的跨平台备份工具，具有快速、增量备份、客户端端到端加密、压缩和重复数据删除功能。包括 CLI 和 GUI。</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI 网关 |AI Native API 网关</p>
+
+<p><a href="https://github.com/cloudwego/hertz">cloudwego/hertz</a><br>Go HTTP 框架，高性能、强扩展性，用于构建微服务。</p>
+
+<p><a href="https://github.com/hashicorp/go-plugin">hashicorp/go-plugin</a><br>基于 RPC 的 Golang 插件系统。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/go-rod/rod">go-rod/rod</a><br>用于 Web 自动化和抓取的 Chrome DevTools 协议驱动程序。</p>
+
+<p><a href="https://github.com/terrastruct/d2">terrastruct/d2</a><br>D2 是一种现代图表脚本语言，可将文本转换为图表。</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - 专为现代应用程序设计的开源、云原生、分布式 SQL 数据库。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

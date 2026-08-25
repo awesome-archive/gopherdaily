@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260114.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260114</span>
+</p>
+<p>每日一谚：Stop excessive DRYing, sugaring, and abstracting if it makes your code harder to understand for newcomers. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/14/go-explicit-philosophy-implicit-interfaces-design-wisdom">Go 的“显式哲学”为何在接口上“食言”了？—— 探秘隐式接口背后的设计智慧</a><br>在一个崇尚“显式”的语言里 ，为什么最核心的抽象机制（接口）却选择了极致的“隐式”？ 相比于 Java 的 implements 或 Rust 的 impl for，Go 的这种“只要方法匹配，就自动实现”的 Duck Typing 风格，确实显得格格不入。 是 Go 的设计者们“双标”了吗？还是这背后隐藏着某种更深层的、我们尚未完全领悟的智慧？本文将带你深入 Go 的设计哲学，揭开这个“反直觉”设 计背后的真相。 </p> 
+
+<p><a href="https://hackernoon.com/how-to-build-a-production-ready-go-diagnostic-rule">如何构建可用于生产环境的Go诊断规则</a><br>在本文中，我们将逐步介绍 Go 中的分析工具是如何工作的，哪些包用于处理代码和语义，如何运行自己的分析器，以及如何将其集成到整个 linter 系统中。</p> 
+
+<p><a href="https://tonybai.com/2026/01/14/google-ucp-agentic-commerce-architecture-revolution/">当机器开始“剁手”：详解 Google UCP 与 Agentic Commerce 的架构革命</a><br>我们正在从“人机交互”的电商时代，跨入“Agentic Commerce（智能体商业）”的新纪元。在这个时代，代替人类下单的，是运行在手机、云端或 眼镜里的 AI Agent（智能体）。 如果你是技术负责人，你可能会感到背脊发凉： 现有的这套为人类设计的、充满图片、广告和前端渲染的电商基建，对于“硅基生物”来说，效率低得令人发指。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-01-13-postgres-table-types/">Postgres 中的表复合类型</a><br>本文探讨了 PostgreSQL 中表复合类型的概念，即 Postgres 如何将每个表的结构视为其自身的类型。文章通过示例展示了如何创建和查询这些类型，并说明了它们在函数签名和作为其他表中的列类型等场景中的应用。同时，文章警告了在不同模式下嵌套表行时可能出现的意外行为，并指出 Doltgres 正在努力实现对该特性的完全兼容。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2026/01/13/announcing-open-to-work-how-to-get-ahead-in-the-age-of-ai/">宣布“开放求职”：如何在人工智能时代取得领先</a><br>文章宣布推出领英（LinkedIn）的首部书籍《开放求职：如何在人工智能时代取得领先》，由领英首席执行官Ryan Roslansky和首席经济机会官Aneesh Raman合著。该书探讨了人工智能（AI）如何重塑工作，并为专业人士和领导者提供了应对变革的实用建议，旨在强调人类的创造力和智慧在AI时代的核心作用，以创造新的经济机会。该书将于3月31日出版。</p>
+
+<p><a href="https://www.haproxy.com/blog/announcing-haproxy-kubernetes-ingress-controller-3-2">宣布 HAProxy Kubernetes Ingress Controller 3.2</a><br>HAProxy Kubernetes Ingress Controller 3.2 和 HAProxy Enterprise Kubernetes Ingress Controller 3.2 现已发布，新增了用户定义的注释和前端 CRD。这些版本兼容 HAProxy 3.2，并提供更灵活的配置和更简单的 Ingress NGINX 迁移路径。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/13/the-symbiotic-revolution-ai-and-cloud-native-technologies-transforming-the-digital-landscape/">AI 与云原生技术的共生革命：重塑数字格局</a><br>本文探讨了人工智能（AI）与云原生技术（如 Kubernetes）的交叉点如何推动技术创新，重塑数字格局。文章分析了 AI 如何影响和改变云原生工作负载，例如通过 AI 驱动的动态资源分配；云原生环境如何从 AI 优化中受益，例如在资源管理和安全性方面；以及 AI 如何从 Kubernetes 提供的可移植性和可扩展性中获益。文章最后列举了 OpenAI、Google Cloud、Uber 等公司利用这种共生关系实现成本效益、增强安全性和推动大规模 AI 部署的实际用例。</p>
+
+<p><a href="https://medium.com/@erickzanetti/rabbitmq-a-complete-guide-to-message-broker-performance-and-reliability-3999ee776d85">RabbitMq完全指南</a><br></p>
+
+<p><a href="https://slicker.me/htmx/htmx-vs-react.html">HTMX大放异彩之处：与React的比较</a><br>本文探讨了HTMX相对于React的优势领域，主要集中在HTMX的简单性、学习曲线低、原生拥抱服务器端渲染（SSR）的优势，以及更小的包体积和更快的性能。HTMX通过扩展HTML属性（如&lt;code&gt;hx-get&lt;/code&gt;）来添加动态行为，无需复杂的JavaScript知识。它消除了构建工具链（如webpack）的复杂性，并促进了全栈开发，使后端开发者无需成为JavaScript专家即可构建交互式应用。HTMX特别适合内容驱动的应用、管理仪表板和对复杂性要求不高的服务器渲染Web应用。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.vincirufus.com/posts/compound-engineering">复合工程——软件工程的下一个范式转变</a><br>随着AI驱动的编码速度从30-70%的提升加速到300-700%，复合工程（Compound Engineering）成为关键范式。了解为什么反馈循环、保护栏和测试框架成为高速开发的基石。</p>
+
+<p><a href="https://blog.mozilla.org/en/mozilla/mozilla-open-source-ai-strategy">所有者，而非租户：Mozilla 的开源 AI 战略</a><br>文章阐述了 Mozilla 对开源人工智能的战略，核心在于确保用户拥有对自己所使用的智能系统的控制权，而不是像租户一样受制于人。作者回顾了 Mozilla 在浏览器领域（对抗 IE 垄断）的成功经验，并指出 AI 正成为新的“中介层”（Layer 8）。
+
+战略强调要解决当前开源 AI 生态碎片化、开发者体验差的问题，并通过关注以下四个关键领域来推动开源 AI 的胜利，使其比闭源替代品更具吸引力：1. 开发者体验（通过构建模块化框架如 anySuite）；2. 数据经济（建立透明的数据市场）；3. 模型（推广小型、专业化模型）；4. 计算资源（推动分布式和主权云）。
+
+最终目标是确保人类主体性、技术去中心化和公共利益的平衡，使 AI 发展走上与大型平台主导的道路不同的方向。</p>
+
+<p><a href="https://stevenadler.substack.com/p/ai-isnt-just-predicting-the-next">AI 不再仅仅是“预测下一个词”了</a><br>本文探讨了人工智能（AI）能力的巨大变化，反驳了“AI 只是在预测下一个词”的常见观点。作者指出，现代 AI 系统（特别是推理模型）已经展现出解决复杂问题的能力，例如在国际数学奥林匹克竞赛中取得优异成绩，并且它们正被训练得越来越像“路径寻找者”而非简单的文本生成器。同时，作者强调了关注 AI 带来的实际（包括潜在的危险）影响的重要性，即使其内部机制可以被简化描述为“预测下一个词”。</p>
+
+<p><a href="https://developer.nvidia.com/blog/reimagining-llm-memory-using-context-as-training-data-unlocks-models-that-learn-at-test-time">重塑LLM记忆：将上下文作为训练数据，解锁模型在测试时学习的能力</a><br>测试时训练的端到端公式（TTT-E2E）使LLM能够通过下一个token预测将长上下文压缩到模型权重中，在损失缩放和推理延迟方面均优于具有完全注意力的Transformer和RNN（如Mamba 2和Gated DeltaNet）。TTT-E2E的推理延迟与上下文长度无关，在NVIDIA H100上，对于128K上下文，速度提高了2.7倍，对于2M上下文，速度提高了35倍，并且在广泛的实验中没有出现缩放瓶颈。该方法依赖于训练期间的元学习来准备模型的初始化以进行TTT，但当前的元学习实现由于FlashAttention中对梯度之梯度缺乏支持，比标准预训练慢3.4倍，这是一个可以通过自定义内核或混合初始化解决的限制。</p>
+
+<p><a href="https://www.philschmid.de/agent-harness-2026">2026年Agent Harness的重要性</a><br>本文探讨了在2026年，Agent Harness（智能体框架）对于构建能够处理复杂、多日任务的可靠人工智能系统的必要性。随着顶级模型在静态基准测试上的差距缩小，任务的持久性（即模型在长时间内遵循指令的能力）变得至关重要。Agent Harness被定义为围绕AI模型的基础设施，用于管理长期任务，确保可靠性、效率和可控性。它比框架更进一步，提供了开箱即用的功能，如提示预设、工具调用处理和生命周期钩子，可被视为智能体的“操作系统”。文章指出，未来开发的重点应从复杂的控制流转向简单、模块化的架构，并将Harness捕获的失败轨迹视为下一代模型训练的数据集。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/charmbracelet/lipgloss">charmbracelet/lipgloss</a><br>Style definitions for nice terminal layouts 👄</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kueue">kubernetes-sigs/kueue</a><br>Kubernetes-native Job Queueing</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaLogs">VictoriaMetrics/VictoriaLogs</a><br>Fast and easy to use database for logs, which can efficiently handle terabytes of logs</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+<p><a href="https://github.com/edoardottt/cariddi">edoardottt/cariddi</a><br>Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more</p>
+
+<p><a href="https://github.com/safing/portmaster">safing/portmaster</a><br>🏔 Love Freedom - ❌ Block Mass Surveillance</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/kubernetes/dashboard">kubernetes/dashboard</a><br>General-purpose web UI for Kubernetes clusters</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Cost monitoring for Kubernetes workloads and cloud costs</p>
+
+<p><a href="https://github.com/publicsuffix/list">publicsuffix/list</a><br>The Public Suffix List</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/gotenberg/gotenberg">gotenberg/gotenberg</a><br>A developer-friendly API for converting numerous document formats into PDF files, and more!</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

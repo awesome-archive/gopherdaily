@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260414.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260414</span>
+</p>
+<p>每日一谚：Go&#39;s parallelism features are an implementation detail, not a language feature. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/type-construction-and-cycle-detection">Go官博：类型构造和循环检测</a><br>在这篇博文中，我们将深入探讨 Go 1.26 中大幅改进的类型检查器部分。从 Go 用户的角度来看，这会带来哪些变化呢？除非你特别喜欢晦涩难懂的类型定义，否则你不会察觉到任何变化。这项改进旨在减少边界情况，为 Go 的未来改进奠定基础。此外，它也让我们饶有兴致地了解了 Go 程序员眼中看似平常却蕴藏着诸多精妙之处的内容。</p> 
+
+<p><a href="https://encore.dev/blog/rust-runtime">构建面向 TypeScript 的 Rust 运行时时学到的经验</a><br># 我们在构建面向 TypeScript 的 Rust 运行时时学到的经验。我们学到了什么：构建一个让 Node.js 与 Rust 可以在同一进程中协作的运行时（省略图片与其余正文）Encore 起初是一个 Go 框架：包含 Go 运行时、Go CLI、Go 解析器和 Go 编译器。当我们决定要支持 TypeScript 时，更“直观”的选择可能是把运行时也用 TypeScript 重写，或是在 Go 运行时上做某种桥接。但最终我们从零用 Rust 写了一个新的运行时。主要有两个原因：第一，我们希望让 Encore 将来能支持更多语言。我们见过像[Prisma](https://www.prisma.io/)和[Pydantic](https://docs.pydantic.dev/)这类项目能成功使用“Rust 核心 &#43; 各语言绑定”的架构，这样在每新增一种语言时，我们就不用为每种语言都重复造一遍处理基础设施的轮子。第二，Node.js 本质上是单线程的。把除了业务逻辑以外的部分搬到 Rust 里：HTTP 请求生命周期、数据库连接管理、发布/订阅、追踪等，都能在 tokio 上实现多线程运行——这是 Node.js 本身做不到的性能收益。...（省略后续内容）</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/how-to-analyze-hugging-face-for-arm64-readiness/">如何分析 Hugging Face 对 Arm64 的就绪情况</a><br>这篇文章是 Docker 和 Arm 的合作内容，演示 Docker MCP Toolkit 与 Arm MCP Server 如何协同工作，用来扫描 Hugging Face Spaces 是否满足 Arm64 就绪条件。</p>
+
+<p><a href="https://nesbitt.io/2026/04/13/common-package-specification.html">通用包规范（Common Package Specification）</a><br>Common Package Specification（通用包规范，CPS）去年在 CMake 4.3 里进入稳定状态，这个名字之所以吸引我，是因为它听起来像是在解决我之前写过的那个“跨生态依赖问题”。阅读规范后我发现，这里的“common”并不是指跨语言生态的通用，而是指跨构建系统的通用：它是一种 JSON 格式，CMake、Meson 和 autotools 都能读取，用来了解某个已安装库在磁盘上的位置、以及如何链接它。它试图替代目前混在一起的`.pc`文件和`*Config.cmake`脚本等机制。</p>
+
+<p><a href="https://blog.cloudflare.com/cf-cli-local-explorer/">Cloudflare CLI 本地探索器</a><br># 为所有 Cloudflare 构建一个 CLI。Cloudflare 有着非常庞大的 API 体系：我们有超过 100 种产品，近 3000 个 HTTP API 操作。越来越多，代理（agents）正在成为这些 API 的主要使用者。开发者把他们的 coding agents 带到[应用](https://workers.cloudflare.com/solutions/frontends)、[代理](https://workers.cloudflare.com/solutions/ai)以及[平台](https://workers.cloudflare.com/solutions/platforms)等场景中，为他们的账户配置参数，并查询 API 来获取分析与日志。...（省略后续内容）</p>
+
+<p><a href="https://github.github.com/gh-stack/">GitHub Stacked PRs</a><br># GitHub Stacked PRs通过原生的 GitHub 支持与`gh stack`命令行工具，把“大改动”拆成一组可以逐层审查的拉取请求，并按顺序合并。Stacked PRs 是目前的私有预览。（省略图片与部分页面内容）Stacked PRs 会把 pull request 组织成一个“stack”。每个 PR 代表你变更中的一个聚焦层，彼此独立可审查，并最终一起落到你的 main 分支。...（省略后续内容）</p>
+
+<p><a href="https://duckdb.org/library/design-and-implementation-of-duckdb-internals/">DuckDB 内部机制的设计与实现</a><br># DuckDB 内部机制的设计与实现Torsten Grust（图宾根大学）2026-03-19这是一个基于 DuckDB 的课程，讲解数据库系统内部的设计与实现（DiDi）。幻灯片与辅助材料在[GitHub 仓库](https://github.com/DBatUTuebingen/DiDi)中提供。...（省略后续内容）</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything">Steve Yegge</a><br>[Steve Yegge](https://twitter.com/steve_yegge/status/2043747998740689171)：&gt; 我在和我朋友聊天，他在 Google 做了大约 20 年的技术总监。聊的是他们的 AI 落地情况——这是我今年聊过最疯狂的一次。结论（TL;DR）：Google 工程团队在 AI 采用上的“足迹”看起来和 John Deere（一家拖拉机公司）差不多。整个行业都有类似的内部采用曲线：20% 是激进的 agentic 用户，20% 是完全拒绝者，60% 还在用 Cursor 或类似的聊天工具。</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/13/servo-crate-exploration/#atom-everything">探索新的 `servo` crate</a><br>**研究：探索新的 `servo` crate**在 Servo 已经发布到 crates.io 之后（Servo 团队在 2026/04/13 公布了 [servo 0.1.0 发布](https://servo.org/blog/2026/04/13/servo-0.1.0-release/)），我关注它的 `servo` crate：它把浏览器引擎打包成了可嵌入库。我让 Claude Code 做一个任务：弄清楚它能做什么，并构建一个 CLI 工具用于截图，同时评估是否能编译到 WebAssembly。由它构建的 `servo-shot` 工具效果还不错。...（省略后续内容）标签：
+- [research](https://simonwillison.net/tags/research)
+- [browsers](https://simonwillison.net/tags/browsers)
+- [rust](https://simonwillison.net/tags/rust)
+- [webassembly](https://simonwillison.net/tags/webassembly)
+- [claude-code](https://simonwillison.net/tags/claude-code)
+- [servo](https://simonwillison.net/tags/servo)</p>
+
+<p><a href="https://steveblank.com/2026/03/17/your-startup-is-probably-dead-on-arrival/">你的创业公司可能还没开始就夭折了。</a><br></p>
+
+<p><a href="https://amd-gaia.ai/docs">GAIA SDK官方文档</a><br>跳到主要内容欢迎来到 GAIA SDK！在本地运行的 AI 代理框架（Build AI Agents That Run Locally）GAIA 是一个开源的 Python 与 C&#43;&#43; 框架，用于构建在本地硬件上运行的 AI 代理。代理会推理、调用工具、搜索文档并执行操作——同时没有云依赖，也不会让数据离开设备。## 本地推理所有处理都留在设备上## 不依赖云服务不需要 API Key 或外部服务## Python 与 C&#43;&#43;两种语言都提供完整 SDK...（省略后续内容）</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.</p>
+
+<p><a href="https://github.com/harness/harness">harness/harness</a><br>Harness Open Source is an end-to-end developer platform with Source Control Management, CI/CD Pipelines, Hosted Developer Environments, and Artifact Registries.</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/cirruslabs/orchard">cirruslabs/orchard</a><br>Orchestrator for running Tart Virtual Machines on a cluster of Apple Silicon devices</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/fish2018/pansou">fish2018/pansou</a><br>PanSou是一款高性能的网盘资源搜索API服务，支持TG频道和插件搜索。系统设计以性能和可扩展性为核心，支持多频道多插件并发搜索、结果智能排序和网</p>
+
+<p><a href="https://github.com/steipete/wacli">steipete/wacli</a><br>WhatsApp CLI</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

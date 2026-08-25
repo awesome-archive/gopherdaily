@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260514.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260514</span>
+</p>
+<p>每日一谚：Go&#39;s pointer syntax is simple. Learn it well and use it appropriately. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/14/uncle-bob-esr-on-why-we-are-turning-to-go-and-rust-in-the-ai-era">AI 时代，软件大师们为什么都倒戈向 Go 和 Rust 了？</a><br>在软件工程的浩瀚星河中，有两位堪称“活化石”级别的宗师：一位是 Eric S. Raymond (ESR)，开源运动的先驱，那本被誉为开源圣经的《大教堂与集市》以及《Unix编程艺术(The Art of UNIX Programming)》一书均是出自他手。他是一个写了 40 年 C 语言的硬核黑客。 另一位是 Uncle Bob Martin (Bob 大叔)，敏捷宣言的签署人之一，《敏捷软件开发》、《代码整洁之道 (Clean Code)》等程序员经典书籍的作者，无数 Java 和 C# 程序员的精神导师。 这两位加起来写了快一百年代码的传奇人物，最近却在 X (Twitter) 平台上，不约而同地抛出了一个足以引发技术圈大地震的论断： 在如今这个被 AI 席卷的时代，他们双双放弃了自己曾经最擅长的语言（C 和 Java），转而全面拥抱 Go 语言，并在特定底层场景下使用 Rust。</p> 
+
+<p><a href="https://jorijn.com/en/blog/leaving-github-for-forgejo/">为什么我要离开 GitHub 转投 Forgejo(gitea的分叉)</a><br>我把代码从 GitHub 迁移到了自托管的 Forgejo 上。不是因为宕机问题，而是因为平台背后的所有权归属。荷兰政府也做出了同样的决定。2026年4月27日，荷兰内政部推出了 code.overheid.nl，这是一个供荷兰政府源代码使用的自托管 Forgejo 实例。项目经理 Boris Van Hoytema 表示，该平台“源于内政部必须在自己拥有的地方合法发布源代码的要求”，选择 Forgejo 而非 GitLab 是因为它完全开源，并提供了数字自主所需的一切自由。在此前一周，我也悄悄地将自己的代码转向了同一方向。我现在主要的 Git 托管服务器是 code.jorijn.com，它在加固设置下的单个 NUC 上运行 Forgejo v15 LTS。我的一些仓库已经迁移到那里；其余的正在排队中。长期的计划是在迁移完成后归档我的公共 GitHub 仓库，并将每个存档指向新的家。大多数关于离开 GitHub 的文章都以宕机为首。宕机是真实的，但不是我离开的原因。宕机、默认开启的 AI 选择项，以及 GitHub 不再拥有自己的 CEO 这一事实，都是一个潜在事实的症状：我并不拥有这些东西。荷兰政府刚刚也发表了同样的结论。所以这是关于该思考的详细版本，以及当你决定做出改变时，这种迁移实际看起来是什么样子。简而言之：- GitHub 在 2025 年 5 月至 2026 年 4 月期间记录了 257 起事件，其中 48 起为重大事件。CTO 公开道歉并表示为了跟上 AI 驱动的负载，容量需要扩展 30 倍。- 2025 年 8 月，GitHub 不再拥有自己的 CEO。它现在是一个部门。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/13/building-a-cloud-native-platform-from-the-ground-up-with-kairos-k0rdent-and-bindy/">从零开始构建云原生平台：Kairos、k0rdent 和 bindy</a><br>正如我们在之前关于 FluxCD 的文章中所分享的那样，加拿大皇家银行资本市场（RBC Capital Markets）一直在有意识地推进 Kubernetes 平台的现代化转型。FluxCD 的 GitOps 为我们提供了坚实的部署基础。但随着平台的发展，我们现在在本地 VMware 环境和多个云上运行着超过 50 个集群，我们遇到了一系列现成工具无法共同解决的问题：如何管理集群本身的生命周期？如何确保每个节点在启动时都是可重现且防篡改的？以及如何在不通过工单队列处理每条记录变更的情况下，将 Kubernetes 服务发现与企业 DNS 基础设施集成？这篇文章介绍了为我们解答这些问题的几个项目，以及我们在受监管的金融机构中利用它们进行构建时所学到的经验。挑战：在受监管环境中大规模进行平台工程跨混合基础设施管理 50 多个 Kubernetes 集群不仅是一个运营挑战，在资本市场中，它也是一个合规挑战。SOX、PCI-DSS 和 Basel III 对可审计性、配置漂移预防和网络分段提出了实际要求。我们的平台团队无法承受存在“雪花”节点、未记录的集群状态或多年积累的手动 DNS 记录。当我们回顾我们在工程投入上的花费时，三个差距凸显出来：1. 节点配置漂移：随着时间的推移，基于虚拟机的节点在经过补丁和修改后，变得无法维护。2. 集群配置：为交易台或风险团队启动新集群是一项耗时数天的手动工作，且没有单一的事实来源。3. DNS 集成：每个新服务或入口点都需要向我们的网络团队提交手动工单，造成了瓶颈。</p>
+
+<p><a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/">Reel Friends：构建扩展至十亿用户的社交发现功能</a><br>从表面上看，新的“好友气泡”（Friend Bubbles）功能看起来很简单。它突出了你好友观看和互动过的 Reels。但有时看起来最直接的功能往往需要最深入的工程工作。在本期 Meta 技术播客中，Pascal Hartig 与 Facebook Reels 团队的两位软件工程师 Subasree 和 Joseph 进行了交流，探讨了实现“好友气泡”背后的艰辛历程。他们讨论了该功能背后的机器学习模型的演进、iOS 和 Android 用户之间不同的行为，以及最终让整个功能变得顺畅的惊人发现。如果你曾经低估了一个“简单”的功能，那么这一期节目就是为你准备的。在下方下载或收听本期节目：你还可以在你获取播客的任何地方找到本期节目，包括：- Spotify- Apple Podcasts- Pocket CastsMeta 技术播客是由 Meta 推出的播客，我们在此突出介绍 Meta 工程师在各个层面所做的工作——从底层框架到最终用户功能。在 Instagram、Threads 或 X 上向我们发送反馈。如果你有兴趣了解 Meta 的职业机会，请访问 Meta 职业页面。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/05/13/kubernetes-v1-36-advancing-workload-aware-scheduling/">Kubernetes v1.36：推进工作负载感知调度</a><br>AI/ML 和批处理工作负载引入了超出简单 Pod 级调度的独特挑战。在 Kubernetes v1.35 中，我们引入了第一批工作负载感知调度改进，其特点是基础工作负载 API 以及构建在 Pod 框架上的基本组调度支持，以及一个用于高效处理相同 Pod 的机会性批处理功能。Kubernetes v1.36 通过清晰地分离 API 关注点引入了重大的架构演进：工作负载 API 作为静态模板，而新的 PodGroup API 处理运行时状态。为了支持这一点，kube-scheduler 引入了一个新的 PodGroup 调度周期，该周期支持原子工作负载处理，并为未来的增强铺平了道路。此版本还首次推出了拓扑感知调度和工作负载感知抢占的迭代，以推进调度能力。此外，工作负载的资源声明支持为 PodGroups 解锁了动态资源分配（DRA）。最后，为了展示实际就绪性，v1.36 实现了作业控制器与新 API 之间集成的第一阶段。工作负载和 PodGroup API 更新工作负载 API 现在作为静态模板，而新的 PodGroup API 描述了运行时对象。Kubernetes v1.36 将工作负载和 PodGroup API 作为 scheduling.k8s.io/v1alpha2 API 组的一部分引入，完全取代了之前的 v1alpha1 API 版本。在 v1.35 中，Pod 组及其运行时状态嵌入在工作负载资源中。新模型解耦了这些概念：工作负载现在作为静态模板对象，而 PodGroup 管理运行时状态。这种分离还提高了性能和可扩展性。</p>
+
+<p><a href="https://www.docker.com/blog/nist-narrows-the-nvd-what-container-security-programs-should-reassess/">NIST 缩小 NVD 范围：容器安全项目应重新评估什么</a><br>4 月 15 日，NIST 宣布了国家漏洞数据库的优先充实模型。大多数 CVE 仍将发布，但较少的 CVE 将获得容器扫描程序和合规性程序历史上所依赖的 CVSS 分数、CPE 映射和 CWE 分类。这一变化使过去两年来任何拉取 NVD 提要的人都能看到的趋势正式化。4 月 15 日改变的是预期：NIST 现在明确表示不打算恢复全面覆盖的充实工作。对于那些基于 NVD 作为 CVE 之上的权威第二层这一假设构建扫描、优先级排序和 SLA 工作流的项目，该假设值得进行结构性审查。发生了什么变化三类 CVE 将继续获得全面充实：- CISA 已知被利用漏洞目录中的 CVE，在一个工作日内锁定- 影响联邦政府内部使用的软件的 CVE- 行政命令 14028 定义的“关键软件”受影响的 CVE其他所有内容都将移至新的“未安排”状态。组织可以通过发送电子邮件至 nvd@nist.gov 请求充实，尽管没有服务级别的时限适用。当提交的 CNA 提供分数时，NIST 也已停止重复 CVSS 分数，并且 2026 年 3 月 1 日之前发布的所有未充实 CVE 已被移至“未安排”。决策背后的 NIST 考量NIST 指出，2020 年至 2025 年间 CVE 提交量增加了 263%，2026 年第一季度的提交量比去年同期高出约三分之一。这种上升与 CVE 编号的更广泛扩张相一致：更多的 CNA，更多的开源项目运行自己的披露流程，以及更多的工具揭示了几年前不会到达 CVE 的问题。</p>
+
+<p><a href="https://bloggeek.me/moq-adoption-problem/">MOQ 缺乏一个令人信服的采用理由</a><br>MOQ 缺乏一个令人信服的采用理由MOQ 拥有联盟、演示和新闻稿。但它目前还没有一个旗舰客户要求使用它。MOQ 是当今的舞会皇后。每个人都在谈论它，似乎对此很感兴趣。这制造了大量的噪音和炒作，以至于感觉如果不参与其中就会错过机会。作为梦想破灭者，现在是时候仔细观察 MOQ 以及为什么我相信它是一个寻找问题的解决方案。这并不是说它不会成功，只是这个谜题中重要的缺失部分使其不完整。原因如下：关键要点：简而言之- MOQ 产生了很大的反响，但缺乏一个展示其用例的旗舰客户- 尽管有大量的供应商投资，但 MOQ 面临的是市场问题而非技术挑战- MOQ 结合了现有协议的功能，但与 WebRTC、HLS 和 DASH 等成熟技术相比，其实际优势仍不明确- 为了成功，MOQ 需要一个引人注目的用例、经过验证的性能以及相对于现有解决方案的明确成本优势- 最终，MOQ 似乎是一个在市场上寻找真正问题的解决方案</p>
+
+<p><a href="https://bloggeek.me/webrtc-monitoring-server-or-service/">WebRTC 监控：你是在监控服务器还是服务？</a><br>WebRTC 监控：你是在监控服务器还是服务？大多数团队监控他们的 WebRTC 基础设施。很少有人监控实际的用户体验。这就是这种区别的重要性所在，以及如何通过客户端可观测性来解决它。在过去几个月与展示我们 rtcstats 故障排除解决方案的公司交谈中，有一点非常明显：他们的 WebRTC 监控完全集中在服务器基础设施上。其中一些甚至收集客户端指标，如丢包率和往返时间。最终的结果是一个监控设备，它最终监控的是服务器，而不是服务。让我们弄清楚这意味着什么，以及我们如何补救。关键要点：简而言之- 监控 WebRTC 基础设施侧重于服务器，通常忽略实际的用户体验，这会导致重大问题- 客户端可观测性有助于通过直接从用户设备收集丢包和抖动等真实用户指标来弥补这一差距- 实施 WebRTC 客户端监控涉及集成数据收集库，将指标流式传输到后端，并为用户体验指标设置仪表板- 使用 rtcStats 等工具可以实现从收集到分析的全面观察，从而改善故障排除和用户满意度- 开始监控客户端指标</p>
+
+<p><a href="https://laurent.le-brun.eu/blog/a-history-of-ides-at-google">谷歌 IDE 的历史</a><br>我之前讨论过谷歌的主要代码库如何强制执行严格的工具和规范以允许代码库扩展。多年来，有一个明显的例外：IDE。背景：我在 2011 年至 2024 年期间在谷歌工作。有些信息可能是近似的，如果有报告，我会更新。这篇博文侧重于谷歌的主要单体仓库 (google3)。一个碎片化的生态系统像在许多公司一样，谷歌的工程师能够选择他们选择的 IDE，这导致了大量的碎片化。2011 年，一些最资深的工程师被问到一个问题：“有没有办法为所有谷歌员工提供一个好的统一 IDE？”答案基本上是“没有”。除其他人外，Jeff Dean 回复道：“试图让一群开发人员全部同意使用一个通用的编辑器是导致不快乐的配方。每个人对什么是重要的都有不同的看法，不同系统的优缺点被不同的人以不同的方式权衡。最终，这没那么重要。”多年来，这是一种普遍的观点。毕竟，你的同事使用什么 IDE 并不重要，只要他们的代码是好的。但我曾在谷歌从事开发工具工作 12 年，我有时会对此感到疑惑。如果你从公司生产力的角度来看：你不希望每个工程师花太多时间设置他们的编辑器。尽管工程师使用不同的 IDE，但有用的集成最终必须到处重新实现：Bazel 支持、Starlark 工具、代码格式化程序。</p>
+
+<p><a href="https://martinfowler.com/articles/what-is-code.html">什么是代码</a><br>什么是代码？从高层次来看，这个问题的答案似乎显而易见。代码是开发人员编写的内容：用编程语言表达的指令，告诉机器该做什么。多年来，编写代码意味着逐字逐句地输入。进度是通过代码生产、编译、测试和部署的效率来衡量的。有了现代大语言模型 (LLM)，我们不再需要输入每个单词来生成代码。大量可执行代码现在可以从高级描述中生成。这迫使我们提出一个更深刻的问题：如果生产代码变得更便宜，那么代码还有什么价值？代码的两个方面代码一直有两个不同但相互交织的目的。首先，代码是一组“对机器的指令”。它指导计算、移动数据、与存储交互并协调执行。在 LLM 时代，这是被商品化的部分。其次，代码是一个“问题领域的概念模型”。这是“设计”方面。</p>
+
+<p><a href="https://buttondown.com/hillelwayne/archive/when-would-you-ever-want-bubblesort/">你什么时候会想要冒泡排序？</a><br>你什么时候会想要冒泡排序？软件工程中几乎没有普遍规则，但有很多几乎普遍的原则。像“更喜欢组合而不是继承”就是几乎普遍的。我喜欢寻找这些原则不适用的罕见情况，比如你确实想要“继承胜过组合”。一个类似的几乎普遍的原则是“不要使用冒泡排序”。有些人甚至会说这是一个普遍规则，唐纳德·克努特写道：“冒泡排序似乎没有什么可推荐的，除了一个吸引人的名字以及它导致了一些有趣的理论问题这一事实”。但克努特以前也犯过错，所以让我们看看这个普遍规则是否只是“几乎普遍”。理论上，对于小数组，冒泡排序比快速排序或归并排序更快。这使得它在更大的排序策略中很有用：大多数原则上快速的排序算法通过递归地对数组的子分区进行排序来工作，即如果你对 2^20 个随机整数应用快速排序，在某个点上你正在对 2^17 个 8 整数子分区进行排序。为这些子分区切换到冒泡排序将是一个不错的优化。许多生产排序算法确实使用混合方法，但它们绝大多数使用插入排序。插入排序对于小数组非常快，而且它也更善于利用硬件。在某些非常特定的硬件上，冒泡排序最终仍然更好，比如在 NVIDIA 的这项研究中，但你可能没有那种硬件。所以这是一个用例，尽管如此。</p>
+
+<p><a href="https://wasp.sh/blog/2026/05/13/new-language-for-web-dev-was-a-mistake">为 Web 开发创建新语言是一个错误</a><br>在 Wasp，我们正在构建一个全栈 Web 框架——想想 JS 的 Rails / Laravel，但也延伸到前端。我和我的双胞胎兄弟在 2021 年通过 Y Combinator 时启动了它，并总共筹集了超过 500 万美元。我们最初的想法是构建一种新的编程语言，该语言可以抽象常见的 Web 应用程序模式，同时在需要深入研究时也适用于任何堆栈（我们从 React、Node.js 和 Prisma 开始）。想想 Terraform，但不是针对云基础设施，而是针对你的 Web 应用程序堆栈。五年过去了，我们意识到这是一个错误。为某些问题和领域创建一种新语言是有意义的，但在这种情况下，它并不适合，给我们带来的麻烦比它的价值还要多。这篇文章是关于我们为什么认为这是一个好主意，我们学到了什么，以及为什么我们要用 TypeScript 替换我们的自定义语言，而 Wasp 本身在后台保持不变。简而言之这是一个很长的帖子。以下是涵盖的关键事项，你可以跳转到你感兴趣的内容而不必阅读所有内容：- 多年来切换了 Web 开发堆栈，我们认为创建一个可以适用于任何堆栈的“通用框架”会很酷。我们得出结论，我们需要创建一种新语言来实现这一点。- 开发人员对 Wasp 正在解决的问题产生了共鸣，但这种语言很难推销。名字中的“Lang”让他们认为我们的目标是取代 JavaScript（并不是），并且对它如何与他们的工具工作持怀疑态度。- 许多开发人员喜欢</p>
+
+<p><a href="https://javarevisited.substack.com/p/40-must-read-white-papers-to-learn">40 本必读白皮书以供学习系统设计</a><br>40 本将使你精通系统设计与架构的精华白皮书你可以阅读以了解更多关于系统设计和软件架构的白皮书Codemia.io 是一个动手实践的系统设计学习平台，可帮助你逐步练习设计真实系统。他们现在推出了代理 AI 设计课程和练习题，以更好地学习代理 AI 设计并为面试做准备。它为你提供挑战，例如设计基于 RAG 的问答代理、设计 AI 旅行计划代理、设计个人理财代理、设计代码生成代理，并为其中许多问题提供编辑解决方案。如果你正在学习代理 AI 设计，那么你可以使用 Codemia.io 来解决实际问题并学习在真实面试中解释你的解决方案需要什么。</p>
+
+<p><a href="https://kftray.app/blog/kubernetes-spdy-to-websockets">Kubernetes 从 SPDY 迁移到 WebSockets</a><br>Kubernetes 正在从 SPDY 迁移到 WebSockets（直到下一个协议出现）kubectl exec、attach、cp 和 port-forward 背后的协议迁移我维护一个构建在 Kubernetes 端口转发之上的应用程序，所以我跟踪 KEP-4006，因为底层的流式传输协议一直在变化。我在 2024 年 4 月左右（Kubernetes 1.30 时）写过关于这个的内容，六个版本之后，它的变化足以值得再看一眼，接下来的大部分内容来自 KEP 设计文档、一些 GitHub 问题以及针对 kube 集群的一些线路追踪……其余的只是我的解读。简短的子协议时间线端口转发在此次迁移之前很早就带有一个子协议名称，双方都使用该名称来约定在 HTTP 升级完成后如何读取字节阅读 KEP，首先引起我注意的是子协议名称，KEP 以一种方式命名它 (v2.portforward.k8s.io)，但 kube 端口转发日志在 Sec-WebSocket-Protocol 标头中显示了一些不同的东西 (SPDY/3.1&#43;portforward.k8s.io)。在所有这一切之下，代码仍然使用一个较旧的常量 (portforward.k8s.io，即 v1 名称)。一旦你看到了每个名称的用途，它们之间就不会互相矛盾……但我能弄清楚的唯一方法是退后一步并回顾时间线</p>
+
+<p><a href="https://www.sandordargo.com/blog/2026/05/13/cpp26-library-hardening">C&#43;&#43;26 标准库加固</a><br>C&#43;&#43;26：标准库加固C&#43;&#43; 中的未定义行为 (UB) 是最难处理的错误类别之一。它可能会悄悄地破坏内存，导致离实际错误很远的地方崩溃，或者——最糟糕的是——恰好在你的机器上工作。真实代码库中很大一部分 UB 并非来自奇特的语言特性，而是来自对标准库的基本误用：越界访问向量、在空容器上调用 front() 或取消引用空的可选项。C&#43;&#43;26 通过 P3471R4 引入的标准库加固直接解决了这个问题。什么是库加固？库加固将标准库中的某些未定义行为转换为运行时可检测的契约违规。当违反了加固的先决条件时，运行时会在任何其他可观察的副作用发生之前做出反应——将其视为对今天属于 UB 的操作添加边界检查。这不是一个新想法。所有三个主要的标准库实现都已经发布了特定于供应商的加固模式。问题是这些机制都是</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.danshapiro.com/blog/2026/05/completion-chat-agent-claw/">补全、聊天、智能体、Claw</a><br>2026 年 5 月 13 日补全、聊天、代理、爪子 (Claw)我在 OpenClaw 流行之前就安装了它。那是不明智的。我能看出它是一个安全噩梦：到处都是提示注入，连接到我所有的东西。但我决定尝试一下，因为谁会花时间为另一个随机的开源代理编写提示注入呢？然后它爆炸了。突然间 OpenClaw 开始管理风险投资家的电子邮件、银行家的 Chrome cookie 和加密兄弟的私人钱包。现在我的爪子成了城里最大的黑客比赛中的安慰奖。我关闭了它。没关系——我非常确定爪子是一种愚蠢的应用程序热潮，会像 BabyAGI 或吉卜力工作室自拍一样消逝。但是……我的朋友 Harper Reed 告诉了我关于滚动社交媒体、精心制作深奥的办公室传说、要求兰博基尼，并以某种方式在工作中变得更好的 AI 同事的事情。Jesse Vincent 告诉我，他的助手花了一些“个人时间”阅读关于如何与 ADHD 患者有效合作的学术研究。他没有告诉它这样做；它唯一的指令是，“每天晚上，研究可能有助于它完成工作的事情”。我与微软 OpenClaw 部门的 CVP Omar Shahine 喝了咖啡，这显然是公司里最令人惊叹的职位名称。他那由 Travel Hub 驱动的爪子处理旅行计划电子邮件，提取酒店确认信息</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志及其他任意数据的代理。</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria 是一个功能强大、闪电般快速且抗审查的代理。</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>为分布式系统中最关键的数据提供分布式可靠的键值存储。</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>用于密钥管理、加密即服务和特权访问管理的工具。</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>Go 语言中终极的 LLM/AI 应用程序开发框架。</p>
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub 代理工作流。</p>
+
+<p><a href="https://github.com/pranshuparmar/witr">pranshuparmar/witr</a><br>为什么这在运行？</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 采集器。</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>一个用于聚合与分发的统一 AI 模型中心。它支持将各种 LLM 交叉转换为 OpenAI 兼容、Claude 兼容或 Gemini 兼容的格式。一个集中的网关，用于持久化。</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>开源 LLM 知识平台：将原始文档转化为可查询的 RAG、自主推理代理和自我维护的维基。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

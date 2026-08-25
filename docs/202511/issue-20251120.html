@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251120.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251120</span>
+</p>
+<p>每日一谚：Errors are our sane behavior , Panics are our manic behavior </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/20/ai-native-dev-workflow">还在当“上下文搬运工”？我写了一门课，帮你重塑AI开发工作流</a><br>我们拥抱了AI，却发现自己陷入了一个新的“效率怪圈”。我们与AI的协作，始终是割裂的、被动的、充满摩擦的。 我一直在思考，这真的是AI时代软件开发的终极形态吗？一定有更好的方式。一定有一种方法，能让AI不再是一个外部的“辅助工具”，而是成为我们开发流程中一个原生的、可指挥的、能动手干活的“核心成员”。 正是为了系统性地解决这个问题，并把我过去大半年时间的思考、踩坑、实践与沉淀分享出来，我与极客时间合作，倾力打造了一门全新的专栏——《AI原生开发工作流实战：重塑新一代软件工程范式》</p> 
+
+<p><a href="https://tonybai.com/2025/11/20/proposal-improve-goroutine-stack-using-page-faults">Goroutine 栈增长机制新提案：用缺页中断替代栈检查？Rob Pike 亲自下场“劝退”</a><br>在 golang-nuts 邮件组，一位名叫 Arseny Samoylov 的年轻开发者发起了一场引人深思的讨论，提出了一个颇具“革命性”的提案：我们能否借鉴 Linux 内核管理线程栈的方式，用“缺页中断”(Page Faults) 机制来取代 Go 现有的“栈检查”？ 这个旨在挑战 Go 运行时基石的大胆设想，引来了 Go 语言联合创始人 Rob Pike 的亲自下场。本文中，我们就来简单看看这个看似优雅的提案 ，为何会引来社区的质疑，并最终被 Rob Pike 本人以“实现过于复杂”为由，泼上一盆“冷水”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/5IC0J0IrIYG19BoP1iibGg">【Go 测试之道】01 开篇：测试的“道”与“术”——从“演员对台词”到我们的“短链接”蓝图</a><br></p> 
+
+<p><a href="https://blog.trailofbits.com/2025/11/14/how-we-avoided-side-channels-in-our-new-post-quantum-go-cryptography-libraries">我们如何在新的后量子 Go 密码库中避免侧信道攻击</a><br>我们发布了 ML-DSA 和 SLH-DSA 的开源 Go 实现。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/why-i-joined-docker-security-at-the-center-of-the-software-supply-chain/">Why I joined Docker: security at the center of the software supply chain</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/11/20/an-architectural-decision-containers-on-bare-metal-or-on-virtual-machines/">An architectural decision: Containers on bare metal or on virtual machines</a><br></p>
+
+<p><a href="https://freedium-mirror.cfd/@daxx5/why-zig-is-quietly-doing-what-rust-couldnt-staying-simple-a47f86b3a58a">为什么 Zig 安静地做了 Rust 无法做到的事：保持简单</a><br>Rust 大声疾呼安全。Zig 只是构建了它——没有繁文缛节、说教或 15 分钟的编译时间。</p>
+
+<p><a href="https://dolthub.com/blog/2025-11-19-cursor-for-everything/">Cursor for Everything</a><br>Dolt 使得为任何数据库支持的应用程序实现类似 Cursor 的用户界面成为可能，并配备了差异和回滚功能。 本文解释了如何做到这一点。</p>
+
+<p><a href="https://www.theregister.com/2025/11/18/linus_torvalds_vibe_coding">Linus谈氛围编程</a><br></p>
+
+<p><a href="https://www.geocod.io/code-and-coordinates/2025-11-18-the-1000-aws-mistake">价值1000美元的aws问题</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Nov/20/nicholas-carlini/#atom-everything">A quote from Nicholas Carlini</a><br>以前，当恶意软件开发者想要通过他们的漏洞获利时，他们只会做一件事：加密个人电脑上的每个文件，并要求赎金来解密文件。将来我认为这种情况会有所改变。LLMs允许攻击者处理受害者电脑上的每个文件，并专门为该人量身定制勒索信。一个人可能与他们的配偶有染。另一个人可能在他们的简历上撒了谎。第三个人可能在学校考试中作弊。任何一个人做了任何这些具体事情的可能性都很小，但对于每个人来说，很可能存在一些可以用来敲诈的事情。恶意软件 &#43; LLMs，在可以访问某人电脑的情况下，可以找到并将其货币化。</p>
+
+<p><a href="https://nicholas.carlini.com/writing/2025/are-llms-worth-it.html">大型语言模型值得吗？</a><br>大型语言模型可能会在未来几年内发生变革。但它们带来了一些严重的潜在风险，并且已经在伤害着人们。在本文中，我想尝试提出一个问题：&#34;LLMs值得吗？&#34;考虑到它们的外部性、目前的危害和潜在的最终后果，我们是否应该创建这些模型？</p>
+
+<p><a href="https://openai.com/index/gpt-5-1-codex-max">GPT 5.1 codex max介绍</a><br></p>
+
+<p><a href="https://www.chrbutler.com/what-ai-is-really-for">人工智能的真正用途是什么？</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

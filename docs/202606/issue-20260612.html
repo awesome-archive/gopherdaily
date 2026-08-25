@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260612.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260612</span>
+</p>
+<p>每日一谚：Don&#39;t be clever. Be simple. Six months from now, you&#39;ll thank yourself. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/12/zig-father-refuses-funding-bans-ai-why-no-1-0-in-a-decade">拒领上亿、封杀 AI：Zig 之父为什么 10 年不发 1.0？</a><br>最近，JetBrains 团队对 Zig 之父 Andrew Kelley 进行了一次深度专访。在长达一个多小&gt;时的访谈中，Andrew 展现出了极度“反主流”的极客态度：坚决抵制 AI 生成的代码（No-AI Policy）、宁可拿 67 万美元的非营利基金也不要上亿美元的投资、10 年不发布 1.0 版本</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/6-w7E1IesRLFxz4KqwZiGg">【AI 时代软件工程师的算法图谱】09 图论基础：依赖与连通性</a><br>图论是计算机科学中最庞大、最硬核的领域之一。但在工程实战中，我们不需要成为图论专家，只需掌握两个最核心的能力： 1.  连通性检测： A 和 B 认识吗？这个网络是通的吗？（对应并查集 / Flood Fill）2.  依赖解析：A 依赖 B，B 依赖 C，我该按什么顺序启动它们？有没有循环依赖？（对应 拓扑排序） 今天，我们将从“孤岛”走到“网络”，最后手写一个微服务启动编排器。</p> 
+
+<p><a href="https://robinsiep.com/blog/posts/go-logs/">在 Go 语言中实现高效的日志记录功能</a><br>在之前的文章中，我解释了为什么团队在生成有用的 Go 代码错误时遇到困难，以及如何解决这个问题。在这篇文章中，我将介绍如何确保在生产环境中日志能够包含足够的上下文信息，同时还能保持日志在控制台中的可读性。 </p> 
+
+<p><a href="https://dev.to/chinmay-sawant/what-building-a-go-pdf-engine-teaches-you-about-real-engineering-26bc">构建 Go PDF 引擎能让你学到哪些实用工程知识</a><br>这篇文章介绍了在构建 GoPdfSuit 项目时所学到的经验。这是一个用 Go 语言编写的 PDF 生成引擎，能够在单台机器上大约 45 分钟内生成 150 万份金融相关的 PDF 文件。该引擎符合 PDF/A-4 和 PDF/UA-2 标准，同时作为 REST API、Go 语言库以及 Python CGO 绑定接口进行提供。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/11/introducing-verifiable-execution-in-dapr-1-18/">Dapr 1.18 引入可验证执行</a><br>银行的电汇系统可能只接受来自已批准支付工作流的请求，防止直接 API 调用绕过欺诈检查、审批和合规审查。该特性增强了系统安全性。</p>
+
+<p><a href="https://www.docker.com/blog/docker-hardened-images-enhanced-vulnerability-scanning-with-docker-and-aikido/">Docker Hardened Images 与 Docker 和 Aikido 增强漏洞扫描</a><br>Docker Hardened Images 通过 VEX 状态管理漏洞，包括已修复、不受影响和调查中。Aikido 默认抑制误报。</p>
+
+<p><a href="https://curlewis.co.nz/posts/lines-of-code-got-a-better-publicist/">代码行数有了更好的公关</a><br>文章讨论了代码行数指标如何获得更好的公关形象，并配有一张仪表盘图片暗示速度。</p>
+
+<p><a href="https://newsletter.thelongcommit.com/p/the-sign-off-layer-is-becoming-the">审批层正成为真正的工程系统</a><br>AI 降低了代码生成成本，但人类能否理解、验证并拥有 agent 生成的代码仍是关键。审批层正成为真正的工程系统。</p>
+
+<p><a href="https://techcrunch.com/2026/06/11/bluesky-launches-group-chats-as-company-shifts-focus-to-community-features/">Bluesky 推出群聊，公司重心转向社区功能</a><br>社交网络 Bluesky 于周四推出群聊支持，这是另一项旨在使其应用与更大竞争对手 X 竞争的功能。</p>
+
+<p><a href="https://xata.io/blog/a-thousand-postgres-branches-for-1">一千个 Postgres 分支仅需 1 美元</a><br>文章介绍了如何将分支创建时间从20多秒缩短到约1秒，并探讨了这些速度提升带来的应用场景。</p>
+
+<p><a href="https://www.glassflow.dev/blog/clickhouse-mistakes-engineers-make">5 个常见 ClickHouse 错误及修复方法</a><br>本文介绍了5个常见的 ClickHouse 错误以及如何修复它们。</p>
+
+<p><a href="https://packagemain.tech/p/evolution-of-code-review-practices-code-rabbit">AI 时代代码审查实践的演进</a><br>AI 正在重新定义代码审查，本文回顾了该领域的进展以及 CodeRabbit 等工具。</p>
+
+<p><a href="https://grack.com/blog/2026/06/11/life-before-main/">Rust 中的 main 之前也有生命</a><br>本文探讨了 Rust 中 main 函数之前执行的生命周期，包括链接器符号图等。</p>
+
+<p><a href="https://frn.sh/8kb-read/">追踪一次 8KB Postgres 读取</a><br>本文追踪了一次 8KB Postgres 读取，解释了页面读取来自共享缓冲区、OS 页面缓存或磁盘，只有磁盘读取才计入 IOPS。</p>
+
+<p><a href="https://starlink.com/business/private-networking">Starlink私有网络</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything">Claude Fable 异常主动</a><br>Claude Fable 主动找到了运行本地开发服务器的配方，启动了 Playwright Chrome 会话，并设置了 Chrome 的可见滚动条。</p>
+
+<p><a href="https://aws.amazon.com/blogs/aws-cloud-financial-management/aws-finops-agent-is-now-public-preview">AWS FinOps Agent 公开预览版发布</a><br>AWS 宣布 AWS FinOps Agent 的公开预览版已可用。</p>
+
+<p><a href="https://cloud.google.com/blog/products/devops-sre/how-google-sre-is-using-agentic-ai-to-improve-operations">Google SRE 如何利用智能 AI 改善运维</a><br>本文介绍了 Google SRE 如何部署智能 AI 来改善运维，包括具体场景和方法。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed.</p>
+
+<p><a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview</a><br>Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. Also: 100x faster replacement for ccusage!</p>
+
+<p><a href="https://github.com/googleapis/mcp-toolbox">googleapis/mcp-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/larksuite/cli">larksuite/cli</a><br>The official Lark/Feishu CLI tool, maintained by the larksuite team — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Mee</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a distributed storage system for object storage (S3), file systems, and Iceberg tables, designed to handle billions of files with O(1) disk access and effortless horizontal scaling.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

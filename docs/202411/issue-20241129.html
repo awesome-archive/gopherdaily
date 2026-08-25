@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241129.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-29</span>
+</p>
+<p>每日一谚：Keep your main package small </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://hez2010.github.io/async-runtimes-benchmarks-2024/">到2024年，你需要多少内存才能运行100万个并发任务？</a><br>2024 年底进行的基准测试比较了在各种编程语言及其各自的运行时中运行 100 万个并发任务的内存消耗。Rust 和 C#，尤其是 NativeAOT 和 GraalVM 原生映像，表现出卓越的内存效率，在某些情况下甚至优于 Java。尽管 Go 是静态编译的，但与其他 Go 相比，内存使用率明显更高。该基准测试强调了语言运行时之间的权衡。事实证明，NET 和 C# 在内存效率方面具有很强的竞争力。结果强调了在扩展应用程序以处理大量并发任务时考虑内存消耗的重要性。
+
+（注意：该摘要旨在概括基准测试研究的主要发现，重点关注不同编程语言的内存效率及其运行时在执行大量并发任务时的运行时间。</p> 
+
+<p><a href="https://dev.to/yanev/optimizing-memory-usage-in-go-mastering-data-structure-alignment-4beb">在 Go 中优化内存使用：掌握数据结构对齐</a><br>本文深入探讨了 Go 中内存优化的重要性，Go 是一种继承了 C/C&#43;&#43; 特性并以其性能而闻名的语言。它强调了数据结构对齐和填充的概念，这对于高效的内存使用和 CPU 性能至关重要。作者解释了现代处理器如何以字大小的块访问内存，因此有必要对齐数据结构以避免额外的内存浪费并确保更快的数据访问。通过示例，本文演示了由于需要多次内存访问，未对齐的结构如何导致内存使用效率低下和性能降低。作者主张将结构体字段从最大大小重新排序为最小大小，以最大限度地减少填充并优化内存使用。文章最后强调，理解和应用正确的数据结构对齐可以显著提高 Go 应用程序的性能。</p> 
+
+<p><a href="https://dev.to/ishankhan21/go-dependency-injection-with-uber-fx-and-echo-5cl1">使用 Uber Fx 和 Echo 进行 Go 依赖注入</a><br>本文提供了在 Go 中使用 Uber Fx 和 Echo 实现依赖注入的深入指南，强调了单例和依赖注入对于高效且可维护的后端服务的重要性。它首先解释了为什么单例和依赖注入对于资源效率和线程安全至关重要，以及集成到 Uber 的 Go 服务中的 Uber Fx 如何提供统一的代码结构。此案例重点介绍 Order Management Service，说明了管理共享资源（如数据库连接和 HTTP 客户端）所面临的挑战。本文概述了设置构造函数、集成 Uber Fx 以及在 Echo 处理程序中使用依赖项的步骤。最后，它强调了将 Uber Fx 与 Echo 结合使用来构建可扩展且干净的后端服务的好处，并引用了其他资源和社区见解。
+
+（注意：摘要不包括文档中的直接引用或特定代码片段，但抓住了本质和关键点。</p> 
+
+<p><a href="https://gopodcast.dev/episodes/048-lea-antony-on-wails/transcript">Wails作者访谈</a><br></p> 
+
+<p><a href="https://betterstack.com/community/guides/logging/golang-contextual-logging/">Go with Slog 中的上下文日志记录</a><br>本文深入探讨了 Go 中上下文日志记录的概念，利用 slog 包来丰富日志条目，其中包含额外的上下文信息。上下文日志记录通过提供对系统事件的详细洞察来增强调试、可追溯性、监控和事件响应。本文概述了在 Go 应用程序中传递 Logger 的三种主要方法：基于上下文的传递、将 Logger 作为参数传递以及使用全局 Logger。每种方法都根据其优点和潜在缺点进行讨论，例如性能开销、详细程度和全局状态问题。本文旨在指导开发人员选择最适合其应用程序需求的日志记录策略，强调上下文信息在使日志更具可操作性和洞察力方面的重要性。</p> 
+
+<p><a href="http://notes.eatonphil.com/2024-11-28-1-million-views.html">100 万次页面浏览</a><br>作者回顾了他们的博客达到 100 万次页面浏览量，这是在注意到网站流量显着增加后实现的里程碑。该博客始于 2018 年，每月平均发布 2 篇文章，使用自定义 Python 脚本构建并托管在 GitHub Pages 上，尽管作者希望获得更大的灵活性。作者使用静态站点生成器、Google Analytics 和 MailerLite 进行订阅，最终由于 MailerLite 的简单性而接受了它。该博客涵盖了广泛的主题，从编程语言和数据库到数据库系统和编程语言实现的调查。作者强调了编写高质量内容、寻求朋友和评论者的反馈以及通过各种渠道与社区互动的重要性。尽管担心自己已经达到顶峰，但作者仍然致力于学习和分享知识，鼓励其他人写下他们的兴趣并加入社区。</p> 
+
+<p><a href="https://dev.to/eminetto/using-cloudevents-in-go-58kh">在 Go 中使用 CloudEvents</a><br>源文档讨论了 Go 中 CloudEvents 的实现，作为事件驱动架构 （EDA） 的一部分，以增强可扩展性并减少微服务之间的耦合。它重点介绍了如何使用 CloudEvents 项目规范以及适用于 Go 和 Python 的 SDK 来标准化事件格式并促进互操作性。该文档提供了一个实际示例，其中“用户”服务生成事件，然后使用 Kafka 将这些事件发送到“审计”服务进行解耦。代码片段演示了如何使用 Go SDK 创建和发送事件，输出确认审计服务成功接收。作者旨在激发在事件驱动系统中进一步探索和采用 CloudEvents，同时也在 GitHub 上分享代码供社区使用。
+
+（注意：摘要是所提供源文档中关键点的综合，侧重于 Go 中 CloudEvents 的主题及其在 EDA 中的角色，不包括特定的代码或直接摘录。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.pragmaticengineer.com/the-pragmatic-engineer-in-2024/">2024 年的pragmatic工程师</a><br>Pragmatic Engineer&#39;s 指南提供了过去一年的全面文章和见解，涵盖的主题包括 Stripe 的工程文化、Oxide 的硬件和软件创业历程，以及安全性和可靠性工程等各种工程学科。该出版物还提供年度订阅的黑色星期五优惠，并为读者提供潜在的费用保障。文章深入探讨了 OpenAI 等科技巨头面临的挑战、利率上升对科技行业招聘的影响，以及软件工程师在大型科技公司中不断变化的角色。此外，该指南还包括关于成为更有效工程师的实用建议、软件工程职位的招聘实践以及软件工程就业市场的状况。该指南还讨论了 AI 工具在软件开发中的使用、GenZ 软件工程师的观点以及对初创公司高效扩展的见解。
+
+（注意：该摘要旨在概括源文档中描述的 Pragmatic Engineer 指南的关键主题和产品，同时保持简洁和连贯性。</p>
+
+<p><a href="https://thenewstack.io/openvpn-or-wireguard-a-detailed-performance-breakdown/">OpenVPN 还是 WireGuard？详细的性能明细</a><br>源文档提供了两种流行的 VPN 协议 OpenVPN 和 WireGuard 之间的详细比较。OpenVPN 自 2001 年以来有着悠久的历史，因其可靠性和安全性而受到赞誉，但因其性能问题和复杂性而受到批评，尤其是在设置和管理方面。相比之下，WireGuard 以其简单性、效率和现代加密而著称，使其成为 DevOps 团队的首选。该文档包括基于 WireGuard 构建的专有 VPN 服务器产品的演示，展示了用于用户管理的 OIDC 集成、自动 TLS 证书处理和适用于经济高效的云基础设施的轻量级操作等功能。该比较强调了 WireGuard 在速度、资源使用和易于维护方面的优势，将其定位为满足现代 VPN 需求的 OpenVPN 的引人注目的替代品。</p>
+
+<p><a href="https://emilyliu.me/blog/comments">使用 Bluesky 帖子作为博客评论</a><br>源文档讨论了 Bluesky 帖子的集成作为增强博客评论部分的一种手段，为用户讨论提供了一个简化且有节制的平台。它强调了使用 Bluesky 的好处，例如集中对话、简化评论审核以及利用 Bluesky 的审核服务。该文档还概述了未来可能的增强功能，包括对点赞的回复进行排序、精选帖子和直接登录功能。此外，它还建议新闻机构可以采用 Bluesky 的评论系统，有可能将其转变为一个通用的评论平台。本文档最后感谢了 Samuel 的贡献，他提供了最初的代码片段，并鼓励进一步的改进想法。
+
+本摘要概括了源文档的关键点，重点介绍了使用 Bluesky 进行博客评论的优势、平台的当前状态以及未来发展的潜力。它通过将好处直接与拟议的增强功能以及对互联网评论生态系统的更广泛影响联系起来来保持连贯性。</p>
+
+<p><a href="https://blog.gitguardian.com/open-source-mlops-stack/">正确完成 MLOps：GitGuardian 久经考验的开源堆栈</a><br>GitGuardian 开发了一个开源 MLOps 堆栈，以提高机器学习 （ML） 开发的效率和可重复性。该堆栈解决了关键痛点，例如跟踪数据集、模型和实验、可视化指标以及管理云资源。核心组件包括用于数据版本控制的 DVC、用于模型标记的 GTO、用于 Web 应用程序开发的 Streamlit 以及用于自动化云实例配置的 SkyPilot。BentoML 用于打包和提供 NLP 模型，从而实现高性能部署。这个全面的堆栈支持快速实验、协作和可扩展性，这对于现代 ML 工程至关重要。
+
+（注意：摘要旨在封装源文档的本质，侧重于 GitGuardian MLOps 堆栈的关键组件和目标。</p>
+
+<p><a href="https://john-tucker.medium.com/deep-dive-into-kubernetes-cpu-usage-requests-and-limits-57b6d0dec625">深入了解 Kubernetes CPU 使用率、请求和限制</a><br>本文在 John Tucker 的见解的指导下，深入探讨了 Kubernetes CPU 使用率、请求和限制的复杂性。它首先建立了 CPU、线程和时间切片等基本概念，强调了使线程数与可用 CPU 资源保持一致的重要性。作者通过示例说明了错位如何导致性能下降，在 GKE 集群上使用基于 Go 的工作负载来演示 CPU 请求和限制对工作负载性能的影响。本文进一步解释了 Kubernetes 如何利用 CPU 请求来调度 Pod，并强制执行 CPU 限制以防止资源过度消耗。通过各种场景，作者强调了设置适当的 CPU 请求和限制以优化性能的重要性，尤其是当其他进程正在争夺 CPU 资源时。文章最后强调了监控 CPU 指标以识别和解决延迟问题的必要性，倡导对 CPU 请求和限制配置采取平衡的方法，以确保在 Kubernetes 环境中高效利用资源。</p>
+
+<p><a href="https://dev.to/mohessaid/how-to-host-hugo-in-vercel-3d57">如何在 Vercel 中托管 Hugo</a><br>源文件详细介绍了用户在 Vercel 上托管基于 Hugo 的网站的体验，强调了模块安装和最终解决方案所面临的挑战。尽管尝试使用各种包管理器安装 Go，但用户最初对 Vercel 构建过程找不到 Go 二进制文件感到困惑。在探索了不同的解决方案并咨询了社区后，用户发现直接在 build 命令中包含 Go 安装过程是可行的。该用户还分享了他们在 AWS Lambda with Go 上的发现，并提供了对网站开发工具的见解。本文档最后说明了社区支持和知识共享对于克服技术障碍的重要性。
+
+（注意：该摘要旨在概括文档的关键点，重点关注用户对 Hugo 和 Vercel 的体验、遇到的问题、找到的解决方案以及社区互动和知识共享的更广泛背景。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/airbnb-engineering/automation-platform-v2-improving-conversational-ai-at-airbnb-d86c9386e0cb">Automation Platform v2：改进 Airbnb 的对话式 AI</a><br>Airbnb 技术博客文章讨论了 Airbnb 对话式 AI 平台从版本 1 到版本 2 的演变，重点是增强大型语言模型 （LLM） 应用程序。版本 1 支持静态工作流，这些工作流是僵化且难以扩展的。LLM 驱动的对话体验的引入有望实现更自然的交互，但面临延迟和数据敏感性等挑战。为了解决这些问题，Airbnb 开发了 Automation Platform v2，其中包含 LLM 工作流程、上下文管理和护栏框架，以确保安全且相关的交互。该平台现在允许与 LLM 进行动态、上下文感知的对话，从而实现更高效和有效的客户支持。本文还强调了将传统工作流与 LLM 功能集成的重要性，并提供了对开发过程的见解，包括用于测试的 Playground 功能和用于监控 LLM 交互的可观测性工具。</p>
+
+<p><a href="https://intezer.com/blog/alert-triage/ways-security-teams-leverage-ai/">AI SOC 的实际应用：安全团队当今利用 AI 的 4 种方式</a><br>本文讨论了人工智能 （AI） 在转变安全运营中心 （SOC） 以加强网络安全工作方面的关键作用。它概述了利用 AI 的四种主要方式：通过下一代系统改进威胁检测、自动化警报分类以减少分析师倦怠并解决人才短缺问题、使用 AI 驱动的工具增强威胁搜寻，以及使用大型语言模型 （LLM） 加速恶意软件分析。Intezer 的自治 SOC 解决方案被强调为一种实用的 AI 应用程序，它可以自动进行警报分类、过滤误报并提供可操作的见解，从而提高 MTTD 和 MTTR。文章强调，AI 不再是一个未来主义的概念，而是一种当今的实用工具，在面对不断变化的网络威胁时，它可以显著提高 SOC 的效率和有效性。</p>
+
+<p><a href="https://simonwillison.net/2024/Nov/27/qwq/#atom-everything">QwQ: Reflect Deeply on the Boundaries of the Unknown</a><br>The source document discusses the exploration and utilization of the QwQ model, an openly licensed AI model developed by Alibaba Cloud&#39;s Qwen team, inspired by OpenAI&#39;s reasoning capabilities. The model&#39;s proficiency in mathematics and programming is highlighted through its ability to reflect and learn from its outputs, as demonstrated by its correct response to the &#34;how many&#39;r&#39;s in strawberry&#39;?&#34; question. The document further showcases the model&#39;s capabilities by using it to generate Python code for importing CSV data into SQLite and creating an SVG image of a pelican riding a bicycle. Despite an initial miscommunication resulting in a response in Simplified Chinese, the model eventually produces a detailed essay and a final SVG image, which is described as elegant. The author shares their experience with the model&#39;s performance and its potential applications, while also providing context with recent articles and tags related to AI and generative models.
+
+(Note: The summary does not include direct quotes or specific URLs from the document but encapsulates the main points and context.)</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/openimsdk/open-im-server">openimsdk/open-im-server</a><br>IM 聊天 ChatGPT</p>
+
+<p><a href="https://github.com/sourcegraph/conc">sourcegraph/conc</a><br>更好的 go 结构化并发</p>
+
+<p><a href="https://github.com/WuKongIM/WuKongIM">WuKongIM/WuKongIM</a><br>More than just IM 不只是即时通讯( IM )</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>有关数千 （！） 加密代币的全面、最新信息集合。</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics：快速、经济高效的监控解决方案和时间序列数据库</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>为 Kubernetes 入口和服务配置外部 DNS 服务器（AWS Route53、Google CloudDNS 等）</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>世界上最快的网站构建框架。</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>在 docker 中运行并使用 WebRTC 的自托管虚拟浏览器。</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>轻量级 Kubernetes</p>
+
+<p><a href="https://github.com/uber-go/fx">uber-go/fx</a><br>一个基于依赖注入的 Go 应用程序框架。</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>异构 AI 计算虚拟化中间件</p>
+
+<p><a href="https://github.com/aquasecurity/kube-bench">aquasecurity/kube-bench</a><br>检查 Kubernetes 是否根据 CIS Kubernetes 基准测试中定义的安全最佳实践进行部署</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

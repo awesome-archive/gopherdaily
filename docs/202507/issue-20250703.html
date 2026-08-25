@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250703.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250703</span>
+</p>
+<p>每日一谚：Document the why, not just the how </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/03/meet-the-go-team-2012">Go考古：创始人亲述Go语言的“创世纪”</a><br>2012 年，Google I/O 大会的舞台上，一个刚刚发布 1.0 版本的编程语言团队，正襟危坐。他们面对着全球开发者的审视和提问，这其中，就有三位图灵奖得主级别的传奇人物：Ken Thompson、Rob Pike 和 Robert Griesemer。今天，就让我们扮演一次“Go 语言考古学家”，拂去时间的尘埃，回到那个被称为“创世纪”的时刻，重温 Go Team 核心成员们的亲口讲述，探寻这门语言最纯粹的初心和设计哲学。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-07-02-the-agentic-software-engineer">The Agentic Software Engineer</a><br></p> 
+
+<p><a href="https://maypok86.github.io/otter/blog/cache-evolution">Go 缓存库的演变</a><br>本文探讨了 Go 语言中缓存库的演变历程，从早期的简单缓存到如今功能强大的库，例如 Ristretto、Theine 和 Otter。文章比较了不同库的优缺点，包括它们在内存管理（堆内和堆外）、性能（吞吐量和命中率）、以及功能（例如驱逐策略、过期策略、批量加载和刷新）方面的差异。作者详细分析了每个库的设计决策及其影响，并最终推荐了 Otter v2 作为当前最优秀的 Go 缓存库。</p> 
+
+<p><a href="https://tailscale.com/blog/evitability-of-enshittification">The evasive evitability of enshittification</a><br></p> 
+
+<p><a href="https://blog.joshsoftware.com/2025/07/03/securing-graphql-in-golang-using-directives-for-authentication-authorization/">Securing GraphQL in Golang using Directives for Authentication and Authorization</a><br></p> 
+
+<p><a href="https://incoherency.co.uk/blog/stories/the-story-of-max.html">Max的故事：一位真正的程序员</a><br>本文讲述了作者维护时间最长的软件项目Imagebin的故事，以及其编写者Max的编程风格。Imagebin最初由作者的学校朋友Max编写，是一个简单的PHP脚本，具有极高的简洁性。作者近期尝试使用Go语言重写Imagebin，却发现代码量反而增加了一倍多，且复杂度更高。这促使作者反思了Max的编程风格，以及简洁性在软件长期维护中的重要性。作者最终决定保留Max的原始代码，并继续使用PHP运行Imagebin。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/containerize-your-apps-with-ask-gordon/">Using Gordon to Containerize Your Apps and Work with Containers</a><br></p>
+
+<p><a href="https://netflixtechblog.com/driving-content-delivery-efficiency-through-classifying-cache-misses-ffcf08026b6c">Driving Content Delivery Efficiency Through Classifying Cache Misses</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/07/03/kmesh-v1-1-0-officially-released/">Kmesh v1.1.0 Officially Released!</a><br></p>
+
+<p><a href="https://kubernetes.io/blog/2025/07/03/navigating-failures-in-pods-with-devices/">Navigating Failures in Pods With Devices</a><br></p>
+
+<p><a href="https://turso.tech/blog/turso-the-next-evolution-of-sqlite">turso：下一代sqlite</a><br></p>
+
+<p><a href="https://refactoringenglish.com/chapters/release-announcements">如何撰写引人入胜的软件发布公告</a><br>一篇优秀的软件发布公告应该重点突出用户体验的改进，而不是仅仅列举新功能。文章通过对比好的和坏的例子，讲解了如何撰写更有效的发布公告，包括如何选择要介绍的功能、如何用更积极的语言描述改进、如何利用截图和动画演示更清晰地展示新功能，以及如何用图表代替枯燥的数字等。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.seangoedecke.com/continuous-ai">软件工程中的持续 AI</a><br>本文探讨了在软件工程中持续集成 AI 工具的理念，即“持续 AI”。作者认为，与按需使用 AI 工具不同，持续 AI 应像单元测试和类型检查一样，通过自动化持续运行和检查。文章列举了持续 AI 的一些示例，例如自动化的 AI 驱动的 PR 审查、AI 驱动的 issue 或 PR 标签，以及日常或每周的汇总报告。作者认为，持续 AI 可以带来一系列小的、但有价值的改进，例如及早发现错误，并可以自动化一些繁琐的协调工作。最后，作者提到了 GitHub Actions 和 GitHub Models 的结合，这为持续 AI 提供了一个理想的组合。</p>
+
+<p><a href="https://decodingml.substack.com/p/stop-building-ai-agents">停止构建AI Agent</a><br></p>
+
+<p><a href="https://resync-games.com/blog/engineering/llms-as-compiler">使用大型语言模型 (LLM) 作为编译器</a><br>这是一篇关于使用大型语言模型 (LLM) 作为编译器的博客文章。作者认为，未来 LLM 可以作为一种新型编译器，将上下文转化为功能，从而使软件工程更加民主化，并加快功能开发速度。文章探讨了这种方法的优势和挑战，并提出了一个基于 LLM 编译器的软件工程师工作流程。文章还提供了相关的参考资源。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>An extremely fast bundler for the web</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-dev-frame/sponge">go-dev-frame/sponge</a><br>A powerful and easy-to-use Go development framework that enables you to effortlessly build stable, reliable, and high-performance backend services with a &#34;low-code&#34; approach.</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>CLI tool for spawning and running containers according to the OCI specification</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/hypermodeinc/ristretto">hypermodeinc/ristretto</a><br>A high performance memory-bound Go cache</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kueue">kubernetes-sigs/kueue</a><br>Kubernetes-native Job Queueing</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/kagent-dev/kagent">kagent-dev/kagent</a><br>Cloud Native Agentic AI | Discord: https://bit.ly/kagentdiscord</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock is a mocking framework for the Go programming language.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

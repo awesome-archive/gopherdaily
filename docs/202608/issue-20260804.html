@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260804.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260804</span>
+</p>
+<p>每日一谚：Do not store Contexts inside a struct type; pass them through call chains. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/04/wails-v3-go-desktop-framework">三年磨一剑！Go 桌面框架 Wails 发布 v3公测版：多窗口、AST 绑定、透明构建系统一次到位</a><br>Wails 是 Go 生态里最受欢迎的桌面应用开发框架之一，v2 版本自 2022 年发布以来积累了超过 3.5 万 GitHub Star。但 v2 那套 “一个 `Run()` 函数配置一切、Context 满天飞”的运行时模型，在开发者想做多窗口、复杂交互的桌面软件时逐渐显得力不从心。2023 年初，Wails 作者 Lea Anthony 发文《The Road to Wails v3》立下重构目标；2024 年底，团队改用“每日发版”策略加速推进；2026 年 8 月 2 日，Wails v3 终于迎来 Beta 版本，桌面端 API 正式进入稳定阶段。本文将结合官方三篇博客，系统解读 v3 的架构变化、新增能力，并给出一份可以直接跑起来的示例代码。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/inside-go-synctest/">假时钟，真实保证：深入了解Go的synctest</a><br>本文探讨了Go语言中synctest包的工作原理，展示了如何使用假时钟实现真实的时间保证。</p> 
+
+<p><a href="https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/">使用Genkit Go中的Agent技能实现按需专业知识</a><br>基于大型语言模型的代理正被越来越多地用于自动化复杂工作流程，但管理提示上下文的大小成为挑战。</p> 
+
+<p><a href="https://antonz.org/going-backward/">反向遍历</a><br>Go标准库的slices包提供了一个Backward函数，允许以逆序方式遍历切片中的元素。</p> 
+
+<p><a href="https://guywaldman.com/posts/polars-dataframe-contributions">对“大数据”生态的适度贡献</a><br>作者分享了自己在大规模ETL工作负载方面的经验，以及对大数据生态系统的贡献。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/08/03/kubeflow-sdk-evolution-one-million-downloads-and-counting/">Kubeflow SDK的演进- 百万下载量持续增长</a><br>ML工程师在Kubeflow上部署生产的传统历程极其分散，包括本地原型设计、代码重写、容器镜像重建等复杂步骤。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/08/03/cortex-completes-ostif-security-audit/">Cortex完成OSTIF安全审计</a><br>2026年早春，Quarkslab的两名审计员使用白盒代码审查方法审查了Cortex的整体安全态势。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/">Gateway API v1.6：TCPRoute和UDPRoute升级为标准</a><br>Gateway API v1.6版本中，TCPRoute和UDPRoute已升级为标准，为网络路由提供了更稳定的支持。</p>
+
+<p><a href="https://www.docker.com/blog/empty-sandboxes-break-developer-experience/">空沙箱破坏开发者体验</a><br>文章讨论了空沙箱如何影响开发者体验，并介绍了各种开发工具包的重要性。</p>
+
+<p><a href="https://www.docker.com/blog/docker-ai-governance-audit-logs-now-where-your-security-team-already-works/">Docker AI治理：审计日志，现在位于您的安全团队已工作的位置</a><br>Docker的AI治理功能将审计日志放置在安全团队已经工作的位置，提高了安全监控的效率。</p>
+
+<p><a href="https://wangcong.org/2026-06-30-why-i-stopped-arguing-with-people.html">我为何停止与人争论</a><br>作为软件工程师，作者曾经热衷于技术正确性的争论，但现在意识到这种争论并不总是有益的。</p>
+
+<p><a href="https://www.seangoedecke.com/llms-reward-expertise/">大型语言模型奖励专业知识</a><br>在2010年代，技术差距需要依赖同事或互联网解决，而现在每个人都可以通过将任务委托给LLM来处理。</p>
+
+<p><a href="https://blog.cloudflare.com/billable-usage-api/">推出计费使用API：Cloudflare的编程式成本可见性</a><br>Cloudflare推出了计费使用API，为开发者提供了编程式的成本可见性功能。</p>
+
+<p><a href="https://pandoc.org/twenty-years-of-pandoc.html">Pandoc - 二十年发展历程</a><br>2006年8月3日，作者发布了第一个版本的pandoc，这是一个开源的文档转换工具。</p>
+
+<p><a href="https://blog.cloudflare.com/grpc-workers/">Cloudflare Workers和容器现在支持入站TCP连接和gRPC</a><br>Cloudflare更新了其Workers和容器服务，现在支持入站TCP连接和gRPC协议。</p>
+
+<p><a href="https://blog.cloudflare.com/meerkat-introduction/">介绍Meerkat-全球共识实验</a><br>Cloudflare推出了Meerkat项目，这是一个探索全球共识机制的创新实验。</p>
+
+<p><a href="https://engineering.zalando.com/posts/2026/06/client-side-load-balancing.html">每秒百万请求的客户端负载均衡</a><br>文章介绍了如何实现高吞吐量的客户端负载均衡，以处理每秒百万级别的请求。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything">引用Steve Yegge的观点</a><br>作者引用了Steve Yegge关于Gas Town项目的观点，该项目在Opus 4.7版本后出现了问题。</p>
+
+<p><a href="https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/#atom-everything">不要成为肉身代理</a><br>作者建议人们在使用AI生成内容时，不应简单转发输出，而应理解、验证并用自己的语言回应。</p>
+
+<p><a href="https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/#atom-everything">开发工具必须开源</a><br>作者认为开发工具应该开源，以便开发者能够自由地修改和改进它们。</p>
+
+<p><a href="https://www.robinwieruch.de/agentic-coding-bet-on-primitives/">智能体编程：押注于基础原语</a><br>文章探讨了如何使用AI智能体提进行编程，特别是在创建自定义图表方面的应用。</p>
+
+<p><a href="https://blog.cloudflare.com/smaller-faster-safer-models/">更小、更快、更安全：大规模运行Kimi和GLM</a><br>Cloudflare介绍了如何在大规模环境中高效运行Kimi和GLM等大型语言模型。</p>
+
+<p><a href="https://qwen.ai/blog?id=qwen3.8">介绍Qwen 3.8</a><br>文章介绍了Qwen语言模型的最新发展和特性。</p>
+
+<p><a href="https://gruhn.me/blog/2026-08-03/">不要成为肉身代理</a><br>作者警告不要在Slack、GitHub或WhatsApp等场合直接转发AI的响应，而应理解并用自己的话回应。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/esengine/DeepSeek-Reasonix">esengine/DeepSeek-Reasonix</a><br>DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray panel supporting multi-protocol multi-user expire day &amp; traffic &amp; IP limit (Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto)</p>
+
+<p><a href="https://github.com/superplanehq/superplane">superplanehq/superplane</a><br>The open source control plane for agentic engineering.</p>
+
+<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP server</p>
+
+<p><a href="https://github.com/bettercap/bettercap">bettercap/bettercap</a><br>The Swiss Army knife for 802.11, BLE, HID, CAN-bus, IPv4 and IPv6 networks reconnaissance and MITM attacks.</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>AI video translation &amp; dubbing tool for humans and AI Agents, powered by LLMs. Full pipeline: download, transcribe, translate, TTS dub, reformat, cover generation. 100&#43; languages, optimized for YouTub</p>
+
+<p><a href="https://github.com/github/gh-stack">github/gh-stack</a><br>GitHub Stacked PRs</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

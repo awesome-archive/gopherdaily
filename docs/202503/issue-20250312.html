@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250312.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250312</span>
+</p>
+<p>每日一谚：Go pkgs are not hierarchical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/03/12/typescript-native-port-to-go">Anders Hejlsberg 亲自操刀向Go语言移植！TypeScript编译器性能狂飙10 倍！</a><br>就在今天，TypeScript 社区迎来了一颗重磅炸弹！微软技术院士、TypeScript 首席架构师、C#、Delphi 和 Turbo Pascal 的最初设计者——Anders Hejlsberg，亲自在微软开发者博客上宣布，TypeScript 团队正在进行一项激动人心的计划：用 Go 语言重写 TypeScript 编译器和相关工具！</p> 
+
+<p><a href="https://getstream.io/blog/goroutines-go-concurrency-guide">Goroutine：并发编程实用指南</a><br>本文介绍了 Go 语言中的协程和通道，以及如何使用它们来编写高效的并发程序。文章首先回顾了传统程序的顺序执行方式及其局限性，然后解释了并发编程的重要性，并比较了并发和并行。文中包含了多个示例，包括一个简单的并发 Web 服务器，以及避免竞态条件的最佳实践，最后总结了 Go 的并发特性如何帮助开发者编写高效且易于维护的应用程序。</p> 
+
+<p><a href="https://dev.to/vaidehi_adhi_84b623a30da7/is-plain-go-still-a-good-choice-in-2025-38la">2025 年，Go语言仍然是好的选择吗？</a><br>2025 年，软件开发领域持续快速发展。微服务、云原生应用和分布式系统正成为标准。鉴于这些进步，许多开发者都在质疑是否继续使用纯 Go 语言（无框架）仍然是一种可行的方法。本文探讨了 Go 语言开发的现状，权衡了使用纯 Go 语言的优缺点，并研究了现代框架如何在保持 Go 语言固有优势的同时提升开发体验。</p> 
+
+<p><a href="https://devblogs.microsoft.com/typescript/typescript-native-port">速度提升10倍的TypeScript编译器</a><br>我们开始着手将现有的 TypeScript 编译器和工具集移植到原生版本，以实现 10 倍的性能提升。原生实现将大幅改进编辑器启动速度，并将大多数构建时间缩短 10 倍，同时大幅减少内存使用量。我们预计到 2025 年年中，能够预览能够进行命令行类型检查的原生 tsc 实现，并在年底前提供针对项目构建和语言服务的完整功能解决方案。</p> 
+
+<p><a href="https://themsaid.com/building-secure-session-manager-in-go">在Go中构建安全的会话管理器</a><br>本文介绍了 Web 会话，以及为 Go Web 应用程序实现安全的会话存储。文章首先解释了 Web 应用程序如何使用 Cookie 来识别和记住用户，以及 Cookie 的局限性（大小限制和安全风险）。然后，文章介绍了服务器端会话的概念，它将主要数据存储在服务器端，仅将一个小的会话 ID 存储在 Cookie 中。文章接着展示了一个基本的会话管理器实现，并指出了该实现的不足之处，例如会话永不过期、会话 ID 生成较弱、会话 Cookie 不安全以及缺乏对跨站请求伪造 (CSRF) 的保护。最后，文章介绍了一个更安全的会话管理器实现，包括使用更强大的会话 ID 生成方法、安全的会话 Cookie、会话过期机制以及垃圾回收机制，并且通过自定义中间件处理会话管理。</p> 
+
+<p><a href="https://buildx.substack.com/p/lets-build-a-database-from-scratch">让我们从零开始构建一个数据库</a><br>本文介绍了作者如何从零开始构建一个类似于 SQLite 的数据库，并详细解释了嵌入式数据库、架构概述、存储引擎、数据模型和模式管理、SQL 解析和查询解释、查询执行引擎、事务管理和 ACID 兼容性、恢复和日志记录、查询优化器、并发和多线程、API 设计和外部接口、性能调整和基准测试以及安全性和数据完整性等方面的内容。文章还提供了 Go 语言编写的示例代码，并给出了 GitHub 仓库链接。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/scale-22">来自 SCaLE 的故事：SoCal Linux 博览会报道</a><br>Tailscale 参加了本周末在南加州举行的 Linux 博览会 (SCaLE)，一些幸运的团队成员有机会与数百名到场的开源开发者和爱好者交流。SCaLE 自 2002 年以来每年举行一次，是北美最大的社区运营的开源和自由软件会议。Tailscale 作为银牌赞助商，在展览大厅设立了展位，与其他众多团体一起，从 GitHub 和 AWS 等科技巨头到 EFF 和业余无线电应急数据网络 (AREN) 等非营利组织，以及 Debian 和 Rocky Linux 等社区自由软件项目，应有尽有。周末期间，数千名与会者参观了展位，领取礼品并了解这些团体提供的服务。许多人建立了自己的家庭实验室，并且很多人热切地告诉我们 Tailscale 如何简化了他们的远程访问，或者（通常带着些许尴尬）表示他们还没来得及尝试，但打算尝试。我们则分别为他们送上击掌或宽慰。我们甚至还遇到了一些我最喜欢的会议交流案例：第一天有人第一次了解 Tailscale，然后当晚就设置好了，第二天就兴致勃勃地回到我们的展位。作为一名 Tailscale 员工，这是我第二次参加 SCaLE，我能观察到与我们交谈的人群中一些细微的同比变化。更多人比以往任何时候都多地询问有关 Tailscale 和 Kubernetes 集群连接的问题。我们向他们介绍了我们的 Kubernetes 运算符和其他的 k8s 文档，并提到我们下个月将参加 KubeCon EU。同样，许多人希望讨论连接到 AI 工作负载的问题。这些对话通常围绕 GPU 展开，但范围从想要在旅途中访问本地 LLM 模型的业余爱好者到跨多个云提供商的 AI 公司的员工。现在，我们与一小部分但数量可观的人交谈，他们第一次接触 Tailscale 是在工作中。随着客户数量的增加，这可能是不可避免的，但这与几年前相比是一个显著的变化。今年，Tailscale 还占据了演讲环节的一个位置，我们自己的 Alex Kretzschmar 进行了一场名为“从任何地方安全访问自托管服务”的演讲，现场座无虚席。该演讲视频如下所示：除了 SCaLE 的包容性和 DIY 精神，博览会还与其他一些活动联合举办，这些活动有自己的演讲系列和聚会。今年，这些活动包括一些与 Tailscale 非常相关的活动：云原生日、DevOpsDay LA、Planet Nix 等等。参与开源社区是 Tailscale 文化的重要组成部分，它体现了我们对信任、透明度和赋能用户的承诺。因此，最后我们要感谢 SCaLE 及其联合活动的志愿者组织者们，感谢他们提供机会让我们当面聚会，并共同分享我们的热情。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/03/12/expose-the-kubernetes-api-and-access-it-anywhere/">公开Kubernetes API并随时随地访问它</a><br>随时随地或跨任何网络访问集群的 Kubernetes API 是一种强大的手段。如果无需部署或扩展更多复杂的网络（如 VPC 或 VPN），则效果更好。本文介绍了如何使用开源 Kubernetes 运算符 ngrok 来实现此目的，它允许您：
+
+1. 使用单个 CRD 向您的 K8s API 添加入口。
+2. 仍然使用 kubectl 执行管理任务，无需与 kube proxy 和 curl 妥协。
+3. 使用您现有的 RBAC/AuthN/AuthZ。
+4. 添加可观察性和流量管理，无需在集群中部署更多服务。
+
+文章详细介绍了设置基于令牌的 RBAC、安装 ngrok 的 K8s 运算符、应用 AgentEndpoint CRD 以及其他高级功能，例如使用 Traffic Inspector 可观察性查看 K8s API 请求以及使用 Traffic Policy 设置访问控制。</p>
+
+<p><a href="https://seeinglogic.com/posts/visual-readability-patterns">是什么让代码难以阅读：复杂性的视觉模式</a><br>最近，我在工作中审核一个代码库（寻找bug）时，意识到尽管代码质量很高，但我很快就感到精神疲惫，很难长时间工作……我最终弄清楚了是什么让这个代码库如此难以坚持，但这并非我预期的（循环复杂度）。经过一些反思和研究，它最终与可读性更相关——我没有很多关于这方面的数据，但我很好奇是否有一些客观的术语或常用的指标。因此，今天我们将深入探讨这项调查的结果，这意味着我们将讨论代码的视觉模式，特别是那些让我头疼的模式！需要注意的是，这是一个模糊且定义不明确的领域……一些数据点包括流行的指标、学术论文和实践意见（包括我自己的），但在搜索结束时，我们将将其提炼成8个可视化观察到的属性，这些属性可以帮助任何语言的程序员提高代码的可读性。</p>
+
+<p><a href="https://questdb.com/blog/design-by-decision-fatigue">由决策疲劳导致的设计 | QuestDB</a><br>这是一篇关于我们在编写软件时做出的决策如何影响我们对这项工作的享受的文章。文章探讨了决策疲劳对软件设计的影响，并提出了一些应对策略，例如探索多个方案、记录决策过程、适时重构、利用工具自动化决策等，最终目标是打造更好的软件和开发体验。</p>
+
+<p><a href="https://www.kmx.io/blog/why-stopped-everything-and-started-writing-C-again">为什么我放弃了一切，重新开始编写C语言</a><br>作者曾是一名经验丰富的自由开发者，使用 Ruby on Rails 多年。后来学习 Common Lisp，并开发了一些成功的项目，但受到垃圾回收器性能限制的困扰。最终，出于性能和可移植性考虑，作者决定使用 C 语言重新编写他的应用程序，并开发了一个名为 KC3 的新编程语言和工具链，包括一个解释器、编译器、以及一个基于 C89 的图数据库。文章详细介绍了作者的开发历程和 KC3 的主要特性。</p>
+
+<p><a href="https://blog.flipt.io/from-ffi-to-wasm">构建跨平台SDK：从FFI到WebAssembly</a><br>本文描述了我们在为 Flipt 构建可移植的跨语言 SDK 过程中的历程，以及意外的技术挑战如何迫使我们多次重新思考方法。最初相对简单的 FFI 实现演变成对 C 标准库、静态链接的复杂探索，最终引导我们转向 WebAssembly。在此过程中，我们发现即使在 2025 年，真正可移植库的梦想仍然出奇地难以实现——但我们结合 WASM 和原生代码的混合方法可能是跨平台 SDK 的关键。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Mar/11/openai-agents-sdk/#atom-everything">OpenAI Agents SDK</a><br>OpenAI今天发布的另一个重要公告（另见[此处](https://simonwillison.net/2025/Mar/11/responses-vs-chat-completions/)）——一个用于构建“智能体”的Python库（[openai-agents](https://pypi.org/project/openai-agents/)），它取代了之前的[swarm](https://github.com/openai/swarm)研究项目。在这个项目中，“智能体”是一个使用系统提示和特定工具配置LLM的类。一个有趣的概念是**[handoffs](https://openai.github.io/openai-agents-python/handoffs/)**，其中一个智能体可以选择将执行权交给另一个系统提示加工具的智能体，几乎将其视为一个工具本身。该库还包括[guardrails](https://openai.github.io/openai-agents-python/guardrails/)——你可以添加的类，试图过滤用户输入以确保它符合预期标准。在我看来，这有点像试图用更多的AI来[解决AI安全问题](https://simonwillison.net/2022/Sep/17/prompt-injection-more-ai/)。</p>
+
+<p><a href="https://nicholas.carlini.com/writing/2025/privacy-copyright-and-generative-models.html">我的隐私论文（并非所有）对版权和生成式 AI 的说法</a><br>本文作者就其关于机器学习模型记忆训练数据的论文在版权诉讼中的引用发表评论。作者指出，这些论文关注的是隐私泄露问题，而非版权问题，因此其结论可能不适用于版权相关诉讼。虽然论文确实表明模型有时会输出训练数据，但这并不意味着所有模型都会这样做，也不意味着所有输出都是版权侵犯。作者还评论了一些引用其论文的法律文件，并指出这些文件中对论文的解读存在偏差。最后，作者建议读者阅读其合作者撰写的其他论文，这些论文更直接地探讨了机器学习和版权之间的关系。</p>
+
+<p><a href="https://www.nickcraux.com/blog/cursor-tips">我每天都使用 Cursor——这是我如何避免其缺点的方法</a><br>本文介绍了如何充分利用 Cursor AI 编码助手，同时避免其缺点的技巧和窍门。作者分享了使用 .cursorrules 文件、提供代码上下文、以及其他技巧来优化 Cursor 输出的经验，并提出了一些避免盲目接受代码、定期手动重构代码以及学习何时手动解决问题等建议。</p>
+
+<p><a href="https://blog.kuzudb.com/post/kuzu-wasm-rag">基于 Kuzu-Wasm 的全浏览器图 RAG</a><br>本文展示了一个基于图 RAG 的全浏览器聊天机器人，它使用 Kuzu-Wasm 和 WebLLM。该聊天机器人使用你的领英数据回答自然语言问题。文章重点介绍了完全本地知识图驱动 AI 应用的潜力。它介绍了 WebAssembly (Wasm) 如何将浏览器转变为通用计算平台，并详细阐述了该应用的架构、实现（包括数据摄取和 WebLLM 提示）以及观察结果。最后，文章还提供了一个在线演示和 GitHub 仓库链接，并展望了未来基于浏览器图 RAG 技术的发展方向。</p>
+
+<p><a href="https://simonwillison.net/2025/Mar/11/using-llms-for-code">我如何使用大型语言模型 (LLM) 来辅助编写代码</a><br>关于使用大型语言模型 (LLM) 辅助编写代码的在线讨论中，常常出现一些开发者表达失望的评论。他们经常会问自己做错了什么——为什么一些人报告了如此好的结果，而他们自己的实验却收效甚微？
+
+使用 LLM 编写代码既困难又反直觉。弄清楚如何有效地使用它们需要付出很大的努力，而且几乎没有指导来帮助人们找到最佳的应用方法。
+
+作者分享了两年来使用 LLM 编写代码的经验，并总结了一些技巧，例如：设定合理的期望、考虑模型的训练截止日期、充分利用上下文信息、寻求多种方案、提供精确指令、测试代码、将其视为对话过程、使用能够运行代码的工具以及尝试“氛围式编码”等。文章还提供了一个使用 Claude Code 的详细示例，以及如何处理 LLM 无法完成的任务。</p>
+
+<p><a href="https://openai.com/index/new-tools-for-building-agents">OpenAI官方：构建智能体的新工具</a><br></p>
+
+<p><a href="https://vintagedata.org/blog/posts/model-is-the-product">模型即产品</a><br>过去几年，关于下一轮人工智能发展周期的猜测有很多：智能体？推理器？真正的多模态？我认为是时候做出判断了：模型就是产品。当前研究和市场发展的所有因素都指向这一方向。
+
+首先，通用模型的扩展正在停滞。GPT-4.5 的发布就传达了这一信息：能力的增长是线性的，而计算成本呈几何级数增长。即使在过去两年中，训练和基础设施的效率都得到了提高，OpenAI 也无法以遥远的可承受价格部署这个巨大的模型。
+
+其次，有针对性的训练效果比预期的要好得多。强化学习和推理的结合意味着模型突然学会了执行任务。这既不是机器学习，也不是基础模型，而是一种神秘的第三种方法。即使是很小的模型也突然在数学方面变得非常出色。编码模型不再仅仅生成代码，而是可以自己管理整个代码库。Claude 甚至可以在上下文信息很少且没有专门训练的情况下玩宝可梦。
+
+第三，推理成本正在暴跌。DeepSeek 最近的优化意味着，所有可用的 GPU 都可以满足来自前沿模型的每天 10k 个令牌的需求…… 对于整个地球人口来说。这个级别的需求根本不存在。对于模型提供商来说，销售令牌的经济模式不再有效：他们必须向上游价值链移动。
+
+这同样是一个令人不安的方向。所有投资者都押注于应用层。在人工智能发展的下一阶段，应用层很可能成为第一个被自动化和颠覆的层级。本文进一步探讨了未来模型的形态、训练与被训练的关系以及强化学习的定价问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go, the easiest way to write LLM-based programs in Go</p>
+
+<p><a href="https://github.com/go-shiori/shiori">go-shiori/shiori</a><br>Simple bookmark manager built with Go</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/daeuniverse/dae">daeuniverse/dae</a><br>eBPF-based Linux high-performance transparent proxy solution.</p>
+
+<p><a href="https://github.com/gophish/gophish">gophish/gophish</a><br>Open-Source Phishing Toolkit</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/sashabaranov/go-openai">sashabaranov/go-openai</a><br>OpenAI ChatGPT, GPT-3, GPT-4, DALL·E, Whisper API wrapper for Go</p>
+
+<p><a href="https://github.com/google/pprof">google/pprof</a><br>pprof is a tool for visualization and analysis of profiling data</p>
+
+<p><a href="https://github.com/TykTechnologies/tyk">TykTechnologies/tyk</a><br>Tyk Open Source API Gateway written in Go, supporting REST, GraphQL, TCP and gRPC protocols</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

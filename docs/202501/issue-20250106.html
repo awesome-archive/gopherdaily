@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250106.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250106</span>
+</p>
+<p>每日一谚：Keep comments up to date with code changes </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/01/06/the-2024-review-of-go-programming-language">2024年Go语言盘点：排名历史新高，团队新老传承</a><br>本文就Go在2024年的演进发展、Go团队变更以及Go发布版本新特性进行了详细的盘点回顾</p> 
+
+<p><a href="https://hakann.substack.com/p/go-upgrade-checklist">Go版本升级的检查清单</a><br>本文介绍了如何在一次升级中同时升级 150 多个服务，并分享了在 Lyft 进行 Go 版本升级 (从 1.17 升级到 1.19，再从 1.19 升级到 1.20) 的经验。文章列出了升级步骤，包括阅读发布说明、使用 golangci-lint 进行代码检查、构建和测试二进制文件，以及部署和回滚计划等。还讨论了一些升级过程中可能遇到的问题，例如 linter 支持、sort 函数的更改以及 math/rand 包的更新等。</p> 
+
+<p><a href="https://www.polymonster.co.uk/blog/printf-debugging-is-ok">使用printf调试没问题</a><br>作者Alex Dixon讨论了关于使用调试器与printf调试的争议。他认为不应该对使用哪种调试方法进行评判，关键在于找到并修复bug。文章中，作者分享了他使用调试器和printf调试的经验，以及一些自定义调试工具的看法。他指出，在某些情况下，printf调试是必要的，例如调试发布版本或处理移动设备的触摸事件。最后，作者还分享了一个使用临时变量创建条件断点的技巧。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/m6JPAkwUdNivsOGft-lR8w">多线程读写锁产生死锁的故障解决方案</a><br>本文从一次协程泄露问题入手，分析golang读写锁可能产生死锁的场景，包括故障背景、排查思路、读写锁原理以及解决方案，并对golang、pthread-c和C&#43;&#43;中读写锁的使用提出了建议。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://bloggeek.me/webrtc-predictions-2025">我对 2025 年 WebRTC 的预测</a><br>本文探讨了 2025 年 WebRTC 的发展趋势和预测，涵盖了视频用例的兴起以及生成式 AI 的影响。文章回顾了作者对 2024 年 WebRTC 预测的准确性，并对 2025 年 WebRTC 的五个方面进行了预测，包括 libWebRTC 的未来、生成式 AI 的应用、音频和视频编解码器的选择、WebTransport 和 MoQ 的发展以及并购和市场整合。作者还介绍了其即将举办的研讨会和 WebRTC 洞察服务。</p>
+
+<p><a href="https://dev.to/aurelievache/understanding-kubernetes-part-54-statefulset-9mj">理解 Kubernetes：第 54 部分——StatefulSet</a><br>本系列文章以图解的方式讲解 Kubernetes 原理。本篇重点介绍 StatefulSet。</p>
+
+<p><a href="https://www.inferable.ai/blog/posts/postgres-nodejs-longpolling.mdx">基础知识回顾：我们为什么选择长轮询而不是 WebSocket</a><br>本文介绍了我们如何使用 Node.js、TypeScript 和 PostgreSQL 通过 HTTP 长轮询实现实时更新。这是一个关于在没有 WebSocket 的情况下构建可扩展实时系统的实用指南。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.samaltman.com/reflections">OpenAI山姆.奥特曼：反思</a><br>ChatGPT 诞生两周年刚过一个月，我们就已经过渡到能够进行复杂推理的下一代模型范式。新年伊始，人们常常陷入沉思，我也想分享一些我对迄今为止 OpenAI 取得的进展以及一路走来的一些经验教训的个人想法。文章回顾了OpenAI的创立初衷、ChatGPT的发布以及由此引发的巨大反响，也坦诚地谈论了公司发展过程中遇到的挑战、挫折，特别是作者本人被解雇的经历以及从中汲取的教训。文章最后展望了AGI和超智能的未来，表达了对OpenAI未来发展的信心和期待。</p>
+
+<p><a href="https://altayakkus.substack.com/p/you-wouldnt-download-an-ai">你不会下载一个 AI</a><br>本文讨论了从移动应用程序中提取 AI 模型的可能性。作者以微软的 Seeing AI 应用为例，尝试提取其货币检测功能使用的 AI 模型。文章描述了使用 apktool 反编译 APK 文件、发现加密的模型文件、使用 Frida 动态调试并最终成功提取 TensorFlow Lite 模型的过程。最后，作者指出这种方法可以用于任何使用 TensorFlow Lite 的应用程序，并以 Adobe Scan 为例进行了说明。文章还强调了 AI 模型的知识产权问题。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/how-ai-will-change-software-engineering">AI如何改变软件工程</a><br></p>
+
+<p><a href="https://minimaxir.com/2025/01/write-better-code">不断要求大型语言模型“编写更好的代码”能否提升其代码编写能力？</a><br>本文探讨了通过反复提示大型语言模型（LLM）“编写更好的代码”来改进代码生成质量的有效性。作者进行了实验，比较了在随意提示和精心设计的提示下，使用Claude 3.5 Sonnet生成Python代码的性能。结果显示，虽然反复提示能带来改进，但“更好”的定义过于宽泛，精心设计的提示能更有效地引导LLM生成更高效的代码，但同时也可能引入细微的错误。最终，作者得出结论，LLM可以提供有价值的工具和思路，但仍然需要人类工程师的专业知识来判断和修正生成的代码。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Mistral, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/cyclops-ui/cyclops">cyclops-ui/cyclops</a><br>Developer Friendly Kubernetes 👁️</p>
+
+<p><a href="https://github.com/owncast/owncast">owncast/owncast</a><br>Take control over your live stream video by running it yourself. Streaming &#43; chat out of the box.</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/jpillora/chisel">jpillora/chisel</a><br>A fast TCP/UDP tunnel over HTTP</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>An alternative to the immich-CLI command that doesn&#39;t depend on nodejs installation. It tries its best for importing google photos takeout archives.</p>
+
+<p><a href="https://github.com/elastic/beats">elastic/beats</a><br>🐠 Beats - Lightweight shippers for Elasticsearch &amp; Logstash</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

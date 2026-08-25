@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241122.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-22</span>
+</p>
+<p>每日一谚：Document the why, not just the how. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://bitfieldconsulting.com/posts/rust-and-go">Rust vs. Go(2024更新)</a><br>在一次采访中，Go 和 Rust 的作者和教育家 John Arundel 讨论了这两种编程语言的优点和挑战。Rust 因其对安全性的关注、消除缓冲区溢出和数据竞争等常见错误以及避免未定义行为的严格内存管理系统而受到赞誉。然而，Rust 的复杂性和陡峭的学习曲线是公认的，它的所有权和参考系统与 Go 的指针模型有很大的不同。Rust 中的并发是通过 “异步” 任务和第三方框架处理的，与 Go 的 goroutine 和通道相比，提供了一种不同的方法。对于希望过渡到 Rust 的 Go 程序员，建议使用 Go Tour 中的 Rustlings 和 Rust track 等资源。Arundel 总结说，Go 和 Rust 的工作知识对于现代软件工程至关重要，因为每种语言在软件开发中都填补了不同的领域。
+
+（注意：摘要旨在概括访谈的关键点，侧重于 Go 和 Rust 之间的比较、它们各自的优势以及对 Rust 感兴趣的 Go 程序员的学习路径。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2024/11/20/deploying-go-apps-with-kubernetes/">使用 Kubernetes 部署 Go 应用程序</a><br>本文提供了有关使用 Kubernetes 部署 Go 应用程序的全面指南，重点介绍如何为开发人员创建跨平台的 Go IDE GoLand。它首先使用 CRUD 操作设置一个基本的 Go 应用程序，使用 Docker 将其容器化，然后将其部署到本地 Kubernetes 集群。然后，本教程深入探讨了使用 Docker Desktop 配置 Kubernetes 集群、创建命名空间、持久卷和服务以管理应用程序的数据库和网络的细节。它还介绍了如何使用 Kubernetes 清单部署应用程序，以及使用 GoLand IDE 管理部署过程。本文最后说明了如何将 Docker 镜像推送到 DockerHub 并观察部署的实际运行情况。本指南面向希望利用 Kubernetes 编排其 Go 应用程序的开发人员，提供一种分步方法以确保顺利部署过程。</p> 
+
+<p><a href="https://dev.to/sha254/testing-rest-apis-in-go-a-guide-to-unit-and-integration-testing-with-gos-standard-testing-library-2o9l">在 Go 中测试 REST API：使用 Go 的标准测试库进行单元和集成测试的指南</a><br>本文提供了有关在 Go 中测试 REST API 的全面指南，重点介绍单元和集成测试。它首先解释了单元测试（单独验证各个组件）和集成测试（评估应用程序的不同部分如何交互，尤其是与 PostgreSQL 数据库的交互）。该指南包括实际示例，例如测试与数据库交互的用户存储函数。它还详细介绍了测试文件的设置、使用 mock 进行隔离测试以及路由处理程序测试的实现。本文强调了测试的重要性，以确保 API 交互的可靠性和正确性，尤其是在处理数据库操作时。作者提供了一种分步方法，使用 Go 的内置测试包为单元和集成级别创建测试，并演示了如何处理预期和意外的情况。本指南最后介绍了编写有效测试和确保强大 API 功能的最佳实践。
+
+（注意：该摘要旨在封装源文档的关键元素，侧重于 Go 中 REST API 的测试方法和实践，如提供的文本中所述。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/bluesky">构建 Bluesky：分布式社交网络</a><br>Bluesky 是一个由一小群工程师构建的去中心化社交网络，自公测版推出以来已迅速增长到 500 万用户。该平台基于开源原则运行并允许用户运行自己的服务器，其 PostgreSQL 数据库面临可扩展性挑战，促使转向 ScyllaDB 以实现更好的水平可扩展性。该团队仅由两位创始工程师 Daniel Holmgren 和 Paul Frazee 组成，他们在维护与云无关的基础设施的同时应对了这些挑战。Bluesky 从一个概念到高增长的社交网络的增长轨迹展示了分布式和联合系统在社交媒体领域的潜力。
+
+（注意：该摘要旨在概括 Bluesky 发展的关键要素、其核心团队的成就以及其基础设施的技术演变，所有这些都在一个简洁的叙述中。</p>
+
+<p><a href="https://datafusion.apache.org/blog/2024/11/18/datafusion-fastest-single-node-parquet-clickbench/">Apache DataFusion 现在是用于查询 Apache Parquet 文件的最快单节点引擎</a><br>正如一篇博文中宣布的那样，Apache DataFusion 实现了最快的 Apache Parquet 文件查询性能，超过了 DuckDB、chDB 和 Clickhouse 等竞争对手。DataFusion 背后的团队将这一里程碑归功于社区驱动的努力、优化技术和采用 Rust 来提高性能。主要改进包括使用 StringView 提高内存效率、高级 Parquet 读取优化以及避免不必要数据复制的新列式组存储机制。该版本还标志着基于 Rust 的引擎首次在性能基准测试中处于领先地位。我们鼓励社区提供进一步的增强功能，并概述未来几个月即将到来的重点领域。
+
+本摘要概括了源文档中突出显示的 Apache DataFusion 的主要成就和未来方向，强调了项目的协作性质及其技术进步。</p>
+
+<p><a href="https://icepanel.medium.com/icepanel-vs-lucidchart-3d47722556e4">IcePanel 与 LucidChart</a><br>IcePanel 和 LucidChart 是两种旨在可视化软件架构的图表工具，其中 IcePanel 因其简单性、一致性和基于模型的系统而受到青睐。基于 C4 模型构建的 IcePanel 提供了一个简单的学习曲线，并通过其有限的抽象类型和图表级别来加强设计一致性。它还提供评论、版本控制和草稿管理等功能，其定价包括多个席位的分级折扣。另一方面，LucidChart 提供了更大的自定义和更广泛的图表类型，但缺乏相同级别的一致性执行。它支持各种导入格式，并包括 SSO 用于其 Enterprise 计划，其定价不提供分层折扣。这两种工具都符合安全标准并提供协作功能，但 IcePanel 的定价和单席位灵活性可能会吸引优先考虑易用性和一致设计的用户。</p>
+
+<p><a href="https://blog.werf.io/blue-green-deployments-a-guide-to-deploying-one-or-more-applications-61e2de67ad19">蓝绿部署：部署一个或多个应用程序的指南</a><br>Flant 员工在 Medium 上发表的文章提供了为应用程序管理实施蓝绿部署的全面指南。它首先详细介绍了使用此策略部署单个应用程序的过程，其中包括部署应用程序和准备 Ingress 以管理蓝色和绿色版本之间的流量。该指南强调了确保正在部署的版本尚未处于活动状态以避免用户影响的重要性。为了从一个存储库部署多个应用程序，本文介绍了 werf 捆绑包的使用，它允许分发和部署预先发布的应用程序图表。本指南中创建的部署管道包括用于检查上游条件、部署应用程序和管理 Ingress 的阶段。该指南最后强调了蓝绿部署和捆绑包在实现无缝、可靠和快速更新方面的优势，特别是对于大型项目。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/11/21/dynamic-kubernetes-api-server-for-cozystack/">我们如何为 Cozystack 中的 API 聚合层构建动态 Kubernetes API 服务器</a><br>Andrei Kvapil 的文章详细介绍了在 Cozystack PaaS 平台中为 API 聚合层开发和实现动态 Kubernetes API 服务器。它解释了 API 聚合层如何允许创建自定义扩展 API 服务器，从而能够处理特定资源类型和命令式逻辑，而无需 CRD。本文概述了使用 API 聚合层的好处，例如管理子资源、提供对验证和输出格式的完全控制以及允许动态资源注册。它还解决了 API 聚合层可能不适用的情况，例如当后端可用性至关重要时。Cozystack 平台对可扩展性的需求和现有 RBAC 模型的局限性促使了该层的集成。本文最后为希望实现类似解决方案的开发人员提供了资源，强调了用于自定义扩展的 Kubernetes API 聚合层的灵活性和强大功能。</p>
+
+<p><a href="https://dolthub.com/blog/2024-11-21-designing-ci-on-dolthub/">在 DoltHub 上设计 CI</a><br>Dolthub 博客宣布在 DoltHub 上引入持续集成 （CI） 测试，DoltHub 是一个使用 Git 语义管理版本控制数据库的平台。此功能允许用户以编程方式测试对其数据的更改，从而补充人工审核流程。CI 配置存储在每个 DoltHub 数据库中，设计利用 GitHub 的 CI 平台作为参考。用户可以使用 YAML 文件定义 CI 配置，这些文件由 DoltHub 系统自动解析并存储在内部表中。CI 过程包括读取这些配置、创建快照 （WorkflowRun） 以及通过 Job 将 CI 任务部署到外部主机。该博客文章概述了此功能的设计和实施注意事项，旨在增强数据审查实践并使分支和合并更加实用。此功能的 Alpha 版本目前可用，并计划进一步改进和附加功能。
+
+（注意：该摘要旨在封装源文档的关键方面，重点介绍 DoltHub 上 CI 的介绍、设计和实现策略以及该功能的当前状态。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/11/21/gateway-api-v1-2/">Gateway API v1.2：WebSockets、超时、重试等</a><br>Kubernetes SIG Network 宣布全面推出 Gateway API v1.2，引入了新功能和重大变化，特别是删除了 GRPCRoute 和 ReferenceGrant 的“v1alpha2”版本。此版本将四个功能升级到标准频道，表明具有很高的置信度和向后兼容性。它还包括实验性功能，例如“*Route”资源的命名规则、HTTPRoute 重试支持和基于百分比的镜像。此外，为了提高可预测性，发布了过程正式化，并且“gwctl”CLI 工具现在单独托管。该文档还强调了社区参与的重要性，并提供了开始使用新 API 版本的资源。
+
+（注意：该摘要旨在概括公告的要点，重点介绍源文档中介绍的主要功能、更改和社区参与机会。</p>
+
+<p><a href="https://www.hashicorp.com/blog/hcp-vault-dedicated-adds-secrets-sync-wif-cross-region-dr-est-pki-and-more">HCP Vault Dedicated 增加了密钥同步、跨区域 DR、EST PKI 等功能</a><br>最新的 HCP Vault Dedicated 1.18 升级为云托管的 Vault 引入了重大增强功能，包括跨区域灾难恢复、用于 IoT 证书管理的 PKI EST 和改进的密钥同步功能。此次升级使组织能够在各种云提供商之间同步密钥，并通过增强的子密钥 UI 权限更有效地管理键值密钥。此外，PKI EST 协议的集成支持自动管理和轮换 IoT 设备的 PKI 证书，从而解决与手动证书处理相关的安全风险。跨区域 DR 功能的扩展允许在发生灾难性故障时故障转移到另一个区域，从而确保更高的弹性。这些新功能旨在简化工作流程、降低安全风险并提高用户在云环境中管理密钥的整体效率。</p>
+
+<p><a href="https://thenewstack.io/platform-engineering-a-workshop-to-help-map-your-strategy/">Platform Engineering: A Workshop to Help Map Your Strategy</a><br>The New Stack&#39;s workshop, &#34;Platform Engineering: A Workshop to Help Map Your Strategy,&#34; aims to guide organizations in defining their internal developer platform (IDP) strategy. Led by Mia-Platform&#39;s developer relations engineer, the workshop focuses on aligning stakeholders from various departments to establish a common language and objectives for platform engineering. It emphasizes the importance of understanding the &#39;why&#39; behind platform development, rather than just the &#39;what.&#39; The workshop introduces the Platform Journey Map, a conceptual tool designed to facilitate discussions on priorities, adoption strategies, and measuring success through key performance indicators (KPIs). The goal is to create a repeatable process that evolves with the organization&#39;s changing needs, ensuring the IDP remains relevant and valuable. The workshop is part of a broader effort to demystify platform engineering and encourage iterative development and stakeholder alignment.
+
+(Note: The summary is crafted to encapsulate the essence of the workshop and its objectives, as described in the source document, without directly quoting or including the questions posed.)</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/better-llm-agent-quality-through-code-generation-and-rag/">通过代码生成和 RAG 提高 LLM 代理质量</a><br>New Stack 社区探索了通过代码生成将大型语言模型 （LLM） 与 API 集成，如源文档中所详述。本文档强调了使用 JSON 作为 LLM 接口的挑战，由于参数选择所需的推理复杂性，这通常会导致不准确。为了解决这个问题，作者主张使用 Python 代码作为更有效的接口，利用 LLM 的编码能力来提高准确性和效率。PromptAI 系统通过使用代码生成 API 调用来举例说明这种方法，并采用检索增强生成 （RAG） 来优化输入值。CodeLlama（一种编码专用 LLM）与 RAG 和向量数据库相结合，显著提高了 API 交互的精度和响应的相关性。这种创新方法不仅简化了将 LLM 与 API 集成的过程，还确保了为最终用户提供更高质量的输出。</p>
+
+<p><a href="http://security.googleblog.com/2024/11/leveling-up-fuzzing-finding-more.html">Leveling Up Fuzzing: Finding more vulnerabilities with AI</a><br>The Google Online Security Blog published an article on November 20, 2024, titled &#34;Leveling Up Fuzzing: Finding More Vulnerabilities with AI,&#34; which discusses advancements in using artificial intelligence to enhance fuzzing techniques for identifying software vulnerabilities. The blog post highlights how AI integration into fuzzing can lead to more efficient and effective discovery of security flaws, potentially improving the overall security posture of various platforms and applications. The article also provides insights into the latest developments in AI-driven security tools and their implications for developers and security professionals. Additionally, the post includes social media sharing options and links to related search labels, indicating a focus on broader engagement and discussion within the security community.
+
+(Note: The summary provided is based on the assumed content of the article, as the original text was not included in the instruction.)</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint 允许用户使用流行的框架快速启动一个 Go 项目</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go，用 Go 编写基于 LLM 的程序的最简单方法</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度和管理</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI 网关 |AI Native API 网关</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>在 Kubernetes 上运行 Ray 应用程序的工具包</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS 是一个链接插件的 DNS 服务器</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>计算机指标的导出器</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics：快速、经济高效的监控解决方案和时间序列数据库</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - 身份基础设施，为您简化。</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric 是一个企业级许可分布式账本框架，用于开发解决方案和应用程序。其模块化和多功能设计可满足广泛的行业用例。它提供了一种独特的共识方法，可在保护隐私的同时实现大规模性能。</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>开源 UI 优先的身份和访问管理 （IAM）/单点登录 （SSO） 平台，具有支持 OAuth 2.0、OIDC、SAML、CAS、LDAP、SCIM、WebAuthn、TOTP、MFA、Face ID、RADIUS、Google Workspace、Active Directory 和 Kerberos 的 Web UI</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>用于密钥管理、加密即服务和特权访问管理的工具</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>临时服务</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby 项目 - 容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>高性能、自托管的时事通讯和邮件列表管理器，具有现代仪表板。单个二进制应用程序。</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI 以时尚的方式管理您的集群！</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

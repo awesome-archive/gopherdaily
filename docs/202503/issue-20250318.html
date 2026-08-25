@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250318.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250318</span>
+</p>
+<p>每日一谚：Prefer &#39;chan struct{}&#39; over &#39;chan bool&#39; for signaling between goroutines. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/CkHqgZG69Xtnj4Aedg1BPA">Go语言的2025开局：AI浪潮助推，生态持续繁荣</a><br>进入2025 年，Go 语言展现出蓬勃的生命力。一系列引人注目的事件表明，这门由Google开源的编程语言不仅在云原生领域持续深耕，更在人工智能的浪潮中找到了新的增长点，其日益壮大的社区和不断完善的生态系统正共同驱动着Go语言迈向新的高度</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/ErrorHandlingNotSolvedProblem">我不认为语言设计已经很好地解决了错误处理的问题</a><br>在编程语言设计中，错误处理仍然是一个未解决的问题，与我们对控制结构如循环和条件语句的共识不同。目前，编程语言在错误处理方面存在多种方法，包括“将错误视为异常”（如Python）、“将错误视为值”（如Go和C）以及“错误作为结果，需手动检查，若出错则崩溃”（如Rust）。即使在Rust中，也有多种处理错误的习惯用法，有些代码会显式检查Result类型，而有些则使用?运算符，接受程序可能会崩溃的结果。</p> 
+
+<p><a href="https://medium.com/@utsavmadaan823/how-we-slashed-api-response-times-by-50-with-go-compiler-optimizations-3c2592c2d241">我们如何通过 Go 编译器优化将 API 响应时间缩短 50%</a><br>我仍然记得那天，我们的 CTO 带着那种表情走进了我们的团队会议。我们的 API 响应时间正在下降，客户非常不满意。我当时没有意识到的是，我们将通过深入研究 Go 编译器优化来解决这个问题，而不是通过增加更多硬件或从头重写所有内容。</p> 
+
+<p><a href="https://itnext.io/why-victorialogs-is-a-better-alternative-to-grafana-loki-7e941567c4d5">为什么 VictoriaLogs 比 Grafana Loki 更好？</a><br>Grafana Loki 被宣传为 Elasticsearch 和 Opensearch 的更好替代品，但它也有其自身的缺点。让我们分析这些缺点，并研究一个更好的开源日志系统——VictoriaLogs。VictoriaLogs 在某些情况下比 Elasticsearch 更具成本效益，因为它使用更少的 RAM 和存储空间，但在其他情况下可能难以配置、速度非常慢且成本高昂。VictoriaLogs 解决了 Loki 的问题，同时保留了它的优势。</p> 
+
+<p><a href="https://dev.to/leapcell/sqlc-type-safe-querying-in-go-4a47">sqlc：Go语言中的类型安全查询</a><br>Go语言的`database/sql`标准库提供的接口是比较底层的，需要我们编写大量的重复代码，这些样板代码不仅繁琐而且容易出错。sqlc可以根据我们编写的SQL语句生成类型安全且符合Go语言习惯的接口代码，我们只需要调用这些方法即可。文章详细介绍了sqlc的安装、SQL语句编写、Go代码生成、使用方法和配置选项等内容。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-03-18-dolt-for-video-game-development/">Dolt用于视频游戏开发</a><br>本文探讨了Dolt（世界上第一个版本控制的SQL数据库）在视频游戏开发中的应用。随着游戏复杂性的增加，游戏配置数据量也急剧增长，传统的版本控制系统（如Git）在管理大型配置文件方面面临挑战。Dolt 提供了一种解决方案，它结合了现代SQL数据库的数据完整性和查询能力以及版本控制系统的软件开发生命周期管理能力，从而有效地管理大型游戏配置数据。</p>
+
+<p><a href="https://blog.livekit.io/say-hello-to-improved-cloud-analytics/">改进的云分析问候</a><br>LiveKit最初推出LiveKit Cloud时，也推出了一款实时分析和遥测产品，让您深入了解用户如何与LiveKit应用程序互动。在过去的两年中，LiveKit Cloud发展迅速，为从AI助手到机器人打桩机再到911紧急呼叫等各种实时应用程序提供支持。去年的并发事件增加了20倍，随着我们网络上的流量增加，我们内部的数据处理管道开始出现问题。这导致页面加载时间变慢，指标报告延迟或不准确。今天，我们推出了LiveKit Cloud分析的重大重新设计（由完整的基础设施重建支持），在性能和可用性方面进行了重大改进。这个新版本旨在处理大型应用程序，我们将在未来的文章中详细介绍我们在构建新的分析堆栈时面临的工程挑战。以下是Analytics v2中的所有新增功能的快速概述：更快的加载时间；更好的导航和布局；新的见解；更多的控制。</p>
+
+<p><a href="https://engineering.salesforce.com/building-agentforce-for-flow-how-ai-cut-execution-time-by-99/">构建面向 Flow 的 Agentforce：AI 如何将执行时间缩短 99%</a><br>了解 Salesforce 如何优化元数据解释和 AI 准确性，将执行时间从 10 分钟缩短到仅 10 秒。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/03/18/scaling-platform-building-balancing-what-is-unique-to-your-org-and-common-across-teams/">扩展平台构建：平衡组织的独特性和团队间的共性</a><br>在当今快节奏的技术环境中，平台工程已成为组织寻求简化开发、提高运营效率和保持竞争优势的战略重点。构建一个满足组织独特需求的内部平台对于加快开发周期和利用云原生技术至关重要。但如何设计一个值得构建的平台呢？本文探讨了仅依赖云提供商构建平台的挑战、平台工程的核心原则、如何将平台视为产品，以及最简可行平台 (TVP) 如何帮助平衡创新与可扩展性。你将学习如何创建一个能够加速开发、与你的业务目标保持一致并实现高效、可扩展运营的平台。</p>
+
+<p><a href="https://blog.xiangpeng.systems/posts/parquet-pushdown">Parquet 中高效的过滤器下推</a><br>如何在 Parquet 读取器中实现高效的过滤器下推，以及为什么在实践中它具有挑战性。</p>
+
+<p><a href="https://victoriametrics.com/blog/alerting-recording-rules-alertmanager">Prometheus告警101：规则、记录规则和Alertmanager</a><br>记录规则可以将复杂的PromQL查询转换为预计算的指标，从而消除重复计算的开销。当这些规则按组组织时，这些告警和记录规则可以精确地安排在特定时间（例如01:30、02:30）运行，甚至可以并行执行以实现最大效率。本文介绍了Prometheus告警的规则、记录规则和Alertmanager，包括告警规则、记录规则、模板、分组、Alertmanager的路由、分组和去重、抑制、静默以及发送通知等内容。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://nicholas.carlini.com/writing/2025/machines-of-ruthless-efficiency.html">冷酷效率的机器</a><br>作者表达了对未来人工智能/机器学习/语言模型的担忧，认为其冷酷的效率可能导致多种危害，例如大规模网络攻击、大规模错误、上瘾性内容的生成、大规模失业以及权力和财富的集中。文章还探讨了所谓的“AI末日”风险，认为虽然这种风险的可能性较小，但它与其他短期风险处于同一频谱上，并且只有在解决短期风险之后才能有效地应对。文章最后呼吁人们关注AI的潜在危害，并就如何减轻这些风险展开讨论。</p>
+
+<p><a href="https://webrtchacks.com/the-unofficial-guide-to-openai-realtime-webrtc-api">OpenAI 实时 WebRTC API 非官方指南 - webrtcHacks</a><br>本文介绍了如何使用 OpenAI 实时 API 与 WebRTC，包括 WebRTC 提示、整体流程、数据通道消息传递和函数。</p>
+
+<p><a href="https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-llm-agents">大型语言模型代理的可视化指南</a><br>探索大型语言模型 (LLM) 代理的独特之处，包括其主要组成部分、单代理和多代理框架。文章包含 60 多个自定义可视化图表，深入浅出地讲解了 LLM 代理、主要组件以及多代理框架。</p>
+
+<p><a href="https://blog.sshh.io/p/how-cursor-ai-ide-works">Cursor（AI IDE）的工作原理</a><br>了解Cursor、Windsurf和Copilot等AI编码工具的内部工作原理可以大大提高你的效率，使这些工具能够更一致地工作——尤其是在大型、复杂的代码库中。当人们难以有效地使用AI IDE时，他们通常将其视为传统工具，忽略了了解其固有限制以及如何最好地克服这些限制的重要性。一旦你掌握了它们的内部工作原理和约束，它就会成为一个“作弊代码”，极大地改善你的工作流程。在撰写本文时，Cursor编写了我大约70%的代码。
+这篇文章深入探讨了这些IDE的实际工作原理、Cursor系统提示以及如何优化代码编写和Cursor规则。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB is an open-source, fast, reactive, in-memory database optimized for modern hardware.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/ent/ent">ent/ent</a><br>An entity framework for Go</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/metoro-io/mcp-golang">metoro-io/mcp-golang</a><br>Write Model Context Protocol servers in few lines of go code. Docs at https://mcpgolang.com</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/expr-lang/expr">expr-lang/expr</a><br>Expression language and expression evaluation for Go</p>
+
+<p><a href="https://github.com/vektra/mockery">vektra/mockery</a><br>A mock code autogenerator for Go</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript - https://k6.io</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/kubernetes-sigs/metrics-server">kubernetes-sigs/metrics-server</a><br>Scalable and efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers (AWS Route53, Google CloudDNS and others) for Kubernetes Ingresses and Services</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/openai/openai-go">openai/openai-go</a><br>The official Go library for the OpenAI API</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

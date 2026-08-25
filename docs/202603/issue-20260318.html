@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260318.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260318</span>
+</p>
+<p>每日一谚：Go&#39;s parallelism features are an implementation detail, not a language feature.  — Russ Cox </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/18/building-industrial-grade-agent-skills">手工作坊的终结：为什么你必须把 Agent Skills 开发，变成严谨的软件工程?</a><br>你精心雕琢的 Prompt，就像是一本厚厚的员工手册。你把它塞给一个记忆力只有 7 秒、充满迷之自信、速度极快的“初级天才开发”。结果就是， 他偶尔能超常发挥，但大多数时候，他会把事情搞砸，而且你根本不知道他为什么搞砸。 靠“玄学 Prompt”来驱动 AI 的时代，已经一去不复返了。我们需要将 AI 技能（Agent Skill）的开发，视为一项严肃的软件工程 </p> 
+
+<p><a href="https://tonybai.com/2026/03/17/ai-engineer-survival-2026-post-hype">泡沫消退后的冷思考：2026年，AI 工程师的真实生存图景</a><br>当狂热的泡沫开始消退，我们有必要重新审视：在 2026 年，AI 工程师的真实生存环境究竟如何？未来的技术护城河又究竟在哪里？</p> 
+
+<p><a href="https://www.scylladb.com/2025/12/16/consuming-cdc-java-go-and-rust">使用 Java、Go… 和 Rust 来使用 CDC</a><br></p> 
+
+<p><a href="https://mp.weixin.qq.com/s/QPHIQohoN2CumrLlDTWWDw">【构建工业级Agent Skills】01 拆解 Skill Spec：如何理解并按需加载一个技能？</a><br>本讲我们要先做一回“解剖学家”。我们要把Skill Spec（技能规范）——放在手术台上，逐层拆解。当然考虑到Anthropic发布了agentskills.io这个开源的公共Agent Skill标准，这次剖析也是完全适用 于Skill标准的。 我们要搞清楚：从物理结构上看，一个标准的 Skill 长什么样？更重要的是，从运行机制上看，Claude Code究竟是如何在成千上万个词汇中，“精准理解”你的意图，并“按需加载”这个技能的？ 准备好了吗？让我们开始这场打破黑盒的探秘之旅。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/03/17/when-kubernetes-restarts-your-pod-and-when-it-doesnt/">Kubernetes重启Pod的机制与误区</a><br>本文深入探讨了Kubernetes中“Pod重启”的真正含义，指出工程师常将四种不同的状态混为一谈，导致运维决策失误。核心在于区分Pod UID是否改变：UID不变是进程级重启，UID改变则是Pod重建。文章揭示了Kubelet仅监控Pod Spec变化这一关键点，解释了为何ConfigMap或Secret等配置更新后应用不自动重启。决策矩阵清晰列出了不同变更（如镜像、环境变量、挂载的配置或资源调整）如何影响容器重启和Pod重建，强调了只有Pod Spec变更才会触发Kubelet操作，而应用层配置更新通常需要手动干预或应用自身逻辑来检测。</p>
+
+<p><a href="https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/">Meta 推出排名工程师智能体加速广告模型创新</a><br>Meta 开发了排名工程师智能体（REA），这是一个自主AI系统，旨在自动化广告排名模型端到端的机器学习（ML）实验生命周期。REA能够自主生成假设、启动训练、调试故障并迭代结果，从而显著减少了对人工干预的需求。REA通过休眠和唤醒机制管理耗时数天至数周的异步工作流程，并在关键决策点保留人工监督。在首次生产部署中，REA驱动的迭代使六个模型的平均准确率提高了两倍，并将三名工程师的工程产出提升了五倍，极大地加速了Meta广告排名的创新和优化效率。</p>
+
+<p><a href="https://tailscale.com/blog/border0-joins-tailscale">Border0 加入 Tailscale</a><br>Border0 团队已正式加入 Tailscale。Border0 专注于基于 Tailscale 构建“PAM 入门包”（PAM starter pack），该方案旨在提供严格的访问控制、良好的可见性以及可靠的审计跟踪能力。此次整合意味着 Tailscale 将吸收 Border0 在精细化访问控制和可信审计方面的能力和技术，进一步增强其安全和管理特性。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/03/17/announcing-copilot-leadership-update/">微软宣布 Copilot 组织架构调整</a><br>微软 CEO 萨提亚·纳德拉宣布对 Copilot 组织和超级智能（superintelligence）工作进行两项组织架构调整。为应对 AI 体验向执行多步骤任务的演进，微软正将商业和消费者端的 Copilot 工作整合为一个统一的整体，涵盖四个核心支柱：Copilot 体验、Copilot 平台、Microsoft 365 应用和 AI 模型。此举旨在将分散的产品组合转变为更集成、更强大的系统。Jacob Andreou 将出任 Copilot 执行副总裁，负责领导跨消费者和商业的 Copilot 体验。同时，微软强调在 AI 模型层面的进展至关重要，将继续加大在超级智能使命上的投入。</p>
+
+<p><a href="https://www.cloudyali.io/blogs/cloud-20th-birthday-s3-pi-day-2006">S3发布二十周年：云时代的经济学与起源</a><br>本文纪念了2006年3月14日（π日）亚马逊S3的低调发布，标志着云计算产业的诞生。S3最初被定位为“互联网的malloc”，以极其简单的定价模式（$0.15/GB/月）开启了云服务。文章指出，云的故事核心并非技术，而是经济学：它讲述了如何从简单的定价演变为复杂的生态，一个内部项目如何成长为百亿级业务，以及最初为网页服务的底层基础设施如何支撑起如今的AI革命。云计算如今已满二十岁，正承担着AI时代的重任。</p>
+
+<p><a href="https://cloudsmith.com/blog/kubernetes-1-36-what-you-need-to-know">Kubernetes 1.30 重大更新速览</a><br>Kubernetes 1.30 版本带来了多项重要更新和变化。关键亮点包括：API 移除与弃用，例如 `v1.PriorityClass` 的 Beta 版 API 被移除，要求用户迁移至稳定版 API；存储方面，`CSIInlineVolume` 达到 GA，增强了存储的灵活性和可靠性；网络方面，对 IPv6 仅有模式的支持得到加强。此外，本次发布还包含若干安全增强和性能优化。用户需要特别关注 API 变更，确保平稳升级，并利用新引入的稳定功能来提升集群的管理和性能。</p>
+
+<p><a href="https://haskellforall.com/2026/03/a-sufficiently-detailed-spec-is-code">a sufficiently detailed spec is code</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/17/ken-jin/#atom-everything">CPython 3.15 JIT 性能目标提前达成</a><br>Python 3.15 的 JIT（Just-In-Time 编译器）取得了显著的性能进展，比原计划提前实现了针对不同架构的性能目标。在 macOS AArch64 平台上，JIT 比尾调用解释器快了约 11-12%；而在 x86_64 Linux 平台上，JIT 比标准解释器快了约 5-6%。这些成果标志着 CPython JIT 项目的开发进展顺利，性能提升效果显著。</p>
+
+<p><a href="https://simonwillison.net/2026/Mar/17/mini-and-nano/#atom-everything">OpenAI发布GPT-5.4新模型：Nano版成本极低</a><br>OpenAI发布了GPT-5.4 mini和GPT-5.4 nano两个新模型，它们是两周前发布的GPT-5.4的轻量级版本。据悉，GPT-5.4 nano在最大推理努力下性能优于此前的GPT-5 mini，而mini版速度提升了两倍。定价方面，nano模型极具竞争力，输入/输出价格分别为0.20美元和1.25美元/百万Token，比Gemini 3.1 Flash-Lite更便宜。文章作者测试了nano模型对一张博物馆照片的描述，花费不到一分钱，并估算描述其76,000张照片集总成本仅需约52.44美元，突显了其在处理大规模视觉任务中的成本效益。</p>
+
+<p><a href="https://simonwillison.net/2026/Mar/17/tim-schilling/#atom-everything">关于LLM在开源贡献中的作用与伦理</a><br>文章引用了Tim Schilling的观点，强调了不理解代码、解决方案或反馈时过度依赖大语言模型（LLM）对Django等开源社区的负面影响。作者指出，当贡献者使用LLM作为主要工具而非辅助工具时，他们提供的只是一个“人类的门面”，这使得原本基于人际交流的开源协作变得困难且令人沮丧。开源贡献是一种社区行为，移除贡献者的人性化参与会损害整个社区的协作体验。因此，LLM应作为补充工具，而非替代人类思考和理解的载体。</p>
+
+<p><a href="https://simonwillison.net/guides/agentic-engineering-patterns/subagents/#atom-everything">利用子代理应对LLM上下文限制</a><br>大型语言模型（LLM）的能力提升并未伴随其上下文窗口的显著扩大，这限制了它们处理大型任务的能力。子代理（Subagents）提供了一种有效的解决方案，允许主代理将复杂任务分解，并分派给具有独立、新鲜上下文窗口的“分身”去执行特定目标。这种机制避免了在顶级代理的有限工作记忆中堆积过多信息。文章以Claude Code为例，展示了它如何通过启动一个“探索”子代理来分析代码库的结构和查找相关信息，从而高效地处理新的编程任务，确保在不超出上下文限制的情况下获得高质量结果。</p>
+
+<p><a href="https://cobusgreyling.substack.com/p/the-rise-of-ai-harness-engineering">AI harness工程的兴起</a><br>文章探讨了构建AI智能体（Agent）的演进历程，从早期的SDK（软件开发工具包）、框架（Frameworks）到脚手架（Scaffolding）三种架构模式。作者指出，在2026年，一种新的、超越前三者的第四种模式已经出现，即“驾驭工程”（Harness Engineering）。这一概念正被OpenAI和Anthropic等行业巨头正式采纳和使用，Martin Fowler也撰文讨论，并且已有相关的学术论文对其进行了规范化定义。这标志着AI系统构建进入了一个新的、更高级的结构化阶段。</p>
+
+<p><a href="https://peterlavigne.com/writing/verifying-ai-generated-code">验证AI生成代码的实践与新思维</a><br>作者通过实验探索在生产环境中使用未经人工审查的AI生成代码的可能性，从而将思维从“必须审查”转变为“必须验证”。验证（Verification）被定义为通过代码审查、机器可执行约束或两者结合来确认代码的正确性。实验中，作者使用属性测试、变异测试、零副作用检查以及Python特有的类型检查和代码规范检查，来约束AI生成的解决方案（以简化版FizzBuzz为例）。作者认为，如果这些自动化验证措施到位，可以无需逐行阅读代码就信任其结果，应将AI输出视为已编译代码对待，可维护性/可读性在此时可能不再是首要考量。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>✨ Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/psviderski/uncloud">psviderski/uncloud</a><br>A lightweight tool for deploying and managing containerised applications across a network of Docker hosts. Bridging the gap between Docker and Kubernetes ✨</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

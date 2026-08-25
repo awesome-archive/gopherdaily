@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250320.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250320</span>
+</p>
+<p>每日一谚：return early, return often. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.infoq.com/news/2025/03/uber-performance-golang/">Uber通过Go的PGO优化提升性能</a><br>概要指导优化 (PGO) 已成为一种强大的技术，它通过使用运行时数据来告知编译器决策，从而提高应用程序性能。在最近的实现中，优步与谷歌合作，将 PGO 集成到 Golang 中，从而在其服务集群中实现了显著的性能提升和资源节约。PGO 利用实际运行时行为做出比传统静态分析更明智的编译器决策。通过在代表性运行期间收集执行概要，PGO 识别热点代码路径并通过以下技术相应地对其进行优化：基于调用频率的智能函数内联；改进的代码和数据布局以获得更好的局部性；增强的寄存器分配和指令调度；基本块重新排序以优化执行路径。优步的 PGO 实施包括几个关键阶段：概要分析、分析和重新编译。最初，在应用程序的代表性执行期间收集运行时概要分析数据。然后分析这些数据以识别优化机会，这些机会随后在重新编译过程中应用以生成优化的二进制文件。虽然像 C&#43;&#43;、Rust、Java 和 Swift 这样的语言长期以来一直支持 PGO，但它集成到 Go 中的时间相对较近。优步与谷歌合作，在 Go 中引入了 PGO 支持，其中 PGO 驱动的内联在 1.20 版中引入，虚拟化优化在 1.21 版中添加。为了将其 PGO 无缝地集成到其持续优化框架中，优步建立了一个系统化流程：每日概要收集；特定服务的注册；持续集成 (CI) 测试；部署；性能监控。在 PGO 实施过程中遇到的一个重大挑战是构建时间的增加，一些服务的延迟高达八倍。这主要是由于编译期间解析概要分析数据需要大量时间。为了解决这个问题，优步开发了一个概要预处理工具，该工具提取运行时概要分析数据，构建调用图，并缓存这些信息以在编译期间使用。此预处理大大缩短了构建时间，使 PGO 集成对开发人员来说更加实用。PGO 的性能影响是使用合成基准测试和现实世界服务评估来评估的。在广泛使用的 Go 第三方 JSON 库（称为 go-json）的情况下，基准测试表明：Go 的 go-json 库的指令翻译后备缓冲区 (iTLB) 未命中减少了 30%；通过优化的内联提高了 4% 的性能；优步顶级服务所需的 CPU 内核减少了 24,000 个，从而节省了大量成本。其他几家科技公司也采用了概要指导优化 (PGO) 来提高其 Go 应用程序的性能。Cloudflare 已将其 PGO 集成到其基于 Go 的服务中，从生产环境中收集 CPU 概要来指导编译器优化，从而降低了 CPU 使用率并提高了性能。同样，Datadog 也使用 PGO 来优化 Go 应用程序，通过利用概要分析数据来告知 Go 编译器的优化决策，在生产环境中最多节省 14% 的 CPU。Grafana Labs 将 PGO 与 Grafana Pyroscope（一个开源持续概要分析平台）结合使用来优化 Go 应用程序。这种集成提供了实时性能分析，使开发人员能够识别低效率并优化代码执行以实现最佳性能。总而言之，优步将其概要指导优化集成到其 Go 编程环境中，已经产生了可观的性能改进。通过系统地收集概要分析数据，预处理以减少构建时间，并应用有针对性的编译器优化，优步提高了其服务的效率。这项倡议不仅展示了 PGO 在优化资源利用方面的潜力，而且还突出了软件性能工程中协作和创新的好处。</p> 
+
+<p><a href="https://tailscale.com/blog/multicloud-gpu-shortage">利用多云设置应对GPU短缺</a><br>近年来，随着人工智能技术的蓬勃发展，对多云的需求也发生了变化。处于该技术前沿的开发人员和团队仍然需要考虑如何获取所需的计算资源，以及如何在获得这些资源后将其与现有基础设施连接起来。虽然与过去两年GPU供应紧张的时期相比，现在云基础设施买家的处境有所好转，但全球GPU需求仍然超过供应，成本问题也随之出现。Tailscale 帮助简化了多云或混合云解决方案，让团队能够专注于核心产品，而不是网络难题。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-03-19-a-pull-first-ollama-docker-image/">先拉取的 Ollama Docker 镜像</a><br>这份快速参考指南介绍了如何创建一个自定义的 Ollama 服务器 Docker 镜像，该镜像在容器启动时会拉取指定的 LLM。它包含 Dockerfile 和 entrypoint 脚本，确保模型在健康检查成功时可用。</p> 
+
+<p><a href="https://thephd.dev/c2y-the-defer-technical-specification-its-time-go-go-go">延迟技术规范：时机已到</a><br>本文讨论了 C 编程语言的 defer 技术规范的最终状态，并解释了 defer 的用途、实现方式以及与其他语言中类似功能的差异。作者还探讨了 defer 的作用以及它如何解决 C 编程中的一些问题，并呼吁编译器厂商尽快实施该规范。</p> 
+
+<p><a href="https://nicolashery.com/decoding-json-sum-types-in-go">在 Go 中解码 JSON 求和类型而不引发恐慌</a><br>Go 编程语言本身并不支持求和类型，但是我们将了解如何模拟它们，如何将它们编码和解码为 JSON，以及在某些情况下它们如何帮助避免运行时恐慌异常。</p> 
+
+<p><a href="https://destel.dev/blog/timeout-middleware-in-go">Go语言中的超时中间件：理论简单，实践复杂</a><br>本文探讨了在Go语言的HTTP服务器中实现超时中间件的挑战。作者指出，简单的超时中间件在处理不同端点需要不同超时时间时会失效，并提出了一种更健壮的、可链式调用的超时中间件解决方案，该方案利用Go 1.21中新引入的context.WithoutCancel函数，允许内部中间件缩短或延长外部中间件设置的超时时间。</p> 
+
+<p><a href="https://eblog.fly.dev/startingsystems2.html">系统编程入门：第二部分：你的程序与外部世界：系统调用和文件</a><br>本文是关于系统编程基础的四篇文章中的第二篇。在第一篇文章中，我们编写了一系列程序作为工具集来研究二进制文件，最后概述了在 Linux 系统上定义可执行二进制文件的 ELF（可执行和可链接格式）文件格式。在本文中，我们将开始深入探讨程序如何与外部世界交互。我们将解答以下问题：如何读取和写入文件？什么是文件描述符？我的程序是如何获得那些命令行参数的？什么是进程环境？我们将编写大量程序。</p> 
+
+<p><a href="https://blog.cubed.run/the-cards-of-concurrency-in-go-0d7582cecb79">大多数人忽略了 Go 的并发秘密</a><br>并发很难。非常难。当需要同时运行多个任务时，事情很快就会变得一团糟。我花了数年时间在其他语言中与线程和锁作斗争，我的天，竞争条件和死锁……简直是噩梦！Go 采取了一种完全不同的方法。Go 基本上说：与其共享内存并用锁保护它，不如传递消息。这个想法——“不要通过共享内存来通信；通过通信来共享内存”——几乎是 Go 对并发的核心思想。本文将引导你了解 Go 如何使用 goroutine 和 channel 来实现并发，让你摆脱互斥锁的噩梦。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/03/20/five-learnings-from-seven-years-of-building-gloo-and-kgateway/">从七年 Gloo 和 kgateway 的构建中获得的五大经验 | CNCF</a><br>我们于 2018 年启动了 Gloo 开源项目，并在 2019 年初达到 GA。从那时起，我们 Gloo 的采用率增长到数百家付费客户和众多开源用户。我们坚信 Gloo Gateway 是市场上最成熟和部署最广泛的基于 Envoy 的网关。这一信念促使我们在 2024 年 KubeCon 北美大会上将 Gloo Gateway 捐赠给 CNCF，将其命名为“kgateway”，进一步丰富了云原生 API 网关生态系统。在本博文中，我们将分享过去七年构建 Gloo/kgateway 的五大关键经验。</p>
+
+<p><a href="http://mikhailian.mova.org/node/295">2FA 是否必要？</a><br>几周前，我收到了一封来自比利时网络安全中心的非请求邮件。邮件开头指出，如果启用 2FA，80% 的网络攻击是可以避免的，并直言不讳地说：&#39;如果您仅使用用户名和密码进行远程登录，您就是一个简单的目标&#39;。
+这并不正确，用户名和密码并不比 2FA 不安全，从某种意义上说，它们甚至更安全。我知道这很具有争议性，但请耐心听我解释 CCB 的假设、我的假设以及这一切是如何成立的。
+CCB 假设人们无法安全保管密码。多年来，最流行的密码一直是“123456”和“password”，紧随其后的是“12345678”和“qwerty”。研究一次又一次地证明，我们尽可能地使用弱密码。
+但是等等。这些人也表现得合理且最优。当他们开始使用新的网站或应用程序时，其价值接近于零，因此使用弱密码是一种最优策略。大多数情况下，交互是唯一的或时间间隔很大，以至于根本没有保存密码的必要。当我访问一个多年未访问过的网站时，我的旧密码通常不再有效，我必须重置它。
+我有一个自动生成密码并将其存储在密码管理器中的工作流程，但对于偶尔的用户，期望其他策略也是完全合理的：
+
+* 输入一个弱密码或一个带有技巧的弱密码，例如在其中包含服务的名称，以便密码易于记住。
+* 从键盘上随机输入文本，直到密码被接受，然后立即忘记它，因为你知道你可以通过电子邮件恢复访问权限。
+
+弱密码在用户开始依赖最初配置了弱密码的服务时会成为问题。大型科技公司已经找到了针对此类情况的微妙但有效的策略，但较小的国家/地区特定企业却没有。
+我一个烂熟于心的密码是一个著名的经典名言，笨拙地翻译成法语和荷兰语的混合体。它很长，由于其长度而无法被暴力破解，而且我很确定它不存在于任何彩虹表中。我从不说出它，更不用说写下来了，但它在我的肌肉记忆中，因为我已经好几年没有更改它了。
+互联网上没有人能破解我用这样的密码保护的 ssh 帐户或 gmail 帐户。这个密码实际上是牢不可破的，请参阅XKCD 538 安全性和XKCD 936 密码强度。
+最近，一些服务开始要求 2FA。其中一个是 Github。当我向我的 Github 帐户添加 2FA 后，它对我来说变得不那么安全了。因为安全性不仅在于防止入侵，还在于能够在任何时间和任何情况下安全地访问数据。
+现在，我的 Github 访问依赖于第二个因素，我选择在我的手机上运行 Microsoft Authenticator。如果我的手机出现故障，我真的不知道会发生什么，所以我从 Github 下载了 TOTP 代码，甚至尝试了一个以查看它是否有效，到目前为止它确实有效，但我现在少了一个 TOTP 代码以防万一发生什么事情。此外，由于 Github 现在是我密码管理例程的一个特例，我担心我可能会丢失这些 TOTP 代码，并完全无法访问我的帐户。
+最糟糕的是，我必须考虑所有这些，这首先是浪费时间。</p>
+
+<p><a href="https://justingarrison.com/blog/2021-03-15-the-document-culture-of-amazon">亚马逊的文档文化</a><br>本文探讨了亚马逊独特的文档文化，重点介绍了以文档为基础的会议流程及其优缺点。作者分享了在亚马逊工作期间，如何通过阅读文档来进行会议，以及这种方式带来的好处，例如减少了会议准备时间、消除了沟通障碍，并提供了一个更公平的沟通环境。但也指出了文档型会议的局限性，例如对写作能力的要求较高，以及文档数量庞大带来的查找和组织困难。总而言之，作者认为，尽管存在一些不足，但亚马逊的文档型会议流程仍然是一种值得借鉴的有效沟通方式。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Mar/19/vibe-coding">并非所有 AI 辅助编程都是氛围编程（但氛围编程确实很棒）</a><br>氛围编程（vibe coding）最近很流行。几周前（2月6日），Andrej Karpathy创造了这个术语，此后它出现在《纽约时报》、《Ars Technica》、《卫报》和无数在线讨论中。本文探讨了氛围编程的定义，以及它与负责任的AI辅助编程之间的区别。作者认为，氛围编程并非指所有使用AI辅助编写代码的方式，而是指在使用LLM构建软件时，不审查其生成的代码。作者还讨论了负责任地使用LLM进行代码编写，并强调了审查代码、测试代码以及能够向他人解释代码工作原理的重要性。文章最后探讨了如何改进氛围编程，并鼓励新手尝试氛围编程，同时告诫大家不要将其与所有其他使用LLM进行代码编写的方式混淆。</p>
+
+<p><a href="https://www.elastic.co/search-labs/blog/deepseek-rag-ollama-playground">使用 Ollama 和 Kibana 在本地测试 DeepSeek R1 的 RAG 功能</a><br>本文介绍了如何运行 DeepSeek R1 的本地实例，并将其连接到 Kibana 中。文章涵盖了使用 Ollama 进行本地推理的设置，包括裸机和容器两种方法，并通过 curl 命令测试了本地推理。此外，文章还演示了如何将 Ollama 连接到 Kibana，以及如何将向量嵌入数据导入 Elasticsearch，最后通过 Playground 测试了 RAG 功能，并探讨了 DeepSeek R1 模型在 RAG 应用中的优缺点。</p>
+
+<p><a href="https://lumberjack.so/p/code-is-the-new-no-code">代码是新的无代码</a><br>这篇文章探讨了无代码工具的局限性，以及大型语言模型（LLM）和基于组件的编程模型（如 React）如何使代码本身变得更容易访问，从而使更多人能够进行软件开发。文章认为，真正的无代码并非是隐藏代码，而是通过AI辅助使代码更易于理解和编写，从而实现软件开发的真正民主化。</p>
+
+<p><a href="https://zacharyhuang.substack.com/p/llm-agent-internal-as-a-graph-tutorial">大型语言模型代理只是图</a><br>你是否对大型语言模型代理的技术术语感到困惑？本教程以最简单易懂的方式解释了代理系统是如何构建成简单图的。我们将学习大型语言模型代理背后的基本概念，以及如何使用PocketFlow（一个只有100行代码的小型框架）构建简单的代理。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/sinclairtarget/git-who">sinclairtarget/git-who</a><br>Git blame for file trees</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB is an open-source, fast, reactive, in-memory database optimized for modern hardware.</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/cloudwego/eino-examples">cloudwego/eino-examples</a><br>Examples and demonstrations for using the Eino framework</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/TykTechnologies/tyk">TykTechnologies/tyk</a><br>Tyk Open Source API Gateway written in Go, supporting REST, GraphQL, TCP and gRPC protocols</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>A BNB Smart Chain client based on the go-ethereum fork</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/cloudflare/terraform-provider-cloudflare">cloudflare/terraform-provider-cloudflare</a><br>Cloudflare Terraform Provider</p>
+
+<p><a href="https://github.com/apache/answer">apache/answer</a><br>A Q&amp;A platform software for teams at any scales. Whether it&#39;s a community forum, help center, or knowledge management platform, you can always count on Apache Answer.</p>
+
+<p><a href="https://github.com/safing/portmaster">safing/portmaster</a><br>🏔 Love Freedom - ❌ Block Mass Surveillance</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/qax-os/excelize">qax-os/excelize</a><br>Go language library for reading and writing Microsoft Excel™ (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/kubesphere/kubesphere">kubesphere/kubesphere</a><br>The container platform tailored for Kubernetes multi-cloud, datacenter, and edge management ⎈ 🖥 ☁️</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

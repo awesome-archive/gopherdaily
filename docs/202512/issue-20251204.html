@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251204.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251204</span>
+</p>
+<p>每日一谚：It is easier to optimize readable code than make heavily optimized code readable. If you can not achieve both, in most cases, default to readability.  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/04/thoughts-before-all-in-agentic-ai">别盲目梭哈 Agentic AI！先看清“确定性”的崩塌与“概率性”重建</a><br>以前我们将业务从 PC 迁移到手机，底层逻辑是没变的：输入 A，经过代码 B，必然得到输出 C。这是一个确定性（Deterministic）的世界，我们是构建规则的“上帝”。 但当我们试图把业务迁移到 LLM（大语言模型）上时，地基塌了。同样的 Prompt，今天的结果可能和明天不一样；模型一换，一切全乱；模型会一本正经地胡说八道；原本严丝合缝的逻辑代码，变成了一场概率的游戏。 别被表象骗了。这不仅仅是技术栈的升级，这是计算机科学底层“物理法则”的改变。</p> 
+
+<p><a href="https://tonybai.com/2025/12/04/minio-enter-maintenance-mode">MinIO 开源版突发“安乐死”：维护模式开启，社区愤怒，你的数据还安全吗？</a><br>近日，GitHub 上拥有近 60k Star、Go 语言生态中最著名的开源对象存储项目——MinIO，悄然修改了其 README。这一行看似平淡的声明，标志着 MinIO 开源版实际上已经被宣判了“死刑”。 曾经，MinIO 是自建 S3 兼容存储的首选，是开源界的宠儿。如今，它转身拥抱了企业级市场和 AI 浪潮，留下了一脸错愕的社区用户和无数依赖它 的开源项目。这究竟是一场无奈的求生，还是一次蓄谋已久的“收割”？ </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/QagG2OLMuwmIWXAUTgILAw">【Google ADK 实战】02 agent.Agent：定义你的第一个智能体</a><br></p> 
+
+<p><a href="https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/">TypeScript 7 的进展，包括tsgo编译器</a><br>今年早些时候， TypeScript 团队宣布，我们一直在将编译器和语言服务移植到原生代码， 以充分利用原生代码的优势，从而获得更佳的原始性能、内存使用效率和并行处理能力。这项工作（代号“Project Corsa”，即将更名为“TypeScript 7.0”）是一项意义重大的工程，但我们在过去的几个月中取得了长足的进步。我们很高兴向大家介绍目前的进展，并展示全新的 TypeScript 工具集如今的“真实”面貌。</p> 
+
+<p><a href="https://blog.fillmore-labs.com/posts/scope-1">在 Go 中最小化标识符的范围</a><br>你是否曾花费数小时调试一个微妙的问题，最终发现它是由一个变量在其声明 200 行之外被意外复用造成的？或者你是否发现自己在一长串函数中上下滚动，试图追踪一个变量最后一次被修改的位置？
+
+这些挫败感通常源于过于宽泛的标识符范围。在 Go 中，狭窄的标识符范围不仅仅是一种风格偏好；其对狭窄范围的强大支持是其提高可读性和可维护性的最强大特性之一。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-12-03-new-zero-time/">与时间作对：零时间的新值</a><br>自版本 1.78.0 起，我们为零时间设定了一个新值。这意味着什么，我们为什么要做出这项改变？</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/12/03/celebrating-100-jobs-on-gitjobs/">庆祝 GitJobs 上的 100 个职位！</a><br>我们很高兴地宣布我们社区的一个重要里程碑：GitJobs 上个月发布了第 100 个职位！作为面向开源的招聘平台，我们的使命始终是连接有才华的开发人员与重视开源、透明和社区协作的公司。</p>
+
+<p><a href="https://medium.com/l7mp-technologies/running-stunner-as-a-public-turn-server-part-2-c75222c3fff1">将 STUNner 用作公共 TURN 服务器</a><br></p>
+
+<p><a href="https://medium.com/@priyasrivastava18official/system-design-pattern-scaling-writes-how-big-tech-handles-billions-of-writes-per-second-60c92d0374f2">系统设计模式：扩展写入：大型科技公司如何处理每秒数十亿次的写入操作</a><br></p>
+
+<p><a href="https://www.a16z.news/p/local-tech-scenes-have-changed">为什么本地科技行业发生了变化</a><br>AI 改变了本地人才和机会成本的风险-收益方程</p>
+
+<p><a href="https://serendb.com/blog/5-engineering-lessons-from-replicating-amazon-rds-postgres">5 Engineering Lessons from Replicating Amazon RDS Postgres with Rust</a><br>复制像 Amazon RDS for PostgreSQL 这样的托管数据库服务并不像简单地指向 pg_dump 然后就完事了。 </p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/3/mitchell-hashimoto/#atom-everything">米切尔·桥本的一句话</a><br>自从2023年该项目启动以来，Ghostty的私人测试版发布，我多次表达了Ghostty在法律上成为非营利组织的意愿。[...] 我希望消除任何关于“退出骗局”的担忧。非营利结构提供了可执行的保证：任务不能被悄悄更改，资金不能被转移到私人利益，项目也不能被出售或改作商业用途。该结构在法律上将Ghostty约束于其创建时所服务的公共利益目的。[...] 我认为这类基础设施应由一个以使命为导向、非商业实体来管理，该实体优先考虑公共利益而非私人利润。这种结构增加了信任，鼓励采用，并为Ghostty发展成为一个被广泛使用且有影响力的开源基础设施创造了条件。</p>
+
+<p><a href="https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic">AI 如何改变 Anthropic 的工作方式</a><br>我们发现，对于软件开发人员而言，AI 的使用正在从根本上改变着工作的性质，这既带来了希望，也带来了担忧。我们的研究揭示了一个正面临重大变革的工作场所：工程师们正在完成更多的工作，变得更加“全栈”（能够胜任超出其正常专业知识范围的任务），加快了学习和迭代的速度，并解决了以前被忽视的任务。这种范围的扩大也让人们对权衡取舍产生了疑问——一些人担心这可能意味着失去更深层的技术能力，或者变得无法有效地监督 Claude 的输出，而另一些人则抓住机会以更广阔和更高的视野思考。一些人发现，更多的 AI 协作意味着他们与同事的协作减少了；一些人想知道他们最终是否可能会因为自己而失业。</p>
+
+<p><a href="https://jonready.com/blog/posts/everyone-in-seattle-hates-ai.html">西雅图的每个人都讨厌 AI</a><br>作者分享了在西雅图与工程师们交流时遇到的对 AI 的普遍负面情绪。 文章描述了西雅图大型科技公司中对 AI 的抵制现象，以及由此产生的对工程师、公司和新创企业的不利影响。 作者认为，这种负面情绪源于对 AI 工具的负面体验、公司文化的变化以及对工程师职业发展的担忧。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

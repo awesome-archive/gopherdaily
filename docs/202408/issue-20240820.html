@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240820.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-20</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/4Q1B8SOVdVCyIDhugT-AMg">继Ollama之后，Go在AI领域再下一城</a><br>danielmiessler/fabric是一个旨在通过AI增强人类能力的开源框架。该项目由Daniel Miessler（号称Founder of Unsupervised Learning）于2024年1月创建，目前在GitHub上已获得20k&#43;的star。最初该项目是用Python实现的，近期，fabric刚刚完成了从Python到Go的迁移。</p> 
+
+<p><a href="https://t.zsxq.com/Kw7VI">探索基于pion开发的WebRTC应用的建连过程(sponsor)</a><br>解释webrtc建连过程的最后一篇文章，用一个实例以及对实例运行的日志分析，说明建连过程的每个环节。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoAndFunctionKeywordArguments">向Go添加函数关键字参数并不简单</a><br>Chris Siebenmann 讨论了向 Go 添加函数关键字参数的挑战，包括潜在的 ABI 问题、高效实现的需求以及对共享库的影响。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/GyjpY3QpeaPqN6s-YgeWMA">字节跳动开源Linux内核网络抓包工具netcap</a><br>字节跳动 STE 团队基于ebpf技术和go开发了下一代内核网络抓包工具：netcap（net capture，内部原名：xcap）</p> 
+
+<p><a href="https://www.youtube.com/playlist?list=PLDWZ5uzn69ezR6D6FUj_iBSOyRc9xaZFP">GopherCon UK 2024 播放列表</a><br>该文件是YouTube的资源列表，包括其关于，新闻，版权，联系方式，广告，开发人员，条款，隐私，政策和安全，YouTube的运作方式，以及其NFL周日门票功能。</p> 
+
+<p><a href="https://dev.to/coderonfleek/file-uploads-with-htmx-and-golang-57ad">使用 HTMX 和 Golang 上传文件</a><br>该文档提供了如何使用 HTMX 和 Golang 创建用于上传文件的简单服务器的指南，包括设置 Go 项目、安装依赖项、创建 HTML 模板、处理上传和测试上传。</p> 
+
+<p><a href="https://dev.to/zakariachahboun/a-comprehensive-guide-to-type-casting-and-conversions-in-go-26di">Go中类型转换综合指南</a><br>本文提供了 Go 中类型转换和转换的综合指南，解释了如何在基本类型、自定义类型、指针、接口、通道、结构体、数组、函数和切片之间进行转换，以确保代码安全和理解。</p> 
+
+<p><a href="https://kmcd.dev/posts/fauxrpc/">FauxRPC 简介</a><br>本文介绍了 fauxRPC，这是一种通过生成 gRPC、gRPC-Web、Connect 和 REST 服务的虚假实现来加速开发和测试的工具，提供隔离、多协议支持、原型设计、协作和与其他工具的兼容性等功能，并可作为开源项目使用。</p> 
+
+<p><a href="https://medium.com/@abdalrahmansaadulla/understanding-golang-interface-contracts-6d781ae61247">理解 Golang 接口契约</a><br>阿卜杜勒阿齐兹·萨阿达拉（Abdulaziz Saadallah）的文章解释了Go中提供者级接口和消费者级接口之间的区别，强调了它们在编写干净代码中的重要性，以及在消费者级别定义接口以满足特定需求的必要性。</p> 
+
+<p><a href="https://medium.com/@arslanstack/go-unlocking-the-power-of-full-stack-web-development-2c0721735e2a">Go：解锁全栈 Web 开发的力量</a><br>Muhammad Arslan 讨论了 Go 编程语言在全栈 Web 开发中的日益普及，强调了其速度、简单性和强大的并发特性，并提出了将其与各种前端框架集成的流行技术堆栈。</p> 
+
+<p><a href="https://eric-fritz.com/articles/sourcegraph-went-dark/">Sourcegraph 变暗了</a><br>埃里克·弗里茨（Eric Fritz）是Sourcegraph的前雇员，他讨论了在公司将其存储库私有后管理对其工作引用的经验，包括将链接移动到他控制下的新存储库的过程。</p> 
+
+<p><a href="https://icepanel.medium.com/system-landscape-diagrams-in-the-c4-model-a5a81746fdbb">C4 模型中的系统布局图</a><br>本文讨论了在 C4 模型中使用系统布局图（级别 0）和域图来提供多系统架构的组织概述，解决 1 级图的可扩展性问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://thenewstack.io/istio-1-23-drops-the-sidecars-for-a-simpler-ambient-mesh/">Istio 1.23 放弃了 sidecar，以获得更简单的“环境网格”</a><br>新发布的 Istio 服务网格 1.23 版本引入了“环境网格”选项，该选项简化了部署并可以减少延迟，从而有可能改变处理 Kubernetes 流量的方式。</p>
+
+<p><a href="https://www.builder.io/blog/good-vs-bad-refactoring">好的重构与坏的重构</a><br>这篇博客文章讨论了重构在软件开发中的重要性，强调了常见的陷阱，例如更改编码样式、引入不必要的复杂性、不一致、过度压缩代码以及不理解业务上下文，并提供了成功重构的技巧，包括使用 linting、代码审查、测试和 AI 工具。</p>
+
+<p><a href="https://eng.lyft.com/protocol-buffer-design-principles-and-practices-for-collaborative-development-8f5aa7e6ed85">protocol buffer设计：协作开发的原则和实践</a><br>来自 Lyft Engineering 的 Roman Kotenko 分享了使用协议缓冲区语言进行协作开发的原则和实践，强调了清晰度、可扩展性和跨实体常量，同时强调了协议缓冲区在高性能、向后兼容数据序列化方面的优势。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/08/20/websockets-transition/">Kubernetes 1.31：从 SPDY 到 WebSockets 的流式过渡</a><br>在 Kubernetes 1.31 中，Kubernetes 客户端 kubectl 默认使用websocket streaming协议，而不是过时且未标准化的 sdpy协议，提高了某些命令的性能，并确保了与不同组件和编程语言的兼容性。</p>
+
+<p><a href="https://www.redhat.com/en/blog/authentication-authorization-redhat-openshift-microservices-architectures">Red Hat OpenShift 和微服务架构中的身份验证和授权</a><br>本文介绍了身份验证和授权在 Kubernetes 和 Red Hat Kubernetes 中的作用，解释了它们在 Kubernetes 生态系统中的工作方式，包括使用 OIDC 和基于角色的访问控制等身份验证技术，以及如何在 Kubernetes 和基于 Kubernetes 的应用程序层中管理它们。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/should-developers-curb-their-enthusiasm-for-generative-ai/">开发者是否应该抑制对生成式人工智能的热情？</a><br>The New Stack 讨论了生成式 AI 在软件开发中的潜在缺点和好处，认为虽然它可能会提高生产力，但也可能使开发人员更难学习和解决问题，并可能导致行业紧张局势的回归。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类。它提供了一个模块化框架，用于使用一组可以在任何地方使用的众包 AI 提示来解决特定问题。</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源自托管实现</p>
+
+<p><a href="https://github.com/riverqueue/river">riverqueue/river</a><br>Go 中快速可靠的后台作业</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>一个强大的小TUI框架 🏗</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>一种快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器暴露到 Internet 上。</p>
+
+<p><a href="https://github.com/amitshekhariitbhu/go-backend-clean-architecture">amitshekhariitbhu/go-backend-clean-architecture</a><br>一个 Go （Golang） 后端干净架构项目，带有 Gin、MongoDB、JWT 身份验证中间件、Test 和 Docker。</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin 是一个用 Go （Golang） 编写的 HTTP Web 框架。它具有类似 Martini 的 API，具有更好的性能 - 速度高达 40 倍。如果您需要出色的性能，请给自己买一些杜松子酒。</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ 构建高价值公共区块链✨的框架</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>使用 Swagger 2.0 for Go 自动生成 RESTful API 文档。</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>用獠牙去配置</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock 是 Go 编程语言的模拟框架。</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Azure Resource Manager 的 Terraform 提供程序</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby Project - 一个容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>出色的 Golang ORM 库，旨在对开发人员友好</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>面向 Kubernetes 的开放且可扩展的持续交付解决方案。由 GitOps Toolkit 提供支持。</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速分布式存储系统，用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 个磁盘查找、云分层。Filer 支持 Cloud Drive、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>云原生应用程序代理</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>一个多合一的可观测性解决方案，旨在结合 Prometheus 和 Grafana 的优势。它管理警报规则，并在漂亮的 Web UI 中可视化指标、日志和跟踪。</p>
+
+<p><a href="https://github.com/google/cadvisor">google/cadvisor</a><br>分析正在运行的容器的资源使用情况和性能特征。</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>乐观是以太坊，规模化。</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Go 的快速 linters 运行器</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>轻松安全地将内容从一台计算机发送到另一🐊 📦台计算机</p>
+
+<p><a href="https://github.com/google/wire">google/wire</a><br>Go 的编译时依赖性注入</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

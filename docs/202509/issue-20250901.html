@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250901.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250901</span>
+</p>
+<p>每日一谚：Tooling is better than documentation </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/01/system-programming-in-go">成为更完整的Go工程师，从补上这堂系统编程课开始</a><br>在 Go 语言诞生之前，许多后端工程师的成长路径都绕不开一本圣经——《UNIX 环境高级编程》（APUE）。它系统地教会了我们，一个程序是如何通过文件描述符、进程、信号、管道、Socket 这些基本元素，与操作系统内核进行“对话”的。这堂课，是构建坚实后端知识体系的基石。而 Go 语言的巨大成功，在某种程度上，让新一代的开发者有机会“跳过”了这堂硬核的必修课。这并非坏事，它证明了语言的进步。但对于追求技术 卓越的我们来说，知识体系中的这块拼图，必须被补上。因为不理解系统编程，你对 Go 的理解就永远无法完整。你无法真正领会 io.Reader/Writer 接口设计的哲学之美，无法看透 net 包背后网络轮询器的惊人效率，也无法自信地处理那些最棘手的、跨越应用层与系统层边界的问题。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/nX2OXhsS8-6gEtsni91EKA">【AI应用开发第一课】03 事实标准：用 Go 发出你的第一个“Hello, AI”请求</a><br>理论已经铺路，是时候挽起袖子，让我们的 Go 程序真正地与 AI “对话”了。本讲，我们将完成从理论到实践的关键一跃，目标只有一个：用 Go 语言，亲手发出你的第一个“Hello, AI” API 请求，并成功解析它的回应。</p> 
+
+<p><a href="https://medium.com/@Realblank/how-go-schedules-millions-of-goroutines-a-deep-dive-into-gmp-0f05c71204bc">Go 如何调度数百万个 Goroutine：深入研究 GMP</a><br>想象一个拥挤的机场，跑道数量有限（CPU 核心）。数千个航班（goroutine）需要高效地起飞和降落。您如何防止混乱并确保没有航班永远停留在停机坪上？Go 对这个空中交通管制问题的回答是其巧妙的 GMP 调度程序。它是一位默默无闻的指挥家，指挥着您的并发代码的乐团。在本文中，我们将从控制塔的视角转移到跑道停机坪，探讨 Goroutines (G)、OS 线程 (M) 和处理器 (P) 如何协同工作，即使在高峰负载期间也能让您的应用程序的流量平稳运行。</p> 
+
+<p><a href="https://rednafi.com/go/lifecycle_management_in_tests">Go 测试中的生命周期管理</a><br>与pytest或JUnit不同，Go的标准测试框架没有提供那么多用于调整测试生命周期的旋钮。通过生命周期，我指的是其他语言中常见的设置和拆卸钩子或fixture。我认为这是一件好事，因为你不需要为如此基础的东西学习许多不同的框架特定的工作流程。Go提供了足够的钩子来以较少的仪式来处理这个问题。但是，要确定适合设置和拆卸的正确约定仍然可能很棘手，尤其是如果你有一段时间没有编写Go了。本文探讨了在Go测试中进行生命周期管理的一些常用方法。</p> 
+
+<p><a href="https://dev.to/gkoos/go-channels-a-runtime-internals-deep-dive-36d8">Go Channels: A Runtime Internals Deep Dive</a><br>Go 通道是该语言的标志性特征之一。它们提供了一种结构化的方式，供 goroutine 进行通信和协调。 它们提供了一种结构化的方式...</p> 
+
+<p><a href="https://blog.stackademic.com/advanced-go-best-practices-every-developer-should-follow-bb9aee96c819">高级 Go 最佳实践：每个开发者都应该遵循</a><br>无论您是独自编写代码还是作为团队的一员，编写的方式都与您编写的内容一样重要。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://easyperf.net/blog/2024/02/12/Memory-Profiling-Part1">Memory Profiling Part 1. Introduction</a><br>This blog series will explain how to collect high-level information about a program’s interaction with memory. This process is called memory profiling. It helps you understand how an application uses memory over time. It will cover topics like total memory consumption, heap allocations, code places with the largest amount of allocated memory, and how much memory a program accesses every second.</p>
+
+<p><a href="https://thenewstack.io/ai-agents-transform-platform-engineering-at-microsoft">AI Agents Transform Platform Engineering at Microsoft</a><br>Microsoft&#39;s platform engineering team uses AI agents to implement security standards, offering a new model for managing developer infrastructure at scale.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://levelup.gitconnected.com/vibe-coding-as-a-coding-veteran-cd370fe2be50">Vibe Coding as a Coding Veteran</a><br>一位拥有40年编码经验的资深人士探索了使用Cursor进行人工智能结对编程，发现了2倍的生产力提升，新的挑战，以及人机协同的联盟。</p>
+
+<p><a href="https://www.fastly.com/blog/senior-developers-ship-more-ai-code">Vibe Shift? Senior Developers Ship nearly 2.5x more AI Code than Junior Counterparts</a><br>Fastly 的 2025 年 7 月份调查显示，资深开发人员使用 AI 生成的代码量是初级开发人员的近 2.5 倍。</p>
+
+<p><a href="https://bencallahan.com/where-ai-is-failing-design-systems">AI 在设计系统中的失败之处，以及我们在 AI 方面的失败之处</a><br>对于一个目标通常是稳定、高质量、持久输出的设计系统项目，我们对工具的多少不稳定、缺乏质量或不持久性可以容忍？这是 Nathan Curtis 和我在 The Question 的第 060 集向设计系统社区提出的问题。文章探讨了 AI 在设计系统中的局限性，以及我们如何能够在构建和管理设计系统时更好地利用 AI，关注点集中在 AI 擅长和不擅长的任务类型，以及如何平衡确定性承诺和概率辅助，以提高 AI 在设计系统工作流程中的有效性。</p>
+
+<p><a href="https://www.bestblogs.dev/article/4c6849">Claude Code 的设计哲学：Keep Things Simple | BestBlogs.dev</a><br>文章深入剖析了 Claude Code 的“保持简单”设计哲学，为构建高效 LLM Agent 提供了核心原则和实践经验。</p>
+
+<p><a href="https://www.ssp.sh/brain/will-ai-replace-humans">人工智能会取代人类思考吗？手动编写和编码的案例</a><br>学习重新思考，以及对人工智能依赖的代价。每天都有很多关于人工智能的（炒作/无聊）帖子出现。使用它没问题，每个人都在用，但还是要学习你的手艺，并尝试思考。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/expr-lang/expr">expr-lang/expr</a><br>Expression language and expression evaluation for Go</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/BishopFox/sliver">BishopFox/sliver</a><br>Adversary Emulation Framework</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>An IPFS implementation in Go</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/quii/learn-go-with-tests">quii/learn-go-with-tests</a><br>Learn Go with test-driven development</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

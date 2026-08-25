@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260525.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260525</span>
+</p>
+<p>每日一谚：Go&#39;s interfaces are satisfied implicitly. This is a feature, not a bug. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/23/google-open-sources-ax-and-agent-substrate-agent-centric-cloud-native-foundation">Google 开源 AX 与 Agent Substrate：构建以 Agent 为核心的云原生计算底座</a><br>Google 在 Google I/O &#39;26 大会上给出了其深思熟虑的系统级回应。这并非一个单一工具的发布，而是一套分层解耦的云原生 Agent 堆栈的整体亮相。本文将拆解这一套以 Agent 为负载单元的新型云原生抽象层，揭示 Google 是如何重新定义大模型时代的分布式系统底座的。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/tEF_pWRdRXgj7wHYOJ7UIg">Go 错误处理十诫</a><br>国外开发者总结的一篇关于Go 错误处理注意事项的文章，这里总结成卡片，分享给大家。</p> 
+
+<p><a href="https://tonybai.com/2026/05/24/shopify-claude-code-configuration-for-23000-engineers">Shopify 23,000 名工程师背后的 Claude Code 配置方案</a><br>这篇来自 X (Twitter) 的深度好文剖析了 Shopify 如何通过 Claude Code 实现工程效率的飞跃。文章不仅分享了其 23,000 名工程师背后的核心配置逻辑，还详细介绍了从并行智能体（Agents）到 MCP 工具包，再到“策略优先 ”的工作流转型。如果你正在思考如何将 AI 真正集成到团队的开发流水线中，这份来自“未来视角”的 AI 原生工程实践手册（AI-first playbook）绝对值得深入研读与复刻</p> 
+
+<p><a href="https://go.dev/blog/pkgsite-api">Go pkgsite API</a><br>自诞生以来，pkg.go.dev已成为 Go 社区获取包文档和发现资源的首选平台。虽然我们最初优先考虑为用户构建一个全面且易于访问的 Web 界面，但对程序化访问的需求已变得日益明确。开发人员在构建工具、IDE 集成和自动化工作流时，过去常常依赖网络抓取等脆弱的变通方案来获取这些数据。为了更好地满足这些不断发展的需求，我们现在正在扩展我们的平台，提供对社区所需信息的直接、可靠的访问。今天，我们很高兴推出官方的 [pkg.go.dev API](https://pkg.go.dev/api)——一个用于查询已发布 Go 模块元数据的服务接口。此次发布是对多年来社区反馈的直接响应。此外，随着 AI 辅助编码的兴起，对形式化接口的需求变得更加迫切。工具现在可以访问推理 Go 生态系统所需的特定、高保真上下文，从而实现更精准的分析。## 服务接口为了实现稳定性和高效的缓存，该 API 使用了无状态、仅限 GET 的架构。主要端点目前托管在 `/v1beta` 路径下。在经过社区反馈并确认稳定后，我们打算过渡到正式的 `v1` 版本。有关所有端点、查询参数和响应格式的完整交互式参考。</p> 
+
+<p><a href="https://dev.to/syedahmershah/swapping-go-for-rust-10x-cheaper-k8s-ingress-2b4p">用 Rust 替换 Go 以实现 10 倍更便宜的 K8s Ingress</a><br>PyCon 大会。一位名叫 Solomon Hykes 的法国开发者走上台，演示了名为 Docker 的东西，演示时长五分钟。观众很困惑，接着好奇，然后掌声响了起来。在那五分钟里，他实际上打破了每个人所知的软件部署方式。不再有“在我机器上能运行”的借口，不再有环境地狱。你把你的应用放进一个盒子里，那个盒子在任何地方都能运行。同样的盒子，每次都一样。互联网为之疯狂。一年之内，每家初创公司都在将所有东西容器化。两年之内，企业都在询问 CTO 为什么还没有跟进。三年之内，Docker 的估值超过十亿美元，“容器化”不再是一个小众词汇。但这就是革命的问题所在——它们会制造新的问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://nesbitt.io/2026/05/24/signing-is-for-the-bad-days.html">签名是为了应对糟糕的日子</a><br>在过去的一个月里，我大约四五次进行了相同的对话。我解释为什么注册表应该采用 Sigstore，或者构建流水线应该发出 in-toto 证明，而桌对面的人会说：我们已经对注册表使用了 TLS，注册表已经对压缩包进行了哈希处理，锁文件已经固定了哈希，签名有什么用？在一个风平浪静的周二下午，诚实的回答是：它在发布时增加了一点 CPU 开销，在工作流中增加了一点 YAML，除此之外你几乎看不到任何东西。这个回答也是我们不断遭遇供应链事故的原因，因为锁文件中的哈希只能告诉你字节从锁定后就没有变过；它无法告诉你它们是否曾经是正确的字节，而这类工具的全部意义在于回答第二个问题。直到某人破坏了构建服务器或在镜像上替换了压缩包的那一天之前，它是看不出任何效果的，而那一天它就是“客户端拒绝安装它”和一篇以“事故”开头博客文章之间的区别。我想详细介绍一下大部分这项工作所依赖的三个项目，以及每个项目实际上防御了什么，因为从正常路径来看，这些好处几乎是不可见的。</p>
+
+<p><a href="https://blog.exe.dev/dev-test-prod">展示 Dev、Test 和 Prod 在 exe.dev 中心重叠的维恩图</a><br>在整个行业中，我们经常在三个不同的环境中开发软件。也许你的笔记本电脑是 Mac；你的 CI 系统是托管的 GitHub Actions，而你的生产环境是 K8s。三合一对于某些用例，你无需费心处理复杂性；对所有三个环境都使用一个 exe.dev 虚拟机。博客、仪表板、链接缩短器、机器人等等：这些在环境合并的情况下工作得很好。通过要求 Shelley 执行来添加功能。通过要求 Shelley 每小时轮询来设置持续部署。如果需要，使用 git 进行备份。瞧！我们的内部工具拥有一个“使用 Shelley 编辑”的功能区。它们要么直接指向 &#34;vm.shelley.exe.xyz&#34; 域，要么链接到 exe.dev/new，并带有预填充的提示和预填充的标签，就像这里的链接一样。</p>
+
+<p><a href="https://rtfm.co.ua/en/opentelemetry-otel-collectors-in-kubernetes-and-victoriametrics-stack-integration/">OpenTelemetry：Kubernetes 中的 OTel 收集器与 VictoriaMetrics 框架的集成</a><br>今天，我们来探讨如何在 Kubernetes 环境中运行 OpenTelemetry，并将其与 VictoriaMetrics 系列工具进行集成——VictoriaMetrics 用于处理指标数据，VictoriaLogs 用于处理日志数据，VictoriaTraces 则用于处理跟踪数据。</p>
+
+<p><a href="https://bun.com/bun-unsafe-audit">bun unsafe 审计</a><br>Bun 尚未发布的 Rust 版本中包含了 13,365 个 unsafe 块。其中大部分都可以被移除</p>
+
+<p><a href="https://blog.kubesimplify.com/nvcf-is-now-open-source-inside-nvidia-s-gpu-function-platform">NVCF 现已开源：走进 NVIDIA 的 GPU 函数平台</a><br></p>
+
+<p><a href="https://seriot.ch/computation/jira.html">Jira是图灵完备的</a><br>据工程领域的传闻，Jira（Atlassian 公司推出的项目跟踪工具）具备图灵完备性。现有的说法只是笼统地提到了其自动化功能，但并未给出具体的证明。本文则提供了详细的证明过程，包括相关的设置步骤和执行流程。</p>
+
+<p><a href="https://devblogs.microsoft.com/dotnet/improving-csharp-memory-safety/">提升 C#语言的内存安全性</a><br>我们正在努力大幅提升 C#语言中的内存安全性。 unsafe 关键字正在被重新设计，其作用是让代码调用者明白：为确保安全性，他们必须履行某些义务。这些要求会通过一种新的注释方式来体现。该关键字的应用范围将从指针扩展到所有以编译器无法确认为安全的方式与内存进行交互的代码。编译器会强制要求使用 unsafe 关键字来标记那些不安全的操作。这样一来，与安全性相关的规则和假设就会变得清晰可见，而不再只是基于惯例来推断的。</p>
+
+<p><a href="https://grafana.com/blog/pyroscope-2-0-release/">介绍 Pyroscope 2.0：大规模、更快速、更具成本效益的连续性能分析</a><br></p>
+
+<p><a href="https://noncrab.net/posts/panic-as-flow-control/">使用 Go 语言中的 panic 机制来控制程序的执行流程</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@panoair.com.ua/a-foundation-for-next-generation-ai-systems-d967e93e1bcd">下一代 AI 系统的基础</a><br></p>
+
+<p><a href="https://yusufaytas.com/does-code-quality-still-matter">代码质量还重要吗</a><br>前几天我们在就质量进行随意的交谈，并看了一些代码示例。如果你想要严肃的工程，你会希望你的代码使用一些原则，如 SOLID。你希望看到代码不会无缘无故地伤害其他人的大脑。这种情况已经持续了很长时间。人们通过阅读代码、破坏代码、修复代码、审查代码，多年来培养了他们的直觉。有时你通过成为必须理解已经离开公司的人所做的聪明决定的人而中了大奖。现在的问题是这是否真的还重要。当 LLM 让代码变得如此便宜时，我们还在乎它吗？我认为我们在乎，但可能不像过去那样在乎了。</p>
+
+<p><a href="https://www.anthropic.com/research/glasswing-initial-update">Glasswing 初始更新</a><br></p>
+
+<p><a href="https://www.cockroachlabs.com/blog/ai-use-cases-database-resilience/">8 种依赖于数据库可靠性的 AI 应用场景</a><br>随着人工智能系统逐渐融入各项核心业务流程中，它们越来越多地与各种记录系统直接交互，将模型的输出结果转化为永久性的数据变更。这就带来了一种新的风险：当基础设施出现故障时，各种决策可能会丢失、被重复处理或被篡改。在大规模应用中，概率性模型的运行方式与对确定性、准确的数据系统的需求之间出现了矛盾。</p>
+
+<p><a href="https://www.0xsid.com/blog/antigravity-bait-n-switch">谷歌的“反重力”骗局/忽悠人的把戏</a><br>这一天本应和往常没什么两样：我打开“反重力”应用程序（没错，使用该应用的人有几十个！），打算在注意力被其他事情分散之前完成一些工作。但谷歌另有打算。他们在 2026 年的 I/O 大会上发布了“反重力”应用程序的新版本，将其宣传为一种功能完备、独立运行的应用体验。在启动新版本之前，Antigravity 自动将我现有的安装版本升级到了新版本。但在这个过程中，我多年来一直使用的 IDE 被彻底破坏了。当我点击常用的快捷键时，整个 IDE 都消失了，取而代之的只有一个对话框而已。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/05/24/the-eternal-sloptember.html">永恒的 Sloptember</a><br>我现在的结论是，在软件开发中采用 AI 代理将是该领域历史上最昂贵的错误之一。代理无法编程，而且意识到它们无法编程所需的时间越来越长。它们是一种高度复杂的统计模型，旨在模仿编程的分布。输出是损坏的，但其方式越来越难检测。这正是你对一个越来越准确的统计模型所期望的。* * *起初，我拒绝了这一点。我买了关于状态焦虑的 Twitter 解释。我通过我的编程能力定义我的一些自我价值，那么对这种损失产生防御性难道不合情理吗？尽可能地否认这些模型可以编码，以保持我的自我？我的意思是，很清楚它们可以解决我毕生致力于此也无法希望解决的数学问题。那么为什么它们不能编程？也许我只是不够好的程序员，无法认识到它们的天才。在过去的 6 个月里我真的尝试过。我 [用代理编写了一些 tinygrad 的部分](https://github.com/tinygrad/tinygrad/blob/master/test/mockgpu/amd/emu.py)。我 [用代理反转了一个 USB &lt;-&gt; PCIe](https://github.com/tinygrad/asm2464pd-firmware) 芯片。但每次我都怀疑我可以手动更好、更快地完成它。代理预先加载了所有进度，然后给你一个老虎机操纵杆去拉，希望能完成抛光。它永远无法完全达到目标。并且在“你用错了”之前。我尝试了所有不同的模型、不同的线束、不同的提示。不是这个。那些说这样话的人可能会对老虎机说同样的话，你看，你在得到樱桃后必须投注 5 行，难怪你赢不了！我并不是说 AI 没有用，它显然是有用的。对于大多数搜索来说，它绝对是一个更好的 Google。每当你需要快速原型且不关心抛光时，它确实快得离谱。但它是</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>开源、自托管的笔记工具，专为快速捕捉而构建。Markdown 原生、轻量级，完全属于你。</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray 面板，支持多协议、多用户、过期时间、流量限制和 IP 限制（Vmess、Vless、Trojan、ShadowSocks、Wireguard、Hysteria、Tunnel、Mixed、HTTP、Tun）。</p>
+
+<p><a href="https://github.com/BenedictKing/ccx">BenedictKing/ccx</a><br>Claude / Codex / Gemini API 代理 - CCX</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity 订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>单文件开源实时后端</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/sartoopjj/thefeed">sartoopjj/thefeed</a><br>用于 Telegram 频道和公开 X 账户的基于 DNS 的订阅源阅读器。专为仅 DNS 查询可用的环境设计。</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源自托管实现</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>整理你生活的待办事项应用。</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>12ft.io 和 1ft.io 的自托管替代方案。移除 CORS 标头并修改 HTML 的代理。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

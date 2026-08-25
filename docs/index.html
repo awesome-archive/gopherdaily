@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260825.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260825</span>
+</p>
+<p>每日一谚：Understand struct field alignment to minimize padding and save memory </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/25/cursor-continuity-git-walgit-spacex">刚被 SpaceX 收购，Cursor 就推出自研 Git 托管硬刚 GitHub，Shopify CEO 一周末就把它复刻了</a><br>SpaceX 刚以 600 亿美元收购 Cursor，Cursor 官方随即发布重磅技术博客，公开了自研 Git 存储引擎 Continuity 的全套设计：&gt;用对象存储（S3）中的写前日志（WAL）与 CAS 原语取代传统数据库和 3PC 共识协议，打破了 GitHub Spokes 架构长达 13 年的扩展性瓶颈。更具戏剧性的是，Shopify CEO Tobi Lütke 仅用一个周末便用 Rust 开源复刻出同款系统 walgit。本文深度拆解这场 Git 基础设施在 AI Agent 时代的架构范式大洗牌。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/08/24/help-ai-coding-agents-write-up-to-date-code-with-modern-golang-skills/">帮助AI编码智能体使用现代Go技能编写最新代码</a><br>Go 1.27引入了泛型方法特性。当操作自然属于类型本身时，应使用泛型方法而不是包级别的泛型辅助函数。泛型方法将操作保留在拥有它们的类型的命名空间中。</p> 
+
+<p><a href="https://konradreiche.com/blog/excessive-nil-pointer-checks-in-go/">Go语言中的过度空指针检查</a><br>让我们讨论Go语言中的空指针检查。您希望在生产环境中防止panic，但这不是从延迟的`recover`开始，而是从防御性编程开始。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/08/25/stop-trying-to-learn-all-of-kubernetes-at-once/">不要试图一次性学习所有Kubernetes知识</a><br>CNI和CSI最初作为插件存在的原因是Kubernetes故意不提供网络或存储功能。它定义了契约并将实现留给插件，因为小型边缘集群和多区域受控环境在操作上没有任何共同点。</p>
+
+<p><a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/">MetaRoCE：为AI规模以太网构建的新RDMA传输</a><br>MetaRoCE结合了传统的基于ECN的发送方驱动的AIMD拥塞控制和接收方驱动的公平份额速率提示。窗口按路径和连接保持，因此拥塞标记会修剪看到它的路径并将下一个数据包引导到清晰的路径。</p>
+
+<p><a href="https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/">MTIA 300：Meta的首款内置NIC和通信卸载引擎的训练芯片</a><br>训练推荐模型是一项独特的基础设施挑战。与需要巨大浮点吞吐量的大型语言模型不同，推荐模型的瓶颈在于训练它们的加速器之间需要快速高效的通信。</p>
+
+<p><a href="https://www.docker.com/blog/minio-end-of-life-how-to-stay-patched-and-audit-ready-with-docker-els/">MinIO生命周期结束：如何使用Docker ELS保持打补丁和审计就绪</a><br>告诉Docker您的生产环境依赖的生命周期结束版本，Docker会构建强化版本并保持在该版本最新的补丁版本。带有ELS标签的图像与LTS标签一起出现在标准DHI目录中，无需迁移即可采用。</p>
+
+<p><a href="https://nesbitt.io/2026/08/25/hardening-the-override-flag.html">强化覆盖标志</a><br>各种命令行工具中的覆盖标志需要谨慎使用，如`rm --no-preserve-root`、`pip --break-system-packages`等。这些标志可能绕过安全检查，需要明确目标并验证状态。</p>
+
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1vxcppp/scaling_android_localization_at_reddit_part_1/">Reddit的Android本地化扩展，第一部分：基础</a><br>Reddit分享了其Android应用本地化扩展的基础架构和策略，以支持多语言用户体验。</p>
+
+<p><a href="https://gultsch.de/posts/25-years-of-digital-independence/">Jabber/XMPP：25年的数字独立性</a><br>我们应该拥有自己的基础设施，这一观点得到了广泛认同。然而，&#34;我们&#34;指的是谁取决于基础设施的类型。高速公路、铁路、桥梁和港口需要国家级别的努力。</p>
+
+<p><a href="https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/">Shipyard上IPFS的终结</a><br>Shipyard项目宣布停止使用IPFS，转而采用其他分布式存储解决方案。这一决定反映了项目在基础设施选择上的战略调整。</p>
+
+<p><a href="https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/">愤怒、焦虑和能动性 | Armin Ronacher的思想与写作</a><br>作者探讨了愤怒、焦虑和能动性之间的关系，以及如何在软件开发中管理这些情绪。Sean Goedecke的观点引发了关于愤怒在专业环境中适当性的讨论。</p>
+
+<p><a href="https://aboullaite.me/java-27-features/">Java 27功能：默认使用紧凑对象头、JFR编辑和后量子TLS！</a><br>Java 27引入了多项重要功能，包括默认的紧凑对象头、JFR编辑功能和后量子TLS支持。这些改进旨在提高性能和安全性。</p>
+
+<p><a href="https://uchenml.tech/simd-softmax-google-highway/">使用Google Highway实现SIMD Softmax，NEON到WASM转换</a><br>UchenML项目转向专注于WASM，意味着降低了GPU支持的优先级，但仍保持高性能运行。这意味着模型在WASM中运行，而训练应使用Mac Studio的全部资源。</p>
+
+<p><a href="https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/">从Rust到Zig的感受</a><br>作者作为有7年经验的Rust开发者，分享了转向Zig编程语言的体验和感受。他主要参与开源项目，对Rust语言及其生态系统有深入理解。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/">你的可执行文件是一个SQLite数据库</a><br>这种方法将SQLite文件格式的4字节应用程序ID设置为SELF，代表结构化可执行和可链接格式。ELF可执行格式的各种组件被排列成多个不同的SQLite表。</p>
+
+<p><a href="https://larsfaye.com/articles/ai-coding-will-prevent-expertise">AI编码将阻止专业知识的发展</a><br>作者探讨了长期技能形成中持续摩擦的必要性，以及AI编码如何可能阻止专业知识的深度发展。Sam Altman描述了AI作为公用事业的未来愿景。</p>
+
+<p><a href="https://blog.jetbrains.com/junie/2026/08/junie-local-launch/">Junie Local：在您的Mac上运行AI编码智能体 | JetBrains</a><br>JetBrains推出了Junie Local，允许开发者在Mac本地运行AI编码智能体，提供更高效的编程体验。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/asciimoo/hister">asciimoo/hister</a><br>Your own search engine</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the int</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/agent-sandbox">kubernetes-sigs/agent-sandbox</a><br>agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement learning (RL).</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray panel supporting multi-protocol multi-user expire day &amp; traffic &amp; IP limit (Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto)</p>
+
+<p><a href="https://github.com/netdata/netdata">netdata/netdata</a><br>The fastest path to AI-powered full stack observability, even for lean teams.</p>
+
+<p><a href="https://github.com/evolution-foundation/evolution-go">evolution-foundation/evolution-go</a><br>Evolution API / Evolution Go is an open-source WhatsApp integration API</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

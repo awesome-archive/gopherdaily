@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260814.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260814</span>
+</p>
+<p>每日一谚：Keep error messages lowercase and without trailing punctuation </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/14/go-ideal-language-for-ai-assisted-engineering">Google官方下场安利：AI时代，Go才是“最适合”的编程语言</a><br>当 AI 编程智能体能在几秒内吐出成百上千行代码，“写代码快不快”不再重要，“审代码准不准”成为了软件工程新的核心瓶颈。Google 官方博客联合 Go 团队撰文，系统论证了 Go 语言因“可读性优先、开箱即用工具链、编译期强校验与向后兼容承诺”而在 AI 时代具备的天然优&gt;势。本文梳理了 Google 的核心论证，并还原了 Hacker News 社区中包括 Netflix 工程师背书与 Rust 阵营反击在内的激烈交锋，带你重新思考 AI 时代的语言选型与工程标准</p> 
+
+<p><a href="https://tonybai.com/2026/08/14/deepseek-harness-everything-is-a-plugin">刚刚，DeepSeek开源Harness：把Agent拆成插件，一切皆可</a><br>DeepSeek 开源了自研 Agent 驾驭框架 DeepSeek Harness（dsh）开发者预览版，采用「一切皆插件」的插件式开放架构：模型、工 具、技能、会话、沙箱、存储、循环、调度、UI 等 Agent 能力均由插件组合而成。其底层由 Cordis 元框架驱动，通过 profile 与 bundle 的分层组装机制实现自由替换，Agent 循环被拆解为可拦截的事件流，会话日志成为唯一真相源，支持分叉与回放。文章将结合开源代码，解读其架构设计，并简要梳理其在会话压缩、长期记忆等前沿方向上的现状与生态动向。</p> 
+
+<p><a href="https://appwrite.io/blog/post/rewriting-the-appwrite-cli-in-go">Appwrite CLI现在使用Go语言编写</a><br>Appwrite CLI现在使用Go语言编写。命令界面保持不变，标志和appwrite.config配置不变。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/08/14/eleven-minutes-zero-humans-building-a-self-healing-kubernetes-upgrade-pipeline-on-kairos/">十一分钟，零人工：在Kairos上构建自愈Kubernetes升级管道</a><br>文章展示了如何在Kairos上构建一个自愈的Kubernetes升级管道，实现了从基线设置到完全自动化的升级过程。</p>
+
+<p><a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/">大语言模型何时能在A/B测试中替代人类？</a><br>简而言之：大语言模型预测可以在A/B测试中替代人类结果，但这只是基于假设而非设计。</p>
+
+<p><a href="https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck">理解是新的瓶颈</a><br>文章讨论了在2026年7月AI工程师大会上演讲的书面版本，探讨了理解能力在技术发展中的新瓶颈作用。</p>
+
+<p><a href="https://tschatzl.github.io/2026/08/10/jdk27-g1-serial-parallel-gc-changes.html">JDK 27中G1、串行和并行GC的变化</a><br>随着OpenJDK 27版本的发布临近，本文再次讨论了OpenJDK在HotSpot VM中stop-the-world收集器的有趣变化。</p>
+
+<p><a href="https://atproto.com/blog/introducing-bluesky-protocol-services">介绍Bluesky协议服务 - AT协议</a><br>文章介绍了Bluesky在开放网络上运行的基础设施的新家园，包括具有网络回放的Jetstream v2、新的Jetstream SDK和基于lex的TypeScript SDK。</p>
+
+<p><a href="https://vickiboykis.com/2026/08/12/write-for-people/">为人们而写</a><br>作者最近注意到自己已经无法阅读和理解互联网上的PR标题和描述，强调了为人类读者写作的重要性。</p>
+
+<p><a href="https://bdrouvot.github.io/2026/08/13/welcome-to-pg-walviz-postgresql-wal-segment-visualizer/">欢迎使用pg_walviz：PostgreSQL WAL段可视化工具</a><br>本文介绍了pg_walviz，这是一个新的PostgreSQL WAL段文件可视化工具。pg_waldump对于显示WAL的可读渲染非常有用。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/">Gemini 3.7 Flash：我们最智能的主力模型</a><br>文章介绍了Gemini 3.7 Flash，这是Google最新发布的最智能的主力AI模型，于2026年8月13日发布。</p>
+
+<p><a href="https://deepseek.com/harness/en/">DeepSeek Harness开发者预览：一切都是插件</a><br>DeepSeek Harness现已面向全球代理工具开发者提供开发者预览版本，包含源代码。</p>
+
+<p><a href="https://www.netlify.com/blog/one-prompt-11-models-very-different-results/">更多模型，更多选择：比较11种不同的AI模型</a><br>文章介绍了与OpenRouter的新合作伙伴关系，使项目可以通过AI网关使用OpenRouter上的任何模型，并提供新的功能。</p>
+
+<p><a href="https://z.ai/blog/glm-5.3">GLM 5.3大模型发布</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/infiniflow/ragflow">infiniflow/ragflow</a><br>RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/netdata/netdata">netdata/netdata</a><br>The fastest path to AI-powered full stack observability, even for lean teams.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/astaxie/TokenHub">astaxie/TokenHub</a><br>TokenHub gives enterprises a private gateway to unify AI model access and governance, making every request controllable, traceable, and attributable.</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Assign issues to Claude Code, Codex, Cursor, and 17 more coding agents like teammates — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/palemoky/chinese-poetry-api">palemoky/chinese-poetry-api</a><br>📜 诗泉：高性能中国古诗词 API 服务</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/oseghalep/cloud-cost-optimization-hub">oseghalep/cloud-cost-optimization-hub</a><br>Cloud Cost Optimization Hub is an open-source, self-hosted platform that provides unified cost visibility and actionable recommendations across AWS, GCP, and Azure. Features include multi-cloud cost a</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

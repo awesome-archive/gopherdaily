@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241024.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-24</span>
+</p>
+<p>每日一谚：Compiler errors are better than runtime errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/eXExSOzkORgHp9UwCqFOmQ">认知负荷对编程语言选择和学习的影响</a><br>近期作者阅读了一些关于认知心理学和脑科学的著作，探讨一下认知负荷究竟如何影响开发人员对编程语言的选择和学习过程的，仅供大家参考</p> 
+
+<p><a href="https://mortenvistisen.com/posts/a-love-letter-to-golang">为什么你应该使用Go</a><br>源文档为采用 Go （Golang） 作为编程语言提供了令人信服的论据，特别是对于参与 Web 开发和后端服务的用户。作者 MBV 分享了他们从前端背景到拥抱 Go 的旅程，强调了它的简单性、效率和强大的标准库。强调 Go 的简约语法和易学性，以及其强大的并发模型和单二进制部署功能。该文档还展示了 Go 适合使用 Templ 等工具进行全栈开发，这些工具有助于创建超媒体驱动的 API。此外，Go 的包生态系统（包括用于数据库交互的 SQLC）因减少样板代码和提高生产力而受到称赞。作者最后指出了 Go 的性能优势以及它与 Docker 的无缝集成以实现轻量级容器化，使其成为寻求简化和有效编程环境的开发人员的有吸引力的选择。</p> 
+
+<p><a href="https://konradreiche.com/blog/two-common-go-interface-misuses/">两种常见的Go接口误用</a><br>Konrad Reiche 讨论了 Go 编程中两种普遍存在的接口误用，强调了避免过早抽象和不必要的模拟测试的重要性。第一个问题是当接口过早引入时出现，这会导致复杂的类型层次结构和认知负载，而没有真正的好处，因为开发人员可能不需要多个实现。第二个误用是创建仅用于测试的接口，这会模糊类型信息并使代码库不必要地复杂化。Reiche 主张更明智地使用接口，将它们保留给真正需要多个实现的情况，例如中间件或钩子。他主张在不依赖接口的情况下编写可测试代码，并建议使用特定于包的测试帮助程序来有效地管理依赖项。本文最后强调，应谨慎使用接口，并且仅当它们为代码库及其可维护性增加价值时才使用。</p> 
+
+<p><a href="https://dev.to/mihailtd/why-go-is-popular-right-now-and-how-and-why-i-started-learning-go-as-a-nodejs-developer-2jcg">为什么Go现在很流行，为什么我开始以nodejs开发者的身份学习go</a><br>源文档探讨了 Go 在开发人员中越来越受欢迎的原因，尤其是那些从 Node.js 过渡的开发人员。Go 因其性能、并发模型、简单性和强类型而受到赞誉，这有助于构建高性能应用程序。该语言与 Kubernetes（容器编排标准）的密切联系也推动了它在企业领域的采用。作者是一名 Node.js 开发人员，他分享了他个人学习 Go 的旅程，并强调了获得的好处，例如提高性能、增强对并发的理解和提高生产力。尽管 Go 很受欢迎，但值得注意的是，它在企业中的应用并不像 Java 或 C# 那样广泛，但 Go 开发人员仍然有很多工作机会。该文档还涉及 Go 错误处理的挑战和与其类型系统相关的学习曲线，同时鼓励Node.js开发人员考虑学习 Go，因为它有可能推动他们的职业生涯。</p> 
+
+<p><a href="https://www.cerbos.dev/blog/how-to-implement-authorization-in-go">如何在 Go 中使用 Cerbos 实现授权</a><br>本指南详细介绍了使用 Cerbos 和 Echo 在基于 Go 的 Web 应用程序中实施授权的过程。它首先解释了授权的重要性和应用程序的结构，其中包括博客文章中 CRUD 操作的角色和权限。然后，该指南将逐步完成设置 Go 项目环境、使用 Echo 定义 API 路由以及启动服务器的过程。本指南的核心侧重于集成 Cerbos 以进行访问控制，其中介绍了资源和权限定义，并演示了如何创建用于策略检查的中间件。最后一部分使用新的授权机制测试 API 终端节点，确保只有具有正确角色的用户才能对博客文章执行操作。该指南强调了 Cerbos 提供的灵活性和粒度，使其成为在 Web 应用程序中实施访问控制的强大解决方案。</p> 
+
+<p><a href="https://theburningmonk.com/2015/03/this-is-why-you-need-composition-over-inheritance/">这就是为什么你需要 Composition 而不是 Inheritance</a><br>本文讨论了 Burning Monk 所倡导的在软件设计中采用组合优于继承的好处。作者分享了由于深层继承层次结构而难以理解复杂代码的个人经历，这导致了对更灵活和可维护的代码结构的渴望。The Burning Monk 认为，组合式鼓励更好地分解问题，使代码更易于理解和维护。作者计划使用 F# 将有问题的类层次结构重构为更小的可组合单元，并邀请其他人遵循这种方法。本文还包括有关无服务器技术、微服务和社区讨论的资源链接，并为无服务器技能开发和产品创意发布提供帮助。Burning Monk 强调了问题分解在软件开发中的重要性，并建议组合可以带来更健壮和可扩展的系统。</p> 
+
+<p><a href="https://abubakardev0.medium.com/goroutines-vs-threads-why-gos-lightweight-concurrency-model-outperforms-system-threads-025a5c877bc9">Goroutines vs. 线程：为什么 Go 的轻量级并发模型优于系统线程</a><br>本文深入探讨了使用 Goroutines（Go 的轻量级并发模型）相对于传统系统线程进行高效软件开发的优势。Goroutines 因其内存效率和速度而备受推崇，因为它们需要较少的开销，并且由 Go 的运行时而不是操作系统管理。这篇文章对比了系统线程的低效率，例如高内存消耗和昂贵的上下文切换，这可能导致性能瓶颈。一个代码示例演示了 Go 如何仅使用一个 OS 线程处理 10,000 个并发任务，展示了 Goroutine 的可扩展性和效率。本文最后强调了 Goroutines 在构建可扩展、高性能系统方面的优势，使其成为现代应用程序开发的首选。</p> 
+
+<p><a href="https://www.uber.com/en-GB/blog/making-ubers-experiment-evaluation-engine-100x-faster/">Making Uber’s ExperimentEvaluation Engine 100x Faster</a><br>The source document titled &#34;Not Acceptable&#34; likely refers to a situation where a user encounters a response indicating that their request or submission was not accepted or valid. This error message is commonly seen in various digital platforms, including web forms, online applications, and services. The occurrence of &#34;Not Acceptable&#34; suggests that the system received input that did not meet the predefined criteria or standards set for processing. This could be due to various reasons such as incorrect data format, missing required fields, violation of rules, or incompatible content. The document, although brief, underscores the importance of adhering to the specified guidelines to ensure seamless interaction with digital systems. It serves as a reminder for users to review and correct their submissions before attempting to resubmit, thereby minimizing the chances of encountering such errors. The summary encapsulates the essence of the document, highlighting the implications of receiving a &#34;Not Acceptable&#34; response and the need for compliance with system requirements.</p> 
+
+<p><a href="https://osa1.net/posts/2024-10-09-oop-good.html">实际上，OOP 并没有那么糟糕</a><br>源文档讨论了与 Haskell 等函数式编程语言相比，静态类型面向对象编程 （OOP） 在促进类型向后兼容演变和易于组合方面的优势。作者认为，OOP 语言（如 C&#43;&#43;、Java 和 C#）为开发库和应用程序提供了一个健壮的框架，这些库和应用程序可以在不改变现有类型的情况下进行扩展和模拟。这可以通过一个简单的 logger 和数据库库场景来举例说明，其中可以无缝添加新功能，例如记录到文件或在生产环境中启用日志记录。相比之下，在 Haskell 中使用 effect monad 或 typeclasses 尝试类似的功能会带来挑战，例如需要适配器来处理不同的 effect 库，以及混合处理程序的类型切换困难。该文档得出结论，主流静态类型 OOP 语言为不断发展的软件系统提供了一种更直接和可组合的方法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://mrcat.au/blog/zig_is_cool/">Zig 是我希望 C 成为的一切</a><br>Zig 是一种新兴的系统编程语言，旨在解决 C 语言的可用性和安全性问题，提供未定义行为、空指针处理和安全检查等功能。它支持任意宽度的整数和打包结构，从而能够精确控制内存布局和类型表示。Zig 的元编程功能允许编译时类型验证和泛型，从而增强代码灵活性和优化。此外，Zig 提供了强大的 C 互操作性，支持使用现有的 C 库并促进交叉编译。该语言的综合工具链（包括 C 编译器）使其成为寻求现代、安全和高效编程环境的开发人员的绝佳选择。</p>
+
+<p><a href="https://vercel.com/blog/how-vercel-adopted-microfrontends">Vercel 如何采用微前端</a><br>Vercel 采用微前端的旅程始于随着公司主网站的增长，需要提高开发人员的速度和用户体验。通过过渡到垂直微前端，Vercel 能够简化依赖关系，将构建时间缩短 40% 以上，并增强最大内容绘制 （LCP） 和与下一次绘制交互 （INP） 等性能指标。这种转变涉及利用 Turbo 的 Turborepo 来优化本地开发和 CI 工作流程，并利用 Next.js Multi-Zones 来部署微前端。Vercel 的迁移路径通过功能标志和增量更新进行精心管理，确保在不中断用户体验的情况下实现平稳过渡。诸如硬导航之类的挑战是通过预取和预渲染等策略来解决的。展望未来，Vercel 旨在进一步完善微前端路由、预览工作流和性能，同时增强仪表板体验并解决工作流挑战。</p>
+
+<p><a href="https://clickhouse.com/blog/a-new-powerful-json-data-type-for-clickhouse">我们如何为 ClickHouse 构建新的强大 JSON 数据类型</a><br>ClickHouse 团队引入了一种新的 JSON 数据类型，旨在克服以前实现的限制并提高半结构化数据的性能。这种高级 JSON 类型解决了诸如真正的面向列的存储、处理混合类型的动态变化数据以及防止磁盘上出现大量列文件等挑战。新的 JSON 类型利用 Variant 和 Dynamic 数据类型等基础构建块，允许高效存储和查询具有任何结构的 JSON 对象。主要功能包括支持嵌套的 JSON 路径、限制每个 JSON 键路径的动态类型数量以及改进的数据压缩和查询性能。新的 JSON 数据类型目前作为实验性功能提供，并计划作为 ClickHouse 路线图的一部分进行进一步的增强。该团队邀请用户联系支持人员以获取个人预览版访问权限，以测试新的 JSON 数据类型。</p>
+
+<p><a href="https://mzfit.app/blog/the_one_where_i_tune_my_cdcd_pipeline/">如何在 60 秒内完成 CI/CD 管道</a><br>作者优化了他们的 GitHub CI/CD 管道，将构建时间从 5 分钟缩短到不到一分钟，从而提高了独立开发人员的工作效率。最初，作者面临着管道漫长的构建过程的挑战，而他们的 ADHD 加剧了这一挑战。为了解决这个问题，他们实施了 GitHub 缓存，这大大减少了下载依赖项所需的时间。此外，作者通过将 golangci-lint 与自定义配置文件结合使用来简化他们的 linting 过程，从而进一步加快了构建速度。他们还将 linting 和测试合并到一个并行作业中，并利用 GitHub 的并行作业功能来利用两个 CPU 内核。结果是一个 CI/CD 管道，允许每月部署 360 次，或每天 12 次部署，在考虑夜间缓存作业后，每次构建和部署的总成本为 5 分钟计费分钟。这种优化使 CI/CD 流程对于作者的开发工作流程更加高效和经济。</p>
+
+<p><a href="https://thenewstack.io/the-top-5-python-packages-and-what-they-do/">前 5 名 Python 包及其用途</a><br>源文档探讨了 PyPI 上可用的前五个 Python 包，重点介绍了它们的重要性和功能。它首先讨论了 Amazon 软件包的主导地位，其中 boto3 成为顶级软件包，作为适用于 Python 的官方 AWS 开发工具包。此软件包使开发人员能够通过 Python 脚本与 S3 和 EC2 等 Amazon 服务进行交互。该文档还提到了 urllib3（用于 Python 的用户友好型 HTTP 客户端）和 botocore（AWS 服务的低级接口），它们对于 boto3 的运行至关重要。该摘要强调了这些软件包在促进与 AWS 服务交互及其在更广泛的 Python 生态系统中的作用方面的重要性。该文档邀请读者贡献他们的兴趣以供将来的报道，表明了一种社区驱动的内容创建方法。</p>
+
+<p><a href="https://www.docker.com/blog/model-based-testing-testcontainers-jqwik/">使用 Testcontainers 和 jqwik 进行基于模型的测试</a><br>源文档指示 403 Forbidden 错误消息，这是一个标准的 HTTP 响应状态代码，表示服务器拒绝访问请求的资源。当用户尝试访问不可公开访问的页面或资源时，通常会发生此错误，通常是由于服务器上设置的权限不正确。在 Nginx（开源 Web 服务器）的上下文中，此错误表明服务器配置可能误导或限制了对某些网页或目录的访问。文档中对 Nginx 的简要提及暗示它与服务器配置问题有关，可能需要调整访问控制设置或 URL 重定向规则才能解决问题。该摘要概括了错误的本质及其对 Web 服务器管理的影响，但未深入研究具体的故障排除步骤或详细配置。</p>
+
+<p><a href="https://engineering.fb.com/2024/10/22/security/ipls-privacy-preserving-storage-for-your-whatsapp-contacts/">IPLS：为您的 WhatsApp 联系人提供隐私保护存储</a><br>WhatsApp 推出了身份证明链接存储 （IPLS），这是一种新颖的联系人加密存储系统，可增强隐私并确保即使用户丢失手机也可以恢复数据。IPLS 利用 WhatsApp 现有的密钥透明度和硬件安全模块 （HSM） 基础设施来安全地存储使用对称密钥加密的联系人姓名。该系统需要通过 WhatsApp 的可审计密钥目录 （AKD） 验证客户端设备身份验证，该目录由 Cloudflare 的数字签名进一步验证，确保目录的单个、不可篡改的实例。存储在基于 HSM 的 Key Vault 中的联系人只能通过端到端加密通道访问，即使客户端设备遭到入侵，也可以保护数据。此功能不仅可以保护用户联系人，还可以跨链接的设备和帐户进行无缝管理，让经常更换手机或需要单独帐户用于个人和工作用途的用户高枕无忧。</p>
+
+<p><a href="https://dev.to/encore/how-to-deploy-a-backend-application-to-digitalocean-using-docker-and-encore-1eh0">如何使用 Docker 和 Encore 将后端应用程序部署到 DigitalOcean</a><br>该指南详细介绍了使用 Docker 和 Encore CLI 将 Encore 应用程序部署到 DigitalOcean 的过程。它从设置 DigitalOcean 帐户并确保安装 Docker 开始。后续步骤包括创建新的 Encore 应用程序、构建 Docker 镜像、将其推送到 DigitalOcean 的容器注册表，并将其部署到 App Platform。该指南还介绍了如何向应用程序添加数据库，并提供了有关部署失败、辅助功能问题和数据库连接问题的故障排除提示。此外，它还鼓励通过 Discord 和 GitHub 参与社区，并提供进一步学习和启发的资源。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/22/how-to-transform-telemetry-data-from-ingest-to-actionable-insights/">如何将 Telemetry 数据从摄取转化为可操作的见解</a><br>在这篇富有洞察力的文章中，Apica 的 CPO/CTO Ranjan Parthasarathy 深入探讨了将遥测数据从原始摄取转化为可操作见解的复杂性。他将遥测数据比作汽车中的重要传感器，强调其对于实时系统监控、问题检测、性能优化和数据驱动决策的重要性。Parthasarathy 概述了一系列最佳实践，包括数据质量管理、分析、可视化和与业务目标的一致性，以及对强大的技术基础设施和数据驱动的组织文化的需求。本文提供了一种结构化的数据转换方法，从筛选和聚合开始，然后是可视化和控制面板创建，最后确定根本原因和异常。作者强调了精心设计的数据管道的重要性以及遥测在释放运营效率和战略规划方面的潜力。Parthasarathy 最后鼓励读者参与 Apica 的可观测性解决方案，并与他联系以获得进一步的见解。
+
+（注意：该摘要旨在概括文章中讨论的关键点和策略，同时保持连贯的叙述流程。它不包括文档中的直接引用或特定细节，而是抓住了内容的精髓。</p>
+
+<p><a href="https://www.redhat.com/en/blog/secure-design-principles-age-artificial-intelligence">人工智能时代的安全设计原则</a><br>源文档概述了 Red Hat 在人工智能 （AI） 领域中集成安全设计原则的承诺。它强调了从一开始就嵌入安全功能的重要性，确保系统在设计上是安全的，并且在部署中是安全的。Red Hat 的方法包括遵守最小权限原则、加强访问控制以及最大限度地减少共享资源以降低安全风险。该文档还强调了 Red Hat 对 AI 模型完整性和真实性的关注，以防止篡改和解决偏差。通过利用基本准则和现代实践，Red Hat 旨在创建强大且有弹性的 AI 解决方案，以抵御新出现的威胁。本文档进一步讨论了 Red Hat 在提供培训、认证和资源以支持安全 AI 技术部署方面所做的努力。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://cybernetist.com/2024/10/21/you-should-probably-pay-attention-to-tokenizers/">你可能应该注意 Tokenizers</a><br>源文档深入探讨了分词器在 AI 应用程序中检索增强生成 （RAG） 模型上下文中的重要性。它强调了当传统编码方法无法很好地转化为统计空间时，开发人员面临的挑战，其中标记化起着至关重要的作用。分词化是将文本分解为较小单元的过程，对于将输入数据转换为语言模型 （LLM） 可以有效处理的格式至关重要。该文件强调了了解和优化分词化以避免“垃圾输入、垃圾输出”等问题的重要性，尤其是在处理特殊字符、表情符号和特定于域的数据时。它还建议开发人员了解 LLM 使用的分词器，并考虑微调或提供额外的上下文来处理边缘情况。文章最后强调了需要干净且标记化良好的输入，以确保依赖 RAG 技术的 AI 应用程序的成功。</p>
+
+<p><a href="https://milesbrundage.substack.com/p/why-im-leaving-openai-and-what-im">我为什么离开 OpenAI 以及我下一步要做什么</a><br>离开 OpenAI 的个人表达了从外部行业角度影响 AI 发展的愿望，专注于政策研究和宣传。他们强调了他们对公司内部 AGI 准备工作的贡献，并承认在政策讨论中需要更多独立于行业的声音。这种离开的驱动力是相信在 OpenAI 之外将获得更多的发布自由、独立性和对 AI 政策的更广泛影响。个人计划成立一个非营利组织或加入现有的非营利组织，专注于 AI 政策研究和宣传，解决 AI 进度评估、AI 安全和安保监管、经济影响和计算治理等领域。他们强调了学术界、工业界、民间社会和政策制定者之间合作的重要性，以确保全球 AI 发展不被视为威胁，倡导以合作方式应对 AI 安全和安保挑战。该摘要概括了个人离开 OpenAI 的原因、他们的未来计划以及他们对政策和协作在 AI 开发中的作用的看法。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/21/claude-artifacts/">本周我用 Claude Artifacts 构建的所有内容</a><br>Simon Willison 利用 Claude LLM 的一项功能 Claude Artifacts 使用 HTML、CSS 和 JavaScript 快速构建交互式单页应用程序 （SPA） 的原型和构建。在过去的一周里，他将此工具用于各种项目，包括使用 Jina Reader 创建 Markdown 阅读器、在 WASM 中演示 SQLite、提取 URL 以及开发剪贴板查看器。他还探讨了 Pyodide、Photo Camera Settings Simulator、LLM 定价计算器、YAML 到 JSON 转换器和 OpenAI Audio 的功能。Willison 对 Claude Artifacts 的广泛使用突出了它在快速实验、解决问题和按需生成工具方面的实用性。尽管存在局限性，例如无法进行 API 调用或提交表单，但 Willison 对该功能的热情从他的众多项目以及他的网站和 GitHub 存储库上提供的详细文档中可以看出。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/22/computer-use/">对 Anthropic 的新 Computer Use 功能的初步探索</a><br>Anthropic 在其 Claude 3.5 Sonnet 模型中引入了一种新的计算机使用功能，该功能允许用户通过文本和屏幕截图与计算机交互，如 Simon Willison 的博客文章中所述。此功能可实现精确的鼠标控制和协调，克服了以前型号无法提供准确点击位置的局限性。新模型可以通过 Docker 命令访问，并带有针对即时注入的内置预防措施，这是一个网络安全问题。Anthropic 的文档和演示代码说明了模型的功能，包括导航网站和解决难题等任务。尽管具有先进的功能，但该公司警告可能会滥用，尤其是在选举等敏感领域。该模型的名称从“claude-3-5-sonnet-20240620”更改为“claude-3-5-sonnet-20241022”反映了其更新版本。Willison 的帖子还强调了使用这个强大工具时安全和保障的重要性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/linkerd/linkerd2">linkerd/linkerd2</a><br>适用于 Kubernetes 的超轻量级、安全优先的服务网格。Linkerd 2.x 的主存储库。</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - 用于使用 CRD 构建 Kubernetes API 的 SDK</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>使用 Go 和 JavaScript 的现代负载测试工具 - https://k6.io</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度和管理</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter 是一款专为灵活性、性能和简单性而构建的 Kubernetes Node Autoscaler。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>适用于云原生时代的终极 Go 微服务框架。</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>基于 eBPF 的网络、安全性和可观测性</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>适用于 Kubernetes 的开放且可扩展的持续交付解决方案。由 GitOps Toolkit 提供支持。</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>用 Go 编写的目录/文件、DNS 和 VHost 清除工具</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>计算机指标的导出器</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>高性能、自托管的时事通讯和邮件列表管理器，具有现代仪表板。单个二进制应用程序。</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/stakater/Reloader">stakater/Reloader</a><br>一个 Kubernetes 控制器，用于监视 ConfigMap 和 Secrets 的变化，并在 Pod 及其相关的 Deployment、StatefulSet、DaemonSet 和 DeploymentConfig 上进行滚动升级 – [✩Star] 如果你正在使用它！</p>
+
+<p><a href="https://github.com/authzed/spicedb">authzed/spicedb</a><br>开源、受 Google 桑给巴尔启发的数据库，用于可扩展存储和查询细粒度授权数据</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>1 个文件中的开源实时后端</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>数据库迁移工具。支持 SQL 迁移和 Go 函数。</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu 允许您以声明方式管理您的云基础设施。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

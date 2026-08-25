@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251202.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251202</span>
+</p>
+<p>每日一谚：Simplicity is key; embrace the Go way. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://kailunli.me/posts/go-slowmo">可视化 Go 运行时调度器事件</a><br>作为一名 Go 开发者一段时间后，我对 Go 运行时的好奇心逐渐增强，渴望获得比大致了解一两个概念更深入的理解。考虑到这一点，我花了几个月的时间构建了 go-slowmo，它围绕 Go 的 GMP 调度模型进行了一些简单的可视化，希望为自己和其他人提供另一种观察 Go 运行时该部分的方法。</p> 
+
+<p><a href="https://tonybai.com/2025/12/02/advices-from-uber-distinguished-engineer">只要 Title 带“工程师”，你就必须写代码：Uber 杰出工程师的硬核建议</a><br>近日，Uber杰出工程师Joakim 接受了一次深度访谈，回顾了他在 Uber 从一名普通高级工程师一路成长为杰出 工程师的完整历程。他不但分享了那个让他获得关键晋升的“史诗级”项目，还坦诚地谈论了办公室政治、不公平的晋升制度、以及他对“影响力”的独 特理解。</p> 
+
+<p><a href="https://packagemain.tech/p/ulid-identifier-golang-postgres">ULID：普遍唯一的字典顺序可排序标识符</a><br>在运行于Postgres数据库的Go程序中使用ULID标识符。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/iiz017_nbQQcCgAyO6cZUg">【Go 测试之道】10 拥抱“混乱”：混沌工程与 Go 测试实践初探</a><br></p> 
+
+<p><a href="https://www.timurcelik.de/posts/n64go-1-getting-started">在 Nintendo 64 上使用 Go 入门</a><br>本文将指导您在 Go 中构建您的第一个 N64 ROM。 我将介绍基本的帧缓冲输出、控制器轮询，甚至音频播放.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/tailscale-jailbroken-kindle">如何在已越狱的 Kindle 上安装 Tailscale（以及为什么你应该这样做）</a><br>为 Kindle 增加更容易的 SSH、Taildrop 和安全连接，让它能够做更多的事情。</p>
+
+<p><a href="https://www.haproxy.com/blog/kubecon-na-2025-universal-mesh-federation-and-the-end-of-the-mesh-tax">KubeCon North America 2025: Universal Mesh, federation, and the end of the &#34;mesh tax&#34;</a><br>在 KubeCon 上，我们问了一个简单的问题：&#34;您的服务网格花费了您多少钱？&#34;。Universal Mesh 将重点从每个服务的代理转移到网络边界的战略网关，充当统一的联邦层。</p>
+
+<p><a href="https://www.docker.com/blog/run-embedding-models-for-semantic-search/">Run Embedding Models for Semantic Search</a><br>本文将介绍如何使用嵌入模型进行语义搜索，以及如何使用 Docker Model Runner 运行它们。</p>
+
+<p><a href="https://engineering.salesforce.com/how-ai-driven-refactoring-cut-a-2-year-legacy-code-migration-to-4-months/">如何通过人工智能驱动的重构将两年期的旧代码迁移缩短至 4 个月</a><br>了解 Salesforce 如何解决未记录的旧 Apex 模式问题，这些问题使手动迁移成为一项耗时两年的工作，最终在 4 个月内交付了原生产品。</p>
+
+<p><a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80">AV1 — Now Powering 30% of Netflix Streaming</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/01/a-guide-to-restarting-pods-in-kubernetes-using-kubectl/">Kubernetes 中使用 kubectl 重启 Pod 的指南</a><br>本文最初发表于 Middleware 博客，并经授权在此转载。kubectl 是用于管理 Kubernetes 集群的命令行界面。它允许您通过终端管理 Pod、部署和其他资源，帮助您解决 Kubernetes 问题，检查 Pod 运行状况，并轻松扩展应用程序。大多数 kubectl 命令都遵循一个简单的结构。例如， `kubectl get pods` 列出正在运行的 Pod，而 `kubectl delete pod &lt;pod-name&gt;` 移除一个 Pod。很多用户想知道如何使用 kubectl 重启 Kubernetes Pod。与普遍的看法相反，没有直接的 `kubectl restart pod` 命令。相反，Kubernetes 希望您使用更高级别的对象，例如部署。本指南涵盖了重启 Pod 的最安全、最有效的方法，包括推出重启、删除 Pod、扩展副本和更新环境变量，帮助您以可预测和受控的方式管理 Pod 重启。</p>
+
+<p><a href="https://aloisdeniel.com/blog/better-than-json">Better than JSON</a><br>深入探讨为什么Protobuf可以在现代API中胜过JSON，通过实际的Dart示例展示强类型、二进制序列化和共享模式如何提高性能和开发人员体验。</p>
+
+<p><a href="https://codegood.co/writing/why-your-best-engineers-are-interviewing-elsewhere">为什么你最好的工程师正在别处面试</a><br>一家公司在 18 个月内失去了五位高级工程师。离职面谈提到了薪酬。真正的问题是：信息无法通过组织层级向上流动。当问题传到高管层面时，它们已经蔓延成几个月前做出的辞职决定。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/2/claude-soul-document/#atom-everything">Claude 4.5 Opus 的“灵魂文件”</a><br>Richard Weiss 设法让 Claude 4.5 Opus 输出了一个 14,000 个 token 的文档，Claude 称之为“灵魂概览”。该文档用于在训练期间塑造模型的个性。</p>
+
+<p><a href="https://blog.logrocket.com/pragmatic-ai-for-devs">你不需要为所有事情都使用 AI：开发人员的现实检查</a><br>Alexandra Spalato，AI 专员，分享了一个实用的框架，帮助开发人员决定何时以及如何使用 AI 和代理。</p>
+
+<p><a href="https://www.vtrivedy.com/posts/agents-should-be-more-opinionated">Agents Should Be More Opinionated | vtrivedy</a><br>最好的 Agent 产品并不是最灵活的，而是最具主见的。 了解为什么 Agent 需要更少的旋钮而不是更多，以及如何围绕模型智能激增进行设计。</p>
+
+<p><a href="https://meysam.io/blog/ai-assisted-coding-killed-programming-joy">AI 辅助编码扼杀了我的编程乐趣</a><br>AI 编码助手感觉就像电子游戏的作弊码——起初令人兴奋，然后令人心碎。 2025 年失去编程乐趣的真实写照，以及我为什么一直回到我的钢琴。</p>
+
+<p><a href="https://taranis.ie/llms-are-a-failure-a-new-ai-winter-is-coming">LLMs 是失败的。新的 AI 寒冬即将来临。</a><br>尽管LLM有很多前景，但实际上并未得到证实。这项技术本质上是失败的，新的AI寒冬即将来临。</p>
+
+<p><a href="https://www.instantdb.com/essays/agents_building_counterstrike">Codex, Opus, Gemini 尝试构建反恐精英</a><br>在过去的一周里，我们对三个主要模型进行了更新：Gemini 3 Pro、Codex Max 5.1、Claude Opus 4.5。我们认为我们可以给他们一个挑战：构建一个基本的《反恐精英》版本。 游戏必须是 3D 用户界面，并且必须是多人游戏。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

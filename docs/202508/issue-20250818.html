@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250818.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250818</span>
+</p>
+<p>每日一谚：return early, return often </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/18/ai-app-dev-guide-for-gopher">收藏级指南：Gopher AI入局路线图</a><br>这篇文章，就是我为你准备的答案。它不是一篇制造焦虑的快餐文，而是一份力求全面、客观、深入的“入局指南”。我们将系统性地梳理 Go 在 AI 时代的定位、生态全景，并为你规划一条从入门到实践的完整路径。</p> 
+
+<p><a href="https://tonybai.com/2025/08/17/create-pointer-to-simple-types">从Rob Pike的提案到社区共识：Go或将通过new(v)彻底解决指针初始化难题</a><br>在 Go 中创建一个指向基本类型（如 int 或 string）的指针，为何比创建一个指向结构体的指针更繁琐？这个长期存在的“人体工程学”问题，由 Go 语言的共同创造者之一 Rob Pike 在提案#45624 中再次带入公众视野，并由此引发了一场长达数年、充满深度思辨的社区大讨论。最终，在权衡了多种方案的利弊后，社区逐渐形成共识，Go 提案委员会倾向于接受 new(v) 语法。本文将和大家一起回顾这场关于指针初始化的“十年之辩”，深入探讨各种方案的优劣，并解读为何 new(v) 可能成为最终赢家。</p> 
+
+<p><a href="https://medium.com/@sogol.hedayatmanesh/generics-in-go-from-basics-to-advanced-for-senior-developers-887790b018d0">Go 中的泛型 — 从基础到高级，面向高级开发人员</a><br>高级开发人员掌握 Go 中泛型 — 从基础到实际应用
+
+🌀 简介
+泛型是在 Go 1.18 中引入的，用于解决一个长期存在的挑战：
+在泛型之前，开发人员要么必须：</p> 
+
+<p><a href="https://dev.to/rezasi/practice-makes-perfect-how-ai-interview-simulation-changed-my-go-game-40d2">实践出真知：AI面试模拟如何改变了我的Go游戏</a><br>嘿，各位开发者！👋还记得技术面试前的令人心跳加速的感觉吗？手心冒汗，思绪万千，担心在被要求实现二叉树时会一片空白？是的，我也有过这种经历。这正是为什么我为Go面试实践构建了AI面试模拟功能——说实话，它改变了许多开发者的游戏规则（包括我自己！）。</p> 
+
+<p><a href="https://dev.to/namratha_3/devops-in-2025-why-linux-golang-and-aiops-are-the-avengers-of-the-cloud-world-7p6">2025 年的 DevOps：为什么 Linux、Golang 和 AIOps 是云世界的复仇者联盟 🦸‍♀️</a><br>“想要让您的 DevOps 职业生涯面向未来？了解为什么 Linux、Golang 和 AIOps 是每位工程师在 2025 年及以后所需的关键技术超能力。”</p> 
+
+<p><a href="https://qouteall.fun/qouteall-blog/2025/Traps%20to%20Developers">开发者陷阱</a><br>总结了一些针对开发者的陷阱。这些陷阱是容易被误解并导致错误的非直观事物。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.wilsonl.in/search-engine">从零开始，用两个月的时间构建一个拥有30亿神经嵌入的网络搜索引擎</a><br>对该项目进行端到端的深入研究，涵盖了大型GPU集群、分布式RocksDB和数TB的碎片化HNSW。</p>
+
+<p><a href="https://www.finkelstein.fr/sqlite-sync-engine-with-reactivity">使用 SQLite 构建同步引擎和反应式系统的心得体会</a><br>本文提炼了我为离线优先的 E2E 加密 Interleave 应用程序构建的最小同步引擎和基于 BroadcastChannel 的反应式系统。</p>
+
+<p><a href="https://brianjenney.medium.com/i-used-to-suck-at-coding-interviews-then-i-quadrupled-my-salary-9d5260389a09">我曾经不擅长编码面试。然后我的薪水翻了四倍。</a><br>五年以前，在一次高级开发人员职位的面试中，我曾惊恐发作。我当时心跳加速。我无法说出我的话。</p>
+
+<p><a href="https://www.polarsignals.com/blog/posts/2025/08/13/oomprof">OOMProf - Profiling on the Brink</a><br>使用 eBPF 记录您的程序垂死时的呼吸声</p>
+
+<p><a href="https://www.marginalia.nu/log/a_123_index_io">使用 NVMe SSD 更快地进行索引 I/O</a><br>Marginalia 搜索索引已部分重写，以提高性能，使用旨在更好地利用现代硬件的新数据结构。 本文将介绍新设计，还将探讨 NVMe SSD 在读取大小方面的一些意想不到的且违反直觉的性能特征。索引已经相当大，但有时感觉比实际小，而且自相矛盾的是，查询性能是其中一个主要原因。</p>
+
+<p><a href="https://www.daft.ai/blog/embedding-millions-of-text-documents-with-qwen3">使用 Qwen3 嵌入数百万文本文件</a><br>了解如何使用 Qwen3 嵌入技术，实现近 100% 的 GPU 利用率来处理数百万的文本文件。</p>
+
+<p><a href="https://www.seangoedecke.com/good-system-design">Everything I know about good system design</a><br>我看到很多关于糟糕的系统设计建议。一个经典的是 LinkedIn 优化的“你从未听说过队列”风格的帖子，大概是针对刚入行的人。另一个是 Twitter 优化的“如果你曾经在数据库中存储布尔值，你就是一个糟糕的工程师”的技巧。即使是好的系统设计建议也可能有点糟糕。</p>
+
+<p><a href="https://derwiki.medium.com/do-things-that-dont-scale-and-then-don-t-scale-9fd2cd7e2156">做非规模化的事情，然后不做规模化</a><br>大约十多年前，保罗·格雷厄姆普及了“做非规模化的事情”这个概念。 想法是：一开始，你做些简陋的、个人的、劳动密集型的事情， 只是为了获得吸引力……然后你才想办法让它变得巨大。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/17/gpt-oss-eval-suite/#atom-everything">TIL: 在 Mac 上使用 LM Studio 运行 gpt-oss 评估套件</a><br>我了解到 OpenAI 发布了一套评估工具，作为其 gpt-oss 模型发布的一部分，在他们的关于验证 gpt-oss 实现的指南中进行了描述。我决定尝试在我的 MacBook Pro 上运行该评估套件，针对运行在 LM Studio 内部的 gpt-oss-20b。简而言之：在 LM Studio 内部运行具有比默认上下文限制更长的模型后，以下命令在大约 3.5 小时内运行了一个评估套件。</p>
+
+<p><a href="https://prava.co/archon/">用电脑教 GPT-5</a><br>Archon - 您的计算机的副驾驶。</p>
+
+<p><a href="https://userjot.com/blog/best-practices-building-agentic-ai-systems">构建 Agentic AI 系统的最佳实践：哪些在生产中真正有效 - UserJot</a><br>构建不会崩溃的 AI 代理系统的真实模式。 两层架构、无状态设计、编排策略以及我们构建 UserJot 的代理基础设施的经验。</p>
+
+<p><a href="https://xeiaso.net/blog/2025/who-assistant-serve">你的助手为谁服务？</a><br>ChatGPT及其后果对人类来说是一场灾难。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/RezaSi/go-interview-practice">RezaSi/go-interview-practice</a><br>Go Interview Practice is a series of coding challenges to help you prepare for technical interviews in Go. Solve problems, submit your solutions, and receive instant feedback with automated testing. Track your progress with per-challenge scoreboards and improve your coding skills step by step.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/stacklok/toolhive">stacklok/toolhive</a><br>ToolHive makes deploying MCP servers easy, secure and fun</p>
+
+<p><a href="https://github.com/xataio/pgroll">xataio/pgroll</a><br>PostgreSQL zero-downtime migrations made easy</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kind">kubernetes-sigs/kind</a><br>Kubernetes IN Docker - local clusters for testing Kubernetes</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/sqshq/sampler">sqshq/sampler</a><br>Tool for shell commands execution, visualization and alerting. Configured with a simple YAML file.</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Webhooks, and MCP. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/NVIDIA/nvidia-container-toolkit">NVIDIA/nvidia-container-toolkit</a><br>Build and run containers leveraging NVIDIA GPUs</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/gophish/gophish">gophish/gophish</a><br>Open-Source Phishing Toolkit</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250617.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250617</span>
+</p>
+<p>每日一谚：A little copying is better than a little dependency </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/17/rider-elephant-arch">“骑手与大象”架构：超越微服务与单体之争的务实之道？</a><br>在软件架构的江湖里，关于“微服务”与“单体”的论战，几乎从未停歇。一方推崇微服务的灵活性、可扩展性和独立部署，另一方则坚守单体的简洁性、低通信开销和易于本地调试。近年来，我们甚至看到像亚马逊 Prime Video 这样重量级的玩家，也公开分享了其从微服务“回归”到某种形式的单体（或者说更粗粒度的服务）的实践，引发了业界新一轮的思考。</p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/type-sets">Go语言type set的乐趣</a><br>泛型为Go引入了全新的接口类型：它不是基于方法，而是基于类型集。让我们探索其可能性。本文摘自《深入浅出Go语言泛型》一书，探讨了Go泛型中类型集、联合、交集以及一些限制，并解释了约束不是类。</p> 
+
+<p><a href="https://antonz.org/go-concurrency/race-conditions">Go要点：竞争条件</a><br>本文节选自我的Go并发编程书籍，通过交互式示例从基础知识逐步讲解该主题。文章探讨了如何处理竞争条件，包括使用互斥锁防止数据竞争、比较并设置操作、幂等性和原子性、Locker接口以及TryLock方法的使用，以及避免共享状态的策略。文章以一个关于用户账户和乐高积木购买的示例说明了竞争条件问题，并提供了多种解决方案，包括使用互斥锁保护整个购买过程以及使用原子比较并设置操作。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-06-16-dolt-stash-now-works-anywhere">Dolt Stash 现在可在任何地方使用</a><br>我们添加了一个 `dolt_stash()` 过程，允许你在 Dolt 的任何位置存储你的更改。这篇文章解释了为什么需要 stash 功能，以及在 Dolt 中实现它的挑战，最后介绍了新的命名 stash 功能，并通过示例演示了它的使用方法。</p>
+
+<p><a href="https://tailscale.com/blog/managing-passwords-is-so-2020">内部管理用户名和密码已过时</a><br>Tailscale 帮助团队构建安全、私密的网络，但安全性并不止于网络层。身份验证同样重要。然而，在 2025 年，许多 SaaS 公司仍在构建和维护自己的登录系统。在这篇文章中，Tailscale 首席执行官 Avery Pennarun 回顾了最近与 Stratechery 的 Ben Thompson 的对话，并论证了为什么现代应用程序应该将身份验证外包——以及我们的开源 OIDC 服务器 tsidp 如何帮助您在不放弃控制权的情况下实现这一点。</p>
+
+<p><a href="https://newsletter.eng-leadership.com/p/the-state-of-engineering-leadership">2025 年工程领导力现状</a><br>这篇新闻文章分享了 600 多位工程领导者对他们角色如何演变的见解，其中包括：工程组织的变化、2025 年工程领导者的现状以及人工智能对工程领导力的影响。文章还揭示了一些有趣的统计数据，例如 60% 的工程领导者认为人工智能尚未显著提高团队的生产力，50% 的人担心就业机会减少，40% 的人认为团队的积极性下降，65% 的人担心经济衰退。文章探讨了人工智能对工程组织的积极和消极影响，以及工程领导者面临的挑战，例如在有限的预算下寻找合适的候选人，以及保持团队士气等。</p>
+
+<p><a href="https://expo.dev/blog/what-are-environment-variables">开发者必知的环境变量使用知识</a><br>本文介绍了环境变量的工作原理、主要用途、常见陷阱以及在 Expo React Native 应用中使用环境变量的最佳方法。学习如何配置环境变量，以及如何在开发和生产环境中安全地使用它们，包括使用 .env 文件和 eas.json 文件。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://a16z.com/next-gen-pentesting-ai-empowers-the-good-guys">新一代渗透测试：AI赋能“好人”</a><br>传统的渗透测试的假设开始动摇，新一代的AI驱动方法正在兴起。本文探讨了AI如何改变渗透测试，使其能够以机器的速度应对现代软件开发的规模和速度。文章还讨论了新一代渗透测试工具的局限性和挑战，例如数据限制、责任不明确以及范围狭窄等问题。</p>
+
+<p><a href="https://engineering.leanix.net/blog/ai-won%E2%80%99t-grow-great-engineers">AI不会培养出优秀的工程师——除非我们正确地使用它</a><br>人工智能已经融入工程师的工作流程、IDE甚至决策过程，它提高了生产力，加快了原型设计，并使我们能够立即获得以前需要数小时深入思考才能找到的解决方案。但是，这种方法存在权衡——这是我们无法忽视的。过度依赖AI会导致工程师缺乏批判性思维、彻底调试或刻意设计的能力，最终可能降低工程思维、质量和团队长期能力。正确的AI集成方法是：自动化重复性任务；情境化学习；加速原型设计，随后进行有意的同行评审和架构验证；专注于文档编制和总结；验证想法；识别解决方案中的不足之处。团队应遵循一条简单的规则：AI可以帮助你入门，但你必须理解并拥有最终结果。这样才能在保持速度的同时保证质量，避免形成依赖性文化。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/karpenter">kubernetes-sigs/karpenter</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/lejianwen/rustdesk-api">lejianwen/rustdesk-api</a><br>Custom Rustdesk Api Server, include web admin ,web client, web client v2 preview and oidc login</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/Musixal/Backhaul">Musixal/Backhaul</a><br>Lightning-fast reverse tunneling solution for NAT traversal, optimized for handling massive concurrent connections with tcp, tcpmux, udp, udp over tcp, ws, wsmux, wss and wssmux support.</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/grafana/tempo">grafana/tempo</a><br>Grafana Tempo is a high volume, minimal dependency distributed tracing backend.</p>
+
+<p><a href="https://github.com/go-sql-driver/mysql">go-sql-driver/mysql</a><br>Go MySQL Driver is a MySQL driver for Go&#39;s (golang) database/sql package</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Simple, reliable, and efficient distributed task queue in Go</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

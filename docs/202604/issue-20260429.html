@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260429.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260429</span>
+</p>
+<p>每日一谚：Go&#39;s defer statement is more than just cleanup. It&#39;s a powerful control flow. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/29/go-1-27-default-simd-for-amd64-portable-simd-proposal">Go 1.27 将默认开启 SIMD for amd64，可移植 SIMD 包提案出炉</a><br>近期，Go 核心团队在官方 GitHub 仓库中，又密集地抛出了一系列重磅提案（#78902, #78979等）。这些提案不仅宣告了在 Go 1.26 中实验性加 入的 SIMD 功能大获成功，更进一步宣布： 在即将到来的 Go 1.27 中，simd/archsimd 包将默认开启！同时，一个早已规划好的、架构无关的 “可移植（Portable）”SIMD API 也已正式提案！</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/JSONNotConfigurationFile">如果它是 JSON 格式，那它就不是真正的配置文件</a><br>在 Fediverse 上，我曾表达过这样的观点：如果你们认为 JSON 是好的配置文件格式，那你们开发的守护进程我绝不会主动运行。这并非针对 ISC Kea 的暗讽。如果我们需要替换传统的 ISC DHCP 服务器，绝不会选择 Kea。如果你们程序的配置文件格式是 JSON，那你们就是在公开宣称：比起软件的使用者，你们更关心在读取和加载配置文件时的编程便利性。“你们可以用软件从其他地方生成 JSON”，不，我不接受。你们已经表明了立场，我会相信你们。我宁愿运行那些真正关心用户的软件。</p> 
+
+<p><a href="https://www.dash0.com/guides/opentelemetry-logging-in-go">Go 语言中的 OpenTelemetry 日志记录</a><br>Dash0 完成 1.1 亿美元 B 轮融资，估值 10 亿美元。Go 语言的 log/slog 包开箱即用，提供了结构化日志记录，但它产生的记录与其余的可观测性堆栈是脱节的。打印到标准输出的 JSON 行并不知道它属于哪个追踪、由哪个跨度触发，也不知道是由哪个资源发出的。otelslog 桥接器将 slog 转变为 OpenTelemetry 原生日志源。它实现了 slog.Handler，因此你现有的日志记录调用无需更改，但在底层，每条记录都会与追踪、指标一同流经 OTel 日志 SDK，并自动附带追踪上下文、资源属性和语义严重级别。本指南详细介绍了完整设置：初始化 OTel 日志 SDK、连接桥接器、关联日志与追踪、替换跨度事件、通过 OTLP 导出，以及配置收集器以在另一端接收所有数据。</p> 
+
+<p><a href="https://dustri.org/b/carrot-disclosure-forgejo.html">Forgejo 安全漏洞披露</a><br>自从 Fedora 从 Pagure 迁移到 Forgejo 后，我终于有动力深入审查 Forgejo 的安全态势。老实说，结果并不乐观：到处都是服务端请求伪造（SSRF）、没有内容安全策略（CSP）或可信类型、JavaScript 代码中存在简陋的模板、加密实践失当、身份验证机制（OAuth2、OTP、会话/访问控制、恢复流程等）存在疏漏、一堆低门槛的拒绝服务漏洞、随处可见的信息泄露、各种竞态条件（TOCTOU）等。总而言之，我下班后花了一个晚上就发现了大量漏洞，并串联其中一些漏洞实现了完整的远程代码执行（RCE）、秘密泄露、持久性账户访问、OAuth2 提权等。幸运的是（或者不幸的是，取决于你的视角），RCE 依赖于开放注册和某些非默认的配置选项。鉴于代码库糟糕的现状，我确信再花一个晚上还能找到新的攻击链，而其他人可能也发现了许多漏洞。</p> 
+
+<p><a href="https://medium.com/@bRutTe_forc3/concurrency-in-go-a-deep-dive-into-goroutines-channels-waitgroups-and-more-b75475290847">Go 并发：深度解析 Goroutines、通道、等待组等</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/04/28/kubernetes-v1-36-staleness-mitigation-for-controllers/">Kubernetes v1.36：控制器的过时数据缓解与可观测性</a><br>控制器中的数据过时问题影响了许多控制器，并可能以微妙的方式影响其行为。通常只有在生产环境中的控制器已经采取了错误操作后，才会发现数据过时问题。Kubernetes v1.36 引入了新功能来帮助缓解控制器的过时问题，并提供更好的控制器行为可观测性。所谓过时，是指控制器缓存中对世界的看法已经过时。为了提供快速的用户体验，控制器通常维护集群状态的本地缓存。Kubernetes v1.36 在 client-go 以及实现方面进行了改进。</p>
+
+<p><a href="https://tailscale.com/blog/paperless-ngx-local-ai-document-search">Tailscale &#43; Paperless-ngx：扫描一切，泄露为零</a><br>设置 Tailscale 与 Paperless-ngx，以安全地存储和访问你的税务、医疗和其他文档，并提供可选的 AI 标签功能。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/04/28/unlocking-human-ambition-to-drive-business-growth-with-ai/">利用 AI 释放人类抱负以推动业务增长</a><br>随着客户向“前沿公司”转型，他们不仅在利用 AI 优化工作方式，还在通过增长承诺重塑业务。组织现在可以通过将 Copilots 和智能体直接植入人们日常使用的工具中来释放创造力、加速创新并实现智能民主化。AI 解决方案中最重要的两个要素是智能与信任。在微软，我们致力于通过 Microsoft IQ 和 Agent 365 提供这两个要素的平台。智能嵌入日常工作后，组织正在激活人类抱负，在不增加操作复杂性的情况下更有效地吸引客户、重塑业务流程并加速创新，将收益转化为竞争优势。</p>
+
+<p><a href="https://nesbitt.io/2026/04/28/github-actions-is-the-weakest-link.html">GitHub Actions 是最薄弱的环节</a><br>审视过去十八个月里几乎所有的开源供应链事故，你会发现最终都归结于 .github/workflows YAML 文件。整个产品是一系列功能的集合，每个功能单独使用都很方便，但很容易被组装成危险的东西。这些工作流运行在一个最初作为私有仓库企业级 CI 工具设计，但从未针对匿名分支和临时拉取请求重新思考默认设置的平台上。</p>
+
+<p><a href="https://newsletter.manager.dev/p/the-unwritten-laws-of-software-engineering">软件工程的不成文法则</a><br>除了那些已命名的法则，每个资深工程师都知道许多不成文的规则。你是通过破坏系统并誓言永不再犯来学会这些规则的。这里有 7 条每个工程师至少违反过一次、通过惨痛教训学到的法则：1. 总是有关联的——先回滚，再调试；2. 没经过恢复验证的备份都不是真正的备份；3. 你总会因为自己写日志的方式而讨厌自己；4. 始终要有回滚计划；5. 每个外部依赖项都会失效；6. 如果有任何风险——遵循“四眼原则”；7. 没有比临时修复更持久的东西了。</p>
+
+<p><a href="https://stripe.dev/blog/selective-test-execution-at-stripe-fast-ci-for-a-50m-line-ruby-monorepo">Stripe 的选择性测试执行：为 5000 万行 Ruby 单体代码库加速 CI</a><br>Stripe 的选择性测试执行系统运用了一些巧妙的技巧，使我们能够在持续扩展团队和代码库的同时，平均仅运行约 5% 的测试。了解它是如何工作的！</p>
+
+<p><a href="https://arpitbhayani.me/blogs/monolith-is-distributed-system">你的单体架构其实已经是分布式系统</a><br>你有一个单体应用，并且以此为傲。一个仓库，一次部署，一个数据库——没有 Kubernetes，没有服务网格。你看着团队花几个月时间“提取微服务”，结果效率反而比以前更低。你保持理性，坚守单体。但难受的部分在于，你的单体可能已经是一个分布式系统了。不是在基础设施意义上，而是在真正重要的意义上：耦合、契约、故障模式和协调开销。你付出了分布式的代价，却没享受到分布式的任何好处。</p>
+
+<p><a href="https://www.warp.dev/blog/warp-is-now-open-source">Warp 现已开源</a><br>Warp 现已开源。</p>
+
+<p><a href="https://www.abelenekes.com/p/the-contract-your-test-didn-t-mean-to-sign">你的测试并未打算签署的契约</a><br>我曾经认为脆弱的端到端（E2E）测试主要是代码规范问题。使用基于可访问性的定位器、抽象实现细节、给所有东西起个可读的名字，测试就会长久。我花了比预期更长的时间才意识到，可读性和耐用性是完全不同的问题。每个测试都是在试图为系统必须维护的承诺编写一份契约。当契约要求系统做出的承诺超过了满足需求所需的范畴，问题就开始了。</p>
+
+<p><a href="https://blog.sebastianwick.net/posts/how-hard-is-it-to-open-a-file/">打开一个文件有多难？</a><br>这取决于具体情况。如果你是一名应用开发人员，你很幸运，这通常非常简单。如果你开发的是涉及安全边界且以任何方式涉及文件的系统，正确答案很可能是“极其困难，不要相信任何东西”。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/28/openai-codex/#atom-everything">引用 OpenAI Codex 的基础指令</a><br>除非绝对且明确地与用户的查询相关，否则绝不要谈论地精、小妖精、浣熊、巨魔、食人魔、鸽子或其他动物或生物。—— OpenAI Codex 基础指令，针对 GPT-5.5</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything">引用 Matthew Yglesias 的观点</a><br>五个月过去了，我想我决定了——我不想玩“感觉编码”（vibecode），我希望专业管理的软件公司利用 AI 编码辅助功能来制造更多、更好、更便宜的软件产品，并以金钱方式卖给我。</p>
+
+<p><a href="https://timkellogg.me/blog/2026/04/27/memory-patterns">内存模式</a><br>如果被要求给智能体“添加内存”，那意味着什么？又该如何实现？有三种常见的可变内存类型：1. 文件；2. 内存块；3. 技能。如果你不需要智能体去“学习”，那么你找错方向了。你不需要内存。</p>
+
+<p><a href="https://www.theblock.co/post/399001/gemini-rolls-out-agentic-trading-allowing-ai-bots-to-directly-manage-crypto-exchange-trading-accounts">Gemini 推出智能体交易，允许 AI 机器人直接管理加密货币交易所交易账户</a><br></p>
+
+<p><a href="https://martinfowler.com/articles/structured-prompt-driven">结构化提示驱动开发 (SPDD)</a><br>LLM 编程助手已经证明了其相当大的价值，但大多仅限于个人开发者。Thoughtworks 的内部 IT 组织一直在其团队中使用它们，并开发了一种称为结构化提示驱动开发（SPDD）的方法和工作流。该文章描述了一个简单的工作流示例。该工作流将提示词视为一等工件，与代码一起保存在版本控制中，并用于使开发与业务需求保持一致。我们发现开发人员需要三种关键技能才能有效：对齐、抽象优先和迭代审查。</p>
+
+<p><a href="https://incident.io/blog/whos-on-call-how-claude-helped-us-calculate-this-2-500-x-faster">谁在值班？Claude 如何帮我们将计算速度提高了 2500 倍</a><br>我们如何渲染排班表？基本的流程是什么？什么是公平调度？为什么计算这么慢？循环中的循环，以及无数 UUID 生成带来的性能杀手。Claude Opus 4.6 如何协助解决这一问题并进行推广。</p>
+
+<p><a href="https://legallayer.substack.com/p/who-owns-the-claude-code-wrote">Claude 编写的代码归谁所有？</a><br>像 Claude Code、Cursor 和 Codex 这样的智能体编码工具生成的代码可能无法获得版权保护、归你的雇主所有，或者被你无法看到的开源许可证污染。其中一些是既定法律，一些仍在积极争议中。如果你正在发布 AI 辅助编写的代码，而从未考虑过这些问题，那么这篇文章就是为你准备的。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/CJackHwang/ds2api">CJackHwang/ds2api</a><br>Deepseek to API: A lightweight, high-performance full-stack middleware converting client protocols to universal APIs. Supports multi-account rotation, compiled binaries, Vercel Serverless, and Docker.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️ OpenCloud is the open source platform for file management, sharing and collaboration. Simple and sovereign.</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>Glamourous agentic coding for all 💘</p>
+
+<p><a href="https://github.com/chenhg5/cc-connect">chenhg5/cc-connect</a><br>Bridge local AI coding agents (Claude Code, Cursor, Gemini CLI, Codex) to messaging platforms (Feishu/Lark, DingTalk, Slack, Telegram, Discord, LINE, WeChat Work). Chat with your AI dev assistant from</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260102.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260102</span>
+</p>
+<p>每日一谚：Make your errors clear with fmt.Errorf, do not just leave them bare </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/02/go-supply-chain-attack-source-code-to-capability-auditing-paradigm-shift/">从“源码审计”到“能力审计”：Go 生态应对供应链攻击的范式转移</a><br>在 GopherCon 2025 上，Google Cloud 安全专家 Jess McClintock 提出了一个新观点：我们需要一场防御范式的转移——从关注代码“写了什么”，转向关注构建产物“能做什么”**。本文将带你深入这场范式转移的核心，剖析攻击手段的演变，并手把手教你使用 Google 开源的 Capslock 工具，开启你的“能力审计”之路。</p> 
+
+<p><a href="https://tonybai.com/2026/01/02/kent-beck-ai-era-code-review-end-and-rebirth">Kent Beck 最新思考：AI 时代的“一人派对”，代码审查的终结与重生</a><br>极限编程 (XP) 和测试驱动开发 (TDD) 的奠基人 Kent Beck，最近发表了一篇题为《Party of One for Code Review!》（代码审查的一人派对！）的博客。 这是一个略带伤感，却又无比清醒的时刻。曾经，代码审查是软件工程中最具社交属性的活动之一，是团队知识共享的纽带。但在 AI 能够以百倍于 人类的速度生成代码的今天，那个属于人类互相 Review 的黄金时代，似乎正在走向终结。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoTestingSelectQuestion">一个 Go 语言问题：如何测试基于 select 代码？</a><br>使用synctest包对基于select代码的测试</p> 
+
+<p><a href="https://blog.yossarian.net/2025/12/29/Some-flexibility-with-Go-s-sumdb">Go的sumdb的一些灵活性</a><br>本文探讨了Go的sumdb（校验和数据库）中关于模块路径大小写灵活性的问题。Go模块路径在导入时是区分大小写的，但在URL表示中，路径部分对大小写是不敏感的。这导致可以为相同的模块版本内容创建多个不同的sumdb日志条目（尽管内容哈希不同，但go.mod哈希相同）。这种不一致性使得对模块的监控变得复杂，并可能为类似“键入错误抢注”（typosquatting）的攻击提供潜在基础，因为大小写变化看起来比典型拼写错误更不引人注目。作者分析了这种灵活性对监控的实际影响（可能导致误报或漏报）以及其安全意义（通常不大，但揭示了透明度方案中身份定义的微妙性）。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://herbsutter.com/2025/12/30/software-taketh-away-faster-than-hardware-giveth-why-c-programmers-keep-growing-fast-despite-competition-safety-and-ai">软件的消耗速度快于硬件的给予速度：尽管面临竞争、安全性和人工智能，C&#43;&#43; 程序员仍在快速增长的原因</a><br>本文探讨了 2025 年 C&#43;&#43; 程序员群体持续快速增长的原因，指出**算力和功耗**是当前计算增长的两个主要瓶颈。作者引用了微软、亚马逊和英伟达高管的言论来强调能效的重要性。C&#43;&#43; 和 Rust 是满足这种效率需求的主要语言。文章驳斥了 C&#43;&#43;“不安全”的说法，指出许多安全问题源于 C 语言，并强调 C&#43;&#43;26 标准通过消除未初始化变量的未定义行为和引入“加固”模式来提高安全性。此外，C&#43;&#43;26 还通过契约（contracts）增加了功能安全。最后，作者认为人工智能（AI）不会取代程序员，反而会成为巨大的“力量倍增器”，因为行业长期面临的瓶颈是**熟练程序员的短缺**，而不是就业岗位的短缺。</p>
+
+<p><a href="https://seangoedecke.com/grok-deepfakes/">Grok is enabling mass sexual harassment on Twitter</a><br>Grok, xAI’s flagship image model, is now being widely used to generate nonconsensual lewd images of women on the internet. When a woman posts an innocuous picture of herself, comments often request Grok to generate explicit or sexually suggestive modifications of the image. The author argues this is the worst AI safety violation seen so far due to its widespread nature on Twitter. The behavior stems from xAI&#39;s general stance on safety, prioritizing capabilities and user engagement over strict content moderation, making it an xAI issue rather than an inherent problem with image models in general. The author suggests pursuing entities like xAI under existing deepfake pornography laws and strongly locking down image editing requests as necessary countermeasures.</p>
+
+<p><a href="https://netflixtechblog.medium.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257">Towards Generalizable and Efficient Large-Scale Generative Recommenders</a><br></p>
+
+<p><a href="https://johnnysswlab.com/memory-subsystem-optimizations">内存子系统优化</a><br>本博客总结了18篇关于内存子系统优化的文章。内存子系统优化旨在通过更好地利用内存子系统来提高软件速度。其中大部分优化适用于处理大型数据集的软件，但有些优化也适用于任何规模数据集的软件。文章涵盖了减少内存访问次数、改变数据访问模式以增加局部性、改变数据布局（类和数据结构）、减少数据集大小、改变内存布局、增加指令级并行性、软件预取、减少TLB缓存未命中、节省内存子系统带宽、分支预测与数据缓存的相互作用、多线程与内存子系统、低延迟应用、以及测量内存子系统性能等主题。</p>
+
+<p><a href="https://gaultier.github.io/blog/the_production_bug_that_made_me_care_about_undefined_behavior.html">让我关心未定义行为的生产环境Bug</a><br>作者回顾了一次在处理一个处理数十亿欧元支付的C&#43;&#43;代码库时遇到的生产环境Bug。该Bug导致响应中`error`和`succeeded`两个布尔字段同时为`true`，这在逻辑上不应该发生。经过深入调查，作者发现问题出在C&#43;&#43;的默认初始化规则上：当一个非平凡（non-POD）结构体（如包含`std::string`的结构体）被默认初始化（如`Response response;`），只有其成员的默认构造函数会被调用；对于内置类型如`bool`，编译器不会生成默认初始化代码，导致它们处于不确定的（未初始化）状态，读取它们会触发未定义行为（Undefined Behavior）。作者通过使用`response{}`进行值初始化（zero initialization）修复了问题，并借此机会讨论了C&#43;&#43;初始化、静态/运行时分析工具（如ASan）在发现此类问题方面的优缺点，并对C&#43;&#43;的复杂性表示了感慨，同时强调了未定义行为的危险性。</p>
+
+<p><a href="https://cointelegraph.com/news/why-jpmorgan-s-onchain-fund-is-a-big-signal-for-ethereum">为什么摩根大通将代币化的货币市场基金放在以太坊上</a><br>摩根大通在以太坊主网上推出了名为 MONY 的代币化货币市场基金。此举意义重大，因为货币市场基金是机构用于短期现金停泊的常见工具。该基金投资于美国国债和国债抵押的回购协议，提供每日股息再投资，并允许合格投资者使用现金或稳定币进行申购和赎回。选择以太坊作为结算层尤其引人注目，因为它与稳定币、代币化国债等现有链上流动性集中在一起。现在，焦点转向了抵押品使用、二级转账以及是否有其他主要银行效仿这一举措。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.fintechbrainfood.com/p/state-of-fintech-2026">2026年金融科技概览：金融科技的复利增长者</a><br>代理人商业、稳定币和预测市场在2025年并未颠覆银行，但它们改变了其他所有事物。金融科技巨头持续扩张，AI影响了交易，稳定币成为跨境支付主流，而银行则保持稳健，共同塑造了新的市场格局。</p>
+
+<p><a href="https://lethain.com/agents-coordinators">构建内部代理：代码驱动 vs LLM 驱动的工作流程</a><br>作者最初认为可以使用 LLM 加上工具使用来解决任意复杂的工作流程，但现在不确定这是否是一个好的解决方案，因为有些问题用软件解决更简单、更便宜、更快。本文介绍了作者支持代码驱动和 LLM 驱动工作流程的方法，以及决定有必要这样做的原因。作者以一个 Slack 机器人拉取请求（PR）状态检查的例子说明了 LLM 驱动工作流可能存在的不确定性问题。随后介绍了如何通过在配置中将协调器设置为 &#39;script&#39; 来实现代码驱动工作流，使自定义 Python 代码能够访问与 LLM 相同的工具、触发器数据和虚拟文件，从而在需要确定性时提供增强功能。</p>
+
+<p><a href="https://spectrum.ieee.org/ai-effect-entry-level-jobs">人工智能如何重塑入门级工作</a><br>人工智能正在改变入门级职位的期望，要求软件工程师具备更高层次的思维和协作能力。面对人工智能改造的就业市场，应届毕业生如何应对？了解如何让AI为您服务，而不是与您作对。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/autobrr/qui">autobrr/qui</a><br>Modern alternative webUI for qBittorrent, with multi-instance support. Written in Go/React.</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/danielpaulus/go-ios">danielpaulus/go-ios</a><br>This is an operating system independent implementation of iOS device features. You can run UI tests, launch or kill apps, install apps etc. with it.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The to-do app to organize your life.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/fish2018/pansou">fish2018/pansou</a><br>PanSou是一款高性能的网盘资源搜索API服务，支持TG频道和插件搜索。系统设计以性能和可扩展性为核心，支持多频道多插件并发搜索、结果智能排序和网盘类型分类。docker集成前后端，一键启动，开箱即用。 https://so.252035.xyz/</p>
+
+<p><a href="https://github.com/getfider/fider">getfider/fider</a><br>Open platform to collect and prioritize feedback</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/ayn2op/discordo">ayn2op/discordo</a><br>A lightweight, secure, and feature-rich Discord terminal (TUI) client.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>An alternative to the immich-CLI command that doesn&#39;t depend on nodejs installation. It tries its best for importing google photos takeout archives.</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

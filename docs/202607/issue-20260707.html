@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260707.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260707</span>
+</p>
+<p>每日一谚：Clear is better than clever. Clever code is hard to read and maintain; clear code tells a story </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/07/how-to-create-loops-with-claude-code">如何使用 Claude Code 构建 AI 循环系统（Loops）</a><br>在 AI 辅助开发的进阶道路上，仅凭单次的提示词（Prompt）无法支撑复杂、高频的自动化任务。本文翻译了技术专家 Rahul 提供 的一份保姆级实战指南，详细讲解了如何使用 Claude Code 搭建“睡后运行”的自动化循环系统（Loops）。文章摒弃了复杂的底层架构，提出了一套极简高效的“4 文件系统”：以 TASK.md 明确终极目标，以 LOOP_INSTRUCTIONS.md 设定标准操作与红线，通过 PROGRESS.md 实现跨会话的记忆持久化与断点续传，最终输出至 outputs 目录。此外，文章还深度剖析了循环必不可少的 6 大要素（触发、上下文、行动、验证、更新、决策），并着重强调了引入强验证（Strong Verification）、避免 5 大崩溃雷区，以及遵循“权限控制阶梯”逐步放权的重要性。掌握这套系统设计方法，开发者可以将耗时的项目审查、报错排查等体力劳动，优雅地转化为可稳定复用的工程闭环。</p> 
+
+<p><a href="https://rednafi.com/go/gofix/">Modernizers &amp; go fix</a><br>Go 1.26 版本的从零开始重新构建了go fix。如果你还没有尝试过，那么不妨试试看吧：它会重新编写你模块中的代码，使其使用现代语言和库的功能。</p> 
+
+<p><a href="https://vercel.com/blog/dockerfile-on-vercel">在 Vercel 上运行任何 Dockerfile</a><br>将 Dockerfile.vercel 文件添加到你的项目中，Vercel 会负责构建、存储、部署镜像，并自动调整镜像大小，这样你就只需要支付代码实际使用的 CPU 资源费用。无需本地运行任何守护进程，无需设置注册表，也无需管理集群。</p> 
+
+<p><a href="https://theconsensus.dev/p/2026/06/27/the-feature-in-oxcaml-more-languages-should-steal.html">OxCaml 中的这个功能，更多语言都应该借鉴借鉴</a><br>在大多数语言中，你可以通过分析器来定位内存分配的情况，而一旦涉及到频繁使用热点代码的地方，这些分配情况就会变得明显起来。Jane Street 提供的 OCaml 超集允许你这样操作：用 [@zero_alloc] 来标注函数，如果调用树中的任何元素涉及到堆内存操作，编译器就会拒绝编译。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/06/the-4-body-problem-of-sre-why-autonomous-operations-depend-on-context/">SRE的四体问题：为什么自主运营依赖于上下文</a><br>将运营视为数据。不要再让代码、基础设施状态、运行时信号和运营知识作为四个孤立且互不信任的堆栈存在。将它们整合到一个可以查询、版本化和推理的统一知识图谱中。智能体是后续步骤，而非首要任务。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/06/evolving-platform-engineering-for-ai-native-workloads/">面向AI原生工作负载的平台工程演进</a><br>基础设施仍然是任何平台工程战略的核心，提供支撑整个生态系统的重要计算、存储和专业化GPU资源。这标志着向平台工程2.0的转变。</p>
+
+<p><a href="https://seangoedecke.com/blog-about-things-you-dont-understand-yet/">撰写关于你尚未理解的事物的博客</a><br>在进入科技行业之前，我是哲学研究生。但在此之前，我是一名诗人。当你尝试写诗时会学到一件事：按照限制性结构写作比简单地&#34;写下你的感受&#34;要容易得多。</p>
+
+<p><a href="https://stevekrouse.com/learn-to-code">学习编程仍然是有价值的</a><br>后来，我了解到这一体验是由数学与教育研究员西摩·派珀特精心设计的。他希望孩子们像学习说话一样学习数学：通过探索而非指导。</p>
+
+<p><a href="https://shiftmag.dev/why-good-architecture-still-fails-in-production-9894/">Eoin Woods谈软件架构失败</a><br>在多伦多的CTO Craft晚宴上，我与来自十多家科技公司的工程领导者进行了交流。我们讨论了软件架构失败的原因以及如何避免这些问题。</p>
+
+<p><a href="https://ammar-najjar.com/de/blog/github-pages-to-cloudflare/">在GitHub Pages上的九年，为什么我最终转向了Cloudflare</a><br>近九年来，我的网站一直托管在GitHub Pages上，免费、可靠且几乎无需维护。那么为什么我要迁移呢？</p>
+
+<p><a href="https://www.architecture-weekly.com/p/addition-by-subtraction-in-software">软件设计中的减法加成</a><br>在软件设计中，减法可以增加价值，而加法可能降低价值。通过移除不必要的功能和复杂性，软件产品可以变得更加专注和高效。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/6/hy3/#atom-everything">腾讯/Hy3</a><br>Hy3是腾讯Hy团队开发的295B参数的专家混合(MoE)模型，具有21B活跃参数和3.8B MTP层参数。在4月底发布Hy3预览版后，我们从50多个产品中收集反馈，并使用更高质量的数据进行了扩展后训练。</p>
+
+<p><a href="https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/">GLM 5.2和即将到来的AI利润率崩溃</a><br>这是一个两部分系列，专注于我认为AI经济学中可能最不被理解的即将到来的转变。如果你喜欢这篇文章并希望收到第二部分的通知，请随时订阅我的通讯。</p>
+
+<p><a href="https://danluu.com/ai-coding/">智能体测试流程、LLM基准测试及其他智能体编程笔记</a><br>自去年11月以来，我一直相当频繁地使用AI，整个过程很有趣。一个智能体会做一些事情，如果人类这样做，你会立即解雇他们。我的反应是表现得好像这很棒，然后启动更多智能体。</p>
+
+<p><a href="https://ramp.com/data/heavy-ai-adopters-hire-more">AI会消除就业机会吗？经济学家发现重度采用者雇佣更多。</a><br>不要错过Ramp经济学实验室关于商业支出关键变化的报道。研究表明，重度采用AI技术的公司实际上雇佣了更多员工，而非减少。</p>
+
+<p><a href="https://learngenomics.dev/docs/biological-foundations/cells-genomes-dna-chromosomes/">细胞、染色体和基因组 | 工程师基因组学导论</a><br>本指南专门由计算机科学家和工程师编写，面向同类读者。癌症基因组学的基础生物学可能极其复杂，需要多年的研究才能掌握。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gastownhall/gastown">gastownhall/gastown</a><br>Gas Town - multi-agent workspace manager</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/infiniflow/ragflow">infiniflow/ragflow</a><br>RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧 Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview</a><br>Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

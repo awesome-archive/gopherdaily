@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260717.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260717</span>
+</p>
+<p>每日一谚：Make the zero value useful. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/17/go-maps-same-proposal-accepted">为了一个函数名，Go官方吵了两个月：maps.Same提案近日正式通过</a><br>Go 的 map 本质是指向哈希表的引用，但语言层面从未提供安全的方式判断“两个 map 变量是否指向同一份数据”——过去只能靠 reflect &#43; unsafe 曲线救国。今天，Go 提案委员会正式采纳了 issue #78456，将在标准库 maps 包中新增 Same 函数。这个看似只有三行代码的提案，却在命名、nil 语义、NaN 陷阱、泛型签名四个维度上引发了长达数月的拉锯战，也让我们得以一窥 Go 语言演进背后严谨到近乎“较真”的设计哲学。</p> 
+
+<p><a href="https://gomodvanityurls.com/zh/blog/go-monorepo-vanity-url/">Go Monorepo 实战：用 Vanity URL 管理多模块</a><br>手把手教程：Go 1.25 子目录模块 &#43; vanity URL 的组合拳。一个 monorepo，多个可导入的 Go 模块，简洁的品牌化导入路径——用 gvu --subdir 搞定。</p> 
+
+<p><a href="https://rednafi.com/go/gc-shape-stenciling/">Go 泛型中的 GC shape模板</a><br>在研究 Go 泛型提案时，我对编译器如何实现泛型感到好奇。编译器通常通过两种方式处理泛型：完全单态化或类型擦除。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/07/16/goland-2026-2-is-now-available/">GoLand 2026.2 现已发布！ - JetBrains 博客</a><br>GoLand 是专业的 Go 开发 IDE。关注我们获取最新更新和教程。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/16/running-a-self-hosted-llm-in-kubernetes-with-vllm/">使用 vLLM 在 Kubernetes 中运行自托管 LLM</a><br>vLLM 提供了一种在 Kubernetes 中部署大型语言模型的高效方法。通过简单的部署配置，您可以快速启动自托管的语言服务。</p>
+
+<p><a href="https://tailscale.com/blog/remotely-access-home-assistant">通过 Tailscale 免费远程访问 Home Assistant</a><br>使用 Tailscale 将 Home Assistant 扩展到家庭网络之外。</p>
+
+<p><a href="https://www.docker.com/blog/what-are-ai-agents/">AI 智能体解析：如何安全构建</a><br>AI 智能体是一种软件，它接收目标并自主工作，推理要做什么，使用工具行动，并根据结果调整。与回答单个提示的聊天机器人不同，智能体会运行决策和行动循环，直到任务完成。</p>
+
+<p><a href="https://www.docker.com/blog/docker-wearedevelopers-world-congress-north-america-2026/">开发者已改变。开发者会议也应如此</a><br>这就是我们最初与 WeAreDevelopers 合作的原因。他们花了十多年时间专注于构建软件的人，而不是销售软件的公司，建立了全球最强大的开发者社区之一。</p>
+
+<p><a href="https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/">Microsoft Comic Chat 现已开源</a><br>Microsoft 已将 Comic Chat 开源。这款经典的聊天应用程序现在可以在开源平台上获取源代码和文档。</p>
+
+<p><a href="https://turso.tech/blog/a-new-modern-version-of-postgres-in-rust">我们正在用 Rust 构建 Postgres</a><br>我们正在使用 Rust 重新实现 PostgreSQL，利用其现代特性和性能优势，打造新一代数据库系统。</p>
+
+<p><a href="https://modal.com/blog/scaling-to-1-million-concurrent-sandboxes-in-seconds">在几秒内扩展到 100 万个并发沙箱</a><br>本文介绍了如何在几秒内扩展到 100 万个并发沙箱的技术实现。作者 Colin Weld 分享了他们在工程方面的经验和解决方案。</p>
+
+<p><a href="https://onatm.dev/2026/07/16/homescale-part-1/">从零开始构建 PlanetScale：基础设施</a><br>Homescale 是家庭版的 PlanetScale。多年前我曾为数据库工具公司工作，有幸在 PlanetScale 流行之前开发了几款数据库克隆工具。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/16/mermaid-ascii/#atom-everything">Mermaid 转 ASCII 艺术 (mermaid-ascii)</a><br>在基于 Grok Build 的 Rust 代码构建 Mermaid 到 ASCII 工具后，我发现有一个更早、功能更全面的 Go 库叫做 AlexanderGrooff/mermaid-ascii。</p>
+
+<p><a href="https://www.kimi.com/blog/kimi-k3">Kimi K3 技术博客：开放前沿智能</a><br>Kimi K3 是一款专注于前沿智能的 AI 模型，提供开放性和创新性，为用户提供先进的 AI 能力和服务。</p>
+
+<p><a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/">NotebookLM 现在是 Gemini Notebook</a><br>NotebookLM 现在更名为 Gemini Notebook。这是 Google 推出的智能笔记本工具，现在整合了 Gemini AI 技术，提供更强大的内容理解和生成能力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/siglens/siglens">siglens/siglens</a><br>100x Efficient Log Management than Splunk 🚀 Reduce your observability cost by 90%</p>
+
+<p><a href="https://github.com/goreleaser/goreleaser">goreleaser/goreleaser</a><br>Release engineering, simplified</p>
+
+<p><a href="https://github.com/lima-vm/lima">lima-vm/lima</a><br>Linux virtual machines, with a focus on running containers</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a><br>面向 Grok Build、Grok Web 与 Grok Console 的多账号 API 网关</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable runtime for building distributed applications across cloud and edge, combining event-driven architecture with workflow orchestration.</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The task manager you actually own.</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

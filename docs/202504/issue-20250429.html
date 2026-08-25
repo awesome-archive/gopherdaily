@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250429.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250429</span>
+</p>
+<p>每日一谚：Write Go code as Gophers write code. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/H15i1XKRx7hcQiyAO6VUng">Go的简洁神话？转Go前你需要知道的5个“真相”</a><br>正如一位拥有超过 15 年经验（主要使用 Java/Kotlin/TypeScript）、并在过去一年深度使用 Go 的开发者（以下简称“视频作者”）在其分享的油管视频中提到的那样，尽管 Go 非常出色，但光环之下并非没有阴影。在投入实际项目，特别是构建一些非同小可的东西之后，会发现 Go 的一些设计决策有利有弊，有些“简洁”的背后隐藏着需要注意的“真相”。 </p> 
+
+<p><a href="https://www.alexedwards.net/blog/organize-your-go-middleware-without-dependencies">无需依赖地组织你的Go中间件</a><br>本文探讨了在 Go Web 应用中组织和管理中间件的几种方法，特别是如何在不依赖第三方库的情况下，使用 Go 1.22 的新模式匹配功能和 Go 1.23 的 `slices.Backward` 函数来有效地管理中间件。文章比较了使用第三方库 `alice` 和 `chi` 的方法，并提供了无需依赖第三方库的自定义 `chain` 类型和 `Router` 类型的实现，以及相应的代码示例和测试链接。</p> 
+
+<p><a href="https://blog.devtrovert.com/p/sighup-signal-for-configuration-reloads">SIGHUP 信号用于配置重新加载</a><br>许多应用程序（包括默认的 Go 应用程序）响应三个终止信号：SIGTERM、SIGINT 和 SIGHUP。其中，SIGHUP 有一些额外的细微之处，在今天可能不太相关。文章详细解释了 SIGHUP 信号的含义、控制终端的概念以及如何在应用程序中处理 SIGHUP 信号以实现配置重新加载，而不是重启整个进程。</p> 
+
+<p><a href="https://dev.to/adaken4/typescript-just-got-10x-faster-but-not-how-you-think-4kmh">TypeScript 编译器速度提升 10 倍——但并非你所想的那样</a><br>大约一个月前，微软发布了一则重磅消息：他们正在用 Go 重写 TypeScript 编译器，放弃 JavaScript。这引起了广泛关注，因为它声称此举将使速度提升 10 倍。本文深入探讨了这一事件背后的技术细节，解释了编译器速度提升的原因，以及这对开发者意味着什么。编译器速度提升不会直接影响 TypeScript 代码在浏览器或 Node.js 中的运行速度，而是指编译过程本身的加速。Go 语言的并发特性使得新的编译器能够并行处理文件解析、类型检查和代码生成等任务，从而显著提高编译效率。</p> 
+
+<p><a href="https://dev.to/leapcell/why-gos-generics-might-be-worse-than-no-generics-at-all-3470">Go泛型可能比没有泛型更糟糕的原因</a><br>本文深入分析了Go语言泛型的基本原理、应用示例以及与其他编程语言（Java、TypeScript、Python、C&#43;&#43;和Rust）泛型机制的比较。作者详细解释了Go泛型的语法结构、类型约束以及常见用法，并指出了Go泛型的优势（简洁性、类型安全性和性能优化）和劣势（功能限制、约束限制和兼容性问题）。文章还推荐了一个适合部署Go服务的平台Leapcell。</p> 
+
+<p><a href="https://dev.to/shrsv/introducing-ducktrace-a-go-tool-to-analyze-log-durations-2e68">DuckTrace：一款用于分析日志持续时间的 Go 工具</a><br>作为开发者，我们经常需要翻阅日志来查找导致程序缓慢或崩溃的原因。这是一项繁琐的工作。我创建了 DuckTrace，这是一个轻量级的 Go 工具，它通过分析日志文件、查找特定事件和计算其持续时间来自动化此过程。它是开源的，并以彩色、易于扫描的格式输出结果。你可以在 GitHub 上查看它。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-04-28-dolt-basics-sql-insert-update-delete/">Dolt 入门：SQL 插入、更新和删除</a><br>Dolt 是一个结构化查询语言 (SQL) 数据库。本文介绍了用于修改 Dolt 数据库中数据的基本 SQL INSERT、UPDATE 和 DELETE 查询。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2025/04/28/how-agentic-ai-is-driving-ai-first-business-transformation-for-customers-to-achieve-more/">如何利用代理 AI 推动 AI 首先的业务转型，帮助客户取得更多成就</a><br>在过去几个月里，随着企业领导者寻求加速 AI 转型的方法，代理 AI 的作用迅速增长。我们坚信，代理 &#43; 副驾驶 &#43; 人类抱负可以为我们的客户带来真正的 AI 差异化。通过将代理的自主能力用于他们的业务，我们的客户正在释放 AI 机会，以实现更大的价值。最近推出的 Microsoft 365 Copilot Chat 实现了我们“人人皆可使用副驾驶”的承诺，它为一线员工提供了一个免费、安全且企业级的 AI 聊天界面。我们的客户正在使用 Microsoft Copilot Studio 的无代码/低代码功能构建他们自己的自定义代理，允许公民和专业开发人员扩展 Copilot 的功能，并满足其行业独特的需求。我们还提供开箱即用的最佳预构建代理框架，例如能够自主工作的销售代理，它可以帮助销售人员建立渠道并更快地达成更多交易。同样，我们最近宣布了通用推理代理——例如研究员和分析师——并邀请所有 Microsoft 365 Copilot 用户在他们的环境中尝试这些功能。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/04/28/open-source-paas-cozystack-becomes-a-cncf-sandbox-project/">开源 PaaS Cozystack 成为 CNCF 沙盒项目</a><br>2月28日，CNCF 技术监督委员会成员完成投票，一致同意将 Cozystack（一个用于构建私有云和 PaaS 的平台）纳入 CNCF 沙盒。该项目目前正在进行入职流程。让我们深入了解这在实践中意味着什么，Cozystack 是什么，以及 CNCF 沙盒代表什么。</p>
+
+<p><a href="https://engineering.fb.com/2025/04/28/security/how-meta-understands-data-at-scale/">Meta如何理解海量数据</a><br>管理和理解大型数据生态系统对许多组织来说是一个重大挑战，需要创新的解决方案来有效地保护用户数据。Meta庞大而多样化的系统使得大规模理解其结构、含义和上下文尤其具有挑战性。为了应对这些挑战，Meta对先进的数据理解技术进行了大量投资，作为其隐私感知基础设施 (PAI) 的一部分。具体来说，Meta采用了“左移”方法，在产品开发过程的早期就集成数据模式化和注释。Meta还创建了一个通用隐私分类法，这是一个标准化框架，为Meta产品的整个数据隐私管理提供了一个通用的语义词汇表，它确保了高质量的数据理解，并为开发人员提供了可重用且高效的合规工具。Meta发现，需要一种灵活且增量的方法来整合构建Meta产品中使用的各种系统和语言。此外，隐私团队和产品团队之间的持续合作对于释放大规模数据理解的价值至关重要。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/04/28/kubernetes-v1-33-hpa-configurable-tolerance/">Kubernetes v1.33：水平 Pod 自动伸缩的可配置容差</a><br>这篇文章描述了 Kubernetes 1.33 中新增的 alpha 功能：水平 Pod 自动伸缩的可配置容差。水平 Pod 自动伸缩是 Kubernetes 的一个知名功能，它允许你的工作负载通过根据资源利用率添加或移除副本来自动调整大小。为了避免指标发生细微波动时就创建或删除副本，Kubernetes 应用了一种滞后机制：只有当当前指标值和期望指标值之差超过 10% 时，才会更改副本数量。在 Kubernetes v1.33 中，现在可以对这个值进行微调。</p>
+
+<p><a href="https://shachaf.net/w/consensus">分布式一致性</a><br>本文相对非正式地讨论了分布式一致性和Paxos算法，包括其作用、工作原理以及一些技巧和变体。文章首先介绍了分布式一致性算法的意义，即在提高系统可靠性的同时保证数据一致性。然后，文章深入探讨了实现分布式一致性算法的挑战，例如网络分区和计算机故障。针对这些挑战，文章提出了一种基于“写一次单元”的方案，并详细解释了Paxos算法的原理及其实现细节，包括锁机制、锁ID、读写仲裁以及如何处理计算机故障。此外，文章还介绍了日志、多Paxos、读写仲裁、已提交日志条目、角色、线性化、连续锁ID、巧妙的锁ID、Raft技巧（日志中无空洞）、交错日志以及可变单元等多种技巧和方法，用于优化Paxos算法的性能和效率，最后还讨论了避免一致性以及重新配置/成员变更等问题。</p>
+
+<p><a href="https://blog.algomaster.io/p/how-databases-guarantee-durability">数据库如何保证持久性（即使在崩溃之后）</a><br>数据库强大的一个方面在于，即使面对意外故障，它也能保护您的数据。无论是数据库服务器崩溃、重启还是突然断电，您都可以相信已提交的数据不会消失。这正是数据库的四大 ACID 属性之一——持久性。本文探讨了数据库用于确保持久性的关键技术，包括预写日志 (WAL)、检查点和复制。</p>
+
+<p><a href="https://www.timdbg.com/posts/recognizing-patterns">识别内存中的模式</a><br>本文讨论了调试技能教学的挑战，特别是模式识别的重要性。作者分享了在内存中识别模式的一些技巧，例如识别对齐的32/64位数据、指针、UTF-16字符、代码字节和高熵数据。文中还提供了具体的内存转储和代码示例，并解释了如何利用这些模式来缩小调试错误的范围，例如内存损坏问题。最后，作者鼓励读者在社交媒体上分享他们的调试技巧。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/humanoid-robots">面向软件工程师的机器人技术：人形机器人</a><br>本文探讨了人形机器人的流行原因以及成为优秀机器人工程师所需的技能。人形机器人学习研究员 Sandor Felber 的客座文章，涵盖了人形机器人的设计理念、硬件和软件挑战，以及人工智能如何改变机器人优化等方面。</p>
+
+<p><a href="https://engineering.fb.com/2025/04/28/security/how-meta-understands-data-at-scale">Meta如何理解海量数据</a><br>管理和理解大型数据生态系统对许多组织来说是一个巨大的挑战，需要创新的解决方案来有效保护用户数据。Meta庞大而多样化的系统使得大规模理解其结构、含义和上下文尤其具有挑战性。为了应对这些挑战，Meta在先进的数据理解技术方面进行了大量投资，将其作为隐私感知基础设施（PAI）的一部分。具体来说，Meta采用了“左移”方法，在产品开发过程的早期就整合了数据模式化和注释。Meta还创建了一个通用的隐私分类法，这是一个标准化的框架，为Meta产品的跨数据隐私管理提供通用的语义词汇表，确保高质量的数据理解，并为开发人员提供可重用且高效的合规工具。Meta发现，需要一种灵活的增量方法来适应构建Meta产品所使用的各种系统和语言。此外，隐私团队和产品团队之间的持续合作对于释放大规模数据理解的价值至关重要。</p>
+
+<p><a href="https://deadmoney.gg/news/articles/migrating-away-from-rust">迁移离开 Rust</a><br>本文讲述了游戏《Architect of Ruin》开发团队从 Rust 和 Bevy 游戏引擎迁移到 C# 和 Unity 的经历。最初选择 Rust 和 Bevy 是因为开发者对 Rust 语言的热爱以及 Bevy ECS 模型的乐趣。然而，在开发过程中，团队遇到了协作困难、抽象不足、引擎更新频繁导致迁移成本高、AI 辅助开发效率低以及 modding 困难等问题。经过权衡，团队决定迁移到 Unity，并通过一个三天的实验性移植，证明了 Unity 在协作、快速迭代和 modding 方面更具优势。最终，迁移到 Unity 大大提高了开发效率，并且团队对未来的开发充满信心。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://2025.stateofai.dev/en-US">2025 年人工智能现状</a><br>这份关于 Web 开发 AI 的首份调查报告解答了诸多问题，例如开发者在 AI 上的支出、哪些工具最为有用，以及开发者在利用 AI 开发 Web 应用时面临的最大痛点。该报告还调查了对 AI 持保留态度的开发者，力求更准确地描绘当前 AI 生态系统的现状。</p>
+
+<p><a href="https://ratfactor.com/cards/naur-vs-llms">阅读 Peter Naur 的《编程作为理论构建》，然后再来告诉我大型语言模型可以取代人类程序员</a><br>这篇文章反驳了大型语言模型 (LLM) 可以取代人类程序员的观点。作者引用 Peter Naur 的论文《编程作为理论构建》，指出 LLM 缺乏构建理论的能力。Naur 认为编程不仅仅是代码编写，更重要的是构建和维护程序的理论。LLM 可以生成代码，但无法理解程序背后的理论，也无法进行程序的修改和调试。文章通过类比说明 LLM 只能处理程序的输出结果，而无法进行真正的程序设计工作。</p>
+
+<p><a href="https://www.anthropic.com/research/impact-software-development">Anthropic经济指数：人工智能对软件开发的影响</a><br>这份报告分析了50万次与代码相关的Claude（Anthropic开发的大型语言模型）交互数据，Claude Code（专门的编码代理）和Claude.ai（标准的聊天机器人界面）的对比显示，编码代理更倾向于自动化任务（79%），而Claude.ai则更注重人机协作（49%）。开发者常用AI构建面向用户的应用程序，例如使用JavaScript和HTML等语言开发网页。初步分析表明，初创企业是Claude Code的主要早期采用者，而大型企业则落后。报告还讨论了AI对软件开发的影响以及未来可能面临的挑战，例如开发人员的角色变化和工作的自动化。</p>
+
+<p><a href="https://qwenlm.github.io/blog/qwen3">Qwen3：思考更深，行动更快</a><br>Qwen 团队发布了最新的大型语言模型 Qwen3。旗舰模型 Qwen3-235B-A22B 在编码、数学、通用能力等基准评估中取得了与 DeepSeek-R1、o1、o3-mini、Grok-3 和 Gemini-2.5-Pro 等顶级模型竞争的成果。此外，小型 MoE 模型 Qwen3-30B-A3B 优于 QwQ-32B，激活参数数量是后者的 10 倍，即使像 Qwen3-4B 这样的小型模型也能与 Qwen2 的性能相媲美。Qwen3 支持 119 种语言和方言，并具有混合思维模式，可在“思考模式”和“非思考模式”之间切换，以平衡速度和深度。该模型已在 Hugging Face、ModelScope 和 Kaggle 等平台上发布。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq is a portable command-line YAML, JSON, XML, CSV, TOML and properties processor</p>
+
+<p><a href="https://github.com/goccy/go-yaml">goccy/go-yaml</a><br>YAML support for the Go language</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/beego/beego">beego/beego</a><br>beego is an open-source, high-performance web framework for the Go programming language.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/Tencent/AI-Infra-Guard">Tencent/AI-Infra-Guard</a><br>A comprehensive, intelligent, easy-to-use, and lightweight AI Infrastructure Vulnerability Assessment and MCP Server Security Analysis Tool.</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>CLI tool for spawning and running containers according to the OCI specification</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers (AWS Route53, Google CloudDNS and others) for Kubernetes Ingresses and Services</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/semaphoreui/semaphore">semaphoreui/semaphore</a><br>Modern UI and powerful API for Ansible, Terraform, OpenTofu, PowerShell and other DevOps tools.</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/bytedance/sonic">bytedance/sonic</a><br>A blazingly fast JSON serializing &amp; deserializing library</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

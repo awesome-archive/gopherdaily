@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250305.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250305</span>
+</p>
+<p>每日一谚：Avoid repetition in naming </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/03/04/deep-dive-into-gocacheprog-custom-extensions-for-go-build-cache">深入GOCACHEPROG：Go构建缓存的自定义扩展</a><br>Go 1.24以实验特性支持go开发者自定义go构建缓存，这篇文章深入分析了该实验特性，并给出了一个设计清晰的、可扩展的自定义go构建缓存的实现，供大家参考！</p> 
+
+<p><a href="https://devopsian.net/p/understanding-gos-supercharged-map-in-v1.24">理解 Go v1.24 中超级强大的 map</a><br>Go 1.24 引入了一种新的 map 实现，其灵感来自 Google 的 Swiss Tables，它为该语言的内置 map 类型带来了显著的优化和性能增强。虽然 Go 的先前 map 实现已经非常高效，但新设计通过引入一种巧妙的数据组织和访问方法使其更进一步。本文使用图书馆的比喻来解释新 map 的工作原理以及它与先前实现的不同之处，并解释了其设计巧妙的原因以及性能提升。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/native-desktop-apps-using-golang">使用Go和Wails构建原生桌面应用：快速入门</a><br>你是否想过使用Go构建原生桌面应用程序？本文介绍了如何使用Wails这个跨平台工具链，结合Go和常用的Web技术（HTML、CSS、JavaScript）来创建原生Mac、Windows和Linux应用程序。文章通过一个简单的游戏示例，演示了Wails的工作原理，并讲解了项目结构、Go和JavaScript的桥接以及应用程序的编译过程。最终，读者可以了解如何利用Go和Wails构建功能强大的原生桌面应用程序。</p> 
+
+<p><a href="https://medium.com/@waynest/victorialogs-source-reading-833db3e8511b">VictoriaLogs源码阅读</a><br>VictoriaLogs 是一个新的日志管理系统，由 VictoriaMetrics 团队开发，但代码并非基于 VictoriaMetrics。它轻量级且灵活，可作为独立系统或类似 `grep` 的命令行工具使用。其查询接口使用新的 LogsQL DSL，遵循管道风格。文章分析了其代码行数、数据模型、查询方式以及存储机制，包括数据摄入、块存储、索引数据库和缓存等，并对关键概念如 Stream、Block、Field 等进行了阐述。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://netflixtechblog.com/title-launch-observability-at-netflix-scale-8efe69ebd653">Netflix规模下标题发布的可观测性</a><br>本文是第二部分的延续，我们在其中消除了围绕Netflix标题发布可观测性的歧义。在本期中，我们将探讨用于实现大规模全面标题可观测性的策略、工具和方法。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/03/05/volcano-v1-11-released-a-new-era-of-cloud-native-scheduling-for-ai-and-big-data/">Volcano v1.11 发布！AI 和大数据云原生调度的全新时代 | CNCF</a><br>作为云原生批处理计算的实际标准，Volcano 已经在包括 AI、大数据和高性能计算 (HPC) 在内的各种场景中得到广泛采用。Volcano v1.11 的新版本在 2025 年新年之际发布，社区引入了许多主要功能，将继续深化其对 CNAI（云原生 AI）和大数据等领域的关注，主要功能包括：AI 场景：网络拓扑感知调度、NPU 调度和虚拟化、GPU 动态分区、Volcano Global 用于多集群 AI 作业调度、检查点和故障恢复优化、动态资源分配 (DRA)；大数据场景：弹性分层队列；微服务场景：在线和离线工作负载与动态资源超额认购的共同部署、负载感知调度和取消调度。 Volcano v1.11.0 版本标志着云原生批处理计算的新篇章！此更新侧重于 AI 和大数据的核心需求，引入了网络拓扑感知调度和多集群 AI 作业调度，显著增强了 AI 训练和推理任务的性能。此外，在线和离线工作负载与动态资源超额认购的共同部署以及负载感知取消调度进一步优化了资源利用率，确保在线服务的可用性。弹性分层队列的引入为大数据场景提供了更灵活的调度策略。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/03/04/sig-etcd-spotlight/">关注 SIG etcd | Kubernetes</a><br>这篇 SIG etcd 文章对 James Blair、Marek Siarkowicz、Wenjia Zhang 和 Benjamin Wang 进行了访谈，以了解更多关于这个 Kubernetes 特别兴趣小组的信息。文章介绍了 SIG etcd 的成立背景、成为 Kubernetes SIG 后取得的进展以及未来的发展方向，并鼓励对 etcd 感兴趣的人参与贡献。</p>
+
+<p><a href="https://jacquiread.com/posts/software-design">软件设计：哪里出错了？</a><br>软件设计应该是开发人员的看家本领。改变我们讨论软件开发的方式是构建更好软件系统的第一步。我们必须停止将所有内容都称为架构，使设计更容易理解，并抵制关注技术的冲动。文章探讨了设计、工程和架构之间的区别，强调了迭代和捕捉设计过程的重要性，并分析了当前软件行业中忽视设计和架构的趋势，最终呼吁更多关注软件设计。</p>
+
+<p><a href="https://www.coderabbit.ai/blog/how-to-do-thoughtful-code-reviews">如何做一个考虑周全的代码评审</a><br></p>
+
+<p><a href="https://theengineeringmanager.substack.com/p/should-managers-still-code">管理人员是否应该继续编写代码？</a><br>本文探讨了管理人员与代码的关系。作者认为，所有管理人员都应该了解代码，但并非所有管理人员都应该编写代码。文章探讨了在当今经济环境下，管理人员面临的挑战，以及如何通过多种方式（例如，安排专门的编码时间、与下属结对编程、进行代码审查等）保持与代码的联系，从而提高效率和影响力。</p>
+
+<p><a href="https://webrtc.ventures/2025/02/a-quick-tour-of-webrtc-internals-a-powerful-webrtc-debugging-tool">webrtc-internals 快速入门：强大的 WebRTC 调试工具</a><br>Chrome 和其他基于 Chromium 的浏览器内置了强大的调试工具 webrtc-internals 选项卡。它提供对活动 WebRTC 会话的实时洞察，为开发者提供连接行为和媒体传输的详细视图。本文将快速介绍 webrtc-internals 如何实现对活动 WebRTC 会话的实时洞察，帮助开发者分析和调试连接行为、媒体传输和性能指标。还将解释为什么在生产环境中可能需要不同的方法。</p>
+
+<p><a href="https://bloggeek.me/getstats">理解 WebRTC 中的 getStats</a><br>本文介绍了如何利用 WebRTC 的 getStats 功能来提升应用程序的性能和可靠性，深入探讨了 getStats 返回值的结构、主要统计对象和字段，以及如何解读这些指标来进行 WebRTC 调试和故障排除。文章还简要介绍了 webrtc-internals 文件的结构以及一些辅助工具和资源。</p>
+
+<p><a href="https://blog.skypilot.co/abusing-sqlite-to-handle-concurrency">滥用 SQLite 处理并发</a><br>SkyPilot 使用 SQLite 进行状态管理。SQLite 可以处理数百万次每秒查询和数 TB 的数据。但是，我们在扩展托管作业功能时遇到了 SQLite 的一个缺点：许多并发写入器。由于 SkyPilot 通常在您的笔记本电脑上作为 CLI 运行，我们希望坚持使用 SQLite，因此我们决定弄清楚如何使其工作。我们对我们的一些发现感到非常惊讶。文章详细介绍了在高并发写入场景下使用 SQLite 的问题、SQLite 的内部锁机制以及如何通过调整超时时间和使用 WAL 模式来缓解并发问题。文章还讨论了未来的改进方向，例如使用实验性的 BEGIN CONCURRENT 事务类型。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.fb.com/2025/03/04/virtual-reality/building-multimodal-ai-for-ray-ban-meta-glasses/">为Ray-Ban Meta眼镜打造多模态 AI</a><br>多模态 AI——能够处理多种不同类型输入（如语音、文本和图像）的模型——正在改变可穿戴设备的用户体验。借助 Ray-Ban Meta 眼镜，多模态 AI 有助于眼镜“看到”佩戴者所看到的内容。这意味着任何佩戴 Ray-Ban Meta 眼镜的人都可以向眼镜询问他们正在观看的内容。眼镜可以提供有关地标的信息，翻译您正在查看的文本以及许多其他功能。本期 Meta Tech Podcast 节目中，我们将与 Shane 会面，他是 Meta 的一位研究科学家，过去七年来一直专注于可穿戴设备的计算机视觉和多模态 AI。Shane 和他的团队一直从事诸如 AnyMAL 等尖端 AI 研究，AnyMAL 是一种统一的语言模型，可以对各种输入信号进行推理，包括文本、音频、视频，甚至 IMU 运动传感器数据。Shane 与 Pascal Hartig 坐下来分享他的团队如何为 Ray-Ban Meta 眼镜构建基础模型。他们讨论了 AI 眼镜的独特挑战以及推动 AI 驱动可穿戴技术发展界限的问题。</p>
+
+<p><a href="https://www.lesswrong.com/posts/PpdBZDYDaLGduvFJj/on-gpt-4-5">GPT 4.5详解</a><br></p>
+
+<p><a href="https://blog.jim-nielsen.com/2025/lots-of-little-html-pages">基于大模型构建html页面</a><br></p>
+
+<p><a href="https://www.asad.pw/llm-subscriptions-vs-apis-value-for-money">LLM模型订阅的价钱对比</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/google/cadvisor">google/cadvisor</a><br>Analyzes resource usage and performance characteristics of running containers.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>Prometheus instrumentation library for Go applications</p>
+
+<p><a href="https://github.com/HavocFramework/Havoc">HavocFramework/Havoc</a><br>The Havoc Framework</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/go-kit/kit">go-kit/kit</a><br>A standard library for microservices.</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge.</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

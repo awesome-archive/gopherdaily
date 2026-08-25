@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250214.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250214</span>
+</p>
+<p>每日一谚：Abstract enough to be composable </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/wasmexport">使用Go构建可扩展的Wasm应用程序</a><br>Go 1.24 通过添加 `go:wasmexport` 指令和构建 WebAssembly 系统接口 (WASI) 反应堆的能力，增强了其 WebAssembly (Wasm) 功能。这些特性使 Go 开发人员能够将 Go 函数导出到 Wasm，从而促进与 Wasm 主机的更好集成，并扩展基于 Go 的 Wasm 应用程序的可能性。</p> 
+
+<p><a href="https://tailscale.com/blog/prometheus-client-metrics-video">Tailscale客户端的Prometheus监控：充满乐趣的指标之旅</a><br>网络管理员现在可以使用Prometheus和我们新的客户端指标功能来监控Tailscale网络中的设备，该功能以标准且易于使用的格式提供连接数据。这种组合为您的Tailscale网络（或tailnet）带来了企业级的可见性，使跟踪性能、发现趋势和设置警报变得容易。</p> 
+
+<p><a href="https://commandcenter.blogspot.com/2025/02/on-bloat-these-are-slides-from-talk-i.html">Rob Pike: 软件包膨胀的问题</a><br>这篇博文链接到一组幻灯片，这些幻灯片来自去年作者为澳大利亚联邦银行年度科技大会所做的演讲。演讲主要讲述了软件包膨胀的问题，以及一个小巧且初衷良好的软件包如何积累大量依赖项，最终导致膨胀和安全隐患。</p> 
+
+<p><a href="https://entgo.io/blog/2025/02/12/rag-with-ent-atlas-pgvector">使用 Ent、Atlas 和 pgvector 在 Go 中构建 RAG 系统</a><br>本博文中，我们将探讨如何使用 Ent、Atlas 和 pgvector 构建检索增强生成 (RAG) 系统。RAG 是一种增强生成模型能力的技术，它通过结合检索步骤来实现。我们不会仅仅依赖模型的内部知识，而是可以从外部来源检索相关文档或数据，并使用这些信息来生成更准确、更关注上下文的响应。</p> 
+
+<p><a href="https://packagemain.tech/p/practical-openapi-in-golang">Go语言中的实用OpenAPI</a><br>本实用指南将引导你完成使用OpenAPI标准构建、实现和使用API的所有重要部分。文章涵盖了OpenAPI规范、API架构、Go服务器生成、Swagger UI/Postman的使用以及客户端代码的生成等方面。</p> 
+
+<p><a href="https://www.jvt.me/posts/2025/02/12/go-omitzero-124">Go 1.24 的 `omitzero` 是近几年生态系统中最好的补充之一</a><br>本文介绍了 Go 1.24 中新增的 JSON 结构体标签 `omitzero`，它允许使用类型的实际零值作为不进行编组的指示，从而简化了可选字段的处理，避免了使用指针的繁琐。作者表达了对这一新功能的兴奋之情，并认为它是 Go 语言生态系统的一大进步。</p> 
+
+<p><a href="https://dev.to/oluwajubelo1/taming-entropy-in-golang-codebases-4oj6">Go代码库中熵的控制</a><br>熵的核心在于系统“混乱”或“无序”的程度，熵越高，混乱和无序程度越高。在软件开发中，熵指的是代码库或系统随时间推移逐渐积累的无序和复杂性。本文探讨了软件设计中熵的影响，以及如何在 Go 代码库中通过遵循编码标准、实现清晰的架构、进行定期重构、测试以及编写文档等策略来主动控制和降低熵。</p> 
+
+<p><a href="https://dev.to/zakariachahboun/say-goodbye-to-websockets-why-sse-might-be-your-new-best-friend-4d7n">和 WebSockets 说再见？为什么 SSE 可能是你的新挚爱 - DEV 社区</a><br>介绍 👋各位开发者！今天，让我们深入探讨服务器发送事件 (SSE)，并探讨为什么它们可能是你下一个最喜欢的实时通信工具。如果你一直依赖传统的请求-响应方法或与 WebSocket 的复杂性作斗争，那么 SSE 可能是你一直在寻找的更简单的解决方案！</p> 
+
+<p><a href="https://destel.dev/blog/fast-listing-of-files-from-s3-gcs-and-other-object-storages">Go 并行流模式：如何显著加快大型 S3 或 GCS 存储桶的扫描速度</a><br>有时瓶颈不在于文件处理，而在于存储桶遍历。学习如何通过将存储桶划分为多个范围并同时从每个范围流式传输文件来加快 S3 和其他对象存储中文件列表的读取速度。这种方法可以显著提高速度，将数小时的操作缩短到几分钟。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2025/02/13/security/looking-back-at-our-bug-bounty-program-in-2024/">回顾 2024 年漏洞赏金计划 - Meta 工程</a><br>2024 年，Meta 的漏洞赏金计划奖励了超过 230 万美元的赏金，自 2011 年计划启动以来，总赏金已超过 2000 万美元。作为防御性策略的一部分，Meta 持续与安全研究社区在生成式 AI、AR/VR、广告工具等领域合作。Meta 还庆祝了漏洞赏金社区的安全研究成果，并在年度漏洞赏金峰会和许多其他行业活动中进行了表彰。文章还介绍了 2024 年漏洞赏金计划的亮点、参与生成式 AI 漏洞研究的细节以及与漏洞赏金研究人员合作的一些成果。</p>
+
+<p><a href="https://lwn.net/Articles/1007689">使用自定义调度程序暴露并发错误</a><br>Jake Hillion 在 FOSDEM 上做了一个关于使用 sched_ext（内核版本 6.12 中引入的 BPF 调度框架）来帮助查找难以捉摸的并发问题的演讲。他和 Johannes Bechberger 共同构建了一个调度程序，可以在几分钟内揭示测试代码中理论上可能但未观察到的并发错误。该调度程序仅依赖于主线内核功能，理论上可以应用于任何在 Linux 上运行的应用程序，但由于该项目仍处于早期阶段，因此存在一些注意事项。该调度程序故意以“糟糕”的方式调度进程，以提高出现错误行为的可能性，从而更容易调试。该项目名为 `concurrency-fuzz-scheduler`，目前主要用于在开发人员的工作站上重现间歇性错误，未来目标是使其能够在生产机器上运行，并在性能开销不大的情况下提高查找错误的概率。</p>
+
+<p><a href="https://blog.golioth.io/nat-is-the-enemy-of-low-power-devices">NAT 是低功耗设备的敌人</a><br>如果您曾经尝试与私有网络上的设备通信，您可能已经遇到过网络地址转换 (NAT)。由于连接设备的数量长期以来超过了 IPv4 地址空间中唯一地址的数量，因此公共 IP 地址必须在设备之间共享。这带来了一些挑战。</p>
+
+<p><a href="https://sharats.me/posts/automating-the-vim-workplace">Vim工作区的自动化</a><br>本文介绍了作者如何通过自动化一些常用的Vim操作来提高效率。文章涵盖了从切换模式、保存所有缓冲区、复制到系统剪贴板，到确保目录存在、在终端运行Git命令等多个方面，并提供了相应的Vim脚本配置。作者强调了根据个人工作习惯来优化Vim配置的重要性，而不是盲目地使用插件。文章还包含了多个章节，后续章节将继续探讨更多自动化技巧。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Feb/14/files-to-prompt/#atom-everything">files-to-prompt 0.5</a><br>files-to-prompt 工具的 0.5 版本发布，该工具最初于 4 月使用 Claude 3 Opus 构建。此版本包含一些新功能和错误修复，例如添加了 `-n/--line-numbers` 标志以包含输出中的行号，修复了 Windows 上的 utf-8 处理，以及改进了 `--ignore` 模式的匹配。作者还分享了几个使用该工具结合 Gemini 2.0 和 o3-mini 模型分析代码的例子，展示了该工具在代码分析和文档生成方面的强大功能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/grafana/tempo">grafana/tempo</a><br>Grafana Tempo is a high volume, minimal dependency distributed tracing backend.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>Backend master class: build a simple bank service in Go</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>CLI tool for spawning and running containers according to the OCI specification</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/gotenberg/gotenberg">gotenberg/gotenberg</a><br>A developer-friendly API for converting numerous document formats into PDF files, and more!</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/MartialBE/one-hub">MartialBE/one-hub</a><br>OpenAI 接口管理 &amp; 分发系统，改自songquanpeng/one-api。支持更多模型，加入统计页面，完善非openai模型的函数调用。</p>
+
+<p><a href="https://github.com/wagoodman/dive">wagoodman/dive</a><br>A tool for exploring each layer in a docker image</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>A database migration tool. Supports SQL migrations and Go functions.</p>
+
+<p><a href="https://github.com/shopspring/decimal">shopspring/decimal</a><br>Arbitrary-precision fixed-point decimal numbers in Go</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

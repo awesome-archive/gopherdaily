@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250512.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250512</span>
+</p>
+<p>每日一谚：Do not declare an interface just for testing. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/7mEzgGQdVEv5o015imUtfQ">Go语言进入“后元老时代”？Ian Lance Taylor离职引发的思考</a><br>Go 语言社区传来一个令人瞩目又略感“悲伤”的消息：Go核心团队的元老级人物 Ian Lance Taylor在为 Google 效力 19 年后，宣布离开。对于许多 Gopher 来说，Ian Taylor 的名字与 Go 语言的早期发展、GCC Go 前端 gccgo 的诞生，以及历时多年最终在 Go 1.18 实现的泛型设计紧密相连。他的离开，不仅仅是一位资深工程师的职业变动，更像是一个时代的注脚，引发我们对 Go 语言发展阶段、团队演进以及开源项目生命力的深层思考。我们是否可以说，Go 语言正在步入一个“后元老时代”？这又意味着什么？在这篇文章中，我们就来简单聊聊。</p> 
+
+<p><a href="https://tonybai.com/2025/05/11/deep-into-pkg-go-dev">Go包维护者必读：如何让你的Go包更易被发现、文档更专业？</a><br>对于 Go 开发者而言，pkg.go.dev 不仅仅是一个查找包文档的网站，更是展示和推广自己辛勤成果的重要平台。理解其运作机制、掌握其使用技巧，并遵循其倡导的最佳实践，能显著提升你的 Go 包的专业度、可见性和社区友好度。本文将基于官方信息，和大家一起挖掘一下 pkg.go.dev 的宝藏知识，包括核心功能和关键建议。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ZIIHnuQkgCVmOWfwZ2s5Aw">百万行依赖的“恐惧”：一位Rust开发者的深度反思与Go的启示</a><br>近期，一位名叫Vincent的国外Rust开发者在其博客文章《Rust Dependencies scare Me》中，就真诚地抒发了他对Rust依赖管理的深切忧虑。这篇博文在Hacker News等社区引发了热烈讨论，其指出的问题——从依赖的维护性到惊人的代码体积——或许也值得我们每一位使用现代包管理系统的开发者深思。</p> 
+
+<p><a href="https://medium.com/@sanilkhurana7/understanding-the-go-scheduler-and-looking-at-how-it-works-e431a6daacf">理解 Go 调度器及其工作原理</a><br>本文介绍了 Go 语言的调度器，解释了它如何通过轻量级 goroutine 实现高并发，以及如何处理系统调用和 I/O 操作，并探讨了调度器设计中的一些关键考量，例如轻量级 goroutine、系统调用和 I/O 处理、并行性、公平性以及避免过度订阅等。</p> 
+
+<p><a href="https://dev.to/leapcell/go-struct-what-happens-when-you-add-a-field-35ic">Go 结构体：添加&#39;_&#39;字段会发生什么？</a><br>Go 编程语言中，我们经常看到下划线（_）的使用，例如将其用作占位符以忽略不需要的变量、仅因其副作用而导入包或忽略类型转换中的变量。然而，大多数人可能没有遇到在结构体中使用下划线的情况——具体来说，定义名为 _ 的结构体字段。
+本文通过比较带有和不带有下划线字段的结构体示例，解释了定义此类字段的目的：在结构体中添加名为 _ 的字段有效地强制使用命名字段初始化（零值结构体变量声明的情况除外），从而提高代码可读性和可维护性，并防止由于位置初始化导致的错误。</p> 
+
+<p><a href="https://dev.to/fahimfaisaal/a-story-of-building-a-storage-agnostic-message-queue-3lo4">构建与存储无关的消息队列的故事</a><br>一年前，我深入研究 Go 语言，尝试构建一个简单的并发队列作为学习项目。我的第一个尝试——使用轮询通道选择的最小队列——是有问题的。但这就是学习的过程，对吧？在专业工作中，我使用过像 BullMQ 和 RabbitMQ 这样的工具来实现事件驱动的解决方案，以及 p-queue 和 p-limit 来处理并发。自然而然地，我开始思考 Go 中是否有类似的工具。我发现了像 asynq、ants 和各种工作池之类的包——可靠且经过实战检验的选项。但是突然之间，我想到：如果我构建一些不同的东西呢？一个没有依赖项、高并发控制，并设计为消息队列而不是提交函数的包？有了这个想法，我开始构建我的第一个 Go 包，发布它，并将其命名为 Gocq（Go 并发队列）。核心 API 很简单。在 Reddit 上发布后，它获得了关注——点赞、评论和赞赏。在一周内，我发布了下一个版本，其中包含一些重大更改，并再次在 Reddit 上分享。更多反馈涌入，一个人要求“持久性抽象支持”。这让我意识到——我之前也感受到过这种差距，持久性。它是任何可靠队列系统的支柱。如果没有持久性，该包将不完整。但是问题是：如果我添加持久性，我是否必须将其绑定到 Redis 或其他数据库等特定工具？我不希望将用户锁定到 Redis、SQLite 或任何特定的存储中。如果队列可以适应任何数据库怎么办？所以我拆解了 gocq。我重写了大部分内容，将核心分成两部分：一个工作池和一个队列接口。工作程序将从队列中提取作业，而无需关心这些作业存储在何处。结果是 Varmq，一个消息队列系统，它不关心你的存储是 Redis、SQLite 还是内存中的。想象一下，你需要一个简单的内存队列：如果你想要持久性，只需插入一个适配器即可。例如 SQLite：或者 Redis 用于分布式工作负载：神奇之处在于：工作程序不知道——也不关心——队列后面是什么。它只处理作业。构建这个过程教会了我两件重要的事情：1. 简单很难。2. 反馈是金。消息队列无处不在——订单处理、通知、数据管道。但并非每个项目都需要 Redis。有时你只需要 SQLite 来简化，或者以后切换数据库而无需重写代码。使用 Varmq，你不会被束缚。需要持久性？添加它。需要扩展？交换适配器。这就像乐高积木一样。下一步是集成 PostgreSQL 适配器和监控系统。如果你好奇，请查看 Varmq 的 GitHub 页面。请随时在下面的评论中分享您的想法和意见，让我们一起改进它。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://plainvanillaweb.com/blog/articles/2024-09-03-unix-philosophy">面向网页开发的 Unix 哲学</a><br>本文探讨了如何利用 Unix 哲学（编写单一功能且运行良好的程序，程序之间相互协作，使用文本流作为通用接口）来改进 Web 组件的开发。作者认为，Web 组件并非旨在解决所有问题，可以通过一系列轻量级的辅助函数（如 html()、signal() 和 bind()）来增强其功能，而不是完全替换它们。文章详细介绍了 bind() 函数的实现，该函数能够将数据绑定到 DOM 元素，并将 DOM 事件绑定回数据，从而实现类似于 Vue 的模板语法，但使用纯 JavaScript 和 Web 组件实现。最终，作者展示了一个简单的加法器组件的实现，以说明这种方法的有效性，并探讨了这种方法的未来前景。</p>
+
+<p><a href="https://1517.substack.com/p/why-bell-labs-worked">贝尔实验室为何成功？</a><br>本文探讨了贝尔实验室辉煌成就背后的原因，并指出MBA文化是如何导致其衰落的。文章认为，贝尔实验室的成功秘诀在于：1. 慧眼识英才；2.  营造优秀人才荟萃的环境；3.  聘用聪明的技术人员；4.  鼓励团队成员日常交流；5.  建立内部学习机制；6.  为研究人员提供长期自由的探索空间；7.  高效的成果转化和推广。作者认为，如今缺乏这种给予人才充分自由和自主性的文化，是贝尔实验室式创新难以重现的主要原因。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/11/cursor-security/#atom-everything">Cursor：安全性</a><br>Cursor 的安全文档页面详细介绍了 Cursor 文本编辑器的后端系统工作方式。文章作者通过检查组织的已记录子处理器列表，了解了其底层架构。Cursor 使用 AWS 作为主要基础设施，Azure 和 GCP 用于“某些次要基础设施”，并在 Fireworks 上托管自定义模型，并根据用户偏好向 OpenAI、Anthropic、Gemini 和 xAI 发出 API 调用。它使用 turbopuffer 作为托管向量存储。最有趣的部分是关于代码库索引的描述，包括如何在隐私模式下操作以保护用户代码安全，以及如何处理嵌入反转的潜在风险。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/cloudreve/Cloudreve">cloudreve/Cloudreve</a><br>🌩支持多家云存储的云盘系统 (Self-hosted file management and sharing system, supports multiple storage providers)</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/go-acme/lego">go-acme/lego</a><br>Let&#39;s Encrypt/ACME client and library written in Go</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/kubernetes/dashboard">kubernetes/dashboard</a><br>General-purpose web UI for Kubernetes clusters</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/crowdsecurity/crowdsec">crowdsecurity/crowdsec</a><br>CrowdSec - the open-source and participative security solution offering crowdsourced protection against malicious IPs and access to the most advanced real-world CTI.</p>
+
+<p><a href="https://github.com/v2ray/v2ray-core">v2ray/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>Simple and easy to use DDNS. Support Aliyun, Tencent Cloud, Dnspod, Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, Namecheap, NameSilo...</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>Self-hosted, lightweight server and website monitoring and O&amp;M tool</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>⛑ Automated developer-oriented status page</p>
+
+<p><a href="https://github.com/hajimehoshi/ebiten">hajimehoshi/ebiten</a><br>Ebitengine - A dead simple 2D game engine for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

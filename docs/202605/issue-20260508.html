@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260508.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260508</span>
+</p>
+<p>每日一谚：A good Go program is self-documenting. Write code that tells its own story </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/08/bun-founder-abandons-zig-for-rust-ai-rewrite">Bun 创始人带头“叛逃”：放弃 Zig，用 AI 把项目重写成 Rust？</a><br>当全世界都在用 C&#43;&#43;、Go、Rust 这些“主流”语言构建底层基础设施时，Bun 却像一个孤独的叛逆者，将自己的身家性命，全部压在了小众但优雅的 Zig 身上。 但就在前几天，这位“叛逆者”似乎也“背叛”了自己的信仰。X 平台上的开发者 Luke Parker 突然发现，Bun 的官方 GitHub 仓库里，出现了一个名为 claude/phase-a-port 的神秘分支。点进去一看，所有人都惊呆了：Bun 的创始人 Jarred Sumner，正在将 Bun 的核心代码，从 Zig 迁移到 Rust！</p> 
+
+<p><a href="https://dev.to/lovestaco/4-open-source-security-tools-every-dev-should-know-35om">开发者应该了解的4个开源安全工具</a><br>你好，我是 Maneshwar。我正在构建 git-lrc，这是一个可以在每次提交时运行的 AI 代码审查工具。请为我们点赞以帮助开发者发现该项目。欢迎试用并分享反馈，以改进产品。Go 的标准库很稳健，生态系统也很成熟。但这些都无法保护你免受泄露的密钥和易受攻击的依赖项的影响。安全工具填补了这一空白。好消息是：该领域最好的工具都是开源且免费的，设置只需 1-10 分钟。以下是四个表现出色的工具——它们的功能、重要性以及如何将它们引入到你今天的工作流中。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/05/07/kubernetes-v1-36-dra-136-updates/">Kubernetes v1.36：更多驱动、新特性以及 DRA 的下一个时代</a><br>动态资源分配 (DRA) 从根本上改变了平台管理员在 Kubernetes 中处理硬件加速器和专用资源的方式。在 v1.36 版本中，DRA 继续成熟，带来了一系列功能的升级、关键的可用性改进以及将 DRA 的灵活性扩展到内存和 CPU 等原生资源的新能力，并支持了 PodGroups 中的 ResourceClaims。驱动程序的可用性持续扩大。除了专用的计算加速器外，生态系统还包括对网络和其他硬件类型的支持，这反映了向更稳健、硬件无关的基础设施发展的趋势。无论你是管理庞大的 GPU 集群、需要更好的故障处理，还是仅仅在寻找更好的资源回退选项定义方式，DRA 在 1.36 版本中的升级都能满足你的需求。让我们深入了解这些新功能和升级！</p>
+
+<p><a href="https://seangoedecke.com/notes-on-incidents/">关于事故的笔记</a><br>事故是无聊的。在事故期间，你大部分时间其实是在等待：等待其他团队调查、等待部署完成、等待某个变更的结果显现，或者等待被叫醒的人上线。这很令人紧张，但通常没有太多实际工作要做。大多数事故会自行解决。人们喜欢分享英雄工程师通过巧妙的即兴修复瞬间修复系统的战斗故事。这种情况很少发生。设计良好的软件系统往往能自行恢复，由于是由非常稳固的组件构建的，许多现代系统至少部分是设计良好的。如果服务器进程崩溃或内存泄漏，Kubernetes 会杀死 pod 并重新启动它。如果服务过载卡住，客户端（希望）会触发断路器并退避，直到服务恢复。昂贵操作的临时峰值通常只会填满队列，而不是导致整个系统宕机。我参与过的大多数事故处理，超过一半在没有人工干预的情况下，大概在相同的时间内就会自行恢复。大多数解决事故的行动会让事故变得更糟。工程师在解决事故时动作太快。哦，队列太大了？别担心，我在生产控制台中清除队列！不幸的是，我刚才删掉的一些作业正在处理重要的计费工作，并且不会自动重新排队，因此这个队列延迟事故现在也变成了计费事故。这类事故的另一个经典案例是“工程师强行进行一系列重新部署来‘修复’看起来令人担忧的指标，而并发部署对系统造成的压力远比导致指标看起来异常的原因要大”。因此，在事故中你应该做的第一件事就是什么都不做。当我深夜被呼叫时，我曾经养成在加入事故处理前给自己倒一杯苏格兰威士忌的习惯。</p>
+
+<p><a href="https://www.docker.com/blog/comparing-sandboxing-approaches-ai-agents/">比较不同的沙箱化方法</a><br>“AI 智能体将成为未来我们与计算机交互的主要方式。它们将能够理解我们的需求和偏好，并主动帮助我们处理任务和做出决策。”—— Satya Nadella，微软首席执行官。无论你是软件工程师、产品经理还是设计师，这句话都应该从根本上改变我们处理日常工作的方式。我们不再仅仅是构建界面；我们正在创造环境，让智能体可以在最少人工干预的情况下自主运行。这样一个环境的基本要求是什么？用一个词概括：隔离。与传统软件交互的用户受到软件允许的操作限制。但智能体是非确定性的，因此容易出现幻觉和提示词注入。一旦你给 AI 系统写入权限，就没有什么能阻止它执行 rm -rf 来删除你的所有数据。当然，解决这个问题的方法有很多，其中一种就是沙箱：一种用于实验和测试而不影响周围系统的隔离、受控环境。因此，我开始探索沙箱化智能体的不同策略。从最基础的设置一直到设置云虚拟机。以下是我在每一步中学到的内容。1. 让我们从基准开始Chroot 是实现文件系统隔离的传统方式。当你希望进程认为某个特定的受限目录是机器的绝对根目录时，它工作得很好。然而，有两个主要注意事项。1. 如果 chroot 内部的进程具有 root 权限，它可能会逃逸。2. 虽然它提供了文件隔离，但进程隔离仍然是一个问题。恶意智能体仍然可以看到系统上运行的其他进程并试图杀死它们。</p>
+
+<p><a href="https://www.codermusings.com/compiler-internals/">编译器内幕</a><br>编译器内部原理深入探讨编译器如何将 C 代码转换为机器代码——从词法分析到优化，再到最终的二进制生成。从零开始编写 C 编译器：构建一个可工作的玩具编译器学习如何从零开始用 C 编写编译器。构建一个完整的玩具编译器，包含手写的词法分析器、递归下降解析器以及针对 x86-64 和 ARM64 汇编的代码生成器。链接器详解：对象文件如何成为可执行文件（静态与 LTO）了解链接器如何将对象文件转换为可执行文件。探索符号解析、重定位记录、静态与动态链接，以及通过真实的 readelf 和 nm 示例进行链接时优化。</p>
+
+<p><a href="https://dbos.dev/blog/goto-considered-harmful-2026">goto 被认为是有害的 (2026版本)</a><br>Goto 被认为是有害的（2026 版本）Mike Stonebraker，2026 年 4 月 29 日事件驱动编程通常是一种糟糕的架构简介关于何时使用事件驱动编程模型以及何时使用工作流架构，已经有很多讨论。这些讨论大部分源于代理 AI 应用的增加。AI 智能体经常执行长时间运行、多步骤的流程，涉及工具调用、外部 API 和人在回路。它们本质上是有状态的且容易出错，这使得协调和恢复成为首要考虑因素。在本文中，我们讨论了这个权衡，并使用了 Dijkstra 关于 GOTO 编程的著名 CACM 信件。</p>
+
+<p><a href="https://blog.val.town/better-auth">更好的身份验证</a><br>从 Supabase 到 Clerk 再到 Better AuthTom MacWright，2026 年 5 月 6 日2023 年，我写了关于 Val Town 如何放弃 Supabase 并转向更常规的数据库设置的文章。我们使用了 Supabase 的很多功能，包括他们的身份验证。所以当需要迁移时，我们找到了替代品：Render 用于数据库，Clerk 用于身份验证。但生活变化很快，到 2023 年底，我们提交了一个问题：放弃 Clerk。那个问题终于在一个月前关闭了，当时我们切换到了 Better Auth。一些重要的背景是 Clerk 是一个巨大的成功。他们刚刚筹集了 5000 万美元，并且有很多满意的用户。嘿，相关新闻是 Supabase 以 50 亿美元的估值筹集了 1 亿美元。恭喜他们两位。我一定是个糟糕的风险投资人。无论我对身份验证和行级安全有什么观点和经验，在这些数字和证明面前都是次要的。你无法与成功争辩。但即便如此，我还是很高兴关闭了那个问题并切换到了 Better Auth。这是一个艰难的经历，伴随着大量的变通方法、错误和停机。Val Town 的架构与 Clerk 的期望存在严重冲突。核心问题核心问题是 Clerk 试图成为你的用户表和你的会话表。我认为他们已经不再这么说了，但它始于一个非常极端的地方：2021 年有一篇博客文章标题为“考虑删除你的用户表”。还有 2023 年的一个 YouTube 视频叫“删除用户表”。</p>
+
+<p><a href="https://www.databricks.com/blog/10-trillion-samples-day-scaling-beyond-traditional-monitoring-infra-databricks">每天 10 万亿个样本，扩展超越传统监控基础设施</a><br>- Databricks 的监控系统在 AWS、Azure 和 GCP 上实时管理超过 50 亿个活跃的时间序列。- 为了在快速扩展的情况下保持这些系统的可靠性和低维护成本，我们通过定制开源监控解决方案重新架构了我们的 TSDB 和聚合层。- 面对高基数故障排查指标的大幅增长，我们开发了一个名为 Hydra 的新型 Lakehouse 平台。这种方法解锁了大规模的丰富调试能力，且存储成本比我们现有的堆栈便宜 50 倍。Databricks 的监控基础设施在过去一年中规模增长了三倍多，现在实时跟踪 50 亿个活跃的时间序列，每天摄入超过 10 万亿个样本。在如此庞大的规模下，我们发现现成的解决方案效率低下或难以满足我们的需求。本文分享了我们构建的替代方案：一个可扩展的平台，它利用了开源监控生态系统的精华，同时针对我们独特的需求进行了定制。Databricks 的工程师依赖监控系统来快速提醒我们出现的问题、自动化扩展和回滚，并实现智能故障排查。这些系统需要高度可靠，这样我们才能确信在潜在的事故期间不会变成盲人。然而，为 Databricks 的规模开发这种基础设施被证明并非易事：- 除了可扩展性、可靠性和效率的要求外，我们在 3 大云厂商的约 70 个云区域中全球运行我们的系统。我们需要在云甚至各个区域之间保持相当的性能。- 面对这种广度和多样性，大规模运行基础设施很快就会变得不可持续。系统需要尽可能实现“免维护”——即自我修复和自我扩展。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything">使用 Claude Mythos 预览版加固 Firefox</a><br>幕后：使用 Claude Mythos 预览版加固 Firefox令人着迷的深度细节，展示了 Mozilla 如何利用他们对 Claude Mythos 预览版的访问权限来定位并随后修复 Firefox 中的数百个漏洞：&gt; 突然间，漏洞变得非常棒了&gt;&gt; 就在几个月前，发送给开源项目的 AI 生成的安全漏洞报告大多因为是不想要的垃圾信息而闻名。处理看起来合理但实际上错误的报告对项目维护者施加了不对称的成本：提示 LLM 在代码中找到一个“问题”既便宜又容易，但响应它却既缓慢又昂贵。&gt;&gt; 很难夸大这种动态在短短几个月内对我们产生了多大的改变。这主要是由于两个因素的结合。首先，模型变得更加强大。其次，我们大幅改进了利用这些模型的技术——引导它们、扩展它们并将它们堆叠起来，以生成大量信号并过滤掉噪音。他们还包含了一些详细的漏洞描述，包括一个 20 年前的 XSLT 漏洞和一个 15 年前在 &lt;legend&gt; 元素中的漏洞。Harbor 的许多尝试都被 Firefox 现有的纵深防御措施所阻止，这令人感到安心。Mozilla 在 2025 年通过修复每月大约 20-30 个 Firefox 安全漏洞。到 4 月份，这个数字跃升至 423 个。</p>
+
+<p><a href="https://simonwillison.net/2026/May/7/xai-anthropic/#atom-everything">关于 xAI/Anthropic 数据中心交易的笔记</a><br>Anthropic 在昨天的 Code w/ Claude 活动上没有发布太多新的重大公告，但最大的新闻是他们与 SpaceX/xAI 达成的交易，使用“他们 Colossus 数据中心的全部容量”。正如我在主题演讲的直播博客中所提到的，那就是那个有着特别糟糕环境记录的数据中心。最初安装用于为该设施供电的燃气轮机在没有《清洁空气法》许可或污染控制设备的情况下运行，他们通过将其归类为“临时”来侥幸逃脱。可靠的报道将其与因空气质量低导致的入院率增加联系起来。Andy Masley 是反驳有关数据中心的误导性言论最直言不讳的声音之一（参见“AI 水资源问题是假的”和“数据中心土地使用问题是假的”），他这样评价 Colossus：&gt; 我绝对不会在这个特定的数据中心运行我的计算业务我明白 Anthropic 严重受限于计算能力，但在一个“AI 数据中心”的存在本身就是一个热门政治问题的世界里（参见犹他州最近关于大规模数据中心批准的新闻），签约这个特定的数据中心看起来非常糟糕。最初有很多关于这是否意味着 xAI 显然要放弃他们自己的 Grok 模型的讨论，因为他们所有的容量都会卖给 Anthropic。这是一个误解——Anthropic 获得的是 Colossus 1，但 xAI 保留了他们更大的 Colossus 2 数据中心用于自己的工作。</p>
+
+<p><a href="https://claude.com/blog/new-in-claude-managed-agents">Claude 托管智能体的新功能</a><br>Claude 托管智能体的新功能：梦境、结果和多智能体编排今天，我们以研究预览版的形式在 Claude 托管智能体中推出了“梦境”功能。梦境通过回顾过去的会话来寻找模式并帮助智能体自我改进，从而扩展了记忆。我们还向使用托管智能体进行构建的开发者提供了结果、多智能体编排和 webhooks。总而言之，这些更新使智能体能够以最少的引导处理复杂任务。使用梦境构建自我改进的智能体梦境是一个预定的过程，它会审查你的智能体会话和记忆存储，提取模式并策划记忆，以便你的智能体随着时间的推移而改进。你决定你想要的控制程度：梦境可以自动更新记忆，或者你可以在更改落地之前审查它们。</p>
+
+<p><a href="https://memory.cobanov.dev">智能体记忆架构</a><br>前提“记忆”对智能体而言意味着什么。语言模型本身是无状态的。你给它一个提示词，你得到一个续写，一旦响应结束，模型就会忘记你的存在。权重内部没有“以前的对话”。相比之下，智能体是围绕模型构建的编排：一个决定下一步传递什么上下文的循环。记忆是该循环中携带信息向前传递的部分。这篇文章中的一切都是同一个问题的不同答案：这次我们应该在提示词中放入什么？无状态 LLM 调用每次调用只看到自己的提示词。智能体带记忆每次调用都会看到提示词 &#43; 携带的上下文。演示亲自尝试开启记忆发送三条消息。切换记忆以查看在上下文中有无先前的轮次所回放的同一对话。</p>
+
+<p><a href="https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections">修正前的正确性</a><br>vLLM V0 到 V1：强化学习中的修正前的正确性PipelineRL 使用 vLLM 作为滚出生成的推理引擎。推理引擎对标记进行采样并返回标记的对数概率；训练器使用这些对数概率来计算策略比率、KL、裁剪率、熵和奖励。计算这些对数概率方式的任何差异都会改变训练动态。这就是我们需要消除的训练-推理不匹配。</p>
+
+<p><a href="https://weightythoughts.com/p/world-models-can-change-everything">世界模型可以改变一切</a><br>世界模型可以改变一切如果它们有效，AI 终于可以征服现实世界……但这只是一个很大的“如果”如果世界模型有效会发生什么？在某种程度上，我们所有的假设都会被打破。LLM 因为拥有互联网上数十亿人的数字足迹而能做的一切……我们也可以在现实世界中实现。我们可以用这些世界模型绕过数据，并引发一场像 2022 年 11 月 ChatGPT 进入大众意识那样大的革命。我们终于可以拥有《杰森一家》中那样的罗西机器人管家了。</p>
+
+<p><a href="https://bsuh.bearblog.dev/agents-need-control-flow/">智能体需要控制流</a><br>智能体需要控制流，而不是更多的提示词论文：处理复杂任务的可靠智能体需要软件中编码的确定性控制流，而不是越来越复杂的提示词链。如果你曾经诉诸于“强制”或“不要跳过”，你就已经触及了提示词的极限。想象一种编程语言，其中的语句是“建议”，函数在“幻觉”的同时返回“成功”。推理变得不可能；随着复杂性的增长，可靠性崩溃了。软件通过递归可组合性进行扩展：由库、模块和函数构建的系统。代码显露出可预测的行为，从而实现局部推理。提示词链缺乏这种属性。虽然对狭窄的任务有用，但提示词是非确定性的、定义松散的且难以验证。可靠性要求将逻辑从散文中移出，进入运行时。我们需要确定性的支架：显式的状态转换和验证检查点，将 LLM 视为一个组件，而不是整个系统。但确定性编排只是战斗的一半。在一个容易出现静默失败的系统中，没有主动错误检测的智能体只是达到错误结论的捷径。没有程序化验证，我们只剩下三种选择：1. 保姆：让人类参与其中，在错误传播之前捕捉它们。2. 审计员：在运行后执行详尽的端到端验证。3. 祈祷：接受输出。</p>
+
+<p><a href="https://deepmind.google/blog/alphaevolve-impact/">AlphaEvolve编码智能体</a><br>AlphaEvolve：我们的 Gemini 驱动的编码智能体如何跨领域扩展影响力一年前，我们介绍了 AlphaEvolve，这是一个用于设计高级算法的 Gemini 驱动的编码智能体。我们证明了 AlphaEvolve 可以帮助在数学和计算机科学的开放问题上取得新发现，并优化已部署在 Google 基础设施关键部分的算法。今天，因为算法几乎是生活的每个方面的一部分，AlphaEvolve 能实现的目标的范围更加广泛。从帮助解释自然世界的物理学到为电力网络和计算基础设施供电，AlphaEvolve 可以通过无数种方式帮助加速各领域科学家和企业的进步。我们很高兴分享 AlphaEvolve 迄今为止最重大的影响力集合。推动社会影响力和可持续性AlphaEvolve 帮助发现了健康和可持续性研究中的关键联系。在基因组学中，AlphaEvolve 被用于改进 DeepConsensus——由 Google Research 开发的用于纠正 DNA 测序错误的模型——实现了变异检测错误减少 30%。</p>
+
+<p><a href="https://x.com/trevin/status/2051316002730991795">智能体原生 CLI 的 10 个原则</a><br>Trevin Chow 在 X 上：&#34;智能体原生 CLI 的 10 个原则&#34;上个月我写了“智能体友好 CLI 的 7 个原则”。从那时起，我一直深入研究 CLI 工作，观察智能体如何使用它们，并看到它们以有趣的方式崩溃。4 月中旬，Cloudflare 发布了“面向所有 Cloudflare 的 CLI”，描述了他们如何围绕一个 TypeScript 模式重建 Wrangler，该模式从一个来源生成 CLI、SDK、Terraform 提供程序和 MCP 服务器。他们的代码模式 MCP 在不到 1000 个 token 中服务于他们全部约 3000 个操作的 API。他们添加了 /cdn-cgi/explorer/api，这是一个面向智能体的 OpenAPI 形状的运行时端点。并且他们在整个 CLI 表面执行命名规则：总是 get，永远不要 info；总是 --force，永远不要 --skip-confirmations；总是 --json。他们框架的理由是：“通过审查手动执行一致性就像瑞士奶酪。”此后不久，HeyGen 推出了他们的 CLI，从那以后我就一直在大量使用它。通过智能体生成视频、轮询作业、将工件路由到 webhook。实践经验使它在这里赢得了一席之地。很多公司发布了 CLI；这是我用过的最让智能体满意的 CLI。我写的最初的 7 个原则是防御性的：CLI 必须做对的事情，否则智能体会在每次调用中付出代价。不要在 TTY 检查上挂起，返回 JSON，制造错误</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/sipeed/picoclaw">sipeed/picoclaw</a><br>小巧、快速且可部署到任何地方——自动化琐事，释放你的创造力</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>开放设备管理</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/chenhg5/cc-connect">chenhg5/cc-connect</a><br>将本地 AI 编码智能体（Claude Code、Cursor、Gemini CLI、Codex）桥接到消息平台（飞书/Lark、钉钉、Slack、Telegram、Discord、LINE、企业微信）。与你的 AI 开发助手聊天</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>开源 LLM 知识平台：将原始文档转化为可查询的 RAG、自主推理智能体和自维护 Wiki。</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>用于聚合和分发的统一 AI 模型中心。它支持将各种 LLM 交叉转换为 OpenAI 兼容、Claude 兼容或 Gemini 兼容的格式。一个集中的网关</p>
+
+<p><a href="https://github.com/CJackHwang/ds2api">CJackHwang/ds2api</a><br>DeepSeek 兼容中间件接口：Go 语言技术探索项目，专注于高并发协议适配。它作为将各种 Web 协议转换的参考实现</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的指挥官</p>
+
+<p><a href="https://github.com/e2b-dev/infra">e2b-dev/infra</a><br>为 E2B Cloud 提供支持的基础设施。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

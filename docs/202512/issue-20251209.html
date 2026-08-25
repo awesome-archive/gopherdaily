@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251209.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251209</span>
+</p>
+<p>每日一谚：Do not ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/09/vet-add-check-for-using-verb-q">Go 的“最小惊讶原则”破功了吗？—— 一个vet 新提案引发的思考</a><br>Go 语言的设计哲学，一向以“简单、明确、无魔法”著称，其目标是让代码的行为尽可能符合开发者的直觉，即遵循所谓的“最小惊讶原则”。然而，最近一个被 Go 团队接受的 go vet 新提案（NO.72850），却像一面镜子，映照出了 Go 在这条道路上的一些“盲区”。 这个提案本身很简单，但它所揭示的问题却非常深刻，让我们不得不反思：Go 的设计，真的总是那么“不言自明”吗？</p> 
+
+<p><a href="https://tonybai.com/2025/12/09/programmer-all-in-ai-survival-revelation-in-2025">给了机关枪，你却非要耍大刀：2025 年末，程序员 All in AI 的生存启示录</a><br>“给了你机关枪，你却非得用大刀。这不仅是不合时宜，简直是暴殄天物” 这三年，AI 不再是那个只会写打油诗的聊天机器人，它是基建，是水电，是程序员的第二大脑。 在这个时间节点，命题早已改变：不再是“要不要用 AI”，而是“你为什么还在用大刀砍柴？” 但在真正 All in AI 之前，我们必须先看清现实中普遍存在的“四大怪象”，并一一打破它们</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/2046zcyJmpy0GJxoLtJTKg">【Google ADK 实战】05 workflowagents：编排你的多 Agent 系统</a><br></p> 
+
+<p><a href="https://packagemain.tech/p/golang-optimizations-for-highvolume">Golang optimizations for high‑volume services</a><br>文章讨论了在处理高并发服务时，针对Go语言进行优化的经验教训，特别是在一个从Postgres到Elasticsearch的数据管道场景下。核心挑战在于如何在严格的约束（Postgres不应长时间保留WAL，内存使用不能失控）下，保持低延迟和稳定的内存使用。作者提出了三方面的优化方向：1. 使用jsoniter替代标准的encoding/json以提高JSON序列化性能；2. 利用sync.Pool重用对象以减少垃圾回收的压力；3. 考虑GC调优，特别是Go 1.25开始的实验性GC（如GreenTeaGC），以换取更高的吞吐量和更稳定的尾部延迟。
+
+总结来说，通过控制并发、使用对象池、优化JSON处理和微调GC，可以构建一个能够持续处理数据库变更流且资源消耗可控的高性能Go服务。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/12/08/goland-2025-3-is-out/">GoLand 2025.3 发布！</a><br>GoLand 2025.3 带来了一系列强大的升级，旨在帮助您编写更清晰、更高效的代码。本次发布引入了实时资源泄漏检测、捆绑的 Terraform 支持、更流畅的单文件编辑、对 golangci-lint 集成的更新以及 IDE 各方面的性能提升。</p> 
+
+<p><a href="https://gomonk.substack.com/p/thinking-in-packages">在Go包中思考</a><br>即使对于小型 Go 程序，也要构建可重用的库。本文通过一个简单的“Hello, world!”示例，逐步演示了如何从单文件实现转向基于测试驱动开发的包结构设计，强调了提前考虑包的职责和接口设计的重要性，即使项目规模很小。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-12-09-ai-database/">所以你想要一个AI数据库？</a><br>本文调查了AI数据库的现状。AI用例如何影响数据库？当今有哪些产品适合AI数据库用例？文章探讨了AI发展对数据库提出的新需求，包括更多写入、结构化数据、数据测试、新的接口、权限、隔离、回滚和审计等方面，并强调AI需要版本控制，同时回顾了Vector数据库和版本控制数据库（如LakeFS、Neon和Dolt）的产品选项。</p>
+
+<p><a href="https://www.docker.com/blog/compose-to-kubernetes-to-cloud-kanvas/">Compose to Kubernetes to Cloud With Kanvas</a><br>Docker Kanvas 扩展将 Docker Compose 文件转换为 Kubernetes 和多云设计，用户可以在 Docker Desktop 中可视化、测试和操作这些设计，从而简化了从本地 Compose 文件到云端基础设施的迁移和管理过程。它提供了 Designer（声明式）和 Operator（命令式）两种模式，旨在通过设计即基础设施的理念，结合 AI 辅助和严格的策略引擎，消除在多云环境下管理复杂 YAML 的痛点。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/08/harbor-enterprise-grade-container-registry-for-modern-private-cloud/">Harbor: 面向现代私有云的企业级容器注册中心 | CNCF</a><br>在不断演进的应用部署格局中，Kubernetes (K8s) 容器化已成为新标准。随着组织大规模采用 Kubernetes，公共镜像注册中心常常带来新的挑战，从速率限制和不断升级的成本到对敏感数据的控制受限。Harbor 作为一款开源的企业级容器注册中心，为容器镜像管理带来了安全性、性能和主权，无缝集成到现有的操作范式中，为现代容器镜像管理需求提供了强大的解决方案。Harbor 于 2016 年开源，于 2018 年 7 月 31 日加入 CNCF，并于 2020 年 6 月 15 日毕业，是其第十一个项目，这反映了它的成熟度和充满活力的社区。本文档介绍了 Harbor 的核心功能（如安全性、复制和可扩展性），并提供了一个在虚拟机（以 VMware vSphere 为例）上部署 Harbor 并使用 Docker CLI 上传和使用容器镜像的示例指南。</p>
+
+<p><a href="https://planetscale.com/blog/io-devices-and-latency">IO设备与延迟</a><br>本文带领读者进行一次关于IO设备历史的互动式探索，并学习IO设备延迟如何影响性能。内容涵盖了磁带存储、硬盘驱动器（HDD）和固态驱动器（SSD）的演变，重点讨论了它们在随机读写、并行性、垃圾回收等方面的影响。最后，文章探讨了云存储中计算与存储分离带来的延迟问题，并介绍了PlanetScale Metal解决方案，该方案通过直接连接NVMe驱动器来解决这些性能瓶颈。</p>
+
+<p><a href="https://www.morling.dev/blog/on-idempotency-keys">关于幂等性键</a><br>在分布式系统中，无法保证消息的精确一次传递，但可以实现精确一次处理。通过为每条消息添加一个唯一的幂等性键，消费者可以识别并忽略重复消息。UUIDs（如UUIDv4）可以作为键，但需要存储所有已处理的消息键，可能不切实际。包含时间戳的UUIDv7或ULID可以帮助检测“太旧”的键。单调递增的序列值是更高效的方案，消费者只需存储最新值，但生产者生成此类值需要原子操作，可能导致性能瓶颈。一种更优的方法是利用事务日志（如Postgres WAL）通过Change Data Capture (CDC) 工具（如Debezium）派生幂等性键，基于消息在日志中的位置（如Postgres LSN），这可以实现空间效率高的重复检测，但会增加运维复杂度。</p>
+
+<p><a href="https://martinalderson.com/posts/has-the-cost-of-software-just-dropped-90-percent">软件构建成本是否已下降90%？</a><br>代理式编码工具正在大幅降低软件开发成本。本文探讨了成本下降的原因，以及为什么2026年可能会让许多人措手不及。作者认为，代理式工具极大地减少了软件开发的劳动力成本，正如Jevons悖论所揭示的，成本降低将释放大量潜在的软件需求。未来，领域知识将成为真正的护城河，掌握这些工具的开发者将能以前所未有的速度交付成果。</p>
+
+<p><a href="https://www.morling.dev/blog/you-gotta-push-if-you-wanna-pull">如果你想拉取，你就得推送</a><br>历史上，数据管理系统围绕“拉取查询”的概念构建：用户查询数据，例如存储在 RDBMS 表中、数据湖中的 Parquet 文件或 Elasticsearch 中的全文索引中。这种拉取数据的方式在很多情况下有效，但存在性能、数据格式、数据形态和数据位置等挑战。这些问题可以通过“物化视图”（广义上）来解决，即针对特定查询和访问模式，预先计算并以优化后的格式、形态和位置存储数据。为了有效地进行拉取查询，应该倾向于数据冗余和反范式化。文章强调应该只有一个规范实例作为数据源头，所有其他视图都从中派生，并讨论了如何通过“推送查询”来增量和高效地保持这些物化视图同步。推送查询由源数据表的变更触发，只发射反映这些变更的结果更新，解决了拉取查询成本过高的问题。最终，结合推送（增量计算）和拉取（人类操作的方便性），通过将推送查询的增量更新存储在支持拉取查询的系统中（如 Flink SQL 写入 Elasticsearch 或 Iceberg 表，或使用增量视图维护引擎），可以实现高效的数据物化。</p>
+
+<p><a href="https://addyo.substack.com/p/21-lessons-from-14-years-at-google">谷歌 14 年的 21 个经验教训</a><br>这篇文章总结了作者在谷歌工作 14 年中学到的 21 条经验教训，重点关注代码、职业生涯和工程学的人性化方面。核心思想包括：专注于解决用户问题、协作达成共识的重要性、倾向于行动和交付（“先做出来，再完善”）、清晰度是资深程度的体现、抽象会转移复杂性、以及人脉的重要性。作者强调，真正成功的工程师是那些擅长处理代码之外的因素——人际关系、政治、对齐和模糊性的人。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/9/formal-verification/#atom-everything">预测：人工智能将使形式化验证走向主流</a><br>Martin Kleppmann 提出了形式化验证语言（如 Dafny、Nagini 和 Verus）开始获得主流应用前景的观点。由大型语言模型（LLMs）生成的代码可以极大地受益于更强大的验证，而 LLMs 本身也使得这些通常难以掌握的系统更容易使用。一项 2025 年 3 月的研究发现，Claude 3.5 Sonnet 对上述三种语言表现出有希望的结果。</p>
+
+<p><a href="https://rlancemartin.github.io/2025/10/15/manus">Context Engineering in Manus</a><br>该文章探讨了AI代理系统Manus中应用的上下文工程（Context Engineering）策略，旨在解决大型语言模型（LLM）上下文窗口限制导致的性能下降问题。文章重点介绍了Manus利用其基于虚拟机的沙箱环境实现的三个核心上下文工程方法：上下文缩减（Context Reduction）、上下文卸载（Context Offloading）和上下文隔离（Context Isolation）。
+
+1. **上下文缩减**：通过将旧的工具调用结果进行“紧凑化”（用文件路径引用替换完整内容）来节省Token，并在紧凑化效果不佳时，使用预定义schema对轨迹进行结构化总结。
+2. **上下文隔离**：通过子代理隔离上下文，将任务分配给具有独立上下文窗口的子代理，以避免信息过载。Manus使用规划者（Planner）分配任务给执行者（Executor）子代理，并区分简单任务（仅传递输出需求）和复杂任务（共享完整上下文）。
+3. **上下文卸载**：将大量操作（如执行工具或处理工具结果）卸载到虚拟机的沙箱环境（如文件系统和Bash）中，而不是将所有工具定义和结果都塞入LLM的上下文窗口。这与Claude的Skills功能中的渐进式披露理念相似。
+
+此外，文章还提到了Manus根据任务选择最适合的模型（如Claude用于编码，Gemini用于多模态），并利用缓存（特别是KV缓存）来优化成本和延迟。最后，作者强调了“苦涩的教训”（Bitter Lesson）——即系统设计（Harness）不应阻碍未来模型性能的提升，建议通过跨模型强度的评估来验证Harness的适应性。</p>
+
+<p><a href="https://oscargabriel.dev/blog/tanstacks-open-ai-sdk">TanStack 的开放人工智能 SDK</a><br>这篇文章深入比较了 TanStack AI Alpha 和 Vercel AI SDK。作者详细分析了 TanStack AI 的分层、类型优先设计、同构工具定义、内置审批工作流程、多语言后端支持以及更精细的流式用户体验控制，特别是其与更广泛的 TanStack 生态系统（如 Query、Router、Form）的潜在集成。文章指出，虽然 Vercel SDK 目前在功能上更成熟（如更多提供商、图像/语音生成），但 TanStack AI 在架构理念和长期可移植性方面更具吸引力，更适合那些优先考虑无厂商锁定和跨语言支持的开发者。对于 Next.js/Vercel 用户，Vercel SDK 的 RSC 支持仍是一个优势，但 TanStack AI 的方法代表了对开源、去中心化工具的更进一步的承诺。</p>
+
+<p><a href="https://higashi.blog/2025/12/07/ai-verification">AI should only run as fast as we can catch up</a><br>这篇文章探讨了在人工智能时代如何确保AI工作的可靠性，即“可靠工程”问题。作者通过对比两位朋友Eric（困于AI生成原型难以深入理解和验证）和Daniel（能高效利用AI完成复杂编码并快速验证）的故事，引出核心观点：AI的有效性取决于我们验证其工作的速度。
+
+文章将任务分解为“学习/创造”和“验证”两部分，提出如果验证的难度远低于创造（如图像生成），AI的价值最大化。反之，如果验证需要大量专业知识（如复杂软件工程），就会产生“验证债务”（Verification Debt），比技术债务更危险。
+
+作者认为“验证工程”（Verification Engineering）将是继提示工程和上下文工程之后的下一个重要领域，其目标是通过设计精密的提示、培养能有效验证的技术利益相关者，以及寻找易于验证的任务，使AI的产出更可靠，从而真正利用AI的指数级速度。</p>
+
+<p><a href="https://www.sh-reya.com/blog/consumption-ai-scale">论AI生成内容的规模化消费</a><br>本文探讨了在AI生成内容（AIGC）泛滥的时代，作为信息消费者所面临的两个主要问题：信号退化（AI过度使用修辞和沟通工具，导致这些工具的信号价值下降）和验证侵蚀（生成内容成本低廉，但验证成本高昂，使消费者倾向于偷懒而不进行深入核查）。作者认为这会削弱人们理解复杂问题的能力，并导致集体判断力的退化。为应对此挑战，作者提出了两个思考方向：一是教导系统理解技术背后的“为什么”（Why），而非仅仅应用其表面的“是什么”（What/How）；二是将AI的置信度建立在经过验证的人类经验之上（例如通过“假设性基础空间”），而不是让模型模仿人类自信的言辞。最终，作者担忧过度依赖AI筛选信息可能进一步恶化信息环境。</p>
+
+<p><a href="https://www.raf.xyz/blog/03-how-i-keep-up-with-ai-generated-prs">我如何跟进由AI生成的Pull Request</a><br>随着AI代码助手普及，代码编写速度提升，代码审查成为新的瓶颈。作者分享了他用于快速而深入审查AI生成PR的工作流程。该流程的核心是利用AI（如Cursor）生成审查计划，而不是直接生成审查意见。作者详细介绍了设置、一个包含GitHub CLI命令的详细审查提示（Prompt），以及如何迭代该提示以持续优化审查效率。目标是让人工智能处理繁琐的总结和初步问题识别，而人工保持对最终输出的控制。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/safing/portmaster">safing/portmaster</a><br>🏔 Love Freedom - ❌ Block Mass Surveillance</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/jorgerojas26/lazysql">jorgerojas26/lazysql</a><br>A cross-platform TUI database management tool written in Go.</p>
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>Self-hosted, lightweight server and website monitoring and O&amp;M tool</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/psviderski/uncloud">psviderski/uncloud</a><br>A lightweight tool for deploying and managing containerised applications across a network of Docker hosts. Bridging the gap between Docker and Kubernetes ✨</p>
+
+<p><a href="https://github.com/base/node">base/node</a><br>Everything required to run your own Base node</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/docker/cagent">docker/cagent</a><br>Agent Builder and Runtime by Docker Engineering</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

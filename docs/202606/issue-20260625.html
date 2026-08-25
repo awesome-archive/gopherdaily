@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260625.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260625</span>
+</p>
+<p>每日一谚：Use time.Duration for all time intervals. Don&#39;t use int64 for seconds </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/25/go-1-27-uuid-newv7-always-generates-uuid-with-7000-on-browsers">浏览器里的“安全阴谋”：为什么 Go 1.27 的 UUIDv7 会离奇丧失随机性？</a><br>知名 Go 游戏引擎 Ebitengine 的创造者 hajimehoshi 在测试 Go 1.27rc1 时，提交了一个 Bug Issue #80084：当他在浏览器环境（GOOS=js GOARCH=wasm）下调用 Go 1.27 新标准库的 uuid.NewV7() 时，生成的 UUID 居然极度规律。在代表随机数和亚毫秒时间戳的第三组字符中，无论运行多少次，永远雷打不动地包含“7000”！</p> 
+
+<p><a href="https://levelup.gitconnected.com/the-goroutine-leak-i-keep-seeing-in-production-go-services-82c1108994f1">我在生产中的 Go 服务中不断看到这种 Goroutine 泄漏问题</a><br>内存使用量在三天内从 4GB 上升到了 31GB。延迟则从 90 毫秒下降到了超过 8 秒。重启相关进程后，情况在大约 36 小时内有所改善，但之后内存使用量又开始缓慢下降。</p> 
+
+<p><a href="https://blog.stackademic.com/secure-your-go-projects-in-5-minutes-with-trivy-full-walkthrough-d91605771b04">人工智能生成的 Go 代码新安全标准</a><br>在人工智能生成代码的时代，扫描器是阻挡在你仓库与那些并非由你编写的 CVE 之间的唯一因素。</p> 
+
+<p><a href="https://medium.com/@erdemakin09/from-php-to-go-major-mindset-shifts-i-encountered-in-my-first-week-4504663e474b">从 PHP 到 Go：第一周里我遇到的重大思维方式转变</a><br>我不想在这篇文章中用过多的技术细节来困扰你。这并不是一篇关于技术的深入解析文章，而是一份关于体验的分享。那么，让我们开始吧。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/24/from-awareness-to-engineered-accessibility-in-open-source/">从意识到开源中的工程化无障碍</a><br>这些努力表明，有组织的社区支持可以减少孤立感并提高参与度。但这一阶段也暴露出了一个持续的差距。我们同时听到了两种不同的声音。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/06/24/wg-device-management-spotlight-2026/">WG Device Management 工作组亮点</a><br>某些功能需要在两方面进行更改。我们还有另一种共享方法，称为&#34;可消耗容量&#34;。在上述显式共享案例中，用户需要将容器指向同一个 ResourceClaim；一个 ResourceClaim 在多个容器和 Pod 之间共享。</p>
+
+<p><a href="https://thomasliao.com/eval-startups">为什么独立的评估创业公司如此稀少？</a><br>每当出现新的AI趋势，如智能体、语音或语音智能体时，开发者都会面临众多选择，其中一部分人确信在识别...方面存在商业机会。</p>
+
+<p><a href="https://blog.cloudflare.com/oauth-for-all/">面向所有人的OAuth解锁</a><br>Cloudflare宣布推出面向所有人的OAuth功能，这将显著简化开发者与其应用集成的过程，提高安全性和用户体验。</p>
+
+<p><a href="https://refactoringenglish.com/excerpts/write-an-effective-design-doc/">如何撰写有效的软件设计文档</a><br>一份优秀的设计文档可以节省数年的开发时间。撰写设计文档迫使你在错误实施或陷入困境之前仔细思考重要决策。它也是团队成员和合作伙伴团队之间协调设计决策的最佳方式。</p>
+
+<p><a href="https://www.phoronix.com/news/GCC-x86-Generic-Mispredict">GCC编译器一行x86代码变更带来&#43;12%的性能提升</a><br>一项对GCC编译器的单行x86代码修改为现代Intel和AMD处理器带来了显著的性能提升，在基准测试中取得了12%的改进。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything">引用Tom MacWright的话</a><br>在过去的几个月里，我开始看到明显由LLM共同撰写的求职申请，链接到LLM生成的作品集网站，进而链接到LLM生成的GitHub项目，以及完全由LLM生成的提交信息。</p>
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/">在Gemini 3.5 Flash中引入计算机使用功能</a><br>Google宣布在Gemini 3.5 Flash模型中引入计算机使用能力，使AI能够直接与计算机交互，执行复杂任务并理解屏幕内容。</p>
+
+<p><a href="https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open">GLM-5.2是开放智能体的变革性进步</a><br>作者认为GLM-5.2代表了开放智能体领域的一个重要能力阈值，标志着该技术发展进入新阶段。</p>
+
+<p><a href="https://www.krea.ai/blog/krea-2-technical-report">Krea 2技术报告</a><br>本技术报告介绍了Krea 2：一系列基础模型，旨在提供广泛的美学多样性和用户创意控制能力。</p>
+
+<p><a href="https://gsstk.gem98.com/en-US/blog/a0127-ai-rotting-brains-deskilling">AI正在腐蚀开发者大脑：强制自动补丁的代价</a><br>本文探讨了开发者技能退化的争议，分析强制使用的AI自动补全工具如何绕过工作记忆并降低软件质量。</p>
+
+<p><a href="https://reactjava.substack.com/p/10-ai-engineering-tools-and-framework">每个开发者都应该知道的10个AI工程工具和框架</a><br>作者测试了多种AI工程工具、框架和库，提供了他个人的十大推荐，帮助开发者提高工作效率和项目质量。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kunchenguid/no-mistakes">kunchenguid/no-mistakes</a><br>git push no-mistakes</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray panel supporting multi-protocol multi-user expire day &amp; traffic &amp; IP limit (Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun)</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/kunchenguid/treehouse">kunchenguid/treehouse</a><br>Manage worktrees without managing worktrees.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

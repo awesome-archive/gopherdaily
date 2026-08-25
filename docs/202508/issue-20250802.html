@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250802.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250802</span>
+</p>
+<p>每日一谚：Define interfaces in the consumer package, not the producer </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/02/proposal-http3">Go官方 HTTP/3 实现终迎曙光：x/net/http3 提案启动，QUIC 基础已就位</a><br>在社区长达数年的热切期盼之后，Go 官方终于迈出了支持 HTTP/3 的关键一步。一项编号为#70914的新提案，正式建议在 x/net/http3 中添加一个实验性的 HTTP/3 实现。意味着 Go 的网络栈即将迎来一次基于 UDP 的、彻底的现代化升级。</p> 
+
+<p><a href="https://blog.hayride.dev/composable-agents">可组合Agent</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-08-01-updates-to-ci">Dolt CI 变得更易于使用</a><br>Dolt 是数据的 Git，而 DoltHub 是 Dolt 的 GitHub。在去年年底，我们宣布了新的 DoltHub 操作，类似于 GitHub 操作。我们实施的第一组操作是持续集成，称为 Dolt CI。谁不喜欢对他们的数据库进行测试呢？ 我们的初始版本有一些痛点。然而，没有本地系统来运行测试，因此您需要推送到 DoltHub 才能运行 CI。您也只能在导出到 yaml 文件后查看步骤，这会使您的目录变得混乱。命令行需要一些改进，因此我们添加了一些额外的功能。让我们来探索一下它的工作原理。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/08/02/what-500-experts-revealed-about-kubernetes-adoption-and-workloads/">500 多位专家揭示了 Kubernetes 的采用和工作负载</a><br>Applications running in containers have come a long way. The conversation has shifted from if organizations are adopting cloud native technologies like Kubernetes to what kinds of applications they’re running in these environments.</p>
+
+<p><a href="https://transactional.blog/blog/2025-modern-distcc-via-siso.html">A Failed Experiment with Siso</a><br>这篇文章记录了使用 Siso（一个 Ninja 兼容的构建工具，旨在替代 distcc）的失败实验。作者尝试使用 Siso 构建一个 CMake 项目，并配置了远程构建，但遇到了多个问题，包括构建配置问题、路径问题和远程执行失败。最终，作者放弃了进一步的尝试，认为需要解决一些 Siso 开发相关的问题。</p>
+
+<p><a href="https://thenewstack.io/gitlab-launches-its-ai-agent-platform-in-public-beta">GitLab的AI Agent 平台进入Beta公测</a><br>GitLab launches its AI Agent Platform in public beta for DevSecOps teams, including multi-agent workflows and IDE integrations.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/1/faster-inference/#atom-everything">更快的推理</a><br>今天，LLM 服务将推理速度作为其主要特征的两个有趣例子。首先，Cerebras 宣布了其极高速托管模型服务的两个新的月度计划：Cerebras Code Pro（每月 50 美元，每天 1,000 条消息）和 Cerebras Code Max（每月 200 美元，每天 5,000 条消息）。他们在这里销售的模型是 Qwen 的 Qwen3-Coder-480B-A35B-Instruct，可能是目前最好的可用开放权重编码模型，该模型于 10 天前发布。从模型发布到第三方订阅服务需要十天，这感觉像是某种记录。
+Cerebras 声称他们可以以惊人的每秒 2,000 个 token 的速度提供该模型 - 是 Claude Sonnet 4 在他们演示视频中的四倍速度。
+同样在今天，Moonshot 宣布了其万亿参数 Kimi K2 模型的新的托管版本，名为 kimi-k2-turbo-preview：
+🆕 迎接 kimi-k2-turbo-preview
+相同的模型。相同的上下文。现在快 4 倍。
+⚡️ 从 10 tok/s 到 40 tok/s。
+💰 限时推出价格（9 月 1 日前 5 折）
+每百万输入 token 0.30 美元（命中缓存）
+每百万输入 token 1.20 美元（未命中缓存）
+每百万输出 token 5.00 美元
+👉 探索更多：platform.moonshot.ai
+这比他们常规模型的价格高出一倍，速度快 4 倍（9 月份增加到 4 倍）。他们如何实现加速，目前还没有详细说明。
+我感兴趣的是看看市场对这种更快性能的需求有多大。我过去曾尝试过 Cerebras，发现这种速度确实让使用实时预览迭代代码的感觉更加互动。</p>
+
+<p><a href="https://productpicnic.beehiiv.com/p/the-ai-age-is-the-age-of-no-consent-7559">The AI age is the &#34;age of no consent&#34;</a><br>&#34;Inevitability&#34; means design decisions are no longer informed by user needs; now they are unilaterally imposed. The users are the ones being designed.</p>
+
+<p><a href="https://blog.google/products/gemini/gemini-2-5-deep-think">Gemini 2.5：深度思考现已推出</a><br>深度思考利用扩展的并行思维和新颖的强化学习技术，以显着提高解决问题的能力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubesphere/kubesphere">kubesphere/kubesphere</a><br>The container platform tailored for Kubernetes multi-cloud, datacenter, and edge management ⎈ 🖥 ☁️</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/sst/opencode">sst/opencode</a><br>AI coding agent, built for the terminal.</p>
+
+<p><a href="https://github.com/lejianwen/rustdesk-api">lejianwen/rustdesk-api</a><br>Custom Rustdesk Api Server, include web admin ,web client, web client v2 preview and oidc login</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/hypermodeinc/dgraph">hypermodeinc/dgraph</a><br>high-performance graph database for real-time use cases</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/kubesphere/kubekey">kubesphere/kubekey</a><br>Install Kubernetes/K3s, and related cloud-native add-ons, it supports all-in-one, multi-node, and HA 🔥 ⎈ 🐳</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>A Modern Testing Framework for Go</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>An open-source runtime for composable workflows. Great for AI agents and CI/CD.</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>Nightingale for monitoring and alerting, just as Grafana for visualization.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/go-co-op/gocron">go-co-op/gocron</a><br>Easy and fluent Go cron scheduling. This is a fork from https://github.com/jasonlvhit/gocron</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

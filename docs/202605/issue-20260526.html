@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260526.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260526</span>
+</p>
+<p>每日一谚：A well-structured Go project has a clear layout. Follow official conventions. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/26/why-nvidia-chose-go-to-rewrite-their-ai-infrastructure">悄悄用 Go 重写基础设施：NVIDIA 的 GPU 云平台为何选择 Go？</a><br>2026 年 4 月，NVIDIA 悄悄开源了一个 repo：github.com/nvidia/nvcf。 没有大张旗鼓的发布会，没有 Jensen Huang 的皮夹克登场。但如果你打开这个 repo 看一眼语言构成，数字会让你一惊： Go 占比 88.5%。这不是一个小工具，这是驱动 build.nvidia.com、NVIDIA DGX Cloud 推理服务和全球 GPU 云合作伙伴（CoreWeave、Oracle Cloud 等）整个 控制平面的核心平台。NVIDIA 在用 Go 构建 AI 时代的基础设施。而且这个趋势正在加速。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/tiwQ7hOETqv4TYRybHfszQ">【AI 时代软件工程师的算法图谱】04 链表操纵：指针的艺术与内存管理</a><br>在现代高级编程（如 Python/Java/Go 业务层）中，链表似乎不如数组常用。但在操作系统内核、内存分配器（Malloc）、Redis 底层（Ziplist/Quicklist）这些硬核领域，链表是绝对的王者。它不需要连续内存，插入删除极其灵活，是连接离散数据的纽带。 对于 Go 工程师来说，理解链表不仅是为了刷题，更是为了理解 container/list 标准库，甚至是 Go Runtime 内部的 mspan 链表管理机 制。 今天，我们将通过指针的“穿针引线”，体验内存操纵的艺术。</p> 
+
+<p><a href="https://log.0x21.biz/posts/go-privdrop/">Go 语言中的权限撤销机制</a><br>计算机程序可以做很多事情，无论是预期的还是非预期的。它们能做什么受到其权限的限制。由于大多数操作系统以特定用户身份执行程序，程序便拥有了该用户的所有珍贵权限。举个具体的例子，如果一个用户随意存放了 SSH 私钥并运行了一个聊天程序，那么这个程序就能够读取该私钥，尽管这与聊天毫无关系。假设该聊天程序存在漏洞，攻击者可能通过精心构造的消息指示聊天程序窃取私钥。这也许不是问题的核心，但损害的根源在于程序访问了它本不应该访问的资源。虽然编写安全软件超出了本文讨论范围，但如果通过某种方式强制执行“最小权限原则”，私钥本可以得到保护。简单来说，它意味着每个组件（例如聊天软件）应该只拥有必要的权限，仅此而已。通往这种状态的途径有很多，例如不在私钥交互和聊天时使用同一个用户，或者对聊天应用程序进行沙箱隔离。在开发软件时，开发者应该清楚他们的工具应该具备什么能力。因此，他们能够利用系统特性划定允许的范围，并拒绝其他一切操作。作为一个比喻，可以想象狼人在满月前将自己锁起来。如果你现在在问自己，为什么应该对代码这样做（因为你的代码永远不会失败），那么你尤其应该这样做。对于大多数现有的应用程序，问题不在于它们“是否”会被攻破，而在于“何时”会被攻破。由于多年来我编写过许多 Bug，并见过无法理解的漏洞利用，我正在尝试锁住我未来所有的“狼人”。</p> 
+
+<p><a href="https://packagemain.tech/p/persistent-multiplayer-state-without">无混乱的持久化多人游戏状态</a><br>持久化多人游戏状态，告别混乱。如何通过 PostgreSQL 保持数据准确性，并利用 Redis 进行快速处理，从而保持实时多人游戏的一致性。在单人游戏中，状态管理很简单。只有一个玩家、一个存档文件，只要你不损坏文件，一切都好。在实时多人游戏中，状态是你面临的最困难的问题。两个玩家可以同时对同一个目标进行操作。一个计划任务（建造、洗钱、突袭）需要在无论谁在线的情况下都在精确的时刻执行。玩家可以在离开三天后回来并期望他们的进度...</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/25/why-kubernetes-policy-enforcement-happens-too-late-and-what-to-do-about-it/">为什么 Kubernetes 策略执行总是滞后，以及该如何应对</a><br>Kubernetes 已成为现代云原生基础设施的骨干。它的灵活性使团队能够快速行动，从模块化组件构建复杂系统，并相对轻松地跨环境部署。但这种灵活性伴随着众所周知的代价：配置复杂性。在各种规模的组织中，很大一部分可靠性和安全事件并非源于应用程序代码。它们源于配置错误的基础设施——缺失的资源限制、过于宽松的安全上下文、错误的 RBAC 绑定。这些问题很常见，隐蔽性强，并且通常在正常的开发节奏中被引入。令人沮丧的部分是？大多数问题被发现得太晚了。### 策略即代码中的时机问题策略即代码工具在 CNCF 生态系统中已经非常成熟。诸如 Open Policy Agent (OPA)、Kyverno 和 Conftest 等工具为平台团队提供了强大的声明式方法，来定义和执行跨 Kubernetes 环境的治理规则。这些工具通常在两个阶段运行：- CI/CD 流水线：作为自动化构建和测试工作流的一部分扫描清单。- 准入控制器：在集群边界强制执行策略，阻止不合规资源的应用。两者都必不可少。但它们有一个共同的结构性限制：当违规被发现时，开发者已经写好了代码，拉取请求（PR）通常也已经被评审过了，上下文已经丢失。随后是熟悉的循环：1. CI 任务因策略违规而失败2. 开发者切换回一个他们已经在心理上关闭的 PR3. 提交后续补丁来修复问题4. 循环重复这不是策略质量的问题。这是一个时机问题。### 重新思考执行位置大多数关于策略即代码的讨论都集中在策略表达了什么以及如何表达...</p>
+
+<p><a href="https://www.cncf.io/blog/2026/05/25/zero-downtime-migration-from-ingress-nginx-to-envoy-gateway/">从 Ingress NGINX 到 Envoy Gateway 的零停机迁移</a><br>随着 Kubernetes 网络向 Gateway API 演进，在生产环境中运行 Ingress NGINX 的团队越来越多地评估迁移路径。对于许多组织而言，挑战不仅在于选择一种 Gateway API 实现，还在于设计一种在切换期间最大限度降低运营风险的迁移策略。大多数工程团队知道他们需要迁移，但缺乏带宽进行适当的评估，不确定哪个 Gateway API 控制器是正确的长期选择，并且意识到草率的切换会在 DNS TTL 与现实不符时导致生产流量中断。本文是我们最近为 AWS 上的一位客户进行的 Ingress NGINX 迁移案例研究。它介绍了我们如何选择 Envoy Gateway，我们如何先在自己的基础设施上测试迁移，为什么我们第一次成功的切换还不够好，以及最终使我们获得零停机结果的加权 DNS 方法。文末还有一个简短的常见问题解答，涵盖了我们不断被问到的关于这次转型的问题。如果你正在自己进行此项迁移，我们的目标是节省你已经完成的探索工作。## 为什么要从 Ingress NGINX 迁移到 Gateway APIIngress NGINX 控制器是 Kubernetes 生态系统中部署最广泛的控制器之一，目前有大量的生产集群正在运行它。随着不再提供安全补丁、没有新功能以及 Ingress API 冻结，Gateway API 是逻辑上的下一步。它是一种更具表现力的规范，用专用资源替换了注释，以处理相同的关注点。在最近一次 AWS 的客户合作中，我们在决定使用 Envoy Gateway 之前评估了几种 Gateway API 实现和迁移方法。因为我们在 Foundation（我们主张的 GitOps Kubernetes 平台）中利用了 Ingress NGINX，所以这次迁移对我们和对我们的客户一样重要。</p>
+
+<p><a href="http://antirez.com/news/167">在 DwarfStar 中分发 LLM 推理</a><br>高端 NVIDIA 显卡以及运行它们所需的服务器和电力成本非常高昂，尤其是如果你计划达到运行大型模型所需的显存容量时。到目前为止，替代方案一直是 Apple 硬件，或者 DGX Spark，即使它由于内存带宽受到严重限制，仍然允许足够快地进行 LLM 提示处理（预填充）。Mac Studio 提供了高达 512GB 的统一内存，这是一种内存带宽适中（但远好于 Spark）且计算能力在当前形势下价格相对公道的解决方案。例如，使用 DwarfStar，Mac Studio M3 Ultra 512GB 可以以 150 t/s 的预填充速度和约 10-13 t/s 的解码速度运行 DeepSeek v4 PRO，虽然不算出色，但在某些用例中是可用的。即使是 2 位量化，DeepSeek v4 PRO 的表现也非常好（今天我让 PRO 写了一个 C 编译器，很快就会发布视频）。我认为在家中运行一个前沿模型，且总花费约 1.2 万美元，这绝非易事。人们可能期望这种情况会越来越好，但地平线上的局势似乎并不明朗。NVIDIA 设置变得更便宜的希望几乎为零，即使是一家小公司也负担不起购买和处理用于本地推理的小型数据中心。与此同时，RAM 的短缺使得我们不太可能看到带有 M5 Ultra 的 Mac Studio，可能具备 1.2T/s 内存带宽和更多计算能力（M5 Max 在计算方面已经更快，且每个 GPU 核心内部都有神经加速器，有助于处理某些模型）。所以，目前本地推理的最佳机器可能是一台笔记本电脑。M5 Max 128GB 可以以非常体面的预填充和解码速度运行 2 位量化的 DeepSeek v4 Flash 和 Mimo V2.5。我们谈论的是约 500 t/s 的预填充和约 35-40 t/s 的解码速度，且随着上下文大小的增加，性能斜率也是非常可接受的。根据配置不同，成本约为 6-7 千美元，这是...</p>
+
+<p><a href="https://nesbitt.io/2026/05/25/github-actions-security-in-python-packages.html">GitHub Actions 在 Python 包中的安全性</a><br>这是我在 2026 年长滩 PyCon US 上发表的演讲的文字版。幻灯片 (PDF)、脚本和数据集可在 github.com/andrew/pycon 找到。在 PyPI 列出的约 864,000 个包中，约有 387,000 个在 GitHub 上声明了存储库 URL，在合并 monorepo 后映射到 343,000 个不同的存储库。其中 152,000 个在 .github/workflows/ 中有内容，实际上开源 Python 只有一个 CI 系统：之前的默认选择 Travis CI 占同类群体的 11%，并于 2023 年停止提供免费的开源构建，其他所有工具占比均低于 2%。其中约 56,000 个存储库在工作流文件中的某处引用了 pypa/gh-action-pypi-publish，也就是说它们对提交进行标记，启动一个运行器，构建 wheel，并通过 twine upload 将其放到 PyPI 上。其中约 22% 已迁移到受信任发布（Trusted Publishing），PyPI 接受由工作流生成而非存储 API 密钥的短效 OIDC 令牌，并且 PyPI 端的发布者配置会指定存储库、工作流文件以及可选的部署环境。其余约 44,000 个仍将 PYPI_API_TOKEN 放在存储库机密中。我认为受信任发布是近年来 Python 打包领域发生的最好的事情之一，这也意味着工作流的身份现在就是凭证，因此 PyPI 对发布的信任取决于 Actions 运行的完整性。PEP 740 证明、Sigstore 签名和 SLSA 来源都将构件绑定到它来源的工作流和提交，这告诉你它是在哪里构建的，但没有说明在上传步骤运行之前是否有东西篡改了工作流。签名是最后发生的步骤，因此对于能够触及其中任何一个步骤的攻击者来说，前面的每一个步骤都在范围内，这就是我在演讲中提出的观点。</p>
+
+<p><a href="https://joe.dev/posts/10-years-of-spiffe/">SPIFFE 10周年</a><br>十多年前，我为 SPIFFE 编写了设计文档，这是一个为工作负载提供加密身份的标准，以便服务可以在没有密码的情况下进行相互认证。那一年我在 GlueCon 的演讲中发布了它。这非常独特，因为它是一个“开源”项目，却仅仅是一份文档。最初没有代码。我差点围绕它创办了一家公司，但后来选择了 Heptio。我把它交给了 Sunil James，他创办了一家公司并将其纳入了 CNCF。Sunil 和他公司 Scytale 的同事们还编写了配套的参考实现，名为 SPIRE。这恰恰说明了我在时机把握上很烂。😂 它现在迎来了高光时刻。随着代理的出现，工作负载身份的需求变得显而易见，这足足花了 10 年时间。为了纪念这一点，我想为任何感兴趣的人提供一些原始素材。- 原始设计文档：[https://docs.google.com/document/d/1GjurNK2ROw4rXz-k-l68JtpGRkGj2fZcWqP6gksEriQ/edit](https://docs.google.com/document/d/1GjurNK2ROw4rXz-k-l68JtpGRkGj2fZcWqP6gksEriQ/edit)- 在 GlueCon 的原始演示：[http://slides.eightypercent.net/spiffe-intro/index.html#p1](http://slides.eightypercent.net/spiffe-intro/index.html#p1)彩蛋：原始 Logo 和设计文档中的颜色是基于我的姓氏。当你的名字可以用十六进制表示时，你会很有趣。`#00BEDA` 和 `#BEDA00`。这些颜色（或非常相似的颜色）仍然用于 Logo 中！[2016 年左右的原始 SPIFFE Logo](/images/spiffe/spiffe-logo-original.png)2016 年左右的原始 SPIFFE Logo[当前的 SPIFFE Logo](/images/spiffe/spiffe-logo-current.png)当前的 SPIFFE Logo非常感谢每一个接过接力棒的人。拾起别人的半成品想法并交付比产生想法本身更难。你们都做到了。</p>
+
+<p><a href="https://victoriametrics.com/blog/multi-tier-observability-a-practical-way-to-handle-diverse-workloads/">多层次可观测性：应对各种工作负载的实用方案</a><br>在大公司中，可观测性的实现方式很难一概而论。VictoriaMetrics 的拓扑结构指南说明了：随着规模、隔离性和可靠性要求的提高，为什么需要采用不同的部署方式。不同的工作负载需要不同的权衡：有些工作负载需要长时间的数据保留以便进行审计和趋势分析；而另一些则需要更高的数据分辨率以便于调试。对于那些对业务至关重要的系统来说，还需要可靠的警报机制和高度的可用性，通常要求系统的可靠性达到 99.999%以上。单一的可观测性配置无法有效满足如此广泛的各种需求。更好的做法是事先识别这些差异，然后设计出能够满足每种工作负载在数据保留、分辨率、告警机制及成本方面的需求的架构。本文提出了另一种解决方案：多层可观测性架构。通过这种方式，负责可观测性工作的团队可以为整个公司统一可观测性服务的标准。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/">使用ai编写高质量代码，就是慢点</a><br>很多人似乎确信 AI 编码的意义在于尽可能快地编写低质量代码。喷出勉强合格的垃圾，开启大规模的 PR，并且不经审查就合并它们。发布吧！但问题是，LLM 是非常灵活的。你完全可以同样有效地利用它们来“更慢地”编写“高质量”代码。这一点在我看来已经显而易见，甚至因为这个原因我差点不想写这篇文章。但似乎有足够多的人确信 LLM 只擅长作为“垃圾制造器”，因此值得提出相反的观点。如果 Mythos 教会了我们什么，那就是 LLM 代理非常擅长发现 Bug。将它们多次投放到代码库中，它们会发现如此多的 Bug，以至于你几乎不知道该怎么办。像许多其他人一样，我也发现对于非 Mythos 模型这也是事实——有些模型可能比其他模型更擅长发现细微的 Bug 或避免误报，但事实是 Anthropic 和 OpenAI 最新的公开模型已经足够好，可以在未经审查的代码中发现大量 Bug。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/BenedictKing/ccx">BenedictKing/ccx</a><br>Claude / Codex / Gemini API 代理 - CCX</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>面向去中心化网络的 AI 照片应用 🌈💎✨</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>用于绕过审查的高级 DNS 隧道 VPN，对比 DNSTT 和 SlipStream 进行了优化，具有低开销 ARQ、解析器负载均衡、高丢包稳定性与速度。</p>
+
+<p><a href="https://github.com/crowdsecurity/crowdsec">crowdsecurity/crowdsec</a><br>CrowdSec - 开源且参与式的安全解决方案，提供针对恶意 IP 的众包保护，并可访问最先进的真实世界 CTI。</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray 面板，支持多协议、多用户、到期日、流量及 IP 限制（Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun）</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告与追踪器拦截 DNS 服务器</p>
+
+<p><a href="https://github.com/GhostTroops/scan4all">GhostTroops/scan4all</a><br>官方仓库漏洞扫描：15000&#43; PoCs；23 种应用密码破解；7000&#43; Web 指纹；146 种协议及 90000&#43; 规则端口扫描；模糊测试、HW、超棒的 BugBounty( ͡° ͜ʖ ͡°)...</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>12ft.io 和 1ft.io 的自托管替代方案。通过代理移除 CORS 头信息并修改 HTML</p>
+
+<p><a href="https://github.com/openclaw/gogcli">openclaw/gogcli</a><br>终端里的 Google Workspace。</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使你能够安全且可预测地创建、更改和改进基础设施。它是一个源码可见的工具，将 API 编码为可共享的声明式配置文件。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260511.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260511</span>
+</p>
+<p>每日一谚：Use table-driven tests. They make your tests clear and maintainable. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/11/go-vs-rust-backend-architecture-the-2026-strategy">“用 Go 打天下，用 Rust 救火”：这才是 2026 年后端架构的唯一正解</a><br>最近，海外技术团队 CodeStax.Ai 发表了一篇文章，题目非常霸气：《Rust vs Go：2026 年唯一有意义的后端语言对决》。 这篇文章没有去纠结语法的优劣，而是直接从企业成本、团队扩张、以及系统演进的宏观视角，给出了一个极具颠覆性，却又务实到令人拍案 叫绝的架构结论： “用 Go 来构建（Build）系统，用 Rust 来优化（Optimize）系统。”</p> 
+
+<p><a href="https://tonybai.com/2026/05/10/scaling-uber-with-thuan-pham">对话 Uber 前 CTO：我如何用 5000 个微服务驯服这头失控的巨兽</a><br> 2013 年，当 Tuan Pham（后来被称为 Uber 的“救火队长”）加入时，这家拥有 40 名工程师的公司，系统每周都会崩溃数次。而他面临的第一 个挑战，就是公司的核心派单系统，只剩下5 个月的寿命。 近日，这位传奇 CTO 接受了一次深度访谈。他不仅首次揭秘了当年与创始人 Travis Kalanick (以下称TK) 长达 30 小时的“魔鬼面试”，更详细复盘了 Uber 是如何在失控的边缘，被迫走上那条被全网群嘲、却又别无选择的 “5000 微服务” 之路。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-05-11-dolt-2-dot-0/">Dolt 2.0</a><br>三年前，我们发布了 Dolt 1.0，标志着 Dolt 已为生产工作负载做好准备。此后我们从未停止改进这一“全球首个且唯一的版本控制 SQL 数据库”。今天，我们很高兴地宣布 Dolt 2.0 正式发布。# Dolt 1.0 意味着什么？Dolt 1.0 代表了四个方面：1. 向前存储兼容性2. 生产级性能3. MySQL 兼容性4. 稳定的版本控制接口Dolt 2.0 保持了 Dolt 1.0 的承诺，并在性能和准确性指标上进行了优化。# Dolt 2.0 意味着什么？Dolt 2.0 代表了五个方面：1. 默认开启自动垃圾回收2. 默认开启归档压缩3. sysbench 测试中比 MySQL 更快4. Beta 阶段向量支持5. 自适应存储与 Dolt 1.0 不同，Dolt 2.0 与所有 Dolt 1.0 版本完全向后兼容，无需使用 dolt migrate 进行存储迁移。让我们深入了解这些要点。</p> 
+
+<p><a href="https://packagemain.tech/p/how-i-built-the-core-loop-of-a-browser">我是如何用Go构建浏览器核心循环的</a><br># 我是如何构建浏览器多人游戏的核心循环的### 为什么异步队列式动作循环依然能带来如实时游戏般的即时响应感——以及实现这一目标的过程我正在开启一个关于 HiddenWars 的系列文章，这是一个我用 Golang 和 Svelte 开发的个人项目。它是一款基于浏览器的持久化黑客游戏，主要是 PvE 玩法，包含 PvP 紧张元素以及不断演进的背景设定。玩家可以在其中构建僵尸网络、升级系统、黑入目标并揭开秘密，同时对抗强大的超级企业。## 引言每一款游戏都有其核心循环。</p> 
+
+<p><a href="https://cilium.io/blog/2026/05/06/securing-cicd-open-source-lessons-from-cilium/">来自cilium的CI/CD安全经验</a><br></p> 
+
+<p><a href="https://miren.dev/blog/gopher-meets-crab">Gopher 遇见 Crab</a><br>我写 Go 大约十年了，在这期间 Rust 一直是我保持礼貌距离、心存敬意的语言。我买了书但主要放在书架上，也尝试过 rustlings 但总是中途放弃。直到这次前往 TokioConf，我需要准备一个不错的演示 demo，这成了我深入学习的完美契机。于是我构建了一个聊天服务器。好吧，其实是让 Claude 帮我写好，然后我花很长时间请教 Claude 它写了什么。这就像是我的一位 Rust 编程搭档，虽然不像人类那样高效，但它很有耐心且在飞机上也能使用。它现在位于我们的示例仓库中，并在线运行于 chat.miren.toys。本周去逛逛，你可能会发现一些友好的陌生人已经在那里聊天了。### 来自地鼠的笔记我花了一些时间尝试将 Rust 适配进 Go 的大脑逻辑里。以下是觉得契合的部分和不适应的部分。穷尽式枚举是我多年来在 Go 中一直渴望的功能。在 Go 中，为了确保处理了某种类型的所有变体，我要么使用代码生成，要么编写繁琐的测试。而 Rust 编译器可以直接检查这一点，非常方便。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://lisyarus.github.io/blog/posts/making-your-own-programming-language.html">创建你自己的编程语言</a><br>创建自己的编程语言比你想象的要简单（但也更难）。2026年5月6日去年12月中旬，我开始制作自己的编程语言。虽然距离生产质量还差得很远（尽管我已经成功用它写出了一个 1k 行代码的蒙特卡洛路径追踪器），但目前项目处于暂停状态，所以我觉得是时候写点什么了。免责声明 #1：我不是专业的编程语言设计师或编译器实现者。虽然我觉得我对本文的大部分内容都很了解，但我可能还是会说些胡话。免责声明 #2：它不是另一个 C/C&#43;&#43;/Rust 的杀手，我也怀疑它是否会被真正广泛使用。我只是觉得好玩，并谈谈我的乐趣。## 内容# 引言## 为什么是现在？大多数程序员都梦想拥有自己完美的编程语言。我已经编程约 17 年了，为什么决定在这一特定时刻去创建呢？只是三件不同的事情在我的脑海中汇聚了。1. 我一直想创建自己的语言。过去我做过一些用于晦涩语言的简陋解释器，以及各种 lambda 演算的解释器，但这并没有消除创建一种“真实”语言的渴望，那种至少在某种程度上面向生产且不像是玩具的语言。</p>
+
+<p><a href="https://fractalbits.com/blog/remove-fsync/">删除 fsync</a><br>大多数存储引擎在持久化写入路径的某个位置都会执行 fsync。我们构建了一个范围狭窄的单节点 KV 存储引擎，它在 PUT 或 DELETE 操作时不会调用 fsync。该设计依赖于固定大小的预分配文件、预清零的范围、O_DIRECT 写入，以及一个提交与 SSD 原子写入单元对齐的日志。这不是对 fsync 的一般性反对。它之所以有效，是因为我们的持久性契约比 POSIX 文件语义更窄，我们的部署仅使用 SSD，并且引擎本身负责分配、日志记录和恢复。在 AWS i8g.2xlarge 本地 NVMe 上的 4KB 随机写入基准测试中，该引擎达到了 190,985 obj/s，而 ext4 &#43; O_DIRECT &#43; fsync 的组合为 116,041 obj/s。## fsync 的成本让我们从对象存储和数据库当前处理 fsync 的方式开始。MinIO 在单节点和分布式部署中最终都会写入本地文件系统。每个 PUT 操作都会对数据部分和 xl.meta 发出 fdatasync 或 fsync，将文件刷入设备。RocksDB 的 WAL 默认不进行同步。需要崩溃一致性语义的应用程序必须手动开启。etcd 则更严格：每个 Raft 条目在写入磁盘前都会 fsync，etcd 论文将其称为 Raft 安全的基础。Postgres 在提交时 fsync WAL，并使用组提交来摊销延迟。Kafka 是个例外，它默认不在写入路径上执行 fsync，完全依赖复制来实现持久性。这种权衡的结果是，单节点数据安全性减弱了，电力中断窗口内的数据可能会丢失，集群的复制因子成为唯一的防线。正确处理 fsync 很困难。Jepsen 曾多次揭示分布式系统中与 fsync 相关的丢失数据漏洞。不谈正确性，fsync 调用本身的成本也很高。</p>
+
+<p><a href="https://s13k.dev/blog/real-workload-sqlite-bench-on-5-dollar-vps/">在 5 美元 VPS 上进行真实工作负载的 SQLite 基准测试</a><br>我订购了最便宜的 Hetzner CX23（4.99 美元/月，共享资源层）并在上面运行了真实的 SQLite 基准测试。这不是微基准测试——而是在拥有 3.7GB 内存的机器上运行 6GB 的数据库，因此读取实际上必须触及磁盘。## 机器配置共享 vCPU，存在邻居干扰：- 2 vCPU Intel Xeon Skylake @ 2.1 GHz- 3.7 GiB 内存，无 swap- 38 GB ext4 (noatime), scheduler=none- Debian 13## SQLite 配置生产级配置：- journal_mode = WAL- synchronous = NORMAL (安全，非严格 ACID 持久化)- page_size = 8192- cache_size = 256 MiB- mmap_size = 256 MiB- temp_store = MEMORY- busy_timeout = 5000一个值得明确的注意事项：synchronous=NORMAL 在严格 ACID 意义上并非持久。断电可能会回滚最后几次已提交的事务——即存在于 WAL 中但尚未 fsync 到主数据库文件的内容。数据库文件本身不会损坏。对于大多数应用程序来说，这是为了速度提升而做的合理权衡。如果你无法承受丢失任何已提交的写入（如支付、审计日志），请使用 synchronous=FULL。## 工作负载- 模式：PK &#43; 2 个索引整数列 &#43; 500 B 文本负载- 1000 万行 ≈ 6 GB 数据库 &gt; 3.7 GB 内存 → 真实磁盘 I/O</p>
+
+<p><a href="https://codeutopia.net/blog/2026/05/09/you-should-read-programming-as-theory-building/">你应该读一读《编程作为理论构建》</a><br>读完 Peter Naur 的《编程作为理论构建》（Programming as Theory Building）时，第一个想法是“为什么没人早点让我读这个？”我最终读了多次，试图整理为什么它如此有意义。你是否有过这种情况：你想解释某事却找不到合适的词汇？我认为 Naur 的“理论”一词正是编写好代码和创建可维护软件时的关键。关于这些主题我有很多想法，但它们都是离散的概念。将编程视为“理论构建”，是补全这一切缺失的一环，回答了“为什么编写高质量软件如此困难”的问题。总之，《编程作为理论构建》指出，程序代码、文档和其他产品都是次要的，编程的核心在于：构建对程序、其需求以及它们如何与周围一切事物相关联的理解或思维模型。也就是说，你作为程序员的主要目标是学习、理解、保留、改进和分享这种关于程序的“理论”。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/">Gemini API 文件搜索现已支持多模态</a><br>我们为 Gemini API 文件搜索工具引入了三项重大更新：多模态支持、自定义元数据和页面级引用。这些功能可帮助开发人员对非结构化数据进行结构化处理，以实现高效、可验证的检索增强生成（RAG）。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>一个开源、代码优先的 Go 工具包，用于灵活且可控地构建、评估和部署复杂的 AI 智能体。</p>
+
+<p><a href="https://github.com/chenhg5/cc-connect">chenhg5/cc-connect</a><br>将本地 AI 编码智能体（Claude Code, Cursor, Gemini CLI, Codex）连接到消息平台（飞书/Lark、钉钉、Slack、Telegram、Discord、LINE、企业微信）。</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>一个统一的 AI 模型聚合与分发中心。支持将各种 LLM 转换为兼容 OpenAI、Claude 或 Gemini 的格式，是实现持久化的集中式网关。</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel 是一款现代化的开源 VPS 控制面板，也是唯一原生支持 AI 智能体的面板。可运行 Ollama 模型、部署 OpenClaw 智能体，并从一个整洁的界面管理整个服务器栈。</p>
+
+<p><a href="https://github.com/sivchari/kumo">sivchari/kumo</a><br>一个用 Go 编写的轻量级 AWS 服务模拟器。</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行 Kubernetes。</p>
+
+<p><a href="https://github.com/microsoft/waza">microsoft/waza</a><br>用于智能体技能的 CLI/框架，用于创建、测试、衡量和提高技能的质量与有效性。</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>一款轻量级、可自托管的个人财务应用程序，具有用户友好的界面和强大的记账功能。</p>
+
+<p><a href="https://github.com/moonD4rk/HackBrowserData">moonD4rk/HackBrowserData</a><br>提取并解密浏览器数据，支持多种数据类型，可在多种操作系统（macOS, Windows, Linux）上运行。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

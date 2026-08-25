@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251210.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251210</span>
+</p>
+<p>每日一谚：Write functions that do one thing and do it well. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/10/russ-cox-interview-go-birth-evolution-future">“我曾想付钱给Google去工作”—— Russ Cox深度访谈：Go的诞生、演进与未来</a><br>在 ACM ByteCast 的一场罕见的深度访谈中，Russ Cox 系统性地回顾了他从贝尔实验室的 青葱岁月，到创立 Go 语言的初心，再到对 AI 时代编程语言未来的深刻思考。这既是一段个人回忆录，也是一部关于“如何构建持久的技术”的生动 史诗，充满了值得每一位 Gopher 细细品味的智慧。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/PsOtu8nLbSn8A1pMy4V1KQ">【Google ADK 实战】06 评估与部署：从“能用”到“可靠”的最后一步</a><br></p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/12/09/preventing-resource-leaks-in-go-how-goland-helps-you-write-safer-code/">在 Go 中防止资源泄漏：GoLand 如何帮助您编写更安全的代码</a><br>Go 中的资源泄漏会悄悄耗尽内存并导致应用程序崩溃。最新版本的 GoLand 引入了资源泄漏分析功能，可以在文件、连接和其他资源造成损坏之前捕获未关闭的情况。了解泄漏的发生原因、垃圾回收器为何无法阻止它们，以及 GoLand 如何帮助您编写更安全、更可靠的代码。</p> 
+
+<p><a href="https://kmcd.dev/posts/traceroute">用 Go 从零开始构建 Traceroute 工具</a><br>Traceroute 是一种网络诊断工具，用于映射数据包穿越 IP 网络所经过的路径。本文深入探讨了 traceroute 的工作原理，并展示了如何使用 Go 语言从零开始构建一个简单的版本。该工具利用 IP 数据包的 Time-To-Live (TTL) 字段和 ICMP（Internet 控制消息协议）的“时间超出”（Time Exceeded）消息来识别中间路由器。
+
+构建过程涉及设置一个 ICMP 侦听器，然后循环发送 TTL 递增的探测包。摘要强调了 ICMP 的核心作用（如 ping 中的 Echo Request/Reply）以及 traceroute 如何利用 TTL 耗尽来获取路径信息。此外，文章还讨论了 ICMP、UDP 和 TCP 作为探测方法的区别，并提供了完整的 Go 语言实现，该实现使用原始 ICMP 套接字来发送 ICMP Echo Request 并等待相应的回复。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://eli.thegreenplace.net/2025/revisiting-lets-build-a-compiler/">重温“让我们来构建一个编译器”</a><br>本文回顾了经典的“让我们来构建一个编译器”（Let&#39;s Build a Compiler）教程，作者将其中的内容（使用 Pascal 编写并生成 68000 汇编）翻译成了 Python，并以 WebAssembly (WASM) 作为目标输出。作者分享了该教程经久不衰的原因：它循序渐进地教授了递归下降解析，并且很早就开始生成可工作的汇编代码。文章通过一个示例展示了原 KISS 语言的输入和生成的 WASM 输出，并探讨了这种“面向语法的翻译”方法的局限性，尤其是在处理类型信息时，作者建议在类型检查后引入 AST 以优化代码生成。</p>
+
+<p><a href="https://www.pingcap.com/blog/how-atlassian-scaled-three-million-tables-multi-tenancy-tidb/">Atlassian Multi-Tenancy at Scale with TiDB: 3M&#43; Tables</a><br>Atlassian将数百个Postgres集群整合到16个TiDB集群中，通过多租户支持和零停机升级，扩展到300万&#43;表。该文章探讨了Atlassian如何利用TiDB解决其Forge插件生态系统平台在海量租户和复杂企业需求下面临的多租户扩展挑战，包括高连接数、元数据扩展性、每租户操作和零停机升级等关键方面。</p>
+
+<p><a href="https://www.docker.com/blog/docker-joins-the-agentic-ai-foundation/">Docker 加入 Agentic AI 基金会</a><br>Docker 宣布成为 Linux Foundation Agentic AI 基金会的金牌会员。该基金会旨在为 AI 代理的关键协议（如 Anthropic 的 MCP、Block 的 Goose 和 OpenAI 的 AGENTS.md）提供中立的治理结构，以促进开发者生态系统中的互操作性和信任。Docker 将在其中积极贡献，推动开发者优先、安全的工具创新。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/09/building-microservices-the-easy-way-with-dapr/">使用 Dapr 轻松构建微服务</a><br>这篇文章是 Dotan Horovits 在 Medium 上发表的特约文章。微服务已经存在了将近二十年，但在大规模、多语言环境中开发仍然非常困难。CNCF 的毕业项目 Dapr（分布式应用运行时）旨在解决这一痛点。Dapr 通过一个智能的边车（sidecar）为应用程序处理消息传递、发布/订阅、服务间通信、存储、缓存和密钥管理等，从而简化了微服务的构建。文章重点介绍了 Dapr 的内置可观测性（与 OpenTelemetry 兼容）以及它与 KEDA 在动态自动伸缩方面的完美结合。</p>
+
+<p><a href="https://letsencrypt.org/2025/12/09/10-years">Let&#39;s Encrypt 证书的十年</a><br>2015年9月14日，Let&#39;s Encrypt 签发了第一个公开信任的证书。十年后，Let’s Encrypt 已成为全球发行证书最多的证书颁发机构，所创建和标准化的 ACME 协议已集成到整个服务器生态系统中，并且已成为系统管理员中的家喻户晓的名字。目前，我们正朝着保护十亿个网站的目标迈进。文章回顾了这一成就的增长、关键里程碑（如首个证书、十亿个证书的里程碑、国际化域名支持、通配符证书等）、技术挑战（如数据库升级）以及确保证书广泛接受度的努力。同时，文章也强调了让工作变得“隐形”的风险，即服务有价值却不被重视，并感谢了初始赞助商和合作伙伴 IdenTrust 的关键支持。最终目标是继续降低实现安全和尊重隐私的互联网的障碍。</p>
+
+<p><a href="https://bytesauna.com/post/microservices">微服务应形成多叉树</a><br>微服务在理论上很美好，但很容易被错误地实施，从而导致复杂的系统。作者提出一个核心原则：微服务的依赖结构应该形成一个“多叉树”（polytree）。多叉树是一种有向无环图，其底层无向图是一棵树。这种结构强制实施清晰的、分层的责任流，带来的实际好处包括：明确的状态归属、可预测的故障模式、更简单的推理和更高的独立演进能力。这排除了形成有向或无向循环依赖的结构，这些结构会使系统难以调试、扩展和维护。</p>
+
+<p><a href="https://strategizeyourcareer.com/p/goal-setting-for-productive-engineers">为高效工程师制定的目标设定指南</a><br>对于那些在长期工程目标中难以保持动力的工程师，本文提供了一个指南，展示了 SMART 目标和微小实验如何结合起来，创造真正能坚持下去的进步。文章探讨了为什么工程师的目标往往在两周后就失败，并介绍了“自下而上”的实验和“自上而下”的目标设定方法，以及如何调整动机方程式中的预期性、价值、冲动性和延迟性，以确保目标得以实现。</p>
+
+<p><a href="https://quant.engineering/exchange-order-book-distributed-logs.html">交易所如何将订单簿转化为分布式日志</a><br>每家现代交易所本质上都是一个伪装起来的分布式数据库。本文揭示了交易引擎如何将混乱的买卖订单流转化为一个完全有序、可重放的日志，以确保公平性、确定性和市场数据的可靠性。
+
+核心思想是将订单簿视为一个事件溯源（Event Sourcing）系统，通过一个单一的、全局一致的序列号（Sequence Number）来强制执行总顺序，从而解决高频交易环境下的时间戳不确定性和竞争条件问题。所有事件（新订单、取消、成交）都被追加到一个日志中，订单簿状态是通过对这个日志的确定性规约（Reduction）操作实时投影出来的。</p>
+
+<p><a href="https://davegriffith.substack.com/p/why-your-cto-might-start-coding-again">为什么你的首席技术官可能会重新开始编程</a><br>文章探讨了在代理式AI（Agentic AI）时代，以往被认为是管理和组织技能的经验（如撰写规范、有效审查工作成果、维护架构一致性、深入理解业务、以及知道不该构建什么）正迅速成为软件开发中最有价值的技能。作者认为，这些技能正是以往晋升到CTO或管理职位的专业人士所积累的，因此他们可能比那些专注于生产性编码技能的开发者更适应新的环境，甚至重新回到代码中发挥关键作用，因为AI使代码生产几乎免费，而判断和方向才是新的瓶颈。</p>
+
+<p><a href="https://dylanbeattie.net/2025/12/08/so-you-want-to-speak-at-software-conferences.html">所以你想在软件会议上发言吗？</a><br>这篇文章为那些想在软件会议上发表演讲的开发者提供了详细的、分阶段的建议。作者强调了明确目标（推广、赚钱、旅行或兴趣）和现实地看待所需工作量的两个关键点。建议分为四个阶段：
+
+1. **第一年：学好内容** - 撰写独特的主题，并在本地用户组中反复练习和改进你的演讲。
+2. **第二年：让人看到你** - 参加社区会议（如 DDD 活动），积极社交并与组织者和同行建立联系，争取将你的演讲视频化。
+3. **第三年：被接受** - 利用人脉和积累的经验，积极向大型会议的征稿（CfP）提交材料，保持内容新鲜并集中提交。
+4. **第四年：感到厌倦** - 这是一个反思阶段，作者提醒演讲者需要确定“成功”的定义，如果不再享受或不再符合推广目标，就要知道何时停下来，并始终尊重听众的时间和投入。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://aaif.io/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agents-md">Agentic AI Foundation (AAIF)宣布成立</a><br>The Linux Foundation announced the formation of the Agentic AI Foundation (AAIF) with founding contributions of leading technical projects including Anthropic’s Model Context Protocol (MCP), Block’s goose, and OpenAI’s AGENTS.md. The AAIF provides a neutral, open foundation to ensure agentic AI evolves transparently and collaboratively. Key projects aim to standardize interaction (MCP), provide a local-first agent framework (goose), and offer consistent guidance for coding agents (AGENTS.md). Platinum members include major tech companies like Amazon Web Services, Anthropic, Block, Google, Microsoft, and OpenAI.</p>
+
+<p><a href="https://repebble.com/blog/meet-pebble-index-01-external-memory-for-your-brain">认识 Pebble Index 01 - 您大脑的外部存储</a><br>Pebble Index 01 是一款小巧的戒指，配有按钮和麦克风，旨在帮助用户捕捉转瞬即逝的想法。按住按钮，说出想法，它就会被发送到手机，并保存到笔记或提醒中。该设备设计为肌肉记忆，始终佩戴在身上，注重隐私（只有按下按钮时才会录音），无需互联网连接或付费订阅。它由耐用的不锈钢制成，防水，电池续航时间长达数年，无需充电。预购价为 75 美元，2026 年 3 月开始全球发货后将涨至 99 美元。它支持 iPhone 和 Android，并具有开放源代码软件，注重隐私和可定制性。</p>
+
+<p><a href="https://blog.langchain.com/agent-engineering-a-new-discipline">智能体工程：一门新兴学科</a><br>如果你构建过智能体（Agent），就知道“在我机器上能跑”和“在生产环境中能用”之间的差距可能非常巨大。传统软件假设我们基本了解输入并能定义输出，但智能体既不提供前者，也无法完全定义后者，用户可以输入任何内容，行为空间是开放的。这既是其强大之处，也可能导致意想不到的问题。本文将“智能体工程”（Agent Engineering）定义为将非确定性的LLM系统提炼成可靠生产体验的迭代过程，它是一个“构建、测试、发布、观察、完善、重复”的循环过程。智能体工程结合了产品思维（定义范围、撰写提示词、定义评估）、工程实践（构建工具、开发用户界面、创建运行环境）和数据科学（衡量和改进性能）。成功的团队不再试图在发布前完美化智能体，而是将生产环境视为主要的学习来源，通过持续追踪、大规模评估和快速迭代来提升智能体可靠性。</p>
+
+<p><a href="https://openai.com/index/the-state-of-enterprise-ai-2025-report">2025年企业AI报告</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/KaijuEngine/kaiju">KaijuEngine/kaiju</a><br>General purpose 3D and 2D game engine using Go (golang) and Vulkan with built in editor</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/qualifire-dev/rogue">qualifire-dev/rogue</a><br>Agents testing framework made easy</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>Get JSON values quickly - JSON parser for Go</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/google/go-containerregistry">google/go-containerregistry</a><br>Go library and CLIs for working with container registries</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/projectdiscovery/subfinder">projectdiscovery/subfinder</a><br>Fast passive subdomain enumeration tool.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

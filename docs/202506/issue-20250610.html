@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250610.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250610</span>
+</p>
+<p>每日一谚：Test edge cases and boundary conditions </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/09/go-simd-intrinsics">告别手写汇编：Go 官方提出原生 SIMD 支持，高性能计算将迎来巨变</a><br>长期以来，在Go语言中追求极致性能的开发者，当遇到需要利用现代 CPU 的 SIMD (Single Instruction, Multiple Data) 能力时，往往不得不求助于手写汇编。这种方式不仅编写和维护困难，还会导致异步抢占失效、阻碍编译器内联优化等问题。现在，这一“不得不”的时代有望终结。Go 官方团队正式提出了 73787 提案：在 GOEXPERIMENT 标志下引入架构特定的 SIMD 内置函数。这一里程碑式的提案，旨在为 Go 开发者 提供一种无需编写汇编即可利用底层硬件加速能力的方式，预示着 Go 在高性能计算领域将迎来一场深刻的巨变。在这篇文章中，我就和大家一 起解读一下这个里程碑式的提案</p> 
+
+<p><a href="https://docs.hatchet.run/blog/go-agents">为什么 Go 非常适合构建 Agent</a><br>本文探讨了 Go 语言在构建 Agent（代理）方面的优势。Agent 通常是长时间运行、高成本、涉及用户输入并等待 I/O 的进程。Go 的并发模型、轻量级协程、基于通道的通信方式、集中的取消机制以及丰富的标准库使其非常适合处理这类并发密集型、I/O 密集型任务。文章还比较了 Go 与其他语言（如 Python 和 Node.js）在 Agent 开发方面的差异，并指出了 Go 在 Agent 开发中的不足之处，例如三方库支持不足、机器学习支持有限等。</p> 
+
+<p><a href="https://tonybai.com/2025/06/07/allow-serving-module-under-subdir">千呼万唤始出来？Go 1.25解决Git仓库子目录作为模块根路径难题</a><br>对于许多 Go 项目维护者而言，如何优雅地组织一个包含多种语言或多个独立 Go 模块的 Git 仓库一直是个不大不小的难题。将 Go 模块置于仓库根目录虽然直接，但有时会导致根目录文件列表臃肿，影响项目整体的清爽度。而将 Go 模块移至子目录，则面临着导入路径、版本标签以及 Go 工具链支持等一系列挑战。近日，一个旨在解决这一痛点的提案Issue #34055, 在历经数年讨论后，终于被 Go 团队正式接受，并将在 Go 1.25 版本中落地。这一变化预示着 Go 模块的管理将迎来更高的灵活性</p> 
+
+<p><a href="https://dolthub.com/blog/2025-06-09-vibe-coding-with-claude">用 Claude Code 体验式编程</a><br>本文介绍了如何使用 Dolt 和 Claude 构建一个战舰游戏。作者分享了使用 Claude Code 的经验，并解释了如何利用 Dolt 的分支和合并功能来构建更有效率的应用程序。文章还包含了代码示例和最终产品的 GitHub 链接。</p> 
+
+<p><a href="https://crawshaw.io/blog/programming-with-agents">我如何使用 Agent 编程</a><br>本文是作者关于如何将编程经验适应会“说话”的计算机世界的持续自学系列的第二部分。第一部分介绍了如何将大型语言模型 (LLM) 融入现有工具（基本上是自动完成）以及如何通过仔细提示来替代传统的网络搜索。本文重点介绍了使用 Agent 进行编程这一更难、更有益的工作。文章定义了 LLM 上下文中“Agent”的含义，并解释了 Agent 如何通过给 LLM 提供环境反馈（例如，允许 LLM 调用编译器、查看编译器错误、使用 grep 和 cat 读取现有文件以及运行测试）来显著提高 LLM 的编程能力。文章还通过 Github App 身份验证和 SQL 中的 JSON 约定两个例子说明了 Agent 的实际应用，并讨论了 Agent 的局限性、未来发展方向以及对 IDE 的影响。作者最后指出，LLM 和 Agent 正在改变编程过程，需要重新思考编程中的许多基本假设，并对代码审查和 IDE 的未来发展提出了展望。</p> 
+
+<p><a href="https://gaultier.github.io/blog/what_should_your_mutexes_be_named.html">你的互斥锁应该如何命名？</a><br>本文探讨了在大型代码库中查找命名约定和代码模式的最佳方法，并以Go标准库为例，研究了互斥锁的命名约定。作者使用ast-grep工具进行结构化搜索，并结合awk进行统计分析，发现Go项目中互斥锁的命名主要有xxxMu、xxxMutex、xxxlock等几种方式，并建议为清晰起见，最好以其保护的变量命名互斥锁，例如bar和barMu。文章还比较了ast-grep、ripgrep和awk等工具的效率和适用场景。</p> 
+
+<p><a href="https://thephp.foundation/blog/2025/06/08/php-30">PHP 30周年：FrankenPHP 现已成为 PHP 组织的一部分</a><br>1995年6月8日，Rasmus Lerdorf 发布了第一个版本的 PHP 语言。随着时间的推移，PHP 已经成为最流行的服务器端编程语言，目前为超过 70% 的网站提供支持！恰逢 PHP 首次发布 30 周年之际，我们荣幸地宣布，基于 Caddy 的现代化高性能应用程序服务器 FrankenPHP 现已成为 GitHub 上 PHP 组织的一部分。FrankenPHP 提供了 PHP 生态系统中独有的功能，例如简化 PHP 应用程序的开发、大幅提高性能、降低托管成本和能耗、简化生产环境中的部署、轻松开发实时功能以及扩展 PHP 应用程序等。</p> 
+
+<p><a href="https://medium.com/@kamilmociszko/thunder-revolutionizing-scalable-microservices-with-minimalist-go-framework-911b07149f8b">Thunder：使用极简 Go 框架彻底革新可扩展微服务</a><br>在当今快节奏的软件开发世界中，构建高效且可扩展的微服务至关重要。Thunder 应运而生——一个用 Go 构建的极简后端框架，它结合了 gRPC、REST 和现代数据库管理的优势，为高性能应用程序提供无缝的开发体验。本文将探讨 Thunder 如何利用 gRPC-Gateway、Prisma 和 Kubernetes 简化后端开发，同时确保强大且安全的部署。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.joshsoftware.com/2025/06/10/from-tasks-to-technology-whats-under-the-hood/">从任务到技术：幕后是什么？</a><br>你有没有想过 ChatGPT、Gemini、Claude 或 Copilot 如何如此轻松地撰写正式邮件、解释代码或总结复杂的段落？无论你是否是技术人员，都很难忽视当今每个人都依赖这些 AI 工具的事实。大多数这些系统的核心都采用了一种称为转换器的强大架构。但是转换器到底是什么？为什么我们需要它们？它们在幕后是如何工作的？让我们来揭开这个谜团。</p>
+
+<p><a href="https://blog.codingnow.com/2025/06/elevator.html">电梯的交互和调度</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/06/09/gitops-in-2025-from-old-school-updates-to-the-modern-way/">2025 年的 GitOps：从老式更新到现代方式</a><br>2025 年，构建软件比以往任何时候都更加依赖云。云计算提供了令人难以置信的速度和灵活性，但也带来了复杂性。公司需要快速发布新功能，保持高正常运行时间，确保安全性并适应不断变化的需求。传统的软件更新方法（通常是手动或依赖于基本脚本）已无法跟上步伐，导致延误、错误和运营混乱。GitOps 应运而生。它现在是管理现代应用程序（尤其是在 Kubernetes 环境中）的基础标准。到 2023 年底，GitOps 的采用率激增，突显了其作为软件运营重要支柱的作用。它为原本混乱的云原生软件世界带来了自动化、一致性和可追溯性。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/06/10/enhancing-kubernetes-event-management-custom-aggregation/">通过自定义聚合增强 Kubernetes 事件管理</a><br>Kubernetes 事件提供集群操作的关键洞察，但随着集群规模的增长，管理和分析这些事件变得越来越具有挑战性。本博文探讨如何构建自定义事件聚合系统，以帮助工程团队更好地理解集群行为并更有效地排除问题。 Kubernetes 事件面临的挑战：在 Kubernetes 集群中，会为各种操作生成事件，从 Pod 调度和容器启动到卷挂载和网络配置。为了深入了解 Kubernetes 中的事件，请阅读事件 API 参考。</p>
+
+<p><a href="https://xania.org/202506/how-compiler-explorer-works">2025 年编译器资源管理器的工作原理</a><br>本文介绍了编译器资源管理器(Compiler Explorer)在2025年的工作原理，它每年处理9200万次编译。文章详细介绍了该系统的架构，包括如何处理大量的编译请求，如何防止恶意代码攻击，以及如何管理数TB大小的编译器。文章还介绍了该系统使用的技术，如nsjail沙箱、squashfs镜像、以及各种监控工具。最后，文章展望了未来的发展方向，例如添加AI解释工具、用户账户以及更多架构支持。</p>
+
+<p><a href="https://www.bramadams.dev/software-is-about-promises">软件关乎承诺</a><br>发布软件时，你向用户做出了承诺。这在软件之外也是如此——没有人会在点一个百吉饼时想要一条小猎犬。但在软件中，围绕承诺有一些独特的考虑因素：软件既是抽象的又是真实的客体；软件从业者受到资源的严重限制，而软件本身却可以完美地扩展。简而言之，软件在想象中可以是任何东西，但在现实中必须是某种东西。这篇文章探讨了软件开发中承诺的重要性，并以作者的个人图书馆科学软件Your Commonbase为例，分析了如何在存储、搜索、合成和分享四个功能中明确定义并测试承诺。</p>
+
+<p><a href="https://netflixtechblog.com/behind-the-scenes-building-a-robust-ads-event-processing-pipeline-e4e86caf9249">幕后故事：构建强大的广告事件处理管道</a><br>在数字广告平台中，强大的反馈系统对于广告活动的生命周期和成功至关重要。该系统包含各种子系统，旨在监控、衡量和优化广告活动。Netflix 致力于构建一个强大的事件处理平台，不仅满足当前需求，还能扩展以满足未来的需求。本文深入探讨了 Netflix 广告事件处理管道的架构演变和技术决策。</p>
+
+<p><a href="https://www.ssp.sh/blog/self-host-self-independence">自建与技术独立：构建自己的喜悦</a><br>作者分享了自建网站、通讯录和家庭实验室的经历，以及由此带来的满足感。文章探讨了技术独立性的概念，即不依赖任何特定公司或软件，并介绍了作者使用的开源工具，例如Quartz、GoatCounter和Listmonk。作者鼓励读者尝试自建，体验构建和使用自己数字工具的乐趣。</p>
+
+<p><a href="https://glama.ai/blog/2025-06-06-mcp-vs-api">为什么AI智能体需要一个新的协议？</a><br>本文探讨了传统HTTP API的局限性，并介绍了模型上下文协议（MCP）作为一种新的、更适合AI代理的协议。文章对比了MCP与传统API（如REST和GraphQL）的五个主要区别：运行时发现与静态规范、确定性执行与LLM生成的调用、双向通信、单请求人类任务以及本地优先设计。MCP通过强制执行一致的JSON模式和确定性执行来解决传统API中数据位置不一致、LLM生成请求错误等问题，为AI代理提供更可靠、高效的交互方式。此外，MCP的标准化也为未来的模型训练提供了优势。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/9/apple-wwdc/#atom-everything">WWDC：苹果为开发者增强其工具和技术</a><br>苹果发布了WWDC的新闻稿。文章重点介绍了两个引人注目的内容：基础模型框架和容器化框架。基础模型框架允许开发者利用苹果的AI技术构建智能化、离线可用且保护隐私的应用，并使用Swift进行开发。容器化框架允许开发者在Mac上直接创建、下载或运行Linux容器镜像，为运行不受信任的代码提供了一个安全可靠的沙箱解决方案。</p>
+
+<p><a href="https://a16z.com/revenue-benchmarks-ai-apps">AI应用时代“工作”的意义 | Andreessen Horowitz</a><br>本文探讨了生成式AI时代初创公司增长的现状。与以往相比，AI领域的企业和消费者公司发展速度更快，营收增长也更加迅速。文章分析了B2B和B2C AI公司的营收基准，指出在AI时代，速度成为一种护城河，并强调了优秀和卓越公司之间的差距越来越大。文章还特别指出，消费者公司现在已经成为真正的（创收的！）企业，并且在营收方面甚至超过了B2B公司。最终，文章总结道，现在是构建应用层软件公司的绝佳时机。</p>
+
+<p><a href="https://taras.glek.net/posts/focus-and-context-and-llms">焦点、上下文和大型语言模型</a><br>本文探讨了智能编码的局限性，作者认为其炒作过度。作者回顾了自己的大型语言模型（LLM）使用经验，从2020年8月开始使用LLM，并分享了使用LLM生成SQL语句、构建RAG框架以及使用Aider工具的经验。文章指出，虽然LLM可以完成复杂的软件工程任务，但需要软件工程师进行严格的算法监督和上下文管理，才能获得理想的结果。作者认为，在找到更好的LLM上下文管理方法之前，只有经验丰富的工程师才能充分利用LLM的强大功能，否则只能得到平庸的结果。</p>
+
+<p><a href="https://www.tensorzero.com/blog/reverse-engineering-cursors-llm-client">逆向工程 Cursor 的 LLM 客户端</a><br>本文探讨了作者如何使用 TensorZero（一个开源框架）作为 Cursor 和大型语言模型 (LLM) 之间的代理，从而对 Cursor 的 LLM 客户端进行逆向工程。通过此方法，他们可以观察 Cursor 发出的 LLM 调用，评估单个推理，使用推理时间优化，甚至实验和优化 Cursor 使用的提示和模型。文章详细描述了设置过程中的挑战，包括 Cursor 服务器和 CORS 问题，以及最终实现对 Cursor 的可观察性。文章还展示了通过 TensorZero 获得的 Cursor 提示和响应示例，并讨论了 Cursor 中潜在的显式 AI 层次结构以及 A/B 测试模型的可能性。最后，文章鼓励读者尝试使用 TensorZero 来分析他们自己对 AI 编码助理的使用。</p>
+
+<p><a href="https://www.joshuapurtell.com/posts/spec_eng">规范工程</a><br>本文探讨了在 AI 软件开发中，随着 AI 组件复杂度的增加，如何更好地管理和维护系统规范。作者认为，仅仅依靠开发人员的经验和理解是不够的，需要一个清晰、持久且可读的系统规范作为事实来源。文章提出了一种基于声明式规范和保证的方案，利用 AI 工具（如 Synth）来辅助开发，并实现规范与代码之间的同步更新，以提高效率和可维护性。  这是一种将规范优先于代码的开发模式，并利用AI辅助实现规范到代码的转换。</p>
+
+<p><a href="https://diwank.space/field-notes-from-shipping-real-code-with-claude">使用 Claude 发布真实代码的现场笔记</a><br>这篇文章介绍了一种利用 AI 辅助开发软件的新方法。文章探讨了如何通过刻意练习来提高生产力，并介绍了 Julep 公司使用 Claude 每天发布生产代码的流程、模板和策略。文章强调了即使在 AI 时代，编写测试仍然至关重要，并解释了三种不同的 AI 辅助编码模式：游乐场模式、结对编程模式和生产/单体库规模模式。文章还讨论了如何管理上下文、保持 Git 工作流程的整洁以及如何在生产环境中扩展 AI 开发。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/sashabaranov/go-openai">sashabaranov/go-openai</a><br>OpenAI ChatGPT, GPT-3, GPT-4, DALL·E, Whisper API wrapper for Go</p>
+
+<p><a href="https://github.com/go-resty/resty">go-resty/resty</a><br>Simple HTTP, REST, and SSE client library for Go</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware(Project under CNCF)</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+<p><a href="https://github.com/WireGuard/wireguard-go">WireGuard/wireguard-go</a><br>Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go</p>
+
+<p><a href="https://github.com/quic-go/quic-go">quic-go/quic-go</a><br>A QUIC implementation in pure Go</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

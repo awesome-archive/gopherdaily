@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260702.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260702</span>
+</p>
+<p>每日一谚：Use constants for compile-time safety. Don&#39;t scatter magic numbers. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/02/loops-md-notes-on-agents-that-run-for-days">Andrej Karpathy 解析 Loop Engineering：构建“数日级”长程 Agent 的 9 条黄金法则</a><br>在 AI 辅助开发的实践中，开发者常陷入通过反复修改 Prompt 解决大模型幻觉与偏航的“深夜玄学”困境。本文翻译了前 OpenAI 联合创始人、Anthropic 独立研究员 Andrej Karpathy 的重磅技术手记《LOOPS.md》。文章指出，制约 Agent 落地的瓶颈已从模型能力转变为 Harness 的设计。Karpathy 提出了超越“Prompt Engineering”的“Loop Engineering（循环工程）”范式，详细分享了 9 条黄金法则：包括角色分离（规划者、生成者、评估者）、写磁盘状态持久化、基于合同的博弈验证、拥抱推倒重来、主观体验的量化打分以及随时准备删除过时的 Harness 等。文章强调，在模型智能足够强大的今天，设计极简且健壮的自主循环，才是实现 Agent 长时间稳定运行并交付可用产品的关键。</p> 
+
+<p><a href="https://tonybai.com/2026/07/02/cc-switch-cli-opensource">cc-switch-cli：专为终端控与远程开发打造的 Claude Code 多模型切换工具！</a><br>在 AI 辅助编码时代，灵活切换大模型供应商（Provider）是平衡性能与成本的关键。然而，现有的 GUI 工具无法满足远程服务器和纯终端开发者的需求。为此，本文作者使用 Go 语言开源了一款名为 cc-switch-cli 的轻量级命令行工具。该工具专为命令行控打造，支持通过内置预设（Presets）一键配置国内外主流大模型（如 DeepSeek、智谱 GLM 等），并实现无损、原子级的 Provider 切换。文章详细介绍了 cc-switch-cli 的安装方式、核心命令、环境变量覆盖以及自动备份与诊断等高阶功能，展示了其如何在纯文本环境下为开发者带来极其丝滑的大模型调度体验。无论是在跳板机还是 Docker 容器中，cc-switch-cli 都能帮助开发者优雅地实现“模型自由”。</p> 
+
+<p><a href="https://manualmeida.dev/articles/gin-simple-over-easy/">构建Gin：简单至上</a><br>2014年我从旧金山回来时没有任何计划。在发布我的第一款游戏后，我在Joypad和TinySpark花了一年时间构建SDK，那一年让我对小型软件团队需要什么样的工具有了很好的了解。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/01/understanding-dynamic-resource-allocation-in-kubernetes/">理解Kubernetes中的动态资源分配</a><br>Kubernetes动态资源分配允许系统根据工作负载需求自动调整资源分配，提高集群资源利用率和应用程序性能。</p>
+
+<p><a href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/">Meta的大规模AI存储蓝图</a><br>性能和延迟：如前所述，虽然传统工作负载的延迟需求适中，但AI工作负载需要从底层到pMax级别的可预测和有界延迟。</p>
+
+<p><a href="https://seangoedecke.com/text-ai-watermarks/">文本AI水印将始终容易被移除</a><br>对于新系统，水印要求将很快实施；而现有系统有过渡期。虽然第50条普通文本并未明确要求水印，但实践条例和操作准则清楚地表明需要水印技术。</p>
+
+<p><a href="https://www.docker.com/blog/why-ai-agents-need-isolation/">为什么AI智能体需要隔离</a><br>AI智能体越来越多地与API、模型网关、云服务、开发平台和外部工具交互。减少直接凭证暴露有助于提高这些工作流程的安全性。</p>
+
+<p><a href="https://blog.demofox.org/2026/07/01/what-to-learn-to-be-a-graphics-programmer/">成为实时图形程序员需要学习什么</a><br>我经常被问到人们需要了解什么才能被雇佣为图形程序员。我想是时候创建一个页面来链接，而不是每次都重新输入。在LLMs时代，我们正处于一个特殊的时期。</p>
+
+<p><a href="https://blog.cloudflare.com/monetization-gateway/">宣布推出Monetization Gateway：通过x402对Cloudflare背后的任何资源收费</a><br>Cloudflare宣布推出Monetization Gateway，允许通过x402协议对Cloudflare网络背后的任何资源进行收费，为内容创作者提供新的变现途径。</p>
+
+<p><a href="https://probelab.io/blog/optimistic-provide/">我们如何使IPFS内容发布速度提高10倍</a><br>在分布式哈希表(DHTs)中发布内容传统上是一个缓慢的操作，特别是在网络规模大且节点频繁变动的情况下。我们的优化方法将这一过程提高了10倍速度。</p>
+
+<p><a href="https://blog.arxiv.org/2026/06/30/arxivs-next-chapter/">arXiv的新篇章：关于从康奈尔大学独立出来的更新</a><br>2026年7月1日，arXiv将与其25年的家园康奈尔大学分离，成为一个独立的非营利组织。随着arXiv旅程的这一阶段即将到来，您可以了解更多关于arXiv历史和从康奈尔大学分离的决定。</p>
+
+<p><a href="https://internals-for-interns.com/posts/linux-kernel-scheduler/">深入linux内核调度器</a><br>Linux内核调度器负责管理系统进程的执行顺序和资源分配，是操作系统性能的关键组件。本文深入探讨调度算法和实现原理。</p>
+
+<p><a href="https://anatoliybabushka.com/blog/when-to-rewrite-working-code.html">大多数重写服务于工程师，而非业务</a><br>大多数代码重写实际上是为了满足工程师的个人需求，而非业务需求。我曾在一个夏天凌晨4点重写已经付费编写的生产代码，这些代码每天都在运行且基于CakePHP构建。</p>
+
+<p><a href="https://vitalik.eth.limo/general/2026/06/29/obfuscation1.html">混淆：构建密码学的最终Boss（第一部分）</a><br>混淆技术被视为密码学的终极挑战，本文探讨如何构建强大的混淆系统，保护代码和算法不被逆向工程。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/leookun/cursor-byok">leookun/cursor-byok</a><br>Infinite BYOK in Cursor https://github.com/leookun/cursor-byok/releases</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/xdevplatform/xurl">xdevplatform/xurl</a><br>The official CLI for the X API</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API is an open-source relay platform that unifies Claude, OpenAI, Gemini, and Antigravity subscriptions into a single endpoint. It supports account sharing and cost-sharing, with seamless native t</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed.</p>
+
+<p><a href="https://github.com/trpc-group/trpc-agent-go">trpc-group/trpc-agent-go</a><br>A Go framework for building production agent systems with graph workflows, tools, memory, A2A, AG-UI, MCP, evaluation, and observability.</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/canopy-network/canopy">canopy-network/canopy</a><br>The official go implementation of the Canopy Network protocol</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

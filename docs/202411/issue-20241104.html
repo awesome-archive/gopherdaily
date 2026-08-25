@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241104.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-04</span>
+</p>
+<p>每日一谚：Avoid package-level variables </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://jarosz.dev/article/writing-secure-go-code/">编写安全的Go代码</a><br>本文档提供了有关在 Go 代码开发中维护安全性的全面指南。它强调通过邮件列表随时了解 Go 安全公告、保持 Go 版本更新以及了解 CVE。关键实践包括使用 Go 内置的 &#39;vet&#39; 命令进行基本代码分析，使用 &#39;staticcheck&#39; 进行更深入的静态代码分析，以及利用 &#39;golangci-lint&#39; 进行 lint 分析和执行编码标准。此外，它还强调了在测试期间使用 Go 的 &#39;-race&#39; 标志检测竞争条件的重要性。本文档还引入了“govulncheck”，用于扫描二进制文件中的已知漏洞，以及“gosec”，用于静态代码分析以识别安全问题。最后，它建议将模糊测试作为一种通过向代码提供随机输入数据来发现漏洞的方法。这些工具和实践共同有助于编写健壮、安全且高性能的 Go 应用程序。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2024/11/04/create-a-full-stack-app-with-go-and-react/">使用Go和React创建全栈应用程序</a><br></p> 
+
+<p><a href="https://eli.thegreenplace.net/2024/ranging-over-functions-in-go-123/">Go 1.23 中的range over 函数</a><br></p> 
+
+<p><a href="https://levelup.gitconnected.com/golang-desing-coroutines-76da4f6f5245">Go设计：协程机制</a><br></p> 
+
+<p><a href="https://medium.com/@0xMGR/book-review-system-programming-essentials-with-go-a-golang-developers-companion-to-mastering-fa12e9872352">书评：System Programming Essentials with Go — A Golang Developer&#39;s Companion to Mastering Low-Level Programming</a><br></p> 
+
+<p><a href="https://dev.to/truongpx396/golang-integration-with-kafka-and-uber-zaplog-2bn7">Golang 与 Kafka 和 Uber ZapLog 的集成</a><br></p> 
+
+<p><a href="https://medium.com/@ravikishan63392/building-a-web-search-engine-in-go-with-elasticsearch-d56a21fe0556">使用 Elasticsearch 在 Go 中构建 Web 搜索引擎</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2024/11/04/opentelemetry-is-expanding-into-ci-cd-observability/">OpenTelemetry 正在扩展到 CI/CD 可观测性</a><br></p>
+
+<p><a href="https://shivangsnewsletter.com/p/why-doesnt-cloudflare-use-containers">为什么 Cloudflare 不在其 Workers 平台基础设施中使用容器？</a><br>源文档探讨了为什么 Cloudflare 在其 Workers 平台中选择 V8 隔离架构而不是传统容器和虚拟机。Cloudflare 的 V8 隔离设计可实现亚毫秒级无服务器延迟，这对于以最少的资源使用处理数百万个并发请求至关重要。这种架构允许严格的租户级隔离，每个隔离在自己的内存空间中运行，由 V8 引擎管理。本文档还讨论了 V8 隔离程序的局限性，例如仅支持 JavaScript 和编译为 WebAssembly 的语言，以及它们不适用于计算密集型任务。此外，它还涉及用户空间和内核空间的分离以实现安全性和性能，以及 V8 引擎在管理 isolate 中的作用。作者建议进一步学习有关云计算和分布式系统的学习资源，并提供有关 Cloudflare 基础设施选择的见解。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括文档中的直接引用或具体问题。</p>
+
+<p><a href="https://read.highgrowthengineer.com/p/5-lessons-i-learned-the-hard-way-from-10-years">我从 10&#43; 年的软件工程师生涯中惨痛地学到了 5 个教训</a><br>在这篇富有洞察力的文章中，经验丰富的软件工程师兼高级工程师 Gourav Khanijoe 分享了他在该领域 10&#43; 年中吸取的五个重要经验教训。第一节课强调个人职业发展，敦促工程师积极主动，推动自己的成长，而不是依赖他人。信任和清晰的沟通是领导力的关键，透明度和参与度可以培养信任并防止误解。Khanijoe 还强调了在新公司中证明自己的价值的重要性，他认为始终如一地提供高质量的工作对于获得信誉和尊重至关重要。第四课强调了保持工作一致性的挑战，倡导将项目分解为可管理的任务，并记录关键讨论。最后，本文鼓励工程师在必要时直言不讳并质疑决策，尤其是在有可靠数据支持和改善结果的真诚愿望的情况下。Khanijoe 的经验和建议旨在使软件工程师能够自信和自信地驾驭他们的职业生涯。
+
+（注意：摘要旨在概括文章的精髓，同时遵守不包括直接引用或回答文档中特定问题的限制。</p>
+
+<p><a href="https://thenewstack.io/playgrounds-for-developers-uses-and-design-patterns/">面向开发人员的 Playground：用途和设计模式</a><br>New Stack 的文章深入探讨了 Playground 对开发人员的重要性，Playground 是展示新库、API 和工具的平台。这些交互式网站允许开发人员在可编辑的面板中运行小型代码示例，输出显示在同一页面上，从而促进动手学习和实验。这篇文章强调了 Playgrounds 从简单的演示到潜在的商业服务的演变，强调了维护者需要建立明确的策略、管理基础设施并提供用户友好的错误报告。它还涉及为小型初创公司维护公共实例的挑战以及版本控制的重要性。文章最后强调了 Playground 的教育价值，特别是在使用大型语言模型生成 SQL 架构的上下文中，以及对开发人员关系和产品采用的更广泛影响。
+
+（注意：该摘要旨在概括所提供源文档中的关键主题和见解，重点关注开发人员 Playground 的角色和演变，而不直接引用或包含文档中提出的具体问题。</p>
+
+<p><a href="https://mohitmishra786.github.io/chessman/2024/10/05/Deep-Dive-into-Memory-Management-and-Garbage-Collection-in-C-and-C&#43;&#43;.html">深入了解 C 和 C&#43;&#43; 中的内存管理和垃圾回收</a><br>源文档深入探讨了 C 和 C&#43;&#43; 中的内存管理和垃圾回收，强调了了解程序终止时的内存清理的重要性，以及使用这些语言实现垃圾回收的挑战。它首先讨论了操作系统在回收内存资源中的作用以及手动清理的原因，例如长时间运行的应用程序中的资源效率和性能。然后，本文档深入探讨了垃圾回收原则，包括引用计数以及 C/C&#43;&#43; 中由于类型安全、指针算术和性能开销而面临的困难。介绍了其他内存管理技术，例如使用 &#39;malloc/free&#39; 的手动内存管理、智能指针和自定义分配器，每种技术都有实际的代码示例。本文档最后强调了通过汇编和内存布局检查进行低级分析的价值，以便更深入地了解内存管理。总之，本文为寻求在 C 和 C&#43;&#43; 环境中优化内存使用和有效管理资源的程序员提供了全面的指南。</p>
+
+<p><a href="https://dev.to/haris_tallat_d5c823f903ae/understanding-database-and-relationships-edj">了解数据库及其关系</a><br>源文档深入介绍了数据库、它们的关键组件以及其中错综复杂的关系。它首先将数据库定义为电子数据的结构化集合，并将其组织成表格以便高效检索。然后，本文档概述了数据库关系的三种主要类型：一对一、一对多和多对多，并提供了示例和架构图来说明每种关系。一对一关系以一个人与其护照之间的关联为例，而一对多关系则通过用户创建多个帖子来显示。多对多关系通过使用联接表来解释，这减少了数据冗余并增强了灵活性。本文档还谈到了使用联接表有效管理多对多关系的重要性，如 Users 和 Roles 的上下文中所示。此外，该文档还包括对 Golang 的讨论，以及来自最新 Golang 块的见解，以及有关优化 Go 包更新的提示。总的来说，该文档是理解数据库及其关系的全面指南，也是对 Go 开发人员的实用建议。
+
+（注意：提供的摘要基于提示中描述的内容，不包括直接引用或实际源文档中的特定详细信息，因为它没有完整提供。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@arijitghosh646/claude-3-5-sonnet-why-its-superior-to-chatgpt-03ae3a5ae00e">Claude 3.5为什么优于ChatGPT</a><br>源文件将 Anthropic 开发的 AI 模型 Claude 3.5 与 OpenAI 的 ChatGPT 进行了比较，突出了 Claude 3.5 在对话、创造力和情境理解方面的独特优势。Claude 3.5 以其参与类似人类的对话、制作诗歌形式、保持情境意识和展示情商的能力而闻名。它特别受到创意专业人士和寻求更加个性化的 AI 交互的人的青睐。尽管有其优势，但该文件承认 ChatGPT 仍然是结构化信息和技术任务的强大工具。结论表明，Claude 3.5 和 ChatGPT 之间的选择取决于用户的具体需求，每种模型都有不同的好处。本文档鼓励探索这两种 AI 选项，以找到最适合个人偏好和要求的 AI 选项。</p>
+
+<p><a href="https://blog.sigplan.org/2024/10/22/prompts-are-programs">提示是程序</a><br>The source document contains a 403 (forbidden) message indicating that access to a specific page is prohibited.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ 您的个人流媒体服务</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/terrastruct/d2">terrastruct/d2</a><br>D2 是一种现代图表脚本语言，可将文本转换为图表。</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一个符合 Redis 标准的内存实时反应式数据库，针对现代硬件以及构建和扩展真正的实时应用程序进行了优化。</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，具有自动 HTTPS</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/gotenberg/gotenberg">gotenberg/gotenberg</a><br>一个对开发人员友好的 API，用于将多种文档格式转换为 PDF 文件，等等！</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel 客户端（以前称为 Argo Tunnel）</p>
+
+<p><a href="https://github.com/beego/beego">beego/beego</a><br>beego 是一个用于 Go 编程语言的开源、高性能 Web 框架。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria 是一个功能强大、快如闪电且抗审查的代理。</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>轻松安全地将内容从一台计算机发送到另一台🐊 📦计算机</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/cri-o/cri-o">cri-o/cri-o</a><br>基于 Open Container Initiative 的 Kubernetes 容器运行时接口实现</p>
+
+<p><a href="https://github.com/ffuf/ffuf">ffuf/ffuf</a><br>用 Go 编写的快速 Web 模糊测试</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate 是一个开源向量数据库，可存储对象和向量，允许将向量搜索与结构化过滤与云原生数据库的容错和可扩展性相结合。</p>
+
+<p><a href="https://github.com/MightyMoud/sidekick">MightyMoud/sidekick</a><br>裸机在几分钟内即可投入生产;您在 VPS 上拥有自己的 Fly 服务器。</p>
+
+<p><a href="https://github.com/IrineSistiana/mosdns">IrineSistiana/mosdns</a><br>一个 DNS 转发器</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260706.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260706</span>
+</p>
+<p>每日一谚：Don&#39;t be clever. Be simple. Six months from now, you&#39;ll thank yourself. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/06/is-go-language-conservative-evolution-still-viable-next-5-years">Go 对语言演化的保守态度，在未来 5 年是否仍然正确呢？</a><br>在编程语言百花齐放的今天，Rust、C# 和 TypeScript 等语言不断通过引入新特性来提升开发者的表达力。相比之下，Go 语言却始 终坚守着近乎严苛的“保守主义”，其新版本（如 Go 1.26）的更新绝大多数依然集中在运行时、工具链和垃圾回收等底层优化上。本文基于 Reddit 开发者社区的深度探讨，客观分析了编程语言在“开发者体验至上”与“运维体验至上”之间的设计哲学权衡。文章指出，Go 语言的克制并非故步自封，而是基于工程实践的刻意选择；在可预见的未来 5 年，其通过极低的认知负载、绝对的向后兼容和卓越的基础设施属性，依然能为云原生和大规模协作提供难以替代的长期价值。</p> 
+
+<p><a href="https://tonybai.com/2026/07/06/get-started-with-gvu-in-5-minutes">5 分钟上手 gvu：把 vanity import path 这件事，从“半天运维”变成一条命令</a><br>上一篇文章的结尾我留了个坑——“这篇不是产品说明书，后面会单独写如何上手的文章”。今天这篇就是还债：gvu 正式开放公测，这是一个专门解决 Go 私有 module vanity import path 分发和拉取问题的命令行工具。这篇文章带你 5 分钟走完从安装到跑通拉取第一个私有 module 的全过程。</p> 
+
+<p><a href="https://tonybai.com/2026/07/05/go-private-modules-lessons-learned">五年，三篇文章，一个我一直没真正解决的问</a><br>大约5年前，我写过两篇关于“如何在小厂内部搭建私有 Go module 拉取方案”的文章。这套方案在公司内部用了五年，基本没出过大 问题。直到今年，我们第一次把 Go 私有库以白盒方式交付给客户，才发现真正的麻烦从来都不在“内部”——而在于代码一旦离开你的组织边界，所有 关于私有 module 的假设都会失效。这篇文章记录了这五年的认知升级，以及为什么我最终把这套认知做成了一个名为gvu的命令行工具。</p> 
+
+<p><a href="https://tonybai.com/2026/07/04/build-gin-simple-over-easy">别把“容易”当“简单”：Gin 框架作者撰文揭秘 88k Star 背后的架构哲学</a><br>Gin 作为 Go 语言生态中最具统治力的 Web 框架，其 GitHub 星数已突破 88k，支撑着数十万个生产级项目。近日，其原作者 Manu Martínez-Almeida 撰文回顾了 Gin 十年来的发展历程。本文深度拆解了 Gin 框架背后的核心设计哲学——“简单胜于容易（Simple Over Easy）”。 通过剖析 Gin 如何与早期依赖反射的框架分道扬镳、如何利用 Radix 树实现极致性能的路由降维打击，以及如何坚守十年零破坏性更新的承诺，揭 示了构建一个长寿、高性能开源库的底层逻辑，为广大软件工程师提供了宝贵的架构设计启示</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/8ZomrU0PkANm6vAsqJ_gEw">【AI 时代软件工程师的算法图谱】14 回溯与分支定界：暴力搜索的优化</a><br>面对这些问题，最原始的方法是 暴力搜索 (Brute Force)，即穷举所有可能。而 回溯法 (Backtracking) 就是一种“有组织、有纪律”的暴力搜索。它像走迷宫一样，一条路走到黑，发现不通就退回来（回溯），换条路走。 今天，我们将深入回溯的模板，并尝试手写一个简易的正则表达式引擎。</p> 
+
+<p><a href="https://segflow.github.io/post/zero-copy-sendfile-splice/">Go中的零拷贝：sendfile、splice和io.Copy的成本</a><br>我的一个小型文件服务系统在一个下午因一次&#34;无害&#34;的中间件更改而变得异常缓慢。服务器CPU使用率翻倍，吞吐量几乎减半。差异仅在一行代码：原本将`*os.File`传递给`io.</p> 
+
+<p><a href="https://priyankchheda.medium.com/understanding-the-interpreter-design-pattern-in-go-a-practical-guide-28c609194faf">理解Go中的解释器设计模式：实用指南</a><br>这是Go设计模式博客系列的一部分。理解Go中的解释器设计模式：实用指南。将语法转化为代码：对Go中解释器模式的实用解读。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/c2pa-only-works-if-everything-is-signed/">C2PA只有在所有内容都签名的情况下才有效</a><br>C2PA（内容来源和真实性联盟）技术要求所有内容都必须经过签名验证才能正常工作。这是确保数字内容真实性的关键前提。</p>
+
+<p><a href="https://fazamhd.com/mental-models/software/">软件，从第一性原理出发</a><br>当你使用智能手机或笔记本电脑时，很容易忽略其背后物理现实的不可思议性。无缝体验的背后是物理学家、化学家、数学家、工程师、程序员和设计师们几个世纪的努力。</p>
+
+<p><a href="https://ubuntu.com/blog/hunting-a-16-year-old-sqlite-bug-with-tla-is-dqlite-affected">用TLA&#43;追踪一个16年的SQLite漏洞</a><br>本文由Canonical公司的dqlite团队成员Marco Manino和Alberto Carretero撰写。SQLite最近发布了新版本，修复了一个长期存在的bug。研究人员使用TLA&#43;形式化方法发现了这个SQLite漏洞。</p>
+
+<p><a href="https://matduggan.com/clickhouse-is-winning-the-observability-wars/">Clickhouse正在赢得可观测性之战</a><br>在过去的十年里，我投入了大量工作时间思考可观测性问题。如果你不熟悉这个术语，&#34;可观测性&#34;就是我们现在用来替代&#34;监控&#34;的词汇，因为后者听起来不够昂贵。</p>
+
+<p><a href="https://www.databricks.com/blog/lakebase-ltap-rethinking-database-storage">从单体到Lakebase再到LTAP：从存储层面重新思考数据库</a><br>16年前我在加州大学伯克利分校开始攻读博士学位时，我的导师告诉我：&#34;OLTP数据库已是成熟技术，它们能正常工作，你应该专注于分析&#34;。当时我们正处于能够收集更多结构化和非结构化数据并应用机器学习（我们现在称之为&#34;AI&#34;）的早期阶段。</p>
+
+<p><a href="https://lispcookbook.github.io/cl-cookbook/lispworks.html">LispWorks评测</a><br>《Common Lisp cookbook》- LispWorks评测。提供高效学习Common Lisp的视频课程，采用代码优先的方法。</p>
+
+<p><a href="https://essenceia.github.io/projects/floating_dragon/">从零开始学习浮点数：困难模式</a><br>我必须承认：浮点数让我感到恐惧。五年前我决定实现一些浮点数运算。当时这似乎足够可行，毕竟浮点数无处不在。它能有多难呢？</p>
+
+<p><a href="https://wangcong.org/2025-02-27-ebpf-trend-analysis.html">eBPF趋势分析</a><br>eBPF（扩展伯克利数据包过滤器）的演进是过去十年中Linux系统可观测性和网络领域最重要的进展之一。</p>
+
+<p><a href="https://gwern.net/lean-scaling">精益软件扩展定律</a><br></p>
+
+<p><a href="https://danielstanica.com/posts/Great-Blogging-Collapse">博客大崩盘：100个成功博客发生了什么？</a><br>十多年来，在线赚钱最有价值的蓝图之一就是&#34;开始博客&#34;。研究揭示了博客生态系统面临的挑战和机遇。</p>
+
+<p><a href="https://wrocpp.github.io/posts/erroneous-behavior/">C&#43;&#43;26将未初始化读取定义为错误</a><br>声明`int x;`，在赋值前读取它，四十年来C&#43;&#43;标准称整个程序是未定义的。不是&#34;x持有某些剩余值&#34;，而是&#34;编译器可以假设这行代码永远不会运行并基于此进行优化&#34;。编译器确实这样做了。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything">sqlite-utils 4.0rc3</a><br>最大的新功能是支持内省和创建复合外键 - 这一功能需要对[table.foreign_keys](https://sqlite-utils.datasette.io/en/latest/python-api.html#foreign-keys)进行细微的破坏性更改，因此需要纳入4.0稳定版发布。</p>
+
+<p><a href="https://signals.forwardfuture.com/loop-library/">循环库：可重复的AI智能体工作流</a><br>循环库：复制具有明确检查和停止条件的实用AI智能体提示。在您的编码智能体中使用Loopy，或将智能体发送到实时指南，或安装Loopy以指导查找、创建、运行、改进和发布循环。</p>
+
+<p><a href="https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/">更好的模型：更差的工具</a><br>Armin Ronacher的思想与写作。更好的模型：更差的工具。一个非常奇怪的Pi问题。</p>
+
+<p><a href="https://x.com/alex_prompter/status/2073462823179731032">与AI工作有多个层次</a><br>Alex Prompter在X上分享了他对AI工作层次的理解，包括提示工程、上下文工程、利用工程和循环工程。他强调了提示工程作为第一层的重要性。</p>
+
+<p><a href="https://blog.fsck.com/2026/06/15/Superpowers-6/">大规模并行拖延</a><br>2026年6月15日。超能力6。标签包括超能力、智能体、编码、Claude、Codex、Fable和优化。您也可以在我们的企业博客上阅读这篇文章。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gastownhall/gastown">gastownhall/gastown</a><br>Gas Town - multi-agent workspace manager</p>
+
+<p><a href="https://github.com/AgentWrapper/agent-orchestrator">AgentWrapper/agent-orchestrator</a><br>Agentic orchestrator for parallel coding agents — plans tasks, spawns agents, and autonomously handles CI fixes, merge conflicts, and code reviews.</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/podman-container-tools/podman">podman-container-tools/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/esengine/DeepSeek-Reasonix">esengine/DeepSeek-Reasonix</a><br>DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

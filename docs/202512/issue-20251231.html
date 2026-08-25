@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251231.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251231</span>
+</p>
+<p>每日一谚：Define interfaces in the consumer package, not the producer. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/31/why-go-community-so-active-and-friendly">代码简单，人也简单？揭秘 Go 社区的“反内卷”文化</a><br>“为什么 Go 社区如此活跃且友好？” 这是一个来自 Reddit r/golang 社区的新人发出的感慨。他曾在 Java 社区潜水，那里“死气沉沉”，充满着冷漠或批评。而来到 Go 社区后，他惊讶地发现，这里不仅活跃，而&gt;且人们真的在试图帮助你，而不是“在阴影中点踩”。</p> 
+
+<p><a href="https://tonybai.com/2025/12/31/go-introspection-using-debug-buildinfo/">Go 服务自省指南：抛弃 ldflags，让你的二进制文件“开口说话”</a><br>Go 语言早就为我们准备好了一套强大的“自省”机制。通过标准库 runtime/debug，二进制文件可以清晰地告诉我们它是由哪个 Commit 构建的、何时构建的、甚至它依赖了哪些库的哪个版本。今天，我们就来深入挖掘 debug.BuildInfo，打造一个具有“自我意识”的 Go 服务。 </p> 
+
+<p><a href="https://www.infoq.com/news/2025/12/cloudflare-2025-ai-bots/">Cloudflare 年度回顾：AI 机器人积极爬取，后量子加密达到 50%，Go 语言使用量翻倍</a><br>Cloudflare 最近发布了第六版 Radar 年度回顾。结果显示全球互联网流量同比增长 19%，Googlebot 占据主导地位，爬取与引荐比率增加，以及后量子加密的广泛采用。超过 20% 的自动化 API 请求来自基于 Go 语言的客户端，比前一年几乎翻了一番。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.joshsoftware.com/2025/12/31/why-ai-driven-intelligent-automation-matters-more-than-workflow-automation/">为什么人工智能驱动的智能自动化比工作流自动化更重要</a><br>文章讨论了在投资平台等场景中，传统的“工作流自动化”常常只自动化了表面流程，而没有解决核心问题，容易造成效率的“危险错觉”。作者强调了引入“AI驱动的智能自动化”的重要性，即让智能更靠近执行端，通过AI代理持续监控、识别和修复问题，从而实现从被动响应到主动预防的转变。文章以一个实际案例说明了AI驱动的自动化如何成功应用于受监管、高并发的投资平台，减少了人工干预和问题处理时间。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/12/30/kubernetes-v1-35-watch-based-route-reconciliation-in-ccm/">Kubernetes v1.35：云控制器管理器中的基于 Watch 的路由协调</a><br>在 Kubernetes v1.35 中引入了一个新的特性门 (feature gate) &lt;code&gt;CloudControllerManagerWatchBasedRoutesReconciliation&lt;/code&gt;，允许云控制器管理器 (CCM) 中的路由控制器从固定的时间间隔调和（reconcile）路由的机制，转变为基于 Watch 的机制。这样做是为了避免在路由没有变化时向云提供商发送不必要的 API 请求，与同一库中实现的其它控制器保持一致。启用此特性后，路由协调将在节点添加、删除或 &lt;code&gt;.spec.podCIDRs&lt;/code&gt;/&lt;code&gt;.status.addresses&lt;/code&gt; 字段更新时触发，并增加一个在 12 到 24 小时之间的随机间隔执行的额外协调操作。此更改不会修改协调循环内的逻辑。</p>
+
+<p><a href="https://dolthub.com/blog/2025-12-30-why-not-dolt/">何时不应将 Dolt 用作数据库</a><br>我们希望您使用 Dolt，但有时它确实不是完成这项工作的合适工具。本文解释了一些不选择 Dolt 作为数据库的原因。主要考虑因素包括：是否需要对软件有足够控制权（Dolt 是独立数据库）、是否可以迁移现有数据、是否可以更改应用程序代码以利用版本控制特性、以及数据库管理员（DBA）是否同意使用。此外，如果应用场景涉及复杂性（如 Git 模型的复杂性）或需要非 OLTP（在线事务处理）类型的数据库（如数据仓库、电子表格、图数据库或嵌入式数据库），或者需要水平可扩展的 OLTP 解决方案，则可能不适合使用 Dolt。最后，如果版本控制模型与 Git 模型不兼容（例如 Perforce），也需要谨慎。</p>
+
+<p><a href="https://codecrafters.io/blog/programming-project-ideas">73个编程项目创意，激发灵感和挑战</a><br>为不确定该构建什么程序的程序员精选的项目列表。我们选择了73个既能学到很多东西又有趣的项目。</p>
+
+<p><a href="https://upflow.io/blog/inside-upflow/engineering-principles-at-upflow">Upflow的工程原则</a><br>本文介绍了Upflow工程团队所遵循的原则，以及这些原则如何指导我们的开发流程，以确保软件的健壮性和可维护性。核心原则包括：你不会需要它（YAGNI）、优先考虑成熟技术、不要盲目遵循最佳实践、不要过于聪明、力求简单避免过度简化、小批量工作、持续重构、从过去的错误中学习并防止再次发生、消除繁重工作、产品思维、所有权和拥抱经过计算的风险。</p>
+
+<p><a href="https://planetscale.com/blog/faster-mysql-with-http3">使用 HTTP/3 实现更快的 MySQL</a><br>本文探讨了 PlanetScale 的 HTTP/3 API 与传统 MySQL 客户端的延迟比较。实验结果表明，在大多数情况下，HTTP（包括 HTTP/2 和 HTTP/3）优于二进制 MySQL 协议，尤其是在冷启动和网络延迟较高或不稳定时。HTTP/3 在大数据负载下，由于 QUIC 对 TCP 缺点的平滑处理以及客户端压缩的优势，表现尤为突出。作者提到目前 PlanetScale Web 控制台已支持 HTTP/3。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2025/12/29/five-years-of-tinygrad.html">tinygrad 的五年</a><br>tinygrad 的第一个提交是在 2020 年 10 月 17 日。距离我们融资已经快三年了。公司现在有 6 个人。代码库有 18,935 行（不包括测试）。作者认为，要与 NVIDIA 竞争，需要一个完全自主的软件栈。作者正在致力于移除对 LLVM 的依赖，使 tinygrad 成为一个纯 Python 驱动 AMD GPU 的系统，并且性能在许多工作负载上超过了 PyTorch。作者还谈到了软件设计理念，认为许多代码是其他抽象的变通方案，而 tinygrad 遵循“让需求不那么愚蠢，最好的部分就是没有部分”的原则。tiny 公司的运营模式是非传统的，通过销售电脑（tinybox）获得收入，并与 AMD 签订了合同。他们的使命是“使每秒浮点运算能力商品化”。</p>
+
+<p><a href="https://magazine.sebastianraschka.com/p/state-of-llms-2025">2025年大语言模型（LLM）的现状：进步、问题与预测</a><br>本文是对2025年大语言模型（LLM）发展的回顾，涵盖了DeepSeek R1和RLVR（可验证奖励强化学习）、推理时间缩放、基准测试、架构演变以及对2026年的预测。2025年是LLM发展异常活跃的一年，主要焦点转向了**推理能力**的提升，特别是通过**RLVR (Reinforcement Learning with Verifiable Rewards)**和**GRPO**算法。DeepSeek R1模型的发布引发了关于模型训练成本的新认识。此外，推理时间缩放（如DeepSeekMath-V2的案例）和**工具使用**也成为关键的性能驱动力。文章预测，2026年将有更多RLVR在不同领域的扩展，以及推理效率的优化，同时对过度依赖基准测试（“Benchmaxxing”）的现象提出了警示。作者强调了人类专业知识在代码、写作和研究中的持续重要性，并将AI视为增强人类能力的“超级工具”。</p>
+
+<p><a href="https://hai.stanford.edu/news/exploring-the-dangers-of-ai-in-mental-health-care">探讨人工智能在精神健康护理领域的潜在风险</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>AxonHub is a modern AI gateway system that provides a unified OpenAI ( Chat Completion, Responses), Anthropic, Gemini and AI SDK compatible API</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/WuKongIM/WuKongIM">WuKongIM/WuKongIM</a><br>More than just IM 不只是即时通讯( IM )</p>
+
+<p><a href="https://github.com/dundee/gdu">dundee/gdu</a><br>Fast disk usage analyzer with console interface written in Go</p>
+
+<p><a href="https://github.com/docker/cagent">docker/cagent</a><br>Agent Builder and Runtime by Docker Engineering</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

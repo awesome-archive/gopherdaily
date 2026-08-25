@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250417.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250417</span>
+</p>
+<p>每日一谚：Favor composition over inheritance </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/ippjOgk0fOeh5KwIaNf6cw">“Go is badly designed”？它像极了我们当年恨过的物理老师！</a><br>Go 就像那位严格的物理老师，他可能不会让你在学习过程中时刻感到“舒适”，甚至会让你经历挫败和“阵痛”。但他目标明确，方法直接，逼着你打好基础，养成严谨的习惯，最终让你能够独立、高效地解决实际问题。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/37YcXsg0nfzH6ar7pnB2Bg">自定义Hash终迎标准化？Go提案maphash.Hasher接口设计解读</a><br>随着Go泛型的落地和社区对高性能自定义容器需求的增长，如何为用户自定义类型提供一套标准、安全且高效的Hash计算与相等性判断机制，成为了Go核心团队面临的重要议题。近日，经过Go核心开发者多轮深入探讨，编号为#70471 的提案 hash: standardize the hash function 最终收敛并被接受，为Go生态引入了全新的maphash.Hasher[T] 接口，旨在统一自定义类型的Hash实现方式</p> 
+
+<p><a href="https://www.srlabs.de/blog-post/golibafl---fuzzing-go-binaries-using-libafl">GoLibAFL：使用 LibAFL 对 Go 二进制文件进行模糊测试</a><br>本文介绍了 GoLibAFL，这是一个基于 LibAFL 的 Go 代码模糊测试器。GoLibAFL 提供了最先进的模糊测试技术，并为高级用户提供了极高的可定制性。文章深入探讨了该项目的动机、架构决策以及开发过程中遇到的挑战。还对现有的 Go 模糊测试解决方案进行了概述，并将其与 GoLibAFL 进行了比较，给出了证明 GoLibAFL 性能优越的基准测试结果。如果只想开始使用 GoLibAFL 对 Go 代码进行模糊测试，请参阅简介部分或访问存储库以获取设置说明。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://valyala.medium.com/the-better-alternative-to-graphite-monitoring-tool-60874e67f422">Graphite监控工具的更好替代方案</a><br>Graphite是一个优秀的开源监控解决方案和用于指标的时序数据库(TSDB)。它于2008年发布，此后一直运行良好。Graphite架构简单，在中小规模环境下易于操作。但在大规模环境下，它存在可扩展性问题，例如默认数据存储后端Whisper在存储数十万个唯一指标路径时会遇到磁盘IO限制；Whisper会根据配置的数据保留配置预分配磁盘空间，这可能会导致磁盘空间过度使用。文章提出了几种解决方案，并重点推荐了VictoriaMetrics，因为它支持Graphite的数据摄取和查询API，迁移成本低，并且能够处理数百万个数据点每秒的摄取速率。</p>
+
+<p><a href="https://dolthub.com/blog/2025-04-17-doltgres-over-dolt/">为什么选择 Doltgres 而不是 Dolt？</a><br>Dolt 已发布 1.0 版本，是一个经过验证的生产数据库。Doltgres 仍处于 Beta 阶段，并且正在积极开发中。本文解答了为什么人们会选择 Doltgres 而不是 Dolt 的问题。主要原因包括：公司内部只使用 Postgres；正在从 Postgres 迁移数据库；大量使用模式；更倾向于投资 Postgres 生态系统。不建议选择 Doltgres 的原因包括：目前不支持扩展；速度不如 Dolt（目前）；不包含一些特殊的 Postgres 功能。</p>
+
+<p><a href="https://blog.rook.io/rook-v1-17-storage-enhancements-5eb9a6abd1ea">Rook v1.17 存储增强</a><br>Rook v1.17 版本发布！v1.17 版本带来了许多新功能，以改进 Kubernetes 的存储功能。再次感谢社区为这一部署生产环境存储的历程提供的大力支持。本版本为 Ceph 存储提供程序带来了许多新功能，包括默认情况下更安全的 ObjectBucketClaims、CephObjectStoreUser 凭据管理、存储桶所有者以及 Kafka 身份验证机制等。此外，还包含 Ceph CSI 3.14 版本以及 Ceph CSI 运算符（实验性）等更新。</p>
+
+<p><a href="https://medium.com/pinterest-engineering/migrating-3-7-million-lines-of-flow-code-to-typescript-8a836c88fea5">将 370 万行 Flow 代码迁移到 TypeScript</a><br>Pinterest 在八个月内将 370 万行代码从 Flow 迁移到 TypeScript，从而提高了类型安全性、开发人员体验和招聘效率。文章分享了迁移过程中的经验教训以及对 Stripe 的 flow-to-typescript 代码转换工具的贡献。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@support_26185/beyond-ai-coding-traes-vision-for-human-ai-collaboration-1d98f5435bbf">超越AI编码：Trae对人机协作的愿景</a><br>在当今的AI领域，无数的编程工具争相吸引人们的注意。然而，真正的革命不在于AI编写代码的能力，而在于改变人类和机器在整个开发过程中的协作方式。Trae 的目标不仅仅是提高开发效率，更是创造一种全新的人工智能协同创作模式。Trae 旨在成为开发人员的真正 AI 工程师合作伙伴，通过处理重复的实现细节，同时在架构层面提供有意义的见解，从而成倍地提高开发人员的生产力和创造力。</p>
+
+<p><a href="https://openai.com/index/introducing-o3-and-o4-mini">OpenAI o3和o4 mini模型介绍</a><br></p>
+
+<p><a href="https://blog.omega-prime.co.uk/2025/04/11/ai-lab-business">AI实验室的商业模式</a><br>作者即将加入Anthropic，因此在被指控泄露内部信息之前，这是他最后一次有机会写下一些关于AI实验室商业模式的想法。文章探讨了AI实验室的竞争格局，并提出了实验室可以采取的一些策略来确保自身良好的经济效益。文章指出，目前AI实验室在技术上没有明显的领先者，进入壁垒不高，模型提取等技术使得竞争加剧。作者分析了AI实验室、云计算提供商和AI客户之间的战略动态，认为各方都在试图使对方的要素商品化。最后，文章提出了AI实验室可以维持利润和收入增长的一些策略，例如增加切换成本、获得训练数据优势、建立市场、建立监管壁垒、垂直整合、专业化、捆绑销售以及期待规模经济的出现。作者还特别关注了一种“远程员工”模式，即在客户公司内部部署AI代理，认为这种模式具有天然的护城河、巨大的市场规模以及降低模型提取风险等优势，并能形成良性循环。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project.</p>
+
+<p><a href="https://github.com/caarlos0/env">caarlos0/env</a><br>A simple, zero-dependencies library to parse environment variables into structs</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/donknap/dpanel">donknap/dpanel</a><br>轻量化 docker 可视化管理面板。lightweight panel for docker</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>Nightingale for monitoring and alerting, just as Grafana for visualization.</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>A database migration tool. Supports SQL migrations and Go functions.</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/nats-io/nats.go">nats-io/nats.go</a><br>Golang client for NATS, the cloud native messaging system.</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/go-git/go-git">go-git/go-git</a><br>A highly extensible Git implementation in pure Go.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/google/go-containerregistry">google/go-containerregistry</a><br>Go library and CLIs for working with container registries</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/docker/buildx">docker/buildx</a><br>Docker CLI plugin for extended build capabilities with BuildKit</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260807.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260807</span>
+</p>
+<p>每日一谚：Prefer value types for small structs to improve GC locality on the stack. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/07/go-crypto-passkey-proposal-explained">Go 密码学前掌门人亲自提案：crypto/passkey 要把“免密登录”这件事一次性做对</a><br>Go 语言前密码学负责人 FiloSottile 向 golang/go 提交了 crypto/passkey 新包提案，力图用无状态、无回调、无接口的极简 API，解决中小型网站接入 Passkey（WebAuthn 免密登录）门槛高的问题。本文从 Passkey 科普讲起，结合 2024 年 Go 生态对passkey支持不足的痛 点，逐条拆解这份提案的设计思路与关键取舍。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/EmacsGitBlameOverTime">在GNU Emacs中随时间导航&#39;git blame&#39;的几种方法</a><br>作为一名系统管理员，我经常探索Git中特定文件的历史记录，以理解其演变过程、功能变化和修改时间。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/08/06/litmuschaos-q1-q2-2026-update-community-contributions-and-project-progress/">LitmusChaos Q1-Q2 2026更新：社区、贡献和项目进展</a><br>AI推理工作负载的故障方式与传统服务不同，许多讨论都涉及混沌工程如何适应这一变化。</p>
+
+<p><a href="https://tailscale.com/blog/aperture-lethal-trifecta">Tailscale如何缓解致命的三重威胁</a><br>保持AI智能体的实用性，同时不结合其最危险的功能。</p>
+
+<p><a href="https://blog.exe.dev/the-end-of-no-code">无代码时代的终结 - exe.dev博客</a><br>Bending Spoons以12.8亿美元收购Airtable，标志着无代码平台可能已过气。这提醒我们技术平台的发展有其生命周期。</p>
+
+<p><a href="https://blog.cloudflare.com/kitesurf/">介绍Kitesurf：首个基于智能体的浏览器，在Cloudflare Workers的V8隔离环境中运行 | Cloudflare博客</a><br>Kitesurf是一个创新的浏览器，专为在Cloudflare Workers的V8隔离环境中运行而设计，优先考虑智能体功能。</p>
+
+<p><a href="https://www.uber.com/us/en/blog/ubers-payments-platform/">揭秘Uber支付平台</a><br>Uber支付平台已经运营了十年，由多位杰出工程师和高级工程经理共同打造，体现了设计上的零和博弈理念。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Aug/6/simon-willison-on-technical-blogging/#atom-everything">Simon Willison谈技术博客写作</a><br>对博客写作的首要建议是降低标准，在仍不满意时就准备发布，避免永远只保存草稿。</p>
+
+<p><a href="https://www.tenex.co/blog/building-an-ai-native-sdlc">构建AI原生的SDLC | Tenex</a><br>在AI原生SDLC构建中，我们需要思考如何整合AI技术，同时保持系统的稳定性和可靠性。</p>
+
+<p><a href="https://blog.cloudflare.com/webmcp/">为任何网站提供WebMCP界面 | Cloudflare博客</a><br>WebMCP是一个创新界面，可以为任何网站提供增强的交互体验和功能扩展，提升用户体验。</p>
+
+<p><a href="https://addyosmani.com/blog/ai-coding-workflow/">2026, 我的LLM编码工作流</a><br>AI编码助手在2025年成为游戏改变者，有效利用它们需要技能和结构，显著增强了LLMs在现实编码中的能力。</p>
+
+<p><a href="https://addyo.substack.com/p/critical-thinking-during-the-age">AI时代的批判性思维</a><br>在AI时代，批判性思维变得尤为重要，我们需要理解AI工具的局限性，并保持独立思考的能力。</p>
+
+<p><a href="https://mastra.ai/blog/anatomy-of-a-coding-agent">构建可运行数小时的编码智能体</a><br>Mastra Code的工具链通过多种技术包装智能体循环，包括对话作为渠道、事件状态转换和人类在循环中的工具。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/esengine/DeepSeek-Reasonix">esengine/DeepSeek-Reasonix</a><br>DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Assign issues to Claude Code, Codex, Cursor, and 17 more coding agents like teammates — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amo</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/infiniflow/ragflow">infiniflow/ragflow</a><br>RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

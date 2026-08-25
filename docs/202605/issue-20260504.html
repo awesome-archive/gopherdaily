@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260504.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260504</span>
+</p>
+<p>每日一谚：Use time.Duration for all time intervals. Don&#39;t use int64 for seconds. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://internals-for-interns.com/posts/go-runtime-slices-maps-channels/">理解 Go 运行时：切片、map和channel</a><br>在本系列文章中，我们已经了解了 Go 运行时中负责协调程序执行的各种组件——内存分配器、调度器、垃圾回收器、sysmon 以及 netpoller。今天，我们将换个话题，来探讨 Go 语言中三种最基本的元素：切片、映射和通道。它们是每个 Go 程序的基石。你很可能在午饭前就已经多次使用过它们了。</p> 
+
+<p><a href="https://tonybai.com/2026/05/04/the-ai-layoff-trap/">AI 正在把我们推向“双输”深渊：顶级论文揭示“AI 裁员陷阱”</a><br>就在今年3月份，宾夕法尼亚大学和波士顿大学的两位学者，发布了一篇极其硬核、甚至有些惊悚的经济学论文——《The AI Layoff Trap》（AI 裁员陷阱）。 这篇论文用极其严密的数学模型，推演出一个令人脊背发凉的结论： 在充分竞争的市场中，所有理性的公司都会陷入一场疯狂的“自动化军备竞赛”。它们会不断地用 AI 裁掉员工，直到把整个市场的消费需求彻底 摧毁，最终导致企业利润和员工收入双双崩溃。</p> 
+
+<p><a href="https://tonybai.com/2026/05/03/flask-creator-pi-author-on-ai-coding-the-cruel-truth">“AI 正在用垃圾代码摧毁一切！”：Flask 之父对话 Pi 作者，揭开 AI 编程的残酷真相</a><br>过去的一年，我们见证了 AI 工具从“玩具”到“神器”的进化。从 Copilot 到 Claude Code，再到OpenClaw和Hermes等，整个技术圈都沉浸在一种“效率无限提升”的乐观主义狂欢之中。 但就在前几天，两位在开源世界里的大神——Flask 框架之父 Armin Ronacher 和 Pi (OpenClaw的agent runtime) 的创造者 Mario Zechner——进行了一场极其深刻、甚至有些“悲观”的对话</p> 
+
+<p><a href="https://tonybai.com/2026/05/02/from-vibe-coding-to-agentic-engineering-karpathy-survival-guide">从“Vibe-Coding”到“Agentic Engineering”：Andrej Karpathy 的 AI 时代程序员生存法则</a><br>就在前几天，在红杉资本组织的 AI Ascent 2026 顶级峰会上，Karpathy 再次发声，为这场 狂欢踩下了“刹车”。 他警告说，如果我们仅仅停留在“Vibe-Coding”的舒适区，我们将很快被时代淘汰。真正的未来，属于一种更严谨、更具工程化思维的全新范式——“Agentic Engineering（智能体工程）”。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/04/securing-github-actions-ci-dependencies-recipe-card/">保护 GitHub Actions CI 依赖项：操作指南</a><br></p>
+
+<p><a href="https://nesbitt.io/2026/05/04/package-manager-cwes.html">包管理器 CWE（常见弱点枚举）</a><br>我查阅了每一个我能找到的针对包管理器本身提交的公开 CVE 和安全建议。包括客户端和注册表：语言包管理器、系统包管理器、自托管注册表服务器等等。同样十几种失效模式在不同的工具中反复出现，通常相隔数年，因为构建第十九个包管理器的人并不总是了解第一到第十八个包管理器踩过的坑。如果你正在构建或维护此类工具，这是你需要关注的列表。我特意没有按工具分类。其中大多数很快得到了修复，有些是由项目自身发现的，哪个项目遇到了哪个漏洞并不重要，重要的是模式。一个告诫。CVE 数量衡量的是已报告并分配 ID 的问题，这与风险是两码事。有些项目运行漏洞赏金计划，为每个 ANSI 转义字符都申请 CVE。另一些则在点版本更新的变更日志中悄悄修复。而大多数现实世界中确实发生的、设计层面的弱点（如以用户身份运行的安装脚本、跨维护者变更的信任传递、先到先得的命名空间）这里并未涉及，因为它们从未获得 CVE。那是另一个话题。</p>
+
+<p><a href="https://www.bytebase.com/blog/postgres-19-features-im-excited-about/">PostgreSQL 19 中让我感到兴奋的功能特性</a><br>本文基于 PostgreSQL 19 版本的发布说明草案编写。在测试版冻结阶段，该版本的功能已经基本确定。随着 PG 19 在测试版和最终测试阶段的推进，我们会及时更新本文内容。</p>
+
+<p><a href="https://x.com/a16zcrypto/status/2048782971289890888">全球金融领域的新趋势：稳定币时代</a><br>a16z crypto 在 X 上：“全球金融的新堆栈：稳定币版” / X全球金融系统正在新基础设施上重建，且发生的速度比大多数加密货币领域外的人意识到的要快。[稳定币](https://a16zcrypto.com/posts/tags/stablecoins/) 是一个催化剂。它们已经从利基交易工具 [演变](https://a16zcrypto.com/posts/article/stablecoin-data-charts) 为基础性管道，并正成为新一代全球金融产品 [构建的基础层](https://a16zcrypto.com/posts/podcast/stablecoins-bridge-founder-circle-usdc-creator/)。随文附带的市场图谱展示了我们对正在进行的变革的看法。具体的公司可能会发生变化，类别也可能变得模糊和演变——但更重要的故事是结构性的：全球金融的新堆栈是如何形成的，它在哪些方面成熟，以及还存在哪些差距。核心思想是稳定币正在引发一种新型的 [银行即服务](https://a16zcrypto.com/posts/article/understanding-stablecoins-banking-history/) (BaaS)。上一波 BaaS 浪潮是关于金融科技公司租赁银行牌照并接入传统核心系统。这一波在结构上是不同的：公司在链上基础设施上构建，使用自我托管钱包来减少摩擦及其对……的依赖</p>
+
+<p><a href="https://skiplabs.io/blog/codegen_as_compiler">将代码生成作为编译器</a><br>Philip Su 最近的文章认为，在代码代理时代，代码审查不仅不切实际，甚至正变得不负责任。他的观点顺应了趋势。但我认为“无人值守代码库”的构想跳过了更令人感兴趣且不安的问题：**为什么无人值守感觉如此可怕**，而这种恐惧真正告诉了我们什么？我认为答案隐藏在我们曾经使用过但很快忘记的东西中：编译器。## 没有人审查编译器输出想想你如何对待你的编译器。你编写 C&#43;&#43;、Rust、Go，工具链输出一个二进制文件。你会打开该二进制文件并阅读汇编代码吗？你会安排与同事开会，在发布前审查目标代码吗？当然不会。那太荒谬了。并不是因为你盲目信任编译器，你并不信任。编译器有错误。编译器有过众所周知的灾难性错误。但你构建了一整套机制，使得审查输出变得 *不必要*：你针对可观测行为编写测试，你有约束输出的类型系统，你有可重复的构建，你有模糊测试、消毒器和高风险领域的正式验证。你信任的是 *过程*，而不是工件。我们还没有为代码代理构建这种机制。这才是真正缺失的，而不是输出本身。## 真正的诊断考虑到像 Michael Novati 这样的开发者在二月份的一天内提交了 417 个 PR。这足以证明审查 AI 生成的代码在数量上是不可能的。确实如此。但我会进一步诊断：**数量不是问题，它是暴露问题的症状**。问题在于我们仍然在对待代理……</p>
+
+<p><a href="https://lasans.blog/articles/misc/email-addresses-deep-dive/">深入理解email地址</a><br>本文主要针对想了解更多有关电子邮件的人，包括创始人、开发者、营销人员、任何管理电子邮件的人等。文章内容稍显技术性且篇幅较长。# 基本结构以这个电子邮件地址为例：```hello@example.com```三个部分：- `hello` - 本地部分，域名内的唯一标识符- `@` - 本地部分与域名之间的分隔符- `example.com` - 域名，由 `example` 和顶级域名 `com` 组成你每天都能看到这种格式。但在这种熟悉的结构背后，隐藏着大多数人不知道的规则、边缘情况和行为。有些关系到安全性。有些关系到隐私。有些在你构建需要处理或验证电子邮件地址的内容时很重要。本文涵盖了所有这些内容：01. 本地部分及其所有结构02. 域名部分及其所有结构03. 顶级域名及其多种类型04. 地址在不同上下文中如何完整格式化05. 每封邮件中的两个发件人06. 基于角色的地址07. 全收地址08. 提供商特定的行为09. 一次性及临时电子邮件10. 验证与常见错误11. 安全隐患# 本地部分本地部分是 `@` 之前的所有内容。大多数人认为它只是一个用户名，但实际上有几种有效的结构，还有一些虽然在技术上被允许但在现实世界中几乎从未见过的内容。## 允许的字符在标准的非引用形式（RFC 中称为点原子）中，本地部分允许：- 字母 `a-z` 和 `A-Z`- 数字 `0-9`- 特殊字符：`. _ - &#43; ! # $ % &amp; &#39; * / = ? ^ { | } ~`最大长度为 `64 个八位字节`。注意是八位字节，而不是字符。对于标准 ASCII，这在实际操作中没有区别，但对于 Unicode 本地部分，这很重要。&gt; 八位字节是计算术语，指正好 8 位的一组，通常与 `字节` 可互换使用，用于……</p>
+
+<p><a href="https://bastrich.tech/perfect-code-review/">完美的代码评审</a><br>[←Daniil Bastrich](https://bastrich.tech)# 完美的代码审查：如何在提高质量的同时降低认知负荷2026年1月3日一份清晰、实用的代码审查指南：为什么它很重要，PERFECT 原则，以及如何建立有效的审查流程。我们又来了：你看到了通知，感到了那种熟悉的抵触情绪。代码审查通常让人感觉认知负荷沉重且不确定：太多路径要跟进，太多模糊之处，太多意见。这种不确定性滋生了拖延和纠结琐事，或者在另一个极端，导致了走过场式的批准。但是，如何在不耗尽审查者精力或让团队陷入无休止争论的情况下最大化审查价值呢？我将一个健康、可持续的审查过程提炼为一个首字母缩写：**PERFECT**。它优先考虑真正重要的事情——从业务逻辑和边缘情况到可靠性和可读性——同时控制主观意见。以下是你如何应用这些原则，为你的代码审查带来结构、清晰度和一致性。## 什么是代码审查？代码审查是验证代码是否满足一组定义要求的过程。它可以由另一名开发者、作者本人或在自动化工具的帮助下执行。这些要求由业务或技术需求定义。在产品或定制软件开发中，它们最终总是由业务目标驱动的。此类要求可能包括代码质量、预防关键问题、更快的开发周期、团队成长和其他因素。例如，开发者个人编写完美整洁代码的愿望本身并不是代码审查的正当理由。然而，当整洁的代码被证明可以减少生产漏洞、提高整体软件质量或对团队动机和可维护性产生积极影响时，它就成了代码审查的合法目的。在这种情况下，整洁代码变成了一种业务需求，而不是个人偏好。## 你真的……</p>
+
+<p><a href="https://c3-lang.org/blog/unsigned-sizes-a-five-year-mistake/">无符号类型尺寸信息：一个持续了五年的错误</a><br></p>
+
+<p><a href="https://daniel.haxx.se/blog/2026/04/30/approaching-zero-bugs/">即将实现零漏洞？</a><br>在这个拥有强大工具来检测软件漏洞的时代，各种工具能够以极高的效率发现大量问题。不过，这对开发者来说却是个难题：要处理日益增多的问题实在不易。解决这些问题的时间可能比发现它们本身还要长；更不用说将修复后的版本发布出去之后，用户才能真正使用到这个更新版本，而这又需要额外的时间。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git 伴随一杯茶！轻松自托管的一体化软件开发服务，包括 Git 托管、代码审查、团队协作、包注册表和 CI/CD</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和双重身份验证（2FA）最简单、最安全的方法。</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger，一个分布式追踪平台</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>用于绕过审查的高级 DNS 隧道 VPN，针对 DNSTT 和 SlipStream 进行了优化，具有低开销 ARQ、解析器负载均衡、高丢包稳定性和速度。</p>
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery，云原生管理器</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>由大语言模型驱动的视频翻译和配音工具。视频翻译器提供 100 种语言翻译和一键全流程部署。视频翻译输出针对各个平台进行了优化</p>
+
+<p><a href="https://github.com/pranshuparmar/witr">pranshuparmar/witr</a><br>为什么它在运行？</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>适用于 Windows、macOS 和 Linux 的跨平台备份工具，具有快速、增量备份、客户端端到端加密、压缩和数据去重功能。包含 CLI 和 GUI。</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Kubernetes 工作流引擎</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

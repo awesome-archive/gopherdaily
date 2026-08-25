@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241230.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20241230</span>
+</p>
+<p>每日一谚：Compiler errors are better than runtime errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://golangnugget.com/p/what-to-expect-from-go-1-24-part-1">Go 1.24 新特性抢先看 - 第一部分</a><br>本文深入探讨了 Go 1.24 中即将推出的新工具链特性和对泛型类型别名的全面支持。这是 Go 1.24 系列文章的第一篇，后续文章将更详细地探讨新特性。</p> 
+
+<p><a href="https://dev.to/leapcell/a-deep-dive-into-gin-golangs-leading-framework-5e39">深入Gin：Go 语言领先的框架</a><br>Gin 是一个用 Go (Golang) 编写的 HTTP 网络框架。它具有类似 Martini 的 API，但性能比 Martini 快 40 倍。本文深入探讨了 Gin 的工作原理，包括创建 Engine 对象、注册路由回调函数、使用基数树加速路由检索、导入中间件处理函数、启动运行、处理消息、处理 panic 等方面。文章还介绍了 Leapcell，一个用于部署 Gin 服务的平台。</p> 
+
+<p><a href="https://ashwiniag.com/interfaces-in-go-simplified-with-a-silly-analogy/">Go接口简化：一个简单的类比</a><br>本文通过一个简单的类比解释了 Go 语言中的接口。作者以自己侄女的行为为例，将接口定义为行为，而方法实现则为执行行为的方式。文章包含代码示例，演示了如何定义接口、创建结构体、实现方法以及使用接口。  文章还扩展了这个例子，展示了多个结构体如何以不同方式实现相同接口的灵活性。最后，作者总结了接口、结构体和方法的关键概念，并强调了接口在代码中的灵活性和可维护性。</p> 
+
+<p><a href="https://medium.com/@dmytro.misik/go-vs-rust-web-service-performance-7fb10bbf9a9f">Go与Rust：Web服务性能对比</a><br>本文通过比较Go和Rust两种语言实现的CPU密集型Web服务的性能，探讨了它们在处理高并发请求方面的差异。作者使用TF-IDF和余弦相似度算法来比较文本相似性，并通过k6负载测试来评估两种服务的性能表现。测试结果显示，Rust在吞吐量和响应时间方面表现更佳，而Go则在可靠性方面稍胜一筹。</p> 
+
+<p><a href="https://dev.to/sajosam/go-routines-vs-threads-whats-the-difference-and-when-to-use-them-1g09">Go协程与线程：区别何在？何时使用？</a><br>现代编程中，并发不再是奢侈品，而是必需品。本文深入探讨Go协程和线程，阐明它们的区别和在实际场景中的应用。无论您是经验丰富的开发者还是Go新手，都能从中了解这些并发工具。</p> 
+
+<p><a href="https://olano.dev/blog/software-design-is-knowledge-building/">软件设计即知识构建</a><br>软件开发的产物并非代码，而是一种心智模型，一种理论：解释世界的一种特定方式。</p> 
+
+<p><a href="https://dev.to/kherld/building-a-programming-language-from-the-ground-up-3inc">从零开始构建编程语言</a><br>本文记录了开发Kisumu（一种静态类型编程语言）的过程，Kisumu 汲取了Python 的简洁性、Go 的并发模型以及 Rust 的内存安全性的优点，所有这些都使用 Go 构建而成。它深入探讨了语言架构的技术细微之处，为开发人员和爱好者提供了直观的理解。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://medium.com/ssense-tech/improving-your-application-availability-active-active-patterns-20eaa6f9d57e">提升应用程序可用性——主主模式</a><br>本文是关于提升应用程序可用性的系列文章的最后一篇，重点介绍了多区域主动-主动方法。文章探讨了实现该方法的模式（本地读取，全局写入；本地读取，分区写入；本地读取，本地写入），并讨论了如何使用某些 AWS 解决方案来简化流程。文章还分析了每种模式的优缺点，以及哪种模式最适合不同类型的应用程序（高读写比、读写平衡、高写比）。最后，文章通过一个电子商务应用程序的示例，说明了如何设置主动-主动架构，包括代码部署、路由和数据同步策略。</p>
+
+<p><a href="https://rubenerd.com/ten-it-things-i-found-joy-in-this-year">2024年科技领域让我感到快乐的十件事</a><br>本文作者列举了2024年在科技领域给他带来快乐的十件事，包括学习Python 3、网络上充满创意的人们、复古电脑上的现代硬件、XML和咖啡的结合、社交媒体的改善、NetBSD和Alpine Linux带来的简单生活、精品托管服务、更易于上手的维修、重新发现纯HTML以及与读者的互动。文章内容生动有趣，展现了作者对科技的热爱和对生活的积极态度。</p>
+
+<p><a href="https://blog.cloudflare.com/sometimes-i-cache/">有时我会缓存：实现无锁概率缓存</a><br>本文探讨了缓存重新验证的工作原理，并提出了一种基于概率的新方法。对于每个发送到源服务器的请求，我们模拟掷骰子。如果结果是6，则请求可以发送到源服务器；否则，它保持陈旧状态，以防止源服务器过载。文章还介绍了该方法的构建和优化过程，包括使用均匀分布和指数分布的概率缓存。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://yage.ai/cursor-ai-entry.html">使用Cursor作为AI的通用入口</a><br>本文探讨将Cursor或类似的编辑器作为AI通用入口的可能性。作者基于Agentic AI的经验，认为Cursor的“我说你做”模式以及其在文本处理方面的优势使其成为更自然的AI交互界面。文章详细介绍了Cursor在问答、私有文档RAG接入、搜索以及个性化方面的应用，并以图片和链接佐证其高效性和便捷性。最后，作者也指出了Cursor目前缺乏API和移动端应用的局限性。</p>
+
+<p><a href="https://abishekmuthian.com/how-i-run-llms-locally/">我如何本地运行大型语言模型</a><br>这篇文章记录了作者如何在本地运行大型语言模型（LLM），包括使用的硬件、软件工具和模型，以及更新和微调方法。作者使用高性能的笔记本电脑，并使用了Ollama、Open WebUI、llamafile等工具，以及Llama 3.2、Deepseek-coder-v2、Qwen2.5-coder和Stable Diffusion等模型。文章还提到了在Obsidian中使用Smart Connections查询笔记的功能。作者最后总结了本地运行LLM的优势，并表示会持续更新文章。</p>
+
+<p><a href="https://www.lesswrong.com/posts/KFFaKu27FNugCHFmh/by-default-capital-will-matter-more-than-ever-after-agi">默认情况下，AGI 之后资本的重要性将比以往任何时候都大</a><br>这篇文章探讨了劳动替代型人工智能对社会的影响。作者认为，人工智能会降低社会对人类的关注度，同时放大和固化现有的权力失衡。即使政府实施普遍基本收入 (UBI)，权力仍然主要掌握在拥有大量资本的人手中。文章还分析了人工智能对创业、硬科学、知识分子和政治等领域的影响，并指出在劳动替代型人工智能时代，通过劳动取得非凡成就的可能性将大大降低。作者呼吁关注人工智能的负面影响，并认为现在是采取行动、保持社会活力和人类雄心的重要时机。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/a-h/templ">a-h/templ</a><br>A language for writing HTML user interfaces in Go.</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/amitshekhariitbhu/go-backend-clean-architecture">amitshekhariitbhu/go-backend-clean-architecture</a><br>A Go (Golang) Backend Clean Architecture project with Gin, MongoDB, JWT Authentication Middleware, Test, and Docker.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/EndlessCheng/codeforces-go">EndlessCheng/codeforces-go</a><br>算法竞赛模板库 by 灵茶山艾府 💭💡🎈</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.</p>
+
+<p><a href="https://github.com/quii/learn-go-with-tests">quii/learn-go-with-tests</a><br>Learn Go with test-driven development</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 Top-Rated Web-Based Linux Server Management Tool. 1Panel features an intuitive web interface that seamlessly integrates server management and monitoring, container management, database administration, website management, system backup and restoration, and more.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Mistral, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

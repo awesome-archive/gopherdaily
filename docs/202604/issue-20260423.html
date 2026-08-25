@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260423.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260423</span>
+</p>
+<p>每日一谚：A good Go test is readable, maintainable, and tests one thing. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/tSboOai1CE9IJBNg7BMPCg">HashiCorp 创始人亲口“认错”：AI 让我重新爱上了 Go</a><br>在技术圈的江湖里，总有那么几位“扫地僧”级别的人物。他们的一言一行，足以引发整个行业的地震。Mitchell Hashimoto，正是其中之一。 作为 HashiCorp 的创始人，曾连续12年，一手使用Go 缔造了Consul、Nomad、Terraform、Vagrant、Vault 等一系列云原生基础设施与Devops“神 器”以及Ghostty Terminal (使用 Zig )的他，被无数开发者奉为“云基础设施时代教父级的人物”。 但在 Go 社区，Mitchell 的形象却颇具争议。因为他曾在公开场合不止一次地表达过对 Go 语言的失望，甚至抛出过“Go has no place anymore”（Go 已无立足之地）这样的“爆论”。 然而，就在最近，这位曾经的“Go 社区的争议人物”，却在 X 平台上发表了一篇 180 度大转弯的“认错”长推，瞬间引爆了整个技术圈，获得了超过 21 万 的阅读量。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2026/debugging-wasm-in-chrome-devtools/">在 Chrome DevTools 中调试 WASM</a><br>当我为我的 Scheme 编译器编写 WASM 后端时，在调试生成的 WASM 代码时遇到了几个棘手的情况。事实证明，Chrome 的 DevTools 中内置了一个功能非常强大的 WASM 调试器，在这篇简短的文章中，我想分享一下如何使用它。设置与工具我将使用我的 wasm-wat-samples 项目中的一个示例。实际上，gc-print-scheme-pairs 示例中已经准备好了一切。该示例展示了如何在 WASM 中使用 GC 引用构建类 Scheme 的 S 表达式并递归打印它们。该示例支持嵌套的整数、布尔值和符号对。要查看实际效果，我们首先需要将 WAT 文件编译为 WASM，例如使用 watgo。dir 中的 browser-loader.html 文件已经预期加载 gc-print-scheme-pairs.wasm。但我们不能直接从文件系统中打开它；因为它加载了 WASM，所以这个文件需要由本地 HTTP 服务器提供服务。我个人使用 static-server，但你也可以使用任何其他工具，比如 Python 内置的 http.server。现在，通过关注打印出的链接并选择 browser-loader.html 文件，可以在浏览器中打开它。调试过程打开 Chrome DevTools，在“Sources”面板中，打开左侧的“Page”视图。它应该在 wasm 下有一个条目，显示我们模块的反编译 WAT 代码。注意：此代码是从二进制 WASM 反汇编得到的，因此会丢失一些 WAT 语法糖（例如折叠指令）。</p> 
+
+<p><a href="https://www.brex.com/journal/building-crabtrap-open-source">构建 CrabTrap 开源项目</a><br>CrabTrap：一个“LLM 作为裁判”的 HTTP 代理，用于保护生产环境中的智能体利用 LLM 来评判 AI 智能体的网络流量在 Brex，我们的 AI 智能体在生产环境中执行实际工作。在将 OpenClaw 等工具部署到生产环境的过程中，Brex 面临着与行业其他公司同样的困境：智能体需要真正的凭证（API 密钥、OAuth 令牌和服务账户），但可能会产生破坏性操作的幻觉或受到提示词注入攻击。一旦这些请求离开进程，就会触及具有生产后果的 API。显而易见的修复方法是护栏（guardrails）。早期的许多工作都集中在范围工具、逐操作权限和人在环路（human-in-the-loop）审批上。挑战在于，随着智能体能力越来越强，每一项新能力都意味着另一个需要审计的手动调整 API 令牌或界面。现有的护栏往往走向两个极端：要么限制太严导致智能体无法工作，要么过于定制化而无法扩展。因此我们构建了 CrabTrap：一个开源的 HTTP/HTTPS 代理，它会拦截 AI 智能体发出的每一个请求，并使用“LLM 作为裁判”来确定请求是否符合该智能体的允许流量策略。结果非常乐观；我们认为这是生产环境中智能体工具安全性的一个有意义的进步。为什么现有方法不够用现有方法只解决了问题的一部分。MCP 网关在协议层强制执行策略，但仅限于使用 MCP 的流量。LLM 提供商提供的护栏绑定在单一模型上，且难以用自己的策略进行自定义。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/">SELinux 卷标签变更即将正式发布（可能对 v1.37 产生影响）</a><br>如果你在 Linux 上以强制模式（enforcing mode）运行 SELinux 并使用 Kubernetes，请提前规划：未来的版本（预计为 v1.37）预计将默认开启 SELinuxMount 特性门控。这会使大多数工作负载的卷设置更快，但它可能会以微妙的方式破坏仍然依赖旧的递归重新标记（recursive relabeling）模型的应用程序（例如，在同一节点上在特权 Pod 和无特权 Pod 之间共享一个卷）。Kubernetes v1.36 是审计集群并修复或选择退出此更改的正确版本。如果你的节点不使用 SELinux，对你没有任何影响：当内核中无法使用或禁用了 SELinux 时，kubelet 会完全跳过 SELinux 逻辑。你可以完全跳过这篇文章。这篇博文基于《Kubernetes 1.27：高效 SELinux 重新标记（Beta）》一文中描述的早期工作。要解决的问题仍然相同，但本文将该方法扩展到了所有卷。问题启用了安全增强 Linux（SELinux）的 Linux 系统使用附加到对象（例如文件和网络套接字）上的标签来做出访问控制决策。历史上，容器运行时将 SELinux 标签应用于 Pod 及其所有卷。Kubernetes 仅将来自 Pod 的 securityContext 字段的 SELinux 标签传递给容器运行时。容器运行时随后会递归地更改 Pod 容器可见的所有文件上的 SELinux 标签。如果卷上有许多文件，这可能会很耗时，特别是当卷位于远程文件系统上时。</p>
+
+<p><a href="https://geohot.github.io/blog/jekyll/update/2026/04/23/us-win-ai.html">你真的希望美国“赢得” AI 吗？</a><br>从各方面来看，我应该是一个新封建主义者。我应该喜欢正在发生的事情。我一生梦寐以求的 AI 正在被构建，工程师型的强人正在掌权，人们正在大声说出我所思考的事情。你可能会争辩说我喜欢它，只是对我在谈判桌上的位置不满意。我经常问自己这是否属实，比如如果我是埃隆（Elon）会怎样。那时我会从那个位置享受它吗？当然，不可能确定地知道，但我认为我真的不会。即使是理想版本，在超人类规模上进行工业巨型项目，同时又不断因杠杆作用而失去控制，听起来也像地狱。无论我的位置如何，那都不是我想居住的社会。我宁愿像这样的人来设计社会，提出关于技术的谨慎、细致的观点。当我看到埃隆和萨姆·奥特曼（Sam Altman）之间的诉讼时，我可能支持萨姆。不是因为他很伟大，我的意思是，他确实窃取了一个慈善机构。但埃隆有什么计划呢？至少萨姆本质上是一个产品人，我相信他确实喜欢构建人们喜爱的产品。而埃隆呢？他的东西没有一个是真正开源的，而且并不是他没有机会这样做。他只是不重视它。我可以听到狂热的埃隆粉丝为他辩护关于特斯拉专利、Twitter 算法之类的东西，但那些不是严肃的开源项目。即使与 Kubernetes 和 React 相比，它们也不是机构，更不用说与 Linux 和 ffmpeg 相比了。他不像达里奥（Dario）那种 EA（有效利他主义）级别的邪恶，EA 人们为你制定了计划，而当有人为你制定计划时，情况从不好。你知道，Mythos 基于恐惧的营销活动并不是 Anthropic 的人第一次这样做。他们在 2019 年做了完全一样的事情。</p>
+
+<p><a href="https://techbruhh.substack.com/p/creating-containers-from-no-where">无中生有的容器</a><br>我使用容器已经很长时间了，但在我开始阅读 Ivan Velichko 的文章之前，我仍然存在一些误解。他有一系列内容丰富的文章，深入探讨了容器在幕后是如何工作的。我写这篇博文是为了分享我最大的收获，并强调每个发布代码的开发人员都需要知道的内容。第 1 部分：无中生有构建容器在现阶段，我们中的许多人都知道容器只是一个进程。但如果你还不知道，也没关系！我们将在本文中深入细节。容器是隔离和受限的 Linux 进程。但进程到底是什么？进程不过是一个执行中的程序。好了，那么程序是什么呢？它是存储在硬盘上的可执行文件。以计算器应用为例。计算器可执行文件位于磁盘上。当我们打开它时，该文件被移入内存（RAM），并成为一个运行中的进程。在我们主动使用它时，它作为线程在 CPU 上执行。我们不会深入操作系统细节，但理解这个基本流程就足够了。容器就像那个计算器进程，只是带有隔离功能。那么，这个进程是如何变成“容器”的呢？这一切归结为两个 Linux 特性：命名空间（Namespaces）和控制组（Cgroups）。容器是隔离的（单独的命名空间）和受限的（限制性的控制组）Linux 进程。好了，新术语警报！什么是命名空间和控制组？命名空间只是逻辑上的分离。</p>
+
+<p><a href="https://brandur.org/second-wave-api-first">API 优先经济的第二波浪潮</a><br>十五年前，当我和一些同事构建 Heroku 的 V3 API 时，我们设定了一个宏伟目标：公共 API 必须足够强大，以运行我们自己的仪表板。没有私有端点，没有后门。这是一个不小的挑战，但它奏效了。公司仪表板的一个新版本在 V3 上发布，一位我们从未谋面的非关联开发者在上面构建了 Heroku 的第一个 iOS 应用程序，没有向我们发送过一个功能请求。第一波浪潮我们这种“仅限公共 API 的仪表板”的方法在今天看来似乎过于理想主义，但它是那个时代的产物。那是 2011 年，对 API 力量的乐观情绪清晰可见。一个新世界正在开启。一个开放、互联、无限可能的世界。我们并不是唯一有这种想法的人：- 仅在一年之前（2010 年），Facebook 发布了原始的 Open Graph API，提供了对其平台数据的极其强大的洞察力。- 那时的 Twitter API 几乎完全开放。你甚至不需要 OAuth 令牌——只需用你的用户名/密码在 API 端点上进行身份验证即可。</p>
+
+<p><a href="https://theconsensus.dev/p/2026/04/03/who-contributed-to-datafusion-53.html">谁为 DataFusion 53 做出了贡献</a><br>DataFusion 的重大发布（带有重大破坏性更改）每隔一两个月就会发生一次。DataFusion 53 本周发布，共有 480 次提交，至少有 52 家公司雇佣的 120 多名开发人员为此做出了贡献。我查看了在此版本中对 DataFusion 贡献最大的个人，以及这些个人所受雇的组织。正如开源中常见的那样，员工贡献最多的组织（InfluxData、Pydantic、Apple、Datadog）并不完全等同于雇佣最多贡献者的组织（Datadog、Apple、e6data、Flarion）。两名贡献者（Jeffrey Vo 和 Konstantin Tarasov）已公开表示他们正在寻找工作。快去抢人吧！本文中的数据与项目发布说明中显示的数据在某些方面有所不同。让我们来看看。背景首先，为了核算多名提交者，本文将任何带有联合作者（co-authors）的提交扩展为每位作者的重复提交。所以当你看到提交数量时，你应该将其视为开发者贡献的总提交数，而不一定是他们作为主要作者的提交数。这对于主要贡献者和轻度贡献者来说似乎更公平。其次，当讨论……</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/22/qwen36-27b/#atom-everything">Qwen3.6-27B：27B 稠密模型中的旗舰级编码</a><br>Qwen 关于其最新开源权重模型提出了宏大的主张：Qwen3.6-27B 提供了旗舰级的智能体编码性能，在所有主要编码基准测试中超越了上一代开源旗舰 Qwen3.5-397B-A17B（397B 总量 / 17B 活跃 MoE）。在 Hugging Face 上，Qwen3.5-397B-A17B 为 807GB，这个新的 Qwen3.6-27B 为 55.6GB。我使用 16.8GB 的 Unsloth Qwen3.6-27B-GGUF:Q4_K_M 量化版本和 llama-server 进行了测试。在第一次运行时，它将约 17GB 的模型保存到了缓存中。这是“生成一张鹈鹕骑自行车的 SVG”的转录。对于一个 16.8GB 的本地模型来说，这是一个出色的结果。llama-server 报告的性能数据：- 阅读：20 个 token，0.4 秒，54.32 token/秒</p>
+
+<p><a href="https://zknill.io/posts/all-your-agents-are-going-async/">所有智能体都将走向异步</a><br>所有智能体都将走向异步智能体过去是你同步交流的对象。现在它们是你工作时在后台运行的东西。当你做出这种改变时，传输层就会崩溃。在 LLM 存在的大部分时间里，你通过打开聊天风格的窗口并输入提示语来使用它们。LLM 将响应逐个 token 地流式传输回来。这就是 ChatGPT、claude.ai 和 Claude Code 的工作方式。这也是基本上每个 AI SDK 或 AI 库的演示工作方式。很容易认为 LLM 聊天机器人是目前 AI 的“可能艺术”。但事实并非如此。相反，所有的智能体都在走向异步。智能体正在获得 cron 任务、webhook 支持、手机“远程控制”、预定任务和例程。智能体正在变成在后台运行的东西，在你工作时工作，并异步报告结果。智能体正在获得 Temporal、Vercel WDK、Relay.app 等工作流。坐在终端或网页聊天室前的人类只是其中一种模式，而且它越来越不再是有趣的模式。有趣的是智能体在没有人类同步监督的情况下能做些什么。问题在于聊天机器人主要是基于 HTTP 构建的。带有提示语的 HTTP 请求，以及 HTTP 响应上生成的 LLM token 的 SSE 流。但当智能体异步运行时，这就不起作用了。没有 HTTP 连接来将响应流式传输回来。OpenClaw 的异步步骤OpenClaw 向异步智能体迈出了一大步，向人们展示了一个智能体可以存在于你的 WhatsApp 聊天中。智能体可以随身携带，并且可以在后台处理事情。</p>
+
+<p><a href="https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp">使用 MCP 构建能够访问生产系统的智能体</a><br>智能体只有在能触及系统时才有用。团队倾向于使用三种方法将它们连接到外部系统——直接 API 调用、CLI 和 MCP。这篇文章阐述了每种方法的适用场景、为什么生产环境智能体倾向于使用 MCP，以及有效构建这些集成的模式。将智能体连接到外部系统我们通常看到将智能体连接到外部系统的三种路径：直接 API 调用、CLI 和 MCP。每种路径都有其合理之处，具体取决于你正在构建的内容。关键区别在于智能体和服务之间是否存在通用层，以及该层触及的深度。直接 API 调用智能体直接调用你的 API——要么通过在代码执行沙箱内编写发出 HTTP 请求的代码，要么通过通用的函数调用工具。大多数团队都是从这里开始的，这对于一个智能体与一个服务对话或小规模应用来说工作得很好。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amo</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
+
+<p><a href="https://github.com/guohuiyuan/go-music-dl">guohuiyuan/go-music-dl</a><br>一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10&#43; 个主流平台，支持多源</p>
+
+<p><a href="https://github.com/e2b-dev/infra">e2b-dev/infra</a><br>Infrastructure that&#39;s powering E2B Cloud.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250828.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250828</span>
+</p>
+<p>每日一谚：Lead with context, end with options, and always close with an error </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/28/go-primer-published">我的Gopher“长期主义”：从《Go语言第一课》新书说起</a><br>四年前，我在极客时间开设了专栏《Go语言第一课》。令我欣慰的是，这个专栏得到了广大 Gopher 的认可和喜爱。截至今日，它已经影响了超 过 2.4 万名订阅者(截至2025.8)，在编程语言类专栏里取得了相当不错的成绩。为了让这份经过市场检验的优质内容，能以一种更经典、更触手可及的方式，帮助更多人踏入 Go 语言的大门，我与人民邮电出版社异步图书合作， 历时一年多的精心打磨，终于将它变成了纸质书 -- 我的第二本“小黄书”</p> 
+
+<p><a href="https://destel.dev/blog/preserving-order-in-concurrent-go">在并发Go应用程序中保持顺序：三种方法的比较</a><br>并发设计打破了固有的顺序，但有时我们需要两者兼顾。探索三种在并发Go应用程序中保持顺序的方法，从标准的ReplyTo通道到复杂的权限传递，并附有基准测试和实际的权衡。</p> 
+
+<p><a href="https://blog.stackademic.com/go-logging-best-practices-fast-structured-and-production-ready-7815379dd537">Go Logging Best Practices: Fast, Structured, and Production-Ready</a><br>学习如何在 Go 中高效地进行日志记录，避免常见错误，并保持您的应用程序快速、干净并准备好投入生产。</p> 
+
+<p><a href="https://medium.com/@Realblank/go-struct-alignment-a-practical-guide-e725c8e1d14e">Go Struct Alignment: A Practical Guide</a><br>Go structs are automatically aligned by the compiler for fast memory access. Understanding these rules helps reduce struct sizes, cut memory use, and avoid hidden performance pitfalls.</p> 
+
+<p><a href="https://telemetryharbor.com/blog/we-built-it-then-we-freed-it-telemetry-harbor-goes-open-source">我们构建它，然后我们释放它：telemetry-harbor开源</a><br>我们正在开源遥测港口：我们在云端运行的相同高性能摄取堆栈，现在完全可自托管。基于 Go、TimescaleDB、Redis 和 Grafana 构建，它开箱即用，可用于生产。您的数据，您的规则，克隆，运行 docker compose，然后开始发送遥测数据。</p> 
+
+<p><a href="https://www.getlago.com/blog/billing-shouldnt-suck">Lago Manifesto：构建计费不应该令人头疼（对企业和工程师而言）</a><br>获得报酬应该是构建了人们想要的东西之后的简单部分。 这不是一个在社交媒体上疯传的问题，但在科技公司中却无处不在：定价和货币化需要很长时间才能发布（即使您设法发布了）。我们似乎认为事情就是这样。 多个全职工程师构建和维护计费系统？事情就是这样。 功能发布延迟，因为需要一个月的时间才能将新的定价电子表格转化为现实？事情就是这样。 即使您为计费软件付费，也需要内部构建所有内容？事情就是这样。 由于价格调整被 3 个边缘案例阻止，季度业绩没有达到预期？事情就是这样。 每天花费数小时手动开具发票和回答计费问题？事情就是这样。 一名工程师在他们的办公桌前哭泣，因为他们花了 2 天时间计算将购买的积分转换为使用额度的逻辑？事情就是这样。 您每周都必须支付夫妇的治疗师费用来参加工程团队和收入团队的同步会议？事情就是这样。 晚上 8 点，您正在修复发票格式以符合危地马拉法律的逻辑，梦想着回到更简单的时代，这样您就可以成为一名中世纪的铁匠，并以蒲式耳小麦获得报酬？事情就是这样。 事情就是这样，但它们不应该这样。 不久前，为地下室的服务器和飞往的技术人员升级 Oracle v2.483 到 Oracle v2.484 曾经是“事情就是这样”。 计费仍然处于地下室服务器时代。 它比以往任何时候都需要更新。 Lago 是那个更新——一种新型的货币化引擎。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-08-27-a-beginners-guide-to-docker-swarm">A Beginner&#39;s Guide to Docker Swarm</a><br>This concludes our beginner-friendly series on Docker, Docker Compose, and Docker Swarm. We hope it has encouraged you to give these tools a try and sparked your curiosity to explore what else is possible.</p>
+
+<p><a href="https://www.p99conf.io/2025/08/27/rust-rewrites-optimizations-at-p99-conf-25/">Rust 重写与优化在 P99 CONF 25</a><br>P99 CONF 2025 将再次充满 Rust 元素。以下是我们将要展示的一些以 Rust 为主题的演讲的预览。</p>
+
+<p><a href="https://www.docker.com/blog/docker-desktop-updates-every-two-weeks/">Docker Desktop 推出更快发布节奏，加速创新</a><br>Docker Desktop发布4.45.0版本，并将发布周期改为每两周发布一次，目标是在2025年底实现每周发布。这将使您可以更快地获得新功能、错误修复和安全更新。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/08/27/metal3-io-becomes-a-cncf-incubating-project/">Metal3.io 成为 CNCF 孵化项目</a><br>CNCF 技术监督委员会 (TOC) 已投票通过接受 Metal3.io 作为 CNCF 孵化项目。Metal3.io 加入了不断壮大的技术生态系统，致力于解决云原生基础设施边缘的现实世界挑战。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/08/27/kubernetes-v1-34-release/">Kubernetes v1.34 Released</a><br>编辑：Agustina Barbetta, Alejandro Josue Leon Bellido, Graziano Casto, Melony Qin, Dipesh Rawat
+
+与之前的版本类似，Kubernetes v1.34版本引入了新的稳定、beta 和 alpha 功能。高质量版本的持续交付凸显了我们开发周期的实力和我们社区的活力支持。
+
+此版本包含 58 项增强功能。在这些增强功能中，23 项已升级为稳定版，22 项已进入 Beta 版，13 项已进入 Alpha 版。</p>
+
+<p><a href="https://world.hey.com/dhh/omarchy-2-0-16fefc15">Omarchy 2.0</a><br>Omarchy 2.0 在 Linux 的 34 岁生日之际发布，以此献给世界上最伟大的开源项目。 它不仅运行着网络上 95% 的服务器，数十亿设备的嵌入式操作系统，而且它也成为了一个令人难以置信的桌面环境！ 很高兴能庆祝 Linux，我花了几个月的时间在 Arch 和 Hyprland 之上构建了新的 Linux 发行版 Omarchy。如果你有兴趣尝试 Linux，并且不怕一个让你不断提升和学习的操作系统， 那么我邀请你试试。</p>
+
+<p><a href="https://stefan-marr.de/2025/08/how-to-slow-down-a-program">如何使程序变慢？以及为什么它可能有用。</a><br>使程序变慢可以用于查找竞争条件、模拟加速以及评估分析器的准确性。</p>
+
+<p><a href="https://arstechnica.com/science/2025/08/more-scientists-choose-bluesky-over-twitter">Bluesky now platform of choice for science community</a><br>It’s not just you. Survey says: “Twitter sucks now and all the cool kids are moving to Bluesky”</p>
+
+<p><a href="https://lubeno.dev/blog/rusts-productivity-curve">Rust 带来的意想不到的生产力提升</a><br>Rust 以其陡峭的学习曲线而闻名，但在本文中，我们将关注另一条曲线，即开发者生产力与项目规模的关系。</p>
+
+<p><a href="https://oshub.org/projects/retros-32/posts/object-oriented-design-patterns-in-osdev">OSHub上的面向对象设计模式</a><br>在OSDev的世界中，你通常是孤独的，这种孤独让你有自由去试验不寻常的编程模式。 我在为我的硕士论文开发一个内核模块时，偶然发现了一篇关于LWN的文章：“内核中的面向对象设计模式”。 文章描述了Linux内核，尽管是用C语言编写的，但通过使用结构体中的函数指针来实现多态性，从而采用了面向对象的原则。</p>
+
+<p><a href="https://linuxcontainers.org/incus/docs/main/explanation/containers_and_vms">关于容器和虚拟机</a><br>Incus 支持两种不同类型的实例：系统容器和虚拟机。 Incus 在系统容器的实现中使用 Linux 内核的特性（例如命名空间和 cgroups）。 这些特性提供了一种纯软件的方式来隔离和限制正在运行的系统容器。 系统容器只能基于 Linux 内核。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://martinfowler.com/articles/build-own-coding-agent.html">构建你自己的 CLI 编码代理，使用 Pydantic-AI</a><br>CLI 编码代理是一种与聊天机器人或自动补全工具完全不同的工具——它们是可以读取代码、运行测试和更新代码库的代理。虽然商业工具令人印象深刻，但它们并不理解我们环境的特定上下文和我们特定项目的特殊性。相反，我们可以通过组装开源工具，使用我们特定的开发标准来构建我们自己的编码代理，用于：测试、文档生成、代码推理和文件系统操作。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>CLI tool for spawning and running containers according to the OCI specification</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/charmbracelet/lipgloss">charmbracelet/lipgloss</a><br>Style definitions for nice terminal layouts 👄</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.</p>
+
+<p><a href="https://github.com/coroot/coroot">coroot/coroot</a><br>Coroot is an open-source observability and APM tool with AI-powered Root Cause Analysis. It combines metrics, logs, traces, continuous profiling, and SLO-based alerting with predefined dashboards and inspections.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go is a Go package that makes it simple to create and clean up container-based dependencies for automated integration/smoke tests. The clean, easy-to-use API enables developers to programmatically define containers that should be run as part of a test and clean up those resources when the test is done.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

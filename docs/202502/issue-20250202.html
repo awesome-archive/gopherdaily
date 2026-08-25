@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250202.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250202</span>
+</p>
+<p>每日一谚：Do not ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://colobu.com/2025/02/01/the-state-of-simd-in-go/">Go语言何时才能官方支持SIMD？</a><br>单指令多数据流 (SIMD) 是一种并行计算技术，能够显著提升计算密集型任务的性能。许多主流编程语言都已支持 SIMD，但 Go 语言的官方支持仍在讨论中。文章探讨了 Go 语言对 SIMD 支持的背景、SIMD 的基本概念、常见的指令集以及 Go 语言中 SIMD 支持的现状，包括标准库的现状、第三方库和解决方案，以及 Go 汇编与 SIMD 的使用方法。</p> 
+
+<p><a href="https://dev.to/39george/user-authentication-in-go-nm7">Go语言中的用户身份验证</a><br>本文探讨了在构建安全应用程序中用户身份验证和授权的基本概念。它介绍了如何使用Go语言的Authpher等包简化这些概念的实现，包括用户数据存储（PostgreSQL数据库）、会话管理（Redis缓存）以及Gin框架和相关包的使用。文章详细讲解了数据库迁移、SQL查询编写以及Go语言逻辑的实现，并提供了测试方法和代码仓库链接。</p> 
+
+<p><a href="https://dev.to/saleh_rahimzadeh/zero-allocation-in-go-golang-237k">Go语言中的内存零分配</a><br>Go语言的垃圾回收器简化了内存管理，但会带来性能开销。零分配编程技术通过最小化或完全避免堆分配来减少垃圾回收开销，从而提高Go应用程序的性能和可预测性。本文探讨了减少堆分配、优化内存效率以及编写高性能Go代码的实用方法，包括高效的字符串连接、预分配切片、使用copy()函数、预分配缓冲区、使用栈而不是堆、最小化热点路径中的分配以及使用sync.Pool重用对象等策略。</p> 
+
+<p><a href="https://medium.com/inspiredbrilliance/atomic-operations-explained-from-hardware-to-high-level-code-using-go-742347d094f6">原子操作详解：从硬件到高级代码（使用 Go）</a><br>现代应用程序经常依赖原子操作，其中原子计数器是最常见的用例之一。例如，当多个线程并行执行时，增量和减量操作必须是原子的，以防止竞争条件。本文将使用 Go 语言作为参考语言，探讨原子操作的底层机制、功能以及与互斥锁的比较。文章首先回顾了在 Go 中处理竞争条件的方法，然后深入研究了 `sync/atomic` 包的底层实现，解释了其如何利用硬件和 CPU 级别的同步来实现原子性。最后，文章比较了原子操作和互斥锁的性能差异，总结了原子操作的优势和适用场景。</p> 
+
+<p><a href="https://dev.to/leapcell/gos-httpservemux-is-all-you-need-1mam">Go 的 http.ServeMux 就足够了</a><br>Go 1.22 版本标准库中的 http.ServeMux 进行了显著优化，增强了模式匹配能力，减少了对第三方路由库的依赖。文章介绍了 Go 1.22 中新的 ServeMux 的使用方法、模式冲突处理以及一个使用新 mux 实现的 REST 服务器示例，并与 gorilla/mux 进行了性能比较。结论是，Go 1.22 中标准库 http.ServeMux 的优化是一个积极的改变，开发者可以选择继续使用熟悉的第三方库或转向标准库。</p> 
+
+<p><a href="https://dev.to/leapcell/go-vs-nodejs-vs-php-which-framework-outperforms-the-other-in-speed-and-efficiency-3aej">Go、Node.js 和 PHP：哪个框架在速度和效率方面表现更好？</a><br>本文对PHP、Go和Node.js框架进行了全面的性能比较，数据来源为TechEmpower基准测试网站。文章分析了JSON序列化、纯文本响应、单行查询、多行查询和数据更新等多种指标，并比较了Node.js（函数计算）、Go（单机部署）以及几种具体应用（例如echo、go-pgx-easyjson、nodejs-postgres等）的性能表现。最终总结了单机部署和函数计算场景下的最佳方案选择，并对PHP的性能和应用场景进行了分析。文章还推荐了Leapcell无服务器平台，并列举了其多语言支持、免费部署、成本效益高、开发体验流畅以及可扩展性强等优点。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://ebpf.foundation/case-study-bytedance-uses-ebpf-to-enhance-networking-performance">案例研究：字节跳动如何使用 eBPF 提升网络性能</a><br>字节跳动公司利用 eBPF 技术成功实现了去中心化的网络解决方案，提升了效率、可扩展性和性能。该方案解决了虚拟以太网带来的性能瓶颈和稳定性问题，并通过回滚升级策略确保了服务的持续性。最终，网络吞吐量提升了 10%，并简化了网络架构，降低了维护成本。</p>
+
+<p><a href="https://medium.com/yandex/yandexs-high-performance-profiler-is-now-open-source-95e291df9d18">Yandex 高性能分析器现已开源</a><br>Yandex 开源了 Perforator，这是一个用于分析其大部分服务性能的持续分析系统。GitHub 存储库包含源代码和在 Kubernetes 集群上部署 Perforator 的基础设施。Perforator 可作为 perf record 的替代方案在本地运行，提供更准确的配置文件，且开销更低。该源代码采用 MIT 许可证（eBPF 程序采用 GPL 许可证），可在 x86-64 Linux 上运行。通过使用 Perforator 和之前的分析方法，Yandex 在其最大的服务（如广告投放系统和 Yandex 搜索）中定期实现数十个百分点的性能提升。此外，Perforator 还填补了开源分析中的一个关键空白，可以通过 Profile-Guided Optimization (PGO) 简化自动程序优化。测试表明，在多种情况下，PGO 可以将工作负载速度提高约 10%。</p>
+
+<p><a href="https://www.workingsoftware.dev/fundamental-techniques-for-software-architects">软件架构师的 27 个基本技巧</a><br>本文概述了软件架构师掌握的 27 个最重要的技巧，这些技巧不仅能够设计出健壮的架构，还能与业务目标完美契合。文章涵盖了战略规划、初始概念、决策制定、技术管理、风险管理、可视化与文档以及评估、衡量、改进和适应等方面，并详细介绍了每个技巧的应用场景和方法，例如影响地图、沃德利地图、领域故事、事件风暴、架构原则、架构决策记录、技术雷达等等。</p>
+
+<p><a href="https://letsencrypt.org/2025/01/30/scaling-rate-limits">扩展速率限制，为十亿个活动证书做准备</a><br>Let&#39;s Encrypt 通过为超过 5.5 亿个网站提供 TLS 证书来保护很大一部分网络——仅去年一年就增长了 42%。我们目前每小时颁发超过 340,000 个证书。为了管理如此巨大的流量并在高需求下保持响应能力，我们的基础设施依赖于速率限制。2015 年，我们引入了第一个基于 MariaDB 的速率限制系统。它随着我们快速发展的服务而发展，但最终暴露出其局限性：使数据库服务器不堪重负，迫使订阅者长时间重置，并减慢每个请求的速度。我们需要一个面向未来的解决方案——一个能够随着需求扩展、减少 MariaDB 负载并适应现实世界订阅者请求模式的解决方案。最终的结果是一个由 Redis 提供支持的新速率限制系统，以及一个 90 年代中期经过验证的虚拟调度算法。它高效且可扩展，能够处理超过十亿个活动证书。</p>
+
+<p><a href="https://dev.to/_n0rdy_/when-postgres-index-meets-bcrypt-3ap3">当 Postgres 索引遇到 Bcrypt</a><br>本文讲述了一个性能问题排查案例。一个服务在用户输入社会安全号码 (SSN) 后获取个性化数据时，响应时间长达 10 秒以上。作者通过本地调试排除了第三方 API 的问题，最终发现问题在于数据库查询。尽管数据库表已建立索引，但由于使用了 Bcrypt 加密算法，数据库使用了顺序扫描，导致性能下降。文章详细解释了 Bcrypt 算法的特性，以及如何选择合适的加密算法来解决性能问题。</p>
+
+<p><a href="https://cedardb.com/blog/reducing_branches">为什么无分支的树木生长更快：减少代码分支的案例</a><br>本文探讨了在现代CPU指令执行中减少分支指令以提高效率的原因。文章解释了代码中的分支是什么，以及CPU如何通过指令流水线和分支预测等优化来提高效率。分支虽然是软件的必要组成部分，但它们会引入不确定性，从而降低CPU的效率。文章还介绍了几种减少分支的方法，包括使用布尔值进行算术运算以及生成代码，并通过基准测试展示了这些方法的效率提升。</p>
+
+<p><a href="https://tanmay-bhat.medium.com/reducing-inter-az-traffic-in-victoriametrics-with-zonekeeper-3bd7e1526796">使用 Zonekeeper 减少 VictoriaMetrics 中的区域间流量</a><br>随着 Kubernetes 可观测性逐渐成为主流，了解并努力降低运行这些监控系统的成本至关重要。大型集群中的主要成本之一是区域间流量。无论是否使用 HA，VictoriaMetrics 代理都会抓取集群中所有 pod 的指标，这些 pod 分布在多个可用区中。这会导致大量的区域间流量，这可能会变得非常昂贵。本文介绍了一种使用 Zonekeeper 减少 VictoriaMetrics 中区域间流量的方案。</p>
+
+<p><a href="https://dagger.io/blog/gpu-challenges">使用 Dagger 解决 CI/CD 管道中的 GPU 挑战</a><br>强大的、可编程的 CI/CD 引擎，可在容器中运行您的管道——在本地机器上预推送和/或在 CI 中推送后。</p>
+
+<p><a href="https://blog.railway.com/p/slack-overflow">Slack Overflow：我们如何扩展Slack以支持数千名开发者</a><br>Railway 为人类构建软件基础设施。我们的理念很简单：你提供 Docker 镜像或 GitHub 代码库，我们负责部署和扩展，无需任何摩擦。本文讲述了 Railway 如何构建一个具有完全模拟功能的双向 Slack 桥接，以从我们的帮助中心为数千名 Railway 开发者提供优质支持，以及在此过程中遇到的挑战和经验教训。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.latent.space/p/2025-papers">2025 年人工智能工程阅读清单</a><br>这份清单汇集了 50 篇论文/模型/博客，涵盖人工智能工程的 10 个领域：大型语言模型 (LLM)、基准测试、提示工程、检索增强生成 (RAG)、智能体、代码生成、视觉、语音、扩散模型和微调。 如果你从零开始，可以从这里入手。</p>
+
+<p><a href="https://martinfowler.com/articles/gen-ai-patterns">构建生成式 AI 产品的新兴模式</a><br>随着我们将使用生成式 AI 技术的软件产品从概念验证转变为生产系统，我们发现了一系列常见的模式。评估在确保这些非确定性系统在合理的范围内运行方面发挥着核心作用。大型语言模型需要增强，以便提供超出通用静态训练集的信息。大多数情况下，我们可以使用检索增强生成 (RAG) 来实现这一点，尽管基本的 RAG 方法需要几种模式来克服其局限性。当 RAG 不够用时，微调就值得一试。本文简要介绍了这些模式，并穿插叙述性文本以更好地解释上下文和相互关联。我们已经用“✣”符号标识了模式部分。任何描述模式的部分的标题都用单个“✣”包围。模式描述以“✣ ✣ ✣”结尾。这些模式是我们试图理解我们在参与中所看到的。那里有很多关于这些系统的研究和教程写作，并且一些不错的书籍开始出现，作为对这些系统以及如何使用它们的常规教育。本文并非试图进行这种通识教育，而是试图组织我们的同事在全球各地与客户进行日常工作中所获得的经验。因此，在某些方面，我们还没有尝试过某些事情，或者我们尝试过，但不足以辨别任何有用的模式。随着我们进一步的工作，我们打算修改和扩展这些材料，当我们扩展这篇文章时，我们将向我们通常的订阅源发送更新。</p>
+
+<p><a href="https://www.pyspur.dev/blog/multi-head-latent-attention-kv-cache-paper-list">DeepSeek的多头潜在注意力和其他KV缓存技巧</a><br>本文探讨了键值 (KV) 缓存如何通过牺牲内存来换取计算时间，从而提高类似ChatGPT和DeepSeek等大型语言模型生成文本的速度。文章首先解释了文本生成速度慢的原因，然后介绍了KV缓存的基本原理，并分析了其优缺点。最后，文章深入探讨了11篇最新的研究论文，包括DeepSeek的多头潜在注意力 (MLA)，这些论文基于KV缓存的基本思想，对大型语言模型的推理速度进行了进一步的优化，并提出了各种改进KV缓存的技巧，例如令牌选择、事后压缩技术和架构重新设计等。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/yusing/go-proxy">yusing/go-proxy</a><br>Easy to use reverse proxy with docker integration</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery, the cloud native manager</p>
+
+<p><a href="https://github.com/WireGuard/wireguard-go">WireGuard/wireguard-go</a><br>Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go</p>
+
+<p><a href="https://github.com/hajimehoshi/ebiten">hajimehoshi/ebiten</a><br>Ebitengine - A dead simple 2D game engine for Go</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/iyear/tdl">iyear/tdl</a><br>📥 A Telegram toolkit written in Golang</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

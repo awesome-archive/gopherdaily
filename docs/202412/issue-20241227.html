@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241227.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20241227</span>
+</p>
+<p>每日一谚：Do not ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://jarosz.dev/code/how-to-handle-go-security-alerts/">如何处理Go安全警报</a><br>本文阐明了 Golang 安全补丁周期。您将学习如何识别 Go 代码和 Go 二进制文件中的漏洞，并获得必要的洞察力来评估这些问题是否会影响您的应用程序并构成安全风险。文章介绍了使用 `govulncheck` 和 `Docker Scout` 等工具扫描 Docker 镜像和 Go 代码以检测漏洞的方法，并演示了如何升级受影响的包以修复漏洞。文章强调了区分潜在安全问题和实际安全风险的重要性，并建议将安全测试和补丁过程自动化并集成到持续集成管道中。</p> 
+
+<p><a href="https://uds5501.github.io/mindpalace/2024/12/25/go-prequel-load-balancer.html">Go-Prequel：Google Prequel负载均衡器的概念验证</a><br>这篇文章尝试解读和复制论文《负载并非你应该均衡的对象：介绍 Prequel》中的发现。文章重点关注一般的负载均衡策略、背后的动机以及作者的实现。作者实现了基于 Prequel 的负载均衡器，并进行了实验，观察了在不同负载情况下的流量分配。实验结果显示，Prequel 通过平衡正在处理的请求数 (RIF) 和延迟，有效地减少了尾部延迟和资源利用率。文章还包含了实验的截图和代码链接。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://medium.com/@whitetown/how-i-reduced-aws-costs-by-100x-at-cloomba-7fe4de3a559f">我如何将 AWS 成本降低 100 倍</a><br>作者讲述了如何从零开始构建一个低成本的社交网络和活动管理平台，以及如何通过构建一个新的、更高效的后台系统，将 AWS 成本从每月 2000 美元降低到 20 美元的故事。文章中还提到了旧后台系统存在的问题，例如命名约定不一致、HTTP 方法有限、模型设计糟糕以及 API 响应效率低等。作者最终成功说服客户采用其新系统，并成功迁移数据。</p>
+
+<p><a href="https://jesipow.com/blog/postgres-reads-cause-writes/">PostgreSQL 中读取操作导致写入操作</a><br>本文探讨了在 PostgreSQL 中，简单的 SELECT 查询如何导致数据写入磁盘的两种机制：事务状态跟踪的提示位设置和页面修剪。文章详细解释了 PostgreSQL 的多版本并发控制 (MVCC)、表、页面和元组的概念，并通过示例演示了如何使用 `pageinspect` 模块检查页面和元组，以及如何理解行更新、提示位更新和页面修剪的过程。最后，文章还简要介绍了 HOT 更新的优化机制。</p>
+
+<p><a href="https://jazco.dev/2024/04/20/roaring-bitmaps/">1.6GB 中的整个社交网络 (GraphD 第二部分)</a><br>本文介绍了如何使用 Roaring Bitmaps 构建更高效的社交网络图数据库 GraphD。Roaring Bitmaps 提供了一种更高效的方式来存储和查询整个社交图，将 550 万用户和 1.64 亿个关注关系存储到大约 1.6GB 的 SQLite 数据库中。文章详细解释了 Roaring Bitmaps 的工作原理，并比较了它与其他方法（如简单的位图和运行长度编码）的优缺点。最终，作者展示了使用 Roaring Bitmaps 的 GraphD 在内存使用、磁盘空间、启动时间和吞吐量方面的显著改进。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2024/Dec/27/open-webui/#atom-everything">开放式 WebUI</a><br>我今天第一次尝试了这个开源（MIT 许可证，JavaScript 和 Python）本地主机 UI，用于访问大型语言模型。它做得非常好。我使用 uvx 运行它，它安装了许多依赖项，然后下载了 903MB 的 all-MiniLM-L6-v2 嵌入模型（可能是为了它的 RAG 功能）。它随后为我提供了一个可用的 Llama 3.2:3b 聊天界面，这让我很惊讶，因为我没有发现它下载了该模型。事实证明，这是因为我的笔记本电脑上已经运行了 Ollama（安装了包括 Llama 3.2:3b 在内的多个模型），而 Open WebUI 自动检测到 Ollama 并让我访问可用模型列表。我找到一个“知识”部分，并添加了所有 Datasette 文档（通过放入文档中的 .rst 文件），现在我可以在聊天中键入 # 来搜索文件，将其添加到上下文中，然后直接询问有关它的问题。我选择了 spatialite.rst.txt 文件，提示它“如何将 SpatiaLite 与 Datasette 一起使用”，并得到了这个答案：这是一个非常可靠的答案，特别是考虑到来自 Ollama 的 Llama 3.2 3B 模型只是一个 1.9GB 的文件！令人印象深刻的是，该模型能够很好地处理针对提供给它的文本进行的基本问答和摘要——它不知何故具有 128,000 个令牌的上下文大小。Open WebUI 还有一些其他技巧：它可以直接与 OpenAI 等 API 模型对话，具有与网络搜索和自定义工具集成的可选功能，并将每次交互记录到 SQLite 数据库。它还附带了详尽的文档。</p>
+
+<p><a href="https://blog.google/technology/ai/google-ai-news-recap-2024/">2024 年谷歌 AI 重大公告回顾：Gemini、NotebookLM 等</a><br>本文回顾了谷歌 2024 年最重要的 AI 新闻，包括 Gemini、NotebookLM、搜索等方面的进展。文章总结了全年各个月份的重大 AI 新闻，涵盖了 Gemini 的多个版本发布、NotebookLM 的更新、AI 在 Google 搜索、Pixel、Chrome 等产品中的应用，以及 AI 在医疗、教育和可持续发展等领域的应用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database designed to scale.</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/shopspring/decimal">shopspring/decimal</a><br>Arbitrary-precision fixed-point decimal numbers in Go</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/apache/incubator-answer">apache/incubator-answer</a><br>A Q&amp;A platform software for teams at any scales. Whether it&#39;s a community forum, help center, or knowledge management platform, you can always count on Apache Answer.</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>An all-in-one observability solution which aims to combine the advantages of Prometheus and Grafana. It manages alert rules and visualizes metrics, logs, traces in a beautiful web UI.</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Simple, reliable, and efficient distributed task queue in Go</p>
+
+<p><a href="https://github.com/getkin/kin-openapi">getkin/kin-openapi</a><br>OpenAPI 3.0 (and Swagger v2) implementation for Go (parsing, converting, validation, and more)</p>
+
+<p><a href="https://github.com/cashapp/cloner">cashapp/cloner</a><br></p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Mistral, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

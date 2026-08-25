@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260309.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260309</span>
+</p>
+<p>每日一谚：The best performance improvement is the transition from the nonworking state to the working state.  — John Ousterhout </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/09/hardcore-review-13-languages-ai-favorite-go-performance">硬核测评：哪门语言最受 AI 宠爱？13 种语言横向对比，Go 表现如何？</a><br>近日，Ruby 核心提交者 Yusuke Endoh（@mame）发布了一份名为 ai-coding-lang-bench 的硬核定量测评报告。他使用 Claude Code（Opus 4.6 模型）对 13 种主流编程语言进行了系统性横向对比。 在这场涵盖了动态语言、静态语言和函数式语言的混战中，Go 语言的表现究竟如何？是力压群雄，还是黯然失色？那些备受人类推崇的静态 类型系统，在 AI 面前是否成了累赘？</p> 
+
+<p><a href="https://tonybai.com/2026/03/07/why-go-is-the-best-language-for-ai-agents">AI 时代的新王座：为什么说 Go 可能是开发 AI Agent 的最佳语言？</a><br>随着 AI 应用从模型训练（Training）走向自主智能体（Agents）和复杂的工程落地，基础设施层的语言选型正在悄然发生变化。近日，开 源数据编排工具 Bruin 的作者发表了一篇题为《Go 是开发 AI Agents 的最佳语言》的文章，在 Hacker News 上引发了数百条跨语言阵营的激烈辩论</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/LxAjqgeTwy5TYB1ss_-nKA">【AI 智能体时代的软件工程】05 免费的架构委员会：零社交成本的“魔鬼代言人”</a><br>今天，我们将解锁 AI 队友的另一项降维打击能力——利用它广博的跨领域知识库，扮演“虚拟架构委员会”，进行零社交成本的无情挑刺。 我们将学习两个极具价值的人机协作设计模式：“角色投影（Role Casting）” 和 “魔鬼代言人（Devil&#39;s Advocate）”。 </p> 
+
+<p><a href="https://tonybai.com/2026/03/08/her-power-in-code-pioneers-to-ai-era">从第一位程序员到 AI 时代的领航者：代码世界里的“她”力量</a><br>随着软件产业的爆炸式增长，薪资与地位水涨船高，女性在科技行业的比例却开始出现诡异的下滑，她们的名字也逐渐被隐藏在庞大服务器 的阴影之中。 今天是 3 月 8 日国际妇女节。在这个特殊的日子里，让我们暂时停下手中正在 Review 的代码，去擦拭掉历史上的偏见灰尘。我们要重新认识那 些在计算机科学发展史上立下不朽丰碑的女性先驱，看看当今站在技术浪潮之巅的领航者，并探讨在汹涌而来的 AI 时代，“巾帼力量”为何比以往 任何时候都更加不可或缺。</p> 
+
+<p><a href="https://tonybai.com/2026/03/09/a-decade-of-docker-containers">Docker 的十年：重塑云原生基础设施的“底层炼金术”</a><br>近日，Docker 领域的三位重量级人物（Anil Madhavapeddy, David J. Scott, Justin Cormack）在ACM通信上联合发表了万字长文《A Decade of Docker Containers》，首次全景式披露了 Docker 十年来的核心技术挑战 与架构演进。 </p> 
+
+<p><a href="https://tonybai.com/2026/03/07/breaking-curse-of-knowledge-architect-reflection-openclaw">打破“知识诅咒”：资深架构师在 OpenClaw 浪潮中的掉队与反思</a><br>那些没有深厚技术包袱的跨界人士、产品经理、甚至是刚刚入门的初级开发者，往往比资深的架构师、高级程序员更能放开手脚。他们不仅用 AI 快速搭建出了令人拍案叫绝的应用，而且玩法百出；相反，那些拥有十几年专业知识的 IT 专家们，却在这场浪潮中显得迟疑、挑剔，甚至有些“滞后”。 为什么会这样？难道多年的专业训练，在 AI 时代反而成了一种负担？</p> 
+
+<p><a href="https://rednafi.com/go/context-cancellation-cause">Go context 是什么取消的？</a><br>介绍 Go 1.20 的 WithCancelCause 和 Go 1.21 的 WithTimeoutCause 如何让你为 context 取消附加原因，以及手动取消和标准库模式中可能遇到的陷阱，以覆盖所有路径。</p> 
+
+<p><a href="https://lattice-substrate.github.io/blog/2026/02/26/strict-rfc8259-json-parser">你的JSON解析器不拒绝什么：用Go构建一个严格的RFC 8259解析器</a><br>本文介绍了一个用Go语言构建的严格JSON解析器，它强制执行RFC 8259（以及RFC 7493/8785）的所有约束。与Go的encoding/json等通用解析器不同，此解析器会拒绝不符合严格规范的输入，例如无效的Unicode代理对、非字符、逃逸解码后的重复键、以及超出七项资源限制的输入。文章深入探讨了实现严格性所需的关键设计，包括UTF-8验证、数字语法的四层强制（拒绝前导零、缺失小数位、负零、溢出/下溢）、字符串中的代理对处理、以及基于解码后字符串的重复键检测，以确保生成确定性的规范形式。</p> 
+
+<p><a href="https://niketpatel.com/essays/why-go-cant-try">Go 为什么不能使用 try</a><br>Go 拒绝添加 try 关键字并非因为它喜欢样板代码。文章深入分析了 Go 的 error 接口的本质以及 Zig 错误处理模型的优势，指出 Go 无法引入类似 try 的机制，是因为这需要对其核心的 error 类型进行根本性的、会破坏现有代码的重构。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.joshsoftware.com/2026/03/09/life-before-agenticai-a-story-of-spreadsheets-and-sleepless-nights/">AgenticAI 出现之前的生活：一个关于电子表格和不眠之夜的故事</a><br>文章讲述了在引入 AgenticAI（特别是 CrewAI 框架）之前，金融交易场景中依赖于复杂、易出错的 Excel 电子表格进行风险计算和交易检查所带来的混乱和压力。作者描述了一个典型的早晨，一个被破坏的公式导致系统运行过时逻辑，引发了恐慌和潜在的财务损失。随后，文章介绍了 CrewAI 如何通过构建一个由专业 AI 代理（如错误分析器、解决方案评估器、代码修复器和 QA 代理）组成的“团队”来解决这个问题。这个基于 Python 的框架实现了自动化的、协作式的多步骤任务处理，特别是用于主动检测和修复系统错误。文章详细介绍了该自动化流程的四个核心阶段（分析、评估、实施和测试），并总结了引入 AgenticAI 后，运维工作从手动、基于阈值的脚本转变为智能、自适应的自动化管道，显著提高了可靠性并减少了人工负担。</p>
+
+<p><a href="http://antirez.com/news/162">GNU 与 AI 重实现</a><br>作者反思了当前人们对 AI 重写现有软件项目公平性的抗议，并将其与 90 年代 GNU 项目重实现 UNIX 用户空间的行为进行对比。他回顾了理查德·斯托曼（Richard Stallman）当年要求以独特、可识别的方式重写工具以规避版权风险的策略，以及林纳斯·托瓦兹（Linus Torvalds）编写 Linux 内核的类似过程。文章深入探讨了版权法如何界定“受保护的表达”（即代码本身），并指出重实现只要不直接复制受保护的表达就是合法的。作者认为，AI 使得重实现的成本和速度发生了根本性变化，但核心问题在于软件本质的变化。他主张与其对抗 AI 驱动的自动化编程，不如建立新的思维模型并适应，强调法律应始终接受审视。最后，作者认为，既然软件发展依赖于在现有思想和代码之上进行增量创新，AI 加速了这一过程，这可能对开源软件产生积极影响，尤其是在对抗商业软件的臃肿和低效方面。</p>
+
+<p><a href="https://xeiaso.net/blog/2026/vibe-coding-sponsor-panel/">Vibe Coding 体验报告：制作赞助商面板</a><br>作者因即将进行手术，需要在手术前完成一个拖延已久的 GitHub 赞助商面板。他采用“Vibe Coding”（凭感觉/直觉编程）的方式，通过提供详细的上下文技能（如 Templ 语法、组件、HTMX 结合等）给 AI 模型，成功生成了原本在 Go 和 GraphQL 交互中遇到的技术难点的解决方案。文章总结了所用的技术栈，并表示虽然生成的代码不够优雅，但成功将功能付诸实践，这比追求完美而迟迟无法发布要重要。</p>
+
+<p><a href="https://garymarcus.substack.com/p/there-are-no-heroes-in-commercial">商业人工智能中没有英雄</a><br>作者Gary Marcus认为，Anthropic的CEO Dario Amodei在很多方面与OpenAI的Sam Altman并无太大区别。尽管Amodei在反对大规模监控和完全自主武器方面有过英勇的立场，但他在过度炒作、推迟实现AGI承诺、以及在AI安全和知识产权等问题上的做法受到了批评。文章引用了关于Anthropic的Claude模型可能在军事行动中造成平民伤亡的报道，并指出了AI代理（Agents）带来的失控和不可靠风险，暗示商业AI领域的领导者都在遵循类似的“炒作募资”剧本，缺乏真正的道德担当。</p>
+
+<p><a href="https://nesbitt.io/2026/03/08/if-it-quacks-like-a-package-manager.html">如果它像包管理器一样嘎嘎叫</a><br>许多工具摇摇晃晃地像包管理器，但没有学会游泳。作者分析了GitHub Actions、Ansible Galaxy、Terraform和Helm等工具，指出一旦工具发展出传递性依赖关系，无论是否承认，都会继承出一系列包管理器特有的问题：可复现性、供应链放大、覆盖和排除机制、可变引用、全树钉死以及完整性验证。如果一个工具具备这些特性，它就是一个包管理器，逃避不了供应链攻击的威胁。</p>
+
+<p><a href="https://sequoiacap.com/article/services-the-new-software">服务：新的软件 | 红杉资本</a><br>下一家价值1万亿美元的公司将是一家伪装成服务公司的软件公司。文章探讨了人工智能时代下，软件工程中“智能”与“判断”的区别，以及“副驾驶”（Copilot）和“自动驾驶”（Autopilot）模式的演变。作者认为，随着AI能力增强，能处理更多“智能”工作的“自动驾驶”模式将取代“副驾驶”模式，尤其在那些已有外包服务的领域（如保险经纪、会计审计、医疗收入周期、税务咨询等），因为替换外包合同比取代内部人员更顺畅。文章还给出了一个基于“智能vs判断”和“外包vs内部”的服务机会图谱。</p>
+
+<p><a href="https://eversole.dev/blog/we-automated-everything">我们自动化了一切，除了了解正在发生的事情</a><br>软件的构建成本急剧下降，但系统底层的复杂性却在增加。Kenneth Eversole 认为，行业正在经历一场身份危机，因为我们过度自动化了构建，却忽视了对系统的深入理解。随着 AI 代理数量的激增，这种理解上的差距正变得越来越危险。未来的成功属于那些能够跟上系统变化速度并真正理解其运作方式的人，而不是那些只关注交付速度的人。</p>
+
+<p><a href="https://www.dash0.com/knowledge/traces-vs-logs">分布式系统调试中的跟踪（Traces）与日志（Logs）对比</a><br>本文深入探讨了分布式系统调试中日志（Logs）和跟踪（Traces）的关键区别，分析了何时使用每种信号，以及如何将它们关联起来以实现有效的可观测性。日志记录特定时刻发生的离散事件和详细上下文，而跟踪则提供了一个单一请求跨服务边界移动的结构化、分层的流程图。文章强调了结构化日志和上下文传播（如Trace ID）的重要性，并总结了日志（适用于高基数数据和审计）和跟踪（适用于因果关系和延迟分析）各自的优势与局限性，最终倡导将两者结合，以实现快速的问题定位和可观测性实践。</p>
+
+<p><a href="https://www.tokyodev.com/articles/working-and-communicating-with-japanese-engineers">与日本工程师合作和沟通</a><br>在国际科技团队中工作会带来超越语言本身的沟通挑战。这里有一些我在日本工作十年所积累的实用建议，包括：让你的英语更易于理解、练习日语技术术语、制定新的会议策略，以及超越语言本身去理解文化差异。关键在于有意识地清晰表达、学习特定领域的日语词汇，并对不同沟通风格保持敏感。</p>
+
+<p><a href="https://alchemists.io/articles/htmx_infinite_scroll">htmx 无限滚动</a><br>本文介绍了如何使用 htmx 实现无限滚动（Infinite Scroll）功能，以替代传统的页面分页（Pagination）。文章首先指出了传统分页的不足，然后展示了如何结合搜索和无限滚动来提升用户体验。主要内容集中在如何在 Hanami 框架中实现后端逻辑（Action）、视图（View）和模板（Template），特别是如何利用 htmx 相关的配置（如 `hx-get`, `hx-trigger`, `hx-swap`）和 Ruby Pattern Matching 来构建一个健壮且简洁的解决方案。最终目标是减少 JavaScript 的使用，专注于 HTML，同时保持分页、浏览器历史等功能。
+
+关键的后端实现包括：注入 htmx 和 API 客户端依赖，使用 Pattern Matching 根据参数（query, page）调用 API 客户端获取数据，并在 htmx 请求时返回不带布局的 HTML 片段，以实现无缝的滚动加载效果。</p>
+
+<p><a href="https://medium.com/airtable-eng/rewriting-our-database-in-rust-f64e37a482ef">用Rust重写数据库</a><br></p>
+
+<p><a href="https://brandonvin.github.io/2026/03/04/ten-years-of-deploying-to-production.html">生产部署的十年历程</a><br>文章回顾了作者从2018年到2026年间关于生产环境部署方式的演变。2018年，作者所在的公司依赖一个专门的运维团队，部署流程缓慢且不灵活，数据科学团队发现的生产问题需要漫长的等待才能修复。作者通过学习Chef、建立内部PyPi仓库等方式，推动了流程的改进。到2026年，工作重心已转向平台工程，目标是加速开发并增强生产环境的弹性，强调开发者体验和快速的CI/CD流程。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/news/mozilla-firefox-security">与 Mozilla 合作以提高 Firefox 的安全性</a><br>AI 模型现在可以独立识别复杂软件中的高危漏洞。Anthropic 近期与 Mozilla 合作，Claude Opus 4.6 在两周内发现了 22 个漏洞，其中 14 个被 Mozilla 评为高危漏洞，几乎占 2025 年修复的所有高危 Firefox 漏洞的五分之一。这表明 AI 正在以极快的速度检测严重安全漏洞。文章还讨论了从模型评估到安全合作的转变，以及 AI 辅助的漏洞识别和修复的最佳实践，并强调了在 AI 漏洞利用能力提升之前，防御者应加速“发现-修复”流程的紧迫性。</p>
+
+<p><a href="https://kellysutton.com/2026/03/04/ai-retrospective-predictions.html">AI 回顾与预测</a><br>本文回顾了2020年代的AI热潮，并探讨了AI作为实现细节、工作加速器、同步/异步任务执行者的角色。作者预测AI将逐渐融入应用，减少直接的聊天界面依赖，并探讨了AI对SaaS和白领工作的影响，最后以电子表格的例子类比当前的创造性破坏。</p>
+
+<p><a href="https://dlants.me/ai-se.html">人工智能如何改变软件工程？</a><br>人工智能编码工具正在迅速改变软件工程的格局，使过去需要数天才能完成的任务现在只需数小时。然而，这些工具的不一致性和不可靠性带来了新的挑战。文章探讨了AI如何影响代码重写、类型系统的价值以及约束条件（如测试、规范和架构）的重要性。作者认为，强大的约束条件能让代码库更容易被AI改造，并且对软件工程的未来有深远影响。对于个人而言，AI是高方差的乘数，对已经擅长利用杠杆的工程师增益最大。对于组织而言，缺乏解决结构性问题的能力（如代码脆弱、单体架构）会阻碍AI生产力的实现。那些投资于重构代码库和实践以适应新现实的团队，将能更好地利用AI工具，并可能超越那些受结构性债务拖累的组织。</p>
+
+<p><a href="https://www.honest-broker.com/p/the-day-ny-publishing-lost-its-soul">纽约出版业失去灵魂的那一天</a><br>作者 Ted Gioia 探讨了纽约出版业的危机，认为其过度依赖少数畅销书和既有配方，导致书籍封面设计趋于雷同、内容缺乏创新和风险承担。他将这种现象追溯到 1990 年代末期出版业的兼并和对“大卖作”的痴迷，这扼杀了“中等销量作家”（midlist writer）的生存空间，并使文学文化陷入停滞。作者呼吁读者、独立书店、图书馆和独立评论家等独立文化力量，共同构建一个不受大型合并企业控制的、更健康的书籍文化生态系统。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Ed1s0nZ/CyberStrikeAI">Ed1s0nZ/CyberStrikeAI</a><br>CyberStrikeAI is an AI-native security testing platform built in Go. It integrates 100&#43; security tools, an intelligent orchestration engine, role-based testing with predefined security roles, a skills system with specialized testing skills, and comprehensive lifecycle management capabilities.</p>
+
+<p><a href="https://github.com/dlvhdr/gh-dash">dlvhdr/gh-dash</a><br>A rich terminal UI for GitHub that doesn&#39;t break your flow.</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/GopeedLab/gopeed">GopeedLab/gopeed</a><br>A modern download manager that supports all platforms. Built with Golang and Flutter.</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>An IPFS implementation in Go</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/steveyegge/beads">steveyegge/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/flyteorg/flyte">flyteorg/flyte</a><br>Scalable and flexible workflow orchestration platform that seamlessly unifies data, ML and analytics stacks.</p>
+
+<p><a href="https://github.com/TecharoHQ/anubis">TecharoHQ/anubis</a><br>Weighs the soul of incoming HTTP requests to stop AI crawlers</p>
+
+<p><a href="https://github.com/docker/docker-agent">docker/docker-agent</a><br>AI Agent Builder and Runtime by Docker Engineering</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

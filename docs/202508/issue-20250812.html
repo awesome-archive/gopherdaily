@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250812.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250812</span>
+</p>
+<p>每日一谚：Make the zero value useful </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/12/go-identity-crisis">Go的“身份危机”：当新Gopher试图将它变成他们最爱的语言</a><br>这个帖子像一块石头投入了平静的湖面，瞬间激起了数百条评论。这不仅仅是一场关于“增加什么功能”的技术讨论，它更像是一场关于 Go 语言“我是谁？”、“我从哪里来？”、“我要到哪里去？”的哲学辩论。 这，正是 Go 语言正在经历的一场深刻的“身份危机”。</p> 
+
+<p><a href="https://kohlschuetter.github.io/blog/posts/2025/08/11/jagors">使用 Go 和 FFM 在 Java 中实现更快的 Reed-Solomon 擦除编码</a><br>Backblaze 基于 Java 的 Reed-Solomon 擦除编码库是一项很棒的技术，但相对较慢。让我们添加一些优化的 Go，并获得巨大的加速。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/why-changing-ai-workflows-still-feels-like-duct-tape/">为什么改变 AI 工作流程仍然感觉像是用胶带粘合 | Docker</a><br>探讨 AI 工具的碎片化景观如何导致不稳定的工作流程，以及如何朝着可组合、可替换的 AI 基础设施迈进。</p>
+
+<p><a href="https://engineering.salesforce.com/how-salesforce-delivers-reliable-low-latency-ai-inference/">Salesforce 如何提供可靠的低延迟 AI 推理</a><br>了解 Salesforce 如何设计多层缓存系统，以消除 400 毫秒的延迟瓶颈，并实现亚毫秒级性能。</p>
+
+<p><a href="https://netflixtechblog.com/accelerating-video-quality-control-at-netflix-with-pixel-error-detection-47ef7af7ca2e">加速 Netflix 的视频质量控制，使用像素错误检测</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/08/12/pac-and-ai/">PaC 和 AI</a><br>在关于策略即代码的本系列文章的第三部分中，我们将探讨 PaC 与 AI 编码助手的交集。AI 编码工具已经从根本上改变了软件开发。 &#34;氛围编码&#34; 或基于聊天的编码，您要求 LLM 编写代码，然后将结果反馈给它并要求它在一个连续的循环中进行更改，这种情况相当普遍。但这带来了一个挑战； 由于开发团队面临着更大的压力，需要更快地编码，并且团队规模更小（基于人力），团队如何保持预期的安全性和质量水平？</p>
+
+<p><a href="https://engineering.fb.com/2025/08/11/security/federation-platform-privacy-waves-meta-distributes-compliance-tasks/">联邦平台和隐私浪潮：Meta 如何大规模分配合规相关任务</a><br>我们正在探索 Meta 的联邦平台，这是一套可扩展的工具，用于管理合规相关任务，以及我们的隐私浪潮，这是一种批量处理这些任务并确保问责制的方法。
+
+联邦平台和隐私浪潮共同创建了一种结构化、有效且可持续的方法来运营隐私工作，使 Meta 能够保护数十亿使用我们产品的用户的数据。
+
+鉴于其在隐私领域的成功，我们正在将这种方法扩展到其他领域，例如安全性和可访问性。</p>
+
+<p><a href="https://transactional.blog/blog/2025-nullbitmap-simd.html">NULL BITMAP on SIMD</a><br>这篇文章讨论了如何编写 SIMD 代码，重点介绍了将循环转换为并行版本。文章首先介绍了 SIMD 优化的简单例子，如 map() 和 reduce()，然后深入探讨了将看似串行的算法转化为并行算法的方法，比如解析整数。</p>
+
+<p><a href="https://www.openssh.com/pq.html">OpenSSH：后量子密码学</a><br>OpenSSH 支持多种被认为可以抵御量子计算机攻击的密码学密钥协商算法。 建议所有 SSH 连接都使用这些算法。
+
+OpenSSH 从 9.0 版本（2022 年）开始默认提供后量子密钥协商 (KexAlgorithms)，最初通过 sntrup761x25519-sha512 算法实现。 最近，在 OpenSSH 9.9 中，我们添加了第二个后量子密钥协商 mlkem768x25519-sha256，并在 OpenSSH 10.0 中将其设为默认方案。
+
+为了鼓励迁移到这些更强大的算法，OpenSSH 10.1 将在选择非后量子密钥协商方案时向用户发出警告，显示以下消息：
+
+** 警告：连接未使用后量子密钥交换算法。
+** 此会话可能容易受到“现在存储，稍后解密”攻击。
+** 可能需要升级服务器。 请参阅 https://openssh.com/pq.html
+
+此警告默认显示，但可以通过 ssh_config(5) 中的 WarnWeakCrypto 选项禁用。</p>
+
+<p><a href="https://opuslabs.substack.com/p/learn-reflect-apply-prepare">学习、反思、应用、准备</a><br>在如今这个沉迷于各种捷径、冲刺和一夜成名的世界里，我被一些更安静、更简单，而且，至少对我来说，更持久的东西所吸引：一种围绕四个动词建立的日常节奏。
+
+没有应用程序。没有仪表板。只是一个我每天都会回到的活生生的实验：
+
+学习。 反思。 应用。 准备。
+
+我还没有掌握它。 远非如此。 但我练习得越多，就越注意到这四个动词如何温和地塑造我的日子，尤其是在事情感觉混乱或不确定的时候。</p>
+
+<p><a href="https://smallcultfollowing.com/babysteps/blog/2025/07/31/rs-py-ts-trifecta">Rust、Python 和 TypeScript：新的三驾马车</a><br>作者认为，Rust、Python 和 TypeScript 将成为未来主导的编程语言（不包括移动市场）。文章探讨了 AI 编程对语言选择的影响，提出“以想法为导向的编程”概念。这种编程方式更注重项目背后的想法，将程序员的角色比作首席架构师，而 AI 工具是他们的助手。文章还讨论了类型系统、生态系统和软件包管理器在 AI 辅助编程中的重要性，以及语法细节和错误消息的重要性。最终，作者认为 LLMs 使得强大的工具更容易被使用，但同时也带来了一些新的挑战，例如如何培养年轻工程师的判断力。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.kilocode.ai/p/future-ai-spend-100k-per-dev">未来 AI 开发人员的账单每年将达到 10 万美元</a><br>代币增长表明未来 AI 开发人员的支出</p>
+
+<p><a href="https://middlelayer.substack.com/p/i-claude-is-the-drug-cursor-is-the">I: Claude Is the Drug, Cursor Is the Dealer</a><br>编码工具只是 AI 供应链战争中的一个前线</p>
+
+<p><a href="https://cameronwestland.com/it-s-not-10x-it-s-36x-this-is-what-it-looks-like-to-kill-a-usd30k-meeting-with-ai">不是 10 倍，是 36 倍 - 这就是用 AI 杀死一个 3 万美元会议的样子</a><br>我上个月取消了我们每周的分类会议。三个小时压缩到五分钟。但关键是——我花了六次失败的尝试才做到这一点。突破性的进展不是让 AI 更聪明，而是让任务更有条理。这就是情境工程的实际表现——混乱、迭代，并且侧重于约束而不是能力。</p>
+
+<p><a href="https://job-boards.greenhouse.io/xai/jobs/4378347007">AI 工程师 - 多模态理解</a><br>xAI 的使命是创建能够准确理解宇宙并帮助人类追求知识的 AI 系统。我们的团队规模小，积极性高，专注于卓越的工程。这个组织面向那些乐于挑战自我并在好奇心上茁壮成长的人。我们以扁平的组织结构运作。所有员工都应亲力亲为，直接为公司的使命做出贡献。领导力属于那些表现出主动性并始终追求卓越的人。职业道德和强大的优先级排序技能很重要。所有工程师都应具备强大的沟通技巧。他们应该能够简洁而准确地与他们的队友分享知识。</p>
+
+<p><a href="https://dwyer.co.za/static/claude-code-is-all-you-need.html">Claude Code 是你所需要的</a><br>我使用 Claude Code 进行工作、娱乐和作为文本编辑器的心得体会。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>A simple zero-config tool to make locally trusted development certificates with any names you&#39;d like.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/j3ssie/osmedeus">j3ssie/osmedeus</a><br>A Workflow Engine for Offensive Security</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.</p>
+
+<p><a href="https://github.com/go-dev-frame/sponge">go-dev-frame/sponge</a><br>A powerful and easy-to-use Go development framework that enables you to effortlessly build stable, reliable, and high-performance backend services with a &#34;low-code&#34; approach.</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>Simple and flexible tool for managing secrets</p>
+
+<p><a href="https://github.com/google/pprof">google/pprof</a><br>pprof is a tool for visualization and analysis of profiling data</p>
+
+<p><a href="https://github.com/openai/openai-go">openai/openai-go</a><br>The official Go library for the OpenAI API</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/minio/minio-go">minio/minio-go</a><br>MinIO Go client SDK for S3 compatible object storage</p>
+
+<p><a href="https://github.com/sashabaranov/go-openai">sashabaranov/go-openai</a><br>OpenAI ChatGPT, GPT-5, GPT-Image-1, Whisper API clients for Go</p>
+
+<p><a href="https://github.com/joho/godotenv">joho/godotenv</a><br>A Go port of Ruby&#39;s dotenv library (Loads environment variables from .env files)</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>Go library for accessing the GitHub v3 API</p>
+
+<p><a href="https://github.com/kubernetes-sigs/controller-runtime">kubernetes-sigs/controller-runtime</a><br>Repo for the controller-runtime subproject of kubebuilder (sig-apimachinery)</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

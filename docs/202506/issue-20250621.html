@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250621.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250621</span>
+</p>
+<p>每日一谚：Avoid tight coupling between modules </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/20/about-errors-join/">Go errors.Join：是“天赐之物”还是“潘多拉魔盒”？——深入错误聚合的适用场景与最佳实践</a><br>在Go 1.20 版本，标准库 errors 包更是带来了一个备受关注的新成员：errors.Join() 函数。这个函数允许我们将多个 error 值合并成一个单一的 error 值，并且合并后的错误依然可以通过 errors.Is 和 errors.As 进行检查。一时间，社区中对其评价不一：有人称之为“天赐之物”，认为它在特定场景下能极大提升代码表达力和用户体验；也有人持审慎态度，强调应坚守“快速失败 (Fail Fast)”的原则，避免滥用错误聚合。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-06-20-go-pprof-diffing">通过对比两个 Go profile 查找性能问题</a><br>本文介绍了如何通过对比两个 pprof Go profile 来调试棘手的性能问题。作者以 Doltgres 项目为例，讲述了如何利用 Go 的性能分析工具 pprof 和 -base 选项，找到一个导致性能下降 3 倍的隐藏 bug。这个 bug 位于 Database.tableInsensitive 函数中，由于一个硬编码的 true 值，导致该函数始终调用更昂贵的获取数据库模式和遍历的方法，从而影响性能。将该值改为 false 解决了性能问题，并提升了 Dolt 的基准测试性能。</p> 
+
+<p><a href="https://www.infoq.com/news/2025/06/docker-hardened-images/">Docker 发布强化版基础镜像</a><br>Docker 发布了 Docker 强化版镜像 (DHI)，这是一系列以安全为中心的基础镜像，可将漏洞减少高达 95%。这些最小化的镜像采用无发行版方法构建，消除了不必要的组件，提供自动修补和与现有 Dockerfile 的兼容性。DHI 非常适合受监管的环境，可增强软件供应链的安全性和透明性。</p> 
+
+<p><a href="https://blog.trailofbits.com/2025/06/17/unexpected-security-footguns-in-gos-parsers">Go解析器中意想不到的安全隐患</a><br>Go语言中的文件解析器包含一些意想不到的行为，这些行为可能导致严重的安全漏洞。本文探讨了Go语言中的JSON、XML和YAML解析器如何处理极端情况，以及这些情况如何反复导致生产系统中出现高影响安全问题。我们探讨了三个真实的攻击场景：处理/反序列化意外数据、利用解析器差异以及利用数据格式混淆。通过示例，我们演示了攻击者如何利用这些解析器行为绕过身份验证、规避授权控制以及窃取敏感数据。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/hash-join-improvements-in-tidb-8-5-part-1/">TiDB 8.5 中的哈希连接改进（第一部分）：无需调整即可实现高达 5 倍的加速</a><br>了解 TiDB 8.5 如何引入重新设计的哈希连接执行器，该执行器可将性能提高一倍，降低延迟并提高可扩展性。 此新引擎充分利用了现代硬件的多线程构建、矢量化探测和更高效的溢出策略。内部基准测试表明，它使常见连接工作负载的性能提高了一倍，降低了延迟，并在内存限制严格的情况下提高了可预测性。</p>
+
+<p><a href="https://blog.dropbox.com/topics/work-culture/survey-productivity-myth-why-doing-less-leads-to-more-impact">The productivity myth: why doing less leads to more impact</a><br></p>
+
+<p><a href="https://engineering.salesforce.com/inside-data-clouds-open-lakehouse-4m-tables-and-50pb-powered-by-apache-iceberg/">Salesforce 数据云开放式湖仓：由 Apache Iceberg 驱动 - 400 万张表和 50PB 数据</a><br>了解 Salesforce 如何解决遗留架构限制，重新设计湖仓以支持 400 万张 Iceberg 表和 50 PB 的数据。文章介绍了 Salesforce 如何应对架构限制、大规模元数据扩展问题以及实时 AI 的需求，最终重新设计了湖仓，使其能够支持 400 万张 Iceberg 表、50 PB 的数据以及 Agentforce 等高级用例。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/06/20/smart-uses-of-imagepullsecrets-in-kubernetes-cluster-with-serviceaccounts/">Kubernetes集群中使用ServiceAccount的imagePullSecrets技巧</a><br>如今Kubernetes无处不在，容器镜像也随处可见。出于诸多原因（其中安全是最重要的原因），从私有注册表获取镜像已成为常态。本文首先回顾了kubectl create deployment nginx –image nginx命令背后的过程，然后解释了在私有注册表中使用imagePullSecrets进行镜像拉取的必要性及工作原理，并重点介绍了一种更便捷的方法：将imagePullSecrets附加到serviceaccounts，从而在所有使用该serviceaccount的Kubernetes对象（如Pods）中自动填充imagePullSecrets，避免了手动修改大量YAML文件带来的麻烦。文章还提供了解决ImagePullBackOff问题的技巧。</p>
+
+<p><a href="https://blog.cloudflare.com/sqlite-in-durable-objects">每个持久化对象中实现零延迟 SQLite 存储</a><br>传统的云存储固有地很慢，因为它通过网络访问并且必须同步许多客户端。但是，如果我们能够将应用程序代码深入到存储层，以便您的代码在数据存储的位置运行呢？带有 SQLite 的持久化对象就是这样做的。</p>
+
+<p><a href="https://brooker.co.za/blog/2025/06/20/career.html">职业建议，或者类似的东西</a><br>这篇博文建议避免消极的群体。作者认为，抱怨和消极的社区虽然舒适，但却有害于职业发展和身心健康。他建议专注于积极方面，并寻找积极向上的社区，从那些你钦佩的人身上学习。文中还强调了维护积极社区的重要性，以及积极行动的重要性，而不是仅仅抱怨。</p>
+
+<p><a href="https://www.uber.com/blog/evolution-of-ubers-search-platform"></a><br></p>
+
+<p><a href="https://www.uber.com/en-IN/blog/making-ubers-experiment-evaluation-engine-100x-faster"></a><br></p>
+
+<p><a href="https://medium.com/@arivermar/demistifying-istio-gateways-762d37070431">Istio 网关详解</a><br>本文介绍 Istio 的 Ingress 和 Egress 流量使用网关，并探讨一些场景。首先介绍了如何部署网关，以及网关的理论知识，包括其作为 Envoy 代理在网格边缘的作用。然后，文章通过 HTTP Ingress、HTTPS Ingress、HTTP Egress 和 HTTPS Egress 四个场景，详细讲解了如何使用 Gateway 和 VirtualService 配置 Istio 网关，以及如何使用 ServiceEntry 允许出站流量访问网格外端点。最后，文章总结了 Istio 网关的强大功能，并指出其主要作用是确保所有流量通过系统的单点，从而方便进行流量追踪。</p>
+
+<p><a href="https://catern.com/private.html">public/protected/private 是个不必要的特性</a><br>本文作者认为，在面向对象编程中，public、protected 和 private 访问修饰符是一个不必要的特性。作者以汽车类和车辆接口为例，说明了接口和继承在限制子类访问父类内部成员方面存在不足。作者认为，通过接口就能实现对类内部成员的访问控制，访问修饰符只是重复了接口的功能，是不必要的冗余。文章还追溯了访问修饰符的历史，指出其在Simula语言中的出现是由于当时的设计者没有充分认识到接口机制已足够实现类似的功能。作者建议，为了代码的简洁性和清晰性，应该尽量避免使用访问修饰符，而是充分利用接口来实现类的封装和访问控制。如果类不允许被继承，或者类的构造函数受到限制，那么访问修饰符就完全没有必要。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/21/faq-for-your-brain-on-chatgpt/#atom-everything">摘录自《ChatGPT 对你大脑的影响》的常见问题解答</a><br>大型语言模型 (LLM) 本质上是否会让我们“变笨”？
+不会！请不要使用诸如“愚蠢”、“笨”、“脑萎缩”、“有害”、“损坏”之类的词语。…这篇文章摘录自《ChatGPT 对你大脑的影响》的常见问题解答部分，该论文受到了许多低质量报道的关注。</p>
+
+<p><a href="https://thenewstack.io/ai-reliability-engineering-welcome-to-the-third-age-of-sre"></a><br></p>
+
+<p><a href="https://www.codelink.io/blog/post/ai-system-development-llm-rag-ai-workflow-agent">AI系统开发：LLM → RAG → AI工作流 → AI智能体 | CodeLink</a><br>对LLM、RAG和AI智能体感到困惑？我们通过一个熟悉的简历筛选示例，分解了AI系统设计的全貌，展示了每个层级能力（和复杂性）的飞跃。文章探讨了大型语言模型（LLM）的最新发展，并讨论了AI系统的关键概念，包括纯LLM、增强型生成（RAG）、工具使用和AI工作流以及AI智能体，并以简历筛选应用为例，说明了不同系统在能力和复杂性上的差异，最后总结出并非每个系统都需要AI智能体，以及应该关注可靠性而非能力。</p>
+
+<p><a href="https://thenewstack.io/github-ceo-on-why-well-still-need-human-programmers"></a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/php/frankenphp">php/frankenphp</a><br>🧟 The modern PHP app server</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/hashicorp/hcl">hashicorp/hcl</a><br>HCL is the HashiCorp configuration language.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/psviderski/uncloud">psviderski/uncloud</a><br>A lightweight tool for deploying and managing containerised applications across a network of Docker hosts. Bridging the gap between Docker and Kubernetes ✨</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/krillinai/KlicStudio">krillinai/KlicStudio</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, cross-DC active-active replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding.</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>An open-source runtime for composable workflows. Great for AI agents and CI/CD.</p>
+
+<p><a href="https://github.com/Ingenimax/agent-sdk-go">Ingenimax/agent-sdk-go</a><br></p>
+
+<p><a href="https://github.com/bytebase/bytebase">bytebase/bytebase</a><br>World&#39;s most advanced database DevSecOps solution for Developer, Security, DBA and Platform Engineering teams. The GitHub/GitLab for database DevSecOps.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

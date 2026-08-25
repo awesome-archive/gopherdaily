@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240804.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-04</span>
+</p>
+<p>每日一谚：Be explicit rather than implicit </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/08/04/gopherdaily-add-feed-support/">Gopher Daily支持Feed订阅</a><br></p> 
+
+<p><a href="https://colobu.com/2024/08/04/beetracer/">使用eBPF编写系统调用跟踪器</a><br>本文介绍了使用eBPF编写系统调用跟踪器的方法,包括先决条件包括系统调用的熟悉、eBPF的基本了解、C语言基础和底层编程的熟悉,以及如何编写eBpf程序。</p> 
+
+<p><a href="https://cerberus-secures.medium.com/creating-a-postgresql-orm-in-go-e080dfadbcb3">为 Go 打造一个可扩展、易于维护的数据库层</a><br>本文提供了有关如何使用 SQLC 为 Go 创建健壮且可维护的数据库层的详细指南，包括使用命令行工具和 Docker 创建 Go 项目、数据库设置、迁移和查询。</p> 
+
+<p><a href="https://kovalevsky.io/full-introduction-to-golang-with-test-driven-development-part-1/">通过测试驱动开发全面介绍 Golang。第一部分</a><br>该文档提供了有关如何使用测试驱动开发 （TDD） 编写 Go 程序的详细指南，并解释了 Go 程序的结构、函数的概念以及如何在函数中测试和传递代码。</p> 
+
+<p><a href="https://github.com/xvzc/SpoofDPI/blob/main/readme_zh-cn.md">规避深度包检测</a><br>本文介绍了SpoofDPI的安装和使用方法,包括如何使用该工具规避深度包检测,如何使用不同的语言和版本,以及如何使用其他 VPN扩展来规避这种检测。</p> 
+
+<p><a href="https://blog.nonstopio.com/go-v-s-tinygo-which-one-is-the-best-for-you-73cac3c7849e">Go vs s TinyGo：哪一个最适合您？</a><br>Arnold Parge 比较了 Go 和 TinyGo，强调了 TinyGo 在二进制大小、资源效率以及与嵌入式系统和 WebAssembly 的兼容性方面的优势，同时指出了它在某些领域的局限性，如 Cgo 支持和垃圾收集。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://thenewstack.io/how-to-manage-linux-log-services/">如何管理 Linux 日志服务</a><br>新堆栈提供了有关如何管理 Linux 日志服务的全面指南，包括使用 syslog 和 journald 等服务，并提供了管理这些服务的实用命令示例，包括用于管理日志数据的 journald 命令。</p>
+
+<p><a href="https://www.uber.com/en-GB/blog/upgrading-m3db/">Upgrading M3DB from v1.1 to v1.5</a><br>&#34;Not acceptable&#34; is a negative response to the statement &#34;Not acceptable&#34;.</p>
+
+<p><a href="https://www.uber.com/en-GB/blog/modernizing-logging-with-clp-ii/">Modernizing Logging at Uber with CLP (Part II)</a><br>&#34;Not acceptable&#34; is a negative response to the statement &#34;Not acceptable&#34;.</p>
+
+<p><a href="https://medium.com/@sriharimalapati/effortless-dependency-updates-for-kubernetes-projects-06486ffc17ac">轻松更新 Kubernetes 项目的依赖项</a><br>本文提供了有关如何使用 dependabot、Renovate、Helm 和 flux 等工具自动执行 Kubernetes 项目的依赖项更新的综合指南，以确保安全性、效率和兼容性。</p>
+
+<p><a href="https://medium.com/@jinvishal2011/openobserve-affordable-real-time-observability-and-analytics-kubernets-111b931c8542">OpenObserve：经济实惠的实时可观测性和分析Kubernetes</a><br>本文介绍了 Openobserve，这是一种用于 Kubernetes 中实时分析和指标收集的开源解决方案，并提供了在 Kubernetes 集群中运行它的安装步骤，重点介绍了其特性、成本效益和易用性。</p>
+
+<p><a href="https://jjr8888.medium.com/terse-notes-fundamentals-of-database-systems-part-8-1acd8710d1db">简明扼要 — 数据库系统基础，第 8 部分</a><br>该文件讨论了关系代数和微积分的概念、它们的运算以及它们的异同，重点介绍了元组和域关系演算的使用，以及存在量词和通用量词的概念。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/xvzc/SpoofDPI">xvzc/SpoofDPI</a><br>一个用Go编写的简单快速的反深度包检测工具</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>1 个文件中的开源实时后端</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，穿透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/KindlingProject/kindling">KindlingProject/kindling</a><br>基于eBPF的云原生监控工具</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>使用 Go 创建美观的应用程序</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>用于去中心化网络🌈💎✨的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 用 Go 编写的快速简单的视频下载库和 CLI 工具</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>乐观是以太坊，规模化。</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和 2FA 的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>一个用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>以太坊协议的 Go 实现</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>面向 IT、安全和基础架构团队的开源平台。（Linux、macOS、Chrome、Windows、云、数据中心）</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区管理的域列表。为 V2Ray 生成geosite.dat。</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>又一个酸奶 - 一个用 Go 编写的 AUR 助手</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web 文件浏览器</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>轻量级 Kubernetes</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>面向开发人员的测试生成。为您的应用程序生成实际有效的测试和存根！</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>快速、安全、高效的备份程序</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/quii/learn-go-with-tests">quii/learn-go-with-tests</a><br>通过测试驱动开发学习 Go</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>基于简单 YAML 的 DSL 的快速可定制漏洞扫描器。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

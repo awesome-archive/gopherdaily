@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250112.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250112</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://cekrem.github.io/posts/clean-architecture-and-plugins-in-go">Go语言插件实现的整洁架构：依赖倒置的实践示例</a><br>本文探讨了 Go 语言的插件系统如何实现依赖倒置以及其他 SOLID 原则。文章以一个简单的转换流水线项目为例，展示了如何使用 Go 的插件系统构建一个灵活且健壮的系统，并解释了如何将这种模式应用于 API 开发。</p> 
+
+<p><a href="https://philipotoole.com/how-is-rqlite-tested">rqlite的测试方法</a><br>rqlite 是一个轻量级、开源的分布式关系数据库，构建于 SQLite 和 Raft 之上。文章探讨了 rqlite 的测试策略，它遵循测试金字塔原则，优先进行单元测试，然后是集成测试，最后是少量端到端测试。单元测试涵盖了隔离的组件，系统级测试关注 Raft 共识模块和 SQLite 之间的交互，端到端测试则作为冒烟测试，验证系统的基本功能。文章还讨论了性能测试，以及在 rqlite 测试过程中学到的经验教训，例如：从小处着手、谨慎地增加更高层次的测试、适应和迭代，以及效率至关重要等。rqlite 的健壮性证明了其严谨的测试策略，十年来，用户报告的生产环境问题很少。保持测试的简洁性将仍然是其设计理念的基石。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-go-error-handling-best-practices-for-robust-applications-53a0">掌握Go错误处理：构建健壮应用程序的最佳实践</a><br>本文探讨了在 Go 语言中编写可靠且易于维护的软件时，错误处理的关键方面。文章涵盖了 Go 错误处理的关键概念和最佳实践，包括自定义错误类型、错误包装以及可靠软件的稳健策略。学习如何创建自定义错误类型、使用错误包装以及实现可靠软件的强大策略，从而提升你的 Go 编程技能。</p> 
+
+<p><a href="https://medium.com/@sanhdoan/chain-of-responsibility-pattern-elegant-request-handling-in-go-62f9c54fee1a">责任链模式：Go 语言中优雅的请求处理</a><br>随着软件系统复杂性的增加，通过单一的整体处理程序来处理请求变得越来越具有挑战性。责任链模式是一种优雅的解决方案，它允许您沿处理程序链传递请求，直到其中一个处理程序处理它。让我们深入探讨这种模式如何使您的代码更灵活、更易于维护。</p> 
+
+<p><a href="https://dev.to/rezmoss/understanding-gos-netnetip-addr-type-a-deep-dive-17-j7b">深入理解Go的net/netip Addr类型</a><br>本文深入探讨了 Go 1.18 中引入的 net/netip 包中的 Addr 类型，它提供了一种比旧的 net.IP 类型更健壮、更高效的方式来处理 IP 地址。Addr 类型是值类型，不可变，并且始终表示有效的 IP 地址。文章涵盖了 Addr 类型的创建、使用方法，以及一些高级用法，例如地址分类、区域处理（IPv6 范围 ID）等，并提供了一个实际的 IP 地址过滤器的示例。此外，文章还比较了 Addr 类型与 net.IP 类型的性能差异，并给出了一些常见的注意事项和技巧。</p> 
+
+<p><a href="https://www.cs.cornell.edu/~asampson/blog/flattening.html">扁平化AST（以及其他编译器数据结构）</a><br>本文介绍了数据结构扁平化，这是 arena 分配的一种特例，非常适合编程语言实现。我们构建了一个简单的解释器两次，一次是普通的方式，一次是扁平化的方式，结果表明，一些相当机械的代码更改可以使速度提高 2.4 倍。除了性能之外，扁平化还带来了一些人体工程学方面的优势。</p> 
+
+<p><a href="https://dev.to/sadanand_dodawadakar_10b2/generics-in-go-transforming-code-reusability-4nm6">Go泛型：代码可重用性变革</a><br>Go 1.18中引入的泛型彻底改变了编写可重用且类型安全的代码的方式。泛型带来了灵活性和强大功能，同时保持了Go的简洁性。然而，理解泛型的细微之处、优势以及泛型与传统方法（如interface{}）的比较需要仔细研究。本文探讨了泛型的复杂性，深入研究了约束，比较了泛型和interface{}，并演示了它们的实际应用。我们还将讨论性能考虑和二进制大小的影响。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://transactional.blog/sqlite/analyze.html">SQLite：ANALYZE</a><br>本文档介绍了SQLite数据库中的ANALYZE命令的语法、语义和代码生成。ANALYZE命令用于填充sqlite_stat*表，这些表包含数据库中表和索引的统计信息，以优化查询性能。文章详细解释了sqlite_stat1表的结构和含义，并讨论了在不同情况下（例如，表是否具有主键，是否使用rowid）ANALYZE命令的行为。此外，文章还描述了与ANALYZE相关的三个函数：stat_init()、stat_push()和stat_get()，并列出了实现ANALYZE功能的计划，包括所需的支持和测试。</p>
+
+<p><a href="https://arjunsreedharan.org/post/148675821737/memory-allocators-101-write-a-simple-memory">内存分配器 101 - 编写一个简单的内存分配器</a><br>本文介绍了用 C 语言编写一个简单的内存分配器。我们将实现 malloc()、calloc()、realloc() 和 free() 函数。这是一篇初级文章，因此我不会详细解释每一个细节。这个内存分配器不会很快且高效，我们不会调整分配的内存以与页面边界对齐，但我们将构建一个有效的内存分配器。就是这样。</p>
+
+<p><a href="https://tautvilas.medium.com/decentralized-syndication-the-missing-internet-protocol-209cb7bd6341">去中心化联合分发——缺失的互联网协议</a><br>互联网天生就是去中心化的。它的诞生并非一蹴而就，而是分阶段进行的。新的协议建立在旧协议之上，每个新协议都扩展和改进了全球网络的功能。TCP/IP协议诞生于20世纪70年代，然后是20世纪80年代的SMTP和DNS。20世纪90年代，我们迎来了可能是最著名的HTTP协议，它带来了网络的视觉体验。所有这些核心协议的建立都考虑到了去中心化的互联网。文章探讨了RSS、Bluesky以及作者提出的RSDS（真正简单的去中心化联合分发）协议，分析了其优缺点，并提出了一个更可扩展、更去中心化的互联网内容分发方案。</p>
+
+<p><a href="https://chshersh.com/blog/2025-01-06-the-most-elegant-configuration-language.html">最优雅的配置语言</a><br>本文介绍了一种名为 CCL（Categorical Configuration Language）的极简配置语言，其核心思想是基于范畴论，只使用键值对，并通过巧妙的设计支持列表、注释、分段、多行字符串以及与其他配置语言的集成。CCL 的简洁性体现在它只做最必要的事情，将复杂的逻辑留给使用者，从而避免了因功能过多而导致的测试成本过高和潜在的错误。文章还深入探讨了 CCL 在数学上的抽象，例如半群、幺半群和幺半群同态，以及如何利用这些抽象来优化配置的组合和解析。</p>
+
+<p><a href="https://netflixtechblog.com/part-2-a-survey-of-analytics-engineering-work-at-netflix-4f1f53b4ab0f">第二部分：Netflix 分析工程工作的调查</a><br>本文是多部分系列文章的第二部分，分享了 Netflix 分析工程工作的广度，最近作为我们年度内部分析工程会议的一部分发表。本文重点介绍了一些令人兴奋的分析业务应用，在最后一篇文章中，我们将深入探讨技术工艺的各个方面。</p>
+
+<p><a href="https://nochlin.com/blog/variable-increment-counting-bloom-filter">变增量计数布隆过滤器的工作原理</a><br>本文深入探讨了如何在概率数据结构中使用数学属性来代替显式状态跟踪——以变增量计数布隆过滤器为例。布隆过滤器是一种优雅的概率数据结构，用于测试元素是否在一个集合中。计数布隆过滤器（CBF）通过用小的计数器替换每个位来解决删除问题。变增量 CBF 通过消除计数器字段来优化 Bh-CBF，从而将内存使用量减少了一半，但代价是增加了误报率。文章详细解释了 Bh 序列的概念以及如何在 VI-CBF 中使用它们来提高效率。</p>
+
+<p><a href="https://netflixtechblog.com/seeing-through-hardware-counters-a-journey-to-threefold-performance-increase-2721924a2822">透过硬件计数器：迈向三倍性能提升的旅程</a><br>Netflix 技术博客文章，讲述了将 Java 微服务迁移到更大规模的 AWS 实例后，性能提升远低于预期的案例。通过使用性能监控计数器 (PMC) 和 Intel vTune 进行微架构分析，他们发现了由于“伪共享”和“真共享”导致的 JVM 本地代码瓶颈。最终，通过简单的代码修改，他们实现了 3.5 倍的吞吐量提升。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jan/12/generative-ai-the-power-and-the-glory/#atom-everything">生成式 AI——力量与荣耀</a><br>迈克尔·利布赖希为彭博新能源财经撰写了一份关于生成式 AI 的现状、能源消耗和数据中心增长的史诗般报告。作者从阅读这篇报告中获益良多，并推荐给所有对 AI 工具能源影响感兴趣的人。报告中的一些要点包括：数据中心电力消耗的预测并非首次出现；AI 基础设施的预期支出需要巨额资金；新一代 AI 训练数据中心对电力需求巨大；英伟达声称取得了巨大的能效提升；到 2030 年，全球额外需求将达到 45GW；谷歌、微软、Meta 和亚马逊都有净零排放目标；埃隆·马斯克在孟菲斯的 10 万 GPU 数据中心目前使用天然气发电；2023 年全球新增电力产能的 91% 来自风能和太阳能。作者认为，科技巨头最终会发现，为 AI 数据中心供电的最佳方式是通过传统方式，并与当地社区合作。报告的结论总体上比较乐观。</p>
+
+<p><a href="https://research.google/blog/a-decoder-only-foundation-model-for-time-series-forecasting">用于时间序列预测的仅解码器基础模型</a><br>谷歌研究人员 Rajat Sen 和 Yichen Zhou 发布了一篇关于 TimesFM 的博文，TimesFM 是一种仅解码器基础模型，经过预训练，可在各种公共基准测试中实现令人印象深刻的零样本性能。该模型已在 HuggingFace 和 GitHub 上发布。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/HavocFramework/Havoc">HavocFramework/Havoc</a><br>The Havoc Framework</p>
+
+<p><a href="https://github.com/WireGuard/wireguard-go">WireGuard/wireguard-go</a><br>Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 Top-Rated Web-Based Linux Server Management Tool. 1Panel features an intuitive web interface that seamlessly integrates server management and monitoring, container management, database administration, website management, system backup and restoration, and more.</p>
+
+<p><a href="https://github.com/encoredev/encore">encoredev/encore</a><br>Open Source Development Platform for building robust type-safe distributed systems with declarative infrastructure</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/dlvhdr/gh-dash">dlvhdr/gh-dash</a><br>A beautiful CLI dashboard for GitHub 🚀</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/icereed/paperless-gpt">icereed/paperless-gpt</a><br>Use LLMs and LLM Vision (OCR) to handle paperless-ngx - Document Digitalization powered by AI</p>
+
+<p><a href="https://github.com/apache/answer">apache/answer</a><br>A Q&amp;A platform software for teams at any scales. Whether it&#39;s a community forum, help center, or knowledge management platform, you can always count on Apache Answer.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

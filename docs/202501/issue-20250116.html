@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250116.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250116</span>
+</p>
+<p>每日一谚：Lead with context, end with options, and always close with an error </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@linz07m/how-to-write-go-part-i-what-uber-teaches-us-0e6919b27103">如何编写Go代码：来自Uber的经验</a><br>每一行代码都由作者负责，使其易于维护、可读且无错误。对于每种编程语言，都会定义许多标准和规则，以确保清晰度和整洁性。在 Uber，Prashant Varanasi 和 Simon Newton 创建了一个 Go 样式指南，以帮助他们的同事快速掌握这门语言。本文将探讨 Uber 在编写高效 Go 代码时遵循的一些标准，并了解如何将其应用到我们的工作流程中。</p> 
+
+<p><a href="https://levelup.gitconnected.com/addressing-gos-compiled-binary-filesize-5f39a540ffac">解决 Go 编译后的二进制文件大小问题</a><br>Go 编译后的二进制文件通常很大。本文探讨了 Go 二进制文件大小过大的原因，并提供了一些优化方法，例如去除调试信息和使用打包工具，以减小文件大小，特别是在安全领域中，减小Payload大小至关重要。</p> 
+
+<p><a href="https://nyadgar.com/posts/go-interfaces-why-how-and-when">Go 接口：为什么、如何以及何时使用</a><br>Go 语言的接口是一个强大的概念，它允许我们以更抽象的方式表达代码。接口使我们能够推断过程的高级逻辑，而无需深入细节。本文讨论了接口可以对代码产生积极影响的情况，并解释了接口的用途以及应避免的误区。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/01/16/the-goland-2025-1-early-access-program-has-started/">GoLand 2025.1抢先体验计划已启动！</a><br>GoLand 2025.1 的抢先体验计划 (EAP) 现已开放！在本版本周期中，我们专注于增强 Go 语言支持、改进代码分析和提升稳定性，为所有 Gophers 提供无缝的开发体验。第一个 EAP 版本可以通过 Toolbox App、我们的网站或 Ubuntu 的 snap 包下载。您也可以在 GoLand 内部通过选择“设置 | 外观与行为 | 系统设置 | 更新”中的“检查 IDE 的抢先体验计划更新”来获取它。</p> 
+
+<p><a href="http://beza1e1.tuxen.de/lore/index.html">软件传说</a><br>这篇博客文章收集了一些难以置信的软件错误案例，这些案例来自网络各地。文章列举了众多不同类型的软件故障，例如汽车对香草冰淇淋过敏、游戏在特定月相下崩溃、冲厕所会使火车停运等等。文章还包含指向外部网站上其他相关故事的链接，以及作者个人博客中类似主题文章的链接。</p> 
+
+<p><a href="https://dev.to/kittipat1413/jwt-tokens-in-golang-a-developers-guide-to-secure-apis-46l6">Go语言中的 JWT 令牌：开发人员安全 API 指南</a><br>现代 Web 开发中，安全且可扩展的身份验证至关重要。JSON Web 令牌 (JWT) 已成为实现此目标的标准方法。本博客将探讨 JWT 的含义、工作原理以及如何在 Go 语言中实现它。</p> 
+
+<p><a href="https://clement-jean.github.io/simd_binary_search_tree">使用 SIMD 的二叉搜索树</a><br>本文介绍了一种使用 SIMD 指令的缓存友好型二叉搜索树算法。文章首先解释了该算法的原理，然后给出了 ARM64 汇编代码实现，并进行了性能测试。该算法通过将父节点与其子节点存储在一起的方式提高缓存局部性，并使用 SIMD 指令并行处理多个节点，从而提高搜索效率。文章还指出了代码中一个未解决的bug，以及实现该算法的数据结构（一个可以在任何时间点冻结的 AVL 树）。</p> 
+
+<p><a href="https://dev.to/firas/ore-advanced-dependency-injection-package-for-go-3n8i">Ore：Go语言的高级依赖注入包</a><br>Ore是一个轻量级、泛型且简单的Go语言依赖注入解决方案。它利用Go泛型来注册和解析依赖项，避免了反射和代码生成的性能开销，确保了应用程序的快速和类型安全。Ore的主要功能包括基于泛型的依赖注入、简单灵活的注册方式、键值服务、占位符服务、验证功能以及高性能。文章包含代码示例，展示了Ore在实际应用中的使用方法。</p> 
+
+<p><a href="https://dev.to/sadanand_dodawadakar_10b2/generics-in-go-transforming-code-reusability-4nm6">Go泛型：代码重用性变革</a><br>Go 1.18中引入的泛型彻底改变了编写可重用且类型安全代码的方式。泛型在保持Go简洁性的同时带来了灵活性和强大功能。然而，理解泛型的细微之处、好处以及泛型与传统方法（如interface{}）的比较需要仔细研究。本文探讨了泛型的复杂性，深入研究了约束，比较了泛型与interface{}，并演示了它们的实际应用。我们还将讨论性能考虑和二进制大小的影响。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://erzeghi.medium.com/yet-another-brief-history-of-container-d-2962eac9679e">container(d) 的另一个简短历史</a><br>这篇文章回顾了容器技术的简史，从早期的虚拟机到如今基于Linux内核命名空间和cgroups的容器技术，并重点介绍了Docker、libcontainer、containerd和OCI等关键技术和组织在容器技术发展中的作用。文章指出，Docker简化了容器的使用，而containerd则作为守护进程管理容器和镜像，runc作为底层容器运行时。OCI的出现则促进了容器格式和运行时的标准化。</p>
+
+<p><a href="https://jiekun.dev/posts/otlp-remote-write">OpenTelemetry、Prometheus 及更多：谁是收集监控指标的最佳选择？</a><br>本文比较了 OpenTelemetry 和 Prometheus 在收集和传播监控指标方面的优缺点。Prometheus 是云原生监控领域的行业标准，但扩展性有限。OpenTelemetry 提供了统一的可观测性标准，但目前在与 Prometheus 集成的性能方面存在一些不足。文章通过基准测试，比较了这两种技术在资源使用、带宽消耗等方面的差异，并分析了在不同场景下选择哪种技术更佳。结果表明，在大多数现有的 Exporter 能提供完善的 OTLP 支持之前，使用 OpenTelemetry 需要付出不小的代价。而Prometheus 3.x 的 Remote Write 2.0 协议配合 zstd 压缩算法，在降低带宽消耗方面表现出色。VictoriaMetrics 的 vmagent 在资源使用效率和带宽消耗方面表现最佳。</p>
+
+<p><a href="https://iniakunhuda.medium.com/efficient-database-transactions-using-postgresql-best-practices-and-optimization-techniques-9652d4ce53c0">高效使用 PostgreSQL 数据库事务：最佳实践和优化技巧</a><br>本文探讨了数据库事务在处理诸如在线预订等需要多个步骤操作的场景中的重要性，并以 Go 语言和 PostgreSQL 为例，讲解了如何使用数据库事务以及 ACID 原则（原子性、一致性、隔离性、持久性）。文章还深入分析了不同事务隔离级别（READ COMMITTED、REPEATABLE READ、SERIALIZABLE）对并发控制的影响，并提出了保持事务简洁、完善错误处理、选择合适的隔离级别以及管理连接和资源的最佳实践和优化技巧。</p>
+
+<p><a href="https://www.matthewball.co/all/stateofvideogaming2025">2025 年电子游戏现状</a><br>一份（免费）220 页的演示文稿，内容涵盖电子游戏行业的过去、现在和未来潜力。</p>
+
+<p><a href="https://www.tecmint.com/docker-tools">11 个必备 Docker 工具，简化您的工作流程</a><br>本文介绍了 11 个 Docker 工具，它们可以简化容器、镜像和配置的管理，无论您是新手还是经验丰富的用户，这些工具都能帮助您更有效地监控、排查和管理 Docker。这些工具包括命令行工具 LazyDocker 和 Dockly，用于分析 Docker 镜像的 Dive，基于 Web 的 UI Portainer，自动化更新工具 Watchtower，以及用于多容器应用程序的 Docker Compose 等。</p>
+
+<p><a href="https://arrow.apache.org/blog/2025/01/10/arrow-result-transfer">Apache Arrow 格式如何加速查询结果传输</a><br>本文探讨了 Apache Arrow 格式如何通过减少序列化/反序列化开销来加速查询结果传输。文章概述了 Arrow 格式的五个关键属性，解释了它们如何实现这一目标：列式存储、自描述和类型安全、零拷贝、流式传输以及通用性。文章还比较了 Arrow 与其他数据格式，并指出使用 Arrow 的实际案例中，速度提升可达数十倍。</p>
+
+<p><a href="https://thenewstack.io/observability-in-2025-opentelemetry-and-ai-to-fill-in-gaps">2025 年可观测性：OpenTelemetry 和 AI 将填补空白</a><br>生成式 AI 技术的快速成熟、OpenTelemetry 的更广泛使用以及削减成本的压力将塑造新一年的可观测性。</p>
+
+<p><a href="https://www.thecoder.cafe/p/exploring-database-isolation-levels">探索数据库隔离级别</a><br>本文深入探讨了数据库隔离级别及其防止异常（脏读、丢失更新、幻读等）的能力。文章解释了不同隔离级别（未提交读、已提交读、可重复读、快照隔离、可序列化快照隔离和可序列化）如何防止这些异常，并讨论了在选择隔离级别时需要权衡的数据一致性和系统性能。</p>
+
+<p><a href="https://jvns.ca/blog/2025/01/11/getting-a-modern-terminal-setup">构建“现代”终端设置需要什么？</a><br>本文探讨了构建现代终端体验的复杂性。作者列出了她认为重要的几个方面，包括多行复制粘贴支持、无限历史记录、有用的提示符、24 位颜色、剪贴板集成、良好的自动完成等等。她分享了自己的终端设置方法，并讨论了使用不同 shell（如 fish 和 zsh）、终端模拟器和文本编辑器（如 neovim、micro 和 helix）的经验。文章还指出了构建现代终端体验的挑战，例如 shell 的默认设置不足、文本编辑器的配置复杂以及各个应用程序的差异。作者建议逐步进行更改，并强调了不同组件之间相互影响的复杂性。</p>
+
+<p><a href="https://dystroy.org/blog/how-not-to-learn-rust">如何避免学习 Rust 的误区</a><br>本文总结了作者观察到的许多优秀程序员在学习 Rust 时遇到的问题，并提出了相应的建议。文章列举了 12 个常见的学习误区，例如：没有做好充分的准备就学习 Rust；没有阅读官方文档；一开始就尝试实现复杂的算法（如图算法）；不仔细阅读编译器错误和警告；盲目套用其他语言的最佳实践（例如试图将 Rust 写成面向对象风格或纯函数式风格）；构建过于复杂的生命周期 API；忽略非标准库；滥用 `unsafe` 和 `unwrap`；不查看源代码；一开始就过度设计；学习错误的 Rust（例如过早使用 `Rc`、`dyn`、`unsafe` 和 `Deref`）。文章建议新手程序员应该循序渐进，认真阅读编译器信息，合理选择库，避免过度设计，并逐步掌握 Rust 的特性。</p>
+
+<p><a href="https://blogsystem5.substack.com/p/code-reviews-a-success-story">代码审查：一个成功案例</a><br>本文讲述了一个严格的代码审查流程如何帮助发布一个无错误的功能的故事。作者对比了两种不同的代码审查方式：一种审查流程较为宽松，导致最终产品出现bug；另一种审查流程严格，并辅以单元测试和集成测试，最终成功发布了一个高质量的功能。这个故事强调了代码审查作为一种工具的重要性，以及如何有效地利用它来提升代码质量和指导初级工程师。</p>
+
+<p><a href="https://mattsayar.com/why-does-cloudflare-pages-have-such-a-generous-free-tier">为什么 Cloudflare Pages 的免费层如此慷慨？</a><br>这篇文章探讨了 Cloudflare Pages 提供无限带宽免费层的原因。作者以自身网站为例，比较了 Cloudflare Pages、GitHub Pages、GitLab Pages 和 Netlify 等平台的免费带宽限制，并分析了 Cloudflare 提供如此慷慨免费层的策略原因：静态网站对 Cloudflare 的服务器资源消耗较小，提供免费服务有助于提升 Cloudflare 的整体网络性能和知名度，同时也能促进付费服务的销售。此外，文章还提到作者找不到 Cloudflare 官方对此的明确解释。</p>
+
+<p><a href="https://gyptazy.com/howto-create-a-public-dns64-nat64-gateway">如何创建(公共)DNS64和NAT64网关</a><br>作为我 BoxyBSD 项目的一部分，该项目旨在仅在 IPv6 网络连接上运行，我最近实现了并提供了 DNS64 和 NAT64 网关支持，以弥合 IPv6 和遗留 IPv4 世界之间的差距。此解决方案可确保用户可以轻松访问重要的资源，例如 GitHub，即使在 2025 年，GitHub 也仍然只能通过 IPv4 协议访问。DNS64 组件将 IPv4 DNS 响应转换为与 IPv6 兼容的记录，而 NAT64 负责实际的网络转换，从而实现 IPv6 仅设备与 IPv4 服务之间的平滑通信。文章详细介绍了 DNS64 和 NAT64 的工作原理、实现方法以及如何在 Linux Debian 系统上创建公共 DNS64 和 NAT64 网关，并提供了具体的配置示例。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/grafana/tempo">grafana/tempo</a><br>Grafana Tempo is a high volume, minimal dependency distributed tracing backend.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/ariga/atlas">ariga/atlas</a><br>Manage your database schema as code</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/git-lfs/git-lfs">git-lfs/git-lfs</a><br>Git extension for versioning large files</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/valyala/fasthttp">valyala/fasthttp</a><br>Fast HTTP package for Go. Tuned for high performance. Zero memory allocations in hot paths. Up to 10x faster than net/http</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/TykTechnologies/tyk">TykTechnologies/tyk</a><br>Tyk Open Source API Gateway written in Go, supporting REST, GraphQL, TCP and gRPC protocols</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/bitnami-labs/sealed-secrets">bitnami-labs/sealed-secrets</a><br>A Kubernetes controller and tool for one-way encrypted Secrets</p>
+
+<p><a href="https://github.com/expr-lang/expr">expr-lang/expr</a><br>Expression language and expression evaluation for Go</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

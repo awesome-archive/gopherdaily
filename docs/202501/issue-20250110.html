@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250110.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250110</span>
+</p>
+<p>每日一谚：Sort your fields in your struct from largest to smallest </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/c9Bd3M5WZ-UpCuo9lslewA">Go错误处理新思路：`?`操作符能否终结if err != nil样板代码</a><br>Go语言独特的错误处理机制，即使用error接口和if err != nil语句，在项目规模增长时会产生大量代码冗余。Go团队核心开发者Ian Taylor提出新的提案，引入?操作符来简化错误处理，引发社区广泛关注。本文介绍该提案的核心内容、优缺点及Go社区反馈，包括代码简化、可读性提升、控制流明确等优势，以及与现有语言差异、err变量隐式声明等不足与争议。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoReflectWhyFieldRestriction">Go反射限制结构体字段修改的原因</a><br>文章解释了 Go 语言反射包中为什么只能设置导出的结构体字段，不能设置私有字段。这是因为私有字段可能被包内的函数和方法用来维护结构体的内部状态，直接修改它们是不安全的。而导出的字段可以被任意代码修改，因此结构体所在的包无法保证其值。文章还引用了 Rust 语言中反射的类似限制，并解释了这种限制背后的原因。</p> 
+
+<p><a href="https://docs.agentstation.ai/blog/beautiful-api-keys">制作美观的API密钥</a><br>文章介绍了作者团队如何设计和实现一个名为uuidkey的Go语言包，用于将UUIDv7编码成更易读、可排序、可索引的API密钥。该包使用Crockford Base32编码和添加分隔符的方式，使生成的密钥更美观，并解决了传统API密钥的诸多问题，例如难以阅读、排序和识别等。文章还对比了其他几种ID生成方法，并详细解释了选择UUIDv7和Crockford Base32的原因，以及在设计中添加分隔符的考虑。最后，文章介绍了uuidkey包的开源地址和使用方法。</p> 
+
+<p><a href="https://canopas.com/golang-struct-interface-and-dependency-injection">Go语言：结构体、接口和依赖注入 (DI)</a><br>这篇博文探讨了在 Go 语言中何时使用结构体以及何时使用接口，并介绍了如何利用两者进行依赖注入 (DI)。通过一个简单的玩具箱的比喻，解释了结构体、接口和依赖注入的概念，并给出了使用示例，包括接口组合和接口嵌入，最后总结了如何平衡灵活性与性能。</p> 
+
+<p><a href="https://mtlynch.io/if-got-want-improve-go-tests">if got, want：编写更优秀的Go测试的简单方法</a><br>本文介绍了一种鲜为人知的优秀的Go测试模式，只需30秒即可掌握。它建议使用 `if got, want :=` 模式编写测试，该模式在表驱动测试中尤其有效。文章通过示例代码对比了传统方法和该模式的简洁优雅，并解释了该模式的工作原理以及其优点，例如提高代码可读性、方便复制粘贴以及区分测试断言和测试逻辑。文章还讨论了为什么作者更偏向于使用Go标准库的测试API而不是第三方库。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dattell.com/data-architecture-blog/how-network-latency-affects-apache-kafka-throughput">如何在存在网络延迟的环境中获得更高的 Kafka 吞吐量</a><br>提高 Kafka 吞吐量是许多组织的优先事项。本文解释了如何优化 Apache Kafka 代理、使用者和生产者，以便在存在网络延迟的环境中获得更高的吞吐量。对于需要个性化帮助的组织，我们提供一系列支持服务，包括审计、人员补充、长期咨询和在您的环境中完全托管的 Kafka。</p>
+
+<p><a href="https://medium.com/rustaceans/from-go-to-rust-1-async-dispatch-866e042cd98a">从Go到Rust：异步调度</a><br>这是关于我将一些代码从 Go 移植到 Rust 时遇到的几个挑战的解决方案的两部分系列文章中的第一部分。第一部分（本部分）对问题进行了总体介绍，并描述了我是如何实现一个泛型异步调度器的，这是一个同步函数，它对对象的异步方法进行动态调用。我的解决方案涉及使用自定义特性和高级特性边界 (HRTB) 来表达一个复杂的生命周期关系，而仅靠 HRTB 无法表达这种关系。在这篇文章中，我将对所有内容进行分解，并向您提供一种理解其工作原理的方法。</p>
+
+<p><a href="https://jirevwe.github.io/sql-nulls-are-weird.html">SQL NULL值很奇怪！</a><br>SQL 中所有 NULL 值的处理方式都不同。本文通过示例演示了 NULL 值的特殊性，例如，具有唯一约束的列可以包含多个 NULL 值，因为每个 NULL 值都被视为与其他 NULL 值不同的独特值。文章探讨了这种现象的原因，以及如何使用生成列或部分索引来确保唯一性。</p>
+
+<p><a href="https://writethatblog.substack.com/p/antirez-on-technical-blogging">antirez (萨尔瓦多·桑菲利波)关于技术博客的思考</a><br>Redis的创建者antirez（萨尔瓦多·桑菲利波）分享了他为什么认为博客对于成功项目至关重要，他的写作流程，以及他对AI写作的看法。文章还包含了他最引以为豪的博客文章以及他的一些写作经验和建议，并提到他不建议使用AI来创作博客内容。</p>
+
+<p><a href="https://varoa.net/2025/01/09/serverless.html">我们为什么还没全部转向无服务器架构？</a><br>本文探讨了无服务器计算（例如AWS Lambda）虽然具有吸引人的价值主张，但并未成为云应用默认架构模式的原因。文章认为，这主要有两个原因：一是微服务架构迁移带来的经验教训，以及无服务器架构将加剧微服务架构带来的挑战；二是组织的准备程度不足。文章最后提出了无服务器架构的有效采用策略，例如关注由完全自主的团队拥有的领域，迁移具有良好范围、独立逻辑的工作负载，以及利用AI和LLM集成。</p>
+
+<p><a href="https://miguelcarranza.es/cto-year-7">我作为创始人的 CTO 角色：第七年</a><br>这篇博文是 Miguel Carranza 对他作为 RevenueCat 创始人的 CTO 角色的第七年的回顾。文章总结了公司在 2024 年取得的巨大成功，包括收入增长、首次收购、以及在全球范围内的扩张。Carranza 还分享了他个人的经验和教训，包括在平衡工作和生活、处理团队成员的个人紧急情况、以及应对公司快速增长带来的挑战等方面的心得。文章还展望了公司未来的发展规划，并表达了对团队、家人和朋友的感谢。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.salesforce.com/the-next-generation-of-rag-how-enriched-index-redefines-information-retrieval-for-llms/">下一代 RAG：增强型索引如何重新定义大型语言模型的信息检索</a><br>了解 Salesforce 如何通过调整查询复杂性等方式创建动态检索系统，从而平衡精确性和速度。</p>
+
+<p><a href="https://simonwillison.net/2025/Jan/10/ai-predictions/#atom-everything">我对未来1年、3年和6年AI/LLM的预测（献给Oxide和朋友们）</a><br>Oxide and Friends播客有一个年度传统，邀请嘉宾分享他们对未来1年、3年和6年的预测。这是我2025年的预测，涵盖了代理、代码和研究助手、普利策奖、隐私法以及对AGI/ASI的乐观和悲观展望。我强调了预测AI/LLM的难度，并分享了对未来几年AI发展的个人观点。</p>
+
+<p><a href="https://time.com/7205359/why-ai-progress-is-increasingly-invisible">为什么人工智能的进步越来越看不见了？</a><br>人工智能专家加里森·洛夫利表示，人工智能的进步并没有停滞，只是变得不那么显眼了，这可能会让我们对未来毫无准备。文章指出，人工智能在解决复杂问题、自动化研究以及软件开发方面取得了显著进展，但这些进步往往被大众媒体忽视，公众看到的仍然是聊天机器人存在的幻觉和基本推理错误。作者警告说，这种进步的隐形化可能会导致决策者和公众对人工智能的真实发展水平判断失误，从而无法有效地对其进行监管，甚至可能面临人工智能失控的风险。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/apache/answer">apache/answer</a><br>A Q&amp;A platform software for teams at any scales. Whether it&#39;s a community forum, help center, or knowledge management platform, you can always count on Apache Answer.</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>A BNB Smart Chain client based on the go-ethereum fork</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/docker/buildx">docker/buildx</a><br>Docker CLI plugin for extended build capabilities with BuildKit</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock is a mocking framework for the Go programming language.</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

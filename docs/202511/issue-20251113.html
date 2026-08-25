@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251113.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251113</span>
+</p>
+<p>每日一谚：Limit concurrency for CPU bound operations (&lt;= #cpus) </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/13/proposal-dynamic-escapes">PGO驱动的“动态逃逸分析”：w.Write(b)中的切片逃逸终于有救了？</a><br>io.Writer，这个在 Go 语言中无处不在的神圣接口，其背后却隐藏着一个困扰了性能敏感型开发者多年的“隐形成本”。当你将一个在函数内创建的字节切片 b 传递给 w.Write(b) 时，这个切片几乎总是会逃逸 (Escape) 到堆上，导致一次不必要的内存分配。为什么？因为编译器不知道 w 的具体实现是什么，它必须做出最保守的假设。然而，一个由 Go 核心贡献者 thepudds 提交的新提案，正试图通过引入一种由 PGO (Profile-Guided Optimization) 驱动的“动态逃逸分析”新机制，来从根本上解决这个顽疾。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/9WpgQn5EeG1Rw8Xn7Ywejw">【Go模块构建与依赖管理】09 企业级实践：私有仓库与私有 Proxy</a><br></p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/red-green-refactor">Red, green, refactor: writing perfect Go, with TDD</a><br>通过“红、绿、重构”技术帮助我们打造正确且美观的 Go 代码。很容易！我们来玩个游戏吧？</p> 
+
+<p><a href="https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg">TypeScript 在 AI 时代的崛起：来自首席架构师 Anders Hejlsberg 的见解</a><br>TypeScript 成为 GitHub 上使用最多的语言。 这是它创建者给出的原因。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.p99conf.io/2025/11/12/caching-and-latency-book-excerpt/">缓存和延迟</a><br>为什么要缓存…以及如何在cache-aside、read-through、write-through、客户端和分布式缓存策略之间进行选择。</p>
+
+<p><a href="https://dolthub.com/blog/2025-11-12-agentic-dolt-workbench/">Dolt Workbench 中的 Agent 模式</a><br>Agent 模式是使用 LLM 与 IDE 交互以操作代码存储库的常用方法。 Workbench 具有用于操作数据库的此功能吗？ 尚未。 本文解释了原因。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/">无限扩展：Azure AI 超级工厂背后的架构</a><br>今天，我们揭幕了位于佐治亚州亚特兰大的 Azure AI 数据中心 Fairwater 新址。这座专门建造的数据中心与我们在威斯康星州的首个 Fairwater 站点、前几代 AI 超级计算机以及更广泛的 Azure 全球数据中心足迹相连，旨在打造世界上首个星球规模的 AI 超级工厂。通过比以往任何时候都更密集地封装计算能力...</p>
+
+<p><a href="https://pierrezemb.fr/posts/diving-into-kubernetes-watch-cache">深入探究 Kubernetes 的 Watch 缓存</a><br>理解 Kubernetes apiserver 如何缓存 etcd、3 秒超时以及 K8s 1.34 一致性读取特性</p>
+
+<p><a href="https://becca.ooo/blog/vertical-integration">垂直整合是唯一重要的事</a><br>作者认为，对于开发者工具，或者更广泛地说，计算机程序，垂直整合是最重要的。文章探讨了“垂直整合”的含义，即在一个堆栈中不同工具之间的紧密集成，以及为什么今天我们没有这种整合。文章列举了垂直整合可能带来的好处，例如简化开发流程和提高效率。它还分析了为什么垂直整合在开源和工业领域中不常见的原因，包括开源项目的规模较小、协调问题以及对工具独立性的坚持，以及工业领域的高迁移成本和对现有基础设施的依赖。作者还讨论了将垂直整合作为产品销售的可能性，以及面临的挑战，如与现有工具的集成问题、迁移成本以及合作风险。</p>
+
+<p><a href="https://bloggeek.me/webrtc-turn">是否需要webrtc turn server</a><br></p>
+
+<p><a href="https://xania.org/202506/how-compiler-explorer-works">编译器 Explorer 在 2025 年如何运作</a><br>你是否曾想过在 Compiler Explorer上点击编译按钮会发生什么事？上周，我浏览了我们的指标仪表板，然后我意识到：我们现在每年进行 9200 万次编译。 每周 180 万次……对于一个网站来说，...</p>
+
+<p><a href="https://devblogs.microsoft.com/dotnet/announcing-dotnet-10">宣布 .NET 10</a><br>今天，我们很高兴地宣布推出 .NET 10，这是迄今为止最具生产力、最现代、最安全、最智能和性能最高的 .NET 版本。这是来自世界各地成千上万开发人员的又一年的努力的成果。此版本包括整个 .NET 堆栈（从语言和开发人员工具到工作负载）的数千项性能、安全性和功能改进，使您能够使用统一的平台构建，并轻松地将 AI 注入到您的应用程序中。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://openai.com/index/gpt-5-1">介绍GPT 5.1</a><br></p>
+
+<p><a href="https://davegriffith.substack.com/p/software-development-in-the-time">Software Development in the Time of Strange New Angels</a><br>五个月前，我的终身职业软件开发发生了翻天覆地的变化。我们第一次遇到代理 AI 的奇怪新天使，它正在改变它的方方面面。</p>
+
+<p><a href="https://latenitesoft.com/blog/evaluating-frontier-ai-image-generation-models">我们运行了 600 多张图像生成，以比较 AI 模型</a><br>我们对 OpenAI gpt-image-1、Google nanoBanana 和 Seedream 进行了 600 多次真实世界照片编辑的基准测试，按任务查看了延迟、成本和质量。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

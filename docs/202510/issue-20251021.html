@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251021.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251021</span>
+</p>
+<p>每日一谚：Protect yourself from runtime panics on inputs you do not control. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/21/10-go-programming-rules-from-reddit/">写出让同事赞不绝口的Go代码：Reddit工程师总结的10条地道Go编程法则</a><br>来自Reddit的工程师Konrad Reiche在其GoLab 2025的精彩分享《Writing Better Go》中给出了否定的答案。他一针见血地指出：大多数“风格(style)”评论，其本 质并非关乎审美，而是关乎如何避免未来的生产环境之痛。本文将和大家一起解读一下这场分享中提炼出的十条黄金法则。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/uu7ajZ0GawbzKplRd0PHqg">【Go 网络编程全解】07 Socket 选项：微调内核网络栈的“旋钮”</a><br></p> 
+
+<p><a href="https://samuelberthe.substack.com/p/go-beyond-goroutines-introducing">超越 Goroutines：介绍反应式编程范式</a><br>自 2009 年以来，Go 语言一直是并发应用程序的一流公民。今天，它凭借“ro”（反应式编程包）提升到了一个新的水平。</p> 
+
+<p><a href="https://threedots.tech/post/sqlite-durable-execution">使用 Go 和 SQLite 进行持久的后台执行</a><br>DNS 中断就像山洪暴发。它突然袭击你，然后消失，仿佛从未存在过。“这可能是 DNS”变成了一种模因。但是，一半的时间，我们不知道确切原因。中断时间很少长到足以诊断、隔离、复制、模拟和测试故障情况。我们如何才能确定这种类型的故障将来不会再次损害我们的系统？</p> 
+
+<p><a href="https://dolthub.com/blog/2025-10-20-dolt-1-75">Announcing Dolt 1.75! AutoGC and Archives Enabled by Default</a><br>Dolt, the world&#39;s first SQL database with Version Control capabilities in its bones, has some new tricks! We&#39;ve been discussing Automatic Garbage Collection and the Archive storage format for some time now. With the release of Dolt 1.75, we&#39;ve taken the leap and made both of these behaviors enabled by default.</p> 
+
+<p><a href="https://verdik.substack.com/p/how-to-get-consistent-classification">如何从不一致的 LLM 中获得一致的分类？</a><br>一种从随机模型中进行确定性标记的技术，具有经过基准测试的 Golang 实现。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.haproxy.com/blog/announcing-haproxy-enterprise-3-2">Introducing HAProxy Enterprise 3.2</a><br>HAProxy Enterprise 3.2 brings next-gen security intelligence, extends its industry-leading performance, and expands native routing and integration capabilities.</p>
+
+<p><a href="https://www.docker.com/blog/docker-model-run-prompt/">New Interactive Prompt for docker model run</a><br>We’ve rolled out a new, fully-featured interactive prompt for the “docker model run” command that brings a host of quality-of-life improvements, making it faster, easier, and more intuitive to chat with your local models.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/20/adding-distributed-tracing-to-ai-gateway-my-lfx-mentorship-journey/">向 AI 网关添加分布式跟踪：我的 LFX 导师之旅</a><br>在当今快速发展的 AI 领域，有效监控和调试 AI 网关已成为一项关键挑战。本文分享了我通过 LFX 导师计划获得的完整体验，我为 kgateway 的 AI 网关功能添加了 OpenTelemetry 分布式跟踪支持。从 LFX 导师计划的应用策略到项目实施期间的挑战和见解，我希望这能为想要参与开源项目的学生提供有价值的参考。</p>
+
+<p><a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/">Disaggregated Scheduled Fabric: Scaling Meta 的 AI 之旅</a><br>Disaggregated Schedule Fabric (DSF) 是 Meta 用于 AI 训练网络的下一代网络架构技术，解决了现有基于 Clos 网络的挑战。 我们正在分享围绕 DSF 的挑战和创新，并讨论未来的方向，包括通过 DSF 和非 DSF 区域互连创建巨型集群，以及探索替代交换技术。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/">7 常见的 Kubernetes 陷阱（以及我如何学会避免它们）</a><br>众所周知，Kubernetes 既强大又令人沮丧。 当我第一次涉足容器编排时，我犯下了不少错误——足以整理出一系列陷阱。 在这篇文章中，我想介绍我遇到的七个主要的难点（或者我看到其他人遇到的），并分享一些关于如何避免它们的技巧。 无论您是刚开始试用 Kubernetes，还是已经管理生产集群，我都希望这些见解能帮助您避免一些额外的压力。</p>
+
+<p><a href="https://community.intel.com/t5/Blogs/Tech-Innovation/open-intel/ChkTag-x86-Memory-Safety/post/1721490">ChkTag: x86 内存安全</a><br>由于编程错误导致的内存安全违规行为长期以来一直困扰着软件。 业界和学术界一直在寻找解决这个问题的方法。 正如英特尔和 AMD x86 生态系统咨询小组 (EAG) 领导者在 2025 年 8 月的帖子中首次指出的那样 [1, 2]，英特尔和 AMD 正在与他们在 EAG 中的生态系统合作伙伴一起努力，以满足对内存安全的需求。 他们正在为通用的 x86 内存标记指令集架构创建一个统一的规范，代号为 ChkTag（发音为“Check Tag”）。 这将有助于确保 x86 继续满足生态系统不断变化的需求。</p>
+
+<p><a href="https://bkaradzic.github.io/posts/fast-call-stack-backtrace">快速调用堆栈回溯</a><br>在开发分析器、内存跟踪器或记录器时，您需要以编程方式访问调用堆栈以跟踪程序如何到达调用方法的位置。操作系统提供了用于调用堆栈跟踪的 API，但这些 API 通常对于实际的实时使用来说太慢。本文将尝试揭开在不同平台上获取调用堆栈跟踪的所有方法的神秘面纱，并且我不会在此处介绍解析调试符号名称。</p>
+
+<p><a href="https://nemanjatrifunovic.substack.com/p/when-compiler-optimizations-hurt">编译器优化何时损害性能</a><br>分支的性能可能优于表查找</p>
+
+<p><a href="https://commoncog.com/letter-to-a-young-person-worrying-about-ai">写给一位担心人工智能的年轻人的信</a><br>人们普遍误认为，要想做得好，就必须能够预测未来。但即使面对人工智能，也可以在不预测的情况下采取行动。以下是如何做的。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.growthunhinged.com/p/is-ai-adoption-slowing-down">AI 采用是否正在放缓？</a><br>您可能错过了《Mostly Growth》中的内容。以下是本次发布的内容摘要：
+*   关于 AI 采用放缓的新数据
+*   社交媒体作为最后的变现模式
+*   您被叫到 CFO 办公室
+*   候选人正在反击 AI 简历扫描
+*   为什么播客极难增长
+*   本周名言</p>
+
+<p><a href="https://www.brethorsting.com/blog/2025/10/claude-code-is-unreasonably-good-at-building-mvps">Claude Code 非常擅长构建 MVP</a><br>过去六个月里，我编写的最有价值的代码是我完全打算扔掉的代码。这不是某种禅宗编程哲学或敏捷方法论的讨论点。这是使用 Claude Code 构建原型和 MVP 的实际情况。从“如果我们构建 X”到“这里是 X 的工作版本”的时间已经从几周或几个月缩短到几小时或几天。</p>
+
+<p><a href="https://www.anthropic.com/news/claude-code-on-the-web">Claude Code on the web</a><br>今天，我们推出了网络版 Claude Code，这是一种可以直接从浏览器委托编码任务的新方法。现在作为研究预览版，您可以为 Claude 分配多个编码任务，这些任务在 Anthropic 管理的云基础设施上运行，非常适合处理错误积压、例行修复或并行开发工作。</p>
+
+<p><a href="https://www.canva.dev/blog/engineering/ai-interview-success">AI 面试成功：面试官的内部指南</a><br>从屏幕的另一边看：我们在你的 AI 辅助面试中寻找什么</p>
+
+<p><a href="https://www.pcloadletter.dev/blog/ai-hype-and-productivity">AI hype is excessive, but its productivity gains are real</a><br>作者认为AI被过度炒作，但其生产力增益是真实的。 他最初对这项技术持怀疑态度，但后来发现AI辅助工具极大地提高了他的开发效率。</p>
+
+<p><a href="https://blog.abdellatif.io/production-rag-processing-5m-documents">生产RAG：我从处理500万份文档中学到的东西</a><br>从为Usul AI和企业客户构建RAG系统，处理超过1300万页的经验教训。</p>
+
+<p><a href="https://payne.io/posts/historical-artifact">我的编程生涯是一个历史文物</a><br>我宣布。我 30 年的科技职业生涯是一个历史文物。 我目前在人工智能方面的工作让我相信，在短短几年内，人类将会回顾过去，并认为人们曾经真正对机器进行编程是一件多么有趣的事情。</p>
+
+<p><a href="https://bigthink.com/life/the-next-revolution-in-biology-isnt-reading-lifes-code-its-writing-it">生物学领域的下一场革命不是解读生命密码，而是书写它</a><br>微生物学家 Andrew Hessel 认为，现在是时候书写人类基因组了，他也是 Human Genome Project–write 的联合创始人。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/tbphp/gpt-load">tbphp/gpt-load</a><br>Multi-channel AI proxy with intelligent key rotation. 智能密钥轮询的多渠道 AI 代理。</p>
+
+<p><a href="https://github.com/rook/rook">rook/rook</a><br>Storage Orchestration for Kubernetes</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. Its modular and versatile design satisfies a broad range of industry use cases. It offers a unique approach to consensus that enables performance at scale while preserving privacy.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/grafana/tempo">grafana/tempo</a><br>Grafana Tempo is a high volume, minimal dependency distributed tracing backend.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/openimsdk/open-im-server">openimsdk/open-im-server</a><br>IM Chat ChatGPT</p>
+
+<p><a href="https://github.com/erigontech/erigon">erigontech/erigon</a><br>Ethereum implementation on the efficiency frontier</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

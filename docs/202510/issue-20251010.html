@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251010.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251010</span>
+</p>
+<p>每日一谚：Don&#39;t ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/10/proposal-add-buffer-peek">Go零拷贝“最后一公里”：Peek API背后的设计哲学与权衡</a><br>在 Go 的世界里，io.Reader 是一个神圣的接口。它如同一条设计精良、四通八达的高速公路，为数据流的传输提供了统一、优雅的抽象。然而，在 这条高速公路的尽头，当数据流的目的地就在眼前——一块已然存在的内存（[]byte）时，我们却常常被迫驶下一条颠簸、缓慢的“土路”，进行一次本 可避免的内存拷贝。 这个从 []byte 到 io.Reader 再回到 []byte 的性能损耗，正是 Go io 体系中长期存在的“最后一公里”问题。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/VFLxGyZPnedRP9jOawZgPg">【Go开发者的数据库设计之道】08 视野篇：关系型数据库选型与核心原理概览</a><br></p> 
+
+<p><a href="https://wizenheimer.github.io/blaze">Blaze - Go 中高性能全文搜索引擎</a><br>Blaze 是 Go 引擎，通过倒排索引实现提供快速的全文搜索功能。 它专为需要有效搜索文本文档而无需依赖外部搜索引擎的应用程序而设计。</p> 
+
+<p><a href="https://dev.to/kirekov/golang-dependency-inversion-a-java-developers-point-of-view-pj4">Golang 依赖倒置 — Java 开发者的视角</a><br>我写 Java 已经很多年了。但最近我开始了一份新工作，我不得不转向 Golang。当然，这两种语言之间有很多不同之处。比如错误处理、并发模型、封装机制等等。但在本文中，我想关注一个特定的东西。那就是依赖倒置原则。
+
+我把这个模式认为是编程中最重要的模式。代码并不完美。有时你不得不打破规则。无论如何，依赖倒置原则是保持你的代码可测试和模块化的原则。如果你违反了它，整个代码库可能会很快变得混乱，即使你始终遵循其他 SOLID 原则。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/10/09/testing-asynchronous-workflows-using-opentelemetry-and-istio/">使用 OpenTelemetry 和 Istio 测试异步工作流</a><br>了解如何使用 OpenTelemetry 进行上下文传播和 Istio 进行流量路由，在云原生应用程序中测试复杂的异步工作流。探索无需复制基础设施即可隔离测试环境的具有成本效益的方法。</p>
+
+<p><a href="https://byroot.github.io/opensource/ruby/2025/10/09/dear-rubyists.html">亲爱的Rubyists：Shopify不是你的敌人</a><br>我一直想写一篇关于我对开源和企业实体的看法。我已经有了大致的提纲；然而，我正遭受写作障碍的困扰，但更重要的是，整篇文章都在赞扬Shopify如何与开源社区互动。因此，鉴于目前的环境，我认为如果不先解决房间里的大象问题，我就无法发布它。</p>
+
+<p><a href="https://blog.miguelgrinberg.com/post/python-3-14-is-here-how-fast-is-it">Python 3.14 Is Here. How Fast Is It?</a><br>2024 年 11 月，我写了一篇博文，标题为“Python 真的那么慢吗？”，我在其中测试了几个版本的 Python，并注意到该语言在性能方面取得的稳步进展。
+
+今天，2025 年 10 月 8 日，就在 Python 3.14 正式发布后一天。让我们重新运行基准测试，看看新版 Python 有多快！</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.docker.com/blog/lora-explained/">Low-Rank Adaptation (LoRA) Explained</a><br>LoRA is a method that freezes a base model and adds trainable adapters to teach pre-trained models new behaviors, without overwriting their existing knowledge.</p>
+
+<p><a href="https://dolthub.com/blog/2025-10-09-data-import-agent">数据导入 AI 代理</a><br>在本文中，我将带您了解我构建一个可以将数据导入 Dolt 的 AI 代理的经验。</p>
+
+<p><a href="https://simonwillison.net/2025/Oct/5/parallel-coding-agents">拥抱并行编码代理的生活方式</a><br>一段时间以来，我一直在听从事并行编码代理的工程师的反馈，他们同时运行多个编码代理——同时启动几个 Claude Code 或 Codex CLI 实例，有时在同一个存储库中，有时针对多个签出或 git worktrees。我最初对此持怀疑态度。 AI 生成的代码需要审查，这意味着所有这些的自然瓶颈是我可以审查结果的速度。 很难跟上单个 LLM，考虑到它们可以以多快的速度生成东西，如果同时运行多个，而不是让我落后，那么有什么好处呢？ 尽管我有所顾虑，但在过去的几周里，我注意到自己默默地开始拥抱并行编码代理的生活方式。</p>
+
+<p><a href="https://kix.dev/two-things-llm-coding-agents-are-still-bad-at">两个编码智能体不擅长的事情</a><br></p>
+
+<p><a href="https://hex.tech/blog/bitter-lessons-building-ai-in-hex-product-management">Bitter lessons building AI products</a><br>我们从构建 AI 产品的过程中学到的经验，以及在技术变革中应该如何调整我们的方法，包括尽早发布、更快地放弃项目，以及每隔几个月就重新尝试失败的想法。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/timelinize/timelinize">timelinize/timelinize</a><br>Store your data from all your accounts and devices in a single cohesive timeline on your own computer</p>
+
+<p><a href="https://github.com/sjzar/chatlog">sjzar/chatlog</a><br>chat log tool, easily use your own chat data. 聊天记录工具，轻松使用自己的聊天数据</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，企业级业务AI&#43;开发解决方案，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/docker/mcp-gateway">docker/mcp-gateway</a><br>docker mcp CLI plugin / MCP Gateway</p>
+
+<p><a href="https://github.com/envoyproxy/ai-gateway">envoyproxy/ai-gateway</a><br>Manages Unified Access to Generative AI Services built on Envoy Gateway</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>Self-hosted, lightweight server and website monitoring and O&amp;M tool</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/docker/mcp-registry">docker/mcp-registry</a><br>Official Docker MCP registry</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/go-co-op/gocron">go-co-op/gocron</a><br>Easy and fluent Go cron scheduling. This is a fork from https://github.com/jasonlvhit/gocron</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

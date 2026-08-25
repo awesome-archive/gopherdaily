@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240828.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-28</span>
+</p>
+<p>每日一谚：Don not Return -1 or nil to Indicate Error. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/unique">Go标准库新包：unique介绍</a><br>Go 编程语言最近在 Go 1.23 中引入了一个新的“unique”包，旨在实现可比较值的规范化。此软件包允许通过仅存储每个值的一个唯一副本来删除值（如字符串）的重复数据，从而在内部有效地管理这些副本。&#39;unique&#39; 包与以前使用的字符串 &#39;Intern&#39; 函数不同，因为它需要包装类型 &#39;Handle[T]&#39;，以防止从内部映射中删除字符串。此包装类型可确保当且仅当两个 &#39;Handle[T]&#39; 值所表示的值相等时，它们才相等，并且它有助于进行廉价的指针比较。“unique”包的引入代表了在 Go 应用程序中优化内存使用和比较效率方面迈出的重要一步。</p> 
+
+<p><a href="https://dev.to/cosmic_predator/writing-a-windows-service-in-go-1d1m">在 Go 中编写 Windows 服务</a><br>源文档提供了有关在 Go 中编写 Windows 服务的全面指南。它解释了 Windows 服务的概念、它们的生命周期，以及为什么 Go 是适合此任务的语言。该指南进一步深入探讨了实现细节，包括创建 Service Context 和 Handler 接口。它还介绍了如何为每 30 秒记录一次信息的 Windows 服务编写代码。最后，本文档提供了有关使用“sc.exe”工具安装、启动和停止服务的说明，并在最后说明了 Go for Windows 服务的简单性和效率。</p> 
+
+<p><a href="https://harrisoncramer.me/terminal-applications-in-go/">Go中的终端应用</a><br>源文档提供了使用 Go 构建终端应用程序的指南，专门用于通过 BubbleTea 库与 ChatGPT 交互。它强调了终端应用程序 （CLI） 在脚本编写和自动化方面的重要性，以及如何通过将它们与 TUI 集成来使其更加用户友好。该文档详细介绍了如何使用 Cobra 进行命令设置，使用 Viper 进行配置管理，以及使用 BubbleTea 进行 UI 开发。此外，还介绍了 BubbleTea 使用的 MVC 模式，重点介绍用于处理用户输入和呈现视图的嵌套模型。该示例包括创建简单应用程序的分步过程，该应用程序允许用户从选项列表中进行选择并从 ChatGPT 接收相应的响应。</p> 
+
+<p><a href="https://mahmoodrm.medium.com/managing-database-changes-in-dockerized-go-applications-3529f16da19c">在 Dockerized Go 应用程序中管理数据库更改</a><br>在本文中，M hmood 解决了在 Dockerized Go 应用程序中管理数据库更改的挑战，特别是在部署新版本时。作者强调了使用迁移工具（如 Go-Migrate）系统地应用和跟踪数据库架构更改的重要性。M hmood 提供了有关将迁移脚本集成到 Docker 工作流中的指导，包括为这些脚本创建专用目录、将它们添加到 Docker 映像以及作为应用程序入口点的一部分执行它们。本文还介绍了定期备份数据库和在出现问题时准备回滚计划的策略。最后，作者强调在部署新版本后需要进行彻底的测试和监控，以确保应用程序的稳定性和数据完整性。</p> 
+
+<p><a href="https://colobu.com/2024/08/28/rust-async-sync/">在 Rust 中同时支持异步和同步代码</a><br>在 Rust 中同时支持异步和同步代码,可以解决问题,包括如何让一个库同时支持異步和阻塞两种使用方式,如何复制一个新的模块,如何创建独立的crate,如何解决特性冲突问题,以及如何放弃支持异动和同步的观点。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.infoq.com/articles/architectural-retrospectives/">架构回顾：提高架构设计水平的关键</a><br>架构回顾与架构评审不同，它侧重于如何做出决策，而不是评估架构本身。它们是团队反思决策过程、识别偏见和改进工作方式的工具。这些回顾应该与审查分开，以保持重点并尊重相关人员的时间。回顾期间解决的关键问题包括检查质量属性要求 （QAR） 的建立、决策方法、反馈使用、权衡考虑、技术债务和技能评估。建议在每次增量发布后定期进行回顾，以确保团队架构实践的持续改进。</p>
+
+<p><a href="https://dolthub.com/blog/2024-08-28-dolt-for-data-engineers/">Dolt for Data Engineers</a><br>DoltHub&#39;s blog post delves into the utilization of Dolt, a version-controlled database, as a powerful tool for enhancing data quality and management in big data environments. The article advocates for the integration of Dolt&#39;s Git-style version control features to augment traditional data platforms like Databricks and Snowflake, primarily for data staging and quality control purposes. By employing Dolt as a data staging area, companies can automate the testing and human review of incoming data before it is ingested into the warehouse, thereby improving data quality. Additionally, the blog post introduces the concept of using Dolt for version controlling &#34;Gold Tables,&#34; which are tables containing clean data for end-user consumption. This is achieved by human-reviewing changes made to these tables via a Pull Request workflow, thus streamlining the process and ensuring data integrity.</p>
+
+<p><a href="https://blog.devops.dev/secure-your-application-code-with-github-secret-scanning-14b1272001fc">Secure your Application Code with GitHub Secret Scanning </a><br>The article &#34;Secure your Application Code with GitHub Secret Scanning&#34; by Mathesh provides an in-depth guide on how to use GitHub&#39;s Secret Scanning feature to enhance the security of application code by preventing accidental exposure of sensitive information such as API keys and passwords. Secret Scanning works by real-time scanning repositories for patterns that match secret keys, and GitHub notifies users immediately if any secrets are exposed. The feature is enabled by default for public repositories, but users can also enable it for individual accounts and private repositories with certain conditions. Additionally, GitHub has partnered with service providers like AWS to extend the scanning for specific secrets. The article also offers guidance on how to enable, disable, and configure Secret Scanning alerts, as well as how to explore and utilize other advanced security features available on GitHub.</p>
+
+<p><a href="https://www.linuxjournal.com/content/linux-distribution-deepin-23-officially-released">Linux发行版deepin 23正式发布</a><br>Linux Journal 近日庆祝了深度操作系统 23 的正式发布，这是由深度操作系统社区开发的基于 Linux 的操作系统的最新版本。此版本标志着社区的重要里程碑，包括 AI 技术的集成以及跨所有操作系统层实现独立开发控制。Deepin 23 是首款支持多种主流 CPU 和 GPU 架构的开源桌面操作系统，彰显了中国在技术自力更生方面取得的进步。深度操作系统社区以其创新和庞大的用户群而闻名，继续成为开源生态系统的驱动力，具有影响全球技术进步的潜力。</p>
+
+<p><a href="https://www.docker.com/blog/streamlining-local-development-with-dev-containers-and-testcontainers-cloud/">使用 Dev Containers 和 Testcontainers Cloud 简化本地开发</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，这通常是由于发出请求的客户端缺乏权限。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明，尝试访问服务器上的特定资源的用户未被授予执行此操作所需的权限。</p>
+
+<p><a href="https://engineering.fb.com/2024/08/27/security/privacy-aware-infrastructure-purpose-limitation-meta/">Meta 如何通过隐私感知基础设施大规模实施目的限制</a><br>Meta 一直在积极努力将隐私集成到其软件堆栈中，最终推出了其隐私意识基础设施 （PAI） 计划。该计划包括 Policy Zones，这是一项旨在通过实时控制数据访问和处理来在 Meta 系统中实施目的限制的技术。策略区集成到各种 Meta 系统中，包括基于函数的系统和批处理系统，用于保护不同系统之间的数据流。为了促进这些隐私措施的实施，Meta 开发了政策区域管理器 （PZM），这是一套工具，可帮助需求所有者有效地执行隐私要求。在整个采用过程中，Meta 吸取了宝贵的经验教训，例如关注特定用例的重要性以及投资克服集成复杂性的必要性。</p>
+
+<p><a href="https://tailscale.com/blog/video-iac-ansible-primer">面向 DevOps 的 Ansible 入门：基础设施即代码，第 3 部分</a><br>本视频是基础架构即代码 （IaC） 系列的一部分，作者演示了如何将 Ansible 与 Tailscale 结合使用来自动化和简化 DevOps 任务。本教程介绍了使用 Jinja2 模板化配置文件、使用 cloud-init 部署 DigitalOcean Droplet 以及在 DigitalOcean 上使用 Caddy 设置反向代理。作者还解释了如何使用 Tailscale SSH 在 Tailscale 网络上自动注册节点。这份综合指南面向有抱负的 DevOps 工程师，包括用于进一步学习的代码片段和资源。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>基于基于 YAML 的简单 DSL 的快速且可定制的漏洞扫描程序。</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>用于小地方的 Go 编译器。微控制器、WebAssembly （WASM/WASI） 和命令行工具。基于 LLVM。</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/wagoodman/dive">wagoodman/dive</a><br>用于浏览 Docker 映像中每一层的工具</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>数据库迁移工具。支持 SQL 迁移和 Go 函数。</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/k8sgpt-ai/k8sgpt">k8sgpt-ai/k8sgpt</a><br>让 Kubernetes 超能力惠及所有人</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock 是 Go 编程语言的模拟框架。</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>在 Kubernetes 中自动配置和管理 TLS 证书</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源自托管实现</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - 用于使用 CRD 构建 Kubernetes API 的 SDK</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/ent/ent">ent/ent</a><br>Go 的实体框架</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby 项目 - 容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu 允许您以声明方式管理您的云基础设施。</p>
+
+<p><a href="https://github.com/DataDog/dd-trace-go">DataDog/dd-trace-go</a><br>Datadog Go 库包括 APM 跟踪、分析和安全监控。</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>一个云原生 Go 微服务框架，带有 cli 工具以提高工作效率。</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度和管理</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型 SRT / WebRTC / RTSP / RTMP / LL-HLS 媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>macOS（和 Linux）上的容器运行时，设置最少</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir 为 Prometheus 提供可水平扩展、高度可用、多租户的长期存储。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

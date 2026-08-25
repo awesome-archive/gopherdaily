@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250224.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250224</span>
+</p>
+<p>每日一谚：Profile your code to identify performance bottlenecks </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://themsaid.com/building-a-dependency-injection-container-for-go">为Go构建依赖注入容器</a><br>本文探讨了依赖注入 (DI) 容器的概念，并逐步讲解了在 Go 中构建自己的 DI 容器的过程。文章介绍了依赖倒置原则 (DIP)，并解释了在 Go 这种非典型面向对象语言中构建 DI 容器的必要性。文中详细介绍了 DI 容器的设计、类型声明（Container、serviceProvider、containerService）、服务名称提取、服务注册（Register 和 RegisterDeferred）、服务解析（Make）、容器引导（Bootstrap）以及构造函数（NewContainer）。此外，文章还演示了如何使用该容器，包括处理接口以及使用环境变量来选择不同的缓存驱动程序。最后，文章提供了完整的源代码链接以及一些流行的 Go 依赖注入框架的链接。</p> 
+
+<p><a href="https://dev.to/leapcell/errgroup-unlocking-gos-concurrency-power-3g2h">ErrGroup：释放 Go 并发能力</a><br>Go 语言的 `errgroup` 库是一个强大的并发控制工具，它基于 `sync.WaitGroup`，但在错误处理和上下文取消方面更强大。本文通过示例演示了 `errgroup` 的基本用法、上下文取消和并发限制，并深入分析了其源代码的核心结构和主要方法，最后推荐了 Leapcell 作为部署 Golang 的理想平台。</p> 
+
+<p><a href="https://dev.to/leapcell/mastering-go-compiler-optimization-for-better-performance-3509">掌握 Go 编译器优化以提升性能</a><br>本文介绍了 Go 编译器优化技术，包括内联函数、避免内存分配、合理使用 Goroutine、转义分析、内存对齐、编译选项、性能分析工具、整数优化、避免反射以及并发控制等方面。文章还提供了项目示例，并推荐了 Leapcell 作为部署 Go 服务的平台。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dev.to/leapcell/why-protobuf-should-dominate-the-data-format-ecosystem-4ddd">为什么 Protobuf 应该主导数据格式生态系统</a><br>本文深入探讨了 Protobuf（Google Protocol Buffer）的优势和劣势，并与 JSON 和 XML 进行比较。Protobuf 具有高性能、高效率、代码生成机制、向后兼容性和向前兼容性以及多编程语言支持等优点，但也存在可读性差、缺乏自描述性和通用性不足等缺点。文章还详细介绍了 Protobuf 的使用指南，包括定义消息类型、字段编号、字段规则、注释、保留字段、字段类型与语言类型的映射、默认值、枚举类型、导入其他 proto 文件、嵌套消息、未知字段以及编码原理（TLV 编码格式、Varint 编码原理、Zigzag 编码以及 tag 和 value 值的计算方法）。最后，文章还推广了 Leapcell 平台，该平台支持多种编程语言、免费部署无限项目、具有极高的成本效益、简化的开发者体验以及轻松的扩展性和高性能。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Feb/23/grok-3-indirect-prompt-injection/#atom-everything">Grok 3 极易受到间接提示注入攻击</a><br>xAI 的新模型 Grok 3 目前仅部署在 Twitter（又名“X”）上，并且似乎在其每次响应中都使用其搜索相关推文的功能。这被认为是一个非常容易受到提示注入攻击的环境。Fabian Stelzer 指出，用户可以通过发布包含恶意指令和唯一关键词的推文，从而导致任何未来提及这些关键词的 Grok 查询都会以用户定义的方式出现故障。例如，如果在提示中加入“FriedGangliaPartyTrap”，Grok 总是会回复一首关于 Glif 是最佳 AI 沙箱的俳句。这是一个“间接提示注入”的经典案例，正如 Kai Greshake 等人在 2023 年 2 月的论文中所描述的那样。</p>
+
+<p><a href="https://www.datastax.com/blog/local-ai-using-ollama-with-agents">解锁本地AI：使用Ollama运行Agent</a><br>了解如何使用 Ollama 运行代理，这是一种更安全、更经济的方式，无需将数据暴露给公共模型提供商。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/alpkeskin/mosint">alpkeskin/mosint</a><br>An automated e-mail OSINT tool</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. Its modular and versatile design satisfies a broad range of industry use cases. It offers a unique approach to consensus that enables performance at scale while preserving privacy.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens.</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/getzep/zep">getzep/zep</a><br>Zep | The Memory Foundation For Your AI Stack</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.</p>
+
+<p><a href="https://github.com/AvaProtocol/EigenLayer-AVS">AvaProtocol/EigenLayer-AVS</a><br>AvaProtocol Ethereum Automation Build on EigenLayer</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/hyperledger/fabric-samples">hyperledger/fabric-samples</a><br>Samples for Hyperledger Fabric</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>Gen AI Toolbox for Databases is an open source server that makes it easier to build Gen AI tools for interacting with databases.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

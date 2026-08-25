@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250509.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250509</span>
+</p>
+<p>每日一谚：return early, return often </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://packagemain.tech/p/real-time-database-change-tracking">Go语言实时数据库变更跟踪：实现PostgreSQL CDC</a><br>变更数据捕获 (CDC) 能够实时跟踪数据库变更，这对于事件驱动系统、分析管道和微服务同步至关重要。本指南将介绍如何使用原生逻辑复制和pgx驱动程序在Go语言中实现PostgreSQL CDC。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/-Pwv_qhsU4r1iUiVd8j_aQ">GitHub英语沟通太难？别让语言成为你参与顶级Go项目的拦路虎！</a><br>文章通过对大量顶级 Go 开源项目（如Go官方仓库、Kubernetes、Docker/Moby、Prometheus等）的 Issues 和 Pull Requests 中社区互动的观察分析，并结合这些项目通常倡导的沟通准则，整理出了一套在 GitHub Issues 中进行高效英语沟通的实用“模式”与“心法”</p> 
+
+<p><a href="https://stevana.github.io/erlangs_not_about_lightweight_processes_and_message_passing.html">Erlang并非关于轻量级进程和消息传递……</a><br>作者过去认为Erlang的核心思想是轻量级进程和消息传递，但近年来意识到还有更重要的见解。文章探讨了Erlang中称为“行为”的通用组件，认为其比轻量级进程更重要。文章详细解释了Erlang的几种行为，包括gen_server、gen_event、gen_statem、supervisor、application和release，并阐述了使用这些行为构建可靠分布式系统的好处，例如简化并发处理、提高代码可重用性以及促进测试和形式化验证。文章最后讨论了在其他编程语言中实现这些行为的方法，以及如何利用状态机结构进行模拟测试和形式化验证，从而构建更可靠的分布式系统。</p> 
+
+<p><a href="https://victoriametrics.com/blog/victoriametrics-getting-started">VictoriaMetrics 组件：入门指南</a><br>本文介绍了 VictoriaMetrics 的关键组件，并解释了它们如何在完整的监控系统中协同工作。VictoriaMetrics 是一个顶级监控解决方案，以其速度和低资源消耗而闻名。它包括用于监控、警报、数据可视化、查询、抓取、增量备份等的组件。文章涵盖了 VictoriaMetrics 集群（vminsert、vmselect、vmstorage）、单节点 VictoriaMetrics、vmagent、vmauth、vmbackup、vmbackupmanager、vmrestore 和 vmalert 等组件。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.livekit.io/bringing-ai-avatars-to-voice-agents/">为语音代理带来 AI 头像</a><br>介绍与 Tavus 的集成
+
+视频头像不仅仅是噱头——它们已经成为开发人员和企业真正需要的实用工具。我们从客户那里听到很多这样的反馈，尤其是在教育、医疗、心理健康和营销领域。每个人似乎都热衷于将他们的语音互动转变为更直观、更引人入胜的东西。
+
+为什么选择头像？
+
+虽然语音是人类沟通的主要媒介，但视觉线索也扮演着重要的角色。面部表情、手势和眼神交流增加了上下文，有助于传达意图、情感和参与度。在将 AI 语音代理集成到应用程序中时，添加视觉头像可以通过使互动感觉更自然和更引人入胜来改善用户体验。</p>
+
+<p><a href="https://dolthub.com/blog/2025-05-08-customer-per-branch/">按分支划分客户</a><br>Dolt是一个拥有分支的SQL数据库。一种常见的Dolt使用模式是“按分支划分客户”。数据库的主分支用于架构和领域数据，每个客户的数据存储在单独的客户专用分支上。合并用于管理架构迁移和领域表更新。客户专用数据是隔离的，可以防止意外修改并简化查询。本文将解释这种模式及其使用方法。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/05/09/announcing-linkerd-2-18-battlescars-lessons-learned-and-preliminary-windows-support/">Linkerd 2.18 发布公告：实战经验、经验教训和初步的 Windows 支持</a><br>Linkerd 2.18 版本现已发布。此版本的主题是“实战经验”：我们添加了新功能并更新了现有功能，以根据从挑战 Linkerd（以及 Kubernetes 本身！）极限的客户那里获得的宝贵经验来减少操作难题。此版本还引入了 Windows 环境的实验性代理版本，这是 Linkerd 一个令人兴奋的新领域。此版本基于我们帮助客户运行 Linkerd 时获得的经验，包含三个重要更改：协议声明、兼容 GitOps 的多集群和对 Gateway API 支持的更改。Linkerd 2.18 版本还修复了一些较小的错误，并引入了 Windows 代理的实验性版本。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/05/08/kubernetes-v1-33-volume-populators-ga/">Kubernetes 1.33：卷填充器升级到 GA</a><br>Kubernetes 卷填充器现已正式上市 (GA)！Kubernetes v1.33 将 AnyVolumeDataSource 功能闸门视为始终启用，这意味着用户可以指定任何合适的自定义资源作为 PersistentVolumeClaim (PVC) 的数据源。
+文章还介绍了与 GA 版本相关的四个主要改进，包括可选的填充器 Pod、用于修改 Kubernetes 资源的更改器函数、灵活的提供程序指标处理以及临时资源的清理。</p>
+
+<p><a href="https://nexo.sh/posts/microservices-for-startups">微服务对你的初创公司来说可能负担不起</a><br>为什么过早拆分代码库会悄无声息地降低团队的速度——以及应该怎么做。
+在初创公司中，你的生存取决于你迭代、发布功能和向最终用户交付价值的速度。这就是你的初创公司的基础架构发挥重要作用的地方；此外，技术栈和编程语言的选择直接影响团队的速度。错误的架构，特别是过早的微服务，会严重损害生产力，并导致软件交付目标的错过。</p>
+
+<p><a href="https://www.darknavy.org/blog/a_first_glimpse_of_the_starlink_user_ternimal">Starlink用户终端初探</a><br>本文简要概述了DARKNAVY近期对Starlink用户终端的初步调查。Starlink是SpaceX提供的低地球轨道(LEO)卫星互联网服务。用户通过用户终端连接到近地轨道卫星，然后通过地面网关连接到互联网。随着新一代卫星逐渐采用激光链路，一些卫星可以通过激光相互通信，从而减少对地面站的依赖，提高传输效率，增强全球覆盖范围。文章分析了Starlink用户终端的硬件、固件、安全芯片等方面，并发现了疑似数据记录程序，引发了对用户隐私的担忧。</p>
+
+<p><a href="https://www.deepintodev.com/blog/how-nodejs-works-behind-the-scenes">Node.js 幕后工作原理</a><br>本文深入探讨 Node.js 事件循环、各个阶段、process.nextTick() 以及 Node.js 如何使用单线程处理异步操作。阅读后，您将深入了解 Node.js 事件循环的工作原理，包括所有阶段；Node.js 如何在单线程环境中执行 JavaScript 代码；Node.js 如何使用 libuv 库和内部 API 管理异步操作；以及了解事件循环对于编写高效后端代码至关重要。</p>
+
+<p><a href="https://newsletter.techworld-with-milan.com/p/how-google-measures-and-manages-tech">谷歌如何衡量和管理技术债务</a><br>技术债务困扰着开发团队数十年，但其解释却出奇地困难。谷歌最近在其规模上也面临着这一挑战，在其内部调查中，相当一部分工程师报告称他们被“不必要的复杂性和技术债务”所阻碍。在一篇题为“定义、衡量和管理技术债务”的论文中，谷歌工程师Ciera Jaspan和Collin Green系统地理解了这一减缓甚至最优秀工程团队速度的概念。他们试图回答以下问题：如何衡量如此无形的东西？一旦你识别出它，如何在不停止新开发的情况下管理它？这项研究很重要，因为技术债务经常被归咎于生产力问题，但却很少被精确地定义或衡量。谷歌的研究工作为任何工程组织都可以采用的具体策略提供了参考。本文深入探讨了他们的方法，包括对技术债务的定义、衡量方法（包括问卷调查和尝试使用工程日志数据）、管理策略（包括技术债务管理框架、技术债务成熟度模型、教育和宣传以及工具和指标）以及一些可借鉴的实践经验。</p>
+
+<p><a href="https://val.packett.cool/blog/podfox">Podfox：全球首个容器感知浏览器</a><br>端口冲突促使我彻底放弃容器端口转发，让我的 Firefox 直接与 Podman 的整个网络通信。此外，还介绍了为命令行爱好者容器化开发环境的方法。文章详细介绍了容器网络的工作原理，以及如何使用 Podfox（一个 Rust 编写的 SOCKS 代理）和 PAC 文件实现容器感知的浏览器体验，无需主机上的任何端口转发或 DNS 配置。最后，文章还介绍了如何利用 Homebrew 和 Podchamp 脚本容器化 CLI 开发环境，方便地在不同容器镜像之间切换开发环境。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/9/sqlite-utils-40a0/#atom-everything">sqlite-utils 4.0a0</a><br>sqlite-utils 的 4.0a0 alpha 版本发布了。这是一个 Python 库和命令行工具，用于操作 SQLite 数据库。此版本中，`.upsert()` 和 `.upsert_all()` 方法升级为使用 SQLite 的 UPSERT 机制 `INSERT INTO ... ON CONFLICT DO UPDATE`。该特性在 SQLite 3.24.0 版本（2018-06-04 发布）中添加。由于底层库升级可能比较困难，作者对 SQLite 版本的支持比较谨慎。这个 alpha 版本发布后会先进行一段时间测试，之后发布稳定版本。由于这是一个主要版本更新，作者会利用这次机会清理一些 API 问题。</p>
+
+<p><a href="https://engineering.fb.com/2025/05/08/data-infrastructure/accelerating-gpu-indexes-in-faiss-with-nvidia-cuvs/">使用 NVIDIA cuVS 加速 Faiss 中的 GPU 索引</a><br>Meta 和 NVIDIA 合作，通过将 NVIDIA cuVS 集成到 Meta 的开源相似性搜索库 Faiss v1.10 中，来加速 GPU 上的向量搜索。此 cuVS 的新实现将在某些领域比经典的 GPU 加速搜索更具性能优势。对于倒排文件 (IVF) 索引，NVIDIA cuVS 的性能最多可比经典的 GPU 加速 IVF 构建时间快 4.7 倍；搜索延迟最多可减少 8.1 倍。对于图形索引，CUDA ANN 图形 (CAGRA) 的性能最多可比 CPU 分层可导航小世界图形 (HNSW) 构建时间快 12.3 倍；搜索延迟最多可减少 4.7 倍。</p>
+
+<p><a href="https://ghiculescu.substack.com/p/nobody-codes-here-anymore">这里不再编写代码了</a><br>关于推出 Cursor 和 Claude Code 的一些笔记。文章探讨了在实际应用中使用 AI 代码生成工具的经验，包括生产力提升、代码风格、代码库的 AI 友好性以及成本等方面。作者认为，虽然 AI 工具在某些方面非常有效，但在其他方面几乎没有帮助，关键在于将其整合到合适的流程中。此外，作者还讨论了 AI 代码生成的局限性，例如生成的代码可能过于冗长或缺乏美感。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/databricks/terraform-provider-databricks">databricks/terraform-provider-databricks</a><br>Databricks Terraform Provider</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/kubesphere/kubesphere">kubesphere/kubesphere</a><br>The container platform tailored for Kubernetes multi-cloud, datacenter, and edge management ⎈ 🖥 ☁️</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript - https://k6.io</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - Infrastructure as Code in any programming language 🚀</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>Generate type-safe code from SQL</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

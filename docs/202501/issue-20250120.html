@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250120.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250120</span>
+</p>
+<p>每日一谚：Don not ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://build-your-own.org/blog/20251015_db_in_3000">用3000行Go代码构建构建一个零依赖的数据库</a><br>本文介绍了作者如何用 3000 行 Go 代码构建一个小型数据库，并逐步讲解了数据库的核心概念，包括：实现防断电原子性（使用追加式日志和校验和）、使用数据结构（B&#43;树）索引数据、回收和重用未使用的空间、在 KV 存储上构建关系型数据库、并发控制以及 SQL-like 查询语言。文章还提供了构建过程中的代码行数统计表，并推荐了作者关于该主题的书籍。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/PrintDebuggingOnlyChoice">有时，基于打印的调试是你的唯一选择</a><br>本文讲述了作者在使用mod_wsgi的Django应用中排查问题时，使用基于打印的调试方法的经验。作者指出，这种方法虽然并非总是首选，但在某些环境（例如隔离的生产环境）中，它是获取信息最有效、便捷的方式。文章还探讨了调试器和基于打印调试的优缺点，并建议开发者掌握基于打印的调试技能。</p> 
+
+<p><a href="https://rednafi.com/go/circuit_breaker">用Go编写断路器</a><br>除了重试，断路器是分布式系统中最常用的弹性模式之一。虽然编写重试例程非常简单，但实现断路器需要一些工作。本文尝试用 Go 编写一个简单的断路器，并解释了其三种状态（关闭、打开、半打开）以及状态转换过程。文中还包含了 Go 代码示例，演示了如何定义状态、初始化断路器、实现 Call 方法以及处理不同状态下的请求。最后讨论了 Go 泛型的一些限制以及如何处理不兼容的函数签名。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/01/20/opentelemetry-for-generative-ai/">用于生成式 AI 的 OpenTelemetry</a><br>随着越来越多的组织采用大型语言模型 (LLM) 和其他生成式 AI 技术，确保可靠的性能、效率和安全性对于满足用户期望、优化资源成本以及防范意外输出至关重要。针对 AI 运营、行为和结果的有效可观察性可以帮助实现这些目标。OpenTelemetry 正在增强以专门支持生成式 AI 的这些需求。
+
+主要有两个资源正在开发中：语义约定和工具库。第一个工具库针对 OpenAI Python API 库。语义约定为跨平台收集和构造遥测数据建立了标准化指南，定义了输入、输出和操作细节。对于生成式 AI，这些约定通过标准化诸如模型参数、响应元数据和令牌使用等属性来简化 AI 模型的监控、故障排除和优化。这种一致性支持跨工具、环境和 API 的更好可观察性，帮助组织轻松跟踪性能、成本和安全性。
+
+工具库正在 OpenTelemetry Python Contrib 中的 instrumentation-genai 项目下开发，用于自动化生成式 AI 应用程序的遥测数据收集。第一个版本是用于检测 OpenAI 客户端调用的 Python 库。该库捕获跨度和事件，以结构化格式收集基本数据，例如模型输入、响应元数据和令牌使用情况。
+
+随着生成式 AI 应用程序的增长，其他语言的附加工具库将陆续推出，从而扩展 OpenTelemetry 对更多工具和环境的支持。当前库对 OpenAI 的关注突出了其在 AI 开发中的普及性和需求，使其成为一个有价值的初始实现。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/KsHnKhnaeLWvwUNmOg69CQ">字节跳动观测数据埋点标准化实践</a><br>本文聚焦字节跳动观测数据埋点标准化，剖析挑战与思路，助力提升数据质量、排障效率。文章详细阐述了埋点标准化的重要性，包括提高研发效率、降低研发协同成本以及为AIOps提供数据支撑。并介绍了字节跳动在埋点标准化过程中遇到的挑战，以及如何通过分层、向后兼容等方式来解决问题。最后，文章总结了字节跳动在观测数据埋点标准化方面取得的成果和赋能效果。</p>
+
+<p><a href="https://newsletter.scalablethread.com/p/what-is-function-sharding-in-serverless">无服务器计算中的函数分片是什么？</a><br>本文探讨了函数分片，这是一种类似于 MapReduce 的分治概念，它根据特定标准（通常是输入数据的一部分）将单个函数的工作分散到多个函数实例中。这与标准的无服务器模型不同，在标准模型中，每个函数运行都由单个实例管理。函数分片提高了并发性和吞吐量，改善了可扩展性，并提供了故障隔离。</p>
+
+<p><a href="https://www.vintagecomputing.com/index.php/archives/3292/the-pc-is-dead-its-time-to-make-computing-personal-again">PC已死：是时候让计算再次变得个性化了</a><br>本文探讨了监控资本主义和数字版权管理如何将家用科技从朋友变成敌人。文章回顾了个人电脑时代，以及互联网和数字版权管理如何逐渐剥夺用户对技术的控制权。文章最后呼吁对隐私立法、维修权立法和数字版权管理进行改革，以恢复个人对数字生活的控制。</p>
+
+<p><a href="https://rdel.substack.com/p/rdel-75-how-do-interruptions-impact">RDEL #75：中断如何影响不同的软件工程活动？</a><br>某些任务及其复杂性会改变中断的影响程度。研究还发现感知数据和生理数据之间存在差异。</p>
+
+<p><a href="https://blog.gitbutler.com/why-is-git-autocorrect-too-fast-for-formula-one-drivers">为什么 Git 自动更正对一级方程式赛车手来说太快了？</a><br>Git 的自动更正为什么会在执行错打的命令前等待 0.1 秒？让我们深入探讨。</p>
+
+<p><a href="http://milinda.pathirage.org/kappa-architecture.com">Kappa 架构：万物皆流</a><br>Kappa 架构是一种软件架构模式，它使用追加式不变日志作为规范数据存储，而不是关系型数据库或键值存储。数据从日志中流经计算系统，并馈送到辅助存储中进行服务。Kappa 架构简化了 Lambda 架构，去除了批量处理系统，通过快速地将数据馈送到流处理系统来替代批量处理。这种架构简化了数据库迁移和重组，只需要维护一套代码。该网站收集并发布了与 Kappa 架构相关的文章、教程、演讲、项目和示例。</p>
+
+<p><a href="https://github.blog/changelog/2025-01-13-evolving-github-issues-public-preview">GitHub Issues 的演变（公开预览）</a><br>继去年推出的可选择加入的预览版后，我们很高兴地向所有用户发布子问题、问题类型和高级问题搜索功能！🎉 感谢所有选择加入并为这些新增功能提供反馈的用户。我们将逐步推出这些更改，预计所有用户在本周末前都能访问。 此次更新包含子问题、问题类型、高级搜索以及问题界面的更新。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jan/19/til-downloading-every-video-for-a-tiktok-account/#atom-everything">学习笔记：下载 TikTok 账号的所有视频</a><br>鉴于 TikTok 可能在美国被禁，作者分享了使用浏览器控制台 JavaScript 抓取视频 URL 和 yt-dlp 下载每个视频的方法。此外，还介绍了使用 mlx-whisper 生成每个视频的 Whisper 转录以及显示下载进度条的技巧。</p>
+
+<p><a href="https://www.answer.ai/posts/2025-01-08-devin.html">一个月使用 Devin 的感想 – Answer.AI</a><br>我们在 Devin 上尝试了 20 多个任务后，对它的印象。Devin 是一个由 AI 驱动的软件工程师，承诺能够像人类同事一样与你交谈，能够完成从学习新技术和调试成熟代码库到部署完整应用程序甚至训练 AI 模型等所有工作。早期的演示令人信服，但随着我们测试范围的扩大，问题出现了。任务往往需要几天而不是几小时才能完成，Devin 会陷入技术死胡同或产生过于复杂、无法使用的解决方案。最令人沮丧的方面不是失败本身，而是我们花费了多少时间试图挽救这些尝试。我们系统地记录了我们在创建新项目、执行研究任务和分析/修改现有项目方面的尝试。结果令人清醒。在 20 个任务中，我们有 14 次失败，3 次成功（包括我们最初的 2 次）和 3 次不确定的结果。更重要的是，我们无法辨别出任何可以预测哪些任务会成功的模式。即使与我们早期成功的任务类似的任务也会以复杂、耗时的方式失败。自主特性似乎很有希望，但却成为了一种负债——Devin 会花费数天时间追求不可能的解决方案，而不是认识到根本性的障碍。总的来说，虽然 Devin 体现了自主式 AI 开发的未来，但它在现实世界中的应用仍有局限性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Phi 4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/YouROK/TorrServer">YouROK/TorrServer</a><br>Torrent stream server</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/gophish/gophish">gophish/gophish</a><br>Open-Source Phishing Toolkit</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/moonD4rk/HackBrowserData">moonD4rk/HackBrowserData</a><br>Extract and decrypt browser data, supporting multiple data types, runnable on various operating systems (macOS, Windows, Linux).</p>
+
+<p><a href="https://github.com/google/osv-scalibr">google/osv-scalibr</a><br></p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

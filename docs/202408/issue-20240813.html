@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240813.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-13</span>
+</p>
+<p>每日一谚：Make your errors clear with fmt.Errorf, do not just leave them bare. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/go1.23">Go 1.23正式发布</a><br>与 1.22 版本相比，Go 编程语言已经发布了许多改进，包括语言更改、工具改进、标准库改进以及在 64 位 RISC-V 上对 OpenBSD 的实验性支持。</p> 
+
+<p><a href="https://kmcd.dev/posts/http1.0-from-scratch/">HTTP/1.0 从零开始实现</a><br>本文提供了如何在 Go 中构建一个有效的 HTTP/1.0 服务器的教程，重点介绍了头、状态代码和主机头，以及如何测试服务器的功能，同时还探讨了 HTTP 到 HTTP/1.1、HTTP/2 和 HTTP/3 的演变。</p> 
+
+<p><a href="https://medium.com/@revaldimijaya.rev/how-to-set-a-max-timeout-for-your-function-in-go-0cca08090e27">How to Set a Max Timeout for Your Function in Go</a><br>Revaldo Mijaya introduces a &#34;timeout-wrapper&#34; in Go programming that allows users to control the execution time of functions, leveraging the concept of multithreading with goroutines, and provides examples for both the use and non-use of the wrapper.</p> 
+
+<p><a href="https://techcrunch.com/2024/08/11/a-not-quite-definitive-guide-to-open-source-alternative-software/">开源工具可提高您的工作效率</a><br>TechCrunch 介绍了流行的生产力应用程序的开源替代品，包括 Cal.com、Jitsi、TabbyML、Appflowy.io、Dub.co 和 Google 的 Gemini Live，同时还讨论了谷歌 Pixel 9 手机的推出以及在 Pixel Watch 3 上引入一项可能挽救生命的新功能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://makeitsimple.medium.com/kubernetes-on-vms-vs-bare-metal-comparison-of-performance-674a920b93e4">虚拟机上的 Kubernetes 与裸机：性能比较</a><br>这篇博文比较了 Kubernetes 在虚拟机和裸机上的性能，其中 SKS（部署在 SmartX HCI 上）的性能范围为裸机 Kubernetes 的 82% 到 96%，表明基于 VM 的 Kubernetes 可以有效满足生产环境中大多数容器化应用的需求。</p>
+
+<p><a href="https://blog.howardjohn.info/posts/mtls-kubernetes/">我只想要 Kubernetes 上的 mTLS</a><br>这篇博客文章讨论了在 Kubernetes 中使用相互传输安全 （mtls），解释了其优势、实施选项，并推荐基于 sidecar 的服务网格、基于节点的环境网格和基于 CNI 的方法来实现 mtls，而无需复杂的服务网格。</p>
+
+<p><a href="https://www.solo.io/blog/http-observability-without-compromises/">不折不扣的 HTTP 可观测性</a><br>Solo.io 的 Istio 环境模式和 Gloo 的高级 HTTP 可观测性提供了轻松的服务网格管理，提供了高性能、安全性和兼容性，同时还提供高级 HTTP 可观察性，而不会影响性能。</p>
+
+<p><a href="https://www.docker.com/blog/zero-trust-and-docker-desktop-an-introduction/">零信任和 Docker 桌面：简介</a><br>源文档是一条消息，指示来自系统的“403 Forbidden”错误消息，特别是来自服务器端，特别是来自“ns”（Nix）模块。</p>
+
+<p><a href="https://www.p99conf.io/2024/08/13/the-cloud-storage-triad-latency-cost-durability/">云存储三元组：延迟、成本、耐用性</a><br>Chris Riccomini 讨论了开源云原生存储引擎 SlateDB 的设计和实现，以及在对象存储上构建 LSM 的挑战，并提出了延迟、成本、持久性 （LCD） 定理来指导此类系统的开发。</p>
+
+<p><a href="https://www.hashicorp.com/blog/nomad-garbage-collection-optimization-discovery-during-nomad-bench">Nomad Bench 项目期间的内部垃圾收集和优化发现</a><br>本文讨论了在 Nomad Bench 项目中发现的优化，该项目侧重于改进工作负载编排器的内部垃圾收集机制，以及优化如何导致更高的吞吐量、更高的稳定性以及 CPU 和内存消耗的微小改进。</p>
+
+<p><a href="https://www.redhat.com/en/blog/improved-vulnerability-reporting-quay">改进了 Quay.io 上的漏洞报告</a><br>Red Hat 改进了 Quay.io 漏洞报告，切换到通用安全咨询框架 （CSAF） 格式，并默认包含未修复的漏洞，使用户更容易验证给定漏洞对特定映像的影响。</p>
+
+<p><a href="https://thenewstack.io/reining-in-the-api-wild-west-5-api-testing-best-practices/">控制API狂野西部：5 个 API 测试最佳实践</a><br>新堆栈为 API 测试和调试提供了五种最佳实践，强调了集成到 CI/CD 管道、代码审查、版本控制、速度和可靠性设计、与产品质量目标保持一致以及定期审查和更新测试套件的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2024">2024 年软件工程师的 AI 工具：现实检查（第 1 部分）</a><br>本文对 AI 工具在软件开发中的使用进行了现实检查，包括流行的工具 ChatGPT 和 GitHub Copilot，以及常见的工作流程，例如与 AI 机器人聊天、调试以及学习新语言和框架。</p>
+
+<p><a href="https://medium.com/@tntra/ai-first-strategy-4-essential-steps-to-building-a-successful-ai-first-company-ba6e1a254420">AI 优先战略：建立成功的 AI 优先公司的 4 个基本步骤</a><br>本文提供了建立成功的人工智能优先公司的四个基本步骤，包括定义人工智能对公司的意义、以身作则、优先考虑员工而不是人工智能，以及在需要的地方部署人工智能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubernetes-sigs/karpenter">kubernetes-sigs/karpenter</a><br>Karpenter 是一个 Kubernetes 节点自动缩放器，专为灵活性、性能和简单性而构建。</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>高可用性 Prometheus 设置，具有长期存储功能。CNCF孵化项目。</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>分布式、可靠的键值存储，用于存储分布式系统中最关键的数据</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>社区维护的 https://github.com/dgrijalva/jwt-go 克隆</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行 Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>自定义 kubernetes YAML 配置</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr 是一个可移植的、事件驱动的运行时，用于在云和边缘构建分布式应用程序。</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go 是一个 Go 包，它使创建和清理基于容器的依赖项以进行自动化集成/冒烟测试变得简单。干净、易用的 API 使开发人员能够以编程方式定义应作为测试的一部分运行的容器，并在测试完成时清理这些资源。</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>适用于 Kubernetes 的 Ingress-NGINX 控制器</p>
+
+<p><a href="https://github.com/goravel/goravel">goravel/goravel</a><br>面向网络工匠的 Golang 框架。向拉拉维尔致敬。</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>后端大师班：用 Go 构建一个简单的银行服务</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>用于去中心化网络🌈💎✨的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/teivah/100-go-mistakes">teivah/100-go-mistakes</a><br>📖 100 个错误以及如何避免它们</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>适用于 Windows、macOS 和 Linux 的跨平台备份工具，具有快速、增量备份、客户端端到端加密、压缩和重复数据删除功能。包括 CLI 和 GUI。</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/uber-go/fx">uber-go/fx</a><br>一个基于依赖注入的 Go 应用程序框架。</p>
+
+<p><a href="https://github.com/go-admin-team/go-admin">go-admin-team/go-admin</a><br>基于Gin &#43; Vue &#43; Element UI &amp; Arco Design &amp; Ant Design 的前后端分离权限管理系统脚手架（包含了：多租户的支持，基础用户管理功能，jwt鉴权，代码生成器，RBAC资源控制，表单构建，定时任务等）3分钟构建自己的中后台项目；项目文档》：https://www.go-admin.pro V2 Demo： https://vue2.go-admin.dev V3 Demo： https://vue3.go-admin.dev Antd 订阅版：https://antd.go-admin.pro</p>
+
+<p><a href="https://github.com/drakkan/sftpgo">drakkan/sftpgo</a><br>功能完备且高度可配置的 SFTP、HTTP/S、FTP/S 和 WebDAV 服务器 - S3、Google Cloud Storage、Azure Blob</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/golang/protobuf">golang/protobuf</a><br>Go 支持 Google 的协议缓冲区</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>macOS（和 Linux）上的容器运行时，只需最少的设置</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

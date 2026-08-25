@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260127.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260127</span>
+</p>
+<p>每日一谚：The cost of building a feature is its smallest cost </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/27/typescript-compiler-go-rewrite-10x-speed-microsoft-details">TypeScript 编译器 Go 重写版提速 10 倍：微软团队深度揭秘幕后工程细节</a><br>备受瞩目的 TypeScript 编译器 Go 重写版（代号 TypeScript 7.0）已经取得了惊人的 10 倍性能提升。在最近的 GopherCon 2025 上，来自 Microsoft TypeScript 团队的 Jake Bailey 带来了一场干货满满的分享，深度揭秘了这场跨语言大迁徙背后的工程挑战与技术细节。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/-zzyifLpoEZsIZUAJumU_w">【分布式系统】09 共识（上）：FLP 不可能定理与 Paxos 的“创世纪” </a><br></p> 
+
+<p><a href="https://internals-for-interns.com/posts/the-go-linker">深入解析 Go 链接器工作原理</a><br>链接器是编译过程的最后一步，它将单独的目标文件组合成一个可执行文件。其主要任务包括：符号解析（Loader构建全局索引并连接引用与定义）、死代码消除（从main.main开始追踪可达性并移除未使用的代码）、重定位（分配地址并修补占位符）、以及生成可执行文件（按操作系统特定格式写入，入口点是运行时启动代码）。Go 链接器还支持静态链接、动态链接、C 存档、共享库和插件等多种构建模式。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-01-26-dolt-crash-recovery-testing/">使用虚拟机对 Dolt 进行持久性测试</a><br>Dolt 是一个具有类似 Git 版本控制功能的 MySQL 兼容 SQL 数据库。为了增强 Dolt 在不同文件系统和设置下运行时其持久性属性的信心，我们最近一直在为 Dolt 构建崩溃恢复测试。本文描述了我们用于针对 Dolt 运行崩溃持久性测试的框架，包括 Linux 虚拟机、DCRTS 守护进程、控制平面和集成测试的整体架构。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoGenericTypeIsPointer">强制 Go 泛型类型为指针类型（以及一些挑战）</a><br>最近我看到一个 Go 语言的例子，让我百思不得其解（你可以在这里看到）。以下是我对这段代码的理解。假设你想为一个泛型类型创建一个泛型接口 ，该接口要求任何具体的实现都必须是指针类型。我们可以通过直接要求使用指针来实现这一点</p> 
+
+<p><a href="https://rednafi.com/go/mocking-libraries-bleh">你的 Go 测试可能不需要 mocking 库</a><br>如何在不使用外部库的情况下，仅使用 Go 标准库中的实用模式来模拟函数、方法、接口、HTTP 调用和时间。</p> 
+
+<p><a href="https://tessl.io/blog/making-claude-good-at-go-using-context-engineering-with-tessl">使用 Tessl 的上下文工程技术，让 Claude 擅长 Go 语言</a><br>本文介绍了如何使用 Tessl 的上下文工程技术来提升 Claude (Claude Opus 4.5) 在 Go 语言方面的能力，并在一个真实 Bug 修复实验中取得了 100% 的成功率，同时运行速度提高了 1.6 倍，单次尝试成本降低了 3 倍（$0.10 对比 $0.30）。文章强调了为 AI 编码代理提供准确、最新的依赖文档的重要性，并展示了 Tessl 规范注册表（spec registry）如何将上下文工程从一门艺术转变为一种工程实践。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/knowing-how-to-drive-the-car/">你必须知道如何驾驶汽车</a><br>这篇文章讨论了成为一名软件工程师的多种方式，但强调无论选择哪条道路（努力工作、从事支持性工作、影响产品方向、晋升或轻松工作），最重要的是“你必须知道技术公司是如何运作的”。作者以汽车类比说明，就像开车是为了达成目标一样，了解技术公司的“政治”和运作机制是实现个人目标的必要条件。文章通过不同抱负的工程师的例子（雄心勃勃想晋升的、想轻松的、想交付用户价值的）来说明，掌握公司运作规则（如晋升路径、胶水工作的陷阱、项目成果的重要性、声誉积累等）对于避免挫折或实现目标至关重要。作者认为，除非完全避开大公司，否则理解这些规则是利用大公司影响力的关键。</p>
+
+<p><a href="https://www.docker.com/blog/clawdbot-docker-model-runner-private-personal-ai/">使用 Clawdbot &#43; DMR 运行私有的个人 AI 助手</a><br>使用 Clawdbot &#43; Docker Model Runner (DMR) 在您自己的硬件上运行私有的个人 AI 助手，实现快速设置、本地数据控制和可预测的成本。该方案强调隐私保护，确保个人数据不发送给第三方云服务，并允许用户通过 DMR 在本地运行和管理 LLMs。</p>
+
+<p><a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151">The AI Evolution of Graph Search at Netflix</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/26/k0s-in-2025-a-year-of-community-growth-governance-and-kubernetes-innovation/">k0s in 2025: A year of community growth, governance, and Kubernetes innovation | CNCF</a><br>As we begin 2026, it’s worth reflecting on the remarkable progress we made with k0s as a project and as a community during 2025. Last year brought exciting advancements, adoption, and stronger community engagement. k0s, a single-binary Kubernetes distribution, delivered 39 stable releases supporting Kubernetes 1.34, enhanced features for edge use cases, and focused on security hardening. Key highlights included a stable dynamic control plane load balancer, nftables support (GA in v1.33), and alpha support for Windows nodes. k0s also joined the CNCF Sandbox and submitted its incubation application, reflecting its growing maturity and commitment to open governance. Community growth included increased adoption, rising contributor engagement, and a community-shaped roadmap. Looking ahead to 2026, planned innovations focus on the v1.35 release, upstream alignment, support for containerd 2.x, and enhanced operational capabilities, all guided by a public roadmap.</p>
+
+<p><a href="https://notes.nora.codes/atproto-again">我对 ATProto 密钥管理的判断是正确的</a><br>作者在尝试为 Bluesky 设置使用 did:web 的 ATProto 账户时遇到了困难，包括账户被创建为“已停用”状态、需要手动请求才能激活，以及在删除空账户后，其 did:web 被 AppView 永久“烧毁”（黑名单），导致在 Bluesky 上无法显示。作者批评了 did:web 设置过程缺乏文档、`getRecommendedDidCredentials` 端点文档误导，以及一个中央化的“烧毁”机制能完全阻止用户与其他人的互动，这与 ATProto 所宣称的去中心化目标相悖。作者最终通过 Hacker News 引起注意后，其账户才被手动恢复。</p>
+
+<p><a href="https://vmblog.com/archive/2026/01/08/2026-kubernetes-and-cilium-networking-predictions.aspx">2026年Kubernetes和Cilium网络预测</a><br>这篇文章是VMblog.com第18届年度预测系列的一部分，由Isovalent的技术营销工程师Nico Vibert撰写。文章预测了2026年Kubernetes网络领域的重要趋势，尤其关注随着组织向VMware之外过渡和人工智能工作负载的快速增长所带来的变化。主要预测包括：运行在Kubernetes上的虚拟机（VM on K8s）的持续发展和挑战，KubeVirt体验的改进，新兴的“Kubernetworker”（融合网络和平台技能的工程师）角色的兴起，Kubernetes网络为适应AI工作负载而进行的调整（例如拓扑感知和带宽管理），以及微隔离重要性的再次提升。文章总结认为，eBPF和Cilium将继续塑造Kubernetes网络的基础，未来一年将是传统网络与云原生网络融合、Kubernetworker崛起以及Kubernetes快速适应AI需求的一年。</p>
+
+<p><a href="https://www.zackliscio.com/posts/rip-low-code-2014-2025">再见低代码 2014-2025</a><br>Agentic（代理式）编程对广泛的低代码工具构成了生存威胁。低代码平台出现的原因是为了用更少的开发者资源创建软件，但随着人工智能编程的兴起，通过传统方式构建工具的投资回报率正在发生逆转。作者以其公司Cloud Capital的经验为例，说明了他们如何快速从依赖Retool等低代码平台转向使用AI工具进行内部管理工具的开发，并在几个冲刺周期内完成了迁移，认为这是更快的、成本更低、更易于维护的选择，并且提高了开发者体验和最终用户质量。</p>
+
+<p><a href="https://www.greptile.com/blog/ai-code-review-bubble">存在一个AI代码审查泡沫</a><br>今天，每个人都在进行AI代码审查。本文阐述了Greptile的观点有何不同——即独立性、自主性和反馈循环。</p>
+
+<p><a href="https://alexwennerberg.com/blog/2026-01-25-slop.html">AI code and software craft</a><br>这篇文章探讨了人工智能（AI）在代码和软件工艺领域的影响。作者认为，AI生成的内容（如音频、视频、文本）的泛滥反映了“技术”（technique）的统治，即将一切活动简化为高效、可衡量的手段，从而扼杀了工艺、尊严和人类自由。在音乐领域，Spotify的指标驱动模式导致平庸音乐的产生，而Bandcamp则通过关注专辑和策展来支持独立音乐。
+在软件领域，大规模技术公司的软件质量普遍低下，工程师的专业技能因过度专业化而退化。作者指出，AI在生成低质量、流程化的软件方面可能很有效，但其被过度吹捧为可以取代所有软件工程。作者通过类比约翰·拉斯金和威廉·莫里斯的“工艺美术运动”，呼吁软件领域也需要一场复兴，重新关注早期的计算思想和真正的工艺与人类批判性思维，以对抗主流软件的退化和中心化趋势。虽然AI可能使垃圾软件更普遍，但也可能为寻求真正工艺和创造性表达的工程师创造空间。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/26/tests/#atom-everything">Tips for getting coding agents to write good Python tests</a><br>有人在Hacker News上询问关于如何让编程代理（coding agents）编写高质量测试的建议。作者分享了他的经验，指出使用Python（因为有大量好的pytest测试示例可供训练）是一个优势。关键点包括：1. 关注并避免重复的测试设置代码，可以使用`pytest.mark.parametrize`或提取pytest fixture来重构。2. 最好让代理在一个已有良好测试规范的项目中工作，它们会自然地学习这些模式。3. 快速展示期望模式的最好方法是让代理参考现有项目的测试，例如“克隆datasette/datasette-enrichments并模仿其测试模式”。</p>
+
+<p><a href="https://aws.amazon.com/cn/blogs/devops/from-ai-agent-prototype-to-product-lessons-from-building-aws-devops-agent">从构建aws devops智能体中学到的</a><br></p>
+
+<p><a href="https://blog.vjeux.com/2026/analysis/porting-100k-lines-from-typescript-to-rust-using-claude-code-in-a-month.html">在一个月内将100k行TS代码移植到Rust</a><br></p>
+
+<p><a href="https://atmoio.substack.com/p/after-two-years-of-vibecoding-im">使用氛围编程两年后</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with GLM-4.7, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The to-do app to organize your life.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api-inference-extension">kubernetes-sigs/gateway-api-inference-extension</a><br>Gateway API Inference Extension</p>
+
+<p><a href="https://github.com/cometbft/cometbft">cometbft/cometbft</a><br>CometBFT: A distributed, Byzantine fault-tolerant, deterministic state machine replication engine. A fork and successor to Tendermint Core.</p>
+
+<p><a href="https://github.com/autobrr/autobrr">autobrr/autobrr</a><br>Modern, easy to use download automation for torrents and usenet.</p>
+
+<p><a href="https://github.com/AlistGo/alist">AlistGo/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/TecharoHQ/anubis">TecharoHQ/anubis</a><br>Weighs the soul of incoming HTTP requests to stop AI crawlers</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

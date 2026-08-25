@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250918.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250918</span>
+</p>
+<p>每日一谚：Close a channel from the producer side </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/18/go-runtime-free-proposal">从arena、memory region到runtime.free：Go内存管理探索的务实转向</a><br>近年来，Go 核心团队为了进一步降低 GC 开销，进行了一系列前沿探索：从备受争议的arena 实验，到更优雅但实现复杂的 memory regions构想，最终，焦点似乎汇聚在了一项更务实、更具潜力的提案上——runtime.free。这项编号为 #74299 的实验性提案，正试图为 Go 的内存管理引入一个革命性的新维度：允许编译器和部分标准库在特定安全场景下，绕过 GC，直接释放和重用内存**。其原型已在 strings.Builder 等场景中展现出高达 2 倍的性能提升。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/BxqtYisaLiQQlUzFNnbYGQ">【Go系统编程】06 高性能共享：消息队列与共享内存</a><br>UNIX 系统提供了更强大的 IPC 机制。今天，我们将揭秘其中最具代表性的两种：消息队列（Message Queue）和共享内存（Shared Memory）</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/09/17/8-common-devops-problems-and-how-to-solve-them-with-goland/">8 Common DevOps Problems And How to Solve Them With GoLand</a><br>本文探讨了8个常见的DevOps问题以及如何使用GoLand（JetBrains公司为Go语言开发的IDE）来解决这些问题，从而简化日常任务，提高效率。</p> 
+
+<p><a href="https://github.blog/changelog/2025-09-09-go-private-registry-support-for-dependabot-now-generally-available">Go private registry support for Dependabot now generally available - GitHub Changelog</a><br>Dependabot can now update private Go modules hosted on enterprise registries and behind GOPROXY-compatible private proxies, as well as public modules, within the same workflow. This enables automated version and security updates for internal Go libraries.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/announcing-docker-model-runner-ga/">Docker Model Runner: Now Generally Available</a><br>Docker Model Runner offers a new way for developers to manage, run, and share local AI models with cutting-edge features and more on the way.</p>
+
+<p><a href="https://blog.dropbox.com/topics/company/research-how-top-performers-stand-out-in-the-age-of-ai">研究：在人工智能时代，顶尖人才如何脱颖而出</a><br>我们相信工作方式很重要。作为 Virtual First 的先驱，我们不断投资于自己的研究，以更好地了解是什么推动了分布式世界中的绩效、生产力和工作与生活的和谐。在我们的最新研究中，我们着手回答一个问题：什么使我们绩效最高、参与度最高的员工脱颖而出？
+
+人力资源思想领袖 Josh Bersin 在研究人工智能对工作的影响时，探讨了类似的主题，并介绍了“Superworker”的概念：一个利用人工智能来超越任务自动化并真正改善工作的人。受到这项研究的启发，我们调查了在虚拟环境中脱颖而出的顶尖人才的素质和行为，包括他们如何使用人工智能来优化他们的工作。</p>
+
+<p><a href="https://vercel.com/blog/generate-static-ai-sdk-tools-from-mcp-servers-with-mcp-to-ai-sdk">Addressing security and quality issues with MCP tools in AI Agent - Vercel</a><br>Use mcp-to-ai-sdk to generate MCP tools directly into your project. Gain security, reliability, and prompt-tuned control while avoiding dynamic MCP risks.</p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/17/kubernetes-v1-34-pods-report-dra-resource-health/">Kubernetes v1.34: Pods Report DRA Resource Health</a><br>AI/ML 和其他高性能工作负载的兴起使得 GPU、TPU 和 FPGA 等专用硬件成为了许多 Kubernetes 集群的关键组成部分。然而，正如之前关于处理设备故障的 Pod 的博文中所讨论的，当这些硬件发生故障时，诊断起来可能很困难，从而导致大量停机时间。随着 Kubernetes v1.34 的发布，我们很高兴地宣布一项新的 alpha 功能，该功能为这些设备的健康状况带来了急需的可见性。</p>
+
+<p><a href="https://webassembly.org/news/2025-09-17-wasm-3.0">Wasm 3.0 已完成 - WebAssembly</a><br>WebAssembly (Wasm) 3.0 已发布，带来了多项新功能，包括 64 位地址空间、多内存、垃圾回收、类型引用、尾调用、异常处理、放松的向量指令、确定性配置文件和自定义注释语法。此版本还改进了 JavaScript API，并支持更多高级语言编译到 Wasm。</p>
+
+<p><a href="https://www.confessionsofadataguy.com/is-data-modeling-dead">数据建模死了么？</a><br></p>
+
+<p><a href="https://xata.io/blog/making-postgres-scale-to-zero-with-cnpg">使用 CNPG 将 Postgres 扩展到零</a><br>我们构建了活动感知型 Postgres 集群，可以自动休眠并节省资源</p>
+
+<p><a href="https://jenson.org/boring">无聊很好</a><br></p>
+
+<p><a href="https://jjrscott.com/to-deflate-or-not">理解Deflate</a><br>作者试图理解Deflate压缩算法的工作原理，通过压缩一个简单的字符串，并手动解码压缩后的文件。</p>
+
+<p><a href="https://ashleyjanssen.com/how-to-motivate-yourself-to-do-a-thing-you-dont-want-to-do">如何激励自己去做一件你不想做的事情</a><br>学习一些方法，在你感到缺乏动力时帮助鼓励行动。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.asimov.press/p/ai-phages">AI 设计的噬菌体</a><br>一篇新论文表明，一种生成式 AI 模型可以设计出可行的噬菌体。</p>
+
+<p><a href="https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit">Spec-driven development with AI: Get started with a new open source toolkit</a><br>开发者可以使用他们选择的 AI 工具进行规范驱动的开发，使用这个开源工具包。</p>
+
+<p><a href="https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues">Anthropic：三个近期问题的总结</a><br>这是一份关于三个间歇性降低 Claude 响应质量的错误的的技术报告。 我们在下面解释了发生的事情、修复花费时间的原因以及我们正在做出的更改。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>A task runner / simpler Make alternative written in Go</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock is a mocking framework for the Go programming language.</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

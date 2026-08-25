@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250923.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250923</span>
+</p>
+<p>每日一谚：Write functions that do one thing and do it well </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/23/go-maphash-portability-costs-and-runtime-boundaries">“可移植性”的隐藏成本：Go为何要重塑maphash并划定新的运行时边界？</a><br>最近，Go核心团队的技术负责人Austin Clements在2025年9月17日的提案审查会议中，将他在2025年6月提出的issue #74285的提案设置为“已接受”（Accepted）状态。该提案名为“maphash: drop purego version and establish stronger runtime boundary”，建议移除maphash包的purego实现，并为Go标准库建立一个更清晰的“运行时边界”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/S5Gq8YqFZnP_wUUYBd9ArQ">Go的组合哲学：用“关节”连接程序的“孤岛”</a><br>很多来自其他语言的开发者初学 Go 时，都会有一个共同的疑问： “Go 没有类，没有继承，它到底是如何构建复杂而庞大的系统的？” 答案就在 Go 的核心设计哲学中：组合优于继承。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/hg3KyW8ufPBu8dPOORV6tg">【Go context解惑】02 今生：context 包 API 精讲与核心用法</a><br>今天，我们将正式揭开这个“完美容器”的神秘面纱——它就是 Go 语言标准库中的 `context` 包。你将看到，它的每一个 API 设计，都像一把精准的 手术刀，完美地切中了我们上一讲遇到的所有痛点。</p> 
+
+<p><a href="https://www.ardanlabs.com/blog/2024/02/kubernetes-cpu-limits-go.html">Kubernetes CPU 限制和 Go</a><br></p> 
+
+<p><a href="https://dolthub.com/blog/2025-09-22-cli-meets-sql">当 CLI 遇到 SQL：在 Dolt 中构建统一接口</a><br>在 Dolt 中，构建跨 CLI 命令和 SQL 表函数的选项策略。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.p99conf.io/2025/09/23/books-by-p99-conf-speakers-ai-engineering-latency-distribtuted-systems-more/">P99 CONF演讲者著作：人工智能工程、延迟、分布式系统及更多</a><br>如果您看过今年的 P99 CONF 议程，您就会知道，群星已经完美地对齐。只需两天半的时间，您就可以从 60 多位杰出的演讲者那里学习——他们都分享了来自广泛视角的见解。分布式数据库、Rust、Go、Java、C&#43;&#43;、Wasm、AI/ML、eBPF、Linux 内核等——一切都在议程上。
+
+在我们发布演讲者简介时，我们被提醒说，我们的演讲者积累了一份令人印象深刻的出版物清单，其中包括很多书籍。这篇博文重点介绍了其中一部分书籍，我们强烈建议您阅读。</p>
+
+<p><a href="https://www.docker.com/blog/mpc-horror-stories-cve-2025-49596-local-host-breach/">MCP Horror Stories: The Drive-By Localhost Breach | Docker</a><br>Learn how CVE-2025-49596 has turned MCP Inspector into a weapon of mass developer environment compromise in this edition of MCP Horror Stories.</p>
+
+<p><a href="https://netflixtechblog.com/scaling-muse-how-netflix-powers-data-driven-creative-insights-at-trillion-row-scale-aa9ad326fd77">Scaling Muse: How Netflix Powers Data-Driven Creative Insights at Trillion-Row Scale</a><br></p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/">Kubernetes v1.34：Pod 级别资源已升级到 Beta</a><br>代表 Kubernetes 社区，我很高兴地宣布，Pod 级别资源功能已在 Kubernetes v1.34 版本中升级到 Beta 版，并默认启用！ 这一重要里程碑为定义和管理 Pod 的资源分配引入了新的灵活性。 这种灵活性源于能够为整个 Pod 指定 CPU 和内存资源。 Pod 级别资源可以与容器级别的规范结合使用，以表达应用程序所需的精确资源需求和限制。</p>
+
+<p><a href="https://blog.cloudflare.com/cloudflare-2025-annual-founders-letter">Cloudflare 2025 年年度创始人信</a><br>Cloudflare 本周迎来了 15 周年纪念日。我们喜欢通过推出回馈互联网的新产品来庆祝我们的生日，本周我们将推出很多此类产品。但借此机会，我们也一直在思考互联网的变化以及未变之处。</p>
+
+<p><a href="https://operating-system-in-1000-lines.vercel.app/en">Operating System in 1,000 Lines</a><br>嘿！在这本书中，我们将从头开始一步一步地构建一个小型的操作系统。我们将实现基本的上下文切换、分页、用户模式、命令行 shell、磁盘设备驱动程序以及 C 语言的文件读/写操作。听起来很多，但它只有 1,000 行代码！</p>
+
+<p><a href="https://marcobambini.substack.com/p/why-local-first-apps-havent-become">为何 Local-First 应用尚未普及？</a><br>离线优先的应用程序承诺即时加载和隐私保护，但实际上，很少有应用程序能获得离线支持，因为让同步正确进行非常困难。</p>
+
+<p><a href="https://nedbatchelder.com/blog/202509/testing_is_better_than_dsa.html">测试比 DSA 更好</a><br>人们应该花更少的时间学习 DSA，而花更多的时间学习测试。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Sep/23/why-ai-systems-might-never-be-secure/#atom-everything">为什么 AI 系统可能永远无法安全</a><br>《经济学人》发表了一篇关于 LLM 安全性的新文章，其标题和副标题是：为什么 AI 系统可能永远无法安全。“致命的三重威胁”的条件使其容易受到滥用。</p>
+
+<p><a href="https://quesma.com/blog/introducing-compilebench">CompileBench: AI 能编译 22 年前的代码吗？</a><br>我们测试了 19 个 LLM 在处理现实世界软件工程任务方面的能力，例如编译旧代码和交叉编译。看看 Anthropic、OpenAI 和 Google 模型在我们新的基准测试——CompileBench 中的表现。</p>
+
+<p><a href="https://donado.co/en/articles/2025-09-16-vibe-coding-cleanup-as-a-service">Vibe Coding 清理即服务</a><br>AI 驱动的编码兴起，创造了一个意想不到的市场：清理由提示生成的软件中的技术债务。本文探讨了为何“Vibe Coding 清理”正成为一个合法的服务类别，以及它对软件开发未来的意义。</p>
+
+<p><a href="https://developers.openai.com/blog/responses-api">Why we built the Responses API</a><br>The Responses API unlocks persistent reasoning, hosted tools, and multimodal workflows for GPT-5.</p>
+
+<p><a href="https://ammar.io/blog/httpjail">Claude 代码的细粒度 HTTP 过滤</a><br>为开发工具和 AI 代理提供默认拒绝 HTTP(S)。使用 JS 或 shell 中的脚本规则，记录每个请求，并将出口保持在您的策略范围内。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/ava-labs/avalanchego">ava-labs/avalanchego</a><br>Go implementation of an Avalanche node.</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>Selfhosted alternative to 12ft.io. and 1ft.io bypass paywalls with a proxy ladder and remove CORS headers from any URL</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ A Framework for Building High Value Public Blockchains ✨</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/kubevela/kubevela">kubevela/kubevela</a><br>The Modern Application Platform.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

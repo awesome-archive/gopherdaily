@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251030.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251030</span>
+</p>
+<p>每日一谚：return early, return often </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/30/type-theory-intro-for-gopher">告别懵圈：实战派 Gopher 的类型理论入门</a><br>你是否曾有过这样的经历：在浏览一个关于 Go 泛型或接口设计的 GitHub issue 或技术提案时，评论区里的大佬们突然开始讨论 “Sum Type”、“Product Type”、“Parametric Polymorphism” 或是 “Higher-Kinded Types”。一瞬间，你感觉自己仿佛闯入了一个学术研讨会，这些看似熟悉又陌生的词汇让你一头雾水，只想默默关掉页面。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/2tjk7RuJG92N_T0DCxeGwg">【Go 网络编程全解】14 QUIC 与 HTTP/3：探索下一代互联网协议</a><br></p> 
+
+<p><a href="https://go.dev/blog/greenteagc">绿茶垃圾收集器</a><br>Go 1.25 包含一个新的实验性垃圾收集器 Green Tea。</p> 
+
+<p><a href="https://www.airs.com/blog/archives/675">JSON Schemas in Go</a><br>作者分享了他在 Google 项目中使用 JSON 模式的经验，以及他个人开发的 JSON 模式实现，强调了其空间效率和支持多种草案的优势。</p> 
+
+<p><a href="https://www.agwa.name/blog/post/verifying_go_reproducible_builds">我在独立验证 Go 的可重现构建</a><br>介绍 Source Spotter，一个 Go Checksum 数据库审计器和 Go 工具链可重现器。</p> 
+
+<p><a href="https://wawand.co/blog/posts/the-concurrency-conundrum">并发难题：一个关于好奇心和代码的故事</a><br>构建一个简单的预订系统听起来很容易，直到并发出现。随着产品的发展，幼稚的检查就会崩溃。这篇文章揭示了为什么原子性是不够的，以及悲观锁和乐观锁如何防止大规模超额预订。</p> 
+
+<p><a href="https://tailscale.com/blog/peer-relays-beta">Introducing Tailscale Peer Relays</a><br>今天，我们很高兴地宣布 Tailscale Peer Relays 正式向公众开放，这是一种替代 Tailscale 托管 DERP 服务器的流量中继方案，可以在任何 Tailscale 节点上启用。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-10-29-dependency-management/">Dependency Management in Database Design</a><br></p> 
+
+<p><a href="https://www.matthewhalpern.com/posts/golang-type-safe-timezones">Timezones as Types: Making Time Safer to Use in Go</a><br>介绍 go-meridian：一个使时区在 Golang 程序中成为一等公民的库。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.seangoedecke.com/good-code-reviews">工程师在代码审查中常犯的错误</a><br>在过去的两年里，代码审查变得越来越重要。现在使用LLM生成代码很容易，但审查代码仍然很困难。许多软件工程师现在花费的时间与审查他们自己的AI工具的输出一样多（或更多）。本文讨论了在代码审查中常见的一些错误，例如：只审查差异，留下过多的评论，使用“我会怎么写”的过滤器进行审查，以及在需要时未能留下阻止性审查。作者建议在审查中需要考虑的内容，包括审查未编写的代码，留下少量深思熟虑的评论，使用“它是否会起作用”的过滤器而不是“这是否是我会怎么做”的过滤器，在不想合并更改时留下阻止性审查，除非存在非常严重的问题，否则批准更改。</p>
+
+<p><a href="https://emily.space/posts/251023-uv">uv 是 Python 生态系统十年来发生的最好的事情</a><br>uv 于 2024 年发布，是管理 Python 安装和依赖项的最佳工具。这就是原因。</p>
+
+<p><a href="https://memn0ps.github.io/hypervisors-for-memory-introspection-and-reverse-engineering">用于内存内省和逆向工程的 Hypervisor</a><br>本文探讨了基于 Rust 的 hypervisor 的设计和实现，用于 Windows 上的内存内省和逆向工程。</p>
+
+<p><a href="https://blog.pranshu-raj.me/posts/backpressure">分布式系统中的背压</a><br>了解什么是背压，如何处理它，在哪里使用它，以及我如何在实时排行榜中处理它。 </p>
+
+<p><a href="https://tailscale.com/blog/peer-relays-beta">Introducing Tailscale Peer Relays</a><br>今天，我们很高兴地宣布 Tailscale Peer Relays 的公开可用性，这是一种流量中继替代方案，Tailscale 的托管 DERP 服务器可以在任何 Tailscale 节点上启用。</p>
+
+<p><a href="https://andrewkelley.me/post/zig-new-async-io-text-version.html">Zig 的新异步 I/O (文本版本)</a><br>为了庆祝 std.Io 引入补丁集 landing ，这里是我在 Zigtoberfest 2025 上的一个简短的互动演示的文本版本。这预览了将在即将发布的 Zig 0.16.0 中提供的新异步 I/O 原语，该版本将在大约 3-4 个月内发布。本文将介绍将可供所有 Zig 代码使用的一些核心同步 API。</p>
+
+<p><a href="https://workweave.dev/blog/the-price-of-mandatory-code-reviews">强制代码审查的代价</a><br>Weave结合了LLM和特定领域的机器学习来了解工程工作。我们了解AI与人类完成了多少工作。AI帮助您的团队更快地交付产品的程度，它是否对代码质量和代码审查产生了影响。</p>
+
+<p><a href="https://jack-vanlightly.com/blog/2025/10/22/a-fork-in-the-road-deciding-kafkas-diskless-future">A Fork in the Road: Deciding Kafka’s Diskless Future</a><br>“ The Kafka community is currently seeing an unprecedented situation with three KIPs ( KIP-1150 , KIP-1176 , KIP-1183) simultaneously addressing the same challenge of high replication costs when running Kafka across multiple cloud availability zones. ” — Luke Chen, The Path Fo</p>
+
+<p><a href="https://cacm.acm.org/federal-funding-of-academic-research/how-the-u-s-national-science-foundation-enabled-software-defined-networking">美国国家科学基金会如何促进软件定义网络的发展</a><br>在过去的二十年中，美国国家科学基金会 (NSF) 在软件定义网络 (SDN) 方面的投资带来了巨大的回报。SDN 改变了公司运营数据中心、企业、蜂窝网络和骨干网的方式，并为创意新想法的广泛部署创造了途径。最大的受益者是数十亿人，他们每天使用的服务的互联网变得更加可靠、更安全、成本更低、速度更快。</p>
+
+<p><a href="https://topicpartition.io/blog/postgres-pubsub-queue-benchmarks">Kafka is fast -- I&#39;ll use Postgres</a><br>为什么您应该只使用 Postgres 而不是 Kafka 来进行小规模消息队列和发布-订阅模式。 包括基准测试和实际测试。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blogs.nvidia.com/blog/open-models-data-ai">NVIDIA 发布开放模型和数据，加速语言、生物学和机器人领域的 AI 创新</a><br>NVIDIA 的开放模型家族，包括用于数字 AI 的 NVIDIA Nemotron、用于物理 AI 的 Cosmos、用于机器人技术的 Isaac GR00T 和用于生物医学 AI 的 Clara，为开发人员提供了构建针对现实世界应用的专业智能体的基础。</p>
+
+<p><a href="https://caylent.com/blog/evolving-multi-agentic-systems">Evolving MultiAgentic Systems</a><br>Explore how organizations can evolve their agentic AI architectures from complex multi-agent systems to streamlined, production-ready designs that deliver greater performance, reliability, and efficiency at scale.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/envoyproxy/ai-gateway">envoyproxy/ai-gateway</a><br>Manages Unified Access to Generative AI Services built on Envoy Gateway</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/korotovsky/slack-mcp-server">korotovsky/slack-mcp-server</a><br>The most powerful MCP Slack Server with no permission requirements, Apps support, multiple transports Stdio and SSE, DMs, Group DMs and smart history fetch logic.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

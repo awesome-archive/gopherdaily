@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250707.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250707</span>
+</p>
+<p>每日一谚：Write code that is easy to optimize, not code that needs to be optimized </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/07/go-module-supply-chain-attack-case">“先发布，后审核”：Go模块生态的阿喀琉斯之踵？</a><br>最近，GitLab的安全研究团队披露了一起极其巧妙的供应链攻击，目标直指 Go 社区中一个流行的 MongoDB 模块。这个案例本身已经足够令人警醒，但如果我们拨开攻击手法的层层迷雾，会发现其背后暴露出的，可能是整个开源生态，包括我们所依赖的 Go Modules，一个根本性的、与生俱来的脆弱性。这个脆弱性，可以概括为六个字：“先发布，后审核”。</p> 
+
+<p><a href="https://jacob.gold/posts/serving-200-million-requests-with-cgi-bin">使用 cgi-bin 每天处理 2 亿次请求</a><br>文章讲述了在 2000 年代早期使用 CGI 程序构建动态网站的经历，以及在现代硬件上使用 CGI 的性能测试结果。CGI 机制简单而强大，每个请求都由一个新的进程处理，在现代多核服务器上具有出色的并发性能。作者进行基准测试，结果表明，即使在中等配置的硬件上，CGI 也能达到每秒处理 2400 多个请求，每天处理超过 2 亿个请求的水平。虽然 CGI 现在并非最佳选择，但在某些情况下仍然是可行的方案。文章还提供了一个用 Go 和 SQLite 编写的简易留言板程序的代码链接。</p> 
+
+<p><a href="https://www.alexedwards.net/blog/making-and-using-middleware">在 Go 中创建和使用 HTTP 中间件</a><br>本文解释了如何在 Go 中创建和使用自定义 HTTP 中间件，如何将多个中间件链接在一起，并提供了一些实际的示例和技巧。文章涵盖了中间件的标准模式，如何在特定路由和所有路由上使用中间件，以及如何通过提前返回来控制中间件的执行流程。最后，文章还介绍了一些管理和组织大量中间件的技巧，例如使用 justinas/alice 包或自定义链式处理方法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://thenewstack.io/how-human-developers-should-upskill-in-the-ai-era">人工智能时代，人类开发人员该如何提升技能</a><br></p>
+
+<p><a href="https://thenewstack.io/infrastructure-from-code-what-went-wrong">代码构建基础设施：出了什么问题</a><br></p>
+
+<p><a href="https://www.instaclustr.com/blog/mastering-clickhouse-best-practices-infrastructure-and-operational-excellence">掌握 ClickHouse 最佳实践：基础设施和卓越运营</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/6/macos-app-built-entirely-by-claude-code/#atom-everything">我发布了一个完全由 Claude 代码构建的 macOS 应用</a><br>Indragie Karunaratne 自 2008 年以来一直在为 Mac 构建软件，但最近决定尝试使用 Claude Code 来构建一个副项目：Context，这是一个用于调试 MCP 服务器的原生 Mac 应用。该项目包含 20,000 行代码，其中不到 1,000 行代码是由他手动编写的。文章详细介绍了使用 Claude Code 构建应用的经验，包括 Claude 在 SwiftUI 和 Swift 中的表现，以及一些遇到的问题和解决方法。作者还强调了 Claude 在创建模拟数据方面的出色能力，并最终通过该项目能够再次轻松完成副项目，这对他来说意义重大。</p>
+
+<p><a href="https://www.bytebot.ai/blog/designing-bytebot-why-the-simplest-desktop-agent-abstraction-wins">为什么最简单的桌面智能体抽象会胜出</a><br></p>
+
+<p><a href="https://spectrum.ieee.org/llm-benchmarking-metr">LLM 基准测试显示，能力每 7 个月翻一番</a><br></p>
+
+<p><a href="https://www.dwarkesh.com/p/timelines-june-2025">为什么我不认为通用人工智能即将到来</a><br></p>
+
+<p><a href="https://blog.sebin-nyshkim.net/posts/nvidia-is-full-of-shit">英伟达全是谎言</a><br>这篇博文强烈批评了英伟达RTX 50系列显卡的发布，指出其存在诸多问题：黄牛抢购、供货不足、电源接口熔化、虚假宣传、出厂缺件以及驱动程序问题。文章还批评了英伟达试图操纵媒体报道，以及其对DLSS技术的过度依赖和营销。作者认为英伟达专注于数据中心GPU业务，而对消费级GPU市场漠不关心，导致产品质量下降和消费者体验不佳。</p>
+
+<p><a href="https://www.testingcatalog.com/openai-experiments-with-new-study-together-tool-on-chatgpt">OpenAI正在ChatGPT中测试新的“一起学习”工具</a><br>OpenAI正在开发一项名为“一起学习”的新功能，该功能已开始出现在一些ChatGPT用户的系统提示中。这项新功能旨在创建一个更具互动性和指导性的学习环境。根据用户的报告，启用该功能后，ChatGPT会通过提出更多问题和逐步分解主题来改变其风格，帮助用户积极学习，而不仅仅是接收解释。它不仅检查答案，还会根据需要提供后续问题或更清晰的解释。</p>
+
+<p><a href="https://thenewstack.io/the-complicated-reality-of-ai-implementation-in-engineering-teams">工程团队实施人工智能的复杂现实</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+<p><a href="https://github.com/PlakarKorp/plakar">PlakarKorp/plakar</a><br>plakar is a backup solution powered by Kloset and ptar</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/zerodha/kite-mcp-server">zerodha/kite-mcp-server</a><br>Zerodha Kite MCP server</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/kitops-ml/kitops">kitops-ml/kitops</a><br>An open source DevOps tool for packaging and versioning AI/ML models, datasets, code, and configuration into an OCI artifact.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/MightyMoud/sidekick">MightyMoud/sidekick</a><br>Bare metal to production ready in mins; your own fly server on your VPS.</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/Xpl0itU/WiiUDownloader">Xpl0itU/WiiUDownloader</a><br>Allows to download encrypted wiiu files from nintendo&#39;s official servers</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

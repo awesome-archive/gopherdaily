@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260415.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260415</span>
+</p>
+<p>每日一谚：Testing leads to failure, and failure leads to understanding </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/15/cpp-community-debate-productivity-revolution-vs-complexity">C&#43;&#43; 社区内部大讨论：新特性到底是“生产力革命”，还是“叠加的复杂性”？</a><br>就在前几天，r/cpp 这个拥有近 10 万 C&#43;&#43;开发者的顶级社区里，一篇名为《现代 C&#43;&#43; 是让我们更高效了… 还是更复杂了？]》的帖子，引发了一场深度大讨论。 发帖人发出了灵魂拷问：  “C&#43;&#43;20/23 给我们带来了 Ranges、协程（Coroutines）、Concepts、Modules……这些新特性真的很酷，我也在用。但我总在想，我们是不是在用 这些东西吓跑新人的同时，眼睁睁地看着老代码库永远冻结在 C&#43;&#43;98？现代 C&#43;&#43; 对生产力来说，到底是一场革命，还是在原本已经足够复杂的巨兽身上，又叠加了一层复杂性？” </p> 
+
+<p><a href="https://pawelgrzybek.com/repository-pattern-in-go-service/">Go 服务中的存储库模式</a><br>发布于：2026.04.14 · 6 分钟阅读
+
+当你开始一个新项目时，所有代码都写在一个 main.go 文件里感觉还不错。当项目开始增长时，你会将代码拆分为多个文件。我们以后再补测试，对吧？需求发生了变化，有人加入了团队，与此同时，你把 SQLite 换成了 Postgres。很快，你原本精心维护的项目变成了一团纠缠不清、层层依赖的混乱代码，没有清晰的关注点分离，且当初忽略的测试此时已变得几乎无法实现。有些好的习惯值得从一开始就养成，而在 Go 服务领域，存储库模式（Repository pattern）就是其中之一。
+
+从概念上讲，存储库封装了持久化数据存储中对象的集合以及针对它们执行的操作，为持久化层提供了更面向对象的视图。存储库还支持实现领域层和数据映射层之间清晰的分离和单向依赖的目标。
+
+这是马丁·福勒（Martin Fowler）经典著作《企业应用架构模式》中的定义，但微软团队在《容器化 .NET 应用的 .NET 微服务架构》中的定义更通俗易懂。
+
+存储库模式是一种领域驱动设计模式，旨在将持久化问题保留在系统的领域模型之外。一个或多个持久化抽象（接口）在领域模型中定义，这些抽象在应用程序的其他位置以持久化特定适配器的形式进行实现。
+
+术语在这里并不重要，重要的是原则。我们希望实现封装。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/hkdzCyfUaXQdU88RNJ9sMw">【AI 工程师的 GPU 入门课】05 | 显存管理革命：从 KV Cache 到 PagedAttention (vLLM)</a><br>今天，我们将深入 LLM 推理的显存深水区。我们要搞清楚 KV Cache 到底是个什么鬼，以及 vLLM 是如何用“操作系统的智慧”解决这个难题，从&gt;而一战封神的。</p> 
+
+<p><a href="https://www.hyperionhq.co/blog/native-go-ml-inference">原生 Go 机器学习推理</a><br>在高风险的 AI 基础设施领域，每一毫秒都至关重要。当我们最初构建 Hyperion 智能层时，我们采用了大多数工程团队的做法：用 Python 构建。它开发速度快，利用了庞大的 scikit-learn 生态系统，并允许我们每天迭代智能路由模型。
+
+但随着 Hyperion 网关从原型转变为处理每秒数百万个 token 的高并发生产引擎，“Python 税”变得不可避免。对于每次路由决策 18ms 的开销听起来很小，但在 200ms 以下的首字响应时间（TTFT）目标世界中，这简直是永恒。
+
+“我们不仅想要一个更快的微服务。我们希望智能成为请求原子执行路径的一部分。这意味着要抛弃 HTTP 网络跳转。”
+
+瓶颈：HTTP 与序列化
+
+我们大部分的延迟实际上不是模型执行本身，而是其周围的基础设施。一个请求到达我们的 Go 网关，被缓冲、序列化为 JSON，通过本地网络桥接发送到 Python FastAPI 容器，反序列化，处理，然后整个过程反向再走一遍。
+
+即使使用优化的 Gunicorn 工作进程和本地网络，你也无法击败进程内内存访问的性能。我们决定将整个推理引擎、分类、异常检测和多臂老虎机直接移植到 Go 核心中。
+
+移植大脑：从 .pkl 到 weights.json
+
+核心挑战是可移植性。Scikit-learn 模型通常保存为 Python pickle，即本质上绑定到 Python 运行时的二进制 Blob。为了在不使用 CGO 或沉重的 ONNX 运行时的 Go 中运行这些模型，我们不得不重新思考机器学习流水线的“最后一英里”。
+
+我们转向了静态导出的权重模型。与其要求 Go “运行一个模型”，不如教 Go 我们特定算法的数学逻辑，利用概率分类和自适应路由。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/">为什么我们选择了一条更艰难的路：Docker 强化镜像一年回顾</a><br>距离我们去年五月推出 Docker 硬化镜像（DHI）即将满一年，本月初跨越的一个里程碑让我停下来反思我们究竟构建了什么。
+
+本月初，我们的 DHI 每日拉取量超过了 50 万次，并且在我们的 SLSA 3 级流水线中拥有超过 2.5 万个持续修补的操作系统级工件。自去年年底推出免费的 DHI 社区层级以来，该目录现已增长到 2000 多个硬化镜像、MCP 服务器、Helm 图表和 ELS 镜像。我们持续修补每一个工件（跨越 CVE、发行版、版本），因此我们目前正在定期运行超过一百万次构建，而且这仅仅是个开始。随着更多 Debian 软件包、ELS 镜像和更新工件类型的加入，目录覆盖范围很快会再次跃升。
+
+但数字并不是有趣的部分。重要的是我们是如何走到这一步的。
+
+我们有意选择了更艰难的道路。我们做出的每一个产品和工程决策在构建和运营上都更加困难，但对开发者和生态系统的安全来说更好。我们使硬化镜像免费且开源。我们构建了一个多发行版产品，因此采用它并不意味着要迁移到供应商的专有操作系统。我们为你们已经在运行的发行版从源代码构建每一个系统软件包。我们随每个镜像附带大量签名证明，因为这才是独立可验证性真正需要的。
+
+在此过程中，我们也密切关注了行业其他厂商如何处理同样的问题，并发现了在修补时间表、SBOM 完整性和咨询覆盖范围方面的模式，在评估任何硬化镜像提供商之前，了解这些模式非常值得。
+
+我们让硬化镜像变得广泛可用，以便每个团队都能提高他们的安全基线
+
+我们希望真正改善互联网的安全状况，这意味着要让硬化镜像变得广泛可用。这就是为什么我们没有像行业常态那样将我们的目录置于付费墙之后，而是使其免费提供。</p>
+
+<p><a href="https://dropbox.tech/infrastructure/improving-storage-efficiency-in-magic-pocket-our-immutable-blob-store">提高 Magic Pocket（我们的不可变 Blob 存储）的存储效率</a><br>Magic Pocket 是 Dropbox 的核心存储系统——一个为耐用性、可用性、规模和效率而设计的定制化、拍字节（exabyte）规模的 Blob 存储系统。它存储用户内容，这意味着它必须安全、快速且能随着公司规模经济地扩展。对于 Dropbox 而言，存储效率非常重要。我们通过衡量所使用的磁盘总空间与实际存储的用户数据量之比来评估效率。
+
+去年，我们推出了一项新服务，改变了数据在 Magic Pocket 中的放置方式。该变化减少了后台写入的写入放大，因此每次写入触发的后端存储操作更少。但它也有一个意想不到的副作用：碎片增加，导致存储开销变高。大部分增长来自少数极其未填满的卷，它们消耗了不成比例的原始容量，而我们现有的压缩策略无法足够快地回收空间。在拍字节规模下，即使是轻微的开销增加也会转化为巨大的基础设施和容量成本，因此迅速降低该数字成为了重点。</p>
+
+<p><a href="https://aws.plainenglish.io/the-death-of-ingress-nginx-a-post-mortem-nobody-wanted-to-write-065a481160fd">Ingress Nginx 之死：一份没人想写的验尸报告</a><br></p>
+
+<p><a href="https://palark.com/blog/kubernetes-1-36-release-features/">Kubernetes 1.36：新 Alpha 特性深度解析</a><br>Kubernetes 1.36 版本定于 4 月 22 日发布，引入了一系列针对三大核心领域的新 Alpha 特性：工作负载性能、API 可扩展性和资源高效使用。此更新带来了许多令人期待已久的功能，包括针对 AI/ML 作业的工作负载感知抢占、针对大规模集群的分片 API 流，以及动态资源分配（DRA）与调度器的深度集成。
+
+我们的概述涵盖了添加到 Kubernetes 中的 20 项新增强功能，从节点级 gRPC API 到优雅的领导者切换，它们提供了一窥容器编排未来的窗口。
+
+注意：我们尽力宣布实际的变化。然而，考虑到 Kubernetes 特性景观不断变化的本质，本文中讨论的一些 Kubernetes 增强提案（KEPs）可能会随着发布日期的临近而从里程碑中移除。
+
+节点
+
+DRA：Downward API 中的设备属性
+
+KEP #5304（问题链接）
+
+特性开关：无。该框架提供了一个布尔标志（例如 --enable-device-metadata），驱动程序将其集成到其 CLI 中。
+
+KEP-5304 引入了一种标准方式，供 DRA 驱动程序填充设备元数据。然后，框架通过挂载将此元数据自动传递给容器。</p>
+
+<p><a href="https://philodev.one/posts/2026-04-code-complexity">代码复杂度</a><br>什么是复杂度？——从大 O 符号和圈复杂度，到心理语言学能为软件开发者提供的令人惊讶的见解。
+
+什么是复杂度？
+
+“算法的复杂度是运行它所需的资源量。”（维基百科定义）
+
+基于这个定义，在运行代码所需的“资源”方面有很多种解释：所需的内存、所需的时间、理解代码所需的脑力资源、理解问题所需的脑力资源、理解代码如何解决问题的上下文知识——所有这些都是对运行代码所需资源合乎情理的解释。
+
+计算复杂度
+
+我在大学听过多次讲座，都指向“这段代码有多复杂？”这个问题。从问题的形式化定义，到如何建模程序以理解其资源，再到随着输入规模增长，资源使用量（时间或内存）如何增长的实际计算。作为一名软件开发者，不再是计算机系学生，我只是偶尔在工作中发现这些问题的踪迹。
+
+例如，这段代码的计算时间复杂度将是 O(n²)，其中 n 是列表的长度。在最坏的情况下，对于反向排序的列表，对于列表的每一个 n 个元素，这将执行 n 次与列表其他元素的比较，然后进行 n 次交换。
+
+不同解决同一问题的实现方式可能有所不同</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/15/juicy-main/#atom-everything">Zig 0.16.0 发布说明：“多汁的 Main”</a><br>Zig 有着非常好的发布说明——全面、详细，并且为每个新特性提供了相关的用法示例。
+
+新发布的 Zig 0.16.0 中特别值得注意的是他们所谓的“Juicy Main”——一种为程序 main() 函数提供的依赖注入特性，接受 process.Init 参数可以获得对有用属性结构的访问：
+
+const std = @import(&#34;std&#34;);
+
+pub fn main(init: std.process.Init) !void {
+ /// 用于临时堆分配的通用分配器：
+ const gpa = init.gpa;
+ /// 默认 IO 实现：
+ const io = init.io;
+ /// 访问环境变量：
+ std.log.info(&#34;{d} env vars&#34;, .{init.environ_map.count()});
+ /// 访问 CLI 参数
+ const args = try init.minimal.args.toSlice(
+ init.arena.allocator()
+ );
+}</p>
+
+<p><a href="https://thechipletter.substack.com/p/the-infinity-man">无限之人</a><br>Demis Hassabis，同事与竞争对手，以及芯片带来的助力
+
+“我是这小岛上的一个古怪的英国局外人，我走出了自己的路。我追随了自己的激情，并努力坚持自己的信念。” —— Demis Hassabis
+
+塞巴斯蒂安·马勒比（Sebastian Mallaby）关于 DeepMind 的 Demis Hassabis 的新传记《无限机器》（The Infinity Machine）封面，以一张 Hassabis 的模糊肖像为特色。这种效果可能旨在唤起一种类似《星际迷航》传送器般的溶解感，象征着人类智能转化为一种不那么有形的“人工智能”形式。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-everything">为网络防御的下一个时代提供可信访问</a><br>OpenAI 对 Claude Mythos 的回应似乎是一个名为 GPT-5.4-Cyber 的新模型：
+
+“为了准备好迎接 OpenAI 在未来几个月内推出能力更强的模型，我们正在专门对我们的模型进行微调，以支持防御性网络安全用例，从今天起推出 GPT-5.4 的一个变体，旨在实现网络许可：GPT-5.4-Cyber。”
+
+他们还在扩展一个二月份推出的名为“网络可信访问”的项目（我之前错过了），用户可以验证其身份（通过由 Persona 处理的政府颁发身份证件的照片）以获得“减少摩擦”的 OpenAI 模型访问权限，用于网络安全工作。
+
+老实说，这个 OpenAI 的公告很难跟上。毫不奇怪，他们根本没有提到 Anthropic，但文章的大部分内容强调了他们多年来现有的网络安全工作以及他们“普及这些工具访问权限”的目标，因此强调了二月份的自助验证流程。
+
+如果你想访问他们最好的安全工具，你仍然需要通过额外的 Google 表单申请流程，这在我看来与 Anthropic 的 Project Glasswing 没有什么不同。</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-everything">网络安全现在看起来像工作量证明</a><br>英国 AI 安全研究所最近发布了《我们对 Claude Mythos 预览版网络能力的评估》，这是他们对 Claude Mythos 的独立分析，支持了 Anthropic 关于其在识别安全漏洞方面表现异常出色的声明。
+
+Drew Breunig 指出，AISI 的报告显示，他们花费的 token（即金钱）越多，得到的结果就越好，这导致了一种强大的经济激励，即尽可能多地花费在安全审查上：
+
+如果 Mythos 只要你不断投入资金就能不断发现漏洞，那么安全就被简化为一个残酷的简单等式：硬化系统所需的成本，必须高于攻击者利用该系统进行攻击时所花费的成本。
+
+这个结果的一个有趣之处在于，开源库变得更有价值，因为用于保护它们的 token 成本可以由所有用户分摊。这直接反驳了“通过 vibe-coding（直觉编码）快速构建开源库替代品的低成本使得开源项目吸引力下降”的观点。</p>
+
+<p><a href="https://kirancodes.me/posts/log-distributed-llms.html">多智能体软件开发是一个分布式系统问题</a><br>多智能体软件开发是一个分布式系统问题（AGI 无法从中拯救你）
+
+最近，我一直在思考用于管理 LLM 系统相互协调的脚手架和语言——新的编程语言可能是该领域理想的解决方案。
+
+我们正在进行一篇有趣的论文，开发一种用于描述多智能体工作流的编排语言——事实证明，编排虽然对任何实际的分布式协议来说都太弱，但对于描述智能体之间产生的定制交互来说，却是一种简洁而优雅的形式化方法，特别是如果我们引入博弈论的话。敬请期待，我们很快就会分享它！
+
+现在，我不断听到一条令人讨厌的反馈，即使是来自本应更了解情况的其他验证研究人员，这是一种对现状以及开发形式化语言和工具来管理智能体目标的“冷漠”。常见的论调最好用这样一句话总结：“智能体协调的最佳解决方案就是再等几个月。”
+
+这个论点大致归纳为：
+
+1. 当前的多智能体 LLM 系统无法自主构建大规模软件（同意 ✅）。
+2. 这归结为一个协调问题（同意 ✅）。
+3. 下一代模型会更聪明（同意 ✅）。
+4. 下一代模型将不会有协调问题（？？哈 ？？）。
+
+主要暗示是，构建用于描述和管理这些系统的语言和工具是一项西西弗斯式的任务；更新的模型不可避免地会使它们过时，所有的努力都将徒劳无功。
+
+作为一名验证研究人员，我觉得这种投降既早熟又被误导：有一系列丰富的分布式系统文献，实际上正是关于这个问题的，人们却</p>
+
+<p><a href="https://blog.langchain.com/your-harness-your-memory/">你的harness，你的记忆</a><br>智能体基座（Agent harnesses）正成为构建智能体的主要方式，而且它们不会消失。这些基座与智能体记忆紧密相关。如果你使用封闭的基座——特别是如果它位于专有 API 之后——你就是选择将智能体记忆的控制权交给第三方。记忆对于创造良好和粘性的智能体体验至关重要。这产生了难以置信的锁定效应。记忆——以及因此的基座——应该是开放的，这样你才能拥有自己的记忆。
+
+智能体基座是你构建智能体的方式，它们不会消失
+
+在过去三年中，构建智能体系统的“最佳”方式发生了巨大变化。当 ChatGPT 出来时，你能做的只是简单的 RAG 链（LangChain）。然后模型变得好一点，可以创建更复杂的工作流（LangGraph）。然后它们变得好多了，这产生了一种新型的脚手架——智能体基座。
+
+智能体基座的例子包括 Claude Code、Deep Agents、Pi（驱动 OpenClaw）、OpenCode、Codex、Letta Code 等等。
+
+智能体基座不会消失。
+
+有时有一种观点认为模型会吸收越来越多的脚手架。这不是真的。</p>
+
+<p><a href="https://addyosmani.com/blog/agentic-engine-optimization/">Agentic引擎优化</a><br>AI 编码智能体消费文档的方式与人类从根本上不同——如果你仍然只为人类读者优化，那么你的很大一部分受众对你的工具来说就是隐形的。文档、CLI、MCP、技能……存在着一整套 AI 智能体与之交互的接口生态系统。
+
+我一直在观察开发者门户网站上发生的事情，我认为这值得比现在更多的关注。
+
+工程师打开 Claude Code，要求它实现一个规范并回车。智能体获取了你的一些文档。它可能会抓取它需要的一部分，将其解析为原始文本，剥离 HTML，计算 token，然后将其用作上下文——或者因为它超过了上下文窗口而默默地丢弃它。
+
+你的分析记录不到任何有用的东西。滚动深度为零。页面停留时间为 400 毫秒。没有链接点击，没有教程完成，没有 UI 交互。你多年来优化的漏斗显示为空。
+
+但智能体确实在那里。它阅读了你的文档。根据这些文档的结构，它要么成功完成了任务——要么因为内容 token 太重、结构不佳或被配置错误的 robots.txt 阻止而产生了幻觉解决方案。
+
+我开始将解决这一问题的学科称为“智能体引擎优化（Agentic Engine Optimization）”。
+
+什么是智能体引擎优化？
+
+智能体引擎优化（AEO）是构建、格式化和提供技术内容的实践，以便 AI 编码智能体可以实际使用它——而不仅仅是人类读者。
+
+我一直想到的类比是 SEO。我们花了很多年学习如何针对搜索爬虫和人类点击模式进行优化。AEO 是同样的想法，但针对的是不同的消费者：自主获取、解析和推理你的内容的 AI 智能体。
+
+重要的事情变得非常具体：
+
+- 可发现性——智能体能在没有...</p>
+
+<p><a href="https://www.lesswrong.com/posts/6SaZ7z2fpKRYEBdff/the-alphafold-moment-for-materials-is-not-any-time-soon">材料学的 AlphaFold 时刻近期不会到来</a><br>我最近参加了一个小型材料&#43;AI 会议，汇集了学者、材料行业高管、前内阁成员、初创公司创始人和军官。这篇文章总结了基于这些对话以及我自己的研究，我对 AI &#43; 材料科学的思考是如何更新的。披露：我不是这个领域的专家。我冷邮件联系了其中一位组织者，他认为我做的一些关于自动驾驶实验室的研究足以引起邀请。
+
+AlphaFold，但针对材料？
+
+一个核心问题是“什么是材料科学的 AlphaFold，我们如何能在 6-24 个月内实现它？”这是一个定义不当的问题，因为蛋白质拥有材料所没有的许多良好特性。即，氨基酸序列基本足以确定感兴趣生理条件下的结构，但成分甚至晶格晶胞不足以确定真实物理材料的结构。尽管每个人都想基于标准的块体建模技术去相信，但大多数材料是无序的，并且具有复杂的界面，如果你不能捕捉到这些含义，模型将输出垃圾。</p>
+
+<p><a href="https://x.com/RampLabs/status/2042660310851449223">通过 KV 缓存压缩实现多智能体系统的高效内存共享</a><br>Ramp Labs 在 X 上：“潜伏简报：通过 KV 缓存压缩实现多智能体系统的高效内存共享” / X
+
+多智能体系统在协调、复杂推理和并行工作流方面显示出了前景。然而，它们通常是高度 token 低效的。在分层架构中，协调者分解任务并将其委托给工作智能体，可能出现冗余的中间推理。随着协调者的推理轨迹跨越众多调用扩展，token 使用量迅速复合。虽然这些方法可以提高性能，但它们是以巨大的成本为代价的，并且通常低效地在智能体之间共享上下文。
+
+现有的管理此上下文的方法（如基于 LLM 的摘要（慢）或通过 RAG 的检索（脆弱））引入了它们自己的权衡。相反，我们使用模型的注意力模式来识别上下文的哪些部分是重要的，并丢弃其余部分。这导致了一种通过直接操作模型 KV 缓存而在智能体之间共享相关内存的方法。我们称这种方法为“潜伏简报（Latent Briefing）”。
+
+在 LongBench v2 基准测试的 126 个问题（跨越 0-100k token 的文档）上，我们的方法实现了：
+
+- 在不同难度和上下文长度条件下，相对于基准线具有相当或更好的准确性
+
+- 在中等长度（32k-100k token）文档上节省高达 49% 的中位数 token
+
+- 工作模型 token 减少 65%</p>
+
+<p><a href="https://x.com/sandhya/status/2042631718293901391">新软件：CLI、技能与垂直模型</a><br>Sandhya 在 X 上：“新软件：CLI、技能与垂直模型” / X
+
+在智能体体验时代，性能将成为伟大 SaaS 公司的全新竞争优势。
+
+2025 年 1 月，我们第一次开始辩论软件的“死亡”。Anthropic 刚刚开源了模型上下文协议（MCP），它正在起飞。Satya Nadella 预测所有点按式软件（“增删改查数据库”）将被“拥有业务逻辑”的智能体所取代。我们也假设价值将流向在现有前沿模型之上构建优秀智能体基座的应用 AI 公司。
+
+现在是 2026 年 4 月，关于这个预测的结论是——好吧，接近但不完全准确。
+
+智能体体验时代：人类用户正在取消中介
+
+到 2025 年 12 月，很明显所有软件都需要为智能体用户重构。在企业中，机器身份的数量现在平均是人类用户的 45 倍，有些组织的比例高达 100 比 1。Neon 报告称 80% 的数据库是由 AI 智能体创建的，而不是人类。GitHub 发现超过 5% 的所有提交完全由 Claude Code 编写，在某些情况下 AI 辅助编写的比例可能高达 40%。MCP 注册表拥有 2000 多个验证服务器，每月 SDK 下载量达 9700 万次。
+
+你现在有一个新的产品问题。而正确解决该问题的公司，并不是那些在仪表板上挂载一个聊天机器人，并且仍然为人类用户发送智能体的公司。
+
+智能体通过 API、脚本和结构化命令以编程方式操作，绕过接口</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>查找容器、Kubernetes、代码仓库、云等中的漏洞、错误配置、密钥和 SBOM。</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>用于从容器镜像和文件系统生成软件物料清单（SBOM）的 CLI 工具和库。</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity 订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源自托管实现。</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Kubernetes 上的异构 GPU 共享。</p>
+
+<p><a href="https://github.com/canopy-network/canopy">canopy-network/canopy</a><br>Canopy 网络协议的官方 Go 实现。</p>
+
+<p><a href="https://github.com/tinode/chat">tinode/chat</a><br>即时通讯平台。后端使用 Go。客户端：Swift iOS、Java Android、JS Web 应用、脚本化命令行；聊天机器人。</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>一个用于聚合和分发的统一 AI 模型中心。它支持将各种 LLM 交叉转换为 OpenAI 兼容、Claude 兼容或 Gemini 兼容的格式。一个集中的持久化网关。</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>连接、保护、控制和观察服务。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

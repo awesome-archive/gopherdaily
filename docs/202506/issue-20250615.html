@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250615.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250615</span>
+</p>
+<p>每日一谚：Make the zero value useful </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/14/go-1-25-foresight">Go 1.25新特性前瞻：GC提速，容器更“懂”Go，json有v2了！</a><br>随着近期Go 1.25RC1版本的推出，我们基于其非最终版的 Release Notes，已经能一窥其核心亮点了。并且，和之前的版本一样，Go 1.25 带来的许多改进，都如同“无形之手”，你可能无需修改一行代码， 甚至无需刻意感知，只需简单升级，便能享受到性能的飞跃、诊断能力的提升以及潜藏错误的暴露。这正是 Go 团队践行其核心原则的极致体现。今天，就让我们一起“未雨绸缪”，聚焦 Go 1.25 中的核心特性，看看它将如何让 Go 语言变得更加强大。</p> 
+
+<p><a href="https://tonybai.com/2025/06/15/rust-vs-go-2025">Go还是Rust？2025年技术选型之辩</a><br>技术圈的话题里，从来不缺少编程语言之争，并且这类话题向来热度不减。最近，JetBrains 旗下的 RustRover 博客发表了一篇题为《Rust vs Go: Which one to choose in 2025》的文章，并引用了《State of Developer Ecosystem Report 2024》的一些数据，再次将 Go 和 Rust 这两位“当红炸子鸡”推上了对比的擂台。</p> 
+
+<p><a href="https://beyondthesyntax.substack.com/p/writing-load-balancer-from-scratch">用Go从零开始编写负载均衡器</a><br>本文介绍了负载均衡器的概念和作用，并通过一个简单的 Go 语言示例演示了如何使用轮询算法实现一个负载均衡器。文章还简要介绍了其他负载均衡策略，并提供了完整的源代码链接。最后，作者预告了下一篇文章将讲解负载均衡器的健康检查机制。</p> 
+
+<p><a href="https://coroot.com/blog/opentelemetry-for-go-measuring-the-overhead">Go语言OpenTelemetry：性能开销测量</a><br>我们对高负载Go应用程序中OpenTelemetry的开销进行了基准测试，并将其与基于eBPF的检测进行了比较。结果可能会让你惊讶——追踪会增加成本，但这并不总是致命的。文章详细介绍了测试设置、运行基准测试的过程以及结果分析，包括CPU使用率、内存消耗和延迟等方面，并对比了基于eBPF的检测方法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://eli.thegreenplace.net/2025/notes-on-cramers-rule/">克莱姆法则笔记</a><br>这篇文章讨论了克莱姆法则，这是一个求解线性方程组的巧妙方法。文章首先介绍了克莱姆法则的基本原理，然后通过构造特殊矩阵并利用行列式的性质推导了克莱姆法则。文章还讨论了克莱姆法则在矩阵求逆中的应用，并解释了为什么克莱姆法则在实际应用中很少用于求解大型矩阵的逆矩阵。文章最后总结了克莱姆法则的适用场景和局限性。</p>
+
+<p><a href="https://signoz.io/blog/cicd-observability-with-opentelemetry">使用 OpenTelemetry 实现 CI/CD 可观测性 - 分步指南</a><br>在快节奏的 CI/CD 世界中，了解管道的性能和行为至关重要。本指南将逐步介绍如何为 GitHub Actions 设置 OpenTelemetry，并提供实际示例和配置代码片段。通过 OpenTelemetry，您可以端到端地查看工作流程运行，优化性能，检测错误并进行调试，以及分析依赖关系。  它可以捕获跟踪（用于结构和计时）和指标（用于定量监控）。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/tdd-ai-agents-and-coding-with-kent">测试驱动开发、AI 代理和与kent back的编码</a><br>肯特·贝克——极限编程的创造者和敏捷宣言的共同作者——回顾了他几十年的编码生涯，从测试驱动开发的诞生到他今天对人工智能编码工具的实验。</p>
+
+<p><a href="https://www.conviva.com/platform/the-concurrency-trap-how-an-atomic-counter-stalled-a-pipeline">并发陷阱：原子计数器如何阻塞管道 - Conviva</a><br>本文讲述了 Conviva 高规模流媒体分析平台中单个原子计数器如何导致严重减速的问题。文章深入探讨了神秘延迟峰值背后的并发陷阱，并为使用 DAG、actor 模型和共享状态的 Rust 开发人员提供了经验教训。</p>
+
+<p><a href="https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns">使用 DNS 加速 HTTPS 和 HTTP/3 协商</a><br>本文探讨了一种新的 DNS 资源记录，旨在加快 HTTP 安全和性能特性协商，并说明它如何帮助加快网络速度。文章解释了这种新的记录类型及其重要性，并重点介绍了 Cloudflare 如何自动为客户提供对新协议的支持，无需任何配置即可为使用支持客户端的 Apple 用户提供最佳连接。文章还讨论了 SVCB 和 HTTPS 记录如何解决 CNAME 记录在顶层域中使用时可能出现的问题。</p>
+
+<p><a href="http://0x80.pl/notesen/2016-11-28-simd-strfind.html">支持 SIMD 的子串搜索算法</a><br>本文介绍了两种利用 SIMD 指令的子串搜索算法，并对这些方法进行了比较和扩展。文章还展示了各种实现的性能结果，包括从 SWAR 到 AVX512F。主要改进在于使用向量谓词代替哈希谓词，并对特定长度的子串进行特殊化处理，从而减少函数调用和内存访问的开销。文中还包含了 SSE、AVX2、AVX512F 和 ARM Neon 的具体实现代码示例以及性能测试结果。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/engineering/built-multi-agent-research-system">我们是如何构建多智能体研究系统的</a><br>Anthropic 的研究功能使用多个 Claude 智能体更有效地探索复杂主题。我们分享了构建此系统的工程挑战和经验教训。</p>
+
+<p><a href="https://thenewstack.io/agentic-coding-how-googles-jules-compares-to-claude-code">Google jules vs. claude code</a><br></p>
+
+<p><a href="https://karpathy.medium.com/software-2-0-a64152b37c35">软件2.0</a><br>本文探讨了软件开发领域中正在发生的一场根本性转变：从基于显式指令的1.0软件（例如用Python或C&#43;&#43;编写的软件）向基于神经网络的2.0软件的转变。2.0软件使用神经网络，其代码以权重等更抽象的形式表示，由优化算法而非程序员编写。作者认为，在许多现实问题中，收集数据比编写程序更容易，这推动了这种转变。文章比较了两种软件的优缺点，并探讨了2.0软件在图像识别、语音识别、语音合成、机器翻译、游戏等领域的应用，以及它带来的挑战和未来发展方向，例如构建专门用于2.0软件开发的IDE和类似于Github的平台。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/securego/gosec">securego/gosec</a><br>Go security checker</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

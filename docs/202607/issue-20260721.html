@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260721.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260721</span>
+</p>
+<p>每日一谚：interface{} says nothing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/21/from-loop-engineering-to-graph-engineering">Loop Engineering才火两个月，硅谷已经卷出“Graph Engineering”了</a><br>仅仅火了两个月的“Loop Engineering（循环工程）”正面临被颠覆的命运。近期，硅谷技术圈正在被“Graph Engineering（图工程）”的新范式引爆。本文基于两篇重磅长文，深度拆解了这一转变的必然性：简单的单点循环极易陷入 Goodhart 定律、向上盲视和测量衰减等致命陷阱；而图工程通过引入“循环监督循环”的网络结构（如挑战者循环、审计循环），实现了更稳健的自我纠错。同时，文章提供了一份硬核的 14 步实操路线图，指导开发者利用 Claude Code 动态工作流，通过扇出扇入、条件路由和对抗验证等节点设计，将线性的 Agent 改造为高可用的 图网络。文章最后发出灵魂拷问：无论是 Loop 还是 Graph，如果系统缺乏扎根现实的“硬性锚点”，任何精妙的拓扑结构最终都将沦为空转的幻觉。</p> 
+
+<p><a href="https://gomodvanityurls.com/zh/blog/go-monorepo-vanity-url/">Go Monorepo 实战：用 Vanity URL 管理多模块</a><br>手把手教程：Go 1.25 子目录模块 &#43; vanity URL 的组合拳。一个 monorepo，多个可导入的 Go 模块，简洁的品牌化导入路径——用 gvu --subdir 搞定。</p> 
+
+<p><a href="https://words.filippo.io/passkey-record/">不透明、可互操作的Passkey记录（以及Go API）</a><br>唯一的例外是备份状态标志。Passkeys会向服务器报告它们是否已备份（例如到iCloud Keychain或Google账户），服务器可以利用该信号建议从账户中移除密码。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/07/20/escape-analysis/">Go中的逃逸分析 - 栈与堆分配解析</a><br>从测量开始，使用性能分析和基准测试找到真正重要的分配，然后才查看逃逸分析日志。不要盲目优化，而应关注热点路径，将注意力集中在紧密循环、高吞吐量代码和延迟敏感部分。</p> 
+
+<p><a href="https://packagemain.tech/p/building-a-pkggodev-tui-explorer">构建pkg.go.dev TUI浏览器</a><br>新的API终于使从任何地方完全浏览Go文档变得实用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/20/argocon-japan-2026-meeting-the-maintainers-enterprise-insights-and-the-road-to-argo-cd-3-5/">ArgoCon Japan 2026：与维护者会面，企业洞察，以及Argo CD 3.5的发展路线</a><br>ArgoCon Japan的最佳部分是与其他Argo用户和项目维护者见面并分享智慧的机会，包括来自美国运通、Coralogix等终端用户公司的演讲。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/20/why-goodput-matters-more-than-throughput-for-llm-serving/">为什么对于LLM服务，goodput比throughput更重要</a><br>两种延迟朝不同方向发展，因为它们来自同一请求的两个阶段。TTFT来自预填充阶段，模型在此阶段读取您的提示，直接限制它使两种配置都保持在接近1.4秒的水平。</p>
+
+<p><a href="https://www.docker.com/blog/coding-agent-horror-stories-the-agent-that-deleted-production/">编程智能体恐怖故事：删除生产环境的智能体</a><br>安全方面：传统智能体设置使用工程师的完整凭证，而Docker沙箱为每个任务提供范围身份，密钥通过智能体注入且从不暴露，生产访问要么继承自操作员角色，要么使用明确的允许列表。</p>
+
+<p><a href="https://var0.xyz/posts/perfection-is-not-over-engineering.html">完美不是过度工程化</a><br>完美不是过度工程化。我无数次听到&#34;我们不想要完美&#34;这样的话，仿佛&#34;完美&#34;是一个肮脏的词。</p>
+
+<p><a href="https://rosipov.com/blog/ai-vim-and-the-illusion-of-flow/">AI、Vim与流畅的错觉</a><br>我最近在工作中更多地使用AI，这正成为整个行业的明确期望：编写更多代码，交付更多功能，更快发布。这让我想到了Vim，我喜欢Vim。</p>
+
+<p><a href="https://refactoringenglish.com/blog/why-i-stopped-creating-content/">为什么我停止了“创建内容”</a><br>当我第一次亲眼看到米开朗基罗的《大卫》时，我哭了。我一生中从未见过更美丽的内容。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/#atom-everything">反向工程现在很便宜</a><br>在智能体出现之前，完全有可能对家庭设备进行反向工程。问题是ROI - 真的值得付出所有这些努力？更重要的是，任何有经验的程序员都知道，那样的未记录、不稳定的API很可能会在未来发生变化或损坏。</p>
+
+<p><a href="https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/#atom-everything">谁害怕中国模型？</a><br>&gt; 美国应该通过一项法律，(1)明确规定收集用于训练模型的数据是合理使用，(2)至少禁止美国公司禁止蒸馏的服务条款。阻止蒸馏——这实际上只是查询API——几乎是不可能的；美国。</p>
+
+<p><a href="https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing/">美国AI被锁定且专有。它正在失去优势。</a><br>链接：[_中国对美国AI优势的双重打击，Robert Hart在The Verge中撰写的文章_](https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen?</p>
+
+<p><a href="https://www.emergingtrajectories.com/lh/frontier-lab-economics/">Kimi K3、Qwen 3.8和Anthropic的（潜在）解体</a><br>Kimi K3、Qwen 3.8和Anthropic的潜在解体。作者Wojciech Gryc，2026年7月19日发布。</p>
+
+<p><a href="https://cursor.com/blog/agent-swarm-model-economics">智能体集群和新模型经济学</a><br>今年早些时候，我们进行了实验，测试扩展智能体以合作实现目标的极限。我们的假设是这将解锁一个新的任务规模和复杂度层级。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Agent-Field/agentfield">Agent-Field/agentfield</a><br>Build, run and scale AI agents like API and microservices</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.</p>
+
+<p><a href="https://github.com/mvanhorn/cli-printing-press">mvanhorn/cli-printing-press</a><br>Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compou</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>Easily and securely send things from one computer to another 🐊 📦</p>
+
+<p><a href="https://github.com/tphakala/birdnet-go">tphakala/birdnet-go</a><br>Self-hosted realtime soundscape analyser for birds, bats and other wildlife. Multi-model local AI inference, runs 24/7 on a Raspberry Pi.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-compile-instrumentation">open-telemetry/opentelemetry-go-compile-instrumentation</a><br>OpenTelemetry Go Compile Instrumentation</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持</p>
+
+<p><a href="https://github.com/mvanhorn/printing-press-library">mvanhorn/printing-press-library</a><br>Official library of CLIs generated by the CLI Printing Press. Endorsed, tested, and community-contributed.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

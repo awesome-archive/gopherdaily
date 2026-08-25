@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250427.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250427</span>
+</p>
+<p>每日一谚：Do not trust user input, validate and sanitize it </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/4B5TDVhLfs1bYk343UfQxQ">Rob Pike的“抱怨”与Go的“解药”：直面软件膨胀的四大根源</a><br>今年年初，Go语言之父、UTF-8编码的发明者Rob Pike的一篇题为On Bloat（关于膨胀）的演讲幻灯片(在2024年下旬做的)在技术圈，尤其是在Hacker News(以下简称HN)上，引发了相当热烈的讨论。Pike作为业界泰斗，其对当前软件开发中普遍存在的“膨胀”现象的犀利批评，以及对依赖管理、 软件分层等问题的深刻担忧，无疑戳中了许多开发者的痛点。</p> 
+
+<p><a href="https://tonybai.com/2025/04/26/13-laws-of-software-engineering">【规律之手】资深码农都懂？软件工程中的13条“潜规则”定律</a><br>本文总结了软件工程领域的13条“定律”。它们中有些广为人知，有些则相对小众，但都非常实用。它们虽然不像物理定律那样严格精确，但确实精准地捕捉到了我们日常工作中经常遇到的挑战和现象，堪称是工程师和管理者都应该了解的宝贵“经验法则”或“心智模型”</p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-04-25-sql-engine-anatomy">SQL引擎剖析</a><br>本文总结了 Dolt 五年来采用 go-mysql-server 的现状，通过一个查询从解析到结果输出的过程，阐述了 SQL 引擎的工作原理。文章涵盖了解析、绑定、计划简化、连接探索、计划成本计算、执行和结果输出等步骤，并深入探讨了左递归解析器、名称绑定、计划简化规则、连接搜索、连接成本计算、以及执行引擎和 IO/结果输出等方面的内容。最后，文章还展望了未来改进的方向，例如优化内存使用、改进查询执行效率等。</p> 
+
+<p><a href="https://hackernoon.com/this-150-line-go-script-is-actually-a-full-on-load-balancer">仅需 150 行 Go 代码即可构建完整的负载均衡器</a><br>本文将向您展示如何仅使用 Go 的标准库创建一个简单的 HTTP 负载均衡器。它使用轮询算法在后端服务器之间平均分配传入请求，并进行健康检查以检测故障，以及请求代理——所有这些都只需大约 150 行代码。非常适合学习 Go 网络编程的基础知识。</p> 
+
+<p><a href="https://dev.to/michaelolof_/golang-error-handling-a-practical-and-robust-solution-3am1">Go错误处理 - 一个实用且健壮的解决方案</a><br>本文探讨了 GoLang 错误处理的经验，从最初的困惑到最终找到一个实用的解决方案。文章指出 GoLang 没有 try/catch 块，错误是值，这导致了冗长的 `if err != nil` 语句。文章比较了 GoLang 与其他语言的错误处理方式，并介绍了错误包装的概念，以及如何使用错误包装来提供更丰富的错误信息。文章还讨论了使用时间戳作为错误标识符来简化错误跟踪和调试，并介绍了 `errx` 库来简化错误处理流程，最终建议使用时间戳标记错误并继续开发。</p> 
+
+<p><a href="https://dev.to/rkatz/experimenting-mcp-go-anythingllm-and-local-llm-executions-549a">实验 mcp-go、AnythingLLM 和本地 LLM 执行</a><br>这篇文章最初发布于这里。注意：我不是LLM、AI或任何相关领域的专家，远非如此。我决定撰写这篇博文主要作为跟踪我的进度和分享我的发现的一种方式！这里可能有一些错误，请告诉我！我热衷于MCP趋势。通常我会多等一段时间才能参与这些主题，但是当涉及到工具之间很酷的集成时，我就会很快兴奋地进行实验。MCP，作为一行解释（来自我自己的想法）是“一种将本地数据与LLM集成的方法”。它主要允许我连接一些理解诸如“圣保罗目前的…天气如何”之类问题的LLM，提供一个接收格式化查询的接口，从某个API请求信息（也可以是完整的本地执行，例如列出我的文件系统），并向LLM提供结构化响应，以便对其进行格式化。正如其名称所示，它是一个协议，允许开发人员创建一个“类似API”的东西，实时查询并根据API响应提供答案。我决定使用Golang SDK，因为它是我最熟悉的领域，但是MCP网站上有很多使用你感觉更舒服的任何语言的有用示例（它还在Python、NodeJS等中提供其官方SDK）。因为我没有足够的钱来调用Claude（Anthropic，MCP的原始创建者也是Claude背后的公司），所以我决定使用一个非常酷的项目AnythingLLM，它允许我执行本地模型并支持MCP。此处使用的代码也可在Github上找到。</p> 
+
+<p><a href="https://webdev-sb.blogspot.com/2025/04/modern-api-development-with-typespec.html">使用 TypeSpec 和 OpenAPI 进行现代 API 开发</a><br>设计健壮且文档齐全的 Web API 是现代软件开发的关键部分。OpenAPI 是描述 RESTful API 最广泛采用的标准之一。它提供了一种机器可读的格式（通常使用 JSON 或 YAML 编写），用于定义 API 的结构、端点、请求/响应格式以及其他方面。这个模式成为单一事实来源，为从交互式文档到客户端库和服务器存根的一切提供支持。但是，手动编写和维护 OpenAPI 规范很快就会成为一项苦差事。语法冗长，结构中的小错误会导致令人沮丧的错误或系统不同部分之间出现不一致。这就是 TypeSpec 的用武之地。TypeSpec 是 Microsoft 开发的一种语言，用于以更友好的方式描述 API。无需与原始 OpenAPI YAML 纠缠，您可以编写一个 TypeSpec 文件，其感觉更像 TypeScript：简洁、富有表现力且模块化。您可以从此单个文件生成完整的 OpenAPI 模式。它充当抽象层，不仅简化了模式创作，还支持强大的代码生成工作流——后端和前端都是如此。在这篇文章中，我们将探讨如何使用 TypeSpec 和 OpenAPI 采用首先生成模式的 API 开发方法来简化您的工作流程，提高系统之间的一致性，并减少样板代码。我们还将深入探讨如何直接从模式生成后端服务器代码和前端客户端库——确保您的堆栈的所有部分都使用相同的语言。文章详细介绍了如何使用TypeSpec定义API模式，使用oapi-codegen生成Go后端代码，使用openapi-typescript生成TypeScript前端客户端，以及使用@redocly/cli生成API文档。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2025/04/25/userns-enabled-by-default">Kubernetes v1.33：默认启用用户命名空间！</a><br>Kubernetes v1.33 版本默认启用了用户命名空间支持。这意味着，在满足堆栈要求的情况下，Pod 可以选择使用用户命名空间。要使用此功能，不再需要启用任何 Kubernetes 功能标志！ 本博客文章解答了关于用户命名空间的一些常见问题。但在深入探讨之前，让我们回顾一下用户命名空间是什么以及为什么它们很重要。</p>
+
+<p><a href="https://www.morling.dev/blog/what-if-we-could-rebuild-kafka-from-scratch">如果我们可以从零开始重建 Kafka？</a><br>最近几天，我花了一些时间研究最近发布的 KIP-1150（“无盘 Kafka”），以及 AutoMQ 的 Kafka 分支，它紧密地集成了 Apache Kafka 和对象存储，例如 S3。遵循 WarpStream 的示例，这些项目旨在大幅改善在云环境中使用 Kafka 的体验，提供更好的弹性，大幅降低成本，并为原生湖仓集成铺平道路。
+
+这让我想到，如果我们从头开始开发一个持久化的云原生事件日志——Kafka.next——那么它应该具备哪些理想的特性和特征？分离存储和计算以及对象存储支持将是基本要求，但还应该有哪些其他功能？多年来，我一直使用 Kafka 来构建事件驱动的应用程序以及运行实时 ETL 和变更数据捕获管道，以下是我个人的愿望清单</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/26/unauthorized-experiment-on-cmv/#atom-everything">未经授权的CMV实验涉及AI生成的评论</a><br>一篇关于苏黎世大学的研究团队未经授权在r/changemyview (CMV) 论坛上进行为期四个月的实验的博文。该实验使用数十个AI生成的账户发布评论，试图改变用户的观点。作者谴责了该实验的伦理问题，因为它未经告知且违反了论坛规则，并且AI生成的评论中包含虚假信息。该实验引发了关于AI在在线讨论中操纵和欺骗的伦理担忧。</p>
+
+<p><a href="https://madebyoll.in/posts/world_emulation_via_dnn">通过神经网络模拟世界</a><br>作者将公寓附近的一条森林小径变成了一个可玩的神经网络世界。 你可以在你的网络浏览器中探索这个世界。这个“神经世界”是指整个世界都是一个神经网络，它基于之前的图像&#43;控制生成新的图像。没有关卡几何图形，没有灯光或阴影代码，没有脚本动画。只是一个循环中的神经网络。作者通过使用定制的相机应用程序记录视频和手机的运动来收集数据，然后训练神经网络来模拟这些输入→输出对的行为。最终，作者创建了一个低分辨率的神经网络世界，并解释了神经世界与传统游戏世界的区别：传统游戏世界像是绘画，而神经世界像是照片，信息直接从传感器流向屏幕，无需经过人工处理。作者认为，随着技术的进步，神经世界将变得越来越逼真。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ibarryyan/golang-tips-100">ibarryyan/golang-tips-100</a><br>Go小技巧&amp;易错点100例</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/gravitl/netmaker">gravitl/netmaker</a><br>Netmaker makes networks with WireGuard. Netmaker automates fast, secure, and distributed virtual networks.</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>Powerful system container and virtual machine manager</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/pterodactyl/wings">pterodactyl/wings</a><br>The server control plane for Pterodactyl Panel. Written from the ground-up with security, speed, and stability in mind.</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The to-do app to organize your life.</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/tilt-dev/tilt">tilt-dev/tilt</a><br>Define your dev environment as code. For microservice apps on Kubernetes.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241231.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20241231</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://words.filippo.io/dispatches/rsa-keygen-bench/">RSA密钥生成的性能基准测试</a><br>RSA密钥生成在概念上很简单，但却是密码工程领域最糟糕的实现任务之一。甚至对其进行基准测试也很棘手，需要用到一些数学知识：本文介绍了我们如何生成一个稳定且具有代表性的“平均情况”，而不是使用普通的统计方法。文章详细介绍了RSA密钥生成的流程，包括素数候选的选取、Miller-Rabin素性测试、试除法等，并解释了如何通过数学方法生成一个平均的候选序列来进行基准测试，从而避免了随机性的影响。最后，文章提供了生成这些平均序列的脚本和一些预先生成的序列，供读者使用。</p> 
+
+<p><a href="https://articles.wesionary.team/building-a-multi-tenant-architecture-in-golang-a-practical-guide-8ee066436678">使用 Go 语言构建多租户架构：实用指南</a><br>本文介绍了多租户架构的概念，以及如何在 Go 语言中使用共享数据库和表来实现多租户架构。文章中包含了架构图示、代码示例以及运行应用程序的步骤，并解释了如何使用唯一的 tenant_id 来隔离每个租户的数据。</p> 
+
+<p><a href="https://dev.to/frorning/functional-programming-in-go-with-ibm-fp-go-error-handling-made-explicit-9of">使用 IBM fp-go 进行 Go 中的函数式编程：明确错误处理</a><br>文中探讨了如何使用fp-go显式处理错误，定义具有多种错误类型的函数签名，并构建一个演示这些概念的真实CRUD API示例</p> 
+
+<p><a href="https://dev.to/indalyadav56/building-a-service-mesh-control-plane-in-go-a-deep-dive-2ma6">用 Go 构建服务网格控制平面：深度剖析</a><br>本文介绍了如何构建一个简化的服务网格控制平面，类似于 Istio，但专注于核心功能。该项目将帮助你理解服务网格架构、流量管理和可观察性。文章涵盖了服务发现与注册、流量管理与负载均衡、断路器与容错、可观察性（指标、跟踪、日志）、配置管理以及健康检查等核心功能，并提供了 Go 代码示例。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2024-12-30-dolt-wrapped/">2024 年 Dolt 回顾：一年中的回顾</a><br>这篇博文总结了 2024 年 Dolt 的亮点，包括最佳功能（DoltHub 持续集成）、最佳用例（Flock Safety）、最佳技术博文（Prolly Trees）以及最令人惊喜的成就（接近 MySQL 的性能）。文章还展望了 2025 年 Doltgres Beta 版本的发布。</p>
+
+<p><a href="https://www.ardanlabs.com/blog/2025/01/optimizing-databases-on-kubernetes-ep5-kubernetes-backup-and-recovery-with-cnpg-and-zfs-snapshots.html">在 Kubernetes 上优化数据库：使用 CNPG 和 ZFS 快照进行 Kubernetes 备份和恢复</a><br>在本系列的最后一集中，Jérôme Petazzoni 深入探讨了 PostgreSQL 的高级备份和恢复技术，展示了 CNPG（Cloud Native PostgreSQL）和 ZFS 快照如何在生产环境中确保持久性和快速恢复。本集重点介绍了使用全面的备份策略、时间点恢复和快速数据库克隆来保护数据，同时利用 ZFS 的效率来优化存储性能。主题包括使用 CNPG 进行备份（包括预写日志 (WAL) 和卷快照）、时间点恢复 (PITR)以及 ZFS 快照效率。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/12/30/cilium-releases-2024-annual-report/">Cilium 发布 2024 年年度报告</a><br>继 2023 年取得重大进展之后，Cilium 在 2024 年取得了关键性进展，组织机构现在利用该项目来管理其整个 Kubernetes 网络堆栈。我们很高兴分享 2024 年 Cilium 年度报告，该报告重点介绍了该项目在过去 12 个月中取得的许多成功。</p>
+
+<p><a href="https://victoriametrics.com/blog/vminsert-how-it-works/">当指标遇见 vminsert：数据传输的故事</a><br>vminsert 充当传入监控数据的网关。它接收不同格式的数据，通过解析和调整标签对其进行处理，然后使用内存缓冲区将这些数据发送到存储节点。它足够智能，可以始终将相同类型的数据发送到相同的存储节点，如果节点工作不正常，它可以重定向数据。</p>
+
+<p><a href="https://matklad.github.io/2024/12/30/what-is-dependency.html">什么是依赖？</a><br>这篇文章探讨了软件依赖的构成要素。作者认为依赖主要包括：校验和（用于验证依赖内容）、位置（获取依赖文件的途径）、名称（区分不同依赖）和版本（规定依赖的可替换性）。文章详细解释了每个要素的作用和重要性，并探讨了如何利用校验和构建更强大的依赖管理系统，例如避免使用锁文件或将锁文件转变为哈希树结构。</p>
+
+<p><a href="https://avi.im/blag/2024/sqlite-facts/">关于SQLite的一些疯狂又有趣的事实</a><br>本文列举了一些关于SQLite数据库的有趣事实，例如SQLite是部署最广泛的数据库，其维护者只有三人，并且不允许外部贡献；SQLite的起源可以追溯到美国军舰；SQLite使用公共领域许可证，并且拥有极高的测试覆盖率；SQLite在某些用例中甚至比Redis更快；SQLite还有一些与其他数据库不同的特性，例如单写者模型、弱类型等等。</p>
+
+<p><a href="https://arstechnica.com/security/2024/12/passkey-technology-is-elegant-but-its-most-definitely-not-usable-security/">密码钥技术很优雅，但它绝对不是实用的安全措施</a><br>正值节假日技术支持高峰期，本文介绍了关于密码钥的知识。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1003059/41b1d2ea281b6779/">Homa 网络协议</a><br>本文介绍了 Homa 传输协议，该协议由 John Ousterhout 开发，旨在用于数据中心应用。Homa 旨在减少 TCP 在数据中心应用中的开销，这些应用通常涉及大量在本地连接的主机之间交换的小消息。Homa 的设计重点是最大限度地减少请求与其响应之间的延迟。文章概述了 Homa 的核心设计，包括其无连接特性、按需数据传输机制以及优先级队列的使用。还讨论了 Homa 在 Linux 内核中的实现，以及它与 Unix 套接字接口的交互方式。最后，文章探讨了 Homa 的前景，并指出它最终可能在网络硬件中实现。</p>
+
+<p><a href="https://bsky.social/about/blog/12-30-2024-year-in-review">2024 年回顾 - Bluesky</a><br>2024 年对 Bluesky 来说是重要的一年！让我们回顾一下过去一年发生的一切。</p>
+
+<p><a href="https://curiouscoding.nl/posts/static-search-tree/">静态搜索树</a><br>这篇文章将实现一个静态搜索树 (S&#43; 树)，用于对排序数据进行高吞吐量搜索，该树在 Algorithmica 上有所介绍。我们将主要以那里提供的代码为起点，并对其进行极限优化。很大程度上，我只是采用了该文章中“未来工作”的想法并实现了它们。然后将查看汇编代码，以尽可能减少指令。最后，将添加一个大型附加功能以优化吞吐量：批量处理。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.chinatalk.media/p/deepseek-ceo-interview-with-chinas">Deepseek：引领中国人工智能竞赛的隐形巨头</a><br>Deepseek 是一家中国人工智能初创公司，其最新的 R1 模型在多个推理基准测试中击败了 OpenAI 的 o1 模型。尽管名气不大，但 Deepseek 是中国最值得关注的人工智能实验室。文章翻译了 Deepseek 首席执行官梁文锋的一次深度访谈，内容涵盖了 Deepseek 的 AGI 宏伟目标、开源战略、价格战、人才策略以及对中国科技创新的思考。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/erigontech/erigon">erigontech/erigon</a><br>Ethereum implementation on the efficiency frontier https://docs.erigon.tech</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>The Open Source Dev Environment Manager.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/go-git/go-git">go-git/go-git</a><br>A highly extensible Git implementation in pure Go.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/casbin/casbin">casbin/casbin</a><br>An authorization library that supports access control models like ACL, RBAC, ABAC in Golang: https://discord.gg/S5UjpzGZjN</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>A Modern Testing Framework for Go</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/projectdiscovery/subfinder">projectdiscovery/subfinder</a><br>Fast passive subdomain enumeration tool.</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

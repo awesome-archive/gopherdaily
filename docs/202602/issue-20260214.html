@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260214.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260214</span>
+</p>
+<p>每日一谚：Don&#39;t communicate by sharing memory, share memory by communicating. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/14/some-changes-in-go-1-26">Go 1.26 中值得关注的几个变化：从 new(expr) 真香落地、极致性能到智能工具链</a><br>本文将基于官方发布的 Release Notes，结合我之前的深度分析，为你全景式解析 Go 1.26 中那些最值得关注的变化。</p> 
+
+<p><a href="https://tonybai.com/2026/02/14/2026-software-factory-manifesto-code-not-by-humans">“代码必须不是人写的”：2026 年软件工厂宣言！</a><br>StrongDM AI 团队在 2026 年 2 月 6 日 发布的备忘录中，白纸黑字写下的第一条铁律。 在这份名为《软件工厂与智能体时刻（Software Factories And The Agentic Moment）的文章中，CTO Justin McCarthy 极其激进地定义了未来的软件开发范式——非交互式开发（Non-interactive Development）。 他们提出的口号令人震颤： Code must not be written by humans.（代码必须不是人写的。）</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/02/13/moving-your-codebase-to-go-1-26-with-goland-syntax-updates/">使用 GoLand 更新将你的代码库迁移到 Go 1.26</a><br>了解 GoLand 如何通过自动快速修复来支持 Go 1.26 语法，例如类型安全的 errors.AsType 和使用 new() 进行指针创建，从而更新您的代码库。文章详细介绍了如何应用这些更新，从单个文件到整个项目，以实现平稳的 Go 版本迁移。</p> 
+
+<p><a href="https://antonz.org/detecting-goroutine-leaks">使用 synctest/pprof 检测 goroutine 泄漏</a><br>本文探讨了在 Go 并发编程中常见的死锁、竞态条件和 goroutine 泄漏问题。重点介绍了 Go 1.24 引入的 synctest 包和 Go 1.26 中实验性的 goroutineleak profile，如何利用它们来检测不同类型的 goroutine 泄漏，例如：范围遍历通道泄漏、双重发送、提前返回、只取第一个结果以及孤立的 goroutine 等。文章对比了第三方库 goleak、synctest 和 pprof 的检测方法，并简要介绍了 goroutineleak profile 的底层检测算法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-02-13-announcing-git-remote-support-in-dolt/"> Dolt 宣布支持 Git 远程仓库</a><br>Dolt v1.81.10 允许您将 Git 远程仓库用作 Dolt 远程仓库——通过 Dolt CLI 和 Dolt sql-server 将版本化的 SQL 数据库与代码一起存储和同步。</p>
+
+<p><a href="https://www.pingcap.com/blog/ai-college-roi-advisor-build-financial-modeling-tidb/">AI学院ROI顾问：使用TiDB构建财务模型</a><br>了解TiDB如何驱动一个AI顾问来模拟20年的大学投资回报率（ROI）。对比真实结果，判断你的学位是否值得承担债务。
+
+本文作者分享了他如何构建一个名为“College Picker”的AI顾问工具，该工具旨在通过量化投资回报率（而不是排名）来帮助学生做出更明智的大学选择。该工具利用TiDB的混合搜索能力（关系过滤、全文搜索和向量相似性）在一个统一的数据库中处理数据，避免了传统AI应用中拆分存储关系数据和向量嵌入带来的复杂性和同步延迟。文章详细介绍了如何使用TiDB的SQL查询结合向量和全文搜索进行高效查询，并展示了如何构建20年财务路径预测模型，帮助用户评估学位带来的长期财务价值。</p>
+
+<p><a href="https://www.docker.com/blog/context-packing-context-window/">使用上下文打包解决上下文窗口限制</a><br>本文介绍了如何使用上下文打包技术，结合 Docker Model Runner 和 Agentic Compose，在不损害性能的情况下，将更多信息塞入小型本地 LLM 的上下文窗口中，从而解决上下文大小限制问题。</p>
+
+<p><a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194">Scaling LLM Post-Training at Netflix</a><br></p>
+
+<p><a href="https://hatchet.run/blog/tuis-are-easy-now">Building a TUI is easy now</a><br>The author shares their surprisingly positive experience building a Terminal User Interface (TUI) for Hatchet using the Charm stack (Bubble Tea, Lip Gloss, Huh) and significantly aided by Claude Code. They detail the reasons for building a TUI (text-first, information-dense, inline with code), the tooling used, the effective testing strategy involving Claude Code driving tmux sessions to test UI rendering, and how leveraging an existing frontend for reference and an OpenAPI spec eased development. The DAG-based renderer, initially daunting, was successfully implemented by adapting an existing ASCII graph renderer found online. The author concludes that the project&#39;s success stemmed from familiar best practices (modular design, tight feedback loops, continuous testing) applied in an agent-assisted environment, making it much faster than a previous, abandoned frontend refactor.</p>
+
+<p><a href="https://antonz.org/allocators">从 C 到 Zig 的内存分配器</a><br>本文探讨了 C、C3、Hare、Odin、Rust 和 Zig 中内存分配器的设计。现代系统语言将分配器视为一等公民，而 C 通常使用标准 libc 分配器。文章详细分析了 Rust 的 GlobalAlloc trait、Zig 的显式分配器接口、Odin 中基于上下文的分配器、C3 的零初始化选项、Hare 的全局分配器以及 C 语言中手动实现的接口和 Arena 分配器，对比了它们在错误处理和 API 上的异同。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.jeffgeerling.com/blog/2026/testing-reachy-mini-hugging-face-robot/">测试 Reachy Mini - Hugging Face 的 Pi 驱动机器人</a><br>作者在 CES 上看到 Jensen Huang 介绍 Reachy Mini 时曾认为是噱头，但 HuggingFace 和 Pollen Robotics 寄来一个进行测试。Reachy Mini 是一个由树莓派供电的小型机器人，可以对人类输入做出反应。作者测试了连接 OpenAI 的对话应用，但对孩子向 AI 透露过多个人信息感到担忧。该机器人是套件形式，需要组装，售价 449 美元的无线版基于树莓派 CM4。虽然作者认为开箱即用体验（如演示中“极其简单”）并非如此，但其开源性质和学习潜力是其亮点。作者遇到了网络配置和部分应用兼容性问题，并对默认开启的 API 和云服务连接表示担忧。总体而言，Reachy Mini 是一个很酷的想法，适合对 Linux 和机器人技术有一定了解的人进行学习。</p>
+
+<p><a href="https://simonwillison.net/2026/Feb/14/thoughtworks/#atom-everything">Thoughtworks的一条引语</a><br>Thoughtworks的一次静修活动挑战了AI将取代初级开发人员的观点。初级开发人员的盈利能力比以往任何时候都高，AI工具可以让他们更快地度过最初的负效率阶段，并作为未来生产力的期权。他们比资深工程师更擅长使用AI工具。真正的担忧在于那些在长达十年的招聘热潮中成长起来的中级工程师，他们可能没有发展出在新环境中蓬勃发展所需的基础知识。尽管讨论了学徒制、轮岗和终身学习等模式来解决这一差距，但尚未有任何组织成功解决这个问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/rcourtman/Pulse">rcourtman/Pulse</a><br>Real-time monitoring for Proxmox, Docker, and Kubernetes with AI-powered insights, smart alerts, and a beautiful unified dashboard</p>
+
+<p><a href="https://github.com/tmrts/go-patterns">tmrts/go-patterns</a><br>Curated list of Go design patterns, recipes and idioms</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable runtime for building distributed applications across cloud and edge, combining event-driven architecture with workflow orchestration.</p>
+
+<p><a href="https://github.com/php/frankenphp">php/frankenphp</a><br>🧟 The modern PHP app server</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

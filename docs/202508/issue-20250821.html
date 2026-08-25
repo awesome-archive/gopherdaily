@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250821.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250821</span>
+</p>
+<p>每日一谚：Write Go code as Gophers write code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/21/go-rust-official-voices">哲学家与工程师：为何Rust和Go的“官方之声”如此不同？</a><br>在阅读 Rust 核心团队负责人 Niko Matsakis 庆祝十周年的系列博文时，我注意到了一个有趣的现象。我下意识地将他的文字，与我长期关注的 Go语言之父Rob Pike以及Go 团队前技术负责人 Russ Cox 的文章放在一起对比。 这时我发现，两者窗外的风景截然不同。</p> 
+
+<p><a href="https://go.dev/blog/container-aware-gomaxprocs">Container-aware GOMAXPROCS - The Go Programming Language</a><br>Go 1.25 包含新的容器感知 GOMAXPROCS 默认值，为许多容器工作负载提供更合理的默认行为，避免可能影响尾部延迟的限制，并提高 Go 的开箱即用生产就绪性。</p> 
+
+<p><a href="https://www.p99conf.io/2025/08/20/go-performance-tuning-quick-start/">Go 性能调优快速入门：指标、分析及其他</a><br>在 Go 中，持续分析通常会发现基准测试中从未出现过的速度变慢；本指南将帮助你入门。</p> 
+
+<p><a href="https://flak.tedunangst.com/post/what-is-the-go-proxy-even-doing">Go 代理做了什么？</a><br>本文作者探讨了 Go 模块代理的行为，特别是它如何反复下载模块，即使是小更新也进行完全的克隆。作者认为这种做法效率低下，并导致服务器因过多的请求而返回 429 错误。文章通过日志分析，揭示了当作者推送代码更改后，来自多个 Google 机器的并发下载请求。作者质疑这种设计在分布式系统中的合理性，并指出代理似乎更倾向于从上游服务器下载，而不是从内部云存储中获取更新。</p> 
+
+<p><a href="https://aws.amazon.com/cn/about-aws/whats-new/2025/08/aws-advanced-go-driver-generally-available">Amazon Web Services (AWS) Advanced Go Driver is generally available</a><br>Amazon Web Services (AWS) Advanced Go Driver 现已正式发布，可与 Amazon RDS 和 Amazon Aurora PostgreSQL 和 MySQL 兼容的数据库集群一起使用。该数据库驱动程序支持更快的切换和故障转移时间、联合身份验证以及使用 AWS Secrets Manager 或 AWS Identity and Access Management (IAM) 进行身份验证。</p> 
+
+<p><a href="https://telemetryharbor.com/blog/from-python-to-go-why-we-rewrote-our-ingest-pipeline-at-telemetry-harbor">从 Python 到 Go：为什么我们在 Telemetry Harbor 重写了我们的摄取管道</a><br>在达到严重的性能限制后，我们从 Python FastAPI 重写了 Telemetry Harbor 的摄取管道，改用 Go。 这种转变带来了 10 倍的效率，通过严格的类型改进了数据完整性，并为我们提供了稳定、可扩展的基础，用于高容量的时间序列数据摄取。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-08-20-does-dolt-need-mcp">Does Dolt Need MCP? | DoltHub Blog</a><br>我们最近发布了Dolt MCP服务器。Dolt在使用编码代理时不需要MCP服务器也能很好地工作。那么，意义何在？本文将回答这个问题，通过一个详细的Dolt MCP服务器示例进行讲解，最后建议您使用Dolt为您的MCP服务器提供版本控制功能。</p>
+
+<p><a href="https://www.haproxy.com/blog/black-hat-usa-2025-recap">Black Hat USA 2025 recap</a><br>This year at Black Hat USA, the conversation focused on model context protocol (MCP), agentic workflows, and how security fundamentals still matter.</p>
+
+<p><a href="https://www.docker.com/blog/hardened-container-images-security-vendor-lock-in/">Hardened Container Images: Security Without Lock-in</a><br>探索硬化容器镜像的悖论——强大的安全收益，但隐藏的供应商锁定风险。了解如何在不失去控制的情况下进行硬化。</p>
+
+<p><a href="https://blog.rook.io/rook-v1-18-storage-enhancements-7977a800e9bc">Rook v1.18 存储增强功能</a><br>Rook v1.18版本发布！v1.18是另一个功能丰富的版本，旨在改进Kubernetes的存储。 再次感谢社区在将存储部署到生产环境中的大力支持。</p>
+
+<p><a href="https://vercel.com/blog/a-proposal-for-inline-llm-instructions-in-html">基于 llms.txt 的 HTML 内联 LLM 指令提案 - Vercel</a><br>llms.txt 是一种新兴标准，用于使文档等内容可供 AI 直接使用。我们正在提议一种约定，将此类内容直接包含在 HTML 响应中。</p>
+
+<p><a href="https://mitchellh.com/writing/advice-for-tech-nonprofits">技术非营利组织的建议</a><br>作者分享了他从与其他事业的互动中以及与捐助者共度时光中学到的经验，并重点介绍了技术非营利组织。文章探讨了技术非营利组织在吸引捐助者方面经常犯的错误，并提供了改进建议，包括简化捐款流程、明确传达捐款用途、制作影响报告以及建立人际联系，以帮助这些组织更有效地吸引和留住捐助者。</p>
+
+<p><a href="https://mackuba.eu/2025/08/20/introduction-to-atproto">AT 协议简介</a><br>对 Bluesky 的 AT 协议 (ATProto) 的各个部分和概念、涉及的服务器类型以及它们如何组合在一起进行演练</p>
+
+<p><a href="https://tigerbeetle.com/blog/2025-08-04-code-review-can-be-better">代码审查可以更好</a><br>本文探讨了作者对GitHub代码审查流程的两个主要问题：审查状态未存储为存储库的一部分，以及审查通过远程优先的 Web 界面进行。作者尝试了一种基于 Git 的代码审查方法，但由于在细节方面遇到了一些挑战，最终放弃了该方法。文章还提到了其他相关工具和资源。</p>
+
+<p><a href="https://medium.com/@himanshusingour7/why-scaling-a-database-is-harder-than-scaling-a-server-9f83779c2deb">为什么扩展数据库比扩展服务器更难</a><br>当您的应用程序增长并且有更多人开始使用它时，您需要确保系统能够处理额外的负载。这就是所谓的扩展——即使成千上万（或数百万）的用户同时使用您的应用程序，也能使其流畅运行。</p>
+
+<p><a href="https://www.lorenstew.art/blog/hx-optimistic">Introducing hx-optimistic: Make Your HTMX Apps Feel Instant</a><br>通过乐观UI使HTMX应用程序感觉即时：即时反馈、自动回滚，并且无需框架，只需简单的声明式HTML。</p>
+
+<p><a href="https://www.cloudbolt.io/kubernetes-pod-scheduling">Kubernetes Pod Scheduling: Tutorial and Best Practices</a><br>了解如何优化 Kubernetes Pod 调度，以改善集群中的资源利用率和应用程序性能。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/08/19/tuning-linux-swap-for-kubernetes-a-deep-dive">Tuning Linux Swap for Kubernetes: A Deep Dive</a><br>Kubernetes 的 NodeSwap 功能（预计将在即将发布的 Kubernetes v1.34 版本中进入稳定状态）允许使用交换空间，这与过去为提高性能可预测性而禁用交换空间的做法形成了重大转变。本文专门侧重于在 Linux 节点上调整交换空间，在该功能可用。通过允许 Linux 节点使用辅助存储来获得额外的虚拟内存，以在物理 RAM 耗尽时使用，节点交换空间支持旨在提高资源利用率并减少内存不足 (OOM) 杀伤。</p>
+
+<p><a href="https://grafana.com/blog/2025/08/13/llm-powered-insights-into-your-tracing-data-introducing-mcp-support-in-grafana-cloud-traces">LLM-powered insights into your tracing data: introducing MCP support in Grafana Cloud Traces</a><br>With support for the Model Context Protocol (MCP) within Grafana Cloud Traces, you can leverage LLM-powered tools like Claude Code to analyze and derive value from your tracing data.</p>
+
+<p><a href="https://medium.com/@amolsingh.singh23/digging-deeper-how-pause-containers-skew-your-kubernetes-cpu-memory-metrics-c50f3832cbe0">深入探讨：pause容器如何歪曲你的 Kubernetes CPU/内存指标</a><br>为什么 container=”” 和 name=”” 正在破坏你的 VictoriaMetrics 仪表板，以及如何使用准确的 PromQL 过滤器来清理它们。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.latent.space/p/chroma">&#34;RAG is Dead, Context Engineering is King&#34; — with Jeff Huber of Chroma</a><br>什么是向量数据库在 2025 年真正重要的？为什么“现代 AI 搜索”有所不同？以及如何构建随着上下文增长而不会腐烂的系统。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/edoardottt/cariddi">edoardottt/cariddi</a><br>Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/nats-io/nats.go">nats-io/nats.go</a><br>Golang client for NATS, the cloud native messaging system.</p>
+
+<p><a href="https://github.com/urfave/cli">urfave/cli</a><br>A declarative, simple, fast, and fun package for building command line tools in Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

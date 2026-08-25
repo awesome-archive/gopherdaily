@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250227.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250227</span>
+</p>
+<p>每日一谚：Be explicit rather than implicit. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/swisstable">使用Swiss表提高Go map性能</a><br>Go 1.24 使用全新的映射实现改进了映射性能。</p> 
+
+<p><a href="https://ericchiang.github.io/post/protoc-plugins">Protobuf生成器：乐趣与收益</a><br>本文探讨了 API 定义语言的不足，并介绍了如何轻松编写自己的 Protobuf 生成器。作者详细解释了 protoc 插件的工作原理，并提供了一个 Go 语言示例，展示如何生成 Markdown 文档。文章还强调了 Go Protobuf API 的优势，以及 Protobuf 插件系统在应对缺少开源项目时的便捷性。</p> 
+
+<p><a href="https://pthorpe92.dev/cursed-go">从令人沮丧的Go调用Rust</a><br>本文探讨了在 Go 中使用 FFI（外部函数接口）的痛点，特别是使用 CGO 的问题。作者介绍了 Limbo 项目，这是一个用 Rust 编写的 SQLite 的现代化重新实现，并解释了为什么需要从 Go 调用 Rust 代码。文章重点介绍了如何使用 purego 库绕过 CGO，直接使用系统调用来实现从 Go 调用 Rust 函数的功能，并讨论了其中的挑战和解决方案。作者还简要比较了其他的 Go SQLite 驱动程序，例如使用 CGO、代码生成、WASM 和管道等方法。最后，作者预告后续文章将详细介绍此方法的注意事项、解决方法和性能基准测试。</p> 
+
+<p><a href="https://beyondthesyntax.substack.com/p/lets-implement-consistent-hashing">让我们从零开始实现一致性哈希</a><br>本文介绍了一致性哈希的概念、应用场景以及使用Golang的实现方法。一致性哈希是一种键分发技术，用于将键平滑地映射到服务器，从而在添加或删除节点时最大限度地减少数据移动。文章详细阐述了其工作原理，并提供了Golang代码示例，包括哈希函数、添加节点、查找最近节点、存储和检索数据以及处理节点删除等方面。</p> 
+
+<p><a href="https://medium.com/@ksandeeptech07/understanding-gos-new-weak-package-735e0a2d67f1">理解 Go 新的 weak 包</a><br>Go 1.24 引入了一个强大的新包：weak，它支持弱指针——一种允许在没有强引用剩余时垃圾回收对象的机制。弱指针对于缓存、去重和管理对象生命周期特别有用，而不会阻止垃圾回收。本文将深入探讨 weak 包，检查实际用例，并查看实际代码示例。</p> 
+
+<p><a href="https://dev.to/bahaanoah/golang-concurrency-how-confinement-improves-performance-without-locks-1ld5">Go并发编程：如何通过限制提高性能而无需锁</a><br>并发是Go语言最大的优势之一，但如果你不小心或不完全理解你在做什么，它也可能成为许多问题的根源。本文将学习如何利用限制模式来提高Go并发性能。限制模式是一种简单而强大的模式，它确保数据只能从单个并发进程访问。如果单个goroutine拥有并修改一段数据，则无需互斥锁等同步机制，因为没有其他goroutine可以干涉它。 通过代码示例演示了如何使用限制模式来避免竞争条件，并提高性能，并比较了使用互斥锁和限制模式的优缺点。</p> 
+
+<p><a href="https://dev.to/leapcell/why-hugo-is-the-best-static-blog-framework-in-2025-43eh">为什么 Hugo 是 2025 年最佳静态博客框架</a><br>Leapcell：面向 Web 托管、异步任务和 Redis 的新一代无服务器平台……文章标签：javascript，gin，go，staticwebapps。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-02-26-mysql-secondary-indexes/">MySQL 次级索引：方法、原因及示例</a><br>本教程将讲解如何在 MySQL 中使用次级索引以及它们的作用，并附带示例。次级索引是数据库快速定位特定行集的一种方法，它使用排序存储或其他某种组织形式，可以无需查看每一行就能找到所需的值。本教程将涵盖次级索引（即主键以外的索引），包括创建索引、使用索引、部分索引匹配、唯一索引、索引中的空值、检查索引、TEXT 和 BLOB 列上的次级索引以及 JSON 文档的索引等内容，并解释索引的优缺点。</p>
+
+<p><a href="https://www.pingcap.com/blog/how-tidb-ttl-efficiently-handles-expired-data/">时间到！TiDB 如何高效处理过期数据</a><br>本文探讨了 TiDB 中 TTL (Time To Live) 功能的设计和实现过程。文章深入探讨了如何配置 TTL 相关的系统变量以获得更好的性能并减少对在线工作负载的影响；在分布式 SQL 数据库中实现 TTL 功能的思路和权衡；以及帮助用户充分利用 TTL 功能高效管理过期数据的关键技术见解。</p>
+
+<p><a href="https://blog.dropbox.com/topics/work-culture/social-worker-burnout-ai-tools-casework-documentation">社会工作面临文书工作难题，解决它可以为建立人际联系腾出更多空间</a><br>借助新的AI工具，社会工作者可以更轻松地管理个案工作，从而能够更多地观察，减少遗漏，并做出更好、更有同情心的护理决策。这项转变减少了护理人员在办公桌前的时间，让他们有更多时间投入到实地工作中。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/02/26/kubescape-becomes-a-cncf-incubating-project/">Kubescape 成为 CNCF 孵化项目</a><br>CNCF 技术指导委员会 (TOC) 已投票接受 Kubescape 作为 CNCF 孵化项目。Kubescape 是一个开源 Kubernetes 安全项目，旨在为整个开发和部署生命周期提供全面的安全覆盖。它提供姿态和漏洞管理以及自动强化策略。此外，它还提供基于 eBPF 的威胁检测功能，以检测云工作负载的异常和可疑行为。Kubescape 可作为 CLI 工具和 Kubernetes 运算符使用。CLI 工具用于手动扫描、脚本编写和 CI/CD 集成。Kubescape 运算符是一组从内部监控 Kubernetes 集群的微服务。Kubescape 于 2021 年由 ARMO 创建，ARMO 是一家专门从事云运行时安全的网络安全公司。自成立以来，Kubescape 一直是增长最快的开源安全项目之一，在云原生社区中获得了广泛的采用。</p>
+
+<p><a href="https://mostlynerdless.de/blog/2025/02/25/helle-ebpf-concurrency-testing-using-custom-linux-schedulers-19">Helle eBPF：使用自定义 Linux 调度程序进行并发测试</a><br>本文介绍了如何使用 sched-ext 和 hello-ebpf 编写自定义 Linux 调度程序，以进行并发模糊测试。作者介绍了其在 FOSDEM 2025 上的演讲，该演讲展示了如何利用自定义调度程序来测试特定的调度顺序，从而发现和重现并发代码中的错误行为，例如死锁。文中还提供了一个使用 Java 编写的原型工具，以及一个示例程序，展示了该技术如何用于发现并发错误。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/zalando/postgres-operator">zalando/postgres-operator</a><br>Postgres operator creates and manages PostgreSQL clusters running in Kubernetes</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>A powerful framework for faster, easier, and more efficient project development.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/sourcegraph/conc">sourcegraph/conc</a><br>Better structured concurrency for go</p>
+
+<p><a href="https://github.com/publicsuffix/list">publicsuffix/list</a><br>The Public Suffix List</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/elastic/beats">elastic/beats</a><br>🐠 Beats - Lightweight shippers for Elasticsearch &amp; Logstash</p>
+
+<p><a href="https://github.com/prometheus/blackbox_exporter">prometheus/blackbox_exporter</a><br>Blackbox prober exporter</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260720.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260720</span>
+</p>
+<p>每日一谚：The bigger the interface, weaker the abstraction </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.jetbrains.com/go/2026/07/20/escape-analysis/">Go中的逃逸分析 - 堆栈与堆分配解析</a><br>从测量开始。使用性能分析和基准测试来找出真正重要的分配，然后再查看逃逸分析日志。不要盲目优化。关注热点路径，将注意力集中在紧密循环、高吞吐量代码和延迟敏感部分。</p> 
+
+<p><a href="https://tonybai.com/2026/07/18/rust-to-zig-roc-compiler-rewrite">Bun刚把Zig重写成Rust，这个团队却用487天反向重写</a><br>就在 Bun 团队宣布用 AI 花 11 天将 50 万行 Zig 代码重写为 Rust 之后，Roc 编译器团队发表了一篇方向截然相反的硬核复盘： 他们耗时 487 天，以纯人工方式将 30 万行的 Rust 编译器从零重写为了 Zig。重写的核心动机并非语言优劣，而是为了彻底解决一个因架构设计&gt;导致的底层 Bug。在重新选择语言时，团队因构建速度、细粒度的内存控制、更贴合编译器生态的库，以及 Zig 对密集“不安全代码（Unsafe）”的&gt;更好兜底，最终放弃了原有的 Rust。实测数据揭示了一个反直觉的结论：丢掉 Rust 借用检查器后，Zig 版编译器的内存损坏 Bug 数量不增反降， 且增量编译速度飙升至惊人的 35 毫秒。文章强调，在真实的软件工程中，没有绝对完美的语言，只有与特定架构约束、生态假设（如全局分配器 vs 显式 Arena）最契合的务实选择。</p> 
+
+<p><a href="https://tonybai.com/2026/07/20/introducing-cc-session-migrate">我开源了 cc-session-migrate ：让 Claude Code 会话在多台机器之间自由迁移</a><br>在使用大语言模型编程助手 Claude Code 时，开发者常面临会话数据受困于单一本地机器，无法在笔记本与远程服务器间自由切换&gt;的痛点。为此，本文作者基于 Go 语言开源了一款命令行工具 csm (cc-session-migrate)。该工具采用 NAT 友好的 Hub-and-Spoke（中心辐射）WebSocket 架构，让用户无需配置繁琐的端口映射，即可实现跨机器的会话列表查看、无缝拉取与 claude --resume 续接。文章不仅分享了 5 分钟上 手指南和基于 S3 协议的自动备份功能，还复盘了开发过程中踩过的技术坑。csm 的发布，为重度多节点开发的高级极客补齐了 AI 编码时代最后一 块体验拼图。</p> 
+
+<p><a href="https://tonybai.com/2026/07/20/the-java-story-30-years-documentary">从掌上设备的失败到AI时代的基石：Java官方纪录片，揭开一门语言30年的生死赌局</a><br>这篇基于 YouTube 官方最新长篇纪录片《The Java Story》的深度解读文章，首次全面揭秘了 Java 语言跌宕起伏的 30 年发展史&gt;。文章讲述了 Java 最初作为一个濒临解散的掌上设备项目（Oak），如何意外搭上浏览器（Mosaic/Netscape）的快车一炮而红；揭示了其采用 C&#43;&#43; 语法的“伪装策略”以及无心插柳切入企业级服务端的传奇历程；披露了 J2EE 的灾难如何逼出了 Spring 与 Hibernate 这两把社区利剑，以及 Sun 与微软之间惊心动魄的世纪诉讼。文章还深度复盘了 Java 在失去创新的“停滞十年”后，如何通过 Oracle 的收购、Java 8 的豪赌（Lambda）以及 改为 6 个月一发布的敏捷节奏，最终完成惊天逆转。如今，面向高并发与 AI 时代，坐拥千万开发者的 Java 正凭借虚拟线程（Loom）、Valhalla 等底层革命再次焕发新生。这既是是一部技术演进史，也是一部充满妥协、抗争与重生的绝佳商业启示录。</p> 
+
+<p><a href="https://tonybai.com/2026/07/18/introducing-tabqueue">告别标签页焦虑：我让 AI 帮我做了个浏览器插件 TabQueue</a><br>面对浏览器标签页堆积如山导致的内存暴涨、风扇狂转与精神焦虑，市面上的书签或稍后读工具往往因为操作繁琐或功能过重而沦为 “标签坟墓”。为此，作者利用 AI 辅助开发了一款名为 TabQueue 的 Chrome/Edge 浏览器扩展。该插件主打“一键收纳、自动去重、按域分组、阅后 归档”的极简工作流，将混乱的标签页转化为如同收件箱般井然有序的阅读队列。TabQueue 坚持 100% 本地存储、零网络请求的隐私底线，并支持将 内容无缝集成至 Trello、Todoist 和 Obsidian 等第三方工作流。本文详细介绍了其核心设计理念、三分钟快速上手指南以及未来的迭代规划，为重度信息消费者提供了一个轻量且优雅的自我解救方案</p> 
+
+<p><a href="https://rakyll.org/zero-sum-games/">零和游戏</a><br>我对机器学习/算法相对较新。我的大部分职业生涯都在从事所谓的&#34;无聊&#34;的商品层工作，我仍在学习这个领域的历史、文化和假设。所以请将此视为一个局外人的观察。</p> 
+
+<p><a href="https://socket.dev/blog/malicious-go-module-exposes-github-malware-lure-network">恶意Go模块暴露GitHub恶意软件诱饵网络范围</a><br>11个恶意NuGet工具伪装成游戏作弊程序，以投放Windows主机监控负载。</p> 
+
+<p><a href="https://blog.andr2i.com/posts/2026-07-06-eliminating-go-bound-checks-with-unsafe.html">使用unsafe消除Go边界检查</a><br>热点路径优化：使用unsafe指针运算消除Go编译器无法移除的边界检查，前提是您可以证明它们确实不必要。</p> 
+
+<p><a href="https://packagemain.tech/p/my-thoughts-on-the-future-of-go-in-ai-era">我对Go在AI时代未来的思考</a><br>我有一个稍微有争议的观点，即AI实际上可能会让&#34;无聊&#34;的语言更有价值，而不是更少。</p> 
+
+<p><a href="https://opentelemetry.io/blog/2026/go-compile-time-instrumentation-v1/">宣布OpenTelemetry Go编译时工具链v1版本</a><br>如果您使用Java、Python、Node.js或.NET编写代码，OpenTelemetry Go编译时工具链v1现已发布，为您提供更高效的观测能力。</p> 
+
+<p><a href="https://autheona.com/developer-blog/architecture-behind-intelligence-api/">智能API背后的Go架构</a><br>通过利用Go并发、本地SQLite缓存和异步PostgreSQL批处理，我们设计了一个认证验证层，能够处理复杂的信任策略，实现低于50毫秒的P99延迟。</p> 
+
+<p><a href="https://packagemain.tech/p/golang-optimizations-for-highvolume">高容量服务的Golang优化</a><br>从Postgres到Elasticsearch管道中学到的经验教训，展示了如何优化高流量服务。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://github.blog/security/6-security-settings-every-github-maintainer-should-enable-this-week/">每位GitHub维护者本周应启用的6项安全设置</a><br>GitHub维护者应立即启用六项关键安全设置，以保护仓库和代码库免受潜在威胁。</p>
+
+<p><a href="https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/">GitHub如何为每个仓库提供持久所有者</a><br>GitHub实施了一项新功能，为每个仓库分配持久所有者，确保长期维护和责任归属。</p>
+
+<p><a href="https://ollygarden.com/blog/teach-your-coding-agent-opentelemetry">教您的编码智能体使用OpenTelemetry</a><br>通过OpenTelemetry为您的编码智能体提供可观测性能力，使其能够更好地理解和优化代码性能。</p>
+
+<p><a href="https://laurent.le-brun.eu/blog/a-history-of-ides-at-google">Google的IDE发展史</a><br>回顾Google内部集成开发环境(IDE)的演变历程，展示了工具如何适应大型项目的需求。</p>
+
+<p><a href="https://smolnero.com/posts/the-zen-of-parallel-programming">并行编程的禅意</a><br>探索处理器间通信、人际沟通和个人内心交流之间的联系，揭示并行编程的本质。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/19/agentic-engineering-thorsten-ball-amp-interview/">“皇帝的新衣”一年后：对话Thorsten Ball谈Agentic编程</a><br>本文根据go podcast()第093期对Amp联合创始人Thorsten Ball的访谈整理而成。Thorsten曾撰写引爆行业讨论的博客《皇帝没穿新衣》，提出用极简工具集加大模型即可超越复杂检索基础设施的洞察，这一观点被视为Agentic编程叙事的重要起点。访谈中，他回顾了从Sourcegraph的Batch Changes、代码语义索引到Amp编程智能体的产品演进逻辑；阐述了Amp “持续做减法、只服务前沿模型”的产品哲学，以及刚发布的Agents and Orbs云端智能体功能；深入讨论了在AI时代“资深工程师经验”的价值重估、初级工程师培养的行业隐喻，以及编程本身的审美愉悦正在如何变&gt;化；最后剖析了闭源与开源大模型之间“不敢停下来”的军备竞赛逻辑，以及外界普遍低估的算力紧缺现状。</p>
+
+<p><a href="https://stateofopensource.ai/">开源AI现状</a><br>智能体式工具是新的前沿，浏览器曾是开放网络的用户智能体，这一角色正在向上层重现。</p>
+
+<p><a href="https://danielmiessler.com/blog/recreating-the-bell-labs-cafeteria">重现贝尔实验室</a><br>探讨创新环境的重要性，以及如何创造类似贝尔实验室的协作空间，促进创意和技术突破。</p>
+
+<p><a href="https://tim.blog/2026/07/17/better-than-free/">比免费更好：如何在AI时代脱颖而出</a><br>在AI时代，创作者需要专注于建立真正的粉丝群体，提供独特价值，而非仅仅追求免费内容。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Agent-Field/agentfield">Agent-Field/agentfield</a><br>Build, run and scale AI agents like API and microservices</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.</p>
+
+<p><a href="https://github.com/mvanhorn/cli-printing-press">mvanhorn/cli-printing-press</a><br>Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compou</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>Easily and securely send things from one computer to another 🐊 📦</p>
+
+<p><a href="https://github.com/tphakala/birdnet-go">tphakala/birdnet-go</a><br>Self-hosted realtime soundscape analyser for birds, bats and other wildlife. Multi-model local AI inference, runs 24/7 on a Raspberry Pi.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-compile-instrumentation">open-telemetry/opentelemetry-go-compile-instrumentation</a><br>OpenTelemetry Go Compile Instrumentation</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持</p>
+
+<p><a href="https://github.com/mvanhorn/printing-press-library">mvanhorn/printing-press-library</a><br>Official library of CLIs generated by the CLI Printing Press. Endorsed, tested, and community-contributed.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

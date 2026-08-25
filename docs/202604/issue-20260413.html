@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260413.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260413</span>
+</p>
+<p>每日一谚：The Go community is pragmatic. We care about what works, not what&#39;s trendy.  — Go Team (社区文化) </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/13/dave-cheney-goroutine-management-philosophy">别再无脑 go func() 了！Go 资深布道师 Dave Cheney 的 Goroutine 管理哲学</a><br>就在去年的 GopherCon Singapore 技术大会上，Go 社区的资深布道师 Dave Cheney，却用一场充满哲学思考的演说，给所有 Gopher 敲响了警钟。他的核心论点很明确：Goroutine 绝非免费的午餐，它是一种需要付出代价的“有限资源”。如果你只管启动（Start）而不懂如何停止（Stop），你并没有在写高效的并发程序，你只是在为系统埋下慢性自杀的伏笔。</p> 
+
+<p><a href="https://tonybai.com/2026/04/11/go-command-working-group-formed-legacy-commands-deprecated">Go Command 工作组成立：这几个用了十年的命令可能要被废</a><br>就在最近，Go 核心团队内部悄然发生了一件大事：他们正式成立了一个全新的 “Go Command 工作组（Go Command Working Group）”。 这个工作组汇聚了 Go 工具链领域最核心的大神们（如 Cherry Mui、Matloob、ThePudds 等）。他们的使命非常明确：对 go 命令集中那些最古老、最含糊、最容易引发开发者困惑的“历史遗留问题”，进行一次彻底的“清理门户”</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/u298BeC-Uh8dfLjE6N-T3Q">【Agentic API 实战】04 OpenAPI 进化：用 Agentic 扩展赋能机器阅读</a><br>软件工程的进步往往是演进式的，而不是推倒重来的。OpenAPI 规范（OAS）作为业界事实上的标准，拥有庞大的工具生态（代码生成、UI 渲染、 网关集成）。我们要做的是给 OpenAPI 规范做一次“基因升级”，让它从一份只给人类看的“说明书”，变成一份 AI 智能体能够精确理解和安全执行的“行动契约”。 今天，我们就来揭秘这项让死文档“活”起来的魔法：OpenAPI 的自定义扩展（Vendor Extensions）</p> 
+
+<p><a href="https://tonybai.com/2026/04/12/agile-manifesto-dead-in-ai-era-martin-fowler-kent-beck/">AI 时代，敏捷宣言已死？听听 Martin Fowler 和 Kent Beck 怎么说</a><br></p> 
+
+<p><a href="https://benhoyt.com/writings/indecisive-ai-agent/">当 AI 编码助手陷入“纠结”：一场有趣的实验</a><br>本文记录了作者在与 Claude 3 Opus 进行编码协作时发现的一个有趣现象：AI 表现得极其“优柔寡断”。在处理任务时，AI 反复推翻自己的代码方案，在不同的实现方式之间徘徊不定。作者通过这一过程探讨了 AI 代理在逻辑决策中的局限性，并以轻松幽默的视角审视了这种“纠结”行为背后的技术表现，展示了当前大模型在复杂编程任务中偶尔出现的逻辑摇摆与不确定性。</p> 
+
+<p><a href="https://glinr.hashnode.dev/parsing-11-languages-in-pure-go-without-cgo-how-i-replaced-regex-with-a-tree-sitter-runtime">如何使用纯 Go 实现 11 种语言的解析：从正则到 Tree-sitter</a><br>本文介绍了作者如何摆脱对 CGO 的依赖，利用纯 Go 语言实现了 Tree-sitter 运行时。作者通过将 Tree-sitter 的解析器解析为中间表示（IR），成功替代了原有的正则表达式方案，从而在不牺牲性能的前提下，为 11 种编程语言提供了更精准、高效的语法解析能力。这一重构不仅解决了跨平台编译的复杂性，还显著提升了代码的可维护性和解析的健壮性。</p> 
+
+<p><a href="https://lesiw.dev/go/step/">在 Go 语言中实现可测试的多步骤任务流</a><br>本文探讨了如何将传统的 Bash 构建脚本迁移至 Go 语言。作者指出，直接将脚本逻辑堆砌在单一函数中会导致代码难以维护和测试。为了提升代码质量，文章建议通过模块化设计将复杂逻辑拆分为独立的函数，并利用 orchestrator（编排器）按顺序执行。这种方法不仅增强了程序的类型安全性和可读性，还使得每个步骤都能被独立测试，从而有效避免了因前期步骤失败导致的测试脆弱性问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/04/13/everyones-a-billionaire.html">“人人十亿”法案：一种极端的货币讽刺</a><br>作者通过“人人发放十亿美金”的讽刺性提案，揭示了美国当前经济问题的核心——法币制度的滥发。文章指出，如果通过大量印钞让全民成为亿万富翁，虽然能消除社会对贫富差距的怨恨，并轻松偿还国债，但其必然导致美元体系的彻底崩溃。作者借此反讽，旨在引导读者思考货币本质，并暗示人们最终将不得不转向如黄金等不可随意增发的硬通货。</p>
+
+<p><a href="https://olano.dev/blog/code-is-run-more-than-read/">重新定义开发优先级：从代码编写到运行维护</a><br>文章探讨了软件开发中不同视角的优先级演变。传统观点强调“代码是用来读的，而非写的”，主张提升代码可维护性。作者进一步指出，软件的核心价值在于用户体验，因此“用户优先于开发者”。最终，作者提出“代码是用来运行的”，强调软件的生产环境运营（部署、监控、维护等）才是长期成本的核心，开发者应将重心从单纯的代码编写转向系统的长期稳定运行与交付。</p>
+
+<p><a href="https://www.sandordargo.com/blog/2026/04/08/cpp-freestanding">C&#43;&#43; 独立式与宿主式标准库解析</a><br>本文介绍了 C&#43;&#43; 标准中的“独立式”（Freestanding）与“宿主式”（Hosted）两种实现环境。宿主式环境是我们常见的操作系统环境，而独立式环境则适用于嵌入式系统、内核或裸机开发，其标准库功能受限，不支持堆分配、系统调用或异常处理。文章通过 `__STDC_HOSTED__` 宏的判定方法，帮助开发者理解在资源受限的环境下，C&#43;&#43; 标准库如何提供最小化的核心支持，以确保代码在无操作系统环境下正常运行。</p>
+
+<p><a href="https://essenceia.github.io/projects/floating_dragon/">挑战浮点数：一场深入底层原理的重构之旅</a><br>本文记录了作者在五年前尝试实现浮点数运算遭遇惨败后，时隔五年重拾信心，决定深入剖析浮点数底层表示与实现逻辑的历程。作者反思了过去仅停留在“会使用”而非“理解”层面的局限性，并计划通过脱离计算机、回归纸笔推演的方式，系统性地攻克浮点数这一技术难关。文章旨在通过深度的理论复盘，揭开浮点运算复杂性的面纱。</p>
+
+<p><a href="https://www.daemonology.net/blog/2026-04-11-20-years-on-AWS-and-never-not-my-job.html">AWS 二十年回顾：从早期用户到安全见证者</a><br>本文作者回顾了自 2006 年 4 月注册 AWS 账户以来的二十年历程。作为一名资深开发者及 FreeBSD 安全官，作者分享了 AWS 早期鲜为人知的服务细节，如被遗忘的 Amazon E-Commerce Service。文章重点探讨了作者在云基础设施发展早期对安全性的关注，特别是针对 AWS API 响应缺乏签名保护及早期 HTTP 通信风险的批判性思考，展示了云服务在安全性与架构演进上的早期探索。</p>
+
+<p><a href="https://blog.cloudflare.com/500-tbps-of-capacity/">Cloudflare 全球网络容量突破 500 Tbps</a><br>Cloudflare 近期宣布其全球网络外部互联容量已正式跨越 500 Tbps 大关。这一里程碑式的数字代表了其在 330 多个城市中，面向传输服务商、对等互联伙伴及互联网交换中心的所有端口容量总和。回顾 2010 年从帕洛阿尔托起步，仅依赖单一运营商的初创阶段，Cloudflare 经过 16 年的持续扩张与架构优化，现已构建起覆盖全球的强大基础设施。该容量不仅满足日常业务需求，还为应对大规模 DDoS 攻击提供了充足的缓冲空间。</p>
+
+<p><a href="https://alok.github.io/lean-pages/perfectable-lean/">Lean：一种可臻于完美的编程语言</a><br>本文探讨了为何Lean是目前最优秀的编程语言。作者认为，Lean的核心优势在于其“可完善性”（perfectable）——即开发者能够在语言内部定义和证明关于代码本身的属性。通过依赖类型系统，Lean允许程序员不仅是编写代码，还能对代码的逻辑行为进行严谨的数学验证。文中对比了传统语言在处理代码属性证明时的局限性，指出随着编程语言的发展，向类型化和编译期计算演进是必然趋势，而Lean通过强大的元编程与证明能力，为构建高质量软件提供了理想的路径。</p>
+
+<p><a href="https://coderlegion.com/14469/the-hidden-program-behind-every-sql-statement">SQL 语句背后的“隐藏程序”</a><br>本文揭示了 SQL 语句在数据库底层运行的本质。虽然 SQL 是一种声明式语言，让开发者只需关注“要获取什么数据”而非“如何获取”，但在数据库引擎内部，每一条 SQL 语句都会被解析、优化并转化为具体的执行计划。文章旨在帮助开发者理解数据库是如何将抽象的查询指令转化为底层的执行程序，从而更好地优化查询性能，深入掌握数据库的工作原理。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything">LLM 的“勤奋”陷阱：为何人类的懒惰至关重要</a><br>布莱恩·坎特里尔（Bryan Cantrill）指出，大语言模型（LLM）因缺乏“懒惰”这一美德，往往会不受限制地制造复杂且冗余的系统。人类之所以追求简洁的抽象，正是源于对时间成本的考量；而LLM由于生成成本极低，极易导致系统规模膨胀却质量下降。文章强调，在AI辅助编程时代，人类那种因“懒惰”而追求高效与优雅的思维方式，对于构建高质量系统依然至关重要。</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything">使用 MLX 在 macOS 上运行 Gemma 4 进行语音转文字</a><br>本文介绍了如何利用 MLX 和 mlx-vlm 框架，在 macOS 环境下运行 Google 的 Gemma 4 E2B 模型实现语音转文字功能。作者分享了一个简洁的 uv 执行指令，通过 Python 环境快速配置并调用该模型处理音频文件。实测结果显示，该方案能够有效完成语音听写任务，为在本地设备上高效运行多模态大模型提供了一种便捷的实践参考。</p>
+
+<p><a href="https://mrandri19.github.io/2026/04/03/2d-quadcopter-simulation.html">2D四旋翼无人机动力学仿真实现</a><br>本文介绍了如何从零构建一个2D平面四旋翼无人机的物理仿真模型。文章首先通过自由体受力分析，推导出无人机的运动方程，随后将其转化为状态空间表示形式，并展示了如何使用Python进行仿真实现。该仿真模型旨在为后续的控制器设计和强化学习算法训练提供基础环境，帮助读者在深入研究控制理论前，透彻理解无人机的动力学特性。</p>
+
+<p><a href="https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/">AI Agent测评的虚假繁荣：主流基准测试均可被轻松破解</a><br>加州大学伯克利分校的研究团队揭露了当前AI Agent领域测评体系的严重漏洞。通过开发自动化扫描工具，研究人员发现包括SWE-bench、WebArena和OSWorld在内的八大主流基准测试均存在逻辑缺陷，AI模型无需具备实际解决问题的能力，仅通过针对评分机制的“投机取巧”即可获得满分。这些漏洞涵盖了读取后台配置、伪造执行环境等多种手段。该研究指出，现有的排行榜指标已无法准确反映模型真实性能，行业亟需建立更稳健、更具可信度的测评标准，以遏制日益严重的指标造假行为。</p>
+
+<p><a href="https://sitebloom.ch/writing/now-is-the-best-time-to-write-code-by-hand/">AI时代：坚持手写代码的价值</a><br>随着AI辅助编程的普及，开发者面临着依赖模型带来的“技能退化”挑战。文章指出，尽管AI能显著提高产出效率，但过度依赖会导致工程基本功的丧失。作者认为，在AI时代，主动练习手写代码、深入理解算法与架构等核心工程能力，反而成为了一种稀缺且珍贵的竞争优势。对于追求卓越的工程师而言，保持刻意练习是未来十年在技术领域保持核心竞争力的关键。</p>
+
+<p><a href="https://x.com/garrytan/status/2042925773300908103">AI 编程效率的秘诀：构建精简高效的“harness”</a><br>Garry Tan 指出，AI 编码效率的巨大差异并非源于模型本身的智力，而在于“外壳”（Harness）的构建。真正的核心竞争力在于如何通过上下文管理、提示词缓存、专用工具等架构设计，为模型提供精准、无冗余的数据支持。他提出了“精简外壳，丰富技能”（Thin Harness, Fat Skills）的理念，强调通过“技能文件”等结构化方式，帮助 AI 深刻理解特定业务场景与代码规范，从而实现 10 倍甚至 100 倍的生产力飞跃。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/steipete/wacli">steipete/wacli</a><br>WhatsApp CLI</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/googleapis/mcp-toolbox">googleapis/mcp-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/GopeedLab/gopeed">GopeedLab/gopeed</a><br>A fast, modern download manager for HTTP, BitTorrent, Magnet, and ed2k. Cross-platform, built with Golang and Flutter.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/anthropics/anthropic-cli">anthropics/anthropic-cli</a><br>The CLI for the Claude API</p>
+
+<p><a href="https://github.com/versity/versitygw">versity/versitygw</a><br>versity s3 gateway</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

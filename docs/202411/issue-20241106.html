@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241106.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-06</span>
+</p>
+<p>每日一谚：Write Go code as Gophers write code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/11/07/exploring-caddy/">从简单到强大：再次探索Caddy服务器的魅力</a><br>探索Caddy的强大功能特性，包括自动https、API控制等</p> 
+
+<p><a href="https://dev.to/lucasdeataides/why-clean-architecture-struggles-in-golang-and-what-works-better-m4g">为什么Clean Architecture在Go中挣扎</a><br>源文件批评了 Clean Architecture 原则在 Go 中的应用，Go 语言以其简单和极简主义而闻名。它认为，与 Go 的设计理念相一致的以包为中心的方法，而不是 Clean Architecture 倡导的分层结构，可以更好地发挥 Go 的优势。本文档强调了 Go 对显式依赖注入的偏好，避免了复杂的抽象，以及实用性而不是理论的纯粹性。它表明，以 Kubernetes 等项目为代表的 Go 生态系统偏爱更直接的模块化架构，强调包和实际测试实践。该摘要概括了文档的立场，即 Go 的惯用架构应该优先考虑简单性、透明性和模块化，而不是坚持 Clean Architecture 的分层抽象方法。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或文档中的具体示例，而是提炼了所提出的总体论点。</p> 
+
+<p><a href="https://changelog.com/gotime/336">Writing a shell in Go</a><br>In this insightful episode of &#34;Go Time,&#34; Johnny Boursiquot and Qi Xiao delve into the complexities of creating a shell program using Go, a programming language known for its simplicity and efficiency. The episode, recorded on November 2, 2024, and published on November 6, 2024, spans 65 minutes and is available for download. Qi Xiao, a prominent figure in the Go community with a strong presence on Twitter, GitHub, and LinkedIn, shares his expertise alongside Johnny Boursiquot, who also has a significant online presence. The discussion is enriched by mentions of various platforms and tools that support developers, such as Fly.io for deploying apps, Retool for building internal tools, and Timescale for real-time analytics on PostgreSQL. Additionally, the episode highlights Elvish shell, a tool for shell scripting, and encourages viewers to sign in for transcript notifications. The episode is part of a series that aims to provide developers with valuable insights and resources.</p> 
+
+<p><a href="https://levelup.gitconnected.com/behave-testing-bdd-with-golang-and-python-a743ced5b946">使用Go和Python进行行为驱动测试 （BDD）</a><br>Ryan Finlayson 的这篇文章将指导开发人员完成使用 Python 将 Behave 测试与 Golang API 集成的过程。它首先使用 Gin 在 Golang 中设置一个基本的 REST API，并为 Behave 设置一个 Python 虚拟环境。作者演示了如何在功能文件中使用 Gherkin 语法编写 BDD 测试，然后在 Python 步骤定义中实现这些测试。本文介绍了如何使用 Postman 进行调试、创建功能文件以及为各种 API 终端节点实现步骤定义。它强调了团队成员之间清晰沟通和协作的重要性，无论技术背景如何。本文最后介绍了如何使用 Behave 运行测试并确保 API 按预期运行。作者还解决了常见问题，例如解决缺少的软件包错误，以简化测试过程。</p> 
+
+<p><a href="https://rmoff.net/2023/07/19/blog-writing-for-developers/">面向开发人员的博客写作</a><br>源文档为开发人员提供了有效博客写作的见解，强调了通过写作分享知识和学习的重要性。作者是一名 DevEx 工程师，他分享了写作的动机，例如传播信息和填补知识空白。为开发人员写作的关键策略包括清晰度、个人声音和内容的统一性。该文件建议观看有关有效写作的讲座，使用 Grammarly 等工具进行校对，并参与社区讨论以获取想法。它还强调了为自己写作的重要性，以确保材料与目标受众产生共鸣，并建议构建具有明确号召性用语的博客文章。作者提倡迭代写作，并强调来自熟练的审稿人和文案编辑的反馈对改进写作过程的价值。总体而言，本文档为希望通过博客提高写作技巧和分享专业知识的开发人员提供了指南。</p> 
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/how-to-become-a-more-effective-engineer">如何成为更高效的工程师</a><br>Cindy Sridharan 的 Pragmatic Engineer 文章深入探讨了软件工程组织内部政治的微妙世界。它强调了了解组织动态、软技能和晋升过程对于成为更有效的工程师的重要性。Sridharan 认为，工程师经常忽视掌握影响项目结果的隐含层次结构和决策理念的重要性。文章建议工程师应该以小的、可实现的胜利为目标，并在公司内部有影响力的人物中建立信誉。它还建议不要在没有明确授权或了解组织指标的情况下进行全面的文化变革。最终，这篇文章为工程师提供了指南，帮助他们驾驭职场政治的复杂性，并为自己的职业发展进行战略定位。</p> 
+
+<p><a href="https://icepanel.medium.com/top-7-most-common-uml-diagram-types-for-software-architecture-3a43caaa2862">软件架构中最常见的 7 种 UML 图类型</a><br>源文档概述了软件架构中使用的最常见的 UML（统一建模语言）图表类型，如 IcePanel 所讨论的那样。UML 图分为结构图和行为图，其中结构图侧重于静态系统组件和关系，而行为图则描述动态交互和工作流。本文档详细介绍了 7 种关键的 UML 图类型：类、对象、组件、序列、活动、用例和状态图。每种类型都有特定的用途，从定义系统类及其关系到说明业务流程和用户交互。本文还谈到了 UML 在开发团队内部规划和沟通方面的实用性，同时承认存在像 C4 模型这样的替代建模方法。提供了资源和进一步阅读，以及 UML 图的可视化表示，以增强理解。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括文档中的直接引用或特定 URL。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.gitpod.io/blog/we-are-leaving-kubernetes">我们即将离开 Kubernetes</a><br>源文档讲述了一个团队的旅程，该团队最初选择 Kubernetes 来构建开发环境，因为它具有可扩展性和容器编排功能。但是，他们遇到了与安全性、资源管理和开发环境独特的状态性质相关的重大挑战。该团队的经验凸显了 Kubernetes 在处理不守规矩的开发环境方面的局限性，从而导致扩展和资源分配的复杂性。为了解决这些问题，他们探索了微型 VM 技术，但发现它们的效率不如容器。最终，该团队决定开发一种新的基础设施 Gitpod Flex，它可以简化架构并增强安全性，同时保持 Kubernetes 的优势。这种新的解决方案允许快速部署，并更好地控制合规性和组织边界。
+
+（注意：摘要旨在概括文档的关键点，同时省略了摘要中未直接涉及的具体细节和问题。</p>
+
+<p><a href="https://thenewstack.io/p99conf-how-ebpf-could-make-faster-database-systems/">eBPF 如何打造更快的数据库系统</a><br>New Stack 的文章讨论了 eBPF（增强型 Berkeley Packet Filter）技术的潜力，该技术通过直接在内核中执行常见操作，绕过操作系统的用户空间，显著提高数据库系统的性能。BPF-DB（基于 BPF 的数据库）由卡内基梅隆大学的研究人员牵头，是一种内存中的键值数据存储，它利用 eBPF 更高效地处理数据。这种方法消除了在用户空间和内核空间之间复制数据的需要，从而减少了延迟并提高了速度。本文重点介绍了正在进行的研究，并计划将 BPF-DB 作为开源软件发布，旨在解决数据库系统因操作系统限制而面临的长期挑战。该项目对 eBPF 的创新使用可能会彻底改变数据库性能，并且是将数据库逻辑集成得更接近内核以提高效率的更广泛趋势的一部分。</p>
+
+<p><a href="https://blog.howardjohn.info/posts/zero-to-value/">Zero to Value in two steps with Istio ambient mode</a><br>The blog post by Howard Johnston details the implementation and benefits of Istio&#39;s ambient mode, which simplifies the deployment of mutual TLS (mTLS) for service-to-service communication within a Kubernetes cluster. The two-step process involves installing Istio in ambient mode and labeling all namespaces with a specific Istio label. This approach significantly reduces operational complexity, as it is designed to be safe and compatible with any service, avoiding the risks associated with sidecar modifications.
+
+The ambient mode also integrates HTTP telemetry, leveraging Gloo Mesh to provide full observability without performance penalties or compatibility issues. Users can visualize service metrics through Kiali, with minimal setup required.
+
+Furthermore, the post addresses the complexity of setting up egress gateways, which are crucial for routing traffic to external services. Ambient mode simplifies this process by utilizing a &#34;waypoint proxy,&#34; which automatically encrypts traffic with mTLS and allows for easy policy attachment to services.
+
+Overall, the ambient mode of Istio offers a streamlined, risk-averse, and efficient way to deploy mTLS and manage egress traffic, making it an attractive option for organizations looking to enhance their service mesh&#39;s security and observability with minimal operational overhead.
+
+```</p>
+
+<p><a href="https://medium.com/nttlabs/containerd-v2-0-nerdctl-v2-0-lima-v1-0-93026b5839f8">containerd v2.0、nerdctl v2.0 和 Lima v1.0</a><br>containerd v2.0、nerdctl v2.0 和 Lima v1.0 的发布标志着容器运行时技术的重大进步，Akihiro Suda 做出了贡献。Containerd v2.0 现在是行业标准，为了提高现代效率，它已经弃用了遗留功能，尤其是在 Kubernetes 支持方面。Nerdctl v2.0 是一个类似 Docker 的 CLI 工具，引入了用于无根模式的“detach-netns”等功能并提高了稳定性，而 Lima v1.0 是一个用于 macOS 的 Linux 虚拟机，增强了文件系统性能并增加了嵌套虚拟化和 UDP 端口转发等功能。这些更新将在 2024 年北美 KubeCon 上展示，反映了容器化工具的持续发展，以满足现代云原生开发的需求。
+
+（注意：该摘要旨在概括源文档中提到的三个项目的关键发展和贡献，重点关注进步及其对容器运行时技术的影响。</p>
+
+<p><a href="https://codspeed.io/blog/state-of-python-3-13-performance-free-threading">Python 3.13 性能现状：自由线程</a><br>Arthur Pastel 的 Python 3.13 性能现状博客文章讨论了 CPython 3.13 中引入的自由线程模式，该模式允许 Python 解释器在没有全局解释器锁 （GIL） 的情况下运行，从而实现线程的真正并行执行。此功能对于性能关键型应用程序（如 PageRank 算法）特别有用，它可以更有效地利用多核处理器。这篇文章比较了单线程、线程和多处理实现的性能，强调了传统多处理方法由于内存开销和通信成本而存在的局限性。自由线程模式虽然是实验性的，但有望显著提高性能，尽管它目前引入了会降低执行速度的开销。该帖子还谈到了子解释器作为替代并行执行方法的未来潜力。总之，该博客文章深入探讨了 Python 3.13 中自由线程的性能影响及其对并行计算的影响。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或不属于总体叙述核心的具体细节。</p>
+
+<p><a href="http://notes.eatonphil.com/2024-11-05-effective-unemployment-and-social-media.html">有效的失业和社交媒体</a><br>源文件讨论了失业的挑战以及使用社交媒体作为找工作手段的潜在好处。它表明，尽管人们普遍认为社交媒体上的求职帖子可能无效或损害个人形象，但积极创建和分享内容实际上是有利的。通过制作新项目、博客文章或其他创意作品并在每个项目中宣布自己的求职信息，个人可以展示他们持续的技能发展和为社区做出贡献的承诺。这种方法不仅让他们接触到新的机会和推荐，还可以让他们保持积极性和敏锐度。作者菲尔·伊顿 （Phil Eaton） 鼓励失业者在社交媒体上分享他们的工作和求职状态，因为这可以带来积极的曝光和潜在的工作前景。Eaton 还通过电子邮件或 Twitter 邀请反馈和参与。
+
+（注意：提供的摘要基于源文档的内容，不包括文本中的直接引用或具体示例。</p>
+
+<p><a href="https://dolthub.com/blog/2024-11-05-multi-source-replication-with-mysql/">从 Dolt 到 MySQL 的多源复制</a><br>源文档详细介绍了版本控制数据库 Dolt 与 MySQL 复制协议的集成，突出了可扩展性、可靠性和高可用性的优势。Dolt 与 MySQL 的 SQL 方言、有线协议和工具兼容，支持多源复制，允许将数据从多个数据库整合到单个 MySQL 服务器中。本文档提供了将两个 Dolt 服务器设置为 MySQL 复制源的分步指南，包括配置 MySQL 副本服务器和确保源之间的数据一致性。它还讨论了如何将 Dolt 的版本控制功能与复制结合使用，演示了源数据库中的更改如何复制到 MySQL 副本。文章最后提出了使用 Dolt 和 MySQL 进行多源复制的未来可能性，例如将多个分支从单个 Dolt 服务器复制到 MySQL 服务器。这种集成为数据管理和分析开辟了新的途径，特别是对于跨多个服务器的分片数据。</p>
+
+<p><a href="https://thenewstack.io/agile-data-management-explained-and-demystified/">敏捷数据管理解释和揭秘</a><br>New Stack 的文章深入探讨了敏捷数据管理的概念，强调了它在提高以数据为中心的项目中的效率和可靠性的潜力。它承认不可预测的时间表和数据质量的挑战，这些挑战是将敏捷原则应用于数据管理时固有的。尽管存在这些挑战，本文仍倡导敏捷方法，强调灵活性、迭代变革和主动风险管理的必要性。本文提出了一些策略，例如试探性路线图、建立时间边际、并行任务和清晰的利益相关者沟通，以降低与敏捷数据管理相关的风险。它强调了适应性和现实规划的重要性，以便在复杂项目中实现敏捷数据管理的好处。
+
+（注意：本摘要旨在概括源文档中讨论的关键主题和策略，重点介绍敏捷数据管理的本质及其实际应用。</p>
+
+<p><a href="https://blog.tarkalabs.com/functional-programming-for-humans-foundations-861bd9b40718"> Functional Programming for Humans — Foundations</a><br>&#34;Functional Programming for Humans: Foundations&#34; by Sameer Kumar delves into the core principles of functional programming (FP), emphasizing the creation of clean, predictable code through the use of pure functions, immutability, and the avoidance of side effects. Kumar explains that pure functions consistently return the same output for the same inputs, contrasting with impure functions that can yield varying results. Immutability is highlighted as a key feature, ensuring that data remains consistent throughout its lifecycle, which aids in garbage collection and provides predictability in code. Higher-order functions, which can accept or return other functions, are presented as a powerful aspect of FP. The article also cautions against side effects, which can disrupt the purity and predictability of FP by altering external states. Through examples and a focus on these foundational concepts, Kumar aims to demystify FP and its benefits for software development.
+
+(Note: The summary is crafted to encapsulate the main ideas and principles discussed in the source document, providing a coherent and non-redundant overview without directly quoting the text.)</p>
+
+<p><a href="https://blog.devops.dev/how-to-start-stop-and-run-docker-containers-with-ansible-automatically-1fa5e76c925b">如何使用 Ansible 自动启动、停止和运行 Docker 容器</a><br>在这份由 DevOps.dev 贡献者 Usama Malik 撰写的综合指南中，读者将了解使用 Ansible 自动化 Docker 容器管理的过程。本文首先强调了 Ansible 的自动化功能和 Docker 的容器化优势之间的协同作用，强调了工作流简化的效率提升。Malik 提供了一种循序渐进的方法，详细说明了自动启动、停止和运行 Docker 容器所需的命令和配置文件。该指南专为寻求增强容器编排实践的 DevOps 专业人员量身定制，重点是减少人工干预和简化操作。本文还包括来自 DevOps 社区的见解，从 Usama Malik 的参与度指标和追随者中可以看出，进一步验证了内容的相关性和影响力。
+
+（注意：摘要经过精心设计，以封装源文档的本质，同时遵守不包含直接引用或特定 URL 的约束。</p>
+
+<p><a href="https://thenewstack.io/why-companies-are-ditching-the-cloud-the-rise-of-cloud-repatriation/">公司为何放弃云</a><br>New Stack 的文章讨论了云遣返的增长趋势，其中 37signals 和 GEICO 等公司正在将工作负载从公共云服务移回本地或私有云环境。这种转变是由于对云存储成本的担忧、对供应商锁定的担忧以及对基础设施进行更大控制的愿望所推动的。文章强调，虽然云服务提供了可扩展性和易用性，但它们会带来更高的费用和定制限制。公司正在权衡自有基础设施的优势与管理自己的服务器相关的运营挑战和成本。该文章还指出，云遣返并不适合初创公司或快速发展的公司，这些公司受益于云对 IT 复杂性的抽象化。文章最后强调，在决定遣返工作负载时，需要仔细考虑规模、工程能力和投资能力。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://googleprojectzero.blogspot.com/2024/10/from-naptime-to-big-sleep.html">使用大型语言模型捕获实际代码中的漏洞</a><br>Big Sleep 团队是 Google Project Zero 和 Google DeepMind 之间的合作团队，宣布在广泛使用的开源数据库引擎 SQLite 中发现堆栈缓冲区下溢漏洞。这个漏洞没有被现有的测试基础设施检测到，但 Big Sleep 代理发现了这个漏洞，这标志着 AI 代理在实际软件中发现了一个以前未知的可利用内存安全问题的第一个实例。该漏洞是由于在索引类型字段中使用特殊的 sentinel 值 （-1） 而引起的，该值对列索引无效。代理能够构建触发特定边缘情况的测试用例，从而导致断言失败，从而使发现成为可能。尽管进行了大量的模糊测试工作，但这个错误仍未被发现，这表明传统的模糊测试可能并不总是能有效地识别此类漏洞。Big Sleep 团队的工作展示了大型语言模型在漏洞研究中的潜力，为防御者提供了一个有前途的途径，可以发现仅通过模糊测试难以或不可能检测到的错误。</p>
+
+<p><a href="https://webrtc.ventures/2024/10/real-time-voice-ai-openai-vs-open-source-solutions/">实时语音 AI：OpenAI 与开源解决方案</a><br>源文档为使用 WebRTC 开发实时语音应用程序的开发人员提供了 OpenAI 的实时音频 API 与开源解决方案之间的深入比较。它重点介绍了传统的 AI 音频处理管道，并介绍了 OpenAI 的简化架构，该架构利用多模态大型语言模型 （LMM） 进行直接语音处理，增强了自然交互流程。本文档还探讨了 LiveKit、PipeCat 和 Ultravox 等开源替代方案，它们提供了与 WebRTC 和 CPaaS 平台的各种集成选项。此外，它还谈到了架构 WebRTC 和 SIP 与 MCU 和 SFU 集成以获得强大通信体验的重要性。该文件最后呼吁开发人员请求免费的 AI 评估，并提到即将在 SignalWire 和 Vonage 等特定平台上进行的讨论。
+
+（注意：摘要经过精心设计，以概括源文档的关键主题和内容，同时保持简洁和连贯性。它不包括文档中的直接引用或具体细节，而是提供了要点的概述。</p>
+
+<p><a href="https://leejamesgilmore.medium.com/how-to-e2e-test-ai-responses-using-ai-8c22367c76d6">如何使用AI进行e2e测试</a><br>Serverless Advocate 的文章探讨了 e2e 测试 AI 生成的响应所面临的挑战，尤其是在处理来自 Amazon Bedrock 等生成式 AI 工具的非确定性输出时。它引入了一个框架，该框架使用 Jest 和 Typescript 创建确定性的 API 响应，从而确保测试条件的一致性。该框架包括一个 API 测试框架，用于模拟易失性数据，从而允许对生成的摘要进行可靠的断言。本文详细介绍了 Gilmore Garage 的一个使用案例，其中 AI 为非技术客户总结了客户服务电话。测试过程包括验证摘要的语气、置信度分数和对特定断言的遵守情况。文章最后强调了确定性响应对于准确测试和验证 AI 生成内容的重要性。
+
+（注意：摘要是所提供源文档中关键点的综合，侧重于 e2e 测试 AI 响应的主要主题和建议的解决方案框架。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>Prometheus 监控系统和时间序列数据库。</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>访问和保护所有基础设施的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>适用于 Kubernetes 的 Go 客户端。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>极快的 Web 捆绑器</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度和管理</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>适用于容器的应用程序内核</p>
+
+<p><a href="https://github.com/aceberg/WatchYourLAN">aceberg/WatchYourLAN</a><br>轻量级网络 IP 扫描程序。可用于通知新主机和监控主机在线/离线历史记录</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>Go 的现代测试框架</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>世界上最快的网站构建框架。</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>GoFrame 是 Golang 的一个模块化、强大、高性能的企业级应用程序开发框架。</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>JSON Web 令牌 （JWT） 的 Go 实现。</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>云原生批处理系统（CNCF 下的项目）</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/goccy/go-json">goccy/go-json</a><br>与 Go 的 encoding/json 兼容的快速 JSON 编码器/解码器</p>
+
+<p><a href="https://github.com/hashicorp/hcl">hashicorp/hcl</a><br>HCL 是 HashiCorp 配置语言。</p>
+
+<p><a href="https://github.com/databus23/helm-diff">databus23/helm-diff</a><br>一个 helm 插件，显示一个 diff 解释 helm 升级会改变什么</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>具有可编程管道的 OpenTelemetry Collector 发行版</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>使用 fangs 的 Go 配置</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

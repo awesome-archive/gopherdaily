@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260323.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260323</span>
+</p>
+<p>每日一谚：计算机科学中的所有问题都可以通过增加一个间接层来解决，除了间接层太多的问题。 —— David Wheeler </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/23/go-is-the-best-programming-language-for-llm/">OpenAI 创始人盛赞 Rust，却遭开发者反驳：Go 才是大模型眼里的“香饽饽”！</a><br>在这个大模型重塑编程范式的当下，如果你想开发一个自主运行的智能体（Agent），或者想让大模型（LLM）帮你生成上万行的核心业务代码，你 会选择哪门编程语言？ 如果你去问 OpenAI 的总裁兼联合创始人 Greg Brockman，他的答案非常直接： Rust 是开发 Agent 的完美语言，因为只要它能编译通过，它就基本是正确的。</p> 
+
+<p><a href="https://tonybai.com/2026/03/22/stop-tactical-diligence-start-stretch-zone-growth">看了 100 小时教程，你为什么依然写不好代码？扒开技术人的“成长环”真相</a><br>为什么看了 100 小时的教程，你依然写不好代码？为什么收藏了无数的技术干货，你的核心竞争力却依然在原地踏步？这其实是整个技术圈最普遍、也最隐蔽的陷阱：用“战术上的勤奋”，掩盖了“战略上的懒惰”。</p> 
+
+<p><a href="https://tonybai.com/2026/03/21/best-practices-for-secure-error-handling-in-go/">你的 Go 报错信息正在“出卖”你！扒一扒大厂是如何做错误隔离与日志脱敏的</a><br>就在本月初，JetBrains GoLand 的官方博客发布了一篇极其硬核的警告文章：《Best Practices for Secure Error Handling in Go》。这篇文章直指一个让无数微服务架构师冷汗直流的安全盲区： 你引以为傲的“错误包装（Error Wrapping）”，正在把你们公司的核心底裤——数据库架构、内部路径、甚至是认证 Token，全部赤裸裸地暴露在 公网之上！</p> 
+
+<p><a href="https://tonybai.com/2026/03/19/2025-turing-award-go-quantum-resistant-cryptography">刚刚，2025图灵奖揭晓！面对即将瘫痪的传统密码学，Go 语言的“抗量子”底牌曝光</a><br>就在昨天（2026 年 3 月 18 日），计算科学界的最高荣誉——ACM A.M. 图灵奖正式揭晓。2025 年的图灵奖，颁给了 Charles H. Bennett 和 Gilles Brassard 两位伟大的科学家，以表彰他们在“量子密码学（Quantum Cryptography）”和量子信息科学领域的开创性贡献。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/bqMb6h02-a4Qz7-RzQvqPQ">【构建工业级Agent Skills】02 启动引擎：用 skill-creator 孵化你的第一个 Skill 雏形</a><br>因此，从这一讲开始，我们将正式引入我们在这个专栏中的“首席结对编程伙伴”——Anthropic 官方发布的 `skill-creator` skill。 今天，我们将启动引擎，在 `Claude Code` 环境中，一步步看着 `skill-creator` 是如何通过深度的需求访谈，将我们脑海中模糊的意图，孵化 为一个具备极高潜力的 Skill 雏形的。</p> 
+
+<p><a href="https://blog.gaborkoos.com/posts/2026-03-19-Developing-and-Benchmarking-the-Same-Feature-in-Node-and-Go/">在 Node 和 Go 中开发和测试同一功能</a><br>本文记录了我在两个运行时环境中实现同一个重要的功能——热配置重载——时发生的情况。然后，我重新运行了之前文章中的基准测试，以比较新版本之间的差异。</p> 
+
+<p><a href="https://hister.org/posts/data-indexing-in-golang">Go中的数据索引</a><br>如果您需要快速、基于内容检索大量文档，那么使用全文索引器是最佳选择。像 Elasticsearch 和 Meil​​isearch 这样的流行解决方案完全能够胜任这项工作。但是，如果您不想依赖外部服务，或者需要对数据的存储和搜索方式拥有更高的控制权，该怎么办呢？幸运的是，Go 语言为此提供了一个非常优秀的库： Bleve。Bleve 可以让你快速地为任何 Go 结构体建立索引，并提供合理的默认值和一个类似 Google 的内置查询语言。你还可以更进一步，构建自己的查询语言，并自定义索引器的每一个细节。</p> 
+
+<p><a href="https://sushantdhiman.dev/kafka-like-commit-log/">从零用Go构建 Kafka 风格的提交日志</a><br>最近我在学习 Kafka 的内部工作原理。为了更好地理解它，我用 Golang 从零开始构建了一个提交日志系统。</p> 
+
+<p><a href="https://rednafi.com/go/repo-txn-uow/">Go 语言中的存储库、事务和工作单元</a><br>这篇文章最初是针对 r/golang 上的两个问题的快速回答。第一个问题是关于在 sqlc 之上构建一个仓库层是否值得 。第二个问题是关于如何…… 当界面隐藏存储细节时，如何处理事务 ？这两个问题在本站都已转换为短分片。本文将它们联系起来，并介绍当事务需要跨越多个存储库时应该如何处理。</p> 
+
+<p><a href="https://dev.to/ajit_pratapsingh_02ab85b/i-benchmarked-every-go-sql-parser-in-2026-and-built-my-own-2j9n">我测试了 2026 年所有 Go SQL 解析器的性能，并构建了自己的解析器</a><br>本文对比了 xwb1989/sqlparser、pganalyze/pg_query_go、TiDB 解析器和 GoSQLX，并提供了实际基准测试数据、权衡分析和代码示例。</p> 
+
+<p><a href="https://victoriametrics.com/blog/log-collectors-benchmark-2026">Kubernetes日志收集器性能基准测试</a><br>本文对主流的Kubernetes日志收集器进行了全面的性能基准测试。测试的工具包括vlagent、Vector、Fluent Bit、OpenTelemetry Collector、Filebeat、Fluentd、Promtail以及Grafana Alloy等。测试维度主要围绕吞吐量、资源消耗（CPU和内存使用率）以及日志交付的正确性展开。VictoriaMetrics团队开发vlagent旨在提供高性能的日志收集方案，此次基准测试旨在验证和比较这些工具在实际生产环境中的表现，为用户选择合适的日志收集代理提供数据支持和参考依据。</p> 
+
+<p><a href="https://antonz.org/solod/">Solod：Go语法、C输出的系统编程语言</a><br>Solod (So) 是一种新型编程语言，它是 Go 语言的一个严格子集，旨在编译为可读的 C11 代码，主要面向系统编程领域。其核心特性是实现“Go 语法，C 输出”，同时保证零运行时（无垃圾回收或隐藏内存分配）、默认全栈分配以及与 C 语言的原生互操作，无需 CGO。Solod 保留了 Go 的结构体、方法、接口、切片和多返回值等特性，但为了简化设计，去除了如 channel、goroutine、闭包和泛型等复杂功能。开发者可以使用熟悉的 Go 工具链进行开发，最终获得高性能、无开销的 C 代码。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/03/23/beyond-batch-volcano-evolves-into-the-ai-native-unified-scheduling-platform/">Volcano演进：迈向AI原生统一调度平台</a><br>随着LLM的兴起，AI工作负载已从传统的训练任务扩展到复杂的推理服务和自主Agent，使得Kubernetes成为智能系统的核心平台。为应对LLM推理对高性能GPU和成本控制的需求，以及AI Agent对“突发性”流量和即时启动的要求，Volcano项目正经历重大转型。通过发布Volcano v1.14、Kthena v0.3.0和AgentCube，Volcano已从批处理工具演变为“全场景、AI原生统一调度平台”。v1.14引入了可扩展的多调度器架构和分片控制器，实现了资源池的动态划分，允许延迟敏感的Agent任务与大规模训练任务在同一集群中共存，提高了集群利用率和资源效率。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/23/metal3-at-kubecon-cloudnativecon-europe-2026-meet-the-cncfs-freshly-incubated-bare-metal-project/">CNCF新孵化项目Metal3亮相欧洲KubeCon</a><br>Metal3（Metal Cubed）是CNCF新晋孵化项目，致力于成为Kubernetes裸金属集群管理的核心工具，尤其适用于自托管云、AI分布式系统和边缘云部署等场景。随着计算基础设施投资的增加，Metal3旨在解决现代IT行业面临的裸金属生命周期自动化管理问题。在2026年欧洲KubeCon &#43; CloudNativeCon上，Metal3将有密集的活动安排，包括项目状态的闪电演讲、关于治理和孵化路径的深度会议，以及来自Sylva项目的实际应用案例分享。此次活动是社区展示项目进展、获取反馈并提高项目影响力的重要机会。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/23/agones-moves-to-the-cncf-a-new-era-for-open-source-multiplayer-game-infrastructure/">Agones 捐赠 CNCF，开启游戏基础设施新纪元</a><br>专为在 Kubernetes 上扩展和编排专用游戏服务器而设计的开源平台 Agones，现已正式移交至云原生计算基金会（CNCF）的沙箱（Sandbox）级别，标志着其进入社区主导的新阶段。该项目由 Google 和 Ubisoft 于 2017 年共同发起，旨在解决多人游戏服务器独特的状态化需求。Agones 的成熟使其成为行业标准，支持超过 250 名贡献者。项目创始人 Mark Mandel 和 Ubisoft 代表将在 KubeCon &#43; CloudNativeCon Europe 2026 上分享其如何利用 Agones 实现全球游戏部署。Agones 强调云无关性，允许开发者“一次构建，随处部署”，为游戏工作室提供了跨 PC、主机和移动平台部署的极大灵活性。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/03/23/changing-the-world.html">重新定义“改变世界”</a><br>作者探讨了“改变世界”这一概念的真正含义，并批判了将其等同于追求金钱的世俗观点。他认为，单纯追求金钱（被比喻为修改数据库中的字节）是一种“可悲的”行为，因为金钱本身不具备终极价值。作者通过童年玩《超级马里奥》并接触“Game Genie”的经历，阐述了真正的价值在于过程和创造，而非轻易达成的结果（如作弊通关）。他强调，真正的“改变世界”意味着去创造那些尚不存在的事物，如永生或火星酒店，而不是沉迷于现有系统（如金融系统）内的数字变动。</p>
+
+<p><a href="https://www.openui.com/blog/rust-wasm-parser">Rust WASM 解析器重写为 TypeScript 提速三倍</a><br>文章记录了团队将基于 Rust 编译到 WASM 的 openui-lang 解析器重写为 TypeScript 的过程和结果。该解析器负责将 LLM 生成的自定义 DSL 转换为 React 组件树，并在数据流的每个分块上运行，对延迟要求极高。原先的 Rust WASM 方案基于其高性能特性，但团队发现性能瓶颈在于 JavaScript/WASM 边界的开销，即数据在 JS 堆和 WASM 内存间的频繁复制和序列化/反序列化。重写为 TypeScript 后，成功绕开了这一“WASM 边界税”，使解析性能提升了三倍。</p>
+
+<p><a href="https://blog.serenedb.com/io-buffer">高性能并发I/O缓冲区设计与实现</a><br>在高负载服务中，网络数据传输的异步模型引入了数据缓冲的性能瓶颈。本文介绍了一种新的、高性能的并发I/O缓冲区（`sdb::message::Buffer`）的实现，旨在解决现有方案（如folly::IOBuf、absl::Cord）在并发读写或性能方面存在的不足。该缓冲区设计遵循先进先出（FIFO）原则，并具备可扩展的无限大小。核心在于它是一个消息队列，支持并发写入和读取，并引入了“已提交”和“未提交”数据概念，确保只有已提交的数据才能被读取，且数据提交必须按顺序进行。文章后续将详细介绍其API、内部机制及性能基准测试结果。</p>
+
+<p><a href="https://ferrous-systems.com/blog/hardware-access-rust/">Rust中访问硬件</a><br>在 Ferrous Systems，我们编写了大量运行在裸机上的 Rust 代码——这些代码在处理器复位后首先运行，并且无需调用更高级别的处理器来获取帮助。其中一些代码作为示例用于培训讲解，一些是为客户编写的，还有一些则以开源形式发布——通过 Rust 嵌入式设备工作组或我们自己的 Knurling 项目 。</p>
+
+<p><a href="https://sushantdhiman.dev/how-kafka-stores-messages-internally/">为什么Kafka这么快！</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/22/javascript-sandboxing-research/#atom-everything">JavaScript 沙箱技术研究对比</a><br>受 Node.js worker 线程的启发，作者发起了一项研究任务，旨在探究利用现有技术在沙箱环境中安全运行 JavaScript 的可行性。Claude Code 协助进行了深入的对比分析，涵盖了多种主流和新兴的沙箱隔离方案。研究对象包括 isolated-vm、vm2、quickjs-emscripten、QuickJS-NG、ShadowRealm（TC39 提案）以及 Deno Workers。这项工作旨在全面评估这些工具在实现 JavaScript 代码隔离和安全执行方面的能力和差异。</p>
+
+<p><a href="https://robenglander.com/writing/ai-did-not-simplify">ai did not simplify</a><br></p>
+
+<p><a href="https://a16zcrypto.substack.com/p/ai-just-gave-you-superpowers-now">ai just gave you superpowers now</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, AI-integrated, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery, the cloud native manager</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

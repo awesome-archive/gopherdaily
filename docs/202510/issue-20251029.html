@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251029.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251029</span>
+</p>
+<p>每日一谚：Define interfaces in the consumer package, not the producer. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/29/why-break-in-go-function-iterators-does-not-work">解构Go函数迭代器——为什么break没有按预期工作？</a><br>关于 Go 1.23&#43; 函数迭代器的第9讲中，我介绍了一种非常强大的高级用法——迭代器组合 (Iterator Composition)。通过像 Filter 和 Map 这样的高阶函数，我们可以用一种相对优雅、富有表现力的方式，构建复杂的数据处理管道。 然而，这种优雅的背后，隐藏着一套全新的执行模型。近日，一位读者在学习了迭代器组合的示例后，提出了一个极其敏锐的问题，它也是许多 Gopher 在初次接触函数迭代器时可能遇到的障碍</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/lcNgmdq9aGaq1NU8diqPmg">【Go 网络编程全解】13 从 HTTP/1.1 到 gRPC：Web API 与微服务的演进</a><br></p> 
+
+<p><a href="https://dolthub.com/blog/2025-10-28-lovable-works-with-dolt/">Lovable versus Replit and Vercel</a><br>我们一直在测试生成式 AI 工具，在这篇博文中，我们看看 Lovable 的应用程序构建器，并将其与 Vercel v0 和 Replit 进行比较。我们构建了一个小型 Web 应用程序，该应用程序从 Dolt 数据库加载数据，并使用 Dolt 的版本控制功能在 Web 应用程序中公开该版本信息。请继续阅读，了解 Lovable 的体验如何。</p> 
+
+<p><a href="https://getpid.dev/blog/elasticsearch-integration-tests">Elasticsearch 按索引的集成测试</a><br>更快地进行 Elasticsearch 测试，无需为每个测试启动容器。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.p99conf.io/2025/10/28/p99-conf-2025-recap/">P99 CONF 2025 回顾：从延迟到 LLM</a><br>又一年飞逝而过——转瞬之间，我又回到了美国，再次主持 P99 CONF。这已是我第三次登台，也是来自世界各地的工程师们分享他们追逐难以捉摸的 P99 延迟的故事的第五次精彩演讲。</p>
+
+<p><a href="https://www.patreon.com/posts/from-thundering-141679975">Patreon 如何扩展规模以适应现场活动</a><br></p>
+
+<p><a href="https://panteracapital.com/http-402s-modern-makeover">HTTP 402’s Modern Makeover | Pantera</a><br>本文探讨了HTTP 402状态码在互联网上的演变，最初是为了实现无缝的支付，但由于各种原因未能实现。随着稳定币和区块链技术的发展，特别是稳定币的兴起以及区块链上低成本、快速的交易，HTTP 402 的愿景——即时、按需支付——似乎终于成为可能。文章介绍了 x402 和 h402 等标准，并讨论了实现 HTTP 402 成功采用所需的四个关键因素：客户端集成、供应商采纳、促进者提供商和底层稳定币轨道。</p>
+
+<p><a href="https://olshansky.substack.com/p/inside-amazons-engineering-culture">Inside Amazon&#39;s Engineering Culture: Lessons from Their Senior Principals</a><br>上周，亚马逊悄悄地为其西雅图总部的资深工程领导者举办了一次私人开放日活动。大约有五十人聚集在一起，讨论亚马逊如何大规模地做出技术决策——你不会在新闻稿或领导力书籍中听到的那种。</p>
+
+<p><a href="https://jessylin.com/2025/10/20/continual-learning">持续学习问题</a><br>关于持续学习的视角，激发了我们关于稀疏记忆微调的论文</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://tombedor.dev/optimizing-repos-for-ai">优化 AI 的代码库</a><br>一位同事抱怨了在 AGENTS.md / CLAUDE.md 中组织信息的麻烦。本文讨论了优化代码库以提高 AI 迭代速度、改进对常用指令的遵守以及帮助人类和 AI 轻松理解信息的方法，并提出了增加静态分析、使用 just 命令以及在 docs/ 文件夹中组织文档的策略。</p>
+
+<p><a href="https://baoyu.io/translations/the-new-calculus-of-ai-based-coding.html">AI 编程带来的新变革</a><br>过去三个月，我和一群经验丰富、志同道合的工程师，一直在 Amazon Bedrock 内部鼓捣一个很酷的项目。虽然项目本身很让人兴奋，但我们团队还有个更独特的地方——我们大部分的代码，都是由 AI 智能体（AI Agent）写的，比如 Amazon Q 或 Kiro。</p>
+
+<p><a href="https://martinfowler.com/articles/agentic-ai-security.html">Agentic AI and Security</a><br>Agentic AI 系统带来了独特的安全挑战。LLM 的基本安全弱点在于，无法严格区分指令和数据，因此它们读取的任何内容都可能成为指令。这导致了“致命的三重威胁”：敏感数据、不受信任的内容和外部通信——LLM 读取隐藏指令，从而将敏感数据泄露给攻击者的风险。我们需要采取明确的措施来减轻这种风险，方法是最大限度地减少对这三个要素的访问。在受控容器内运行 LLM 并分解任务，以便每个子任务阻塞三重威胁中的至少一个是有价值的。最重要的是，执行可由人类控制和审查的小步骤。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/trpc-group/trpc-agent-go">trpc-group/trpc-agent-go</a><br>trpc-agent-go is a powerful Go framework for building intelligent agent systems using large language models (LLMs) and tools.</p>
+
+<p><a href="https://github.com/NVIDIA/k8s-device-plugin">NVIDIA/k8s-device-plugin</a><br>NVIDIA device plugin for Kubernetes</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware(Project under CNCF)</p>
+
+<p><a href="https://github.com/runatlantis/atlantis">runatlantis/atlantis</a><br>Terraform Pull Request Automation</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/shadow1ng/fscan">shadow1ng/fscan</a><br>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/sigstore/cosign">sigstore/cosign</a><br>Code signing and transparency for containers and binaries</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

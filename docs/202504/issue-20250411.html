@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250411.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250411</span>
+</p>
+<p>每日一谚：Keep code close to where it is used </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/04/11/uber-go-pgo-optimization">Go开发者必看！Uber如何利用PGO将Go服务性能优化推向新高度？</a><br>对于像Uber这样广泛采用Go语言（Uber 60%的CPU资源都用于支撑Go服务运行）的科技巨头而言，性能优化不仅关乎用户体验，更直接影响着运营成本。继多年前通过GOGC调优节省7万CPU核心后，Uber近期再次发力，分享了其在大规模Go服务中部署Profile-Guided Optimization (PGO) 的实践经验，并通过自动化框架和工具创新，克服了关键挑战，实现了显著的性能收益。这篇文章介绍了Uber的PGO优化之旅，供大家参考</p> 
+
+<p><a href="https://antonz.org/go-concurrency/context">Go语言要点：Context</a><br>本文节选自我的 Go 并发编程书籍，通过交互式示例从基础知识讲解该主题。在编程中，上下文指的是对象存在或函数执行的环境信息。在 Go 中，上下文通常指的是 context 包中的 Context 接口。它最初旨在简化 HTTP 请求处理，但也可以用于常规并发代码。让我们看看具体是如何实现的。</p> 
+
+<p><a href="https://golangbot.com/unit-testing-using-mock-go">使用 Mock 在 Go 中进行单元测试</a><br>本文介绍了在 Go 中使用 Mock 进行单元测试的必要性，并通过一个创建 AWS S3 Bucket 的示例，详细讲解了如何创建接口、模拟接口以及编写单元测试来测试成功和失败的场景。文章还提到了使用表格驱动测试来改进代码可维护性，并推荐了 mockery 库来简化 Mock 的创建过程。</p> 
+
+<p><a href="https://tailscale.com/blog/plan9-port">将 Tailscale 移植到 Plan 9</a><br>本文深入探讨了我们将 Tailscale 移植到 Plan 9 的幕后过程，包括在此过程中修复的一些 Plan 9 和 Go 问题。Tailscale 现在可以在 Plan 9 上运行。</p> 
+
+<p><a href="https://dagger.io/blog/docker-model-runner">使用 Dagger 和 Docker 模型运行器创建本地 AI 代理</a><br>Dagger 原生集成大型语言模型 (LLM)，只需几行代码即可轻松编写 AI 代理。虽然可以轻松地在本地运行 Dagger 并连接到远程 LLM，但有时您需要在本地运行模型。这可能是因为需要在隔离的环境中工作、出于隐私考虑或本地开发。Docker 模型运行器是一个新的解决方案，可以轻松地在本地开发环境中设置和运行流行的模型，它在今天发布。Docker 模型运行器使用户可以像使用 `docker pull` 下载容器镜像一样，使用 `docker model pull` 下载模型；可以像使用 `docker run` 运行容器一样，使用 `docker model run` 运行模型。模型使用 GGUF 格式，打包为 OCI 工件，易于使用，许多工具都可以处理它们。任何与 OCI 兼容的注册表都可以托管它们，这使得推送您自己的模型变得相对容易。它们在您的主机上本地运行，使用机器的 GPU，因为当您在本地使用 AI 模型时，性能是关键。目前，Docker 模型运行器仅在 Apple 的 Metal API 上运行模型，这意味着您需要一台 Apple 硅芯片机器。将来可能会将支持扩展到其他硬件。您需要 Docker Desktop 4.40 或更高版本才能使用 Docker 模型运行器。在 Docker Desktop 设置的“开发中的功能”部分启用该功能。通过使用一些环境变量将 Dagger LLM 集成连接到本地模型，即可在本地运行模型。然后，您就可以利用 Dagger 的自动 LLM 工具调用 (MCP) 和提示功能。</p> 
+
+<p><a href="https://tailscale.com/blog/app-connectors-explained">Tailscale 解释：什么是应用连接器？</a><br>你是否曾经希望能够仅通过你基础设施的特定部分来路由单个域的流量？也许你有一个内部代码库（例如 GitHub Enterprise 或 Gitlab），它需要所有来自单个白名单 IP 的流量。使用 Tailscale 应用连接器，你可以做到这一点。应用连接器就像一个特定于域的出口节点，它类似于拆分 DNS，但用于路由流量，将数据包通过你的 tailnet 传送到你需要它们到达的任何地方。视频演示了配置应用连接器，以及如何轻松地将流量定向到其需要出口的任何位置。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.livekit.io/livekits-series-b/">LiveKit B轮融资：构建一体化语音AI代理平台</a><br>LiveKit宣布完成4500万美元B轮融资，并发布其Agents框架1.0版本，该框架旨在用于构建语音和视频AI代理。该框架支持多种语言，并具有改进的端转检测和更强大的电话功能，简化了闭环语音代理的构建。LiveKit还推出了Cloud Agents的封闭测试版，这是一个用于代理部署和扩展的解决方案。</p>
+
+<p><a href="https://www.haproxy.com/blog/haproxy-goes-big-at-kubecon-london-2025">HAProxy 在 2025 年伦敦 KubeCon 大会上大放异彩</a><br>HAProxy Technologies 在 2025 年伦敦 KubeCon 大会上取得了空前成功，其展台规模之大、解决方案之全面令人叹为观止，这一切都归功于 HAProxy One 平台。  与会者对 HAProxy 的关注度极高，讨论的话题涵盖了高性能、安全性和 Kubernetes 流量管理的简易性等方面。HAProxy Technologies 还发布了新网站，并宣布成为 CNCF 的金牌会员。</p>
+
+<p><a href="https://blog.heroku.com/introducing-official-heroku-mcp-server">正式推出 Heroku MCP 服务器</a><br>Heroku MCP 服务器正式发布！通过 MCP 将 AI 代理与 Heroku 的 AI PaaS 集成，实现智能应用程序自动化。该服务器利用 Heroku CLI 作为主要引擎，并以 REPL 模式运行以提高性能。目前支持应用程序生命周期管理、数据库操作、附加组件管理和扩展等核心开发工作流程。</p>
+
+<p><a href="https://www.docker.com/blog/docker-dx-extension-for-vs-code/">适用于 Visual Studio Code 的全新 Docker 扩展 | Docker</a><br>通过 Docker DX 扩展加快开发速度，该扩展可在 VS Code 中提供实时反馈、更智能的代码检查以及对 Bake/Compose 文件的直观支持。</p>
+
+<p><a href="https://onevariable.com/blog/embedded-rust-production">2025 年生产环境中的嵌入式 Rust</a><br>本文讨论了 Rust 在 2025 年生产环境中嵌入式设备的应用情况。文章列举了多个使用 Rust 的项目，涵盖了嵌入式 Linux 和裸机/RTOS，并对不同领域（例如：可信根和安全密钥处理器、笔记本电脑和服务器固件、汽车和航空电子设备、机器人、工业和航天应用、家用电器和智能家居设备）的使用情况进行了详细说明。文章还包含了 2024 年 Rust 嵌入式设备工作组社区调查的结果，数据显示了 Rust 在嵌入式领域的使用情况、流行的芯片系列以及用户对 Rust 的满意度。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://a16z.com/ai-avatars">AI 头像摆脱诡异谷 | Andreessen Horowitz</a><br>当人工智能不仅生成内容，而且体现内容时会发生什么？作者测试了 20 多款 AI 头像产品，以了解哪些有效以及未来的发展方向。AI 头像结合面部和语音来创建会说话的角色，这项技术在内容创作、广告和企业沟通中得到应用。文章探讨了 AI 头像技术的发展历程，从早期的 CNN 和 GAN 模型到最新的基于 Transformer 架构的扩散模型 (DiT)，并分析了 AI 头像在消费者、中小企业和企业中的实际应用案例，例如角色创作、潜在客户开发和内容扩展等。文章还讨论了 AI 头像的构成要素，包括面部、声音、唇形同步、身体和背景，以及未来的发展机遇，例如角色一致性和转换、更好的面部运动和表情、身体运动、与“现实世界”互动以及更多实时应用等。</p>
+
+<p><a href="https://www.sequoiacap.com/article/ai-50-2025">AI 50：人工智能代理超越聊天</a><br>2025 年 AI 50 榜单显示，各公司正在利用代理和推理模型来承担真实的企业工作流程，从法律到客户服务再到机器人技术。文章重点介绍了企业工具（如自动化客户服务的 Sierra 和自动化代码生成的 Cursor）和机器人技术（如 Figure AI 的人形机器人和 Skild AI 的通用机器人基础模型）在 AI 应用层面的突破，并预测 2026 年将出现更多面向消费者的 AI 产品，以端到端的方式处理用户的日常任务。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>Work with remote images registries - retrieving information, images, signing content</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/NVIDIA/k8s-device-plugin">NVIDIA/k8s-device-plugin</a><br>NVIDIA device plugin for Kubernetes</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>A simple zero-config tool to make locally trusted development certificates with any names you&#39;d like.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, cross-DC active-active replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding.</p>
+
+<p><a href="https://github.com/vektra/mockery">vektra/mockery</a><br>A mock code autogenerator for Go</p>
+
+<p><a href="https://github.com/cloudwego/kitex">cloudwego/kitex</a><br>Go RPC framework with high-performance and strong-extensibility for building micro-services.</p>
+
+<p><a href="https://github.com/kubernetes/kube-state-metrics">kubernetes/kube-state-metrics</a><br>Add-on agent to generate and expose cluster-level metrics.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ A Framework for Building High Value Public Blockchains ✨</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/go-resty/resty">go-resty/resty</a><br>Simple HTTP, REST, and SSE client library for Go</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/fsnotify/fsnotify">fsnotify/fsnotify</a><br>Cross-platform filesystem notifications for Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

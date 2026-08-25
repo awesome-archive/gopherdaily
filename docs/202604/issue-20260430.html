@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260430.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260430</span>
+</p>
+<p>每日一谚：Don&#39;t just check errors, handle them gracefully. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/30/ghostty-creator-leads-github-exodus-cto-apology-go-fix">Ghostty 之父带头“出走”GitHub！官方 CTO 紧急道歉，并揭秘正在使用 Go 语言救火</a><br>是什么，让这位曾经的“ GitHub骨灰粉”毅然决然地带着自己的“亲儿子”项目“出走”呢？ 答案简单得令人窒息：GitHub 正在变得越来越不可用。 “在过去的一个月里，我用日记记录了每一次 GitHub 宕机对我工作的影响。几乎每一天，旁边都画着一个‘X’。就在我写下这些文字的时候，GitHub Actions 又挂了 2 个小时。……如果一个平台每天都要瘫痪几个小时，那它就不再是一个适合严肃工作的地方。” Mitchell 的这封“分手信”，像一颗炸弹，瞬间引爆了整个技术圈。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2026/thoughts-on-webassembly-as-a-stack-machine/">关于将 WebAssembly 作为栈机的思考</a><br>本周一篇名为《Wasm 并非完全是栈机》的文章引起了我的关注。该文章声称 WASM 并非纯粹的栈机，因为它拥有局部变量，且缺少一些像 `dup` 和 `swap` 这样的栈操作指令。虽然我不一定完全同意这个观点，但恕我直言，这更像是一个语义上的讨论，因为据我所知，并没有关于“什么是栈机”的严格定义。例如，维基百科指出：栈机是一种计算机处理器或进程虚拟机，其主要交互方式是将短期的临时值压入或弹出栈。WASM 当然符合这个定义；其主要交互是通过栈完成的，尽管 WASM 还增加了一个无限的寄存器文件（即局部变量）。更纯粹的栈机（如 Forth）仅限于栈和内存（内存指针在栈上管理）；WASM 也有这些，外加寄存器。提到 Forth 时，我想起了自己编程时的感受，我在关于《在 Go 和 C 中实现 Forth》的文章中记录过。在那里，我重点介绍了一个 Forth 的核心库函数；它将一个被加数加到内存中存储的值上。我感叹如果不配合详细的栈视图注释，理解这样的代码有多么困难。我觉得理解这段 WASM 代码要简单得多。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/EmacsSwitchingToOnlyCorfu">在 GNU Emacs 配置中完全切换至 Corfu</a><br>不久前我阅读了一篇关于 GNU Emacs 模块化补全框架的文章，并在社交网络上表达了我的想法：如果 GNU Emacs 中的 lsp-mode 除了（或取代）company-mode 之外还支持 corfu，我可能会为了统一补全环境而从 company 切换到 corfu。但我认为除了 company-mode 之外，没有任何工具支持 LSP 的即时补全。我错了；corfu 确实支持即时补全。Corfu 将其称为自动补全，默认情况下未开启，但你可以根据需要进行更改。今天我尝试了一下，尘埃落定后，我已完全切换到 corfu，即使是在 lsp-mode 中，并进行了一些额外更改。正如我在首次探索 GNU Emacs 即时自动补全时发现的那样，我喜欢看到补全信息，但我不想因为弹出了补全信息就导致我的按键被拦截。Corfu 的默认快捷键会拦截我编程时可能用到的常用键，例如回车、Tab 以及光标上下键；这在 corfu 的正常环境（必须手动触发补全）下是完全合理的。</p> 
+
+<p><a href="https://www.agwa.name/blog/post/fastcgi_is_the_better_protocol_for_reverse_proxies">FastCGI 是更好的反向代理协议</a><br>HTTP 反向代理是一片雷区。就在前几周，一位研究人员披露了 Discord 媒体代理中的一个同步漏洞。这并不罕见；此类漏洞层出不穷。问题在于反向代理和后端之间普遍使用 HTTP 协议，尽管它并不适合此项工作。但我们不必非要使用 HTTP。有一种诞生于 30 年前的代理到后端通信协议，它避免了 HTTP 的缺陷。它就是 FastCGI，其规范发布于 30 年前的今天。FastCGI 是一种线路协议，而非进程模型。确实，一些 Web 服务器可以自动生成 FastCGI 进程来处理特定后缀的文件请求，就像它们处理 CGI 文件一样。但你不必以这种方式使用 FastCGI——你也可以像使用 HTTP 那样使用 FastCGI 协议，通过 TCP 或 UNIX 套接字将请求发送给长驻后台的守护进程，由其处理。例如，在 Go 中，你只需导入标准库 net/http/fcgi 并将 http.Serve 替换为 fcgi.Serve 即可。你的应用其余部分保持不变，包括处理程序，它依然使用标准的 http.ResponseWriter。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/04/29/kubernetes-v1-36-memory-qos-tiered-protection/">Kubernetes v1.36：利用内存 QoS 实现分层内存保护</a><br>代表 SIG Node，我们很高兴宣布 Kubernetes v1.36 中内存 QoS 功能（Alpha）的更新。内存 QoS 利用 cgroup v2 内存控制器为内核提供关于如何处理容器内存的更好引导。在 Kubernetes v1.36 中，我们引入了：可选的内存预留、基于 QoS 类别的分层保护、可观测性指标以及针对 memory.high 的内核版本警告。v1.36 将限流与预留分离开来。启用功能开关后会开启 memory.high 限流，但内存预留现在由 kubelet 配置字段控制：None（默认）：不写入 memory.min 或 memory.low。TieredReservation：kubelet 根据 Pod 的 QoS 类别写入分层内存保护：Guaranteed Pod 通过 memory.min 获得硬保护；Burstable Pod 通过 memory.low 获得软保护；BestEffort Pod 不获得内存保护。</p>
+
+<p><a href="https://atproto.com/blog/serving-the-for-you-feed">服务“为你推荐”Feed 流</a><br>“为你推荐”Feed 的维护者如何从家中提供服务！这是关于 atproto 生态系统发展的客座文章。Spacecowboy 是热门“为你推荐”Feed 的构建者，该 Feed 每天为数以万计的用户提供个性化内容。在这篇文章中，Spacecowboy 解释了他们如何利用本地基础设施和 VPS 作为代理，从家里提供服务。“为你推荐”是一个单一的 Go 二进制程序：它消耗帖子、点赞、转发的流（Jetstream）并将其保存到 sqlite 数据库中；提供 Feed 服务；提供 playground 页面。作为单一进程，管理起来很容易。我将所有数据存储在 sqlite 中。sqlite 的一个主要优势是可测试性，我可以将数据库创建在内存中进行单元测试，无需模拟存储层。为了提高效率，我为每个帖子的 AT URI 分配了一个整数 ID。</p>
+
+<p><a href="https://corrode.dev/blog/bugs-rust-wont-catch/">Rust 无法捕获的 Bug</a><br>2026 年 4 月，Canonical 在 uutils（Rust 重写的 GNU coreutils 实现）中披露了 44 个 CVE。值得注意的是，所有这些 Bug 都出现在生产级的 Rust 代码库中，由资深开发者编写，且没有任何一个被借用检查器、clippy lint 或 cargo audit 捕获。如果你在 Rust 中编写系统代码，这可能是目前你能找到的关于 Rust 安全边界的最集中分析。最严重的一类 Bug 是“不要跨越两次系统调用信任路径”。模式总是一样的：你执行一次系统调用来检查路径的某些信息，然后执行另一次系统调用来对同一路径采取行动。在这两次调用之间，拥有父目录写权限的攻击者可以替换符号链接。内核在第二次调用时会重新解析路径，从而导致特权操作落在攻击者选择的目标上。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything">Zig 项目坚持反 AI 贡献政策的理由</a><br>Zig 拥有主要开源项目中最为严格的反 LLM 政策：禁止 LLM 参与问题反馈、禁止 LLM 提交 PR、禁止 LLM 发表评论。Zig 软件基金会社区副总裁 Loris Cro 解释了这项禁令背后的逻辑：成功的开源项目最终会面临 PR 处理不过来的情况，与其为了追求吞吐量而接受不完美的 PR，Zig 项目更愿意投入时间帮助新贡献者完善他们的工作，即使他们需要指导。这种人与人之间的深度互动和教育是 AI 无法替代的价值。</p>
+
+<p><a href="https://x.com/rohit4verse/status/2049548305408131349">2026 年 AI 智能体领域中应该学习、构建和跳过的内容</a><br>每一天都有新的框架、基准测试和“10 倍速”产品发布。问题不在于“如何跟上”，而在于什么是信号，什么是伪装成紧迫感的噪音。AI 重写了原有的画布，任何有品味的人现在都能产出过去需要资深工程师奋战多日的成果。专业知识依然重要，但那种通过观看系统崩溃、调试内存泄漏积累起来的品味（而非仅仅掌握本周 API 表面）才是关键。对于那些询问现在应该关注什么的人，我建议不要将其视为路线图，因为智能体领域尚无终点。赢家是那些尽早选择了耐用原语，并让其余炒作随风而逝的人。</p>
+
+<p><a href="https://legallayer.substack.com/p/who-owns-the-claude-code-wrote">谁拥有 Claude 编写的代码？</a><br>像 Claude Code、Cursor 和 Codex 这样的智能体编码工具所生成的代码，可能面临无法获得版权、被雇主拥有，或被未知的开源许可证污染的问题。有些属于既定法律，有些则尚在争议中。如果你在使用 AI 辅助编程且未考虑过这些问题，这篇文章旨在阐述开发者需要记录什么才能拥有构建成果，雇佣合同对 AI 辅助工作成果的规定，以及 AI 辅助编写开源代码的实际影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/CJackHwang/ds2api">CJackHwang/ds2api</a><br>Deepseek 转 API 工具：一种轻量级、高性能的全栈中间件，可将客户端协议转换为通用 API。支持多账号轮询、编译二进制文件、Vercel Serverless 和 Docker。</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>查找容器、Kubernetes、代码仓库、云环境等中的漏洞、配置错误、密钥和 SBOM。</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>一个用于聚合与分发的统一 AI 模型中心。它支持将各种 LLM 转换为 OpenAI、Claude 或 Gemini 兼容格式。作为模型集成的中心化网关。</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>12ft.io 和 1ft.io 的自托管替代方案。用于移除 CORS 头部并修改 HTML 的代理。</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>开源 LLM 知识平台：将原始文档转化为可查询的 RAG、自主推理智能体和自维护 Wiki。</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>云原生应用代理。</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个用于对象存储 (S3)、文件系统和 Iceberg 表的分布式存储系统，旨在处理数十亿个文件，支持 O(1) 磁盘访问和轻松的水平扩展。</p>
+
+<p><a href="https://github.com/Gentleman-Programming/engram">Gentleman-Programming/engram</a><br>用于 AI 编码智能体的持久化内存系统。包含 SQLite &#43; FTS5 的 Go 二进制程序，支持 MCP 服务器、HTTP API、CLI 和 TUI。</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>一款开源、集成 AI、跨平台的终端，旨在实现无缝工作流。</p>
+
+<p><a href="https://github.com/Agent-Field/agentfield">Agent-Field/agentfield</a><br>像构建 API 和微服务一样构建、运行和扩展 AI 智能体——从第一天起就具备可观测性、可审计性和身份感知能力。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260112.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260112</span>
+</p>
+<p>每日一谚：Use any for generics and interface{} for interfaces </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/10/go-dropped-from-7th-to-16th-in-one-year">离了大谱！Go 一年之内从第 7 掉到第 16</a><br>新年伊始，TIOBE 发布了最新的编程语言排行榜。当我满怀期待地去寻找 Go 的身影时，差点以为自己眼花了： Go 居然从去年的第 7 名，断崖式下跌到了第 16 名！占比跌幅高达 1.37%，在这个榜单上几乎是“崩盘”级别的表现。</p> 
+
+<p><a href="https://tonybai.com/2026/01/12/victoriametrics-guide-most-efficient-go-code">从入门到极致：VictoriaMetrics 教你写出最高效的 Go 代码</a><br>很多 Gopher 都好奇：为什么用同样的语言，VictoriaMetrics 能跑得这么快、省这么多内存？答案就藏在它的源码里。VictoriaMetrics 的代码库堪称一本活着的“Go 高性能编程教科书”。从基础的工程规范，到极致的内存复用，再到对并发模型的精细控制，每一行代码都是对性能的极致追求。 </p> 
+
+<p><a href="https://tonybai.com/2026/01/11/proposal-float-to-int-conversions-should-saturate-on-overflow/">Go 的“浮点数陷阱”将被填平：浮点转整数即将在所有平台上行为一致</a><br>你是否知道，同一行简单的代码 int64(myFloat)，在 Intel (amd64) 机器上可能返回一个巨大的负数，而在 ARM64 机器上却可能返回最大正整数？ 在 Go 语言中，浮点数到整数的转换溢出行为长期以来一直属于“实现定义”(implementation-dependent) 的灰色地带。这意味着，代码的运行结果竟然取决于你底层的 CPU 架构。这种不确定性，一直是跨平台开发中一个难以察觉的隐形地雷。</p> 
+
+<p><a href="https://tonybai.com/2026/01/11/21-lessons-from-google-engineer">代码之外的修炼：Google 资深工程师的 21 条“生存法则”</a><br>“当我 14 年前加入 Google 时，我以为这份工作就是写出优秀的代码……我只说对了一部分。我待得越久，就越意识到，那些真正茁壮成长的工程师，不一定是最好的程序员——他们是那些懂得如何驾驭代码周围一切的人：人、政治、协同和模糊性。” 这段话，出自 Google 资深工程师 Addy Osmani 的一篇深刻反思——《在 Google 14 年的 21 条经验》。这篇文章，如同淬炼了 14 年的智慧结晶，几乎没有谈论任何具体的技术栈，却精准地描绘出了一位卓越工程师的成长画像。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/iNgWG3Oy-QrUkN_c0QMJzA">【分布式系统】03 复制（上）：“权威中心”的秩序 —— 主从架构、一致性与权衡</a><br></p> 
+
+<p><a href="https://rybicki.io/blog/2026/01/01/mutexes-from-scratch-in-go.html">用 Go 从零开始编写互斥锁</a><br>这篇文章探讨了在 Go 语言中从零开始实现互斥锁（Mutex）的过程，从一个无效的自旋锁尝试开始，逐步引入原子操作、`runtime.Gosched()`、Linux 的 futex 系统调用，并结合自旋与睡眠的混合策略。作者通过性能测试对比了自实现锁与 Go 标准库 `sync.Mutex` 的表现，揭示了在不同竞争场景下，不同锁实现（纯自旋锁、基于 futex 的锁、以及自适应的混合锁）的性能权衡。文章的最终目标是深入理解并发控制机制的底层原理。</p> 
+
+<p><a href="https://unisondb.io/blog/building-corruption-proof-write-ahead-log-in-go">用 Go 构建防损坏的预写日志</a><br>了解如何用 Go 构建一个防崩溃的预写日志 (WAL)，以及为什么仅靠 CRC32 是不够的。我们探讨了 UnisonDB 使用的持久性层，以防止崩溃后发生数据损坏。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-12-19-golang-ieee-strictness">Golang 真的实现了 IEEE-754 浮点数规范吗？答案可能会让你惊讶！</a><br>作者在修复 Dolt 数据库引擎中的一个性能问题后，发现在 GitHub Actions 的 CI 中，macOS 和 Windows 上的测试结果出现了差异，这种差异源于查询计划在不同平台上的细微不同。经过深入调查，发现根本原因是 Go 编译器在 Mac（ARM 架构）上可能会使用 Fused-Multiply-Add (FMA) 指令，而 Windows（可能是 x86 架构）上的 CPU 可能没有使用或以不同方式处理该指令，导致浮点运算结果出现微小偏差，进而影响了成本估算，最终导致了查询计划的差异。文章探讨了 C 和 Java 在处理 IEEE-754 兼容性上的历史做法，并最终得出结论：Go 确实在一定程度上实现了 IEEE-754 规范，但该规范本身并不完全保证跨平台数学运算结果的一致性，因为语言或硬件可以对中间结果的精度做出平台依赖的选择。</p> 
+
+<p><a href="https://www.unkey.com/blog/serverless-exit">我们为何放弃无服务器架构</a><br>当我们把 API 部署到 Cloudflare Workers 上时，它似乎是 API 身份验证服务的完美选择。全球边缘部署、自动扩展和按需付费的定价模式，简直完美！后来，我们完全使用有状态的 Go 服务器重建了它。最终实现了 6 倍的性能提升，以及架构的极大简化，从而实现了自托管和平台独立性。</p> 
+
+<p><a href="https://blog.appsignal.com/2025/12/03/the-performance-revolution-in-javascript-tooling.html">JavaScript工具链的性能革命</a><br>近年来，我们目睹了JavaScript生态系统发生了一场显著的转变，许多流行的开发者工具被重写为使用Rust、Go和Zig等系统编程语言。本文探讨了驱动这场革命的因素、其对更广泛生态系统的影响，以及一些引领潮流的关键项目，如SWC、ESBuild、BiomeJS、Oxc、FNM/Volta和Go语言中的TypeScript等，这些工具带来了显著的性能提升和创新。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2026-01-09-golang-panic-recovery">Golang Panic Recovery</a><br>了解如何在 Golang 应用程序中安全地从 panic 中恢复至关重要，特别是如果您正在构建长期运行的服务、后台工作进程或 goroutine 池。在这篇博文中，我们将探讨 Go 中的 panic 恢复机制，以及需要注意的一些陷阱。学习 panic 和 recover 的基础知识，了解它们与传统异常处理的区别，以及如何在并发场景中正确使用它们，避免应用程序崩溃。</p> 
+
+<p><a href="https://davidbacisin.com/writing/golang-http-connection-pools-1">Go中的HTTP连接池</a><br>本文深入探讨了Go中HTTP/1.1和HTTP/2的连接池机制，并提供了配置建议。文章详细解释了什么是连接池、Go标准库HTTP客户端的工作原理，并分别通过示例分析了HTTP/1.1中MaxIdleConnsPerHost和MaxConnsPerHost的配置效果，以及HTTP/2的复用（multiplexing）特性。核心建议包括为HTTP/1.1配置较高的MaxIdleConnsPerHost/MaxIdleConns，以及根据网络条件测试选择HTTP/1.1或HTTP/2。对于HTTP/2，可以考虑使用StrictMaxConcurrentStreams来限制并发连接数。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cloudamqp.com/blog/message-queues-exaplined-with-analogies.html">消息队列：带有类比的简单指南</a><br>本指南使用类比（数据库、仓库和邮局）来解释消息队列。消息队列就像数据流动的媒介，从生产者（源系统）接收消息，按到达顺序排队，然后发送给消费者（目标系统）。这使得它们非常适合微服务架构中系统之间的异步通信，允许服务在不相互等待的情况下进行通信，从而提高可靠性和可扩展性。</p>
+
+<p><a href="https://www.jvm-weekly.com/p/everything-you-might-have-missed-886">2025年Java领域你可能错过的所有精彩瞬间</a><br>这是一份对2025年JVM生态系统重大进展的全面回顾，涵盖了Java语言特性（如虚拟线程无Pinning、Stream Gatherers的成熟、Valhalla和Leyden的进展）、平台演进（如Class-File API的稳定、JVM与异构计算的融合）以及社区动态（如GraalVM的战略转型、Kotlin K2编译器的普及、Jakarta EE的复兴以及AI工具对开发工作流的影响）。文章强调了平台基础的稳固性是应对技术变革（特别是AI浪潮）的关键。主要亮点包括：虚拟线程与synchronized的兼容、Stream API的扩展能力、对象头紧凑化带来的内存优化、Project Valhalla的实质性进展、GraalVM成为专业化运行时，以及JetBrains对AI驱动的IDE和新语言的布局。</p>
+
+<p><a href="https://mitchellh.com/writing/ghostty-memory-leak-fix">Ghostty内存泄露问题修正</a><br></p>
+
+<p><a href="https://www.pcloadletter.dev/blog/craftsmanship-is-dead">软件匠艺已死</a><br>作者认为，在敏捷化和工程师薪酬热潮中，软件开发中的“匠艺”精神正在消亡。他观察到，尤其是在近期，代码质量普遍偏低，人们过于关注快速交付新功能，而忽视了代码的长期可维护性。作者提出了几个可能的原因：围绕“影响力”的负面激励机制（提倡多发功能而非高质量代码）、持续的待办事项（Backlog）压力，以及由于软件可以通过网络轻松部署和修补而带来的低风险环境，使得开发者更愿意偷工减料。他担心真正注重软件工程技艺的人正在消失。</p>
+
+<p><a href="https://www.lastweekinaws.com/blog/aws-in-2026-the-year-of-proving-they-still-know-how-to-operate">AWS 在 2026 年：证明他们仍然知道如何运营的一年</a><br>文章探讨了作者对 AWS 在 2026 年的展望，作者认为 AWS 总体上“还好”，但其昔日的绝对主导地位已不复存在。作者提出了六个主要观点：1. 对 Azure 增长数据的真实性保持怀疑；2. 认为 Google Cloud 是更值得关注的竞争对手；3. AWS 在 re:Invent 2025 上的多云、本地部署和模型训练的举动是战略上的务实调整；4. AWS 在生成式 AI 方面的差距真实存在但被夸大了，其自研芯片和 Bedrock 服务正在追赶；5. 真正的风险在于人才流失，运营专长正在流失；6. 2026 年是关于执行力的考验，而不是战略本身。作者表示将通过关注 AWS 的故障响应时间、Trainium 采用率、Bedrock 容量、Google Cloud 轨迹以及“无聊”核心服务的稳定性来评估自己的预测。</p>
+
+<p><a href="https://www.tomwphillips.co.uk/2026/01/staging-is-a-wasteful-lie-the-case-for-the-mono-environment">暂存环境是浪费的谎言：单环境的论点</a><br>暂存环境捕获不了错误，拖慢交付速度，并让开发者感到痛苦。应直接部署到生产环境。
+
+作者Tom Phillips认为，非生产环境（如暂存环境）本质上是浪费的，并提出了“单环境”作为替代方案。他主张，由于用户只能从生产环境中获得价值，投入到暂存环境的任何工作都是浪费。暂存环境作为质量关卡也并不可靠，因为它通常无法代表生产环境的负载和数据情况，反而会降低变更吞吐量。他提出了在单环境中安全操作的五项关键实践：1. 自动化测试（最好是测试驱动开发 TDD）；2. 使用易失性本地环境进行演示和调试；3. 使用功能标志（Feature Flagging）在生产环境中对部分用户测试新功能；4. 采用持续部署，快速、无缝地交付变更；5. 持续监控生产环境以了解用户体验。
+
+文章还探讨了常见的反对意见，如合规性要求和数据库迁移问题，并强调增量交付与单环境是相辅相成的，能带来更快的反馈循环和更高的安全性。</p>
+
+<p><a href="https://docs.base14.io/blog/introducing-pgx">介绍 pgX：弥合 PostgreSQL 数据库与应用监控之间的鸿沟</a><br>现代软件系统并非沿着清晰的架构边界出现故障。应用程序延迟、数据库争用、基础设施饱和和用户行为是紧密耦合的，但大多数可观察性设置仍然将它们视为独立的问题。PostgreSQL 是大多数生产系统的核心组件，但它通常是孤立地被监控——通过单独的工具、单独的仪表板和单独的思维模型。
+
+当数据库行为成为应用程序使用方式的直接函数时（查询模式随功能变化、负载随用户波动、数据库压力反映上游设计决策），这种隔离就开始失效了。pgX 旨在解决这一问题，它将 PostgreSQL 的诊断和监控数据与应用程序跟踪、日志和基础设施指标直接集成，从而能够分析数据库行为与应用程序性能和基础设施健康状况的上下文关系，实现更快的诊断和更有效的优化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/11/dont-fall-into-the-anti-ai-hype/#atom-everything">不要陷入反AI的炒作</a><br>作者很高兴看到有人敢于直言不讳地反对当前软件开发社区中存在的反AI情绪。虽然其中很多不满是合理的，但如果认为AI对软件开发人员没有真正的用处，或者认为这股热潮很快就会消退，那么实际上正面临着对未来职业生涯的真实风险。作者引用了 Salvatore Sanfilippo 的观点，即编程已经永远改变了，以及 LLM 将帮助我们更快地编写更好的软件，使小团队有能力与大公司竞争，就像 90 年代的开源软件一样。</p>
+
+<p><a href="https://opencode.ai/zen">OpenCode Zen | A curated set of reliable optimized models for coding agents</a><br>Zen provides access to a curated set of AI models tested and benchmarked by OpenCode for coding agents, ensuring consistent performance and quality. It solves the problem of inconsistent model performance across different configurations. Users can sign up, add a $20 balance, pay per request with zero markups, and set up auto-top-ups. All Zen models are hosted in the US with a zero-retention policy for data privacy, with some exceptions noted in the documentation.</p>
+
+<p><a href="https://nader.substack.com/p/the-complete-guide-to-building-agents">The Complete Guide to Building Agents with the Claude Agent SDK</a><br>本文是关于使用 Claude Agent SDK 构建 AI 代理的完整指南。它介绍了如何快速启动和运行自定义 AI 代理，并提供了构建一个代码审查代理的实例，该代理能够分析代码库、查找错误和安全问题，并返回结构化反馈。文章详细解释了 SDK 提供的功能，如内置工具（读取、写入、编辑、Bash、Glob、Grep、WebSearch、WebFetch）、消息流处理、权限管理、子代理创建、会话管理、使用钩子（Hooks）以及自定义工具（通过 MCP）。</p>
+
+<p><a href="https://www.schneier.com/blog/archives/2026/01/ai-humans-making-the-relationship-work.html">AI 与人类：让关系运作起来</a><br>许多组织领导者敦促团队采用能动性AI（Agentic AI）以提高效率，但发现难以从中获益。将AI代理添加到现有的人类团队中时，可能会发现机器人无法忠实地遵循指示、返回无用或显而易见的结果，或者在旧系统也能完成的任务上浪费宝贵的时间和资源。那些从AI中获益最多的技术创新者发现，该技术在行为上可以非常像人类。而且，当多组AI代理被赋予需要合作和协作的任务时，这些人性化的动态就越发明显。研究表明，未来最有效的领导者可能是那些擅长理解久经考验的人类管理原则的人。成功管理混合团队（人类和能动性AI）的经验教训包括：有效授权、迭代尝试、高效信息共享，以及持续的衡量和改进。</p>
+
+<p><a href="https://www.mihaileric.com/The-Emperor-Has-No-Clothes">皇帝的新衣：如何用200行代码实现Claude Code</a><br>Claude Code、Cursor 和 Warp 等工具的核心并非魔法，而是大约200行简洁的 Python 代码。本文将从零开始构建一个功能性的代码代理（Coding Agent），阐述其核心的“思考模型”（请求-工具执行-反馈）以及实现文件读写、列表和编辑这三大基础工具所需的全部逻辑，揭示AI代码助手的底层机制。</p>
+
+<p><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">揭秘人工智能（AI）智能体的评估方法</a><br>使智能体变得有用的能力也使其难以评估。跨部署有效的策略结合了多种技术，以匹配它们所测量的系统的复杂性。
+</p>
+
+<p><a href="https://minusx.ai/blog/decoding-claude-code">解构Claude Code</a><br></p>
+
+<p><a href="https://dev.to/koushik_sen_d549bf321e6fb/meet-the-kiss-agent-framework-2ij6">KISS 智能体框架简介</a><br>KISS（Keep It Simple, Stupid）智能体框架倡导激进的简洁性，旨在简化 AI 智能体（Agent）的构建过程。它基于 ReAct 模式，允许用户通过简单的 Python 函数调用来定义工具和运行逻辑，避免了传统框架的复杂性。该框架支持多模型（OpenAI、Anthropic、Gemini 等），内置了预算跟踪、SWE-bench 验证集成、Docker 隔离环境以及 GEPA（遗传帕累托提示词进化）和 KISSEvolve 等高级自我优化和算法发现功能，目标是提供一个强大且易于使用的 AI 智能体开发基础。</p>
+
+<p><a href="https://every.to/guides/agent-native">Agent-native Architectures: How to Build Apps After Code Ends</a><br>该指南提出了软件构建的新范式——“代理原生架构”，即应用程序的核心能力围绕代理构建，而不是传统代码。核心原则包括：UI功能必须能被代理通过工具实现（对等性）；工具应是原子化的，功能是代理在循环中为实现目标而组合工具所达成的结果（粒度）；新功能可以通过编写新提示来创建（可组合性）；代理应能完成开发者未明确设计的功能（涌现能力）；应用程序应随着时间的推移，通过累积的上下文和提示优化而不断改进。该架构强调文件作为通用接口，并探讨了移动应用中的实现模式，如iCloud优先的存储和健壮的检查点/恢复机制，以应对移动环境下的中断。</p>
+
+<p><a href="https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages">为什么AI正在将开发者推向静态类型语言</a><br></p>
+
+<p><a href="https://davekiss.com/blog/the-1000-commits-problem">The 1000 commits problem</a><br>文章探讨了AI辅助开发带来的“1000次提交问题”，指出软件的开发速度（如Claude Code一天内有1096次提交）已经远远超过了人类管理和验证的速度。作者以Anthropic的CLI因一次简单的Markdown格式更改（添加日期到变更日志标题）而宕机为例，说明了传统管理系统（如人工审查、简单的测试）已无法跟上AI驱动的速度。文章认为，解决之道在于自动化：需要在每一次系统连接的“接缝处”部署自动化工具，以自动监测变更日志格式漂移、文档与工具行为的一致性，以及将模糊的Bug报告转化为可操作的工单，从而在不因维护和协调而“淹没”的情况下实现更快的发布速度。作者认为，这预示着未来将出现更多由组件间“漂移”和“模式不匹配”引起的全新类型的Bug。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/the-dev-tools/dev-tools">the-dev-tools/dev-tools</a><br>Local-first API testing that goes from HAR file to GitHub Actions in 60 seconds.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/badtuxx/girus-cli">badtuxx/girus-cli</a><br></p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/autobrr/qui">autobrr/qui</a><br>A fast, single-binary qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers.</p>
+
+<p><a href="https://github.com/cexll/myclaude">cexll/myclaude</a><br>Claude Code and Codex orchestration workflow</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/ayn2op/discordo">ayn2op/discordo</a><br>A lightweight, secure, and feature-rich Discord terminal (TUI) client.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

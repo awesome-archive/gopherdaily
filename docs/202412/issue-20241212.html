@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241212.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-12</span>
+</p>
+<p>每日一谚：Close channels to signal completion </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://getconvoy.io/blog/circuit-breaker-in-golang">使用Go构建分布式熔断器</a><br>本文讨论了在 Go 中设计分布式熔断器系统，以管理不可靠的 webhook 端点，通常称为 &#34;僵尸端点&#34;。它对比了同步和异步熔断器，强调后者在可用性和并发性方面的优势，尽管复杂性增加。所提出的解决方案利用 Redis 和 PostgreSQL，使用 Redis 进行分布式锁定和领导者选举，同时对 PostgreSQL 进行成功/失败率的轮询。该系统定期采样事件，更新熔断器状态，并确保所有代理根据存储在 Redis 中的最新状态采取行动。该实施旨在减少僵尸端点的影响，防止其端点持续堵塞队列和延迟事件传递。在生产环境中测试后，该解决方案显著减少了自托管客户的失败交付尝试，展示了其有效性。</p> 
+
+<p><a href="https://mcyoung.xyz/2024/12/10/json-sucks">没有人会因为选择JSON而被解雇，但也许他们应该这样做？</a><br>本文重点介绍了 JSON 的广泛使用和固有的缺陷，JSON 是一种深度嵌入在 REST API 和 JavaScript 中的格式，尽管 ECMA 和 IETF RFC8259 对 JSON 进行了非规范定义。它指出了 JSON 处理数字的不一致，这可能会被误解为浮点数，从而导致潜在的数据丢失，尤其是对于大整数。缺乏在 JSON 中序列化字节字符串的标准化方法因其效率低下和互操作性问题而受到批评，而 base64 编码等替代方案作为一种解决方法，在 JSON 解析器中通常未实现。文章还指出，JSON 无法原生支持将复杂数据结构流式传输到大型数组之外，这是 Protobuf 等格式所不存在的限制，并提请注意该格式对某些数值的往返数据丢失的敏感性。这些问题源于 JSON 的流行和设计选择，对数据完整性、合规性和高效数据传输构成了重大挑战。建议使用 JSON 的替代方案（如 BSON、UBJSON 和 Protobuf）来解决其中一些问题。</p> 
+
+<p><a href="https://joshua-etim.medium.com/clever-sql-handling-with-golang-a99e52da0e57">使用Go 进行巧妙的SQL 处理</a><br>本文讨论了 Go 中高效的 SQL 查询处理，作者 Joshua Etim 探索了 ORM 的替代方案，以更好地控制数据库交互。作者以 pgx 库为例，演示了如何动态生成用于插入、筛选、更新和删除数据库中记录的 SQL 查询。通过创建可重用的方法，作者旨在简化这些过程，并在不同的表和模型之间提供灵活性。这篇文章反映了当后者需要广泛的研究或预计到未来问题时，有时会选择自定义解决方案而不是已建立库的决定。作者得出的结论是，虽然既定的解决方案通常更可取，但在某些情况下，构建自定义方法可能更直接、更令人满意。这篇文章还谈到了作者的编程经验，鼓励参与，可以通过提供的电子邮件联系到你。</p> 
+
+<p><a href="https://lemire.me/blog/2024/12/08/data-structures-as-jigs-for-programmers-go-edition/">数据结构作为程序员的夹具（Go 版）</a><br>源文档指示对特定网页的访问受到限制，从而导致向用户显示 403 Forbidden 错误消息。此错误表示服务器理解对页面发出的请求，但由于访问限制而无法完成该请求。虽然文档本身没有提供有关此封锁背后的原因的具体细节，但它通常指向阻止用户查看内容的权限设置或安全协议。文档中未指定禁止内容的确切性质或访问控制标准。要解决此问题，用户可能需要调整其权限、与网站站长联系或确保符合网站的访问策略。传达的核心信息是由于强制的安全或权限设置而无法访问特定网页。</p> 
+
+<p><a href="https://errorprone.info/docs/time">如何理解时间</a><br>本文讨论了在编程中处理日期和时间的复杂性，区分了物理时间、民用时间和时区。它解释了物理时间是瞬间的线性进程，而民用时间涉及受日历系统影响的日期时间，主要集中在公历上，并且由于时区的变化而常常定义不清。作者警告不要使用定义不清的时区，如常见的PST，并建议使用 UTC 或设计用于物理时间的库类型来编写独立于时区的代码。文档强调了 zoned datetimes 的陷阱，以及理解墙时和经过时间之间区别的重要性，推荐特定库以确保准确的时间测量。它还涉及时间的历史和实际方面，包括通常选择的参考瞬间 Unix 纪元，以及民用时间周期中的偶尔不规则性。总体而言，本指南旨在提供一个关于编程中日期和时间的概念模型，避免常见的误解和错误。</p> 
+
+<p><a href="https://semaphoreci.medium.com/unit-testing-vs-integration-testing-test-automation-basics-f1b9bd83eb85">单元测试与集成测试：测试自动化基础知识</a><br>本文在测试自动化的上下文中区分了单元测试和集成测试，说明了它们在确保代码质量方面的不同作用。单元测试侧重于验证隔离组件的功能，理想情况下快速运行，以便在开发过程中获得频繁的反馈，而集成测试则评估这些组件的交互方式，模拟实际使用情况以发现组件交互引起的问题。这篇文章强调了测试自动化的好处，例如标准化、减少错误和提高代码质量，以及它促进一致、彻底的测试和更快的代码交付的能力。本文以 Python 和 Flask 为例，提供了一种类似教程的方法，演示了如何设置一个简单的 Web 应用程序并为其编写测试，强调了测试自动化原则的实际应用。该讨论强调了了解单元测试和集成测试对于创建健壮软件的重要性，本文为开发人员提供了实施这些测试策略的指南。通过这种方式，开发人员可以通过有效地整合测试自动化来改进他们的代码和开发流程。</p> 
+
+<p><a href="https://sourcegraph.com/blog/the-death-of-the-stubborn-developer">顽固开发者的消亡</a><br>这篇博客文章讨论了由于语言模型（LLMs）能够执行复杂任务，初级开发者在软件项目中的角色正在减弱。作者认为，软件工程的未来是“聊天导向编程”（chop），这需要技能的转变，尽管目前存在不可预测性和幻觉等挑战。虽然一些人将自主代理视为终极解决方案，但作者对此持怀疑态度，并强调技术采用的渐进性。他们指出，使用 chop 已经带来了生产力的提升，并对其陡峭的学习曲线表示担忧。作者与 Gene Kim 合作，开发评估 Code AI（包括 chop）影响的指标，并承认特殊用途自主代理的潜力。尽管存在缺点，作者仍将 chop 视为一种不可避免的加速工具，尽管其采用过程可能会颠簸。</p> 
+
+<p><a href="https://xuanwo.io/2024/10-a-letter-to-open-source-maintainers/">致开源维护者的一封信</a><br>这封信谈到了围绕开源维护者角色的现实和期望，强调贡献者没有义务无限期地维持项目。它强调了建立健康的参与基线的重要性，摆脱了持续维护的压力，并鼓励维护者优先考虑他们的福祉。作者讨论了留下来的不利动机，例如成为唯一有能力的贡献者的感觉或害怕他人的反应，并提出了优雅地退出或过渡责任的实用步骤。这封信还强调了可持续实践、明确许可以及与用户或企业合作以延长项目寿命的重要性，同时最终尊重个人对开源社区的贡献或离开的选择。首要信息是善意、理解和为开源参与设定切合实际的期望。它既可以作为指南，也可以温柔地提醒我们，在对开源的热情和个人生活之间保持平衡是必不可少的。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://lwn.net/Articles/997784/">Rust 的增量编译器架构</a><br>LWN 文章讨论了 Rust 独特的增量编译器架构，该架构通过使用查询模型与传统编译器设计相区别。这一系统通过provider组织查询，隐式跟踪依赖关系，从而实现更高效的增量编译，类似于构建系统。尽管这一方法增加了复杂性，但它使 Rust 在编译时间上取得了显著改善，且仍有进一步优化的潜力。Rust 编译器的设计虽然尚未普遍采用，但已证明增量编译足够稳定，成为开发构建的默认设置，而发布构建通常避免使用增量编译以防止潜在问题。文章还提到了实现 Rust 与 C&#43;&#43; 之间 ABI 稳定性挑战的细节，以及分发 Rust 库的细微差别，这些库在编译器版本之间不保证稳定的 ABI，需谨慎管理。讨论强调了 Rust 在编译器技术方面的进展及其对构建系统和增量编译的影响</p>
+
+<p><a href="https://kyle.cascade.family/posts/how-to-actually-migrate-complex-systems-in-infrastructure/">如何真正迁移复杂的基础设施系统</a><br>这篇博客文章讨论了在基础设施中迁移复杂系统的策略，强调了最小化维护遗留系统（称为`骑双马`）所花费的时间的重要性，以及避免客户施加的工作负担。文章突出了`攀缘榕模式` 作为过渡系统的首选方法，涉及在旧系统中嵌入新组件，并逐步将功能转移到现代平台。作者警告不要分叉代码，低估双系统维护中涉及的工作量，以及让客户最后适应新系统的陷阱。文章提倡将迁移过程保持增量化，专注于功能而非客户，并在过程中早期向最大的或最复杂的客户学习以告知架构变化。总体策略旨在降低风险，确保从遗留系统平稳过渡到现代平台，尽管过渡搭建被视为必要的投资，外表上看似浪费。该博客为工程师提供了可视化和规划成功迁移的指南，平衡现代化与持续运营和客户满意度。</p>
+
+<p><a href="https://victoriametrics.com/blog/vmstorage-how-it-handles-data-ingestion/">vmstorage如何将原始指标转换为井然有序的历史记录</a><br>VictoriaMetrics 中的 vmstorage 组件负责监控数据的长期存储，在磁盘上高效组织数据，并管理其保留。它以数据块的形式处理传入数据，创建规范指标名称和 TSID，并在将原始行分片刷新到 LSM 部分之前将其缓冲在内存中。重复数据删除和保留策略是可配置的，可减少磁盘使用量并允许将特定数据切片保留指定时间段。在磁盘空间不足的情况下，vmstorage 会切换到只读模式，在密切监控磁盘空间的同时保护数据完整性。该系统的架构支持大容量数据，专注于高效的数据检索、压缩以及合并部分以优化存储的能力。此设置是 VictoriaMetrics 中更广泛功能套件的一部分，旨在以透明和控制的方式处理复杂的数据存储需求。</p>
+
+<p><a href="https://martinfowler.com/articles/design-token-based-ui-architecture.html">设计基于令牌的UI架构</a><br>本文讨论了 UI 架构中设计令牌的实现和优势，强调了它们作为跨平台设计决策的单一事实来源的作用。设计令牌（表示为数据）可简化更新并确保一致性，部署管道可促进自动化代码生成。令牌系统被组织成多个层 — 选项令牌定义可用的设计选择，决策令牌指定样式上下文，组件令牌详细说明特定的 UI 部分。虽然两层或三层很常见，但确切的数量取决于项目需求。本文还强调了当前缺乏用于令牌范围的标准化解决方案，但建议使用文件路径过滤器作为解决方法。总体而言，使用设计令牌对于可扩展的多平台项目是有利的，尽管适用性因项目要求而异。</p>
+
+<p><a href="https://www.prweb.com/releases/open-source-veteran-launches-skyseed---first-ecosystem-fund-and-incubator-for-the-bluesky-at-protocol-302329958.html">开源资深人士推出 Skyseed - Bluesky AT 协议的第一个生态系统基金和孵化器</a><br>开源企业家 Peter Wang 推出了 Skyseed Fund，这是一家致力于 Bluesky 平台及其开放生态系统的风险基金和孵化器，初始资金为 $1M。Bluesky 拥有近 2500 万用户，通过其应用程序提供类似社交媒体的体验，并通过其开源技术和社交图谱脱颖而出。这使开发人员能够创建各种利用 Bluesky 平台的应用程序，从而促进从当今围墙花园的潜在转变。该基金旨在专注于在数据隐私、本地优先体验以及尊重用户意图和数据权利方面增强 Bluesky AT 协议生态系统，同时还支持演变为可持续商业模式的项目。鼓励开发人员提交想法，该基金已经在审查初步提交的内容。Wang 的愿景有助于去中心化的网络运动并促进更健康的在线互动。</p>
+
+<p><a href="https://eng.lyft.com/integrating-extensions-into-large-scale-ios-apps-8f15dc5f3be9">将扩展集成到大型iOS应用程序中</a><br>本文档讨论了将 Lyft 的 iOS 应用程序扩展集成到 Apple Maps 所涉及的技术挑战和解决方案。它强调了在模块化应用程序中管理密集依赖关系图的复杂性，这可能会显著增加扩展的二进制大小和内存占用。通过 Gephi 和 Bazel 等可视化工具，Lyft 工程师分析了依赖项，并通过提取核心功能和修剪不必要的依赖项，将二进制文件大小从 45MB 减少到 15MB。本文还谈到了确保扩展在特定区域的可用性、管理第三方依赖项以及解决开发过程中可能出现的开发人员体验问题的重要性。最终，本文档深入探讨了集成过程，提供了优化性能的见解，同时在整个 iOS 生态系统中保持高质量的用户体验。</p>
+
+<p><a href="https://dolthub.com/blog/2024-12-11-mysql9-and-caching-sha2-auth-support/">MySQL-9.0、Dolt 和缓存 SHA-2 身份验证支持</a><br>该博客文章讨论了 MySQL-9.0 创新版本删除“mysql_native_password”身份验证支持所引起的问题，使与依赖此已弃用身份验证方法的旧 MySQL 服务器的连接复杂化。它强调了 Homebrew 的默认 MySQL-9.0 安装，并建议使用 MySQL-8.4 作为稳定的、受支持的版本，同时指出 Homebrew 默认无法在 MySQL-9.0 客户端中包含“mysql_native_password”支持。提供了一些解决方法，例如通过 Homebrew 安装 MySQL-8.4 并使用不同的客户端版本来管理身份验证方法。DoltSQL 还进行了更新，以支持 “caching_sha2_password” 身份验证，从而提供了 “mysql_native_password” 的替代方案。该博文旨在指导用户完成这些更改，确保与旧 MySQL 服务器的兼容性并采用新的身份验证方法。它还涉及 MySQL 弃用 “mysql_native_password” 的更广泛背景以及社区的回应，包括对客户端构建文件的修复确认。</p>
+
+<p><a href="https://tailscale.com/blog/tailscale-wrapped-2024">Tailscale总结：一年的安全远程访问</a><br>Tailscale 庆祝安全网络领域的变革之年，专注于简单性和稳健增长。该公司强调了其对降低网络复杂性的承诺，这体现在稳定发布更新、达到 5000 个付费团队以及扩展设备态势管理集成上。Tailscale 的努力通过奖项及其不断增长的客户群得到认可，包括在为所有用户提供安全连接方面取得的重大进展。展望未来，Tailscale 旨在通过探索 2025 年的新功能和集成来继续简化安全网络，同时承认其用户和合作伙伴的宝贵贡献。该公司的旅程反映了在不断发展的网络环境中，Zero Trust 原则、自动化和隐私优先设计的更广泛趋势。Tailscale 的成就突显了对跨不同环境的无缝、安全连接的普遍需求。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/12/12/scheduler-queueinghint/">Kubernetes v1.32：QueueingHint 为优化 Pod 调度带来了新的可能性</a><br>Kubernetes v1.32 更新引入了 QueueingHint，通过优化调度器处理未调度的 Pod 的方式，对 Pod 调度吞吐量进行了重大改进。QueueingHint 解决了根据集群事件对 Pod 重新排队的问题，提供了一种比以前的方法更有针对性的方法。它允许插件（如 InterPodAffinity）订阅特定事件并评估它们是否可能解决调度失败，从而减少不必要的重试。该功能最初是实验性的，后来导致了内存泄漏，现在已经被改进，现在是默认启用的，SIG Scheduling 社区的贡献塑造了它的开发。此更新旨在通过过滤相关事件来提高调度器的效率，尤其是在较大的集群中，这些事件可能会使以前无法调度的 Pod 有资格进行调度。本文档还邀请社区提供反馈和贡献，以进一步改进 Pod 调度。</p>
+
+<p><a href="https://thenewstack.io/kubernetes-1-32-aces-api-conformance-testing/">Kubernetes 1.32 Aces API 一致性测试</a><br>Kubernetes 1.32 的发布标志着一个重要的里程碑，因为它在一系列测试中实现了完全一致性，确保 Kubernetes API 按指定方式运行。此版本引入了改进的动态资源分配 （DRA） 系统，纠正了以前的问题，并符合对基于 GPU 的 AI 工作负载的现代需求。新的 DRA 模型有助于跨各种硬件平台（包括 GPU、FPGA 和专用网络适配器）更好地管理资源。一致性测试套件对于验证 Kubernetes 的核心功能至关重要，它确认了平台的可互操作能力。这一进展反映了十年来的开发和适应，凸显了 Kubernetes 的演变及其不断增长的生态系统的稳健性。这项工作不仅验证了 Kubernetes 的功能，还通过 Pod 状态中的资源健康状态增强了故障排除。</p>
+
+<p><a href="https://blog.kloudmate.com/understanding-ebpf-a-new-frontier-in-observability-e55a7735ebf6">了解 eBPF：一种新的可观测性方法</a><br>本文档深入介绍了 eBPF，该技术使程序能够在 Linux 内核中执行以实现可观察性，而无需更改内核代码或模块。它强调了 eBPF 在网络处理、NAT 优化方面的能力及其对 Kubernetes 可观测性的变革性影响，提供了对系统资源和事件的精细洞察。强调了该技术对高性能环境的好处，以及其非侵入式调试潜力和增强的安全功能。但是，也存在仅限 Linux 的支持、沙盒限制和资源限制等挑战。该文档还展示了 KloudMate 使用 eBPF 收集遥测数据，这些数据可以使用预构建的仪表板进行可视化。本概要概括了 eBPF 在推进系统级可观测性方面的作用、其实际应用以及有效部署所需的考虑因素。</p>
+
+<p><a href="http://security.googleblog.com/2024/12/google-cloud-expands-vulnerability.html">Google Cloud 使用 OSV 扩展了 Artifact Registry 的漏洞检测范围</a><br>Google Cloud 博客宣布扩展其 Artifact Registry 的漏洞检测功能，现在集成了可观察性服务验证 （OSV） 工具。此增强功能旨在加强用于管理和部署软件构件的安全措施。该帖子的日期为 2024 年 12 月 10 日，是 Google 为提高互联网安全性而持续努力的一部分，正如其更广泛的安全博客所强调的那样。将 OSV 集成到 Artifact Registry 中代表了 Google 致力于利用外部工具来识别和解决其服务中的潜在漏洞。</p>
+
+<p><a href="https://engineering.fb.com/2024/12/10/video-engineering/inside-facebooks-video-delivery-system/">Facebook 的视频交付系统内部</a><br>Facebook 的工程团队通过广泛的视频统一工作，简化了跨移动、服务器和排名层的视频交付系统，为用户创造了统一的体验。他们对 Watch Tab UI 进行了现代化改造，使其更接近其他视频体验，并实施了动态分页，以更好地管理容量成本和用户使用模式。该系统优先考虑新鲜内容，并严重依赖排名来确定内容优先级，从而确保跨设备的无缝用户体验。通过整合基础设施和数据模型，Facebook 旨在提供相关、及时和响应迅速的视频内容，同时通过高级排名算法和隐私检查优化数据中心需求和功耗。该团队的工作解决了在高度分散的生态系统中交付数十亿用户内容、管理庞大代码库和维护参与度指标的复杂性。这种统一不仅简化了用户和开发人员的体验，还实现了跨堆栈的端到端深度集成和复杂功能。</p>
+
+<p><a href="https://icepanel.medium.com/icepanel-vs-miro-c8f72ad8917a">IcePanel 与 Miro</a><br>IcePanel 和 Miro 都是旨在可视化软件架构的协作工具，但它们满足不同的需求。IcePanel 是一种用于记录软件系统的专用工具，它使用 C4 模型，并为超过 15 个席位的团队提供分层折扣，使其对于专注于软件架构的大型团队具有成本效益。Miro 虽然更通用，但为各种图表需求提供了广泛的模板，包括 UML、旅程图和流程图，适合多种受众和用途。虽然 Miro 提供了广泛的功能，但 IcePanel 因其基于模型的系统、结构化的图表层次结构以及专注于降低架构表示的复杂性而脱颖而出。这两种工具都支持协作、评论和导出，其中 IcePanel 倾向于软件架构，而 Miro 则提供跨不同领域的多功能性。它们之间的选择可能取决于特定的组织需求，其中 IcePanel 是一致的软件架构文档的首选选项，而 Miro 则适用于更广泛的活动。</p>
+
+<p><a href="https://www.hashicorp.com/blog/how-tooling-consolidation-can-help-dev-and-sec-work-together">工具整合如何帮助 Dev 和 Sec 协同工作</a><br>本文档讨论了开发和安全团队之间工具蔓延所带来的挑战，这些挑战会导致安全实施效率低下、可见性问题和繁琐的跨团队交互。它主张使用统一平台进行工具整合，强调了简化工作流程、降低成本和改进合规性审计的好处。该案例使用了 Roche Informatics 等组织的示例，这些组织已成功实施了 HashiCorp Vault 和 Terraform 等工具，以集中和标准化其流程。该文件建议，采用基于平台的方法可以增强开发人员体验，确保安全最佳实践，并将团队集中在他们的专业知识上，最终实现运营一致性。要了解更多信息，我们鼓励读者阅读 HashiCorp 的白皮书或参加有关在开发中平衡速度和安全性的网络研讨会。总体战略旨在通过现代工具和工作流程标准化来解决开发团队和 Sec 团队之间的不一致问题。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2024/Dec/11/gemini-2/#atom-everything">Gemini 2.0 Flash：一款出色的多模态 LLM，具有科幻流媒体模式</a><br>谷歌宣布推出 Gemini 2.0，这是一款开创性的多模态 LLM，擅长处理图像、视频、音频和文档，其功能是其前身 Gemini 1.5 Pro 的两倍，功能更强大。新型号 Gemini 2.0 Flash 引入了令人印象深刻的流媒体功能，允许实时音频和视频通信，让人感觉就像与未来派的 AI 互动。用户可以通过输入图像和接收详细描述来探索其视觉处理，使用边界框进行空间推理，甚至执行代码或查看模型生成的分形艺术。Gemini 2.0 Flash 可免费提供预览版，预计价格适中，当用户尝试多模态图像编辑和对话式 AI 时，有望提供大量应用程序和乐趣。特别是流式处理 API，这是一项重大进步，它让我们得以一窥 AI 可以实时处理和响应视觉刺激的未来。由于 Gemini 2.0 Flash 的定价细节尚未公布，因此人们对其在各个领域的潜在影响的预期越来越高。</p>
+
+<p><a href="https://engineering.salesforce.com/inside-the-brain-of-agentforce-revealing-the-atlas-reasoning-engine/">Agentforce 的大脑内部：揭示 Atlas 推理引擎</a><br>来自 Salesforce AI Research 的 Phil Mui 强调了 Atlas 推理引擎在 Agentforce 中的作用，Agentforce 是一个部署自主 AI 代理以增强业务功能的平台。该引擎建立在强化学习和反馈循环之上，能够理解人类意图并高精度地执行操作，正如在早期试点中看到的那样，这些试点在客户服务方面取得了显著改进。开发引擎的挑战（例如可扩展性和模块化更新）通过声明式代理创建和异步事件驱动架构得到了解决。Salesforce 的 Hyperforce 框架为引擎的安全性奠定了基础，允许针对特定行业进行受控部署阶段和定制，从而提高效率和可扩展性。该引擎的架构支持独立的模块开发和扩展，确保在保持高安全性和性能标准的同时确保持续演进。为客户（包括一家大型人力资源软件公司）定制的解决方案展示了该引擎在各个领域的适应性和影响力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - 任何编程语言🚀的基础设施即代码</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>一个强大的小 TUI 框架 🏗</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism 是以太坊，可扩展。</p>
+
+<p><a href="https://github.com/go-pay/gopay">go-pay/gopay</a><br>微信、支付宝、通联支付、拉卡拉、PayPal、Apple 的Go版本SDK。【极简、易用的聚合支付SDK】</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和 2FA 的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics：快速、经济高效的监控解决方案和时间序列数据库</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>连接、保护、控制和观察服务。</p>
+
+<p><a href="https://github.com/NVIDIA/gpu-operator">NVIDIA/gpu-operator</a><br>NVIDIA GPU Operator 在 Kubernetes 中创建、配置和管理 GPU</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>计算机指标的导出器</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Kubernetes 的渐进式交付</p>
+
+<p><a href="https://github.com/ariga/atlas">ariga/atlas</a><br>将数据库架构作为代码进行管理</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kueue">kubernetes-sigs/kueue</a><br>Kubernetes 原生作业队列</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

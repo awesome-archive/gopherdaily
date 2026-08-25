@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250926.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250926</span>
+</p>
+<p>每日一谚：Avoid context.Background(), make your goroutines promisable. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/26/self-reliant-programmer">“自立程序员宣言”解读：这不就是我们一直在说的Go语言哲学吗？</a><br>最近，一篇措辞激烈、观点鲜明的《自立程序员宣言》在技术圈流传开来。它以一种近乎愤怒的姿态，抨击了现代软件开发中日益增长的复杂性、对臃肿工具的过度依赖以及脆弱的供应链 。 对于许多沉浸在复杂框架和无尽工具链中的开发者来说，这份宣言可能显得有些“原教旨主义”。然而，在我们Go社区，当这篇文章被转发和讨论时， 一种奇特的、会心一笑的共鸣油然而生。我们中的许多人看完后的第一反应是：“这不就是我们一直在说的Go语言哲学吗？” 这份宣言的核心呼吁——**相信简单、最小化依赖、并勇于编写自己的工具——听起来就像是Go社区日常交流的“黑话”。本文将和你一起解读这份“檄文”，并逐一印证，为什么它所倡导的“自立”之道，早已深深烙印在Go语言的DNA之中。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-09-25-grafana-with-go-mysql-server">Grafana 的 go-mysql-server 指标后端</a><br>Grafana 最近在其指标仪表板中推出了对 SQL 查询的支持。 我们介绍了他们如何使用 Go 编写的 SQL 查询引擎 go-mysql-server 来实现此功能。</p> 
+
+<p><a href="https://medium.com/@Realblank/clean-architecture-why-it-saves-projects-where-a-simple-change-stops-being-simple-dfb11f0ae86d">Go 架构：在项目增长时保持代码整洁</a><br>想象一个已经使用了三年的产品。你“仅仅”向一个表单添加了一个字段，一个小时后你发现有五个测试失败了，迁移影响了两个服务，并且处理程序突然知道了数据库模式的一半。这是一个症状：策略（业务规则）与细节（框架、数据库、传输）纠缠在一起，任何调整都会拖累一堆依赖关系。 原生的clean architecture出现在OOP语言中，其最新趋势被凝固成六边形架构（端口和适配器）。一些经典技术（例如，深层继承层次结构）变得不规范或过度。这促使我们寻求更简单、更实用的相同原则的实现——这就是我想用Go展示的。</p> 
+
+<p><a href="https://www.xtxmarkets.com/tech/2025-ternfs">TernFS：一个EB级、多区域分布式文件系统</a><br>XTX是一家算法交易公司，使用先进的机器学习技术为全球50,000多种金融工具生成价格预测。随着XTX构建更好模型的研发工作不断推进，对资源的需求也在不断增加。该公司最初只有几台台式机和一台NFS服务器，10年后拥有了数万个高端GPU、数十万个CPU和数百PB的存储空间。随着计算能力的增长，存储系统难以跟上。在评估了各种第三方解决方案后，我们决定实现自己的文件系统，我们称之为TernFS。我们已经决定开源我们的努力：TernFS作为免费软件在我们的公共GitHub上提供。这篇文章介绍了TernFS的动机，解释了它的高级架构，然后探讨了一些关键的实现细节。如果您只想启动一个本地TernFS集群，请前往README。</p> 
+
+<p><a href="https://dev.to/teamcamp/code-comments-that-actually-help-the-google-engineering-approach-433c">Code Comments That Actually Help: The Google Engineering Approach</a><br>内容目录
+
+为什么注释会失败
+Google 的注释理念
+有用的注释类型
+审核清单
+团队工作流程
+工具和 Linting
+衡量影响
+Teamcamp 文档链接
+
+你写了一段很棒的代码。它运行完美，通过所有测试，并优雅地解决了问题。但六个月后，你盯着自己的创作，想知道你在想什么。
+
+听起来很熟悉吗？你并不孤单。
+
+即使在 Google，卓越的工程技术至关重要，与难以理解的代码的斗争仍在继续。
+
+Google 工程团队与大多数开发组织的区别不仅仅是他们的技术实力。这是他们通过战略注释实践使代码易于理解的系统方法。
+
+让我们深入探讨是什么让他们的做法如此有效，以及你如何应用这些原则来提高团队的生产力。</p> 
+
+<p><a href="https://dev.to/jones_charles_ad50858dbc0/go-reflection-taming-memory-costs-for-high-performance-apps-5f6e">Go 反射：驯服内存成本，打造高性能应用</a><br>介绍：Go 反射的力量与危险 Go 的 reflect 包对于动态编程来说是一个超级英雄——把它想象成用于在运行时检查结构体、调用方法或解析配置的瑞士军刀。构建一个通用的 ORM、一个 JSON 序列化器或一个动态配置加载器？Reflection 会支持你。但问题是：它是一个内存密集型的超级英雄。在高并发系统中，如每秒处理数千个请求的 API 服务器，反射会堆积分配、给垃圾收集器（GC）带来压力，并导致用户不满意的延迟峰值。 </p> 
+
+<p><a href="https://cryptobook.nakov.com">开发者实用密码学</a><br>一个现代的关于为开发者编写密码学的实用书籍，包含代码示例，涵盖了核心概念，如：哈希（例如SHA-3和BLAKE2），MAC码（例如HMAC和GMAC），密钥派生函数（例如Scrypt，Argon2），密钥协商协议（例如DHKE，ECDH），对称密码（例如AES和ChaCha20，密码块模式，认证加密，AEAD，AES-GCM，ChaCha20-Poly1305），非对称密码和公钥密码系统（RSA，ECC，ECIES），椭圆曲线密码学（ECC，secp256k1，curve25519），数字签名（ECDSA和EdDSA），安全随机数（PRNG，CSRNG）和量子安全密码学，以及密码库和开发者工具，包含大量Python和其他语言的代码示例。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.p99conf.io/2025/09/25/better-async-rust-disk-i-o/">更好的异步Rust磁盘I/O</a><br>比较tokio、io_uring（通过monoio）和其他技术在实际应用场景中的表现。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/">发布更改块跟踪 API 支持（alpha）</a><br>我们很高兴地宣布对更改块跟踪机制的 alpha 支持。这通过为 CSI 存储驱动程序提供一种有效的方法来识别持久卷快照中已更改的块，从而增强了 Kubernetes 存储生态系统。使用可以使用该功能的驱动程序，您可以从更快、更节省资源的备份操作中受益。如果您渴望尝试此功能，可以跳到入门部分。</p>
+
+<p><a href="https://ollama.com/blog/web-search">Web search</a><br>Ollama 中现在推出了新的网络搜索 API。Ollama 为个人用户提供了免费的网络搜索服务，通过 Ollama 的云服务可以获得更高的速率限制。</p>
+
+<p><a href="https://www.postgresql.org/about/news/postgresql-18-released-3142">PostgreSQL 18 发布！</a><br>PostgreSQL 全球开发小组今天宣布发布 PostgreSQL 18，这是世界上最先进的开源数据库的最新版本。PostgreSQL 18 通过一个新的 I/O 子系统提高了各种工作负载的性能，该子系统在从存储读取时展示了高达 3 倍的性能提升，并且还增加了可以使用索引的查询数量。此版本使主要版本升级的破坏性更小，加速了升级时间，并减少了在升级完成后达到预期性能所需的时间。开发人员还可以从 PostgreSQL 18 的功能中受益，包括在查询时计算值的虚拟生成列，以及数据库友好的 uuidv7() 函数，该函数为 UUID 提供了更好的索引和读取性能。PostgreSQL 18 通过支持 OAuth 2.0 身份验证，更容易与单点登录 (SSO) 系统集成。</p>
+
+<p><a href="https://read.perspectiveship.com/p/decision-log">卓越的属性：决策日志</a><br>你的最大导师不是别人，而是过去的你。</p>
+
+<p><a href="https://meks.quest/blogs/the-theatre-of-pull-requests-and-code-review">拉取请求和代码评审的剧场</a><br>作者分享了在Goatmire Elixir Conf上Saša Jurić的演讲，主题是关于代码审查和拉取请求（PR）的。演讲强调了编写讲述故事的提交信息的重要性，以及如何通过更小的、更易于审查的PR来改善代码审查流程。文章还讨论了如何通过规范化审查过程、创建5-10分钟即可完成的PR、以及减少代码审查的阻力来改进协作。最后，作者建议大家在准备PR时，考虑是否能够讲述一个审查者可以理解的故事。</p>
+
+<p><a href="https://stefvanwijchen.com/the-self-trivialisation-of-software-development">The self-trivialisation of software development</a><br>How software keeps making itself simpler: from libraries and open source to no‑code and AI. What self‑trivialisation means for developers’ skills, roles, and future.</p>
+
+<p><a href="https://medium.com/graalvm/writing-truly-memory-safe-jit-compilers-f79ad44558dd">真正实现内存安全的 JIT 编译器</a><br>V8 团队上个月发布了一篇关于他们称之为 V8 沙盒的优秀博文。 这不是针对您的 JavaScript 代码的沙盒——它旨在减轻由 JIT 编译器本身的错误引起的浏览器漏洞。</p>
+
+<p><a href="https://www.nethermind.io/blog/road-to-zk-implementation-nethermind-clients-path-to-proofs">Road to ZK Implementation: Nethermind Client’s Path to Proofs</a><br>Nethermind 正在有条不紊地为其执行客户端添加 ZK 准备。到目前为止，已完成：执行见证捕获、无状态区块重放、最小 EVM 二进制文件创建和 RISC-V64 编译。大部分繁重的工作已经完成。接下来的里程碑是 Zisk 集成以实现端到端证明，然后是 RISC0 和 SP1 支持。Nethermind 在其久经考验的生产可靠性的基础上，现在正在逐步将该基础扩展到零知识系统。</p>
+
+<p><a href="https://lukasniessen.medium.com/immutable-infrastructure-devops-why-you-should-replace-not-patch-e9a2cf71785e">Immutable Infrastructure DevOps：为什么要替换，而不是修补</a><br>将服务器和基础设施组件视为部署后不可更改。与其就地更新现有系统，不如用全新的、预配置的实例完全替换它们。</p>
+
+<p><a href="https://github.blog/security/supply-chain-security/our-plan-for-a-more-secure-npm-supply-chain">我们为更安全的 npm 供应链制定的计划</a><br>针对软件包注册表攻击激增的情况，GitHub 正在通过更严格的身份验证、细粒度的令牌和增强的受信发布来加强 npm 的安全性，以恢复对开源生态系统的信任。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1038715/e4a2f8f50c244545">mmap() 文件操作的逐步淘汰</a><br>内核中的 file_operations 结构是一组函数指针，实现了对文件的操作。特别是 mmap() 方法，当用户空间调用 mmap() 系统调用时，会将文件描述符后面的对象映射到其地址空间。然而，该方法目前正处于一个多版本发布的流程中，该流程始于 6.17 版本。该文章讨论了 mmap() 方法在内核中的一些问题，以及用新的 API 来替换它的过程，以更好地限制内核之外的代码可以做什么。</p>
+
+<p><a href="https://blog.cloudflare.com/email-service">Cloudflare 电子邮件服务私有 Beta 版发布</a><br>今天，我们推出了 Cloudflare 电子邮件服务。直接通过您的 Workers 发送和接收电子邮件，无需 API 密钥。我们将电子邮件发送和路由整合到一个专为开发人员构建的单一服务中。注册私有 Beta 版。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Sep/25/github-copilot-cli/#atom-everything">GitHub Copilot CLI 现在公开预览</a><br>GitHub 现在在编码终端 CLI 代理空间中有了自己的入口：Copilot CLI。 它与 Claude Code、Codex CLI、Gemini CLI 以及该领域中越来越多的其他工具的基本形式相同。它是一个终端 UI，接受指令，可以修改文件、运行命令并与 GitHub 的 MCP 服务器以及您配置的其他 MCP 服务器集成。</p>
+
+<p><a href="https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release">持续为您带来我们最新的模型，改进的 Gemini 2.5 Flash 和 Flash-Lite 发布</a><br>Google 发布了更新的 Gemini 2.5 Flash 和 Flash-Lite 预览模型，改进了质量、速度和效率。这些版本引入了“-latest”别名，方便访问最新版本，允许开发者测试并提供反馈，以塑造未来的稳定版本。</p>
+
+<p><a href="https://blog.nseldeib.com/p/pairing-with-claude-code-to-rebuild">使用 Claude Code 重建我的创业公司网站</a><br>使用 AI 代理（尤其是 Claude Code）和 MCP 服务器的冒险经历</p>
+
+<p><a href="https://openai.com/index/introducing-chatgpt-pulse">介绍Chatgpt pulse</a><br></p>
+
+<p><a href="https://www.testingcatalog.com/meta-introduces-vibes-feed-for-ai-generated-content">Meta 推出 Vibes Feed，用于 AI 生成的内容</a><br>Meta 在其 AI 应用和 meta.ai 上推出了 Vibes 功能，允许用户创建和分享 AI 生成的短视频；用户可以混音和分享带有视觉效果、音乐和风格选项的片段。</p>
+
+<p><a href="https://www.finalroundai.com/blog/anthropic-cpo-mike-krieger-on-ai-replacing-entry-level-jobs">Anthropic CPO 承认他们很少雇用应届毕业生，因为人工智能接管了入门级任务</a><br>Anthropic 首席产品官 Mike Krieger 承认应届毕业生面临严峻的就业市场，因为人工智能越来越多地处理曾经由入门级工人完成的任务。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/publicsuffix/list">publicsuffix/list</a><br>The Public Suffix List</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/julienschmidt/httprouter">julienschmidt/httprouter</a><br>A high performance HTTP request router that scales well</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/go-git/go-git">go-git/go-git</a><br>A highly extensible Git implementation in pure Go.</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/rs/zerolog">rs/zerolog</a><br>Zero Allocation JSON Logger</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

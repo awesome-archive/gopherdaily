@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250811.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250811</span>
+</p>
+<p>每日一谚：Handle errors explicitly </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/11/why-go-not-embrace-iouring">为何Go语言迟迟未能拥抱io_uring？揭秘集成的三大核心困境</a><br>然而，一个令人费解的问题摆在了所有 Go 开发者面前：作为云原生infra和并发编程的标杆，Go 语言为何对这颗唾手可得的“性能银弹”表现得如此 审慎，甚至迟迟未能将其拥抱入标准库的怀抱？一场在 Go 官方仓库持续了五年之久的 Issue 讨论（#31908），为我们揭开了这层神秘的面纱。</p> 
+
+<p><a href="https://antonz.org/chans">构建惯用Go管道的构建块</a><br>我创建了一个名为 chans 的 Go 包，它提供了通用的通道操作，使构建并发管道更容易。它的目标是灵活、不带偏见和可组合，而不会过度抽象或夺走开发者的控制权。</p> 
+
+<p><a href="https://dev.to/lovestaco/the-proxy-playbook-building-fast-secure-middle-layers-in-go-1jc5">The Proxy Playbook: Building Fast, Secure Middle Layers in Go</a><br>目前，我正在构建一个私人的 AI 代码审查工具，该工具在您的 LLM 密钥（OpenAI、Gemini 等）上运行，采用扁平的、无席位的定价——专为小型团队设计。  如果那是你喜欢的东西，请查看它。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/08/11/exploring-cloud-native-projects-in-sandbox-13-arrivals-from-2024-h2/">探索沙盒中的云原生项目：2024 年 H2 的 13 个新项目</a><br>这篇文章介绍了去年被 CNCF Sandbox 接受的 13 个开源项目。这些项目是根据 CNCF TOC（技术监督委员会）于 8 月、9 月和 10 月进行的投票添加的。</p>
+
+<p><a href="https://solmaz.io/typed-languages-are-better-suited-for-vibecoding">静态类型语言更适合“氛围编码”</a><br>这篇文章阐述了作者认为类型语言（如 TypeScript、Rust 和 Go）由于其安全性保证，比 Python 更适合于“氛围编码”（指在不完全了解代码的情况下，通过 LLM 等工具快速生成代码）。作者通过在 TextCortex 的 TypeScript 前端代码重构的例子，说明了 AI 工具在提高开发效率和代码质量方面的作用，并预测 Python 在生产部署中的采用率可能会下降。</p>
+
+<p><a href="https://notes.eatonphil.com/2025-08-09-what-even-is-distributed-systems.html">什么是分布式系统</a><br>分布式系统是进程之间交互的研究。任何两个交互的进程就构成了一个分布式系统，无论它们是否在同一主机上。与单进程系统相比，分布式系统在正确性（即一致性）、可靠性和性能（即延迟和吞吐量）方面带来了新的挑战。</p>
+
+<p><a href="https://relentless-leader.com/dive-deep-into-Paxos.html">以直观的方式理解Paxos</a><br>我们正在构建分布式系统方面坚实的基础。我们已经讨论了分布式时间；下一个我们将要讨论的主题是分布式共识。为了奠定分布式共识的基础，我们将讨论Paxos。Paxos 通过提供第一个可证明正确的解决方案，用于在不可靠的处理器之间达成共识，从而彻底改变了分布式计算，形成了现代分布式系统和数据库的理论基础。Paxos 是最重要，也是最难理解的算法之一。在本博客中，我将以一种非常直观的方式简化和解释 paxos。</p>
+
+<p><a href="https://ahmedhshaikh.medium.com/end-to-end-deployment-of-an-application-on-kubernetes-devops-guide-2025-b8f904b11818">端到端应用程序在 Kubernetes 上的部署 — Devops 指南 2025</a><br>嘿，Devops 学习者们，在这篇博文中，我将与您分享我在早期 devops 职业生涯中作为一名实习生参与的第一个端到端项目。这个项目给了我…的准确流程和正确的道路，让我开始我的 devops 旅程，以及如何在 AWS 中构建基础设施来部署应用程序。</p>
+
+<p><a href="https://ddia.vonng.com">设计数据密集型应用（第二版）</a><br>DDIA2，设计数据密集型应用（第二版）中文版翻译，设计数据密集型应用是一本关于数据系统设计的书籍，它深入探讨了数据密集型应用的架构和设计原则，涵盖了模型，存储，分区，事务，分布式系统、数据存储、流处理，批处理等各种主题。</p>
+
+<p><a href="https://transactional.blog/blog/2024-data-replication-design-spectrum">数据复制设计谱系</a><br>一致性复制算法可以根据它们处理副本故障的方式进行分类。在该谱系的三个常见点上，比较了资源效率、可用性和延迟，为如何为用例选择适当的复制算法提供了指导。</p>
+
+<p><a href="https://chameth.com/how-i-use-tailscale">我如何使用 Tailscale</a><br>我使用 Tailscale 大约四年了，它将我的各种设备、服务器和应用程序连接在一起。我想谈谈我如何使用它，您可能不知道的一些很酷的功能，以及我遇到的一些障碍。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/11/qwen-image-mps/#atom-everything">qwen-image-mps</a><br>Ivan Fioravanti 构建了这个 Python CLI 脚本，用于在 Apple silicon Mac 上运行 Qwen/Qwen-Image 图像生成模型，可以选择使用 Qwen-Image-Lightning LoRA 来显著加速生成。 总结来说，这个脚本可以运行Qwen/Qwen-Image模型，并且可以利用 LoRA 来加速生成过程。</p>
+
+<p><a href="https://onevcat.com/2025/08/claude-code">一个半月高强度 Claude Code 使用后感受</a><br>本文作者分享了使用 Claude Code (CC) 一个半月后的感受。文章讨论了 CC 带来的产品迭代速度提升、与传统编辑器 AI 的区别、CC 的边界和长处，以及在 vibe coding 时代需要注意的问题，包括任务拆解、subagent 的使用、命令和周边工具等。作者还分享了在不同技术栈和项目中，应该如何制定适合自己的开发策略。</p>
+
+<p><a href="https://www.dzombak.com/blog/2025/08/getting-good-results-from-claude-code">从 Claude Code 获得良好结果</a><br>在过去的几个月里，我一直在试验 LLM 编程代理。Claude Code 已经成为了我的最爱。
+
+虽然它并非没有问题，但它让我在相对较短的时间内编写了大约 12 个程序/项目，并且我觉得如果没有它，我不可能在相同的时间内完成所有这些。其中大部分，如果没有 Claude Code，我甚至不会费心去写，仅仅是因为它们会占用我太多的时间。（本文末尾附有列表。）
+
+我仍然远不是 Claude Code 的专家，我有一堆博文和文档要复习，可能对您有所帮助。但是——而且这很关键——您不必阅读所有内容就可以开始看到结果。您甚至不需要阅读 *本* 文章；只需输入一些提示并查看结果即可。
+
+也就是说，因为我刚为一份工作申请写了这篇文章，**以下是我从 Claude Code 获得良好结果的方法**。我已在适当的地方添加了一些示例链接。</p>
+
+<p><a href="https://queue.acm.org/detail.cfm?id=3746223">释放端用户可编程 AI 的力量</a><br>本文概述了一个 AI 优先的程序合成框架的高级设计，该框架围绕一种新编程语言 Universalis 构建，该语言专为知识工作者设计，易于阅读，针对我们的神经计算机 (Automind) 进行了优化，可以执行，并准备好被一组随附的工具分析和操作。 Universalis 语言旨在让用户能够通过自然和系统的方法来指导 LLM 执行各种任务。 此外，Universalis 具有前置条件和后置条件，确保了逻辑正确性和道德合规性，为 AI 安全提供了一种强大的方法。 本文还展示了 Universalis 支持高级特性，如条件、批量处理和查询理解，在保持自然语言感的同时扩展了其功能。 总之，Universalis 能够处理广泛的计算任务，从简单的算术和模式匹配到复杂的数据处理和工作流执行。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/RezaSi/go-interview-practice">RezaSi/go-interview-practice</a><br>Go Interview Practice is a series of coding challenges to help you prepare for technical interviews in Go. Solve problems, submit your solutions, and receive instant feedback with automated testing. Track your progress with per-challenge scoreboards and improve your coding skills step by step.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/steveiliop56/tinyauth">steveiliop56/tinyauth</a><br>The simplest way to protect your apps with a login screen.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>Powerful system container and virtual machine manager</p>
+
+<p><a href="https://github.com/e2b-dev/infra">e2b-dev/infra</a><br>Infrastructure for AI code interpreting that&#39;s powering E2B.</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/sammcj/gollama">sammcj/gollama</a><br>Go manage your Ollama models</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/k8sgpt-ai/k8sgpt">k8sgpt-ai/k8sgpt</a><br>Giving Kubernetes Superpowers to everyone</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria is a powerful, lightning fast and censorship resistant proxy.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/go-dev-frame/sponge">go-dev-frame/sponge</a><br>A powerful and easy-to-use Go development framework that enables you to effortlessly build stable, reliable, and high-performance backend services with a &#34;low-code&#34; approach.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

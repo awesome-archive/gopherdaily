@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260424.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260424</span>
+</p>
+<p>每日一谚：A good Go test is readable, maintainable, and tests one thing. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/24/go-code-design-day-one-principle-practical-patterns-list">Go 代码设计的“第一天原则”：一份能让你少走五年弯路的实战模式清单</a><br>每一个 Go 开发者，大概都经历过这样的心路历程： 项目启动初期，为了追求“快”，我们怎么方便怎么来。配置到处写，数据库连接随手建，错误日志直接 fmt.Println。我们安慰自己：“先跑起来，以后再重构。” 结果呢？ 半年后，项目变成了一座摇摇欲坠的“屎山”。配置散落在几十个文件里，改一个端口号要动十个地方；数据库连接池因为没关，把连接数打满；线 上出了 Bug，日志里只有一行孤零零的 record not found，查个问题比登天还难。 技术债，就像滚雪球，你越是假装看不见，它就滚得越大。这时候，你的内心肯定在呐喊：有没有一些在Go项目刚创建时期就应该知道的Go代码模式，可以让我在项目的**“第一天”**，就建立起一套健壮、 可维护、可观测的骨架呢！ </p> 
+
+<p><a href="https://sushantdhiman.dev/understanding-grpc-architecture-in-simple-terms/">用简单的术语解释 gRPC 架构</a><br>大多数教程解释了如何编写 .proto 文件并调用 gRPC 方法。但很少有人解释在调用之后实际上发生了什么。我最近在我的一个项目中实现了 gRPC，在学习过程中，我试图从第一性原理来理解它的架构——不仅是如何使用它，而且是为什么要这样设计以及为什么它很快。这篇文章是对该架构的简单分解。RPC：像调用本地代码一样调用远程代码让我们先从 gRPC 中去掉 &#39;g&#39;，理解 RPC 的含义。你遇到一种情况，必须执行一些不在你的机器上而是在其他远程机器上的代码。你会怎么做？为它编写一个 HTTP API。但这就是陷阱。用 HTTP 做这件事需要你编写额外的模板代码并创建 API，而且性能也会下降（至少与 RPC 相比）。如果有一种方法可以像在本地机器上一样（就像我们调用函数一样）在远程服务器上执行代码呢？这就是 RPC 的全部意义所在。RPC 为你抽象了所有网络复杂性。RPC 实际上是如何实现这一点的？这是一个简单的例子：result := Add(2, 3)这个 Add 函数看起来可能是本地的，但它实际上将通过以下组件在远程服务器上执行。- 客户端：通过调用远程服务器来启动 RPC 的软件。- 服务器：接收来自客户端的请求并执行代码的软件。- 存根（Stub）：远程服务器的本地实现。客户端将与它交互。- 骨架（Skeleton）：服务器到客户端的接口。它负责接收来自客户端的请求。- 协议：底层通信协议。可以是 TCP 或任何其他协议。客户端将使用存根调用 Add 函数。存根将准备一个 RPC 请求，包括有关要执行的函数的信息和所需参数。然后数据将被编组（marshalled）</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/04/23/from-ingress-nginx-to-higress-migrating-60-resources-in-30-minutes-with-ai/">从 Ingress NGINX 到 Higress：使用 AI 在 30 分钟内迁移 60 多个资源</a><br>随着 2026 年 3 月 Ingress NGINX 的正式退役，企业平台团队面临着紧迫的安全与合规任务。继续使用已退役的控制器会将关键基础设施暴露在未经修补的安全风险中。对于一位管理着包含 60 多个复杂 Ingress 资源集群的基础设施工程师来说，挑战很明确：寻找一个现代化的、企业级的替代方案，且无需数月的繁琐手动重构。这篇博文解释了如何通过利用 AI 智能体和 Higress 在短短 30 分钟内实现全面的迁移验证。Higress 是一个由阿里巴巴发起、最近加入 CNCF 沙箱的云原生且 AI 原生的 API 网关。解决方案：为什么 AI 时代选择 Higress？Higress 基于行业标准的 Envoy 和 Istio 构建，被专门设计为 AI 原生网关，在解决传统控制器缺点的同时，为大语言模型（LLM）提供了专用功能。- AI 原生架构：与传统网关不同，Higress 将 LLM 视为一等公民。它包含了诸如基于 Token 的速率限制（管理模型成本）和缓存能力（减少常见 AI 提示的延迟）等专用功能。- LLM 协议治理：它提供了与各种 LLM 提供商接口的统一协议，使团队能够在单个安全端点后切换模型。- 零停机可靠性：利用 Envoy 的 xDS 协议，Higress 允许在毫秒级进行配置更新。这消除了“NGINX 重载”问题，对于在 AI 流媒体和 gRPC 中保持持久连接至关重要。- 模型上下文协议（MCP）：Higress 支持托管 MCP 服务器，允许 AI 智能体通过网关与企业工具和数据进行安全交互。</p>
+
+<p><a href="https://tailscale.com/blog/aperture-public-beta">Aperture 测试版：为 AI 智能体时代提供更好的控制</a><br>Aperture 现已在所有套餐中可用，它提供了更好的控制和可见性——正好赶在补贴 AI 的时代结束之前。</p>
+
+<p><a href="https://seangoedecke.com/software-engineering-may-no-longer-be-a-lifetime-career/">软件工程可能不再是一生的职业</a><br>我认为没有令人信服的证据表明使用 AI 会使你的整体智力降低。然而，使用 AI 来执行任务意味着你对“执行该任务”本身学到的东西减少了，这似乎是非常明显的。一些软件工程师认为这是反对使用 AI 的决定性论点。他们的论点大致如下：1. 使用 AI 意味着你从工作中学习到的东西变少了。2. 随着技术技能退化，AI 用户随着时间的推移会成为效率较低的工程师。3. 因此，我们不应该在工作中使用 AI。我不一定同意第 2 点。一方面，从汇编语言转向 C 在某些方面使程序员效率降低，而在其他方面效率更高。另一方面，从手动编写代码转向使用 AI 可以说是更大的转变，所以谁知道呢？但这并不重要。即使我们承认第 2 点是正确的，这也仍然是一个糟糕的论点。在 2024 年之前，学习软件工程的最佳方式就是“去做软件工程”。这对我们来说真的很幸运！这意味着我们可以将编码爱好转化为赚钱的职业，而且真正喜欢这项工作的人会随着时间的推移变得越来越好。然而，这从来不是软件工程定义的不可变事实。这只是一个幸运的巧合。如果从长远来看，使用 AI 会使我们在工作中表现变差（甚至在一般推理能力上也是如此，尽管我仍然不相信这是真的），那对软件工程师来说真的很糟糕。但我们仍然可能不得不使用它，如果它提供了足够多的短期利益，就像建筑工人被迫搬运重物一样：因为那是我们被支付薪水去做的事情。如果你从事建筑工作，你需要搬运一系列重物才能高效。但是搬运重物会长期磨损你的背部和关节，使你随着时间的推移效率降低。建筑工人不会因为搬运重物而说自己……</p>
+
+<p><a href="https://www.docker.com/blog/trivy-kics-and-the-shape-of-supply-chain-attacks-so-far-in-2026/">Trivy、KICS 以及 2026 年迄今为止的供应链攻击形态</a><br>捕捉 KICS 攻击：发生了什么，以及关于公开、快速协作的案例在过去几周里，我们处理了 Docker Hub 上的两起供应链泄露事件，它们的形态相似：首先是 Trivy，现在是 Checkmarx KICS。在这两起案例中，被盗的发布者凭据都被用于通过合法的发布流程推送恶意镜像。在这两起案例中，Docker 的基础设施均未被破坏。在这两起案例中，所有拉取被污染标签的用户其软件供应链都曾短暂暴露。这是我们对 KICS 事件的说明，受影响的用户应该怎么做，以及这种模式揭示了防御者需要在哪里投资。发生了什么2026 年 4 月 22 日大约 12:35（协调世界时），攻击者使用有效的 Checkmarx 发布者凭据向 Docker Hub 进行了身份验证，并将恶意镜像推送到了 checkmarx/kics 仓库。五个现有的标签被覆盖为恶意摘要（latest, v2.1.20, v2.1.20-debian, alpine, debian），并创建了两个新标签（v2.1.21, v2.1.21-debian）。这些镜像是由攻击者控制的源仓库构建的，而不是 Checkmarx 的。被污染的二进制文件保持了合法的扫描表面完整，并增加了一个隐蔽的渗漏路径。扫描输出被收集、加密并发送到攻击者控制的基础设施 audit.checkmarx[.]cx，User-Agent 为 KICS-Telemetry/2.0。由于 KICS 扫描 Terraform、CloudFormation、Kubernetes 和类似配置文件，其输出通常包含机密、凭据、云资源名称和内部拓扑结构。</p>
+
+<p><a href="https://geohot.github.io/blog/jekyll/update/2026/04/24/positivity.html">积极性</a><br>今天是保持积极的好日子。有时我太专注于消极的一面，以至于忘记了事情实际上有多好。我们活着见证了机器智能的诞生。10 年前能彻底取代 Google 的东西现在可以在你的笔记本电脑上运行。最好的 AI 研究是开源的，约束是创造力之母。前沿领域比以往任何时候都更加开放和具有竞争力。我小时候想成为一名程序员，我想我做到了。我的两家公司多年来一直在持续改进开源项目，雇佣了超级有才华的人，并实现了可持续发展，卖出的设备价格高于制造成本。我仍然编写大量的程序。我认为 comma 和 tinygrad 的核心使命在去中心化的后云时代深刻地塑造了我们的未来，在那里你真正拥有自己的东西，但目前还没有定论。如果这是板上钉钉的事，那就没意思了。我在 Instagram 上看到一段视频，一群流行朋克青少年嘲笑 TurboTax 的复杂性和游说计划。在“奋斗者”之外形成了令人敬畏的新亚文化，哲学也依然活跃，当然这并非你所预期的，但这总是必然的结果。我们今天都承认生活在一个多极世界中，而且与我听说关于苏联的情况不同，美国和中国都是真正宜居的地方。它们不同，各有各的长处和短处，都有好的一面和不那么好的一面，但有时我太沉迷于批评，以至于忘记了水是多么清澈。随便你怎么说特朗普和美国政治，当然……</p>
+
+<p><a href="https://crawshaw.io/blog/building-a-cloud">构建一个云</a><br>我正在构建一个云2026-04-22今天是融资公告日。正如面向更广泛受众写作的本质一样，这是一个正式、安全的公告。理应如此。写作在大规模环境下必然变得客观。但我还是想写一些个人的东西，关于为什么我要这样做。构建 exe.dev 的目标是什么？我已经是一家运行得非常好的初创公司的联合创始人，销售着一种我从最初帮助设计和构建时一样喜爱的产品。是什么让我不顾一切痛苦去创办另一家公司？一些同行创始人不可置信且震惊地看着我，我不明白为什么我会自投罗网。（更糟糕的是，经验告诉我，大部分痛苦还在未来。）这是一个很难回答的真正问题，因为我开始寻找一个“宏大”的理由，一个原则或社会需求，一个超越挑战的理由或动机。但我相信真相要简单得多，对某些人来说，我敢肯定同样令人难以置信。我喜欢电脑。在某些科技圈子里，这是一个不寻常的陈述。（“在这个屋檐下，我们咒骂电脑！”）我懂，电脑确实可能非常令人沮丧。但我喜欢电脑。我一直都喜欢。让计算机做事情真的很有趣。痛苦，当然，但结果是值得的。小型微控制器很有趣，台式机很有趣，手机很有趣，服务器也很有趣，无论它们是放在你的地下室里还是放在世界另一端的数据中心里。我都喜欢。所以，当我承认我不喜欢今天的云时，对我来说这不是小事。我想喜欢。计算机很棒，无论是直接安装在 PC 上的 BSD 还是 Linux 虚拟机。我可以享受 Windows、BeOS、Novell NetWare，甚至在过去我安装过 OS/2 Warp 并玩得很开心。Linux 在今天特别强大，是无尽潜力的源泉。而且对于那些堆积如山的成页产品来说，云只不过是 Linux 虚拟机而已。</p>
+
+<p><a href="https://www.allthingsdistributed.com/2026/04/17/the-invisible-engineering-behind-lambdas-network.html">Lambda 网络背后的隐形工程</a><br>Lambda 网络背后的隐形工程2026 年 4 月 22 日特别感谢那些与我分享他们的故事并帮助实现这篇博文的工程师们：Ravi Nagayach、Prashant Singh、Kshitij Gupta 以及整个 Lambda 网络团队。他们是在从事让 AWS 运行的隐形工程工作的人。AWS 的大多数基础设施改进都是隐形发生的。工程团队花费数年时间逐步重建数百万客户依赖的系统，同时这些系统在全规模下运行而不受干扰。Marc Olson 将此描述为在飞行中将螺旋桨飞机改装成喷气机。犯一个错误，飞机就会坠毁。但如果做对了……就没人会注意到。这就是那些永远不会上头条或发表博文的工作（至少在事情按计划进行时不会）。比如优化 iptables 规则、绕过内核锁竞争或重写数据包头。这些工作的成功是静默的。回报是知道你所做的工作比一周前更好，并且下一个团队不会遇到你刚刚移除的同样的约束。我最近一直在想这个问题。有像 S3 Files 这样的大型发布，它们解决了非常明显的客户问题，然后还有那些在很长一段时间内悄悄发生、在客户视线之外的令人印象深刻的工作。今天，我想和你分享一个关于 Lambda 的故事，它跨越了近十年，并使得我们认为不可能的事情（例如在无服务器函数中运行延迟敏感的工作负载）变得可能。这是 Lambda 网络团队的故事，以及他们细微的创造力是如何实现的。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-everything">DeepSeek V4 - 接近前沿水平，成本仅为其一小部分</a><br>中国 AI 实验室 DeepSeek 上一次模型发布是去年 12 月的 V3.2。他们刚刚发布了备受期待的 V4 系列的首批模型：DeepSeek-V4-Pro 和 DeepSeek-V4-Flash。这两个模型都是 100 万 token 上下文的混合专家模型（MoE）。Pro 总参数量 1.6T，活跃参数 49B。Flash 总量 284B，活跃参数 13B。它们使用标准的 MIT 许可证。我认为这使 DeepSeek-V4-Pro 成为新的最大开源权重模型。它比 Kimi K2.6（1.1T）和 GLM-5.1（754B）还要大，并且是 DeepSeek V3.2（685B）尺寸的两倍多。Pro 在 Hugging Face 上有 865GB，Flash 有 160GB。我希望轻量量化的 Flash 能在我的 128GB M5 MacBook Pro 上运行。如果我能从磁盘流式传输必要的活跃专家，Pro 模型也许也有可能运行。目前，我通过 OpenRouter 使用 llm-openrouter 插件试用了这些模型。我把 Opus 4.7 和 DeepSeek-V4-Pro 对比生成了一张“骑自行车的鹈鹕”图片。DeepSeek 得到了一辆坚固的自行车，虽然辐条有点锯齿状，车架稍微压缩了一点。鹈鹕出了一点问题——它的身体非常大，只有一只翅膀，背部看起来很奇怪，看起来像是在溺水。</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports/#atom-everything">关于近期 Claude Code 质量报告的更新</a><br>关于近期 Claude Code 质量报告的更新事实证明，过去两个月关于 Claude Code 提供较差质量结果的大量投诉是有实情基础的。模型本身没有错，但 Claude Code 脚手架中的三个独立问题导致了复杂的但实质性的问题，直接影响了用户。Anthropic 的事后分析详细描述了这些问题。这个特别让我印象深刻：3 月 26 日，我们发布了一个更改，清除空闲超过一小时的会话中 Claude 的旧有思考，以减少用户恢复这些会话时的延迟。一个错误导致这种情况在会话的其余部分每一轮都在发生，而不仅仅是一次，这让 Claude 看起来健忘且重复。我们在 4 月 10 日修复了它。这影响了 Sonnet 4.6 和 Opus 4.6。我经常有 Claude Code 会话，我会把它们留一个小时（或者经常是一天甚至更久）才回来。现在我有 11 个这样的会话（根据 ps aux | grep &#39;claude &#39;），而那还是在我前几天关闭了更多会话之后。如果正在构建智能体系统，值得详细阅读这篇文章——即使撇开模型本身固有的非确定性不谈，影响脚手架的 bug 类型也非常复杂。</p>
+
+<p><a href="https://jalammar.github.io/how-gpt3-works-visualizations-animations/">GPT3 是如何工作的 - 可视化与动画</a><br>科技界充斥着 GPT3 的炒作。大型语言模型（如 GPT3）开始以其能力令我们感到惊讶。虽然对大多数企业将其放在客户面前还不够完全可靠，但这些模型表现出的聪明火花肯定会加速自动化的进程和智能计算机系统的可能性。让我们揭开 GPT3 的神秘面纱，了解它是如何训练以及如何工作的。训练好的语言模型生成文本。我们可以选择向其输入一些文本，这会影响其输出。输出是根据模型在训练期间“学习”到的内容生成的，在训练期间，它扫描了大量的文本。训练是将模型暴露于大量文本的过程。该过程已完成。你现在看到的所有实验都来自那一个训练好的模型。估计耗费了 355 个 GPU 年，成本为 460 万美元。3000 亿个 token 的文本数据集被用于生成训练……</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amo</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
+
+<p><a href="https://github.com/guohuiyuan/go-music-dl">guohuiyuan/go-music-dl</a><br>一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10&#43; 个主流平台，支持多源</p>
+
+<p><a href="https://github.com/e2b-dev/infra">e2b-dev/infra</a><br>Infrastructure that&#39;s powering E2B Cloud.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

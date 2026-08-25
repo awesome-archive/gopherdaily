@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250414.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250414</span>
+</p>
+<p>每日一谚：Explicitly ignore values with blank identifier (_) instead of silently ignoring them </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@bryan.hyland32/rust-is-easy-go-is-hard-521383d54c32">Rust比Go更容易？</a><br>作者最近参与了一个项目，他认为Go非常适合。由于他有一段时间没有使用Go了，所以他也认为这是一个练习并保持技能的好机会。结果发现，Rust实际上比Go更容易使用。文章讲述了这个故事，并从枚举、trait与接口以及错误处理三个方面比较了Rust和Go，得出结论：对于复杂且需要维护的系统，Rust前期较高的学习成本能够避免Go长期维护中遇到的问题。</p> 
+
+<p><a href="https://tonybai.com/2025/04/13/top-programmers-methods-mindset">揭秘顶尖技术专家的15个关键方法与心态，不只靠代码</a><br>Matthias Endler在他广受关注的文章《我所认识的最优秀的程序员》中，基于多年的观察，提炼出了那些真正顶尖的工程师们所共有的特质与习惯。这并非一份简单的技能清单，而更像是一份关于技术匠心、持续成长和专业心态的深度指南。在这篇文章中，我门将一同探索这些宝贵的洞见，希望能为你我的技术之路带来启发。</p> 
+
+<p><a href="https://blog.cubed.run/the-cards-of-concurrency-in-go-0d7582cecb79">大多数人忽略了Go的并发秘密</a><br>并发很难。非常难。当需要多个任务同时运行时，事情很快就会变得混乱。我花了数年时间在其他语言中与线程和锁作斗争，我的天，竞争条件和死锁……简直是噩梦！</p> 
+
+<p><a href="https://thenewstack.io/prepare-your-mac-for-go-development">准备你的Mac用于Go语言开发</a><br>本文教你如何准备你的 Mac，以便使用 Go 编程语言进行第一个项目。它讨论了系统配置、支持软件、语言安装等等。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://thenewstack.io/boost-your-ci-cd-pipeline-automate-docker-with-github-actions">提升您的 CI/CD 管道：使用 GitHub Actions 自动化 Docker</a><br>本指南深入探讨如何使用 GitHub Actions 自动化 Docker 工作流程，以实现更快的部署。随着云原生开发的兴起和 CI/CD 管道的日益复杂，自动化必不可少。GitHub Actions 提供了一种将 Docker 无缝集成到您的工作流程中的方法，从而减少人工操作并提高部署速度。我们将逐步指导您完成设置和使用 GitHub Actions 自动构建和推送 Docker 镜像，以及将其部署到 Kubernetes 集群的过程。同时，我们还将介绍如何使用 Trivy 等安全工具扫描镜像中的漏洞，确保仅推送安全的镜像。</p>
+
+<p><a href="https://transactional.blog/blog/2025-torn-writes">撕裂写检测和保护</a><br>磁盘具有承诺原子性的数据单元：扇区。历史上，它是 512 字节。磁盘一次也接受对多个连续扇区的写入请求。如果断电，这可能导致只有一部分扇区被写入：撕裂写。数据库在 4KB 或更大的页面上运行，因此容易受到撕裂写的影响。受撕裂写影响的数据库页面称为撕裂页面。不同的数据库对在恢复期间检测撕裂页面以及如何将页面恢复到正确的完整页面映像有不同的看法和策略。本文探讨了各种数据库中检测和保护撕裂写的方法，包括仅检测、扇区大小页面、记录完整页面、记录页面首次写入、双写缓冲区、写时复制、首次写入复制以及原子（多）块写入等技术，并对这些方法进行了比较。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://tonybai.com/2025/04/14/what-is-a2a-protocol">告别智能体孤岛：谷歌A2A协议能否成为企业AI协作的通用语？</a><br>谷歌近日联合 Atlassian、Salesforce、SAP、LangChain、Cohere 等超过 50 家技术合作伙伴和领先服务提供商，共同发布并推动一个全新的开放协议——Agent2Agent(A2A)。该协议旨在为不同生态系统中的AI智能体提供一种标准的通信语言，使其能够安全地发现彼此、交换信息、协调行动，最终实现跨平台、跨应用的无缝协作。</p>
+
+<p><a href="https://simonwillison.net/2025/Apr/14/sqlite-file-format-viewer/#atom-everything">SQLite 文件格式查看器</a><br>Visal In 使用 React 和自定义 TypeScript 解析器构建了一个简洁的基于浏览器的可视化界面，用于探索 SQLite 数据库文件的结构。</p>
+
+<p><a href="https://blog.usetusk.ai/blog/comparing-ai-agents-for-unit-test-generation-typescript">TypeScript AI单元测试生成器对比：Tusk vs. Cursor Agent vs. Claude Code</a><br>本文比较了三种AI编码代理（Tusk、Cursor和Claude Code）在TypeScript代码库中生成单元测试的质量和检测潜在bug的能力。测试结果显示，虽然三种代理都能生成可执行的测试代码，但在bug检测能力和测试代码质量方面存在显著差异。Tusk在遵循测试设置和模拟最佳实践方面表现出更高的稳定性，并且在大多数测试生成运行中都能正确识别PR中的bug，而Cursor Agent和Claude Code则并非如此。</p>
+
+<p><a href="https://dmodel.ai/nullability-gentle">CodeBot 内部：大型语言模型理解可空性的温和介绍</a><br>本文介绍了大型语言模型（LLM）如何理解代码中的可空性。作者通过实验和分析，探讨了LLM在不同情况下理解和处理可空变量的能力，并提出了一种探测模型内部状态以衡量其可空性理解的“可空性探针”方法。实验结果表明，LLM 通过训练学习编程规则，理解可空类型的概念，并且模型大小和训练步骤会影响其理解能力。文章还展示了可视化工具，用于展示模型在处理程序时对可空性的“思考”过程。</p>
+
+<p><a href="https://www.adithyan.io/blog/writing-cursor-rules-with-a-cursor-rule">使用Cursor规则编写Cursor规则</a><br>人工智能在聊天之间会忘记信息。Cursor规则可以解决这个问题。了解为什么需要它们以及一个简化编写它们的技巧。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>Self-hosted, lightweight server and website monitoring and O&amp;M tool</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB is an open-source, fast, reactive, in-memory database optimized for modern hardware.</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>An alternative to the immich-CLI command that doesn&#39;t depend on nodejs installation. It tries its best for importing google photos takeout archives.</p>
+
+<p><a href="https://github.com/miniflux/v2">miniflux/v2</a><br>Minimalist and opinionated feed reader</p>
+
+<p><a href="https://github.com/kubernetes/dashboard">kubernetes/dashboard</a><br>General-purpose web UI for Kubernetes clusters</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

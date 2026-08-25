@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241216.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-16</span>
+</p>
+<p>每日一谚：Use constants for magic numbers </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/EI4Xe0EvNoTUiN-Sc1C-oA">Go 1.24新特性前瞻：语法、编译器与运行时</a><br>Go 1.24rc1已经发布，前瞻一下新特性，这一篇主要包括语法、编译器和运行时层面主要变化的介绍</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoUnionTypesStartWithGoals">我认为Go联合类型的提案应该从他们的目标开始</a><br>Chris Siebenmann 是 Go 编程社区的贡献者，他认为，任何关于 Go 联合类型的提案都应该优先考虑澄清其目标，而不是提出建议的语法。Siebenmann 批评当前的提案缺乏明确的目标，使其难以有效地评估和讨论。他认为，一个明确的目标对于提案的成功至关重要，并且可以指导其被接受，即使实现该目标的手段与最初的想法不同。Siebenmann 的博客是 CSpace 社区的一部分，是讨论编程主题（包括 Go）的平台，他鼓励在语言增强提案中透明地表达意图。</p> 
+
+<p><a href="https://dev.to/souvikinator/arrays-vs-slices-in-go-understanding-the-under-the-hood-functioning-visually-4gh5">Go 中的数组 vs 切片：了解“幕后”的原理</a><br>本文档深入探讨了 Go 中数组和 slice 之间的区别，并通过可视化示例说明了它们的内部工作原理。Go 中的数组是固定大小的内存块，用特定数量的元素声明，而切片则通过后备数组和标头结构提供动态大小调整功能。切片通过分配更多内存并在达到容量时复制现有元素来增长，在 Go 1.18 版本之后，增长策略从简单的翻倍发展到容量增加 25%。使用数组或切片之间的选择取决于可预测的数据大小与动态数据大小、性能考虑以及对共享数据视图的需求。数组是首选小型、固定大小的数据，同时考虑到性能和类型安全性，而切片则用于动态数据和相同数据的多个视图。该文档还引用了一个工具，该工具可以将 Notion 页面转换为 Markdown，并鼓励加入 Discord 社区以进一步参与。</p> 
+
+<p><a href="https://www.lambrospetrou.com/articles/encryption/#envelope-encryption-with-kms">如何在 Go 中使用 KMS 进行加密和信封加密</a><br>本文提供了对称加密、使用密钥管理服务 （KMS） 进行信封加密和密钥轮换的全面指南，重点介绍了 Go 实施。它介绍了如何使用对称加密通过数据加密密钥 （DEK） 将明文转换为密文，以及如何使用 KMS 安全地管理 DEK，以最大限度地减少潜在密钥泄露的影响。作者演示了信封加密的过程，其中 DEK 使用密钥加密密钥 （KEK） 进行加密，并讨论了使用 KMS 服务安全地存储和管理 KEK 的好处，从而降低了密钥泄露的风险。本文还谈到了密钥轮换对于减轻潜在 DEK 泄露影响的重要性，并介绍了 AWS 等服务使用的多级信封加密概念，以有效管理大量密钥。在整个过程中，作者旨在通过 Go 代码示例使概念具体化，并强调 KMS 提供商为保护密钥而采取的安全措施。这种方法允许开发人员安全地加密数据、管理加密密钥并根据需要轮换它们，同时依靠云提供商的 KMS 服务来实现密钥安全。</p> 
+
+<p><a href="https://mstryoda.medium.com/do-not-miss-messages-when-kafka-topic-partitioned-915dcb2bfc0b">Kafka Topic Partitioned 时不错过消息</a><br>本文演示了如何使用 Go 作为编程语言，使用 IBM/sarama 作为 Kafka 库，确保 Kafka 主题分区中的使用者在添加新分区时不会错过消息。它指导读者使用 Docker 设置本地 Kafka 代理，使用循环平衡策略配置使用者，以及向主题添加分区以观察使用者行为。作者 Emre Savc 提供了代码片段和 Docker compose 配置来说明该过程，重点介绍了使用者自动包含的新分区。本文还涉及不同的分区平衡策略，重点介绍循环策略的工作原理。总体目标是向读者展示如何处理 Kafka 主题中的动态分区更改，确保使用者可以扩展和处理来自新创建分区的消息。该媒体既是 Kafka 使用者设置和分区管理的教程，也是参考。</p> 
+
+<p><a href="https://softwaredoug.com/blog/2024/12/14/throwaway-prs-not-design-docs">倾向于抛弃代码而非设计文档</a><br>该文档挑战了通过设计文档在实施之前仔细规划和记录软件开发的常规方法。相反，它提倡一种“编码狂欢”的方法，涉及创建草稿拉取请求以进行原型设计，征求早期反馈，并在这些草稿中记录过程。这种方法强调计划与实际代码之间不可避免的偏差，建议真正的设计源于编码和迭代的过程。作者主张抛弃初始想法，并在开发过程中逐步填补测试空白。尽管承认传统设计文档的有限价值，作者仍然认为它们在组织反馈、提供长期愿景或在编码不可行时有其作用。总体信息提倡一种有纪律的黑客文化，而非详细的设计规划，强调通过代码学习和适应。</p> 
+
+<p><a href="https://mihaiolteanu.me/interactive-dev">高速软件开发风格</a><br>本文档介绍了一种高速的实验性软件开发方法，该方法强调频繁的代码更改、热重载和最短的重启时间。作者提倡一种编码风格，优先考虑基于函数的可组合代码，通常避开传统工具和大量文档，转而使用简化的、以命令行为中心的环境。通过将实验数据与生产代码一起保存，并使用 print 语句进行内省，作者为持续的实验和学习创造了一个类似实验室的环境。该理念概述了对传统软件工程实践的挑战，而是促进了与代码库的规范化、动手交互，从而促进了快速迭代和理解。</p> 
+
+<p><a href="https://dev.to/frorning/big-decimal-arithmetic-across-programming-languages-bridging-the-gap-n71">跨编程语言的大十进制算术：弥合差距</a><br>本文档讨论了各种编程语言中大十进制算法的可用性和功能，重点介绍了 Python、Java 和 C&#43;&#43; 在通过“decimal”等库提供强大的本机支持方面处于领先地位。Decimal“、”BigDecimal“和 GMP/MPFR。它指出了 Go、Node.js 和 Elixir 等缺乏原生支持的语言所面临的挑战，并提出了 FFI 集成或通过 gRPC 或 Thrift 提供远程服务等解决方法。本文还介绍了高性能库用于乘法、除法和模算术等运算的高级算法，以及在本身不支持高精度算术的语言中实现这些算法的困难。为了克服 Go 和 Elixir 等语言的限制，本文档建议与提供高精度计算的服务集成或使用外部库，尽管存在潜在的性能开销或复杂性。本文档最后提供了使用 GMP 和 MPFR 库设置 C&#43;&#43; 项目的指南，重点介绍了如何使用 CMake 进行配置。本摘要概括了编程语言中有关大十进制算术支持的要点、针对缺少此功能的语言的建议解决方法，以及在 C&#43;&#43; 中使用特定库的简要指南。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2024/12/16/cpumanager-strict-cpu-reservation/">Kubernetes v1.32 为严格的 CPU 预留添加了一个新的 CPU 管理器静态策略选项</a><br>Kubernetes v1.32 更新为 CPU 管理器静态策略引入了一个 &#39;strict-cpu-reservation&#39; 选项，解决了对不受控制的中断/计时器影响工作负载性能的担忧，尤其是在电信/NFV 用例中。此功能最初处于 alpha 阶段，它明确为操作系统守护程序保留系统 CPU，从而防止工作负载使用这些内核，如果管理不当，可能会导致运行中的 Pod 不足。要启用它，用户必须激活 &#39;CPUManagerPolicyAlphaOptions&#39; 特性门控，将 &#39;strict-cpu-reservation&#39; 设置为 true，并在 kubelet 配置中调整 &#39;reservedSystemCPUs&#39; 设置。可以通过 CPU 管理器计数器进行监控，并鼓励提供反馈以改进该功能的实现。引入此严格的预留策略被视为某些部署的关键步骤，并邀请社区做出贡献并进一步讨论。更多详细信息和参与机会可以通过 Kubernetes 的文档和 SIG Node 会议找到。</p>
+
+<p><a href="https://thenewstack.io/the-future-of-ai-and-travel-relies-on-synthetic-data/">人工智能的未来依赖于合成数据</a><br>New Stack 社区讨论了合成数据在推进 AI 方面的关键作用，强调了由于现实世界数据集无法训练强大的 AI 模型而存在的必要性。人工创建的合成数据是为了反映真实数据的各个方面，越来越多地用于填补空白和增强数据集，确保 AI 模型准确、公正和公平。文章引用了 Gartner 的预测，即到 2024 年，合成数据将构成 AI 中使用的数据的很大一部分，并且它正在应用于旅游等行业，有助于预测航班价格和优化旅行者体验。使用合成数据也被视为应对数据稀缺挑战的解决方案，支持开发可以泛化于不同场景和人口统计数据的 AI 模型。其潜在信息是，合成数据不仅仅是真实数据的替代品，而且是可以提高人工智能在各个领域的性能和合规性的宝贵补充。本文暗示了采用合成数据来克服 AI 进步的数据可用性和质量限制的趋势。</p>
+
+<p><a href="https://thenewstack.io/genai-is-quickly-reinventing-it-operations-leaving-many-behind/">GenAI 正在迅速重塑 IT 运营，将许多人抛在后面</a><br>New Stack 社区讨论了生成式 AI （GenAI） 对 IT 运营管理 （ITOM） 的变革性影响，从被动系统转变为主动系统。GenAI 通过自主监控、诊断和补救事件来增强 ITOM，这些任务以前是手动的，需要人工干预。该技术现在能够提供及时、上下文感知的见解和建议，为 IT 团队确定关键问题的优先级。虽然 GenAI 正在推进 ITOM 功能，但它被视为对传统 AI 的补充，将这两种技术混合在一起以自动执行重复性任务并优化 IT 系统会产生最佳结果。重点是利用 GenAI 的权威洞察和 LLM 在问题发生之前预测问题，从而实现自我优化的 IT 生态系统。ITOM 的这种发展是由 GenAI 的集成推动的，有望实现更智能和自主的 IT 运营。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://hatchworks.com/blog/gen-ai/ai-orchestration/">AI 编排：面向 2025 年的内容、原因和方式</a><br>本文讨论了 AI 编排的概念，将其作为简化和增强组织内各种 AI 工具集成的一种手段，将其比作指挥管弦乐队。它强调了独立 AI 应用程序和 AI 编排系统之间的区别，强调了后者协调不同 AI 工具处理复杂任务的能力。概述了 AI 编排的核心组件（自动化、集成和管理），重点介绍了 API 和云计算在使 AI 编排成为可能方面的作用。本文强调了 AI 编排在提高运营效率和 AI 系统性能方面的优势，同时还可以解决数据安全性和互操作性等挑战。建议了最佳实践，包括从试点项目开始、确保数据质量、选择适当的工具和持续监控。AI 编排的未来趋势是一个值得关注的领域，但具体细节没有详细说明。</p>
+
+<p><a href="https://outlore.dev/blog/model-context-protocol/">关于使用 Model Context Protocol （MCP） 进行构建的思考</a><br>模型上下文协议 （MCP） 是一种新兴标准，它有助于将 Claude Desktop 等大型语言模型 （LLM） 连接到外部工具和数据源，为集成各种 API 和数据库提供了一条有前途的途径。尽管具有潜力，但当前的实现（例如在 Claude Desktop 中）仍未达到完整规范，缺乏流数据更新、动态资源处理和强大的超时管理等功能。该文档提供了一个不错的概述，但可以更加集成，并且开发体验各不相同，Python SDK 存在明显的问题，而 TypeScript SDK 因其有用的 API 和类型定义而受到称赞。为了增强用户体验，建议包括为 MCP 服务器建立官方注册表、启用异步任务调度以及为协作任务进行会话化交互。这些改进可以弥合 MCP 的技术能力与无缝集成到 AI 应用程序之间的差距，使开发人员和用户更容易利用各种工具和数据源。该反思强调了 MCP 的当前限制和变得更加用户友好和稳健的潜在方向。</p>
+
+<p><a href="https://willwhitney.com/computing-inside-ai.html">AI 内部的计算</a><br>该文件讨论了从将大型语言模型 （LLM） 视为对话代理到将其视为计算机应用程序的转变，这种比喻可以释放它们在生产力和创造力方面的全部潜力。通过生成图形界面，这些模型可以提供可发现性、效率和实时交互，类似于使用工具而不是人。这种模型即计算机的方法提出了一种范式，其中 LLM 为任务动态创建定制界面，可能会改变人类与技术交互的方式，甚至取代传统的操作系统。该概念通过暗示这一未来的当前应用程序示例（例如 websim.ai 和 GameNGen）来说明，并提出了有关此类生成接口可能出现的实际实现、分发和新体验的问题。该讨论暗示了未来 LLM 将充当根据用户需求量身定制的变形工具，提供一种更直接、更强大的方式来处理复杂任务。</p>
+
+<p><a href="https://amjith.com/blog/2024/introducing-llm-to-litecli/">将 LLM 引入 Litecli</a><br>本文档讨论了 LiteCLI 中添加的一项实验性功能，这是一个命令行 SQLite 数据库客户端，它集成了语言学习模型 （LLM） 以根据有关数据库的自然语言问题生成 SQL 查询。该功能仍在开发中，允许用户浏览存储在 SQLite 数据库中的 Chrome 历史数据，并接收可以在执行前进一步编辑的 SQL 查询。该实现使用 llm 库访问数据库架构和示例行，制作指导 LLM 制定 SQL 查询的提示。该实验强调了模型理解特殊时间戳格式的能力，并证明了使用本地 LLM 生成高质量 SQL 查询的可行性。此功能的灵感来自 Simon 的 sqlite-utils-ask 插件，实验代码驻留在特定的 git 分支中。该功能是实验性的，鼓励用户在执行之前编辑 SQL 查询，并为生成的 SQL 提供解释的额外好处。</p>
+
+<p><a href="https://simonwillison.net/2024/Dec/15/phi-4-technical-report/#atom-everything">Phi-4 技术报告</a><br>Phi-4 技术报告详细介绍了 Microsoft 的最新语言模型 Phi-4，该模型拥有 140 亿个参数，旨在擅长复杂推理，尤其是在与数学相关的任务中。Phi-4 通过使用高质量的合成数据集、精选的自然数据和训练后创新而脱颖而出，挑战了大型模型总是更优越的观念。该模型目前可通过 Hugging Face 等平台上即将发布的版本访问，通过非官方的 GGUF 版本展示其功能，这些版本可以使用特定工具进行安装和交互。该报告重点介绍了模型的训练方法，强调通过合成数据进行结构化学习，其中包括广泛的主题、细致入微的示例和准确的可执行代码。Microsoft 的 Phi 系列模型（包括 Phi-4）强调了合成数据在 AI 语言模型训练中日益增长的重要性和有效性。该文件还引用了与 AI 进步相关的最新文章和标签，表明了该领域持续发展的更广泛背景。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一种开源、符合 Redis 标准、反应式、可扩展、高度可用、针对现代硬件进行了优化的统一缓存。</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git 喝杯茶！轻松的自托管一体化软件开发服务，包括 Git 托管、代码审查、团队协作、包注册表和 CI/CD</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源自托管实现</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区托管域列表。为 V2Ray 生成 geosite.dat。</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速的分布式存储系统，适用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 磁盘查找、云分层。Filer 支持云驱动器、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+<p><a href="https://github.com/openimsdk/open-im-server">openimsdk/open-im-server</a><br>IM 聊天 ChatGPT</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>世界上最快的网站构建框架。</p>
+
+<p><a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a><br>Lightning 网络守护程序 ⚡️</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 OpenAI、Claude 等的免费开源替代品。自托管和本地优先。OpenAI 的直接替代品，在消费级硬件上运行。无需 GPU。运行 gguf、变压器、扩散器和更多模型架构。功能： 生成文本、音频、视频、图像、语音克隆、分布式、P2P 推理</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>去中心化预言机网络的节点，桥接链上和链下计算</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250825.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250825</span>
+</p>
+<p>每日一谚：Be explicit rather than implicit </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/25/go-is-still-not-good">Go的“七宗罪”：一篇“Go依然不够好”如何引爆社区激辩？</a><br>在技术圈，平静的湖面下往往暗流涌动。对于Go语言社区而言，这股潜藏已久的暗流，被近期的一篇名为《Go is still not good》的博文彻底引爆。作者Thomas Habets，一位自称拥有超过十年Go使用经验的资深开发者，在他的这篇文章中系统性地列举了他眼中Go语言的“七宗罪”。这篇文章迅速登上Hacker News热榜，吸引了超过700条评论，形成了一场规模空前的社区大辩论。</p> 
+
+<p><a href="https://tonybai.com/2025/08/25/documents-the-architects-programming-language">掌握架构师的“编程语言”：将“想法”部署到“人”的艺术</a><br>从初级到高级，开发者的职业路径通常是清晰的：写出更好的代码。但当站在高级工程师的十字路口，是转向管理还是深入技术成为架构师？许多人 选择了后者，却发现这个角色的定义模糊不清。最近，stackoverflow的一篇精彩的博客文章《文档：架构师的编程语言》提出了一个深刻的洞见：高级开发者将代码部署到代码构成的系统中， 而架构师将想法部署到人构成的系统中</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.cuongle.dev/p/constructor-best-practices-in-rust">Rust 中的构造函数最佳实践</a><br>Rustacean 应该掌握的构造函数模式，可以让你不再像一个新手。</p>
+
+<p><a href="https://blog.attara.dev/event-driven-everything-how-to-think-and-build-in-events-instead-of-requests-617f63ca6164">事件驱动一切：如何使用事件代替请求进行思考（和构建）</a><br>本文是“实践中的战略架构”系列的一部分，探讨了软件结构如何满足业务增长的需求。事件驱动架构不仅仅是一种技术模式。
+ 这是一个关于系统如何运作和演变的思考方式。</p>
+
+<p><a href="https://www.jeronimo.dev/the-two-versions-of-parquet">Parquet 的两个版本</a><br>由于生态系统中缺乏支持，Parquet 版本 2 的采用受到限制，这影响了它的发展，尽管它在压缩和性能方面有所改进。</p>
+
+<p><a href="https://www.seangoedecke.com/good-system-design">我对优秀系统设计的理解</a><br>我看到很多糟糕的系统设计建议。一个经典的是LinkedIn优化的“你肯定没听说过队列”风格的帖子，大概是针对刚入行的人。另一个是Twitter优化的“如果你在数据库中存储布尔值，你就是一个糟糕的工程师”的巧妙技巧。即使是好的系统设计建议也可能有点糟糕。我喜欢《设计数据密集型应用》，但我不认为它对大多数工程师会遇到的系统设计问题特别有用。
+
+什么是系统设计？在我看来，如果软件设计是你如何组合代码行，那么系统设计就是你如何组合服务。软件设计的基本要素是变量、函数、类等。系统设计的基本要素是应用程序服务器、数据库、缓存、队列、事件总线、代理等。
+
+这篇文章是我尝试写下我对优秀系统设计的所有理解。很多具体的判断都取决于经验，而我无法在这篇文章中传达。但我正在努力写下我能写的东西。</p>
+
+<p><a href="https://www.seangoedecke.com/good-api-design">Everything I know about good API design</a><br>API设计的关键在于熟悉度和灵活性的平衡。好的API应该简单易懂，因为API使用者希望将时间花在他们的目标上，而不是API本身。API的改变会破坏用户软件，所以要谨慎设计，并尽量避免破坏性改变。如果需要更改，使用版本控制。API的成功取决于产品本身，而不是API的设计。API应该支持简单的API密钥认证，需要对请求进行限制，并且对于需要操作的请求，应该包含幂等性密钥以确保安全。对于大型数据集，应该使用基于光标的分页。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://cc.deeptoai.com/docs/zh/best-practices/claude-code-setup-tips">掌握 Claude Code 的 33 个必知设置技巧</a><br>通过 33 个基础到高级的技巧全面掌握 Claude Code，涵盖快捷键、提示技巧、MCP 服务器、项目规则和自动化钩子。从新手到专家级生产力的完整指南。</p>
+
+<p><a href="https://reflexions.florianernotte.be/post/ai-transparency">写作与 LLM 并非可耻之事：关于 AI 使用透明度的文章</a><br>这篇文章探讨了关于在写作中使用人工智能(AI)时，是否需要公开声明的问题。作者认为，仅仅因为使用了 AI 而羞于公开是不必要的，并质疑了透明度的必要性。文章深入探讨了透明度、可信度以及避免偏见等问题。作者认为，强制公开 AI 使用可能导致“思想警察”的出现，过度关注 AI 使用的伦理问题，而忽略了技术本身的价值。最终，作者得出的结论是，与其纠结于是否声明 AI 使用，不如关注内容的质量和创作者的诚信。文章认为，过度强调透明度可能会导致读者对内容的预先偏见，而忽略了内容本身的价值。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/cloudfoundry/cli">cloudfoundry/cli</a><br>The official command line client for Cloud Foundry</p>
+
+<p><a href="https://github.com/google/mangle">google/mangle</a><br></p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/ory/hydra">ory/hydra</a><br>The only web-scale, fully customizable OpenID Certified™ OpenID Connect and OAuth2 Provider in the world. Become an OpenID Connect and OAuth2 Provider over night. Written in Go, cloud native, headless, API-first. Available as a service on Ory Network and for self-hosters. Relied upon by OpenAI and others for web-scale security.</p>
+
+<p><a href="https://github.com/google/syzkaller">google/syzkaller</a><br>syzkaller is an unsupervised coverage-guided kernel fuzzer</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>Directory/File, DNS and VHost busting tool written in Go</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/containers/kubernetes-mcp-server">containers/kubernetes-mcp-server</a><br>Model Context Protocol (MCP) server for Kubernetes and OpenShift</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/ibnaleem/gosearch">ibnaleem/gosearch</a><br>🔍 Search anyone&#39;s digital footprint across 300&#43; websites</p>
+
+<p><a href="https://github.com/getlago/lago">getlago/lago</a><br>Open Source Metering and Usage Based Billing API ⭐️ Consumption tracking, Subscription management, Pricing iterations, Payment orchestration &amp; Revenue analytics</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

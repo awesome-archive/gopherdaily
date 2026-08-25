@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241222.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-22</span>
+</p>
+<p>每日一谚：Measure before optimizing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@ksandeeptech07/golang-rewinding-2024-7b18b7fab9a9">Go：回顾2024</a><br>本文档回顾了截至 2024 年 Go 编程语言的重大进步，重点介绍了 Go 1.23 改进的错误处理、更快的编译时间和特定于环境的构建等关键更新。它讨论了 Go.dev 的改进以实现更好的包发现、Go for WebAssembly 项目的日益普及以及向常见模式的通用库的转变。文章还指出了 Go 适合边缘计算，这要归功于其较小的二进制文件大小和并发特性，并提到了 Go 可观测性生态系统的增长。最后，它谈到了正在进行的关于 Go 中 async/await 的讨论、蓬勃发展的 Go 社区以及进一步增强 Go 功能的未来计划。总体基调传达了 Go 的演变及其在现代软件开发中日益增长的相关性，重点是可扩展性、简单性和性能。这篇文章对 Go 的进展及其对开发人员的影响进行了深刻的审视，同时也指出了它的未来潜力。</p> 
+
+<p><a href="https://go.dev/blog/survey2024-h2-results">Go开发者调查：2024 年下半年结果</a><br>Go 最新的 Go 开发者调查显示，他们对这门语言的情绪非常积极，93% 的受访者对他们的 Go 开发体验表示满意。Go 的易部署性和用户友好的 API/SDK 受到高度赞赏，尤其是在使用 Go 进行云开发时，很大一部分开发人员会部署到 AWS 等云服务。尽管 Go 在容器化和微服务方面具有优势，但开发人员在保持一致的编码标准和识别性能问题方面仍面临挑战。该调查强调，Go 开发人员越来越多地使用 AI 助手，最佳实践所需的 AI 支持与当前的使用模式之间存在显着差距。此外，Go 还需要更好的 SIMD 支持，因为性能优化对于许多开发人员的项目仍然至关重要。调查的见解正在塑造 Go 专注于集成更好的工具和功能来满足这些需求。</p> 
+
+<p><a href="https://medium.com/ostinato-rigore/go-htmx-templ-tailwind-complete-project-setup-hot-reloading-2ca1ba6c28be">Go &#43; HTMX &#43; Templ &#43; Tailwind：完成项目设置和热重载</a><br>本文介绍了使用 Go、HTMX、Templ 和 Tailwind CSS 的完整项目设置，提供了一种简化的 Web 开发方法，而无需繁重的 JavaScript 框架。作者 Alberto Jaen 概述了一个堆栈，该堆栈简化了热重载和将资产嵌入到单个二进制文件中的过程，从而可以高效地构建高性能 Web 应用程序。它们详细介绍了设置工具、运行开发环境和热重载的过程，并为本地测试提供了端口和命令。本文还介绍了用于部署的容器化，使用 Dockerfile 为常见的服务器架构构建二进制文件。该堆栈最大限度地减少了 JavaScript 的使用，但仍包含了 HMTX 和 Alpine.js 等基本库，并将 Tailwind CSS 等静态资产嵌入到二进制文件中，以便于参考。这种设置保证了简单性和高性能，使其成为对开发人员有吸引力的选择。</p> 
+
+<p><a href="https://flakm.com/posts/phantom_leak/">Phantom Menace：不存在的内存泄漏</a><br>这篇博文讲述了作者最初担心迁移到Kubernetes的遗留Rust应用程序会出现内存泄漏，后来发现这不是泄漏。通过使用 eBPF、heptrack 和 jemalloc 分析来跟踪内存使用情况，作者揭穿了泄漏假说，意识到指标仪表板由于计算容器内存使用情况而具有误导性。真正的问题是误解了 Kubernetes 中内存指标的计算方式，特别是活动内存和文件系统缓存使用情况之间的混淆。最终，作者学到了关于定义问题、测试假设、使用适当工具、记录流程以及与同事协作解决容器化应用程序中的复杂问题的宝贵经验。这次经历凸显了有条不紊的调试方法的重要性，以及依赖仪表板指标而不深入了解其底层计算的潜在陷阱。作者从恐惧到清晰的旅程可以作为在 Kubernetes 环境中进行调试的指南。</p> 
+
+<p><a href="https://berthub.eu/articles/posts/on-long-term-software-development/">关于长期软件开发</a><br>本文档讨论了长期软件开发的挑战和策略，强调了依赖项管理、测试、简单性和开源贡献的重要性。它强调了荷兰选举委员会对健壮、可维护软件的需求，建议关注基本选择，如编程语言和最少的依赖项列表。这些建议包括编写简单、文档齐全的代码，投资于广泛的测试，以及维护开源的存在以确保问责制。此外，它还强调了长期雇用开发人员和定期维护检查对于几十年来保持软件质量的价值。首要主题是通过控制依赖关系、简化代码以及培养持续改进和透明的文化来为未来的变化做好准备。本文档借鉴了来自受人尊敬的来源的原则，倡导支持持续软件发展的实践。</p> 
+
+<p><a href="https://devstarterpacks.com/blog/what-every-developer-should-know-about-offline-first-apps">每个开发人员都应该了解的离线优先应用程序</a><br>本文档讨论了应用程序开发中的离线优先理念，强调需要将离线状态视为默认状态，并将在线连接视为增强功能。它强调了传统纯在线思维的问题，例如假设持续连接并将断开连接视为错误，从而导致数据丢失和糟糕的用户体验。离线优先方法通过本地优先存储、后台同步和基于队列的架构等原则进行了概述，具有更好的可靠性、性能和用户体验等优势。介绍了离线优先应用程序的技术基础，包括浏览器存储选项（如 LocalStorage、IndexedDB 和 WebAssembly with SQLite），以及使用 Service Worker 代理网络请求。该文档还涉及离线优先应用程序中数据同步和冲突解决的复杂性，提出了版本控制更改和复杂的策略来处理并发更新并保持数据一致性。总体而言，向离线优先开发的转变与各种应用程序越来越相关，有望在互联网访问不可靠的地区改进功能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2024/12/18/android/translating-java-to-kotlin-at-scale/">大规模将 Java 转换为 Kotlin</a><br>Meta 拥有全球最大的 Android 代码库之一，它已着手从 Java 到 Kotlin 的重大转换，以充分利用 Kotlin 的价值。尽管存在与 null 相关的错误等问题的复杂性和潜在性，但 Meta 的工程师已经开发了 Kotlinator 等工具来自动化转换过程，解决从构建速度到 null 安全性的问题。Meta 的方法包括预处理、无头 J2K 转换和自定义后处理步骤，以确保可靠性，同时与 JetBrains 合作提高符号分辨率并开源其自定义步骤。Meta 的旅程凸显了将大量 Java 代码转换为 Kotlin 的挑战和解决方案，旨在最大限度地提高开发人员的工作效率和 null 安全性，尽管存在回归 null 安全性和在转换过程中遇到其他错误的固有风险。这项工作反映了对 Kotlin 采用的坚定承诺，他们计划转换几乎所有积极开发的代码和中央依赖项，同时从过程中学习以改进他们的工具和实践。</p>
+
+<p><a href="https://thenewstack.io/top-dev-tools-and-web-developer-trends-of-2024/">2024 年顶级开发工具和 Web 开发人员趋势</a><br>New Stack 的文档反映了 2024 年面向开发人员的主要工具和趋势，重点介绍了 AI 工具、新编程语言和开发框架方面的进步。它讨论了 LLM 工具的增长，尽管它们与标准开发工作流程的集成有限，并提到了 Cursor AI 和 Zed AI 等嵌入 LLM 功能以提供帮助编码的工具。文章还指出了 Wasm 能力的扩展、Virgil 和 Zig 等新语言的出现，以及对 Wasm 优化语言（如 MoonBit）的兴趣。此外，它还涉及 Kamal 和 Capistrano 等本地部署系统，并提到了 Payload（无头 CMS）和 Deno（包含 TypeScript 的 JavaScript 运行时）等创新项目。该文件表明，人们越来越意识到主流工具和平台的替代方案，基于 Smalltalk 的 Glamorous Toolkit 和 System Initiative 的数字孪生方法就是例证。总体而言，这篇文章全面介绍了开发人员在 2024 年参与的各种工具生态系统。</p>
+
+<p><a href="https://blog.openpolicyagent.org/announcing-opa-1-0-a-new-standard-for-policy-as-code-a6d8427ee828">宣布推出 OPA 1.0：策略即代码的新标准</a><br>Open Policy Agent 项目宣布推出 OPA 1.0，这标志着 Policy as Code 的一个重要里程碑，重点是改善开发人员体验。经过近十年的开发和 450 多名开发人员的贡献，OPA 1.0 引入了强制性的“if”语句、“every”和“in”等新关键字，并更改了默认行为以支持新语法。该版本为未来的策略即代码项目奠定了坚实的基础，包括向后兼容性功能，以帮助从以前的版本迁移。它还带来了性能增强，发行说明中提供了详细的改进。OPA 团队对社区在测试、错误报告和贡献方面发挥的作用表示感谢，同时鼓励用户升级并参与未来的开发。此次发布是该项目的庆祝时刻，标志着 Policy as Code 的新时代。</p>
+
+<p><a href="https://www.pingcap.com/blog/revolutionizing-loyalty-programs-rakuten-distributed-sql/">彻底改变忠诚度计划：Rakuten 的分布式 SQL 之旅</a><br>Rakuten 是一家拥有超过 18 亿会员的全球巨头，它从传统数据库过渡到开源分布式 SQL 数据库 TiDB，以克服其忠诚度计划 Rakuten Points 的可扩展性和运营挑战。面对不断增长的数据量和复杂的事务，乐天采用了微服务架构和 TiDB 来确保实时查询和水平可扩展性。概念验证 （POC） 展示了 TiDB 处理高频写入和并发读取的能力，在重负载下保持低响应时间和稳定运行。TiDB 成功集成到乐天系统中，凸显了现代分布式数据库在支持数据密集型应用程序、确保无缝用户体验和系统弹性方面的优势。Rakuten 的旅程凸显了不断发展的数据基础设施对于满足动态数字环境需求的重要性。这种战略转变不仅满足了当前的需求，还为乐天的未来可扩展性和效率奠定了基础。</p>
+
+<p><a href="https://blog.livekit.io/using-a-transformer-to-improve-end-of-turn-detection/">使用transformer改进末端turn检测</a><br>本文档讨论了语音 AI 中轮次结束检测的挑战，强调了当前依赖于语音活动检测 （VAD） 和静音超时的短语端点技术的局限性。这些方法通常会将暂停误解为用户轮到的结束，从而导致不必要的干扰或无响应。作者提出了一种新的基于 transformer 的模型，该模型使用语义理解来预测用户语音的结束，从而将无意中断减少 85%，并将错误的轮次结束指示减少一小部分。该模型集成到 LiveKit 代理中，在客户支持场景中显示出前景，作者计划扩展其功能以支持更多语言并提高推理速度。他们还暗示了未来涉及多模态模型的工作，这些模型可以解释语调和节奏，以实现更细致的转弯检测。该文件的结尾是邀请合作和为项目做出贡献。</p>
+
+<p><a href="https://opensource.googleblog.com/2024/12/kubernetes-132-is-now-available-on-gke.html">Kubernetes 1.32 现已在 GKE 上提供</a><br>最新的 Kubernetes 版本 1.32 已在 Google Kubernetes Engine （GKE） 上发布，具有重大改进，例如动态资源分配（现在处于测试阶段）、对更高效 API 流的支持以及卷扩展失败的恢复机制。此更新还引入了 Job API 的 managed-by 机制，用于外部控制器集成，并通过 QueueingHint 增强了调度性能。在 Google 员工的不懈努力下，这些功能以及其他功能迅速被整合到 GKE 中。该博客文章重点介绍了这些更新，并向贡献者表示感谢，同时也鼓励读者在社交媒体上分享该帖子。该博文的标签包括 1.32、GKE 和 Kubernetes，表明它与这些主题的相关性。该博文反映了 Google 致力于将 Kubernetes 推进为首屈一指的容器编排平台的承诺。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/12/20/opentelemetry-io-2024-review/">OpenTelemetry.io 2024 回顾</a><br>2024 年 OpenTelemetry 的 CNCF 项目帖子强调了在使文档更易于访问和用户友好方面取得的重大进展，重点是多语言支持、信息架构的改进和不断增长的社区贡献。翻译了 120 多页内容，与上一年相比，该网站的浏览量增加了 16%。贡献激增，提交量增加了 33%，贡献者增加了 15%，并且积极参与了讨论和问题报告。展示了最受欢迎的内容和最活跃的贡献者，并邀请在 2025 年继续合作，强调了 OpenTelemetry 背后充满活力和敬业精神的社区。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2024/Dec/20/openai-o3-breakthrough/#atom-everything">OpenAI o3 在 ARC-AGI-PUB 上突破高分</a><br>ARC Prize 的联合创始人 François Chollet 对 OpenAI 的 o3 模型进行了深入分析，强调了它在高效解决 ARC-AGI 难题方面的重大突破。Chollet 指出，该模型的核心机制涉及令牌空间内的自然语言程序搜索，类似于 AlphaZero 的蒙特卡洛树搜索，由深度学习指导。尽管其令人印象深刻的壮举，但 Chollet 认为 o3 并不等同于 AGI，因为它仍在努力完成人类可以轻松解决的某些任务。在高效模式下运行 o3 的成本估计约为 114.8 万美元，计算能力是较低配置的 172 倍，并且在即将到来的基准测试中面临挑战，这可能会进一步测试其功能。文章还包括一个 o3 无法解决的谜题示例，强化了人类智能在某些领域仍然占据优势的观点。本次讨论反映了 LLM 的演变性质及其与 AGI 的区别。</p>
+
+<p><a href="https://www.greptile.com/blog/make-llms-shut-up">如何让 LLM 闭嘴</a><br>该博客文章讨论了在 Greptile 的 AI 代码审查机器人的上下文中制作大型语言模型 （LLM） 产生较少不相关评论时遇到的挑战和解决方案。最初，尝试通过 LLM 的提示和严重性评级来优化评论生成，但未成功。随后，该团队探索了基于学习的方法，但担心成本和可移植性。最终的解决方案包括按反对票对过去的评论进行聚类，以有效地过滤掉令人讨厌的评论。这种方法显著提高了 LLM 生成的评论的地址率，从 19% 提高到 55% 以上。此功能的实现标志着在减少噪声和增强 LLM 在代码审查过程中的实用性方面取得了显著改进。</p>
+
+<p><a href="https://near.tl/developer-forever/forum/announcement/being-a-developer-in-the-age-of-reasoning-ai.anc-4b87de19-f7cf-4ef0-91c8-e28b260fd9ad.html">在推理 AI 时代成为开发者</a><br>OpenAI 的 o3 AI 的推出让开发人员质疑他们的角色，因为 AI 的进步模糊了人类编码和算法生成之间的界限。o3 通过程序综合，可以即时创建算法，使开发人员能够理解和监督 AI 生成的逻辑。未来的软件开发可能会看到两种方法：开发人员积极审查 AI 生成的代码，或者用户依赖 AI 生成代码而不了解其工作原理。这种演变引发了关于对 AI 的信任和理解的意识形态问题，有可能使人类成为 AI 输出的创造者或仅仅是旁观者。该文件还谈到了 AI 解决国际象棋等复杂问题的能力，以及它在各个领域超越人类的潜力，同时强调了对专业环境中对 AI 辅助的看法的担忧。最后，它讨论了向语义 AI 进行结构化数据提取的转变，并将其与生成式 AI 的概率逻辑进行了对比。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ 您的个人流媒体服务</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 最受好评的基于 Web 的 Linux 服务器管理工具。1Panel 具有直观的 Web 界面，可无缝集成服务器管理和监控、容器管理、数据库管理、网站管理、系统备份和恢复等。</p>
+
+<p><a href="https://github.com/hugomd/ascii-live">hugomd/ascii-live</a><br>parrot.live 的扩展，支持更多动画！http://ascii.live</p>
+
+<p><a href="https://github.com/shadow1ng/fscan">shadow1ng/fscan</a><br>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。</p>
+
+<p><a href="https://github.com/moonD4rk/HackBrowserData">moonD4rk/HackBrowserData</a><br>提取和解密浏览器数据，支持多种数据类型，可在各种操作系统（macOS、Windows、Linux）上运行。</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>用于小地方的 Go 编译器。微控制器、WebAssembly （WASM/WASI） 和命令行工具。基于 LLVM。</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism 是以太坊，可扩展。</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/Kethsar/ytarchive">Kethsar/ytarchive</a><br>垃圾 Youtube 直播下载器</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>世界上最快的网站构建框架。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/WireGuard/wireguard-go">WireGuard/wireguard-go</a><br>仅镜像。官方存储库位于 https://git.zx2c4.com/wireguard-go</p>
+
+<p><a href="https://github.com/eatmoreapple/openwechat">eatmoreapple/openwechat</a><br>golang微信SDK</p>
+
+<p><a href="https://github.com/miniflux/v2">miniflux/v2</a><br>极简主义和固执己见的 Feed Reader</p>
+
+<p><a href="https://github.com/qdm12/gluetun">qdm12/gluetun</a><br>VPN 客户端位于多个 VPN 提供商的精简 Docker 容器中，用 Go 编写，并使用 OpenVPN 或 Wireguard、DNS over TLS，内置了一些代理服务器。</p>
+
+<p><a href="https://github.com/encoredev/encore">encoredev/encore</a><br>开源开发平台，用于构建具有声明式基础设施的健壮类型安全的分布式系统</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - 用 Go 编写的 AUR Helper</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.3、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB — 云原生分布式 SQL 数据库，旨在实现高可用性、轻松扩展和对数据放置的控制。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241026.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-26</span>
+</p>
+<p>每日一谚：Returning early is a good thing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dolthub.com/blog/2024-10-25-go-nil-channels-pattern/">Go中的nil channel模式</a><br>Dolthub 博客的博文探讨了 Go 中 &#39;nil&#39; 值通道变量最初违反直觉的行为，以及它如何为 select 语句启用强大的模式。作者在回顾他们对 Go 的使用经验时强调，虽然 &#39;nil&#39; 通道会导致死锁，但它们也提供了一种在 &#39;select&#39; 语句中选择性地禁用分支的方法，允许可选的功能。示例包括为 input 通道实现 debouncing、批处理具有最大大小的 transformer 以及使用 input/output branchs 管理状态机。该博文最后承认了这种模式在简化代码和在 Go 应用程序中实现更具表现力的行为方面的效用，并邀请读者分享他们的经验或加入相关主题的讨论。</p> 
+
+<p><a href="https://blog.stackademic.com/comprehensive-guide-to-testcontainers-for-go-practical-testing-with-containers-b11039e0bf41">Testcontainers for Go综合指南：使用容器进行实际测试</a><br>本文提供了使用 Testcontainers for Go 进行实际集成测试的全面指南。它强调了在现代开发环境中进行测试的挑战，尤其是在处理数据库和消息代理等外部服务时。Testcontainers for Go 允许开发人员直接从测试代码在隔离的 Docker 容器中运行这些服务的实际版本，从而简化了流程。这确保了一致的测试条件并消除了环境问题，从而获得更稳定和可靠的测试结果。该指南介绍了安装、为 PostgreSQL、MongoDB 和 Kafka 等服务创建容器，以及将这些容器集成到测试中。它还讨论了使用 Testcontainers 的好处，例如环境隔离、测试一致性和易于配置。此外，本文还提供了优化性能的提示，例如重用容器和配置就绪性检查。总体而言，Testcontainers for Go 为希望增强其集成测试实践的开发人员提供了强大的解决方案。</p> 
+
+<p><a href="https://dev.to/githaiga22/how-i-stopped-worrying-and-learned-to-love-go-interfaces-3m7p">我是如何不再担心并学会爱上Go接口的</a><br>本文是理解和实现 Go 接口的指南，Go 是一种以简单和高效而闻名的编程语言。作者分享了他们最初的困惑和最终对 Go 接口的掌握，首先将接口定义为行为契约，但没有详细说明实现。通过简单的代码示例，例如使用 Sound（） 方法创建动物，作者说明了如何互换使用满足接口的任何类型。接口对灵活性、多态性和干净代码的贡献强调了接口的重要性，从而允许使用更可维护和可扩展的软件。本文还谈到了空接口 （interface{}） 及其在处理未知类型中的作用，并在最后鼓励读者采用接口以获得更好的编码实践。讨论部分通过社区见解和在 Go 中有效使用界面的其他技巧进一步丰富了叙述。</p> 
+
+<p><a href="https://www.willem.dev/articles/benchmarks-performance-testing/">Go基准测试和性能测试</a><br>本文提供了有关在 Go 中编写、运行和解释基准测试的全面指南，重点介绍性能测试。它首先强调人类性能比机器性能更重要，倡导可读性、可维护性和文档。该指南详细介绍了基准测试的结构，包括函数签名以及将结果分配给全局变量以防止编译器优化的必要性。它还解释了如何使用 &#39;go test -bench&#39; 命令执行基准测试，以及如何使用 &#39;-benchmem&#39; 标志包含内存分配。提供了一个真实示例，展示了不同 set 实现的基准，突出了执行时间和内存分配差异。本文最后呼吁读者订阅以获得更多见解，并探索在 Go 中编写准确基准测试和性能优化的其他资源。该指南面向希望通过严格的基准测试实践来提高其代码性能的 Go 开发人员。</p> 
+
+<p><a href="https://gowind.github.io/post/simd_algos_part2/">SIMD 算法第II部分：计数</a><br>源文档讨论了 SIMD（单指令、多数据）算法的实现和性能，用于计算一组字节或位的汉明权重 （popcount）。汉明权重是二进制表示中的设置位 （1） 的计数。本文档重点介绍了专用硬件指令（如 x86-64 上的“popcnt”和 ARM 上的“CNT”）的使用，以实现高效的 popcount 计算。它还提到了 GCC 和 Clang 中用于 popcount 的内置函数的可用性。作者分享了一个自定义实现，尽管删除了内部循环，但运行速度比使用 AVX2 指令的优化版本慢。该实现使用 AVX2 指令并行处理 64 位字，采用随机排序和对绝对差值求和等技术来计算设置位。本文档还解决了边缘情况，例如当总位数小于 256 或数组大小不是 8 的倍数时。作者指出，自定义实现虽然速度较慢，但提供了对 SIMD 操作及其优化的见解。性能基准表明，修改后的实现每个周期比 AVX2 优化版本慢大约 20-25%。本文档最后提供了一个详细的代码片段，说明了该算法，强调了巧妙地使用洗牌和求和技术来有效地计算汉明权重。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.lionbloggertech.com/emerging-web-design-trends-in-2024/">2024 年新兴网页设计趋势</a><br>Lion Blogger Tech 文章深入探讨了 2024 年网页设计的最新趋势，重点介绍了迎合用户个性化、身临其境的故事讲述和可持续实践的创新方法。AI 驱动的个性化处于最前沿，网站会实时适应用户行为以提供量身定制的体验。沉浸式滚动讲述将叙述转换为交互式滚动触发的动画，从而提高用户参与度。形态设计演变为界面引入了深度和触觉元素，而高级排版系统则提供动态且可访问的文本体验。可持续的 Web 设计实践旨在减少数字运营对环境的影响，而微交互 2.0 通过上下文感知动画提供有意义的反馈。打破网格的布局挑战了视觉趣味的传统设计规范，而增强的移动体验则力求实现类似应用程序的功能。暗模式演变和高级数据可视化也是关键趋势，分别关注用户偏好和数据可访问性。这些趋势共同突破了网页设计的界限，优先考虑用户体验、可访问性和环境意识。</p>
+
+<p><a href="https://engineering.fb.com/2024/10/25/developer-tools/diff-authoring-time-dat-measuring-developer-productivity-meta/">差异创作时间：衡量 Meta 的开发人员生产力</a><br>在本期 Meta Tech 播客中，Pascal Hartig 与来自 Meta 的工程师 Sarita 和 Moritz 讨论了差异创作时间 （DAT） 的创新方法。DAT 是一种新颖的方法，旨在通过跟踪将更改提交到代码库所需的时间来衡量开发人员的工作效率。该播客深入探讨了准确衡量生产力、DAT 实施的挑战，以及它为开发人员提供的新见解。该剧集可在各种播客平台上观看，是 Meta 提高开发人员效率和生产力的更广泛计划的一部分。此外，该播客还谈到了 Meta 的职业机会，并通过精选帖子和职位列表让人们一睹 Meta 的文化。该讨论旨在促进对可以推动科技行业绩效的工具和指标的更深入理解。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/25/software-supply-chain-compliance-and-security-policies-with-signserver-ejbca-and-chainloop/">使用 SignServer、EJBCA 和 Chainloop 的软件供应链合规性和安全策略</a><br>本文档讨论了 SignServer、EJBCA 和 Chainloop 的集成，以增强软件供应链的合规性和安全性。它强调了元数据在做出有关部署应用程序的明智决策方面的重要性，特别是考虑到《关于改善联邦网络和关键基础设施网络安全的行政命令》等法规。Chainloop 和 Keyfactor 之间的合作伙伴关系使组织能够收集、验证和保护整个软件交付生命周期中生成的元数据。引入了两个关键集成：使用 SignServer 进行远程签名和使用 EJBCA 临时证书进行本地签名。这些集成可确保使用受信任的证书对证明进行签名，从而促进自动化策略实施和合规性。该文档还提供了使用 EJBCA 配置 Chainloop 以进行 CA 设置的指南，并概述了使用这些集成来构建健壮的安全框架的好处。后续步骤涉及针对元数据运行 Rego 策略，以进一步加强安全性和合规性措施。</p>
+
+<p><a href="https://thenewstack.io/how-to-run-databases-on-kubernetes-an-8-step-guide/">如何在 Kubernetes 上运行数据库：8 步指南</a><br>这份全面的指南详细介绍了在 Kubernetes 上部署数据库等有状态应用程序的过程，以及解决持久存储、数据一致性和网络稳定性方面的挑战。它首先解释了无状态应用程序和有状态应用程序之间的区别，强调了有状态应用程序对持久存储的需求。然后，该指南概述了在 Kubernetes 上运行数据库所需的关键概念和工具，包括 StatefulSets、PersistentVolumes （PV）、PersistentVolumeClaims （PVC） 和 StorageClasses。提供了创建存储类、PV、PVC 和 MySQL StatefulSet 的分步说明，以及监控和维护数据库运行状况的提示。该指南最后强调了定期备份和监控的重要性，以确保 Kubernetes 环境中的数据库完整性和可用性。对于希望利用 Kubernetes 进行数据库管理和可扩展性的开发人员和 DevOps 专业人员来说，此资源特别有价值。</p>
+
+<p><a href="https://www.linuxjournal.com/content/hardening-linux-servers-against-threats-and-attacks">强化 Linux 服务器抵御威胁和攻击</a><br>这份全面的指南由 George Whittaker 撰写，深入探讨了强化 Linux 服务器以抵御各种网络威胁的关键方面。它首先概述了威胁态势，包括暴力攻击、rootkit、DoS 攻击和零日漏洞，强调了了解这些威胁以制定有效安全措施的重要性。然后，该指南探讨了用户和访问控制，倡导最低权限原则、定期用户帐户审查以及 SSH 强化技术，例如基于密钥的身份验证和 IP 限制。系统配置是另一个重点，包括自动更新、漏洞扫描、内核安全设置和网络配置策略，以禁用未使用的端口和服务。讨论了 RBAC、SELinux 和 AppArmor 等高级身份验证机制，以进一步保护服务器访问。该指南还介绍了应用程序和数据库安全性，推荐了安全的 Web 应用程序配置、数据库访问限制、加密和 SQL 注入预防。此外，它还强调了使用 Syslog、JournalD 和 Auditd 等工具进行审计、监控和日志记录的重要性，以及通过磁盘加密和文件完整性监控进行数据保护的重要性。最后，它强调了事件响应计划、自动备份和还原程序对于确保数据可恢复性的重要性。总体而言，该指南为服务器管理员提供了详细的路线图，以加强其 Linux 服务器对不断演变的网络威胁的防御。</p>
+
+<p><a href="https://www.haproxy.com/blog/encoding-haproxy-logs-in-machine-readable-json-or-cbor">以机器可读的 JSON 或 CBOR 编码 HAProxy 日志</a><br>HAProxy 3.0 的发布引入了新的 JSON 和 CBOR 编码选项，满足了团队对标准化日志记录格式的需求。这些选项简化了日志管理，提高了性能，并确保了更好的系统互操作性。新的编码选项解决了以前日志记录格式的常见问题，例如数据类型不一致、引用问题和十六进制表示形式。通过这些改进，HAProxy 用户现在可以轻松生成结构化日志，而无需手动解析或中间件转换，从而简化了日志分析和集成过程。HAProxy 3.0 中新增的 JSON 和 CBOR 格式显著简化了日志管理，并促进了团队基础架构之间的一致性。
+
+（注意：该摘要旨在封装源文档的关键点，重点介绍 HAProxy 3.0 中引入的新编码选项、它们的好处以及它们对日志管理和互操作性的影响。</p>
+
+<p><a href="https://blog.trailofbits.com/2024/10/25/a-deep-dive-into-linuxs-new-mseal-syscall/">深入了解 Linux 的新 mseal syscall</a><br>Linux 内核的 6.10 版本引入了“mseal”系统调用，这是一种新颖的内存密封功能，旨在通过防止未经授权修改虚拟内存地址 （VMA） 来增强漏洞利用缓解。与之前在 RAM 中创建匿名文件的内存保护机制（如 &#39;memfd_create&#39; 和 &#39;memfd_secret） 不同，&#39;mseal&#39; 专门针对运行时内存区域的不变性，以阻止代码执行攻击。开发人员可以利用“mseal”来封装 VMA，从而阻止出于恶意目的更改权限或布局的尝试。此功能对两种漏洞利用场景特别有效：篡改 VMA 权限以恢复 shellcode，以及利用取消映射漏洞用攻击者控制的数据重新填充内存区域。将 &#39;mseal&#39; 集成到 glibc 中有望提供更广泛的保护，尽管动态内存分配区域可能需要手动应用程序。“mseal”系统调用代表了在保护 Linux 系统免受复杂的基于内存的攻击方面向前迈出的重要一步。</p>
+
+<p><a href="https://dev.to/pareek/how-to-fix-oomkilled-3mp6">如何修复 OOMKilled</a><br>源文档提供了解决 Kubernetes 中 OOMKilled 错误的全面指南，当 Pod 超过其内存限制并被系统终止时，就会发生该错误。该指南首先指导用户使用 &#39;kubectl get pods&#39; 识别 OOMKilled 事件，并分析 Pod 的内存使用模式。它建议调整 Pod 规范中的内存设置，通过将资源请求和限制与节点容量保持一致来防止超额使用，并检查 Pod 的 QoS 等级和oom_score。此外，它还提供了对 Pod 的重启策略及其如何影响终止过程的见解。该文档还包括常见问题解答的视觉辅助工具和模板，以及呼吁读者通过登录或创建帐户与社区互动的行动号召。总体而言，该指南旨在为用户提供有效排查和解决 OOMKilled 错误的知识，确保在 Kubernetes 环境中更顺畅地运行。</p>
+
+<p><a href="https://dev.to/pareek/how-to-set-up-disk-and-bandwidth-limits-in-docker-2887">如何在 Docker 中设置磁盘和带宽限制</a><br>DEV 社区文章提供了有关为 Docker 容器设置磁盘和带宽限制以防止资源过度使用和潜在安全风险的全面指南。它首先解释了管理磁盘空间和网络带宽的重要性，因为不受控制的消耗会导致性能问题和漏洞。该指南提供了通过编辑 Docker 守护程序配置文件并重新启动服务，在基于 Ubuntu 的容器上强制实施 10GB 磁盘大小限制的分步说明。此外，它还详细介绍了创建脚本以将所有 Docker 容器的带宽限制为 10Mbps 的过程，其中包括将脚本添加到系统的启动序列中。提供了验证步骤以确保限制有效，并会显示指示限制已到位的预期错误消息。本文最后强调了受控环境对容器化应用程序的好处，并包括该过程的可视化表示。本指南面向希望优化 Docker 容器性能和安全性的开发人员和系统管理员。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.codonomics.com/2024/10/pairing-with-human-or-genai-or-both.html">与 Human 或 GenAI 配对，或两者兼而有之？</a><br>源文件探讨了与人类配对与在专业环境中使用 ChatGPT 等 GenAI 工具的细微体验。它强调了人类交互的局限性和好处，例如对话的丰富性和深度学习时刻的潜力，与 GenAI 可以提供的效率和新颖性形成鲜明对比。作者分享了人类结对带来重要见解和高效解决问题的个人轶事，同时也承认了 GenAI 提供快速学习机会和代码生成的例子。结论强调了将人类协作与 GenAI 工具相结合以增强持续学习和团队绩效的价值。该文件倡导战略配对，指出虽然 GenAI 可以增强学习过程，但在理解、同理心和创造力方面不可替代的人为因素仍然至关重要。</p>
+
+<p><a href="https://thenewstack.io/augment-ai-code-assistant-targets-large-development-teams/">Augment AI Code Assistant 面向大型开发团队</a><br>由 Scott Dietzen 创立的初创公司 Augment Code 推出了一款专为大型软件开发团队量身定制的全新 AI 编码助手平台。该平台与 VSCode 和 JetBrains 等流行的 IDE 集成，提供检索增强生成 （RAG） 等功能，以理解和适应组织的代码库和实践。它还为开发经理提供了一个仪表板，用于监控 AI 使用情况和项目进度。Augment Code 的 AI 工具支持 80 多种语言和框架，并已用于迁移代码库和更改数据库服务等任务。此外，该平台还包括一个 Slack 机器人，用于在开发过程中进行团队协作和解决问题。该公司还提供一张 1,000 美元的礼品卡，用于参与他们的年度读者调查，以完善他们对 2025 年的覆盖范围。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/25/llm-cerebras/#atom-everything">LLM-Cerebras</a><br>源文档重点介绍了 GitHub 用户 irthomasthomas 开发的 LLM 插件，该插件利用 Cerebras 的定制硬件以极高的速度交付 Llama LLM。该插件名为“llm-cerebras”，允许用户与 Cerebras 的 API 进行交互，该 API 目前提供两种模型，速率限制为每分钟 30 个请求。该文档包括一个演示视频，展示了提示速度，并提供了安装和使用说明。此外，该博文还引用了与 Claude 分析工具、Anthropic 的新计算机使用功能和 Claude Artifacts 相关的最新文章。该帖子还包括各种标签和版权信息，表明了 LLM 技术与专用硬件集成以提高性能的全面更新。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/NVIDIA/k8s-device-plugin">NVIDIA/k8s-device-plugin</a><br>适用于 Kubernetes 的 NVIDIA 设备插件</p>
+
+<p><a href="https://github.com/cloudwego/kitex">cloudwego/kitex</a><br>Go RPC 框架，高性能、强扩展性，用于构建微服务。</p>
+
+<p><a href="https://github.com/diggerhq/digger">diggerhq/digger</a><br>Digger 是一种开源 IaC 编排工具。Digger 允许您在现有的 CI 管道⚡️中运行 IaC</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kind">kubernetes-sigs/kind</a><br>Docker 中的 Kubernetes - 用于测试 Kubernetes 的本地集群</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>云原生批处理系统（CNCF 下的项目）</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/quii/learn-go-with-tests">quii/learn-go-with-tests</a><br>通过测试驱动开发学习 Go</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>世界上最快的网站构建框架。</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate 是一个开源向量数据库，可存储对象和向量，允许将向量搜索与结构化过滤与云原生数据库的容错和可扩展性相结合。</p>
+
+<p><a href="https://github.com/goreleaser/goreleaser">goreleaser/goreleaser</a><br>尽可能快速、轻松地交付 Go 二进制文件</p>
+
+<p><a href="https://github.com/expr-lang/expr">expr-lang/expr</a><br>Go 的表达式语言和表达式评估</p>
+
+<p><a href="https://github.com/thomaspoignant/go-feature-flag">thomaspoignant/go-feature-flag</a><br>GO Feature Flag 是一个简单、完整且轻量级的自托管功能标志解决方案，100% 开源。🎛️</p>
+
+<p><a href="https://github.com/stakater/Reloader">stakater/Reloader</a><br>一个 Kubernetes 控制器，用于监视 ConfigMap 和 Secrets 的变化，并在 Pod 及其相关的 Deployment、StatefulSet、DaemonSet 和 DeploymentConfig 上进行滚动升级 – [✩Star] 如果你正在使用它！</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>完整的容器管理平台</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>适用于云原生时代的终极 Go 微服务框架。</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/external-secrets/external-secrets">external-secrets/external-secrets</a><br>External Secrets Operator 从第三方服务（如 AWS Secrets Manager）读取信息，并自动将值作为 Kubernetes Secrets 注入。</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型 SRT / WebRTC / RTSP / RTMP / LL-HLS 媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/marcel-dempers/docker-development-youtube-series">marcel-dempers/docker-development-youtube-series</a><br></p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Kubernetes 的渐进式交付</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/authzed/spicedb">authzed/spicedb</a><br>开源、受 Google 桑给巴尔启发的数据库，用于可扩展存储和查询细粒度授权数据</p>
+
+<p><a href="https://github.com/XrayR-project/XrayR">XrayR-project/XrayR</a><br>A Xray backend framework that can easily support many panels. 一个基于Xray的后端框架，支持V2ay,Trojan,Shadowsocks协议，极易扩展，支持多面板对接</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

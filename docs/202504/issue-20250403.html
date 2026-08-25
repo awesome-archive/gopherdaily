@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250403.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250403</span>
+</p>
+<p>每日一谚：Do not trust user input; validate and sanitize it </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/04/03/waitgroup-go-proposal">WaitGroup.Go要来了？Go官方提案或让你告别Add和Done样板代码</a><br>近日，一项旨在简化这一模式的提案#63796在Go社区引发了广泛关注，并已被标记为Likely Accept，预示着sync.WaitGroup可能很快将迎来一个实用的新方法：Go。这也意味着Go开发者可以告别Add、defer Done的样板代码，并避免它们的“陷阱”可能导致的难以捕捉的代码错误。这篇文章介绍了WaitGroup.Go这个提案。</p> 
+
+<p><a href="https://t.zsxq.com/Ea8T6">Gopher的AI原生应用开发第一课：基于LLM OS之上(sponsor)</a><br>Gopher开发AI原生应用的系列文章的第一篇，引入了LLM OS范式，将LLM类比为操作系统内核，将Prompt类比为系统调用，从而为理解和构建AI原生应用提供了一个全新的视角和AI开发的方法框架</p> 
+
+<p><a href="https://go.dev/blog/testing-b-loop">使用testing.B.Loop实现更可预测的基准测试</a><br>Go 1.24 引入了一种编写基准测试的新方法 `testing.B.Loop`，它比传统方法更易用、更健壮。它避免了编译器在基准测试循环中的意外优化，自动排除了设置和清理代码对基准测试时间的影响，并且代码不会意外地依赖于迭代总数或当前迭代次数。这些改进使得基准测试结果更可预测，并且运行速度更快。</p> 
+
+<p><a href="https://tailscale.com/blog/5-things-5-years">Tailscale 五周年：五大经验总结</a><br>Tailscale 正式发布五周年之际，分享了团队在构建更便捷安全的互联网过程中获得的五大经验：简洁性是超级力量；可靠性带来复利效应；Tailscale 适用于小型团队到大型企业等各种规模的组织；适度的“懒惰”有时也是一种美德；网络安全不仅仅关乎数据包，更关乎信任。文章还宣布了为庆祝五周年而举办的赠送五个终身个人高级计划的活动。</p> 
+
+<p><a href="https://wundergraph.com/blog/golang-sync-pool">Go语言sync.Pool并非万能药</a><br>本文深入探讨了Go语言的sync.Pool，分析了其优势、缺陷以及何时应该（或不应该）使用它。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-structured-logging-in-go-a-developers-guide-to-better-observability-1fh3">掌握 Go 语言中的结构化日志记录：开发者提升可观测性的指南</a><br>本指南介绍了 Go 语言中结构化日志记录的最佳实践、高效实现和性能优化，以增强应用程序的可观测性。学习如何使用 Zap 日志记录器创建机器可解析的 JSON 日志，从而改进微服务间的调试和监控。</p> 
+
+<p><a href="https://dev.to/vishaaxl/intermediate-go-tutorial-building-your-own-redis-like-in-memory-cache-5aa2">Go 中级教程：构建你自己的 Redis</a><br>本教程将指导你使用 Go 构建自己的类 Redis 内存缓存系统。在本教程结束时，你将拥有一个支持基本操作的功能性缓存，例如设置和获取键、LRU 驱逐和持久化到磁盘。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.joshsoftware.com/2025/04/02/non-functional-testing-the-key-to-robust-software-performance/">非功能性测试：实现强大软件性能的关键</a><br>在当今快节奏的软件开发环境中，开发人员和测试人员不仅关注确保应用程序执行预期的功能，还努力保证其在各种条件下的可靠性。这就是非功能性测试的用武之地。非功能性测试侧重于评估与特定功能无关但对于为用户提供无缝体验同样至关重要的软件方面。这些方面包括性能、安全性、可用性和可扩展性。性能测试、负载测试和压力测试是其中一些最重要的测试，它们有助于确保软件能够处理现实世界的流量，提供最佳响应时间，并在意外情况下保持弹性。</p>
+
+<p><a href="https://blog.heroku.com/delivering-platform-for-next-wave-of-apps">Heroku：赋能下一波 AI 应用浪潮</a><br>Heroku 作为 Salesforce 的一部分，始终致力于帮助开发者使用任何语言更快地交付价值，提高可靠性和效率，同时简化不断变化的生态系统的复杂性。最新的创新使开发者能够更快地构建自定义 AI 应用，使用 AI 功能增强现有应用，并为任何语言的 AI 代理创建专门的操作和体验。Heroku 的下一代平台引入了 AI 功能，并提供像 Cursor 这样的开发者工具，帮助组织加速其代理计划，从而改善客户体验并专注于创造独特的价值。主要的新功能包括：Heroku AppLink（与 Salesforce 集成）、Heroku Eventing（事件驱动架构）、Heroku Fir 新一代平台（基于 Kubernetes 等）、VS Code 扩展、.NET 支持、Heroku-Jupyter 和托管推理与代理（MIA）。文章最后邀请读者参加网络研讨会，了解更多信息。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/04/02/kubecon-cloudnativecon-europe-2025-day-one-keynote-recap/">KubeCon &#43; CloudNativeCon欧洲2025：第一天主题演讲回顾</a><br>在阳光明媚的伦敦的一天，来自世界各地的与会者聚集在ExCel体育馆，参加KubeCon &#43; CloudNativeCon 2025的第一天。以下是主题演讲的简要回顾。演讲涵盖了云原生计算十周年纪念、欧洲主权云边缘连续体NeoNephos、大型语言模型时代的可观测性、AI赋能的可观测性解释器、Linux内核中的Rust、通过Kubernetes增强可访问性（实时手语翻译的未来）、可观测性平台工程优势（从零代码到代码即监控）等主题。</p>
+
+<p><a href="https://engineering.fb.com/2025/04/02/open-source/meta-open-source-by-the-numbers/">Meta 开源：2024 年数据 - Meta 工程</a><br>开源在科技行业及其他领域发挥着至关重要的作用。无论是在 AI/ML、Web 还是移动领域，我们的开源社区都在发展壮大，同时连接着世界各地的人们。在 Meta 开源项目中，2024 年是增长和转型的一年。我们的开源计划解决了开发人员不断变化的需求和挑战——推动 AI 领域的突破，并支持创建创新型、以用户为中心的应用程序和体验。通过与开源社区密切合作，我们分享知识、推出新项目并改进现有项目。在这篇文章中，我们将通过数据来回顾我们的开源项目组合，以便更好地了解我们每天与之互动的社区规模。到去年年底，我们启动了 256 个全新的代码库，使活跃的公共项目达到 944 个。这个数字不包括存档的代码库和我们转移到基金会的项目。2024 年，我们的开源代码库以惊人的速度增长，仅一年内就达到了 189,719 次提交。社区贡献者贡献了 71,018 次，而 Meta 员工贡献了剩余的 118,701 次。开源离不开人们的协作、分享和创新。共有 4,274 名外部贡献者帮助我们的社区壮大到 7,144 人。这个非凡的社区是 Meta 开源持续发展的动力。除了个人贡献之外，我们在 GitHub 上的项目还积累了额外的 151,380 个星标，总数达到了惊人的 180 万。参与度的增长表明，人们对 Meta 开源项目非常感兴趣和兴奋。</p>
+
+<p><a href="https://cedardb.com/blog/compilation">快速编译还是快速执行：两者兼得！</a><br>本文探讨了代码生成的基础知识，这是 CedarDB 性能背后的秘密之一。CedarDB 为每个查询创建自定义机器码，从而最大限度地减少不必要的数据传输，并使数据尽可能长时间地保留在 CPU 寄存器中。</p>
+
+<p><a href="https://corrode.dev/blog/pitfalls-of-safe-rust">安全Rust的陷阱</a><br>当人们说Rust是一种“安全的语言”时，他们通常指的是内存安全。虽然内存安全是一个良好的开端，但它远非构建健壮应用程序所需的一切。内存安全很重要，但对于整体可靠性来说是不够的。在本文中，我想向您展示安全Rust中的一些常见陷阱，编译器无法检测到这些陷阱，以及如何避免这些陷阱。</p>
+
+<p><a href="https://tomazweiss.github.io/blog/stackoverflow_decline">Stack Overflow 的衰落</a><br>多年来，Stack Overflow 一直是开发人员寻求编码问题解决方案的首选平台。然而，随着人工智能驱动的编码助手兴起，该平台的相关性受到了影响。本文将探讨 Stack Overflow 衰落背后的数据，比较 ChatGPT 和其他大型语言模型引入后问题的数量趋势和热门标签的变化。其他文章也探讨了这一趋势，例如 DevClass 的分析和 Pragmatic Engineer 的文章。然而，这些讨论主要关注整体活动下降，而不是问题标签的具体变化。在这篇文章中，我们将仔细研究哪些主题受 AI 辅助转变的影响最大。此外，检查哪些主题受 AI 影响最小也很有趣，这突出了人工辅助仍然有价值的领域。本分析的数据来自 StackExchange 数据资源管理器，它允许对数据库进行 SQL 查询。问题的数量急剧下降下图显示了问题数量的显著下降，尤其是在 2022 年 11 月 ChatGPT 公开发布之后。在此之前，Stack Overflow 已经经历了缓慢的下降，但在 ChatGPT 引入之后，下降速度变得更加明显，因为开发人员越来越多地转向 AI 以寻求快速、上下文相关的答案。哪些主题受影响最大？为了更好地理解影响，我们分析了 2022 年 11 月最热门标签的问题数量在 2024 年 11 月如何变化。虽然一些主题的下降幅度大于其他主题，这是可以预料的，但在这些下降中存在一个有趣的模式。最突出的是，与基本编程概念（例如列表、字典、循环、字符串和函数）和数据分析（包括 pandas、数据帧、数组、SQL 和 NumPy）相关的问题经历了最显著的下降。这可能是因为对受影响最大的主题生成的 AI 答案质量特别高，使得人工协助变得不那么必要。或者，使用这些技术的开发人员可能更倾向于将 AI 整合到他们的工作流程中，从而减少他们对传统问答平台的依赖。相反，与操作系统（Windows、Android 和 iOS）以及某些开发框架、IDE 和云平台（包括 Next.js、.NET、SwiftUI、React Native、Angular、Android Studio、Visual Studio Code 和 Azure）相关的主题，其活动下降相对较小。这可能是因为这些领域的问题经常涉及前端和 UI 相关的挑战，或者需要带有屏幕截图的可视化解释，而 AI 生成的响应仍然难以提供足够的支持。对这些结果的更全面的解释留给对所列技术有更深入了解的读者。发现此内容有趣或有用？用咖啡支持未来的文章！</p>
+
+<p><a href="https://thenewstack.io/the-new-look-and-feel-of-apache-kafka-4-0">Apache Kafka 4.0 的新面貌和感受</a><br>Apache Kafka 4.0 通过将 ZooKeeper 替换为 KRaft 作为默认元数据管理来显著简化平台。此版本还包含 Kafka Streams、Kafka Connect 和 Kafka 代理、使用者、生产者等方面的改进。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-04-02-dolthub-sql-assistant-technical-details/">DoltHub SQL 助手技术细节</a><br>本文深入探讨了 DoltHub SQL 助手幕后的技术细节，它是一个由大型语言模型 (LLM) 提供支持的 SQL 助手，可以帮助您在 DoltHub 上编写 SQL 查询。文章介绍了 DoltHub 的部署架构，包括用于运行多个开源模型的 Ollama 服务器，以及异步处理机制如何处理对大型语言模型的调用，以避免阻塞主 API。文章还讨论了选择 deepseek-r1 模型的原因，以及 SQL 助手请求的生命周期。</p>
+
+<p><a href="https://idiallo.com/blog/code-for-hire">科技工作的现实：我们并非被雇来编写代码</a><br>作者以自身经历和前同事的例子，阐述了在科技行业中，开发人员并非仅仅被雇佣来编写代码，而是被雇佣来构建产品和功能。公司更看重产品和功能的交付，而非代码本身的编写。即使是精通JavaScript的作者，其自建的测试套件和工具也被第三方产品取代。作者认为，在团队合作中，最重要的是团队中最弱的开发者至少要胜任，其余的努力应该放在构建和维护公司产品和功能上。</p>
+
+<p><a href="https://blog.google/products/gemini/how-we-built-gemini-robotics">谷歌如何构建 Gemini 机器人模型</a><br>Gemini 机器人模型驱动的机器人可以学习复杂的动作，例如准备沙拉甚至折叠纸鹤。</p>
+
+<p><a href="https://mlagerberg.com/blog-ai-copilot">使用 AI 副驾驶进行编程：资深开发人员的视角</a><br>本文作者是一位资深开发者，他分享了自己使用 AI 辅助编程工具的经验。他认为 AI 工具并非革命性的改变，而是开发工具的进化，它在简化重复性工作、学习新框架等方面很有帮助。但他也指出 AI 工具也存在一些问题，例如可能会生成不安全的代码、出现幻觉等，因此 AI 工具仍然需要人类开发人员的专业知识来指导和修正。</p>
+
+<p><a href="https://lucianonooijen.com/blog/why-i-stopped-using-ai-code-editors">为什么我停止使用AI代码编辑器</a><br>作者在2022年末开始使用AI代码编辑工具，起初对其功能印象深刻，但到2024年末，他停止了使用所有AI集成工具。作者将这种体验比作使用特斯拉的自动驾驶系统：起初很方便，但长期依赖会降低自身能力。作者认为过度依赖AI会降低编程能力，特别是“Fingerspitzengefühl”（直觉和经验），这对于高级开发者至关重要。他建议程序员谨慎使用AI，不要将其作为工作流程的核心部分，应保持学习和练习基本技能，避免成为只会依靠AI的“提示工程师”。作者仍然偶尔使用AI，但坚持将其与代码编辑器分开，手动输入所有上下文，以避免过度依赖。</p>
+
+<p><a href="https://thenewstack.io/how-ai-agents-are-quietly-transforming-frontend-development">AI 代理正在悄然改变前端开发</a><br>我们离能够运行 A/B 测试、评估性能影响并根据实时用户数据推荐 UX 优化的代理不远了。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/wgpsec/ENScan_GO">wgpsec/ENScan_GO</a><br>一款基于各大企业信息API的工具，解决在遇到的各种针对国内企业信息收集难题。一键收集控股公司ICP备案、APP、小程序、微信公众号等信息聚合导出。支持MCP接入</p>
+
+<p><a href="https://github.com/SpecterOps/BloodHound">SpecterOps/BloodHound</a><br>Six Degrees of Domain Admin</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.</p>
+
+<p><a href="https://github.com/k8sgpt-ai/k8sgpt">k8sgpt-ai/k8sgpt</a><br>Giving Kubernetes Superpowers to everyone</p>
+
+<p><a href="https://github.com/charmbracelet/gum">charmbracelet/gum</a><br>A tool for glamorous shell scripts 🎀</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/NVIDIA/gpu-operator">NVIDIA/gpu-operator</a><br>NVIDIA GPU Operator creates, configures, and manages GPUs in Kubernetes</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

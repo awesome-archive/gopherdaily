@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250522.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250522</span>
+</p>
+<p>每日一谚：A test should never delete something it does not create. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/05/22/go-mod-ignore-directive">Go工具链进化：go.mod新增ignore指令，破解混合项目构建难题</a><br>Go Issue #42965 的核心目标是提供一个全局的、可被 Go 工具链生态系统共同理解的目录忽略机制。经过多轮讨论和对各种方案（如独立的 .goignore 或 go.ignore 文件、利用 go.work 等）的权衡，Go 团队最终采纳了在 go.mod 文件中添加 ignore 指令的方案</p> 
+
+<p><a href="https://nghiant3223.github.io/2025/04/15/go-scheduler.html">深入分析Go调度器原理</a><br>本文深入探讨了Go调度器的演变过程，从最初的简单模型到现在的GMP模型，并详细解释了其各个组成部分，包括goroutine的创建、抢占、系统调用处理以及netpoll的集成。文章还介绍了Go运行时提供的API以及一些常见的函数，例如`getg()`和`gopark()`。此外，文章还分析了Go是如何高效处理I/O操作的，并解释了垃圾回收器的运行机制。总而言之，本文旨在帮助读者更好地理解Go调度器的工作原理，并编写更高效、更可靠的Go程序。</p> 
+
+<p><a href="https://revline.one/blog/stripe-affiliate-go-nextjs">使用Go、GraphQL和Next.js以及Stripe Connect实现联盟计划</a><br>本文介绍了如何使用Stripe Connect构建一个简单的应用内联盟计划，以激励用户分享你的应用程序。作者详细介绍了使用Go、GraphQL、Next.js和Stripe Connect构建联盟系统的过程，包括连接Stripe账户、使用Connect Webhooks和账户功能、在结账过程中使用联盟代码以及支付联盟奖励等步骤。 通过利用Stripe Connect和golang-petname，作者创建了一个强大的系统，不仅可以实现基本的联盟奖励，还可以实现自定义功能，例如应用内品牌推广和功能强大的仪表板。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/guide-self-hosting-proxmox">小白也能轻松自建服务器：安装 Proxmox 和硬件选择指南</a><br>本教程将指导你选择硬件并安装 Proxmox。随后，Tailscale 将安全地连接到你的自建存储。我们将探讨使用小型主机和虚拟设备进行设置的步骤，并解决一些常见的网络问题。</p>
+
+<p><a href="https://engineering.salesforce.com/engineering-hyperforces-front-door-how-ingress-gateway-powers-100-billion-daily-requests/">Salesforce工程博客：Hyperforce入口网关如何处理每天1000亿次请求</a><br>本文介绍了Salesforce如何应对突然增加5倍的流量，解决自动伸缩挑战，并在25个AWS区域支持数十亿次每日请求。文章重点介绍了Ingress Gateway团队如何构建和运营Salesforce公共云堆栈中最关键的系统之一，以及他们如何应对流量激增、确保系统稳定性和安全性，以及持续改进Ingress Gateway能力的研发工作。</p>
+
+<p><a href="https://netflixtechblog.com/fm-intent-predicting-user-session-intent-with-hierarchical-multi-task-learning-94c75e18f4b8">FM-Intent：使用分层多任务学习预测用户会话意图</a><br>Netflix 技术博客的文章介绍了 FM-Intent，这是一个新的推荐模型，通过分层多任务学习来增强基础模型。FM-Intent 利用短期和长期隐式信号来预测用户的潜在会话意图，并利用该意图预测来改进下一个项目的推荐。实验结果表明，FM-Intent 在预测下一个项目和用户意图方面均显著优于现有模型。</p>
+
+<p><a href="https://engineering.fb.com/2025/05/21/production-engineering/journey-to-1000-models-scaling-instagrams-recommendation-system/">通往 1000 个模型的旅程：扩展 Instagram 的推荐系统</a><br>本文探讨了 Instagram 如何成功地扩展其算法以包含超过 1000 个机器学习模型，同时不会牺牲推荐质量或可靠性。我们深入探讨了管理如此大量的模型的复杂性，每个模型都有其自身的性能特征和产品目标。我们分享了沿途的见解和经验教训——从最初意识到我们的基础设施成熟度落后于我们雄心勃勃的扩展目标，到我们实施的创新解决方案以弥合这些差距。文章还介绍了使 Instagram 能够保持其在社交媒体创新前沿地位的策略和工具，确保为数十亿用户提供无缝且引人入胜的体验。</p>
+
+<p><a href="http://www.brendangregg.com/blog//2025-05-22/3-years-of-extremely-remote-work.html">三年极度远程办公的经验</a><br>作者在过去三年中为一家美国公司（英特尔）远程办公，分享了其在澳大利亚远程办公的经验，以及一些针对类似情况（在亚洲为美国公司工作）的远程工作人员的建议。文章中，作者提到自己参加了77次凌晨1点到6点之间的会议，并讨论了远程办公的一些挑战和机遇，例如：时间差异、保持动力、被忽视的机会以及与面对面办公的比较。文章还分享了一些技巧，例如：计算非工作时间的会议次数、避免抱怨工作时间、保持每日工作日志等。</p>
+
+<p><a href="https://www.pingcap.com/blog/ten-years-on-we-set-off-again-my-journey-with-tidb">十年之后，我们再次启程：我和 TiDB 的旅程</a><br>PingCAP 从成立之初就是一个由建设者为建设者而构建的公司。在这篇特别的十年回顾文章中，PingCAP 的第一位员工兼产品与工程高级副总裁分享了 TiDB 背后的真实历程——从第一行 Go 代码到在全球范围内运行关键任务工作负载。我们希望这能激励下一代开源梦想家。</p>
+
+<p><a href="https://catonmat.net/low-level-bit-hacks">低级位操作入门</a><br>本文介绍了嵌入式系统程序员常用的低级位操作技巧。位操作是一种巧妙的编程技巧，它以一种聪明而高效的方式操作整数。这些编程技巧无需循环遍历单个位即可执行操作（例如，计算整数中 1 的位数），而是使用一个或两个精心挑选的位运算来实现相同的功能。文章从最基本的位操作开始，逐步讲解更高级的操作，并通过示例解释每个位操作的工作原理。文章还包含了Perl、Python和C语言的实用函数，用于打印8位有符号整数的二进制值。</p>
+
+<p><a href="https://www.quantamagazine.org/for-algorithms-a-little-memory-outweighs-a-lot-of-time-20250521">算法：少量内存胜过大量时间 | 量子杂志</a><br>一位计算机科学家的“惊人”证明是50年来对计算机科学中最著名问题之一取得的第一个进展。</p>
+
+<p><a href="https://langfuse.com/blog/2025-05-21-customizable-dashboards">我们如何构建可扩展且可定制的仪表板 - Langfuse 博客</a><br>Langfuse 推出了可定制的仪表板，这是一种在 Langfuse UI 中直接可视化 LLM 使用情况的强大方法。本文深入探讨了从产品理念到技术实现、测试和发布的幕后过程，并分享了我们在构建灵活的实时洞察 LLM 管道的经验教训。文章详细介绍了仪表板背后的三个主要组件：数据库/指标抽象、查询构建器和仪表板构建器，并阐述了每个组件的设计理念和技术细节。此外，文章还介绍了 beta 版本的创建、测试和发布过程，以及用户反馈和后续改进。</p>
+
+<p><a href="https://oppi.li/posts/tales_from_mainframe_modernization">大型机现代化轶事</a><br>作者讲述了在上一家公司将大型机语言（COBOL、JCL、BASIC等）转换为Java（使用Rust！）的经历。文章重点介绍了在处理大约20万行COBOL代码时遇到的各种奇特的编程技巧和历史遗留问题，例如基于10的数值表示、国际化（通过REDEFINES关键字实现西班牙语重定义）、字符串解析、早期退出机制以及一个包含前800个自然数的奇怪文件。文章还提到了JCL子系统中的DD语句与UNIX的dd命令之间的联系。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/22/no-docs-no-bugs/#atom-everything">没有文档，就没有bug</a><br>如果你的库没有任何文档，它就不可能有任何bug。文档规定了你的代码应该做什么。你的测试规定了它实际上做什么。当你的测试强制执行的实现未能匹配文档中描述的行为时，就会出现bug。如果没有文档，bug就只是未定义的行为。如果你打算遵循语义版本控制，那么当发布向后不兼容的更改时，你会增加你的主要版本。如果你的代码没有被全面记录，这样的更改就不可能存在！</p>
+
+<p><a href="https://developers.googleblog.com/en/google-ai-studio-native-code-generation-agentic-tools-upgrade">Google AI Studio 的开发者体验升级</a><br>Google AI Studio 进行了升级，以增强开发者体验，其功能包括使用 Gemini 2.5 Pro 进行原生代码生成、智能工具以及增强的多模式生成能力，此外还包括新的功能，例如“构建”选项卡、“实时 API”和改进的工具，用于构建复杂的 AI 应用程序。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/DNSCrypt/dnscrypt-proxy">DNSCrypt/dnscrypt-proxy</a><br>dnscrypt-proxy 2 - A flexible DNS proxy, with support for encrypted DNS protocols.</p>
+
+<p><a href="https://github.com/docker/buildx">docker/buildx</a><br>Docker CLI plugin for extended build capabilities with BuildKit</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/kubernetes-sigs/metrics-server">kubernetes-sigs/metrics-server</a><br>Scalable and efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.</p>
+
+<p><a href="https://github.com/ThreeDotsLabs/watermill">ThreeDotsLabs/watermill</a><br>Building event-driven applications the easy way in Go.</p>
+
+<p><a href="https://github.com/sigstore/cosign">sigstore/cosign</a><br>Code signing and transparency for containers and binaries</p>
+
+<p><a href="https://github.com/drakkan/sftpgo">drakkan/sftpgo</a><br>Full-featured and highly configurable SFTP, HTTP/S, FTP/S and WebDAV server - S3, Google Cloud Storage, Azure Blob</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/openimsdk/open-im-server">openimsdk/open-im-server</a><br>IM Chat ChatGPT</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/cloudflare/cfssl">cloudflare/cfssl</a><br>CFSSL: Cloudflare&#39;s PKI and TLS toolkit</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

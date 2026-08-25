@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260316.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260316</span>
+</p>
+<p>每日一谚：A little copying is better than a little dependency.  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/16/go-language-eliminated-undefined-behavior-truth-investigation/">真相调查：Go 语言真的消灭了 Undefined Behavior 吗？</a><br>近日，我翻阅了一份珍贵的历史资料——2013 年发生在 golang-nuts 邮件组的一场深度辩论。对话的一方是 Go 语言曾经的顶级贡献者 Dave Cheney，另一方是 Go 核心团队成员、gccgo 的作者 Ian Lance Taylor。 这场发生在这个语言童年时期的对话，揭示了一个令人背脊发凉又引人深思的事实：Go 并没有完全消灭未定义行为，它只是将 UB 赶进了一个更隐秘、更危险的角落——并发。 本文将带你层层剥开 Go 语言规范的表皮，调查“未定义行为”在 Go 中的真实生存状态，并探讨这对我们编写高质量代码意味着什么。</p> 
+
+<p><a href="https://tonybai.com/2026/03/15/over-engineering-trap-no-promotion-for-simplicity">别傻了，写出极致整洁的代码，是你升不了职的根本原因</a><br>今天讲点得罪人的大实话。如果你是一个有代码洁癖、崇尚极简主义、总是能用最干净的逻辑解决复杂问题的“老实人”程序员，那么接下来的内容 ，可能会戳痛你。因为在我们当下的技术职场里，有一个残酷的潜规则：“几乎没人会因为把代码写得太简单，而获得晋升。”</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/VdsVs2OcaNX7U4MvCf3_VQ">【AI 智能体时代的软件工程】08 上下文工程：把知识视为接口，而非垃圾场</a><br>AI 在新写的模块里，调用了一个早在两年前就被废弃的鉴权函数（因为这个函数在老代码里出现频率极高）；它在一个明确要求极低延迟的接口里，硬生生塞进了一段冗长的同步日志记录逻辑（因为它在某篇不知过时多久的 Wiki 里看到“所有请求必须记录全量日志”）；当你问它为什么这么做时，它无辜地引用了一段存在于代码库某个隐蔽角落里的、实际上已经被废弃的注释。 这，就是我们在第 2 讲中提到的“上下文悖论（The Context Paradox）”——我们提供的上下文越多，AI 使用得越低效，甚至越混乱。 今天，我们将正式攻克这一难题。我们将学习一项在智能体软件工程中极具杠杆率的技能：上下文工程（Context Engineering）。</p> 
+
+<p><a href="https://tonybai.com/2026/03/15/why-your-openclaw-skills-make-ai-go-on-strike/">都在用 OpenClaw 跑 Skill，但你写的“技能”为什么总让 AI 频繁罢工？</a><br>在过去两个多月的 实战 AI 原生开发、趟过了无数暗坑之后，我发现了一个极其普遍、却又被大多数人刻意忽略的残酷现象：绝大多数天天喊着“All in Agent”、天天白嫖别人开源 Skill 的开发者，其实根本没有看懂 agentskills.io 这个Skill 规范（Spec）的底层逻辑。 当你试着自己去魔改或者从零编写一个专属 Skill 时，灾难往往就开始了：你的 AI 要么在关键时刻“想不起来”调用你的技能，要么在执行到一半时陷入死循环，要么疯狂产生幻觉、乱改你的核心业务代码。 你以为你写的是严谨的“技能规则”，但在大模型的“心智”里，那可能只是一个让它频繁罢工的逻辑迷宫。</p> 
+
+<p><a href="https://tonybai.com/2026/03/14/go-sumdb-transparent-logs-supply-chain-trust/">拒绝“偷天换日”！深度拆解 Go sumdb 的密码学防线</a><br>为了应对这种极其隐蔽的软件供应链攻击，Go 团队祭出了其包管理生态中的终极武器：Go Checksum Database (sumdb)。但很多Go开发者并不清楚Go sumdb背后的工作机制。 本文将结合 Russ Cox 和 Filippo Valsorda 的核心设计文档，拆解一下 sumdb 究竟是如何利用透明日志（Transparent Logs）和精妙的瓦片化（Tiling）算法，在不信任任&gt;何中央服务器的前提下，为全球 Go 开发者构筑起一道坚不可摧的密码学防线的。</p> 
+
+<p><a href="https://jitesh117.github.io/blog/google-file-system-in-go">Google File System in Go</a><br>本文详细介绍了如何使用 Go 语言实现 Google 文件系统（GFS）。文章涵盖了 GFS 的核心概念和数据结构，包括 Chunk Handle、Metadata 结构、Operation Log Entry 等。同时介绍了 Checksum 实用工具、Master Server 的设计（包括命名空间锁定、文件创建删除、Chunk 分配、机架感知服务器选择等）、租约管理（一致性的核心）、快照与写时复制、后台协程（垃圾回收、重新复制）、心跳机制、ChunkServer 的实现（流水线数据推送、读写路径、应用变更）以及 GFS 客户端的设计（位置缓存、读写路径）。文章最后还提供了完整的演示，展示了如何将所有组件组合在一起运行。</p> 
+
+<p><a href="https://packagemain.tech/p/2fa-desktop-client-golang-wails-vue">2FA Desktop Client in Go with Wails and Vue</a><br>作者分享了使用 Go、Wails 框架和 Vue.js 开发桌面 2FA 验证器应用的经验。Wails 允许开发者使用 Go 作为后端，结合 WebKit 前端构建跨平台桌面应用。文章介绍了 Wails 的工作原理：它是一个标准的 Go 应用，可以将 Go 方法绑定到前端，使它们像本地 JavaScript 方法一样被调用。作者希望构建一个类似 Google/Microsoft Authenticator 的本地桌面 2FA 应用，使用 Wails v2 就可以轻松实现这一目标。文章包含了开发过程、架构设计和实现细节。</p> 
+
+<p><a href="https://jespino.github.io/having-fun-with-the-go-source-code-workshop">Having Fun with the Go Source Code Workshop</a><br>这是一个包含 11 个练习的 Go 源码学习工坊，帮助开发者从构建 Go 源码开始，并在编译器、工具和运行时的不同位置进行修改。通过这些练习，你将获得关于 Go 内部的深入见解，涵盖词法分析器（lexer）、解析器（parser）等不同层面。练习内容包括：0）介绍和环境搭建；1）无修改编译 Go；2）添加 &#39;=&gt;&#39; 箭头操作符用于启动 goroutine；3）启用多个连续 &#39;go&#39; 关键字；4）内联参数和函数内联实验；5）修改 gofmt 使用 4 空格替代 tabs 并添加自定义 AST 转换；6）创建自定义 SSA 编译器 pass 检测可优化为位移的除法；7）让 Go 等待 - 添加超时机制等。工坊帮助开发者深入了解 Go 编译器和运行时的内部机制。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://batsov.com/articles/2026/03/09/emacs-and-vim-in-the-age-of-ai">Emacs and Vim in the Age of AI</a><br>作者作为一个超过 20 年的 Emacs 狂热粉，同时最近也在大量使用 Vim 和 Neovim，探讨了在 AI 时代这两个经典编辑器的未来。文章指出 VS Code 已经是主导编辑器，并且会与每个主要 AI 工具（Copilot、Codex、Claude、Gemini 等）进行深度集成。AI 工具可能使 VS Code 对非专业用户更具吸引力。但 Emacs 和 Vim 不会立即消失，因为它们有独特优势：高度可定制化、基于文本的本质、在服务器环境中的可访问性、以及对键盘为中心的交互。AI 集成需要重新设计，而不是简单地将 AI 功能添加到现有结构中。挑战在于如何让这些老牌编辑器在保持其核心哲学的同时，适应 AI 带来的新范式。</p>
+
+<p><a href="https://backnotprop.com/blog/do-not-ab-test-my-workflow">Do Not A/B Test My Workflow</a><br>作者讲述了使用 Claude Code 的经历，指出 Anthropic 在其上进行 A/B 测试，这些测试主动降低了他的工作效率。文章强调他每月支付 200 美元使用 Claude Code，这是一个专业工具，他需要了解它如何工作的透明度，以及配置它的能力。作者不认为 A/B 测试本质上是错误的，也不认为 Anthropic 是有意降低任何人的体验，他们显然是在尝试优化。但是，测试设计很重要，在不知道原因的情况下改变核心功能（如计划模式）的感知行为，会降低用户体验。文章呼吁对 AI 工具的使用更加负责任，需要透明度和可配置性。每天都有工程师抱怨 Claude Code 的回归问题，有时你可能处于 A/B 测试中却不知道。</p>
+
+<p><a href="https://rushter.com/blog/github-malware">GitHub Malware</a><br>作者报告了 GitHub 上恶意仓库数量的激增，而令人遗憾的是，GitHub 似乎不太关心。作者发现了超过 100 个这样的仓库，其中一些完全由 LLM 生成以从搜索引擎和 GitHub 获取流量，而另一些则模仿流行仓库。恶意仓库通常遵循可识别的模式：提供 Windows 二进制文件但没有 Linux/MacOS，README 中移除了构建项目的信息，使用 LLM 修改描述以移除大量技术细节。恶意链接通常遵循可识别的模式，如 Software-v1.9-beta.2.zip 等命名。一些用户账户似乎注册已久，可能存在账户劫持。作者向 GitHub 报告了其中一个仓库，解释了问题并展示了 VirusTotal 的报告，但到现在为止，仓库仍然存在，二进制文件仍然可供下载。该仓库已经活跃了两个月。警告用户不要被欺骗，务必检查你正在下载的仓库。</p>
+
+<p><a href="https://newsletter.scalablethread.com/p/why-event-driven-systems-are-hard">Why Are Event-Driven Systems Hard?</a><br>文章探讨了事件驱动系统（Event-Driven Systems）的核心挑战，以及为什么在大型规模上构建和管理这些系统异常困难。事件只是一个说&#39;嘿，发生了一些事情！&#39;的小消息。例如 UserClickedButton、PaymentProcessed 或 NewOrderPlaced。服务订阅它们关心的事件并相应地做出反应。然而，这种事件驱动的方法使系统变得复杂。文章介绍了管理消息格式版本的挑战：想象你和你的朋友有一个传递笔记的秘密代码。有一天，你决定在代码中添加一个新符号来表示新的含义。如果你开始使用它而不告诉你的朋友，你的新笔记会让他们困惑。这正是事件驱动系统中发生的事情。例如，一个 OrderPlaced 事件可能包含特定字段，六个月后，你添加了一个新字段 shippingAddress。你更新生产者。事件变得不同，但另一个服务读取旧格式并发送确认邮件时就会出现问题。文章深入探讨了如何在不破坏现有消费者的情况下演化事件格式。</p>
+
+<p><a href="https://sushantdhiman.dev/how-kafka-stores-messages-internally">How Kafka Stores Messages Internally</a><br>文章探讨了 Kafka 为什么比 RabbitMQ 等传统消息队列快得多的原因。主要原因在于它在磁盘上存储数据的方式，以及它使用的一些操作系统优化技术。大多数人认为 Kafka 是一个队列，但这不对。在其核心，Kafka 是一个分布式提交日志。它不像传统的队列数据结构那样，你可以从不同的端推送和消费数据。提交日志是分布式系统中使用的最简单但最强大的数据存储概念之一。在核心，提交日志是存储在磁盘上的仅追加的记录序列。每条新数据只是附加到日志末尾，中间没有任何内容被修改或删除。文章介绍了 offset（偏移量）的概念：offset 是分配给写入日志的每条消息的唯一标识符，系统在追加消息时简单地为每条消息分配一个递增的数字。Kafka 和其他提交日志通常将所有数据存储在系统磁盘上，不使用任何数据库。相反，Kafka 依赖于操作系统优化来实现高吞吐量。这就是为什么 Kafka 的吞吐量取决于你的磁盘有多好。</p>
+
+<p><a href="https://unplannedobsolescence.com/blog/xml-cheap-dsl">XML is a Cheap DSL</a><br>作者基于其在 IRS 税务扣缴估算器项目（TWE）中的经验，为 XML 辩护。TWE 全部由两个 XML 配置生成：第一个是 Fact Dictionary（事实字典），是美国税法的表示；第二个是 Fact Graph（事实图），用于计算纳税人的纳税义务。XML 被广泛认为是笨拙的，最坏情况下是过时的，会唤起 SOAP 配置和 J2EE 的记忆。然而，作者的经验告诉他，XML 绝对在现代软件开发中有一席之地，并且应该被视为任何跨平台声明性规范的首选选项。XML 的优势包括：声明性、自描述、Schema 支持、良好的工具支持、广泛采用等。作者认为 XML 在复杂事实图的声明性规范方面具有独特优势，特别是对于公共部门软件而言，因为它提供了一种清晰、可审计、版本控制友好的方式来声明规则和关系。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://stigmollerhansen.dk/resume/learning-creative-coding">Learning Creative Coding</a><br>这是一本免费书籍，为学习创意编码（Creative Coding）的设计学生提供帮助。书中映射了你将面临的 45 个最常见的挫折，并确切地向你展示如何通过并从每个挫折中学习。这本书不会让编码变得容易，但会让你保持好奇而不是愤怒，在通往编程信心的道路上。本书适合：像其他人一样&#39;都懂了&#39;而你在错误信息中挣扎的人；在课上问&#39;基础&#39;问题时感到尴尬；准备退出因为&#39;你只是不是程序员&#39;的人；对跳过你实际遇到的地方的教程感到愤怒的人。书籍涵盖：开始编程时的心态、处理错误的挫折、理解抽象、调试策略、学习路径规划、作品集建设等主题。全书 148 页，无需注册即可免费下载 PDF，已有 16,363 次下载。</p>
+
+<p><a href="https://robenglander.com/writing/ai-did-not-simplify">AI Didn&#39;t Simplify Software Engineering: It Just Made Bad Engineering Easier</a><br>文章强烈质疑软件行业正在努力说服自己软件工程不再必要的观点。大语言模型当然可以编写代码，有时这可以节省时间。它是令人印象深刻的进步，毫无疑问。然而，行业似乎已经得出结论，软件开发已经被简化到不再需要专业知识的程度。如果可以按需生成代码，那么困难的部分一定已经结束。架构、规范、仔细验证——这些只是 quaint 的古董吗？废话。在一些组织中，这个想法甚至没有被谨慎探索，它已经开始塑造政策。工程师被大量裁员，AI 进展被引用为使专业知识变得多余。真相是，AI 只是另一个借口，用来转移糟糕的商业决策或压倒性的市场力量。曾经支配复杂系统如何构建的纪律实际上被整体抛弃。提示 AI 越来越被呈现为替代曾经定义软件工程的纪律。作者感觉这是一种似曾相识的模式——每隔几年就会有一个新工具出现，有人宣布软件工程的困难部分终于被解决或消除了。</p>
+
+<p><a href="https://x.com/wangray/status/2031029344995606838">AI 时代，最危险的不是做错，而是迟迟不做</a><br>Ray Wang 分享了一个关于对冲基金经理的故事：这个人管理着将近 20 个人的团队，在别人眼里的顶级位置，他却辞了，去创业，从零开始。外人觉得他疯了，但他的逻辑链是这样的：当他看到 AI 能写出有用的代码时，他没有停留在&#39;这还不够好&#39;的叙事里，而是顺着趋势继续往下推了一层：如果 AI 写代码的 bug 率有一天低于人类程序员，那么程序员面对的真正门槛，就不再是&#39;AI 够不够好&#39;，而是&#39;AI 是否已经比你更好&#39;。这件事什么时候发生，他并没有试图给出一个精确日期，但他判断，几年之内大概率会到来。沿着同样的思路再往前一步，更专业、更依赖知识密度的量化金融，也迟早会被模型公司一步步吃进去，只是速度不同而已。所以他没有继续等，当很多人还在观望的时候，他就选择了行动。AI 时代，最危险的不是做错，而是迟迟不做。</p>
+
+<p><a href="https://x.com/tonykipkemboi/status/2031068470922670471">Difference Between Agent Harnesses &amp; Agent Frameworks</a><br>Tony Kipkemboi 解释了 Agent Harnesses 和 Agent Frameworks 的区别。Agent 框架和 Agent Harnesses 位于观点谱的不同点上，如果你正在构建 agents，理解它们所在的位置很重要，因为它改变了你负责什么以及工具为你处理什么。如果你把 agent 开发放在一条线上，没有抽象的原始代码位于最左边。你直接调用 API，自己管理状态，从头构建每一个部分。完全的灵活性，完全的责任。Agent 框架位于中间。它们给你结构和抽象，但你仍然要做很多决策。你选择内存系统，你配置工具，你定义编排逻辑。框架对事物应该如何连接有意见，但它是模块化的。你可以交换组件。Agent Harnesses 位于最右边。它们最大限度地有意见。一切都是为你确定的。你添加你的 API 密钥，可能指向几个工具，它就运行了。内存、上下文管理、agent 循环、安全检查——所有这些都为你决定。框架为构建 agents 提供抽象。你定义角色、任务、工具。你指定 agents 如何协调，他们是否共享状态等。</p>
+
+<p><a href="https://developer.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course">Get Started with GitHub Copilot CLI: A Free Hands-On Course</a><br>GitHub Copilot 已经远远超出了你编辑器中的代码补全。它现在也存在于你的终端中。GitHub Copilot CLI 让你审查代码、生成测试、调试问题，并在不离开命令行的情况下询问有关项目的问题。为了帮助开发者快速上手，微软整理了一个免费的、开源的课程：GitHub Copilot CLI for Beginners。它包含 8 章，从头开始动手实践，设计得可以在几个小时内从安装到构建真实的工作流程。GitHub Copilot CLI 是一个运行在终端中的对话式 AI 助手。你使用 @ 引用它指向文件，它会读取你的代码并用分析、建议或生成的代码响应。你可以使用它来：审查文件并获得关于代码质量的反馈；基于现有代码生成测试；通过指向文件并询问问题来调试问题；解释不熟悉的代码或令人困惑的逻辑；生成提交消息、重构建议等。课程涵盖了从安装到配置、代码审查、测试生成、调试、自动化工作流程等所有内容。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 OpenAI、Claude 等的免费开源替代方案。自托管和本地优先。消费级硬件上的替代品。无需 GPU。运行 gguf、transformers、diffusers 等。</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric 是一个用于使用 AI 增强人类能力的开源框架。它提供了一个模块化系统，用于使用众包的 AI 提示集解决特定问题，可以在任何地方使用。</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>你的个人 AI 交易助手。任何市场。任何模型。用 USDC 支付，而不是 API 密钥。</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>太阳能充电 ☀️🚘</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>✨ 能够执行复杂渗透测试任务的完全自主 AI Agents 系统。</p>
+
+<p><a href="https://github.com/psviderski/uncloud">psviderski/uncloud</a><br>一个轻量级工具，用于跨 Docker 主机网络部署和管理容器化应用程序。弥合 Docker 和 Kubernetes 之间的差距 ✨。</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>下一代爬取和爬虫框架。</p>
+
+<p><a href="https://github.com/fengshao1227/ccg-workflow">fengshao1227/ccg-workflow</a><br>多模型协作开发系统 - Claude 编排 &#43; Codex 后端 &#43; Gemini 前端，28 个命令覆盖开发全流程，一键安装零配置。</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity 订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区管理的域名列表。为 V2Ray 生成 geosite.dat。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

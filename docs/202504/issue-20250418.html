@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250418.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250418</span>
+</p>
+<p>每日一谚：Group related code into packages. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/Wcytm8ZE7a8Pl-iOPD1MjQ">代码Agent没有护城河？我用Go标准库和DeepSeek证明给你看！</a><br>用Go&#43;DeepSeek复现Thorsten Ball的Coding Agent</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ippjOgk0fOeh5KwIaNf6cw">“Go is badly designed”？它像极了我们当年恨过的物理老师！</a><br>叫Lyes的开发者回应 “Go is badly designed” (Go 语言设计得很糟糕) 的说法，他将Go比作高中物理老师，从不‘放水’，直面问题。你可以很快用它变得高效，写出远比用 Python 或 JavaScript 写得更好的软件</p> 
+
+<p><a href="https://hub.corgea.com/articles/go-lang-security-best-practices">Go语言安全最佳实践</a><br>这份全面的指南介绍了如何保护您的 Go 应用程序。它涵盖了输入验证、密码和密钥管理、身份验证和授权、依赖项管理以及针对 SQL 注入、跨站脚本 (XSS) 和竞争条件等常见漏洞的保护。您还将学习如何安全地处理错误、记录的最佳实践以及如何利用 Go 的内置工具尽早发现和修复安全问题。</p> 
+
+<p><a href="https://hypermode.com/blog/go-graphql-mcp">Go、GraphQL和MCP：开发者工具的新时代</a><br>本文讨论了Go、GraphQL和模型上下文协议（MCP）如何彻底改变开发者的工作流程。文章重点介绍了这些技术如何重塑开发工作流程，并在API管理中带来新的可能性，包括WunderGraph公司如何利用这些技术，以及AI如何改变开发者工具。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/04/18/creating-a-clickhouse-cluster-on-raspberry-pis/">在树莓派上创建 ClickHouse 集群</a><br>想要一种动手实践的方式来探索 Kubernetes 和 ClickHouse®，而无需启动云虚拟机？在这篇文章中，我们将构建一个由树莓派 5 型板组成的家庭实验室集群……它模拟了一个高可用性设置。无论您是希望拓宽裸机和网络技能的云原生开发者，还是仅仅是喜欢将树莓派硬件推向其极限的爱好者，这个项目都提供了一种有趣且经济高效的方式，让您在家中获得实际的 Kubernetes 体验。我们将涵盖从准备树莓派和安装 K3s 到启动由 Altinity ClickHouse 运算符管理的 ClickHouse 复制集群的所有内容。</p>
+
+<p><a href="https://transactional.blog/blog/2025-decomposing-transactional-systems.html">分解事务系统</a><br>每个事务系统都必须执行、排序、验证和持久化事务。执行事务意味着评估事务的主体以产生预期的读写操作。排序事务意味着为事务分配某种发生时间的概念。验证事务意味着强制执行并发控制，或更少见的情况是特定于领域的语义。持久化事务使其持久化，通常是持久化到磁盘。这四个步骤可以在任何顺序下执行，也可以并发执行。不同的系统通过重新排序这些步骤来实现不同的权衡。</p>
+
+<p><a href="https://victoriametrics.com/blog/dont-default-to-microservices-you-will-thank-us-later">不要默认选择微服务：你以后会感谢我们的！</a><br>我们认为微服务不应该是默认选择，公司应该从单体架构开始，直到实际需要扩展并从单节点迁移到集群节点。因此，我们提供基于开源的集群功能，因为我们希望支持真实的增长。阅读更多细节！</p>
+
+<p><a href="https://dave.recoil.org/unikernels">关于Unikernel的思考</a><br>本文回顾了单内核十年来的发展历程。单内核是一种单用途设备，其中应用程序与其所需的一切（包括内核驱动程序）链接到单个二进制文件中，可在云中运行。作者探讨了单内核的优势，例如允许探索新的想法、重新思考旧的 OS 接口以及删除过去几十年积累的不必要代码层。单内核也是“库操作系统”，其中网络堆栈和设备驱动程序是库，直接与自定义应用程序逻辑链接到单个二进制文件中。单内核对于高保证应用程序是一个不错的选择，因为它减少了攻击面。单内核还允许进行实验，例如在响应网络请求时生成单内核。最后，文章介绍了其他一些有趣的单内核项目，例如 UniKraft 和 Nanos。</p>
+
+<p><a href="https://maknee.github.io/blog/2025/3FS-Performance-Journal-1">DeepSeek分布式文件系统入门</a><br>这篇文章介绍了DeepSeek公司开源发布的分布式文件系统3FS（Fire-Flyer File System）。文章首先解释了什么是分布式文件系统以及其优势，例如处理海量数据、高吞吐量、容错性和冗余性。然后，文章深入探讨了3FS的架构，包括四个主要组件：元数据节点（Meta）、管理服务器（Mgmtd）、存储节点（Storage）和客户端（Client）。文章详细解释了每个组件的功能和工作原理，并重点介绍了3FS中使用的CRAQ（Chain Replication with Apportioned Queries）协议，该协议用于实现强一致性和线性化。最后，文章比较了3FS与其他分布式文件系统的异同，并提出了后续文章将探讨的性能分析问题。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/NTd9_QRJRIu_XLbZ1zv7KA">2025年：MySQL vs PostgreSQL</a><br>在 2025 年的当下，MySQL 无论是在功能特性集，质量正确性，性能表现，还是生态与社区上都被 PostgreSQL 拉开了差距，而且这个差距还在进一步扩大中。今天我们就来对 MySQL 与 PostgreSQL 进行一个全方位的对比，从功能，性能，质量，生态来全方位反映这几年的生态变化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/18/gemini-image-segmentation/#atom-everything">使用 Gemini 2.5 进行图像分割</a><br>本文介绍了如何使用 Gemini 2.5 的图像分割功能。作者指出 Gemini 2.5 系列的一个隐藏特性：除了生成相关主题的二维边界框外，还可以创建分割蒙版。作者创建了一个基于浏览器的工具，可以直接与 Gemini API 交互，用户提供 Gemini API 密钥和图像以及提示，该工具即可运行提示并显示生成的 JSON。Gemini API 返回的分割蒙版为 base64 编码的 PNG 图像。作者还分享了使用 Claude 和 ChatGPT 构建该工具的过程以及成本分析。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel offers an intuitive web interface for managing websites, files, containers, databases and LLMs within a Linux server.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/shirou/gopsutil">shirou/gopsutil</a><br>psutil for golang</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/openai/openai-go">openai/openai-go</a><br>The official Go library for the OpenAI API</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/go-acme/lego">go-acme/lego</a><br>Let&#39;s Encrypt/ACME client and library written in Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

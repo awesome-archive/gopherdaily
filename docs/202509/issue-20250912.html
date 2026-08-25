@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250912.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250912</span>
+</p>
+<p>每日一谚：Avoid unnecessary allocations and memory overhead </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/12/go-constructor-pattern-guide">超越零值：Go语言“构造模式”深度指南</a><br>Go 语言的设计哲学崇尚简约与直白(straightforward)。其中，结构体字面量 (Struct Literal) 的存在，让我们可以用极其简单的方式创建数据结 构。然而，在构建大型、复杂的系统时，这种简单性也可能成为一把双刃剑。当一个对象的创建需要满足特定前置条件、执行复杂初始化或强制执行 业务规则时，我们便需要一个更强大、更可控的工具。这个工具，就是 Go 语言中地道 (Idiomatic) 且被广泛采用的“构造模式”，通常以工厂函数(New或NewXXX)的形式出现。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/cTSc7IMs_2hPn0GqfRD5Og">【Go系统编程】01 文件I/O：从文件描述符到 io.Reader/Writer 的抽象</a><br>这一讲，我们将像剥洋葱一样，从操作系统最底层的概念开始，层层向上，最终领略 Go 语言在 I/O 领域设计的哲学之美。理解了这一讲，你不仅能写出更高效、更灵活的 I/O 代码，更能深刻体会到 Go 是如何将复杂的底层细节，抽象成一组如此简单、优雅且可组合的接口。 </p> 
+
+<p><a href="https://abinesh-mathivanan.vercel.app/en/posts/post-5">go-torch - simple torch like library in 1000 lines.</a><br>我正在阅读 Joe Bodner 的书《学习 Go》，并产生了用 Go 重建一个类似 PyTorch 的库的想法。 go-torch 的想法很简单——只需构建基本要素：张量函数、自动梯度、反向传播和线性层。 只需要用一个可以实际训练网络的库——比如一个用于 MNIST 的数字识别器。</p> 
+
+<p><a href="https://packagemain.tech/p/graceful-shutdowns-k8s-go">优雅地终止：优雅关闭指南</a><br>让我们深入研究优雅关闭的世界，特别是对于在 Kubernetes 上运行的 Go 应用程序。</p> 
+
+<p><a href="https://gaultier.github.io/blog/observe_sql_queries_in_go_with_dtrace.html">使用 DTrace 在 Go 中观察实时 SQL 查询</a><br>你有一个 Go 程序，它用 SQL 数据库做一些事情。确切地说？你不知道。你想实时查看正在完成的 SQL 查询。使用 DTrace 很容易做到，无需任何代码修改，甚至无需重新启动正在运行的程序！我们将使用 DTrace 窥探 Go 运行时的内存，检查函数参数，并重建带有其参数的完整 SQL 查询。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/09/08/goland-can-do-that-ten-secret-superpowers-you-might-not-know">“GoLand 可以做到吗？” 您可能不知道的十个秘密超能力</a><br>认为您了解 GoLand？ 探索十个秘密超能力，可以节省您的时间并帮助您更快地移动、编写更好的代码并充满信心地扩展。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2025/09/11/kubernetes-v1-34-mutable-csi-node-allocatable-count/">Kubernetes v1.34: Mutable CSI Node Allocatable Graduates to Beta</a><br>Kubernetes v1.34 版本中，用于 CSI 驱动程序更新节点上可附加卷计数信息的 功能（最初在 Kubernetes v1.33 中作为 Alpha 引入）已升级为 Beta 版本！这标志着通过减少由于过时的可附加卷容量信息而导致的故障，从而增强有状态 Pod 调度的准确性方面的一个重要里程碑。</p>
+
+<p><a href="https://www.seangoedecke.com/pure-and-impure-engineering">纯粹与不纯粹的软件工程</a><br>为什么单人游戏开发者倾向于与大型科技公司的工程师发生争执？为什么大型公司聘请的高调外部人员往往会失败？为什么 AI 辅助开发对一些工程师来说很棒，而对另一些工程师来说却毫无用处？</p>
+
+<p><a href="https://programmingsimplicity.substack.com/p/type-checking-is-a-symptom-not-a">类型检查是症状，而不是解决方案</a><br>如果编程界对类型检查的数十年痴迷完全解决了错误的问题呢？如果我们的类型系统越来越复杂——从Haskell的范畴论到Rust的借用检查器——是我们从一开始就犯下的基本架构错误的精心设计的权宜之计呢？软件行业已经相信类型检查不仅有用，而且至关重要。我们围绕着在编译时捕获类型错误是软件设计中最高优先级之一的前提构建了整个编程语言。我们投入了无数人年，开发更强大的类型系统，将每一次进步都视为无可争议的进步。但是，退一步问一个简单的问题：我们为什么需要类型检查？</p>
+
+<p><a href="https://yatsushi.com/blog/tz-database">tz 数据库的工作原理</a><br>前几天，我遇到了 Ruby 中的时区问题，那是第一次接触 tz 数据库。几乎没有博文解释其工作原理，所以我决定自己写一篇。 我们将使用 alpine:3.12 Docker 镜像来测试。 什么是它？ tz 数据库是全球大多数系统用来处理时区转换的标准化时区数据和规则的集合。</p>
+
+<p><a href="https://www.braintrust.dev/blog/async-programming">The rise of async programming</a><br>本文介绍了异步编程的工作流程，包括明确定义问题、自动化验证和代码审查。它强调了清晰的问题定义的重要性，以及自动化验证和代码审查在异步编程中的作用。文章还讨论了异步编程如何改变开发人员的工作方式，以及Braintrust如何在其AI工程中使用异步编程。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/engineering/writing-tools-for-agents">Writing effective tools for AI agents — with agents</a><br>Agents are only as effective as the tools we give them. We share how to write high-quality tools and evaluations, and how you can boost performance by using Claude to optimize its tools for itself.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>Nightingale for monitoring and alerting, just as Grafana for visualization.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/openfga/openfga">openfga/openfga</a><br>A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，企业级业务AI&#43;开发解决方案，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/yaml/go-yaml">yaml/go-yaml</a><br>The YAML org maintained fork of https://github.com/go-yaml/yaml</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/sst/opencode">sst/opencode</a><br>AI coding agent, built for the terminal.</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

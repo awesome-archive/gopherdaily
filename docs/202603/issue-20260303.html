@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260303.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260303</span>
+</p>
+<p>每日一谚：Concurrency is not parallelism </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.jetbrains.com/go/2026/03/02/secure-go-error-handling-best-practices/">Go 语言中安全错误处理的最佳实践</a><br>对于 Go 新手来说，错误处理绝对是一个需要适应的范式转变。与其他流行语言不同，在 Go 中，错误是值，而不是异常。这意味着开发者不能再对错误视而不见——你必须在调用时显式地处理错误。这相当于大量的 if err != nil { return err } 语句。但更重要的是，由于错误是值，它们也可以像其他变量一样被传递、检查和组合。如果不小心，这会引发许多安全问题。本指南将引导您了解 Go 语言中安全错误处理的最佳实践。我们将探讨其重要性、对安全性的影响，以及如何安全地创建、包装、传播、包含和记录错误。此外，我们还将提供一份清单，指导您如何安全地处理特定的 Go 错误。</p> 
+
+<p><a href="http://notes.eatonphil.com/2026-03-02-source-available-projects-and-their-ai-contribution-policies.html">可供源代码的项目及其AI贡献政策</a><br>这是一篇外部文章，它重定向到 &#39;https://theconsensus.dev/p/2026/03/02/source-available-projects-and-their-ai-contribution-policies.html&#39;。文章标签包括：开源、AI、theconsensus、外部。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/LogMessagesAreForOperation">日志消息主要供软件操作人员使用</a><br>我最近读了埃文·哈恩的 《两种错误 》，其中简要地提到了日志记录，这引发了我的一些思考。我之前写过一篇从系统管理员角度出发，阐述错误日志级别含义的文章，但那篇文章忽略了日志消息的一个基本概念：在大多数情况下， 日志消息是给软件的运行人员看的 （ 我之前在其他场合也提到过这一点 ）。当你准备添加一条非调试日志消息时，你应该问自己的一个问题是：运行你程序的人员看到这条消息有什么好处？</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-03-02-workbench-medicaid/">使用 Dolt Workbench 处理 Medicaid 数据库</a><br>本文介绍了如何使用 Dolt Workbench 的 Agent 模式来分析新发布的 Medicaid 数据集中可疑的付款记录。文章详细指导了安装 Dolt Workbench、克隆数据库、启动 Agent 模式（使用 Claude AI）的步骤，并展示了如何通过 AI 提示来识别潜在的欺诈行为（如创建名为 `fraud_risk_score` 的视图），最后对一个具体的被标记为高风险的提供商（NPI 1013030808）进行了分析，结论是该提供商的标记是误报，原因与其作为县立精神卫生设施的性质有关。</p>
+
+<p><a href="https://seangoedecke.com/giving-llms-a-personality/">为大型语言模型赋予个性只是良好的工程实践</a><br>文章反驳了AI怀疑论者关于大型语言模型（LLMs）不应具有类人个性的观点。作者认为，赋予LLM个性（如Claude和ChatGPT所拥有的）并非出于市场营销或哲学上的错误，而是构建一个有用、能力强的AI系统的最佳方式。基础模型（base model）本身并不可用，需要通过后训练（post-training）为其“塑造个性”（通常是友好的助手形象），才能使其能够从训练数据中提取有益的信息，避免输出不连贯或有害的内容。这种“个性”是LLM能够执行任务的媒介，就像人类的身份是其行为的约束一样。因此，类人个性是技术上的必要条件，而非可有可无的装饰。</p>
+
+<p><a href="https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec">Optimizing Recommendation Systems with JDK’s Vector API</a><br></p>
+
+<p><a href="https://www.johndcook.com/blog/2026/03/02/an-ai-odyssey-part-1-correctness-conundrum/">人工智能奥德赛，第一部分：正确性难题</a><br>人工智能系统在关键任务上可能会犯错。我们在工业可靠性标准的环境下讨论人工智能系统的准确性。作者强调，尽管AI工具在提高生产力方面很有用，但它们不能保证正确性，这一点在处理关键资产（如财务数据）时需要非常小心。当前的AI系统存在技术上的不可预测性，这使得它们在可靠性方面难以达到高风险工程领域要求的标准，如六西格玛或形式验证所要求的程度。在获得可靠性保证之前，应以明智的方式使用这些工具，避免不必要的风险。</p>
+
+<p><a href="https://nesbitt.io/2026/03/02/transitive-trust.html">可传递信任</a><br>你信任你的维护者，他们信任他们的维护者，但他们信任他们的维护者的维护者吗？文章探讨了开源生态系统中基于维护者之间相互信任的“可传递信任”模型，并以Ken Thompson的“反射信任”理论为引子，讨论了事件流（event-stream）事件、xz后门和Codecov攻击等安全事件，指出依赖扫描工具的局限性以及“可信发布”（Trusted publishing）机制带来的新信任假设，最后指出大型公司通过本地化构建（vendoring）也只是将信任链的验证深度进行了限制，最终仍需要停止于某个可接受的深度。</p>
+
+<p><a href="https://engineering.fb.com/2026/03/02/video-engineering/ffmpeg-at-meta-media-processing-at-scale/">FFmpeg在Meta：大规模媒体处理</a><br>Meta每天执行数十亿次的FFmpeg和ffprobe二进制文件，面临着处理媒体文件的独特挑战。通过与FFmpeg开发者、FFlabs和VideoLAN的合作，Meta成功地将多车道转码和实时质量指标等关键功能整合到上游FFmpeg中，从而能够完全弃用内部的FFmpeg分支。此外，通过对硬件加速API的贡献，Meta得以在其自研ASIC（MSVP）上使用通用工具，最小化平台特定调整。Meta承诺将继续为FFmpeg社区做出贡献，以提升资源利用率、增加新编解码器支持和提高可靠性，从而造福整个行业。</p>
+
+<p><a href="https://matthiasplappert.com/blog/2026/humanoid-robot-in-the-room">让我们来谈谈房间里的人形机器人</a><br>通用型人形机器人就像自动驾驶汽车，但实际上要困难得多。尽管硬件、基础模型和资本投入方面取得了令人印象深刻的进步，但通用型人形机器人的部署环境极其开放，任务种类繁多，且数据收集面临巨大挑战，这使得它们比自动驾驶汽车更难实现。作者认为，短期内实现通用型人形机器人希望渺茫，并指出更专业的机器人（如扫地机器人、割草机器人）或专注于工业环境的AI可能是更现实的短期发展方向。</p>
+
+<p><a href="https://www.star-history.com/blog/openclaw-surpasses-react-most-starred-software">OpenClaw 超过 React 成为 GitHub 上星标最多的软件项目</a><br>OpenClaw 已经超过 React，成为 GitHub 上星标最多的非聚合类软件项目——就在它超过 Linux 五周之后。OpenClaw 现已获得超过 250K 颗星，超过了多年来一直保持领先地位的 React。</p>
+
+<p><a href="https://www.ntik.me/posts/voice-agent">我如何从零开始构建一个延迟低于500毫秒的语音智能体</a><br>这篇文章详细介绍了作者如何从零开始构建一个延迟低于500毫秒的语音代理，并将其性能与现有平台（如Vapi）进行对比。作者强调语音代理的复杂性在于实时、连续的轮次切换（用户说话/系统说话）和协调多个模型（STT、LLM、TTS）。
+
+主要步骤包括：
+1. **第一阶段（VAD测试）**：使用Silero VAD进行基础的语音活动检测和简单的预录制响应测试，以隔离和验证最难的轮次检测逻辑。
+2. **第二阶段（全流程）**：引入Deepgram Flux进行更精确的流式语音转录和轮次检测，并构建了一个将LLM输出流式传输到TTS，再实时转发音频的管道，以最小化延迟。
+3. **优化**：通过将编排层部署到与服务（Twilio, Deepgram, ElevenLabs）地理位置相近的欧盟区域，将端到端延迟从约1.7秒降低到约790毫秒。
+4. **模型选择**：通过延迟测试发现Groq的llama-3.3-70b在首次令牌时间（TTFT）方面显著优于OpenAI模型，最终将延迟优化至约400毫秒。
+
+**核心技术要点**在于：低TTFT、端到端流式管道、精确的轮次取消机制，以及服务部署的地理位置优化。</p>
+
+<p><a href="https://0xparc.org/writings/programmable-cryptography-1">可编程的密码学</a><br>超越原始计算。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/guides/agentic-engineering-patterns/gif-optimization/#atom-everything">使用 WebAssembly 和 Gifsicle 的 GIF 优化工具 - 代理工程模式</a><br>这篇文章介绍了作者如何使用 Claude Code 创建了一个基于 WebAssembly 和 Gifsicle 的 GIF 优化网页工具。作者喜欢在文章中使用动画 GIF，但它们通常文件较大。Gifsicle 是一款优秀的 GIF 压缩工具，但它是一个命令行工具。作者通过向 Claude Code 提出详细的提示，成功地让 AI 编译 Gifsicle 为 WASM，并构建了一个允许用户上传/拖放 GIF、预览不同压缩设置、下载结果的 Web 界面。文章详细解释了提示中的各个部分如何指导 AI 完成任务，包括使用 Rodney 进行测试、添加构建脚本和补丁，以及确保对 Gifsicle 作者的署名。最终生成的工具允许用户在浏览器中进行高效的 GIF 优化。</p>
+
+<p><a href="https://tomtunguz.com/hybrid-state-machine-agents">AI做得越来越少？</a><br>对14个生产级AI智能体工作流程的分析表明，最佳的确定性代码与LLM推理平衡是：65%的节点作为纯代码运行，从而节省Token并提高可靠性。研究总结出四种类型：纯确定性（100%）、大部分确定性（67-91%）、混合型（14-56%）和纯智能体型（0%）。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/asheshgoplani/agent-deck">asheshgoplani/agent-deck</a><br>Terminal session manager for AI coding agents. One TUI for Claude, Gemini, OpenCode, Codex, and more.</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 Take full control of your VPS with 1Panel. Deploy OpenClaw in one click.</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

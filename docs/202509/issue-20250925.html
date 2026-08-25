@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250925.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250925</span>
+</p>
+<p>每日一谚：In golang, if you have packages like `interface`, `factories`, `model`, and so on, it is an antipattern. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/25/go-security-past-present-and-future">Go 安全的“隐形战争”：过去、现在与未来</a><br>在今年的 GopherCon UK 大会上，该团队负责人 Roland Shoemaker 发表了一场罕见的、对 Go 安全内核 进行深度揭秘的演讲这场演讲更像是一部关于 Go 语言在安全领域攻防战的编年史，清晰地描绘了其过去的经验教训、现在的核心工作，以及未来的宏大蓝图，值得每位对Go安全感兴趣的Go开发者参考。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/AdUoBAwPBWgnAQUNHdSwdw">【Go context解惑】03 原理：深入源码，揭秘 context 的“树”与“信号”</a><br>今天，我们将化身“源码侦探”，一起潜入 `context` 包的内部，彻底揭开这些谜底。放心，我们不会逐行去啃食晦涩的源码，而是会抓住核心数据结构和关键函数，并借助清晰的示意图，让你对 `context` 的工作原理建立起一个直观且深刻的心智模型。</p> 
+
+<p><a href="https://matttproud.com/blog/posts/go-maphash.html">哈希函数的安魂曲：我如何学会热爱 maphash 包</a><br>我刚从手术中恢复过来，有些空闲时间，所以我想分享一个关于学习经历的故事。
+
+这篇文章在软件工程师的教学时刻上有点双重目的——提供对糟糕的决定的回顾，并以此获得忏悔。
+
+有一个片段深深地印在我的记忆中，带有相当大的羞耻感：为 Prometheus 的客户端指标实现原始指标哈希，用于指标族数据类型。这种哈希被用于客户端指标的内部，因此用户不会直接接触到它——除了 CPU 成本！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/evaluate-models-and-mcp-with-promptfoo-docker/">Evaluate models and MCP with promptfoo and Docker | Docker</a><br>Learn how promptfoo and Docker help developers compare models, evaluate MCP servers, and even perform LLM red-teaming.</p>
+
+<p><a href="https://engineering.salesforce.com/rebuilding-heroku-on-kubernetes-platform-modernization-operational-complexity-and-technical-debt-resolution/">在 Kubernetes 上重建 Heroku：平台现代化、运营复杂性和技术债务解决</a><br>了解 Salesforce 如何同时维护三个运行时代，从专有技术过渡到开源标准，以及更多内容！</p>
+
+<p><a href="https://engineering.fb.com/2025/09/24/video-engineering/video-streaming-with-av1-video-codec-mobile-devices-meta-white-paper/">在移动设备中使用 AV1 视频编解码器进行视频流传输</a><br>今天，Meta、沃达丰和谷歌发布了一份白皮书，题为“在移动设备中使用 AV1 视频编解码器进行视频流传输”，详细介绍了 AV1 编解码器的优势，这是一种先进的视频压缩技术，旨在增强移动设备上的流媒体视频体验。</p>
+
+<p><a href="https://bigdata.2minutestreaming.com/p/how-aws-s3-scales-with-tens-of-millions-of-hard-drives">AWS S3 如何在慢速硬盘上每秒提供 1 PB 的数据</a><br>了解亚马逊如何构建现代 Web 的骨干——一个大规模的多租户分布式系统，该系统能够在商品硬盘上扩展到 1 PB/s 和 1.5 亿 QPS。</p>
+
+<p><a href="https://threedots.tech/post/watermill-1-5">SQLite Pub/Sub、快速入门等 — Watermill 1.5 发布</a><br>自上次 Watermill 发布文章以来已经快一年了，我们有很多新闻要分享！ Watermill 是一个 Go 库，用于以简单的方式构建事件驱动的应用程序。它就像一个 HTTP 路由器，但用于消息。Watermill 是一个库，而不是一个框架，因此没有供应商锁定。Watermill 现在接近 9k 的 GitHub 星标和 79 位贡献者，仅在主存储库中。</p>
+
+<p><a href="https://mohitmishra786.github.io/TheCoreDump/posts/Everything-About-Memory-Allocators-Write-a-simple-memory-allocator">Everything About Memory Allocators: Write a Simple Memory Allocator</a><br>一份关于内存分配器的综合指南，涵盖了分配策略、堆管理，以及从头开始用 C 语言实现自定义内存分配器，并考虑了性能因素。</p>
+
+<p><a href="https://garrettdbates.com/driving-complex-decisions">驱动复杂决策</a><br>本文阐述了一种快速、协作、有效地驱动复杂决策的结构化方法。我们将介绍思维模型、实用步骤和需要避免的陷阱，以便您在真正重要的时刻充满信心地领导。</p>
+
+<p><a href="https://sedimental.org/product_hunt_is_dead.html">Product Hunt已死</a><br>作者分享了关于Product Hunt已经衰落的看法，并指出其存在的问题，比如虚假的投票，以及其他替代方案。</p>
+
+<p><a href="https://www.crunchydata.com/blog/the-postgres-project-original-goals-and-how-the-creators-totally-nailed-it">Postgres 的最初项目目标：创造者完全实现了</a><br>我上周有机会坐下来阅读了宣布 Postgres 作为平台和 1986 年最初设计目标。我被这种先见之明所震撼——以及最初的项目目标如何为如今似乎正在接管世界的数据库奠定了基础。PostgreSQL 的创造者完全实现了这一点。他们为各种业务用例设计了一个灵活的框架，这些框架最终将在 30 年后成为最受欢迎的数据库。</p>
+
+<p><a href="https://devcenter.upsun.com/posts/why-you-should-replace-postgresql-with-git-for-your-next-project">为什么要用Git代替PostgreSQL来做你的下一个项目</a><br>探索Git的内部架构如何使其成为一个令人惊讶的、有能力的数据库替代方案。通过一个实用的待办事项应用程序的实现来学习Git的数据结构，这可能会让你重新考虑你的数据库选择。</p>
+
+<p><a href="https://workweave.dev/blog/hiring-only-senior-engineers-is-killing-companies">只聘用高级工程师正在扼杀公司</a><br>Weave 结合了 LLM 和特定领域的机器学习来理解工程工作。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-09-24-berkeley-cs-agents-need-branches">Agents Need Branches: UC Berkeley CS Edition</a><br>The world is starting to realize agents need branches, specifically database branches. This article dives deep into what &#34;Supporting Our AI Overlords: Redesigning Data Systems to be Agent-First&#34; says about database branches and acts as DoltHub&#39;s formal response.</p>
+
+<p><a href="https://simonwillison.net/2025/Sep/25/documentation/#atom-everything">不要隐藏你最好的文档</a><br>如果你隐藏了 LLM 代理的系统提示和工具描述，你实际上是在故意向你最精明的用户隐藏描述你服务的最有用的文档！</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built">Claude Code是如何构建的</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/publicsuffix/list">publicsuffix/list</a><br>The Public Suffix List</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>Repo for learning observability</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>Get JSON values quickly - JSON parser for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

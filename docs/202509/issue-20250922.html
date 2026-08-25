@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250922.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250922</span>
+</p>
+<p>每日一谚：Profile your code to identify performance bottlenecks </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/22/go-team-gave-up-on-features">“我们放弃了”——Go团队坦诚布公，聊聊那些可能永远不会加入Go的功能</a><br>在 GopherCon Europe 2025 的 Go 团队座谈会上，Michael Stapelberg(负责go protobuf)、Damien Neil(负 责Go安全相关)、Michael Pratt(负责Go运行时和Go性能相关) 和 Jonathan Amsterdam(log/slog作者，负责Go工具相关) 四位核心成员与社区进行了一场坦诚的对话。他们不仅分享了诸如官方 MCP SDK、“裸金属”Go 等激动人心的进展，更以一种罕见的坦率，正面回应了社区长期以来关心的多个“老大难”问题——包括不可 变类型、泛型错误处理和非 nil 指针。其中最引人注目的一句“我们放弃了”，几乎为 Go 语言在某些方向上的演进画上了句号。</p> 
+
+<p><a href="https://tonybai.com/2025/09/20/refactoring-go-in-large-codebases">重构还是重写？GitHub工程师维护Go大项目的实践指南</a><br>在 GitHub 的软件工程师 Brittany Ellich 最近的一次分享中，她系统性地为大型 Go 项目的维护者提供了一份清晰的实践指南。本文将为你完整呈现这份源自顶级工程团队的宝贵经验。</p> 
+
+<p><a href="https://tonybai.com/2025/09/21/why-maintainers-should-say-no-to-good-idea">面对“好主意”，为何开源项目的维护者必须学会说“不”？</a><br>维护一个开源项目，最难的部分往往不是修复 bug 或实现新功能，而是对一个设计精良、技术上无懈可击的“好主意”说“不”。Prefect 和 FastMCP 的创始人 Jeremiah Lowin 最近发表了一篇深刻的文章，探讨了这种看似 “不近人情”的行为背后的管理哲学。他指出，项目的成功最终取决于其愿景的连贯性，而非功能的堆砌。在 LLM 让代码变得“廉价”的今天，这种对&gt;项目“灵魂”的守护变得比以往任何时候都更加重要。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/-ZVNb0rOpKQ-OyDBMbb2MA">【Go context解惑】01 前世：没有 context 的世界，我们如何挣扎？</a><br>我邀请你和我一起坐上“时光机”，回到那个没有 `context` 包的“史前时代”。我们将亲手搭建一个简单的 Go 程序，然后一步步地为它增加&gt;真实世界的功能需求。在这个过程中，我们将遇到两个极其棘手且普遍的问题，并尝试用最“笨拙”的方式去解决它。</p> 
+
+<p><a href="https://dev.to/arshiargh/go-maps-deep-dive-part-1-the-secrets-behind-o1-performance-overflows-and-growth-227">Go Maps 深度解析 — 第 1 部分：O(1) 性能、溢出和增长背后的秘密</a><br>揭开 Go 映射背后的魔力！ 了解它们通常为 O(1) 的原因、它们如何处理溢出以及它们在不降低应用程序速度的情况下增长的巧妙方式。</p> 
+
+<p><a href="https://blog.stackademic.com/graceful-shutdowns-in-go-http-servers-ensuring-zero-downtime-for-live-traffic-b8224b28ab4a">Go HTTP 服务器中的优雅关闭：确保实时流量零停机时间</a><br>想象一下，你正在经营一家咖啡馆，现在是关门时间——你会把顾客赶出去吗？或者让他们喝完，安静地清理干净…… 优雅关闭意味着什么对你的 Go HTTP 服务器。在这篇文章中，我们将分解如何实现优雅关闭——而不会陷入深奥的技术水域。无论您是 Go 开发人员新手还是部署您的第一个服务，本指南都将帮助您了解即使在关闭服务器时如何保持服务器的可靠性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/tailscale-glinet-travel-router-mt3000-beryl-ax">升级你的旅行套装，配备小巧、支持 Tailscale 的路由器</a><br>在发布这篇文章时，我将去度假。 这不是一个热带、文化或冒险的假期，而是一种远程度假，在一个租来的大房子里，与志同道合的室内爱好者一起。 我将要捣鼓的工具（玩具）之一是 GL-MT-3000（又名 Beryl AX），这是一个口袋大小的路由器，内置了 Tailscale。</p>
+
+<p><a href="https://signoz.io/blog/claude-code-monitoring-with-opentelemetry">Bringing Observability to Claude Code: OpenTelemetry in Action | SigNoz</a><br>Monitor Claude Code usage with OpenTelemetry and SigNoz. This blog walks you through implementing comprehensive observability for your Claude Code activity using OpenTelemetry and SigNoz.</p>
+
+<p><a href="https://brianmckenna.org/blog/howtostopfp">如何停止函数式编程</a><br>以下内容从未发生在我身上，但我经常听到故事。你到公司上班，发现一个同事对你写的一些代码不满意，因为他们不理解。他们去找你的经理，告诉他们你编写他们不理解的代码是个问题。你的经理，在解决冲突方面非常熟练，做出了一个技术决定，以避免你使用的导致问题的任何工具。对你来说，那就是函数式编程。就是这样。你被告知了。不再有函数式编程。</p>
+
+<p><a href="https://weberdominik.com/blog/rules-user-interfaces">创建美观用户界面的规则，来自开发者</a><br>创建美观的用户界面很困难，但是通过遵守一些规则，它会变得简单得多。关键是关注几个重要的方面，而不是试图优化每一个微小的细节。</p>
+
+<p><a href="https://dayvster.com/blog/dev-culture-is-dying-the-curious-developer-is-gone">Dev Culture Is Dying The Curious Developer Is Gone</a><br>从修补匠到追求指标的人：开发者文化的转变如何影响创新和创造力。</p>
+
+<p><a href="https://andiroberts.com/leadership-questions/how-to-influence-others-without-manipulating">如何不靠操纵来影响别人</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Sep/21/locally-ai/#atom-everything">Locally AI</a><br>Adrien Grondin 开发的便捷 iOS 应用，用于在您的手机上运行本地 LLM。 它刚刚增加了对新的 iOS 26 Apple Foundation 模型的支持，因此您可以安装此应用程序并立即开始与该模型对话，而无需任何额外的下载。</p>
+
+<p><a href="https://www.galois.com/articles/claude-can-sometimes-prove-it">Claude 能（有时）证明它</a><br>让我直奔主题，不要像以前一样胡说八道：1. Claude Code，Anthropic 推出的新 AI 编码代理，非常擅长交互式定理证明 (ITP)。 2. 我发现这非常令人惊讶，你们可能也应该如此。 交互式定理证明工具（例如 Lean）是最强大和最值得信赖的正式方法工具。 它们已被用于正式验证重要事物，例如密码库、编译器和操作系统。 不幸的是，即使是专家也发现 ITP 证明既耗时又容易出错。 这就是 Claude Code 如此擅长 ITP 的原因——而且非常令人惊讶！ 如今，Claude Code 可以独立完成许多复杂的证明步骤，但它仍然需要一位“项目经理”（我）来引导它完成整个形式化过程。 但我认为 Claude Code 指向一个不再需要专家的世界，定理证明器可以被更多人使用。</p>
+
+<p><a href="https://donado.co/en/articles/2025-09-16-vibe-coding-cleanup-as-a-service">Vibe 编码清理即服务</a><br>人工智能驱动的编码的兴起创造了一个意想不到的市场：清理由提示生成的软件中的技术债务。 这是为什么 &#34;Vibe 编码清理&#34; 正在成为一个合法的服务类别以及它对软件开发未来的意义。</p>
+
+<p><a href="https://aifoc.us/interception">拦截 | AI焦点</a><br>这是一篇非常快的文章。 晚上遛狗的时候，我有一个想法，想在几个小时内构建一个功能演示并写下来。
+虽然这篇文章和这个想法是从今晚开始的，但这个想法的起源酝酿了一段时间，可以追溯到一年多以前的 2024 年 8 月，当时我写了关于被吸入虚拟互联网的文章。 WebSim 一直在我脑海中盘旋，因为我喜欢能够直接使用浏览器而不是通过另一个网页来模拟我自己版本的网络这个想法。 几周前，我设法弄清楚了如何让 Puppeteer 拦截请求并使用 LLM 生成的内容进行响应。</p>
+
+<p><a href="https://martinalderson.com/posts/what-happens-when-coding-agents-stop-feeling-like-dialup">当编码助手不再感觉像拨号上网时会发生什么？</a><br>在短短几个月内，从神奇到令人沮丧。 为什么人工智能编码助手感觉像拨号上网，以及超快推理可以为开发人员的生产力带来什么。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/ava-labs/avalanchego">ava-labs/avalanchego</a><br>Go implementation of an Avalanche node.</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>node of the decentralized oracle network, bridging on and off-chain computation</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>Selfhosted alternative to 12ft.io. and 1ft.io bypass paywalls with a proxy ladder and remove CORS headers from any URL</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ A Framework for Building High Value Public Blockchains ✨</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/kubevela/kubevela">kubevela/kubevela</a><br>The Modern Application Platform.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

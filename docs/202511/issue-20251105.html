@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251105.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251105</span>
+</p>
+<p>每日一谚：Go is not theoretically exciting on the surface, but it is very useful in real life. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/05/proposal-remove-godebug-flags">GODEBUG 的“技术债”清算：Go 团队提出全新生命周期管理策略</a><br>自 2012 年 Go 1 发布以来，“向后兼容性” (Go 1 compatibility guarantee) 不仅是一份承诺，更是 Go 语言赢得全球开发者信任的基石。然而， 为了在不违背这份承诺的前提下修复 bug、引入新行为，Go 团队创造了一个强大的“安全阀”——GODEBUG 环境变量。 GODEBUG 如同一台“时光机”，允许开发者在升级 Go 版本时，通过设置标志（如 GODEBUG=panicnil=1）来选择性地保留旧版本的行为，从而为代码迁移争取宝贵的时间。 然而，13 年过去，这台“时光机”的开关变得越来越多。每一个 GODEBUG 标志，都是 Go 工具链中的一个“分叉点”，它们极大地增加了测试的复杂性 和维护的负担，逐渐累积成了一笔沉重的“技术债”。 近日，由 Go 核心团队成员 Robert Griesemer 发起的提案（#76163），正式为这笔技术债的“清 算”，提出了一套清晰、系统的GODEBUG 标志移除策略。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/1f3ULU7nlSqis20fNLW_uw">【Go模块构建与依赖管理】04 日常操作精通：get, tidy, list 三剑客</a><br></p> 
+
+<p><a href="https://dolthub.com/blog/2025-11-04-bolt-works-with-dolt/">Bolt versus Replit、Vercel 和 Lovable</a><br>我们继续测试生成式 AI 工具！在本文中，我们正在测试 Bolt，并将其与我们使用 Lovable、Replit 和 Vercel 的体验进行比较。这些应用程序构建器中的每一个都允许您通过会话式 UI 构建 Web 应用程序，但它们都具有不同的体验、功能和优势。请继续阅读，了解我们对 Bolt 的看法。</p> 
+
+<p><a href="https://beyondthesyntax.substack.com/p/i-made-a-configurable-rate-limiter">我创建了一个可配置的速率限制器……因为 API 不能说“冷静”</a><br>一个可配置的速率限制器执行传统速率限制器的所有任务，但也允许您为不同的 API 指定不同的速率限制规则。</p> 
+
+<p><a href="https://www.cncf.io/blog/2025/11/04/announcing-vitess-23-0-0/">宣布 Vitess 23.0.0</a><br>Vitess 团队很高兴发布 Vitess 23.0.0，这是 Vitess 的最新主要版本，带来了新的默认设置、更好的运营工具和改进的指标。此版本建立在版本 22 的坚实基础上，旨在使部署和可观察性更顺畅，同时继续充满信心地横向扩展 MySQL 工作负载</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://frederickvanbrabant.com/blog/2025-10-31-architectural-debt-is-not-just-technical-debt">架构债务不仅仅是技术债务</a><br>当我还是一个开发人员时，我们一半的挫折都与技术债务有关。我们总是在代码债务和架构债务之间做出区分：代码债务是您为了达到最后期限而设置但从不删除的临时黑客行为，而架构债务是六个月后让您付出代价的结构性决策。架构债务不仅仅是技术架构。企业架构不是技术架构。架构债务会给组织带来很多麻烦，但业务和战略层面的架构债务会造成更大的破坏。在应用程序/基础架构层，企业架构不应该关注代码级别。</p>
+
+<p><a href="https://netflixtechblog.com/supercharging-the-ml-and-ai-development-experience-at-netflix-b2d5b95c63eb">Supercharging the ML and AI Development Experience at Netflix</a><br></p>
+
+<p><a href="https://tailscale.com/blog/exit-node-parents-streaming-support">Why you should mail your parents a Tailscale node</a><br>设置 VPN、远程技术支持、文件共享以及其他有用的东西，只需给您的朋友和家人邮寄一个小的 Tailscale。</p>
+
+<p><a href="https://multigres.com/blog/generalized-consensus">Introducing Generalized Consensus: An Alternate Approach to Distributed Durability</a><br>今天，我们将发布一个系列，该系列将介绍对共识算法的全新视角。我们没有将共识视为一个整体的黑盒子，而是提出了一个概念框架，使这些系统更易于理解、适应和灵活。</p>
+
+<p><a href="https://mrinal-vaults.pages.dev/Engineering/Software-Architecture/Differences">差异</a><br>区分两个常见但常被混淆的概念：单体仓库 vs. 多仓库；单体架构 vs. 微服务。</p>
+
+<p><a href="https://martinfowler.com/articles/llm-learning-loop.html">学习循环和 LLM</a><br>持续学习塑造了使用 LLM 的有效软件开发。</p>
+
+<p><a href="https://riscv.org/blog/risc-v-jtc1-pas-submitter">RISC-V 迈出国际标准化第一步，ISO/IEC JTC1 授予 PAS 提交者身份</a><br>在 2025 年 RISC-V 北美峰会上，RISC-V International 的首席执行官 Andrea Gallo 和 ISO/IEC 联合技术委员会 (JTC 1) 的主席 Phil Wennblom 宣布，RISC-V International 已获得 ISO/IEC JTC1 批准，成为 PAS 提交者。</p>
+
+<p><a href="https://www.lucasfcosta.com/blog/retrospectives">为什么你的回顾会议不起作用以及如何修复它们</a><br>每个团队都必须相信改进，即使它不再发生。 这就是回顾的目的。大多数团队也使用回顾来记录没有人有时间修复的问题。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/engineering/code-execution-with-mcp">使用 MCP 进行代码执行：构建更高效的 AI 代理</a><br>直接的工具调用会为每个定义和结果消耗上下文。代理通过编写代码来调用工具可以更好地扩展。以下是它与 MCP 的工作原理。</p>
+
+<p><a href="https://deepnote.com/blog/were-open-sourcing-the-successor-of-jupyter-notebook">We’re open-sourcing the successor of Jupyter notebook</a><br>The traditional Jupyter experience has felt outdated for a while now. We’re open‑sourcing its successor. Teams need notebooks that are reactive, collaborative, and AI‑ready. Today, we’re announcing that Deepnote is going open source.</p>
+
+<p><a href="https://cognition.ai/blog/codemaps">Windsurf 代码图：在你体验之前理解代码</a><br>Windsurf 代码图旨在让人类和人工智能对系统有一个共同的理解，使你的人工智能能够让你快速而优雅地了解你正在查看的代码。可以生成任何系统或代码片段的代码图，以阐明其代码路径，帮助用户学习和回忆。代码图允许人工智能成为一个以准确和一致的方式解释代码的伙伴，而不是生成大量难以理解的垃圾。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/mudler/edgevpn">mudler/edgevpn</a><br>⛵ The immutable, decentralized, statically built p2p VPN without any central server and automatic discovery! Create decentralized introspectable tunnels over p2p with shared tokens</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/qax-os/excelize">qax-os/excelize</a><br>Go language library for reading and writing Microsoft Excel™ (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets</p>
+
+<p><a href="https://github.com/qualifire-dev/rogue">qualifire-dev/rogue</a><br>Agents testing framework made easy</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/ekristen/aws-nuke">ekristen/aws-nuke</a><br>Remove all the resources from an AWS account</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/OpenCSGs/csghub-server">OpenCSGs/csghub-server</a><br>csghub-server is the backend server for CSGHub which helps user to manage datasets, modes, and also run Model Inference, Finetune and Application Spaces.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.</p>
+
+<p><a href="https://github.com/docker/mcp-registry">docker/mcp-registry</a><br>Official Docker MCP registry</p>
+
+<p><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a><br>MCP server for Grafana</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

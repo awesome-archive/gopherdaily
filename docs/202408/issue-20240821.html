@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240821.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-21</span>
+</p>
+<p>每日一谚：Reading is more important than writing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/08/22/go-as-first-language">从零开始编程：Go语言真的适合新手吗？</a><br>讨论一下Go是否适合作为第一门编程语言</p> 
+
+<p><a href="https://go.dev/blog/range-functions">Go官博：range over function</a><br>Go 编程语言在 1.23 版本中引入了一个新功能，即 Range Over 函数类型，它允许循环访问用户定义的容器的元素，使用标准化的迭代器形式，以及 slices 和 maps 包中的新功能。</p> 
+
+<p><a href="https://dev.to/zakariachahboun/common-use-cases-for-defer-in-go-1071">在Go中使用defer：最佳实践和常见用例</a><br>该文档讨论了 Go 中 &#39;defer&#39; 关键字的使用，重点介绍了它在管理资源、执行清理操作和提高代码清晰度方面的实用性，并提供了它在各种场景中的使用示例，例如文件关闭、网络连接解锁、工作目录恢复、从崩溃中恢复、日志记录和处理 HTTP 请求正文。</p> 
+
+<p><a href="https://dev.to/harendra21/how-to-write-maintainable-go-code-45hp">如何编写可维护的Go代码？</a><br>这篇博文提供了编写可维护的 Golang 代码的策略，包括保持 main 函数较小、使用有意义的名称、编写有意义的注释、避免代码重复、使用切换大小写而不是 if/else，以及连续代码重构。</p> 
+
+<p><a href="https://reliasoftware.com/blog/reflection-in-golang">深入了解Golang 中的反射：类型、值及其他</a><br>该指南提供了 Go 反射的综合指南，解释了其基础知识、实际应用和高级技术，包括类型和值操作、序列化和反序列化以及动态 JSON 解析器，重点介绍了“反射”包。</p> 
+
+<p><a href="https://medium.com/@pavan.sarvan/parsing-yaml-in-go-lang-091ebaeecb6d">在 Go 中解析 YAML</a><br>Sarvan Kattamuru 讨论了如何使用 Go 编程语言来解析和解析 XML （YAML） 配置文件，重点介绍了如何使用 Go 结构标签和 Go yaml 解码器来解析和映射配置属性的值。</p> 
+
+<p><a href="https://www.viam.com/post/real-time-robot-control-grpc-webrtc">使用 gRPC 和 WebRTC 进行实时机器人控制</a><br>本文讨论了使用 gRPC 和 WebRTC 进行实时机器人控制，重点介绍了它们的优势，例如速度、效率、安全性和直接点对点通信，并演示了它们在街机爪游戏中的工作原理。</p> 
+
+<p><a href="https://xavd.id/blog/post/effective-changelogs/">编写有效的commit日志</a><br>该文档提供了编写有效变更日志的指南，强调了基于文件的格式、简单的标题、记下日期、标志性样式、关注影响、上下文以及不包括所有内容的重要性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.searce.com/using-reusable-workflows-in-github-actions-6772120e206f">在 GitHub Actions 中使用可重用工作流</a><br>这篇博客文章讨论了在 GitHub Actions（一种 CI/CD 工具）中使用可重用的工作流，以简化和标准化多个项目的 CI/CD 流程，从而促进模块化、统一性和易于维护。</p>
+
+<p><a href="https://www.p99conf.io/2024/08/21/switching-from-c-to-rust/">从 C&#43;&#43; 切换到 Rust</a><br>Nikita Lapkov，前 C&#43;&#43; 开发人员，分享了他从 C&#43;&#43; 过渡到 Rust 的个人经验和想法，强调了改进的内存安全性、统一的构建系统、简洁的错误消息和富有表现力的类型系统，同时也强调了改进的构建系统和编译器错误。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/08/21/cri-cgroup-driver-lookup-now-beta/">Kubernetes 1.31： Node Cgroup 驱动程序的自动配置（测试版）</a><br>Kubernetes 1.31 引入了一个用于自动检测 cgroup 驱动程序的 beta 功能，允许 kubelet 询问 CRI 实现使用哪个 cgroup 驱动程序，从而改善了新 Kubernetes 集群的用户体验。</p>
+
+<p><a href="https://thenewstack.io/serviceops-balancing-speed-and-risk-in-devops/">ServiceOps：在DevOps中平衡速度和风险</a><br>新堆栈引入了 ServiceOps，这是一种新的运营模式，通过集成 IT 服务管理、IT 运营和 DevOps，并使用 GenAI 预测和管理风险，使软件交付更安全、更具协作性，从而在 DevOps 中加速变革并管理风险。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.fb.com/2024/08/20/data-infrastructure/aparna-ramani-future-of-ai-infrastructure-meta/">Aparna Ramani 探讨 AI 基础设施的未来</a><br>Meta 工程副总裁 Aparna Ramani 在 AI Infra @ Scale 2024 大会上讨论了 AI 基础设施的未来，重点介绍了该公司在大规模 GPU 集群、开放式硬件设计和用于 AI 训练工作负载的定制芯片方面所做的努力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类。它提供了一个模块化框架，用于使用一组可以在任何地方使用的众包 AI 提示来解决特定问题。</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>关于数千 （！） 个加密代币的全面、最新的信息集合。</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>计算机指标的导出器</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>一个开源的 UI 优先身份和访问管理 （IAM） / 单点登录 （SSO） 平台，具有支持 OAuth 2.0、OIDC、SAML、CAS、LDAP、SCIM、WebAuthn、TOTP、MFA、Face ID、RADIUS、Google Workspace、Active Directory 和 Kerberos 的 Web UI</p>
+
+<p><a href="https://github.com/sourcegraph/sourcegraph-public-snapshot">sourcegraph/sourcegraph-public-snapshot</a><br>带有 Code Search 和 Cody 的 Code AI 平台</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>精选的优秀 Go 框架、库和软件列表</p>
+
+<p><a href="https://github.com/amitshekhariitbhu/go-backend-clean-architecture">amitshekhariitbhu/go-backend-clean-architecture</a><br>一个 Go （Golang） 后端干净架构项目，带有 Gin、MongoDB、JWT 身份验证中间件、Test 和 Docker。</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>一个强大的小TUI框架 🏗</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>在 Go 中实现超快、结构化、分级的日志记录。</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>一个多合一的可观测性解决方案，旨在结合 Prometheus 和 Grafana 的优势。它管理警报规则，并在漂亮的 Web UI 中可视化指标、日志和跟踪。</p>
+
+<p><a href="https://github.com/runatlantis/atlantis">runatlantis/atlantis</a><br>Terraform 拉取请求自动化</p>
+
+<p><a href="https://github.com/adnanh/webhook">adnanh/webhook</a><br>Webhook 是一个轻量级的传入 Webhook 服务器，用于运行 shell 命令</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>云原生策略管理</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型SRT / WebRTC / RTSP / RTMP / LL-HLS媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go 客户端用于 Kubernetes。</p>
+
+<p><a href="https://github.com/shirou/gopsutil">shirou/gopsutil</a><br>psutil for golang</p>
+
+<p><a href="https://github.com/twmb/franz-go">twmb/franz-go</a><br>franz-go 包含一个功能完整的纯 Go 库，用于与 Kafka 从 0.8.0 到 3.7&#43; 进行交互。生产、消费、交易、管理等。</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源自托管实现</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS 提供商使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>临时服务</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

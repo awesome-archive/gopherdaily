@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251125.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251125</span>
+</p>
+<p>每日一谚：Start with concrete types first. Let interfaces emerge organically. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/25/who-killed-your-http-connection-traps-of-connection-pooling">谁“杀”死了你的 HTTP 连接？—— 揭秘云环境下连接池配置的隐形陷阱</a><br>你是否在生产环境中遇到过偶现的 EOF、connection reset by peer 或 unexpected end of stream 错误？ 你是否检查了代码逻辑、防火墙规则甚至抓了包，发现应用层一切正常，但请求就是偶尔会失败？ 最令人费解的是，这往往发生在低频请求的场景下，或者系统刚从闲置状态“醒来”的时候。很多开发者——无论是写 Android 的还是写 Go 的——往往将目光局限在代码逻辑层面。然而，在云原生时代，应用代码只是庞大网络链路中的一环。本文将以一个真实的跨云通信故障为引子，深入探讨 HTTP 连接池（Connection Pool）中 Idle Timeout 的机制，并以 Go 语言为例，给出最佳实践配置。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/fL9AxWtVif03niil87SQcw">【Go 测试之道】04 隔离的魔法：用构建约束（Build Tags）分离测试“战场”</a><br></p> 
+
+<p><a href="https://www.allthingsdistributed.com/2025/11/tech-predictions-for-2026-and-beyond.html">2026年及以后的技术预测</a><br>我们已经瞥见了未来，它重视自主性、同情心和个人专业知识。跨学科的合作以不屈不挠的速度影响着发现和创造。在未来一年，我们将开始向人类在环路中的人工智能的新时代过渡，而不是相反。这一周期将创造巨大的机会来解决真正重要的问题。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2025/notes-on-the-wasm-basic-c-abi/">WASM Basic C ABI 简介</a><br>WebAssembly/tool-conventions 存储库包含“支持使用 WebAssembly 的工具之间的互操作性的约定”。其中特别值得关注的是 Basic C ABI - 一个用于在 WASM 中表示 C 程序的 ABI。编译器（如 Clang）使用此 ABI，目标为 &lt;tt class=&#34;docutils literal&#34;&gt;wasm32&lt;/tt&gt;。Rust 也&lt;a class=&#34;reference external&#34; href=&#34;https://blog.rust-lang.org/2025/04/04/c-abi-changes-for-wasm32-unknown-unknown/&#34;&gt;正在切换到此 ABI&lt;/a&gt;，用于 &lt;tt class=&#34;docutils literal&#34;&gt;extern &#34;C&#34;&lt;/tt&gt; 代码。 本文包含有关此 ABI 的一些说明，并附有注释代码示例和图表，以帮助可视化发出的 WASM 代码正在做什么。 以后，“ABI”指的是这个 Basic C ABI。</p> 
+
+<p><a href="https://share.transistor.fm/s/342cb266">播客: LLM/AI作为你Go系统中的代理</a><br>本周我试图保持开放的心态，与Markus Wüstenberg讨论LLM和AI。Markus是节目的朋友，我注意到他最近使用了很多LLM，我在进行这些播客访谈时基本上学到了很多，所以我对Markus在交付的系统中使用LLM和AI以及他如何在日常工作中作为软件工程师使用AI感到很感兴趣。就个人经验而言，到目前为止有些混合，有时表现很好，有时又相当令人沮丧，尤其是整合LLM增强的功能或尝试将编码代理集成到我的日常工作中，老实说，我还没做到。但我想听听那些在这些领域有真实生产经验的人，Markus为我澄清了一些方面，至少对我来说是这样；)。链接：gomponents &#43; Datastar：Markus的Claude Code技能，Markus在Go中自己的LLM抽象层叫做GAI，Andy Masley关于AI和环境的讨论，Charm在Go中的AI库，Markus的网站。如往常一样，如果你觉得这个播客有价值，请分享，你也可以购买我的课程，我的《从零到Gopher》在三周前发布，节目听众有50%的折扣。 </p> 
+
+<p><a href="https://okayfail.com/2025/in-praise-of-dhh.html">赞美 dhh</a><br>这是一篇关于Ruby过去、现在和未来的反思。 作者Filipa写道，她对Ruby on Rails的创始人David Heinemeier Hansson（又名dhh）的评价，以及Ruby社区的演变。她回忆起了自己职业生涯开始时，Ruby on Rails对她的影响，以及对Ruby社区在包容性和多样性方面所做的努力。文章对DHH在Ruby社区中的作用提出了批评，并呼吁Ruby社区成员采取行动，维护社区的价值观。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2025/11/25/configuration-good-practices/">Kubernetes 最佳配置实践</a><br>在 Kubernetes 中，配置是至关重要的。 缺少引号、 API 版本错误或 YAML 缩进错误都可能毁掉你的整个部署。 本文汇集了经过验证的配置最佳实践。 这些小习惯可以使你的 Kubernetes 设置保持干净、一致且易于管理。 无论你是刚开始接触 Kubernetes 还是每天都在部署应用程序，这些都是保持集群稳定和保障未来平稳运行的小技巧。</p>
+
+<p><a href="https://lesleylai.info/en/fifty_shades_of_oop">五十度 OOP</a><br>这篇文章讨论了在 OOP 这个总称下的许多不同方面。 行业和学术界已经使用“面向对象”这个术语来表示许多不同的含义。  我认为最好将 OOP 视为一组相互关联的想法，并分别检查它们。  下面，我将调查一些与 OOP 相关的想法，并提及它们的优缺点（在我主观的头脑中）。</p>
+
+<p><a href="https://blogs.embarcadero.com/rethinking-c-architecture-concepts-and-responsibility">C&#43;&#43; 重构：架构、概念和责任</a><br>为何 C&#43;&#43;Builder 13 不仅仅是版本号升级——以及为何我们必须开始真正理解 C&#43;&#43;。</p>
+
+<p><a href="https://bloggeek.me/collecting-webrtc-internals-rtcstats">采集WebRTC内部状态</a><br></p>
+
+<p><a href="https://kmicinski.com/functional-programming/2025/11/23/build-a-language">使用五个项目构建编译器</a><br>你是否对构建编译器感兴趣？想学习函数式语言是如何实现的？想获得一些使用x86-64汇编语言的实践经验？如果是这样，我邀请你尝试一下我课程中的项目。CIS531 是一门关于编译器设计的硕士课程，假设 (a) 你知道如何编程，(b) 你已经接触过一些 C (了解堆栈分配、malloc 等)，并且 (c) 见过一些汇编代码。我的课程项目使用 Racket 编程语言，但如果你不了解 Racket，学习它非常容易：我有一套 YouTube 视频讲座可以快速教你 Racket！ 如果你以前从没听说过 Racket，或者你对函数式编程持怀疑态度，请容忍我一下：本课程中没有硬核的 FP 理论或数学，而 Racket 确实是用于这种特定设置的最佳语言。</p>
+
+<p><a href="https://dolthub.com/blog/2025-11-24-announcing-dolt-json-diff/">使用 DOLT_JSON_DIFF 比较文档</a><br>Dolt 是一个版本控制的 SQL 数据库：可以将其视为 Git，但用于数据。 这包括使用自动合并解决并发更改来创建和合并分支的能力。 Dolt 也可以很好地用作版本控制的文档存储：如果您的数据库包含结构化数据类型（如 JSON），Dolt 也会合并对这些数据的并发更改。</p>
+
+<p><a href="https://momito.co.uk/cloudflare-primitives">Cloudflare Primitives: A Visual Explainer</a><br>Cloudflare Primitives的视觉指南，包括Workers、Durable Objects、R2、D1、Workers KV、Queues等。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/engineering/advanced-tool-use">介绍 Claude 开发者平台上的高级工具使用</a><br>Claude 现在可以动态地发现、学习和执行工具，从而使代理能够在现实世界中采取行动。这是操作方法。</p>
+
+<p><a href="https://www.anthropic.com/news/claude-opus-4-5">Introducing Claude Opus 4.5</a><br>Anthropic 发布了新的模型 Claude Opus 4.5，该模型在编码、代理和计算机使用方面表现出色。 它在深度研究以及处理幻灯片和电子表格等日常任务方面也有显著改进。Opus 4.5代表了AI系统能力的一大步，也预示着工作方式的重大变革。</p>
+
+<p><a href="https://www.oneusefulthing.org/p/three-years-from-gpt-3-to-gemini">三年时间，从 GPT-3 到 Gemini 3</a><br>从聊天机器人到智能体</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

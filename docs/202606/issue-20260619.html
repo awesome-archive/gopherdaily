@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260619.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260619</span>
+</p>
+<p>每日一谚：Go&#39;s slice syntax is powerful but can be confusing. Understand it well </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://groups.google.com/g/golang-nuts/c/ysWLWUI4KYM/m/ZDjYRc58CAAJ">Go 1.27 rc1 发布</a><br>Go 1.27的第一个rc版本已经发布。这个版本包含了多项改进和新功能，为即将到来的正式版本奠定基础。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/JqKWOGTloVc3y6OXBMtjPg">TypeScript 7.0 RC 版本发布了！</a><br>今天，Microsoft宣布 正式发布TypeScript 7.0 RC 版本。在过去的一年中，Microsoft TypeScript团队在Anders Hejlsberg的带领下，成功地将现有的 TypeScript 代码库从 TypeScript（一种可以编译为 JavaScript 的底层代码库）迁移到了 Go 语言中。凭借 Go 语言的原生代码速度和共享内存并行处理能力，TypeScript 7.0 的运行速度通常比 TypeScript 6.0 快 10 倍以上。</p> 
+
+<p><a href="https://tonybai.com/2026/06/19/agentic-coding-and-persistent-returns-to-expertise">Anthropic 40万大样本揭秘：AI 时代为什么“专家”身价暴涨？</a><br>“AI 究竟是专家经验的放大器，还是专家经验的掘墓人？” 为了彻底用科学数据回答这个终极命题，大模型领域无可争议的“编码之王” Claude 的母公司 Anthropic，于近日发布了一份具有里程碑意义的实证研究报告：《Agentic coding and persistent returns to expertise》。 这份白皮书的含金量极高。研究人员在确保隐私安全的前提下，深度追踪并分析了从 2025 年 10 月到 2026 年 4 月期间，全球开发者使用 Claude Code 的 40 万次真实交互会话（Sessions）。报告揭示出的事实极其震撼、甚至有些反直觉：大模型并没有让专家的经验贬值，反而让“专家经验”在 AI 时代迎来了前所未有的暴利和溢价；与此同时，那些只会写语法糖、没有领域常识（Domain Knowledge）的普通程序员，正在被无情地边缘化。</p> 
+
+<p><a href="https://blog.getzep.com/agentic-development-in-go">在不使用框架的情况下构建Go智能体</a><br>生产环境中的智能体是一个长时间运行、并发、I/O密集型进程。这种特性与Go的运行时相匹配：goroutine每个启动时占用约2KB内存，channels用于协调和流式传输，而`context.Context`可以一次性取消所有库中的运行。</p> 
+
+<p><a href="https://share.transistor.fm/s/45f0dcaf">Go播客 090：这里我们讨论Go以及如何使用Go构建业务</a><br>本期播客讨论了如何使用Go语言构建业务，以及创业者在技术选择方面的经验分享。嘉宾们分享了他们在使用Go开发产品过程中的见解和挑战。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/">企业托管授权：MCP的零接触OAuth</a><br>本文介绍了企业托管授权系统，特别是针对模型上下文协议(MCP)的零接触OAuth解决方案。该系统旨在简化用户认证流程，提高企业级应用的安全性和可管理性。</p>
+
+<p><a href="https://nelson.cloud/.gitignore-isnt-the-only-way-to-ignore-files-in-git/">.gitignore不是Git中忽略文件的唯一方式</a><br>Git提供了三种不同级别的文件忽略方式，而不仅限于使用.gitignore文件。这三种方式分别是.gitignore文件、.git/info/exclude文件和~/.config/git/ignore文件，可以根据不同场景灵活选择使用。</p>
+
+<p><a href="https://austinhenley.com/blog/automatingmyjob.html">自动化我的工作</a><br>原本每天一两次、每次5分钟的琐碎任务，变成了每天10-20次的重复工作。自动化明显部分后，留下的粘合工作成为了我日常的重要部分，频繁的上下文切换让我不堪重负。</p>
+
+<p><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-rc/">宣布TypeScript 7.0 RC版</a><br>TypeScript 7.0候选版本已发布，引入了多项新功能和改进。这个版本为开发者提供了更好的类型系统支持和更高效的开发体验。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://vettedconsumer.com/glm-5-2-the-most-powerful-open-weight-model-yet-and-the-brutal-reality-of-running-it-locally/">GLM-5.2：迄今为止最强大的开源权重模型——以及本地运行的残酷现实</a><br>每隔几周，&#34;最佳开源模型&#34;的称号就会易主。本周，来自中国实验室Z的GLM-5.2成为新的王者，但本地运行这一强大模型面临着严峻的硬件挑战。</p>
+
+<p><a href="https://agenticresourcediscovery.org/introduction/">AgenticResourceDiscovery规范</a><br>智能体资源发现(ARD)规范旨在标准化智能体如何发现和使用网络资源。该网站提供了发布指南、客户端实现方法和参考实现，帮助开发者更好地集成ARD功能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/zzet/gortex">zzet/gortex</a><br>High-performance code-intelligence engine for AI agents and IDE, supports 257 languages, multi repositories, with access via CLI, MCP Server, and API. AI coding agents teammate - expose only needed in</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/asheshgoplani/agent-deck">asheshgoplani/agent-deck</a><br>Terminal session manager for AI coding agents. One TUI for Claude, Gemini, OpenCode, Codex, and more.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>Glamourous agentic coding for all 💘</p>
+
+<p><a href="https://github.com/podman-container-tools/podman">podman-container-tools/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a c</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

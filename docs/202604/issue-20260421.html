@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260421.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260421</span>
+</p>
+<p>每日一谚：Go is not meant to innovate programming theory. It&#39;s meant to innovate programming practice — Rob Pike, </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/21/why-we-are-building-agent-harness-from-scratch">聊聊为什么我要花这么大精力，带大家手写 Agent Harness？</a><br>今天想和大家分享一个好消息：我筹备已久的极客时间专栏 《从0 开始构建 Agent Harness》于昨日(2026.4.20)正式上架了。 在这个各种 AI 应用框架满天飞、“几行 Python 代码就能跑起一个智能体”的时代，很多朋友可能会问：“Tony，大家都在用现成且免费的轮子，你为什么还要花这么大的精力，甚至专门开一个 24 讲的专栏，带着大家用 Go 语言从零去手写一个底层的 Agent Harness 引擎？” 借着专栏上架的机会，我想和大家聊聊，我是如何看待当前 AI 应用开发的，以及为什么我坚定地认为，现在是时候撕开框架的黑盒，回归底层的 Harness（驾驭工程）了。</p> 
+
+<p><a href="https://words.filippo.io/128-bits/">量子计算机对 128 位对称密钥不构成威胁</a><br>量子计算相关的威胁日益临近，迫切需要替换当前部署的非对称密码学原语——密钥交换（ECDH）和数字签名（RSA, ECDSA, EdDSA），因为它们容易受到 Shor 量子算法的影响。然而，这并不影响现有的对称密码算法（AES, SHA-2, SHA-3）及其密钥长度。人们普遍存在一种误解，认为量子计算机将使对称密钥的安全性“减半”，从而需要 256 位密钥来达到 128 位的安全性。这种对量子算法速度提升的解读是不准确的，它并未反映在任何合规性要求中，且有分散精力和注意力从而偏离实际必要的后量子迁移工作的风险。这种误解通常源于对另一种量子算法 Grover 算法适用性的误读。AES-128 对量子计算机是安全的。SHA-256 对量子计算机是安全的。作为后量子迁移的一部分，无需更改任何对称密钥的尺寸。这是专家和标准化机构之间的近乎共识的意见，需要向 IT 社区的其他部分传播。本文的其余部分从技术层面和参考相关权威机构的角度支持这一主张。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-netpoller/">理解 Go 运行时（六）：网络轮询器</a><br>在上一篇文章中，我们看到了 sysmon 如何每 10 毫秒介入一次，代表繁忙的 P 调用 netpoll(0)，确保调度程序在过于繁忙而无法自行轮询时，网络 I/O 不会停滞。我们当时略过了网络轮询器究竟是什么。今天我们将补上这一点。Go 的网络机制是其最令人印象深刻的默然技巧之一。你编写的代码看起来是阻塞的——conn.Read(buf)、conn.Write(buf)、listener.Accept()——读起来和几十年前经典的线程化服务器完全一样。但在底层，没有 OS 线程真正被这些调用阻塞。在后台，运行时正在 Linux 上驱动 epoll，在 BSD/macOS 上驱动 kqueue，在 Windows 上驱动 I/O 完成端口，随着就绪事件的到达，挂起和唤醒 goroutine。你所看到的同步 API 是一种舒适的幻觉——而维护它的机器就是网络轮询器（network poller），简称 netpoller。代码主要位于 src/runtime/netpoll.go 中（平台无关驱动程序），每个平台对应一个文件（netpoll_epoll.go, netpoll_kqueue.go, netpoll_windows.go 等）。src/internal/poll 中的一个薄桥将其连接到 net 和 os 包。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/4OAggwHkytLBpen1gxK7Uw">【AI 工程师的 GPU 入门课】06 算子融合魔法：FlashAttention 的底层原理</a><br>在 AI 工程界，有一个名字如雷贯耳——FlashAttention。 它几乎成为了所有高性能 LLM的标配。如果你在 PyTorch 代码里加上一行 `scaled_dot_product_attention`，性能瞬间提升 3-5 倍，显存占用还大幅下降，你一定会觉得这是魔法。 今天，我们就来拆解这个魔法。我们要回答的核心问题是：标准的 Attention 算法到底慢在哪里？FlashAttention 又是如何通过“欺骗” GPU &gt; 的内存层级，实现逆天改命的？</p> 
+
+<p><a href="https://xata.io/blog/what-if-database-branching-was-easy">如果数据库分支变得容易会怎样</a><br>我们通常认为分支意味着复制整个数据库。有了写时复制（copy-on-write），就不需要了。让我们比较一下数据植入（seeding）与数据库分支的工作流。大多数团队最终都会使用一个 seed.ts 或 seed.sql 文件。它起初是为了方便，然后慢慢承担了越来越多的设置工作。你运行迁移、加载固定数据（fixtures）、等待后台作业处理事情，然后祈祷自上次有人触碰它以来没有发生偏移。我仍然希望每个新环境都是隔离且新鲜的。但我不认为“新鲜”必须意味着从头开始构建一切。对我来说，问题在于你是否可以在不每次都重新创建所有数据的情况下获得同样新鲜、隔离的环境。注意：我们将 Xata 在 Apache 2.0 下开源。这篇文章探讨了写时复制分支解锁的工作流。如果你想了解其内部原理或自行运行，公告文章和技术深入分析文章涵盖了其内部机制。为什么要植入数据？植入数据有其存在的价值。它具有可移植性、可重复性，并且符合“从头开始构建基础设施”的思维方式。对于一个拥有 20 行固定数据的小型应用来说，它确实是最简单的有效方案。对于每次都需要从已知状态开始的测试，它仍然是正确的工具。问题出现在以下情况：- 虚假数据遗漏了真实的边界情况。一个植入文件可能只有 2 个用户。生产环境可能有 200,000 个，加上你没料到的 NULL 值、旧迁移留下的外键，以及当前枚举类型甚至不再有的计划类型。- 植入脚本成了另一个需要维护的东西。每次迁移都需要更新植入文件。每个新功能都需要固定数据。文件变得越来越长，越来越难分辨哪些仍然需要。- 加载真实数据变得缓慢。</p> 
+
+<p><a href="https://programmers.fyi/the-power-of-the-pointer-how-memory-management-is-still-relevant-today">指针的力量：内存管理在今天依然重要吗</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/04/20/from-public-static-void-main-to-golden-kubestronaut-the-art-of-unlearning/">从 public static void main 到黄金 Kubestronaut：去学习的艺术</a><br>十年前，我的整个世界都塞进了一个 public static void main。我是一名 Java 开发者。基础设施？那是别人的问题，是一个黑盒，我的 JAR 文件去那里生活或悄悄消亡，我大多不在乎是哪种。我发布代码。别人处理服务器。这就是协议。那就是问题所在。今天，我拥有所有五项 Kubernetes 认证——CKA、CKAD、CKS、KCNA 和 KCSA——并且我已经达到了 CNCF 黄金 Kubestronaut 称号，这是云原生社区中最高级别的认可。我写这篇文章不是为了谈论徽章。我写这篇文章是因为从开发者到云原生架构师的旅程差点让我崩溃。我知道很多工程师现在正处于那条道路的中途，在 YAML 中悄悄溺水，盯着失败的 Pod，想知道他们遗漏了什么。你遗漏的不是另一个 kubectl 命令。而是“去学习”（unlearn）的意愿。当最佳实践变成反模式时我向基础设施的转变并非始于兴奋。而是始于愤怒。我深入参与了一个大型企业应用程序，我们不断撞到同样的墙。“它在我的机器上能跑。” QA 环境与生产环境偏离得太远，以至于它们几乎是不同的国家。然后是凌晨 3 点的呼叫。这些不是有趣的呼叫。它不是一个迷人的并发错误或复杂的逻辑错误，你可以自豪地深究。这些是配置漂移呼叫。有人在某个环境中手动更改了一个属性，却忘记了复制它。所以我在那里——半睡半醒、寒冷、喝着冷咖啡、盯着巨大的堆栈跟踪——结果发现根本原因是 JDBC URL 不匹配。一个字符串。在一个属性文件中。有人手动触碰过它。那不是工程问题。那是穿着工程问题外衣的流程问题。任何 Java 技能都无法解决它。我那时意识到可靠性...</p>
+
+<p><a href="https://awesomeagents.ai/news/github-fake-stars-investigation/">Untitled</a><br>简而言之：- 一项经同行评审的 CMU 研究（ICSE 2026）发现，在 18,617 个存储库中存在 600 万个虚假星标（stars），使用了 301,000 个帐户——其中 AI/LLM 存储库是最大的非恶意类别。- 在至少十几个网站、Fiverr 零工和 Telegram 频道上，星标的售价为每个 0.03 美元到 0.85 美元——无需暗网。- 风投公司明确将星标作为寻源信号：Redpoint 发现种子轮的星标中位数为 2,850，各公司使用自动抓取工具来寻找快速增长的存储库。- 我们在 20 个项目中进行了自己的分析，每个存储库随机抽样 150 个个人资料，发现有的存储库中 36-76% 的星标用户拥有零关注者，并且分叉与星标比例比有机基准线低 10 倍。- 美国联邦贸易委员会（FTC）2024 年禁止虚假社交影响力指标的规则规定每次违规罚款 53,088 美元——且美国证券交易委员会（SEC）已经起诉过在筹款期间夸大牵引力指标的初创公司创始人。一个 GitHub 星标的最低成本为 0.06 美元。一轮种子轮融资可以带来 100 万到 1000 万美元。数学计算显而易见，成千上万的存储库正在利用这一点。这项调查绘制了完整的生态系统：从量化该问题的经同行评审研究，到公开销售星标的市场，再到将星标数量转化为融资决策的风险投资渠道。我们使用 GitHub API 对 20 个存储库进行了自己的分析，采样了数千个星标用户的个人资料，以独立验证哪些项目显示出操纵指纹，而哪些没有。呈现出的画面是一个在众目睽睽之下运作的成熟、专业化的影子经济。六百万个虚假星标权威的记录来自 CMU、北卡罗来纳州立大学和 Socket 的研究人员在 ICSE 2026 上发表的一篇经同行评审的研究。</p>
+
+<p><a href="https://binaryigor.com/modern-frontend-complexity.html">现代前端的复杂性</a><br>现代前端的复杂性：是本质的还是偶然的？曾经很简单这种“复杂性”的根源是什么？我们是如何走到这一步的？曾几何时，在 Web 的黎明时期，浏览器和网站都很简单。基本上没有真正的应用程序，大多是静态页面——.html 文件集合，点缀着一些 CSS 以获得更好的外观。这些网站大部分是基于文本的，链接到万维网上可用的其他类似文档。一切都简单明了；静态文档相互引用。然后慢慢地，一步步地，增加了越来越多的交互性；首先是表单和输入，不久之后出现了 JavaScript 编程语言（两者均在 1995 年）。在此阶段，复杂性仍然很低。当时开发的 Web 系统主要由以下部分组成：1. .html 文档和模板2. 一个或多个 .css 文件3. 一些 .js 脚本4. 使这些静态文件可用并处理来自表单的状态更改请求的 HTTP 服务器5. 存储系统状态的数据库关键在于，这些早期网站和应用程序的 UI 源代码与在浏览器中解释和执行的输出文件（运行时目标）基本相同。即使使用了 PHP 和模板语言/系统（如 Mustache），它看起来也非常类似于目标 HTML 文件，由浏览器显示。</p>
+
+<p><a href="https://newsletter.signoz.io/p/our-project-hail-mary-the-observability">我们的 Hail Mary 项目：可观测性工具背后的可观测性设置</a><br>今天，我们的内部可观测性系统监控着 6 个区域，每天摄入 210 亿个指标点、14 TB 日志和 10 TB 跟踪数据。我们走到今天这一步的故事始于一切分崩离析之时。这是来自 SigNoz 的 Elizabeth！我不打算将其做成一篇独立的博客，最初想把它与那篇“鲨鱼如何做可观测性”合并。后来，当我和 Nightswatch 的幕后策划者 Pandey 通电话时，我意识到这值得单独写一篇文章。这旨在公正地评价我们的平台团队每天为保持我们所有客户云实例活跃和稳定而进行的疯狂工作。希望你读到这篇文章时和我了解它并为你撰写它时一样享受。今天，我们的内部可观测性系统监控着 6 个区域，每天摄入 210 亿个指标点、14 TB 日志和 10 TB 跟踪数据，毫无压力。我们是构建可观测性工具的人。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.flyingpenguin.com/build-an-openclaw-free-secure-always-on-local-ai-agent/">构建 OpenClaw：免费、安全、始终在线的本地 AI 智能体</a><br>OpenClaw 骗不了我。我还记得 MS-DOS。DOS 的悲惨日子。任何程序都可以窥探和篡改内核、挂钩中断、在磁盘的任何地方写入。根本没有安全性。修复方法不是一个包装器或一个不同的 shell。这是一种完全不同的做法。世界已经拥有了环、虚拟内存、ACL、独立的地址空间。Unix 从一开始就有的三十年隔离被忽视了，它最终追上了 DOS 的世界。我并不是说 DOS 不受欢迎。天哪。我记得在芝加哥的一家酒吧里的一个漆黑夜晚，一个醉醺醺的瑞典 IT 顾问跳上一张桌子说“大家都听着！”。当他挥舞着啤酒杯，漫不经心地摇晃，腿脚不稳时，他说他去城里是为了处理运行 MS-DOS 的沃尔玛销售点（POS）设备。为什么他表现得像这样？他很高兴，非常、非常高兴。他想让我们知道他热爱他的工作，类似于“你能相信沃尔玛有成千上万台装有你所有 F$%#$%NG 支付卡数据的 DOS 机器吗？！哈哈哈！而且它们都有一个每个人共享的密码！你想要吗？！我正好有！自由，美国，F$#%$K Yeah！”真实的故事。那个家伙和沃尔玛都把所有客户信息放在没有任何安全性的 MSDOS 上。</p>
+
+<p><a href="https://www.kimi.com/blog/kimi-k2-6">Kimi K2.6：推进开源编码</a><br>我们正在开源我们最新的模型 Kimi K2.6，该模型具有顶尖的编码、长视野执行和智能体集群能力。Kimi K2.6 现在可通过 Kimi.com、Kimi App、API 和 Kimi Code 使用。Kimi K2.6 在长视野编码任务中表现出显著的改进，并在编程语言（例如 Rust, Go 和 Python）以及任务（例如前端、DevOps 和性能优化）中具有可靠的泛化能力。在 Kimi Code Bench（我们内部涵盖各种复杂端到端任务的编码基准测试）上，Kimi K2.6 相较于 Kimi K2.5 表现出显著提升。Kimi K2.6 在复杂的工程任务中展示了强大的长视野编码能力：Kimi K2.6 在 Mac 上成功下载并本地部署了 Qwen3.5-0.8B 模型。通过使用 Zig（一种高度小众的编程语言）实现和优化模型推理，它展示了卓越的分布外泛化能力。在 4000 多次工具调用、超过 12 小时的持续执行和 14 次迭代中，Kimi K2.6 显著地……</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The to-do app to organize your life.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/xdevplatform/xurl">xdevplatform/xurl</a><br>The official CLI for the X API</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+<p><a href="https://github.com/basecamp/once">basecamp/once</a><br>Easy self-hosting for Docker-based web apps</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

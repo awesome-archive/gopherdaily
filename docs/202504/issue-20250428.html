@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250428.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250428</span>
+</p>
+<p>每日一谚：if you expect Go to match the development experience of a highle language with lots of syntactic sugar you will be disappointed </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/LRY6WmujMTLybed3V0B44Q">go-yaml归档背后：Go开源生态的“脆弱”与“韧性”，我们该如何看待？</a><br>go-yaml 的归档，似乎成了这个担忧的一个现实注脚。一个维护了十多年、被广泛使用的基础库，说停就停了，这是否预示着 Go 的开源生态存在系 统性的脆弱？我们是否真的应该为此感到焦虑？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/aPiWDFInEXQjqosvGB-IUg">Go开发者必知：五大缓存策略详解与选型指南</a><br>目前业界主流的缓存策略有多种，每种都有其独特的适用场景和优缺点。今天，我们就来探讨其中五种最常见也是最核心的缓存策略：Cache-Aside&gt;、Read-Through、Write-Through、Write-Behind (Write-Back) 和Write-Around，并结合Go语言的特点和示例（使用内存缓存和SQLite），帮助大&gt;家在实际项目中做出明智的选择。</p> 
+
+<p><a href="https://dev.to/pixperk/go-concurrency-the-full-guide-to-goroutines-and-beyond-2ajh">Go并发编程：Goroutines及其他完整指南</a><br>本文深入探讨Go并发编程，涵盖Goroutines、通道、缓冲通道、死锁、Select语句、WaitGroup、互斥锁和Context包等内容，并讲解常见并发模式和陷阱。文章以通俗易懂的方式解释了并发和并行之间的区别，并通过示例代码演示了如何使用这些工具来构建高效、安全的并发程序。</p> 
+
+<p><a href="https://dev.to/lovestaco/quick-fix-for-debugging-panic-failures-in-go-2kp8">Go语言中快速修复调试恐慌故障的方法</a><br>作者在开发LiveAPI（一个通过使用Git仓库生成交互式API文档的工具）时，遇到服务器崩溃的问题，并非简单的`panic(&#34;oops&#34;)`，而是切片索引超出范围、空指针解引用等真正的崩溃。文章介绍了一种快速修复方法：重定向`os.Stdout`到缓冲区，使用正则表达式搜索最后打印的job ID，并将所有信息保存到日志文件以便事后分析。文中提供了Go代码示例，并讨论了长期解决方案，例如使用结构化日志记录和上下文传播job ID等。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/maintainers-monetization-and-making-the-time">Fallthrough | 维持者、货币化和时间安排</a><br>维护软件是一项挑战，但在正确评估自己时间的同时将其货币化则更加复杂。对开源项目进行所有这些工作是一项挑战，很少有人能解决。在本周的节目中，Matt 和 Angelica 与 Carlos Becker 共同讨论了维护和货币化开源项目、在开源公司工作的感受以及如何评估自己的时间。此外，我们在节目结尾还有一些不受欢迎的观点。支持者可以访问扩展对话，包括关于时间价值、Carlos 使用的工具以及小组对 AI 工具的看法！通过在 https://fallthrough.fm/subscribe 注册来获取访问权限。感谢收听，祝您收听愉快！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dgsq.net/2025-04-27-averages">计算机架构师找不到平均值</a><br>本文讨论了计算机架构领域关于如何总结系统性能平均值的不同观点。作者批判了使用算术平均数和几何平均数的常见方法，并对一篇提倡使用调和平均数的论文进行了评论。作者认为，无论使用哪种平均数，由于实际应用中工作负载的混合情况难以精确掌握，任何单一数字都无法完美地比较不同机器的性能。最终，作者建议继续使用几何平均数，因为它易于比较且大家熟悉。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/28/sam-altman/#atom-everything">Sam Altman 的一段话</a><br>最近几次 GPT-4o 更新让它的个性变得过于谄媚和烦人（尽管它也有一些非常好的方面），我们正在尽快修复这些问题……有些今天就能解决，有些则在本周解决。</p>
+
+<p><a href="https://www.doliver.org/articles/programming-is-a-thinkers-game">AI编码助手价值有限，因为程序员的工作是思考</a><br>编写代码很容易；让代码正确运行很难。本文作者认为，AI编码助手生成的代码往往质量不高，因为它无法像人类工程师一样进行思考和推理，而程序员的工作重点在于思考和解决问题，而不是单纯地编写代码。文章通过一个JavaScript示例代码片段，阐述了代码的可读性和运行时行为之间的巨大差异，并指出优秀的软件工程更注重思考和讨论，而非单纯的代码编写。</p>
+
+<p><a href="https://huggingface.co/blog/tiny-agents">微型代理：50 行代码的 MCP 驱动代理</a><br>本文介绍了如何使用 TypeScript (JS) 实现一个微型代理，并阐述了如何利用 MCP（模型上下文协议）简化代理式 AI 的开发。MCP 是一个标准 API，用于公开可连接到大型语言模型 (LLM) 的工具集。作者通过一个简单的循环，将 MCP 客户端与 LLM 推理相结合，实现了 50 行代码的代理。文章还包含了运行完整演示、工具使用方法、代码位置以及未来发展方向等内容。</p>
+
+<p><a href="https://vladfeinberg.com/2025/04/24/gemini-flash-pretraining.html">Gemini-flash预训练</a><br>这篇博文讨论了Gemini大型语言模型的预训练。作者Vlad Feinberg回顾了关于规模定律的学术论文，并探讨了在推理约束下如何修改规模化方法。文章还包括对相关研究工作的评论，以及针对学术界的未来研究方向的建议，例如量化和内核开发、生成式搜索以及规模定律拟合的统计框架等。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/cloudreve/Cloudreve">cloudreve/Cloudreve</a><br>🌩支持多家云存储的云盘系统 (Self-hosted file management and sharing system, supports multiple storage providers)</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/go-admin-team/go-admin">go-admin-team/go-admin</a><br>基于Gin &#43; Vue &#43; Element UI &amp; Arco Design &amp; Ant Design 的前后端分离权限管理系统脚手架（包含了：多租户的支持，基础用户管理功能，jwt鉴权，代码生成器，RBAC资源控制，表单构建，定时任务等）3分钟构建自己的中后台项目；项目文档》：https://www.go-admin.pro V2 Demo： https://vue2.go-admin.dev V3 Demo： https://vue3.go-admin.dev Antd PRO：https://antd.go-admin.pro</p>
+
+<p><a href="https://github.com/beego/beego">beego/beego</a><br>beego is an open-source, high-performance web framework for the Go programming language.</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/v2rayA/v2rayA">v2rayA/v2rayA</a><br>A web GUI client of Project V which supports VMess, VLESS, SS, SSR, Trojan, Tuic and Juicity protocols. 🚀</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/metoro-io/mcp-golang">metoro-io/mcp-golang</a><br>Write Model Context Protocol servers in few lines of go code. Docs at https://mcpgolang.com</p>
+
+<p><a href="https://github.com/bytedance/sonic">bytedance/sonic</a><br>A blazingly fast JSON serializing &amp; deserializing library</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

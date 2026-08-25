@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260116.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260116</span>
+</p>
+<p>每日一谚：Write functions that do one thing and do it well. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/16/go-community-the-right-kind-of-abstraction">为什么 Go 社区强调避免不必要的抽象？—— 借用海德格尔哲学寻找“正确”的答案</a><br>在 GopherCon UK 2025 上，John Cinnamond 做了一场与众不同的演讲。他没有展示任何炫酷的并发模式，而是搬出了马丁·海德格尔（Martin Heidegger）和伊曼努尔·康德（Immanuel Kant），试图用哲学的视角，为我们解开关于 Go 抽象的终极困惑。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/b-uF_bvSIqjOqECwd25jIA">【分布式系统】05 时间的幻象 —— Lamport 与 Vector Clock 如何重建分布式因果？</a><br></p> 
+
+<p><a href="https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04">欢迎来到Gas Town</a><br>Gas Town 是面向 2026 年的全新 IDE。Gas Town 可以帮助您摆脱运行大量 Claude Code 实例的繁琐工作。数据容易丢失，难以追踪每个用户的操作等等。Gas Town 可以帮您处理所有这些琐碎事务，让您专注于 Claude Code 正在处理的工作。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-01-15-a-day-in-gas-town/">Gas Town 一日游</a><br>本文是对新的编码代理 Gas Town 的回顾和评测，Gas Town 旨在像拥有 100 个 Claude Code 实例一样运作。文章讨论了 Gas Town 如何通过其依赖项 Beads（一个使用 Git 和 SQLite 的内存系统）来实现并行任务管理，并探讨了 Dolt 如何能通过提供统一的、带有版本控制的结构化数据存储来潜在地改进 Beads 和 Gas Town 的效率和可控性。尽管 Gas Town 的尝试带来了快速但昂贵的（Token 消耗大）软件开发体验，作者认为其潜力巨大，并指出了机器规模写入对版本控制系统的需求，这是 Dolt 可以满足的。</p> 
+
+<p><a href="https://blog.gaborkoos.com/posts/2026-01-08-The-Go-Build-System-Optimised-for-Humans-and-Machines">Go 构建系统：兼顾人类和机器的优化</a><br>Go 的构建系统针对人类和机器进行了优化：更快速、可重现的构建、智能缓存、无缝的 CI/CD 以及实用的指导，旨在精简现代开发者的工作流程。本文深入探讨了 Go 工具链的各个方面，包括模块解析、包级编译、选择性链接、内容寻址的构建缓存，以及如何使用调试标志来观察和理解构建过程。核心观点是 Go 的构建哲学是清晰、可预测，并且最大化地重用已完成的工作，从而同时提升人类开发效率和机器执行效率。</p> 
+
+<p><a href="https://benraz.dev/blog/golang_review.html">Go语言的诚实评价</a><br>作者分享了在过去几个月使用Go语言的体验，并总结了其优点和缺点。优点包括内置的一流的并发模型（Channels和Goroutines）、简洁的类型系统（支持结构体嵌入和隐式接口实现，简化了动态类型处理）以及简洁的语法（如类型注解和大小写字母的可视性控制）。缺点主要集中在缺乏真正的枚举类型（依赖常量组，缺乏穷尽性检查）、编译时常量定义的局限性（不能用于结构体或映射的字面量初始化），以及对error类型的处理方式（将其视为仅有Error() string方法的接口，导致丢失底层错误信息，需要进行字符串解析来区分错误类型，不如Rust的Result类型强大）。</p> 
+
+<p><a href="https://medium.com/@ehabhosam/kafkafka-how-i-built-kafka-from-scratch-in-golang-95ad8f4cc32a">如何用Go从头构建kafka</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/open-source-terraform-module">Tailscale 的 Terraform 模块，用于可预测的多云部署</a><br>Tailscale 团队根据数千小时的客户支持经验，构建了一个开源的 Terraform 模块，用于在 AWS、Azure、GCP 等多云环境中一致且可靠地引导和配置 Tailscale。该模块解决了 Cloud-init 带来的痛点，提供了跨不同操作系统的稳定引导路径，并支持如 peer-relays 和临时设备注册等高级功能。</p>
+
+<p><a href="https://www.haproxy.com/blog/how-paypal-solved-multi-cloud-complexity-with-haproxy">通用网格（Universal Mesh）实战：PayPal 如何用 HAProxy 解决多云复杂性</a><br>PayPal 在管理跨 AWS、GCP 和 Azure 三大云提供商以及本地数据中心的复杂基础设施时，面临着连接冲突（如重叠的 CIDR/IP 地址）和碎片化工具的挑战。为了解决这些问题，PayPal 打造了代号为“Meridian”的通用网格（Universal Mesh）解决方案，核心组件是 HAProxy Enterprise 和 HAProxy Fusion Control Plane。</p>
+
+<p><a href="https://www.docker.com/blog/rag-permission-testing-testcontainers-spicedb/">使用 Testcontainers 和 SpiceDB 进行 RAG 权限测试</a><br>了解如何使用 Testcontainers 和 SpiceDB 对 RAG（检索增强生成）管道的权限进行端到端验证，包括设置、测试数据和开发人员可以信任的策略检查。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/16/cri-o-completes-second-ostif-audit/">CRI-O 完成第二次 OSTIF 审计</a><br>开源技术改进基金（OSTIF）自豪地公布了对 CRI-O 安全审计的结果。CRI-O 是 Kubernetes 容器运行时接口（CRI）的一种 OCI 兼容实现。在 X41 D-Sec 和云原生计算基金会（CNCF）的帮助下，CRI-O 成功完成了其第二次 OSTIF 安全审计。审计结果显示代码“设计良好且执行有效，在最小化和实际稳健性之间取得了良好的平衡”，发现了两项信息性安全问题，并建议进一步的安全工作。</p>
+
+<p><a href="https://secondthoughts.ai/p/software-too-cheap-to-meter">软件便宜到无需计量</a><br>文章探讨了软件开发成本大幅下降的趋势，预测了个性化解决方案将取代一刀切的大众市场应用。作者以自己开发定制的Gmail垃圾邮件管理界面为例，说明了AI“代码代理”如何使得为个人需求创建软件变得越来越容易，即使是对于解决每周只需三分钟的小问题也变得值得投入时间。这种转变意味着用户需要学习根据自己的需求来塑造软件，而不是反过来。</p>
+
+<p><a href="https://stackoverflow.blog/2026/01/14/8-lessons-from-tech-leadership-on-scaling-teams-and-ai">8 lessons from tech leadership on scaling teams and AI</a><br>总结了作者从“代码领导者”（Leaders of Code）播客中提炼出的八个关于技术领导力、团队扩展和人工智能（AI）的关键经验教训。核心观点包括：AI项目成功与高质量数据的依赖性、企业往往高估了自身数据准备度、内部知识是解决AI“幻觉”的关键、开发人员对AI的信任度正在下降、理解AI的局限性至关重要，以及AI正在重塑团队结构和角色，API将成为AI集成的核心骨干。</p>
+
+<p><a href="https://hawksley.org/2026/01/14/beyond-senior.html">超越资深工程师：考虑“员工/Staff”级别路径！</a><br>Joel Hawksley 是一位驻科罗拉多州的软件工程师。本文是他关于软件工程师职业发展路径的演讲稿，重点讨论了在达到“资深工程师”（Senior）级别后，可以考虑的“员工/Staff”级别（Staff Path）的职业发展道路。文章定义了 Staff 工程师的角色，探讨了如何晋升到该级别，并详细阐述了 Staff 工程师的四种主要原型：技术负责人（Tech Lead）、架构师（Architect）、问题解决者（Solver）和幕僚（Right Hand）。最后，作者分享了如何在 Staff 岗位上取得成功的关键策略，包括：与原型保持一致、保持公开日志、预测未来趋势、向权力方进言、明确化后再委托任务，以及持续产生积极的能量和交付成果。作者认为 Staff 工程师的经历是其软件工程师生涯中最有成就感的时期之一，并鼓励读者考虑这条路径。</p>
+
+<p><a href="https://davefriedman.substack.com/p/the-saas-selloff-ai-and-interest">SaaS 抛售潮：人工智能与利率</a><br>人工智能是明显的 SaaS 杀手，但较高的利率也会影响估值。文章分析了影响软件行业估值的两个主要因素：宏观因素（利率导致估值折现率上升）和结构性因素（AI 带来的劳动力通缩和可变成本通胀，以及软件堆栈的重新整合）。作者探讨了 AI 如何通过压缩工位数量和引入可变成本（AI 推理成本）来攻击传统 SaaS 商业模式的两个核心假设（工位定价与价值匹配、固定成本带来的高毛利）。最终，作者建议运营商和投资者应关注商业模式的持久性，而非仅仅是 AI 功能的引入。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/15/open-responses/#atom-everything">Open Responses</a><br>Open Responses 是一项旨在为托管的 LLM（大型语言模型）提供供应商中立的 JSON API 规范的标准化工作。该规范基于 OpenAI 的 Responses API，旨在解决 LLM 世界中对这种标准化的需求。Open Responses 的启动合作伙伴（包括 OpenRouter、Hugging Face、LM Studio、vLLM、Ollama 和 Vercel）覆盖了目前绝大多数主流模型和工具。作者还提到希望有一个全面的、与语言无关的合规性测试站点，目前官方仓库提供了服务器实现的测试，但缺少客户端测试的等效工具。</p>
+
+<p><a href="https://www.philschmid.de/building-agents-interactions-api">使用 Gemini Interactions API 构建智能体</a><br>了解如何使用新的 Gemini Interactions API 构建 AI 代理，该 API 具有服务器端状态管理和简化的工具编排功能。文章通过步骤演示了如何使用 Interactions API（Beta 版）构建一个命令行界面 (CLI) 代理，重点介绍了它如何简化了代理的核心循环（观察 → 思考 → 行动 → 再次观察），尤其是在处理对话历史和工具调用方面。</p>
+
+<p><a href="https://blog.character.ai/technical-deep-dive-how-digitalocean-and-amd-delivered-a-2x-production-inference-performance-increase-for-character-ai">技术深度解析：DigitalOcean 和 AMD 如何为 Character.ai 实现 2 倍的生产推理性能提升</a><br>本文是 Character.ai 与 DigitalOcean 和 AMD 合作伙伴共同撰写的技术深度解析，重点介绍了三方如何通过深入的技术协作，优化 GPU 工作负载，并最终实现了 2 倍的生产推理性能提升，显著降低了推理成本。文章详细探讨了在 Qwen3-235B Instruct FP8 模型上进行的两种主要优化配置：DP1 / TP8 / EP8 和 DP2 / EP4 / TP4 与 AITER 的结合使用。DP2 / TP4 / EP4 配置在满足延迟要求的同时，吞吐量比 DP1 / TP8 / EP8 提高了约 45%，比非优化设置提高了 91%。此外，文章还强调了在 DigitalOcean Kubernetes (DOKS) 上部署的便利性，以及使用 NFS 缓存模型权重以减少加载时间等基础设施方面的改进，最终总结了实现生产级 AI 基础设施所需的四大范式转变。</p>
+
+<p><a href="https://code.dblock.org/2026/01/15/serving-markdown-for-ai-agents.html">为AI代理提供Markdown服务</a><br>Dries Buytaert最近撰文讨论了“第三受众”。几十年来，网站的目标受众是人类和搜索引擎。AI代理现已成为第三受众，但大多数网站尚未针对它们进行优化。本文介绍了一个解决方案，即通过提供Markdown源文件来优化内容，因为AI代理更喜欢简洁、结构化的内容，而Markdown是理想的选择。文章描述了如何通过在HTML头部添加`&lt;link rel=&#39;alternate&#39; type=&#39;text/markdown&#39; href=&#39;...&#39;&gt;`标签并在GitHub Actions工作流中复制Markdown源文件来实现这一目标。作者认为，虽然这可能使AI公司更容易使用内容，但提供清晰的输入可能带来更好的归属和更准确的引用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/memodb-io/Acontext">memodb-io/Acontext</a><br>Data platform for context engineering. Context data platform that stores, observes and learns. Join the community❤️: https://discord.acontext.io</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>Automation engine to build, test and ship any codebase. Runs locally, in CI, or directly in the cloud</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/loong/go-concurrency-exercises">loong/go-concurrency-exercises</a><br>Hands on exercises with real-life examples to study and practice Go concurrency patterns. Test-cases are provided to verify your answers.</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/getlago/lago">getlago/lago</a><br>Open Source Metering and Usage Based Billing API ⭐️ Consumption tracking, Subscription management, Pricing iterations, Payment orchestration &amp; Revenue analytics</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaLogs">VictoriaMetrics/VictoriaLogs</a><br>Fast and easy to use database for logs, which can efficiently handle terabytes of logs</p>
+
+<p><a href="https://github.com/kserve/kserve">kserve/kserve</a><br>Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

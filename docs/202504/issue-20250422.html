@@ -1,0 +1,167 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250422.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250422</span>
+</p>
+<p>每日一谚：Design the architecture, name the components, document the details. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://hub.corgea.com/articles/go-lang-security-best-practices">Go语言安全最佳实践</a><br>这份全面的指南介绍了如何保护您的 Go 应用程序。它涵盖了输入验证、密码和密钥管理、身份验证和授权、依赖项管理以及针对 SQL 注入、跨站脚本 (XSS) 和竞争条件等常见漏洞的保护。您还将学习如何安全地处理错误、记录的最佳实践以及如何利用 Go 的内置工具尽早发现并修复开发中的安全问题。</p> 
+
+<p><a href="https://dev.to/ouma_ouma/mastering-database-migrations-in-go-with-golang-migrate-and-sqlite-3jhb">掌握 Go 语言中使用 golang-migrate 和 SQLite 的数据库迁移</a><br>管理数据库更改对于任何软件项目都至关重要。本指南将引导您在 Go 中使用 golang-migrate 和 SQLite 来干净利落地处理迁移。文章涵盖了数据库迁移的概念、golang-migrate 的优势、最佳实践（命名约定、迁移的重点、版本控制、测试和部署技巧）、项目设置、创建和运行迁移（包括示例SQL和Go代码）、常用命令和常见问题（脏数据库状态和迁移失败）。</p> 
+
+<p><a href="https://dev.to/pradumnasaraf/monitoring-go-applications-using-prometheus-grafana-and-docker-33i5">使用 Prometheus、Grafana 和 Docker 监控 Go 应用程序</a><br>监控对于任何应用程序都很重要。它可以帮助我们确保应用程序平稳运行，并在问题变得严重之前检测到它们。本文将创建一个使用 Prometheus 和 Grafana 监控的 Golang 应用程序，并使用 Docker 和 Docker Compose 运行应用程序和监控堆栈。</p> 
+
+<p><a href="https://meowbark.dev/Better-error-handling">更好的错误处理</a><br>糟糕的错误处理已经导致数十亿美元的损失、飞机坠毁、人员伤亡、股市暴跌、车辆损坏和航班延误。在我们回顾万圣节之际，适逢反思这些软件出错的恐怖故事。你可以在我的文章《一个万圣节恐怖故事》中阅读更多相关信息（基于真实事件），或者观看这个新发布的Fireship视频。错误处理不仅仅是一项技术挑战，更是软件安全性和可靠性的关键因素。然而，在TypeScript和JavaScript中，它仍然有些像蛮荒的西部。今天，我将分享当前状况概述以及我偏好的方法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/introducing-docker-mcp-catalog-and-toolkit/">Docker化MCP：为生态系统带来发现、简洁性和信任</a><br>本文介绍了Docker MCP目录和工具包，这是一种利用MCP工具进行资源获取、使用和扩展的新方法。它旨在解决MCP客户端和服务器面临的挑战，例如发现分散、信任手动以及安全和身份验证问题。通过将容器化作为默认设置，并提供集中的工具发现中心和无缝的凭据管理，Docker MCP目录和工具包旨在简化MCP的开发和使用，并使其更安全可靠，从而为下一代智能代理和实际自动化铺平道路。</p>
+
+<p><a href="https://blog.dropbox.com/topics/work-culture/emergency-management-teams-making-faster-better-decisions-with-ai">在危机管理中做出更快、更好的决策，这可是你的本职工作</a><br>灾难管理团队人手紧张，并且正在寻求人工智能的帮助。对他们有效的策略能否帮助我们其他人呢？本文探讨了人工智能在危机管理中的应用，以及如何帮助应急管理人员更快、更有效地做出决策，最终改善人们的生活。</p>
+
+<p><a href="https://engineering.salesforce.com/bridging-natural-language-and-sql-with-generative-ai/">使用生成式 AI 弥合自然语言和 SQL 之间的差距</a><br>了解工程团队如何构建一个 AI 助手，该助手利用大型语言模型 (LLM)、一致性评分和快速迭代来将自然语言转换为 SQL 查询。该助手消除了瓶颈，加快了对洞察的访问速度，并使工程师能够专注于更高影响力的任务。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/04/22/these-kubernetes-mistakes-will-make-you-an-easy-target-for-hackers/">这些 Kubernetes 错误会让你成为黑客的攻击目标</a><br>Kubernetes 在大规模编排容器化应用程序方面非常强大。但是，如果没有适当的监控和可观察性，尤其是在自管理基础设施中，它很快就会变成等待发生的重大安全灾难。这并非由于 Kubernetes 本身存在固有缺陷，而是由于普遍存在的、可预防的错误配置、设计误判和安全漏洞，这些漏洞为威胁参与者创造了主要的入口点。文章探讨了常见的 Kubernetes 安全错误，例如身份验证和访问控制方面的基础缺陷、常被忽视的运行时漏洞，并提供了具体的可操作步骤来构建强大的安全态势。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/04/22/multi-container-pods-overview/">Kubernetes 多容器 Pod：概述</a><br>随着云原生架构的不断发展，Kubernetes 已成为部署复杂分布式系统的首选平台。该生态系统中最强大也最细致的设计模式之一是 sidecar 模式——允许开发者扩展应用程序功能，无需深入研究源代码。sidecar 模式的起源可以将其想象成可靠的摩托车侧车附件。从历史上看，IT 基础设施始终使用辅助服务来处理关键任务。在容器出现之前，我们依赖于后台进程和辅助守护程序来管理日志记录、监控和网络。微服务革命改变了这种方法，使 sidecar 成为一种结构化且有意的架构选择。Kubernetes 中的 sidecar 容器与主应用程序在同一个 Pod 中运行，从而实现通信和资源共享。Kubernetes v1.29.0 之前，sidecar 容器必须通过在 Pod 清单中定义多个容器来实现。现在，sidecar 容器可以通过在 Pod 清单中使用 `spec.initContainers` 字段来定义。使它成为 sidecar 容器的关键在于你使用 `restartPolicy: Always` 来指定它。</p>
+
+<p><a href="https://thenewstack.io/what-devs-should-know-when-starting-an-apache-kafka-journey">开发者在开始 Apache Kafka 之旅时应该了解什么 - The New Stack</a><br>许多团队难以发挥 Kafka 的全部潜力。本文探讨了开发过程中遇到的障碍，并提供了一些切实可行的建议，帮助将这些障碍转化为机遇。</p>
+
+<p><a href="https://tigerbeetle.com/blog/2021-08-30-three-clocks-are-better-than-one">三个时钟胜过一个</a><br>本文探讨了在高性能金融交易数据库中，使用多个时钟来实现容错的时钟同步机制。文章介绍了Linux内核中三种单调时钟（CLOCK_MONOTONIC_RAW，CLOCK_MONOTONIC和CLOCK_BOOTTIME）的差异，并解释了为什么CLOCK_BOOTTIME是构建容错时钟的最佳选择。作者还详细介绍了TigerBeetle如何结合集群中多个时钟来构建一个名为“集群时间”的容错时钟，以及如何使用Marzullo算法来估计集群时间。文章最后总结了在需要精确时间戳的系统中，依赖冗余硬件实现容错的重要性，以及区分“腕表时间”和“秒表时间”在算法设计中的作用。</p>
+
+<p><a href="https://restate.dev/blog/building-a-modern-durable-execution-engine-from-first-principles">从第一性原理构建现代持久化执行引擎</a><br>本文深入探讨了 Restate 的架构细节，这是一个从头构建的持久化执行引擎。Restate 不需要数据库/日志或其他系统，而是实现了一个完整的堆栈，在持久性和操作方面与最好的日志相媲美。文章介绍了 Restate 的架构、集群、对象存储、分区扩展、事件日志和处理器、状态存储、领导者和跟随者、控制平面、数据平面、外部一致性、故障转移和重新配置以及收敛的单二进制文件等方面，并提供了一些性能数据。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/22/working-through-the-fear-of-being-seen/#atom-everything">克服被看见的恐惧</a><br>Ashley Willis 的一篇发自肺腑的文章，讲述了在网上发表文章时克服自我怀疑的挑战。文章指出，知道谁可能会读到自己的文章是一部分挑战，因为关注者中有些人很聪明、固执己见，并不总是善意的。作者呼吁大家避免成为那些阻止他人分享想法的人。</p>
+
+<p><a href="https://edgebit.io/blog/automated-dependency-updates-with-ai">构建用于自动化代码维护的一次性 AI 代理的原则</a><br>EdgeBit 是一个安全平台，可帮助应用程序工程团队查找和修复安全漏洞。Dependency Autofix 功能包含一个极其精确的可达性引擎，用于识别对应用程序的影响。大多数更新没有影响，因此使用 EdgeBit 的工程师可以将精力集中在有影响的升级上。这意味着工程师可以将更多时间用于核心任务，而不是管理依赖项。
+这篇文章将介绍如何识别可以使用 1) 集中工具、2) 智能地处理错误以及 3) 利用 AI 代理的持久性来实现巨大效率提升的领域（例如，我们为 Dependency Autofix 所做的工作），并提供一些数据作为支持。</p>
+
+<p><a href="https://www.oneusefulthing.org/p/on-jagged-agi-o3-gemini-25-and-everything">参差不齐的 AGI：o3、Gemini 2.5 及其后的所有内容</a><br>本文探讨了新一代人工智能模型（如 o3 和 Gemini 2.5）的强大功能及其局限性。作者认为，这些模型虽然在某些方面超越了人类专家，但在其他方面却表现出令人惊讶的不足，体现了“参差不齐的前沿”这一概念。文章还讨论了 AGI 的定义问题以及这些新模型对工作和生活带来的潜在影响，并指出，AGI 的到来是否会立即改变世界仍然存在不确定性。</p>
+
+<p><a href="https://maknee.github.io/blog/2025/3FS-Performance-Journal-1">DeepSeek分布式文件系统简介</a><br>本文介绍了DeepSeek公司开源发布的分布式文件系统3FS（Fire-Flyer File System）。文章首先解释了什么是分布式文件系统以及其优势，然后深入探讨了3FS的架构，包括元数据节点（Meta）、管理节点（Mgmtd）、存储节点（Storage）和客户端（Client）四个主要组件。文章详细阐述了每个组件的功能和工作机制，特别是重点介绍了3FS中使用的CRAQ（Chain Replication with Apportioned Queries）协议，该协议用于实现强一致性和线性化。最后，文章还比较了3FS与其他分布式文件系统的异同，并展望了后续的性能分析工作。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/cloudwego/eino-ext">cloudwego/eino-ext</a><br>Various extensions for the Eino framework: https://github.com/cloudwego/eino</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/rqlite/rqlite">rqlite/rqlite</a><br>The lightweight, user-friendly, distributed relational database built on SQLite.</p>
+
+<p><a href="https://github.com/supabase/auth">supabase/auth</a><br>A JWT based API for managing users and issuing JWT tokens</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+<p><a href="https://github.com/go-resty/resty">go-resty/resty</a><br>Simple HTTP, REST, and SSE client library for Go</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/go-co-op/gocron">go-co-op/gocron</a><br>Easy and fluent Go cron scheduling. This is a fork from https://github.com/jasonlvhit/gocron</p>
+
+<p><a href="https://github.com/usual2970/certimate">usual2970/certimate</a><br>开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

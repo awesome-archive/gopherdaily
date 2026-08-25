@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260122.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260122</span>
+</p>
+<p>每日一谚：Close a channel from the producer side </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/survey2025">2025 Go 开发者调查结果</a><br>本文总结了2025年Go开发者调查的结果，该调查于2025年9月进行，收到了5379份有效回复。主要发现包括：开发者在识别和应用最佳实践、充分利用标准库以及扩展语言和内置工具方面寻求帮助；大多数开发者使用AI辅助工具，但满意度中等，主要因质量问题；以及相当比例的开发者需要经常查阅核心go子命令（如go build, go run, go mod）的文档，表明go命令的帮助系统有改进空间。调查还涵盖了开发者对Go的满意度（91%满意），他们构建的应用类型（CLI和服务API占主导），开发环境（macOS/Linux为主，VS Code/GoLand最常用）以及对AI工具的使用和满意度。</p> 
+
+<p><a href="https://tonybai.com/2026/01/22/a-bug-cause-50000-goroutine-leak">凌晨3点的警报：一个导致 50000 多个 Goroutine 泄漏的 Bug 分析</a><br>这是一个周六凌晨 3 点，发生在核心 API 服务上的真实噩梦。运维正准备重启服务止损，但 Serge Skoredin 敏锐地意识到：这不是普通的内存泄漏，而是一场已经潜伏了 6 周、呈指数级增长的 Goroutine 泄漏。 导致这场灾难的代码，曾通过了三位资深工程师的 Code Review，看起来“完美无缺”。今天，让我们跟随 Serge 的视角，层层剥开这个隐蔽 Bug 的 伪装，学习如何避免同样的悲剧发生在你身上。</p> 
+
+<p><a href="https://tonybai.com/2026/01/22/why-are-we-still-talking-about-containers-in-ai-age">Kelsey Hightower 退休后的冷思考：为什么 10 年过去了，我们还在谈论容器？</a><br>“如果你在 2014 年告诉我，十年后我们还在讨论容器，我会觉得你疯了。但现在是 2025 年，我们依然在这里，谈论着同一个话题。” 在去年中旬举行的 ContainerDays Hamburg 2025 上，早已宣布“退休”的云原生传奇人物 Kelsey Hightower 发表了一场发人深省的主题演讲。在这个 AI 狂热席卷全球的时刻，他没有随波逐流地去谈论大模型，而是回过头来，向所有技术人抛出了一个灵魂拷</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/cxzOyH7sUporlL26-Mz-GQ">【分布式系统】06 分区：分而治之的艺术与陷阱</a><br></p> 
+
+<p><a href="https://devpost.com/software/xgotop-go-runtime-observer">xgotop: Realtime Go Runtime Visualizer</a><br>xgotop: Realtime Go Runtime Visualizer - Monitor goroutine lifecycles and memory allocations with sub-microsecond delay and low overhead, without even changing your Go program! Inspect your program in realtime with a cool web UI. 这个项目使用eBPF来实时跟踪Go程序中的goroutine生命周期和内存分配事件，具有亚微秒级的延迟和低开销。开发者通过阅读Go源码来确定需要hook的运行时函数和内存偏移量，并克服了uretprobe的限制，最终实现了低延迟的事件处理和可视化界面。</p> 
+
+<p><a href="https://tailscale.com/blog/hypergrowth-isnt-always-easy">高速增长并非易事</a><br>Tailscale 的首席执行官谈论中断：它们是什么，为什么会发生，以及 Tailscale 如何使它们变得更小、更不频繁。许多年来，系统架构的工作成果使得许多中断不会切断现有连接，但如果恰好在控制平面出现问题期间需要它，用户将完全感受到中断的影响。为了解决这个问题，我们将持续改进，使这些事件更加罕见和短暂。我们正在努力通过缓存网络映射、改进分片协调服务、投资更好的多 tailnet 共享以及不断改进软件来减少对控制平面的依赖。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-01-22-agentic-memory/">Agentic Memory</a><br>Agentic memory is here, and it&#39;s powered by Dolt. This article explains what agentic memory is, defines requirements, and shows why Dolt is a perfect fit. Beads, the leading agentic memory system, uses Dolt for storage.</p> 
+
+<p><a href="https://opensource.googleblog.com/2026/01/a-json-schema-package-for-go.html">A JSON schema package for Go</a><br>Explore Google&#39;s new Go JSON Schema package! Built to strengthen AI ecosystems with easy schema creation, validation, and inference from Go types. JSON Schema is vital for LLM infrastructure as it provides an expressive way to constrain LLM output. The new package, github.com/google/jsonschema-go/jsonschema, offers schema creation via a Go API, serialization, validation, and inference from Go types. The authors found no existing package that met all these requirements, leading to the development of this comprehensive solution.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/01/21/platform-engineering-maintenance-pitfalls-and-smart-strategies-to-stay-ahead/">平台工程的维护陷阱与保持领先的智能策略</a><br>平台工程旨在通过设计、构建和维护抽象底层复杂性的内部平台，为软件工程团队提供自助服务能力，从而提高其生产力。然而，基于Kubernetes的平台通常是复杂的OSS集成，需要持续的依赖维护和应对不可避免的破坏性变更。本文探讨了维护一个基于Kubernetes集群的平台中集成14个OSS项目时面临的挑战，包括：跟进上游软件变更、控制供应链、跟上Kubernetes升级、维护Helm chart升级、维护带有持久化数据的应用，以及运行时验证的必要性。文章建议采用高度自动化和开发专用平台管理组件的策略来确保长期可维护性，并强调了向社区贡献反馈和上游贡献的重要性。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/01/22/headlamp-in-2025-project-highlights/">Headlamp in 2025: Project Highlights</a><br></p>
+
+<p><a href="https://kerkour.com/introduction-rust-simd">纯 Rust 中的 SIMD 编程</a><br>本文介绍了如何在纯 Rust 中进行 SIMD 编程，以充分利用现代 CPU 的向量指令集（如 AVX-512 和 NEON）来加速热点代码路径。作者分享了 SIMD 的基本概念（加载、计算、存储）、CPU 特性检测的方法（运行时和编译时），并讨论了 Auto-vectorization（自动向量化）的潜力。文章强调了 Rust 语言在不依赖汇编的情况下，利用 SIMD 提升性能的便利性，并期待未来 Rust 标准库中更易用的“可移植 SIMD”特性。</p>
+
+<p><a href="https://victoriametrics.com/blog/victorialogs-architecture-basics">VictoriaLogs架构基础</a><br></p>
+
+<p><a href="https://mitchellh.com/writing/tripwire">别绊倒自己：在 Zig 中测试错误恢复</a><br>我编写了一个名为 Tripwire 的库。 为了向 Zig 程序中注入故障，其明确目的在于： 测试错误处理路径。在单元测试之外，这部分工作已被完全优化 ，运行时开销（空间或时间）为零。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/news/claude-new-constitution">Claude新“宪法”</a><br></p>
+
+<p><a href="https://modal.com/llm-almanac/workloads">三种类型的 LLM 工作负载及其服务方式</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery, the cloud native manager</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware(Project under CNCF)</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/vllm-project/aibrix">vllm-project/aibrix</a><br>Cost-efficient and pluggable Infrastructure components for GenAI inference</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/maliceio/malice">maliceio/malice</a><br>VirusTotal Wanna Be - Now with 100% more Hipster</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/coze-dev/coze-loop">coze-dev/coze-loop</a><br>Next-generation AI Agent Optimization Platform: Cozeloop addresses challenges in AI agent development by providing full-lifecycle management capabilities from development, debugging, and evaluation to monitoring.</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

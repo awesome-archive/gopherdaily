@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251020.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251020</span>
+</p>
+<p>每日一谚：If data comes from outside (requests, external stores), validate it first. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/19/flask-creator-choose-go">为什么 Flask 的创造者选择 Go 作为他 AI 创业公司的核心语言？</a><br>Armin Ronacher，这个名字在 Python 世界如雷贯耳。作为广受欢迎的 Web 框架 Flask 的创造者、Sentry 的首批工程师之一，他被公认为 Python 社区最具影响力的开发者之一。然而，最近在一场深度访谈中，他透露了一个足以让许多人感到惊讶的决定：在他的新 AI 创业公司中，Go 成为了核心的后端语言。</p> 
+
+<p><a href="https://tonybai.com/2025/10/20/k8s-1m-intro">一个 Kubernetes 集群的“珠峰攀登”：从 10 万到 100 万节点的极限探索</a><br>一位前OpenAI工程师(曾参与OpenAI 7.5k节点的Kubernetes集群的建设))发起了一个更雄心勃勃、甚至堪称“疯狂”的个人项目：k8s-1m。他的目标，是向着那座从未有人登顶的、充满未知险峻的“百万节点”之巅，发起一次单枪匹马的极限攀登。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/2o6aj4H5uewchuxtpOzUyg">【Go 网络编程全解】06 UDP 数据报编程：速度、不可靠与应用层弥补</a><br></p> 
+
+<p><a href="https://dev.to/devflex-pro/copying-by-value-how-go-tricks-you-into-thinking-its-by-reference-2nb7">按值复制：Go 如何让你误以为它是按引用</a><br>在我们的创业公司中，我们几乎所有事情都使用 Go——从小型微服务到批处理作业和内部...</p> 
+
+<p><a href="https://aran.dev/posts/cue/using-cue-to-unify-iot-sensor-data">使用 CUE 统一物联网传感器数据</a><br>CUE 是一种配置语言，它能同时进行数据验证和数据转换。这篇文章讲述了如何使用 CUE 来处理物联网传感器数据，尤其是在处理来自不同传感器类型的各种数据结构时。它解决了在处理多传感器时，避免类型断言和冗余代码的问题。文章首先介绍了在没有 CUE 的情况下使用 Go 处理传感器数据的方法以及其局限性，然后展示了 CUE 如何通过定义模式、验证数据和转换数据来简化流程，并使代码更加清晰。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/18/revisit-extreme-programming-in-the-age-of-ai/">AI 让代码产出速度提升 10 倍，为什么我们的软件交付成功率却停滞不前？</a><br>AI 编程助手、自动化代码生成、Agentic 开发系统……我们正目睹一场由 AI 引领的软件生产力革命。代码的产出速度正以 5 倍、10 倍甚至更高的倍率疯狂增长。理论上，我们应该能更快、更好地交付软件。但现实却给了我们一记响亮的耳光：我们的软件交付成功率，数十年来几乎毫无寸进 ，甚至有所倒退。</p>
+
+<p><a href="https://www.docker.com/blog/open-webui-docker-desktop-model-runner/">Run Local AI with Open WebUI &#43; Docker Model Runner</a><br>Use the Open WebUI extension for Docker Desktop to run local LLMs with Docker Model Runner—chat UI, file uploads, voice, and multi-model support in minutes.</p>
+
+<p><a href="https://steve-yegge.medium.com/beads-for-blobfish-80c7a2977ffa">Beads for Blobfish</a><br>在这里，作者解释了为什么你应该花 3 分钟时间，尝试将 Beads 与你的代码代理结合起来。 首先，我们都同意一点：你应该使用一个自主的、基于命令行的代码代理。 这是十月，2025 年。 是时候把那个 IDE 放在一边了。 这是一个拐杖。</p>
+
+<p><a href="https://helm.sh/blog/helm-turns-ten">Helm 十周年</a><br>Helm 十年前，在 Kubernetes 1.1.0 发布后不久的一次黑客马拉松中诞生。</p>
+
+<p><a href="https://newsletter.francofernando.com/p/caching-in-distributed-systems-part-6ca">分布式系统中的缓存 - 第二部分</a><br>更高级的缓存概念概述：读写策略、替换策略、失效和 TTL。</p>
+
+<p><a href="https://www.cloudbolt.io/kubernetes-pod-scheduling">Kubernetes Pod 调度：教程和最佳实践</a><br>了解如何优化 Kubernetes pod 调度，以改善集群中的资源利用率和应用程序性能。</p>
+
+<p><a href="https://datamethods.substack.com/p/sql-anti-patterns-you-should-avoid">SQL 反模式，你应该避免</a><br>今天，我将讨论一些我从经验中看到的一些常见且影响巨大的 SQL 反模式，这些反模式会使查询和管道难以维护，或者导致性能低于预期。这些问题会加剧，导致对数据的信任度下降，并减慢总体查询开发速度。</p>
+
+<p><a href="https://www.crunchydata.com/blog/is-postgres-read-heavy-or-write-heavy-and-why-should-you-care">Postgres 是读密集型还是写密集型？ (以及为什么你应该关心)</a><br>一个查询，用于找出 Postgres 是读密集型还是写密集型，以及优化 Postgres 以同时满足读写工作负载的技巧。</p>
+
+<p><a href="https://blog.peterzhu.ca/open-source-is-the-most-fragile-and-resilient-ecosystem">开放源码是最脆弱也是最 resilient 的生态系统</a><br>作者讨论了开源的脆弱性与韧性，强调了对 Ruby 生态系统进行投资的重要性，特别是考虑到 RubyGems 的情况。文章讨论了 Shopify 在 Ruby 生态系统中的作用，并鼓励其他公司参与开源，以此来维护和加强其技术栈，改善开发者体验，并确保供应链的安全。</p>
+
+<p><a href="https://daymare.net/blogs/everbody-so-creative">大家是如此有创造力！</a><br>在用了 4 年 Rust 之后，我喜欢这门语言——但我开始认为生态系统对抽象有着瘾。或者说：为什么每个 Rust crate 感觉都像一篇关于抽象的研究论文。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://techtrenches.substack.com/p/the-great-software-quality-collapse">The Great Software Quality Collapse: How We Normalized Catastrophe</a><br>The Apple Calculator leaked 32GB of RAM.  This article discusses how software quality has declined significantly, with memory leaks and system failures becoming commonplace. It explores the impact of abstraction layers, the energy crisis, and the role of AI in amplifying incompetence. The author suggests that the focus should shift from velocity to quality, and emphasizes the importance of fundamental engineering principles.</p>
+
+<p><a href="https://www.anildash.com/2025/10/17/the-majority-ai-view">多数 AI 观点</a><br>尽管人工智能是过去几年科技界讨论最多的话题，但我们目前的情况很特殊，即在科技行业中，关于人工智能最普遍的观点几乎从未被提及。总结而言，技术人员认为 LLM 等技术具有实用性，但它们被过度炒作的方式，以及它们被强加于每个人，并坚持忽视有关它们的许多合理批评，使得人们很难专注于它们可能增加价值的合法用途。</p>
+
+<p><a href="https://www.philschmid.de/agents-2.0-deep-agents">Agents 2.0: From Shallow Loops to Deep Agents</a><br>本文概述了从浅层代理（Agent 1.0）到深度代理（Agent 2.0）的架构转变，以及如何构建能够处理多步任务的复杂 AI 代理。</p>
+
+<p><a href="https://www.anthropic.com/news/skills">Claude Skills: Customize AI for your workflows</a><br>构建自定义技能以教导 Claude 专门的任务。一次创建，随处使用——从电子表格到编码。可在 Claude.ai、API 和代码中使用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria is a powerful, lightning fast and censorship resistant proxy.</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project.</p>
+
+<p><a href="https://github.com/goreleaser/goreleaser">goreleaser/goreleaser</a><br>Release engineering, simplified</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>An alternative to the immich-CLI command that doesn&#39;t depend on nodejs installation. It tries its best for importing google photos takeout archives.</p>
+
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向代理,DDNS,WOL,ipv4 stun内网穿透,cron,acme,rclone,ftp,webdav,filebrowser</p>
+
+<p><a href="https://github.com/screego/server">screego/server</a><br>screen sharing for developers https://screego.net/</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/sqshq/sampler">sqshq/sampler</a><br>Tool for shell commands execution, visualization and alerting. Configured with a simple YAML file.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

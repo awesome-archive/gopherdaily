@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250627.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250627</span>
+</p>
+<p>每日一谚：xxx </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/27/from-java-to-go">Gopher视角：Java开发者转向Go时，最需要“掰过来”的几个习惯</a><br>作为一名在Go语言世界摸爬滚打多年的Gopher，我见过许多优秀的Java开发者在初探Go时，会不自觉地带着一些“根深蒂固”的Java习惯。这些习惯在 Java中或许是最佳实践，但在Go的语境下，却可能显得“水土不服”，甚至成为理解和掌握Go精髓的绊脚石。 今天，我就从Gopher的视角，和大家聊聊那些Java开发者在转向Go时，最需要刻意“掰过来”的几个习惯。希望能帮助大家更顺畅地融入Go的生态，体会到Go语言设计的精妙之处。</p> 
+
+<p><a href="https://antonz.org/go-1-25">Go 1.25 交互式教程</a><br>Go 1.25 预计将于 8 月发布，现在是探索新功能的好时机。官方发行说明比较枯燥，因此我准备了一个交互式版本，其中包含大量示例，展示了有哪些变化以及新的行为是什么。本文涵盖了 synctest、json/v2、GOMAXPROCS、新的 GC、反 CSRF、WaitGroup.Go、FlightRecorder、os.Root、reflect.TypeAssert、T.Attr、slog.GroupAttrs 和 hash.Cloner 等内容。</p> 
+
+<p><a href="https://dev.to/aymanepraxe/embracing-typescript-principles-in-go-the-creation-of-a-zod-inspired-validation-library-4g6d">在 Go 中拥抱 TypeScript 原则：创建受 Zod 启发的验证库</a><br>TypeScript 和 Go 现在在当代工程师的心目中占据着重要的地位。前者将可选的静态类型嫁接到 JavaScript 自由奔放的语法上，从而减轻了运行时错误的永恒痛苦。后者将编程简化为其基本要素，为几乎没有经验的开发人员提供了性能和轻松的并发性。最近，我在不同的项目中同时使用这两种语言，它们在验证方面的文化差异立即显现出来。TypeScript 开发者依赖于 Zod 等富有表现力、类似 DSL 的工具，这些工具将模式验证简化为少量流畅的调用。相比之下，Go 团队通常会回归到基于反射的代码，这种代码既庞大，而且在某些极端情况下，还会明显影响执行速度。这种不对称性一直困扰着我，直到它提出一个几乎贪婪的挑战：为什么 Gopher 的生态系统不能至少借用一部分 TypeScript 的验证魔力？是否有可能在不引入通常伴随着转译 JavaScript 的沉重负担的情况下，导入其简洁的语法和符合人体工程学的可链式调用？</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://nullprogram.com/blog/2025/06/26">使用新的标签兼容性规则在 C 中实现参数化类型</a><br>C23 引入了一个新的结构体、联合体和枚举兼容性规则，GCC 15 及更高版本和今年晚些时候发布的 Clang 开始支持该规则。这使得可以使用宏来实现某种程度的类型参数化。文章详细介绍了这一规则如何运作，并通过示例展示了如何使用宏定义参数化类型，以及如何结合 C23 的新 typeof 特性来改进动态数组的实现。文章还讨论了这种技术的一些局限性，例如无法定义像 Map(K, V) 这样的类型，以及对代码工具的影响。</p>
+
+<p><a href="https://hiandrewquinn.github.io/til-site/posts/save-your-disk-write-files-directly-into-ram-with-dev-shm">节省磁盘空间，直接将文件写入RAM(/dev/shm)</a><br>本文介绍了如何利用Linux系统中默认挂载的/dev/shm目录（一个基于RAM的临时文件系统）来保存文件，从而提高文件操作速度并延长SD卡和硬盘寿命。虽然/dev/shm中的文件在重启后会丢失，但对于一些临时文件或需要频繁访问的大文件，这是一个非常有效的优化方法。文章还提供了一个使用/dev/shm处理Wiktionary中芬兰语单词的示例，以及一些性能比较。</p>
+
+<p><a href="https://vercel.com/blog/vercel-ship-2025-recap">Vercel Ship 2025 回顾</a><br>Vercel Ship 2025 为人工智能时代增加了新的构建模块：默认情况下快速、灵活且安全。Fluid 的主动 CPU 定价降低了成本，滚动发布使部署更安全，BotID 提供了隐形的 CAPTCHA。查看回顾中的这些内容以及更多内容。</p>
+
+<p><a href="https://samestep.com/blog/random-access">随机访问到底慢多少？</a><br>本文探讨了计算机程序中随机访问和顺序访问的性能差异。作者通过实验比较了不同大小的浮点数数组在顺序访问和随机访问两种情况下的性能，并分析了缓存（L1、L2、L3）、内存分页、交换空间等因素的影响。实验结果表明，对于小于一定大小的数组，两种访问方式的性能差异不明显；但对于大于缓存大小的数组，随机访问的性能显著下降，且在数组大小超过内存容量时，性能下降更为剧烈。作者还比较了使用内存映射文件进行访问的性能，发现其并未显著提高性能。最后，作者总结了实验结果，并对几个关键问题给出了答案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/26/gemma-3n/#atom-everything">介绍 Gemma 3n：开发者指南</a><br>谷歌今天发布了一个极其重要的新的开放权重模型：Gemma 3n。其设计天生就是多模态的，原生支持图像、音频、视频和文本输入以及文本输出。它针对设备进行了优化，提供了两种尺寸的模型（E2B 和 E4B），其内存占用与传统的 2B 和 4B 模型相当，分别只需要 2GB 和 3GB 的内存。该模型支持文本、图像和音频输入，谷歌还与 AMD、Axolotl、Docker、Hugging Face 等多家公司合作，提供了多种尝试该模型的方法。文章作者尝试了 Ollama 和 mlx-vlm 两个版本，并展示了使用示例和结果。</p>
+
+<p><a href="https://cekrem.github.io/posts/programming-as-theory-building-naur">编程即理论构建：为什么资深开发者比以往任何时候都更有价值</a><br>Peter Naur 1985 年的编程理论解释了为什么在 AI 生成代码时代，经验变得更加重要。文章探讨了AI代码生成的无理论性，以及资深开发者在构建和维护理论框架、确保代码与系统设计一致性、进行有意的AI协作以及传授理论和实践方面的关键作用。资深开发者成为软件质量的守护者，确保系统易于理解且建立在坚实的理论基础之上。</p>
+
+<p><a href="https://ashouri.xyz/post/kindnessinengineering">工程中的善良的重要性</a><br>本文论述了在工程领域，善良的重要性远超技术能力。善良体现在多个方面，例如：耐心帮助初学者、与同事结对编程、体谅他人并合理安排时间、维护良好的代码文档、编写易于理解的代码、以用户为中心设计错误信息和产品功能，以及优先处理能提高团队效率的任务。作者认为，最优秀的工程师不仅技术精湛，更富有善良，能提升整个团队的效率。</p>
+
+<p><a href="https://blog.brakmic.com/structured-output-with-langchain-and-llamafile">使用 LangChain 和 Llamafile 进行结构化输出</a><br>本文介绍如何使用 LangChain 的 JsonParser 扩展 Llamafile 以生成干净的结构化 JSON 输出。文章首先简要介绍了 Llamafile，然后讲解如何通过定义一个 Pydantic 的 BaseModel 类来创建结构化输出，最后通过 LangChain 的 JsonOutputParser 和 PromptTemplate 将其整合到 Llamafile 中，实现结构化 JSON 输出。文章还包含代码示例和运行结果截图。</p>
+
+<p><a href="https://www.cubic.dev/blog/learnings-from-building-ai-agents">从构建 AI 智能体中获得的经验教训</a><br>cubic 的联合创始人 Paul Sangle-Ferriere 分享了构建 AI 代码审查智能体的经验教训。最初的智能体过于嘈杂，产生过多的误报。通过对架构进行三次重大修改和大量的离线测试，他们成功地将误报减少了 51%，同时没有牺牲召回率。文章总结了三个关键经验：明确的推理提高了清晰度；简化工具集；使用微型智能体进行专业化。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/langgenius/dify-plugin-daemon">langgenius/dify-plugin-daemon</a><br></p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/Musixal/Backhaul">Musixal/Backhaul</a><br>Lightning-fast reverse tunneling solution for NAT traversal, optimized for handling massive concurrent connections with tcp, tcpmux, udp, udp over tcp, ws, wsmux, wss and wssmux support.</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/magic-modules">GoogleCloudPlatform/magic-modules</a><br>Add Google Cloud Platform support to Terraform</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/joho/godotenv">joho/godotenv</a><br>A Go port of Ruby&#39;s dotenv library (Loads environment variables from .env files)</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

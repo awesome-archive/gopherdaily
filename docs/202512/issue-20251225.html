@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251225.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251225</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/25/go-next-frontier-gophercon-2025">Go 的 AI 时代宣言：我们如何用“老”原则，解决“新”问题？</a><br>在 GopherCon 2025 上，Go 语言产品负责人 Cameron Balahan 发表了一场题为《Go 的下一个前沿领域》的主题演讲，重点关注了AI 时代的软件工程这个重要的主题。在这个充满焦虑与炒作的时代，Cameron 没有贩卖焦虑，也没有盲目追逐热点。相反，他通过一组冷静的数据和深刻的洞察，为我们描绘了一幅清晰的蓝图：Go 语言的核心原则——简单、高效、工程化——在 AI 时代不仅没有过时，反而变得比以往任何时候都更加重要</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/44d0SwLFgtQl4xxsAebuig">【API 设计之道】08 流量与配额：构建基于 Redis 的分布式限流器</a><br></p> 
+
+<p><a href="https://pion.ly/blog/sctp-and-rack/">RACK 使 Pion SCTP 速度提升 71%，延迟降低 27%</a><br>在Go社区WebRTC实现Pion的 RACK 配置下，SCP 以约 0.044 CPU 秒的 CPU 时间实现了 316 Mbps 的持续吞吐量，而 RACK 配置之前，SCP 以约 0.056 CPU 秒的 CPU 时间实现了 234 Mbps 的吞吐量。经 CPU 使用率标准化后，这相当于每个 CPU 的吞吐量提升了约 71%，而最大突发 CPU 配置的性能仍然相当。</p> 
+
+<p><a href="https://funnelstory.ai/blog/engineering/scaling-go-testing-with-contract-and-scenario-mocks">使用契约和场景模拟来扩展 Go 测试</a><br>模拟不是敌人；糟糕的测试才是。我们使用“战术对子”来扩展 Go 测试：“契约测试”用于验证事实，“场景模拟”用于测试逻辑。文章讨论了如何通过分离数据层（契约测试）和业务逻辑（场景模拟）来应对测试中的“模拟漂移”和“集成复杂性”的风险。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/nobody-knows-how-software-products-work/">没有人知道大型软件产品是如何运作的</a><br>大型、快速发展的科技公司在其系统方面经常处于“战争迷雾”中。简单的问题，比如特定用户类型是否可以访问某个功能，往往只能由组织中极少数人回答，有时甚至没有人能回答。这是因为大型软件产品极其复杂，尤其是那些为了服务更广泛用户群（如自托管、试用、多语言支持、受监管客户等）而添加的复杂功能。这些功能会影响到其他所有功能的构建。文档记录很难跟上系统快速变化的步伐，而且许多行为是系统交互的自然涌现，而非刻意为之。因此，能够准确回答关于大型软件系统问题的能力变得非常宝贵，这使得工程师在大型科技公司中拥有重要的地位。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/24/bringing-sustainability-back-into-the-conversation-cncf-cloud-native-sustainability-month-tokyo/">将可持续性带回对话中：CNCF 云原生可持续性东京站</a><br>尽管人工智能（AI）是突破性技术，但在云原生世界的创新加速之际，环境可持续性常常被搁置一旁。为了解决这个问题，CNCF 环境可持续性技术咨询小组（TAG）发起了可持续性月活动。本文分享了 CNCF 云原生可持续性月 2025 东京站的亮点，包括绿色软件基金会（GSF）的最新动态、从 FinOps 到 GreenOps 的转变讨论，以及今年各项会议和研讨会中的云原生可持续性关键见解。核心信息是：AI 和可持续性并非互不相容，通过社区协作和采用标准化指标，可以确保创新与环境责任保持一致。</p>
+
+<p><a href="https://matklad.github.io/2025/12/23/static-allocation-compilers.html">编译器中的静态分配</a><br>本文探讨了TigerBeetle数据库中使用的“静态分配”概念（即启动后不再分配内存），并思考其是否适用于编译器。TigerBeetle的静态分配之所以可行，是因为其输入和输出（消息）是有限的，数据主要存储在磁盘上。对于编译器而言，输入（源代码）和输出（可执行文件）可以是任意大的，使其直接应用静态分配变得困难。作者提出了一种折衷方案：将编译器视为“流处理”问题，设定有限的输入块大小（如单个文件大小），并为编译器处理中间件留出固定大小（O(1)内存）的处理空间，而将最终的、不可变的结果累积在“输出区域”，这可能有助于简化编译器架构。</p>
+
+<p><a href="https://engineering.leanix.net/blog/trade-offs">技术术语的隐藏成本</a><br>一篇反思工程师在没有完全理解权衡的情况下，如何被新技术所吸引，以及为什么在采用新技术之前提出正确的问题对于做出明智的决定至关重要。</p>
+
+<p><a href="https://www.natemeyvis.com/against-semver">反对语义化版本</a><br></p>
+
+<p><a href="https://zhach.news/how-i-left-youtube">我如何离开YouTube</a><br>作者讲述了自己在YouTube工作期间，因晋升受阻而决定离职寻找外部机会的经历。他详细描述了在不影响本职工作的情况下准备面试的“双重生活”的艰辛，如何在不违反保密协议（NDA）的前提下向面试官展示自己的能力（侧重于抽象的工程原理而非具体产品细节），以及面试轮次日益增多的现象。最后，作者分享了与经理告别时的复杂心情，并总结道：如果感觉自己的工作水平已经远超当前职级，而唯一的“回报”只是更多的工作，那么是时候去市场上检验自己的真正价值了。</p>
+
+<p><a href="https://linusakesson.net/programming/kernighans-lever/index.php">柯尼根的杠杆</a><br>这篇文章探讨了布莱恩·柯尼根（Brian Kernighan）关于“调试程序比编写程序困难两倍”的名言。作者认为，人们不应将此视为对“巧妙”技术的警告，而应视为一种自我提升的机制——“柯尼根的杠杆”。当程序员编写了超出当前能力范围的巧妙代码时，调试过程会迫使他们超越自己，从而在克服困难的过程中提升技能。这种机制利用了人类的荣誉心、自尊心、固执和好奇心等内在驱动力，为个人成长提供了持续的动力，将短期目标（实现功能）的努力转化为长期的技能投资。作者将此过程与心理学中的“心流”概念联系起来，强调避免挑战（通过写过于简单的代码）会导致无聊，而迎接挑战才能通过调试的痛苦带来技能的增长和心流体验。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://odyssey.ml/the-dawn-of-a-world-simulator">世界模拟器的黎明</a><br>一篇关于因果多模态系统学习预测世界的文章。它探讨了如何通过下一帧预测等简单的因果预测目标，使模型能够学习世界的潜在状态、动态和因果关系，从而发展出类似世界模拟器的能力，并强调了这种方法在超越语言之外，应用于视频和交互数据的重要性。最终目标是创建一个能够进行长期、连贯交互的通用世界模拟器。</p>
+
+<p><a href="https://velocitycurve.substack.com/p/your-team-has-a-context-window">你的团队有一个上下文窗口</a><br>本文探讨了团队的“上下文窗口”概念，类比于个人的工作记忆。它指的是团队需要共同维护的知识、代码、文档、关系和假设的总和。当这个集体上下文窗口过大时，团队会因认知负荷过重而效率降低、出现碎片化甚至功能失调。文章分析了认知限制、协调成本和复杂性放大这三种影响团队上下文窗口的因素，并强调解决团队范围（Scope）问题本质上是一个认知设计问题，需要有意识地收缩和塑造上下文窗口，以确保团队能够可持续地保持对正确信息的掌握。</p>
+
+<p><a href="https://bits.logic.inc/p/codex-is-a-slytherin-claude-is-a">Codex is a Slytherin, Claude is a Hufflepuff</a><br>本文对 Codex、Claude、Gemini 和 Mistral 四款 AI 编程代理在解决 2025 年 Advent of Code 问题的过程中进行了非科学的评估和比较。作者通过量化指标（如代码行数、复杂性、准确性和时间）和定性分析（代码风格和注释习惯）将这些 AI 代理类比为霍格沃茨的四个学院。结论是：Codex 像斯莱特林（Slytherin），注重效率和目标达成；Claude 像赫奇帕奇（Hufflepuff），注重耐心和正确性；Gemini 像格兰芬多（Gryffindor），喜欢在思考中前进；Mistral 像拉文克劳（Ravenclaw），沉迷于构建理论上的完美框架。文章最后通过使用 Droid 编排器再次测试 Codex 和 Claude 的结果，表明代理的“个性”不仅取决于基础模型，还受其运行环境和工具封装的影响。</p>
+
+<p><a href="https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report">AI vs human code gen report: AI code creates 1.7x more issues</a><br>我们分析了470个开源GitHub pull requests，使用CodeRabbit的结构化问题分类法，发现AI生成的代码会产生1.7倍多的问题。报告详细列举了10大发现，包括AI PRs的总体问题更多（1.7倍）、严重性升级（更多关键和主要问题）、逻辑和正确性问题增加75%、可读性问题增加3倍以上等。文章建议工程团队通过提供上下文、使用策略即代码（policy-as-code）来强制执行风格、添加正确性安全护栏等措施来应对这些挑战。</p>
+
+<p><a href="https://blog.google/technology/ai/2025-research-breakthroughs">谷歌2025年回顾：年度研究突破</a><br>2025年是AI代理、推理和科学发现取得非凡进展的一年。谷歌推出了Gemini 3和Gemma 3等世界级模型，在推理、多模态理解、效率和创意能力方面实现了重大突破。AI正在将谷歌的产品组合（从Pixel 10到搜索）转变为真正的实用工具。此外，谷歌在生命科学、健康、数学、计算和机器人学等领域也取得了重大科学进展，并致力于负责任地推进AI发展。</p>
+
+<p><a href="https://www.timothychambers.net/2025/12/23/my-open-social-web-predictions.html">我对 2026 年开放社交网络预测</a><br>Tim Chambers 对 2026 年开放社交网络进行了预测，涵盖了温和（Mild）、中等（Medium-Spicy）和火辣（Spicy）三个等级的预测。温和预测包括 Bluesky 和 ActivityPub Fediverse 的用户增长预测，以及 Threads 的发展状况。中等预测关注了跨协议互操作性（如 BridgyFed）、ATProto 生态系统的独立性、Mastodon 的可持续性以及 Bluesky PBC 的商业模式。火辣预测则大胆预测了主要媒体机构的迁移、政府在去中心化网络上的布局、Nostr/ATProto/ActivityPub 的三向桥接，以及类似《犹他州数字选择法案》的法律对平台互操作性的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/memodb-io/Acontext">memodb-io/Acontext</a><br>Context Data Platform for Agents. Join the community❤️: https://discord.acontext.io</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/go-rod/rod">go-rod/rod</a><br>A Chrome DevTools Protocol driver for web automation and scraping.</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/go-sql-driver/mysql">go-sql-driver/mysql</a><br>Go MySQL Driver is a MySQL driver for Go&#39;s (golang) database/sql package</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/kserve/kserve">kserve/kserve</a><br>Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

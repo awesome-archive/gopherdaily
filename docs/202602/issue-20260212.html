@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260212.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260212</span>
+</p>
+<p>每日一谚：Go is not meant to innovate programming theory. It&#39;s meant to innovate programming practice. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/12/p2h-to-p2a2h-software-architecture-inversion-designing-for-agents">从 P2H 到 P2A2H：软件架构的终极倒置——为智能体设计软件</a><br>再见 P2H！揭秘为 AI 智能体设计的软件架构新纪元</p> 
+
+<p><a href="https://tonybai.com/2026/02/12/ai-garbage-code-hashicorp-founder-vouch-rebuilding-open-source-trust">AI 垃圾代码泛滥？HashiCorp 创始人开源 Vouch：重构开源信任机制</a><br>在生成式 AI 大模型以及AI Coding Agent（如Claude Code等）极大地降低了代码编写门槛的今天，开源维护者的防线正面临崩溃。当“看起来像样但毫无逻辑”的 AI 垃圾代码（AI Slop）充斥 PR 列表时，传统的“来者不拒”模式已不再适用。为此，HashiCorp 创始人 Mitchell Hashimoto 开源 了新工具 Vouch，试图将开源治理从“验证代码”回归到“验证人”。</p> 
+
+<p><a href="https://www.ardanlabs.com/blog/2026/02/query-database-using-plain-english/">使用自然语言查询数据库</a><br>本文介绍了一种系统，它允许用户使用自然语言查询关系型数据库，从而使不熟悉SQL或商业智能系统的用户也能从数据中获取洞察。该系统采用Go语言实现，利用LLM（大语言模型）将自然语言问题转换为SQL查询，执行查询并将结果转换为CSV格式，最后再调用LLM生成对用户问题的自然语言回答。文章详细介绍了系统架构、初始化连接（包括使用Kronk模型服务器和DuckDB）、用户交互循环、构建SQL生成和答案生成提示词，以及实际的LLM查询逻辑。文章最后展示了运行示例，并指出代码的核心在于提示词的调优。</p> 
+
+<p><a href="https://entire.io/blog/hello-entire-world">Entire发布第一个go实现的ai产品</a><br>宣布 Entire 完成 6000 万美元种子轮融资，并推出我们的第一个产品 Checkpoints。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/screwing-up/">关于犯错 (On screwing up)</a><br>作者回忆了自己作为实习生时犯下的、并试图掩盖的错误，以此为引子，探讨了在工作中如何处理犯错后的情绪反应、有效沟通以及接受错误带来的后果。作者强调了控制情绪、及时、实事求是地告知相关人员（如经理）的重要性，并指出经理更关心结果而非技术细节。文章最后总结，犯错并非完全是坏事，适度的错误是承担风险和推动项目进展的必然部分，最优的工作状态不是永不犯错，而是找到“永远正确”和“承担风险”之间的平衡点。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/02/12/sig-architecture-api-spotlight/">SIG 架构聚焦：API 治理</a><br>本文是 SIG 架构聚焦系列报道的第五篇，重点关注 Kubernetes 的 API 治理特别兴趣小组（SIG Architecture: API Governance）。采访了该子项目的负责人 Jordan Liggitt，他分享了自己在 Kubernetes 中的角色、对 API 治理子项目的参与历程，以及 API 治理的核心目标：在保持稳定性的同时允许创新。文章深入探讨了 Kubernetes API 的各个方面（包括 REST API、命令行标志、配置文件等）以及自定义资源（CRD）带来的挑战和演进方向，特别是内置校验规则的引入如何帮助维护 API 的一致性和质量。Jordan Liggitt 强调了 API 治理对用户信任的重要性，并鼓励新贡献者通过参与实际的 API 变更来逐步深入了解和贡献这一关键领域。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/02/02/opentelemetry-collector-vs-agent-how-to-choose-the-right-telemetry-approach">OpenTelemetry Collector 与 Agent 对比：如何选择正确的遥测方法</a><br>随着云原生架构的成熟，可观测性已成为一项基础要求。本文深入探讨了 OpenTelemetry 架构中的 OpenTelemetry Collector 和 Agent 的区别，帮助读者根据系统规模和可观测性目标选择最合适的遥测方案。关键区别在于 Collector 负责集中式数据聚合、转换和导出，而 Agent 则专注于在应用程序级别进行轻量级、低开销的数据捕获和转发。对于大多数设置，结合使用两者能提供最佳的性能和可扩展性。</p>
+
+<p><a href="https://blog.skypilot.co/slurm-to-k8s-migration">从 Slurm 迁移到 Kubernetes</a><br>从 Slurm 迁移到 Kubernetes 不必意味着失去你所熟悉的流程。本文介绍了 SkyPilot 如何将类似 Slurm 的简洁性带到 K8s 上。文章对比了 Slurm 的优点（如同步调度、资源保证和简单脚本）与迁移到 Kubernetes 的痛点（如复杂的 YAML 清单、缺乏同步调度以及交互式开发困难）。然后，重点介绍了 SkyPilot 如何通过提供一个统一的、类似 Slurm 的 YAML 接口、支持类 salloc 的交互式开发，帮助团队平稳过渡，同时还能利用 Kubernetes 的容器化优势。文章还提供了 Slurm 命令到 SkyPilot 命令的映射以及数据存储（NFS 替代方案）的建议。</p>
+
+<p><a href="https://www.phoronix.com/news/Linux-7.0-Rust">Linux 7.0 正式结束 Rust 实验</a><br>尽管 Linux 7.0 只是由于 Linus Torvalds 的编号偏好而产生的下一个内核版本，但这个新的内核合并窗口中有一个值得注意的符号变化：正式结束了“Rust 实验”，上游内核开发者现在接受 Rust 将在 Linux 内核中长期存在。
+
+该补丁在去年 12 月就已讨论过，标志着 Rust 在 Linux 内核中的试验结束，并确定其将长期存在。Rust 已在生产环境、一些 Linux 发行版以及数百万 Android 设备中使用。
+
+该补丁作为今日的 Rust 合并请求的一部分，除了文档更新外，还添加了“__rust_helper”注释，用于改进内核 LTO 使用下的 Rust 内核构建。此外，还对 Rust 内核 crate 进行了各种增强，但总体上没有特别值得注意的重大更新。</p>
+
+<p><a href="https://blog.nix-ci.com/post/2026-02-05_the-purpose-of-ci-is-to-fail">持续集成的目的在于失败</a><br>持续集成（CI）的价值仅体现在它失败时。当CI通过时，它只是开销：与没有CI时获得的结果相同。CI的价值在于它能捕获错误，阻止不良后果的发生，而这只有在CI失败时才能实现。因此，CI唯一有价值的结果就是“失败”。</p>
+
+<p><a href="https://theguardian.engineering/blog/faster-cheaper-messier-lessons-from-switch-to-self-hosted-github-actions">The Guardian Engineering Blog - Faster, cheaper, messier: lessons from our switch to self-hosted GitHub Actions</a><br>The Guardian engineering team shares their experience of moving from GitHub-hosted runners to self-hosted runners for their CI/CD pipelines, primarily due to high costs associated with macOS runners, slow build times, and unpredictable upstream changes. The transition brought significant benefits in speed (up to 120% faster average job runtime), a monthly cost reduction of about £400, and better control over OS upgrades and debugging. However, it also introduced new maintenance overhead, concurrency limits, and the need for robust cleanup strategies for non-ephemeral runners. The key learnings emphasize that bigger machines are easier to manage and that reliable power and cleanup planning are essential for self-hosting.</p>
+
+<p><a href="https://surfingcomplexity.blog/2026/02/08/nobody-knows-how-the-whole-system-works">没有人知道整个系统是如何运作的</a><br>这篇文章讨论了在 Twitter 衰落的背景下 LinkedIn 的兴起，并引用了 Simon Wardley、Adam Jacob 和 Bruce Perens 关于构建系统而不完全理解其工作原理的观点。作者随后引用了 Louis Bucciarelli 在 1994 年出版的《设计工程师》中的一段话，深入探讨了“理解一个系统如何工作”的含义，并以技术面试问题（如“输入 URL 后会发生什么”）为例，说明了任何人都不完全理解复杂技术（如电话系统、CPU 架构、操作系统）的每一个层面。作者总结说，Wardley 的观点强调了不了解底层机制的危险性（如“魔法”框架），Jacob 认为 AI 的益处大于风险，但同时也使我们离底层工作原理更远。Perens 的观点认为，我们早已处于这种知识部分缺失的状态。Bucciarelli 强调了现代技术（如电话系统）的固有复杂性意味着任何人都无法完全理解它们，AI 只是加剧了这一长期存在的情况。评论中进一步探讨了 AI 对工程实践和知识链条的影响。</p>
+
+<p><a href="https://www.wowza.com/blog/optimizing-bandwidth-for-latency-vs-reliability">Optimizing Bandwidth for Latency vs. Reliability</a><br>The article discusses the inherent tension in video streaming between prioritizing ultra-low latency for real-time interactivity and prioritizing reliability/resiliency for consistent stream delivery, especially in challenging network environments. It presents a decision matrix to guide technical choices based on whether a delayed stream is worse than a lower-quality stream (favoring latency) or if an interrupted stream is worse than a delayed one (favoring resiliency). The text highlights the &#39;Edge Approach&#39; for industrial CCTV where resiliency is key, citing examples like Swift and Africam, and notes that ultra-low latency streaming requires flexible protocols and extensible infrastructure to enable real-time intelligence.</p>
+
+<p><a href="https://extremefoundership.substack.com/p/should-your-developer-company-go">你的技术公司应该采取开源模式吗？</a><br>一个为寻求杠杆而非追逐潮流的创始人设计的决策框架。作者通过亲身经历，提出了一个关于技术公司是否应该采取开源模式的结构化思考框架，强调开源不是一种分发技巧，而是一种关于产品、商业模式和执行力的架构决策。框架包含11个关键点，涉及用户与贡献者身份的一致性、问题成熟度、开源的真正价值（绕过许可/权限而非免费）、扩展性的双刃剑效应，以及明确开源切入点和付费边界的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163">AI吸血鬼</a><br></p>
+
+<p><a href="https://newsletter.eng-leadership.com/p/96-engineers-dont-fully-trust-ai">96% 工程师不完全信任人工智能的输出，但只有 48% 的人会验证</a><br>本文基于 Sonar 的最新《代码状态开发者调查报告》，探讨了工程师如何使用人工智能 (AI)，他们对其输出的信任程度，以及最受欢迎的 AI 工具。报告的关键发现包括：96% 的工程师不完全信任 AI 生成的代码，但只有 48% 的人会始终验证代码；72% 尝试过 AI 的工程师每天都会使用它；以及代码质量审查和验证被认为是 AI 时代的工程师最重要的技能。
+
+文章强调了工程师对 AI 输出可靠性普遍持怀疑态度（61% 认为 AI 经常产生看起来正确但不可靠的代码），但验证率低下令人担忧。作者呼吁工程师对 AI 生成的代码负起全部责任，并建议通过更精确的提示词和严格的代码审查来提高 AI 输出的质量。</p>
+
+<p><a href="https://www.omnara.com/blog/what-is-an-async-agent-really">Omnara - Claude 代码和 Codex 移动和网页客户端</a><br>控制在笔记本电脑上运行的 Claude Code 和 Codex，通过手机或网页进行操作。这款移动和网页应用让您可以从手机上进行编码——随时启动会话、审查更改以及管理您的 AI 编码代理。</p>
+
+<p><a href="https://www.bicameral-ai.com/blog/tech-debt-meeting">为什么“仅仅是更好地提示”就行不通</a><br>本文探讨了AI编程助手（Coding Assistants）带来的挑战，核心观点是它们放大了软件开发中已有的跨职能沟通摩擦，而不是解决了根本问题。研究发现，技术约束的发现和传达是主要的痛点，尤其是在跨职能团队中。AI擅长生成代码，但不擅长拒绝编写不佳或有潜在冲突的代码，这使得原本在实现阶段通过“动手编码”发现的约束，被转移到了更难解决的代码审查阶段。作者认为，解决之道在于加强产品会议的初始阶段，利用AI来辅助识别潜在的约束和差距，从而将发现工作的负担转移到规划阶段，而不是在实现阶段被代码生成绕过。</p>
+
+<p><a href="https://zachwills.net/building-at-the-speed-of-thought">以思维的速度构建</a><br></p>
+
+<p><a href="https://www.kimi.com/blog/agent-swarm.html">Kimi Agent Swarm: 100个子智能体解放，大规模自主工作</a><br>Kimi Agent Swarm 是一个自组织的、最多可生成100个子代理的多代理系统，用于并行研究、文档综合和多视角分析。它解决了单智能体顺序执行模式在处理长期任务和扩展推理方面的结构性限制，通过水平扩展（构建组织）而非仅仅垂直扩展（更大的模型）来实现更强大的能力。该系统可以部署多达100个子代理并行工作，执行超过1500次工具调用，并将执行速度提高4.5倍。它适用于大规模发现（如搜集海量信息）、大规模输出（如生成长篇报告）和大规模视角分析（如让不同专家角色同时审查方案），目前已向顶级订阅用户开放。</p>
+
+<p><a href="https://vercel.com/blog/how-we-built-aeo-tracking-for-coding-agents">我们如何为编程智能体构建AEO跟踪系统</a><br>了解我们如何使用Vercel Sandbox、AI Gateway和Workflows构建AI引擎优化（AEO）系统，以实现隔离执行中的编程代理跟踪。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The to-do app to organize your life.</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/dolthub/dolt">dolthub/dolt</a><br>Dolt – Git for Data</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaLogs">VictoriaMetrics/VictoriaLogs</a><br>Fast and easy to use database for logs, which can efficiently handle terabytes of logs</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/bia-pain-bache/BPB-Wizard">bia-pain-bache/BPB-Wizard</a><br>A wizard to facilitate BPB Panel deployment and management.</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/obot-platform/obot">obot-platform/obot</a><br>Complete MCP Platform -- Hosting, Registry, Gateway, and Chat Client</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

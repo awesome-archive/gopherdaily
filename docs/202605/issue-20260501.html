@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260501.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260501</span>
+</p>
+<p>每日一谚：Go modules solve the dependency problem. Use them, don&#39;t fight against them </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://philpearl.github.io/post/swissing_a_table/">Go 语言新版 map 实现背后的设计思路</a><br>这篇博文通过逐步讲解的方式，从最简单的哈希表开始，逐步介绍什么是“swiss table”。在每个阶段，我都进行了简单的性能测试，以便让大家了解每个步骤所带来的影响。</p> 
+
+<p><a href="https://www.zarl.dev/posts/hal-by-any-other-name">换个名字的 HAL</a><br>随着 Gemma4 和 Qwen 3.6 等“本地优先”模型的问世，使用消费级 GPU 在本地进行多模态/智能体相关操作，已经变得比以往任何时候都更为可行。</p> 
+
+<p><a href="https://dev.to/colafanta/asyncawait-like-pattern-in-go-to-make-structured-concurrency-easy-and-with-less-boilerplate-121l">Go 中的 async/await 模式，使结构化并发更容易且样板代码更少</a><br>只是一个封装了 Goroutine 和 channel 的模式。底层依然是 Goroutine。它并没有为 Go 代码引入“着色”。函数仍然像普通函数一样调用其他函数，无需区分异步/同步函数。Goroutine对于来自 JavaScript 等其他“有色”语言的 Go 初学者来说，Golang 心智模型中的一个巨大区别就是 Goroutine。</p> 
+
+<p><a href="https://emmanuel326.github.io/blogs/sheriffdb.html">SheriffDB: 我删除了那些“聪明”的代码后，数据库的性能反而变好了</a><br>有一种典型的“工程陷阱”：当你创造出某种复杂精巧的产品时，这种复杂性本身反而成了产品的核心。你不再问“这真的能解决问题吗？”，而是开始问“这难道不令人惊叹吗？</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/01/open-source-civil-war-bun-founder-predicts-ban-on-human-contributions">开源社区“内战”爆发：Bun 创始人预言“未来将禁止人类贡献”，硅谷大佬纷纷站队！</a><br>过去的一年，AI 编程的浪潮席卷了整个技术圈。但在这片繁荣之下，一场关于“开源精神与 AI 伦理”的深刻裂痕，正在悄然扩大。 就在前几天，这场裂痕，以一种极其戏剧性的方式，被彻底引爆了。 事件的导火索，来自当红 JavaScript 运行时 Bun 的一则看似平平无奇的技术更新：Bun 团队 fork 了 Zig 语言的编译器，通过引入并行分 析等优化，将自己的调试构建速度提升了 4 倍。 </p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://incident.io/blog/whos-on-call-how-claude-helped-us-calculate-this-2-500-x-faster">谁在值班？Claude 如何帮助我们将计算速度提升了 2500 倍</a><br>大多数情况下，这一过程只需几微秒即可完成。但在少数情况下，系统需要耗费大量 CPU 资源来确定谁该值班以及何时值班。今年早些时候，我们提升了日程安排渲染引擎的性能。短短几小时内，其速度就提升了数千倍。其中一部分提升得益于对性能分析数据的分析，但最大的贡献则要归功于 Claude Opus 4.6——我们只需输入几条指令即可实现这一效果</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/entireio/cli">entireio/cli</a><br>📜 Entire CLI 挂钩到你的 Git 工作流中，以在你工作时捕获 AI 代理会话。会话与提交一起索引，创建了一个可搜索的记录，记录了代码是如何在你的仓库中编写的。</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>开源 LLM 知识平台：将原始文档转换为可查询的 RAG、自主推理代理和自我维护的 Wiki。</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>受 Make 启发，专为现代工作流设计的快速、跨平台构建工具。</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>轻松安全地在计算机之间传输文件 🐊 📦</p>
+
+<p><a href="https://github.com/k0sproject/k0s">k0sproject/k0s</a><br>k0s - 零摩擦的 Kubernetes</p>
+
+<p><a href="https://github.com/flyteorg/flyte">flyteorg/flyte</a><br>动态、弹性的 AI 编排。在构建 AI 工作流时协调数据、模型和计算。</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS Provider 使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的指挥官</p>
+
+<p><a href="https://github.com/googleapis/mcp-toolbox">googleapis/mcp-toolbox</a><br>MCP Toolbox for Databases 是一个用于数据库的开源 MCP 服务器。</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism 是以太坊的扩容方案。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

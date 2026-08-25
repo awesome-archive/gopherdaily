@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250618.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250618</span>
+</p>
+<p>每日一谚：The standard library is your friend </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/18/inside-goroutine-scheduler-column">解构Go并发之核，与Dmitry Vyukov共探Go调度艺术</a><br>欢迎踏上一次深入Go并发核心的探索之旅——【Go并发调度艺术】微专栏。我们每天都在使用go关键字轻松驾驭并发，享受着Go语言带来的编程乐趣。但在这简洁的背后，是一套复杂而精密的调度系统在默默支撑。它如同一位技艺精湛的指挥家，巧妙地调度着成千上万的goroutine，在用户态的轻盈与操作系统的力量之间取得了绝妙的平衡。</p> 
+
+<p><a href="https://dev.to/jones_charles_ad50858dbc0/advanced-go-concurrency-channel-patterns-for-real-world-problems-33ce">Go高级并发：用于解决实际问题的通道模式</a><br>本文探讨 Go 语言中的高级并发技巧，重点讲解通道模式在解决实际问题中的应用，例如速率限制、生产者-消费者和扇出/扇入等模式。文章包含代码示例、常见问题及解决方法，并分享了作者在实际项目中使用通道模式的经验。</p> 
+
+<p><a href="https://medium.com/trendyol-tech/migrating-high-load-go-services-to-bytedance-sonic-c3777ed9bb69">将高负载Go服务迁移到 bytedance/sonic</a><br>提高 JSON 编码和解码速度对于处理请求的服务至关重要，这直接影响 API 的响应速度、计算机资源消耗以及可扩展性。本文介绍了 Trendyol 的搜索相关性团队如何在基于 Go 的 REST-JSON API 中从 goccy/go-json 迁移到 bytedance/sonic，并展示了由此带来的显著改进。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/why-docker-chose-oci-artifacts-for-ai-model-packaging/">Docker 为什么选择 OCI 工件来打包和共享 AI 模型？</a><br>本文探讨了 Docker 选择 OCI 工件来打包和共享 AI 模型的原因。标准化、灵活且专为开发人员设计。</p>
+
+<p><a href="https://engineering.salesforce.com/inside-data-clouds-new-high-throughput-low-latency-service-powering-agentforce/">Salesforce 数据云为 Agentforce 提供的新型高吞吐量、低延迟服务内部信息</a><br>了解 Salesforce 如何降低外部数据存储的昂贵数据移动成本，如何为数百万个文件优化高吞吐量索引，以及更多信息。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/06/17/the-story-behind-the-great-sidecar-debate/">大型 Sidecar 辩论背后的故事</a><br>最近围绕 sidecar 的话题引发了大量的讨论。本文探讨了 Linkerd 选择使用 sidecar 模式，而 Istio Ambient 选择避免使用 sidecar 模式的利弊。作者通过运行负载测试并测量结果来比较这两种模式，并讨论了其方法论和结果。测试结果显示，Istio Ambient 的资源消耗高于 Linkerd，并且 Istio Ambient 的架构也更复杂。作者鼓励读者自行复现测试结果，并提供了相关的源代码和数据。</p>
+
+<p><a href="https://blog.bytebytego.com/p/how-the-google-cloud-outage-crashed">谷歌云宕机如何导致互联网崩溃</a><br>2025年6月12日，互联网的很大一部分经历了突然的宕机。最初是Gmail和Spotify的间歇性故障，很快升级为全球基础设施的崩溃。数百万用户和数百家公司的重要应用程序都停止了运行。此次宕机的核心原因是谷歌云平台（GCP）的广泛中断，GCP为大量的数字服务提供后端支持。文章分析了此次宕机的关键系统——服务控制，以及导致宕机的关键工程失误，包括缺乏功能标志、代码中缺少基本的空值检查、全球数据复制系统、恢复过程中缺乏随机指数退避以及监控和状态基础设施故障等。文章最后总结了谷歌为避免此类事件再次发生而承诺采取的改进措施。</p>
+
+<p><a href="https://pgrs.net/2025/06/17/double-entry-ledgers-missing-primitive-in-modern-software">现代软件中缺失的基元：复式记账</a><br>我认为记账在今天的软件开发中被低估了。具体来说，与目前系统中临时使用的类似记账的功能相比，复式记账模型更适合许多系统。文章探讨了记账的定义、原理以及在记录支付、奖励积分等方面的应用案例，并总结了复式记账在软件开发中的优势。</p>
+
+<p><a href="https://blog.swgillespie.me/posts/monorepo-ingredients">高效 Monorepo 的要素</a><br>本文探讨了构建高效 Monorepo 所需的工具和策略。作者指出，简单的迁移到 Monorepo 并不能保证获得像 Google、Meta 或 Uber 等大型科技公司那样的效率提升。相反，组织需要关注一致性、组织凝聚力和共享工具的努力。文章强调了 O(change) 而不是 O(repo) 的重要性，并详细讨论了源代码管理、构建、测试和持续集成/交付等方面，提供了各种方法和工具的比较，最终建议企业根据自身情况权衡取舍，并持续改进。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/18/trap/#atom-everything">这是一个陷阱</a><br>最近流传的memvid项目是一个陷阱。它是一个嵌入存储，会记录视频文件中二维码中嵌入的原始文本。这样做非常荒谬，该项目的唯一目的是让那些不加批判地分享它的人显得愚蠢。不要掉入陷阱。</p>
+
+<p><a href="https://www.shayon.dev/post/2025/164/pitfalls-of-premature-closure-with-llm-assisted-coding">LLM辅助编码中过早闭合的陷阱</a><br>大型语言模型(LLM)能够生成干净、专业的代码，这很容易让人放弃探索其他方案。但正是在这里，过早闭合的风险就出现了。本文探讨了在LLM辅助编码中过早闭合的陷阱，以及如何避免这些陷阱。文章通过一个医学案例引入“过早闭合”的概念，并分析了在软件开发中类似现象的风险，尤其是在处理复杂问题时。作者建议将AI视为合作者而非预言机，在使用AI辅助编码时，应始终寻求替代方案，并对生成的代码进行同行评审式的审查，以避免错过更好的解决方案并积累技术债务。文章还强调了保持探索精神和提高代码审查能力的重要性，以在AI辅助开发中找到效率和质量之间的平衡。</p>
+
+<p><a href="https://omarabid.com/claude-magic">为什么Claude Code感觉像魔法？</a><br>Claude Code 感觉像魔法，因为它具有迭代性。任何问题的解决方案都是随机的，你只需要迭代整个可能的搜索空间，直到找到一个可行的方案。Claude Code 利用 API 或 Web 界面提供的相同模型，但用户感受到智力的提升，并非模型本身变得更聪明，而是因为它可以自行进行多次尝试，从而提高了最终用户的整体智能。作者以更新项目依赖项为例，说明了 Claude Code 的高效性和自动化潜力，并探讨了大规模并行计算下 Claude Code 的未来可能性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/php/frankenphp">php/frankenphp</a><br>🧟 The modern PHP app server</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/Musixal/Backhaul">Musixal/Backhaul</a><br>Lightning-fast reverse tunneling solution for NAT traversal, optimized for handling massive concurrent connections with tcp, tcpmux, udp, udp over tcp, ws, wsmux, wss and wssmux support.</p>
+
+<p><a href="https://github.com/loft-sh/devpod">loft-sh/devpod</a><br>Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/elastic/beats">elastic/beats</a><br>🐠 Beats - Lightweight shippers for Elasticsearch &amp; Logstash</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/dexidp/dex">dexidp/dex</a><br>OpenID Connect (OIDC) identity and OAuth 2.0 provider with pluggable connectors</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

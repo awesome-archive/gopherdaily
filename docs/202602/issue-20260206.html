@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260206.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260206</span>
+</p>
+<p>每日一谚：Go is not magical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/06/go-2-dont-become-a-frankenstein-monster">“Go 2，请不要发生！”：如果 Go 变成了“缝合怪”，你还会爱它吗？</a><br>近日，一张充满讽刺意味的老梗图在 r/golang 社区又炸开了锅。图片的上方，是我们熟悉的 Gopher 吉祥物——那只呆萌、简单、甚至有点傻气的蓝色地鼠，它象征着 Go 语言纯粹而克制的灵魂。今天，就让我们借着这场社区激辩，再次探讨一下 Go 语言的过去、现在与未来。如果 Go 真的变成了那个“缝合怪”，你还会爱它吗？ </p> 
+
+<p><a href="https://modern-c.blogspot.com/2026/02/taming-flat-ast-ergonomics-in-age-of.html">驯服扁平AST：零分配时代的易用性</a><br>博主介绍了egg（一个用于Go的现代LL(1)解析器生成器）及其核心特性——扁平抽象语法树（AST）。为了实现高性能和低GC压力，egg将整个AST编码在一个单一的int32切片中。尽管这在性能上很出色，但给开发者带来了遍历上的困难。通过利用Go 1.23的迭代器（iterator）和轻量级的“视图”结构，博主展示了如何隐藏底层内存布局的复杂性，使用户能够在享受零分配性能的同时，也能以类似于标准树遍历的简洁方式处理AST，从而在性能和易用性之间取得了平衡。</p> 
+
+<p><a href="https://modern-c.blogspot.com/2026/02/taming-regex-monster-optimizing-massive.html">驯服正则表达式怪兽：优化大规模的字面量交替</a><br>最近在 Gophers Slack 上的一场讨论引起了我的注意，内容涉及 Go 标准库 `regexp` 包在处理大规模字面量交替时的性能问题。由于标准库将正则表达式中的每个字面量字符都计为一个指令，这导致包含大量长字符串的简单正则表达式会超过高效单通道执行引擎的阈值，转而使用 NFA（非确定性有限自动机）引擎，从而导致匹配性能下降。文章探讨了使用 DFA（确定性有限自动机）方法进行优化，尽管 DFA 编译成本高昂（慢约 200 倍），但一旦编译完成，其执行速度比标准库的 NFA 快约 28 倍，对于需要频繁执行的复杂正则表达式，这可以带来巨大的吞吐量提升。</p> 
+
+<p><a href="https://jnfrati.dev/posts/ebpf-transparent-proxy">使用 eBPF 和 Go 构建透明代理</a><br>本文深入探讨了如何使用 eBPF、Go 和 cgroup 钩子在内核级别拦截 TCP 连接，从而构建透明代理，以透明地将应用程序流量重定向到代理。</p> 
+
+<p><a href="https://oblique.security/blog/go-synctest">Go的synctest太棒了</a><br>我们将Go的“testing/synctest”包应用于代码库中一个特别棘手的部分，对其有效性感到非常惊喜。本文介绍了synctest包、它的细微差别，以及它所能做的远不止是加速测试。</p> 
+
+<p><a href="https://oblique.security/blog/type-safe-frontend-apis">类型安全的客户端API</a><br>本文介绍了如何使用Protobuf和Connect从前端到后端实现类型安全的客户端API调用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://shkspr.mobi/blog/2026/02/get-all-the-reactions-to-your-github-content-using-graphql/">使用 GraphQL 获取您 GitHub 内容的所有表情反应</a><br>作者 Terence Eden 分享了他如何利用 GraphQL 查询来检索他创建的 GitHub 议题和拉取请求上收到的所有 Emoji 反应，以弥补 GitHub 缺少直接通知的不足。文章展示了查询不同内容类型（议题和拉取请求）的 GraphQL 语法，并幽默地吐槽了 GraphQL 的复杂性以及在获取评论反应方面的限制。</p>
+
+<p><a href="https://mitchellh.com/writing/my-ai-adoption-journey">我的AI采用之旅</a><br>作者分享了他在采用AI工具（特别是Agent）过程中的六个阶段，从最初的低效聊天机器人，到通过“复制自己的工作”来学习，再到利用“下班时间Agent”和“外包得分最高的任务”，最终聚焦于“工程化约束”以确保Agent的准确性。文章强调了摆脱聊天界面、转向Agent的必要性，以及在委托任务时应避免上下文切换的重要性。作者的目标是保持持续的Agent运行，以期实现更高的工作效率和更专注于自己喜爱的任务。</p>
+
+<p><a href="https://nesbitt.io/2026/02/06/cratesio-freaky-friday.html">Crates.io 的疯狂星期五</a><br>当 Rust 的包注册表醒来时，发现其设计理念与 Debian 互换了。文章探讨了如果 Crates.io 采用 Debian 的套件（suite）模型、审查流程和二进制分发，以及 Debian 采用 Crates.io 的即时发布和去中心化模型会发生什么，主要涉及版本管理、发布流程、决策机制和构建开销等方面的权衡。</p>
+
+<p><a href="https://susam.net/twenty-five-years-of-computing.html">Stories From 25 Years of Computing</a><br>Susam Pal分享了他在计算机领域25年职业生涯中的一系列故事，重点在于人与经历而非技术本身。这些故事包括：第一次接触HTML的经历、通过跳到复位向量（Reset Vector）重启8086机器的实验、第一份工作中的安装程序经历、尝试在嵌入式系统上实现动画控件的挑战（最终因性能问题失败）、受到导师鼓励后职业生涯的积极转变，以及在一次CTF比赛中取得好成绩后对“经验”与“天赋”看法的变化。作者希望这些故事能为读者带来乐趣。</p>
+
+<p><a href="https://www.tigerdata.com/blog/its-2026-just-use-postgres">2026年了，请直接使用Postgres</a><br>停止管理多个数据库。Postgres 扩展使用 BM25、向量、JSONB 和时间序列在一个数据库中替代 Elasticsearch、Pinecone、Redis、MongoDB 和 InfluxDB。</p>
+
+<p><a href="https://blog.comma.ai/datacenter">拥有一个价值500万美元的数据中心</a><br>本文介绍了comma.ai如何运行自己的数据中心，而不是使用云服务。作者阐述了不使用云的理由，包括掌控自主权、激发良好的工程实践（关注功耗、比特和浮点运算而非API和计费）、以及更优的工程师激励机制（倾向于提高代码效率而不是简单地增加计算资源）。作者估计，他们的数据中心花费了约500万美元，而如果使用云服务，成本将超过2500万美元。
+
+文章详细介绍了数据中心所需的关键组成部分：
+1. **电力 (Power)**：当前最大使用约450kW，并提到了圣地亚哥高昂的电价。
+2. **冷却 (Cooling)**：采用纯室外空气冷却，辅以循环风扇来控制温湿度，能耗较低。
+3. **服务器 (Servers)**：主要依靠600个GPU的75台自建TinyBox Pro机器进行模型训练和通用计算，以及约4PB用于数据存储的SSD。
+4. **网络 (Network)**：使用3台100Gbps的Z9264F交换机作为主以太网，以及Infiniband交换机用于GPU集群互联。
+5. **软件 (Software)**：使用SaltStack进行服务器管理，自研的分布式存储mkv（minikeyvalue）存储3PB的训练数据，使用Slurm进行工作负载管理，并使用自研的miniray（一个轻量级任务调度器）来处理分布式计算任务（如模型推理和数据预处理）。
+
+文章最后以一个实际的端到端模型训练命令为例，展示了所有基础设施如何协同工作，并鼓励读者自己建立数据中心或加入comma.ai。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://openai.com/index/introducing-gpt-5-3-codex">GPT 5.3 codex发布</a><br></p>
+
+<p><a href="https://www.anthropic.com/news/claude-opus-4-6">推出 Claude Opus 4.6</a><br>我们正在升级我们最智能的模型。在代理编码、计算机使用、工具使用、搜索和金融领域，Opus 4.6 是行业领先的模型，通常领先幅度很大。新模型改进了编码技能，能更仔细地规划，能持续更长时间地执行代理任务，能在更大的代码库中更可靠地运行，并具备更好的代码审查和调试技能来发现自身的错误。此外，Opus 4.6 还首次在 Opus 级别模型中推出了 1M token 上下文窗口的测试版。Opus 4.6 在日常工作任务中的表现也得到了提升，例如运行财务分析、进行研究以及使用和创建文档、电子表格和演示文稿。在 Cowork 中，Opus 4.6 可以将所有这些技能投入使用。Opus 4.6 在多个评估中均达到了最先进的性能，包括在代理编码评估 Terminal-Bench 2.0 中得分最高，在复杂的多学科推理测试 Humanity’s Last Exam 中领先所有其他前沿模型。在 GDPval-AA（一项评估模型在金融、法律和其他领域的经济上有价值的知识工作任务的性能的评估）上，Opus 4.6 比行业中第二好的模型（OpenAI 的 GPT-5.2）高出约 144 Elo 点，比其前代模型（Claude Opus 4.5）高出 190 点。Opus 4.6 在 BrowseComp 上的表现也优于所有其他模型，该基准衡量了模型在线定位难找信息的能力。Opus 4.6 的整体安全性能与行业中任何其他前沿模型一样好，甚至更好，在安全评估中失准行为的发生率很低。我们还在 Opus 4.6 表现出色的领域应用了新的安全措施，特别是在网络安全能力方面。此外，我们还推出了新的产品功能，如 Claude Code 中的代理团队、API 中的上下文压缩和 1M token 上下文，以及 Claude in Excel 和 Claude in PowerPoint 的增强功能，使日常工作更加高效。</p>
+
+<p><a href="https://www.anthropic.com/engineering/building-c-compiler">使用并行 Claude 团队构建 C 编译器</a><br>我们将 Opus 4.6 任务分配给代理团队，从头开始构建一个基于 Rust 的 C 编译器，并（基本上）放手不管。本文探讨了我们从中对自主软件开发未来的学习，包括设计长期运行的 Claude 代理团队环境、编写测试以及如何使并行化变得容易。</p>
+
+<p><a href="https://blog.42futures.com/p/company-as-code">代码即公司 (Company as Code)</a><br>作者反思了企业运营中数字化工具与组织结构描述方式之间的巨大脱节。他提出了一种“代码即公司”的概念，主张将公司的组织结构、政策和操作流程都以程序化的方式（如声明式 DSL）进行表示，类似于基础设施即代码 (IaC)。这种方法可以实现版本的控制、可查询性、可测试性和自动化集成，从而极大地提高合规审计的效率，并使组织变革的影响分析更加清晰和可靠。文章设想了一个包含实体（人、角色、政策等）、关系和控制的图模型，并强调了这种代码驱动的组织模型应通过低代码/无代码界面向非技术业务人员开放，以实现真正的全员可用性。</p>
+
+<p><a href="https://innfactory.ai/en/blog/openclaw-ai-agent-security">OpenClaw：当AI智能体获得完全系统访问权限时——是革命还是安全噩梦？</a><br>OpenClaw（原名Moltbot/Clawdbot）承诺提供具有完全计算机访问权限的终极个人AI助手。但巨大的安全风险使得沙箱部署成为绝对要求。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/kagent-dev/kagent">kagent-dev/kagent</a><br>Cloud Native Agentic AI | Discord: https://bit.ly/kagentdiscord</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/grafana/tempo">grafana/tempo</a><br>Grafana Tempo is a high volume, minimal dependency distributed tracing backend.</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向代理,DDNS,WOL,ipv4 stun内网穿透,cron,acme,rclone,ftp,webdav,filebrowser</p>
+
+<p><a href="https://github.com/steveyegge/beads">steveyegge/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/rcourtman/Pulse">rcourtman/Pulse</a><br>Real-time monitoring for Proxmox, Docker, and Kubernetes with AI-powered insights, smart alerts, and a beautiful unified dashboard</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

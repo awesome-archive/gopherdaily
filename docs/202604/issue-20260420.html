@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260420.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260420</span>
+</p>
+<p>每日一谚：Use goroutines. Don&#39;t overuse goroutines. Finding balance is art of Go. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/18/ollama-from-open-source-hero-to-community-enemy">从“开源英雄”到“社区公敌”，Ollama 到底做错了什么</a><br>Ollama 被盛赞为“本地 AI 的 Docker”、“开源精神的典范”，几乎成了无数技术布道者口中的“开源英雄”。 但就在几天前，一篇名为《本地大模型生态系统不再需要 Ollama》的文章，在技术社区 Hacker News 上，引发了一场“社区公审”。 文章详细罗列了 Ollama 在享受了社区的赞誉之后，犯下的种种“罪行”：从对核心依赖 llama.cpp 长达 400 多天的“选择性遗忘”，到试图用私有 模型格式“绑架”用户，再到其背后若隐若现的“VC 商业化”套路…… 一夜之间，Ollama 的形象从“屠龙少年”，变成了那条它曾经挑战的“恶龙”。</p> 
+
+<p><a href="https://tonybai.com/2026/04/19/thin-harness-fat-skills">薄驾驭，厚技能：YC 掌门人揭秘拉开 1000 倍效率差距的 AI 工程化心法</a><br>今天，我们就来读读 Garry Tan 这篇文章，看看硅谷最顶尖的玩家，是如何通过 “薄驾驭，厚技能（Thin Harness, Fat Skills）” 的架构哲学，来榨干大模型的每一滴潜能的。</p> 
+
+<p><a href="https://tonybai.com/2026/04/20/openclaw-father-ted-talk">“我把公司卖了，却感觉一无所有”：OpenClaw 之父 TED 亲述如何靠 AI 重获新生</a><br>就在前几天，Peter 登上 TED 的舞台，首次完整地讲述了他从一个被“燃尽（Burn-out）”的创始人，到靠 AI 获得“重生”，再到创造 OpenClaw 并意外引爆全球的传奇故事。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/JOUUrUTWruSZWhQjEYqxIw">【Agentic API 实战】06 演进与落地：如何将现有系统平滑升级为 Agentic API？</a><br>“难道为了拥抱 AI，我们要把这几百个微服务全部推翻重写一遍？” 绝不。在大型软件工程中，任何需要“推翻重写”的技术转型，其成功率都无限趋近于零。 今天，作为本专栏的收官，我们将探讨一套平滑演进的策略。 我们的目标是：在不修改任何一行老旧系统业务代码的前提下，为你的整个基础设施戴上一副“Agentic 外骨骼”，让 AI 智能体能够毫无阻力地调 用它们。</p> 
+
+<p><a href="https://medium.com/@m0t9_/lets-add-a-conditional-expression-to-go-language-3eec7783388e">让我们在 Go 语言中添加一个条件表达式</a><br></p> 
+
+<p><a href="https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/">GitHub 如何使用 eBPF 提升部署安全性</a><br>你是否知道，在 GitHub，我们所有的源代码都托管在 github.com 上？我们这样做是因为我们是自己最大的客户——在将变更发布给用户之前，我们会在内部进行测试。然而，这有一个缺点：如果 github.com 瘫痪，我们将无法访问自己的源代码。这就是所谓的简单循环依赖：部署 GitHub 需要 GitHub。如果 GitHub 宕机，我们将无法部署任何修复程序。我们通过维护一份代码镜像来进行前向修复，并构建资产以供回滚来缓解这一问题。这样就解决了吗？没有，还有更多循环依赖需要考虑。例如，你如何防止部署脚本自身对内部服务产生循环依赖，或防止从 GitHub 下载二进制文件？当我们开始设计新的基于主机的部署系统时，我们评估了一些新方法来防止部署代码产生循环依赖。我们发现...</p> 
+
+<p><a href="https://rednafi.com/go/error-translation/">Go 服务中的错误转换</a><br>在分层的 Go 服务中，很容易不小心将像 sql.ErrNoRows 这样的存储错误一路泄露给处理器（handler），更糟糕的是泄露给客户端。这篇文章展示了如何在服务边界捕获这些错误，将其转换为领域错误，并防止内部细节到达不该出现的地方。当处理器了解你的数据库时假设你有一个由 Postgres 支持的用户服务。处理器通过 ID 获取用户，并需要区分“未找到”和“实际失败”：处理器现在耦合了。它导入了 database/sql 并检查 sql.ErrNoRows，这是一个存储特定的错误。这意味着处理器现在知道该服务使用了 SQL。对于一个只有一个数据库和一个传输层的小型服务，这是一个合理的权衡。你知道它是 SQL，而且短期内不会有其他变化。然后服务增长了。有人在 Postgres 前面放置了 Redis 作为预读缓存，现在有了两种不同的“未找到”错误。处理器现在导入了两个存储包。它知道该服务同时使用了 Postgres 和 Redis。接着你添加了软删除。被软删除的用户在 Postgres 和 Redis 中都存在，因此 sql.ErrNoRows 和 redis.Nil 都不会触发。但该服务认为用户已消失。处理器无法为该用户返回 404。</p> 
+
+<p><a href="https://medium.com/@vladimirvivien/building-gemma-4-local-powered-llm-apps-with-go-and-yzma-6bc43d48ee4e">使用 Go 和 Yzma 构建 Gemma 4 本地 AI 应用</a><br></p> 
+
+<p><a href="https://nymity.ch/writing/articles/validation/">在 Go 中验证数据</a><br>Mat Ryer 的 Go 数据验证方法既简单又优雅。我在构建 WhyNotLog 时广泛使用了这种方法。其核心思想是定义一个 Validator 接口，任何实现此接口的类型都可以进行验证：Validate 方法返回一个字段名到问题描述的映射。这个映射稍微有点繁琐，所以我更喜欢返回一个 Problems 类型：我们可以添加语法糖使其使用更方便：我们还希望有一个 String 方法将问题转化为人类可读的字符串表示：实现接口有了这些工具，考虑这个 TaskCreateRequest 类型。调用者使用此类型注册一个需要定期运行的任务。该类型的一个有效值必须满足多个约束：- 名称不能为空。- 运行函数不能为 nil。- 间隔和截止时间必须大于 0。- 截止时间必须小于间隔，否则任务的两个实例可能会同时运行。我们通过让 TaskCreateRequest 类型实现 Validator 接口来实现这些约束。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2026-04-17-automating-go-test-coverage/">自动化 Go 测试覆盖率</a><br>我们正在使用 Go 编写 Dolt，这是世界上第一个版本控制的 SQL 数据库。编写数据库很难做到完美，所以我们有很多测试，数以百万计的测试。我们非常关注数据库的良好测试和正确性，因此我们阻止任何测试回归的发布。但有一个测试方面我们到目前为止没有给予太多关注：测试覆盖率。测试覆盖率是一种工具，可以告诉你哪些代码行被你的测试执行（覆盖），哪些没有（未覆盖）。我们的许多工程师来自 Java 背景，在那里代码覆盖率报告工具是许多构建平台的标准组成部分，人们投入了大量精力来获得更好的覆盖率数字。Go 自 1.2 版本以来就有了代码覆盖率分析的支持，但据我所知，这种做法在 Go 社区中从未达到像在 Java 社区中那样显眼的地位。至少，我从没听过 Go 工程师像 Java 工程师那样痴迷于测试覆盖率，尽管你的经验可能有所不同。DoltHub 从一开始基本就是一个测试覆盖率的荒漠。但最近我们的一位工程师注意到，Go 在几年前的 1.20 版本中增加了对常规二进制文件（不仅仅是 go test 的一部分）进行覆盖率插桩的支持。这对我们很重要，因为我们很大一部分测试覆盖率来自集成测试，涉及直接运行二进制文件并检查结果，而不是调用 go test。特别是，我们为 CLI 编写了数千个 BATS 测试，而代码库的很大一部分仅通过这些测试来执行。</p> 
+
+<p><a href="https://lemire.me/blog/2026/04/09/a-brief-history-of-c-c-programming-languages/">C/C&#43;&#43; 编程语言简史</a><br>最初，我们有 Fortran（1957）、Pascal（1970）和 C（1972）等语言。Fortran 是为数值计算和科学计算而设计的。Pascal 对底层访问有限制（它被刻意设计为“安全”的，用于教授结构化编程）。因此，C 作为一种允许底层/不安全编程（指针算术、直接内存访问）且足够通用以进行 Unix 系统工作的语言胜出了。公平地说，Pascal 的后代依然存在，但 C 显然占据了主导地位。20 世纪 80 年代和 90 年代，面向对象编程被视为未来，变成了一种类似教派的东西。但 C 不是面向对象的。因此我们有了 C&#43;&#43;，它最初是“带类的 C”。C&#43;&#43; 有模板，能够实现泛型编程和编译时元编程。语言的这部分使 C&#43;&#43; 功能非常强大，但也有点难以掌握（伴随着疯狂的错误信息）。C 和 C&#43;&#43; 都取得了巨大的成功，但编写可移植的应用程序仍然很困难——你通常必须针对 Windows 或特定的 Unix 变体。这对像 Sun Microsystems 这样销售 Unix 服务器并希望与当时正成为巨头的微软竞争的公司来说是个问题。因此，Java 在 1995 年出现了。它被定位为 C&#43;&#43; 的安全、可移植替代方案：它消除了原始指针算术，增加了强制垃圾回收，到处进行数组边界检查，并在具有即时编译功能的虚拟机（JVM）上运行以保证性能。“一次编写，到处运行”的承诺直接解决了 C/C&#43;&#43; 可移植性的痛点。直到今天，Java 仍然是编写可移植企业代码和服务器端代码的强大解决方案。我们在 1995 年还得到了 JavaScript。尽管名字相似，但在语义上它与 Java 几乎没有任何共同之处。最好将其视为与 Java 分开的语言。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.trailofbits.com/2026/04/17/we-beat-googles-zero-knowledge-proof-of-quantum-cryptanalysis/">我们破解了谷歌关于量子密码分析的零知识证明</a><br>两周前，谷歌量子 AI 小组发布了一个极其优化的量子电路零知识证明，他们得出的结论是，第一代量子计算机最快只需 9 分钟就能破解椭圆曲线密码密钥。今天，Trail of Bits 发布了我们自己的零知识证明，在所有指标上都显著优于谷歌的结果。我们的成果并非源于某种量子突破，而是源于对谷歌 Rust 证明器代码中多个微妙的内存安全和逻辑漏洞的利用。谷歌已经修补了他们的证明，他们的科学主张未受影响，但这个故事反映了系统在使用零知识证明时引入的独特攻击面。谷歌的证明使用零知识虚拟机（zkVM）来计算量子电路在三个关键指标上的成本。总操作数和 Toffoli 门计数代表电路的运行时间，量子比特数代表内存需求。谷歌与来自加州大学伯克利分校、以太坊基金会和斯坦福大学的合著者一起，发布了两个电路的证明；一个最小化了门数，另一个最小化了量子比特数。我们的证明在两者上都有所改进。我们的证明在使用谷歌未经修补的验证代码时完全验证通过。它与他们原始的证明具有相同的验证密钥，并且在密码学上是等价的。</p>
+
+<p><a href="https://mropert.github.io/2026/04/13/modules_in_2026/">2026 年的 C&#43;&#43; 模块现状</a><br>我们终于可以在 2026 年使用 C&#43;&#43; 模块了吗？每隔 6 到 12 个月，我都会尝试使用 C&#43;&#43; 模块，遇到障碍，可能在社交媒体上抱怨一番，然后转向其他事情。尽管观看了多个关于该主题的讲座，但总有东西挡路。到目前为止，我最大的成功是在渲染器库中成功使用了 VulkanHpp 模块。但在上周取得一些进展（并遇到新障碍）之后，我觉得我已经有了足够的总结。作为免责声明，我想提一下，我已经与 C&#43;&#43; 程序员同行分享了我对模块状态的一些结论，但他们并非全都同意我的结论。然而，我相信模块存在严重的“专家偏见”问题，对于像我这样接触不多且没有密切关注标准化的普通用户来说，许多反驳听起来就像是“在我的机器上能用”。我不自诩为该主题的专家，但我了解构建系统，并且我相信我花在尝试调整项目中的模块上的时间比普通 C&#43;&#43; 程序员要多得多，所以我认为这篇文章可以代表普通爱好者用户（或者更确切地说是潜在用户）的观点。噢，我主要关注 MSVC。我可能会简要提及 Clang 或 GCC，但我主要是 Windows 经验。简单的部分与你可能听到的相反，简单的用例是相当容易实现的，前提是你必须在严格的限制范围内。例如，正如我之前提到的，我在渲染库中使用了 VulkanHpp 提供的模块，它工作得很好。</p>
+
+<p><a href="https://blog.iamvedant.in/containers-are-just-linux-wrapper-exploring-namespaces-and-cgroups-from-scratch-part-1">容器只是 Linux 包装器：从零开始探索命名空间和cgroups控制组（第一部分）</a><br></p>
+
+<p><a href="https://blog.exe.dev/http-proxy-secrets">HTTP 代理机密</a><br>机密管理是一件麻烦事。大型组织致力于将机密管理集中在服务中。当做得好时，这些服务可以解决围绕机密的许多问题，代价是产生大量运维开销（这就是为什么它们仅限于大型组织）和工程复杂性。到目前为止，小型组织一直忍受这种痛苦。但随着智能体的出现，这种痛苦变得严重多了。当你直接把 API 密钥交给智能体时，它们会很困扰。它通常是可以工作的，如果你将其设置为会话后禁用且可快速撤销的密钥，可以降低风险。但有些模型（你知道是哪些）在看到机密时会惊慌失措，并且在密钥“暴露”后拒绝执行任何操作。对 API 密钥不太敏感的模型会将密钥写入会话间内存，在另一个会话中提取出来，并浪费宝贵的上下文窗口尝试使用已撤销的密钥。所有这些都假设你愿意不断生成密钥。像现在受到关注的许多问题一样，这看起来像是智能体带来的问题。但问题一直存在。API 密钥很方便但权限太大。持有一个密钥不仅授予你进行 API 调用的能力，还授予你让别人进行 API 调用（通过发送给他们密钥）的能力。我在生产环境中编写的任何包含 API 密钥的环境变量文件 /etc/defaults 的软件都不需要这种权力。我们一直都很小心编写程序以不泄露密钥。从来不够小心，因为此类应用程序中的许多安全缺陷现在让攻击者可以轻易拿走密钥，并在我们意识到并手动轮换它们之前，获得一个窗口进行各种破坏。自动化轮换密钥以填补此漏洞的尝试效果参差不齐。我们的行业确实在某些地方使用 OAuth，有时 OAuth 被配置为轮换密钥。但服务仍然分发 API 密钥，因为这对用户来说很简单。</p>
+
+<p><a href="https://thedataquarry.com/blog/datafusion-and-the-rise-of-deconstructed-data-systems/">DataFusion 与解构数据系统的兴起</a><br>DataFusion 与解构数据系统的兴起深入探讨 DataFusion 及其在推动大量新型开源、可组合数据系统爆炸式增长中的作用。多年来，我们已经习惯了可移植且高度互操作的数据格式（Parquet、Lance）和内存中表示（Arrow）。但查询引擎——将用户的问题转化为扫描、连接和过滤的部分——历史上是你必须从头构建的一层。它需要深厚的专业知识，并且与其他系统层紧密耦合。随着 Apache DataFusion 的到来，这一切都改变了：这是一个用 Rust 编写的可嵌入、Arrow 原生查询引擎，为系统开发者提供了完整的流水线（解析、逻辑计划、优化、物理计划和流执行），而无需他们自己构建。它正在成为位于系统前端和存储引擎之间的可重用计算层。这就是 LanceDB、Lance-Graph 等系统能够以当前速度发展的原因。嵌入 DataFusion 的规划和执行机制使工程师能够将精力集中在真正使他们的系统与众不同的层上：存储、索引、查询语言或领域语义。这篇文章深入探讨了 DataFusion 如何实现这一切，为什么它很重要，以及为什么它的模块化设计正在促成新一代可组合数据系统。</p>
+
+<p><a href="https://medium.com/@andreiboar/algotutor-using-ai-to-actually-get-better-at-algorithms-a2b7b96e054a">使用 AI 真正提高算法能力</a><br></p>
+
+<p><a href="https://www.ip.network/blog/what-is-ipv8-protocol">什么是 IPv8 协议？</a><br>IPv8 是 IPv6 之后的下一个互联网协议吗？答案比你想象的更令人困惑。看看 2026 年的 IETF 草案、Tribler 的覆盖库以及 1990 年代的 Pip 提案。那么，IPv8 是真实存在的吗？简短回答：算是，但可能不是你想象的那样。如果你是在 Hacker News 或 LinkedIn 上看到有人讨论“IPv8”后来到这里的，你并不是唯一一个有疑问的人。这个名字已经流传了几周，几乎让每个人都感到困惑。原因很简单：三个完全不同的项目都叫“IPv8”，而且只有一个甚至在尝试成为下一代互联网协议。让我们理清 IPv8 实际上指的是什么，为什么它在 2026 年 4 月成为热门话题，以及它对你的网络意味着（或不意味着）什么。这三个 IPv8在我们深入研究任何一个之前，这里是名单：1. draft-thain-ipv8 —— 2026 年的一份 IETF 互联网草案，提议将 IPv8 作为 IPv4 的 64 位继任者。这就是病毒式传播的那一个。2. Tribler IPv8 —— 一个用于点对点覆盖网络的 Python 和 Kotlin 库，由代尔夫特理工大学的研究人员维护。与 IP 层寻址完全无关。3. 历史上的 IPv8 (Pip) —— 保罗·弗朗西斯（Paul Francis）在 1990 年代初期的 IPng 候选者。它输给了后来成为 IPv6 的协议，此后一直只是一个脚注。大多数新闻报道都是关于第一个的。所以让我们从那里开始。2026 年提出的 IPv8：Thain 草案2026 年 4 月 1 日，一份题为“互联网协议版本 8 (IPv8)”的互联网草案出现在 IETF 数据跟踪器上。作者 Brendan Thain 不隶属于任何知名工作组，该草案是个人提交的——这意味着 IETF 允许几乎任何人上传。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything">Claude Token 计数器，现已支持模型比较</a><br>Claude Token 计数器，现已支持模型比较我升级了我的 Claude Token 计数器工具，增加了针对不同模型运行相同计数以进行比较的功能。据我所知，Claude Opus 4.7 是第一个改变标记器（tokenizer）的模型，因此仅值得在 4.7 和 4.6 之间进行比较。Claude 标记计数 API 接受任何 Claude 模型 ID，所以我包含了所有四个显著当前模型的选项（Opus 4.7 和 4.6，Sonnet 4.6 和 Haiku 4.5）。在 Opus 4.7 发布公告中，Anthropic 表示：Opus 4.7 使用了一个更新的标记器，改进了模型处理文本的方式。代价是相同的输入可能会映射到更多的 token——根据内容类型，大约是 1.0–1.35 倍。我将 Opus 4.7 系统提示词粘贴到标记计数工具中，发现 Opus 4.7 标记器使用的 token 数量是 Opus 4.6 的 1.46 倍。Opus 4.7 的定价与 Opus 4.6 相同——每百万输入 token 5 美元，每百万输出 token 25 美元——但这这种 token 膨胀意味着我们预计它会贵大约 40%。Token 计数器工具也接受图像。Opus 4.7...</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything">个人 AI 的“无头”一切</a><br>个人 AI 的“无头”一切Matt Webb 认为“无头”（headless）服务将变得更加普遍：为什么？因为对于用户来说，使用个人 AI 的体验比直接使用服务更好（老实说）；而且对于个人 AI 来说，无头服务比让它们点击带有机器人控制鼠标的 GUI 更快、更可靠。显然 Marc Benioff 也这么认为：欢迎使用 Salesforce Headless 360：无需浏览器！我们的 API 就是 UI。整个 Salesforce &amp; Agentforce &amp; Slack 平台现在都作为 API、MCP 和 CLI 公开。所有 AI 智能体都可以直接在 Slack、语音或其他任何地方通过 Salesforce Headless 访问数据、工作流和任务。如果这种模式真的流行起来，它将对现有的每人 SaaS 定价方案造成严重破坏。我想起了 2010 年代初每个在线服务都在推出 API 的时代。Brandur Leach 在《API 优先经济的第二波浪潮》中回忆起那段时光，并预言 API 即将卷土重来：突然间，API 不再是负债，而是一个重要的可销售向量，可以给用户他们想要的：一种进入他们使用并付费的服务的方式，以便智能体可以代表他们完成工作。特别是在产品差异化不大的情况下，在不久的将来，API 的可用性可能就是导致一种选择胜出的关键决定性因素。</p>
+
+<p><a href="https://www.anthropic.com/news/claude-design-anthropic-labs">Claude Design Anthropic Labs</a><br>产品公告隆重推出 Anthropic Labs 的 Claude Design2026 年 4 月 17 日今天，我们推出 Claude Design，这是一项全新的 Anthropic Labs 产品，让你能够与 Claude 合作创建精致的视觉作品，如设计、原型、幻灯片、单页文档等。Claude Design 由我们最强大的视觉模型 Claude Opus 4.7 提供支持，并为 Claude Pro、Max、Team 和 Enterprise 订阅者提供研究预览。我们将在全天逐渐向用户推送。使用 Claude 进行设计即使是经验丰富的设计师也必须限制探索——很少有时间制作十几个方向的原型，所以你限制自己只能做几个。而对于有想法但没有设计背景的创始人、产品经理和营销人员来说，创建和分享这些想法可能令人望而生畏。Claude Design 给设计师留出了广泛探索的空间，也为其他人提供了一种制作视觉作品的方式。描述你的需求，Claude 就会构建第一个版本。从那里开始，你可以通过对话、内联评论、直接编辑或自定义滑块（由 Claude 制作）进行细化，直到满意为止。获得访问权限后，Claude 还可以自动将你团队的设计系统应用于每个项目，因此输出与公司其余的设计保持一致。团队一直在使用 Claude Design 进行：- 逼真的原型：设计师可以将静态模型变成易于共享的交互式原型，以收集反馈和进行用户测试，无需代码审查或 PR。- 产品线框和模型：产品经理可以勾勒出功能流程，并将其交给 Claude Code 进行实现，或与设计师分享以进一步细化。- 设计探索：设计师...</p>
+
+<p><a href="https://blog.cloudflare.com/agent-readiness/">引入 Agent Readiness 评分。你的网站准备好迎接智能体了吗？</a><br>互联网一直不得不适应新标准。它学会了与 Web 浏览器对话，然后学会了与搜索引擎对话。现在，它需要与 AI 智能体对话。今天，我们很高兴推出 isitagentready.com——一个新工具，旨在帮助网站所有者了解如何优化其网站以适配智能体，从指导智能体如何进行身份验证，到控制智能体可以看到的内容、接收内容的格式以及付费方式。我们还向 Cloudflare Radar 引入了一个新数据集，用于跟踪整个互联网上对每种智能体标准的采纳情况。我们希望以身作则。这就是为什么我们也分享了我们最近如何彻底改革了 Cloudflare 的开发者文档，使其成为最友好的智能体文档网站，使 AI 工具能够更快地回答问题。</p>
+
+<p><a href="https://www.portainer.io/how-to/how-to-deploy-a-docker-stack-with-terraform">如何使用 Terraform 部署 Docker 堆栈</a><br>让我们经验丰富的工程师为你设置和管理你的 Kubernetes 基础设施。相关内容行业新闻、笔记和见解。</p>
+
+<p><a href="https://spectrum.ieee.org/state-of-ai-index-2026">2026 年 AI 指数现状</a><br>12 张图表解释 2026 年 AI 现状</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Multi Account, Webhooks, and MCP, and Chatwoot. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/tphakala/birdnet-go">tphakala/birdnet-go</a><br>Realtime BirdNET soundscape analyzer</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/cerbos/cerbos">cerbos/cerbos</a><br>Cerbos is the open core, language-agnostic, scalable authorization solution that makes user permissions and authorization simple to implement and manage by writing context-aware access control policie</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

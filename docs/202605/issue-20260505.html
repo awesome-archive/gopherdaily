@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260505.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260505</span>
+</p>
+<p>每日一谚：The Go way is often different from other languages. Embrace the difference. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/05/ai-makes-everyone-a-developer-like-cameras-for-photographers">“AI 让每个人都成了开发者”，就像“相机让每个人都成了摄影师”</a><br>最近，在技术圈里流传着一个“非主流观点（Unpopular Opinion）”： “‘AI 让每个人都成了开发者’，这句话是真的。就像当年‘相机的发明，让每个人都成了摄影师’一样。” 这句充满“内涵”的类比，在 Reddit、X 等社区引来了开发者的热议。它精准地戳中了所有专业开发者心中最深的隐忧：当 AI 将编程的门槛夷为平地，我们这些苦练了十几年“内功”的“老师傅”，还有存在的价值吗？</p> 
+
+<p><a href="https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres/">PGKeeper：为 Postgres 打造我们所需要的“保护机制”</a><br>这就是我们为何以及如何打造 PGKeeper 的故事。PGKeeper 是一项可扩展且可靠的服务，旨在为 Figma 那些快速增长的产品和数据库需求提供支持。在过去的几年里，Figma 在功能和服务规模方面都实现了显著增长。这意味着，我们的数据库系统不得不应对日益增加的工作负载和流量。显然，现有的 PgBouncer 已经无法满足需求了——毕竟，PgBouncer 只是一个轻量级且被广泛使用的 PostgreSQL 连接池管理工具。因此，我们开发了 PGKeeper(一个Go服务)，这是一种全新的连接和负载管理工具，可以替代 PgBouncer 来管理 Postgres 数据库。在这篇文章中，我们将详细介绍 PGKeeper 的设计和部署过程。</p> 
+
+<p><a href="https://socket.dev/blog/malicious-ruby-gems-and-go-modules-steal-secrets-poison-ci">恶意的 Ruby Gems 和 Go 模块伪装成开发工具，窃取机密信息并破坏持续集成流程</a><br>GitHub 账号 BufferZoneCorp 发布了恶意软件包，这些软件包后来被用来窃取凭证信息、篡改 GitHub Actions 的相关设置、创建伪造的 Go 语言程序包，以及实现 SSH 连接的持久化。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2026/05/05/how-frontier-firms-are-rebuilding-the-operating-model-for-the-age-of-ai/">前沿公司如何为人工智能时代重建运营模式</a><br>现在观察任何软件工程团队，你都会发现一些值得注意的事情。在过去几年中，软件构建方式经历了四种不同的人机协作模式，同样的模式也开始出现在公司的其他职能部门中。- 作者：你负责产出工作，并根据需要调用人工智能提供帮助——如一行代码、一句话或一张图表。- 编辑：你设定意图，由人工智能创建初稿供你编辑和批准。- 总监：你创建规范，将整个任务移交给人工智能在后台执行。- 编排者：你设计一个系统，让多个代理在工作流中并行运行，并将异常和升级情况反馈给你。每一位商业领袖都知道世界正在发生变化，但很少有人清楚该怎么做。这四种模式是起点。领导者接下来的真正工作是围绕协作模式重新设计公司的运营模式。随着代理使用的增加，人类的参与并没有消失，而是改变了形式。减少的是人类自己执行的战术性、步骤性工作，增加的是人类设定方向、定义标准和评估结果的需求。最终，目标不是将每个任务和业务流程都移到第四种模式。相反，领导者需要帮助他们的组织明确如何将工作流与正确的协作模式相匹配。这就是前沿公司的形态：由领导者如何刻意设计跨职能工作，并将人类的参与程度与结果相匹配来定义。### **数据显示了什么**我们的 2026 年工作趋势指数研究证实了这种跨角色和行业的转变。我们分析了数万亿条匿名化的 Microsoft 365 生产力信号，并调查了 10 个国家/地区使用人工智能的 20,000 名员工。我们还与人工智能、工作和组织心理学领域的领先专家进行了交流。</p>
+
+<p><a href="https://www.docker.com/blog/precision-container-security-with-docker-and-black-duck/">使用 Docker 和 Black Duck 实现精准容器安全</a><br>现代容器化应用程序的复杂性往往让开发者淹没在“噪音”中——即存在于文件系统中但对应用程序不构成实际风险的漏洞。Black Duck 与 Docker Hardened Images (DHI) 的集成提供了应对这一挑战的明确答案。通过结合 Docker 默认安全的基础、使用 VEX（漏洞可利用性交换）声明以及 Black Duck 行业领先的分析引擎，团队现在可以自动将基础层噪音与应用程序层风险区分开来。## **TL;DR: Black Duck &#43; Docker 的价值主张**- **零配置识别：** Black Duck 在扫描过程中自动识别 DHI 基础镜像，无需手动标记。- **精准分流：** 利用 Docker 提供的 VEX 数据和 Black Duck 安全公告 (BDSA) 来忽略“不受影响”的基础镜像漏洞。- **全面的漏洞情报：** 结合 Docker 的可利用性数据与 Black Duck 的专有研究，以降低分类成本并消除误报。- **合规自动驾驶：** 导出富含 VEX 可利用性状态的高保真 SBOM，支持欧洲《网络韧性法案》(CRA) 等全球法规以及 FDA 针对医疗设备和政府机构强制要求的行业标准中规定的透明漏洞义务。## **全面的软件完整性战略**Black Duck 的容器安全战略建立在“合作共赢”的理念之上，利用两种不同但互补的分析技术来提供 360 度全方位的可见性。</p>
+
+<p><a href="http://antirez.com/news/164">Redis 数组类型：漫长开发的小故事</a><br>我从一月初开始为 Redis 开发新的数组数据类型。直到现在 PR 才合并到仓库中，所以这段代码酝酿了四个月。我基本上是半职完成的实现（之所以说是半职，是因为很多周其实是全职工作的，有时要让自己从键盘前抽身是件复杂的事），即使在 LLM 出现之前，这可能也是我四个月内能做完的事情。改变的是，在同样的时间跨度内，我能够做更多的事情。这就是发生的事情的简短故事。第一个月我只是写了规范文档。包括新数据类型的基本原理、C 结构、使用的稀疏表示、环形缓冲区和 ARINSERT 的数组游标的确切语义。我手写了几天详细的规范，起初我与 Opus 协作，后来 GPT 5.3 发布，我转而使用 Codex 进行所有的设计和开发。从那以后，我只使用 GPT 5.x 进行系统编程任务。多亏了人工智能，通过反馈的来回交流、关于最佳设计是什么、什么是正确的妥协、什么过度工程了什么的知识挑战，规范得以极大地进化。从第二个月开始，我使用自动编程（或者叫自动编码）开始了实现，并不断审查开发的代码。后来我意识到我选择的间接级别是错误的。我确实希望人们能够执行 ARSET myarray 293842948324 foo，并且一切都能正常工作而无需巨大的分配。我拥有的两级目录&#43;切片（稀疏和密集）是不够的。因为有 AI，我没有妥协，我决定加倍努力。一旦达到特定条件，数据结构在内部会改变形状，变成切片密集目录的超级目录，这也指向实际的数组切片（默认每个切片 4096 个元素）。这种设计依然提供了我想要的内部“实际上是一个数组”的表示。</p>
+
+<p><a href="https://evilgeniuslabs.ca/blog/from-cvs-to-git-thirty-years-of-source-control">从 CVS 到 Git：三十年的源代码控制</a><br>从 CVS 到 Git，三十年的源代码控制，亲历其中。2005 年 4 月，Linus Torvalds 用十天时间编写了 Git，因为 BitKeeper 取消了其对 Linux 内核的免费许可。二十一年后，没有继任者出现。这是一位自 1990 年以来使用过每种主要系统，并在其中大多数系统中丢失过代码的人，所写下的源代码控制实践历史。1996 年，我正在为一个开发商店跟踪源代码，系统是 zip 文件。文件名是项目名称加上日期。备份是每周轮换一次的磁带。分支是“复制目录并重命名”。合并是使用 Beyond Compare 和打印件，在糟糕的一周，那是 Beyond Compare 和争吵。我们并不特殊。Visual SourceSafe 是微软商店的选择，而 Visual SourceSafe 经常损坏自己的数据库，以至于“维护 SourceSafe 仓库的离线备份”是一项文档化的 IT 程序，而不是最坏的情况。三十年后，我在 Git 中工作。我认识的每家公司都在用 Git。所谓“现代源代码控制”就是那位芬兰内核开发者在 2005 年 4 月十天内写出的东西，而二十一年后，地平线上没有任何继任者。原因是结构性的。这是从那时到现在的路径，亲历其中。## 前 VCS 时代，在正式版本控制存在之前我们做了什么2010 年之后入行的从业者可能不知道当时有多糟糕。</p>
+
+<p><a href="https://csjh.blog/posts/a-tale-of-three-wasm-runtimes/">三个WASM运行时的故事</a><br>三个 WebAssembly 运行时的故事。WebAssembly (Wasm) 是一种很棒的小字节码格式。它易于生成、易于解析、易于执行且易于解释。我喜欢推荐 Wasm 解释器作为学习语言运行时基础的有趣方式。为了言行一致，我最终不仅制作了一个运行时，而是三个！更准确地说，它最终变成了“一个运行时内的三种执行模式”，因为除了执行逻辑外它们共享一切，但这听起来没那么响亮。这篇博文将深入探讨我从它们三个中挑选出的一些有趣点。最后，我还会进行这三者以及一些更成熟的运行时之间的性能比较。注意：所有代码都可以在 GitHub 上找到，并且是为 M1 Macbook 构建的。其中一些设计选择依赖于 Arm64，但并没有什么对特定架构的超强要求。## 什么构成了 WebAssembly 运行时？语言运行时的抽象定义可能是“一个允许你运行用某种语言编写的另一个程序的程序”。在我们的例子中，WebAssembly 运行时是一个让你运行 WebAssembly 程序的执行文件。通常，Wasm 运行时包含一些额外的内容。例如，大多数实现了一定数量的 WASI，它为 Wasm 提供了一个系统调用层。Wasm 规范要求一个预验证步骤（几乎所有运行时都遵守），对我来说这是一个更有趣的额外点。由于所有这些运行时都需要一个即时的 O(n) 处理步骤，我们可以塞入一点额外的工作，只要它不需要太多时间，就不会是什么大问题。这三种执行方法都利用了这个验证步骤。</p>
+
+<p><a href="https://cekrem.github.io/posts/architecture-by-autocomplete/">自动补全功能所生成的架构结构</a><br>在人工智能生成的代码中，有一种特有的“代码异味”。一旦注意到这种异味，就再也无法忽视了：从最底层的实现细节，到整个系统的核心逻辑，到处都体现着对原始数据类型的过度依赖。 string 用于表示电子邮件地址； string 用于表示标识符； Map&lt;string, any&gt; 则在任何需要处理复杂情况时被使用。虽然这样的代码能够正常运行、通过测试、顺利部署，但那些真正了解业务逻辑的开发者，绝不会以这种方式来编写代码。</p>
+
+<p><a href="https://www.vitaliihonchar.com/insights/fleeto-private-local-iot-control-without-cloud-infrastructure">fleeto 无需云基础设施的私有本地物联网控制</a><br>我构建 Fleeto 是因为我想要一个简单的方法来解决一个一直困扰我的问题：为什么小型物联网设置仅仅为了注册设备、收集遥测数据、显示仪表板和发送命令就需要云基础设施？最初的想法来自一个非常实际的地方。我正在考虑为我的公寓建立一个家庭安全系统，但大多数现有的解决方案都依赖于云服务。我不喜欢那样。对于这种系统，我希望重要的部分保持本地化：设备数据、命令执行、遥测历史记录和管理 UI。所以我将 Fleeto 构建为可以在本地网络内的 Raspberry Pi 上运行的私有物联网控制服务器。设备通过带 mTLS 的 MQTT 连接到它，Fleeto 在本地存储它们的消息，用户无需运行云代理、云数据库或托管后端即可获得仪表板和命令。## Fleeto 适合谁Fleeto 对那些已经了解拼凑代理、设备身份验证、存储、仪表板和命令执行的痛苦的物联网构建者最感兴趣。如果你构建 ESP32、ESP8266、Raspberry Pi 或其他小型设备项目，Fleeto 为你提供了一个用于实验和小型部署的本地控制点。它并不试图成为企业物联网车队管理平台。当前版本更接近于小型物联网系统的私有控制室，技术人员想要理解和操作整个设置。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://larsfaye.com/articles/agentic-coding-is-a-trap">智能体编码是一个陷阱</a><br>“AI 负责编码，而人作为循环中的编排者”_这是目前行业中大肆炒作的情绪：传统编码几乎已经死亡，规范驱动开发 (SDD) 才是未来。你生成一个计划，并断开编写任何代码的连接。代理更了解情况，并处理所有实现。你在那里作为_专家_，提供“好的品味”，审查输出，并不断引导代理执行你精心制定的计划。工作流在这一点上呈现出多种形式，但总的来说，这是一个过程，某人定义项目的需求（同时在微观_和_宏观层面），生成计划，然后[拉动老虎机杠杆](https://blog.quent.in/blog/2026/03/09/one-more-prompt-the-dopamine-trap-of-agentic-coding/)一次又一次，迭代并反复迭代，通常有_多个_代理实例，直到完成。与此同时，在“编排者”和正在生成并提交的代码之间拉开了越来越大的距离。编码代理是有用且强大的，但已经有一些可量化的权衡需要讨论：- 周围系统的复杂性增加，以减轻 AI 非确定性的增加带来的模糊性。- 大量人群的技能萎缩。- 个人和整个团队的供应商锁定（Claude Code 的中断已经让整个团队陷入停顿）。- 访问工具的成本波动且增加。员工的成本是固定的；Token 是一个不断移动的目标。这种编码代理方法的成功取决于一个相当关键的要素：只有一位思考严谨、舒适于在架构层面操作的熟练开发者，才能在成千上万行生成的代码中发现问题，_在_它们成为问题之前。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>像喝茶一样简单的 Git！无痛自托管的一体化软件开发服务，包括 Git 托管、代码审查、团队协作、包注册表和 CI/CD</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和双重身份验证 (2FA) 最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger，一个分布式追踪平台</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>用于审查绕过的高级 DNS 隧道 VPN，在 DNSTT 和 SlipStream 之上进行了优化，具有低开销 ARQ、解析器负载均衡、高丢包稳定性和速度。</p>
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery，云原生管理器</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>由 LLM 驱动的视频翻译和配音工具。视频翻译器提供 100 种语言翻译和一键全流程部署。视频翻译输出针对平台进行了优化</p>
+
+<p><a href="https://github.com/pranshuparmar/witr">pranshuparmar/witr</a><br>为什么这个在运行？</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>适用于 Windows、macOS 和 Linux 的跨平台备份工具，具有快速、增量备份、客户端端到端加密、压缩和数据去重功能。包含 CLI 和 GUI。</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Kubernetes 的工作流引擎</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

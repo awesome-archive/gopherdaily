@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240824.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-24</span>
+</p>
+<p>每日一谚：An error message better not contain: failed, cannot, ... </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-sync-pool/">图解Go sync.Pool工作原理</a><br>VictorialMetrics官博文章，详细讲解sync.Pool的工作原理</p> 
+
+<p><a href="https://tpaschalis.me/go-mod-edit/">让我们停止手工编辑go.mod</a><br>详解如何通过go mod命令编辑go.mod文件</p> 
+
+<p><a href="https://dolthub.com/blog/2024-08-23-the-4-chan-go-programmer/">4 chan Go程序员</a><br>4chan Go programmer 是一个聪明的 Go 程序，它使用独特的方法来演示并发编程中通道的强大功能。该程序使用 4 层通道间接，从声明为 4-chan 的顶级通道开始，逐步创建 3-chans、2-chans，最后创建 int 通道。该程序在每个层生成生成者 （Producer） 和使用者 （Consumer），生成者通过通道发送值，使用者接收和处理这些值。最终结果是最大分布计算的演示，在本例中，计算数字的五次方。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2024/sentencepiece-bpe-tokenizer-in-go/">Go中的SentencePiece BPE分词器</a><br>源文档提供了 &#39;go-sentencepiece&#39; 项目的概述，该项目是 Google 的模型（如 Gemma 和 Gemini）使用的 SentencePiece 分词器的 Go 实现。作者 Eli Bendersky 解释了这种分词器与 OpenAI 的变体有何不同，特别是在处理空格和它支持的配置选项方面。该文档还详细介绍了 &#39;go-sentencepiece&#39; 中的算法改进，例如使用 trie 数据结构和基于堆的优先级队列，这显著提高了其性能。此外，作者还提供了有关如何配置和设置分词器的信息，包括必要的 &#39;.proto&#39; 文件和模型 protobuf。最后，Bendersky 提供了分词器的在线演示，可通过提供的链接访问。</p> 
+
+<p><a href="https://dev.to/ankitmalikg/golang-generate-fake-data-with-gofakeit-23gj">Go：使用GoFakeIt生成假数据</a><br>本文提供了有关使用 Go 编程语言和 GoFakeIt 库生成假数据的广泛指南，重点介绍了它在软件开发中用于高效测试的效用。它涵盖了 GoFakeIt 的安装、基本和自定义数据生成，包括姓名、电子邮件地址、电话号码和地址，以及生成用于数据库测试的假 SQL 数据。该指南还深入探讨了播种随机性以产生可重复结果的概念，以及如何使用 struct 标签将数据直接生成到 struct 字段中。此外，本文还介绍了开发社区的资源，包括有关掌握 Cypress 中的模拟和存根等主题的综合指南，以及质量保证在软件开发中的重要性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2024/08/23/ambient-mesh-can-sidecar-less-istio-make-your-application-faster/">Ambient mesh：无 sidecar 的 Istio 可以使您的应用程序更快吗？</a><br>本文通过在 Bookinfo 应用程序上进行负载测试，探讨了在 Istio（一个无 sidecar 的服务网格）中使用 Ambient mesh 的性能影响。测试表明，虽然与不使用网格相比，使用 Ambient 网格时响应时间略有增加，但差异很小，通常在 0-5% 的范围内。有趣的是，Ambient 网格中的 details 服务显示的响应时间比无网格场景略快。作者将这些发现归因于 Ambient mesh 对连接池和 HTTP/2 流多路复用的有效管理，这可以通过客户端和服务器 ztunnel pod 抵消额外跃点的开销。此外，本文还讨论了在 details 服务中引入 TCP_NODELAY 以及使用现代 Bookinfo 部署如何改善整个应用程序的延迟和响应时间。</p>
+
+<p><a href="https://thenewstack.io/devs-dont-just-read-about-design-patterns-implement-them/">开发人员：不要只阅读设计模式，要实现它们</a><br>源文档似乎是一篇关于在软件开发中实现设计模式重要性的教育文章，而不仅仅是阅读它们。它强调，虽然设计模式可以帮助记录软件工程实践，但当开发人员理解并应用它们来解决新问题时，它们的真正价值才会实现。本文档使用灵活的英雄动物名册的类比，每个动物都有特定的技能和家庭生物群落，以说明软件设计中的解耦概念。任务需要英雄团队，系统根据所需技能选择合适的动物的能力反映了设计良好的软件的可扩展性。该文档还谈到了定义动物技能的必要性，这与软件设计中实现一致功能所需的共同理解相似。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.fb.com/2024/08/23/ml-applications/pytorch-ai-training-inference/">PyTorch 如何为 AI 训练和推理提供支持</a><br>来自 Meta 工程的文章深入探讨了 PyTorch 的进步及其在为大型语言模型 （LLM） 的 AI 训练和推理提供支持方面的作用。它重点介绍了 Wanchao Liang、Evan Smothers 和 Kimish Patel 的贡献，他们讨论了 PyTorch 的新功能和工具，这些功能和工具可促进大规模 LLM 训练、内存高效微调和设备端 LLM 功能。本文还讨论了在设备上部署大型模型（包括量化的使用）所面临的挑战和解决方案。此外，该文件还提供了在各种社交媒体平台上分享内容的链接，并提到了与 AI 研究相关的可用职位。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>使用 Go 和 JavaScript 的现代负载测试工具 - https://k6.io</p>
+
+<p><a href="https://github.com/containerd/nerdctl">containerd/nerdctl</a><br>contaiNERD CTL - 适用于 containerd 的 Docker 兼容 CLI，支持 Compose、Rootless、eStargz、OCIcrypt、IPFS 等</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>适用于Windows、macOS和Linux的跨平台备份工具，具有快速、增量备份、客户端端到端加密、压缩和重复数据删除功能。包括 CLI 和 GUI。</p>
+
+<p><a href="https://github.com/lionsoul2014/ip2region">lionsoul2014/ip2region</a><br>Ip2region （2.0 - xdb） 是一个离线 IP 地址管理器框架和定位器，支持数十亿个数据段，十微秒的搜索性能。适用于多种编程语言的 XDB 引擎实现</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>在 docker 中运行并使用 WebRTC 的自托管虚拟浏览器。</p>
+
+<p><a href="https://github.com/lima-vm/lima">lima-vm/lima</a><br>Linux 虚拟机，专注于运行容器</p>
+
+<p><a href="https://github.com/tsenart/vegeta">tsenart/vegeta</a><br>HTTP 负载测试工具和库。超过 9000 个！</p>
+
+<p><a href="https://github.com/halfrost/LeetCode-Go">halfrost/LeetCode-Go</a><br>✅ Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode 题解</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel 客户端（以前称为 Argo Tunnel）</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，仅供个人或者企业内部管理与分发渠道使用，请勿用于商业用途，本项目基于One API二次开发。</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO 是一个高性能、与 S3 兼容的对象存储，在 GNU AGPLv3 许可下开源。</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>适用于 Kubernetes 的工作流引擎</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/deepflowio/deepflow">deepflowio/deepflow</a><br>eBPF 可观测性 - 分布式跟踪和分析</p>
+
+<p><a href="https://github.com/apache/incubator-answer">apache/incubator-answer</a><br>适用于任何规模团队的问答平台软件。无论是社区论坛、帮助中心还是知识管理平台，您始终可以信赖 Apache Answer。</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>去中心化预言机网络的节点，桥接链上和链下计算</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>在您的终端中实现 AI 驱动的开发。专为大型实际任务而设计。</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger，分布式跟踪平台</p>
+
+<p><a href="https://github.com/elastic/beats">elastic/beats</a><br>🐠 Beats - 适用于 Elasticsearch 和 Logstash 的轻量级运输器</p>
+
+<p><a href="https://github.com/openimsdk/open-im-server">openimsdk/open-im-server</a><br>IM 聊天</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

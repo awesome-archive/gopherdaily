@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250728.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250728</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/28/go-fix-reborn">Go fix命令将迎“重生”：移除过时功能，为集成现代化代码分析器铺平道路</a><br>Go 语言工具链中的元老级命令 go fix 即将迎来其生命周期中最重要的转折点。一项编号为#73605的新提案建议移除 go fix 当前的全部功 能，使其暂时成为一个空命令。这一看似“激进”的举动，实则是为一个更宏大的目标铺路：将 go fix 改造为一个基于 Go 强大的代码分析（analysis）框架**的、能够批量应用安全修复的现代化工具。本文将深入解读该提案的背景、具体内容 以及它对 Go 代码现代化演进的深远影响。</p> 
+
+<p><a href="https://dev.to/xinjie_zou_d67d2805538130/why-gos-simplicity-is-its-greatest-engineering-strength-33k">为什么 Go 的简单性是其最大的工程优势</a><br>Go 并不浮华。它没有 packed with features。 这正是它在生产中获胜的原因。 在一个...</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/07/28/interprocedural-analysis-catch-nil-dereferences-before-they-crash-your-code/">Interprocedural Analysis: Catch nil Dereferences Before They Crash Your Code</a><br>即将发布的 GoLand 2025.2 版本引入了一套强大的新功能和改进，旨在帮助你编写更安全、更可靠的 Go 代码。 在这篇文章中，我们将重点介绍其中一项最重要的功能：用于检测 nil 指针取消引用的跨过程代码分析。 通过帮助你尽早发现那些经常在代码审查和测试中被忽略的微妙错误，这项改进使你的生产代码更稳定，更容易维护</p> 
+
+<p><a href="https://medium.com/@ryanjjacobs/kubernetes-monitoring-a-complete-solution-part-8-logging-with-victorialogs-f17c44461034">Kubernetes 监控 — 完整解决方案，第 8 部分：使用 VictoriaLogs 进行日志记录</a><br>在之前的第 3 部分中，我声称完整的监控堆栈包括日志、指标、跟踪、仪表盘和警报。我之所以这样说，是因为 Kubernetes 的某些操作员经常安装指标、仪表盘和警报，并称其为一个完整的堆栈，但事实并非如此。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.p99conf.io/2025/07/28/rewriting-rust/">重写 Rust</a><br>Seph Gentle 对 Rust（仍然）的不足之处以及他将如何改进它的看法。</p>
+
+<p><a href="https://buttondown.com/whatever_jamie/archive/the-many-many-many-javascript-runtimes-of-the-last-decade%20">过去十年中众多 JavaScript 运行时</a><br></p>
+
+<p><a href="https://www.drewlyton.com/story/the-future-is-not-self-hosted">未来不在于自托管</a><br>几个月前，亚马逊宣布Kindle用户将不再能够将他们的图书库下载并备份到他们的计算机上。值得庆幸的是，我仍然可以访问我的图书馆，因为我看到了Jared Henderson的这段视频，警告了这一变化，并立即下载了我的所有书籍。但对于那些没有这样做的人来说，他们访问他们拥有的书籍的唯一方式是通过Kindle或Kindle应用程序。这就引出了一个问题：他们真的拥有这些书吗？如果只能通过决定访问条款和方式的中介访问一个项目，我会说不。你在Kindle上并不拥有你的书。你从亚马逊租借它们。亚马逊也同意这一点。当他们关闭用户直接访问其电子书的这条途径时，他们还在Kindle商店中更新了语言，说明用户购买的是许可证——而不是书籍！现在，这并不是什么新鲜事。自互联网诞生以来，像亚马逊这样的公司一直在利用数字版权管理（DRM）来作恶。购买的数字商品一直更多的是许可证而不是拥有的资产。变化的是，他们现在大胆地说出了他们的真实想法：我们什么都不拥有。但这种情况已经超出了媒体的范畴。甚至你自己的数据：你在Dropbox或Google Drive中的文档，你在iCloud或Google Photos中的照片，你的电子邮件，聊天记录，所有的一切都是这些大公司的电脑上的出租空间。而且，他们随时可以更改该租赁协议的条款和条件。他们可以（而且我确信他们确实）在你的所有内容上训练AI模型。他们可以（而且确实）更改他们的计划的定价层以进行追加销售。他们可以（而且确实）使迁移到不同的服务变得极其困难。在我们的技术封建主义反乌托邦中，他们是地主。我们是农奴。但在过去的几周里——在越来越多的反叛者试图夺回对其数字生活的拥有权和控制权的帮助下——我做了一些激进的事情：我建立了我的云。我和我的妻子现在在我们家中有一台电脑，运行着Google Drive、Google Photos、Audible、Kindle和Netflix的开源等价物。它与我们所有的设备同步。它在我们自己的VPN后面是安全的。而且它完全、真正地属于我们。而且本周，我想与你分享我是如何做到的，我学到了什么，以及为什么我认为自托管不是我们应该为之奋斗的未来。让我们从回答一个简单的问题开始...</p>
+
+<p><a href="https://wassimulator.com/blog/programming/programming_vehicles_in_games.html">在游戏中编程车辆</a><br>关于在游戏中编程车辆的介绍，包括引擎，轮胎，底盘，车辆动态。文章讨论了引擎，变速箱，轮胎模型，纵向和横向轮胎力，以及如何将它们结合起来。文章强调了理解物理原则的重要性，以及如何创建车辆体验而不是简单地模拟现实。</p>
+
+<p><a href="https://www.zachleat.com/web/adventures-in-date-parsing">Never write your own Date Parsing Library—zachleat.com</a><br>重点：永远不要编写自己的日期解析库。关于使用Luxon的经验，以及由于依赖性问题，作者开发了一个新的RFC 9557兼容的日期解析库@11ty/parse-date-strings。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://research.eye.security/how-we-rooted-copilot">我们如何攻破Copilot</a><br>在经历了一周的漫长工作后，Eye Security 研究团队认为现在是时候来点轻松愉快的消遣了。于是，我们攻破了 Copilot。</p>
+
+<p><a href="https://addyosmani.com/blog/ai-evals">工程师的 AI 代码模型评估指南</a><br>改进具备代码生成能力的 AI 模型（如 Google 的 Gemini 或 OpenAI 的代码模型）并不像简单地为其提供更多数据或调整一些参数那么简单。 流程中至关重要的部分是评估——通常缩写为“评估”。在 AI 模型的语境中， 评估是指我们用来衡量模型在特定任务上的表现的结构化测试或基准。对于不是 AI 专家的软件工程师和 Web 开发人员来说，将评估类比于软件中的单元测试或集成测试会很有帮助：它们定义了模型输出的“正确”或“好”的样子，以便我们可以系统地验证改进（或检测回归），因为我们改进了模型。在本文中，我们将探讨什么是评估，如何构建评估（包括“黄金”或黄金示例的想法），“爬山法”在模型开发中的含义，以及所有这些部分如何连接起来以持续训练和改进编码模型。我们将使用一个改进模型全栈 Web 开发能力（例如，生成 React/Next.js 代码）的示例场景来阐述这些概念。</p>
+
+<p><a href="https://www.geoffreylitt.com/2025/07/27/enough-ai-copilots-we-need-ai-huds">够了，AI副驾驶！我们需要AI抬头显示器</a><br>作者认为，现代AI设计最好的批评之一来自Mark Weiser的1992年演讲，他反对将“副驾驶”作为AI的隐喻。 Weiser的观点是：AI应该像HUD（抬头显示器）一样，融入背景，成为人类的延伸，而不是一个需要对话的助手。文章探讨了如何将HUD应用于现代软件设计，例如拼写检查和定制调试器UI，以增强人类的感知。文章总结认为，设计AI时，应考虑非副驾驶形式的因素，以更直接地扩展人类思维。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP server</p>
+
+<p><a href="https://github.com/miniflux/v2">miniflux/v2</a><br>Minimalist and opinionated feed reader</p>
+
+<p><a href="https://github.com/kubernetes/kops">kubernetes/kops</a><br>Kubernetes Operations (kOps) - Production Grade k8s Installation, Upgrades and Management</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/safing/portmaster">safing/portmaster</a><br>🏔 Love Freedom - ❌ Block Mass Surveillance</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/YouROK/TorrServer">YouROK/TorrServer</a><br>Torrent stream server</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

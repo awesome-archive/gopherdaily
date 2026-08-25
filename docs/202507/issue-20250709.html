@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250709.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250709</span>
+</p>
+<p>每日一谚：Prefer readability over cleverness </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/09/gemini-cli-starting-guide">你的命令行，即将迎来一场“AI革命”</a><br>今天，当我们以为 VS Code 这样轻快、插件丰富的编辑器已经统一江湖时，一股强劲的“复古之风”正悄然刮起。但这一次，它并非简单的怀旧，而是一场由 AI 驱动的、向命令行的“伟大回归”</p> 
+
+<p><a href="https://gaultier.github.io/blog/an_optimization_and_debugging_story_go_dtrace.html">Go 和 DTrace 的优化和调试故事</a><br>作者在工作中优化 Go 应用程序 Kratos 的测试套件时，遇到测试运行时间过长的问题。通过使用 CPU profile 和 DTrace，作者发现问题在于对 SQL 迁移文件的排序操作。文章详细描述了使用 DTrace 进行性能分析和调试的过程，包括如何使用 DTrace 脚本测量函数运行时间，以及如何识别并修复排序算法的低效之处。最终，作者将目标函数的运行时间从 180 毫秒缩短到 11 毫秒，实现了 16 倍的性能提升。文章还讨论了 DTrace 的优缺点，以及如何处理 Go 的多协程并发模型。最后，文章提供了关于 Goroutine 感知 D 脚本的补充说明。</p> 
+
+<p><a href="https://medium.com/@danielabatibabatunde1/mastering-queues-in-golang-be77414abe9e">精通Go队列</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-07-08-doltgres-correctness-testing">Doltgres Correctness Testing</a><br></p>
+
+<p><a href="https://www.docker.com/blog/introducing-docker-hub-mcp-server/">Introducing Docker Hub MCP Server: A New Way to Discover, Inspect, and Manage Container Images</a><br></p>
+
+<p><a href="https://hw.glich.co/p/how-uber-eats-scaled-search-to-handle-billions-of-daily-queries">Uber是如何应对每天百万搜索请求的</a><br></p>
+
+<p><a href="https://evanhahn.com/how-i-build-software-quickly">如何快速构建软件</a><br>软件的构建受到时间和质量的限制。我们希望编写好的代码并快速完成。本文作者分享了一些经验教训，例如：了解代码对于手头任务的质量要求；从粗略草稿开始；尝试软化需求；避免分心；进行小的改动；练习特定技能等。文章还提到了快速构建软件的一些技巧，例如使用粗略草稿、尝试更改需求、避免在代码中徘徊、进行小的更改以及练习一些有用的技能，例如阅读代码、数据建模、脚本编写、使用调试器等。</p>
+
+<p><a href="https://thenewstack.io/best-practices-for-creating-markdown-documentation-for-your-apps">为应用创建markdown文档的最佳实践</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/8/uv-cache-prune/#atom-everything">uv 缓存清理</a><br>如果你磁盘空间不足并且是 uv 用户，不要忘记使用 uv cache prune：uv cache prune 会删除所有未使用的缓存条目。例如，缓存目录可能包含先前 uv 版本中创建的不再需要的条目，可以安全地删除。uv cache prune 可以定期运行，以保持缓存目录的整洁。</p>
+
+<p><a href="https://patriksvensson.se/posts/2025/07/introducing-open-cli">介绍 OpenCLI</a><br>大约三年前，我被邀请参加微软 System.CommandLine 团队的会议。他们当时正在完成 System.CommandLine 的开发，并希望获得社区成员的意见，由于我在 Spectre.Console 和 Spectre.Console.Cli 上的工作，我也被邀请参加。
+在这些会议中，简要讨论的事情之一是制定一个开放规范来描述 CLI 的结构，类似于 OpenAPI，但适用于命令行应用程序。我非常喜欢这个想法，因为我看到了它可以解决的许多问题，不仅包括文档生成，还包括创建强类型包装器以编程方式与 CLI 工具交互。
+三年过去了，我还没有看到任何人主动构建这样的东西。
+所以我想：是我自己做点什么的时候了。
+这就是为什么今天我想介绍 OpenCLI 计划的原因（目前）它在 Spectre.Console GitHub 组织下维护。该规范仍在起草中，并且尚不完整，但我认为它是一个很好的起点。
+简单来说，OpenCLI 规范 (OCS) 定义了一个标准的、与平台和语言无关的 CLI 应用程序接口，它允许人和计算机在不访问源代码或文档的情况下理解如何调用 CLI 工具。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Webhooks, and MCP. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/bytedance/sonic">bytedance/sonic</a><br>A blazingly fast JSON serializing &amp; deserializing library</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/vllm-project/aibrix">vllm-project/aibrix</a><br>Cost-efficient and pluggable Infrastructure components for GenAI inference</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

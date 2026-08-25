@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240910.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-10</span>
+</p>
+<p>每日一谚：Go is a `get things done` language </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/09/10/programmer-mentors-and-their-classic-works/">致敬：程序员成长路上的良师与经典著作</a><br>在教师节这个特殊的日子，作为IT行业从业人员，我想向那些在计算机科学和编程领域给予我们启迪的老师们致敬。这些老师可能不是传统意义上站在讲台前的教育者，但他们通过自己的著作、思想和贡献，通过他们的智慧结晶，为我们指明了方向，为无数程序员的成长之路点亮了明灯</p> 
+
+<p><a href="https://go.dev/blog/survey2024-h2">Go官博：2024第二次Go用户调查开始了</a><br>Go 团队邀请 Go 开发者社区参加一年两次的 Go 开发者调查，该调查于 9 月 9 日至 9 月 23 日举行，以收集有关 Go 编程语言的使用、挑战和所需改进的反馈。这些反馈对于理解 Go 如何应用于不同领域以及增强语言以更好地为开发人员服务至关重要。Go 团队强调了这项调查在塑造 Go 未来方面的重要性，并鼓励开发人员通过简短的调查来分享他们的见解。此外，他们敦促社区传播信息并鼓励其他人参与，强调他们共同的经验对 Go 发展的集体影响。</p> 
+
+<p><a href="https://medium.com/globant/mitigate-vulnerabilities-and-improve-go-quality-code-b1f9b50dc304">减少漏洞并提高 Go 质量代码</a><br>Jhon Baron 在 Medium 上的文章强调了缓解漏洞和提高 Go 代码质量的重要性。它强调了开发人员在不验证其版本的情况下集成库的常见做法，这会导致潜在风险。Baron 建议利用 govulncheck 等工具检测 Go 代码中的漏洞，并利用 SonarQube 等工具进行整体代码质量分析，包括重复代码和代码异味。此外，他主张使用 Jenkins 管道来自动化这些检查，从而将安全和质量措施集成到持续集成和交付流程中。通过采用这些策略，开发人员可以维护符合最佳实践的安全高效的代码库。</p> 
+
+<p><a href="https://atlasgo.io/blog/2024/09/09/how-go-tests-go-test">Go如何测试&#39;go test&#39;</a><br>本文深入探讨了 Go 团队如何测试 Go 工具的演变，以及如何使用名为 “testscript” 的工具将这些策略应用于测试用 Go 编写的命令行工具。最初，Go 团队使用一个名为“test.bash”的 shell 脚本进行测试，随着“script_test.go”的引入，该脚本演变成一个更复杂的测试框架。该框架允许以类似于 shell 脚本的方式进行测试，并具有 Go 测试基础设施的额外好处。由 Roger Peppe 开发的“testscript”工具通过提供更流畅、更直观的方式来为 CLI 工具编写测试，并具有并行测试执行和自动清理等功能，从而进一步完善了这一过程。Atlas，一个数据库模式即代码工具，已经成功地将“testscript”集成到其测试过程中，展示了该工具在确保 CLI 工具可靠性方面的实际应用和影响。</p> 
+
+<p><a href="https://itnext.io/statically-and-dynamically-linked-go-binaries-5a3c0313b3a4">静态和动态链接的 Go 二进制文件</a><br>在这篇文章中，Alex Pliutau 深入探讨了静态和动态链接的 Go 二进制文件的复杂性，探讨了这些链接方法对可移植性、部署和安全性的影响。静态链接，即将所有必要的库直接嵌入到可执行文件中的过程，因其可移植性优势而备受强调，尽管它可能并不总是必要的，尤其是在利用 libc 等流行库时。相反，动态链接允许使用共享库，并可能导致更小的可执行文件大小，但它也引入了潜在的安全注意事项，例如 LD_PRELOAD 技巧和安全执行模式。本文还谈到了使用 cgo 的交叉编译 Go 程序的挑战，以及理解 Go 的编译和执行过程对于健壮的跨平台应用程序开发的重要性。</p> 
+
+<p><a href="https://buttondown.com/jaffray/archive/measuring-throughput/">测量吞吐量</a><br>本文讨论了两种测量数据库系统吞吐量的方法：开环和闭环基准测试。作者解释说，虽然开环基准测试由于无法考虑排队和请求调度系统而容易不准确地测量延迟，但它们可以有效地测量吞吐量。作者提出了一种闭环基准测试方法，尽管它与开环基准测试相似，但它对数据库更宽容，因为它减轻了负载，而不是导致它无限排队。作者分享了两种方法的结果，表明闭环基准测试方法始终产生接近开环方法的吞吐量值，在本例中约为每秒 470 个查询。作者还指出，给定理想化系统，两种方法理论上应该达到相同的最大吞吐量值。</p> 
+
+<p><a href="https://planetscale.com/blog/btrees-and-database-indexes">B 树和数据库索引</a><br>本文深入探讨了 B 树和 B&#43;树的复杂性，这两种数据结构广泛用于数据库管理系统，用于通过索引进行高效的数据查找。它解释了 MySQL（一种广泛使用的 DBMS）如何使用 B&#43;树，特别是在其 InnoDB 存储引擎中，其中所有表数据都存储在 B&#43;树结构中。本文进一步讨论了主键选择在确定 B&#43;树中数据的布局和性能方面的重要性。它对比了顺序键插入和随机键插入，说明了顺序键如何导致更可预测和更浅的树，从而提高查询性能。此外，本文还谈到了 MySQL 中缓冲池的重要性，尽管 MySQL 在内存中缓存，但它仍然受益于最小化查询期间访问的页面数量。</p> 
+
+<p><a href="https://yorickpeterse.com/articles/asynchronous-io-the-next-billion-dollar-mistake/">Asynchronous IO: the next billion-dollar mistake?</a><br>The article questions whether asynchronous IO, a technique used to handle high traffic web services without blocking the calling OS thread, might be considered a &#34;billion-dollar mistake&#34; akin to Tony Hoare&#39;s invention of NULL pointers. It explores the historical context of asynchronous IO, its growth in popularity, and the alternatives it presents to handling IO operations. However, the author also highlights the challenges and limitations of asynchronous IO, such as the need for different strategies for file IO and the dependency on the underlying OS&#39;s support for asynchronous operations. The article concludes by suggesting that instead of investing in asynchronous IO, resources could have been better spent on improving the performance of OS threads, proposing a hypothetical scenario where efficient OS threads could negate the need for asynchronous IO.</p> 
+
+<p><a href="https://reshefsharvit.medium.com/optimizing-event-driven-workloads-our-journey-from-lambda-triggers-to-polling-bb40f7b03038">优化事件驱动型工作负载：我们从 Lambda 触发器到轮询的旅程</a><br>Reshef Sharvit 是一位经验丰富的后端工程师，他在 Medium 博文中分享了他优化事件驱动型工作负载的历程。最初，服务 A 和服务 B 与 SQS 队列分离以管理数据库负载，但由于事务争用而导致的 CPU 峰值变得明显。为了解决这个问题，Sharvit 试验了一种轮询机制来取代 SQS 触发的 Lambdas，旨在平衡负载管理和处理效率。尽管在 AWS Lambda 的约束下实施长时间运行的流程很复杂，但他开发了一种解决方案，可以在 3 到 4 次执行内处理消息，从而最大限度地减少对数据库的影响。这种方法还保持了干净的日志、错误率和指标，被证明是一种灵活且以客户为中心的技术解决方案。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://itnext.io/victorialogs-an-overview-run-in-kubernetes-logsql-and-grafana-88e0934a5ccd">VictoriaLogs：概述，在 Kubernetes、LogsQL 和 Grafana 中运行</a><br>VictoriaLogs 是一种用于收集和分析日志的新系统，可与 Grafana Loki 相媲美，但资源密集度较低。它旨在更易使用、更高效，并注重性能和易用性。该系统仍处于早期阶段，一些组件（如 Grafana 数据源）仍处于测试阶段。尽管具有潜力，但用户可能会遇到来自 Loki Gateway 的 504 错误等问题，这促使需要 VictoriaLogs 等替代方案。此外，该系统的 LogsSQL 提供了更复杂的查询功能，尽管它可能需要用户熟悉其语法和功能。</p>
+
+<p><a href="https://kamsjec.medium.com/k8sgpt-your-personal-kubernetes-assistant-powered-by-ai-backends-5dec6eb644aa">K8sGPT：由 AI 后端提供支持的个人 Kubernetes 助手</a><br>K8sGPT 是一种创新工具，旨在通过集成 AI 功能来协助 Kubernetes 管理，特别是由 OpenAI 提供支持。它充当个人 Kubernetes 助手，能够通过 AI 驱动的分析来诊断和解决 Kubernetes 集群中的问题。要使用其功能，用户必须满足某些先决条件，包括连接到 Kubernetes 集群并访问 OpenAI ChatGPT。K8sGPT 的架构包括一个安装选项，可以在工作站上作为 CLI 执行，并能够将 OpenAI 集成为 AI 支持的后端。本摘要概括了源文档的精髓，突出了 K8sGPT 在通过 AI 辅助增强 Kubernetes 操作方面的作用。</p>
+
+<p><a href="https://blog.cloudflare.com/pingora-saving-compute-1-percent-at-a-time/">A good day to trie-hard: saving compute 1% at a time</a><br>The source document appears to be a transcript or a snippet from a larger text, likely an instructional or informative piece, given the context of a pause indicated by &#34;Just a moment...&#34;. This suggests that the content may involve an explanation or a detailed account that requires careful consideration or a brief intermission. The brevity of the source does not provide specific details about the topic, but the phrase implies a structured presentation of information, possibly addressing a question or a statement that necessitates a thoughtful response or a moment of reflection.</p>
+
+<p><a href="https://thenewstack.io/ceph-20-years-of-cutting-edge-storage-at-the-edge/">Ceph：20 年的前沿存储技术</a><br>Ceph 源自加州大学圣克鲁斯分校学生项目的 40,000 行 C&#43;&#43; 代码，现已发展成为一种强大的分布式对象存储系统，被很大一部分开放基础设施用户采用，报告显示截至 2023 年的使用率为 82%。该系统旨在将智能推向边缘并确保没有单点故障，在 Lustre 和 Google File System 等同时代产品中脱颖而出。包括劳伦斯利弗莫尔国家实验室、桑迪亚、洛斯阿拉莫斯国家实验室、DreamHost 和 Red Hat 在内的主要机构和公司在其开发和采用方面发挥了重要作用。Red Hat 在 2014 年收购了 Inktank，这标志着 Ceph 的关键时刻，使其进入生产就绪状态并不断改进。Ceph 的创新功能（如 CRUSH 和 DSP）进一步巩固了其作为企业环境中领先存储解决方案的地位。</p>
+
+<p><a href="https://medium.com/@promo_55210/top-most-common-causes-and-consequences-of-database-redundancy-3fa799b1a198">数据库冗余的最常见原因和后果</a><br></p>
+
+<p><a href="https://www.docker.com/blog/labs-ai-tools-for-devs-docker-desktop-extension/">Labs AI Tools for Devs Docker Desktop 扩展入门</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，通常是由于缺少权限或请求被明确禁止。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明用户尝试访问服务器正在保护的资源，但被拒绝访问。该文档不包含除状态代码及其描述之外的任何其他信息。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@mokabbirbhuiyan/the-rise-of-chatbots-revolutionizing-customer-interaction-and-business-automation-f341e9e34a38"> The Rise of Chatbots: Revolutionizing Customer Interaction and Business Automation</a><br>The article by Mokabbir on &#34;The Rise of Chatbots: Revolutionizing Customer Interaction and Business Automation&#34; explores the significant impact of chatbots in transforming customer service and automating business processes across various industries. Chatbots, powered by AI and capable of understanding and responding to human language, have become essential tools for instant, 24/7 communication, cost-effective support, personalized customer engagement, and efficient lead generation. The article categorizes chatbots into rule-based, AI-powered, and hybrid types, each serving distinct functions. Looking ahead, the future of chatbots promises more human-like interactions, omni-channel integration, AI-driven decision-making, and voice-enabled functionalities. However, the article also highlights the challenges and ethical considerations, such as privacy concerns, potential bias in AI, and the need to balance automation with human touch.</p>
+
+<p><a href="https://community.codenewbie.org/zorian/prompting-techniques-to-control-ai-output-3603">控制 AI 输出的提示技术</a><br>源文档提供了有关提示技术控制 AI 输出的广泛指南，强调了它们在指导 AI 模型在自然语言处理中实现特定结果方面的重要性。它介绍了各种技术，例如长度控制、受众控制、语气控制、样式控制、种子文本、分解子任务、思维链、系统和用户角色、澄清和避免幻觉。此外，它还为每种技术提供了实际示例，并鼓励用户探索更多资源来提高他们的提示工程技能。该文件还包括一个关于社区参与的部分，强调了 AI 爱好者社区内支持和协作的重要性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一个内存中的实时数据库，具有基于 SQL 的反应性。它经过高度优化，可在现代硬件上构建和扩展真正的实时应用程序，同时是 Redis 的直接替代品。</p>
+
+<p><a href="https://github.com/josephburnett/jd">josephburnett/jd</a><br>JSON 差异和补丁</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq 是一个可移植的命令行 YAML、JSON、XML、CSV、TOML 和属性处理器</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/shadow1ng/fscan">shadow1ng/fscan</a><br>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。</p>
+
+<p><a href="https://github.com/HavocFramework/Havoc">HavocFramework/Havoc</a><br>浩劫框架。</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Datadog Agent 的主存储库</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/elastic/beats">elastic/beats</a><br>🐠 Beats - 适用于 Elasticsearch 和 Logstash 的轻量级运输器</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby 项目 - 容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>适用于 golang 的 Fluent SQL 生成</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>云原生策略管理</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>用于 Go 的结构化、可插拔日志记录。</p>
+
+<p><a href="https://github.com/chaos-mesh/chaos-mesh">chaos-mesh/chaos-mesh</a><br>适用于 Kubernetes 的混沌工程平台。</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go 是一个 Go 包，它使创建和清理基于容器的依赖项变得简单，用于自动集成/冒烟测试。这个干净易用的 API 使开发人员能够以编程方式定义应作为测试的一部分运行的容器，并在测试完成后清理这些资源。</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>具有可编程管道的 OpenTelemetry Collector 发行版</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>Go 的现代测试框架</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>数据库迁移工具。支持 SQL 迁移和 Go 函数。</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>适用于 Kubernetes 的 Go 客户端。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

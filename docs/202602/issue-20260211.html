@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260211.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260211</span>
+</p>
+<p>每日一谚：Avoid repetition in naming </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/11/go-1-26-json-v2-delay-7-technical-roadblocks">Go 1.26 发布在即，为何 json/v2 依然“难产”？七大技术路障全解析</a><br>Go 1.26 预计将于本月（2026 年 2 月）正式发布。然而，在即将到来的 release notes 的欢呼声中，有一个备受瞩目的名字依然带着“实验性”的标签躲在 GOEXPERIMENT 背后——那就是 encoding/json/v2。 作为 Go 生态中最核心的基础设施之一，JSON 库的每一次呼吸都牵动着数百万开发者的神经。从 v1 到 v2，不仅仅是性能的提升，更是一场关于API 设计哲学、向后兼容性与极致性能的艰难博弈。</p> 
+
+<p><a href="https://go.dev/blog/go1.26">Go 1.26 正式发布</a><br>Go 1.26 发布，带来了新的垃圾收集器（Green Tea，现默认启用）、cgo 开销降低约 30%、编译器在更多情况下将切片（slice）的底层存储分配到栈上、全新的 `go fix` 命令（基于 Go 分析框架，包含“现代修复”功能）、以及三个新的实验性包：`simd/archsimd`、`runtime/secret` 和 `runtime/pprof` 中的 `goroutineleak` 剖面信息。语言方面，`new` 函数支持表达式作为操作数，并且泛型类型可以在其自身的类型参数列表中引用自身。</p> 
+
+<p><a href="https://tonybai.com/2026/02/11/2026-software-development-anthropic-agentic-coding-trends-report">2026 软件开发新纪元：解读 Anthropic《Agentic Coding 趋势报告》</a><br>如果说 2024-2025 年是 AI Coding（AI 编程）的“试水期”，开发者们还在为 Cursor 的 Tab 补全感到兴奋，或者为 Claude 3.5 能够写出一个贪吃蛇游戏而惊叹；那么 2026 年，正如 Anthropic 最新发布的重磅报告《2026 Agentic Coding Trends Report》所言，我们正式进入了 Agentic Coding（智能体编程）的深水区。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/02/10/new-livestream-go-1-26-release-party/"> Go 1.26 发布派对 by GoLand</a><br>邀请您参加 Go 1.26 发布派对，与社区一起庆祝 Go 的最新发布。在这个直播中，Go 专家将向您介绍 Go 1.26 的新增内容、这些变更为何重要，以及它们如何影响实际的 Go 开发。
+
+**日期：2026 年 2 月 19 日**
+
+**时间：世界标准时间下午 4:00 – 5:30**
+
+庆祝活动将由 Go 教育家和 go-tours 的创建者 Anton Zhiyanov 带来专家深度解析，他将通过实时编码和实际示例介绍 Go 1.26 中最重要的更新。随后，GoLand 高级员工工程师 Alex Rios 将展示 GoLand 如何从第一天起就支持新版本，帮助开发者自信地采用 Go 1.26。
+
+活动将融合技术见解、现场演示和开放讨论，并带来一些惊喜！</p> 
+
+<p><a href="https://pboyd.io/posts/redefining-go-functions">Redefining Go Functions</a><br>本文探讨了如何在Go语言中实现类似Perl的函数重定义（或称为“猴子补丁”）的技术，尽管Go语言本身并不直接支持运行时代码修改。作者首先回顾了Perl中通过修改函数在运行时重写自身的能力，并指出Go语言由于其编译特性，不允许这种“猴子补丁”的语言特性。
+
+然而，文章随后展示了如何利用Go的底层工具（如`reflect`包获取函数地址，以及`unsafe`包和系统调用`mprotect`）来绕过内存保护，直接修改程序在内存中的机器指令，从而实现对标准库函数（如`time.Now`）的重定向和替换。作者使用x86汇编的JMP指令将控制流导向自定义函数，并通过系统调用确保修改的代码段具有执行权限。
+
+文章也详细指出了这种技术的局限性和潜在危险，包括内联函数（Inline Functions）、泛型函数以及方法重写（Method Overriding）带来的复杂问题（如结构体布局不匹配导致的错误计算）。最后，作者提供了一个包裹了这些底层操作的Go包，但强烈不建议在生产环境中使用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/screwing-up/">论犯错</a><br>作者分享了十年前作为实习生犯下的一个令他至今感到羞耻的职场错误——向同事撒谎，承认代码未在测试环境中运行就声称已测试通过。虽然作者并不为技术上的失误感到羞耻，但为自己处理错误的方式感到羞愧。文章随后提出了处理职场错误的三个步骤：首先，控制情绪，避免陷入自我辩护或自我贬低的陷阱，并建议在最初的冲击期内“什么都不要做”；其次，在情绪稳定后，应立即、客观地将发生的事情告知管理者，即使尚未找到解决方案，因为隐瞒可能导致更严重的后果，尤其会让管理者在不知情的情况下陷入被动；最后，接受犯错带来的负面影响，认识到在技术领域，犯错的优化数量不是零，因为避免所有错误意味着工作速度过慢，但管理者会根据结果评判表现，因此持续的成功才能平衡可接受的失败。</p>
+
+<p><a href="https://www.docker.com/blog/hardened-images-free-now-what/">Docker 强化镜像现已免费。接下来做什么？</a><br>Docker 强化镜像（DHI）现已免费，涵盖 Alpine、Debian 以及其他 1000 多种镜像，包括数据库、运行时和消息总线。这改变了容器漏洞管理的经济性。DHI 提供了安全“水位线”，低于水位线的部分由 Docker 负责漏洞管理，之上则由用户负责。DHI 提供了超越 CVE 修复的供应链隔离价值，因为它来自受控的命名空间。容器镜像是评估的统一单位，是实现策略一致性的检查点。DHI 大幅减少了需要策略决策的发现数量，使既定策略更容易执行。VEX（漏洞易用性交换）可用于管理应用层发现。DHI 满足了 ISO 27001、SOC 2 和欧盟网络韧性法案等合规控制要求，提供了可审计的漏洞管理基础。建议采取的后续步骤包括：识别高用量基础镜像、替换一个镜像进行测试、配置基于策略的过滤、记录水位线，以及开始实践 VEX。</p>
+
+<p><a href="https://idiallo.com/blog/my-non-programmer-friends-built-apps">去年，我所有不会编程的朋友都开发了App</a><br>去年，我所有的非程序员朋友都在构建应用程序。然而今天，这些应用程序无处可寻。他们都跟随了广告，注册了Lovable和其他花哨的App构建服务。这些AI服务在生成应用程序可见的20%部分方面非常出色，但剩下的80%（基础设施、安全、维护、扩展和成本）才是真正的工作所在。当他们需要开始支付AWS等服务的月费时，他们的热情就消退了。他们的实验并非失败，但他们现在明白了演示与实际产品之间的区别。</p>
+
+<p><a href="https://xeiaso.net/blog/2026/markdownlang/">人类最后的编程语言</a><br>探讨了如果Markdown文件可以执行会怎样，并由此引出了“Markdownlang”的概念——一个基于LLM的、以结构化输出和Markdown为核心的AI原生编程环境。文章对比了当前AI Agent工具的碎片化和复杂性，指出Markdownlang的核心优势在于将文档和代码合二为一，并通过严格的Schema来保证一致性。作者认为，虽然这类工具会带来编程范式的变革和潜在的职业冲击，但真正深刻的抽象和思考仍将是程序员的核心价值所在。文章最后以《银翼杀手》中的“达摩克利斯之剑”比喻了AI技术对程序员职业的潜在威胁，表达了对这种新颖编程范式（描述即编程）的喜爱与对市场应用前景的担忧。</p>
+
+<p><a href="https://garymarcus.substack.com/p/breaking-llm-reasoning-continues">LLM（大型语言模型）的“推理”能力持续存在严重缺陷</a><br>一项新的综述强调了LLM推理问题的广泛性，并表明近万亿美元的投入也未能改变这一现状。作者引用了自己十多年前的观点以及其他学者的批评，指出LLM在因果关系、抽象概念和逻辑推理方面存在核心问题，并呼吁业界应关注LLM的替代方案。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/go-git/go-git">go-git/go-git</a><br>A highly extensible Git implementation in pure Go.</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/gotenberg/gotenberg">gotenberg/gotenberg</a><br>A developer-friendly API for converting numerous document formats into PDF files, and more!</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq is a portable command-line YAML, JSON, XML, CSV, TOML, HCL and properties processor</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250118.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250118</span>
+</p>
+<p>每日一谚：Only use a buffered channel if you know the exact buffer size </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/ufYxzZuAIA8W_Yf2cLycJA">Eino: Go实现的大语言模型应用开发框架</a><br>经过字节跳动内部半年多的使用和迭代，基于 Golang 的大模型应用综合开发框架 —— Eino，已在 CloudWeGo 正式开源啦！Eino 基于明确的“组件”定义，提供强大的流程“编排”，覆盖开发全流程，旨在帮助开发者以最快的速度实现最有深度的大模型应用。</p> 
+
+<p><a href="https://dev.to/ryo_suwito/rust-vs-go-a-hands-on-comparison-for-real-developers-4320">Rust与Go：面向资深开发者的实践比较</a><br>Rust和Go都是现代编程语言，各有优劣。文章通过示例比较了它们的性能、内存安全、并发性、学习曲线和生态系统，并讨论了各自适用的场景。Rust注重安全和性能，适合构建高性能系统；Go则注重简单性和易用性，适合快速开发Web应用。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-01-17-convt-perf">小心convT</a><br>我们在使用 Go 编写 Dolt，世界上第一个版本控制的 SQL 数据库。这篇博客讨论了我们如何通过避免在关键连接处使用接口来将表扫描速度提高 24%。接口虽然方便，可以模块化代码并定义逻辑层之间的边界，但在性能方面却有所不足。将内存到网络的转换从使用接口类型改为使用具体类型，我们的表扫描性能提高了 24%。</p> 
+
+<p><a href="https://dev.to/oyedeletemitope/how-to-create-an-ai-avatar-in-go-using-simli-63n">使用 Simli 在 Go 中创建 AI 头像</a><br>这篇教程介绍了如何使用 Simli 平台和一个 Go 语言库来创建实时视频 AI 头像。Simli 提供了 AI 视频头像生成功能，可以创建栩栩如生的动画角色，并实现唇形同步和逼真的头部运动。教程涵盖了环境设置、API 密钥获取、头像选择、Go 项目构建以及前端界面的创建等步骤，并提供了一个完整的示例代码和测试方法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://shikaan.github.io/assembly/x86/guide/2024/09/26/x86-64-functions.html">面向高级程序员的汇编入门 — 函数与循环</a><br>本文是面向高级程序员的汇编友好入门系列文章的第三篇，介绍了汇编语言中函数和循环的实现。文章首先解释了函数的概念，并通过`call`和`ret`指令演示了如何在汇编语言中实现函数调用和返回。然后，文章讨论了函数参数和返回值的传递方式，以及调用约定（calling conventions）的重要性，并以一个掷骰子的例子说明了如何使用寄存器传递参数和返回值。最后，文章总结了函数和循环的实现方法，并预告了下一篇文章将介绍栈的概念。</p>
+
+<p><a href="https://blog.yfzhou.fyi/posts/tdd-llm">利用大型语言模型进行测试驱动开发，兼顾乐趣与收益</a><br>本文是博主新博客的第一篇文章，探讨了软件开发、站点可靠性工程（SRE）以及其他有趣的内容。作者分享了将大型语言模型（LLM）与测试驱动开发（TDD）结合的经验，认为LLM可以显著改变TDD的经济性。文章详细介绍了作者如何利用LLM编写单元测试和代码实现，并自动化了IDE、shell终端和聊天界面之间的切换。作者还讨论了LLM在调试方面的优势，以及如何管理认知负荷以保持代码的可维护性。最后，作者提醒读者注意AI技术的快速发展，不要过度依赖当前的LLM技术。</p>
+
+<p><a href="https://blog.railway.com/p/data-center-build-part-one">你想自己搭建数据中心吗？</a><br>Railway 的计算资源最初建立在 Google Cloud Platform 之上。该平台支持了 Railway 的初始发展，但同时也带来了许多问题，对我们的业务构成了生存风险。更重要的是，依赖超大规模云服务提供商会阻碍我们为客户提供最佳平台。这直接影响了我们的定价（出口费用？），限制了我们能够提供的服务级别，并带来了工程限制，限制了我们能够构建的功能。因此，我们去年启动了 Railway Metal 项目。九个月后，我们在加利福尼亚州上线了第一个站点，从机架中的光纤电缆到与 ISP 的各种合同，我们都设计、规范和安装了所有内容。我们正在建设另外三个数据中心区域。</p>
+
+<p><a href="https://anirudh.fi/blog/identity">atproto和身份所有权</a><br>atproto 作为一个激动人心的新技术，它完美地将身份和用户数据层与应用层分离。这与联邦宇宙（fediverse）有着显著的不同。在联邦宇宙中，你的应用和用户帐户是绑定在一起的，而 atproto 使用个人数据服务器 (PDS) 和基于域的身份，实现了身份所有权和数据所有权的双重保障。这使得用户可以在基于 atproto 的其他应用程序中重复使用相同的 DID，从而解决了新社交应用程序的两个主要问题：用户无需创建新帐户，以及社交图谱的构建。这为各种新型“支持社交功能”的服务铺平了道路，例如论坛、长篇写作，甚至更复杂的代码库等，所有这些都共享同一个帐户。此外，应用层和用户层的分离使得构建可盈利的“应用程序”成为可能，这也有利于开放网络的长期发展。atproto 还吸引了早期风险投资的关注，这预示着其广阔的未来前景。作者预测，凭借其易于使用的特性，将会出现一个以用户拥有身份为核心的新一代社交应用程序。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/VBnm3KCsYd4fuXcBpDgiaA">晚点对话MiniMax闫俊杰：创业没有天选之子</a><br>MiniMax 创始人兼 CEO 闫俊杰接受访谈，谈及公司发展、技术选择以及对 AI 行业的独特见解。他强调，千万不要用移动互联网的逻辑来思考 AI 产品，更好的模型可以导向更好的应用，但更好的应用和更多用户并不会导向更好的模型。MiniMax 的目标是加速技术迭代，而非单纯的增长或收入。</p>
+
+<p><a href="https://simonwillison.net/2025/Jan/18/deepseek-api-docs-rate-limit/#atom-everything">DeepSeek API 文档：速率限制</a><br>令人惊讶的是，DeepSeek 提供了我见过的唯一一个未实现速率限制的托管 LLM API：DeepSeek API 不会限制用户的速率限制。我们将尽最大努力处理每个请求。但是，请注意，当我们的服务器承受高流量压力时，您的请求可能需要一些时间才能收到服务器的响应。想要对 10,000 个项目运行提示？使用 DeepSeek，您可以理论上启动数百个并行请求，并几乎立即处理这些数据。随着越来越多的公司开始构建依赖于 LLM 提示进行大规模数据提取和操作的系统，我希望高速率限制将成为不同平台之间关键的竞争优势。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/rs/zerolog">rs/zerolog</a><br>Zero Allocation JSON Logger</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/zalando/postgres-operator">zalando/postgres-operator</a><br>Postgres operator creates and manages PostgreSQL clusters running in Kubernetes</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/aquasecurity/tracee">aquasecurity/tracee</a><br>Linux Runtime Security and Forensics using eBPF</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit</p>
+
+<p><a href="https://github.com/k0sproject/k0s">k0sproject/k0s</a><br>k0s - The Zero Friction Kubernetes</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/nomad">hashicorp/nomad</a><br>Nomad is an easy-to-use, flexible, and performant workload orchestrator that can deploy a mix of microservice, batch, containerized, and non-containerized applications. Nomad is easy to operate and scale and has native Consul and Vault integrations.</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>An engine to run your pipelines in containers</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

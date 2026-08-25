@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250910.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250910</span>
+</p>
+<p>每日一谚：Gofmt is part of the Go culture </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/10/introducing-the-mcp-registry">MCP协议注册中心发布：Go在下一代AI基础设施中扮演关键角色</a><br>近日，模型上下文协议 (Model Context Protocol, MCP)官方发布了其生态系统的核心基础设施：MCP 注册中心 (MCP Registry)的预览版。这个开放的、分布式的目录服务不仅为 MCP 服务器的发现与实施提供了“单一事实来源”，更值得我们 Go 开发者关注的是，Go 语言在其中扮演了从官方工具链到客户端集成的关键角色。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/djh6d8WwJiZkal2V_JGjIQ">最好的教师节礼物：来自2.5万名Gopher的认可</a><br>今天一早，收到了来自极客时间的教师节贺卡，当看到上面那一行数字时，内心瞬间被温暖与感动填满</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/40lVO3buxfFGKpFsgJD_fg">【AI应用开发第一课】11 实战串讲：用 Go 构建一个 AI 驱动的 GitHub Issue 助手</a><br>本讲，我们将融会贯通，将前面学到的所有知识点付诸实践，从零开始，用 Go 语言亲手构建一个有实际价值的、可运行的 AI 应用——一个能自动化处理 GitHub Issue 的智能助手。</p> 
+
+<p><a href="https://go.dev/blog/jsonv2-exp">Go 的全新实验性 JSON API</a><br>Go 1.25 引入了对 encoding/json/jsontext 和 encoding/json/v2 包的实验性支持。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-09-09-announcing-dolt-sql-server-mcp">宣布 Dolt SQL Server MCP</a><br>我们已将 Dolt MCP 直接添加到 Dolt 中！ 这篇博文将向您展示如何使用单个命令启动 Dolt SQL 服务器和 Dolt MCP 服务器。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2025/09/09/flexible-work-update/">灵活工作更新</a><br>Amy Coleman，执行副总裁兼首席人事官，今天早上与微软员工分享了以下沟通内容。我们工作的方式已经永远改变。我记得在 90 年代末刚开始在微软工作的时候，总是在办公室，没有笔记本电脑，主要和走廊里的同事一起工作。随着科技的发展和我们业务的扩展，我们变得更加开放，更加全球化，并且能够以我们无法想象的方式进行扩展。然后，疫情重塑了一切。它促使我们以不同的方式思考工作，以前所未有的方式联系（感谢 Teams！），提醒我们有多么珍视在一起，并让我们在传统工作日中有了专注和自主权。我们不会回去，而且我们也不应该回去。相反，我们应该吸取我们所学到的最好的东西并继续前进。</p>
+
+<p><a href="https://eng.lyft.com/migrating-lyfts-android-codebase-to-kotlin-53b231dfecb5">将Lyft的Android代码库迁移到Kotlin</a><br>Lyft于2018年开始将Kotlin应用于我们的Android代码库。快进7年，我们终于完成了！Lyft Rider、Driver和Lyft Urban Solutions应用程序现在完全基于Kotlin。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/09/kubernetes-v1-34-snapshottable-api-server-cache/">Kubernetes v1.34: 可快照的 API 服务器缓存</a><br>多年来，Kubernetes 社区一直致力于提高 API 服务器的稳定性和性能可预测性。这项工作的主要重点是处理 &lt;strong&gt;list&lt;/strong&gt; 请求，这些请求历来是高内存使用率和 &lt;code&gt;etcd&lt;/code&gt; 数据存储负载的主要来源。 随着每个版本的发布，我们都在逐步解决这个问题，今天，我们很高兴地宣布完成拼图中最后一块主要的部分。 &lt;em&gt;可快照 API 服务器缓存&lt;/em&gt;功能已在 Kubernetes v1.34 中升级到 &lt;strong&gt;Beta&lt;/strong&gt;， 最终完成了允许几乎所有读取请求直接从 API 服务器缓存中提供数据的多版本努力。</p>
+
+<p><a href="https://blog.epsiolabs.com/i-love-uuid-i-hate-uuid">我对UUID的爱和恨</a><br></p>
+
+<p><a href="https://helm.sh/blog/path-to-helm-v4">Helm v4 发布之路</a><br>Helm v4的第一个Alpha版本已经发布。现在Helm v4的开发已进入最后阶段，我们想分享正在发生的事情以及更广泛的社区如何参与其中。</p>
+
+<p><a href="https://wrongthink.link/posts/all-you-need-is-ssh">你只需要 SSH</a><br>作为一名自诩的极简主义者，我一直以来都是“完美并非在无物可加，而是在无物可减”这一格言的拥护者。当处理复杂系统时，人们通常会发现，解决问题的最佳方案往往是最简单的。在数字安全领域，这一点尤其适用，因为复杂性本身就可能与保障系统的目标相悖。但系统的运作也可能因此受损。当在那些功能应该非常简单的东西前面加上一层又一层的抽象时，这一点就会显现出来。</p>
+
+<p><a href="https://jenniferdaniel.substack.com/p/tomorrows-emoji-today-unicode-170">明日表情符号，今日发布：Unicode 17.0 已经到来</a><br>伸缩表情符号正进入我们的内心……</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.builder.io/blog/agents-md">Improve your AI code output with AGENTS.md (&#43; my best tips)</a><br>Stop re-prompting. Put the rules in AGENTS.md: do and don’t, file-level tests, and real examples so agents ship code that matches your project.</p>
+
+<p><a href="https://www.anthropic.com/news/create-files">Claude 现在可以创建和使用文件</a><br>Claude 现在可以直接在 Claude.ai 和桌面应用程序中创建和编辑 Excel 电子表格、文档、PowerPoint 幻灯片和 PDF 文件。 您可以描述您需要的，上传相关数据，并获得可直接使用的文件。</p>
+
+<p><a href="https://sophiebits.com/2025/09/09/ai-agents-security">我不想让 AI 代理控制我的笔记本电脑</a><br>当我看到人们运行 claude --dangerously-skip-permissions 或 codex --yolo 以允许他们在机器上不受限制地运行命令时，我总是感到不安。 允许 AI 在您的计算机上采取行动，您需要启用大部分内容。 现代桌面操作系统并没有真正为运行在您机器上的不同事物之间的强大安全边界而设计。 尤其是在涉及 Simon Willison 的致命三件套的情况下，您实际上并不希望授予对这些内容的访问权限，即使大多数情况下，一切都不会出问题。 考虑到这一点，有两个有希望的解决方案。 我希望大多数编码代理都朝着这个方向发展。 另一个旨在处理彼此之间不泄漏的隔离环境的软件是浏览器。 给予完全访问权限是可怕的，但是如果正确地集成到浏览器中，您实际上可以有选择地选择要访问的站点（或不访问的站点），并让浏览器强制执行这些边界。</p>
+
+<p><a href="https://www.varunraghu.com/why-i-wont-be-vibe-coding-anymore">我为什么不再氛围编程</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Webhooks, and MCP. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/databus23/helm-diff">databus23/helm-diff</a><br>A helm plugin that shows a diff explaining what a helm upgrade would change</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/sst/opencode">sst/opencode</a><br>AI coding agent, built for the terminal.</p>
+
+<p><a href="https://github.com/dexidp/dex">dexidp/dex</a><br>OpenID Connect (OIDC) identity and OAuth 2.0 provider with pluggable connectors</p>
+
+<p><a href="https://github.com/JanDeDobbeleer/oh-my-posh">JanDeDobbeleer/oh-my-posh</a><br>The most customisable and low-latency cross platform/shell prompt renderer</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/99designs/gqlgen">99designs/gqlgen</a><br>go generate based graphql server library</p>
+
+<p><a href="https://github.com/sjzar/chatlog">sjzar/chatlog</a><br>chat log tool, easily use your own chat data. 聊天记录工具，轻松使用自己的聊天数据</p>
+
+<p><a href="https://github.com/muesli/duf">muesli/duf</a><br>Disk Usage/Free Utility - a better &#39;df&#39; alternative</p>
+
+<p><a href="https://github.com/sigstore/cosign">sigstore/cosign</a><br>Code signing and transparency for containers and binaries</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

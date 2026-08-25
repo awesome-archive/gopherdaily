@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240924.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-24</span>
+</p>
+<p>每日一谚：. Prefer readability over performance. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/09/24/the-evolution-of-type-name-in-go-spec/">“类型名称”在Go语言规范中的演变</a><br>帮你理解go规范中的Type Name类别变化</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/iFbo1mcyyFUuElCR954ibA">如果编程语言是自然语言，AI眼中的Go会是哪国语言呢？</a><br>问了问AI们，它们眼中的Go会是哪国语言呢？AI包括ChatGPT(4o)、Claude sonnet 3.5、Google Gemini以及最强开源模型llama 3.1 405B，观点分成了两派</p> 
+
+<p><a href="https://developers.redhat.com/articles/2024/09/24/go-compiler-register-allocation">Go编译器中的寄存器分配</a><br>正如 Vladimir Makarov 所探索的 Go 编译器的 register 分配器，是一个具有一些全局优化的局部范围寄存器分配器。它以静态单一分配 （SSA） 形式运行，由几个组件组成，包括关键边缘消除、实时分析和堆栈插槽分配，集成到“regalloc”通道中。register allocator 处理溢出放置和 register shuffling，特别是在 CFG 合并点。虽然 Go RA 因其小代码库、快速执行和不错的堆栈插槽共享而受到称赞，但它也因其缺乏全局视图而受到关注，这可能导致更复杂的 CFG 中出现过多的洗牌和溢出。总体而言，Go register 分配器被公认为一种设计良好且富有创意的解决方案，尽管在处理复杂的代码结构方面存在一些限制。</p> 
+
+<p><a href="https://www.wired.com/story/attention-spoiled-software-engineers-take-a-lesson-from-googles-programming-language/">注意：宠坏的软件工程师们：向谷歌的编程语言学习一课</a><br>Go 语言来自程序员自我意识较小、商业野心较少的时代。我们这一代奋斗者有很多东西要学。</p> 
+
+<p><a href="https://cacm.acm.org/blogcacm/giving-go-a-go-simplifying-cloud-infrastructure-development/">试一试：简化云基础设施开发</a><br>Golang，也称为 Go，由 Google 开发，用于简化软件开发，特别是对于大型代码库和多核芯片。它已成为现代云基础设施开发不可或缺的一部分，解决了微服务、高效联网和跨平台互操作性方面的挑战。Go 的独特功能（如 goroutines 和通道）有助于有效的并发编程，而其静态类型和集成工具（包括 go test）增强了代码的可靠性和可维护性。尽管来自其他语言的竞争，但 Go 的可访问性和持续创新使其成为构建可扩展且高效的云解决方案的宝贵工具。</p> 
+
+<p><a href="https://opensauced.pizza/blog/technical-deep-dive:-how-we-built-the-pizza-cli-using-go-and-cobra">技术深入探讨：我们如何使用 Go 和 Cobra 构建 Pizza CLI</a><br>Pizza CLI 是一种用于生成 CODEOWNER 文件并与 OpenSauced 平台集成的命令行界面工具，是使用 Go 和 Cobra 开发的。源文档深入介绍了工程团队如何构建 CLI，强调了仔细规划和使用 Cobra 组织命令的重要性。解释了 CLI 的目录结构和文件组织，突出了关注点的分离和可维护性。此外，该文档还详细介绍了 go-git 的集成以迭代 git ref 日志，以及将 testify 库用于 Go 的测试框架。Pizza CLI 还集成了 Just，这是一个命令运行程序实用程序，用于执行脚本并促进迭代开发和测试过程。</p> 
+
+<p><a href="https://medium.com/cyberark-engineering/a-post-quantum-cryptography-web-server-in-go-1-23-9f7e98db7b39">Go 1.23 中的后量子密码学 Web 服务器</a><br>本文概述了后量子密码学与 Go 1.23 的集成，重点介绍了 TLS 1.3 协议和混合 Kyber 算法 （x25519Kyber768Draft00） 的具体实现。它解释了开发人员如何通过进行最少的代码更改（例如确保 TLS 1.3 支持和避免明确的曲线首选项）来使其应用程序面向未来免受量子计算威胁。本文还强调了自动协商对最安全选项的重要性，以及社区贡献在这一进步中的作用。此外，它还讨论了量子计算机带来的潜在安全风险，以及加密实践中对抗量子算法的需求。</p> 
+
+<p><a href="https://dev.to/aplgr/exploring-password-strength-and-number-validation-in-perl-and-go-529p">探索 Perl 和 Go 中的密码强度和数字验证</a><br>本文提出了两个不同的编程挑战的解决方案：加强弱密码和验证数字。密码验证任务要求密码满足特定条件才能被视为强密码，并且提供的 Perl 和 Go 实现计算满足这些标准所需的最小更改次数。相反，数字验证任务涉及确定给定字符串是否表示有效数字，考虑各种格式，包括整数、小数和科学记数法。这些解决方案使用提供的测试用例进行了测试，本文最后讨论了这些解决方案对 Web 开发人员和编码人员的重要性。</p> 
+
+<p><a href="https://rogersm.net/posts/developing-a-go-bot-embedding-ichiban-prolog/">开发 go bot embedding ichiban Prolog</a><br>本文讨论了 Go 机器人 Hellabot 的开发，该机器人具有对消息触发器的 Prolog 支持。作者 Roger Sen 解释说，Hellabot 的触发器分两步操作，涉及条件和操作。为了实现这一点，作者引入了一个 PrologTrigger 结构，该结构具有一个结合了 Prolog 代码和消息术语的 Exec 函数。执行嵌入在机器人二进制文件中的 Prolog 代码以生成对特定消息命令的响应。然后，响应将通过 Hellabot API 发送回用户。作者还暗示了未来的改进，例如优化 Prolog 解释器的使用和将更多代码移动到 Prolog 中。</p> 
+
+<p><a href="https://surfingcomplexity.blog/2024/09/22/linearizability-refinement-prophecy/">线性化！优雅！预言！</a><br>源文档深入探讨了并发编程中的线性化概念，特别关注 Herlihy 和 Wing 引入的线性化队列。它解释了线性化如何作为并发对象的正确性条件，确保操作似乎在单个时间点瞬间发生。本文档进一步探讨了使用 PlusCal 对算法进行建模，以及 refinement mappings 在验证特定队列实现是否符合其更高级别规范方面的作用。对 Herlihy 和 Wing 队列的批判性检查揭示了细化映射的潜在问题，这个问题可以通过引入 prophecy 变量来解决。这些变量允许进行预测，从而启用到 LinearizableQueue 模型的优化映射，从而确保即使在预测错误的情况下，由于允许卡顿步骤，系统的行为仍然有效。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://icepanel.medium.com/how-to-diagram-a-microservices-architecture-in-icepanel-e29d0626cc4a">如何在 IcePanel 中绘制微服务架构图</a><br>本文提供了有关如何使用 IcePanel 和 C4 模型绘制微服务架构图的全面指南，重点介绍名为 Icy-Bay 的电子商务系统。它以一个上下文图开始，该上下文图说明了架构中涉及的主要参与者（客户）和系统（Icy-Bay、支付提供商、中央银行和潜在的第三方邮件客户端）。随后的容器图进行了更深入的研究，将微服务描述为单个应用程序及其交互，包括将前端应用程序详细分解为其组件模块。该指南还强调了在不同级别可视化架构的重要性，以便更好地理解和导航。</p>
+
+<p><a href="https://www.p99conf.io/2024/09/24/top-9-p99-conf-talks-so-far-rust-zig-java-and-more/">到目前为止排名前 9 位的 P99 CONF 演讲：Rust、Zig、Java （！） 等</a><br>本文档提供了过去排名前 9 位的 P99 演讲的精选列表，重点介绍各种主题，包括 Rust、Zig、Java、极端 HTTP 性能调优等。这些讲座涵盖了与注重性能的工程师相关的广泛主题，例如低延迟系统的未来、内存缓存以及将 eBPF 用于高性能网络。此外，还讨论了企业开源实践的演变以及 Ceph 等存储解决方案对 NVMe 和持久内存等新技术的适应。该文档为那些对性能计算和开源软件领域的最新趋势和技术见解感兴趣的人提供了资源。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/23/kubernetes-governance-the-great-policy-for-innovation/">Kubernetes 治理：创新的伟大政策</a><br>本文讨论了 Kubernetes 治理的实现，以使用 Kubernetes 的准入 Webhook 通过策略即代码促进创新。它强调了在系统内清晰、准确地实施策略和可见性的必要性。拟议的治理系统概述了三个主要要求：清晰的策略描述、准确的策略执行和可见性。本文还强调了开源解决方案对策略管理的重要性，比较了 OPA Gatekeeper 和验证准入策略。选择 Ultó 是因为它们能够处理复杂的策略要求，包括验证、更改和外部数据考虑。但是，本文承认需要进一步开发以简化策略创建和更新。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/09/24/sig-scheduling-spotlight-2024/">聚焦 SIG Scheduling</a><br>Arvind Parekh 与 Kalsekar Nakada （KN） 合作，在 Kubernetes 社区内讨论 SIG Scheduling 项目，重点关注其在增强 Kubernetes 调度能力方面的作用。KN 是 SIG Scheduling 的审批者，也是两个 SIG 子项目的创始人，他详细阐述了该项目的目标，即提高调度吞吐量和可扩展性，解决不同组织需求的挑战。对话还谈到了 QueueHint 的引入，这是一项旨在优化调度效率的新内部增强功能。此外，KN 强调了代码之外的社区贡献（例如反馈和文档澄清）对 Kubernetes 生态系统发展的重要性。SIG Scheduling 的未来是构建一个更具可扩展性和稳定性的调度系统，继续强调吞吐量和适应各种调度需求的能力。</p>
+
+<p><a href="https://thenewstack.io/how-to-jump-start-your-stalled-kubernetes-migration/">如何快速启动停滞的 Kubernetes 迁移</a><br>本文提供了有关如何克服 Kubernetes 迁移过程中面临的挑战的全面指南。它强调了规划和制定战略以应对复杂性的重要性，例如管理混合基础设施、决定容器化、保持可观察性、防止供应商锁定和确保合规性。本文还解决了可能阻碍迁移过程的影子 IT 解决方法问题。为了帮助完成这一旅程，本文提供了实时在线活动和大量专家等资源，他们可以提供有价值的见解和解决方案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://martinfowler.com/articles/legacy-modernization-gen-ai.html">传统现代化与 GenAI 的结合</a><br>Thoughtworks 通过将生成式人工智能 （GenAI） 与 CodeConcise 等工具集成，率先将其用于遗留系统（尤其是大型机）的现代化。这种方法将大型语言模型 （LLM） 与知识图谱相结合，旨在比传统方法更有效地理解和翻译代码。该公司一直专注于挑战，例如通过逆向工程提取低级需求，以及在大型代码库中发现未使用、死或重复的代码。通过利用 GenAI，Thoughtworks 旨在减少对专业知识专家 （SME） 的依赖并加快现代化进程。此外，他们还在探索 GenAI 如何协助增量代码转换，以促进不同技术范式之间的过渡。</p>
+
+<p><a href="https://www.theinsaneapp.com/2024/09/ai-driven-product-innovations.html">实施 AI 驱动的产品创新：战略洞察和实际应用</a><br>本文深入探讨了 AI 驱动型产品创新的战略实施，强调了它们在当今快节奏、以数据为中心的市场中的重要性。它强调了 AI 如何成为创新的催化剂，使企业能够通过增强客户体验和简化运营来超越竞争对手。这篇文章概述了 AI 在电子商务中的实际应用，例如需求预测、个性化推荐以及通过聊天机器人和虚拟助手改进客户服务。此外，还讨论了人工智能在优化 B2B 电子商务供需动态方面的作用，包括降低供应链成本和动态定价策略。本文还谈到了使 AI 计划与公司目标保持一致、管理期望的重要性，以及建立创新文化以充分利用 AI 潜力的必要性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>云原生批处理系统（CNCF 下的项目）</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>完整的容器管理平台</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>使用 Docker 定义和运行多容器应用程序</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>后端大师课：用 Go 构建一个简单的银行服务</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 快速简单的视频下载库和用 Go 编写的 CLI 工具</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>用于根据 OCI 规范生成和运行容器的 CLI 工具</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥🔥🔥 Web-based linux server management control panel. / 现代化、开源的 Linux 服务器运维管理面板。</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/shirou/gopsutil">shirou/gopsutil</a><br>用于 golang 的 psutil</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - 用于使用 CRD 构建 Kubernetes API 的 SDK</p>
+
+<p><a href="https://github.com/kubescape/kubescape">kubescape/kubescape</a><br>Kubescape 是一个开源 Kubernetes 安全平台，适用于 IDE、CI/CD 管道和集群。它包括风险分析、安全性、合规性和错误配置扫描，为 Kubernetes 用户和管理员节省宝贵的时间、精力和资源。</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>适用于 Kubernetes 的 Go 客户端。</p>
+
+<p><a href="https://github.com/bitnami-labs/sealed-secrets">bitnami-labs/sealed-secrets</a><br>用于单向加密 Secret 的 Kubernetes 控制器和工具</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI 网关 |AI Native API 网关</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go 客户端</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>使用 fangs 的 Go 配置</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>分布式可靠键值存储，用于分布式系统中最关键的数据</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>与 Prometheus 类似，但用于日志。</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>基于基于 YAML 的简单 DSL 的快速且可定制的漏洞扫描程序。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

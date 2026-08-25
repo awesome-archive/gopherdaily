@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251208.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251208</span>
+</p>
+<p>每日一谚：Avoid unnecessary allocations and memory overhead </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/08/api-design-pattern-and-implementation">拒绝“面条代码”，做有架构思维的 Go API 设计师</a><br>“Tony，我已经熟悉了 Go 的语法，也会用 Gin 写增删改查（CRUD）了，为什么我写的 API 还是经常被前端吐槽？为什么业务逻辑稍微一变，我的代码就要推倒重来？为什么我的接口文档和代码永远对不上？” 这并不是你一个人的困惑。在多年的一线架构与咨询工作中，我见过太多 “能跑但不可维护” 的 API 系统</p> 
+
+<p><a href="https://tonybai.com/2025/12/07/switching-from-rust-to-go-appeal-of-the-language/">“我从未想过学完 Rust 后会转向 Go”—— 这门“无聊”的语言究竟有什么魅力？</a><br>近日，开发者 Abhishek Singh 的一条推文，以其独特的、充满“诗意”的笔触，在开&gt;发者社区引发了广泛的共鸣和讨论。这句自白之所以令人惊讶，是因为它描绘了一条在很多人看来“不可思议”的技术迁徙路径：从 Rust——一门以其严谨、强大、表达力丰富著称的现代语言，转向 Go——一门在许多人眼中“简单”、“啰嗦”甚至“无聊”的语言。</p> 
+
+<p><a href="https://tonybai.com/2025/12/06/zootopia-distributed-system-written-in-go">如果《疯狂动物城》是一个分布式系统，那它一定是用 Go 写的</a><br></p> 
+
+<p><a href="https://tonybai.com/2025/12/07/zootopia-2-perfect-architecture-lie-exposed/">看完《疯狂动物城2》，我发现“完美架构”的谎言被戳破了</a><br></p> 
+
+<p><a href="https://mp.weixin.qq.com/s/LNWb5fL3vWZqqSXvPBFfSA">【Google ADK 实战】04 session 与 memory：让你的 Agent 拥有记忆</a><br></p> 
+
+<p><a href="https://ebitengine.org/en/blog/2025.html">Ebitengine 的 2025 年回顾</a><br>这篇文章是 Ebitengine 在 2025 年的回顾。作者对 2025 年的赞助者和贡献者表示感谢，并展示了使用 Ebitengine 开发的几款游戏（包括主机游戏）、游戏开发大赛的精选作品。作者提到 Ebitengine 已经成熟，新功能添加放缓，并透露他本人正专注于开发 GUI 框架 Guigui，希望能为 Ebitengine 缺乏 GUI 和编辑器的现状提供解决方案，并计划在明年发布 Guigui v0.1。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://steve-yegge.medium.com/six-new-tips-for-better-coding-with-agents-d4e9c86e42a9">智能体编码的六个新技巧</a><br></p>
+
+<p><a href="https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform">傅里叶变换的互动指南</a><br>傅里叶变换是一个深刻的洞察，它将一个时域信号分解成构成它的不同频率（或周期性“成分”）的“配方”。文章通过一个“冰沙与配方”的类比来解释其核心思想：就像通过滤网分离出冰沙的原料一样，傅里叶变换将信号分解成构成它的基本循环路径（频率、振幅和相位）</p>
+
+<p><a href="https://thorsell.io/2025/12/07/estimates.html">估算——必要的恶吗？</a><br>产品负责人（PO）希望开发者进行估算，以便规划发布日期和管理预期，因为积压工作项的流入速度通常快于开发速度。然而，开发者痛恨估算，因为它们经常被用作无法改变的截止日期，而且估算本身就包含对不可预见问题的预测，这与编码的确定性本质相悖。技术债务是导致冲突的常见原因。文章认为，问题在于将估算视为预测和截止日期，而不是一个持续演进的近似值，并建议停止提前沟通具体功能和武断的截止日期，转而采用持续更新估算的方法。</p>
+
+<p><a href="https://aivarsk.com/2025/12/07/tigerbeetle-blob-storage">TigerBeetle 作为文件存储</a><br>本文探讨了如何利用 TigerBeetle（一个用于金融会计的数据库）来存储任意二进制大对象（blobs），以实现对数据的持久性保护，使其免受存储故障的影响。作者通过将文件名存储在账户 ID 字段，文件大小存储在 `user_data_64` 字段，并将文件内容（分块）存储在 Transfer 记录的 `user_data_128`、`user_data_64` 和 `user_data_32` 字段中来实现这一目标。测试结果显示，写入速度接近 642 kB/s，而读取速度达到 2,228 kB/s，并通过 SHA256 校验验证了数据在读写过程中的完整性。</p>
+
+<p><a href="https://www.howtocodeit.com/articles/ultimate-guide-rust-newtypes">Rust Newtype 的终极指南</a><br>使用 Rust 的 newtype 包装器来清理代码、阐明业务逻辑并提高测试覆盖率。本指南深入探讨了 newtype 的各种用途、最佳实践，例如使用构造函数作为真相的来源（“解析而非验证”原则）、实现标准 traits（如 Display、AsRef、Deref 和 Borrow），以及如何处理绕过验证（例如使用 `unsafe` 的 `new_unchecked`）。文章还提到了 `derive_more` 和 `nutype` 这样的库来减少样板代码，并以实际练习结束，以巩固所学知识。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/8/the-museum-of-jurassic-technology/#atom-everything">小众博物馆：侏罗纪技术博物馆</a><br>我终于去探访了自2019年开始记录我参观过的小众博物馆以来，一直位居我最想去名单之首的博物馆——侏罗纪技术博物馆（The Museum of Jurassic Technology）。该博物馆于1988年在洛杉矶卡尔弗城开业，近四十年来一直让参观者困惑什么是真实的，什么不是。</p>
+
+<p><a href="https://levelup.gitconnected.com/building-17-agentic-ai-patterns-and-their-role-in-large-scale-ai-systems-f4915b5615ce">17个Agentic AI构建模式</a><br></p>
+
+<p><a href="https://research.google/blog/titans-miras-helping-ai-have-long-term-memory">Titans &#43; MIRAS：帮助人工智能拥有长期记忆</a><br>我们介绍了 Titans 架构和 MIRAS 框架，它们通过在人工智能模型运行时更新其核心记忆，使其工作速度更快，并能处理海量上下文。该研究将 RNN 的效率与 Transformer 的准确性相结合，引入了一种深度神经网络作为记忆模块，可以在数据流入时学习和更新，实现了超越固定大小循环状态的限制。该架构在处理超长上下文（如超过 200 万个 token）和推理任务中表现出色。</p>
+
+<p><a href="https://research.google/blog/introducing-nested-learning-a-new-ml-paradigm-for-continual-learning">介绍嵌套学习：一种用于持续学习的新的机器学习范式</a><br>我们引入了嵌套学习（Nested Learning），一种新的机器学习方法，它将模型视为一系列更小、嵌套的优化问题，每个问题都有其内部的工作流程，目的是减轻甚至完全避免“灾难性遗忘”问题，即学习新任务会牺牲对旧任务的熟练度。嵌套学习将模型架构和优化算法视为同一个概念的不同“层次”，为设计更强大的AI提供了新的维度。</p>
+
+<p><a href="https://www.anildash.com/2025/12/02/vibe-coding-empowering-and-imprisoning">Vibe Coding: 赋能与禁锢</a><br>本文探讨了使用大型语言模型（LLM）辅助编写代码的“Vibe Coding”现象。作者指出，这种技术能帮助许多人（包括不再频繁编码的开发者）快速完成工作，这带来了赋能的潜力。然而，作者也提出了两个主要担忧：首先，科技巨头投资LLM的目的是为了削弱和压低程序员的薪资，这已经导致了大规模裁员；其次，LLM基于已有代码训练，倾向于生成保守或有缺陷的代码，这可能会限制真正的激进创新，并将用户困在过去的代码范式中，最终可能导致对商业AI平台的过度依赖和知识的退化。</p>
+
+<p><a href="https://ceodinner.substack.com/p/the-ai-wildfire-is-coming-its-going">人工智能野火即将来临。它将非常痛苦，但也极其健康。</a><br>人工智能不会崩溃——它将燃烧。像每一个技术周期一样，这场大火将清除杂草，重新分配人才，并留下驱动未来发展的基础设施。问题是：你是什么样的植物？</p>
+
+<p><a href="https://www.lesswrong.com/posts/Q9ewXs8pQSAX5vL7H/ai-in-2025-gestalt">2025 年的人工智能：格式塔</a><br></p>
+
+<p><a href="https://vedder.io/misc/state_of_robot_learning_dec_2025.html">机器人学习的现状</a><br>本文描述了2025年12月主流的纯行为克隆（BC，或称模仿学习）机器人学习栈的结构、缺点和解决办法。BC系统依赖人类演示数据，通过监督学习训练模型模仿人类动作。文章详细介绍了三种数据收集方式（领头跟随、智能演示手套、直接人类演示）的优缺点，并深入探讨了行为克隆面临的“硬问题”——即模型在遇到训练数据之外的状态（OOD states）时的性能下降问题。针对OOD状态，文章提出了类似DAgger的迭代恢复数据收集方法，并讨论了加速BC策略的难度。最后，文章展望了超越BC的未来方向（如强化学习），分析了LLM与机器人RL在环境可重复性上的核心区别，并对机器人学习的未来做出了预测，建议“卖铲子”的初创企业应关注人类演示数据收集的软硬件栈。</p>
+
+<p><a href="https://rlancemartin.github.io/2025/12/01/claude_diary">Claude 日记</a><br>Lance Martin 创建了一个名为 Claude Diary 的插件，旨在为 Claude Code 提供一个持续学习和记忆系统。该插件借鉴了 CoALA 和 Generative Agents 等研究中的记忆框架，允许 Claude Code 从经验中学习并将经验转化为持久的、可更新到系统指令（CLAUDE.md）中的规则。Claude Diary 使用 `/diary` 命令捕获会话的关键信息，并通过 `/reflect` 命令分析日记条目，提炼经验教训并更新 CLAUDE.md。该系统已在 PR 评审反馈、Git 工作流程、测试实践、代码质量、Agent 设计和自我修正等方面显示出实用性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/psviderski/uncloud">psviderski/uncloud</a><br>A lightweight tool for deploying and managing containerised applications across a network of Docker hosts. Bridging the gap between Docker and Kubernetes ✨</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/fish2018/pansou">fish2018/pansou</a><br>PanSou是一款高性能的网盘资源搜索API服务，支持TG频道和插件搜索。系统设计以性能和可扩展性为核心，支持多频道多插件并发搜索、结果智能排序和网盘类型分类。docker集成前后端，一键启动，开箱即用。 https://so.252035.xyz/</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/base/node">base/node</a><br>Everything required to run your own Base node</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.</p>
+
+<p><a href="https://github.com/slackhq/nebula">slackhq/nebula</a><br>A scalable overlay networking tool with a focus on performance, simplicity and security</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/AlistGo/alist">AlistGo/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

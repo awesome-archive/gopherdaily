@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250523.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250523</span>
+</p>
+<p>每日一谚：Do not prematurely abstract </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/05/23/go-api-design-mcp-sdk/">API设计的“Go境界”：Go团队设计MCP SDK过程中的取舍与思考</a><br>最近，Go 官方团队为 Model Context Protocol (MCP) 发起了一项 Go SDK 的设计讨论，并公开了其详细的设计草案以及一个初期的原型代码实现。这份设计稿与代码，在我看来，不仅仅是对 MCP 协议的 Go 语言实现规划，更是一份Go 官方团队关于 API 设计思考与实践的“公开课”。它向我们生动地展示了，在打造一个既强大又符合 Go 惯例 (Idiomatic Go) 的 SDK 时，需要在哪些维度进行权衡取舍，以及如何将 Go 的设计哲学&gt;融入到每一个细节之中。</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-synctest/">Go synctest：解决测试不稳定问题</a><br>传统的并发 Go 测试由于非确定性调度程序行为和计时而可能不稳定。Go 1.24 的实验性 synctest 功能通过在隔离的“泡泡”中运行 goroutine 来提供确定性测试，其中合成时钟只有在所有内部管理的 goroutine 永久阻塞时才会前进。本文详细解释了 synctest 的工作原理，并通过示例演示了如何使用它来解决测试不稳定问题。</p> 
+
+<p><a href="https://dev.to/leapcell/optimizing-go-performance-with-syncpool-and-escape-analysis-3l25">使用 sync.Pool 和转义分析优化 Go 性能</a><br>Go 标准库中的 sync.Pool 是一个用于缓存和重用临时对象的高性能工具。本文介绍了 sync.Pool 的使用场景，包括频繁的临时对象分配、高并发场景和短生命周期对象。此外，文章还讨论了如何通过转义分析来减少堆分配，包括避免指针转义、控制变量作用域、优化数据结构和使用编译器指令等方法。最后，文章总结了 sync.Pool 和转义分析的协同优化，以及验证转义分析结果的方法。</p> 
+
+<p><a href="https://dev.to/kelvinfloresta/false-sharing-in-go-the-hidden-enemy-in-your-concurrency-37ni">Go语言中的伪共享——并发编程中的隐藏敌人</a><br>本文介绍了Go语言中伪共享的概念，它是一个容易被忽视的问题，可能会严重影响并发程序的性能。文章通过一个简单的例子和详细的步骤说明了伪共享是如何发生的，以及如何通过填充结构体来解决这个问题。文章还提供了使用`go test`和`perf`工具来测量伪共享问题的性能影响的方法。</p> 
+
+<p><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews">TypeScript 原生预览版发布公告</a><br>TypeScript 团队激动地宣布 TypeScript 原生预览版现已广泛可用。开发者现在可以通过 npm 获取原生 TypeScript 编译器的预览版，并通过 Visual Studio Marketplace 使用 VS Code 的预览版编辑器功能。原生预览版在大多数项目上实现了 10 倍的速度提升，但仍处于开发早期阶段，一些功能尚未完善。此预览版最终将成为 TypeScript 7，并会定期发布更新。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="http://notes.eatonphil.com/2025-05-22-debugging-memory-leaks-postgres-heaptrack-edition.html">使用 heaptrack 调试 Postgres 内存泄漏</a><br>这是一篇外部文章，介绍使用 heaptrack 调试 Postgres 内存泄漏的方法。文章链接到 EnterpriseDB 博客上的完整文章。</p>
+
+<p><a href="https://www.pingcap.com/blog/managing-resource-isolation-optimizing-performance-stability-tidb/">TiDB 资源隔离最佳实践：优化性能稳定性</a><br>本文重点介绍基于流的资源隔离的最佳实践，帮助您了解如何在运行时控制和隔离工作负载，而无需严格的物理隔离。文章涵盖了基于数据的资源隔离（物理隔离）和基于流控制的资源隔离（软隔离）两种方案，并结合具体的应用场景（例如批处理加载隔离、SaaS场景等），讲解了如何利用 TiDB 的资源控制功能实现高效的资源利用率和稳定性。</p>
+
+<p><a href="https://www.p99conf.io/2025/05/22/databases-linux-page-cache/">为什么数据库应该绕过 Linux 页缓存</a><br>本文探讨了 ScyllaDB 在读取过程中完全绕过 Linux 缓存，并使用自身高效的基于行的集成内部缓存的原因。Linux 页缓存（也称为磁盘缓存）是一种通用类型的缓存。虽然它可以被调整以更好地服务数据库类型的工作负载，但它从根本上来说对于数据库实现效率低下。页缓存缺乏对关键数据库特定需求的上下文，而这些需求对于最佳性能和控制是必要的。鉴于页缓存的内存使用效率低下、负缓存差、冗余缓冲区、读取的高 CPU 开销和过早的缓存逐出（以及其他挑战），对于面向性能的数据库来说，采用不同的方法是有意义的。让我们看看为什么 ScyllaDB（一个面向延迟敏感型应用程序的数据库）在读取过程中完全绕过 Linux 缓存，并使用自身高度高效的基于行的集成内部缓存。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/05/23/platform-democracy-rethinking-who-builds-and-consumes-your-internal-platform/">平台民主：重新思考谁来构建和使用您的内部平台</a><br>平台工程多年来经历了多次迭代。首先是开发和运维之间的分离，这种模式通过创建依赖关系、瓶颈和目标错位来破坏价值流。然后是DevOps运动，旨在弥合差距，但这往往导致团队承担超出可持续管理能力的更多责任，从而导致效率低下甚至安全风险。为了解决这些挑战，平台团队应运而生。他们的使命是？提供自助服务基础设施、工具和工作流程，帮助开发人员更快、更安全地交付产品。然而，随着组织规模的扩大，平台团队发现自己不堪重负，在试图成为所有事物的单一控制点时，被需求压垮。本文探讨了平台民主的概念，在这个概念中，开发人员、安全团队、SRE 甚至外部服务提供商可以无缝协作，而不是等待中心平台团队交付所有内容。</p>
+
+<p><a href="http://www.brendangregg.com/blog//2025-05-22/3-years-of-extremely-remote-work.html">三年超远程办公体验</a><br>作者在过去三年中为一家美国公司（英特尔）远程办公，分享了其在澳大利亚远程办公的经验和心得。文章详细描述了其由于时区差异而不得不参加许多凌晨会议的情况，并分享了一些应对远程办公挑战的技巧，例如记录并分享会议统计数据、保持积极性、以及避免抱怨等。文章还探讨了远程办公的优缺点，例如减少了通勤时间和生病天数，但也可能导致“眼不见心不烦”的问题，从而错失职业发展机会。最后，作者呼吁公司在制定远程办公政策时，应充分考虑远程员工的实际情况。</p>
+
+<p><a href="https://semaphore.io/blog/ephemeral-environments-open-source">用于测试开源项目的短暂环境</a><br>Semaphore 开源后，为了确保它可以在任何地方顺利运行，我们构建了短暂的环境，这比预期的要难得多，但非常值得。文章详细介绍了构建过程，包括使用 Helm charts 打包应用程序、在 Google Cloud 和 AWS 上创建新的 Kubernetes 集群、运行端到端测试以及最终使用单 VM k3s 设置进行快速本地测试的过程，并总结了经验教训。</p>
+
+<p><a href="https://www.uber.com/blog/robust-database-backup-recovery-at-uber">Uber健壮的数据库备份和恢复</a><br></p>
+
+<p><a href="https://jamesbornholt.com/blog/memory-models">内存一致性模型：教程</a><br>本文探讨了计算机科学中一个难题：内存一致性，即定义并行线程如何观察其共享内存状态的问题。文章解释了顺序一致性及其局限性，引入了存储缓冲区以及总存储排序（TSO）等概念来提高性能，并阐述了其可能导致与程序员直觉相悖的行为。文章还讨论了缓存一致性、弱排序等概念，并强调了使用同步库来避免低级同步问题的必要性。最后，文章指出，如果程序没有数据竞争，编译器会插入必要的栅栏以保持顺序一致性的外观。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/23/remote-prompt-injection-in-gitlab-duo/#atom-everything">GitLab Duo 中的远程提示注入导致源代码被盗</a><br>本文介绍了 GitLab Duo（GitLab 的聊天机器人）中发生的远程提示注入攻击，攻击者利用经典的 Markdown 图片渗透攻击窃取源代码。攻击利用了 LLM 访问私有数据、暴露于恶意指令以及通过工具使用或渲染链接和图像来泄露信息的能力，从而造成安全漏洞。GitLab 通过添加 `isRelativeUrlWithoutEmbeddedUrls()` 函数来修复此问题，确保只有“受信任”的域才能被链接和图像引用。</p>
+
+<p><a href="https://gizmodo.com/its-breathtaking-how-fast-ai-is-screwing-up-the-education-system-2000603100">AI正在以惊人的速度破坏教育体系</a><br>由于新型聊天机器人的出现，美国人的愚蠢程度正在以惊人的速度升级。文章指出，AI不仅让大学生可以轻松作弊，也让老师可以更容易地创建课程和作业，最终导致学生和教师都变得越来越依赖AI，智力水平下降。文章还批评了AI行业鼓吹“颠覆”教育体系的行为，认为这实际上是一种破坏性力量。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/elastic/beats">elastic/beats</a><br>🐠 Beats - Lightweight shippers for Elasticsearch &amp; Logstash</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/metoro-io/mcp-golang">metoro-io/mcp-golang</a><br>Write Model Context Protocol servers in few lines of go code. Docs at https://mcpgolang.com</p>
+
+<p><a href="https://github.com/bytebase/bytebase">bytebase/bytebase</a><br>World&#39;s most advanced database DevSecOps solution for Developer, Security, DBA and Platform Engineering teams. The GitHub/GitLab for database DevSecOps.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/drakkan/sftpgo">drakkan/sftpgo</a><br>Full-featured and highly configurable SFTP, HTTP/S, FTP/S and WebDAV server - S3, Google Cloud Storage, Azure Blob</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/k0sproject/k0s">k0sproject/k0s</a><br>k0s - The Zero Friction Kubernetes</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240923.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-23</span>
+</p>
+<p>每日一谚：Make it easy to read from top to bottom </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://packagemain.tech/p/different-ways-of-working-with-sql">在Go中使用SQL数据库的不同方式</a><br>本文全面比较了在 Go 中使用 SQL 数据库的不同方法和工具，包括内置的 &#39;database/sql&#39; 包和流行的第三方库，如 &#39;sqlx&#39;、&#39;GORM&#39; 和 &#39;sqlc&#39;。它探讨了每种方法的优缺点，从 &#39;database/sql&#39; 的简单性和直接性到 &#39;sqlc&#39; 提供的类型安全性和抽象性。此外，本文还谈到了数据库迁移的重要性，提到了 &#39;golang-migrate&#39; 和 &#39;goose&#39; 等工具，它们有助于管理不同环境中的架构更改。讨论还扩展到这些工具和方法对各种开发人员需求和项目要求的适用性。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/golang-time">在Go中使用时间</a><br>Cloudflare 已阻止对 bytesizego.com 的访问，促使网站所有者通知用户，由于该网站旨在防止在线攻击的安全措施，他们已被阻止。该消息指示某些操作（例如提交特定单词或短语、SQL 命令或格式错误的数据）可能会触发此类阻止。建议寻求解决问题的用户通过电子邮件联系网站所有者，提供他们导致阻止的操作的详细信息以及与事件相关的 Cloudflare Ray ID。</p> 
+
+<p><a href="https://www.developing.dev/p/a-new-era-of-writing-code">编写代码的新时代</a><br>Ryan Peterman 引入了利用 Cursor 等大型语言模型 （LLM） 生成代码的概念，这标志着软件工程师进行编程的方式发生了潜在转变。通过利用这些工具，Peterman 能够构建一个简单的全栈应用程序，并显著减少编码工作量，展示了 LLM 在处理重复性任务方面的效率。但是，他也强调了高级规划和设计的重要性，以及 LLM 在调试和处理专有代码方面的局限性。Peterman 的经验表明，虽然 LLM 可以提高生产力，让工程师能够专注于开发中更具创造性的方面，但它们还不能完全替代人类编码技能。</p> 
+
+<p><a href="https://shape-of-code.com/2024/09/22/discussing-new-language-features-is-more-fun-than-measuring-feature-usage-in-code/">讨论新的语言功能比测量代码中的功能使用情况更有趣</a><br>Shape of Code 博客深入探讨了编程语言功能的复杂性、它们的用法，以及对开发人员、语言设计人员和整个行业的影响。它质疑了语言功能在代码中的使用频率，这是一个很少被探讨的话题。该博客强调了了解编程语言的流行和很少使用的特性的重要性，因为这些知识对各种利益相关者都很有价值，包括那些优化代码和教育学生的人。该帖子还谈到了语言功能提案背后的动机，从营销到语言创作者的个人享受。此外，该博客还讨论了衡量语言功能使用情况的挑战以及对编程语言和 AI 开发的未来的潜在影响。</p> 
+
+<p><a href="https://shiftmag.dev/unhappy-developers-stack-overflow-survey-3896/">80% 的开发人员不满意。问题不在于 AI，也不在于编码</a><br>Stack Overflow 调查显示，80% 的开发人员对自己的工作不满意，主要原因是不切实际的期望、过度的官僚主义以及提倡喧嚣而不是福祉的文化。尽管存在不满，但开发人员在很大程度上支持在工作中使用 AI 工具，并承认提高生产力是一个显着的好处。然而，他们对 AI 在处理复杂任务方面的有效性及其可靠性表示担忧。该调查还强调了诸如工资下降（尤其是 PHP 开发人员）以及导致工作不满的技术债务普遍存在等问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://modern-json-schema.com/analyzing-the-openapi-tooling-ecosystem">分析 OpenAPI 工具生态系统</a><br>本文档详细探讨了 OpenAPI 规范 （OAS） 工具生态系统，旨在增强与 API 交互的工具的设计、实现和维护。它提出了一种理想化的架构，该架构描述了三个主要功能区域：解析库、基于 OAS 的工具（OAD 工具）和 API 工具。分析库构成了处理文档接口、引用和分析任务的基础。OAD 工具侧重于 OpenAPI 描述的结构，而 API 工具则关注 API 的 HTTP 建模和客户端代码。本文档还讨论了需要一个类似于 DOM 的 OpenAPI Descriptions 的干净接口，以及定义可扩展系统以适应新兴数据格式的挑战。</p>
+
+<p><a href="https://spin.atomicobject.com/simplicity-design-thinking/">简单的魔力：让设计思维研讨会充满活力和影响力</a><br>这篇文章强调了简单性在设计思维研讨会中的重要性，认为它会带来更深入的见解、即时参与、包容性和更多的想法。作者分享了推动此类研讨会的个人经验，强调了过于复杂的活动如何阻碍进度并在参与者之间造成孤立感。通过保持活动简单明了，作者断言研讨会可以保持高能量水平并营造协作环境。文章最后鼓励在研讨会中练习简单性，声称它不会损害质量或创造力，反而会增强整体体验。</p>
+
+<p><a href="https://medium.com/@josielol/unleashing-the-t-rex-how-containers-sometimes-fail-to-contain-1710b6cc7990">释放 T-Rex：容器有时无法容纳</a><br>在文章中，Josephine Pfeiffer 将臭名昭著的侏罗纪公园与计算中的容器概念进行了类比，说明了在某些情况下，容器如何无法包含其进程，从而导致系统范围的中断。Pfeiffer 复习了容器基础知识，将容器与恐龙外壳进行了比较，并解释了容器运行时、运行时环境和隔离机制的作用。本文深入探讨了容器逃避隔离的各种方式，包括容器攻击向量和 eBPF 漏洞利用，它们针对隔离机制和内核内部。Pfeiffer 讨论了 eBPF 的一个案例研究，详细介绍了攻击者如何利用 eBPF 验证器和 JIT 编译器中的漏洞进行本地权限提升。本文最后讨论了如何防止此类违规行为，强调了供应链安全的重要性，以及使用 SBOM 和工件签名等工具实现容器完整性的重要性。</p>
+
+<p><a href="https://medium.com/@pbrzoska/kibana-vs-grafana-choosing-the-right-data-visualization-tool-kibana-vs-grafana-19ffb154015b">Kibana 与 Grafana：选择合适的数据可视化工具 |Kibana 与 Grafana</a><br>Kibana 和 Grafana 都是用于探索和呈现数据见解的数据可视化工具。Kibana 专为 Elastic Stack 设计，在日志分析和可视化 Elasticsearch 中存储的数据方面表现出色。另一方面，Grafana 在处理各种数据源方面用途广泛，特别擅长创建监控仪表板。虽然这两种工具都提供了一系列可视化选项，但它们之间的选择通常取决于项目的特定需求，例如主要数据源和所需的自定义级别。Quesma 等工具可以扩展 Kibana 的互操作性，从而允许使用更灵活的方法跨不同平台进行日志分析和可观测性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://ia.samaltman.com/">智能时代</a><br>本文设想了智能时代的未来，人工智能 （AI） 的进步将带来前所未有的繁荣和解决复杂问题的能力。它强调了深度学习的关键作用，随着资源和规模的增加，深度学习已经显示出显着的进步，推动人类走向这个新时代。作者表示相信人工智能将变得更加有效并融入我们的生活，充当个人助理并促进医疗保健、教育和技术创新。然而，本文也承认需要仔细驾驭与 AI 相关的风险，以确保其利益最大化，潜在危害最小化。最终，作者相信人工智能的未来将是光明的，从而取得重大成就，例如缓解气候变化、太空殖民和突破性的科学发现。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 快速简单的视频下载库和用 Go 编写的 CLI 工具</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ 与 Subsonic/Airsonic 兼容的 Modern Music Server 和 Streamer</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>1 个文件中的开源实时后端</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>后端大师课：用 Go 构建一个简单的银行服务</p>
+
+<p><a href="https://github.com/encoredev/encore">encoredev/encore</a><br>开发平台，用于构建具有声明式基础设施的健壮类型安全的分布式系统</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/kubernetes/kops">kubernetes/kops</a><br>Kubernetes 操作 （kOps） - 生产级 k8s 安装、升级和管理</p>
+
+<p><a href="https://github.com/konstructio/kubefirst">konstructio/kubefirst</a><br>Kubefirst 开源平台</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>适用于去中心化 Web 🌈💎✨ 的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和 2FA 的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman：用于管理 OCI 容器和 Pod 的工具。</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>使用 PUT/POST 将推送通知发送到您的手机或桌面</p>
+
+<p><a href="https://github.com/nucleuscloud/neosync">nucleuscloud/neosync</a><br>面向开发人员的开源数据匿名化和合成数据编排。创建高保真合成数据并在您的环境中同步。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源的轻量级笔记服务。轻松捕捉和分享您的精彩想法。</p>
+
+<p><a href="https://github.com/mikestefanello/pagoda">mikestefanello/pagoda</a><br>快速、简单的 Go 全栈 Web 开发入门工具包</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>适用于容器的应用程序内核</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

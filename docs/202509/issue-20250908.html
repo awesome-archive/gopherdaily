@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250908.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250908</span>
+</p>
+<p>每日一谚：Documentation is better than nothing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/08/fanren-xiuxian-programmer-levels">从《凡人修仙传》看程序员境界：道友，你修炼到哪一层了？</a><br>在这“码农”修仙界，人人皆望飞升，脱离 CRUD 的苦海，证得架构大道。韩天尊从一介凡人，在人界一步步逆天修行；我们则从一行“Hello World”开始，在代码的世界里摸爬滚打 。从初窥门径到执掌乾坤，其间的艰辛与突破，又何尝不是一场惊心动魄的修行？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ODKP4F81Dn0MrvOTDi-M5A">【AI应用开发第一课】09 拓宽视野：玩转 Anthropic、Google 等多模型 Go SDK</a><br>本讲，我们将开启一段全新的探索之旅。我们将暂时将将目光从 OpenAI 的生态暂时移开，去拓宽我们的视野，快速领略 Go 语言是如何 与 Anthropic Claude 和 Google Gemini 这两大主流模型进行交互的</p> 
+
+<p><a href="https://rednafi.com/go/early_return_and_goroutine_leak">早返回和 goroutine 泄漏</a><br>在工作中，我注意到在审查候选人的家庭作业时，他们经常犯一个错误，即将 goroutine 连接到通道，然后提前返回。
+
+这种模式通常是这样的：
+
+*   启动几个 goroutine
+*   每个 goroutine 将一个 `result` 发送到其自己的非缓冲通道
+*   在主 goroutine 中，逐个从这些通道中读取
+*   如果任何读取包含错误，则提前返回
+
+陷阱是提前返回。对于非缓冲通道，发送会阻塞，直到接收方就绪。如果你在从剩余通道读取之前返回，那么向它们写入的 goroutine 就会永远阻塞。这就是一个 goroutine 泄漏。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-09-08-agentic-ai-three-pillars">Agentic AI 的三大支柱</a><br>在我看来，代理式 AI 的黎明始于 2025 年 2 月 24 日发布的 Claude Code。代理式 AI 诞生至今只有六个月，这令人难以置信。 在 DoltHub，我们对代理工作流程特别感兴趣。 在研究了编码代理的工作原理后，我们认为 Dolt 是代理的最佳数据库。 代理需要三个支柱才能正确运行：一个有能力的模型、版本控制和测试。 Dolt 在数据库上提供版本控制和测试，而不是在文件上，将代理工作流程扩展到代码之外的任何应用程序。 本文对此进行了解释。</p> 
+
+<p><a href="https://popovicu.com/posts/running-go-tools-in-browser">在浏览器中运行 Go 工具</a><br>快速概述如何通过利用 WASM 在浏览器内运行用于 Mrav 自定义 CPU 的 Go 工具。该项目使用 Bazel 和 Go 规则构建。</p> 
+
+<p><a href="https://dev.to/js402/vibe-coding-a-simple-feature-took-3-hours-heres-why-4f7m">Vibe 编码一个简单功能花了 3 小时。原因如下。</a><br>我试图让一个 LLM 添加两个简单的参数，结果引发了一场持续 3 小时的设计辩论。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/07/the-power-of-an-interface-for-performance">为什么说“接口”，而非代码或硬件堆砌，决定了系统的性能上限？</a><br>TigerBeetle数据库创始人Joran Dirk Greef在Strange Loop上的一场精彩的演讲，用一场耗资百万美元的数据库比赛，颠覆了这一传统认知。他通过无可辩驳的基准测试数据证明：在分布式系统中，接口（Interface）的设计，而非代码实现或硬件堆砌，才是决定性能上限的真正瓶颈。</p>
+
+<p><a href="https://allan.reyes.sh/posts/keeping-secrets-out-of-logs">避免在日志中泄露机密信息</a><br>虽然没有银弹，但如果我们在正确的地方放置一些“铅”弹，我们就有很大的机会将敏感数据排除在日志之外。</p>
+
+<p><a href="https://00f.net/2025/09/01/opensource-by-internal-contributors">为什么我们更信任陌生人的开源代码，而不是同事的？</a><br>在科技公司中，我一次又一次地注意到一个奇怪的现象。当一个团队需要一个特定功能时，第一反应是快速进行 Google 或 GitHub 搜索。他们会获取一些开源库，通常由他们从未听说过的人维护。这没问题！但矛盾的是：如果完全相同的功能在由员工维护的开源项目中可用，人们就会开始怀疑。那么，为什么我们会更信任陌生人的代码呢？让我们来深入了解一下背后的心理。</p>
+
+<p><a href="https://justin.searls.co/posts/how-to-distribute-your-own-scripts-via-homebrew">通过 Homebrew 分发您自己的脚本</a><br>我一直使用 Homebrew。每当看到一个新的 CLI 提供 npm 或 uv 安装路径以及 brew 安装路径时，我都会选择 brew。但是，当涉及到发布我自己的 CLI 时，我通常只将其作为 Ruby gem 或 npm 包发布，因为我对 Homebrew 的工作原理一无所知。下面是在 Homebrew 上发布您自己的 CLI 的步骤。完成以下步骤后，用户将能够通过两个命令安装您的 CLI：</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Sep/7/is-the-llm-response-wrong-or-have-you-just-failed-to-iterate-it/#atom-everything">LLM的回复是错误的，还是你未能迭代它？</a><br>从Mike Caulfield那里了解更多。他从一个绝佳的例子开始，说明谷歌的AI模式通常正确处理常见的错误信息，但偶尔也会出错（非确定性系统的诅咒），然后展示了一个他称之为“排序提示”的例子。</p>
+
+<p><a href="https://www.gilesthomas.com/2025/09/maths-for-llms">理解大型语言模型所需的数学知识</a><br>快速复习大型语言模型背后的数学知识：向量、矩阵、投影、嵌入、逻辑和softmax。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Webhooks, and MCP. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/charmbracelet/huh">charmbracelet/huh</a><br>Build terminal forms and prompts 🤷🏻‍♀️</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/k1LoW/deck">k1LoW/deck</a><br>deck is a tool for creating deck using Markdown and Google Slides.</p>
+
+<p><a href="https://github.com/gokcehan/lf">gokcehan/lf</a><br>Terminal file manager</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>An IPFS implementation in Go</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

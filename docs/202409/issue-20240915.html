@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240915.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-15</span>
+</p>
+<p>每日一谚：Close a channel from the producer side.  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://hungaikev.in/e-commerce-platform/part-1-setting-up-the-foundation/">使用Temporal和Go构建可扩展的订单处理系统</a><br>本综合指南详细介绍了如何使用 Temporal 实现订单处理系统来编排微服务。它首先设置一个基于 Golang 的基础 CRUD API，该 API 与 Temporal 工作流集成，并由 Postgres 数据库提供支持。该指南还介绍了如何使用 Docker 和 docker-compose 创建本地开发环境，以及从 OpenAPI 规范生成 Go 代码。此外，它还深入探讨了 Temporal 工作流与 API 的集成、使用 sqlc 实现数据库操作以及设置过程中遇到的挑战和注意事项。本文档最后概述了后续步骤，包括预览即将发布的部分，该部分将扩展 Temporal 工作流和活动，并引入更高级的概念，例如 saga 模式和分布式事务。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2024/notes-on-running-go-in-the-browser-with-webassembly/">使用 WebAssembly 在浏览器中运行 Go 的注意事项</a><br>本文深入探讨了如何使用 WebAssembly 在浏览器中运行 Go 代码，重点介绍了 Eli Bendersky 的经验。它讨论了将 Go 编译为 WebAssembly、从 JavaScript 调用 Go 函数以及在 Go 中操作 DOM 的过程。本文还介绍了一种使用轻量级 Go 工具链 TinyGo 将 Go 代码编译成 WebAssembly 的替代方法，重点介绍了它的好处和局限性。此外，本文通过引入 Web Workers 的概念解决了计算过程中阻塞主线程的问题，演示了 Go 代码如何在单独的线程中并发运行，从而保持 UI 的响应性。</p> 
+
+<p><a href="https://itnext.io/golang-and-htmx-combination-for-embedded-linux-8169887104e5">用于嵌入式 Linux 的 Golang 和 HTMX 组合</a><br>Pantacor 的软件工程师 Sergio Marin 一直专注于使用 Go 和 HTMX 开发容器化嵌入式 Linux 解决方案。本文讨论了嵌入式 Linux 开发中面临的挑战，特别是在资源受限的情况下创建用户界面和基于 Web 的应用程序。Marin 对 Golang（一种静态类型的高效编译语言）以及 HTMX（一种轻量级 JavaScript 库）的探索旨在为嵌入式 Linux 系统构建带有 Web 组件的小型应用程序。这些技术的结合旨在满足嵌入式 Linux 开发中对高效、轻量级解决方案的需求。</p> 
+
+<p><a href="https://shivamsouravjha.medium.com/how-i-mismanaged-data-storage-in-mongodb-7e25e9a382d2">我如何在 MongoDB 中管理错误的数据存储</a><br>本文讨论了 MongoDB 中数据存储的管理不善，特别关注时间序列数据的处理。作者分享了一个个人经验，他们最初将用户活动事件存储在常规 MongoDB 集合中，导致查询速度效率低下并增加了存储大小。在了解 MongoDB 的时间序列集合（针对存储按时间排序的数据进行了优化）后，作者考虑了迁移数据。但是，他们发现，虽然时间序列集合中的批量插入速度非常快，但由于批处理操作的开销，单个事件的插入速度较慢。作者得出的结论是，插入速度和查询性能之间存在权衡，对于频繁写入和读取的特定用例，常规集合是目前最合适的选择。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://itnext.io/i-transitioned-to-containerized-development-environments-75f2ecbc37c5">我过渡到容器化开发环境</a><br>在一篇 Medium 博文中，Piotr 深入探讨了他过渡到容器化开发环境的经验，强调了这种方法的挑战和好处。他解释了在当今快节奏的开发环境中保持一致的开发环境至关重要，以及容器化如何通过“开发容器”等工具帮助他实现这一目标。Piotr 还讨论了容器化的灵活性、它满足大型存储库中不同项目的能力，以及它在持续集成工作流中的有用性。他进一步探讨了“DevPod”的作用，该工具可简化跨团队使用容器化环境并支持协作。尽管存在一些挑战，例如需要更好的编辑器集成，但 Piotr 强调了容器化为他的日常工作流程带来的重大改进。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/eryajf/cloud_dns_exporter">eryajf/cloud_dns_exporter</a><br>自动获取DNS提供商的域名及解析列表，同时自动获取每个域名解析的证书信息，并导出为Prometheus Metrics。已支持：Tencent，Aliyun，Godaddy，DNSLA，Amazon，Cloudflare</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - 用 Go 编写的 AUR Helper</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥🔥🔥 Web-based linux server management control panel. / 现代化、开源的 Linux 服务器运维管理面板。</p>
+
+<p><a href="https://github.com/cloudwego/hertz">cloudwego/hertz</a><br>Go HTTP 框架，高性能、强扩展性，用于构建微服务。</p>
+
+<p><a href="https://github.com/k8sgpt-ai/k8sgpt">k8sgpt-ai/k8sgpt</a><br>让 Kubernetes 超能力惠及所有人</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ 用 Go 编写的受 Express 启发的 Web 框架</p>
+
+<p><a href="https://github.com/containerd/nerdctl">containerd/nerdctl</a><br>contaiNERD CTL - 适用于 containerd 的 Docker 兼容 CLI，支持 Compose、Rootless、eStargz、OCIcrypt、IPFS 等</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web 文件浏览器</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 快速简单的视频下载库和用 Go 编写的 CLI 工具</p>
+
+<p><a href="https://github.com/openimsdk/open-im-server">openimsdk/open-im-server</a><br>IM 聊天</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>使用 Go 创建漂亮的应用程序</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向代理,DDNS,WOL,ipv4 stun内网穿透,cron,acme,阿里云盘,ftp,webdav,filebrowser</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go，用 Go 编写基于 LLM 的程序的最简单方法</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细访问控制将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/bytebase/bytebase">bytebase/bytebase</a><br>用于数据库 DevOps 的 GitHub/GitLab。为开发人员、DBA 和平台工程团队提供世界上最先进的数据库 DevOps 和 CI/CD。</p>
+
+<p><a href="https://github.com/golang/example">golang/example</a><br>Go 示例项目</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>一个云原生 Go 微服务框架，带有 cli 工具以提高工作效率。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区托管域列表。为 V2Ray 生成 geosite.dat。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

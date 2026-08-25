@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241225.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-25</span>
+</p>
+<p>每日一谚：Be explicit rather than implicit </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/12/26/exploring-the-connection-establish-process-of-webrtc-app-built-with-pion">探索基于pion开发的WebRTC应用的建连过程</a><br>通过示例详解webrtc建连</p> 
+
+<p><a href="https://www.brandur.org/two-phase-render">消除N&#43;1查询：Go 语言中的两阶段数据加载和渲染模式</a><br>本文介绍了一种两阶段数据加载和渲染模式，以通用方式防止 N&#43;1 查询问题。这种模式在 Go 语言中尤其有用，但也可应用于任何其他编程语言。文章首先解释了 N&#43;1 查询问题的本质，并通过一些示例（包括 Ruby 和 Go）演示了该问题以及如何使用两阶段模式来解决它。该模式将数据加载和渲染过程分为两个阶段：加载阶段从数据库生成包含所有必要数据的加载包，渲染阶段使用加载包渲染单个或多个资源，而无需进行数据库访问。这种模式有效地避免了在渲染多个资源时进行多次数据库查询，从而提高了应用程序的性能。</p> 
+
+<p><a href="https://minds.md/zakirullin/cognitive">认知负荷才是关键</a><br>本文探讨了软件开发中认知负荷的重要性。过高的认知负荷会导致开发人员困惑，浪费时间和金钱。文章分析了认知负荷的类型（内在的和外在的），并通过具体的代码示例，说明了如何减少外在认知负荷，例如：使用有意义的变量名简化复杂的条件语句；使用早期返回代替嵌套的if语句；优先使用组合而不是继承；避免创建过多的小型模块和微服务；选择功能较少、正交的编程语言；使用自描述字符串代替数字状态码；避免过度使用DRY原则；避免与框架紧密耦合；避免不必要的层次化架构；以及避免对DDD的误解。文章强调，减少认知负荷可以提高开发效率，并使新加入的开发人员更快地上手项目。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-go-generics-monads-and-functors-for-powerful-expressive-code-1g39">掌握 Go 泛型：用于强大、表达性代码的 Monad 和 Functor</a><br>探索高级 Go 泛型：实现 Monad 和 Functor 以创建表达性强、易于维护的代码。学习如何在复杂系统中优雅地处理错误和副作用。</p> 
+
+<p><a href="https://dev.to/samet_burgazoglu/new-postgresql-orm-for-golang-enterprise-1bja">面向 Golang 的新型 PostgreSQL ORM：Enterprise</a><br>为什么需要一个新的 ORM？虽然已经有了一些不错的 ORM 可用，但它们无法满足我的需求。那么，我想要什么呢？高性能、代码即模式、静态类型和生成的 API 代码、更少的生成文件、简单且实用、易于使用 RawSQL、连接关系时的单次数据库命中过滤。目前，我不能说 Enterprise 能很好地做到我提到的所有事情，但它的目标是做到这些。本文介绍了 Enterprise 的高性能、代码即模式、静态类型和生成的 API 代码、更少的生成文件、简单且实用、易于使用 RawSQL、连接关系时的单次数据库命中过滤等特性，并提供了代码示例和相关链接。</p> 
+
+<p><a href="https://dev.to/souvikinator/understanding-goroutines-and-channels-in-golang-with-intuitive-visuals-16gj">理解和可视化 Golang 中的 Goroutine 和 Channel</a><br>本系列文章将介绍 Go 语言中的 Goroutine 和 Channel，涵盖 Goroutine 的工作原理及其生命周期、Goroutine 之间的 Channel 通信、带缓冲区的 Channel 及其用例，并通过实际示例和可视化图表进行讲解。文章首先介绍了基础知识，逐步深入，帮助读者建立起对 Goroutine 和 Channel 的直观理解和有效使用能力。文章还包含了 sync.WaitGroup 的使用以及缓冲区 channel 与非缓冲区 channel 的对比。</p> 
+
+<p><a href="https://clace.io/blog/go-composition/">Go 语言组合与隐式接口的兼容性问题</a><br>Go 语言支持组合而不是继承来扩展行为。文章介绍了 Go 语言中组合是如何破坏使用隐式接口的代码的，并提供了解决方案和避免此问题的建议。文章以作者在 Clace 项目中遇到的 Server-Sent Events (SSE) 停止工作的问题为例，说明了组合导致隐式接口（例如 `http.Flusher`）失效的问题，并提出了两种解决方案：显式实现 `http.Flusher` 接口和使用两种实现（可刷新和不可刷新）以保持原始行为。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.home-assistant.io/blog/2024/12/19/voice-preview-edition-the-era-of-open-voice/">开放式语音助手的时代已经到来</a><br>Home Assistant 推出了语音预览版，旨在打造一款不收集用户数据且功能不受限制的语音助手。该预览版注重隐私和开放性，并具有先进的音频处理技术，能够在嘈杂环境中清晰地识别语音指令。用户可以自定义其功能和外观，并参与到其开发中。该产品价格实惠，并提供本地和云端两种运行模式，以满足不同用户的需求。</p>
+
+<p><a href="https://www.zymtrace.com/article/introducing-zymtrace">介绍 zymtrace，全球首个用于 GPU 和 CPU 工作负载的分布式分析器</a><br>zymtrace 是全球首个专为通用和 AI 加速工作负载设计的分布式分析器。它通过提供 GPU 和 CPU 工作负载的统一可见性、将复杂性能数据转换为清晰的、可操作的建议以及无需代码更改、重启或检测即可实现零摩擦的可观察性来彻底改变工程师优化其现代基础设施的方式。zymtrace 能够监控系统上运行的每一行代码，并准确地告诉您发生了什么以及如何解决问题。目前已发布的版本专注于全系统 CPU 工作负载优化，未来将发布 GPU 分析组件。</p>
+
+<p><a href="https://gerlacdt.github.io/blog/posts/logging">logging：明智的默认设置</a><br>日志记录是设计良好的应用程序的重要支柱。它不仅在开发过程中有很大帮助，而且对于故障分析和调试也至关重要。Brian W. Kernighan 说过：&#34;最有效的调试工具仍然是仔细思考，再加上明智地放置打印语句。&#34;  生产环境中的可观测性也需要进一步的日志记录。然而，我经常遇到日志记录实践糟糕的代码库。这表现为缺少上下文的无用日志记录或过度日志记录，从而导致整个系统崩溃。人们常常忘记日志记录是很昂贵的。以下列出了现代云原生应用程序最重要的日志记录特性。好的日志记录包括：将日志作为文本格式事件流，通常流式传输到 STDOUT；每个日志事件对应一行；使用结构化日志记录和机器可解析的格式（如带有预定义属性的 JSON，例如时间戳、环境、节点、集群、日志级别、应用程序名称、消息、请求 ID）；优先使用静默日志（如 Unix 哲学中所述）；仅记录可操作的事件；适当地使用日志级别；使用堆栈跟踪和其他上下文信息（如用户 ID、事务 ID、请求 ID）记录错误；将日志聚合到中心系统（如 ElasticSearch 或 Datadog）中，以实现强大的搜索、分析和异常检测。坏的日志记录包括：不要将日志写入文件；不要为一个日志事件记录多行；不要在生产环境中记录 DEBUG 信息；不要记录敏感数据；不要将日志用作持久性数据存储。</p>
+
+<p><a href="https://www.erikheemskerk.nl/htmx-trello-clone/">使用 htmx 创建 Trello 克隆</a><br>本文探讨了使用 htmx 创建 Trello 克隆的可行性，并通过逐步讲解，展示了如何使用 htmx、Hyperscript 和少量 JavaScript 代码实现 Trello 的核心功能，例如创建看板、重命名看板、创建泳道、创建卡片、重新排序卡片以及移动卡片等。文章还讨论了 htmx 的一些特性以及如何处理一些常见问题，例如浏览器历史记录、页面标题更新、表单验证和并发更新等。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2024/Dec/25/deepseek-v3/#atom-everything">DeepSeek-V3大型语言模型发布</a><br>中国人工智能实验室DeepSeek（中国对冲基金High-Flyer的分支）发布了新的6850亿参数大型语言模型DeepSeek-V3-Base。该模型的架构是混合专家模型，拥有256个专家，每个标记使用8个专家。DeepSeek-V3-Base目前通过chat.deepseek.com和DeepSeek API进行分阶段推出。在Aider Polyglot排行榜上，DeepSeek V3预览版获得了48.4%的得分，排名第二。</p>
+
+<p><a href="https://near.tl/developer-forever/forum/announcement/being-a-developer-in-the-age-of-reasoning-ai.anc-4b87de19-f7cf-4ef0-91c8-e28b260fd9ad.html">在推理 AI 时代成为一名开发者</a><br>OpenAI 最新发布的 o3 模型引发了作者对自身开发者身份的思考。o3 模型在代码生成能力上超越了 99.8% 的开发者。文章探讨了用户、机器学习和 o3 模型这三种创建逻辑的方式，并分析了在 o3 时代，开发者将面临两种不同的软件开发方式：主动参与的“亲力亲为”方法和被动参与的“放手不管”方法。作者认为，开发者必须理解并对 AI 生成的逻辑负责，否则人类的推理能力将被 AI 终结。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Go 中简单、可靠、高效的分布式任务队列</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>独立的中间人攻击框架，用于网络钓鱼登录凭据和会话 Cookie，允许绕过 2 因素身份验证</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs 是一种轻松的自托管 Git 服务</p>
+
+<p><a href="https://github.com/lionsoul2014/ip2region">lionsoul2014/ip2region</a><br>Ip2region （2.0 - xdb） 是一个离线 IP 地址管理器框架和定位器，支持数十亿个数据段，十微秒的搜索性能。适用于多种编程语言的 XDB 引擎实现</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>一个一体化的可观测性解决方案，旨在结合 Prometheus 和 Grafana 的优势。它管理警报规则并在漂亮的 Web UI 中可视化指标、日志、跟踪。</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/teamhanko/hanko">teamhanko/hanko</a><br>Passkey 时代的完整身份验证和用户管理解决方案。Clerk、Auth0 等的开源替代方案。</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>1 个文件中的开源实时后端</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>JSON Web 令牌 （JWT） 的 Go 实现。</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等......，并带有功能强大的web管理端。轻量级、高性能、强大的内网渗透代理服务器，拥有强大的 Web 管理终端。</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go 客户端</p>
+
+<p><a href="https://github.com/WireGuard/wireguard-go">WireGuard/wireguard-go</a><br>仅镜像。官方存储库位于 https://git.zx2c4.com/wireguard-go</p>
+
+<p><a href="https://github.com/apache/incubator-answer">apache/incubator-answer</a><br>适用于任何规模团队的问答平台软件。无论是社区论坛、帮助中心还是知识管理平台，您始终可以信赖 Apache Answer。</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>使用 PUT/POST 将推送通知发送到您的手机或桌面</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock 是 Go 编程语言的模拟框架。</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>用 Go 编写的目录/文件、DNS 和 VHost 清除工具</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.3、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

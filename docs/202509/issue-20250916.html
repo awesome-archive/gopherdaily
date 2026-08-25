@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250916.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250916</span>
+</p>
+<p>每日一谚：There should be only one way to do it </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/16/go-language-when-simple-becomes-complex">Go语言的灵魂之问：当“简单”变得“复杂”</a><br>这场讨论始于一个 Gopher 的真诚提问：在重温了 Rob Pike 2015 年关于“Simplicity is Complicated”的著名演讲后，他感到困惑。Go 语言在近些年增加了不少新特性，尤其是泛型，这是否违背了当初的简约哲学？语言真的因此变得更好了吗？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/QolpRcTLoaDUFj1ZhgH1Jw">【Go系统编程】04 实战：用 Go 编写一个健壮的守护进程 (Daemon)</a><br>这一讲，是一次纯粹为了求知和理解而进行的冒险。 学完它，你将对 Linux 后台服务的运作方式有一个脱胎换骨的理解，并能更深刻地体会到为什么现代 Go 开发会选择另一条更安全的道路</p> 
+
+<p><a href="https://blog.phakorn.com/posts/2025/building-a-simple-vm">Building a Simple Virtual Machine | Breakpoint 🛑</a><br>探索使用基于栈的架构在 Go 中构建一个简单的 VM。通过实践，学习虚拟机的基本原理。</p> 
+
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1nhkviq/optimizing_gos_garbage_collector_for_kubernetes">为Kubernetes优化Go GC</a><br></p> 
+
+<p><a href="https://dev.to/gkoos/garbage-collection-in-go-from-reference-counting-to-tri-color-to-green-tea-4f87">Go 语言中的垃圾回收：从引用计数到三色标记再到greentea</a><br>介绍
+
+垃圾回收 (GC) 是任何现代编程语言运行时最重要的组件之一。 它决定了如何以及何时回收内存，直接影响应用程序的延迟、吞吐量和整体响应能力。
+
+Go 语言一直以来都优先考虑简洁性和开发人员的生产力，其垃圾收集器在其中发挥了重要作用。 与将内存管理留给程序员的 C 和 C&#43;&#43; 等语言不同，Go 附带了一个复杂的 GC，旨在保持低延迟，同时扩展到多核系统。
+
+在 Go 1.25 中，垃圾收集器经历了重大变化。 一种新算法，内部称为“绿茶”，取代了 Go 自早期版本以来一直使用的三色标记和清除方法的核心部分。 这种转变不仅仅是一个实现细节——它是 Go 长期战略中的一个重要一步，旨在为高并发应用程序提供可预测的、低延迟的 GC。
+
+在本文中，我们将回顾一下垃圾收集策略的演变，直到 Go 目前的方法。 我们将涵盖三个主要里程碑：
+
+1.  **引用计数** —— 一种简单但受限的策略，在历史上很流行。
+2.  **三色标记和清除** —— 在 1.25 之前为 Go 的 GC 提供支持的增量算法。
+3.  **绿茶** —— Go 1.25 中引入的基于跨度的新算法。
+
+但这不仅仅是理论。 为了真正理解差异，我们将：
+
+*   使用简化的堆模型，构建每个算法在 Go 中的玩具实现。
+*   对它们的行为进行基准测试和可视化。
+*   运行实验以比较性能、权衡和边缘情况。
+*   讨论对 Go 开发人员的更广泛影响以及这些想法与其他生态系统中的 GC 的比较。
+
+最后，您不仅会了解 Go 1.25 中的变化，还会更深入地了解 GC 设计背后的权衡——这些知识的价值远远超出了 Go 本身。</p> 
+
+<p><a href="https://medium.com/@Realblank/profiling-in-go-from-guesswork-to-data-a-practical-guide-d56adef4f85e">Go 中的性能分析：从猜测到数据。实用指南</a><br>您的 Go 服务在负载下开始变慢。延迟增加，内存泄漏，而您却不知道原因。日志是干净的，指标只显示症状，而原因隐藏在代码的某个地方。熟悉吗？在本文中，我们将介绍如何通过 Go 的性能分析工具，从猜测走向硬数据</p> 
+
+<p><a href="https://packagemain.tech/p/how-to-implement-the-outbox-pattern-in-golang">How to implement the Outbox pattern in Go and Postgres</a><br>在现代的、事件驱动的架构中，服务通常使用消息代理异步通信。一个典型的流程是：服务接收一个请求，更新其自身的数据库，然后发布一个事件来通知其他服务该更改。或者这两个操作并行发生。解决的问题是：如果数据库提交成功，但随后调用消息代理失败，会发生什么？本文介绍了 Outbox 模式，通过将消息保存在本地数据库中，确保消息的发送（例如，发送到队列）至少成功一次。</p> 
+
+<p><a href="https://philipotoole.com/rqlite-9-0-real-time-change-data-capture-for-distributed-sqlite">rqlite 9.0：用于分布式 SQLite 的实时变更数据捕获</a><br>rqlite 是一个轻量级、用户友好的开源分布式关系数据库。它用 Go 编写，使用 Raft 进行分布式共识，并使用 SQLite 作为其存储引擎。 rqlite 9.0 引入了变更数据捕获 (CDC)，使您能够将对底层 SQLite 数据库发生的更改流式传输到其他系统。 通过 CDC，rqlite 不再仅仅是一个分布式数据库，它还是一个实时事件源。 让我们看一下最新版本允许我们做什么，以及需要解决的一些设计挑战，尤其是在 SQLite 上构建变更数据捕获。</p> 
+
+<p><a href="http://notes.eatonphil.com/2025-09-15-what-is-systems-and-how-do-i-learn.html">回复开发者关于系统的提问</a><br>作者回复了一位开发者关于如何学习系统知识的提问。作者首先定义了“系统”指的是开发者使用的底层软件，如编译器、数据库、操作系统等。他认为，学习系统知识可以从质疑和自己构建每一层软件开始，鼓励读者阅读《设计数据密集型应用》这本书，并提到这是一个长期的学习过程，需要时间和耐心。此外，作者推荐了Software Internals Discord和nycsystems.xyz这两个资源。</p> 
+
+<p><a href="https://blog.fillmore-labs.com/posts/errors-2">Linter 破坏了我的代码的那一天</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/self-hosted-git-server-tailscale-forgejo">使用 Forgejo 和 Tailscale 构建您自己的私有、自托管 Git 服务器</a><br>构建一个本地优先的代码平台和 GitHub 镜像备份——然后使其能够非常轻松地进行安全访问。</p>
+
+<p><a href="https://www.docker.com/blog/ai-poc-success-rules/">构建实际交付的 AI PoC 的九大规则</a><br>构建实际交付的 AI POC。使用 remocal 工作流程，从小处着手，为生产环境设计，跟踪成本，并让用户参与进来，从而从演示走向可靠的部署。</p>
+
+<p><a href="https://netflixtechblog.com/building-a-reliable-cloud-live-streaming-pipeline-for-netflix-8627c608c967">Behind the Streams: Building a Reliable Cloud Live Streaming Pipeline for Netflix. Part 2.</a><br></p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/15/kubernetes-v1-34-decoupled-taint-manager-is-now-stable/">Kubernetes v1.34: Decoupled Taint Manager Is Now Stable</a><br>此增强功能将管理节点生命周期和 Pod 驱逐的责任分离为两个不同的组件。以前，节点生命周期控制器同时处理使用 NoExecute taint 标记节点为不健康以及从它们驱逐 Pod。现在，一个专门的 taint 驱逐控制器管理驱逐过程，而节点生命周期控制器仅侧重于应用 taint。这种分离不仅改进了代码组织，而且也使改进 taint 驱逐控制器或构建基于 taint 的自定义实现变得更容易。</p>
+
+<p><a href="https://www.davidpoll.com/2025/09/the-4p-developer-the-missing-layer-in-platform-thinking">4p开发者：平台思维中缺失的一环</a><br>每个成功的平台都有它们。它们价值数十亿美元。然而，我们甚至没有一个名字来称呼它们。我指的是为您的平台上的其他开发者构建工具的开发者。不是您的内部团队。不是外部应用程序开发者。使平台爆发的第四方。</p>
+
+<p><a href="https://purplesyringa.moe/blog/falsehoods-programmers-believe-about-null-pointers">程序员对空指针的误解</a><br>空指针在表面上看起来很简单，这就是它们如此危险的原因。随着编译器优化、直观但错误的简化以及特定于平台的怪癖不断增加，做出错误假设的几率也随之增加，从而导致错误和漏洞的扩散。本文探讨了许多程序员对空指针的常见误解，从简单的谬论开始，逐步深入到最奇怪的案例。其中一些对初学者来说只是新闻，而另一些可能会让专家们走上细致的事实核查之路。事不宜迟，让我们开始吧。</p>
+
+<p><a href="https://newsletter.scalablethread.com/p/why-event-driven-systems-are-hard">Why are Event-Driven Systems Hard? - by Sid</a><br>了解异步架构的核心挑战</p>
+
+<p><a href="https://kyrylo.org/software/2025/08/21/why-do-software-developers-love-complexity.html">为什么软件开发人员喜欢复杂性？</a><br>本文探讨了为什么软件开发人员倾向于构建复杂系统。文章指出，市场营销、对创造力的渴望、遗留系统和技术债务、团队协作以及创新压力等因素，都会促使开发者拥抱复杂性。文章最后呼吁，在构建复杂系统时，要像埃及人建造金字塔一样，注重明确的目的、坚实的基础和真正有价值的内容。</p>
+
+<p><a href="https://nickb.dev/blog/default-musl-allocator-considered-harmful-to-performance">默认 musl 分配器被认为有害（对性能）</a><br>在真实的基准测试中，默认的 musl 分配器导致了与其他分配器相比 7 倍的减速。我建议所有 Rust 项目立即将以下行添加到他们的应用程序的 main.rs 中：
+
+```rust
+// 避免 musl 的默认分配器，因为它性能不佳
+// https://nickb.dev/blog/default-musl-allocator-considered-harmful-to-performance
+
+#[cfg(target_env = &#34;musl&#34;)]
+#[global_allocator]
+static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
+```
+
+以及 Cargo.toml
+
+```toml
+[target.&#39;cfg(target_env = &#34;musl&#34;)&#39;.dependencies]
+mimalloc = &#34;0.1.43&#34;
+```
+问题的根本原因是分配内存时多个线程之间的争用，因此问题会随着创建更多线程或分配而恶化。
+我建议即使 musl 不是今天的编译目标，或者程序是单线程的，也要交换分配器。这是你绝对不想忘记的事情。
+读者可以自行选择他们想要替换的分配器。代码片段使用 mimalloc，但 jemalloc 也不错。
+此外，读者可以选择是否只将分配替换限制在 musl 环境（如所示）还是在全球范围内进行。我不介意在这里有条件地编译依赖项，因为它充当了另一种形式的文档。</p>
+
+<p><a href="https://dev.to/franckpachot/mongodb-internals-how-collections-and-indexes-are-stored-in-wiredtiger-2ed">MongoDB 内部：WiredTiger 中集合和索引的存储方式</a><br>WiredTiger 是 MongoDB 的默认存储引擎，但当集合和索引保存到磁盘时，幕后到底发生了什么？在这次简短的深入探讨中，我们将探索 WiredTiger 数据文件的内部结构，涵盖从  _mdb_catalog 元数据和 B-Tree 页面布局到 BSON 存储、主索引和辅助索引以及多键数组处理的所有内容。目标是介绍有用的低级工具，如  wt 和其他实用程序。</p>
+
+<p><a href="https://tidyfirst.substack.com/p/programming-deflation">编程通货紧缩</a><br>当代码每天都变得更便宜</p>
+
+<p><a href="https://mattpalmer.io/posts/developer-marketing">什么是开发者营销？</a><br>本文探讨了开发者营销的关键要素：构建什么产品、为谁构建以及如何沟通。作者强调，开发者营销的核心在于理解用户及其痛点，将技术术语转化为更易于理解的语言，并通过分享失败、寻求帮助和庆祝成功来建立社群。最终目标是让用户通过自己的成功故事来宣传你的产品。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://bclarkson-code.com/posts/llm-from-scratch-scalar-autograd/post.html">Building an LLM from scratch</a><br>构建一个 LLM：自动微分</p>
+
+<p><a href="https://openai.com/index/introducing-upgrades-to-codex">OpenAI Codex升级介绍</a><br></p>
+
+<p><a href="https://joincolossus.com/article/ai-will-not-make-you-rich">AI 将无法让你致富</a><br>颠覆是真实的。它也是可以预测的。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAGI">mudler/LocalAGI</a><br>LocalAGI is a powerful, self-hostable AI Agent platform designed for maximum privacy and flexibility. A complete drop-in replacement for OpenAI&#39;s Responses APIs with advanced agentic capabilities. No clouds. No data leaks. Just pure local AI that works on consumer-grade hardware (CPU and GPU).</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP server</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/docker/mcp-gateway">docker/mcp-gateway</a><br>docker mcp CLI plugin / MCP Gateway</p>
+
+<p><a href="https://github.com/gocolly/colly">gocolly/colly</a><br>Elegant Scraper and Crawler Framework for Golang</p>
+
+<p><a href="https://github.com/flexprice/flexprice">flexprice/flexprice</a><br>Usage-based pricing and billing for developers 🔓 Cloud or self-hosted ⚙️ No-code UI 💰 Realtime usage metering 🎟 Credits &amp; top-ups 🔑 Control feature access</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/docker/mcp-registry">docker/mcp-registry</a><br>Official Docker MCP registry</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/projectdiscovery/subfinder">projectdiscovery/subfinder</a><br>Fast passive subdomain enumeration tool.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

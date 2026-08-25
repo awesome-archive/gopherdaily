@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250809.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250809</span>
+</p>
+<p>每日一谚：Do not reuse variables that you sent through a channel. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/09/true-streaming-support-in-jsonv2">Go jsonv2实战：告别内存爆炸，掌握真流式Marshal和Unmarshal</a><br>Go 开发者长期以来面临一个痛点：标准库 encoding/json 在处理大型 JSON 数据时，即使使用 Encoder/Decoder，也因其内部的全量缓冲机制而导 致巨大的内存开销。备受期待的 encoding/json/v2 提案#71497旨在从根本上解决这一问题。通过引入全新的底层包 encoding/json/jsontext，v2 实现了真正的流式处理能力。本文将通过具体的、可量化的基准测试，向你展示 v1 的内存 陷阱，并演示如何使用 json/v2 高效地实现流式处理大规模 JSON 数据，彻底告别内存爆炸的烦恼。</p> 
+
+<p><a href="https://medium.com/@sogol.hedayatmanesh/gos-context-in-distributed-systems-ccdec75d5868">Go’s Context in Distributed Systems</a><br>从请求到取消 — 真正传递的内容以及可能中断的内容。🌀 简介：跨越边界的上下文您正在构建一个 Go 微服务。 您编写了干净的代码，您的 goroutine 被整洁地作用域化，您的超时已定义 — 一切看起来都很好。 但是，一旦您的服务成为更大分布式系统的一部分，事情就变得不可预测。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-08-08-vector-type">VECTOR 列的计划</a><br>最近，我们为我们的 SQL 数据库 Dolt 增加了对向量索引的支持。Dolt 旨在替代 MySQL，但当时 MySQL 还不支持向量索引。实际上，现在它仍然不支持。所以我们借鉴了 MariaDB（MySQL 语法的另一个数据库引擎，它确实支持向量索引）的语法。目前，您可以通过这种方式添加向量索引。</p>
+
+<p><a href="https://blog.codingnow.com/2025/08/setwindowtext_deadlock.html">SetWindowText 引起的死锁</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/08/08/from-terraform-modules-to-platform-services-simplify-infrastructure-management-with-the-kratix-cli/">从 Terraform 模块到平台服务：使用 Kratix CLI 简化基础设施管理</a><br>如果您使用 Terraform 一段时间，您可能已经体验过直接将 Terraform 模块交给应用程序开发人员。尽管这可以让团队快速上手，但它也可能导致很多麻烦。</p>
+
+<p><a href="https://victoriametrics.com/blog/victorialogs-concepts-message-time-stream">VictoriaLogs 实用ingest指南：消息、时间和流</a><br>VictoriaLogs 使用三个核心概念：消息、时间和流字段来构建日志数据。流太少会创建难以查询的胖流，而……</p>
+
+<p><a href="https://kiraniyer88.medium.com/production-kubernetes-logging-victorialogs-73ae858aa3e4">生产环境 Kubernetes 日志记录-VictoriaLogs</a><br>介绍用于 Kubernetes (EKS) 日志记录的 VictoriaLogs。</p>
+
+<p><a href="https://radar.com/blog/high-performance-geocoding-in-rust">我们如何使用 Rust 和 RocksDB 替换 Elasticsearch 和 MongoDB</a><br>Radar 提供地理编码、地点搜索和欺诈检测 API，由 HorizonDB 提供支持，这是一个基于 Rust 的引擎，可提供 20k QPS 和亚毫秒级延迟。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://nik1379616.substack.com/p/can-we-make-ai-code-assistants-smarter">为什么我删除了我的 Copilot 规则：指导 AI 助手的更好方法</a><br>我使用预先构建的规则来增强 GitHub Copilot 的实验失败了，尽管它们在 Cursor 中有效。 了解一种反直觉的迭代方法，用于共同创作 AI 指令，这种方法实际上可以提供更好、更具上下文的代码。</p>
+
+<p><a href="https://www.dzombak.com/blog/2025/08/getting-good-results-from-claude-code">从 Claude Code 获得良好结果</a><br>在过去的几个月里，我一直在尝试 LLM 编程代理。Claude Code 已经成为我最喜欢的。它并非没有问题，但它让我在相对较短的时间内编写了大约 12 个程序/项目，而且我觉得如果没有它，我无法在相同的时间内完成所有这些。其中大多数，如果没有 Claude Code，我甚至不会费心去写，仅仅是因为它们会占用我太多时间。（此帖子末尾包含一个列表。）我离 Claude Code 专家还差得很远，我有一堆博客文章和文档需要审查，这些可能会有用。但是——而且这很关键——你不需要阅读所有现有的内容就能开始看到结果。你甚至不需要阅读这篇文章；只需输入一些提示并看看结果即可。也就是说，因为我刚刚为一份工作申请写下了这篇文章，**以下是我从 Claude Code 中获得良好结果的方式**。我已在适当的位置嵌入了一些示例的链接。关键是提前编写清晰的规范，这为代理在代码库中工作时提供了上下文。为代理准备一份文档，概述项目的结构以及如何运行例如构建和 linters 很有帮助。要求代理对其自身的工作进行代码审查，这出人意料地有益。最后，我有一个个人的“全局”代理指南，描述了代理要遵循的最佳实践，例如解决问题的方法、使用 TDD 等。（此文件列在此帖子的末尾附近。）然后是**验证 LLM 编写的代码**的问题。AI 生成的代码**通常**是不正确或效率低下的。重要的是，我要指出的是，**我相信我最终要对我的名字出现在 PR 中的代码负责，无论它是如何产生的**。因此，尤其是在任何专业环境中，我都会手动审查所有 AI 编写的代码和测试用例。我会为我认为缺失或需要改进的任何内容添加测试用例，无论是手动添加还是要求 LLM 编写这些用例（然后我会进行审查）。最终，手动审查是必要的，以验证行为是否已正确实施和测试。</p>
+
+<p><a href="https://instavm.io/blog/building-my-offline-ai-workspace">我想要一切都在本地——构建我的离线 AI 工作区</a><br>我想要一切都在本地——没有云，没有远程代码执行。这就是一位朋友所说的。这句简单的一句话，需要多方面协同工作才能实现。文章介绍了构建一个在本地运行 LLM，代码在轻量级 VM 中执行，并且有headless browser 来实现自动化和互联网访问的 AI 工作室的方案。文章还讨论了所使用的技术栈，遇到的挑战以及未来展望。</p>
+
+<p><a href="https://blog.google/technology/developers/introducing-gemini-cli-github-actions">与你的新 AI 编码队友会面：Gemini CLI GitHub Actions</a><br>今天，我们推出了 Gemini CLI GitHub Actions。它是您存储库中一个免费且强大的 AI 编码助手。它既可以作为关键例行编码任务的自主代理，也可以作为您可以快速委派工作的按需协作伙伴。</p>
+
+<p><a href="https://blog.google/products/gemini/gemini-2-5-deep-think">Gemini 2.5：Deep Think 现已推出</a><br>我们正在向 Google AI Ultra 订阅者推出 Gemini 应用中的 Deep Think，这是专为他们提供的最新、功能强大的 AI 工具和功能之一。Deep Think 利用并行思维技术，能够生成多种想法并同时考虑它们，从而找到最佳答案。它还可以改进迭代开发和设计、科学和数学发现以及代码生成等任务。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/steveiliop56/tinyauth">steveiliop56/tinyauth</a><br>The simplest way to protect your apps with a login screen.</p>
+
+<p><a href="https://github.com/gotify/server">gotify/server</a><br>A simple server for sending and receiving messages in real-time per WebSocket. (Includes a sleek web-ui)</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/openai/openai-go">openai/openai-go</a><br>The official Go library for the OpenAI API</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/fullstorydev/grpcurl">fullstorydev/grpcurl</a><br>Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers</p>
+
+<p><a href="https://github.com/RezaSi/go-interview-practice">RezaSi/go-interview-practice</a><br>Go Interview Practice is a series of coding challenges to help you prepare for technical interviews in Go. Solve problems, submit your solutions, and receive instant feedback with automated testing. Track your progress with per-challenge scoreboards and improve your coding skills step by step.</p>
+
+<p><a href="https://github.com/sashabaranov/go-openai">sashabaranov/go-openai</a><br>OpenAI ChatGPT, GPT-3, GPT-4, DALL·E, Whisper API wrapper for Go</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>The Fastest LLM Gateway with built in OTel observability and MCP gateway</p>
+
+<p><a href="https://github.com/shirou/gopsutil">shirou/gopsutil</a><br>psutil for golang</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/containers/kubernetes-mcp-server">containers/kubernetes-mcp-server</a><br>Model Context Protocol (MCP) server for Kubernetes and OpenShift</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/kubernetes-sigs/controller-runtime">kubernetes-sigs/controller-runtime</a><br>Repo for the controller-runtime subproject of kubebuilder (sig-apimachinery)</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

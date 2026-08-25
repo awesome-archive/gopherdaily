@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251215.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251215</span>
+</p>
+<p>每日一谚：Reuse existing code and libraries whenever possible. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/15/go-language-anti-patterns-10-donts/">Go 语言的“反模式”清单：来自资深 Gopher 血泪教训的 10 条“不要做”</a><br>近日，在 r/golang 社区,引爆了一场关于 Go 语言“反模式”与“最佳实践”的集体反思。帖子下数百条评论，汇集了无数 Gopher 在真实项目中用“血与泪”换来的宝贵经验。这些教训，往往不是关于某个高深的算法，而是关于那些看似“理所当然”，却在不经意间为代码埋下地雷的日常习惯。</p> 
+
+<p><a href="https://tonybai.com/2025/12/13/from-eiffel-contract-to-go-interface/">跨越20年的对话：从 Eiffel 的“契约”到 Go 的“接口”</a><br>20年前，当我第一次翻开 Bertrand Meyer 的那本巨著《面向对象软件构造》 时，一种醍醐灌顶的感觉油然而生。书中那个名为 Eiffel 的语言，以及它所倡导的 “契约式设计” (Design by Contract, DbC)，仿佛为当时混乱的软件开发世界点亮了一盏明灯。虽然 Eiffel 语言最终并未像 Java 或 C&#43;&#43; 那样统治世界，但它留下的思想遗产——前置条件、后置条件、不变量——却潜移默化地渗透进了现代软件工程的骨髓。 时光流转，当我们站在云原生时代的潮头，手握 Go 语言 这把利器时，你是否意识到：Go 的接口 (Interface) 设计，其实是一场跨越 20 年的、对契约精神的现代演绎与致敬。</p> 
+
+<p><a href="https://simpleobservability.com/blog/go-portable-until-isnt">Go 是可移植的，直到它不是</a><br>本文探讨了 Go 语言在与系统特定的 C 库（如 libsystemd）集成以及处理 glibc 与 musl 系统时的可移植性限制。作者分享了在构建跨平台服务器监控代理 simob 时遇到的陷阱，最初的设想是生成一个可以在任何地方运行的便携式二进制文件，但这在需要访问 systemd journal 日志时遇到了挑战，因为它依赖于动态链接的 C 库，并引入了构建复杂性，包括系统依赖和 glibc/musl 兼容性问题。</p> 
+
+<p><a href="https://jitesh117.github.io/blog/implementing-tail-at-scale-in-golang">在 Go中实现“尾部扩展”</a><br>本文讨论了谷歌2013年著名的“尾部扩展”（Tail at Scale）论文，并重点介绍了作者对该论文中“补偿请求”（Hedged Requests）这一技术的 Go 语言实现。文章解释了在大规模分布式系统中，尾部延迟（如99%或99.9%的延迟）如何成为用户体验的主要瓶颈，以及补偿请求如何以较小的开销显著降低这些尾部延迟。作者通过一个 Go 模拟程序来展示这种技术的效果，并对比了启用和禁用补偿请求前后的延迟百分位差异。</p> 
+
+<p><a href="https://tonybai.com/2025/12/13/influxdb-3-0-grand-gamble-or-painful-cycle">InfluxDB 3.0：一场豪赌的未来，还是又一次痛苦的轮回？</a><br>近日，在技术社区中，一位资深 InfluxDB 用户的发帖引发了其他InfluxDB深度用户的广泛共鸣。这既是对一个数据库版本的担忧，也是对这家公司长期技术路线稳定性的灵魂拷问。</p> 
+
+<p><a href="https://tonybai.com/2025/12/14/dont-let-ai-put-your-brain-cpu-in-wait">你的大脑是 CPU，别让 AI 把它挂起 (WAIT)</a><br></p> 
+
+<p><a href="https://mp.weixin.qq.com/s/nm3Yq309R3IZeNaM_VHcsA">【API 设计之道】01 资源导向设计 (ROD)：告别 RPC 风格的“动词地狱”</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents">复合工程：Every 如何与智能体一起编码</a><br>一个为不编写代码的软件团队设计的四步工程流程。文章介绍了“复合工程”的概念，它期望每个新功能都能让后续功能的构建变得更容易，通过为智能体创建一个学习循环来记录和利用过去的经验教训。该流程包括四个核心步骤：计划、工作、评估和复合，强调了在 AI 驱动的开发中，规划和回顾的重要性，以及如何通过记录知识来使整个团队（包括未来的智能体）的生产力不断提升。</p>
+
+<p><a href="https://netflixtechblog.medium.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac">Netflix 的“混乱之山”：在现代 CPU 上扩展容器</a><br></p>
+
+<p><a href="https://scalex.dev/blog/2-years-with-shape-up">使用 Shape-Up 两年后，我们为何又换回了原来的方式</a><br>作者分享了他们在应用 Shape-Up 软件开发方法论两年的经验和教训，以及最终决定不再使用它的原因。他们发现，虽然 Shape-Up 承诺通过更长的周期加速交付，但其僵化的结构并不适合他们不断变化的需求。文章探讨了规划难题（特别是“Appetite”的校准和较小项目的适配问题）、“冷却期”（Cooldown）的双刃剑效应（既能促进技术债务清理，又容易被其他工作侵占），以及该方法论在保持专注方面是否过于死板。最终，作者认为该框架更适用于处理大型、拖沓的项目，而对于他们目前需要更灵活、更具方向性的工作，更短周期的 Scrum 调整后的版本更为合适，但 Shape-Up 在价值驱动和冷却期处理上的理念仍有借鉴价值。</p>
+
+<p><a href="https://entropicthoughts.com/deprecate-like-you-mean-it">像对待真的那样弃用</a><br>作者讨论了弃用警告（deprecation warnings）在推动 API 变更方面的低效性，引用了 Seth Larson 的观点，即人们倾向于忽略这些警告，直到函数被移除导致代码中断。文章提出了一种激进的替代方案：让被弃用的函数在不同阶段故意、随机地返回错误的结果，并伴随弃用警告。随着时间的推移，错误返回的频率增加，从而使用户立即感受到延迟维护的成本，迫使他们尽快进行更新。然而，作者最后总结说，这种“注入错误”的方法可能不如直接“保留瑕疵”（leave the warts）来得好，并强调标志和警告在驱动系统变更方面处于效能等级的底层，不应期望它们能有效工作。</p>
+
+<p><a href="https://www.hyperact.co.uk/blog/product-engineering-teams-must-own-supply-chain-risk">产品工程团队必须承担供应链风险</a><br>产品团队必须承担软件供应链风险，因为第三方依赖项已成为主要的攻击面。了解起源、证明和 SLSA 如何使信任明确、可执行和可验证。</p>
+
+<p><a href="https://rapha.land/craft-software-that-makes-people-feel-something">创作能引起人们共鸣的软件</a><br>作者分享了他决定暂停开发代码编辑器 Boo，转而研究一门编程语言的原因。他认为软件创作需要灵感，重复性的工作会降低创造出令人惊艳的软件的可能性。他将此过程比作玩乐高积木，享受探索和创造的过程，而不是追求商业成功或模仿主流产品。最终，他计划用新的编程语言重写 Boo，并强调这是他按照自己的意愿进行的爱好性工作。</p>
+
+<p><a href="https://larr.net/p/namings.html">程序员和软件开发者在给他们的工具命名上已经失控</a><br>作者认为现代软件开发领域存在一种不良风气，即倾向于使用随机、晦涩的名称（如神话生物或随机名词）来命名工具和库，而不是使用描述性名称。作者引用理查德·斯托曼的观点，强调了清晰命名（如grep, awk, sed）的重要性，并指出这种命名混乱给开发者带来了不必要的“认知税”，即每次遇到新工具时都需要花费额外的精力去解码其含义。文章呼吁在基础设施和工具命名中回归专业标准，优先考虑清晰度和描述性，将创意性的名字留给面向终端用户的产品。</p>
+
+<p><a href="https://www.notboring.co/p/hardware-is-a-fruit">硬件是水果</a><br>本文是 Packy McCormick 与 Daylight 创始人 Anjan Katta 的对话式随笔，探讨了硬件如何作为一种“水果”，承载并推广具有长期积极外部性（如隐私、专注、身心健康）的“良性软件”种子，以克服短期市场竞争中的劣势。文章核心观点是：硬件通过提供差异化的用户体验、产生现金流来支撑初期软件生态的发展，最终实现用户、开发者和公司的目标一致性，避免“逐底竞争”。</p>
+
+<p><a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3">后台编码智能体：通过强大的反馈循环实现可预测的结果（第3部分）| Spotify工程</a><br>这是我们关于Spotify使用后台编码代理以及大规模软件维护未来的系列文章的第3部分。本文探讨了在没有人工监督的情况下，代理需要什么样的环境才能尽可能频繁地产生正确和可靠的结果。Spotify通过实施强大的验证循环来应对这一挑战，这些循环指导代理逐步确认其方向是否正确，然后再提交更改。验证循环包括一个或多个独立验证器，以及一个作为“裁判”的LLM，用于评估提案的更改是否偏离了提示中概述的指示。
+
+未来的工作重点包括：支持更广泛的硬件和操作系统、与CI/CD管道的深度集成以及实施更结构化的评估（evals）。</p>
+
+<p><a href="https://www.howtocodeit.com/guides/the-definitive-guide-to-rust-error-handling">The Definitive Guide to Error Handling in Rust</a><br>本指南深入探讨了 Rust 中处理错误的各种方法，旨在帮助开发者在建模和处理错误时做出最佳选择。内容涵盖了 Rust 错误处理的基础知识，如 `Result` 类型，动态错误处理（如 `Box&lt;dyn Error&gt;` 和 `anyhow` 库的使用），以及结构化错误处理（使用枚举和 `thiserror` 宏构建富有表现力的自定义错误类型）。指南强调了在 API 设计中应优先考虑结构化错误以避免因依赖错误字符串而带来的维护问题（即 Hyrum&#39;s Law），并分析了标准库中复杂的 `std::io::Error` 的设计权衡。最终建议是根据错误的预期受众和处理需求，灵活选择最合适的错误表示方式，并在整个代码库中保持清晰和可预测性。</p>
+
+<p><a href="https://johnjames.blog/posts/graphql-the-enterprise-honeymoon-is-over">GraphQL：企业蜜月期结束</a><br>对企业级系统中 GraphQL 的实战检验，探讨了为什么蜜月期会消退，以及何时其复杂性会超过其带来的好处。
+
+文章认为 GraphQL 确实解决了一个真实存在的问题（过度获取数据），但在大多数企业环境中，这个问题已经被 BFF (Backend for Frontend) 等现有架构解决了。作者指出，引入 GraphQL 会带来额外的设置、抽象、间接层和维护成本，尤其是在下游服务仍是 RESTful API 的情况下，其主要优势被削弱。
+
+此外，作者还强调了 GraphQL 在实现速度、可观测性（尤其是在错误状态码处理上）、缓存的脆弱性、对 ID 的强制要求、处理二进制数据（文件上传/下载）的尴尬，以及更慢的团队上手速度等方面带来的负面权衡。结论是：GraphQL 并非不好，但它非常小众，并且在许多已通过现有架构解决问题的企业环境中，可能并不需要它。</p>
+
+<p><a href="https://blog.canoozie.net/disks-lie-building-a-wal-that-actually-survives">磁盘会说谎：构建一个真正能幸存的写前日志（WAL）</a><br>写前日志（WAL）是数据库概念中听起来很简单的一种：在将记录应用于内存状态之前先将其写入磁盘。如果系统崩溃，可以重放日志并恢复。然而，现实中磁盘会“说谎”。本文探讨了 PostgreSQL、SQLite 等依赖 WAL 的系统面临的持久性挑战，并提出了构建一个能真正幸存的 WAL 的五层防御策略：校验和（CRC32C）、双 WAL 文件（LSE保护）、O_DIRECT &#43; O_DSYNC 确保数据落盘、使用 io_uring 进行链接 I/O 排序，以及最终的写后验证读取，以应对磁盘可能出现的静默错误和数据丢失风险。</p>
+
+<p><a href="https://arpitbhayani.me/blogs/kafka-partitions">增加 Kafka 分区时会发生什么</a><br>Kafka 分区是其工作原理的核心，它们决定了顺序、并行度和可扩展性。本文将深入探讨增加 Kafka 分区时的完整情况，包括增加分区的机制、现有数据不会移动的原因、对基于键的排序的影响，以及消费者重新平衡协议（如 KIP-429 和 KIP-848）如何影响操作。文章还讨论了不同的分区分配策略（如 RangeAssignor, RoundRobinAssignor, StickyAssignor）以及在扩展分区时如何维护“恰好一次”语义（Exactly-Once Semantics）。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/14/justhtml/#atom-everything">JustHTML 是一个关于“氛围工程”的迷人实践案例</a><br>作者介绍了 JustHTML，一个由 Emil Stenström 发布的新型 Python HTML 解析库。该库的突出特点是它是纯 Python 实现，通过了所有 html5lib 测试，并具有 100% 的测试覆盖率。作者最初对 JustHTML 的简洁和高质量印象深刻，随后发现该库几乎完全由 AI 辅助编程（LLMs）构建而成。作者将这种由专家指导 AI 完成高质量、可靠软件的开发方式定义为“氛围工程”（vibe engineering），区别于无节制地让 AI 生成代码的“氛围编程”（vibe coding）。Emil Stenström 在开发过程中利用了包括 html5lib-tests 在内的多种工具和实践（如基准测试、代码审查和模糊测试），展示了如何通过“氛围工程”实现高效的软件开发。</p>
+
+<p><a href="https://stephenramsay.net/posts/vibe-coding.html">如果你要进行“氛围编码”，为什么不用 C 语言呢？</a><br>这篇文章的作者对“氛围编码”（Vibe Coding，指依靠 AI 模型编写代码）这一现象进行了深入探讨。作者承认氛围编码确实有效，能生成复杂且健壮的系统，但他个人感觉这种方式让他感到“不纯粹”，因为它削弱了编程的乐趣和对代码的完全掌控感。作者引用《计算机程序的构造和解释》中的观点，强调编程语言首先是供人阅读和表达思想的媒介，其次才是供机器执行的工具。因此，他提出了一个核心问题：如果氛围编码是未来，为什么我们不使用一种专门为机器便利性而非人类便利性设计的语言（比如 C 语言甚至 x86 汇编）来“氛围编码”呢？作者认为 Rust、Haskell 或 Python 等语言过于关注人类关切的问题，而 AI 模型恰恰没有这些问题。他推测未来可能会出现一种“氛围导向的编程语言”（VOPL），这种语言可能更接近自然语言，或者直接生成汇编代码，并认为这种范式的转变与早期计算机从手动布线转向存储程序计算机有着相似的争议和阻力。</p>
+
+<p><a href="https://mistral.ai/news/devstral-2-vibe-cli">Introducing: Devstral 2 and Mistral Vibe CLI. | Mistral AI</a><br>Mistral AI 发布了下一代代码模型系列 Devstral 2（123B）和 Devstral Small 2（24B），以及原生的 CLI 代理工具 Mistral Vibe。Devstral 2 在 SWE-bench Verified 上达到了 72.2% 的准确率，并以更少的参数量实现了行业领先的性能，同时成本效率更高。Devstral Small 2 可以在消费级硬件上本地部署。Mistral Vibe CLI 是一个开源的命令行代码助手，能够自主解决软件工程任务，支持项目感知上下文和多文件编排。Devstral 2 目前通过 API 免费提供，并公布了后续的 API 定价。</p>
+
+<p><a href="https://blog.google/technology/developers/deep-research-agent-gemini-api">使用 Gemini 深度研究功能进行构建</a><br>我们对 Gemini 深度研究进行了重新设计，使其功能比以往更强大，现已通过新的 Interactions API 向开发者开放。同时发布的还有 DeepSearchQA，这是一个用于复杂网络搜索任务的基准测试。</p>
+
+<p><a href="https://manthanguptaa.in/posts/claude_memory">我反向工程了 Claude 的记忆系统，发现了这些！</a><br>当我反向工程 ChatGPT 的记忆系统时，我发现它在每个提示中注入预先计算的摘要。但 Claude 的方法不同。通过广泛的实验，我发现 Claude 使用按需工具和选择性检索，这是一种根本不同的架构。这究竟是如何运作的？它与 ChatGPT 的方法相比如何？
+
+这是我反向工程流行的 AI 助手记忆系统系列文章的第二篇。第一篇关注 ChatGPT 的记忆系统。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaLogs">VictoriaMetrics/VictoriaLogs</a><br>Fast and easy to use database for logs, which can efficiently handle terabytes of logs</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>Headless cloud-native authentication and identity management written in Go. Scales to a billion&#43; users. Replace Homegrown, Auth0, Okta, Firebase with better UX and DX. Passkeys, Social Sign In, OIDC, Magic Link, Multi-Factor Auth, SMS, SAML, TOTP, and more. Runs everywhere, runs best on Ory Network.</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/negokaz/excel-mcp-server">negokaz/excel-mcp-server</a><br>A Model Context Protocol (MCP) server that reads and writes MS Excel data</p>
+
+<p><a href="https://github.com/memodb-io/Acontext">memodb-io/Acontext</a><br>Context Data Platform for Agents. Join the community❤️: https://discord.acontext.io</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - Infrastructure as Code in any programming language 🚀</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/docker/mcp-registry">docker/mcp-registry</a><br>Official Docker MCP registry</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/YouROK/TorrServer">YouROK/TorrServer</a><br>Torrent stream server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

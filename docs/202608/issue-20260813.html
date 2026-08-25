@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260813.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260813</span>
+</p>
+<p>每日一谚：Favor simplicity and readability over complex abstractions. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/12/rust-foundation-explained-governance-and-funding/">从 Mozilla 孤儿到独立王国：起底 Rust 基金会如何“养大”一门产业级语言</a><br>本文基于 Rust in Production 播客对 Rust 基金会三位核心成员的访谈，系统梳理了 Rust 基金会与 Rust 项目之间“权、钱分离”的治理结构：基金会负责基础设施、资金与商业连接，项目团队保留对语言本身的完全自治权。文章还拆解了 Rust 商业网络（RCN）、维护者基金、Trusted Trainer 认证计划、安全关键 Rust（Ferrocene/FLS）等具体机制，并在文末将 Rust 的基金会治理与 Go 语言长期依赖 Google 的治理模式做了对比，探讨两种模式对语言长期演进可能带来的不同结果。</p> 
+
+<p><a href="https://tailscale.com/blog/sqlite-wal-reset-bug">我们如何追踪到一个存在16年的SQLite错误</a><br>团队成功定位并解决了一个困扰SQLite数据库长达16年的损坏问题。</p> 
+
+<p><a href="https://smallcultfollowing.com/babysteps/blog/2026/08/10/cyclic-trait-solving/">循环特征实现：动机与初步探索</a><br>本文是循环特征实现系列的一部分。作者最近一直在思考循环特征实现的动机和实现方式。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/08/13/lightweight-dragonfly-deployment-p2p-distribution-without-the-database-stack/">轻量级Dragonfly部署：无数据库堆栈的P2P分发</a><br>Dragonfly是一种轻量级的P2P分发系统，无需传统数据库堆栈即可实现高效的内容分发。该系统通过客户端节点直接传输数据，减轻了中央数据库的负担。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/08/13/llmops-and-platform-engineering-who-should-own-the-ai-pipeline/">LLMOps与平台工程：谁应该拥有AI管道？</a><br>LLMOps与平台工程团队需要协作确定AI管道的所有权。关键是通过受管API而非临时脚本来管理微调作业、提示部署和推理端点。</p>
+
+<p><a href="https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/">如何在WhatsApp上构建具有端到端加密和可验证性保证的诈骗警报</a><br>WhatsApp通过设备端数据最小化策略来构建诈骗警报系统。原始信号不会离开设备，客户端在本地将其聚合为计数，然后仅发送这些聚合后的计数。</p>
+
+<p><a href="https://www.docker.com/blog/docker-vmm-public-beta/">Docker VMM公开测试版：为性能而完全重构</a><br>此次更新不仅关注性能提升，还增强了企业级管理控制和开发环境治理功能。这些改进将在两个产品线中全面体现。</p>
+
+<p><a href="https://www.docker.com/blog/a-new-security-baseline-for-enterprise-agentic-adoption/">企业智能体采用的新安全基线</a><br>企业需要建立新的安全基线来管理AI智能体系统。这包括发现和记录每个智能体的所有者、目的、组件、依赖关系和有效访问权限，以及限制智能体的运行资源。</p>
+
+<p><a href="https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/">如何在WhatsApp上构建具有端到端加密和可验证性保证的诈骗警报</a><br>WhatsApp通过设备端数据最小化策略来构建诈骗警报系统。原始信号不会离开设备，客户端在本地将其聚合为计数，然后仅发送这些聚合后的计数。</p>
+
+<p><a href="https://medium.com/airbnb-engineering/flexible-authentication-reimagining-authentication-for-millions-of-users-at-airbnb-3a8a4c917137?source=rss----53c7c27702d5---4">灵活的身份验证：重新想象Airbnb数百万用户的认证方式</a><br>Airbnb团队为全球规模的用户认证系统提供了重要启示：产品洞察和工程架构不是分离的考虑因素。识别后挑战、挑战选择器和服务器驱动屏幕都是对人们行为方式的直接表达。</p>
+
+<p><a href="https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here">Mojo 1.0正式发布！</a><br>Modular团队宣布Mojo 1.0正式发布，这是专为AI和系统编程设计的新一代编程语言。新版本带来了显著的性能提升和更丰富的功能集。</p>
+
+<p><a href="https://ngrok.com/blog/compression-is-prediction">压缩就是预测 | ngrok博客</a><br>作者最近在研究压缩技术时发现了一个有趣的观点：压缩器和大型语言模型本质上都在尝试解决相同的问题。</p>
+
+<p><a href="https://techcrunch.com/2026/08/11/blueskys-active-user-base-is-shrinking-as-its-focus-expands-beyond-the-app/">Bluesky活跃用户群萎缩，其焦点扩展到应用之外 | TechCrunch</a><br>去中心化社交网络Bluesky在2024年11月马斯克的X平台用户外流中曾是主要受益者之一。然而，随着其业务重点扩展到应用之外，其活跃用户数量正在减少。</p>
+
+<p><a href="https://lwn.net/Articles/1083985/">内联函数的调试信息 [LWN.net]</a><br>LWN.net团队坦诚表示，他们的强项不是市场营销，而是为开发人员、管理员和自由软件支持者撰写文章，帮助他们了解Linux世界的最新动态。</p>
+
+<p><a href="https://thenewcuriosityshop.substack.com/p/the-essential-question">信息过载时代的基本问题</a><br>文章探讨了&#34;接下来我应该读什么&#34;这个基本问题，并强调只有人类才能回答这个问题。作者认为在信息过载的时代，人类的选择和判断比算法推荐更为重要。</p>
+
+<p><a href="https://wesmckinney.com/blog/agentic-engineering-aug-2026/">Kenn如何进行智能体工程 - Wes McKinney</a><br>作者分享了Kenn软件公司智能体工程流程和文化的演变过程。尽管今年晚些时候才计划发布产品，但团队已经取得了显著进展，并建立了独特的智能体工程方法论。</p>
+
+<p><a href="https://linebender.org/blog/fearless-simd-0-7/">fearless_simd v0.7：64位整数、改进的泛型、SSE2和即将推出的v1.0</a><br>fearless_simd库通过消除SIMD编程中的unsafe代码，使高性能计算更加安全。新版本增加了64位整数支持、改进的泛型实现和SSE2优化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/">DeepSeek V4 Pro 0813（在OpenRouter上）</a><br>作者测试了DeepSeek V4 Pro在不同推理级别（低、中、高）下的表现，并发现生成的图像结果有显著差异。</p>
+
+<p><a href="https://manus.im/blog/a-note-to-our-users">Manus: 给用户的一封信</a><br>Manus公司宣布将重新作为独立公司运营，并提醒用户可能需要对其账户采取相应行动。</p>
+
+<p><a href="https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html">智能体循环中的TDD - 形式主义还是实际价值？</a><br>Birgitta Böckeler探讨了在AI智能体循环中应用测试驱动开发（TDD）的实际价值。她分析了TDD在AI环境中的适用性和局限性。</p>
+
+<p><a href="https://www.aihero.dev/a-complete-guide-to-agents-md">AGENTS.md完整指南</a><br>本文详细介绍了如何优化AGENTS.md文件以适应AI编码智能体。文章涵盖了渐进式披露、保持指令聚焦和最大化智能体性能等关键策略。</p>
+
+<p><a href="https://www.browserbase.com/blog/stagehand-v4">推出Stagehand v4：浏览器智能体的SDK | Browserbase</a><br>Browserbase发布了Stagehand v4，将框架的核心功能（目标管理、状态和CDP调度）移至浏览器扩展中，该扩展在页面旁边运行。</p>
+
+<p><a href="https://hazyresearch.stanford.edu/blog/2026-08-05-retire-the-abstractions">摒弃抽象</a><br>作者探讨了在AI模型中过度使用抽象的问题，并提出应该简化模型架构以提高效率和可解释性。</p>
+
+<p><a href="https://zed.dev/blog/introducing-delta">推出Delta — Zed博客</a><br>Zed团队推出了Delta，这是一个支持多人协作的编码环境，允许用户与AI智能体一起编程并审查它们构建的内容。目前正在进行私人测试。</p>
+
+<p><a href="https://brentfitzgerald.com/posts/the-human-is-the-loop/">人类在循环中</a><br>作者分享了自己离开AI几周后的体验，意识到自己形成了不健康的AI使用习惯。他认为人类应该保持对AI使用的主动控制，而不是被AI所主导。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/infiniflow/ragflow">infiniflow/ragflow</a><br>RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs</p>
+
+<p><a href="https://github.com/netdata/netdata">netdata/netdata</a><br>The fastest path to AI-powered full stack observability, even for lean teams.</p>
+
+<p><a href="https://github.com/compozy/compozy">compozy/compozy</a><br>An operating system for AI agents. Plug in the agent CLIs you already use (Claude Code, Codex, Gemini CLI, Cursor) and they become a team: they split the work, hand tasks to each other, run automated </p>
+
+<p><a href="https://github.com/alibaba/skill-up">alibaba/skill-up</a><br>An evaluation and evolution tool for Agent Skills.</p>
+
+<p><a href="https://github.com/Agent-Field/pr-af">Agent-Field/pr-af</a><br>#1 open-source code reviewer on Code-Review-Bench</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

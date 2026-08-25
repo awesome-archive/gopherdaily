@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260202.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260202</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/02/beads-bd-distributed-task-tracking-engine-for-ai-agent">Git 即数据库：Beads (bd) —— 专为 AI Agent 打造的分布式任务追踪引擎</a><br>在 AI 编码智能体（如 Claude Code、Gemini CLI等）日益普及的今天，我们面临着一个棘手的工程难题：AI Agent 虽然极其聪明，但它们通常是健忘的。 它们在处理一个长期、复杂的重构任务时，往往会在海量的上下文切换中迷失方向。传统的 Issue Tracker（如 Jira）对 AI 来说太重、太慢且难以集成；而简单的 Markdown 文件又缺乏结构化和版本控制。 于是，Beads（命令行工具 bd）应运而生。</p> 
+
+<p><a href="https://tonybai.com/2026/02/01/moltbook-first-social-network-for-ai-agent">地球上第一个“硅基生命”社交网络moltbook上线：人类禁止发帖，只能围观！</a><br>欢迎来到 Moltbook —— 地球上第一个专为 AI Agent（智能体）打造的社交网络。就在2026年1月份的最后一天，Moltbook 正式上线。它的 Slogan 令人背脊发凉又兴奋不已： “A Social Network for AI Agents. Humans welcome to observe.” （一个 AI 智能体的社交网络。人类？欢迎旁观。） 在这里，人类是二等公民。我们可以看，可以听，但这是属于它们的舞台。</p> 
+
+<p><a href="https://tonybai.com/2026/02/01/go-rewrite-python-gateway-10x-performance-career-nightmare">我用 Go 重写了 Python 网关，性能提升 10 倍，却成了职场噩梦</a><br>“如果你没有坏，就不要修它。” (If it ain&#39;t broke, don&#39;t fix it.) 这句老生常谈的工程谚语，最近在 r/golang 社区的一次热议中再次得到了血淋淋的验证。 一位开发者 分享了他即使成功将一个 Python 服务重写为 Go，并取得了显著的性能提升，却依然感到挫败和后悔的经历。</p> 
+
+<p><a href="https://tonybai.com/2026/01/31/rust-vs-typescript-ai-agent-battleground-winner">Rust 输了？在 AI Agent 的战场上，TypeScript 才是唯一的“神”</a><br>在 AI Agent 的应用层战场上，尤其是像上述这些火出圈的AI Agent项目中，Rust 几乎“失声”了。除了 OpenAI 的 Codex 这个孤勇者之外，我 们很难在主流的开源 Agent 列表中看到 Rust 的身影。 难道在 AI 时代的Agentic AI(智能体AI应用)阶段，Rust 输了吗？为什么被视作“玩具语言”的 TypeScript，反而成了 AI Agent的“母语”？</p> 
+
+<p><a href="https://tonybai.com/2026/01/31/go-official-updates-race-detector-trace-ui-pprof/">Go 性能诊断工具大变天？Race 检测有望进生产，Trace 秒开不是梦！</a><br>近期，Go Runtime 团队公开了一系列关于性能与诊断工具链的内部会议记录（2025年末至2026年初）。从中，我们可以看到从轻量级竞态检测的探索，到 Trace 工具的交互式革命，再到 pprof 接口的现代化重构，Go 团队正在酝酿一系列深远的变革。 今天，我们就来深度解码这些前沿动向，看看 Go 1.27 及未来版本可能带给我们什么惊喜。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ip7nT9v8BDbxVL_5CRcw9g">【分布式系统】13 眺望未来：分布式系统前沿一瞥与 CRDTs 的乐观魔法</a><br></p> 
+
+<p><a href="https://modern-c.blogspot.com/2026/01/building-high-performance-json-parser.html">使用 Egg 在 Go 中构建高性能 JSON 解析器</a><br>本文介绍了 Egg，一个专为 Go 设计的现代 LL(1) 解析器生成器，它通过将抽象语法树 (AST) 编码成一个扁平的整数切片（Flat AST）来实现高性能和低垃圾回收 (GC) 压力。文章以构建一个完整的 JSON 解析器为例，展示了其简洁的 EBNF 语法、代码生成过程、扁平 AST 的工作原理（优点和缺点），以及内置的测试和基准测试功能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="http://www.paulgraham.com/superlinear.html">超线性回报</a><br>本文探讨了“超线性回报”（Superlinear Returns）的概念，即绩效的回报是非线性的，通常更像是指数级的，而不是我们童年被教导的线性关系（投入多少就产出多少）。作者指出，这种现象在商业、名声、权力、军事胜利、知识甚至对人类的贡献中都很普遍，强者愈强者。
+
+超线性回报主要源于两个基本原因：指数增长（如细菌培养、初创公司增长，以及知识积累）和阈值（如“赢家通吃”的局面，在体育比赛、定理证明或市场网络效应中体现）。
+
+文章提供了一些利用超线性回报的启发式方法：寻求能“复利”的工作，无论是直接的（如建立基础设施）还是通过学习间接的；保持持续学习（因为不学习通常意味着没有走在通往超线性回报的道路上）；以及在涉及阈值的情况下，寻找那些“平庸但仍受欢迎”的事物进行颠覆。
+
+作者最后指出，由于技术进步和组织重要性下降，我们正进入一个个人更容易获得超线性回报的时代，这要求人们具备独立思考能力，并警惕将“工作”等同于“工作岗位”的传统观念。成功的关键在于选择自己有天赋并深感兴趣的工作，努力探索知识前沿的空白，并承担可承受的风险。</p>
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/sysadmin/PrometheusBlackboxTCPQRMetrics">估算 Prometheus Blackbox TCP 查询响应检查失败的位置</a><br>在 Prometheus 环境中，从外部检查简单服务的常用方法是使用 Prometheus Blackbox ，但它的理解起来比较复杂 。它的一个抽象概念是探测器（proper） ，这是一种使用 HTTP、DNS 查询、TCP 连接等方式检查服务的通用方法。TCP 探测器支持在连接后执行查询-响应对话 ，但目前（截至 Blackbox 0.28.0 版本）它不会直接公开指标来告诉你 TCP 探测（使用查询-响应集）失败的原因，而有时你确实需要知道这一点 。</p>
+
+<p><a href="https://fly.io/blog/litestream-writable-vfs">Litestream 可写 VFS</a><br>闪电般快速的 Litestream VFS，现在支持写入了！本文介绍了 Litestream 的新特性：可写 VFS（Writable VFS）和后台数据同步（Hydration）。可写 VFS 允许用户在不下载整个数据库的情况下对基于对象存储的 SQLite 数据库进行写入操作，但它目前仅适用于单一写入场景，并以每秒一次的频率缓冲写入到对象存储。Hydration 特性则支持在后台将存储在对象存储中的数据库内容同步到一个本地文件中，以提高冷启动和查询速度。这些新特性主要针对 Fly.io 的 Sprites 产品中的存储需求进行了优化。</p>
+
+<p><a href="https://quesma.com/blog/introducing-otel-bench">OpenTelemetry 基准测试：AI 能追踪到你的登录失败吗？</a><br>许多供应商都在推销 AI SRE（人工智能站点可靠性工程师）。我们对 11 种编程语言的 14 个模型进行了测试；即使是最好的模型，在用主流的开源标准 OpenTelemetry 对代码进行插桩（instrumenting）方面也举步维艰。文章发布了 OTelBench 开源基准测试，并指出当前 AI 在复杂的、多语言的、需要上下文理解的 SRE 任务（如生成正确的分布式追踪）方面仍表现不佳。</p>
+
+<p><a href="https://faresbakhit.github.io/e/cpp-modules">C&#43;&#43; 模块已成定局</a><br>本文探讨了 C&#43;&#43;20 模块的引入及其在解决 C&#43;&#43; 编译时间瓶颈方面的优势。作者解释了模块的基本概念（如翻译单元、模块单元、导出声明、模块分区）并展示了如何使用和创建模块，包括子模块的命名约定和模块分区的用途。同时提到了向后兼容性，如使用全局模块片段（global module fragment）集成不支持模块的旧代码。文中通过一个图表数据（8.6 倍于 Clang，1.2 倍于 PCH）强调了模块带来的显著编译速度提升。最后，作者提供了一个使用 C&#43;&#43;20 模块的最小 CMake 配置示例，并讨论了当前工具链对模块的支持情况，指出大多数主要编译器和 CMake 都已提供足够的支持。</p>
+
+<p><a href="https://antirez.com/news/159">自动编程</a><br>作者在YouTube频道上开始使用“自动编程”（Automatic Programming）来指代使用AI辅助编写软件的过程，并认为这很快将成为编写软件的主流方式。他强调，即使使用相同的LLM，不同人类引导过程（凭借直觉、设计、持续指导和软件构想）也能产生截然不同的结果。作者批评了“Claude 帮我写代码”（Vibe Coding）的说法，认为那是指完全不参与过程，仅以笼统的描述让LLM生成代码，而“自动编程”则是指在AI协助下，严格遵循生产者（即人类）的愿景来生产高质量软件的过程。作者坚称，无论代码是如何生成的，它都是“我的代码，我的产出，我的作品”，因为LLM的预训练数据是人类的集体贡献。就像Redis的价值在于其蕴含的理念而非技术上的新颖性一样，编程现在是自动化的，但“愿景”尚未（完全）自动化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://martinalderson.com/posts/two-kinds-of-ai-users-are-emerging/">两种人工智能用户正在出现。他们之间的差距令人震惊。</a><br>人工智能的采用正在发生两极分化——“超级用户”能在几天内交付产品，而其他所有人则只停留在生成会议议程的水平。企业工具的选择正在加速这种分歧。作者指出，缺乏技术限制和内部API的企业更容易从更前沿的AI工具中获得巨大生产力提升，而企业内部的限制（如锁定的环境、糟糕的工具如Copilot）正在使差距扩大。</p>
+
+<p><a href="https://garymarcus.substack.com/p/openclaw-aka-moltbot-is-everywhere">OpenClaw (又名 Moltbot) 无处不在，一场即将发生的灾难</a><br>作者对 OpenClaw（或 Moltbot）及其衍生的社交网络 Moltbook 表达了深切的担忧，认为它们在带来新奇技术的同时，也带来了严重的安全和隐私风险。OpenClaw 被描述为一个 LLM 代理的级联系统，与 AutoGPT 相似，但作者认为它更容易被利用，因为它被赋予了对用户系统和敏感数据的“不设防的访问权限”。Moltbook 作为一个据说只对 AI 代理开放的社交网络，也已经被发现存在漏洞。作者强烈建议用户，如果关心设备安全和数据隐私，应避免使用 OpenClaw，并引用安全专家的观点强调了这种风险的严重性。</p>
+
+<p><a href="https://mariozechner.at/posts/2025-11-30-pi-coding-agent">我构建一个固执己见且极简的编码智能体中学到的东西</a><br>作者分享了他在构建自己的编码代理工具链（包括 pi-ai, pi-agent-core, pi-tui, 和 pi-coding-agent）过程中吸取的经验教训。核心理念是“我不需要的就不会被构建”，强调对上下文的精确控制、最小化的系统提示和工具集，以及默认的“YOLO”（你只活一次）安全模式。作者批评了现有主流工具（如 Claude Code）的臃肿、不透明性和API设计不佳，并展示了其极简框架在保持高效率的同时，如何通过对比基准测试（Terminal-Bench 2.0）与其他复杂的代理工具相媲美，证明了简洁方法论的有效性。文章还深入探讨了统一LLM API的复杂性、TUI的渲染策略以及避免内置To-Dos、Plan模式和MCP支持的原因。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/AlexanderGrooff/mermaid-ascii">AlexanderGrooff/mermaid-ascii</a><br>Render Mermaid graphs inside your terminal</p>
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/sammwyy/MikuMikuBeam">sammwyy/MikuMikuBeam</a><br>An open-source network stresser tool but it&#39;s Hatsune Miku</p>
+
+<p><a href="https://github.com/free5gc/free5gc">free5gc/free5gc</a><br>Open source 5G core network based on 3GPP R15</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/yusing/godoxy">yusing/godoxy</a><br>High-performance reverse proxy and container orchestrator for self-hosters</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>AI Trading OS: Multi-AI, multi-exchange trading infrastructure with Strategy Studio.</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/icereed/paperless-gpt">icereed/paperless-gpt</a><br>Use LLMs and LLM Vision (OCR) to handle paperless-ngx - Document Digitalization powered by AI</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

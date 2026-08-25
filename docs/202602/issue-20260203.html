@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260203.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260203</span>
+</p>
+<p>每日一谚：Don not force the creation of interface, wait for your code to tell you it&#39;s the time and place for one. Otherwise it creates un-needed complexity. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/03/claude-code-founder-10x-efficiency-10-hidden-skills">Claude Code 创始人亲授：解锁 10 倍效率的 10 个“隐藏技能”</a><br>最近，Claude Code 的创始人 Boris Cherny 亲自下场，在社交媒体上分享了团队内部使用的 Best Practices。 看完这些技巧，我才意识到：我们以前可能只用了它 10% 的功力。</p> 
+
+<p><a href="https://tonybai.com/2026/02/03/russ-cox-15-year-war-on-floating-point-conversion">算法神话的祛魅：Russ Cox 与浮点数转换的 15 年求索之路</a><br>2011 年，Go 语言的核心人物 Russ Cox 写下了一篇博文，试图用一种简单的算法来“驯服”这条龙。然而，在随后的十几年里，学术界和工业界爆发 了一场军备竞赛：Dragon4, Grisu3, Ryū, Schubfach, Dragonbox... 每一个新算法都试图在速度上压倒前一个，但也让代码变得越来越复杂，数学 证明越来越晦涩。2026 年初，Russ Cox 带着他的新系列文章强势回归。这一次，他不仅带来了一套比所有已知算法都更快的全新算法，而且证明了：极致的性能不需要极致的复杂性。</p> 
+
+<p><a href="https://medium.com/@aminebenseddik/how-i-set-up-free-go-vanity-urls-with-cloudflare-workers-824216aead41">我使用cloudflare worker搭建了一个免费的Go vanity urls服务</a><br></p> 
+
+<p><a href="https://cephei8.dev/blog/dont-be-afraid-goyacc">不要害怕 goyacc：为查询数据制作面向用户的 DSL</a><br>本文介绍如何使用 Go 的 YACC 解析器生成器（goyacc）为 Greener 项目创建一个面向用户的领域特定语言（DSL），用于查询数据库中的测试结果。作者通过定义抽象语法树（AST）、编写 goyacc 语法、实现词法分析器（tokenizer）、生成解析器，最后从 AST 生成 SQL 语句，展示了一个将简单的 DSL 查询（如：`status = &#34;fail&#34; AND name = &#34;login_test&#34;`）转换为 SQL 的简化过程。作者认为 goyacc 对于典型的解析需求来说是足够的，并且易于使用。</p> 
+
+<p><a href="https://www.jeffgeerling.com/blog/2025/4x-faster-network-file-sync-rclone-vs-rsync">使用 rclone (对比 rsync) 实现 4 倍快的网络文件同步</a><br>作者分享了他使用 rclone 工具将大量视频和项目文件从本地网络存储 (NAS) 同步到外部 Thunderbolt NVMe SSD 的经验。他发现传统的 rsync 工具在处理大量小文件和中等大小文件时速度很慢，因为它是单线程串行操作，网络速度无法充分利用。通过在 rclone 中使用 `--multi-thread-streams=32` 选项，他实现了并行传输，成功将同步速度提高了大约 4 倍，使 10 Gbps 网络连接的带宽得到了充分利用，原本需要 8 分多钟的任务缩短到了 2 分多钟。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://idiallo.com/blog/the-show-on-the-other-foot-linkedin-stories">另一只脚上的鞋</a><br>作者分享了他在创业失败的低谷期，从一位只有一只鞋的流浪汉（他称之为大卫）那里获得深刻启示的故事。大卫视自己只有一只鞋的状态为一种“警醒”，提醒他时刻感受脚下的路。作者受此启发，不仅雇用了大卫作为顾问，还做出了一个惊人的决定：此后每次参加重要会议时，他都脱下右脚的鞋子，赤脚工作，以此来保持谦逊、接地气，并时刻记住旅途中的真实感受和来之不易的成功。这个故事的核心在于，真正的洞察力和领导力来自于拥抱不适和寻求意想不到的智慧。</p>
+
+<p><a href="https://terriblesoftware.org/2026/02/02/why-am-i-doing-the-thinking-for-you/">Why Am I Doing the Thinking for You? – Terrible Software</a><br>这篇文章讨论了在团队协作中，当有人仅仅抛出一个“你觉得怎么样？”的问题而不先表达自己的观点时，实际上是在将思考的工作推给别人。作者认为，这种行为通常源于两种情况：要么是提问者没有充分理解或阅读了相关文档，要么是提问者有自己的想法但害怕承担风险而不敢明确表达立场。作者提倡更高效的沟通方式：直接给出明确的建议、理由、备选方案以及假设的下一步行动，从而将“帮我思考”转变为“请检查我的思考”，以减少模糊性，尊重他人的时间，并加速决策过程。</p>
+
+<p><a href="https://tailscale.com/blog/hypergrowth-isnt-always-easy">高速增长并非总是一帆风顺</a><br>Tailscale 的 CEO 谈论宕机：它们是什么、为什么会发生，以及 Tailscale 如何使其变得更小、更不频繁。作者深入探讨了公司架构、协调服务、数据平面与控制平面之间的区别，以及持续改进的措施，以应对快速增长带来的挑战。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://garymarcus.substack.com/p/where-is-ai-headed-8-perspectives">人工智能将走向何方？《纽约时报》的 8 个观点</a><br>作者很荣幸能参与《纽约时报》的这项调查，与尤瓦尔·赫拉利（Yuval Noah Hariri）、梅兰妮·米切尔（Melanie Mitchell）、海伦·托纳（Helen Toner）、卡尔·贝内迪克特·弗雷（Carl Benedikt Frey）、阿杰亚·科特拉（Ajeya Cotra）以及 Perplexity 和 Cohere 的联合创始人一起探讨人工智能的未来走向。文章通过图片展示了参与者的观点分布，特别指出了对编程、教育等领域的影响预测，并附有原文章的礼品链接。</p>
+
+<p><a href="https://neutree.ai/blog/nano-vllm-part-1">深入nano-vllm原理</a><br></p>
+
+<p><a href="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations">设计抗人工智能的技术评估方法</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/autobrr/qui">autobrr/qui</a><br>A fast, single-binary qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers.</p>
+
+<p><a href="https://github.com/AlexanderGrooff/mermaid-ascii">AlexanderGrooff/mermaid-ascii</a><br>Render Mermaid graphs inside your terminal</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>An alternative to the immich-CLI command that doesn&#39;t depend on nodejs installation. It tries its best for importing google photos takeout archives.</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/charmbracelet/vhs">charmbracelet/vhs</a><br>Your CLI home video recorder 📼</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/slackhq/nebula">slackhq/nebula</a><br>A scalable overlay networking tool with a focus on performance, simplicity and security</p>
+
+<p><a href="https://github.com/miniflux/v2">miniflux/v2</a><br>Minimalist and opinionated feed reader</p>
+
+<p><a href="https://github.com/TecharoHQ/anubis">TecharoHQ/anubis</a><br>Weighs the soul of incoming HTTP requests to stop AI crawlers</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向代理,DDNS,WOL,ipv4 stun内网穿透,cron,acme,rclone,ftp,webdav,filebrowser</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/hatchet-dev/hatchet">hatchet-dev/hatchet</a><br>🪓 Run Background Tasks at Scale</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

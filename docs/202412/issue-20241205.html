@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241205.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-05</span>
+</p>
+<p>每日一谚：Fail fast, fail loudly. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dev.to/evrone/rust-vs-go-in-2025-an-in-depth-comparison-196">2025年的Rust与Go：深度比较</a><br>DEV 社区文章提供了截至 2025 年 Rust 和 Go 编程语言的全面比较，突出了它们各自的优势和理想的用例。Go 因其简单性、可读性和适合构建可扩展的后端服务而受到赞誉，而 Rust 则因其卓越的性能、内存安全性和编译时保证而受到认可。尽管 Rust 在高负载场景中具有性能优势，但与 Go 的开发人员友好型方法相比，其复杂的语法和陡峭的学习曲线被认为是缺点。文章指出，Rust 最适合性能关键型任务，而 Go 则更适合快速、可扩展的解决方案。此外，本文还包括视觉效果和相关内容的链接，例如常见问题解答模板以及有关 JavaScript 性能和 TypeScript 观点的进一步讨论。
+
+（注：摘要不包括文件中的任何直接引用或具体问题，而是侧重于传达的关键点和总体信息。</p> 
+
+<p><a href="https://smcleod.net/2024/12/bringing-k/v-context-quantisation-to-ollama/">将K/V上下文量化引入Ollama</a><br>在 Ollama 中引入 K/V 上下文缓存量化标志着一项重大进步，使用户能够以较低的 VRAM 需求运行更大的模型，并扩展上下文大小以获得更全面的响应。此功能将上下文所需的 VRAM 减半甚至降低到三分之一，这是通过 Q8_0 和 Q4_0 量化级别实现的，对性能的影响最小。集成此功能的过程大约需要五个月的时间，涉及广泛的测试、社区反馈和代码重构。但是，某些功能被排除在最终版本中，例如在模型的 Modelfile 中设置量化级别的能力以及 K 和 V 缓存的不同量化级别。建议用户启用 Flash 注意以获得最佳性能，并在禁用该功能的情况下进行测试以隔离潜在的错误。我们鼓励社区通过现有渠道报告问题，使用表情符号来表达支持。
+
+（注意：该摘要旨在封装源文档的关键点，重点介绍 K/V 上下文缓存量化的重要性、其集成过程以及用户和错误报告的注意事项。</p> 
+
+<p><a href="https://medium.com/@sajo02/lazy-initialization-in-golang-a-practical-guide-with-examples-5cf25d63e12b">Golang 中的延迟初始化：带示例的实用指南</a><br>在这份综合指南中，sajosam 深入探讨了 Golang 中延迟初始化的概念，重点介绍了它在性能优化、内存效率和线程安全方面的好处。本文首先将延迟初始化定义为一种将资源创建推迟到需要时再创建的技术，从而避免不必要的开销。然后，Saijoam 概述了采用延迟初始化的原因，例如处理昂贵的资源、管理很少使用的资源以及按需加载配置。该指南进一步解释了如何使用互斥锁和 &#39;sync.Once“结构，后者提供了一种更简洁、更简洁的方法。本文最后讨论了最佳实践，包括使用 &#39;sync.Once“，警告不要过度使用，以及测试并发性的重要性。本指南为希望通过高效的资源管理策略增强其 Golang 应用程序的开发人员提供了实用资源。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或文档中的具体细节，而是对内容进行释义以提供简要概述。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-gos-nursery-pattern-boost-your-concurrent-codes-efficiency-and-robustness-1ap9">掌握 Go 的 Nursery 模式：提高并发代码的效率和健壮性</a><br>源文档深入探讨了 Go 编程中 Nursery 模式的概念，强调了它在提高并发代码的效率和健壮性方面的作用。Nursery 模式将 goroutine 组织成结构化的组，从而可以更好地控制和错误处理。它解决了并发编程中的常见问题，例如 goroutine 泄漏和竞争条件，通过提供一种机制，在一个子 goroutine 失败或 panic 时取消所有子 goroutine。该模式还集成了基于信号量的并发控制、超时和任务之间的依赖关系管理等功能。此外，它还被强调为微服务和分布式系统中的强大工具，可以在其中管理复杂的工作流和依赖项。本文档最后强调了 Nursery 模式在 Go 中构建弹性、可维护和高效的并发应用程序的好处。
+
+（注意：提供的摘要基于所述源文档的一般内容和主题。实际文档可能包含本摘要中未包含的更具体的详细信息和示例。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.p6n.dev/p/is-aurora-dsql-huge">Aurora DSQL 是您的下一个数据库吗？</a><br>Amazon 宣布推出 Aurora DSQL，这是一种无服务器、全球分布式的 PostgreSQL 兼容数据库，标志着可扩展数据库解决方案的重大进步。Aurora DSQL 在 re：Invent 2024 上亮相，拥有高可用性、多区域支持，据称性能比 Google Cloud Spanner 更快。该数据库利用 Amazon Time Sync Service 来保持一致的全局提交时间。尽管 Aurora DSQL 的功能前景广阔，但仍处于早期阶段，全球可用性有限，并且缺少一些 PostgreSQL 功能。此外，其独特的身份验证方法也为与现有应用程序的集成带来了挑战。虽然它代表了无服务器数据库技术的飞跃，但需要进一步的发展和实际的性能指标来全面评估其功能。</p>
+
+<p><a href="https://itnext.io/monolith-to-micro-services-avoid-database-sprawl-122bc82a7ecb">从整体式应用到微服务：避免数据库蔓延</a><br>在他为 ITNEXT 撰写的文章中，Benjamin Cane 讨论了从整体式架构过渡到微服务时数据库蔓延的陷阱。他强调了为每项服务使用最合适的数据库的诱惑如何导致大量数据库技术，每种技术都有自己的管理开销。Cane 建议采用更具战略性的方法，方法是考虑各种使用案例和要求，从精选列表中选择可以满足多种需求的数据库。这种方法旨在降低运营复杂性和技术债务，使团队能够专注于交付价值。Cane 还分享了他作为支付系统构建者和开源贡献者的专业知识，进一步建立了他在该主题上的可信度。
+
+（注意：摘要旨在概括文章的关键点，同时保持简洁和连贯。它不包括直接引用或文档中的具体细节，而是转述了主要论点和结论。</p>
+
+<p><a href="https://cedardb.com/blog/in_memory_dbms/">内存数据库系统的兴起和衰落的历史</a><br>本文研究了内存数据库系统的兴起和随后的衰落，由于内存价格下降和对更快数据处理的需求，内存数据库系统在 2010 年代初期开始流行。尽管这些系统取得了初步的成功并且性能出色，但这些系统面临的挑战导致其广泛采用受到限制。它们下跌的主要原因包括内存价格增长停滞、数据的持续增长以及延迟低于传统硬盘的固态硬盘 （SSD） 的出现。文章认为，虽然构建内存系统不是错误，但认为它们将成为主要数据存储解决方案的假设是有缺陷的。它强调了将主内存视为一等公民并为未来技术转变做好准备的重要性，例如过渡到基于云的存储解决方案。吸取的教训是，需要对新技术趋势保持适应性和开放性，以避免落后。</p>
+
+<p><a href="https://brooker.co.za/blog/2024/12/04/inside-dsql.html">DSQL Vignette：读取和计算</a><br>在本文中，来自 AWS 的 Marc Brooker 深入探讨了 Aurora DSQL 的架构，这是一种可扩展的主动-主动 SQL 数据库。他强调了计算和存储的创新分解，从而实现了独立扩展和高效的资源管理。每个事务都使用 Firecracker MicroVMs 可确保低延迟和高性能，而存储的逻辑接口允许直接在存储副本上执行高级数据操作，例如筛选和聚合。这种设计选择消除了对大型一致缓存的需求，从而进一步优化了性能。Brooker 还谈到了快照隔离对只读事务的重要性，以确保数据一致性。本文最后展望了未来关于写入路径的讨论，强调了整体架构对可扩展性、性能和成本效益的关注。</p>
+
+<p><a href="https://nmn.sh/blog/2024-11-30-thoughts-on-tailwind-4">对 TAILWIND 的看法</a><br>源文档提供了对 Tailwind CSS v4 的详细批评，突出了积极的进步和值得关注的领域。作者称赞了向 LightningCSS 的转变，因为它具有性能优势和工具的统一性，并称赞了 CSS 优先配置的设置简单性。然而，由于潜在的性能问题，他们对 CSS 主题变量持保留态度，并且引入了后代变体，他们认为这破坏了原子 CSS 的原则。该文档还谈到了默认主题中 &#39;rem&#39; 单位的猖獗使用，作者将其视为可访问性问题。尽管存在这些担忧，但作者承认了其他一些改进，例如原生 CSS 级联层和简化的主题配置。总的来说，作者呼吁采用一种平衡的方法，在解决突出问题的同时保持 Tailwind 的性能和可用性。
+
+（注意：摘要旨在概括文档的关键点，同时省略了原始文本中存在的具体细节和问题。</p>
+
+<p><a href="https://thenewstack.io/aws-debuts-a-distributed-sql-database-s3-tables-for-iceberg/">AWS 首次推出分布式 SQL 数据库 S3 Tables for Iceberg</a><br>在 AWS re：Invent 2024 上，Amazon Web Services （AWS） 推出了 Amazon S3 表（一种针对分析工作负载进行了优化的 Apache Iceberg 表的新托管服务）和 Amazon Aurora DSQL（一种分布式 SQL 数据库服务）。Amazon S3 表旨在实现更快的查询性能和更高的事务吞吐量，自动执行数据压缩和快照管理等维护任务，并与 AWS Glue 数据目录集成以增强数据发现和分析。同时，Amazon Aurora DSQL 提供近乎无限的可扩展性、强一致性和高可用性，无需基础设施管理。这些创新代表了 AWS 为利用开源数据湖仓一体的组织提供可扩展、高性能数据管理解决方案的承诺。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.bitsrc.io/building-vue-design-system-with-ai-256ccdced07c">使用 AI 构建 Vue Design System</a><br>本文讨论了 AI 对 Vue Design Systems 开发的变革性影响，强调了一致性、可重用性和协作的好处。它概述了 HopeAI 等 AI 工具如何简化 Vue 组件的创建、自动化主题和样式以及增强 CI/CD 工作流程。通过利用 AI，开发人员可以生成具有内置最佳实践（例如辅助功能和响应式设计）的组件，同时还可以促进实时更新和协作。本文还强调了 AI 在优化 Vue 设计系统的可扩展性和可靠性方面的作用，最终实现更高效、更有创意的开发过程。
+
+（注意：提供的文本是源文档中关键点的摘要，重点介绍了 AI 在 Vue Design System 开发中的作用。它不包括直接引用或文档中的具体细节，而是捕捉了内容的精髓。</p>
+
+<p><a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/">Genie 2：一个大规模的基础世界模型</a><br>Genie 2 由 Google DeepMind 开发，是一个开创性的基础世界模型，可生成多样化和复杂的 3D 环境，用于训练和评估具身 AI 代理。该模型扩展了其前身 Genie 1 的功能，允许通过逼真的物理、对象交互和角色动画来模拟虚拟世界。Genie 2 的自回归潜在扩散模型在大量视频数据上进行了训练，能够创建一致且多样化的体验，包括模拟不同的视角和动态元素，如水和照明效果。该模型能够记住长期状态并动态生成新内容，这使其成为在新场景中快速构建原型和测试 AI 代理的强大工具。Genie 2 的进步为更通用和更强大的 AI 代理铺平了道路，其潜在应用范围从游戏到科学探索。
+
+（注意：该摘要旨在概括源文档中描述的 Genie 2 的关键方面，重点介绍其功能、训练和对 AI 研究的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS 提供商使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，可以使用你想要的任何名称制作本地信任的开发证书。</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>下一代爬行和爬取框架。</p>
+
+<p><a href="https://github.com/elastic/cloud-on-k8s">elastic/cloud-on-k8s</a><br>Kubernetes 上的 Elastic Cloud</p>
+
+<p><a href="https://github.com/gardener/gardener">gardener/gardener</a><br>使用托管控制平面在任何基础设施上大规模构建同构 Kubernetes 集群。</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/google/pprof">google/pprof</a><br>pprof 是一种用于可视化和分析分析数据的工具</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby 项目 - 容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>适用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Kubernetes 工作负载和云成本的成本监控</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>快速获取 JSON 值 - 适用于 Go 的 JSON 解析器</p>
+
+<p><a href="https://github.com/dgraph-io/badger">dgraph-io/badger</a><br>Go 中的快速键值数据库。</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>macOS（和 Linux）上的容器运行时，设置最少</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/kubernetes/kube-state-metrics">kubernetes/kube-state-metrics</a><br>用于生成和公开集群级指标的附加组件代理。</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>一个反向代理，提供对 Google、Azure、OpenID Connect 和更多身份提供商的身份验证。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>复合服务（例如 Ingress）和负载均衡 API 的下一次迭代的存储库。</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>适用于 Kubernetes 的工作流引擎</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

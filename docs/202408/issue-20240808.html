@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240808.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-08</span>
+</p>
+<p>每日一谚：Do not just check errors, handle them gracefully. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@0xape/utilize-cpus-with-golang-050813e62522">降低Go的CPU使用率</a><br>本文讨论了在大规模产品开发中使用 Golang 优化多线程的方法，演示了四种方法：sequence、burst all、burst n 和 worker pool，这些方法可以帮助优化作业处理时间并降低 CPU 使用率。</p> 
+
+<p><a href="https://jvns.ca/blog/2024/08/06/go-structs-copied-on-assignment/">Go结构体是在赋值时复制的</a><br>作者分享了他学习 Go 的历程，强调了他常犯的三个错误：不理解结构是在赋值时复制的，不理解附加切片的副作用，以及不理解不同类型的方法接收器。</p> 
+
+<p><a href="https://clipperhouse.com/split/">所以，你是在关键路径上分割字符串</a><br>该文档讨论了降低在 Go 和 C# 中的热路径上拆分字符串的成本的技术，例如使用迭代器或不分配子字符串，这可以减少分配并提高性能。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2024/08/05/goland-2024-2-is-out/">GoLand 2024.2 已发布！</a><br>GoLand 2024.2 是一款跨平台的 Go IDE，已经发布，具有性能改进、增强的语言支持、新的重构、改进的远程开发和开发容器支持，以及众多用户体验和 AI 增强功能。</p> 
+
+<p><a href="https://eltonminetto.dev/en/post/2024-08-05-json-vs-flatbuffers-vs-protobuf/">JSON vs FlatBuffers vs protobuf</a><br>该文档讨论了使用 JSON 和协议缓冲区进行应用程序之间通信的优点和缺点，并提出了两种替代方案，即协议缓冲区和平坦缓冲区，作为性能替代方案，使用真实世界的应用程序来测试其性能。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-08-07-drawing-a-commit-graph/">绘制提交图</a><br>DoltHub 博客解释了如何使用 JavaScript 在他们的平台上绘制提交图，解释了提交图的概念、生成子数组的过程以及使用 SVG 绘制图的过程。</p> 
+
+<p><a href="https://www.bleuio.com/blog/building-ble-applications-with-bleuio-and-go/">使用 BleuIO 和 Go 构建 BLE 应用程序</a><br>该教程演示了如何使用 BleuIO USB 加密狗和 Go 编程语言构建低功耗蓝牙 （BLE） 应用程序，使用其内置的 AT 命令以及与任何编程语言的兼容性。</p> 
+
+<p><a href="https://tech.loveholidays.com/optimising-load-testing-in-production-d5a280a8411f">优化生产中的负载测试</a><br>Loveholidays 是一家使用 Owlbot 来模拟其生产系统负载增加的公司，它发现了开源负载生成器 Ripley 的瓶颈，并实施了优化过程以使其更加高效和有效。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://changelog.com/gotime/328">podcast: OpenAPI and API Design</a><br>The episode &#34;OpenAPI &amp; API Design with Jamie Tanna&#34; on Go Time #328 discusses OpenAPI, API design philosophies, versioning, and open source maintenance and sustainability, with a bonus 18 minutes for Changelog&#43;&#43; members.</p>
+
+<p><a href="https://lwn.net/Articles/982077/">深入了解 BPF 验证器</a><br>BPF 验证器是静态分析的一种形式，用于确定 BPF 程序是否满足某些属性，例如不进入无限循环、不使用内容未定义的内存、仅调用具有正确参数类型的现有内核函数，并且已更新以处理循环和其他复杂程序，并随着时间的推移进行改进。</p>
+
+<p><a href="https://glasskube.dev/guides/kubectl/">我从未有过的 kubectl 指南。</a><br>这篇博文提供了 Kubernetes 的综合指南，重点介绍了命令语法、有用的命令以及扩展了“kubectl”和 Kubernetes 功能的插件和工具生态系统，重点介绍了命令语法、命令式工作、使用资源以及命令和标志的使用，同时还重点介绍了 Kubectl 等有用的项目。 Kubens、Glasskube 等。</p>
+
+<p><a href="https://blog.aquasec.com/go-deeper-linux-runtime-visibility-meets-wireshark">更深入：Linux 运行时可见性与 Wireshark 的结合</a><br>Aqua Security 引入了 Traceeshark，这是一个用于 TCP/IP 的插件，它支持对 Linux 运行时安全监控和高级系统跟踪的交互式分析，增强了用户体验，并能够直接从该工具捕获 Tracee 事件，以便更好地分析和取证调查。</p>
+
+<p><a href="https://systemdesignclassroom.substack.com/p/distributed-services-cant-exist-without">没有最终一致性，分布式服务就无法存在。</a><br>该文档讨论了分布式服务中最终一致性的重要性，解释了实现最终一致性的三种模式：后台同步、基于编排请求和基于事件的模式，并强调了对基于事件的系统的需求，以提高性能、可伸缩性和可用性。</p>
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/CrowdstrikeArityProblem">也许可以理解 Crowdstrike 的论证 arity 问题</a><br>Chris Siebenmann 在 Crowdstrike 最近失败的背景下讨论了编程问题，解释说问题是由于他们的签名匹配系统中的 [arity] 不匹配造成的，在编译时未检测到该错误，并提出了可能的解决方案，例如使用主事实来源作为主 arity 和构建自定义工具。</p>
+
+<p><a href="https://blog.min.io/the-architects-guide-to-dora-regulations-and-their-impact-on-enterprise-data-storage/">DORA 法规及其对企业数据存储的影响的架构师指南</a><br>欧洲的《数字运营弹性法案》（DORA）要求数据存储基础设施能够承受IT中断，预计将影响企业数据存储，而像MinIO这样的现代对象存储解决方案最适合满足这些新需求。</p>
+
+<p><a href="https://www.redhat.com/en/blog/top-red-hat-blog-articles-year-so-far">年度热门红帽博客文章！（到目前为止...</a><br>红帽博客重点介绍了 2024 年上半年的热门文章，涵盖虚拟化、人工智能、Linux 培训和平台工程等主题，以及新产品和服务，并提供各种学习和试用资源。</p>
+
+<p><a href="https://www.openfaas.com/blog/what-goes-up-must-come-down/">关于自动缩放 - 上升的东西必须下降</a><br>本文讨论了 OpenFaaS 和 Kubernetes 中自动缩放的演变和当前状态，重点介绍了其特性、扩展和缩减的注意事项，以及考虑 Pod 生命周期以避免丢弃消息或 HTTP 错误的重要性。</p>
+
+<p><a href="https://www.p99conf.io/2024/08/07/a-tale-of-database-performance-pains/">数据库性能难题的故事</a><br>Piotr Sarna 是 P99conf 24 的演讲者，他分享了他在自己的在线商店中遇到数据库性能困难的个人经验，强调了了解工作负载特征、预测和管理峰值以及保持系统一致性的重要性。</p>
+
+<p><a href="https://icepanel.medium.com/comparison-c4-modelling-vs-diagramming-1e51c839630e">比较：C4 建模与图表</a><br>本文比较了 C4 模型（一种用于记录软件架构的轻量级框架）和图表，强调了两者的优点，但建议将它们结合起来可以提高准确性、一致性和速度。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/08/07/sig-api-machinery-spotlight-2024/">聚焦 SIG API machinery</a><br>SIG API Machinery 是一个 Kubernetes 特别兴趣小组，其范围很大，包括 Kubernetes 控制平面，并且随着时间的推移不断发展，以满足日益提高的采用需求，当前的首要任务是可靠性、效率和能力。</p>
+
+<p><a href="https://www.redhat.com/en/blog/what-you-need-know-about-vmware-automation-red-hat-ansible">您需要了解的有关使用 Red Hat Ansible 实现 VMware 自动化的信息</a><br>红帽企业 Linux、红帽 OpenShift 和红帽 Ansible 提供一系列自动化产品和服务，包括红帽企业 Linux AI、红帽 Ansible 自动化平台和一个应用平台，该平台可以自动化和编排整个虚拟机生命周期，使其成为在多云环境中运营的组织的重要工具。</p>
+
+<p><a href="https://levelup.gitconnected.com/what-insights-can-ebpf-provide-into-real-time-ssl-tls-encrypted-traffic-and-how-435c8ad33efc">eBPF 可以提供哪些关于实时 SSL/TLS 加密流量的见解以及如何提供？</a><br>这篇博文介绍了 Anteon 的 eBPF Agent 解决方案，该解决方案可以拦截和监控 Kubernetes 上的 SSL/SSL 加密流量，从而在不影响安全性的情况下提供对应用程序性能和流量模式的洞察。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.salesforce.com/reengineering-data-clouds-data-handling-the-role-of-retrieval-augmented-generation-rag/">重新设计数据云的数据处理：检索增强生成 （RAG） 的作用</a><br>Claire Cheng 在 Salesforce 的团队已将检索增强生成 （RAG） 系统集成到数据云中，将非结构化文本转换为可搜索的格式，以实现高效的信息检索和生成，并根据用户反馈和数据不断改进系统。</p>
+
+<p><a href="https://blog.pragmaticengineer.com/klarnas-ai-chatbot/">Klarna 的 AI 聊天机器人：它到底有多大的革命性？</a><br>Klarna 与 OpenAI 合作推出了一款 AI 聊天机器人，该公司声称将消除 2/3 的客户支持职位，但该文章质疑其对创造就业机会的影响以及它取代工作的潜力。</p>
+
+<p><a href="https://thenewstack.io/in-the-age-of-ai-what-should-we-teach-student-programmers/">在人工智能时代，我们应该教学生程序员什么？</a><br>计算机科学教师协会 （CTSA） 和非营利性 Code.org 正在引领一场关于如何向学生程序员传授人工智能的潜力和局限性的对话，强调人类参与的必要性以及人工智能需要提高人类技能而不是取代人类技能。</p>
+
+<p><a href="https://www.ardanlabs.com/blog/2024/07/categorize_data_large_language_model_rust.html">在 Rust 中使用大型语言模型对数据进行分类</a><br>该文档提供了有关如何使用 Rust 中的大型语言模型 （LLM） 、Serde、CSV、Itertools、Reqwest 和 futures 等工具自动执行大型数据流分类过程的指南，并提供了有关如何使用这些工具分析大型数据流的分步指南。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>通过 Terraform 预配远程开发环境</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>用于 Go 的结构化、可插拔的日志记录。</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，为下一代 AI 应用程序提供存储</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul 是一种分布式、高可用性和数据中心感知的解决方案，用于在动态的分布式基础设施中连接和配置应用程序。</p>
+
+<p><a href="https://github.com/uber/cadence">uber/cadence</a><br>Cadence 是一个分布式、可扩展、持久且高度可用的编排引擎，以可扩展和弹性的方式执行异步长时间运行的业务逻辑。</p>
+
+<p><a href="https://github.com/dunglas/frankenphp">dunglas/frankenphp</a><br>🧟 现代PHP应用服务器</p>
+
+<p><a href="https://github.com/google/uuid">google/uuid</a><br>基于 RFC 4122 和 DCE 1.1 的 UUID Go 包：身份验证和安全服务。</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>使用 Swagger 2.0 for Go 自动生成 RESTful API 文档。</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>在🚀本地运行 GitHub Actions</p>
+
+<p><a href="https://github.com/stakater/Reloader">stakater/Reloader</a><br>一个 Kubernetes 控制器，用于观察 ConfigMap 和 Secrets 的变化，并在 Pod 及其关联的 Deployment、StatefulSet、DaemonSet 和 DeploymentConfig 上进行滚动升级 – [✩Star] 如果你正在使用它！</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>现代 Go CLI 交互的指挥官</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>出色的 Golang ORM 库，旨在对开发人员友好</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go 客户端用于 Kubernetes。</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>在 Kubernetes 中自动配置和管理 TLS 证书</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>用獠牙去配置</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/wagoodman/dive">wagoodman/dive</a><br>用于探索 docker 镜像中每一层的工具</p>
+
+<p><a href="https://github.com/googleapis/google-api-go-client">googleapis/google-api-go-client</a><br>自动生成的 Google Go API。</p>
+
+<p><a href="https://github.com/gabriel-vasile/mimetype">gabriel-vasile/mimetype</a><br>一个基于幻数的快速 Golang 库，用于媒体类型和文件扩展名检测</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>具有可编程管道的 OpenTelemetry Collector 分发</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Kubernetes 的渐进式交付</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>用于访问 GitHub v3 API 的 Go 库</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

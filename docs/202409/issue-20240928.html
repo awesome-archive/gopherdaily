@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240928.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-28</span>
+</p>
+<p>每日一谚：test coverage != bug free </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/09/28/understand-deep-copy-in-go">Go语言中的深拷贝：概念、实现与局限</a><br>之前有Gopher部落知识星球的gopher问过深拷贝的问题，这里对深拷贝做了相对系统的介绍，供大家参考</p> 
+
+<p><a href="https://cuonglm.xyz/post/go_issue_69434/">go1.23中的range-over-func bug</a><br>本文讨论了 Go 1.23 中发现的与 range-over-func 功能相关的错误，其中迭代器函数的 for 循环被编译器错误地重写，从而导致潜在的错误编译。该问题首先由用户报告，随后由 Keith Randall 确定为编译器错误。该问题可以追溯到 Go 编译器的转义分析中的一条规则，该规则无法识别 range-over-func 的新命名方案，从而导致错误的分配决策。对这个错误的修复，扩展了逃逸分析以识别新的命名方案，计划成为 Go 的下一个小版本的一部分，可能是 Go 1.23.2。</p> 
+
+<p><a href="https://tpaschalis.me/golang-multierr/">Go中的join error</a><br>Go 编程语言的 &#39;errors&#39; 包允许连接多个错误，这是一个在野外不常用的功能。这种连接可以通过使用多个 &#39;%w&#39; 动词或使用 &#39;errors.Join&#39; 函数。联接的错误表示为 &#39;joinError&#39; 结构，其中包含错误切片。要手动检查这些错误，开发人员可以使用 &#39;errors.Is&#39; 或 &#39;errors.AS 函数分别用于特定错误或基于类型的错误。但是，由于两种 “种类” 连接错误实现的 Unwrap 方法不同，因此访问原始错误切片以进行手动遍历需要一个额外的步骤。</p> 
+
+<p><a href="https://jvns.ca/blog/2024/09/27/some-go-web-dev-notes/">一些Go Web开发的笔记</a><br>作者是一位精通 Go 的 Web 开发人员，他分享了对 Go 标准库中最新增强功能的见解，特别是简化了 URL 处理的改进路由系统。他们对使用 Go 的内置机制重写自定义路由逻辑的能力表示赞赏，这些机制更易于理解和维护。此外，开发人员还讨论了 sqlc 的实用程序，sqlc 是一种为数据库查询自动生成 Go 代码的工具，可以节省编写 SQL 查询的时间和精力。他们还分享了有关为服务器优化 SQLite 的技巧，包括管理并发写入和提高查询性能。最后，作者解决了过去在 Go 中内存管理方面面临的挑战，解释了他们如何通过设置垃圾回收器 （GC） 内存限制来解决频繁的内存不足 （OOM） 错误。</p> 
+
+<p><a href="https://dev.to/cmiller01/log-streaming-what-we-got-wrong-and-how-we-fixed-it-7gn">Log Streaming - 我们做错了什么以及如何修复它</a><br>DevZero 改进其日志记录系统的旅程凸显了实时日志流在基础设施和用户体验方面面临的挑战和解决方案。最初，收集日志并将其发送到控制平面，这会导致 CPU 和内存使用量激增，并延迟向用户输出日志。为了解决这些问题，我们实施了一种新方法，可以更频繁地流式传输日志，模拟实时更新。同时，对后端和存储层进行了调整，以支持这种频繁的流式处理。“logsrv”是一种专用日志记录服务，通过处理日志的流式传输和存储、简化架构并使系统更加健壮和可扩展，进一步完善了流程。</p> 
+
+<p><a href="https://remvn.dev/posts/raw-dogging-postgresql-with-pgx-and-sqlc-in-go/">在Go中基于pgx和sqlc的进行原始PostgreSQL查询</a><br>本文讨论了 Go 开发人员如何通过使用 &#39;pgx&#39; 和 &#39;sqlc&#39; 包来简化编写原始 SQL 查询的过程。这些工具旨在弥合 Go 的类型系统和原始 SQL 所需的灵活性之间的差距，提供更直接的数据库操作方法。通过集成这些包，开发人员可以更高效地执行 SQL 语句，同时还可以从 Go 提供的类型安全中受益。作者强调了这些包在增强开发人员在 Go 中处理 PostgreSQL 数据库时的体验方面的重要性。</p> 
+
+<p><a href="https://blog.nikhildev.com/building-with-go-in-a-monorepo-using-bazel-gazelle-and-bzlmod/">使用 Bazel、Gazelle 和 bzlmod 在 monorepo 中使用 Go 进行构建</a><br>该文档提供了有关使用 Bazel、Gazelle 和 bzlmod 管理 Go 单一存储库的全面指南。它首先解释了 monorepository 的重要性，特别是对于拥有大型工程团队的成长型公司。作者详细介绍了使用 Bazel 设置单一存储库的过程，从删除 WORKSPACE 文件到创建 MODULE.bazel 文件，以及使用 Gazelle 生成构建文件和管理依赖项。该指南进一步详细说明了如何通过为常见库和团队特定代码创建“包”目录和子目录来构建存储库。它还涵盖了 Go 模块的创建、使用 Gazelle 整理和初始化 &#39;go.mod&#39;，以及自动生成 Go 库和二进制文件。最后，本文档说明了如何在 monorepository 中构建和运行二进制文件，展示了构建过程的成功执行。</p> 
+
+<p><a href="https://medium.com/@analyticbridge/accelerating-file-movement-and-parallel-s3-uploads-with-golang-b53412a88ff5">使用 Golang 加速文件移动和并行 S3 上传</a><br>本文讨论了 Analytic Bridge 实施的一种解决方案，该解决方案使用 Golang 加速文件移动和并行 S3 上传。解决的主要问题是顺序文件传输效率低下和系统吞吐量利用率不足。为了解决这些问题，开发了一个 Golang 脚本，它利用与 goroutine 和 channel 的并发来管理并行上传，由信号量控制以防止过载。适用于 S3 的 AWS 开发工具包用于高效的文件上传。这种方法显著提高了上传速度，允许可扩展且高效地处理大量数据。</p> 
+
+<p><a href="https://jorenar.com/blog/less-known-c">C 语言的一些鲜为人知的技巧、怪癖和特点</a><br>本文档深入探讨了 C 编程语言的各种鲜为人知的技巧、怪癖和功能，即使是经验丰富的开发人员也可能会感到惊讶。它涵盖了 Unity 构建、使用 &#39;sscanf（）&#39; 匹配字符类以及预处理器的特性等主题。本文档还探讨了 C 语言中二合图、三合图和替代标记的使用，以及预处理器作为自己的语言的概念。此外，它还讨论了使用 &#39;volatile&#39; 类型限定符的含义、灵活数组成员的优点和限制，以及函数参数声明中静态数组索引的重要性。其他突出的主题包括 &#39;void&#39; 指针的隐式转换、按参数列表长度的宏重载以及 &#39;typedef&#39; 语法的使用。本文档最后讨论了内联汇编、检测常量表达式以及 C 语言中安全可变参数函数的实现。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://devops.com/opentelemetry-isnt-the-hero-we-need-heres-why-its-failing-our-stack/">OpenTelemetry 不是我们需要的英雄：这就是它导致我们的堆栈失败的原因</a><br>OpenTelemetry 虽然是跨分布式系统收集和关联跟踪、日志和指标的广泛采用的标准，但在性能和洞察深度方面存在不足。该工具被批评为臃肿、低效和不完整，其广泛的范围导致功能蠕变和焦点被稀释。相比之下，eBPF 被强调为一种更有效的低级跟踪工具，它可以直接从内核提供实时、精细的见解，而不会产生与 OpenTelemetry 相关的开销。与 OpenTelemetry 不同，eBPF 尚未被企业出于不可告人的动机而采用，保持其作为强大的内核级技术的完整性，以获得深入的系统洞察。</p>
+
+<p><a href="https://read.engineerscodex.com/p/4-software-design-principles-i-learned">4 Software Design Principles I Learned the Hard Way</a><br>4 Software Design Principles I Learned the Hard Way is a detailed article that outlines four key software design principles. The author emphasizes the importance of maintaining one source of truth to avoid synchronization bugs and conflicting data. They advocate for the practice of repeating oneself, or &#34;PRY,&#34; to ensure code reusability and testability, while also cautioning against overusing mocks in testing due to potential pitfalls in production. Lastly, the author stresses minimizing mutable state to facilitate faster development and prevent complex sync issues, suggesting that in the early stages of a project, it&#39;s beneficial to limit stored state.</p>
+
+<p><a href="https://josephg.com/blog/rewriting-rust">重写Rust</a><br>The author expresses a desire for a more evolved Rust language, comparing it to the first generation of a product like the iPhone. They highlight the language&#39;s strengths, such as algebraic types, memory safety, and a modern package manager, but also its perceived shortcomings and slow progress. The author discusses the large number of unstable features in the rust &#34;unstable book,&#34; which are not yet part of stable rust, and the perceived inefficacy of the rust RFC process. They fantasize about forking the compiler to introduce their own &#34;seph&#34; edition of rust, with added features like function traits and privileged function calls. The author also proposes solutions to reduce supply chain risk from third-party crates and improve the ergonomics of working with unsafe code and raw pointers in Rust.</p>
+
+<p><a href="https://materializedview.io/p/the-new-era-of-flexible-infrastructure">灵活基础设施部署的新时代</a><br>本文讨论了灵活基础设施部署的不断发展形势，强调了提供自我管理、BYOC 和 SaaS 云模型等多样化部署选项的重要性。它深入探讨了 Confluent 对 WarpStream 的战略收购，这使 Confluent 能够增强其产品 FreightClusters 并满足 BYOC 部署需求。本文还强调了实时分析处理 （OLAP） 领域灵活部署的重要性，以 ClickHouse 为示例系统，提供广泛的部署灵活性。此外，它还提到了 PostgreSQL、Neon 和 MotherDuck 等其他公司，这些公司也在各自的产品中适应灵活部署的趋势。</p>
+
+<p><a href="https://ea.rna.nl/2024/09/28/like-we-dont-see-air-we-dont-see-the-digital-revolution/">Like we don’t see air, we don’t see the Digital Revolution</a><br>The Digital Revolution, spanning roughly half a century, has fundamentally transformed our reliance on digital technology, which is inherently built on discrete, true/false logic. This reliance has led to a &#34;complexity crunch,&#34; where the vastness and intricacy of digital systems hinder agility and change. The document suggests that the Digital Revolution does not follow a singularity trajectory but rather an S-curve, where the acceleration of change is currently slowing down, and expectations are outpacing actual developments. To navigate this mature digital landscape, the document advises cleaning up technical debt, creating IT strategies independent of business strategies, and fostering a mature design culture within organizations. These strategies are crucial for maintaining flexibility and mitigating the inertia caused by the complexity of digital operations.</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/27/why-kubernetes-is-removing-in-tree-cloud-provider-integration-support-in-v1-31-and-how-it-can-affect-you/">为什么 Kubernetes 在 v1.31 中删除树内云提供商集成支持，以及它对您有何影响</a><br>从 1.31 版本开始，Kubernetes 正在逐步淘汰树内云提供商集成，这一变化旨在增强模块化并允许云提供商独立于 Kubernetes 进行开发。此举还寻求为所有云提供商提供公平的竞争环境，并减少 Kubernetes 核心组件对外部依赖项的依赖。为了促进这一过渡，Kubernetes 社区鼓励使用树外云提供商支持，例如一个演示集群项目，该项目指导用户设置具有 Google Cloud Platform （GCP） 支持的测试环境。该项目概述了必要的步骤，包括配置 GCP 权限、设置云控制器守护进程集以及调整云控制器管理器二进制文件以与新的云提供商集成设置保持一致。</p>
+
+<p><a href="https://www.ardanlabs.com/blog/2024/09/fearless-concurrency-ep2-managing-threaded-programs-and-data-races-in-rust.html">Fearless Concurrency Ep.2: Managing Threaded Programs and Data Races in Rust</a><br>Herbert Wolverson, in his second episode of the &#34;Fearless Concurrency in Rust&#34; series, delves into the intricacies of threading in Rust, emphasizing the use of `std::thread` for spawning threads and the importance of managing their lifecycle. He explains how Rust&#39;s unique approach to concurrency, with its strong safety guarantees against data races, is achieved through the language&#39;s ownership and borrowing rules. Wolverson also touches on the use of join handles for efficient result handling from threads and the significance of static variables for data that outlives threads. The episode serves as a comprehensive guide for developers to understand and implement safe and efficient multithreaded programming in Rust.</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/26/the-state-of-security-in-cloud-native-development-2024/">2024 年云原生开发的安全状况</a><br>Linux 基金会对 2024 年云原生开发安全状况的调查显示，84% 的组织认为他们的云原生应用程序与两年前相比更加安全，其中很大一部分组织几乎采用了所有云原生技术。这种安全性的提高归因于更严格的测试实践，包括执行静态应用程序安全测试 （SAST） 和软件组件分析的可能性更高。然而，挑战仍然存在，近一半的组织表示威胁的快速演变是他们最关心的问题。违规通常发生在云基础设施和服务中，其次是配置和密钥管理问题。为了应对这些安全挑战，为 KubeCon &#43; CloudNativeCon North America 2024 的与会者安排了大量关于安全的深入会议，提供了一个增强安全实践的平台。</p>
+
+<p><a href="https://umartahir93.medium.com/postgresql-17-exploring-combined-i-o-and-its-implications-28b3757d13a2">PostgreSQL 17：探索组合 I/O 及其影响</a><br>在这篇文章中，Umar Tahir 深入探讨了 PostgreSQL 17 的进步，特别关注了组合 I/O（矢量化 I/O）的实现。这项创新功能旨在通过减少多页读取所需的系统调用次数（顺序扫描中的常见情况）来提高数据库的效率。相反，组合 I/O 允许预测这些读取并将其合并到单个系统调用中，利用 &#39;p-vread&#39; 系统调用同时进行页面获取。这种方法的好处包括提高效率、改进的缓存和更好的资源管理。但是，本文还强调了潜在的挑战，例如过度读取的风险，其中不必要的数据可能会加载到内存中。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.devops.dev/understanding-hugging-face-model-file-formats-ggml-and-gguf-914b0ebd1131">了解 Hugging Face Model 文件格式、GGML 和 GGUF！</a><br>本文深入探讨了 Hugging Face 使用的各种模型文件格式，特别关注 GGML 和 GGUF 作为传统格式的进步。它解释了 &#39;model.bin&#39;、&#39;config.json&#39; 和 &#39;tokenizer.json&#39; 等文件在定义和加载模型架构和标记化过程中的重要性。本文还深入探讨了较新的格式 GGML 和 GGUF，重点介绍了它们的独特功能，例如单文件捆绑、CPU 兼容性和增强的元数据支持。虽然 GGML 通过将模型组件整合到一个文件中来简化流程，但它面临着兼容性和灵活性方面的挑战。GGUF 作为一种建立在 GGML 基础上的解决方案出现，为处理大型语言模型提供了一种更通用且面向未来的方法。</p>
+
+<p><a href="https://medium.com/@swathyecengg/unlocking-the-next-frontier-in-code-generation-how-planning-in-natural-language-supercharges-llms-a4eb34dd8685">解锁代码生成的下一个前沿：自然语言规划如何增强 LLM</a><br>Swathy Sekar 的文章讨论了用于代码生成的大型语言模型 （LLM） 的进步，重点介绍了在自然语言中集成规划以克服当前方法的局限性。解决的主要挑战是 LLM 产生的解决方案缺乏多样性，它们通常依赖于试错技术，无法探索广阔的解决方案空间。Sekar 引入了两种创新方法，即 IdeaSearch 和 PlanSearch，旨在增强 LLM 的战略思维。IdeaSearch 鼓励模型在生成代码之前用自然语言阐明高级解决方案，而 PlanSearch 通过生成一阶和二阶观察来促进对概念空间的探索。实验结果表明，PlanSearch 的性能明显优于其他方法，在编码基准测试中实现了更高的通过率，并展示了 AI 在理解和解决复杂编程问题方面的潜力。</p>
+
+<p><a href="https://thenewstack.io/why-ai-pcs-are-not-for-developers/">为什么 AI PC 不适合开发人员</a><br>本文讨论了 AI PC 的挑战和现状，重点介绍了开发人员可能认为它们没有好处的原因。它强调了一些问题，例如无法获得与高通和英特尔芯片等硬件中的专用 AI 处理器兼容的轻量级 AI 模型、对 GPU 或 CPU 的依赖而不是专用的神经处理单元 （NPU），以及运行长查询的内存限制。此外，它还谈到了英特尔参与 AI PC 的历史，提到了 Meteor Lake 芯片的失败以及随后被功能更强大的 Lunar Lake 芯片取代。这篇文章还对比了 Microsoft 的 Copilot PC，旨在将 AI 功能集成到桌面应用程序中，与开发人员难以在 AI PC 上有效加载和利用 AI 模型的当前情况进行了对比。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一种内存中的实时反应式数据库，支持 Redis 和 SQL，针对现代硬件和构建实时应用程序进行了优化。</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/src-d/hercules">src-d/hercules</a><br>从 Git 存储库历史记录中获得高级见解。</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>市场上最具可扩展性和可自定义性的身份服务器。用更好的 UX 和 DX 替换您的 Homegrown、Auth0、Okta、Firebase。拥有所有筹码：Passkeys、Social Sign In、Multi-Factor Auth、SMS、SAML、TOTP 等。用 Go 编写，云原生、无头、API 优先。作为 Ory Network 上的一项服务提供，并供自托管者使用。</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>支持 RTSP、RTMP、HTTP-FLV、WebRTC、MSE、HLS、MP4、MJPEG、HomeKit、FFmpeg 等的终极相机流媒体应用程序。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/getzep/zep">getzep/zep</a><br>泽普 |AI 堆栈的内存基础</p>
+
+<p><a href="https://github.com/rook/rook">rook/rook</a><br>适用于 Kubernetes 的存储编排</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA 是基于 Kubernetes 的事件驱动自动缩放组件。它为在 Kubernetes 中运行的任何容器提供事件驱动的扩展</p>
+
+<p><a href="https://github.com/kubernetes/kube-state-metrics">kubernetes/kube-state-metrics</a><br>用于生成和公开集群级指标的附加组件代理。</p>
+
+<p><a href="https://github.com/containrrr/watchtower">containrrr/watchtower</a><br>自动执行 Docker 容器基础映像更新的过程。</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型 SRT / WebRTC / RTSP / RTMP / LL-HLS 媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>适用于 NATS.io、云和边缘原生消息传递系统的高性能服务器。</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>用于管理密钥的简单灵活的工具</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>具有长期存储功能的高可用性 Prometheus 设置。CNCF 孵化项目。</p>
+
+<p><a href="https://github.com/smartcontractkit/chainlink">smartcontractkit/chainlink</a><br>去中心化预言机网络的节点，桥接链上和链下计算</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/google/cadvisor">google/cadvisor</a><br>分析正在运行的容器的资源使用情况和性能特征。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>与 Prometheus 类似，但用于日志。</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>出色的 Golang ORM 库旨在对开发人员友好</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速的分布式存储系统，适用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 磁盘查找、云分层。Filer 支持云驱动器、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

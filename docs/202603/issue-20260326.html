@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260326.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260326</span>
+</p>
+<p>每日一谚：走慢的请让开道，不要挡了走得快的。如果你们原地踏步，请靠边站。— Linux内核黑客文化 </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/26/rust-project-perspectives-on-ai">Rust 核心团队大吐苦水：求求你们别再用 AI 提交“垃圾 PR”了！</a><br>继Go核心团队拒绝 AI 署名，为AIGC 时代的Go项目划下的“工程红线”后，前不久，Rust 项目的核心开发者、语言设计团队负责人 Niko Matsakis 在内部发起了一场长达数周的“大摸底”，旨在收集 Rust 核心贡献者和维护者们对于 AI 辅助编程的真实看法。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/9tY8u1gHKv9ACFrcPqMz-w">【AI 智能体时代的软件工程】12 信任工程：建立 AI 时代的“三维材料清单 (BOM)”</a><br>今天，我们将直击 Agentic 软件工程中最硬核的底座——信任工程（Trust Engineering）。我将教你如何彻底消灭不可追溯的“YOLO 模式”，并为你引入智能体时代的终极审计武器：三维材料清单（The 3D BOM）。</p> 
+
+<p><a href="https://seangoedecke.com/simple-work-gets-rewarded/">简单代码同样能获得晋升</a><br>文章驳斥了“只有复杂代码才能获得晋升”的流行观点。虽然非技术管理者有时会误将复杂性视为工作难度的标志，但长期来看，他们更看重实际成果。写出简单、易懂代码的工程师能更快地完成任务、减少错误，并在更短时间内交付更多成功的项目。因此，那些能通过简洁高效的解决方案持续产出业绩的工程师，最终将在职业生涯中走得更远，并因此获得回报和晋升。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/03/26/the-platform-under-the-model-how-cloud-native-powers-ai-engineering-in-production/">云原生赋能生产环境AI工程</a><br>文章探讨了如何利用云原生生态系统来解决AI模型从训练到可靠生产部署中的运营挑战。AI工程涉及构建可信赖、生产级的AI系统，这要求解决低延迟推理服务、高效的GPU资源调度、成本与吞吐量监控、安全发布以及多租户治理等基础设施问题。云原生技术栈，特别是Kubernetes，已经为这些挑战提供了成熟的解决方案。关键进展包括Kubernetes中通用可用（GA）的动态资源分配（DRA），它通过基于CEL的过滤和声明式ResourceClaims，实现了对GPU等加速资源的精细化、拓扑感知调度，极大地改进了GPU集群的管理。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/26/announcing-kubescape-4-0-enterprise-stability-meets-the-ai-era/">Kubescape 4.0 发布：企业级稳定性和 AI 时代安全能力</a><br>Kubescape 4.0 重大版本发布，核心聚焦于提升企业级的稳定性和可扩展性，并引入了面向 AI 时代的先进威胁检测能力。本次发布的一大亮点是运行时威胁检测（Runtime Threat Detection）正式 GA，该引擎基于高效的 CEL 规则，能监控系统交互、网络连接和存储活动等全方位事件。同时，Kubescape 存储组件也达到 GA，利用 Kubernetes 聚合 API 集中存储安全元数据。新版本还增强了对 AI 智能体的支持，允许其利用 Kubescape 进行集群扫描，并对 AI 智能体自身进行安全态势扫描，使安全防护更具前瞻性。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/25/higress-joins-cncf-delivering-an-enterprise-grade-ai-gateway-and-a-seamless-path-from-nginx-ingress/">Higress 加入 CNCF，成为企业级 AI 网关</a><br>Higress 正式成为 CNCF 沙箱项目，标志着这款基于 Envoy 和 Istio 构建的 AI 原生高性能 API 网关融入云原生生态。Higress 的核心价值在于统一了流量网关、微服务网关和 AI 网关的控制平面，简化了云原生和 AI 工作负载的运维复杂度。它源自阿里巴巴的大规模生产环境，具备企业级稳定性和 WebAssembly (Wasm) 可扩展性。在功能上，Higress 不仅是成熟的 Kubernetes Ingress Controller，可作为 Nginx Ingress 的安全、直接替代品，完全兼容现有配置，并以 xDS 架构消除安全隐患；同时，它将 AI 流量视为一等公民，原生支持 LLM 调用、模型上下文协议 (MCP) 等，提供基于 Token 的限速、多模型容错和智能路由等功能，标准化了云原生应用消费 LLM 的方式。</p>
+
+<p><a href="https://nesbitt.io/2026/03/25/the-top-10-biggest-conspiracies-in-open-source.html">开源领域的十大阴谋论</a><br>这篇文章揭示了开源社区中流传的十大“阴谋论”，旨在探讨一些工具和现象背后的“不为人知”的动机。例如，它声称GitHub的Dependabot实际上是一个监控工具，通过分析公司对安全漏洞的响应速度来收集数据，并将其出售给招聘机构。另一个被质疑的点是Dockerfile的语法被故意设计成“几乎正确但有缺陷”的状态，以确保持续产生技术咨询和培训服务的需求，从而为相关公司创造收入。这些论点大多基于匿名消息源，暗示了商业利益可能在开源生态系统中的某些设计决策中起到了隐秘的作用。</p>
+
+<p><a href="https://cocoindex.io/blogs/building-an-invisible-daemon">构建无感知的后台守护进程</a><br>许多开发者工具需要一个长期运行的本地后台进程（如LSP服务器、文件监视器）。本文探讨了如何构建一个“隐形”的守护进程，使其能够按需启动、随工具升级而更新、根据配置变化重新加载，并能干净地关闭，而无需用户手动干预。作者以其嵌入式代码搜索工具 cocoindex-code 的开发经验为例，说明了从单体应用转向持久化守护进程的实践。核心经验在于简化设计，使用户只需通过 CLI（如 `ccc`）进行交互，守护进程的生命周期管理（启动、运行、关闭）对用户完全透明，从而提升了性能和用户体验，并允许工具被其他命令行程序调用。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/how-to-be-a-10x-engineer-interview">如何成为“10倍工程师”：专访一位不靠海投的顶尖开发者</a><br>本文采访了一位被誉为“10倍工程师”的顶尖开发者“Sam”。尽管Sam没有公开的GitHub贡献记录，并且清晰地设定了工作边界，但他寻找新工作的过程却与众不同：他无需主动投递简历，而是被前同事们积极引荐和争抢。Sam的经历揭示了真正有价值的工程师如何通过卓越的工作表现和人脉网络，自然而然地获得顶尖机会，即使他并未遵循传统上展示技术实力的公开路径。文章探讨了这位优秀工程师的工作哲学以及他如何被业内人士高度认可。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/25/thoughts-on-slowing-the-fuck-down/#atom-everything">警惕AI智能体开发中的“加速陷阱”</a><br>文章探讨了当前AI智能体（Agent）工程化趋势中过度追求速度带来的风险。以Pi Agent框架创建者Mario Zechner的观点为核心，指出当前行业沉迷于在最短时间内生成最多代码，放弃了应有的工程纪律和判断力。与人类不同，AI智能体能以极快速度引入大量细微错误，这些错误会迅速累积，形成难以控制的复杂代码库，导致开发者失去对代码的认知和控制（认知债）。作者强调，虽然智能体能极大提升速度，但这种速度也使得代码在数小时内发生剧变，超出了人类的理解能力。因此，核心建议是必须主动放慢速度，给自己留出时间思考、质疑和设定代码生成限制，以确保开发的可控性。</p>
+
+<p><a href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression">TurboQuant：以极致压缩重新定义人工智能效率</a><br>我们引入了一系列先进的、具有理论基础的量化算法，可以对大型语言模型和向量搜索引擎进行大规模压缩。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/kagent-dev/kagent">kagent-dev/kagent</a><br>Cloud Native Agentic AI | Discord: https://bit.ly/kagentdiscord</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go, the easiest way to write LLM-based programs in Go</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

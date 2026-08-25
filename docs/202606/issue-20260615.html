@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260615.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260615</span>
+</p>
+<p>每日一谚：Clear is better than clever. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://opensource.googleblog.com/2026/06/a-new-pkggodev-api-for-go.html">Go 语言的新 pkg.go.dev API</a><br>由 Ethan Lee、Jonathan Amsterdam 和 Hana Kim，Go 团队撰写。Google 为 Go 语言生态系统推出了新的 pkg.go.dev API，提供更强大的包搜索和浏览功能。</p> 
+
+<p><a href="https://tonybai.com/2026/06/15/google-ai-in-sre">谷歌 SRE 重磅白皮书：当 AI 自动写出 10 倍代码，谁来阻止系统崩溃？</a><br>为了应对这场“AI 带来的生产力过载危机”，谷歌 SRE 团队于近日发布了一份极具颠覆性的系统级白皮书：《AI in SRE: How Google is Engineering the Future of Reliable Operations》。 在这份白皮书中，谷歌首次向外界披露了其内部正在运转的、以 Agent 编排与闭环控制（Closed-loop Control）为核心的下一代自愈式运维系统。</p> 
+
+<p><a href="https://tonybai.com/2026/06/14/stop-saving-tokens-silicon-valley-consensus-waste-compute-shortcut">别再省 Token 了！硅谷新共识：浪费算力才是唯一捷径</a><br>在最新一期的硅谷教父 Naval and Nivi Podcast 闭门在线圆桌会议上，Naval 邀请了三位极其硬核的“前沿造物主”，在这场几乎没有水分的对话中，大佬们抛出了一个在当今开发圈极具毁灭性、却又无比清醒的论点：“别去学那些花里胡哨的提示词技巧了。扔掉预算表，直接用最粗暴的方式把 Claude、Gemini、Codex 砸向同一个问题。垃圾代码万岁，浪费 Token 才是大模型时代的唯一捷径。”</p> 
+
+<p><a href="https://tonybai.com/2026/06/13/linux-maintainer-greg-kh-switched-to-rust-after-35-years-of-c">Linux 内核顶级维护者：写了 35 年 C，是 Rust 让我重新找回了编程的乐趣</a><br>在最新一期的 Rust in Production 播客中，两位行业殿堂级人物坐在一起，进行了一场 载入 Linux 史册的对话，揭示了 Linux 内核史上最伟大的语言融合</p> 
+
+<p><a href="https://www.elttam.com/blog/golang-code-review-notes-ii">Golang 代码审查笔记</a><br>超越明显的错误：审计 Go 语言中微妙且危险的行为。</p> 
+
+<p><a href="https://dev.to/jaisonerick/reading-wi-fi-data-from-go-on-macos-after-apple-removed-airport-19g">在苹果移除 `airport` 后从 Go 读取 macOS 上的 Wi-Fi 数据</a><br>如果您曾经需要脚本或 Go 程序来读取 Mac 所在 Wi-Fi 网络的 SSID、BSSID、信号强度或信道，那么过去两年并不顺利。我自 2022 年以来一直有一个小型库存工具在静默运行。</p> 
+
+<p><a href="https://dnaeon.github.io/golinkname/">探索和使用 Go linkname 编译器指令</a><br>Go 支持多种可以影响编译器行为的[指令](https://pkg.go.dev/cmd/compile#hdr-Compiler_Directives)。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2026-05-22-special-cases-in-go/">Go 语言中的特殊情况</a><br>Go 语言常被设计为一种&#34;简单&#34;的语言，有意避免会增加复杂性的功能。语言设计公开表达观点，但避免将这些观点写入规范。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/06/15/sig-storage-spotlight-2026/">SIG Storage 焦点</a><br>更智能的数据管理：我们将看到向更智能的 CSI 驱动程序和提供自动分层、快照、迁移和复制等高级功能的数据管理工具转变，这些功能专门针对高性能 AI/ML 工作流程和大型数据平台进行优化。</p>
+
+<p><a href="https://seangoedecke.com/ai-gpus-live-longer-than-three-years/">AI GPU 的使用寿命可能超过三年</a><br>与之前关于 AI 和用水量的说法类似，&#34;最多三年&#34;的说法常被引用为&#34;1-2年，在最佳条件下有些可使用长达3年&#34;。</p>
+
+<p><a href="https://www.pingcap.com/blog/database-branching-ai-agents-tine/">AI 智能体的数据库分支：TINE 如何解决模式漂移问题</a><br>迭代开发：从数据管理仪表板开始，智能体通过连续的提示添加了按用户访问控制和审计日志表。</p>
+
+<p><a href="https://wasi-gfx.dev/blog/posts/future-of-wasi-gfx/">wasi-gfx 和 wasi:webgpu 的未来</a><br>作者：Sean Isom，Mendy Berger。过去几年，我们一直致力于通过 `wasi:webgpu`、`wasi:surface`、`wasi:frame-buffer` 和 `wasi:graphics-context` 将图形功能引入 WebAssembly。</p>
+
+<p><a href="https://blog.cloudflare.com/scaling-security-scans/">扩展安全洞察：我们如何实现全球扫描能力 10 倍的增长</a><br>2026-06-12。我们通过优化扫描架构和分布式处理，成功将全球安全扫描能力提升了 10 倍，同时保持了高准确性和低延迟。</p>
+
+<p><a href="https://sushantdhiman.dev/built-a-network-load-balancer-in-c-to-understand-how-it-actually-works-2/">用 C 语言构建 TCP 负载均衡器以了解其工作原理</a><br>许多工程师每天都在使用负载均衡器，但大多数从未深入了解其工作原理。我实现了 C 语言的第 4 层负载均衡器，以理解其内部工作机制。</p>
+
+<p><a href="https://brandondong.github.io/blog/git_merges_can_be_better">Git 合并可以更好</a><br>如果您的本地开发工作流程与我的类似，99% 的合并是 `git merge master`（或 `main`）。尽管这是压倒性的使用案例，我认为这正是 git 合并用户体验最糟糕的地方！</p>
+
+<p><a href="https://xeiaso.net/notes/2026/ipv6-zones-go-url/">确保你不是机器人！</a><br>通过分析网络请求特征和行为模式，开发了一种新型机器人检测系统，有效区分人类用户和自动化脚本。</p>
+
+<p><a href="https://veduis.com/blog/data-consistency-models/">数据一致性模型：从强一致性到最终一致性</a><br>当您在分布式系统中存储数据时，面临一个基本选择：是否要求所有数据副本始终保持一致？</p>
+
+<p><a href="https://www.phoronix.com/news/Linux-7.1-Released">Linux 7.1 发布：新 NTFS 驱动程序，面向 Panther Lake 的 Intel FRED，更快的 Arc 图形</a><br>Linux 7.1 版本发布，包含新的 NTFS 驱动程序、支持 Intel FRED 架构以及改进的 Arc 图形性能，为用户带来更好的文件系统和硬件兼容性体验。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything">为什么 AI 没有取代软件工程师，也不会取代</a><br>如果编写代码不是瓶颈，那是什么？任务分解调查显示问题在于会议或调试。这引出了更多问题：开发者在这些会议中做什么，为什么不能由 AI 完成？随着能力提升，调试会不会自动化？</p>
+
+<p><a href="https://www.thoughtfultechnologist.com/p/automating-myself-out-of-development">将自己从开发中自动化</a><br>关于我如何使用 Claude Code 逐步将自己从开发周期中移除——或者我做到了吗？通过自动化工具和流程，我减少了手动编码工作，转向更高层次的系统设计。</p>
+
+<p><a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/">开放知识格式如何改善数据共享</a><br>数据分析 # 介绍开放知识格式 2026年6月12日。开放知识格式是一种标准化数据共享框架，使不同系统和组织能够无缝交换和利用知识数据，促进跨平台协作。</p>
+
+<p><a href="https://x.com/zero_goliath/status/2065835673911976398">Goliath 在 X 上的帖子：&#34;https://t.co/XDUUGPX4X4&#34; / X</a><br>该帖子讨论了人工智能在软件开发中的应用和挑战，强调了人机协作的重要性。</p>
+
+<p><a href="https://x.com/JackWoth98/status/2065529819685871690">Jack Wotherspoon 在 X 上的帖子：&#34;https://t.co/e6enxfTNnQ&#34; / X</a><br>该帖子分享了关于大型语言模型训练和优化的见解，探讨了提高模型效率和性能的新方法。</p>
+
+<p><a href="https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype">Claude Fable 5：神话级炒作、创纪录的作弊和一些名人堂条目</a><br>本文回顾了 Claude Fable 5 挑赛中令人印象深刻的表现，包括创新解决方案和突破性技术，展示了 AI 在复杂问题解决方面的潜力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview</a><br>Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents.</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/runatlantis/atlantis">runatlantis/atlantis</a><br>Terraform Pull Request Automation</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>Headless cloud-native authentication and identity management written in Go. Scales to a billion&#43; users. Replace Homegrown, Auth0, Okta, Firebase with better UX and DX. Passkeys, Social Sign In, OIDC, </p>
+
+<p><a href="https://github.com/jetify-com/devbox">jetify-com/devbox</a><br>Instant, easy, and predictable development environments</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

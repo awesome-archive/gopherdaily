@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250613.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250613</span>
+</p>
+<p>每日一谚：Make the zero value useful </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dev.to/shrsv/best-database-migration-tools-for-golang-ajf">Go的最佳数据库迁移工具</a><br>数据库迁移是构建和维护 Go 应用程序的关键环节。它能使数据库架构与代码库保持同步，处理更新，并确保应用程序在不断发展过程中保持可靠性。选择合适的迁移工具可以节省时间、减少错误，并使部署更加顺畅。在本文中，我们将深入探讨适用于 Go 的最佳数据库迁移工具 ，并提供示例、比较和实用技巧，帮助您为项目选择合适的工具。</p> 
+
+<p><a href="https://tailscale.com/blog/frequent-reath-security">频繁的重新身份验证并不能提高你的安全性</a><br>Tailscale旨在让安全访问变得无缝——但安全工具往往适得其反。一个常见的罪魁祸首是什么？频繁的登录提示。它们会打断你的工作，让用户感到沮丧，而且自相矛盾的是，它们会削弱你的安全态势。在这篇文章中，Avery Pennarun解释了为什么强迫用户不断重新验证身份是一种过时的想法——以及更智能的实时方法如何在不产生摩擦的情况下提供更强的安全性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://jasone.github.io/2025/06/12/jemalloc-postmortem">jemalloc 事后分析</a><br>jemalloc 内存分配器诞生于 2004 年初，至今已公开使用约 20 年。由于开源软件许可的性质，jemalloc 将无限期地公开可用。但活跃的上游开发已经结束。这篇文章简要描述了 jemalloc 的开发阶段，每个阶段都有一些成功/失败的亮点，然后是一些回顾性评论。文章回顾了jemalloc的四个开发阶段：Lyken、FreeBSD、Facebook和Meta，并分析了每个阶段的成功与失败，以及一些项目管理上的反思，例如与Mozilla和Rust社区的合作，以及Valgrind支持的移除等。</p>
+
+<p><a href="https://blog.bytebytego.com/p/shopify-tech-stack">Shopify 技术栈</a><br>本文与 Shopify 工程团队合作撰写。文章介绍了 Shopify 的技术栈，从仍在运行业务的模块化单体架构，到隔离故障域的 Pod，再到每天交付数百次更改的部署管道，涵盖了 Shopify 用于保持快速、弹性和开发者友好的工具、编程语言和模式，使其能够在惊人的规模下保持运行。</p>
+
+<p><a href="https://www.androidauthority.com/google-not-killing-aosp-3566882">AOSP 并未消亡，但谷歌刚刚对自定义 ROM 开发者给予了沉重打击</a><br>谷歌确认并未停止 AOSP 的开发，但其进行的更改使得开发者更难为 Pixel 手机构建 Android 系统。谷歌将 AOSP 参考目标从 Pixel 硬件转移到名为“Cuttlefish”的虚拟设备，声称这样做是为了更中立。虽然谷歌坚持 AOSP 不会消失，但开发者现在必须逆向工程这些更改，这使得支持 Pixel 设备的过程更加困难。</p>
+
+<p><a href="https://math.mit.edu/~shor/435-LN">Peter Shor - 2022年秋季量子计算课程讲义 (8.370/18.435)</a><br>这是Peter Shor教授2022年秋季量子计算课程 (MIT 8.370/18.435) 的讲义笔记。内容涵盖量子计算的多个方面，包括：绪论与历史、叠加原理、幺正演化与Bloch球、量子测量、联合量子系统与张量积、经典布尔电路、可逆布尔电路、量子门、量子隐形传态、密度矩阵、GHZ实验、Deutsch-Jozsa算法、经典计算复杂性理论、Simon算法、量子傅里叶变换、相位估计、量子因式分解算法、用于因式分解算法的数论、离散对数算法、Grover搜索算法、Grover搜索最优性证明、Hamiltonian模拟、量子纠错码（9-qubit码、7-qubit量子汉明码、CSS码）以及BB84量子密钥分发协议及其安全性证明。  注意，第26讲的笔记尚未完成。</p>
+
+<p><a href="https://danielsada.tech/blog/carreer-part-7-how-office-moved-to-git-and-i-loved-devex">从Source Depot到Git的Office迁移，或者我如何学会热爱DevEx</a><br>这篇文章讲述了作者参与Office团队从Source Depot迁移到Git的经历。文章详细描述了Source Depot的缺点，迁移过程中的挑战（包括与GitHub合作开发VFS for Git），以及最终成功迁移的结果和经验教训。迁移涉及到4000多名工程师，涵盖了Word、Excel、PowerPoint等多个Office应用。作者强调了沟通的重要性，以及构建并验证平行系统的必要性，以确保迁移的顺利进行和最终成功。</p>
+
+<p><a href="https://kobzol.github.io/rust/rustc/2025/06/09/why-doesnt-rust-care-more-about-compiler-performance.html">为什么Rust不更关注编译器性能？</a><br>关于Rust最常见的抱怨是其缓慢的反馈循环和漫长的编译时间。博主经常听到这种抱怨，他自己也是Rust用户。文章探讨了Rust项目是否重视编译器性能，并解释了为什么编译速度还不够快以及改进的难点，包括技术原因、优先级问题和贡献者等方面。文章最后总结了未来改进编译器性能的希望和计划。</p>
+
+<p><a href="https://charity.wtf/2025/06/08/on-how-long-it-takes-to-know-if-a-job-is-right-for-you-or-not">多久才能知道一份工作是否适合你？</a><br>作者分享了自己在工作中的一些经验，认为通常在一周内就能感觉到一份工作是否适合自己。作者还谈到管理者和工程师在工作匹配度上的不同，以及如何从不合适的经验中学习。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/13/prompt-injection-design-patterns/#atom-everything">保护LLM代理免受提示注入攻击的设计模式</a><br>这篇由来自IBM、Invariant Labs、苏黎世联邦理工学院、谷歌和微软等机构的11位作者撰写的新论文，是对提示注入和LLM安全文献的极好补充。论文阐述了多种LLM代理设计模式，这些模式可以显著降低提示注入的风险。这些设计模式限制了代理的操作，以明确防止它们执行任意任务。论文认为，这些设计模式在代理效用和安全性之间取得了宝贵的平衡。论文探讨了提示注入问题的范围，并提出了六种设计模式来帮助防御提示注入，包括CaMeL论文中提出的模式。这些模式包括：动作选择器模式、计划然后执行模式、LLM映射归约模式、双LLM模式、代码然后执行模式以及上下文最小化模式。论文还提供了十个案例研究，以说明这些设计模式如何在实践中应用，每个案例研究都附有详细的威胁模型和潜在的缓解策略。</p>
+
+<p><a href="https://cognition.ai/blog/dont-build-multi-agents">不要构建多智能体</a><br>大型语言模型（LLM）智能体的框架令人惊讶地令人失望。本文基于自身的反复试验，提供了一些构建智能体的原则，并解释了为什么一些诱人的想法在实践中实际上非常糟糕。文章重点介绍了上下文工程的两个核心原则：共享上下文（包括完整的智能体轨迹，而不仅仅是单个消息）和行动包含隐式决策（冲突的决策会导致不良结果）。文章通过对比单线程线性智能体和多智能体架构，阐述了单智能体架构在可靠性方面的优势，并探讨了在处理大型任务时如何通过上下文压缩模型来改进单智能体架构。最后，文章以Claude Code和编辑应用模型为例，说明了这些原则在实际应用中的体现，并展望了未来多智能体协作的可能性。</p>
+
+<p><a href="https://lucumr.pocoo.org/2025/6/12/agentic-coding">代理编码建议</a><br>本文探讨了代理编码的实践经验，作者主要使用Claude Code进行编码，并分享了其在工具选择、语言选择、工具使用以及代码编写方面的建议。文章强调了工具的快速响应、易用性以及代码的简洁性，并建议使用Go语言进行后端开发，以及在前端使用Tailwind、React等技术。此外，文章还讨论了代码稳定性、并行化以及重构的重要性。</p>
+
+<p><a href="https://www.latent.space/p/o3-pro">上帝渴望语境：我对o3 pro的初步想法</a><br>OpenAI今天将o3的价格下调了80％（从每mtok 10美元/40美元降至2美元/8美元——与GPT 4.1的价格相同！！），为o3-pro的发布奠定了基础（20美元/80美元，支持一个未经验证的社区理论，即-pro版本是具有多数投票的10倍基础模型调用，如他们的论文和我们在Chai剧集中提到的那样）。o3-pro在人类测试者中的胜率为64％，在4/4的可靠性基准测试中表现略好，但正如sama所注意到的那样，当你以不同的方式测试它时，实际体验会扩展…</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/securego/gosec">securego/gosec</a><br>Go security checker</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

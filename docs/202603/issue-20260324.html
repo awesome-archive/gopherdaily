@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260324.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260324</span>
+</p>
+<p>每日一谚：Don&#39;t communicate by sharing memory; share memory by communicating — Rob Pike </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/24/no-soil-for-new-programming-languages-in-ai-era">告别古法编程黄金时代：AI 时代不会再有新编程语言诞生的土壤</a><br>站在 2026 年的节点上，当你看着 Claude Code、Cursor 或各类 Coding Agent 在几秒钟内倾泻出数千行逻辑严密的代码时，一个残酷的真相正在浮出水面： 大模型（LLM）的爆发，彻底抽干了孕育下一代通用编程语言的土壤。属于人类的“造语言”游戏，结束了。这不是危言耸听，而是基于技术演进第一性原理的必然推演。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ST_tPnImtDeV-hAPVV_WCg">【AI 智能体时代的软件工程】11 双态工作台：为何我们需要为 AI 重构 IDE？</a><br>在智能体软件工程时代，当前行业最深的一个设计陷阱就是：强迫人类和 AI 智能体共用同一个工作界面（IDE）。 人类和 AI 在工作时所需的“空气”是完全不同的。今天，我们将彻底打破对传统 IDE 的迷信，去构建下一代研发界面的终极形态——双态工作台（Dual Workbench Architecture）。</p> 
+
+<p><a href="https://americanexpress.io/migrating-the-payments-network-twice/">美国运通零停机两次迁移支付网络实践</a><br>本文深入探讨了美国运通（American Express）如何成功地将其关键的支付网络进行了两次迁移，且全程未对客户造成任何影响（零停机时间，无中断交易或计划维护）。支付网络是处理实时卡授权等关键交易的分布式系统，要求极高的可用性和低延迟。此次迁移的目标是将系统从遗留平台现代化为新的微服务架构，同时必须遵守严格的运营约束，即迁移过程必须在线完成，不能有任何计划或意外停机。文章将详细介绍这两次大规模迁移背后的工程决策、权衡取舍以及所吸取的经验教训。</p> 
+
+<p><a href="https://brigham-skarda.blogspot.com/2026/03/a-commonly-unaddressed-issue-in-c-and.html">C&#43;&#43;与Go语言性能对比的被忽视的优化成本</a><br>文章探讨了在比较C&#43;&#43;和Go语言性能时一个常被忽略的细节：虽然C&#43;&#43;代码通常比Go快50%，但这往往是由于开发者投入了大量的额外优化工作所致。作者基于自己学习和使用C&#43;&#43;（包括在自动驾驶公司的工作经验）以及Go语言的经历，认为对于普通开发者而言，为达到这种性能差距所付出的额外优化努力往往得不偿失。核心观点是，在衡量两者性能差异时，必须考虑实现这些性能优势所需的人力投入成本。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/03/24/fluid-becomes-a-cncf-incubating-project/">Fluid 晋升为 CNCF 孵化项目</a><br>CNCF 技术监督委员会（TOC）已批准 Fluid 项目晋升为 CNCF 孵化（Incubating）项目。Fluid 是由南京大学、阿里云和 Alluxio 社区于 2020 年发起的一个云原生数据编排与加速系统。它旨在解决 Kubernetes 环境中数据密集型工作负载对存储访问的特殊需求，如数据集版本控制、动态挂载和数据加速等。Fluid 通过在 Kubernetes 中引入数据抽象层，将“弹性数据集”视为一等资源，实现了“数据无处不在、随时可用”的愿景。该项目通过支持异构计算环境和多种存储系统（如 HDFS、S3 等），并利用 Alluxio 等缓存引擎，极大地提升了数据访问效率和灵活性。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/24/tekton-becomes-a-cncf-incubating-project/">Tekton 晋升为 CNCF 孵化项目</a><br>CNCF 技术监督委员会（TOC）已投票通过接纳 Tekton 成为 CNCF 孵化项目。Tekton 是一个强大的、灵活的开源框架，用于构建 Kubernetes 原生的持续集成和交付（CI/CD）系统，它通过抽象底层细节，支持多云和本地部署的工作负载编排。该项目已达到 v1.0 稳定版本，并在业界得到广泛采用，被 Puppet 和福特等公司使用，并为 Red Hat OpenShift Pipelines 和 IBM Cloud 等商业产品提供支持。晋升为孵化项目后，Tekton 将与 Argo CD、SPIFFE/SPIRE 和 Sigstore 等其他 CNCF 项目进行更紧密的集成，以增强其供应链安全能力。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/24/welcome-llm-d-to-the-cncf-evolving-kubernetes-into-sota-ai-infrastructure/">llm-d 加入 CNCF，推动 Kubernetes 演进为前沿 AI 基础设施</a><br>llm-d 项目已正式成为云原生计算基金会（CNCF）的沙盒项目，旨在引领 Kubernetes 及 CNCF 生态向最先进（SOTA）的 AI 基础设施演进，将分布式推理视为一等云原生工作负载。该项目由 Red Hat、Google Cloud、IBM Research 等多家行业巨头于 2025 年发起，核心愿景是实现“任意模型、任意加速器、任意云”。llm-d 获得 CNCF 的中立治理，增强了企业构建 AI 基础设施的信心。Mistral AI 等合作伙伴强调，项目将重点解决 KV 缓存管理和分布式服务等复杂推理优化挑战，以支持 MoE 等下一代模型，共同推动 AI 服务开放标准的制定。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/24/announcing-a-kotlin-multiplatform-api-and-sdk-for-opentelemetry/">OpenTelemetry 推出 Kotlin 多平台 API 和 SDK</a><br>OpenTelemetry（OTEL）已成为云原生系统遥测数据收集的标准。随着 Kotlin 和 Kotlin Multiplatform (KMP) 在客户端和移动端应用中日益普及，社区对 Kotlin 观测能力的需求增强。Embrace 公司向社区贡献了 OpenTelemetry 规范的 Kotlin 实现，该贡献现已被接受，并正式发布了 Kotlin API 和 SDK（opentelemetry-kotlin）。该项目的落地，为使用 Kotlin 编写的客户端和服务器端应用提供了厂商中立的观测支持，允许 KMP 和 Kotlin 项目通过统一 API 为多个平台捕获遥测数据，扩展了 OTEL 在 JVM 以外生态中的应用基础。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/23/cloud-native-agentic-standards/">云原生智能体（Agentic）标准探讨</a><br>随着云原生生态中智能体AI的兴起，文章强调了当前缺乏标准化和互操作性带来的挑战。智能体被定义为在云原生环境中部署的容器化微服务，它利用AI/ML能力进行推理、执行任务，并具备自主规划和治理执行的能力。为确保这些系统的安全、可观测性和可扩展性，文章聚焦于探讨在基于Kubernetes的云原生环境中，亟需标准化的四个关键领域。此探讨旨在提供一个中立的、侧重于最佳实践的通用基础框架，而非关注具体协议或编程语言的实现细节。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/23/kusari-and-cncf-advancing-software-supply-chain-security-for-cloud-native-projects/">Kusari与CNCF合作强化云原生软件供应链安全</a><br>随着开源软件在现代应用中的基础地位确立，复杂的软件供应链和AI代码的兴起带来了日益严峻的安全挑战，如依赖攻击和许可风险。为应对这些威胁，Kusari宣布与云原生计算基金会（CNCF）合作，旨在帮助云原生项目的维护者和贡献者在无需成为安全专家的前提下，轻松保障其复杂的依赖生态系统。作为合作的一部分，Kusari将向CNCF项目免费提供其AI代码审查和依赖管理工具Kusari Inspector。此举旨在为Gemara、SLSA等关键CNCF项目提供清晰的供应链可见性，尤其是在处理深层和可传递依赖关系时，从而提升整体安全态势。</p>
+
+<p><a href="https://tailscale.com/blog/aperture-self-serve">Tailscale 发布自服务版 Aperture</a><br>Tailscale 现已推出 Aperture 的自服务版本，旨在帮助组织更安全地使用人工智能。Aperture 允许用户自行部署，以实现对组织内部 AI 使用情况的集中化管理、精细化控制以及深入了解。通过此工具，企业可以更好地监控和规范其 AI 应用，确保数据安全和合规性。这标志着企业级 AI 治理工具可供用户直接获取和部署，增强了对敏感数据的保护和对 AI 流程的掌控力。</p>
+
+<p><a href="https://www.docker.com/blog/trivy-supply-chain-compromise-what-docker-hub-users-should-know/">Trivy 镜像供应链安全事件及用户应对指南</a><br>Docker 官方通报了 Aqua Security 漏洞扫描器 Trivy 镜像遭遇的供应链安全事件。在特定时间段内（2026年3月19日至23日），攻击者入侵了 Aqua Security 的 CI/CD 流程，向 Docker Hub 推送了包含信息窃取恶意软件的 Trivy 镜像，标签包括 `0.69.4`、`0.69.5`、`0.69.6` 和 `latest`。
+
+拉取了这些受感染镜像的 Docker Hub 用户，其 CI/CD 机密、云凭证、SSH 密钥和 Docker 配置存在泄露风险。Docker 已协助移除受影响版本。受影响用户应立即停止使用这些镜像，并立即轮换所有可能泄露的凭证。Docker 官方的 Trivy 镜像（DHI）和 Docker Hub 基础设施未受影响。</p>
+
+<p><a href="https://metr.org/blog/2026-02-24-uplift-update/">METR 调整开发者生产力实验设计</a><br>研究机构 METR 宣布将改变其开发者生产力实验的设计。此前基于 2025 年数据的一项研究显示，AI 工具的使用导致经验丰富的开源开发者完成任务的速度减慢了 20%。为持续追踪 AI 对开发者生产力的长期影响，机构于 2025 年 8 月启动了一项使用最新 AI 工具的新实验。然而，由于参与者反馈和调查显示，当前实验数据被认为不能可靠地反映 AI 工具的真实生产力影响。主要原因是许多开发者因不愿在无 AI 辅助的情况下工作而选择退出研究，这可能导致对 AI 辅助加速效果的估计偏低。此外，薪酬降低（从 $150/小时降至 $50/小时）也被认为是造成选择性偏差的原因之一。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/">使用Agent sandbox在Kubernetes上运行Agent</a><br>当平台工程团队寻找合适的架构来托管这些新型 AI 工作负载时，Kubernetes 脱颖而出，成为首选平台。然而，将这些独特的智能体工作负载映射到传统的 Kubernetes 原语需要一种新的抽象方法。 这时，新的 Agent Sandbox 项目（目前正在 SIG Apps 的指导下开发）就派上了用场。</p>
+
+<p><a href="https://blog.kerollmops.com/the-good-the-bad-and-the-leaky-jemalloc-bumpalo-and-mimalloc-in-meilisearch">the good the bad and the leaky jemalloc bumpalo and mimalloc in meilisearch</a><br>It&#39;s been some time since a couple of open-source users reported that \[meilisearch is leaking memory\](https://github.com/meilisearch/meilisearch/issues/6112). I spent time reviewing the codebase to see where a leak could have hidden, but I never found anything suspicious enough. I was also very suspicious of those claims, as we are running multiple thousand meilisearch instances on our Cloud and have never had any leaking issues that caused instances to be killed by the OS...
+
+...actually, yes, \[we had a leak in v1.25\](https://github.com/meilisearch/meilisearch/releases/tag/v1.25.0), but it was related to an LMDB feature I was developing back then, and I talked about this \[in another blog post\](https://blog.kerollmops.com/patching-lmdb-how-we-made-meilisearch-s-vector-store-333-faster). This is fixed now, and it was entirely my fault to dive into a complex C codebase and deploy a spooky change without extensive testing.
+
+I also investigated meilisearch on the Cloud and always found that meilisearch wasn&#39;t leaking memory in any way. As you can see below, this is the memory usage of one of a customer who is heavily indexing embeddings and keywords. No apparent leak while they have tens of millions of documents on this machine (part of a sharded cluster).
+
+\[!\[Memory usage on the Cloud\](assets/images/da9b7e9ae5045103.png)\](assets/images/da9b7e9ae5045103.png)
+
+But one day, I noticed something similar to what was reported: meilisearch was using more and more resident memory. Resident memory, also known as RSS, is the memory allocated by the OS that resides in RAM, unlike virtual (VRT) memory, which often comes from memory-mapped files and is allocated on demand. RSS memory comes from calls to \[the \`mmap\` syscall\](https://linux.die.net/man/2/munmap) with the \`MAP\_ANONYMOUS\` option. That&#39;s what your allocator does when you \`malloc\` something if there are no pages already allocated.
+
+\[!\[mimalloc &#43; leak &#43; LMDB with sysalloc\](assets/images/a0bb4e22ce17c2a</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/24/streaming-experts/#atom-everything">MoE模型流式加载技术进展</a><br>文章介绍了“流式专家”（Streaming Experts）技术，即通过将大型混合专家（MoE）模型所需权重从固态硬盘（SSD）流式加载到内存中，实现在内存不足的设备上运行超大模型。此前，该技术已成功在48GB内存中运行Qwen3.5-397B-A17B模型。最新进展显示，该技术已能让拥有320亿活跃权重的万亿参数模型Kimi K2.5在96GB内存的MacBook Pro上运行。此外，该技术甚至被移植到了iPhone上，尽管速度较慢（0.6 tokens/秒）。作者认为这项技术潜力巨大，研究人员正持续优化以提升性能。</p>
+
+<p><a href="https://simonwillison.net/2026/Mar/23/neurotica/#atom-everything">关于“劣质内容”的讨论</a><br>文章引用了关于“slop”（劣质内容）的观点，指出那些需要比生产本身投入更多人力来消化的内容，是对他人时间的一种不尊重。具体而言，引用了一个例子，即同事发送未经处理的生成式AI（如Gemini）输出，这并非表达创造自由，而是在浪费接收者的时间。这一观点涉及人工智能伦理、生成式AI的产出质量及其对信息消费效率的影响。</p>
+
+<p><a href="https://simonwillison.net/2026/Mar/23/david-abram/#atom-everything">LLM 无法替代软件开发的真正价值</a><br>作者引用 David Abram 的观点，指出软件开发中最困难和最有价值的部分，如理解复杂系统、架构设计、调试难题以及做出关键决策，是当前大型语言模型（LLMs）无法解决的。尽管 LLMs 能辅助编写代码或提供样板文件，但它们缺乏对系统全局的理解和上下文的把握，更无法判断决策的对错。文章强调，软件开发的核心价值在于“知道什么应该存在以及为什么存在”，而“选择”权仍然掌握在开发者手中，真正的技能和价值并未被机器取代。</p>
+
+<p><a href="https://www.marktechpost.com/2026/03/22/how-bm25-and-rag-retrieve-information-differently/">BM25与RAG的信息检索差异解析</a><br>本文旨在阐述经典的稀疏检索算法BM25与现代的检索增强生成（RAG）框架在信息检索机制上的根本区别。BM25主要依赖于词频和逆文档频率等统计学指标进行匹配和排序，侧重于关键词的精确度。而RAG则结合了检索模块和大型语言模型（LLM）的生成能力，通过检索到的相关上下文来指导和增强最终答案的生成，以提供更准确、更具连贯性的回复。文章将对比这两种方法在处理查询、相关性评估以及最终输出质量方面的不同侧重点和适用场景。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>Your personal AI trading assistant. Any market. Any model. Pay with USDC, not API keys.</p>
+
+<p><a href="https://github.com/supabase/cli">supabase/cli</a><br>Supabase CLI. Manage postgres migrations, run Supabase locally, deploy edge functions. Postgres backups. Generating types from your database schema.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery, the cloud native manager</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

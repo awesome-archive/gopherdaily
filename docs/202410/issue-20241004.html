@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241004.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-04</span>
+</p>
+<p>每日一谚：Goroutines are cheap, but not free </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/7YXvcXd50fz5TYk5slZ8gg">Go语言的新时代：新领导团队和未来规划</a><br>Gotime播客发布了最新一期podcast，邀请了russ cox、Austin Clements和cherrymui一起聊聊go团队的“权力”交接以及Go语言演进</p> 
+
+<p><a href="https://tonybai.com/2024/10/03/how-to-daemonize-go-program">探索Go守护进程的实现方法</a><br>go程序转守护进程的挑战、现状与方法</p> 
+
+<p><a href="https://registerspill.thorstenball.com/p/glad-i-did-it-in-go">很高兴我用Go语言做了这件事</a><br>Thorsten Ball 回顾了他为《用 Go 语言编写解释器》所写代码的持久性，这本书标志着他系列书籍的开端。他对自己在 2016 年使用 Go 1.7 编写的代码感到满意，尽管这一语言和工具在过去八年中有所更新，但代码仍然基本保持不变且依然符合习惯用法。Ball 解释说，Go 语言的简洁性和缺乏多余语言特性的特点，促进了代码的持久性和易于翻译成其他语言的能力。他还强调了 Go 的 gofmt 所提供的统一格式风格和内置测试框架，这使他能够专注于解释器的概念和实现。文章最后引用了一些读者的推荐，尽管他们并不熟悉 Go，但能够理解并将代码翻译成自己喜欢的编程语言，展示了原始 Go 代码的可访问性和永恒性。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoNewSmallLanguageFeaturesNice">Go 1.22 和 1.23 中新增的小语言功能很不错</a><br>CSpace 博客的贡献者 Chris Siebenmann 分享了他对 Go 版本 1.22 和 1.23 中最近添加新的小语言功能的见解。Siebenmann 很欣赏这些功能，包括内置函数 max（） 和 min（） 以及整数范围的能力。他解释了这些功能如何简化生成 goroutines 的过程，这是 Go 编程中的一项常见任务。尽管承认这些功能并不是开创性的，但 Siebenmann 认为它们是对 Go 语言和内置函数的一个小而重要的增强。他还反思了 Go 必须在语言增长及其核心原则之间取得平衡，因为 Go 是一种渴望在数学上最小化的语言。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/go-embed">使用Go Embed</a><br>Cloudflare 已阻止对 bytesizego.com 的访问，如声明用户已被阻止并提供 Cloudflare Ray ID 的消息所示。网站所有者被告知，该阻止是由可能被解释为安全威胁的操作触发的，例如提交特定的单词、命令或格式错误的数据。建议寻求重新获得访问权限的用户通过电子邮件联系网站所有者，详细说明他们的操作并包括提供的 Ray ID 以供参考。该消息还将用户引导至 Cloudflare 自己的资源，以获取有关该问题的更多信息。</p> 
+
+<p><a href="https://medium.com/@keployio/understanding-go-ebpf-a-deep-dive-into-efficient-kernel-level-programming-6fb6a32653c2">理解Go eBPF: 深入高效内核编程</a><br>在文章《理解 Go eBPF：深入探讨高效的内核级编程》中，Keployio 探索了扩展伯克利数据包过滤器（eBPF）的能力及其与 Go 编程语言在内核级编程中的集成。eBPF 最初是为数据包过滤而设计的，但它已经演变为支持多种内核级任务，提供深度的内核可视化、安全性、性能和灵活性。文章强调了 Go 语言在 eBPF 中的适用性，原因在于其简单性、并发模型和强大的生态系统，这些都有助于开发高性能、安全且可扩展的应用程序。Keployio 提供了一个实际示例，展示如何将 eBPF 程序附加到跟踪系统调用，并演示了如何使用 Go 观察输出。文章最后讨论了 Go eBPF 在可观察性和监控、安全强制执行以及网络性能优化等多个领域的潜力。</p> 
+
+<p><a href="https://www.willem.dev/articles/testing-http-handlers-using-httptest/">使用 httptest 进行准确的处理程序测试</a><br>本文提供了在 Go 中准确测试 HTTP 处理程序的深入指南，强调了使用服务器端请求以避免客户端请求可能产生的不准确的重要性。它解释了 HTTP 处理程序需要服务器端请求，以及如何使用 &#39;httptest.NewRequest&#39; 或 &#39;httptest.NewRequestWithContext“ 函数。此外，本文还介绍了 &#39;httptest.ResponseRecorder“作为 &#39;http.ResponseWriter“，这对于构建有效响应和验证其元素（如状态代码、正文、标头和内容类型）至关重要。该指南还包括每种验证类型的示例，并提供了在 Go 中使用时间的简要指南。最后，作者推广了他们即将推出的 Go 项目结构指南，并邀请读者加入他们的免费时事通讯，以持续提高 Go 技能。</p> 
+
+<p><a href="https://blog.livekit.io/openai-livekit-partnership-advanced-voice-realtime-api/">OpenAI 和 LiveKit 合作将 Advanced Voice 转变为 API</a><br>OpenAI 和 LiveKit 合作将语音技术转变为可访问的 API，使开发人员能够创建具有类似于 ChatGPT 基于文本的服务的功能的应用程序。新的多模态代理 API 促进了实时语音和文本交互，GPT-4o 以类似人类的情绪和口音做出响应。为了应对网络挑战，OpenAI 采用 WebRTC 进行音频流，并辅以 LiveKit 的基础设施，以最大限度地减少延迟和数据包丢失。该 API 旨在无缝集成到现有的开发人员工作流程中，LiveKit 提供负载平衡、电话和其他功能。这一进步为客户支持、远程医疗、语言学习和互动游戏方面的创新应用开辟了可能性。</p> 
+
+<p><a href="https://medium.com/@darwishdev.com/structuring-go-applications-a-practical-approach-db85d2f8101f">构建 Go 应用程序：一种实用的方法</a><br>本文通过解决如何组织 API 代码的常见问题，提供了一种构建 Go 应用程序的实用方法。它批评了 API 处理程序完成所有工作的幼稚方法，导致紧密耦合、代码重复和测试困难。相反，它提出了一个包含域、用例、存储库和适配器的干净架构，以分离关注点并提高可维护性和性能。本文强调了专用查询层和存储接口的重要性，以将 SQL 代码与域逻辑分离，从而提高灵活性和安全性。最后，它引入了适配器层来管理请求和响应转换，进一步完善了 API 开发的结构。</p> 
+
+<p><a href="https://dev.to/ossan/leverage-your-test-suite-with-testcontainers-go-docker-compose-502e">通过 testcontainers-go 和 docker-compose 利用您的测试套件</a><br>源文档提供了有关使用 Go、Docker 和 testcontainers-go 软件包为项目编写端到端测试的全面指南。它首先讨论了任务所需的工具和概念，包括 Go 编程语言、Docker 和带有 compose 模块的 testcontainers-go 包。然后，本文档深入探讨了使用 docker-compose.yml 文件设置测试环境的细节，以及如何使用 testcontainers-go 软件包来运行这些测试。它进一步解释了如何使用 ginkgo 测试框架构建测试，强调了在 Describe 容器节点中组织测试的重要性。最后，它提供了一个编写测试以检索账户的实际示例，演示了如何设置环境、执行测试和解释结果。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://htmx.org/essays/why-gumroad-didnt-choose-htmx">为什么 Gumroad 没有选择 htmx</a><br>Gumroad 的首席执行官 Sahil Lavingia 分享了关于该公司为什么选择不将 htmx 用于其 Helper 项目的见解，尽管最初由于 htmx 承诺提供用于添加简单交互的轻量级解决方案而持乐观态度。该决定受到多种因素的影响，包括 htmx 的开发人员体验与 React 相比不那么直观，htmx 以服务器为中心的方法导致用户体验吸引力降低，以及缺乏复杂交互和状态管理的可扩展性。此外，对 htmx 的有限社区支持和生态系统，尤其是与 React 和 Next.js 可用的大量资源相比，发挥了重要作用。最终，Gumroad 过渡到 React 和 Next.js，这允许更直观的开发过程、更顺畅的拖放功能实现以及更好的性能优化。这种转变凸显了使技术选择与项目特定需求和长期愿景保持一致的重要性。</p>
+
+<p><a href="https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity">解构整体式架构：设计可最大限度地提高开发人员工作效率的软件</a><br>Shopify 从整体式代码库到模块化整体式架构的旅程反映了公司的发展和软件复杂性的不断增加。Shopify 的系统最初是作为一个整体构建的，它处理各种功能，由于高度耦合和脆弱性，维护和扩展变得具有挑战性。为了解决这些问题并提高开发人员的工作效率，Shopify 过渡到模块化整体架构，在组件之间实施边界并减少依赖关系。这种转变允许更有条理的代码、更容易的组件隔离，以及随着公司的发展而重构和重新架构的能力。向模块化单体的转变还促进了用新的税收计算系统替换他们的税收引擎，展示了这种架构选择的灵活性和长期优势。</p>
+
+<p><a href="https://www.infoq.com/news/2024/09/monzo-microservices-migrations/">规划、自动化和 monorepo：Monzo 如何跨 2800 个微服务进行代码迁移</a><br>在 InfoQ 上的一篇详细文章中，Monzo 的软件架构师 Rafal Gancarz 探讨了该公司在其庞大的微服务平台（包括 2800 多项服务）中管理大量代码迁移的方法。Monzo 采用规划、高度自动化和集中式团队来高效执行代码迁移，确保透明度和最少的干扰。该公司对所有源代码使用 monorepo，使用 Go 作为编程语言，并使用 config 服务逐步推出。本文还讨论了使用库包装器在库之间切换，以及跨服务维护一组有限的一致技术的重要性。虽然 Monzo 已经建立了一个强大的代码迁移系统，但作者认为还有改进的余地，特别是在标准化用于这些流程的工具方面。</p>
+
+<p><a href="https://leejamesgilmore.medium.com/progressive-lambda-deployments-with-rollbacks-e8a1288fa852">具有回滚功能的渐进式 Lambda 部署</a><br>本文深入探讨了 AWS Lambda 函数的渐进式部署，强调了此类策略在降低与软件更新相关的风险方面的重要性。它引入了一个自定义结构“ProgressiveLambda”，该结构有助于蓝/绿部署，并包括一个 CloudWatch 警报来监控错误，并在必要时启用回滚。给出的示例涉及一个虚构的发廊系统，其中 Lambda 函数是逐步部署的，在保证稳定性后，流量逐渐转移到新版本。本文还详细介绍了 AWS CodeDeploy 的设置，以及它如何与“ProgressiveLambda”结构集成以管理部署和警报。最后，它通过一个代码示例演示了这些概念的实际应用，该示例包括故意不触发警报，然后回滚到以前的稳定版本。</p>
+
+<p><a href="https://engineering.fb.com/2024/10/02/android/react-at-meta-connect-2024/">在Meta Connect 2024上的react</a><br>在 Meta Connect 2024 上，Blair Vanderhoof 和其他 Meta 作者强调了 React 和 React Native 在 Meta 工程文化中的重要性，强调了它们在为 Meta Quest 和其他平台快速开发高质量产品中的作用。这些团队利用 React Native 为Meta Horizon OS构建沉浸式体验，利用熟悉的Android工具和独特的Meta Quest功能。此外，使用 React Native for Desktop 开发的 Meta Spatial Editor 有助于为 Meta Horizon OS 创建 3D 体验。源文件强调了 Meta 的 React 团队与各个团队之间的协作努力，以增强 React 的跨平台能力，不仅使 Meta 的产品受益，而且使整个 React 生态系统受益。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/02/reducing-mttd-and-increasing-observability-with-linkerd-at-loveholidays/">在 loveholidays 上使用 Linkerd 减少 MTTD 并提高可观测性</a><br>loveholidays 是一家领先的在线旅行社，它成功实施了 CNCF 的服务网格解决方案 Linkerd，以增强其可观察性并缩短其技术堆栈中的事件响应时间。通过利用 Linkerd 的统一指标，他们缩短了平均发现时间 （MTTD），并通过更快的搜索响应时间将客户转化率提高了 2.61%。实施过程非常细致，应用程序逐步上线并持续监控，以确保稳定性并解决任何边缘情况问题。此外，loveholidays 还利用 Linkerd 的指标来自动延迟和成功 SLO，进一步优化了他们的服务交付。该公司致力于监控和改进，这使他们能够探索 Linkerd 的高级功能，例如流量拆分和故障注入，以继续增强其服务网格能力。</p>
+
+<p><a href="https://thenewstack.io/google-equips-postgresql-valkey-services-for-vector-processing/">Google 为 PostgreSQL 和 Valkey Services 配备用于向量处理</a><br>Google 在其数据库和 AI 平台上引入了多项更新和集成，以增强开发人员的能力。其中包括为 Spanner 添加现代 AI 技术、LangChain 与 Spanner 的集成，以及使用 Google 的 ScaNN 向量索引扩展 AlloyDB 以改进向量处理。此外，Google 已将其服务扩展到 Redis 和 Valkey，为两者提供 Memorystore，从而实现高性能向量搜索。此外，Google 的 Firebase Data Connect 现在提供托管的 PostgreSQL 数据库体验，通过为各种应用程序自动创建架构和生成 SDK，简化了新数据库的设置。</p>
+
+<p><a href="https://medium.com/@platform.engineers/advanced-alerting-techniques-in-grafana-978c83c18308">Grafana 中的高级警报技术</a><br>本文深入探讨了 Grafana 中的高级警报技术，Grafana 是一个专为高效监控和警报管理而设计的平台。它指导用户完成设置警报规则、配置通知策略和利用机器学习进行预测警报的过程。本文还深入探讨了如何使用静音和静音计时来管理警报噪音，并强调了这些功能在维护系统可靠性和响应能力方面的重要性。此外，它强调了了解这些高级警报功能对于优化系统性能和最大限度地减少停机时间的重要性。</p>
+
+<p><a href="https://medium.com/simform-engineering/workflow-in-dapr-io-d51538bbbee5">Dapr.io 中的工作流</a><br>Dapr 工作流是 Dapr 生态系统中的一项功能，支持跨分布式服务编排复杂的业务流程。它们提供了一种有状态的持久机制来管理长时间运行的任务，这对于处理涉及多个服务和步骤的复杂工作流至关重要。这些工作流由外部触发器启动，旨在简化开发、增强可靠性和提高可扩展性。常见使用案例包括订单处理、付款处理、欺诈检测和数据处理管道。要实施工作流，开发人员必须设置必要的组件，定义工作流及其活动，并确保每个微服务在工作流中正确注册和执行。</p>
+
+<p><a href="https://googleprojectzero.blogspot.com/2024/10/effective-fuzzing-dav1d-case-study.html">有效的模糊测试：Dav1d 案例研究</a><br>2023 年底，一名从事 Project Zero 工作的 Google 员工在 AV1 视频解码器 dav1d 中发现了漏洞。该问题是多线程上下文中整数溢出的结果，可能会导致远程代码执行。尽管 oss-fuzz 的模糊测试覆盖范围很广，但由于模糊测试程序中缺乏人为限制，特别是未经检查的DAV1D_FUZZ_MAX_SIZE，因此这个特殊的漏洞没有被发现。该员工的调查导致增加了对 dav1d 的各种配置设置的模糊测试支持，旨在增强未来的漏洞检测。本案例强调了探索模糊测试程序中的人为限制以发现可能被遗漏的漏洞的重要性。</p>
+
+<p><a href="https://vercel.com/blog/serverless-servers-node-js-with-in-function-concurrency">无服务器服务器</a><br>Vercel 在其无服务器平台 Vercel Functions 中引入了函数内并发，以优化交互式工作负载的效率。此功能允许单个函数实例利用空闲时间同时处理多个调用，从而可能将计算使用量和成本降低多达 50%。该实现涉及建立流连接、用 Rust 重写函数运行时以提高性能，以及使用双向流编排工作负载。虽然这项创新显著提高了效率，但它也带来了权衡，例如，CPU 密集型工作负载的潜在延迟增加以及 Node.js 处理并发的方式发生了变化。Vercel 继续确保其无服务器模型保持透明，具有自动扩展、零停机时间更新和维护模式处理功能。</p>
+
+<p><a href="https://thenewstack.io/are-we-thinking-about-supply-chain-security-all-wrong/">Are We Thinking About Supply Chain Security All Wrong?</a><br>The New Stack&#39;s discussion on supply chain security delves into the complexities of open-source software maintenance, where volunteers predominantly uphold the codebase. Ashley Williams, founder of the Rust Foundation, critiques the current perception of software supply chain security, emphasizing the lack of a supplier-consumer relationship in open-source contexts. Williams&#39;s perspective is influenced by her understanding of the open-source ecosystem, as detailed in her blog post &#34;I Am Not a Supplier.&#34; The conversation also touches on the importance of younger maintainers in the open-source community and the potential benefits of open-source models for software security.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://openai.com/index/introducing-canvas/">Introducing canvas: A new way of working with chatgpt to write and code</a><br>The source document appears to be a transcript or a snippet from a larger text, likely an instructional or informative piece, given the context of a pause indicated by &#34;Just a moment...&#34;. This suggests that the content may involve an explanation or a detailed account that requires careful consideration or a brief intermission. The brevity of the source does not provide specific details about the topic, but the phrase implies a structured presentation of information, possibly addressing a question or a statement that necessitates a thoughtful response or a moment of reflection.</p>
+
+<p><a href="https://engineering.fb.com/2024/10/03/ml-applications/open-source-ai-population-maps-meta/">开源 AI 如何改进人口估计、可持续能源和气候变化干预措施的交付</a><br>Meta 通过开源用于训练其 AI 驱动的人口地图的数据和代码来增强全球人口地图。这些地图估计了全球 30 米网格地块内的人口，利用计算机视觉来识别卫星图像中的人造结构。这些数据包括超过 126 GB 的卫星图像和近 1000 万个标签，对于世界银行和世界宣明会等组织有效定位社会项目至关重要。通过提供此数据集，Meta 旨在帮助研究人员和非营利组织改进人口估计并加快可持续发展项目的进展，例如获得清洁水和适应气候变化的努力。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/2/not-digital-god/#atom-everything">OpenAI DevDay：让我们构建开发人员工具，而不是数字上帝</a><br>Simon Willison 回顾了他在 OpenAI DevDay 2024 上直播博客的经历，指出与往年相比，它更加以开发人员为中心。他强调了关键公告，例如为带有共享前缀的提示提供 50% 的输入令牌折扣，类似于降价，以及引入 WebSocket Realtime API，它允许与 GPT-4o 等模型直接进行音频和文本交互。Willison 称赞了促进模型蒸馏的新功能，他认为这个过程对于根据较大模型的示例微调较小模型至关重要。尽管他对 AGI 不感兴趣，但他很欣赏 OpenAI 转向为开发人员创建实用工具的转变，即使该公司的估值正在大幅增加。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>使用 Go 和 JavaScript 的现代负载测试工具 - https://k6.io</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速的分布式存储系统，适用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 磁盘查找、云分层。Filer 支持云驱动器、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>用于 git 命令的简单终端 UI</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>使用 Go 创建漂亮的应用程序</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>容器镜像和文件系统的漏洞扫描器</p>
+
+<p><a href="https://github.com/crowdsecurity/crowdsec">crowdsecurity/crowdsec</a><br>CrowdSec - 开源和参与式安全解决方案，提供针对恶意 IP 的众包保护，并访问最先进的真实 CTI。</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Go 的快速 linters 运行程序</p>
+
+<p><a href="https://github.com/tmrts/go-patterns">tmrts/go-patterns</a><br>Go 设计模式、配方和惯用语的精选列表</p>
+
+<p><a href="https://github.com/flyteorg/flyte">flyteorg/flyte</a><br>可扩展且灵活的工作流编排平台，可无缝统一数据、ML 和分析堆栈。</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq 是一个可移植的命令行 YAML、JSON、XML、CSV、TOML 和属性处理器</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/oapi-codegen/oapi-codegen">oapi-codegen/oapi-codegen</a><br>从 OpenAPI 3 规范生成 Go 客户端和服务器样板</p>
+
+<p><a href="https://github.com/ThreeDotsLabs/watermill">ThreeDotsLabs/watermill</a><br>在 Go 中以简单的方式构建事件驱动型应用程序。</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman：用于管理 OCI 容器和 Pod 的工具。</p>
+
+<p><a href="https://github.com/aquasecurity/kube-bench">aquasecurity/kube-bench</a><br>检查 Kubernetes 是否根据 CIS Kubernetes 基准测试中定义的安全最佳实践进行部署</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>适用于 Windows 的 node.js 版本管理实用程序。具有讽刺意味的是，这是用 Go 编写的。</p>
+
+<p><a href="https://github.com/openfga/openfga">openfga/openfga</a><br>专为开发人员构建的高性能和灵活的授权/权限引擎，其灵感来自 Google Zanzibar</p>
+
+<p><a href="https://github.com/vektra/mockery">vektra/mockery</a><br>Go 的模拟代码自动生成器</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>具有可编程管道的 OpenTelemetry Collector 发行版</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

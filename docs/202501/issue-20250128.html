@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250128.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202501/2025-new-year-eve-1.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250128</span>
+</p>
+<p>每日一谚：Start with concrete types first. Let interfaces emerge organically. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.jvt.me/posts/2025/01/27/go-tools-124">Go 1.24 的 `go tool` 是近年来生态系统中最好的补充之一</a><br>本文介绍了 Go 1.24 中新增的 `go tool` 命令和 `go.mod` 中的 `tool` 指令，用于管理项目使用的工具。作者对其表示高度赞赏，认为这是近年来 Go 生态系统中最好的改进之一。文章详细解释了 `go tool` 的工作原理、迁移方法以及性能提升，并讨论了一些潜在问题，例如 `go.mod` 中的依赖关系变化和 `gqlgen` 与 Go 1.24rc2 的兼容性问题。</p> 
+
+<p><a href="https://francoposa.io/resources/golang/golang-benchmarking-1">Go语言基准测试，第一部分</a><br>本文介绍了如何使用Go的测试包和benchstat进行基本的CPU和内存基准测试及分析。文章通过一个Grafana Mimir代码库中的例子，演示了如何编写和运行简单的性能基准测试，如何控制基准测试迭代次数，以及如何使用benchstat工具进行统计测试，最终得出结论：预先进行基准测试可以帮助我们及早发现性能问题，甚至可以防止它们进入生产环境。</p> 
+
+<p><a href="https://medium.com/@ajitem/performance-optimization-in-go-checkmate-performance-using-chess-piece-movements-as-an-example-920a2b22be19">Go性能优化：以象棋棋子移动为例优化性能</a><br>本文记录了作者在优化象棋棋子移动算法的六个版本迭代过程，展示了代码的演变、早期方法的缺陷以及改进策略的成功。文章重点阐述了在Go语言中，如何平衡性能、可读性和模块化，以及如何利用Go的并发模型来实现显著的性能提升。</p> 
+
+<p><a href="https://eltonminetto.dev/en/post/2025-01-25-intro-encore-part-1">开始使用 Encore.go</a><br>Encore.go 一直在我的关注列表中，它漂亮 网站和示例在 Hacker News 的新闻文章中引起了我的注意。但在 2024 年 12 月发布这篇文章后，我的兴奋感真的增加了。它宣布该框架将成为一个独立项目，与 Encore Cloud 工具分离。这个决定可以让框架对希望在其现有环境中使用它的公司和开发人员更有吸引力。我并不反对 Encore Cloud，它似乎是一个非常有趣且强大的解决方案，但是这种选择的自由有利于在不同规模的公司中采用。鉴于此初始背景，我决定将我用来撰写关于微服务的文本和讲座的项目移植到 Encore，结果是一系列文章，这是第一篇。最初的想法是将系列文章分为以下几部分：
+1. 创建具有数据库的 API（&lt;- 你在这里）
+2. 服务间通信和身份验证
+3. 通过 Pub/Sub 通信
+4. 部署
+我可能会在撰写后续部分时创建新的文章，但初步计划就是这样。所以，让我们进入第一部分。</p> 
+
+<p><a href="https://medium.com/@dmytro.misik/go-vs-python-web-service-performance-1e5c16dbde76">Go与Python：Web服务性能对比</a><br>本文比较了Go和Python在构建高性能Web服务的性能。作者使用FastAPI和Fiber框架分别构建了执行迭代快速排序算法的Web服务，并使用k6进行负载测试。结果表明，Go在吞吐量和响应时间方面显著优于Python，这主要归因于Go的编译型特性、高效的I/O性能以及优化的垃圾回收机制。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/01/27/what-is-observability-2-0/">什么是可观察性 2.0？</a><br>在采用 Kubernetes、微服务和无服务器计算等尖端技术的过程中，监控往往被忽视。许多企业认为他们现有的可观察性工具就足够了。然而，随着他们向云端迁移并采用分布式架构，他们面临的挑战变得更加难以解决。本文以 Generation Esports 公司为例，解释了传统可观察性方法在现代环境中的不足，并介绍了可观察性 2.0 如何通过统一遥测、人工智能驱动的异常检测和主动故障排除来解决这些差距。</p>
+
+<p><a href="https://ahmet.im/blog/controller-pitfalls">你想编写 Kubernetes 控制器吗？</a><br>任何使用 Kubernetes 的公司最终都会开始考虑开发自定义控制器。毕竟，能够使用声明式配置来配置资源有什么不好的呢：控制循环很有趣，Kubebuilder 使得......开发可扩展且可靠的控制器并非易事。本文探讨了在开发生产级控制器时常见的错误，并提供了最佳实践建议，涵盖了CRD设计、单一职责控制器、协调方法、状态和条件报告、观察生成、缓存客户端、快速离线协调、协调返回值、工作队列/重新同步机制以及期望模式等方面。</p>
+
+<p><a href="https://pierrezemb.fr/posts/distsys-resources">学习数据和分布式系统的最佳资源</a><br>学习分布式系统很难。在能够全面了解之前，你需要阅读大量的学术论文、概念和代码审查。值得庆幸的是，有很多资源可以帮助你入门。这里列出了我用来学习分布式系统的一些资源。我将持续更新这篇博文，加入书籍、会议等等。</p>
+
+<p><a href="https://medium.com/@joeri_verhavert/enhancing-kubernetes-for-advanced-telecom-use-cases-with-multus-cni-672fcf80ce28">使用 Multus CNI 增强 Kubernetes 以满足高级电信用例</a><br>随着电信公司越来越多地采用云原生技术，Kubernetes 已成为部署现代应用程序和网络功能的关键平台。但是，默认的 Kubernetes 网络模型（限制每个 Pod 只有一个网络接口）通常无法满足电信环境的复杂需求。Multus CNI 弥补了这一差距，它能够在一个 Pod 中启用多个网络接口，并为高级电信用例提供所需的灵活性。本文将探讨 Multus CNI 如何增强 Kubernetes，使其成为推动 5G、NFV 及其他领域创新的理想解决方案。</p>
+
+<p><a href="https://opensource.googleblog.com/2025/01/see-code-that-powered-pebble-smartwatches.html">查看为 Pebble 智能手表提供动力的代码 | Google 开源博客</a><br>我们很高兴地宣布，为 Pebble 智能手表提供动力的源代码现已开源</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://newsletter.languagemodels.co/p/the-illustrated-deepseek-r1">图解 DeepSeek-R1 - Jay Alammar</a><br>DeepSeek-R1 是人工智能领域稳步发展的最新成果。对于机器学习研发社区而言，这是一个重要的版本，原因如下：
+
+1. 它是一个开放权重模型，具有更小、更精简的版本。
+2. 它分享并反思了一种训练方法，可以复制像 OpenAI O1 这样的推理模型。
+
+在这篇文章中，我们将了解它是如何构建的。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/nevalang/neva">nevalang/neva</a><br>🌊 Next-generation programming language that solves programmers&#39; problems</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.</p>
+
+<p><a href="https://github.com/go-fuego/fuego">go-fuego/fuego</a><br>Golang Fuego - web framework generating OpenAPI 3 spec from source code</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/cashapp/cloner">cashapp/cloner</a><br></p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/garethgeorge/backrest">garethgeorge/backrest</a><br>Backrest is a web UI and orchestrator for restic backup.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

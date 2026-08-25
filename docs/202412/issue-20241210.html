@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241210.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-10</span>
+</p>
+<p>每日一谚：Compiler errors are better than runtime errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/12/11/simulate-quantum-computing-in-go">量子计算入门与Go模拟</a><br>一文告诉你什么是量子计算</p> 
+
+<p><a href="https://danp.net/posts/synctest-experiment/">Go 1.24新增并发测试testing/synctest实验包</a><br>Go 1.24 版本发布周期引入了一个实验性的 `testing/synctest` 包，以解决测试涉及时间或并发的代码时面临的挑战。该实验性功能旨在通过在“气泡”内控制时间的进程，使测试更加精确和快速，从而允许 goroutine 在时间前进之前处于空闲状态。这可以解决在测试中常见的问题，比如睡眠一秒或涉及并发操作（如定时器）时的波动性和慢速执行时间。引入 `synctest` 预计将显著改善测试实践，正如在实际案例中展示的那样，并有潜力稳定不稳定的测试。用户可以通过使用 `gotip` 和 `GOEXPERIMENT=synctest` 来实验这个功能，尽管在 Go 1.24 发布时仍需使用这个实验性设置。该提案和初步实现正在积极审查中，并鼓励其他人分享他们的经验。</p> 
+
+<p><a href="https://www.myhatchpad.com/insight/mocking-techniques-for-go/">Go中的mock测试技术</a><br>该文档提供了 Go 中用于有效单元测试的模拟技术的深入指南，强调了自包含的快速测试的重要性。它介绍了五种关键的模拟策略：使用高阶函数、猴子补丁、接口替换、嵌入接口和模拟下游 HTTP 调用。每种技术都通过示例进行了解释，突出了 Go 的模拟能力，例如静态满足接口以及使用 &#39;httptest&#39; 包来模拟外部服务。首要主题是编写测试，通过理解和控制依赖项、尽可能避免使用第三方工具以及确保测试保持可靠和自包含来灌输对已交付代码的信心。该文档为 Go 开发人员提供了掌握 mock 概念并将其应用于测试实践的资源，最终通过全面测试以不可测试的代码为目标。它鼓励理解 Go 的模拟工具，并密切关注被测试的代码。</p> 
+
+<p><a href="https://nuage.quimerch.com/-/ewen/articles/templ-vs-gomponents">Templ vs Gomponents</a><br>本文档比较了两个基于 Go 的 UI 库 Templ 和 Gomponents，重点介绍了它们的功能、成熟度、集成、数据安全、易用性和性能。这两个库都提供类型安全的模板组合和 Go 互操作性，但它们的方法不同;Gomponents 是简单的 Go 函数，而 Templ 使用混合 Go/HTML 语法和语法糖进行上下文注入。作者指出了 Gomponents 的稳定性和面向未来的设计，尽管 Templ 显示出对未来稳定性和力量的希望。它们之间的选择可能取决于特定的偏好，Templ 需要编译但提供可读的语法，而 Gomponents 提供无需构建、易于阅读的解决方案。该文档还推广了 Fuego，这是一个支持这两个库的框架，并建议进一步探索，但没有给出明确的建议。性能基准表明，这两个库都比 &#39;html/template&#39; 快得多，尽管更准确的基准会更好。</p> 
+
+<p><a href="https://blog.alexoglou.com/posts/profiling-golang/">增强Go性能：使用火焰图分析应用程序</a><br>该指南全面介绍了如何使用 CPU 分析工具对 Go 应用程序进行性能分析，重点介绍如何使用火焰图可视化性能分析数据，以识别性能瓶颈。首先，通过创建一个 &#39;cpu.pprof&#39; 文件在 Go 应用程序中设置性能分析，然后运行应用程序以生成性能分析数据。建议使用 pprof 的 Web 界面、Flamegraph.com 和 Speedscope.app 等可视化工具来解释这些数据，并附有说明如何查明和解决性能问题的示例。该指南还讨论了采样数据不足以快速执行代码的常见问题，并建议循环执行以收集更多数据。最后，它强调了性能分析在优化 Go 应用程序方面的价值，并提供了指向该过程中使用的示例代码的链接。总体信息鼓励将性能分析纳入开发工作流程，以做出明智的优化决策。</p> 
+
+<p><a href="https://boyter.org/posts/golang-slog-disable-tests/">在Go测试中禁用Slog消息</a><br>本文讨论了一种解决方案，通过使用 slog 的无操作处理程序（一个日志记录库）来避免在 Go 测试中记录消息。作者 Ben E. C. Boyter 更喜欢使用特定的日志记录库，但目的是在必要时最大限度地减少第三方依赖项。为了解决特定于测试的日志记录问题，提供了一个代码片段，可以将其放置在测试文件中以禁止记录输出。原始代码演示了如何设置 noop 处理程序，但后来被确定为 Anton 的人提出了更好的方法，他使用 &#39;slog.New（slog.NewTextHandler（io.Discard， nil）））&#39; 来实现相同的目标。重点是通过选择性地禁用它来使测试中的日志记录更清晰、更可控。本文重点介绍了一种在 Go 中简化测试日志记录的实用方法，这与作者减少第三方包使用的偏好一致。</p> 
+
+<p><a href="https://www.codingexplorations.com/blog/post-quantum-cryptography-go-crystals">使用crystals-go在Go中实现后量子密码学</a><br>该博客文章讨论了使用“crystals-go”库在 Go 中实现后量子密码学 （PQC），该库实现了 NIST PQC 标准化过程的决赛入围者 CRYSTALS-Kyber 和 CRYSTALS-Dilithium。它强调了量子安全加密系统的必要性，因为量子计算的进步威胁着 RSA 和 ECC 等经典算法。该博文提供了使用 Kyber 进行密钥封装和使用 Dilithium 进行数字签名的 Go 原生示例，演示了密钥生成、封装、解封装、签名和验证等关键操作。此外，还解决了 Go 中 PQC 特有的挑战，例如更大的密钥大小、性能考虑和成熟的生态系统。作者鼓励读者尝试 “crystals-go”，保持更新，并严格测试实现，为保护系统免受量子威胁提供前瞻性视角。本文最后邀请读者分享他们在 Go 中使用 PQC 的经验，强调了为量子时代做准备的重要性。</p> 
+
+<p><a href="https://sbaziotis.com/compilers/common-misconceptions-about-compilers.html">关于编译器的常见误解</a><br>本文解决了关于编译器的常见误解，揭示了如果没有适当的模型，编译器就不会生成最佳程序，而且它们本身也不会优先考虑代码大小而不是运行时性能。它解释说，虽然 GCC、LLVM 和 ICX 等编译器很复杂，但它们通常缺乏严格的硬件模型，并且 x86 中的分支提示可能会在没有特定架构考虑的情况下产生误导。与信念相反，更高的优化级别（例如 -O3）并不能保证优于其他级别（例如 -O2）的性能，并且强调了解释器或 JIT 编译器在某些上下文中的必要性，尤其是在 WebAssembly 生态系统中。该讨论还涉及了链接时优化是实现全程序优化的唯一方法的误解，并论证了 C/C&#43;&#43; 项目中 Unity 构建的好处。最后，它消除了内联是过程间优化的唯一方法的观念，并指出现代编译器（包括 LLVM）确实会考虑像 &#39;inline&#39; 关键字这样的提示，尽管在许多情况下它对实际优化的影响有限。本文鼓励探索 LLVM 内部结构以获得编译器开发见解，同时还指出了机器学习在自动化编译器成本建模方面的潜力。</p> 
+
+<p><a href="https://semaphoreci.medium.com/tdd-vs-bdd-whats-the-difference-complete-comparison-ada6b2fd0a24">TDD 与 BDD：有什么区别？（完整比较）</a><br>测试驱动开发 （TDD） 和行为驱动开发 （BDD） 是软件测试中的两种常用方法，每种方法都有不同的目标和目标。TDD 由 Kent Beck 创建，专注于在代码之前编写测试，以确保完整的功能覆盖，通过红-绿-重构循环促进更好的设计和代码正确性。BDD 通过促进技术和非技术利益相关者之间的沟通，使用自然语言定义预期行为并使代码与业务成果保持一致，从而扩展了 TDD。TDD 专注于技术方面，而 BDD 则强调理解和满足用户故事。这两种方法可以共存，当一起使用时可以相互补充以提高代码质量和用户满意度。TDD 和 BDD 的集成创建了一个反馈循环，可增强开发过程，确保软件同时满足技术标准和用户期望。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.cloudflare.com/radar-2024-year-in-review/">Cloudflare 2024 Year in Review</a><br></p>
+
+<p><a href="https://mailchi.mp/quantamagazine.org/why-colliding-particles-reveal-reality-4865746?e=4ee9db7d79">What I Learned Covering Computer Science in 2024</a><br></p>
+
+<p><a href="https://joyofrails.com/articles/what-you-need-to-know-about-sqlite">您需要了解的有关 SQLite 的信息</a><br>本文讨论了 SQLite 在 Web 应用程序中的日益普及，消除了它不适合生产的神话，同时强调了它的简单性和 Rails 8 中最近的改进。SQLite 设计为小型且自包含，在应用程序进程内运行，并针对单主机部署进行了优化，尽管可以使用 Litestream 等工具配置备份和冗余。尽管存在弱类型且不安全分叉等限制，但 SQLite 提供了独特的功能和优势，包括备份 API 和在某些情况下每秒处理数千次写入的能力。Rails 8 生态系统现在为 SQLite 提供了强大的支持，使其成为具有正确架构和工具的生产环境的可行选择。作者是 SQLite for Web 应用程序的支持者，他为了解 SQLite 的功能并将其集成到 Rails 应用程序中提供了全面的指南，同时承认 Ruby 社区对 SQLite 开发的贡献。</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2024/12/exploring-naiadclock-tla-model-in-tla.html">在 TLA-Web 中探索 NaiadClock TLA&#43; 模型</a><br>本文档讨论了 TLA-Web 在探索和理解 TLA&#43; 模型方面的有用性，重点介绍了 NaiadClock TLA&#43; 规范。作者使用 TLA-Web 从基于纸张的协议中挽救了见解，并强调了该协议的分布式收敛进度跟踪器。该博客还谈到了设计分布式系统，强调了对基本理解的必要性，并讨论了数据库可用性的重要性。此外，作者还反思了在云事件中使用机器学习进行根本原因分析的潜力和当前方法，同时还提供了有关基础学习和线性化作为并发对象正确性条件的见解的建议。通过这些示例，该博客展示了理论模型的实际应用、数据库架构的演变以及理解核心分布式系统文献的重要性。作者的贡献范围从技术探索到为该领域的年轻学习者提供指导。</p>
+
+<p><a href="https://blog.trailofbits.com/2024/12/09/35-more-semgrep-rules-infrastructure-supply-chain-and-ruby/">另外35 条Semgrep 规则：基础设施、供应链和 Ruby</a><br>该博客文章讨论了最新的 Semgrep 规则，重点关注基础设施、供应链和 Ruby，为收集了 115 个公共 Semgrep 规则。它重点介绍了该工具在静态分析方面的功能，而不仅仅是应用程序代码，还包括文本数据的 YAML、IaC 和 Regex 模式。作者 Matt Schwager 和 Travis Peters 强调了 Semgrep 在识别供应链问题（例如在 GitHub Actions 中使用短期 OIDC 令牌）以及保护 Terraform 和 Nomad 等 IaC 工具方面的重要性。他们主张将 Semgrep 集成到 CI/CD 管道中，以在开发过程的早期检测和防止错误配置和漏洞，并展示其在保护应用程序代码和基础设施即代码方面的效用。该帖子旨在激发 Semgrep&#39;dedynamicly 在项目中的使用及其对更广泛的安全社区的贡献。作者的工作将 Semgrep 的覆盖范围扩展到保护机器学习管道和发现 goroutine 泄漏，展示了其多样化的应用。</p>
+
+<p><a href="https://engineering.fb.com/2024/12/09/developer-tools/typed-python-2024-survey-meta/">2024 年的Type-Python：被广泛采用，但可用性挑战仍然存在</a><br>Meta、Microsoft 和 JetBrains 的调查显示，人们对 Python 类型普遍持积极态度，88% 的受访者在他们的代码中使用类型，这是由于更好的 IDE 工具、错误预防和代码清晰度。尽管如此，开发人员仍面临着表达动态功能的复杂性、Mypy 等类型检查器的性能以及工具之间的不一致等挑战。很大一部分开发人员享受类型的好处，例如增强的自动完成和错误检测，但许多人指出流行的库中缺少类型注释，并且高级功能的文档不明确。该调查强调了对更好的标准化、运行时类型检查和更易于访问的文档的渴望，并呼吁未来讨论如何改进 Python 类型系统。</p>
+
+<p><a href="https://www.ardanlabs.com/blog/2024/12/optimizing-databases-on-kubernetes-ep1-provisioning-a-cluster-and-configuring-postgresql-on-kubernetes.html">在 Kubernetes 上优化数据库 Ep.1：在 Kubernetes 上配置集群和配置 PostgreSQL</a><br>在本集中，Jérôme Petazzoni 将指导观众完成预置 Kubernetes 集群以供数据库使用的过程，重点是 PostgreSQL。本集重点介绍了 Linode 高效且经济实惠的 Kubernetes 配置、ZFSPV 等基本组件以及用于简化集群部署的 CNPG PostgreSQL 运算符。观众了解数据库基础设施的成本节约策略，从托管服务转向更可控、更经济实惠的方法。本集是未来数据库优化主题的介绍性基础，强调了 Kubernetes 在可扩展、经济高效的数据库管理方面的优势。
+
+本摘要概括了本集的关键要素：预置 Kubernetes 集群、使用 Linode 和 CNPG for PostgreSQL、成本优化以及让查看者为高级数据库优化做好准备的总体教育目标。它涵盖了本集对经济实惠且可靠的集群创建、所涉及的工具以及所讨论方法的财务优势的关注。</p>
+
+<p><a href="https://thenewstack.io/kubecon-keynotes-wrestle-with-ai-governance-complexities/">KubeCon主题演讲探讨AI治理的复杂性</a><br>本文讨论了AI在软件开发中的整合，KubeCon特别关注AI治理的复杂性。Camille Crowell-Lee反映了KubeCon北美大会的主题“攀登新高峰”，与容器行业的发展轨迹及AI在应用交付中日益重要性相一致。此次活动强调了AI治理必须与AI进步共同演变，重点在于标准化、互操作性和通过CNCF支持的网关抽象复杂工作流。尽管取得了一定进展，但在功能碎片化和支持生成AI应用的灵活适应工具方面仍然面临挑战，KubeCon的公告对此进行了讨论。总结概括了此次活动对CNCF社区内部协作的重视，以加速AI创新，同时解决治理问题。Camille的见解显示出对AI的积极姿态，倡导社区参与以克服当前技术缺口。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.bitsrc.io/build-web-apps-with-ai-and-components-35912af4d312">使用AI和组件构建Web应用程序</a><br>本文讨论了AI在Web开发中的变革性作用，重点是可重用组件的组合而非生成新代码。它强调了使用如Hope AI等AI工具的好处，这些工具可以识别和组合现有的、经过测试的组件，从而确保Web应用程序的一致性、可扩展性和减少技术债务。文章强调了从代码生成转向组件重用的转变，展示了AI如何简化测试、集成和定制流程。最后，它将AI驱动的组件组合定位为现代开发的基石，呼吁读者探索将AI与模块化组件相结合的平台，以实现更优的Web开发实践。本文由React倡导者Mike Chen撰写，促进了AI在创建高质量、可维护的Web应用中的使用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.3、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI 工具从现有基础设施生成 terraform 文件（反向 Terraform）。基础设施到代码</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>快速获取 JSON 值 - 适用于 Go 的 JSON 解析器</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>package gorilla/websocket 是一种快速、经过充分测试且广泛使用的 Go WebSocket 实现。</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>1 个文件中的开源实时后端</p>
+
+<p><a href="https://github.com/projectdiscovery/subfinder">projectdiscovery/subfinder</a><br>快速被动子域枚举工具。</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>计算机指标的导出器</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>访问和保护所有基础设施的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>Prometheus 监控系统和时间序列数据库。</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics：快速、经济高效的监控解决方案和时间序列数据库</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/go-co-op/gocron">go-co-op/gocron</a><br>简单流畅的 Go cron 调度。这是 https://github.com/jasonlvhit/gocron 的分支</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq 是一个可移植的命令行 YAML、JSON、XML、CSV、TOML 和属性处理器</p>
+
+<p><a href="https://github.com/rs/zerolog">rs/zerolog</a><br>零分配 JSON 记录器</p>
+
+<p><a href="https://github.com/direnv/direnv">direnv/direnv</a><br>整理您的 .profile</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei 是一种快速、可定制的漏洞扫描程序，由全球安全社区提供支持，并基于简单的基于 YAML 的 DSL 构建，支持协作解决互联网上的趋势漏洞。它可以帮助您发现应用程序、API、网络、DNS 和云配置中的漏洞。</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型 SRT / WebRTC / RTSP / RTMP / LL-HLS 媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/go-git/go-git">go-git/go-git</a><br>纯 Go 中高度可扩展的 Git 实现。</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>用于访问 GitHub v3 API 的 Go 库</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

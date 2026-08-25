@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250402.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250402</span>
+</p>
+<p>每日一谚：Simplicity is key; embrace the Go way </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://cyolo.io/blog/leak-and-seek-a-go-runtime-mystery">Go运行时内存泄漏之谜</a><br>Cyolo研发团队在解决一个与Go运行时相关的内存泄漏问题时，经历了一场调试冒险。该内存泄漏最初表现为性能问题，影响了几个大型客户。经过一番调查，发现泄漏源于go-sqlite3驱动程序中最近添加的一个终结器，该终结器与go-smb2中的阻塞错误相结合，导致最终器goroutine阻塞，进而导致内存泄漏。最终，问题得以解决，并促使对Go运行时进行改进。</p> 
+
+<p><a href="https://blog.cubed.run/how-gos-error-handling-makes-you-a-better-coder-5e646374f468">Go 语言的错误处理如何提升你的编码水平</a><br>如果你来自 Java、Python 或 C# 等语言，你可能会注意到（并且可能抱怨）Go 语言是如何处理错误的。 持续的 `if err != nil` 检查可能会让你觉得很笨拙、重复，甚至比你习惯的 `try-catch` 块还要落后。 但是，Go 语言处理错误的方式不仅仅是一个奇特的设计选择；它是融入到该语言中的一个基本理念。它可能看起来像额外的工作，但这种显式的方法会积极地引导你编写更好、更清晰、更健壮的代码。把它看作是一种额外的帮助，而不是一项任务，它会让你成为一个更有思想的程序员。</p> 
+
+<p><a href="https://valkey.io/blog/new-hash-table">Valkey：一种新的哈希表</a><br>本文介绍了Valkey 8.1版本中一种新的哈希表设计。该设计旨在改进性能和内存使用，允许用户使用更少的内存存储更多数据。新哈希表通过减少内存访问次数和优化内存布局来实现这一目标，每个桶最多可以存储七个元素，并包含一个元数据部分来辅助快速查找。实验结果表明，新哈希表将内存使用减少了大约20字节/键值对，对于带有过期时间的键，内存使用量减少了更多。Hashes、Sets和Sorted sets等嵌套数据类型也受益于此改进。</p> 
+
+<p><a href="https://www.sitepoint.com/building-a-network-vulnerability-scanner-with-go">使用 Go 构建网络漏洞扫描器 — SitePoint</a><br>本文介绍了如何使用 Go 构建一个简单的网络漏洞扫描器。Go 非常适合网络编程，因为它具有并发性设计以及强大的标准库。该扫描器将能够扫描网络主机，查找开放端口，运行服务并发现可能的漏洞。文章涵盖了项目设置、端口扫描（包括多线程扫描以提高效率）、服务检测（通过读取服务标语来识别服务并提取版本信息）以及漏洞检测（通过将服务信息与已知漏洞数据库进行比较）等方面。文章还强调了网络扫描的道德考虑和风险，并提供了使用命令行参数配置扫描器的示例。</p> 
+
+<p><a href="https://yokecd.github.io/blog/posts/interfacing-with-webassembly-in-go">Go 语言中 WebAssembly 的接口</a><br>深入 WebAssembly 世界，学习如何通过对主机和访客交互的实践探索，无缝且安全地将其与系统资源集成。Yoke 是一个使用 WebAssembly 作为其包格式的 Kubernetes 包管理器。本文探讨了在构建 Yoke 过程中关于 WASM/WASI 的一些学习成果，包括如何在 Go 中安全地运行 WASM 模块并提供集群访问，以及处理主机和访客之间的数据传递和错误处理等挑战。</p> 
+
+<p><a href="https://sarvendev.com/posts/contract-testing-on-examples">基于示例的契约测试</a><br>许多公司使用微服务架构。它有很多优点，但也有一些缺点。其中之一是整个系统变得更加复杂，端到端 (E2E) 测试可能不是一种可扩展的方法。对于少量服务，这不是问题，因为我们可以启动所有服务并运行 E2E 测试。但是，当处理数十个或更多服务时，这就会成为一个问题，因为启动所有服务会花费大量时间，不可靠，并且难以调试故障。与其依赖 E2E 测试，我们可以分别测试每个服务，并使用契约测试来验证服务之间的通信。</p> 
+
+<p><a href="https://dev.to/l_walid/writing-software-that-works-with-the-machine-not-against-it-in-go-1apg">编写与机器协同工作而非对抗的 Go 语言软件</a><br>本文深入探讨了 Go 语言中的关键性能原则，涵盖了 CPU 架构、内存层次结构、数据结构、虚假共享、分配策略和执行模式，重点是如何编写能够最大限度地提高硬件效率的 Go 代码。文章通过示例说明了动态分派、结构布局、切片与链表的比较、虚假共享以及内存优化等方面的问题，并给出了相应的优化建议。最终，文章总结了编写具有机械同情心的 Go 代码的关键要点，旨在帮助开发者编写更高效的 Go 应用程序。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/k8s-operator-ga">Tailscale Kubernetes Operator 正式可用，实现简单安全的 K8s 访问</a><br>Tailscale Kubernetes Operator 现已正式向所有 Tailscale 用户开放。自一年前发布 Tailscale Kubernetes Operator 测试版以来，已有数千家组织采用它，包括用于生产环境。今天的版本标志着稳定性和可靠性的又一里程碑，这些都是用户已经信赖的。该 Operator 可用于安全地连接内部用户到集群内的应用程序和 Kubernetes 控制平面，实现简单的服务间连接，以及连接多个集群。</p>
+
+<p><a href="https://blog.joshsoftware.com/2025/04/02/non-functional-testing-the-key-to-robust-software-performance/">非功能性测试：实现强大软件性能的关键</a><br>在当今快节奏的软件开发环境中，开发人员和测试人员不仅关注应用程序是否执行预期功能，还努力保证其在各种条件下的可靠性。这就是非功能性测试的用武之地。非功能性测试侧重于评估与特定功能无关但对于为用户提供无缝体验同样至关重要的软件方面。这些方面包括性能、安全、可用性和可扩展性。性能测试、负载测试和压力测试是几种最重要的非功能性测试类型，它们有助于确保软件能够处理实际流量、提供最佳响应时间并在意外情况下保持弹性。</p>
+
+<p><a href="https://blog.heroku.com/delivering-platform-for-next-wave-of-apps">Heroku：赋能下一波 AI 应用</a><br>Heroku 作为 Salesforce 产品组合的一部分，一直是构建任何语言应用程序的可靠平台。其最新创新使开发人员能够更快地构建自定义 AI 应用，使用 AI 功能增强现有应用，并为任何语言的 AI 智能体创建专门的操作和体验。Heroku 的新一代平台提供集成的自动化体验，在全球范围内具有弹性、安全性和高性能。它基于 Kubernetes、开放容器倡议 (OCI) 和开放遥测等开放的云原生标准构建。平台现已利用 AWS 服务，包括 Amazon Elastic Kubernetes Service (EKS)、Amazon Elastic Container Registry (ECR)、AWS 全球加速器和 AWS Graviton。新的功能包括 Heroku AppLink、Heroku Eventing、.NET 支持、VS Code 扩展和 Heroku-Jupyter。还提供了托管推理和智能体 (MIA) 的试用版，它提供构建和管理自定义 AI 应用的简化开发人员和运营商体验。报名参加网络研讨会了解更多信息。</p>
+
+<p><a href="https://www.docker.com/blog/docker-desktop-4-40/">Docker Desktop 4.40 发布 | Docker</a><br>Docker Desktop 4.40 引入了简化 GenAI 应用开发并支持安全、可扩展开发的新工具。此版本包含模型运行器（用于在本地运行 AI 模型）、功能更强大的 Docker AI 代理（具有 MCP 功能）以及扩展的 AI 工具目录。此外，Docker Desktop 设置报告功能还为管理员提供了对合规性和策略执行的更大可见性。</p>
+
+<p><a href="https://engineering.salesforce.com/detecting-openai-ai-provider-issues-in-under-10-minutes-with-a-new-observability-system/">使用实时可观测性监控 OpenAI 和 AI 提供商</a><br>了解工程师如何构建实时可观测性系统来监控 OpenAI 和 AI 提供商的问题，在 10 分钟内检测中断。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/04/02/kubecon-cloudnativecon-europe-2025-day-one-keynote-recap/">KubeCon &#43; CloudNativeCon欧洲2025：第一天主题演讲回顾</a><br></p>
+
+<p><a href="https://www.polarsignals.com/blog/posts/2025/04/01/introducing-continuous-gpu-profiling/">最大化GPU效率：精确可视化、分析和优化</a><br>Polar Signals推出了针对GPU的持续性能分析功能，该功能能够提供对GPU工作负载的深入、持续可见性，帮助团队更好地了解其系统的性能特征，解决GPU性能优化难题，例如缺乏可见性、利用效率低下和调试性能下降等问题。该功能与PyTorch和云原生ML堆栈集成，并提供多种关键特性和优势，例如多指标GPU使用情况、CPU使用情况关联、火焰图可视化等，适用于机器学习工程师、数据科学家和软件工程师。</p>
+
+<p><a href="https://asatarin.github.io/testing-distributed-systems">分布式系统测试 | 精选的分布式系统测试资源列表</a><br>Andrey Satarin 精选的分布式系统测试资源列表，涵盖测试方法概述（研究论文、弹性、Jepsen、形式化方法、确定性模拟、自主测试、谱系驱动故障注入、混沌工程、模糊测试、微服务、性能和基准测试等）、不同分布式系统中的特定方法（Google、AWS、Netflix、Microsoft、Meta 等）、单节点系统以及工具等。</p>
+
+<p><a href="https://sqlsync.dev/posts/stop-syncing-everything">停止同步所有内容</a><br>本文介绍了 Graft，一个开源事务存储引擎，旨在解决边缘数据同步的挑战。受 SQLSync 的启发，Graft 支持延迟、部分和强一致性复制，允许边缘应用程序仅在需要时同步所需的数据。Graft 适用于离线优先和移动应用程序、跨平台同步、无状态多写入副本以及任何数据类型。它采用了一种不同的方法，将物理复制的简单性和逻辑复制的效率相结合，实现了延迟、部分、边缘功能和一致性。</p>
+
+<p><a href="https://newsletter.manager.dev/p/the-13-software-engineering-laws">13条软件工程定律</a><br>本文列举了13条对工程师和管理者都非常有用的软件工程定律，包括一些知名定律和一些比较小众的定律，例如帕金森定律、霍夫施塔特定律、布鲁克斯定律、康威定律（以及反康威定律）、康宁汉姆定律、斯特金定律、扎温斯基定律、海勒姆定律、普莱斯定律、林格曼效应、古德哈特定律、吉尔布定律和墨菲定律。文章对每个定律进行了详细解释，并分享了相关的漫画和对工程管理者的意义。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/1/half-stack-data-science/#atom-everything">半栈数据科学：与 Simon Willison 一起进行 AI 编程</a><br>我参与了与 David Asboth 和 Shaun McGirr 进行的这场时长 50 分钟的广泛对话。我们讨论的话题包括大型语言模型在数据新闻中的应用、在这些工具的“参差不齐的边界”能力下建立直觉的挑战、大型语言模型如何影响编程学习以及本地模型如何开始变得真正有用。文章中还特别提到，对于初学者而言，现在是学习编程的最佳时机，因为大型语言模型降低了学习曲线。但同时也强调了需要学习如何与这些工具一起学习，了解其局限性，并避免将需要学习的部分外包给机器。</p>
+
+<p><a href="https://sfstandard.com/2025/04/01/white-collar-recession-in-san-francisco-tech-industry">科技行业的焦虑：就业减少、薪资降低、AI 崛起</a><br>随着大型公司寻求用代码替代人工，薪资下降和漫长的求职过程越来越普遍。管理层职位也面临压力，许多人降职并降薪，而留在大公司的管理人员则面临着“用更少的人做更多事”的压力。尽管科技行业的整体就业仍在增长，但就业市场低迷的现象不容忽视，这尤其体现在AI的逐渐普及对劳动力市场的影响上。</p>
+
+<p><a href="https://lucianonooijen.com/blog/why-i-stopped-using-ai-code-editors">我为什么停止使用AI代码编辑器</a><br>作者在2022年末开始使用AI代码编辑器，起初对其功能印象深刻，但到2024年末，他停止了使用所有AI代码编辑器集成。他发现过度依赖AI会逐渐降低自身的编程能力，就像曾经过度依赖特斯拉的自动驾驶功能一样，导致他需要重新学习基本的驾驶技能。作者认为，AI可以作为辅助工具，但不能过度依赖，否则会失去“Fingerspitzengefühl”（直觉和熟练技巧），尤其是在处理复杂问题和安全相关代码时。他建议新程序员应该专注于学习编程基础，而不是过度依赖AI，因为那些只依赖AI进行“氛围式编程”的工作岗位将最先被淘汰。作者现在仍然偶尔使用AI，但只将其作为辅助工具，手动输入所有上下文，并刻意提高使用门槛以避免过度依赖。</p>
+
+<p><a href="https://mlagerberg.com/blog-ai-copilot">使用AI副驾编程：资深开发人员的视角</a><br>本文作者是一位资深开发者，他分享了自己使用AI辅助编程工具的经验。文章既肯定了AI工具在提高效率和学习新框架方面的积极作用，也指出了AI工具的局限性，例如代码安全隐患、产生错误代码和“幻觉”等问题。作者认为，AI工具是辅助编程的有益工具，但不能取代程序员，程序员仍然需要具备专业知识和批判性思维，才能有效地利用AI工具并保证代码质量。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/bytebase/bytebase">bytebase/bytebase</a><br>World&#39;s most advanced database DevSecOps solution for Developer, Security, DBA and Platform Engineering teams. The GitHub/GitLab for database DevSecOps.</p>
+
+<p><a href="https://github.com/fsnotify/fsnotify">fsnotify/fsnotify</a><br>Cross-platform filesystem notifications for Go.</p>
+
+<p><a href="https://github.com/nicocha30/ligolo-ng">nicocha30/ligolo-ng</a><br>An advanced, yet simple, tunneling/pivoting tool that uses a TUN interface.</p>
+
+<p><a href="https://github.com/wgpsec/ENScan_GO">wgpsec/ENScan_GO</a><br>一款基于各大企业信息API的工具，解决在遇到的各种针对国内企业信息收集难题。一键收集控股公司ICP备案、APP、小程序、微信公众号等信息聚合导出。支持MCP接入</p>
+
+<p><a href="https://github.com/stakater/Reloader">stakater/Reloader</a><br>A Kubernetes controller to watch changes in ConfigMap and Secrets and do rolling upgrades on Pods with their associated Deployment, StatefulSet, DaemonSet and DeploymentConfig – [✩Star] if you&#39;re using it!</p>
+
+<p><a href="https://github.com/loft-sh/vcluster">loft-sh/vcluster</a><br>vCluster - Create fully functional virtual Kubernetes clusters - Each vcluster runs inside a namespace of the underlying k8s cluster. It&#39;s cheaper than creating separate full-blown clusters and it offers better multi-tenancy and isolation than regular namespaces.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/SpecterOps/BloodHound">SpecterOps/BloodHound</a><br>Six Degrees of Domain Admin</p>
+
+<p><a href="https://github.com/pion/webrtc">pion/webrtc</a><br>Pure Go implementation of the WebRTC API</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/infracost/infracost">infracost/infracost</a><br>Cloud cost estimates for Terraform in pull requests💰📉 Shift FinOps Left!</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250124.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250124</span>
+</p>
+<p>每日一谚：Error messages should not be capitalized or end with punctuation </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@patronfragas/golang-the-compiler-cosmos-adventure-59e337d5f51a">Go编译器宇宙的探险</a><br>本文作者通过一个简单的 Go 程序，深入探讨了 Go 语言编译器的工作原理。文章详细解释了从源代码到可执行文件的整个过程，包括词法分析、语法分析、抽象语法树 (AST)、中间表示 (IR)、汇编代码和机器代码生成以及链接等步骤，并对 Go 编译器中的一些优化技术，例如去虚拟化、函数内联和逃逸分析等进行了讲解。文章还提供了相关的命令和代码片段，方便读者进行实践和学习。</p> 
+
+<p><a href="https://blog.devgenius.io/common-go-programming-pitfalls-how-to-avoid-them-022f87bbf6ea">常见的Go编程陷阱：如何避免它们</a><br>Go（Golang）是一种功能强大且高效的编程语言，但与任何语言一样，它也有一些细微之处和潜在的陷阱。理解这些细微的问题可以极大地提高代码质量和性能。本文将深入探讨一些常见的Go编程错误，包括误用init函数、接口污染、range循环行为、低效的字符串连接、不正确的接收器使用以及被低估的命名结果参数的价值。</p> 
+
+<p><a href="https://blog.noblet.tech/go-slices-and-subslices-understanding-shared-memory-and-avoiding-append-pitfalls">Go切片与子切片：理解内存共享与如何避免append陷阱</a><br></p> 
+
+<p><a href="https://medium.com/@ajitem/performance-optimization-in-go-checkmate-performance-using-chess-piece-movements-as-an-example-920a2b22be19">Go 性能优化：以国际象棋棋子移动为例进行性能提升</a><br>本文记录了作者在优化国际象棋棋子移动算法的六个版本历程，展示了代码的演变、早期方法的缺陷以及改进策略的成功。文章从一个功能性实现开始，逐步改进代码模块化、可读性，并通过消除冗余检查、引入并发以及预先分配内存等方法，显著提升了性能。最终，通过对Position结构体的String()方法进行优化，避免了多余的内存分配和复制操作，进一步提高了效率。</p> 
+
+<p><a href="https://dev.to/siddheshk02/taking-pagination-to-the-next-level-sorting-and-filtering-in-go-apis-497d">将分页提升到新的水平：在 Go API 中进行排序和过滤</a><br>在上一篇文章中，我们讨论了分页，将大型 API 响应分解成可管理的块。但是，如果您想让用户控制数据的排序方式或过滤特定结果，那么您就准备好迈向下一步：排序和过滤。让我们通过添加这些功能来增强 API 的功能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2025/01/22/security/how-meta-discovers-data-flows-via-lineage-at-scale/">Meta如何大规模地通过血缘关系发现数据流</a><br>数据血缘关系是Meta隐私感知基础设施(PAI)计划中不可或缺的一部分，PAI是一套有效保护用户隐私的技术。它是一个关键且强大的工具，用于大规模发现相关数据和数据流，支持Meta系统中的隐私控制。这使我们能够验证用户的日常互动在其应用家族中得到保护，例如本文中将介绍的Facebook Dating应用中的宗教信仰示例。为了构建高质量的数据血缘关系，我们开发了不同的技术来收集跨不同技术栈的数据流信号：不同语言的静态代码分析、运行时检测以及输入和输出数据匹配等。然后，我们将直观的UX构建到我们的工具中，使开发人员能够有效地以系统的方式使用所有这些血缘关系数据，从而节省了构建隐私控制的工程时间。随着我们在Meta中扩展PAI，我们获得了关于数据血缘关系空间的宝贵见解。我们对隐私空间的理解得到了发展，揭示了需要尽早关注数据血缘关系、工具、以及更具凝聚力的库生态系统等。这些举措有助于加快数据血缘关系的发展，并更快、更高效地实施目的限制控制。</p>
+
+<p><a href="https://danluu.com/deconstruct-files">文件危机四伏</a><br>这篇伪演讲稿讨论了文件系统和磁盘的可靠性问题。文章指出，大多数开发人员认为文件操作很简单，但实际上，从文件API到文件系统，再到磁盘，各个层面都存在导致数据损坏或丢失的潜在风险。文章通过具体的例子分析了文件API的复杂性，以及文件系统和磁盘在处理错误方面的不足，并指出即使是经验丰富的程序员也难以避免这些问题。文章还讨论了提高数据可靠性的方法，例如使用数据库代替文件存储，以及在软件中处理文件系统错误的策略。最后，文章总结道，虽然大型科技公司有能力解决这些问题，但对于消费者软件来说，由于成本和责任的考量，这些问题往往被忽视。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jan/24/anthropics-new-citations-api/#atom-everything">Anthropic 的新 Citations API</a><br>本文介绍了 Anthropic 推出的仅限 API 的新功能：Citations API。该 API 可在检索增强生成 (RAG) 中使用，帮助减轻模型基于训练数据以外的信息作答或产生错误细节的风险。文章详细介绍了如何使用 Anthropic 的 Python 客户端库和 uv run 来测试该 API，并展示了如何利用 LLM 将 API 的 JSON 输出渲染成更易于阅读的格式。最后，文章还对比了 Anthropic 和 OpenAI 的战略差异。</p>
+
+<p><a href="https://openai.com/index/introducing-operator">OpenAI：operator介绍</a><br></p>
+
+<p><a href="https://www.thelis.org/blog/lessons-from-ai">从构建小型 AI 应用程序中学到的 7 个教训</a><br>本文总结了作者一年来构建小型 AI 助手的心得体会，涵盖了 AI 编程的随机性、数据质量的重要性、模型评估方法、信任度/质量问题、训练流程的重要性、分布式系统的设计以及对 AI 库的实用性评价等七个方面。作者强调，构建高质量的 AI 应用需要持续的实验和评估，训练流程是核心知识产权，并且需要谨慎选择和使用 AI 库，避免被其高层抽象所限制。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Phi 4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/ethereum-optimism/superchain-registry">ethereum-optimism/superchain-registry</a><br>An index of chains which serves as the source of truth for who’s in the Superchain Ecosystem</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/oapi-codegen/oapi-codegen">oapi-codegen/oapi-codegen</a><br>Generate Go client and server boilerplate from OpenAPI 3 specifications</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/prometheus/blackbox_exporter">prometheus/blackbox_exporter</a><br>Blackbox prober exporter</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/json-iterator/go">json-iterator/go</a><br>A high-performance 100% compatible drop-in replacement of &#34;encoding/json&#34;</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/hibiken/asynq">hibiken/asynq</a><br>Simple, reliable, and efficient distributed task queue in Go</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/runatlantis/atlantis">runatlantis/atlantis</a><br>Terraform Pull Request Automation</p>
+
+<p><a href="https://github.com/goreleaser/goreleaser">goreleaser/goreleaser</a><br>Release engineering, simplified</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260101.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260101</span>
+</p>
+<p>每日一谚：Log or return an error. Prefer the last one more. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/01/go-archaeology-porting-policy">Go 考古：Go 官方如何决定支持你的 CPU 和 OS？</a><br>解读Go官方Porting策略文档</p> 
+
+<p><a href="https://tonybai.com/2026/01/01/ai-is-the-fastest-way-to-forget-how-to-code">AI 是让你忘掉如何编程的最快方式</a><br>如果我们习惯了让 AI 替我们思考，我们的大脑正在经历一场无声的“认知肌肉萎缩”。在 AI 时代，写下每一行代码依然重要。这不是一种复古 的情怀，而是关乎我们职业生存的“认知保留”</p> 
+
+<p><a href="https://www.infoq.com/news/2025/12/unkey-serverless/">API 平台 Unkey 在性能困扰后放弃无服务器架构</a><br>开发者平台 Unkey 撰文讲述了其如何从无服务器的 Cloudflare Workers 全面转向有状态的 Go 服务器，重构其整个 API 身份验证服务。此举带来了六倍的性能提升，并消除了曾占据工程工作主导地位的变通方案。Unkey 联合创始人解释说，由于服务位于数千个应用程序的请求路径中，每毫秒都很重要，而无服务器架构的无状态特性导致了缓存和日志记录等方面的复杂性成本，迫使他们转向了更简单的自托管（AWS Fargate 上的 Go 进程）解决方案。</p> 
+
+<p><a href="https://blog.daniel-beskin.com/2025-12-22-the-compiler-is-your-best-friend-stop-lying-to-it">编译器是您最好的朋友，别再对它撒谎了</a><br>编译器是一个强大的工具，但许多开发者与它有着痛苦的关系。我们能做得更好吗？
+
+文章探讨了开发者与编译器之间的关系，指出许多开发者通过使用 `null`、异常、类型转换和副作用来“欺骗”编译器，导致编译器无法提供足够的帮助，最终导致运行时错误。
+
+作者主张停止对编译器撒谎，通过在类型系统中显式表达意图（如使用 Option/Result 类型、密封类型、类型包装器、非空类型等），将编译时的“谎言”转化为清晰的类型保证，从而与编译器建立建设性的对话关系，提高代码的安全性和可维护性。文章以 Google Cloud 2025 年宕机事件为例，说明了 `null` 带来的危害，并倡导“函数式核心，命令式外壳”的架构来最大化编译器的帮助。</p> 
+
+<p><a href="https://dev.to/serifcolakel/deadlocks-in-go-the-silent-production-killer-1fnc">Go 中的死锁：静默的生产环境杀手</a><br>“健康检查通过了，CPU 占用率只有 2%，内存持平……但 API 却超时了。” 如果你管理过 Go 服务，一定深有体会。崩溃会产生警报，但死锁是静默的。本文深入探讨了 Go 中死锁的实际生产环境表现、如何调试卡死的进程，以及如何设计拒绝被冻结的系统。关键点包括：启用 pprof 进行可观测性、强制执行确定性的锁顺序、使用 Context 和 errgroup 来“快速失败”而不是永远阻塞。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2025/12/31/kubernetes-v1-35-structured-zpages/">Kubernetes 1.35：增强的 z-pages API 调试功能</a><br>Kubernetes 1.35 增强了 z-pages 调试端点，引入了结构化、可机器解析的响应（JSON 格式）。这一新功能向后兼容现有的纯文本输出，旨在简化工具构建和故障排除工作流程。z-pages（如 /statusz 和 /flagz）是控制平面组件暴露的调试端点，结构化响应的引入使得自动化检查和配置验证更加容易，但目前仍处于 Alpha 阶段，建议谨慎用于关键生产流程。</p>
+
+<p><a href="https://chrisloy.dev/post/2025/12/30/the-rise-of-industrial-software">工业软件的兴起</a><br>文章探讨了随着人工智能编码的兴起，软件生产正经历一场工业革命。作者引用了牛津英语词典中“工业”的定义，并将其与软件的传统“手工艺”性质进行对比。工业化将使软件生产变得更便宜、更快、规模更大，并可能导致“一次性软件”（disposable software）的出现，即不期望长期拥有、维护或理解的软件。文章提到了由效率提升导致消费增加的“杰文斯悖论”，并将其应用于软件开发，预测AI驱动的软件产出将爆炸式增长。最后，作者探讨了传统、高质量的“手工”软件是否会像其他工业化领域一样，退缩到小众或精品市场，并指出真正的进步是创新与工业化相互作用的结果，而一个核心的长期挑战可能是数字世界的“技术债务”——谁来维护那些无人拥有的软件。</p>
+
+<p><a href="https://xam.dk/blog/lets-make-2026-the-year-of-java-in-the-terminal">2026年：Java终端之年</a><br>作者认为Java应该在终端中有更好的表现，并呼吁2026年是实现这一目标的一年。尽管AI终端工具多用Python、Rust、Go或Node.js编写，但Java拥有所需的一切（如PicoCLI、Project Loom、GraalVM、JBang和JReleaser）来构建同等出色的工具。作者驳斥了“Java启动慢”和“过于冗长”等旧有借口，强调现代Java平台已经成熟。文章重点介绍了JBang如何简化脚本运行和分发，以及JReleaser如何自动化发布流程（包括原生镜像），使Java CLI工具的分发变得非常容易。作者呼吁社区专注于构建出色的终端UI（TUI）生态系统，分享更多Java终端工具的例子，并拥抱JBang和JReleaser进行分发，目标是让Java开发者能够轻松地使用他们熟悉的语言来构建高质量的命令行工具和交互式终端应用。</p>
+
+<p><a href="https://netflixtechblog.medium.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-2-building-a-scalable-storage-layer-ff4a8dbd3d1f">netflix：为事实分布式图构建可扩展的存储层</a><br></p>
+
+<p><a href="https://blog.pypi.org/posts/2025-12-31-pypi-2025-in-review">PyPI in 2025: A Year in Review</a><br>回顾 PyPI 在 2025 年的主要变化和相关统计数据。重点包括：安全方面的改进，如增强的抗网络钓鱼的双因素认证（2FA）和可信发布（Trusted Publishing）；在透明度和事件响应方面的努力，发布了有关权限、网络钓鱼攻击和 GitHub Actions token 泄露等事件的报告；安全和支持请求的处理，包括对恶意软件报告的快速响应和账户恢复请求的解决；组织功能的增长，已有超过 7742 个组织被创建；以及项目生命周期管理等用户体验改进。文章最后感谢了赞助商和社区贡献者。</p>
+
+<p><a href="https://charlesgrassi.dev/blog/gpu-cache-hierarchy">GPU 缓存层级：理解 L1、L2 和 VRAM</a><br>为什么一个纹理采样需要 4 个周期而另一个需要 500 个周期？GPU 缓存层级解释——L1、L2、VRAM，以及如何停止使其抖动（Thrashing）。</p>
+
+<p><a href="https://www.repoflow.io/blog/benchmarking-self-hosted-s3-compatible-storage-a-practical-performance-comparison">自托管S3兼容存储基准测试</a><br>我们对七种自托管S3兼容存储解决方案进行了基准测试，在相同的单节点条件下测试了上传、下载、并行性能和对象列表操作。比较了MinIO、Ceph、SeaweedFS、Garage、Zenko、LocalStack和RustFS的表现。</p>
+
+<p><a href="https://cpojer.net/posts/you-are-absolutely-right">你说的完全正确！？</a><br>作者分享了他对2025年软件工程领域变革的看法，重点是如何使用大型语言模型（LLMs），并展示了他在过去一年中利用AI完成的项目成果，例如React数据库库&#39;fate&#39;的开发。他详细描述了自己使用ChatGPT/Codex的工作流程，包括并行生成多个解决方案、利用AI处理重复性工作、以及在调试中对AI的依赖。作者认为AI正在加速开发，但强调了人工的“精湛技艺”（Craftsmanship）和清晰意图的重要性，因为AI生成的内容在细节和质量上仍有欠缺。最后，他探讨了AI对软件框架、个人计算、娱乐和知识传播的未来影响。</p>
+
+<p><a href="https://enzom.dev/b/passkeys">关于构建passkeybot时我学到的关于passkey的事情</a><br>作者分享了在开发 passkeybot.com（一个支持通过几行服务器端 HTTP 处理程序将通行密钥认证添加到网站的托管登录页面）过程中学到的关于 WebAuthn 和通行密钥的有趣知识。内容涵盖了安全区域处理器（SEP）的工作原理、用户存在（UP）与用户验证（UV）的区别、认证器（authenticator）的定义、证明（attestation）的意义及其潜在的指纹识别问题、通行密钥仅用于认证而非通用签名、JS代码安全性的局限性、即将到来的“即时中介”（immediate mediation）API、相关源请求（Related Origin Requests）的限制、计数器的“启发式”性质、使用蓝牙通过附近设备存储的通行密钥进行登录、使用 Signal API 删除通行密钥、`user.id` 与 userHandle 的关系，关于 `crypto.subtle.generateKey` 创建不可提取密钥的讨论，PKCE（Proof Key for Code Exchange）被回嵌到 OAuth 中的机制，以及数字凭证 API（Digital Credentials API）作为浏览器连接到原生操作系统钱包的桥梁。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/31/the-year-in-llms/#atom-everything">2025: 大语言模型之年</a><br>这是我关于过去12个月大语言模型（LLM）领域所有事件的年度回顾系列的第三篇。2025年充满了许多不同的趋势，包括“推理”元年、智能体（Agent）元年、命令行LLM的兴起、200美元/月的订阅费的出现、顶尖中国开源模型的崛起、长任务处理能力的提升，以及提示词驱动的图像编辑的普及。作者详细回顾了推理（Reasoning）如何成为模型的一个标志性功能，以及它如何推动了真正有用的编码智能体和异步编码智能体的成熟。文章还提到了Meta Llama系列的失势、OpenAI失去领先地位、Gemini的强劲表现，以及“Slop”（低质量AI生成内容）一词被选为年度词汇。</p>
+
+<p><a href="https://simonwillison.net/2025/Dec/31/the-year-in-llms">2025年：大语言模型的这一年</a><br>这是作者年度系列中回顾过去12个月大语言模型（LLM）领域所发生一切的第三篇。2025年充满了许多不同的趋势，包括“推理”元年、智能体元年、命令行LLM元年、200美元/月订阅费的出现，以及中国开源模型排名的上升。作者详细讨论了推理（RLVR）的兴起如何推动了智能体的发展，特别是代码智能体（如Claude Code和Codex CLI）的突破性进展。文章还提到了Nano Banana图像模型、模型在学术竞赛中取得金牌，以及Llama系列和OpenAI的相对失速，而Google Gemini则迎来了强劲的一年。此外，还探讨了“slop”（低质量AI生成内容）的流行、对数据中心环境影响的关注，以及作者在“vibe coding”（氛围式编程）中的实践和个人工具的构建。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/JanDeDobbeleer/oh-my-posh">JanDeDobbeleer/oh-my-posh</a><br>The most customisable and low-latency cross platform/shell prompt renderer</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>The most advanced status page in the world</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS / MPEG-TS / RTP media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/krau/SaveAny-Bot">krau/SaveAny-Bot</a><br>Save Any Telegram File to Anywhere 📂 (Alist, Disk, Webdav, S3...) . Support restrict saving content and beyond telegram.</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/nginx/kubernetes-ingress">nginx/kubernetes-ingress</a><br>NGINX and NGINX Plus Ingress Controllers for Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

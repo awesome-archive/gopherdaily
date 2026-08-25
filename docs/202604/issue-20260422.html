@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260422.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260422</span>
+</p>
+<p>每日一谚：Goroutines are cheap, but they aren&#39;t free. Respect your system&#39;s limits — Go Community  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://jry.io/writing/ai-makes-golang-one-of-the-best-languages/">AI 让 Go 成为最好的语言</a><br>在我的职业生涯中，我个人编写了数十万行 Go 代码。作为一名程序员，我发现 Go 语言令人抓狂。但作为一名人工智能工程师，Go 语言简直是天堂。 Golang 开箱即用，就能让您（以及您的智能体）在编码方面获得巨大优势</p> 
+
+<p><a href="https://www.dash0.com/guides/golang-logging-libraries">2026年，Go日志库怎么选？</a><br>在 Go 语言的大部分历史中，选择日志库意味着在 Logrus、zap、zerolog 以及其他少数几个库之间做选择，它们各自带来了自己的 API、惯用语和关于结构化日志工作方式的见解。那个时代基本结束了。自 Go 1.21 起，log/slog 提供了一个生态系统已经汇聚于此的标准前端。这种转变简化了事情，但并没有完全消除决策难度。本指南涵盖了今天值得考虑的内容：哪些库仍然重要，它们的性能如何，它们有何不同，以及什么时候仅使用 slog 就足够了。1. Slog如果你正在启动一个新的 Go 项目，你的应用程序代码应该只使用 log/slog。不是因为它最快或者 API 最好，而是因为它在标准库中，生态系统已经与它对齐，而且如果你确实需要，以后还可以插入不同的后端。slog.Handler 接口将应用程序代码与底层的编码引擎解耦。如果 slog 内置的 JSON 处理程序对于某个特定服务来说太慢，你可以在不触及任何日志语句的情况下通过更改初始化代码来更换不同的后端。使用 JSONHandler 的典型设置如下：这为你提供了结构化的 JSON 输出。</p> 
+
+<p><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-beta/">宣布 TypeScript 7.0 Beta</a><br>今天，我们非常激动地宣布 TypeScript 7.0 Beta 的发布！如果你一直没有关注 TypeScript 7.0 的开发，那么这个版本意义重大，因为它建立在全新的基础之上。在过去的一年中，我们一直在将现有的 TypeScript 代码库从 TypeScript（作为一种编译为 JavaScript 的自举代码库）移植到 Go 语言。结合原生代码的速度和共享内存并行性，TypeScript 7.0 的速度通常比 TypeScript 6.0 快约 10 倍。不要被“测试版（Beta）”标签误导——你可能现在就可以在日常工作中开始使用它。新的 Go 代码库是从我们现有的实现中有条不紊地移植过来的，而不是从零重写的，其类型检查逻辑在结构上与 TypeScript 6.0 完全一致。这种架构对等性确保了编译器继续强制执行你所依赖的完全相同的语义。TypeScript 7.0 已经根据我们在过去十年中构建的庞大测试套件进行了评估，并且已经在微软内部及外部的多个拥有数百万行代码的代码库中使用。它高度稳定、高度兼容，今天就可以放入你的日常工作流和 CI 流水线中进行测试。一年多来，我们与许多微软内部团队以及 Bloomberg、Canva、Figma、Google、Lattice、Linear、Miro、Notion、Slack、Vanta、Vercel、VoidZero 等公司的团队合作，在他们的代码库上试用了 TypeScript 7.0 的预发布版本。反馈非常积极，许多团队报告说速度提升类似，节省了大部分构建时间，并且……</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/04/21/auto-diagnosing-kubernetes-alerts-with-holmesgpt-and-cncf-tools/">使用 HolmesGPT 和 CNCF 工具自动诊断 Kubernetes 警报</a><br>由两人组成的 SRE 团队在构建 AI 调查流水线时的心得。剧透：运行手册（runbooks）比模型更重要。为什么要构建这个？在 STCLab，我们的 SRE 团队支持多个运行高流量生产工作负载的亚马逊 EKS 集群。我们部署了完整的可观测性栈：OpenTelemetry 馈送到 Mimir、Loki 和 Tempo。Robusta OSS 在将 Prometheus 警报推送到 Slack 之前，会先用错误日志、Grafana 链接和团队提及来丰富这些警报。所以数据从来都不是问题。问题在于接下来发生的事情。每个警报都意味着同样的套路：检查 Pod、查询 Prometheus、挖掘 Loki、提取跟踪信息、尝试关联。每次都要花 15 到 20 分钟。我们希望第一轮调查能够自动完成，并显示在同一个 Slack 线程中。HolmesGPT：让 LLM 决定调查什么我们选择了 HolmesGPT（CNCF 沙箱项目），因为它采用了 ReAct 模式：LLM 读取警报，选择一个工具，读取结果，然后决定下一步检查什么。如果 Pod 重启，它可能会从退出代码开始，通过 VPC 对等互连拉取跨集群的 Loki 日志，然后查看 Prometheus 中的 CPU 压力。路径不是写死的，而是取决于模型实际发现了什么。这在我们的案例中很重要，因为并不是每个命名空间看起来都一样。有些拥有完整的视图：集中式日志、分布式跟踪等。多租户工作负载通常什么都没有；对于那些命名空间，只有 kubectl 和 Prometheus。我们将这些差异记录在 Markdown 运行手册中，每个手册都有一个元数据头。Holmes 在调查初期会调用 fetch_runbook。元数据会告知它哪些工具可用。</p>
+
+<p><a href="https://engineering.fb.com/2026/04/21/ml-applications/modernizing-the-facebook-groups-search-to-unlock-the-power-of-community-knowledge/">现代化 Facebook 群组搜索以释放社区知识的力量</a><br>- 我们从根本上改造了 Facebook 群组搜索，帮助人们更可靠地发现、筛选和验证与他们最相关的社区内容。- 我们采用了新的混合检索架构，并实施了自动化的基于模型的评估，以解决人们在搜索社区内容时遇到的主要摩擦点。- 在这个新框架下，我们在搜索参与度和相关性方面取得了切实改进，且没有增加错误率。全世界的人每天都依赖 Facebook 群组来发现有价值的信息。由于可用信息量巨大，用户的搜索旅程并不总是容易的。在我们帮助连接志同道合的人群时，设计一条穿过海量对话的路径，以尽可能精确地呈现用户正在寻找的内容也同样重要。我们发表了一篇论文，讨论了我们如何通过重新架构 Facebook 群组范围搜索来解决这个问题。通过从传统的关键字匹配转向混合检索架构并实施自动化的基于模型的评估，我们正在从根本上创新人们发现、消费和验证社区内容的方式。解决社区知识中的摩擦点人们在社区内容中搜索答案时会遇到三个摩擦点——发现、消费和验证。发现：迷失在翻译中历史上，发现依赖于基于关键字（词法）的系统。这些系统寻找精确匹配的词，在人的自然语言意图和可用内容之间制造了鸿沟。例如，考虑一个人搜索“带糖霜的小型个人蛋糕”。如果社区使用的是“纸杯蛋糕（cupcakes）”一词，传统的关键字系统可能返回零结果。由于特定的措辞不匹配，该用户错过了高度相关的信息。我们需要一个搜索系统……</p>
+
+<p><a href="https://seangoedecke.com/luddites-and-ai-datacenters/">卢德分子与 AI 数据中心</a><br>是时候开始焚烧数据中心了吗？有些人是这么想的。印第安纳波利斯的一位市议员最近因为支持数据中心而导致家中被枪击，不久之后，萨姆·奥特曼（Sam Altman）的家遭到纵火（随后又遭到枪击）。各方观点的人们都在对即将到来的暴力事件发出警报。显而易见的各种历史比较是卢德运动，这是 19 世纪的一种现象，英国织布工和针织工摧毁了使他们工作自动化的机器，并在某些情况下杀死了机器的所有者。反 AI 人士正在重新利用这个词来描述自己，许多反 AI 运动的领军人物（如 Brian Merchant 或 Gavin Mueller）撰写了书籍，大意是认为卢德分子是正确的，我们应该效仿他们的例子来抵制 AI 自动化。像许多人一样，我听说过很多关于卢德运动和卢德分子的信息，但仅限于将该词用作反技术者的通称。我对了解实际的历史运动很感兴趣：参与者是怎样的人，它是什么，以及它完成了什么。我阅读了 Merchant 和 Mueller 的书，以及其他书籍，试图弄清楚这一切。</p>
+
+<p><a href="https://nesbitt.io/2026/04/21/brief.html">简报</a><br>任何进入陌生仓库的人，无论是新贡献者、安全扫描程序还是 AI 编码智能体，在做任何有用的事情之前，都必须回答同样的问题：这是什么语言，我如何安装依赖项，测试命令是什么，提交前我运行什么 linter，对于安全审查，此堆栈中哪些函数是危险的。智能体案例只是让犯错的代价变得最容易观察，因为你可以看到 Claude 搜索 package.json，读取 Gemfile，尝试 npm test，被告知没有测试脚本，尝试 yarn test，发现实际上是 pnpm，然后才开始你要求的工作。对于曾经存在过的每一个 Rails 项目或每个 Go 模块，这些答案都是完全相同的，每次都从零开始重新发现它们是浪费精力。brief 是一个涵盖 54 个语言生态系统中 516 个工具的知识库，前端有一个单一的 Go 二进制文件，它执行查找并在管道传输时打印 JSON，或在 TTY 上打印人类摘要。该数据集是在其他任何地方都不存在的部分：调用命令、配置文件位置以及单个机器可读模式下的五百个工具的分类。CI 模板、devcontainer 生成器和编辑器引导流是我找到的最接近的工具，每个工具都携带它的一部分，没有任何共享的上下游。我将 CLI 视为该数据的一个视图，并期望会有其他视图。指向一个目录、一个 git URL 或一个类似 gem:rails 或 npm:express 的注册坐标，它就会报告跨二十个类别的工具链，每个类别都有运行命令和驱动它的配置文件，加上它在通常位置找到的任何治理和社区文件（带 SPDX 标识符的许可证、安全策略、CODEOWNERS、FUNDING.yml 等）。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/04/22/ai-has-no-moat.html">AI 没有护城河</a><br>SpaceX 正在以 600 亿美元收购 Cursor。哈哈，看着这种烂事真是令人难过，Twitter 当时才 440 亿美元。这肯定是什么我无法理解的骗局。我认识的人里根本没人在用 Cursor 了。在我看来，opencode 确实是最好的编码智能体。不是开源那种自欺欺人，它是货真价实的排名第一。是的，它是一个很好的脚手架（harness），但写出类似的东西并不难。opencode 有一个稳固的商业模式，希望他们不要搞砸。Claude Code 的源代码泄露了，结果发现它 10% 是智能体，90% 是间谍软件。然后是模型。闭源模型是最好的（我发现这些排名很准确），GPT-5.4 和 Opus 4.7，但它们的制作成本至少是 Kimi K2.6 和 GLM 5.1 的 10 倍，而后者并没有差多少（滞后 6 个月）。模型比脚手架软件更难制作，但有完整的指南教你制作它们，这主要是一个是否能证明为一种贬值如此之快的资产投入大量训练资金合理性的问题。如果它没那么令人难过，这其实挺美的。金钱的贪婪必须自行燃尽。它看起来越来越愚蠢，与现实脱节。发生这种情况是因为错失恐惧症（FOMO）和极短期的思维。这些人竟然相信某种 AGI 奇点废话，如果他们不在 7 分钟内采取行动，一切就完了。兄弟，这不是真的，它从来都不是真的。看看中国，他们不相信这个，这只是正常的指数增长曲线。看起来科技界正在经历 AI 精神病。我相信你们中的许多人已经在某种程度上亲自体验过，AI 精神病是真实存在的。未来属于那些成功驾驭它的人。请让科技界快速死掉，不要再拖延……</p>
+
+<p><a href="https://serdardogruyol.com/why-crystal-10-years-later-performance-and-joy">为什么选择 Crystal：十年后的性能与快乐</a><br>在 2015 年末，我写了一篇关于 Crystal 的博客文章《为什么选择 Crystal？》。当时，Ruby 社区正处于动荡之中。开发者越来越多地寻求“语言 X”（Go、Rust 或 Elixir）来解决性能瓶颈。作为一名铁杆 Ruby 爱好者，我提出了一个既大胆又不可避免的论点：这个“X”应该是 Crystal。那时，Crystal 正处于 0.9.1 版本。它是一个 alpha 阶段的实验，承诺提供 Ruby 的语法和 C 的速度。今天，在 2026 年 4 月，随着语言达到 1.20 版本，那个“实验”已经成熟为高性能系统的基石。回首那篇十年前的文章，我震惊于变化之大以及保持不变的东西之多。从 0.9.1 到 1.20：优雅的演进在 2015 年，我们为简单的斐波那契数列带来的 20 倍性能提升感到兴奋。今天，讨论的主题已经从“它能跑得快吗？”转变为“它能扩展到多远？”以下是定义迈向 v1.20 之旅的主要里程碑：1. 多线程革命。如果说 2015 年是语法之年，那么随后的几年就是并行化之年。多线程模型的引入和最终稳定（在 0.34 中预览并在 1.x 周期中完善）改变了一切。我们从单一事件循环模型转变为一个成熟的调度程序，可以利用现代机器上的每个核心。在 2026 年，在单独的调度程序线程上启动工作已成为第二天性，使 Crystal 能够……</p>
+
+<p><a href="https://luke.hsiao.dev/blog/changesets-polyglot-monorepo/">在多语言 Monorepo 中使用 Changesets</a><br>在一个小型企业中工作的好处之一是你可以享受使用不需要扩展到极端规模的东西。软件世界中的一个例子是 monorepos（单代码仓库）。虽然 monorepos 可以很好地扩展（参见 Google、Facebook 等），但这样做需要特殊的工具和基础设施。使用普通的 git，你只能走那么远。虽然你可以使用它，但它有明显的优势，比如能够在一次提交中进行影响系统许多部分的原子更改，从而消除了整类兼容性和集成问题。你以后总可以拆分一个 monorepo（参见 git-filter-repo）。那么，假设你是一个使用 monorepo 的中小型团队。让我们更进一步，假设这个 monorepo 存储了你公司所有的代码，这意味着它跨越了许多不同的编程语言——它是一个多语言（polyglot）monorepo。你可以使用什么工具以一致的方式管理版本控制？我认为 changesets 是一个可靠的选择，即使它主要专注于 JavaScript/TypeScript 生态系统。注有一个关于原生多语言 monorepo 支持的公开讨论。然而，即使没有原生支持，changesets 也具备了在许多设置中实现此功能的必要钩子。背景对于任何版本控制工具，你通常是在寻找如何：- 定义变更日志/发布说明中出现的内容- 影响包的版本号- 自动化执行实际元数据升级和标记的提交- 自动化响应发生的构建</p>
+
+<p><a href="https://github.blog/open-source/git/highlights-from-git-2-54/">Git 2.54 亮点</a><br>开源 Git 项目刚刚发布了 Git 2.54，带来了来自 137 多位贡献者（其中 66 位是新贡献者）的特性和错误修复。我们上次更新 Git 的最新动态是在 Git 2.52 发布时。为了庆祝最近的这次发布，这里是 GitHub 对自上次发布以来引入的一些最有趣特性和更改的看法。💡 由于我们撰写的上一个 Git 版本是 Git 2.52，这篇博文涵盖了 2.53 和 2.54 版本发布的主要亮点。使用 git history 重写历史Git 项目有着提供工具来重写存储库历史的长久传统。git rebase –i 是最广为人知的，它非常灵活：你可以对提交进行重新排序、压缩、编辑和丢弃。但这种灵活性伴随着复杂性：交互式变基操作的是一系列提交，并在进行过程中更新你的工作树和索引，这可能会让你处于需要先解决冲突才能继续的状态。对于更简单的情况，所有这些机制可能会让人感觉……</p>
+
+<p><a href="https://javarevisited.blogspot.com/2026/04/how-to-design-rate-limiter-in-system-design-interviews.html">如何系统设计面试中设计速率限制器（2026 指南）</a><br>学习 Java、编程、Spring、Hibernate，通过教程、示例和面试问题2026 年 4 月 20 日，星期一如何系统设计面试中设计速率限制器（2026 指南）</p>
+
+<p><a href="https://farlow.dev/2026/04/17/running-a-minecraft-server-and-more-on-a-1960s-univac-computer">在 20 世纪 60 年代的 UNIVAC 计算机上运行 Minecraft 服务器及其他</a><br>来看看！我正在一台 20 世纪 60 年代的 UNIVAC 1219B 计算机上运行 Minecraft 服务器：这是一台正在渲染 Pinball 第一帧的 NES 模拟器：……以及使用“overstrike（叠印）”技术打印的自拍：我们还运行了大量其他疯狂的东西，包括：- OCaml 程序（！)- Web 服务器- Curve25519 &#43; AES 加密- BASIC 解释器- ELIZA- 像 Oregon Trail、Wordle 和 Battleship 这样的游戏……还有更多！所有这些都在一台 20 世纪 60 年代的 250khz 计算机上运行，只有 90kb 内存。我为这种事情而活！我痴迷于在奇怪的地方运行代码并粉碎技术限制。这个项目是我迄今为止最雄心勃勃的项目，花费了我和其他人大约 8 个月的时间。该项目的源代码在这里。另请参阅 TheScienceElf 关于该项目的视频！UNIVAC 是一台奇怪的机器UNIVAC 1219B 是一台非常奇怪的机器，在几乎所有方面都对现代编程充满敌意：- 18 位字长。内存地址和值是 18 位的！甚至不是 2 的幂。- 一种补码算术。现代计算机使用二进制补码来表示有符号整数。这台计算机使用一补码，但周围有恼人的差异，即有符号零，我们必须对其进行逆向工程。- 只有少数寄存器。一个 36 位寄存器 A 可以被 AU:A 单独寻址。</p>
+
+<p><a href="https://dpc.pw/posts/i-dont-want-your-prs-anymore/">我不想要你的 PR 了</a><br>目录- 我为什么不想合并你的 PR- 软件开发的本质已经转变- 你可以如何提供帮助：提供反馈、讨论想法、报告和调查错误、原型变更、审查代码并指出问题、Fork 代码并报告结果我真的很感激你喜欢我维护的软件并想提供帮助。但我们需要重新思考这种协作，因为我觉得我们越来越在浪费彼此的时间。我为什么不想合并你的 PR因为我不认识你，我总是必须假设你可能试图在你的更改中混入恶意内容，这使得审查和合并它们的风险比我自己实现它们更高。最重要的是，代码包含许多个人和主观的方面。你可能对格式、风格、结构、依赖关系和方法有特定的偏好，而我有我的。然后，我们需要在审查、CI 运行、合并冲突等方面进行同步。然后贡献者和维护者之间存在这种常见的来回往复的行程，这只会拖延事情。即使在 LLM 出现之前，编写代码也不是我的主要瓶颈。但编写代码确实需要时间，所以一个扎实、工作正常、易于审查的 PR 通常值得承担小额的额外风险和不便。随着 LLM 在实现方面变得非常出色，这种权衡几乎不再成立。虽然我仍然需要审查 LLM 生成的代码，但我通常不必担心它像未知贡献者的代码那样带有恶意。我已经规范化了我的许多编码原则……</p>
+
+<p><a href="https://adueck.github.io/blog/curry-howard-proofs-are-programs/">证明即程序：Curry-Howard 对应关系的几个例子</a><br>证明即程序，程序即证明。这基本上就是 Curry-Howard 对应关系所说的内容。证明可以转化为程序，程序可以转化为证明。如果你有一个证明，你可以免费从中得到一个程序。如果你有正确的程序，它也可以作为证明。正如范畴论者可能说的那样，证明与程序是同构的。直接证明与函数在学习数学中的直接证明时，将直接证明视为我试图编写的一个简单函数对我很有帮助。例如，假设我们需要证明以下内容：如果 a 和 b 是奇数，那么 a&#43;b 是偶数使用直接证明法，我们需要展示将任意两个奇数相加如何导致偶数。我们可以把这个证明看作是我们试图编写的一个小函数：使用代数，我们可以像这样“填入”这个“函数”：我们知道根据奇数的定义，任何奇数都可以表示为 2n&#43;1，其中 n 是任何整数。所以让我们取两个奇数……</p>
+
+<p><a href="https://zef-lang.dev/implementation">如何制作一个快速的动态语言解释器</a><br>这篇文章是关于优化一个极其简单的 AST 走访解释器，针对我为了好玩而创建的名为 Zef 的动态语言，使其性能可以与 Lua、QuickJS 和 CPython 等语言相媲美。为什么？大多数关于使语言实现变快的文章都集中在你拥有稳定基础后要做的工作，比如编写另一个 JIT（即时）编译器或微调一个已经相当不错的垃圾回收器。我已经写了很多关于成熟 JS 运行时中疯狂优化的文章。这篇文章不同。它关注的是你从零开始的情况，你离编写 JIT 还很远，而 GC 也不是你的首要问题。这篇文章中的技术很容易理解——没有 SSA、没有 GC、没有字节码、没有机器码——但它们却实现了惊人的 16 倍速度提升（如果包括未完成的 Yolo-C&#43;&#43; 移植，则为 67 倍），并将我的微型解释器带入了 QuickJS、CPython 和 Lua 的行列。我将在本文中重点介绍的技术是：- 值表示。- 内联缓存。- 对象模型。- 观察点（Watchpoints）。- 经过常识优化。评估方法为了评估我的进度，我创建了一个名为 ScriptBench1 的基准测试套件。它将经典的语言基准测试移植到了 Zef：- Richards（操作系统调度程序）- DeltaBlue（约束求解器）- N-Body（物理模拟）- Splay（二叉树测试）</p>
+
+<p><a href="https://fitzgen.com/2024/02/06/safe-gc.html">安全 GC</a><br>许多人，包括我自己在内，已经为 Rust 实现了垃圾回收（GC）库。Manish Goregaokar 几年前对这个领域做了一次精彩的调查。这些库旨在为其用户提供一个安全的 API：一个不含 unsafe 的接口，稳健地封装并隐藏了库内部的 unsafe 代码。唯一的例外是它们枚举用户定义的 GC 类型的外向 GC 边的机制，因为枚举失败可能导致收集器认为某个对象不可达并将其回收，尽管用户仍然持有对该已回收对象的引用，从而导致释放后使用（use-after-free）错误。此功能通常作为用户实现的 unsafe trait 暴露，因为维护此特定的关键安全不变性是用户的责任，而不是库的责任。然而，尽管提供了安全的接口，所有这些库在其内部实现中都大量使用了 unsafe 代码。我一直相信编写一个没有任何 unsafe 代码的垃圾回收库是可能的，也没有人反驳过我的断言，但从未有过构造性证明。所以，最后，我创建了 safe-gc crate：一个零 unsafe 代码的 Rust 垃圾回收库。API 中没有 unsafe。实现中没有 unsafe。它甚至在顶部有一个 forbid(unsafe_code) pragma。话虽如此，safe-gc 并不是一个特别高性能的垃圾回收器。使用 safe-gc要使用 safe-gc，首先我们定义我们的 GC 管理类型，使用 Gc 定义对其他 GC 管理对象的引用，并实现 Trace trait 以向收集器报告每一个 GC 边：</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/22/bobby-holley/#atom-everything">引用 Bobby Holley</a><br>作为我们与 Anthropic 继续合作的一部分，我们有机会将 Claude Mythos Preview 的早期版本应用于 Firefox。本周发布的 Firefox 150 包括对此次初步评估期间发现的 271 个漏洞的修复。我们的经验对于那些摆脱眩晕并开始工作的团队来说是充满希望的。你可能需要重新确定其他所有事情的优先级，以便将无情和单一的目标焦点集中在任务上，但隧道尽头有光。我们为我们的团队如何崛起迎接这一挑战感到非常自豪，其他人也会做到。我们的工作还没有完成，但我们已经转危为安，可以瞥见一个比仅仅跟上现状要好得多的未来。防守者终于有机会决定性地获胜了。— Bobby Holley, CTO, Firefox</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/22/changes-to-github-copilot/#atom-everything">GitHub Copilot 个人计划的变更</a><br>在 Claude Code 出现短暂的 100 美元/月费用风波（目前它们已经撤销了）的同一天，这是关于 GitHub Copilot 定价的最新消息。与 Anthropic 不同，GitHub 发布了关于其变更的官方公告，包括收紧使用限制、暂停个人计划的注册（！）、将 Claude Opus 4.7 限制在更昂贵的 39 美元/月的“Pro&#43;”计划中，并完全取消了之前的 Opus 模型。关键段落：智能体工作流从根本上改变了 Copilot 的计算需求。长时间运行的并行化会话现在经常消耗远超原始计划结构所能支持的资源。随着 Copilot 的智能体能力迅速扩展，智能体正在做更多的工作，越来越多的客户达到了旨在维护服务可靠性的使用限制。人们很容易忘记，仅仅六个月前，重度 LLM 用户消耗的 token 数量要少一个数量级。编码智能体消耗了大量的计算资源。Copilot 在智能体中也是独一无二的（我相信），它是按请求收费，而不是按 token 收费。（修正：Windsurf 也曾采用这种计费系统，但他们在上个月放弃了）。这意味着消耗更多 token 的单一智能体请求直接侵蚀了他们的利润。最近的定价方案通过基于 token 的会话和每周使用限制来解决这个问题。我对这个公告的一个问题是，它没有明确澄清名为“GitHub Copilot”的哪个产品受到这些变更的影响。</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-everything">Claude Code 会涨价到 100 美元/月吗？可能不会——这一切非常令人困惑</a><br>Anthropic 今天悄悄（是静默地，没有任何公告）更新了他们的 claude.com/pricing 页面（但没有更新他们的“选择 Claude 计划”页面，那是我在 Google 上首先看到的），增加了这个微小但重要的细节（箭头是我加的，而且它已经被撤销了）：Internet Archive 昨天的副本显示那里有一个勾选框。Claude Code 曾经是 20 美元/月 Pro 计划的功能，但根据新的定价页面，它现在是 100 美元/月或 200 美月 Max 计划的专属功能。更新：不要错过这篇博文的更新，他们在该变更上线几个小时后就已经改变了方针。这到底是怎么回事？不出所料，Reddit、Hacker News 和 Twitter 全部炸开了锅。我第一次看到截图时自己都不相信——除了定价网格，我在任何地方都找不到 Anthropic 的公告。然后 Anthropic 的增长主管 Amol Avasare 发推文说：为了澄清，我们正在对约 2% 的新专业用户注册进行小规模测试。现有的 Pro 和 Max 订阅者没有受到影响。</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-everything">那只拿着火腿电台的浣熊在哪里？（ChatGPT Images 2.0）</a><br>OpenAI 今天发布了 ChatGPT Images 2.0，这是他们最新的图像生成模型。在直播中，Sam Altman 表示从 gpt-image-1 到 gpt-image-2 的飞跃相当于从 GPT-3 到 GPT-5 的跳跃。以下是我对其进行的测试。我的提示词：做一个“沃尔多在哪里”风格的图像，但主题是“那只拿着火腿电台的浣熊在哪里”gpt-image-1首先作为基准，这是我直接从 ChatGPT 使用旧的 gpt-image-1 得到的：我无法找到那只浣熊——我很快意识到在“沃尔多在哪里”风格的图像上测试图像生成模型可能会非常令人沮丧！我尝试让 Claude Opus 4.7 凭借其新的更高分辨率输入来解决它，但由于图像左上角的说明卡片，它确信有一只它找不到的浣熊：是的——图片中至少有一只浣熊，但它藏得非常好。在我仔细扫描缩放部分后，老实说，我无法明确发现一只拿着火腿电台的浣熊。Nano Banana 2 和 Pro接下来我尝试了 Google 的 Nano Banana 2，通过 Gemini。</p>
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research">下一代 Gemini 深度研究</a><br>Deep Research Max：自动研究智能体的阶跃变化2026 年 4 月 21 日基于 Gemini 3.1 Pro 构建，全新的深度研究智能体带来了 MCP 支持、原生可视化以及在网络或自定义源的长视野研究工作流中前所未有的分析质量。Lukas Haas, Google DeepMind 产品经理Srinivas Tadepalli, Google DeepMind 项目经理</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amo</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
+
+<p><a href="https://github.com/guohuiyuan/go-music-dl">guohuiyuan/go-music-dl</a><br>一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10&#43; 个主流平台，支持多源</p>
+
+<p><a href="https://github.com/e2b-dev/infra">e2b-dev/infra</a><br>Infrastructure that&#39;s powering E2B Cloud.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

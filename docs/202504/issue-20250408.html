@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250408.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250408</span>
+</p>
+<p>每日一谚：Do not write code that you think is fast; measure it. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/epYYHK2wVgu7RmLxqH1zWw">TIOBE 4月榜：Go语言历史性突破3%！官方下场AI，Gopher们见证新纪元</a><br>根据全球权威编程语言排行榜TIOBE最新发布的2025年4月榜单，我们挚爱的Go语言市场份额首次历史性地突破了3%大关，达到了3.02%！更令人兴奋的是，就在社区热议Go在AI基础设施领域潜力之时，Go官方团队核心成员公开表示，正准备投入资源，开发和支持一个官方的Go MCP SDK，并已与Anthropic等公司展开讨论！这不仅是TIOBE排名的里程碑，更是Go语言正式迈向AI核心生态、拥抱未来的强力宣言</p> 
+
+<p><a href="https://rezakhademix.medium.com/how-i-scaled-a-golang-app-to-handle-1-5m-requests-per-minute-7fb706d9119d">我如何扩展Go应用程序以每分钟处理 150 万个请求</a><br>作者是一位 Go 语言开发者，分享了其将 Go 应用程序扩展到每分钟处理 150 万个请求的经验。文章重点介绍了避免使用 ORM、异步模式、缓存和缓存未命中风暴处理、数据库优化以及可观察性等关键技术和策略。</p> 
+
+<p><a href="https://medium.com/@lucas01/insights-and-optimizations-from-benchmarking-frameworks-a089bf44320">使用 Go 降低 70% 的基础设施成本：Go、NextJS、Java 和 GraalVM 的基准测试</a><br>微服务架构中，使用饱和度和延迟等指标进行可观测性是理解和改进应用程序性能的关键组成部分。虽然算法和代码优化通常对这些指标影响最大，但很少有参考资料探讨语言框架本身的效率。本文通过评估用 Java、Go、Kotlin 和 Node.js 实现的基本 REST API 来提供更广泛的基准测试视角。我们将使用作者开发的 Benchmark API 来衡量饱和度和延迟指标，并探讨我们将在此处讨论的场景中可能的性能优化。文章末尾提供了完整的测试结果。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/apis-design-imperfectly-improve-relentlessly-b3469946-baed-434d-8446-3d37b6821be0">Fallthrough | API：不完美的设计，持续改进</a><br>本期节目中，Kris 和 Ian 邀请了 Jamie Tanna 来讨论 API 设计。从创建 API 理论，到构建其基础，再到在设计过程中积极进行原型设计，小组讨论了他们多年来在设计高质量 API 中的经验教训。最后，他们分享了一些不受欢迎的观点，并额外展示了他们制作本播客节目的幕后花絮。支持者可以收听扩展版对话，内容包括未完成的讨论、更多关于播客制作的细节，以及 Kris 反对使用 REST 的论点！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/04/07/kubecon-cloudnativecon-europe-2025-day-three-keynote-recap/">KubeCon &#43; CloudNativeCon欧洲2025：第三天主题演讲回顾</a><br>KubeCon &#43; CloudNativeCon欧洲2025的最后一天，与会者们兴致勃勃地学习了关于大型语言模型（LLM）、5G和6G等尖端主题的最新信息。以下是主题演讲的概要：
+
+* **大型语言模型感知的Kubernetes负载均衡：一个新的效率时代**：谷歌杰出工程师Clayton Coleman和字节跳动软件工程师Jiaxin Shan介绍了如何利用两个基本原则来自动化GenAI服务的许多工作：对传入的LLM请求的成本进行建模，并确定将其发送到后端将如何影响其他请求的延迟；通过持续收集指标来构建每个后端的实时性能快照，以便捕获硬件、并发性和客户端可见延迟之间的复杂关系。他们的预测：2025年将是生产规模化的一年。
+
+* **电信中的云原生演进：5G、6G及以后！**：来自爱立信软件工程的Faseela K、沃达丰的Tom Kivlin、Orange的Philippe Ensarguet和Swissccom的Joel Studler组成的专家小组讨论了该行业需要进行文化转变，并且科技公司需要采用云原生工具才能最大限度地提高生产力。“我们今天解决的每一个问题都会减少明天的技术债务。”
+
+* **拨开迷雾：阐明云原生中的《网络安全法案》合规性**：Sonatype的OSPO负责人Eddie Knight和Kusari的首席技术官Michael Lieberman讨论了旨在保护消费者和企业免受具有数字元素的产品网络安全威胁的《网络安全法案》（欧盟立法）。
+
+* **221B云原生街**：CERN的计算工程师Ricardo Rocha和苹果的高级现场工程师Katie Gamanji代表CNCF技术指导委员会（TOC）发表了演讲。在其他努力中，TOC启动了TAG重启计划，旨在扩展TAG并为云原生的下一个十年做好准备。TOC还确定了一些我们认为将塑造我们生态系统未来趋势的差距，包括多集群管理、成本管理和可持续性，以及围绕基础设施供应和密钥管理的工具。
+
+* **光速下的科学：用于天文工作负载的云原生基础设施**：EPFL的系统专家Carolina Lindqvist谈到了平方公里阵列（SKA）。SKA有三个站点——一个望远镜在南非，一个在澳大利亚，总部在英国——12个成员国，每年产生600 PB的数据！该项目有各种各样的科学目标。
+
+想要体验更多KubeCon &#43; CloudNativeCon欧洲2025的第三天内容？[观看视频！](https://www.linkedin.com/posts/cloud-native-computing-foundation_kubecon-cloudnativecon-activity-7313952932893188096-gvBL? )</p>
+
+<p><a href="https://kubernetes.io/blog/2025/04/07/introducing-kube-scheduler-simulator/">Kube-scheduler-simulator 简介</a><br>Kubernetes 调度器是控制平面中一个至关重要的组件，它决定 Pod 将运行在哪个节点上。因此，任何使用 Kubernetes 的人都依赖于调度器。kube-scheduler-simulator 是 Kubernetes 调度器的模拟器，它最初是由 Kensei Nakada（Tetrate）在 2021 年的 Google Summer of Code 项目中开发的，后来又收到了很多贡献。此工具允许用户仔细检查调度器的行为和决策。它对使用调度约束（例如 Pod 间亲和性）的普通用户和使用自定义插件扩展调度器的专家都非常有用。</p>
+
+<p><a href="https://blog.ferretdb.io/20-must-try-mongodb-queries-operations-ferretdb">20 个 FerretDB 中必试的 MongoDB 操作和查询</a><br>FerretDB v2.0 GA 版本的发布使其性能更上一层楼，带来了更深层次的 MongoDB 兼容性，使更多高级工作负载能够运行针对大多数用例的复杂查询。本文将深入探讨 20 个在 FerretDB 上运行的 MongoDB 功能和操作，涵盖身份验证、索引、聚合操作、地理空间查询等。</p>
+
+<p><a href="https://blog.gitbutler.com/20-years-of-git">Git 的 20 年：依然古怪，依然精彩</a><br>二十年前，Git 诞生了。这个不太可能的“信息管理器”是如何征服世界的？本文回顾了 Git 的早期历史，以及作者 Scott Chacon 与 Git 的不解之缘，并探讨了 Git 的未来。</p>
+
+<p><a href="https://queue.acm.org/detail.cfm?id=3722542">开源软件供应链安全五十年</a><br>本文探讨了开源软件供应链安全领域50年来的挑战与进展。文章从1974年美国空军对Multics系统的安全评估报告开始，对比了当时和如今软件供应链攻击的共通之处，指出软件供应链安全问题具有根本性，没有简单的答案。文章提出了改进防御措施的几个方法，包括软件身份验证、构建可重复性、快速发现和修复漏洞、以及预防漏洞。文章还强调了开源软件资金不足的问题，并以xz攻击为例说明了资金不足如何使开源项目容易受到恶意行为者的攻击。文章最后呼吁业界共同努力，改进开源软件供应链安全。</p>
+
+<p><a href="https://thenewstack.io/how-ai-is-reshaping-ciso-priorities">AI 如何重塑首席信息安全官的优先级</a><br>尽管生成式 AI 可能带来安全挑战，但它也为改进软件开发流程的安全性提供了机会。</p>
+
+<p><a href="https://tedium.co/2025/04/06/gumroad-open-source-doge-drama">Gumroad 的“开源”策略时机耐人寻味</a><br>创作经济服务平台 Gumroad 在一个非常巧合的时机宣布开源其平台（甚至“开源”的说法都有些牵强）。文章指出，Gumroad 的开源许可证并非真正意义上的开源，并且其客户支持几乎完全依赖于大型语言模型，这引发了用户的担忧。此外，文章还揭露了 Gumroad CEO Sahil Lavingia 在同一天被曝出为 DOGE（狗狗币）在退伍军人事务部工作，这更加引发了人们对 Gumroad 的质疑。文章最后建议创作者们考虑更多地依靠自己托管的工具，减少对平台的依赖。</p>
+
+<p><a href="https://newsletter.scalablethread.com/p/how-to-handle-sudden-bursts-of-traffic">如何处理突发的流量高峰或“惊群效应”？</a><br>本文介绍了避免因突发流量高峰导致潜在故障的技术，包括指数抖动和重试、请求排队、负载均衡和限流等方法，并配图说明。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://hai.stanford.edu/ai-index/2025-ai-index-report">2025 AI 指数报告 | 斯坦福大学人本人工智能研究所</a><br>斯坦福大学人本人工智能研究所 (HAI) 发布了 2025 年 AI 指数报告。该报告全面评估了人工智能的进展，涵盖了研发、技术性能、经济、教育、政策、治理、多样性、公众意见等多个方面。报告指出，人工智能的性能在不断提高，并在日常生活中得到越来越广泛的应用；商业领域对人工智能的投资和使用也在加速，研究表明人工智能提高了生产力；美国仍然在生产顶级 AI 模型方面处于领先地位，但中国正在缩小差距；负责任的 AI 生态系统发展不平衡；全球对人工智能的乐观情绪正在上升，但地区差距依然存在；人工智能变得更高效、更经济实惠且更易于获取。报告还涵盖了人工智能对科学的影响，并指出复杂的推理仍然是一个挑战。</p>
+
+<p><a href="https://blog.vllm.ai/2025/04/05/llama4.html">vLLM 中的 Llama 4</a><br>我们很高兴地宣布 vLLM 现在支持 Llama 4 系列模型：Scout (17B-16E) 和 Maverick (17B-128E)。您可以通过更新到 v0.8.3 或更高版本，立即在 vLLM 中运行这些功能强大的长上下文、原生多模态（最多可支持 8-10 张图像，效果良好）混合专家模型。该文章提供了使用指南，包括在不同硬件配置（8x H100 和 8x H200 GPU）上的使用命令，以及多模态、性能优化和长上下文方面的技巧，还包含了对模型架构和集群规模服务的讨论以及对Meta团队和AMD团队的感谢。</p>
+
+<p><a href="https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks">MCP安全通知：工具投毒攻击</a><br>Invariant发现了一个模型上下文协议（MCP）中的严重漏洞，允许所谓的“工具投毒攻击”。Anthropic和OpenAI等许多主要提供商、Zapier等工作流程自动化系统以及Cursor等MCP客户端都容易受到此攻击。攻击者可以嵌入隐藏指令来操纵AI模型执行未经授权的操作，例如提取敏感数据（如SSH密钥、配置文件、数据库等）并将其传输，同时向用户隐藏这些操作。文章详细解释了攻击向量、影响和缓解策略，并建议用户在连接到第三方MCP服务器时谨慎操作，并实施安全措施以保护敏感信息。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/owasp-amass/amass">owasp-amass/amass</a><br>In-depth attack surface mapping and asset discovery</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>Headless cloud-native authentication and identity management written in Go. Scales to a billion&#43; users. Replace Homegrown, Auth0, Okta, Firebase with better UX and DX. Passkeys, Social Sign In, OIDC, Magic Link, Multi-Factor Auth, SMS, SAML, TOTP, and more. Runs everywhere, runs best on Ory Network.</p>
+
+<p><a href="https://github.com/JanDeDobbeleer/oh-my-posh">JanDeDobbeleer/oh-my-posh</a><br>The most customisable and low-latency cross platform/shell prompt renderer</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a><br>MCP server for Grafana</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript - https://k6.io</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

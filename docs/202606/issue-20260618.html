@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260618.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260618</span>
+</p>
+<p>每日一谚：Don&#39;t use cgo unless absolutely necessary. It has real costs </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/18/why-choose-go-over-rust-today-in-ai-age">在 AI 编码时代，为什么我们依然选择 Go 而不是 Rust？</a><br>既然 AI 已经帮我们消灭了 Rust 的学习和编写门槛，今天我们为什么还要选择 Go？</p> 
+
+<p><a href="https://www.bud1m.com/blog/go-empty-struct/">Go中的struct{}为何占用零字节</a><br>Go的空struct{}为何占用零字节 - 所有实例共享相同的零基址，以及需要注意的陷阱。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/17/why-cloud-native-belongs-at-the-heart-of-agentic-ai-lessons-from-building-a-multi-agent-security-platform-on-kubernetes/">为什么云原生应处于智能AI的核心：在Kubernetes上构建多智能体安全平台的经验</a><br>背景：一个保护受监管生产环境的内部实时安全操作平台，目前正处于积极开发阶段并正在部署中。用于智能体间协调的A2A协议（于2025年开源，现由Linux基金会管理）。</p>
+
+<p><a href="https://tailscale.com/blog/azure-blob-storage-streaming">将Tailscale日志发送到Azure Blob Storage</a><br>将Tailscale日志与您的其他安全数据保存在一起。</p>
+
+<p><a href="https://p99conf.io/2026/06/17/http-server-on-thread-per-core/">在每核线程框架上构建HTTP服务器，无需Async/Await</a><br>如何在没有async/await或协程的情况下构建生产级HTTP服务器。编者注：这是一篇由Peter Mbanugo撰写的客座文章。Peter将在P99 CONF 2026上发表演讲，主题是：无三难困境的多核：摆脱Async/Await、互斥锁和GC。</p>
+
+<p><a href="https://xeiaso.net/notes/2026/anubis-wasm-vendor-binary/">我讨厌编译器</a><br>阿努比斯即将引入基于 WebAssembly 的工作证明机制，这样管理员就可以使用非 SHA256 工作证明方法来保护他们的网站。这项工作的部分目标是让检查逻辑在客户端和服务器上都集中在一个地方定义。这样一来，客户端和服务器就可以协同工作，确保它们运行的一致性。</p>
+
+<p><a href="https://www.thesignalist.io/s/the-dialogue-dividend/">对话红利</a><br>我记得几年前与一位同事坐在一起。</p>
+
+<p><a href="https://rustfoundation.org/media/on-openais-support-for-rust/">关于OpenAI对Rust的支持</a><br>Rust基金会很高兴地宣布OpenAI对Rust的支持。</p>
+
+<p><a href="https://www.phoronix.com/news/GCC-17-std-CPP29-Experimental">GCC 17为C&#43;&#43;29提供初始基础设施 - Phoronix</a><br>GCC 17为C&#43;&#43;29提供了初始基础设施。</p>
+
+<p><a href="https://gaultier.github.io/blog/I_sped_up_the_test_suite_by_x2.html">不要在测试中运行SQL迁移：我将测试套件速度提高了2倍</a><br>不要在测试中运行SQL迁移：我将测试套件速度提高了2倍。</p>
+
+<p><a href="https://pranitha.dev/posts/rust-and-memory-allocators/">你的Rust服务没有泄漏 - 可能是分配器的问题</a><br>工作中的Rust服务在负载测试时遇到了内存激增并保持不变的问题。</p>
+
+<p><a href="https://clickhouse.com/blog/the-open-ecosystem-around-clickhouse">ClickHouse周围的开放生态系统</a><br>ClickHouse周围的开放生态系统。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything">GLM-5.2可能是最强大的纯文本开源权重LLM</a><br>GLM-5.2在每个任务上使用的输出令牌比其他领先的开源权重模型更多：该模型在每个智能索引任务上使用43k输出令牌，高于GLM-5.1以及MiniMax-M3、Kimi K2.6和DeepSeek V4 Pro。</p>
+
+<p><a href="https://www.greptile.com/blog/trex-code-execution">构建TREX：AI代码审查的代码执行和工件生成 | Greptile</a><br>构建TREX：AI代码审查的代码执行和工件生成。</p>
+
+<p><a href="https://arxiv.org/abs/2606.15991">[2606.15991] GPU上的无畏并发</a><br>GPU上的无畏并发。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mvanhorn/cli-printing-press">mvanhorn/cli-printing-press</a><br>Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compou</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/getlago/lago">getlago/lago</a><br>Open Source Metering and Usage Based Billing API ⭐️ Consumption tracking, Subscription management, Pricing iterations, Payment orchestration &amp; Revenue analytics</p>
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>Self-hosted, lightweight server and website monitoring and O&amp;M tool</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/asheshgoplani/agent-deck">asheshgoplani/agent-deck</a><br>Terminal session manager for AI coding agents. One TUI for Claude, Gemini, OpenCode, Codex, and more.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

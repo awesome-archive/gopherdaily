@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260108.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260108</span>
+</p>
+<p>每日一谚：Make the zero value useful </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/08/how-claude-code-works">拆解 Claude Code：Coding Agent 终于“能用”背后的架构真相</a><br>这不是一篇 Anthropic 的官方通稿。本文基于 PromptLayer 创始人 Jared Zoneraich 的深度逆向工程与实战分享。我们扒开了 Claude Code 的外衣，试图还原 Coding Agent 从“玩具”进化为“神器”的技术跃迁路径。</p> 
+
+<p><a href="https://blog.thibaut-rousseau.com/blog/the-most-popular-go-dependency-is">最流行的 Go 依赖项是…… </a><br>这篇文章揭示了 Go 社区中最流行的依赖项是 `testify`，并详细介绍了作者如何通过抓取 Go 模块代理（goproxy.org）的索引数据，利用 Neo4j 图数据库来构建和分析整个开源 Go 生态系统的依赖关系图。作者分享了数据收集的方法（从最初的 Git 克隆到使用代理索引），数据库建模（节点和关系），以及使用 Cypher 查询语言进行图分析的示例，包括查找直接和间接依赖项，以及列出前 10 大最常用的依赖项。最终结果显示 `github.com/stretchr/testify` 以超过 25 万个最新依赖项的数量遥遥领先。</p> 
+
+<p><a href="https://tonybai.com/2026/01/08/databases-in-2025-a-year-in-review">PostgreSQL 吞噬世界，MongoDB 起诉 Go 开源项目：2025 数据库年度盘点</a><br>数据库领域的“毒舌”，CMU教授 Andy Pavlo 再次发布了他的年度回顾（虽然这次是站在 2026 年初的回望）。2025 年对于数据基础设施是疯狂的一年：PostgreSQL 继续确立其霸主地位，引发了巨头间的收购狂潮；AI Agent 通过 MCP 协议正式接管数据库交互；而 Go 社区熟知的 FerretDB 则陷入了与 MongoDB 的法律泥潭。本文将为你深度梳理这份报告背后的技术趋势与行业信号。</p> 
+
+<p><a href="https://devblogs.microsoft.com/cosmosdb/build-ai-tooling-in-go-with-the-mcp-sdk-connecting-ai-apps-to-databases">使用 MCP SDK 在 Go 中构建 AI 工具 - 将 AI 应用连接到数据库</a><br>了解如何使用面向 Go 开发人员的 MCP SDK 将 AI 应用程序与 Azure Cosmos DB 连接起来，并增强您的项目。本文详细介绍了 MCP Go SDK 的基础知识，包括如何定义工具、实现处理程序、管理身份验证、选择传输方式以及编写集成测试，这些模式可应用于任何 MCP 服务器的构建。</p> 
+
+<p><a href="https://chris-besch.com/articles/forgejo_actions_notification">Forgejo Actions 通知的开发历程分享</a><br>本文记录了作者在 Forgejo 上的开发故事，包括 Go 项目的结构、Forgejo 的分层架构和发布-订阅（pub-sub）模式的意义，并详尽解释了如何为 Forgejo 设置开发环境。作者主要分享了为 Forgejo 贡献添加 CI Workflow 失败时邮件和 Webhook 通知功能的经历，涉及代码结构理解、依赖处理以及多个 Pull Request 的实现过程。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.salesforce.com/migration-at-scale-moving-marketing-cloud-caching-from-memcached-to-redis-at-1-5m-rps-without-downtime/">大规模迁移：在 150 万次/秒的请求下，将营销云缓存从 Memcached 迁移到 Redis 而无需停机</a><br>探索 Salesforce 如何在实时生产流量下执行零停机迁移，如何在大规模情况下管理 Redis 的热点键压力，以及更多内容。文章详细介绍了迁移过程中为保持功能奇偶性、解决 TTL 语义差异、处理热键性能限制和设计动态缓存路由器的策略和验证过程，最终实现了 P50 延迟接近 1 毫秒和 P99 延迟约为 20 毫秒的稳定性能。</p>
+
+<p><a href="https://dolthub.com/blog/2026-01-07-how-to-version-control-a-database/">如何对数据库进行版本控制</a><br>这篇文章讨论了数据库和版本控制的设计空间，旨在解释 Dolt 的数据库版本控制是如何工作的。文章首先探讨了版本控制数据库的要求，包括规模和性能、快速的细粒度差异（diff）以及结构共享。然后，它深入探讨了数据库存储架构（搜索树和页面）以及版本控制的两种主要方法：检查点和补丁（Checkpoints and Patches）与内容寻址（Content-Addressing）。最后，文章评估了“快照和日志”的实现方式，并重点介绍了基于内容寻址的“Prolly Trees”（Dolt 使用的结构），认为这是提供数据库版本控制的唯一可行方法。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/07/holmesgpt-agentic-troubleshooting-built-for-the-cloud-native-era/">HolmesGPT: 专为云原生时代构建的代理式故障排除工具</a><br>如果您曾调试过生产事件，您会知道最难的部分通常不是修复，而是找到从何入手。大多数值班工程师会花费数小时拼凑线索，在时间压力下挣扎，并试图理解分散的数据。HolmesGPT 是一个开源的 AI 故障排除代理，专为 Kubernetes 和云原生环境构建。它结合了可观察性遥测、LLM 推理和结构化运行手册，以加速根本原因分析并以自然语言提供明确的、数据支持的诊断和修复建议。
+
+HolmesGPT 架构可扩展，允许贡献者添加新的工具集、评估和运行手册，确保数据隐私，并可以在本地或集群内部署。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/01/07/kubernetes-v1-35-csi-sa-tokens-secrets-field-beta/">Kubernetes v1.35：用于将服务账户令牌传递给 CSI 驱动程序的更好方法</a><br>Kubernetes v1.35 为维护使用服务账户令牌的 CSI 驱动程序的管理员带来了一项改进。为了解决将敏感的 JWT 令牌通过不适合的 &lt;code&gt;volume_context&lt;/code&gt; 字段传递的问题，v1.35 引入了一个 Beta 解决方案：CSI 驱动程序可以通过 &lt;code&gt;secrets&lt;/code&gt; 字段选择加入，以通过 &lt;code&gt;NodePublishVolumeRequest&lt;/code&gt; 接收服务账户令牌。此更改使用 CSI 规范中专为敏感信息设计的字段，同时通过默认值保证了向后兼容性。</p>
+
+<p><a href="https://tidesdb.com/articles/what-i-learned-building-a-storage-engine-that-outperforms-rocksdb">我从构建一个超越 RocksDB 的存储引擎中学到的经验</a><br>本文总结了作者在构建 TidesDB（一个嵌入式键值存储引擎）的过程中所吸取的经验教训。TidesDB 在性能上超越了 RocksDB，主要归功于无锁并发、自适应的合并（Compaction）策略（借鉴了 Spooky 研究）和积极的内存缓存策略。作者强调了从第一原理设计系统的价值，并详细介绍了无锁结构、WiscKey 风格的键值分离、动态容量适应（DCA）在降低写放大和减小存储空间方面的作用，以及如何在 C 语言中实现高性能、跨平台和 ACID 事务（包括 SSI 隔离级别）。</p>
+
+<p><a href="https://grafana.com/blog/how-to-use-ai-to-analyze-and-visualize-can-data-with-grafana-assistant">如何使用 Grafana Assistant 分析和可视化 CAN 数据</a><br>本文介绍了如何利用 Grafana Assistant 轻松释放人工智能 (AI) 的强大功能，直接在 Grafana 内部进行数据分析和仪表板可视化。文章特别关注了如何利用 AI 来处理和分析大量的 CAN（控制器局域网）数据，解决了工程师在探索和可视化海量、复杂日志文件时面临的挑战。Grafana Assistant 提供了零设置、处理 TB 级数据、数据探索、快速仪表板创建等关键功能，使用户无需具备 SQL 或编码知识即可获得强大的数据洞察。</p>
+
+<p><a href="https://platformengineering.org/blog/10-finops-tools-platform-engineers-should-evaluate-for-2026">2026十大finops平台工具</a><br></p>
+
+<p><a href="https://fhur.me/posts/2026/change-is-the-root-of-all-evil-bugs">变化是所有（邪恶）错误的根源</a><br>作者回顾了十年的软件开发经验，得出一个核心结论：变化是所有错误的根源。无论是依赖项的更新、分布式系统的波动、配置漂移，还是环境差异，这些“变化”是导致许多难以察觉的 Bug 出现的主要原因。许多软件工程实践（如不可变数据结构、纯函数、模块化、稳定API、版本控制、Docker）实际上都是为了管理或限制变化。文章鼓励读者反思自己系统中的变化来源（依赖、基础设施、配置），因为不理解变化，就容易被突如其来的问题所困扰。</p>
+
+<p><a href="https://cilium.io/blog/2025/12/31/tetragon-2025-review">Tetragon: 2025 年终回顾</a><br>Reflections on Tetragon for the year 2025... (关于 Tetragon 在 2025 年的思考和回顾...)</p>
+
+<p><a href="https://www.brentozar.com/archive/2026/01/database-development-with-ai-in-2026">2026年的人工智能数据库开发</a><br>这篇文章讨论了2026年人工智能（AI）对数据库开发和DBA工作可能产生的影响。作者认为，由于SQL语言的稳定性和文档的成熟度，AI在数据库领域（尤其是在报告查询和ETL方面）的应用前景光明，报告工具供应商可能率先整合AI功能。然而，对于大型、复杂的现有遗留数据库，由于文档缺乏和现有工具的局限性，AI在提高工作效率方面的作用在2026年可能仍然有限。作者强调，对于需要高精度和安全性的核心数据库工作，人类专家的角色在短期内仍不可替代，并且他本人承诺不会使用AI生成博客内容，以提供无法从大型语言模型中获得的真知灼见。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/7/adam-wathan/#atom-everything">A quote from Adam Wathan</a><br>一段来自Adam Wathan（Tailwind Labs 首席执行官）的引文，描述了AI对他们业务的“残酷影响”：团队中75%的工程师失业。他表示，他每花一秒钟为社区做免费的事情，就意味着他没有花时间扭转业务，确保仍在职的员工能拿到工资。尽管Tailwind的普及度和使用率创下新高，但其收入却下降了近80%，他认为当前让Tailwind更容易使用与使框架的开发更具可持续性之间没有关联。</p>
+
+<p><a href="https://vibeandscribe.xyz/posts/2026-01-07-emergent-behavior.html">涌现行为：当技能结合时</a><br>这篇文章探讨了将AI模型的不同技能（如代码优化、调试和头脑风暴、前端设计）结合使用时所产生的“涌现行为”。作者通过一个具体的例子，展示了如何结合使用一个优化技能和一个调试技能（oberdebug）来诊断和解决一个macOS窗口管理器中IPC路径的性能瓶颈，从而显著提高了效率。随后，作者还展示了如何将头脑风暴技能与前端设计技能结合，以一种更具设计意识的方式来构思博客本身。核心观点是，组合技能能带来超越单一技能的强大能力和新的发现。</p>
+
+<p><a href="https://cursor.com/cn/blog/dynamic-context-discovery">动态上下文发现</a><br>本文介绍了 Cursor 中采用的“动态上下文发现”模式，它与静态上下文相对，旨在提高代码 Agent 的效率和回复质量。这种模式通过在需要时按需提取相关上下文，而不是预先提供所有细节，来优化 token 使用。具体做法包括：将冗长的工具响应转换为文件、在摘要过程中引用聊天历史、支持 Agent Skills 开放标准、高效加载 MCP 工具以及将集成终端会话视为文件。这些方法显著提高了 Agent 的效率和智能性。</p>
+
+<p><a href="https://www.focusedchaos.co/p/vibe-coding-without-system-design-is-a-trap">Vibe Coding Without System Design is a Trap</a><br>Vibe coding is incredibly powerful, but you still need system design to properly architecture software, otherwise AI will take over, make decisions and limit your ability to build successfully.</p>
+
+<p><a href="https://www.nucleate.dev/blog/ai-makes-exploration-cheap-not-decisions-easy">AI 使探索廉价，但不会让决策轻松</a><br>AI 加速了探索过程，让你能专注于判断。伟大的工作仍然需要“浪费”时间去尝试。区别在于你浪费时间的效率有多快。AI 降低了尝试不同方案的成本，从而让你更快地学习和迭代，但最终的判断和决策仍然需要人类的智慧和经验。</p>
+
+<p><a href="https://www.daily.co/blog/building-voice-agents-with-nvidia-open-models">使用 NVIDIA 开源模型构建语音代理</a><br>使用 NVIDIA 开源模型构建超低延迟的语音代理。了解 Nemotron Speech ASR 如何实现低于 25 毫秒的转录，Nemotron 3 Nano LLM 和 Magpie TTS 如何协同工作，以及如何优化架构以实现实时语音 AI 部署。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/abhinavxd/libredesk">abhinavxd/libredesk</a><br>Modern, open source, self-hosted customer support desk. Single binary app.</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/vllm-project/semantic-router">vllm-project/semantic-router</a><br>System Level Intelligent Router for Mixture-of-Models</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable runtime for building distributed applications across cloud and edge, combining event-driven architecture with workflow orchestration.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/kubernetes-sigs/karpenter">kubernetes-sigs/karpenter</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/containers/kubernetes-mcp-server">containers/kubernetes-mcp-server</a><br>Model Context Protocol (MCP) server for Kubernetes and OpenShift</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

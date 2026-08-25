@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260604.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260604</span>
+</p>
+<p>每日一谚：软件设计有两种方式：一种是尽量简单以至于明显没有缺陷；另一种是尽量复杂以至于没有明显的缺陷。第一种方式要难得多。 — C.A.R. Hoare </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/04/master-new-tech-in-ai-era-counter-intuitive-learning-guide">AI 时代如何真正掌握一门新技术？这份非主流学习指南建议永久收藏</a><br>当AI 能秒出代码、秒给方案时，我们该如何建立属于自己的、不可替代的技术壁垒？如果你的学习方式依然停留在“遇到问题 -&gt; 丢给AI -&gt; 复制粘贴 -&gt; 跑通收工”的循环中，那么你正在主动将自己推向被AI淘汰的边缘。 在这篇文章中，我们将结合这场技术社区的讨论，为你拆解一套在AI时代真正掌握一门新技术（我们以崇尚极简的Go语言为例）的“非主流”学习指南。</p> 
+
+<p><a href="https://tonybai.com/2026/06/04/the-maintainers-dilemma">开源维护者的困境</a><br>如果代码是 AI 写的，审核也是 AI 做的，那么“受保护的分支”究竟是在保护什么？开源社区赖以生存的“人与人的连接”是否会随之消失？前Go 语言核心团队成员、gohugo和Cobra 创始人 Steve Francia 近期撰写了一篇文章，深度剖析了这一“维护者的困境”。</p> 
+
+<p><a href="https://blog.andr2i.com/posts/2026-06-03-web-compression-in-2026-brotli-zstd-and-compression-patterns">2026年Web压缩：brotli、zstd和压缩模式</a><br>Go web服务器压缩技术的实践之旅：静态资源、动态内容、共享字典、训练和流式压缩。对brotli、zstd和gzip进行基准测试。</p> 
+
+<p><a href="https://dubeykartikay.com/posts/go-optimization-pprof/">优化Go TUI：一个真实的pprof案例研究</a><br>我构建了Peacock，一个Go终端JSON日志查看器，但它太慢，无法跟上繁忙的日志流。本文是一份`go tool pprof`的分步指南：读取配置文件，修复最热代码行，重新配置文件，重复操作。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/EmacsCompletion-2026-06">我的GNU Emacs补全设置</a><br>在GNU Emacs中，补全是一个复杂的话题。至少有两种补全方式，包括在 minibuffer 中的补全。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/06/03/inspektor-gadget-results-from-the-first-security-audit/">Inspektor Gadget：首次安全审计结果</a><br>默认强制TCP监听器使用TLS。当守护进程启动没有TLS的TCP监听器时，当前会记录警告并以明文继续。建议要求明确的退出标志。在CI/CD中固定和验证外部依赖。</p>
+
+<p><a href="https://seangoedecke.com/anti-ai-nostalgia/">反AI怀旧和对过去的崇拜</a><br>直接将我的漫画与任何实际文章联系起来感觉不妥，但没有任何例子就做出笼统断言也同样不妥。为了让您了解我在谈论什么，[这里](https://huronbikes.mataroa.blog/blog/i-am-not-a-software-engineer/) [有一些](https://lpcvoid.</p>
+
+<p><a href="https://www.p99conf.io/2026/06/03/why-queues-dont-fix-overload/">为什么队列不能解决过载问题（以及替代方案）</a><br>本文讨论软件系统中背压的物理定律、延迟死亡螺旋，以及为什么无界队列是一个错误。编辑注：这是一篇由Peter Mbanugo撰写的客座文章（最初发布在Peter的博客上）。Peter将在P99 CONF 2026上发表演讲。</p>
+
+<p><a href="https://nesbitt.io/2026/06/03/skills-registry-threat-models.html">技能注册表威胁模型</a><br>超出输入限制的截断。处理清单前一万字符的审查器会在第一万零一个字符处放置恶意指令。</p>
+
+<p><a href="https://letsencrypt.org/2026/06/03/pq-certs">Let&#39;s Encrypt的后量子未来 - Let&#39;s Encrypt</a><br>Let&#39;s Encrypt致力于构建后量子安全的Web PKI。</p>
+
+<p><a href="https://fzakaria.com/2026/06/01/every-byte-matters">每个字节都很重要</a><br>我职业生涯的大部分时间都在使用Java工作。在那段时间里，你习惯于巨大的类。每个新字段的成本很少被考虑。</p>
+
+<p><a href="https://www.copetti.org/writings/consoles/playstation/">PlayStation架构 | 实用分析</a><br>支持图像：模型、主板、图表。模型：原始版、Slim版。</p>
+
+<p><a href="https://mijndertstuij.nl/posts/scale-to-zero-keda-cron-scaler/">使用KEDA将Kubernetes部署扩展到零</a><br>如果您为开发、QA和暂存环境有多集群EKS部署，这些环境通常不需要在凌晨3点运行。没有人使用这些资源，除了可能有一些用于刷新数据的cronjob。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything">Uber限制使用AI工具如Claude Code以控制成本</a><br>这家共享出行巨头限制每位员工每月在每个AI编码工具上的代币支出为1500美元，一位Uber发言人在回应彭博新闻社的询问时表示。这意味着在一个工具上的支出不会影响另一个工具的预算。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/cisco-ai-defense/defenseclaw">cisco-ai-defense/defenseclaw</a><br>Security Governance for Agentic AI</p>
+
+<p><a href="https://github.com/bruin-data/ingestr">bruin-data/ingestr</a><br>ingestr is a CLI tool to copy data between any databases with a single command seamlessly.</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br></p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

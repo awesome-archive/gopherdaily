@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251121.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251121</span>
+</p>
+<p>每日一谚：Libraries are better than frameworks </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/21/why-go-is-quietly-doing-what-rust-couldnt-staying-simple">为什么Go在悄悄地做Rust做不到的事：保持简单</a><br>近日，一篇题为《为什么 Zig 在悄悄地做 Rust 做不到的事：保持简单》的文章在开发者社区引发了热议。文章以其辛辣、富有煽动性的文风，将 Zig 描绘成 Rust 复杂性的“解毒剂”，是“一个终于接受了心理治疗的 C 项目”，并引发了关于“简单性”与“安全性”的深刻辩论。这不禁让我们——作为 Go 社区的观察者——产生了一个有趣的想法：如果我们将文中的主角 Zig，完全替换为 Go，这篇文章的论点是否依然成立？</p> 
+
+<p><a href="https://words.filippo.io/2025-state/">2025 年 Go 密码学发展现状</a><br>我在 2025 年纽约 GopherCon US 上发表了传统的 Go 密码学发展现状演讲。内容涵盖了过去一年中 Go 和密码学的交叉领域所发生的一切。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/r4z2nKZluNnN-ClL59FMfg">【Go 测试之道】02 单元测试（上）：测试的“形状”——用例组织与测试替身</a><br></p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/AlwaysUncodedErrorHandling">总会有办法不编写错误处理代码</a><br>我对 Rust 的 `.unwrap()` 的看法是：无论你做什么，人们总是想要一些便捷的捷径来避免在编程语言中显式地处理错误。然后，人们会在不恰当的地方使用这些捷径，因为人无完人，有时也会犯错。几乎所有流行的编程语言都允许代码以某种方式不处理错误，采取一种乐观的处理方式。如果运气好的话，程序会在运行时发现实际发生的错误。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/docker-model-runner-integrates-vllm/">Docker Model Runner Integrates vLLM for High-Throughput Inference</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/11/20/an-architectural-decision-containers-on-bare-metal-or-on-virtual-machines/">一个架构决策：裸金属或虚拟机上的容器</a><br>构建和运行现代应用程序始于选择 Kubernetes 发行版作为基线。一旦平台团队选择了其编排层，接下来的架构选择之一就涉及该集群将运行的部署架构。容器可以直接部署在裸金属服务器或虚拟机上。本文考察了在裸金属上部署容器与在虚拟机上部署容器的特点、权衡和社区经验。</p>
+
+<p><a href="https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/">Key Transparency Comes to Messenger</a><br></p>
+
+<p><a href="https://www.morling.dev/blog/building-durable-execution-engine-with-sqlite">使用 SQLite 构建持久化执行引擎</a><br>最近，围绕持久化执行 (DE) 引擎出现了很多令人兴奋的事情。DE 的基本思想是获取（可能长时间运行的）多步骤工作流程，例如处理采购订单或用户注册，并使其各个步骤具有持久性。如果流程在运行过程中被打断，例如由于机器故障，DE 引擎可以从最后成功执行的步骤恢复它并驱动它完成。这提出了一个非常有趣的价值主张：关键业务流程的进展得到可靠地捕获，确保它们最终完成。重要的是，当重试失败的流程时，已经成功执行的任何步骤都不会被重复。这有助于确保流程被正确执行（例如，防止库存被两次分配给同一采购订单）、高效（例如，避免重复的远程 API 调用）和确定性。特别受益于此的一类软件是代理系统，或者更广义地说，是任何与 LLM 交互的系统。LLM 调用速度慢且成本高，并且它们的结果是不确定的。因此，在失败后继续代理流程时，希望避免重复任何先前的 LLM 调用。</p>
+
+<p><a href="https://redmonk.com/sogrady/2025/11/07/github-2025">github 2025</a><br></p>
+
+<p><a href="https://bravenewgeek.com/everything-you-know-about-latency-is-wrong">所有的你了解的关于延迟的内容都是错误的</a><br></p>
+
+<p><a href="https://fil-c.org/fugc">Fil-C：令人难以置信的垃圾收集器</a><br>Fil-C 使用名为 FUGC（Fil&#39;s Unbelievable Garbage Collector）的并行并发即时灰色堆栈 Dijkstra 精确非移动垃圾收集器。文章详细介绍了 FUGC 的特性，包括并行性、并发性、即时性、灰色堆栈、Dijkstra、精确性和非移动性。 FUGC 还支持 C 风格、Java 风格和 JavaScript 风格的内存管理，包括释放对象、终结器、弱引用和弱映射。</p>
+
+<p><a href="https://ochagavia.nl/blog/towards-interplanetary-quic-traffic">迈向星际 QUIC 流量</a><br>你有没有想过当从毅力号火星车下载照片到地球时使用什么协议？我以前也没想过，直到 2024 年 4 月，我在互联网上偶然看到一条有趣的消息：我正在寻找一位精通 quic/quinn 的人来帮助我们完成我们的深空 IP 项目。需要兼职顾问。如有兴趣，请私信我。该消息本身很短，而且有点专业术语，所以，我花了一些时间才完全意识到这个项目是关于什么的。</p>
+
+<p><a href="https://www.readwriterachel.com/things-i-learned/2025/11/09/devtools-1.html">Chrome Devtools 的六个你可能不知道的技巧，第 1 部分</a><br>本文介绍了 Chrome Devtools 的六个实用技巧，分为两部分。第一部分涵盖了使用 console.time() 和 console.timeEnd() 进行时间函数计时、监视 DOM 元素的变化以及监听页面上的任何函数。</p>
+
+<p><a href="https://blog.jsbarretto.com/post/actors">我们正在用更糟糕的东西取代 OOP</a><br>OOP 正在领域之间转移，而不是消失。我认为这通常是一件坏事。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Nov/20/nano-banana-pro/#atom-everything">Nano Banana Pro aka gemini-3-pro-image-preview 是最佳的图像生成模型</a><br>紧随周二发布的 Gemini 3 Pro 之后，今天推出的是 Nano Banana Pro，也称为 Gemini 3 Pro Image。我获得了几天的预览访问权限，这是一个令人惊叹的图像生成模型。</p>
+
+<p><a href="https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories">如何编写一个优秀的agents.md</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

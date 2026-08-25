@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250328.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250328</span>
+</p>
+<p>每日一谚：Returning early is a good thing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/03/28/go-mod-verify-tag/">Go模块发布流程再加固：go mod verify -tag提案详解</a><br>近期，Go团队接受了一项备受关注的提案Issue #68669，旨在通过扩展go mod verify -tag命令为模块作者提供一种官方途径来验证他们本地的代码和标签确实与Go生态系统将收录的版本一致。在这一篇文章中，我就根据issue中的内容，来简单介绍一下这一新增安全机制的背景和运作原理。</p> 
+
+<p><a href="https://www.finly.ch/engineering-blog/436253-building-a-real-time-notification-system-in-go-with-postgresql">Finly — 使用PostgreSQL在Go中构建实时通知系统</a><br>本文介绍了如何在 Finly 中使用 PostgreSQL 的 PGNotify 作为轻量级发布/订阅系统来实现实时通知，从而实现动态通知中心，确保在新的通知到达时自动更新并触发吐司通知。这篇文章详细介绍了如何在 Go 中进行设置，并为客户端提供 GraphQL 订阅。</p> 
+
+<p><a href="http://notes.eatonphil.com/2025-03-27-things-that-go-wrong-with-disk-io.html">磁盘IO出错的情况 | notes.eatonphil.com</a><br>本文讨论了在编写读取和写入文件的应用程序（不仅仅是数据库！）时需要记住的一些有趣的情况，尤其是在事务上下文中，您实际关心数据完整性以及就地编辑数据（例如与写时复制相比）时。文章探讨了几种可能发生的情况：写入的数据从未真正写入磁盘；写入的数据被发送到磁盘上的错误位置；读取的数据是从磁盘上的错误位置读取的；磁盘上的数据损坏。并介绍了实际数据系统如何考虑这些情况（它们并不总是考虑所有情况！）。</p> 
+
+<p><a href="https://dagger.io/blog/dagger-shell">容器时代的Shell：Dagger Shell介绍 - Dagger</a><br>Dagger Shell是一个强大的、可编程的CI/CD引擎，它在容器中运行你的流水线——在本地机器上预推送和/或在CI中后推送。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-03-27-server-connections-improved/">Dolt 服务器连接改进</a><br>DoltHub 团队改进 Dolt SQL 服务器的连接管理。新版本引入了 `back_log` 和 `max_connections_timeout_millis` 两个选项，允许更精细地控制服务器连接，避免客户端因等待连接而长时间阻塞。此外，服务器现在会在达到 `max_connections` 或 `back_log` 限制时记录警告信息，并提高了默认的 `max_connections` 值。</p>
+
+<p><a href="https://tailscale.com/blog/network-troubleshooting-kubernetes-security-part-3">Kubernetes 调试和访问控制仍然存在问题（以及如何解决）</a><br>这是我们关于 Kubernetes 安全风险系列文章的第三部分。如果你看不到它，你就无法保护它。我们将探讨为什么 Kubernetes 访问权限过于狭窄，调试不会自动将身份附加到工作负载，以及基于身份的网络如何解决这两个问题。</p>
+
+<p><a href="https://www.pingcap.com/blog/scaling-up-how-easypost-future-proofed-data-infrastructure-distributed-sql/">突破限制：EasyPost 如何通过分布式 SQL 数据库未来证明其基础设施</a><br>EasyPost，一家领先的物流技术公司，在其基础设施团队的带领下，解决了复杂的 MySQL 扩展挑战，并最终选择了 TiDB，一个强大的分布式 SQL 数据库。本文讲述了 EasyPost 如何克服其 32TB MySQL 数据库的局限性，以及 TiDB 的水平扩展能力、MySQL 兼容性、TTL 功能、ACID 事务支持和强大的商业支持如何帮助他们实现这一目标。文章还分享了 EasyPost 在此过程中学到的经验教训，包括热点问题、索引缺失、查询计划、分区性能和 TTL 的使用等方面，并展望了其未来使用 TiDB 的计划。</p>
+
+<p><a href="https://www.haproxy.com/blog/load-balancing-vmware-horizons-udp-and-tcp">使用 HAProxy 对 VMware Horizon 的 UDP 和 TCP 流量进行负载均衡 | HAProxy Technologies</a><br>了解如何使用 HAProxy 的无状态粘性来平衡 VMware Horizon 复杂 UDP 和 TCP 流量。提高远程桌面性能和可靠性。</p>
+
+<p><a href="https://blog.heroku.com/using-github-actions-heroku-flow-additional-security-control">使用 GitHub Actions 和 Heroku Flow 加强安全控制</a><br>许多高级用户希望将 GitHub Actions 与其在 Heroku 上的应用程序一起使用。现在，有一种简单的方法可以将这些优秀的系统结合起来，同时满足严格的安全和合规性要求。本文介绍了一种利用 GitHub Actions、Heroku 运行任意工作负载的能力及其强大的平台 API 的方法，解决 GitHub 组织无法配置 Heroku IP 范围的问题。通过将 GitHub Runner 托管在 Heroku 上，您可以实现无缝的 CI/CD 流程，自动化部署，并满足严格的安全要求，所有这些都在 Heroku Pipeline 仪表板体验中进行。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/03/27/istio-the-highest-performance-solution-for-network-security/">Istio：最高性能的网络安全解决方案</a><br>Istio 的环境模式提供的加密吞吐量高于 Kubernetes 生态系统中的任何其他项目。传输中的加密是当今几乎所有 Kubernetes 环境的基本要求。然而，安全性的挑战在于它并非没有成本：它通常涉及复杂性、用户体验和性能之间的权衡。Istio 现在是 Kubernetes 中实现安全零信任网络的最高带宽方式。测试结果显示，Istio 明显领先于其他流行的 Kubernetes 网络安全解决方案。Ztunnel 的性能在最近四个版本中提高了 75%。</p>
+
+<p><a href="https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/coroutines-philosophy">协程的哲学</a><br>本文探讨了协程的优势、使用技巧以及不同视角下的协程概念。作者从客观和主观两个方面阐述了其对协程的热情，并比较了协程与显式状态机、传统线程的优劣。文章详细介绍了各种协程技术，包括生成器、消费者、适配器、协议以及更通用的应用场景，并讨论了协程在不同规模代码中的应用。此外，文章还探讨了协程的几种范式，例如对称的、无栈的协程；可恢复的子程序；以及协作式线程等。最后，文章总结了协程的诸多优点，例如易于清理、可通过命名对象标识程序活动等。</p>
+
+<p><a href="https://blog.frost.kiwi/tunneling-corporate-firewalls">为开发者穿透公司防火墙</a><br>本文介绍了如何在存在代理、防火墙和网络监控的情况下，通过SSH连接到服务器并确保开发工具（如git、scp、rsync和VSCode的SSH集成）正常工作，方法是使用HTTPS隧道技术，并且无需安装新软件或对服务器进行大量修改。文章详细讲解了不同类型的防火墙和代理服务器如何影响SSH连接，以及如何利用HTTP CONNECT方法和HTTPS隧道来绕过这些限制。最后，文章还介绍了如何在Windows系统上配置rsync以支持HTTPS隧道。</p>
+
+<p><a href="https://refactoringenglish.com/chapters/write-blog-posts-developers-read">如何撰写开发者会阅读的博客文章</a><br>作者结合自身九年软件开发博客撰写经验，分享了如何撰写受开发者欢迎的博客文章的技巧。文章指出开发者阅读博客时注意力集中时间短，因此需要在文章开头快速点明主题和读者收益，并建议使用更简洁明了的语言，避免专业术语或生僻概念。此外，文章强调了图片的重要性，建议添加图片、截图、图表或示意图等视觉元素，并建议考虑更广泛的受众，通过改进文章结构和内容，扩大文章的影响范围。最后，作者分享了如何选择合适的平台发布文章，以及如何利用各种方法提升文章的曝光率。</p>
+
+<p><a href="https://blog.cloudflare.com/three-chapters-at-cloudflare-programmer-to-cto-to-board-of-directors">Cloudflare 的三个篇章：程序员到 CTO 再到董事会成员</a><br>作者 John Graham-Cumming 在 Cloudflare 工作 13 年后，宣布加入 Cloudflare 董事会，并辞去 CTO 全职职务。文章回顾了他职业生涯中在 Cloudflare 的一些重要时刻，包括 Universal SSL 的发布、应对 Cloudbleed 事件以及在国际化方面的贡献。  他同时宣布 Dane Knecht 将接任 CTO 职位。作者表示未来将继续以董事会成员身份参与 Cloudflare 的发展，尤其关注 AI 领域。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Mar/28/incomplete-json-pretty-printer/#atom-everything">不完整的 JSON 美化打印工具</a><br>这篇博文介绍了一个不完整的 JSON 美化打印工具。作者遇到日志文件或工具输出的 JSON 数据意外终止的问题，无法进行美化打印以查看内容。因此，作者利用 GPT-4.5 创建了一个能够处理不完整 JSON 的美化打印工具，并通过 Claude 3.7 进行了改进。该工具可以在线使用，并具有移动端友好性、复制到剪贴板和示例数据等功能。作者还分享了使用大型语言模型进行代码开发的经验，并认为这是一个“氛围编码”的完美案例。</p>
+
+<p><a href="https://www.anthropic.com/research/tracing-thoughts-language-model">Antropic破解Claude大模型黑箱</a><br></p>
+
+<p><a href="https://metastable.org/five">AI 将不会改变的五件事</a><br>本文探讨了即使在强大的 AI 出现后，仍然不会改变的五件事：AI 将是多种多样的；恶意 AI 将持续存在；资源分配不均；政治分歧依旧；人类不会沦为 AI 面前的“蚂蚁”。作者认为，尽管存在关于 AI 安全的各种观点，但 AI 的发展不会停止，并且 AI 将在各个领域与人类深度互动，改变人类生活，但不会改变人类社会的一些根本性问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/dolthub/dolt">dolthub/dolt</a><br>Dolt – Git for Data</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为统一格式调用，支持OpenAI、Claude等格式，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/pulumi/pulumi-aws">pulumi/pulumi-aws</a><br>An Amazon Web Services (AWS) Pulumi resource package, providing multi-language access to AWS</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/mailhog/MailHog">mailhog/MailHog</a><br>Web and API based SMTP testing</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/gonum/gonum">gonum/gonum</a><br>Gonum is a set of numeric libraries for the Go programming language. It contains libraries for matrices, statistics, optimization, and more</p>
+
+<p><a href="https://github.com/cadence-workflow/cadence">cadence-workflow/cadence</a><br>Cadence is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

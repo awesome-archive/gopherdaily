@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240811.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-11</span>
+</p>
+<p>每日一谚：Returning early is a good thing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/08/11/understand-functional-programming-in-go">通过Go示例理解函数式编程思维</a><br>一个孩子要尝试10次、20次才肯接受一种新的食物，我们接受一种新的范式，大概不会比这个简单</p> 
+
+<p><a href="https://t.zsxq.com/myX86">WebRTC第一课：网络架构与NAT工作原理(sponsor)</a><br>这半年来都在做一款与webrtc有关的产品，打算写点与webrtc有关的文章，先从网络说起，再说音视频质量，这是第一篇。里面的示例尽量都使用go(结合pion库)来实现。</p> 
+
+<p><a href="https://povilasv.me/how-to-monitor-containerd/">如何监控Containerd</a><br>本文通过探索其基于插件的架构、其核心插件以及如何在 Docker 的 gRPC 服务中收集指标，提供了有关如何监控和排查 containerd（Kubernetes 中使用的一种流行的容器运行时）的全面指南。</p> 
+
+<p><a href="https://medium.com/@ksandeeptech07/dependency-injection-in-go-with-google-wire-a-detailed-guide-62688003609e">Go with Google Wire 中的依赖注入：详细指南</a><br>本文详细介绍了如何使用 Google Wire（一种用于 Go 的编译时依赖注入工具）来管理 Go 应用程序中的依赖关系，从而促进松耦合、可测试性和灵活性。</p> 
+
+<p><a href="https://dev.to/koladev/building-a-music-streaming-service-with-python-golang-and-react-from-system-design-to-coding-part-3-52pm">使用 Python、Golang 和 React 构建音乐流媒体服务：从系统设计到编码第 3 部分</a><br>该系列文章讨论了使用 Python、Golang 和 React 构建音乐流媒体服务的过程，重点介绍了 API 的开发、处理 HTTP 范围请求以及为服务创建系统设计，重点关注安全性、隐私性和可扩展性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://itnext.io/from-yaml-chaos-to-kubernetes-zen-5b9e8242a5cb">从 YAML Chaos 到 Kubernetes Zen</a><br>Pepr 是一种使用 TypeScript 进行 Kubernetes 管理的工具，它简化了管理和安全任务，确保了合规性和安全性，并提供了一种灵活的、以代码为中心的集群管理方法，具有 WebAssembly 支持和扩展功能等功能。</p>
+
+<p><a href="https://www.infoq.com/articles/mastering-long-running-processes/">你完成了吗？掌握现代架构中长时间运行的进程</a><br>本文讨论了软件应用程序中长时间运行的流程的重要性，强调了工作流引擎和流程编排平台的使用，以及需要一个专门的团队来实施这些解决方案，同时还强调了分布式系统的挑战和采用异步通信的重要性。</p>
+
+<p><a href="https://adil.medium.com/how-to-fix-conntrack-table-full-dropping-packets-in-kubernetes-07f561a432aa">How to fix conntrack: table full, dropping packets in Kubernetes?</a><br>The article discusses the issue of &#34; Conntrack &#34;, a component of the Linux kernel&#39;s Netfilter framework, running out of capacity in Kubernetes, and suggests solutions such as increasing the limit, modifying the max value via a daemonset, reducing DNS connections, or using NodeLocal DNS Cache.</p>
+
+<p><a href="https://thenewstack.io/the-linux-users-ultimate-guide-to-text-editors/">Linux 用户的文本编辑器终极指南</a><br>New Stack 提供了 Linux 基本文本编辑器的综合指南，重点介绍了两个流行的选项：vim 和 nano，并提供了如何使用它们的详细说明，包括如何创建、编辑、保存和关闭文本文档。</p>
+
+<p><a href="https://blog.howardjohn.info/posts/netpol-api/">NetworkPolicy：错误的解决方案解决正确的问题</a><br>这篇博文讨论了 Kubernetes 网络策略的问题，强调了 Pod 标签作为身份的局限性、缺乏访问控制以及无法在网络请求中包含 Pod 标签，提出了一种更安全、更可扩展的替代方案，即 ServiceAccount。</p>
+
+<p><a href="https://www.philipotoole.com/rqlite-8-27-loadable-sqlite-extensions-support/">rqlite 8.27：可加载的 SQLite 扩展支持</a><br>最新版本的 rqlite 是一个用 Go 编写的开源分布式关系数据库，它引入了在启动时加载 sqlite 扩展的能力，扩展了数据库的功能，并鼓励社区探索可用的广泛的 sqlite 扩展库。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/08/09/deploying-a-microservices-application-using-helm-on-kubernetes/">在 Kubernetes 上使用 Helm 部署微服务应用程序</a><br>该文档提供了如何在 Kubernetes 上使用 Helm 部署微服务应用程序的指南，包括创建 Helm 图表、管理依赖和设置 Ingress，旨在简化 Kubernetes 应用程序的部署和管理。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.pragmaticengineer.com/klarnas-ai-chatbot/">Klarna 的 AI 聊天机器人：它到底有多大的革命性？</a><br>Klarna 与 OpenAI 合作推出了一款 AI 聊天机器人，该公司声称将消除 2/3 的客户支持职位，但该文章质疑其取代工作的潜力以及对整个 IT 行业的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>一个用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>世界上最快的网站构建框架。</p>
+
+<p><a href="https://github.com/rqlite/rqlite">rqlite/rqlite</a><br>基于 SQLite 构建的轻量级、用户友好型分布式关系数据库。</p>
+
+<p><a href="https://github.com/taubyte/tau">taubyte/tau</a><br>开源分布式平台即服务 （PaaS）。自托管的 Vercel / Netlify / Cloudflare 替代方案。</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>电话号码的信息收集框架</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一种开源的轻量级笔记服务。轻松捕捉和分享您的精彩想法。</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman：用于管理 OCI 容器和 Pod 的工具。</p>
+
+<p><a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a><br>闪电网络守护进程 ⚡️</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，用于使用您想要的任何名称制作本地受信任的开发证书。</p>
+
+<p><a href="https://github.com/teivah/100-go-mistakes">teivah/100-go-mistakes</a><br>📖 100 个错误以及如何避免它们</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>后端大师班：用 Go 构建一个简单的银行服务</p>
+
+<p><a href="https://github.com/owasp-amass/amass">owasp-amass/amass</a><br>深入的攻击面映射和资产发现</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI 网关 |AI 原生 API 网关</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>用于社交和实时游戏和应用程序的分布式服务器。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，穿透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/dolthub/dolt">dolthub/dolt</a><br>Dolt – 用于数据的 Git</p>
+
+<p><a href="https://github.com/hatchet-dev/hatchet">hatchet-dev/hatchet</a><br>分布式、容错的任务队列</p>
+
+<p><a href="https://github.com/cilium/tetragon">cilium/tetragon</a><br>基于 eBPF 的安全可观测性和运行时执行</p>
+
+<p><a href="https://github.com/danvergara/dblab">danvergara/dblab</a><br>每个命令行迷都应该拥有的数据库客户端。</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>用于 git 命令的简单终端 UI</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>高性能、自托管、时事通讯和邮件列表管理器，具有现代仪表板。单个二进制应用程序。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

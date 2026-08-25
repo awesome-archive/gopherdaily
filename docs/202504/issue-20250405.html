@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250405.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250405</span>
+</p>
+<p>每日一谚：Test with the race detector. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.cubed.run/so-why-does-gos-composition-feel-so-speedy-1f3fc2bd146a">Go的组合为何如此高效？</a><br>本文探讨了 Go 语言中组合的优势，特别是结构体嵌入如何提高代码运行速度。作者对比了 Go 的组合方法和传统面向对象语言中的继承，解释了 Go 的组合方法在内存布局和方法调用方面的效率，以及如何利用组合编写更高效的 Go 代码。</p> 
+
+<p><a href="https://t.zsxq.com/LnZxe">Gopher的AI原生应用开发第一课：与LLM OS交互的基础规则(sponsor)</a><br>本文将和大家一起深入探讨与LLM OS沟通的核心机制，解码LLM OS的“说明书” -- 模型规范，理解与其进行有效交互所需遵循的基本规则和结构。这些基本规则、结构与机制主要源于OpenAI提出的Model Spec(模型规范)(当前其他大模型也有自己的规范)。这份规范旨在明确模型行为的指导原则，包括其目标 (Objectives)、规则 (Rules) 和默认行为 (Defaults)，并为我们提供了一套理解和控制模型交互的基础框架。</p> 
+
+<p><a href="https://dev.to/tuna99/why-memory-alignment-matters-in-go-making-your-structs-lean-and-fast-1kfk">Go语言内存对齐的重要性：让你的结构体更精简、更快</a><br>编写Go代码时，很容易忘记底层发生了什么——尤其是在内存布局方面。但是你知道吗，你在结构体中组织字段的方式实际上会膨胀内存，甚至影响性能？让我们深入了解Go语言中的内存对齐机制，以及结构体布局为何比你想象的更重要。文章通过示例和基准测试，展示了优化结构体布局可以节省内存、提高程序速度，并使数据更易于缓存。文章还介绍了使用`go vet -fieldalignment`工具自动检查和改进结构体对齐的技巧。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2025/04/04/celebrating-microsofts-50-years/">庆祝微软 50 周年</a><br>微软董事长兼首席执行官萨提亚·纳德拉在今天的微软 50 周年纪念活动上发表了以下讲话：能够与大家一起庆祝微软 50 周年，我感到非常荣幸。尤其是在这样一个时代，这更令人兴奋。对我来说，这一切始于比尔·盖茨和史蒂夫·鲍尔默，他们今天都与我们同在。我要对你们两位，以及保罗·艾伦表示衷心的感谢，感谢你们对我的个人意义，感谢你们对这家非凡公司的愿景，我很荣幸能成为其中一员。感谢你们的远见卓识、领导才能、热情以及你们构建的我们今天所熟知的微软。一家真正改变了世界的公司。
+
+……（以下为文章摘要，包含了微软50年发展历程、对未来50年的展望，以及对AI创新，特别是Copilot和Azure AI Foundry的介绍）</p>
+
+<p><a href="https://www.docker.com/blog/run-llms-locally/">使用 Docker 在本地运行大型语言模型 (LLM)：模型运行程序快速入门指南 | Docker</a><br>本文介绍了如何使用 Docker 模型运行程序在本地运行大型语言模型 (LLM)，无需复杂的设置或基础设施。Docker 模型运行程序现已推出测试版，它简化了在本地机器上提取、运行和试验 LLM 的过程。它提供了基于 llama.cpp 的集成引擎，支持 Apple 硅芯片上的 GPU 加速，并提供各种预打包模型。文章还提供了使用 CLI 和 Java LangChain4j 集成的示例。</p>
+
+<p><a href="https://antirez.com/news/149">Redis向量集合</a><br>Redis 最近合并了向量集合，这是一种新的集合类型数据结构，类似于有序集合，但使用向量作为分数。它支持添加、删除元素，并根据给定查询向量查找相似元素。该实现利用了 HNSW（Hierarchical Navigable Small World）图，并进行了改进，包括真正的节点删除、改进的连接属性以及线程化向量相似性请求。此外，它还支持量化和过滤功能，并通过 JSON 属性实现高级过滤。作者认为向量集合是一个数据结构，而不是索引，并描述了其在处理大量向量时的组合使用模式。性能测试表明，该实现速度很快。</p>
+
+<p><a href="https://tratt.net/laurie/blog/2025/the_fifth_kind_of_optimisation.html">第五种优化方法</a><br>本文讨论了软件优化的第五种方法——并行化。作者回顾了之前提出的四种优化方法（使用更好的算法、使用更好的数据结构、使用更低级的系统、接受不太精确的解决方案），并指出忽略了并行化这种常用的技术。文章详细解释了并行化的优势，以及在现代多核硬件和编程语言中如何有效且可靠地实现并行化。作者还讨论了多线程编程的挑战，例如同步问题、编译器优化以及不同平台之间的差异，并推荐了Rust语言作为一种易于编写可靠的多线程程序的语言。</p>
+
+<p><a href="https://rethinkingsoftware.substack.com/p/in-retrospect-devops-was-a-bad-idea">回想起来，DevOps是一个坏主意。</a><br>这篇文章讨论了DevOps的演变。作者认为，DevOps 的初衷是合理的，它促进了健康的工程实践，但给它命名是一个错误。将 DevOps 变成一个独立的团队，反而导致了生产环境的再次隔离，这与 DevOps 初衷背道而驰。文章还指出，现代 DevOps 团队构建的内部工具更侧重于限制而非赋能，这与最初信任开发者管理生产环境的理念相悖。最后，作者认为，DevOps 的问题在于将其正式化，而解决方案在于提高操作的透明度和可审查性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://eli.thegreenplace.net/2025/reproducing-word2vec-with-jax/">使用 JAX 复现 word2vec</a><br>这篇文章使用 JAX 重现了 2013 年 Google 研究人员提出的 word2vec 模型的结果，并讨论了使用原始 C 代码进行复现。文章首先简要介绍了词嵌入的概念，然后详细解释了 word2vec CBOW 架构，包括模型结构、数据流和训练过程。文章还提供了 JAX 实现的代码片段，并描述了训练过程，包括数据预处理、子采样、词汇表创建和训练循环。最后，文章演示了如何提取嵌入并查找词相似性，并比较了 word2vec 与现代文本嵌入方法的差异。</p>
+
+<p><a href="https://simonwillison.net/2025/Apr/5/matt-webb/#atom-everything">马特·韦伯的一段话</a><br>博客再次具有小写的“政治”意义。它又回来了。这是一个声明，将你的文字放在一个不受他人算法左右的地方，告诉你什么是成功；当你写博客时，你的文字并非对他人平台价值观的投票。</p>
+
+<p><a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html">E.W.Dijkstra 档案：关于“自然语言编程”的愚蠢之处。(EWD 667)</a><br>这篇论文质疑了使用自然语言进行编程的可行性。作者认为，依赖自然语言会增加编程的复杂性，因为自然语言容易产生歧义，而形式化语言则具有更高的精确性和可操作性。作者以数学史为例，说明了形式化符号系统对数学发展的重要性，并指出自然语言编程可能需要数千年的时间才能达到实用化的程度。最后，作者还指出，西方世界近年来语言能力的下降，也进一步削弱了自然语言编程的可能性。</p>
+
+<p><a href="https://thenewstack.io/building-your-first-model-context-protocol-server">构建你的第一个模型上下文协议服务器</a><br>模型上下文协议 (MCP) 充当中间体，标准化不同工具和服务与语言模型交互的方式。本文介绍了如何构建一个简单的 MCP 服务器，该服务器使用 Node.js 和 TypeScript 与 Stream 的服务集成，并演示了如何将该服务器添加到 Cursor 等客户端。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project.</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a><br>MCP server for Grafana</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/grafana/tempo">grafana/tempo</a><br>Grafana Tempo is a high volume, minimal dependency distributed tracing backend.</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/stakater/Reloader">stakater/Reloader</a><br>A Kubernetes controller to watch changes in ConfigMap and Secrets and do rolling upgrades on Pods with their associated Deployment, StatefulSet, DaemonSet and DeploymentConfig – [✩Star] if you&#39;re using it!</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB — the cloud native, distributed SQL database designed for high availability, effortless scale, and control over data placement.</p>
+
+<p><a href="https://github.com/go-delve/delve">go-delve/delve</a><br>Delve is a debugger for the Go programming language.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models.</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/uber-go/fx">uber-go/fx</a><br>A dependency injection based application framework for Go.</p>
+
+<p><a href="https://github.com/NVIDIA/nvidia-container-toolkit">NVIDIA/nvidia-container-toolkit</a><br>Build and run containers leveraging NVIDIA GPUs</p>
+
+<p><a href="https://github.com/TykTechnologies/tyk">TykTechnologies/tyk</a><br>Tyk Open Source API Gateway written in Go, supporting REST, GraphQL, TCP and gRPC protocols</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

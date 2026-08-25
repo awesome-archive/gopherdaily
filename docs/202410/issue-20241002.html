@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241002.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-02</span>
+</p>
+<p>每日一谚：Start with concrete types first. Let interfaces emerge organically </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/10/02/why-canonical-import-paths-no-longer-necessary-in-go">为什么Canonical Import Path注释在Go中不再必要</a><br>讨论Go中一个已被`淘汰`的历史遗留机制</p> 
+
+<p><a href="https://alxibra.medium.com/why-we-moved-from-ruby-to-golang-an-infrastructure-perspective-140945483688">为什么我们从Ruby迁移到Go：基础设施视角</a><br>在 Alexander Ibrahim 的一篇文章中，从基础设施的角度探讨了从 Ruby 过渡到 Golang 的原因。主要动机是克服与 Ruby 相关的性能和并发瓶颈，特别是由于其全局解释器锁 （GIL） 阻碍了多线程应用程序。Golang 的轻量级 goroutine 和高效的通道提供了卓越的并发处理，从而提高了硬件利用率并减少了服务器实例。此外，与 Ruby 相比，Golang 的内存效率和执行过程中的 CPU 消耗更低，有助于节省成本和简化微服务架构。迁移到 Golang 降低了基础设施成本、简化了管理并提高了可扩展性，这为处理高负载环境的公司带来了显著的优势。</p> 
+
+<p><a href="https://threedots.tech/post/distributed-transactions-in-go/">Go中的分布式事务：先读后试</a><br>本文讨论了在微服务架构中实现分布式事务的复杂性和注意事项，特别是在处理跨多个服务的事务时。它表明，这种方法通常过于复杂，并建议不要这样做，而是建议采用最终的一致性。作者介绍了使用消息和事件驱动模式作为替代方案的概念，解释了如何有效地设计和测试此类系统。Watermill 是一个 Go 库，因其在简化分布式系统中处理事件和消息的过程方面的实用性而受到强调。</p> 
+
+<p><a href="https://philipotoole.com/concurrency-control-in-go-inside-rqlites-custom-synchronization-primitives/">Go中的并发控制：rqlite 的自定义同步原语内部</a><br>本文深入探讨了为 rqlite 开发的同步原语和无竞争数据结构，rqlite 是一个用 Go 编写的轻量级开源分布式关系数据库。这些机制对于并发控制至关重要，尤其是在 rqlite 使用 Raft 共识算法的上下文中。作者介绍了 Check-And-Set 机制来防止快照阻塞，Multi-Reader Single-Writer 机制（允许在保护快照创建的同时允许并发读取），以及 ReadyTarget 来等待特定条件。此外，还提供了 time、bool 和 string 类型的自定义原子包装器，以简化 Go 中的并发处理。本文强调了在开发有效的并发解决方案时，简单性、理解标准库、严格测试和迭代优化的重要性。</p> 
+
+<p><a href="https://packagemain.tech/p/implementing-server-sent-events-in-go">在Go中实现SSE</a><br>服务器发送事件 （SSE） 是一种使用单个 HTTP 连接实现从服务器到客户端的实时单向通信的技术。本文提供了在 Go 中实现 SSE 的指南，重点介绍了其优势，例如简单性、本机浏览器支持、自动重新连接和资源高效使用。该实现包括设置特定的 HTTP 标头、在服务器上创建事件循环以及使用 &#39;http.Flusher&#39; 进行即时数据传输。本文还讨论了 Golang 中 SSE 的最佳实践，包括健壮的错误处理、结构化事件格式化、重新连接策略和负载均衡。此外，它还概述了 SSE 的各种使用案例，例如实时控制面板、实时体育比分、社交媒体源、股票市场股票行情和长时间运行任务的进度指标。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-10-01-dolt_undrop-in-the-wild/">如何恢复已删除的数据库</a><br>DoltHub 的博客文章解释了版本控制的关系数据库 Dolt 如何允许用户使用“dolt_undrop（）”存储过程撤消“删除数据库”操作。此功能对于数据安全至关重要，因为它可以在数据意外丢失的情况下进行审计和恢复。该帖子讲述了一个事件，其中客户不小心删除了数据库，并且不知道“dolt_undrop（）”功能，并尝试重新创建它，从而导致混淆。作者澄清说，&#39;dolt_undrop（）&#39; 可以通过重命名已删除数据库的目录，然后调用存储过程来恢复原始数据库。该博客文章强调了 Dolt 对数据安全的承诺，重点介绍了用于全面数据保护和恢复的 reflog 和 &#39;dolt_revert（）&#39; 等其他工具。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://icepanel.medium.com/how-to-diagram-an-event-driven-architecture-in-icepanel-93392bcb5d35">如何在 IcePanel 中绘制事件驱动架构</a><br>本文提供了有关如何使用 C4 模型绘制事件驱动架构图的全面指南，并通过 MonitorMe 系统的实际示例进行了说明。它解释了从上下文图（描述包括参与者、系统及其交互）到深入研究应用程序中代码的逻辑分组的组件图的进展。该指南进一步讨论了主题的表示形式，提供了两种方法：作为不同的应用程序，这使它们在视觉上突出，但可能导致中心辐射型设计，或作为与技术选择的连接，这避免了中心辐射型设计，但模糊了模型中的主题信息。本文还谈到了 IcePanel 功能的未来扩展，以更好地可视化这些架构。</p>
+
+<p><a href="https://blog.devops.dev/promql-core-concepts-an-illustrated-guide-e40a4194aa42">PromQL 核心概念：图解指南</a><br>本文是揭开 PromQL 神秘面纱的图解指南，PromQL 是一种用于从 Prometheus 服务器的时间序列数据库中查询数据的查询语言。它解释了指标源、Prometheus 服务器以及数据可视化和警报工具之间的关系。该指南深入探讨了 PromQL 的核心概念，包括其强大的查询功能，并提供了清晰的解释、直观的插图和示例，以帮助用户编写高级查询并利用 Prometheus 的全部监控潜力。此外，本文档还介绍了 PromQL 指标类型（计数器、仪表、摘要、直方图），并介绍了用于跨时间序列或跨时间聚合数据的 PromQL 和函数。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/01/cncf-and-sustainability-how-cloud-native-projects-are-shaping-the-green-tech-movement/">CNCF 和可持续性：云原生项目如何塑造绿色科技运动</a><br>本文深入探讨了 CNCF 项目如何在塑造绿色技术运动中发挥作用，尤其是在可持续发展和云原生项目的背景下。它强调了 Kubernetes 及其功能（如 Horizontal Pod Autoscaler、Vertical Pod Autoscaler 和 Cluster Autoscaler）在优化大规模云环境中的资源使用和降低能耗方面的作用。此外，它还讨论了 KEDA 的事件驱动型自动扩展和 KubeGreen 的 Kubernetes 集群节能策略。此外，还强调了 Prometheus 在监控可持续基础设施的资源使用情况方面的重要性。此外，本文还承认了 Karpenter 对 Kubernetes 中高效自动扩展的贡献，以及绿色软件基金会在促进节能软件开发方面所做的努力。这篇文章强调了这些项目和举措在推动云原生技术更可持续的未来方面的集体影响。</p>
+
+<p><a href="https://www.hashicorp.com/blog/integrating-azure-devops-pipelines-with-hashicorp-vault">将 Azure DevOps Pipelines 与 HashiCorp Vault 集成</a><br>与 GitHub 不同，由于缺少平台级标识，Azure DevOps 管道在与 HashiCorp Vault 集成时面临挑战。为了解决这个问题，Microsoft 在 Azure DevOps 中引入了工作负载联合身份验证 （WIF） 功能，使用 OpenID Connect （OIDC） 标准实现无密码身份验证。此集成允许 Azure DevOps 管道访问 Vault 中的静态和动态机密，而无需凭据管理。该设置需要 Terraform 配置，以便使用 WIF 创建 Azure DevOps 服务连接，并提取服务主体对象 ID 以在 Vault 中进行基于角色的访问控制。</p>
+
+<p><a href="https://www.redhat.com/en/blog/smarter-way-manage-malware-red-hat-insights">使用 Red Hat Insights 以更智能的方式管理恶意软件</a><br>Red Hat Insights 是一种工具，旨在简化 Red Hat Enterprise Linux （RHEL） 基础架构中的恶意软件管理。它包含恶意软件检测服务，该服务与 IBM X-Force 威胁情报团队合作，提供已知 Linux 恶意软件的签名。此服务可帮助威胁评估和 IT 事件响应团队创建针对恶意软件威胁的定制响应。此外，Insights 允许用户在系统和签名级别查看和调整恶意软件签名匹配的状态，从而启用更集中的方法来管理恶意软件检测。</p>
+
+<p><a href="https://thenewstack.io/open-source-needs-younger-maintainers-how-can-it-get-them/">开源需要更年轻的维护者。它怎么能得到他们呢？</a><br>New Stack 凸显了开源维护者社区老龄化的问题，许多长期贡献者在没有足够的继任者的情况下接近退休。Tidelift 的《开源维护者现状》报告中的数据强调了这种担忧，该报告显示担任维护角色的年轻开发人员有所下降。AI 生成代码的兴起加剧了开源的老龄化，这挑战了维护者的传统角色，并引发了对开源贡献未来的质疑。专家建议，导师计划，例如 Google 的 Summer of Code 和在学术机构建立开源计划办公室 （OSPO），对于培养新人才和保持开源精神至关重要。此外，人们呼吁企业接受这些教育计划，并呼吁政府进行潜在的干预，以确保开源项目的可持续性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/">微软：适合所有人的AI伴侣</a><br>Microsoft 正在增强其 AI 伴侣 Copilot，以创造更直观和支持性的用户体验。更新后的 Copilot 具有温暖的语气和个性化的互动，在提供事实信息的同时提供鼓励和建议。新功能包括 Copilot Voice，它允许用户使用他们喜欢的语音进行交互，以及 Copilot Daily，提供精选的新闻和天气摘要。此外，Copilot Vision 支持实时视觉交互，而 Think Deeper 有助于对复杂问题的详细回答。这些更新是 Microsoft 承诺的一部分，即通过丰富生活和促进联系来确保 AI 为人类服务。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/1/openai-devday-2024-live-blog/#atom-everything">OpenAI DevDay 2024直播博客</a><br>该实时博客详细介绍了在旧金山举办的 OpenAI DevDay 2024 的活动，Simon Willison 在那里发起了一次独特的实时博客体验来记录会议过程。主要公告包括促进语音输入和输出的实时 API，与往年相比，使用语音模型的成本显著降低，以及引入模型蒸馏工具，使开发人员能够微调较小的模型。此外，该博客还强调了两个新的 API 平台功能的推出：用于模型训练的存储补全和用于 OpenAI 平台上端到端蒸馏的 beta Evals 产品。该博客还谈到了 AI 进步的更广泛影响，例如计算机不断发展的功能以及为实际应用构建安全可靠的模型的重要性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/peer-calls/peer-calls">peer-calls/peer-calls</a><br>用 Go 和 TypeScript 编写的面向所有人的群组点对点视频通话</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman：用于管理 OCI 容器和 Pod 的工具。</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，具有自动 HTTPS</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>使用 Go 和 JavaScript 的现代负载测试工具 - https://k6.io</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>备份和迁移 Kubernetes 应用程序及其持久卷</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>面向开发人员的影子测试生成。为您的应用程序生成实际有效的测试和存根！</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI 以时尚的方式管理您的集群！</p>
+
+<p><a href="https://github.com/k0sproject/k0s">k0sproject/k0s</a><br>k0s - 零摩擦 Kubernetes</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI 工具从现有基础设施生成 terraform 文件（反向 Terraform）。基础设施到代码</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>快速、安全、高效的备份程序</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>适用于Windows、macOS和Linux的跨平台备份工具，具有快速、增量备份、客户端端到端加密、压缩和重复数据删除功能。包括 CLI 和 GUI。</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq 是一个可移植的命令行 YAML、JSON、XML、CSV、TOML 和属性处理器</p>
+
+<p><a href="https://github.com/sigstore/cosign">sigstore/cosign</a><br>容器和二进制文件的代码签名和透明度</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>用于访问 GitHub v3 API 的 Go 库</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>OpenTelemetry-Go 的扩展集合。</p>
+
+<p><a href="https://github.com/getkin/kin-openapi">getkin/kin-openapi</a><br>适用于 Go 的 OpenAPI 3.0（和 Swagger v2）实现（解析、转换、验证等）</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/sensepost/gowitness">sensepost/gowitness</a><br>🔍 gowitness - 使用 Chrome Headless 的 golang Web 屏幕截图实用程序</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

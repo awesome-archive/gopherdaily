@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241108.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-08</span>
+</p>
+<p>每日一谚：Go is not magical, This is the way </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-runtime-finalizer-keepalive/">Go Runtime Finalizer和KeepAlive</a><br>源文档深入研究了 Go 运行时包的细微差别，特别是研究了 &#39;SetFinalizer&#39; 和 &#39;runtime.KeepAlive“函数。它强调了 Go 中终结器的不可预测性，它们不能保证在可预测的时间运行，这可能会导致意想不到的后果，例如过早关闭文件描述符。该文件建议谨慎使用终结器，建议使用明确的资源管理方法，如 &#39;Close&#39;、&#39;Release&#39; 或 &#39;Dispose&#39; 作为更安全的替代方案。它还涉及对象复活的概念，其中标记为垃圾回收的对象由于终结器创建新引用而无意中保持活动状态。本文档最后讨论了弃用终结器以支持名为“AddCleanup”的新 API 的提案，该 API 旨在为资源清理提供更可靠的机制。该叙述强调了了解这些运行时功能以避免常见陷阱和编写更健壮的 Go 应用程序的重要性。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括文档中的直接引用或具体示例，而是转述了主要概念。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2024-11-08-sprintf-vs-concat/">fmt.Sprintf与String Concat</a><br>DoltHub 的博客文章比较了使用 &#39;fmt.Sprintf&#39; 与 Go 中的字符串连接。虽然 &#39;fmt.Sprintf&#39; 提供了一种更有条理的字符串格式化方法，由于处理 &#39;any&#39; 类型以及为字符串构造创建中间缓冲区，它引入了开销。这种开销会导致性能降低，基准测试显示性能指标（例如每秒操作数和每个操作的分配数）下降就证明了这一点。该博文强调，即使是很小的性能提升也可能是显著的，尤其是在网络和 I/O 开销不太重要的本地服务器中。作者建议，对于性能关键型路径，字符串连接更可取，并建议密切关注热路径的格式，以确定优化机会。该帖子还包括对 &#39;fmt.Sprintf&#39; 在后台工作，进一步说明了与直接字符串连接相比，其性能较慢的原因。</p> 
+
+<p><a href="https://www.trevorlasn.com/blog/pkl-apple-new-configuration-language">Pkl: Apple&#39;s New Configuration Language That Could Replace JSON and YAML</a><br>The source document delves into Apple&#39;s Pkl (Pickle), a new configuration language designed to streamline and enhance the reliability of configuration management, potentially replacing JSON and YAML. Pkl, pronounced &#34;Pickle,&#34; is a hybrid language that combines the simplicity of YAML with the power of programming languages, aiming to address the complexities and errors associated with traditional configuration formats. It introduces immutability and built-in validation through schemas, ensuring configurations are error-free before deployment. Despite its innovative approach, the document raises concerns about the introduction of a new language, including the learning curve, toolchain support, and long-term commitment, especially given Apple&#39;s history with developer tools. The document also questions the necessity of another configuration language in the presence of existing tools like JSON Schema and the Information Property List used by Apple. The summary encapsulates the essence of Pkl&#39;s potential benefits and the skepticism surrounding its adoption in the broader developer community.
+
+(Note: The summary is crafted to be concise and capture the key points of the source document while omitting specific details and questions that were not directly addressed in the summary.)</p> 
+
+<p><a href="https://francoposa.io/resources/golang/golang-templates-1/">Go模板第1部分：概念和组合</a><br>本文档深入介绍了 Go 的模板系统，重点介绍了其独特的模板嵌套和层次结构方法。与依赖于面向对象继承的传统模板系统不同，Go 的模板允许任何模板嵌入任何其他模板，从而创建模板的递归集合。Go 中的 &#39;Template&#39; 类型是一种递归数据结构，其中模板可以相互嵌套，但不允许循环。本文档介绍了使用 &#39;define&#39; 和 &#39;template&#39; 操作定义和调用模板的过程，并介绍了 &#39;block&#39; 操作以实现更简洁的代码。它还介绍了如何构建模板集合，确保以灵活的方式解析模板并将其添加到集合中。最后，本文档详细介绍了如何执行模板（无论是整体还是单独），并使用简单的文本模板演示了预期的输出。本指南旨在阐明 Go 模板库的内部工作原理，使开发人员能够在他们的应用程序中有效地使用它。</p> 
+
+<p><a href="https://justine.lol/mutex/">The Fastest Mutexes</a><br>The source document highlights the performance and efficiency of Cosmopolitan Libc&#39;s mutex library, developed by Justine, in comparison to other mutex implementations across various platforms. Justine&#39;s benchmarks reveal that Cosmopolitan Libc mutexes outperform Microsoft&#39;s SRWLOCK, glibc, musl libc, and even Apple&#39;s Libc on MacOS, particularly in contended scenarios with a small critical section. The mutex library utilizes a combination of optimistic CAS, futexes, and a &#34;long wait&#34; mechanism to prevent starvation and ensure fast lock acquisition. The document also mentions the integration of the nsync library, which contributes significantly to the performance gains. Justine&#39;s work demonstrates that Cosmopolitan Libc&#39;s mutex library is a superior choice for production workloads, especially in heavily contended environments. The document concludes with a live demo of the web server running on Cosmopolitan Libc mutexes, showcasing its resilience against DDoS attacks.</p> 
+
+<p><a href="https://transactional.blog/how-to-learn/disk-io">用户空间磁盘I/O</a><br>源文档深入探讨了 Userland Disk I/O 的复杂性，特别关注数据库环境中文件 I/O 操作的理念和实际考虑。它强调了对无缓冲 I/O 使用 &#39;O_DIRECT&#39; ，它允许直接操作内核的页面缓存，提供对缓存数据的控制，并在读/写时跳过缓存。该文档还讨论了 Linux 社区中围绕“O_DIRECT”的争议，Linus Torvalds 对其实现表示不满。它将缓冲 I/O（以 RocksDB 和 LMDB 等数据库为例）与无缓冲 I/O 进行了对比，并指出了内核缓存的好处。本文档进一步探讨了使用 &#39;pwritev2（）&#39; 进行多块原子写入以及选择正确文件系统的重要性，建议使用 XFS 以获得性能优势。此外，它还建议使用 &#39;fallocate（）&#39; 来扩展文件，并警告不要由于元数据开销而附加到文件。本文档最后强调需要仔细考虑 I/O 操作，尤其是在数据持久性和完整性的背景下，并建议使用异步 I/O 框架（如 io_uring、libeio 或 SPDK）来提高性能，在 macOS 上优先使用 libeio，在 Windows 上优先使用 I/O 完成端口。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://avi.im/blag/2024/disaggregated-storage/">分解存储 - 简介</a><br>源文档探讨了数据库系统中分解存储的概念，重点介绍了其计算和存储分离以实现可扩展性和无服务器架构。它将依赖磁盘 I/O 的传统数据库（如 PostgreSQL、SQLite 和 MySQL）与使用网络 I/O 的解耦系统进行了对比，从而允许独立扩展 CPU 和 I/O 资源。本文档承认了权衡取舍，特别是由于网络 I/O 导致的延迟增加，并且需要强大的、具有容错能力的存储服务器。它还涉及潜在的解决方案，例如缓存、批处理和分片，以缓解延迟问题。作者最后指出，分解式存储更适合供应商和科技公司而不是小型组织的大规模运营。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括文档中的直接引用或具体细节，而是提供了所讨论的主要概念和注意事项的概述。</p>
+
+<p><a href="https://www.linkedin.com/blog/engineering/infrastructure/how-design-patterns-power-linkedin-infrastructure">驾驭规模：设计模式如何为 LinkedIn 的基础设施提供支持</a><br>来自 LinkedIn 的 Saira Khanum 的博客文章详细介绍了生产者 - 消费者模式在管理 LinkedIn 私有数据中心的庞大服务器基础设施中的应用。此模式有助于处理与数十万台服务器的通信和近乎实时地处理数据，这是 LinkedIn 运营的关键要求。该博文详细阐述了此模式在 3 个关键系统中的实现：分布式服务器查询系统、服务器控制台监控和网络安全监控。对每个系统的架构进行了剖析，以展示消息队列、工作进程和并发控制机制的使用。该博文还强调了这种模式的好处，例如可扩展性、效率和处理复杂、高容量任务的能力。此外，作者还分享了有关设计选择的见解，例如决定使用本机数据库咨询锁而不是 ZooKeeper 等外部系统，以及为了简单和易于调试而更喜欢多线程而不是 AsyncIO。该博文最后承认了团队成员和管理层的贡献，强调了 LinkedIn 可扩展基础设施解决方案背后的协作努力。</p>
+
+<p><a href="https://vercel.com/blog/a-deep-dive-into-hive-vercels-builds-infrastructure">深入了解 Hive：Vercel 构建基础设施</a><br>Vercel 的 Hive 是一个低级、不可信且短暂的计算平台，它为其客户显著缩短了构建时间并提高了性能。自 2023 年 11 月以来，Hive 一直在为 Vercel 的构建提供支持，从而将构建时间缩短了 20%，并将安全计算的预置时间从 90 秒大幅缩短到 5 秒。该平台在 KVM 层上运行以实现完全虚拟化，并使用 Firecracker 进程进行安全的多租户容器管理。Hive 的架构包括专用盒子、单元和控制平面，可确保隔离、高效且可扩展的客户构建执行。Vercel Build Pipeline 与全球多个 Hive 实例连接，每个实例都可以扩展以满足需求。借助 Hive，Vercel 为需要额外资源的客户提供增强的机器，展示了该平台的灵活性和性能优势。
+
+（注意：摘要旨在封装源文档的关键点，重点关注 Hive 对构建时间、底层技术以及为客户提供的好处的影响。它简洁明了，抓住了文件的精髓，没有深入研究不是整体叙述核心的细节。</p>
+
+<p><a href="https://dolthub.com/blog/2024-11-07-doltgres-supports-users/">Doltgres 现在支持user</a><br>DoltgreSQL 团队宣布成功集成用户支持、身份验证和权限，这标志着 DoltgreSQL 在成为 PostgreSQL 的直接替代品方面取得了重大进展。用户、身份验证和权限是管理客户端与数据库交互的基本组件，DoltgreSQL 实现了这些功能，以提供具有受 Git 影响的版本控制功能的 MySQL 兼容数据库。该团队已通过 SCRAM-256 引入了密码身份验证，并计划在未来支持其他身份验证方法。DoltgreSQL 中的集中式用户系统允许对数据库对象具有唯一的用户所有权，从而实现对数据访问和修改的精细控制。该系统还有助于历史数据查询并确保敏感数据保护。该团队承认需要在角色组、其他权限和身份验证方法等方面进行进一步开发，同时邀请社区反馈和贡献。
+
+（字数：99）</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/07/fast-secure-and-simple-istios-ambient-mode-reaches-general-availability-in-v1-24/">快速、安全、简单：Istio的ambient mode在v1.24中正式发布</a><br>随着 1.24 版环境模式的正式发布 （GA），Istio 社区达到了一个重要的里程碑，这标志着服务网格已准备好在没有 sidecar 的情况下进行广泛的生产使用。这项开发自 2022 年 9 月以来一直在进行中，由各种组织的贡献推动，旨在解决与传统 sidecar 代理相关的资源开销、运营复杂性和应用程序中断等挑战。微光模式引入了一种透明、轻量级的网状实施方法，具有双向 TLS 加密、L4 授权策略和遥测等功能，所有这些都无需重新启动应用程序或将代理基础设施与工作负载并置。ztunnel 和 waypoint 代理有助于高效的资源使用和可扩展性，允许逐步采用和定制 L7 处理。展望未来，Istio 计划继续增强 Ambient Mode，支持 sidecar 互操作性、多集群安装等。尽管取得了这些进步，但 sidecar 仍然受支持，确保用户能够顺利过渡。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/11/08/kubernetes-1-32-upcoming-changes/">Kubernetes v1.32 抢先看</a><br>Kubernetes v1.32 版本先睹为快揭示了计划的更改和弃用，包括删除“flowcontrol.apiserver.k8s.io/v1beta3”API 版本和动态资源分配 （DRA） 的增强功能。本文档概述了 API 的弃用策略，并指出只有在有较新版本可用时才能弃用稳定的 API。它还强调了旧 DRA 实现的退出，并转向新的结构化参数模型，以更好地支持集群自动扩展。此外，发布说明还提到了几项增强功能，例如将资源健康状态添加到 Pod 状态、支持正常关闭 Windows 节点、允许在环境变量中使用特殊字符，以及使用“ipMode”字段改进负载均衡器行为。本文档还介绍了在发生冲突时自动生成资源名称的自动重试。这些变化旨在提高 Kubernetes 集群的灵活性、效率和可靠性。</p>
+
+<p><a href="https://thenewstack.io/improve-microservices-with-these-new-load-balancing-strategies/">使用这些新的负载均衡策略改进微服务</a><br>本文讨论了增强微服务架构的高级负载均衡策略，以应对可扩展性、效率和可靠性方面的挑战。它强调了从整体式到微服务的转变，微服务允许独立扩展和部署，但引入了流量管理的复杂性。这篇文章概述了智能负载分配的必要性，以防止服务瓶颈并确保高可用性。它建议使用 Consul 等工具进行服务发现，使用 Nginx 进行负载均衡，使用 Ribbon 进行客户端负载均衡，使用 Hystrix 进行熔断来管理延迟和错误。此外，本文还强调了混沌工程和异步通信（如 Apache Kafka）在测试和改进系统弹性方面的作用。API 网关还提到是将请求路由到适当微服务的关键组件。总之，本文提供了在微服务中实施有效负载均衡以处理增加的流量并保持系统性能的全面指南。</p>
+
+<p><a href="https://netflixtechblog.medium.com/my-non-linear-path-towards-data-netflix-feccbe9c3dae">我的数据之路 @ Netflix</a><br>丽莎·赫尔佐格 （Lisa Herzog） 在 Netflix 进入数据科学领域的旅程始于她最初在国际业务领域的职业道路，她对数据驱动的用例和解决问题的创造力产生了新的热情。尽管没有定量学位，但 Herzog 利用在线资源、指导和个人奉献精神来掌握 SQL、数据预处理、统计和解决问题的方法。作为 Netflix 的分析工程师，她的职责包括将复杂的数据洞察转化为跨职能合作伙伴的可操作指标，强调相关性、可操作性、可量化性和简单性。Herzog 的经历强调了没有传统背景的数据科学职业的可访问性，突出了 Kaggle 和咨询指南等资源对技能发展的重要性。她的故事说明了数据科学在技术领域的变革力量，以及个人通过自我教育和实际应用茁壮成长的潜力。
+
+（注意：本摘要旨在概括丽莎·赫尔佐格职业道路的关键要素、她学习数据科学的方法以及她利用的资源，所有这些都在她在 Netflix 的角色范围内进行。</p>
+
+<p><a href="http://notes.eatonphil.com/2024-11-06-exploring-postgress-arena-allocator-writing-http-server-scratch.html">通过从头开始编写 HTTP 服务器来探索 Postgres 的 arena 分配器</a><br>源文档是作者 Phil Eaton 的一篇外部博文，详细介绍了他们通过从头开始构建 HTTP 服务器的过程对 PostgreSQL 的 Arena 分配器的探索。该帖子是关于该主题的全面指南和讨论，邀请读者通过电子邮件或 Twitter 提供反馈来参与作者的作品。该文档链接到 EnterpriseDB 博客，感兴趣的人可以在该博客中找到更多信息，并可能从最初的帖子重定向。这篇文章不仅展示了实现自定义分配器的技术旅程，还强调了社区交互对于知识共享和改进的重要性。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/06/karpenter-v1-0-0-beta/">Karpenter v1.0.0 对 Kubernetes 自动扩展意味着什么</a><br>Karpenter v1.0.0 代表了 Kubernetes 自动扩展的一个重要里程碑，它标志着它的最终成熟，具有稳定的 API，在未来的小版本中不会发生重大变化。Karpenter 由 AWS 开发并通过云原生计算基金会 （CNCF） 开源，可自动选择、预置和扩展 Kubernetes 集群中的基础设施，从而提高效率和成本效益。它作为 Kubernetes 操作员运行，根据 Kubernetes 调度约束做出预置和取消预置计算资源的决策。Karpenter 的工作包括为不可调度的 Pod 预置新的计算资源，并在不再需要时取消预置。它还具有工作负载整合功能，通过将未充分利用的工作负载重新调度到更具成本效益的实例上来优化计算成本。随着 Karpenter 1.0.0 的发布，用户可以期待持续支持并与其他 CNCF 项目集成，例如用于事件驱动自动扩展的 KEDA，以及通过供应商中立的核心贡献与各种云提供商的无缝兼容性。官方指南和蓝图可用于设置 Karpenter，确保简化的采用流程。</p>
+
+<p><a href="https://www.hashicorp.com/blog/speed-up-app-delivery-with-automated-cancellation-of-plan-only-terraform-runs">通过自动取消仅限计划的 Terraform 运行来加快应用程序交付速度</a><br>该博客文章宣布在 HCP Terraform 和 Terraform Enterprise 中全面推出一项新功能，该功能可自动取消由版本控制系统中的拉取请求触发的仅限计划的 Terraform 运行。此功能旨在通过消除过时提交导致的运行积压来加快应用程序交付速度。用户可以管理推测计划设置以启用或禁用自动取消，这反映在运行详细信息页面和更新的 VCS 状态检查中。该功能还为自动取消的计划提供不同的消息，将它们与手动取消的计划区分开来。对于聚合状态检查，Terraform 包括自动取消的运行计数。该博客鼓励用户了解有关这些增强功能的更多信息，并注册 HCP Terraform 以开始使用。
+
+此摘要概括了新功能的关键方面、它对应用程序交付的影响以及可用的用户管理选项。它还突出显示了运行详细信息页面和状态检查中的更改，从而提供了博客文章内容的连贯概述。</p>
+
+<p><a href="https://thenewstack.io/you-must-prioritize-compliance-in-modern-infrastructure/">您必须优先考虑现代基础设施中的合规性</a><br>源文件强调了在现代基础设施中优先考虑合规性的至关重要性，特别是对于受监管行业的企业。它强调了与数字化转型相关的风险，例如数据泄露可能带来的罚款和声誉损害，涉及 Capital One、万豪国际和 Meta 的事件就说明了这一点。该文件概述了动态合规性框架的必要性，该框架不断更新以符合不断发展的法规，包括对 HIPAA、SOX 和 GDPR 等法律的透彻理解。它强调需要强大的数据安全策略，包括多层防御和零信任模型，以及为敏感个人数据量身定制的数据保护措施。首要信息是，公司必须主动管理合规性，以避免法律和财务影响，同时实现基础设施现代化。
+
+（注意：摘要不包括文档中的直接引用或具体问题，而是侧重于关键主题和信息。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>复合服务（例如 Ingress）和负载均衡 API 的下一次迭代的存储库。</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>适用于 Kubernetes 的入口 NGINX 控制器</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>使用 Go 和 JavaScript 的现代负载测试工具 - https://k6.io</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行 Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes/kube-state-metrics">kubernetes/kube-state-metrics</a><br>用于生成和公开集群级指标的附加组件代理。</p>
+
+<p><a href="https://github.com/jpillora/chisel">jpillora/chisel</a><br>基于 HTTP 的快速 TCP/UDP 隧道</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt 是一种灵活的编排工具，允许使用 OpenTofu/Terraform 编写的基础设施即代码进行扩展。</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>完整的容器管理平台</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>充当反向代理，保护您的 Web 服务免受攻击和利用。</p>
+
+<p><a href="https://github.com/IBM/sarama">IBM/sarama</a><br>Sarama 是 Apache Kafka 的 Go 库。</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator 在 Kubernetes 上创建/配置/管理 Prometheus 集群</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>通过 Terraform 配置远程开发环境</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>与 Prometheus 类似，但用于日志。</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>用于密钥管理、加密即服务和特权访问管理的工具</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>Go 的现代测试框架</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>访问和保护所有基础设施的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>基于 eBPF 的网络、安全性和可观测性</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>极快的 Web 捆绑器</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，可以使用你想要的任何名称制作本地信任的开发证书。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

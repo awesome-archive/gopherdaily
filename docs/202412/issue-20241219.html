@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241219.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-19</span>
+</p>
+<p>每日一谚：Do not prematurely abstract </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://olivernguyen.io/w/namespace.error/">错误，无处不在的错误：我们如何集中和结构化地处理错误</a><br>本文档讲述了 Go 中错误处理的演变，从简单的错误值到集中的、结构化的命名空间错误框架。最初，Go 的极简错误处理方法允许特定于包的错误，但随着代码库的扩展，这导致了错误日志和处理不一致的混乱。建议的解决方案包括在集中式命名空间中声明错误，将它们映射到 Protobuf、HTTP 和标签，以便更好地进行日志记录和监控。引入的框架包括用于创建、包装和测试错误的工具，以及将第三方错误调整到内部命名空间中的工具。迁移过程是渐进的，从基础软件包开始，并根据需要添加新的错误代码。这种转变旨在为错误管理提供清晰度、可追溯性和安心，最终节省时间并减少调试中的挫败感。</p> 
+
+<p><a href="https://itnext.io/mastering-memory-management-in-go-avoiding-slice-related-leaks-7d5e97ee48d4">掌握 Go 中的内存管理：避免与 slice 相关的泄漏</a><br>本文讨论了 Go 中内存管理的最佳实践，重点介绍了避免与 slice 相关的内存泄漏。Tiago Temporin 解释了 Go 中的切片如何引用相同的底层数组，这可以防止垃圾回收释放内存，即使只有一小部分数据被主动使用。为了防止内存泄漏，作者建议将必要的数据复制到新的切片中，将未使用的切片设置为 nil，并通过预分配容量或在使用后重置切片来管理循环内的切片增长。最重要的信息是，如果开发人员不了解切片行为，Go 的自动内存管理仍然会导致内存泄漏，通过应用这些做法，开发人员可以编写更高效的代码。该文章发表在 ITNEXT 上，旨在就这些问题对 IT 开发人员进行培训，以改进其 Go 应用程序的内存管理。Go 专家 Tiago Temporin 提供了可以帮助开发人员避免内存使用中常见陷阱的见解。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2024/implementing-raft-part-5-exactly-once-delivery/">实现 Raft：第 5 部分 - 恰好一次交付</a><br>该系列文章讨论了 Go 中 Raft 共识算法的实现，最终形成了一个严格可序列化的键/值数据库。重点转移到解决可能导致重复命令执行的客户端重试问题，这可能会破坏严格的可序列化性。为了解决这个问题，作者建议使用全局唯一的客户端 ID 和特定于请求的 ID 进行命令重复数据删除。这可确保每个命令只处理一次，从而恢复系统提供严格可序列化性的能力，即使在面对客户端重试时也是如此。该系列还涉及实现 Exactly-once 交付语义，从而增强系统的可靠性。作者最后提供了一条通往健壮的分布式键 / 值数据库基础的途径，并邀请读者通过电子邮件或 GitHub 问题进一步参与。</p> 
+
+<p><a href="https://medium.com/@mehul25/implementing-a-sieve-cache-in-go-9652cfa99278">在 Go 中实现 Sieve 缓存</a><br>本文讨论了 Go 中 sieve 缓存的实现，其灵感来自作者在创建 LRU 缓存后对高效缓存管理系统的探索。sieve 缓存因其选择性和自适应缓存方法而备受瞩目，专注于根据自定义过滤规则存储高价值或经常访问的数据，这与可能缓存所有数据的传统缓存系统不同。该实现的核心涉及一个 &#39;sync.Map&#39; 用于线程安全操作，基于 TTL 的过期策略，以及用于定期清理过期项目的后台 goroutine。sieve cache&#39;ged 过滤功能是可定制的，使其适用于 CDN、AdTech、数据库优化和流媒体服务等各种应用程序。作者通过示例演示了该功能，展示了如何有选择地缓存项目以及系统处理过期项目的能力。与 LRU 缓存的比较是为了说明 sieve 缓存对选择性缓存的独特关注，与 LRU 基于新近度的方法形成对比。</p> 
+
+<p><a href="https://philbooth.me/blog/concurrency-diagrams">绘制并发图</a><br>本文档讨论了在程序设计和系统体系结构中使用并发图以避免对并发操作的误解的重要性。它解释了这些图（创建简单）如何通过在一个轴上表示不同的功能组件和在另一个轴上表示时间来阐明有关系统并发的假设，通常更喜欢沿 y 轴运行的时间。图表中的框表示事件或操作，而箭头表示阻塞关系，目的是使并发任务可见且易于识别误解。该文件认为，定期创建和讨论这些图表可以防止在开发后期出现代价高昂的误解，确保团队内部的一致性。提供了一个具体示例，说明了如何在此类图中表示并发操作和阻塞交互。建议一致地使用并发图，以保持开发团队对系统并发的理解的方向和连贯性。</p> 
+
+<p><a href="https://changelog.com/gotime/340">是时候结束Go Time了！</a><br>Go Time 的最后一集庆祝该节目 8 年和 340 集的成功播出，以演员和制片人 Jerod Santo 的怀旧反思和讨论结束。在这一集中，该小组回忆了他们的旅程，突出了最喜欢的时刻，并可能分享了非常规的观点。本集是独家群组 Changelog&#43;&#43; 的一部分，该群组受益于无广告观看。这一集连同文字记录和下载链接一起展示了充满活力的 Go 社区的最后一章，同时也推广了 Go 开发和播客领域的资源。</p> 
+
+<p><a href="https://dev.to/jones_charles_ad50858dbc0/implementing-websocket-communication-and-heartbeat-mechanism-with-goframe-a-hands-on-guide-44df">使用 GoFrame 实现 WebSocket 通信和心率机制：动手指南</a><br>该指南提供了使用 GoFrame（基于 Go 的框架）设置 WebSocket 通信的全面演练。它首先创建一个侦听端口 8399 的 WebSocket 服务器，并包含一个简单的 echo 服务器示例。客户端实现使用 HTML/JavaScript 进行演示，能够建立连接、发送消息和处理检测信号。概述了一个强大的心跳机制，确保连接正常运行，客户端处理 ping 和 pong。重点介绍了最佳实践，包括错误处理、连接清理和重新连接逻辑，同时提醒了常见的陷阱。该指南旨在为读者提供在 GoFrame 应用程序中实现可靠、实时通信的知识，并辅以资源和与 DEV 社区互动的呼吁。</p> 
+
+<p><a href="https://greptime.com/blogs/2024-05-07-error-rust">大型 Rust 项目的错误处理 - GreptimeDB 实践的深入探讨</a><br>本文讨论了大型 Rust 项目中的高级错误处理实践，特别以 GreptimeDB 为案例。它强调了使用系统回溯进行错误报告的低效性和缺乏特异性，建议通过`堆叠错误`方法提供更简化和上下文丰富的替代方案。这种方法包括一个虚拟堆栈，从用户代码中提供相关上下文，而系统回溯往往因系统库中的无关细节而显得杂乱。所提议的解决方案在二进制大小和运行时开销方面都很低，适合复杂系统的使用。本文还涉及如何以简化的形式向最终用户呈现错误，重点关注错误描述和外部根本原因。正在努力使这种错误处理模式在 GreptimeDB 之外得到推广，具有在处理大量时间序列数据的行业中的潜在应用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/navigating-business-growth-tidb-scaling-petabyte-level-data-volumes/">驾驭业务增长：TiDB 如何扩展 PB 级数据量</a><br>该博客文章讨论了开源分布式 SQL 数据库 TiDB 如何应对业务增长带来的数据量爆炸、复杂性增加和运营负担等挑战。它突出了 TiDB 在处理 PB 级数据、支持每秒数百万次查询以及提供水平可扩展性、低操作复杂性和低延迟等功能方面的能力。来自欧洲一家成长中的移动公司 Bolt 和印度最大的电子商务公司 Flipkart 的真实示例展示了 TiDB 在管理海量和高事务率方面的可扩展性和效率。TiDB 的架构允许独立扩展计算和存储，并且它支持在线 schema 更改和快速添加索引，使其成为快速增长业务的强大解决方案。该博文强调了 TiDB 能够快速执行大规模集群的备份，从而确保数据的持久性和可用性。总体而言，TiDB 是一种面向未来的数据库解决方案，可在业务扩展时简化扩展和运营需求。</p>
+
+<p><a href="https://tailscale.com/blog/will-moore-journey">如果我能让 Tailscale 工作，你也能</a><br>源文件重点介绍了 Will Moore 在体验 Tailscale 连接设备和服务的简单性和有效性后，从安全领域的技术爱好者和专业人士到成为 Tailscale 倡导者的旅程。Moore 对传统网络解决方案的挫败感，加上在历史悠久的住宅中提供可靠的 Wi-Fi 的挑战加剧了这种挑战，这促使他探索 Tailscale 作为无缝连接的解决方案。Moore 对 Tailscale 的易于安装和功能印象深刻，现在依靠 Tailscale 来提供他的家庭实验室和自托管服务，并称赞它对他的技术生活的影响。该文件是对 Tailscale 的认可，让人们了解了它在远程访问、自托管和克服网络配置障碍方面的好处，最终邀请读者亲自尝试该服务。</p>
+
+<p><a href="https://engineering.fb.com/2024/12/18/android/translating-java-to-kotlin-at-scale/">大规模将 Java 转换为 Kotlin</a><br>Meta 拥有全球最大的 Android 代码库之一，它已着手从 Java 到 Kotlin 的重大转换，以充分利用 Kotlin 的价值。尽管存在与 null 相关的错误等问题的复杂性和潜在性，但 Meta 的工程师已经开发了 Kotlinator 等工具来自动化转换过程，解决从构建速度到 null 安全性的问题。Meta 的方法包括预处理、无头 J2K 转换和自定义后处理步骤，以确保可靠性，同时与 JetBrains 合作提高符号分辨率并开源其自定义步骤。Meta 的旅程凸显了将大量 Java 代码转换为 Kotlin 的挑战和解决方案，旨在最大限度地提高开发人员的工作效率和 null 安全性，尽管存在回归 null 安全性和在转换过程中遇到其他错误的固有风险。这项工作反映了对 Kotlin 采用的坚定承诺，他们计划转换几乎所有积极开发的代码和中央依赖项，同时从过程中学习以改进他们的工具和实践。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/12/18/what-is-inference-parallelism-and-how-it-works/">什么是推理并行度及其工作原理</a><br>该博客文章讨论了推理并行作为在现代 GPU 上部署具有数十亿个参数的大型语言模型 （LLM） 的一种方法，这些 GPU 通常会超过可用的内存容量。它概述了四种主要的并行方法：数据、张量、管道和专家并行，每种方法都有独特的方法在多个 GPU 之间分配计算工作负载。并行方法的选择取决于模型架构、用例要求（延迟与吞吐量）和硬件配置等因素。这篇文章强调了结合不同并行技术以提高 GPU 吞吐量的潜力，并提到了 TensorRT-LLM 和 vLLM 等促进使用这些方法的工具。它得出的结论是，理解和应用推理并行性对于高效运行越来越大的 AI 模型至关重要，并强调了它在使 AI 更快、更便宜、更强大方面的作用。正如所建议的，AI 的未来不仅在于扩展模型大小，还在于优化它们在硬件资源中的部署。</p>
+
+<p><a href="https://www.hashicorp.com/blog/hashicorp-2024-year-in-review">HashiCorp 2024 年度回顾</a><br>2024 年，HashiCorp 被 IBM 收购，标志着重要的一年，旨在加强全球基础设施和安全实践。该公司推出了 The Infrastructure Cloud，这是一种管理基础设施生命周期的综合方法，并进行了第四次年度云战略现状调查，揭示了更高云成熟度的好处。重点介绍了其产品套件（包括 Terraform、Nomad、Vault 和 Consul）的重大更新，以及改进部署、安全性和可见性的功能。客户案例展示了 HashiCorp 工具的广泛影响，展示了它们在各行各业的价值，并在不影响用户体验的情况下为更好的安全集成做出了贡献。该公司对创新和客户成功的承诺通过其产品改进和不断增长的客户数量可见一斑，超过 4,800 名客户从他们的服务中受益。该文件强调了一年来取得的变革性成就以及对未来增长和合作的关注。</p>
+
+<p><a href="https://www.redhat.com/en/blog/top-10-open-source-community-posts-2024">2024 年关于开源社区的 10 大博客文章</a><br>该文档重点介绍了 Red Hat 对开源社区的重大贡献，展示了 Red Hat Enterprise Linux 和 Red Hat OpenShift 等产品，以及支持 AI 和云计算的服务。它强调了红帽在各个行业（尤其是媒体、娱乐和 AI）中的作用，并强调了他们通过红帽学院和培训课程对教育的承诺。该文档还谈到了 Red Hat 在保护软件供应链方面的参与以及他们在 Kubeflow 社区中所做的努力。最后，它展示了从免费软件爱好者到容器专家，参与 Red Hat 生态系统的个人的鼓舞人心的旅程，展示了技术领域的各种机会。
+
+**注意：** 该摘要概括了 Red Hat 与开源社区的广泛互动、他们的产品和服务产品、他们对安全和 AI 的承诺，以及他们提供的个人成长机会，所有这些都没有文档中的具体细节或问题。</p>
+
+<p><a href="https://tailscale.com/blog/client-metrics">使用新的客户端指标更好地监控节点</a><br>Tailscale 引入了新的客户端指标以实现更好的节点监控，使用户能够在本地或远程检查这些指标，并直接摄取到 Prometheus 等系统中。这些指标可用于监控子网路由器、站点到站点网络配置、Docker 容器和 Kubernetes 部署。用户可以通过本地网络或通过 Tailscale 的 Web 客户端访问这些指标，并可选择通过 Internet 公开这些指标。此功能旨在通过提供一种稳定的、有记录的方法来评估网络运行状况和连接性，从而改善从家庭实验室爱好者到 IT 专业人员等一系列用户的网络管理，这是对以前未记录或基于日志的方法的重大升级。</p>
+
+<p><a href="https://www.pingcap.com/blog/tidb-mercari-saas-distributed-sql/">Mercari 如何使用分布式 SQL 扩展其 SaaS 平台</a><br>在 2024 年 HTAP 峰会上，来自 Mercari 的 Takashi Honda 分享了该公司如何通过过渡到分布式 SQL 数据库 TiDB 来克服 MySQL 的可扩展性、弹性和开发挑战。Mercari 是日本著名的 C2C 市场，在扩展和管理其 MySQL 基础设施方面面临困难，该基础设施在众多服务器上跨越超过 40TB。为了解决这些问题，Mercari 与 TiDB 进行了概念验证，重点关注并发、吞吐量和日志管理的性能调优。POC 实现了超过 300 万次 QPS，峰值性能达到 450 万 QPS，展示了 TiDB 的可扩展性。尽管 TiDB 的延迟高于 MySQL，但延迟注入测试显示对客户体验没有显著影响。Mercari 目前正在将 MySQL 服务器迁移到 TiDB 集群，以更好地适应业务增长并简化运营。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/12/18/kubernetes-1-32-volume-group-snapshot-beta/">Kubernetes 1.32：将卷组快照移至 Beta 版</a><br>Kubernetes 生态系统已发展到包括对卷组快照的 beta 支持，从版本 1.27 中的 Alpha 功能过渡到当前更新。此功能依赖于 CSI 驱动程序 API，可在多个卷之间实现崩溃一致性快照，从而促进工作负载恢复到特定时间点。用户可以动态请求新的组快照或导入现有组快照，后者需要手动识别单个卷快照。虽然 beta 实现提供了崩溃一致性，但它缺乏超出存储系统的应用程序一致性保证。Kubernetes 团队建议分发服务器将卷快照控制器和 CRD 捆绑为集群插件，并更新 external-snapshotter sidecar 容器以支持组快照。未来的计划可能包括正式发布此功能，等待反馈和采用率。</p>
+
+<p><a href="https://www.docker.com/blog/docker-2024-highlights/">Docker 2024 亮点：AI 创新、安全性和为开发团队赋能</a><br>源文档指示 Nginx Web 服务器在无法访问或提供请求的网页时通常显示的错误消息，从而导致 403 Forbidden 状态代码。虽然该文档没有提供有关错误的上下文或内容的具体详细信息，但它暗示了服务器拒绝用户访问的权限问题。此错误表明由于服务器上设置的权限或限制不足，无法访问请求的资源。要解决此问题，可能需要审查服务器配置或访问控制并相应地进行调整。文档本身是 Nginx 上下文中 403 错误的通用表示，提醒用户或管理员需要注意的访问问题。了解根本原因对于纠正这种情况和恢复对所需网页的访问至关重要。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/microsoft-makes-github-copilot-free-in-vs-code/">Microsoft 在 VS Code 中免费提供 GitHub Copilot</a><br>Microsoft 通过为 Visual Studio Code 用户推出免费计划，使其无需信用卡即可访问，并提供每月 2,000 次代码完成，从而扩展了对其 AI 编码助手 GitHub Copilot 的访问。免费套餐还包括聊天功能、多模型选择和多文件编辑，以及访问 GPT-4o 和 Claude 3.5 Sonnet 等著名模型。Microsoft 的这项计划旨在为全球开发人员普及 AI 编码工具，其愿景是在 GitHub 上为 10 亿开发人员提供支持。免费计划还允许在达到基本限制时进行聊天请求和访问其他模型，这代表了使 AI 开发工具更广泛可用的重大转变。</p>
+
+<p><a href="https://blog.bitsrc.io/why-gen-ai-is-better-on-components-than-code-056d20b86b81">为什么 Gen AI 在组件上比在代码上更好</a><br>本文讨论了生成式 AI 和基于组件的软件开发之间的协同作用，重点介绍了 Hope AI 等 AI 工具如何更有效地促进有界上下文中的代码生成和修改。它认为，专注于离散、可重用的软件单元（组件）可以使 AI 高效运行，提供可扩展且可维护的结果。这篇文章解释了可组合代码库的好处，其中组件充当基本单元，提供隔离、定义的接口、可重用性和协作增强。它展示了如何利用 AI 来生成或修改组件，强调了边界对 AI 精度的重要性，以及可组合性在加速开发、提高质量和简化维护方面的优势。软件工程的未来被设想为 AI 和模块化组件融合在一起，为开发人员提供更快、更可靠的开发周期，并为组织降低成本并提高可扩展性。本文最终提出了一个令人信服的案例，将 AI 集成到组件驱动的开发范式中。</p>
+
+<p><a href="https://simonwillison.net/2024/Dec/17/openai-webrtc/#atom-everything">OpenAI WebRTC Audio 演示</a><br>源文档讨论了 OpenAI 的 WebRTC 音频 API 的演示，强调了它使用临时令牌促进双向音频对话以增强安全性的能力。该演示可通过 Simon Willison 的博客访问，展示了 API 的功能，这些功能通过公开 API 密钥并改为有限的连接窗口提供临时令牌来解决以前的限制。临时令牌有效期较短，允许用户在不泄露其 OpenAI 密钥的情况下安全地连接，这与以前需要服务器端代理实现的方法相比有了重大改进。该文档还列出了与该主题相关的最新文章和标签，表明了对 AI 工具、生成式 AI 以及与 API 使用相关的安全性的更广泛讨论。该交互式演示是新 WebRTC 机制的一个实际示例，强调了其实时通信的潜力。这篇帖子的日期是最近的，有助于关于 AI 辅助编程和工具进步的持续对话。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器公开给 Internet。</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 最受好评的基于 Web 的 Linux 服务器管理工具。1Panel 具有直观的 Web 界面，可无缝集成服务器管理和监控、容器管理、数据库管理、网站管理、系统备份和恢复等。</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>使用 Swagger 2.0 for Go 自动生成 RESTful API 文档。</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>使用 Go 创建漂亮的应用程序</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>开放可靠的容器运行时</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>通过 Terraform 配置远程开发环境</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>package gorilla/websocket 是一种快速、经过充分测试且广泛使用的 Go WebSocket 实现。</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>用于 git 命令的简单终端 UI</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>使用 Go 和 JavaScript 的现代负载测试工具 - https://k6.io</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq 是一个可移植的命令行 YAML、JSON、XML、CSV、TOML 和属性处理器</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>一个简单、现代且安全的加密工具（和 Go 库），具有小的显式密钥，没有配置选项，具有 UNIX 风格的可组合性。</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>具有可编程管道的 OpenTelemetry Collector 发行版</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/mailru/easyjson">mailru/easyjson</a><br>golang 的快速 JSON 序列化器。</p>
+
+<p><a href="https://github.com/osmosis-labs/osmosis">osmosis-labs/osmosis</a><br>AMM 实验室</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度和管理</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/rook/rook">rook/rook</a><br>适用于 Kubernetes 的存储编排</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>适用于 GitHub Actions 自托管运行器的 Kubernetes 控制器</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

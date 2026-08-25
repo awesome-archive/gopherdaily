@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260806.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260806</span>
+</p>
+<p>每日一谚：Prefer time.Duration over raw integers for duration parameters. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.jetbrains.com/go/2026/08/05/new-livestream-go-127/">Go 1.27 发布派对 - 与 Go 团队一起的免费在线活动</a><br>Alan Donovan 是 Google 纽约 Go 团队的成员，并参与审查变更提案的委员会工作。</p> 
+
+<p><a href="https://tonybai.com/2026/08/06/rust-lang-llm-policy-interpretation-2026">Rust官方发文：AI 可以审代码，但不能写代码</a><br>Rust官方今日为rust-lang/rust仓库正式发布LLM使用政策，由五个核心团队联合采纳。政策的核心逻辑是「可以用AI来审，不能用AI来创」：允许提问、分析、评审等辅助性用途，但严格限制AI生成代码的合入，且要求比人类提交更高的审查标准，同时强制披露一切公开的LLM文本内容。这份政策的出台，源于打磨精致但缺乏理解的PR、评审资源被进一步挤压、机械复制粘贴LLM回复三类正在恶化的社区问题。Go、Zig、Linux Kernel等项目此前也各自表明了立场，从严格禁止到工具中立不等，共同勾勒出开源世界应对AI辅助编程的完整光谱。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoProgramMemoryUseII">查看 Go 1.27 程序在 Linux 上的内存映射</a><br>多年前我写了一篇关于深入分析简单 Go 1.11 程序在 Linux 操作系统内存使用的文章。出于个人原因，我在 Go 1 中重新回到这个话题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/08/05/opencost-1-121-0-first-of-a-kind-kubernetes-inference-cost-tracking/">OpenCost 1.121.0：首个 Kubernetes 推理成本跟踪工具</a><br>推理调度器(EPP)是网关级别的路由组件，作用于每个推理池。虽然仅使用 CPU，但在高吞吐量部署中仍代表真实的运营成本。</p>
+
+<p><a href="https://www.docker.com/blog/governance-is-a-developer-experience-problem/">治理是开发者体验问题</a><br>治理通常被描述为速度与控制之间的选择。快速行动并接受风险，或者增加控制并拖慢每个人的速度。实际上，最成功的开发者平台很少做出这种权衡。</p>
+
+<p><a href="https://nesbitt.io/2026/08/06/a-year-of-ai-disclosure-in-critical-packages.html">关键包中一年的 AI 披露</a><br>过去一年中，多个主流软件包生态系统增加了 AI 技术披露要求，提高了透明度和安全性。</p>
+
+<p><a href="https://zed.dev/blog/introducing-deltadb">软件是在提交之间创建的 — Zed 博客</a><br>我从来不是拉取请求的忠实粉丝。在智能体出现之前，人们更容易相信在快照上交换评论的仪式是协作开发软件的有效方式，但这对 Zed 团队来说从未真正奏效。</p>
+
+<p><a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/">我们 AI 动力的下一章</a><br>我们正在开启 AI 发展的新篇章，继续推动人工智能技术的创新和应用，为用户带来更智能的体验。</p>
+
+<p><a href="https://epage.github.io/blog/2026/08/cargo-vision/">Cargo 的愿景</a><br>根据 Stack Overflow 调查，Cargo 是最受欢迎的开发工具。许多人选择 Rust 语言正是因为 Cargo 工具链。</p>
+
+<p><a href="https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/">我们如何通过 Cloudflare OS 重新思考 Cloudflare 的工作方式 | Cloudflare 博客</a><br>Cloudflare OS 代表了我们重新思考工作方式的新方法，整合了 AI 技术以提高效率和创新能力。</p>
+
+<p><a href="https://clickhouse.com/blog/wal-backpressure-clickhouse-managed-postgres">什么是 WAL 反压，为什么 ClickHouse 托管 Postgres 需要它？| ClickHouse</a><br>WAL 反压是一种管理写入前日志(WAL)流量的机制，ClickHouse 托管 Postgres 需要它来确保系统在高负载下的稳定性和性能。</p>
+
+<p><a href="https://cedardb.com/blog/encoding_vs_compression/">编码还是压缩：为什么不两者兼得？| CedarDB</a><br>数据压缩和数据编码经常被混为一谈。公平地说，如果根据香农熵的教科书定义，它们实际上确实指的是同一概念。</p>
+
+<p><a href="https://www.allthingsdistributed.com/2026/08/on-building-scalable-control-planes.html">关于构建可扩展控制平面 | All Things Distributed</a><br>Zak van der Merwe 在 AWS 整个职业生涯都在构建控制平面，本文分享了构建可扩展控制平面的经验和见解。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/#atom-everything">涉及 OpenAI 模型的第三方网络安全评估</a><br>Irregular 是我们的外部网络安全测试合作伙伴之一，正在运行旨在与互联网隔离的夺旗式评估，但测试环境的错误配置使模型能够访问公共互联网。</p>
+
+<p><a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2">推出 Muse Code 和 Muse Spark 1.2 | Meta AI 研究</a><br>我们很高兴发布 Muse Code（测试版），这是一个由 Muse Spark 1.2（我们的最新模型）驱动的终端编码智能体。这标志着我们迈向前沿的下一步，更大且能力更强的模型正在开发中。</p>
+
+<p><a href="https://data4sci.com/blog/building-an-advanced-agentic-harness">构建高级智能体工具 | Data For Science</a><br>基本的工具循环是正确的，但过于简单。单独的飞行员可能在精心设计的飞机中赢得空战，但没有人会以这种方式进行空中战役。</p>
+
+<p><a href="https://naomibashkansky.com/blog/telepathy/">我为何离开 OpenAI 构建心灵感应技术</a><br>7 月 23 日周四，我从 OpenAI 辞职。24 日，我作为创始研究员加入 Conduit。我们正在构建心灵感应技术：基于非侵入性神经数据训练的思维到文本模型。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/esengine/DeepSeek-Reasonix">esengine/DeepSeek-Reasonix</a><br>DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the int</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous GPU Sharing on Kubernetes</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - Infrastructure as Code in any programming language 🚀</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

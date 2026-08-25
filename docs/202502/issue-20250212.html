@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250212.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250212</span>
+</p>
+<p>每日一谚：Interface{} says nothing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/go1.24">Go 1.24正式发布！</a><br>Go 1.24 发布了！此版本包含泛型类型别名、map 性能改进、FIPS 140 兼容性等等。 请访问下载页面获取此版本。 此版本改进包括：对泛型类型别名的完全支持；运行时中的多项性能改进，平均可将 CPU 开销降低 2-3%；新的`go get -tool` 命令用于跟踪工具依赖项；`go vet` 子命令中的新测试分析器；标准库中包含一组新的机制，以方便 FIPS 140-3 兼容性；基准测试现在可以使用更快且更不易出错的`testing.B.Loop`方法；新的`os.Root`类型；运行时提供了一种新的终结机制`runtime.AddCleanup`；改进的 WebAssembly 支持。</p> 
+
+<p><a href="https://dagger.io/blog/replaced-react-with-go">我们用 Go 和 WebAssembly 替换了我们的 React 前端 - Dagger</a><br>几周前，我们发布了 Dagger Cloud v3，这是 Dagger Cloud 的一个全新用户界面。v3 与其 v2 前辈的主要区别之一在于，新的 UI 使用 Go 编写了 WebAssembly (WASM)。这篇文章解释了我们选择 WebAssembly 的原因，一些实现挑战（以及我们如何解决这些挑战），以及结果。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/go-124-tool-directive">如何在 Go 1.24 中使用新的 tool 指令</a><br>Go 1.24 版本引入了 Go 模块的 `tool` 指令，简化了工具（例如，许多 Go 项目中广泛使用的代码检查工具或生成器，但不在代码库中直接使用）的管理流程。本文将探讨 `tool` 指令是什么、为什么重要以及如何有效使用它。该指令允许指定项目中使用的工具的依赖项，而无需将这些工具添加为常规依赖项。这对于 `golangci-lint`、`mockgen` 或其他支持开发工作流程但不出现在导入图中的命令行实用程序特别有用。以前，开发人员必须使用变通方法来管理此类工具，例如将它们添加到 `tools.go` 或 `gen.go` 文件中，或手动安装在 Go 模块之外。`tool` 指令通过提供一种专门声明这些依赖项的方法来消除这种摩擦。使用 `tool` 指令的好处包括：关注点分离、版本管理以及简化的工作流程。</p> 
+
+<p><a href="https://dev.to/zakariachahboun/say-goodbye-to-websockets-why-sse-might-be-your-new-best-friend-4d7n">告别 WebSocket？为什么 SSE 可能是你新的最佳伙伴</a><br>本文探讨了服务器发送事件 (SSE) 以及为什么它们可能是你用于实时通信的下一个最喜欢的工具。如果你一直在依赖传统的请求-响应方法或与 WebSocket 的复杂性作斗争，SSE 可能是你一直在寻找的更简单的解决方案！</p> 
+
+<p><a href="https://dev.to/devdevgo/the-ultimate-guide-to-custom-error-handling-system-in-go-apis-14h4">Go API自定义错误处理系统的终极指南</a><br>本文介绍了一种在Go API中构建一致、可操作且有意义的错误响应系统的方案。该系统以CustomError结构体为核心，包含HTTP状态码、详细错误信息、用户友好型错误信息、错误类型、错误代码、可重试标志以及元数据等字段。文章还介绍了用于简化CustomError创建的工厂函数，以及用于将现有错误包装到CustomError中的函数。此外，文章还阐述了用于将错误转换为响应的错误处理程序，以及三个关键接口：APIError、APIErrorCreator和ResponseWriter，这些接口使得系统具有灵活性和可扩展性。最后，文章还介绍了使用YAML配置和Go模板自动生成错误定义的方法。</p> 
+
+<p><a href="https://blog.ferretdb.io/replication-ferretdb-enabling-high-availability-performance">FerretDB 的复制功能：实现高可用性和高性能</a><br>本文探讨了 FerretDB 中复制的重要性及其益处，以及 FerretDB 如何帮助您创建可靠且容错的环境。复制是一种数据库技术，用于在不同的服务器上存储和分发多个数据副本。它通过维护一个处理所有写入操作的主数据库和一个或多个与主数据库同步的只读副本，来减少主实例的负载，提高查询性能并增强容错能力。FerretDB 的复制功能基于 PostgreSQL 的原生复制机制，允许用户构建能够高效处理大量查询并最大限度地减少故障发生时中断的容错应用程序。通过在 PostgreSQL 中设置多个副本，可以将数据读取分布在各个副本之间，以降低延迟并提高响应时间。在主要 PostgreSQL 实例发生故障时，需要额外的编排才能将副本提升为主服务器。FerretDB 不包括用于自动故障转移的内置机制，这意味着需要使用第三方工具或自定义脚本进行平滑的转换。同样，FerretDB 不会自动在不同的实例之间平衡查询。要有效地在多个 FerretDB 实例之间分发请求，需要使用外部负载平衡器（如 HAProxy）。与任何异步复制策略一样，副本在从主服务器同步数据时可能会出现一些延迟。依赖实时数据一致性的应用程序必须考虑主服务器和只读副本之间可能存在的差异。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-http2-server-push-in-go-boost-web-performance-40n0">Go语言中掌握 HTTP/2 服务器推送：提升网页性能</a><br>本文探讨了如何在 Go 语言中高效地实现 HTTP/2 服务器推送以优化网页性能。文章涵盖了资源选择、优先级管理、缓存策略、与 CDN 集成以及性能监控等方面，并提供了相应的 Go 代码示例。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.alexellis.io/how-to-run-firecracker-without-kvm-on-regular-cloud-vms/">如何在云虚拟机上运行无需 KVM 的 Firecracker</a><br>这篇博文介绍了一种在云虚拟机上运行微型虚拟机（microVM）的新方法，尤其是在 KVM 不可用时。文中探讨了 KVM 的作用，以及在没有 KVM 的情况下（即虚拟机关闭嵌套虚拟化且没有 /dev/kvm 设备）运行 Firecracker 等微型虚拟机所面临的挑战。作者介绍了 PVM 虚拟化框架，它允许在没有硬件扩展或嵌套虚拟化的普通云虚拟机上运行 Firecracker。文章还比较了 AWS 和 Hetzner 的不同云服务方案的成本，并详细介绍了如何在 AWS EC2 上配置和运行 KVM-PVM，包括构建新的主机内核、访客内核和修补的虚拟机管理程序。最后，作者总结了 KVM-PVM 的性能、优缺点和未来发展方向。</p>
+
+<p><a href="https://cacm.acm.org/research/metas-hyperscale-infrastructure-overview-and-insights">Meta 的超大规模基础设施：概述与见解</a><br>本文概述了 Meta 的超大规模基础设施，重点介绍了其发展过程中的关键见解，特别是系统软件方面。文章强调了 Meta 工程文化中的几个方面，例如快速迭代、技术开放性、生产中的研究以及共享基础设施。为了提高开发人员的生产力，Meta 普遍采用了持续部署，并使更多开发人员能够编写无服务器函数，而不是传统的服务代码。为了降低硬件成本，Meta 在数据中心规模上采用了硬件软件协同设计，并自主优化资源分配，包括跨全球数据中心的负载迁移，而不是仅限于单个集群。Meta 的 AI 战略涉及协同设计整个堆栈，从 PyTorch 到 AI 加速器、网络和 Llama 等 ML 模型。文章还讨论了 Meta 基础设施的关键组件，包括 CDN 站点、边缘数据中心和主数据中心，以及它们如何协同工作以处理用户请求。最后，文章探讨了超大规模基础设施的未来趋势，包括 AI、特定领域硬件、边缘数据中心和开发人员生产力。</p>
+
+<p><a href="https://dzone.com/articles/a-general-overview-of-tcpcopy-architecture">TCPCopy 架构概述</a><br>TCPCopy 是一款用于真实测试的 TCP 流量重放工具，其架构已从单一程序发展成为一个分布式负载测试框架。本文介绍了 TCPCopy 架构的三个发展阶段，分别阐述了每个阶段的优缺点，并最终提出了一种最大限度减少对在线环境影响的请求复制方法。</p>
+
+<p><a href="https://jack-vanlightly.com/blog/2025/2/10/how-to-disaggregate-a-log-replication-protocol">如何分解日志复制协议</a><br>这篇文章继续探讨日志复制协议，在状态机复制 (SMR) 的背景下，或者当日志本身就是产品时（例如 Kafka）。到目前为止，我一直在研究虚拟共识，但现在我将拓宽视野，研究如何普遍地分解日志复制协议（有很多方法）。在下一篇文章中，我将根据本文中描述的分解类型，对日志复制系统进行调查。</p>
+
+<p><a href="https://creston.blog/wasm-will-replace-containers">WASM 将取代容器</a><br>WebAssembly 是一种真正的“一次编写，随处运行”的体验。容器在软件开发中解决了许多重要问题，但现在使用起来很麻烦。WebAssembly 有望取代容器，因为它可以将多种语言编译成 WebAssembly，并且可以在许多地方运行。虽然目前系统接口（文件访问、网络等）的缺乏是其主要障碍，但这只是时间问题。与 JVM 不同，WebAssembly 字节码可以在 Web 浏览器中运行，这使其成为跨平台共享代码的理想选择。此外，WebAssembly 在无服务器平台（如 Cloudflare Workers）中的应用，可以带来微服务的所有开发者优势以及整体的运行时优势。</p>
+
+<p><a href="https://avivby.medium.com/tech-debt-isnt-debt-22bd8e7d37f1">技术债务并非真正的债务</a><br>许多初创公司将大量时间用于处理所谓的“技术债务”，但作者认为，将所有被标记为债务的任务都添加到冲刺中，是因为我们有时间去处理它，这意味着我们必然错过了更好的机会。真正的领导力在于“视情况而定”的判断。有时付出努力是有意义的，但有时这只是令人感觉良好的无用功。我们的作用是帮助选择有价值的改变，并将重要的事情与次要的事情区分开来。为此，作者强烈建议不要再为这些工作设定硬性时间。相反，让团队解释这些工作背后的原因和价值，并像对待其他任何产品任务一样对其进行优先排序。</p>
+
+<p><a href="https://dev.to/littlejo/lets-introduce-ebpf-and-aya-40ji">让我们了解 eBPF 和 Aya</a><br>我开始使用 Aya 进行 eBPF 编程。本系列文章旨在帮助你入门。本文将解释什么是 eBPF，什么是 Aya，以及使用 Aya 需要了解的内容。最后，我们将设置一个使用 Aya 进行开发的环境。文章还包含了关于 eBPF 的基本知识，例如其定义、起源、简单的程序示例以及使用 eBPF 的知名软件，以及如何使用 Aya 进行 eBPF 编程，包括 Rust 语言的基础知识和开发环境的设置。</p>
+
+<p><a href="https://zknill.io/posts/patterns-for-building-realtime">构建实时功能的模式</a><br>实时功能使应用程序感觉现代、协作且最新。这些功能主要需要在更改发生时将一个用户触发的更改共享给其他用户。这通常意味着您的服务器需要将数据发送到某些客户端，而这些客户端不知道他们缺少数据。这些模式依赖于客户端和服务器之间的连接，服务器可以通过该连接通知客户端某些数据。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Feb/11/llm-sort/#atom-everything">llm-sort：基于LLM的语义排序工具</a><br>Evangelos Lamprou 开发了一个名为 llm-sort 的令人惊艳的 LLM 插件，该插件能够进行“语义搜索”，允许用户根据提示对文件内容进行排序。该插件使用成对提示，通过 LLM 确定排序顺序，并通过 Python 的 sorted 函数实现。文章还提到了一个类似的旧项目 turksort，使用 Mechanical Turk 完成相同的功能。</p>
+
+<p><a href="https://www.anthropic.com/news/the-anthropic-economic-index">Anthropic 经济指数</a><br>Anthropic 推出了 Anthropic 经济指数，这是一个旨在随着时间推移了解人工智能对劳动力市场和经济影响的倡议。该指数的初步报告提供了基于数百万条匿名 Claude.ai 对话的数据和分析，揭示了人工智能如何在现代经济中融入现实世界任务的清晰图景。该数据集也已开源，研究人员可以以此为基础扩展研究成果。主要发现包括：目前人工智能的使用主要集中在软件开发和技术写作任务；人工智能更多地用于增强而非自动化任务；中高收入职业的人工智能使用率较高，而低收入和高收入职业的人工智能使用率较低。</p>
+
+<p><a href="https://defragzone.substack.com/p/techs-dumbest-mistake-why-firing">科技行业最大的错误：为何裁掉程序员转而使用 AI 会毁掉一切</a><br>科技行业曾经崇拜程序员，如今却将他们视为古代文明的遗迹。公司相信AI是万能药，而程序员？不过是昂贵、固执己见，最糟糕的是，他们还是人类。但事实是——如果你认为裁掉程序员而用AI取而代之是天才之举，你可能想回忆一下上次公司解雇所有工程师时的情况：最终以诉讼、产品失败和绝望的重新招聘告终。但尽管如此，大胆地解雇他们吧，你会后悔得比说“语法错误”还快。
+
+文章分析了三个即将发生且对那些认为AI会取代程序员的公司都不利的情况：1. 新一代程序员准备不足；2. 裁掉程序员而使用AI的公司很快就会后悔；3. 优秀的程序员会变得更加稀缺（也更贵）。最终总结道，科技行业正在搬起石头砸自己的脚，因为相信AI可以取代程序员，正在扼杀保持创新活力的生态系统。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/openimsdk/open-im-server">openimsdk/open-im-server</a><br>IM Chat ChatGPT</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>Backend master class: build a simple bank service in Go</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. Its modular and versatile design satisfies a broad range of industry use cases. It offers a unique approach to consensus that enables performance at scale while preserving privacy.</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/loft-sh/devpod">loft-sh/devpod</a><br>Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/rs/zerolog">rs/zerolog</a><br>Zero Allocation JSON Logger</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+<p><a href="https://github.com/lib/pq">lib/pq</a><br>Pure Go Postgres driver for database/sql</p>
+
+<p><a href="https://github.com/v2rayA/v2rayA">v2rayA/v2rayA</a><br>A web GUI client of Project V which supports VMess, VLESS, SS, SSR, Trojan, Tuic and Juicity protocols. 🚀</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

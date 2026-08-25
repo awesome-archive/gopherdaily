@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250515.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250515</span>
+</p>
+<p>每日一谚：Go is not just OOP, functional, or procedural. It is a unique blend of all and beyond. If you aim for idiomatic code, do not confine it to any one style. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="Go%20%e5%ae%98%e6%96%b9%e5%9b%a2%e9%98%9f%e7%bb%88%e4%ba%8e%e5%bc%80%e5%a7%8b%e7%9d%80%e6%89%8b%e5%af%b9%20encoding/json%20%e8%bf%9b%e8%a1%8c%e4%b8%80%e6%ac%a1%e6%84%8f%e4%b9%89%e6%b7%b1%e8%bf%9c%e7%9a%84%e5%8d%87%e7%ba%a7%e2%80%94%e2%80%94%e8%bf%99%e5%b0%b1%e6%98%af%20encoding/json/v2%20%e7%9a%84%e7%94%b1%e6%9d%a5%e3%80%82%e8%99%bd%e7%84%b6json/v2%20%e5%b0%9a%e6%9c%aa%e6%ad%a3%e5%bc%8f%e5%8f%91%e5%b8%83%ef%bc%8c%e4%bd%86%e5%85%b6%e6%a0%b8%e5%bf%83%e4%bb%a3%e7%a0%81%e5%b7%b2%e7%bb%8f%e5%90%88%e5%b9%b6%e5%88%b0%20Go%20%e7%9a%84%e5%bc%80%e5%8f%91%e5%88%86%e6%94%af%ef%bc%8c%e5%b9%b6%e5%8f%af%e4%bb%a5%e9%80%9a%e8%bf%87%e4%b8%80%e4%b8%aa%e5%ae%9e%e9%aa%8c%e6%80%a7%e7%89%b9%e6%80%a7%e6%a0%87%e5%bf%97%20GOEXPERIMENT=jsonv2%20%e6%9d%a5%e6%8f%90%e5%89%8d%e4%bd%93%e9%aa%8c%ef%bc%81">手把手带你玩转GOEXPERIMENT=jsonv2：Go下一代JSON库初探</a><br></p> 
+
+<p><a href="https://dev.to/sk25469/designing-go-routines-4oaa">Goroutine设计</a><br>本文深入探讨了 Go 协程的内部机制，包括并发与并行的区别、Go 调度器和 G-M-P 模型、高效的 CPU 利用率、协程的内存管理（堆栈增长和堆栈分割）、调度抢占和公平性、阻塞任务的处理、I/O 轮询和 Netpoller，以及垃圾回收和性能注意事项等。文章以图文并茂的方式解释了 Go 如何高效地管理大量协程，并提出了避免协程泄漏和优化通道使用的建议。</p> 
+
+<p><a href="https://dev.to/leapcell/mastering-higher-order-functions-in-go-gc0">掌握 Go 语言中的高阶函数</a><br>高阶函数是在 Go 语言函数式编程中非常重要的概念。本文介绍了高阶函数的概念，并通过回调函数、策略模式、过滤器和映射器等示例，演示了如何在 Go 中使用高阶函数来编写更简洁、可重用和易于维护的代码。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.openpolicyagent.org/introducing-swift-opa-native-policy-evaluation-for-swift-d5136c8a662e">Swift OPA：Swift 原生策略评估工具</a><br>Swift OPA 现已发布，它是一种在 Swift 应用程序和服务中原生集成 OPA 的新方法。Swift OPA 基于 OPA 中间表示 (IR) 计划的强大基础，该计划于 2022 年推出，OPA 工具链能够将 Rego 策略编译成 IR，精确定义评估策略所需的具体步骤。Swift OPA 随后解释这些 IR 计划，使您能够在 Swift 应用程序和服务中原生利用 OPA 丰富的策略。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/05/14/introducing-k0rdent-v0-3-0-smarter-observability-smoother-operations/">Introducing k0rdent v0.3.0: Smarter observability, smoother operations</a><br></p>
+
+<p><a href="https://kubernetes.io/blog/2025/05/14/kubernetes-v1-33-updates-to-container-lifecycle/">Kubernetes v1.33: Updates to Container Lifecycle</a><br></p>
+
+<p><a href="https://blog.trailofbits.com/2025/05/14/the-cryptography-behind-passkeys">paaskey背后的密码学</a><br></p>
+
+<p><a href="https://redmonk.com/sogrady/2025/05/06/oss-forward-back">开源软件的进退</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/15/openai-on-twitter/#atom-everything">OpenAI 推特上的引言</a><br>根据大众需求，GPT-4.1 将从今天开始直接在 ChatGPT 中可用。GPT-4.1 是一款专门的模型，擅长编码任务和指令遵循。因为它更快，所以它是日常编码需求的 OpenAI o3 和 o4-mini 的绝佳替代品。</p>
+
+<p><a href="https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms">AlphaEvolve：一款由 Gemini 驱动的编码代理，用于设计高级算法</a><br>这款新型 AI 代理通过结合大型语言模型的创造力和自动评估器，进化出用于数学和计算实际应用的算法。AlphaEvolve 提高了 Google 数据中心的效率、芯片设计和 AI 训练流程（包括训练 AlphaEvolve 本身所依赖的大型语言模型）的效率。它还有助于设计更快的矩阵乘法算法，并找到开放性数学问题的新解决方案，展现出在许多领域的应用前景。</p>
+
+<p><a href="https://fredbenenson.medium.com/the-perverse-incentives-of-vibe-coding-23efbaf75aee">氛围编程的扭曲激励机制</a><br>作者 fred benenson 分享了他使用 AI 编程助手（如 Claude Code）的体验，并将其比作一种上瘾行为。AI 编程助手虽然能提供高效的编码体验，但其“差一点就完美”的质量和奖励的不确定性会让人上瘾。此外，AI 系统生成的代码往往冗长且过度工程化，这与 AI 助手按代码量收费的商业模式有关，形成了经济激励与用户需求之间的矛盾。作者提出了一些应对策略，并探讨了如何更好地协调 AI 发展中的经济激励与代码质量之间的关系。</p>
+
+<p><a href="https://pivot-to-ai.com/2025/05/13/if-ai-is-so-good-at-coding-where-are-the-open-source-contributions">如果AI在编程方面如此出色……为什么开源贡献如此之少？</a><br>最近，微软CEO萨蒂亚·纳德拉和Meta CEO马克·扎克伯格都大力宣传AI编程。文章作者质疑了这种说法，并指出如果AI编程真的如此出色，为什么在开源项目中几乎看不到高质量的AI代码贡献？文章援引了Ben Evans的观点，他呼吁大家展示AI生成的、经同行评审并合并的优秀代码贡献，以此证明AI编程的实际能力。文章还讨论了开源项目对AI代码贡献的负面反馈，指出许多AI生成的代码质量低下，反而增加了开发者的负担。作者认为，目前AI编程的实际应用效果与宣传存在巨大差距。</p>
+
+<p><a href="https://vvvincent.me/llms-are-making-me-dumber">大型语言模型让我变笨了</a><br>作者探讨了大型语言模型（LLM）如何影响其学习和工作效率。作者承认，使用LLM提高了生产力，例如快速构建Chrome扩展程序、完成数学作业和撰写邮件，但同时也牺牲了对JavaScript等技能的深入学习。作者质疑这种为了速度牺牲深度学习的做法是否值得，并通过历史上的计算器、GPS、印刷术等例子进行类比，探讨了技术进步对人类技能的影响。作者认为，LLM作为辅导工具，可以帮助学习，但关键在于找到学习深度和输出速度之间的平衡点。文章最后，作者提出了一些保持独立思考能力和长期学习能力的方法。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project.</p>
+
+<p><a href="https://github.com/hashicorp/golang-lru">hashicorp/golang-lru</a><br>Golang LRU cache</p>
+
+<p><a href="https://github.com/pdfcpu/pdfcpu">pdfcpu/pdfcpu</a><br>A PDF processor written in Go.</p>
+
+<p><a href="https://github.com/ltaoo/wx_channels_download">ltaoo/wx_channels_download</a><br>微信视频号下载器</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>Simple and easy to use DDNS. Support Aliyun, Tencent Cloud, Dnspod, Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, Namecheap, NameSilo...</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/lejianwen/rustdesk-api">lejianwen/rustdesk-api</a><br>Custom Rustdesk Api Server, include web admin ,web client, web client v2 preview and oidc login</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>Simple and flexible tool for managing secrets</p>
+
+<p><a href="https://github.com/kubernetes-sigs/metrics-server">kubernetes-sigs/metrics-server</a><br>Scalable and efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

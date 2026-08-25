@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260313.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260313</span>
+</p>
+<p>每日一谚：Simplicity is prerequisite for reliability.  — Edsger W. Dijkstra </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/13/go-duckdb-micro-data-warehouse-dimensionality-reduction">别再滥用 ClickHouse 了！单机每秒狂刷 1800 万条数据，拆解 Go&#43;DuckDB 的“微型数仓”降维打击</a><br>今天，我想给你介绍一个在海外工程界使用较多的方案。它不仅能把你从沉重的大数据组件中解救出来，还能在你的 Go 语言单二进制文件中 ，塞进一个性能恐怖的 OLAP（在线分析处理）引擎。 它就是 [DuckDB](https://github.com/duckdb/duckdb-go)。结合 Go 语言，它能在普通服务器上跑出每秒 1800 万条记录的写入速度，和毫 秒级的亿级数据分析延迟。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/azD9HJVBxCXO_0MsXYr3ZA">【AI 智能体时代的软件工程】07 任务工程：告别 Prompt，建立“自治契约”</a><br>我们要学习如何把 AI 队友那不可预测的“随机性”，关进坚固的工程笼子里。 我们今天先来解决所有 AI 研发流水线的第一道关卡，也是目前绝大多数开发者每天都在犯错的地方——我们给 AI 派发任务的方式从根本上就是错 的。 在这一讲，我们将彻底抛弃业内广为流传的“提示词工程（Prompt Engineering）”思维，转而建立面向智能体的新一代规范：任务工程（Mission Engineering）与“任务简报（Mission Brief）”。 </p> 
+
+<p><a href="http://notes.eatonphil.com/2026-03-12-mojos-not-yet-python.html">Mojo 尚不是 Python</a><br>这是一篇外部文章。点击此处跳转到该文章在 theconsensus.dev 上的链接（https://theconsensus.dev/p/2026/03/12/mojos-not-yet-python.html）。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-03-12-hosted-branch-permissions/">托管 Dolt Workbench 中的分支权限</a><br>我们最近为托管 Dolt Workbench 发布了分支权限功能。您可以与团队无缝协作，同时对进入主数据库的内容拥有更大的监督权。Dolt 的分支权限模型最初包括 admin、write 和 read 三种可用权限。现在，我们为 Dolt 增加了一种额外的分支权限——merge。在 workbench 中，用户现在可以通过 UI 直接设置分支权限，以限制对特定分支的访问。这使得团队协作更加顺畅，并为进入生产数据库的更改提供了更大的透明度和控制力。</p>
+
+<p><a href="https://www.haproxy.com/blog/dora-and-nis2-compliance-solution">NIS2 和 DORA 合规性：满足欧盟监管要求</a><br>NIS2 和 DORA 现已生效。了解如何通过 HAProxy 采用统一的应用层安全方法来满足欧盟网络安全和运营弹性要求。</p>
+
+<p><a href="https://www.docker.com/blog/native-e2e-test-reliability/">实现可靠的原生端到端测试：超越修复测试用例的失败</a><br>对于在各种平台（Android/iOS）、屏幕尺寸和操作系统版本上运行的原生应用程序，端到端（E2E）测试尤为重要。E2E 测试可以发现跨此分散生态系统的行为差异。但是，保持 E2E 测试的可靠性通常比编写它们更具挑战性。本文讨论了团队在 E2E 测试稳定性方面面临的挑战，并分享了构建可信赖的可靠 E2E 系统的经验，重点是稳定测试环境、明确测试所有权、减少嘈杂的警报以及改善可观测性。此外，它还介绍了使用 Docker 化模拟器进行扩展的混合策略。</p>
+
+<p><a href="https://simonwillison.net/2026/Mar/13/liquid/#atom-everything">Shopify/liquid: Performance: 53% faster parse&#43;render, 61% fewer allocations</a><br>Shopify CEO Tobias Lütke针对Liquid（Shopify的开源Ruby模板引擎）提交了一个性能优化Pull Request (PR)，使其解析和渲染速度提升了53%，分配数减少了61%。这些优化是通过使用Andrej Karpathy的“autoresearch”编码代理系统，运行了约120次自动实验（包含93个提交）发现的微优化成果。优化措施包括用`String#byteindex`替换StringScanner分词器、纯字节解析标签标记，以及缓存小整数的to_s转换。作者认为这突显了健壮的测试套件、autoresearch模式、将“使其更快”作为可操作目标的有效性，以及编码代理使得高层管理者也能高效参与代码工作。</p>
+
+<p><a href="https://idiallo.com/blog/work-taught-me-how-to-think">是工作教会了我如何思考</a><br>学习发生于工作中。在工作中，问题会呈现出来并等待解决。没有标准答案，你必须学会独立思考来解决它们。作者通过在家具仓库和后来的开发工作中遇到的实际问题，对比了学校教育和工作实践在培养独立思考能力方面的差异，强调工作经验是真正教会人如何解决实际问题和独立思考的途径。</p>
+
+<p><a href="https://lcamtuf.substack.com/p/how-much-of-hn-is-ai">HN中有多少是AI内容？</a><br>作者对Hacker News (HN) 既爱又恨，认为它是极客新闻的重要聚合器和博客流量来源，但也充斥着有毒评论者。作者观察到近期HN的头条充斥着关于AI、由AI撰写或AI评论的故事。他通过对2026年2月每日头条前5名的抽样分析，发现AI相关话题占据了主导地位。为了判断哪些故事可能是AI撰写的，他使用了Pangram模型，认为该模型在检测LLM生成文本方面效果显著。作者还提到他查看了所有被标记的故事，并发现结果合理，甚至Pangram可能存在一些漏报。</p>
+
+<p><a href="https://dynomight.net/formatting/">现代写作中的格式化成瘾</a><br>本文探讨了当前写作中过度使用格式（如标题、列表、粗体等）的现象，对比了两种截然不同的写作风格（Exhibit A：过度格式化；Exhibit B：传统段落式），并分析了人们（包括人类作者和AI）沉迷于格式化的五个可能原因：格式本身有益（尤其在不信任作者时）、质量难以验证、格式化写作比撰写清晰段落更容易、格式有助于思维过程（链式思考/Blathering），以及格式化可能是一种“虚张声势”（Bluff），掩盖了思想组织不力的事实。作者建议的实践方法是：先用大量格式写草稿，然后努力去除格式化以形成清晰叙事，最后再酌情添加回格式。</p>
+
+<p><a href="https://blog.jsbarretto.com/post/text-editor">编写我自己的文本编辑器并投入日常使用</a><br>作者对现有文本编辑器（如 Howl）的不满促使他开发了自己的终端用户界面 (TUI) 文本编辑器。他最初的目标是保持简单，例如只支持他自己需要的偏好设置，并逐步通过“食用自己的狗粮”（即强迫自己使用它进行日常任务）来迭代开发。文章详细介绍了开发过程中的几个关键方面，包括：难以掌握的“光标操作”；对现有编辑器中优秀“文件浏览器”的模仿和简化（主要依赖于简单的启发式算法进行模糊搜索）；为实现上下文相关的语法高亮而从头构建高性能的正则表达式引擎，并应用了多种优化技术（如 AST 优化、线程代码和 CPS 转换）；通过缓存和需求驱动的模式提高了“高亮”性能；以及使用多线程和工作窃取实现了快速的“项目搜索”。最后，作者总结了自制工具的优势，包括完美契合需求、学到深入知识以及提高长期生产力，并鼓励他人也尝试构建自己的工具。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://evanhahn.com/how-i-use-gen-ai-on-this-blog/">How I use generative AI on this blog</a><br></p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/03/12/changing-my-mind-on-ubi.html">Changing my mind on UBI</a><br></p>
+
+<p><a href="https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/">AI 带来的哀伤与分歧</a><br>人工智能辅助编程正在揭示开发者群体中一直存在但因工作方式相似而不可见的裂痕。作者也感受到了哀伤，但其解决方式与预期不同，这反映了他一直以来作为开发者的身份。文章探讨了这种分歧，认为一些开发者哀悼的是手工艺的损失，而作者的哀伤更多是关于周围环境（如开放网络、职业前景）的变化。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/dolthub/dolt">dolthub/dolt</a><br>Dolt – Git for Data</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/steveyegge/gastown">steveyegge/gastown</a><br>Gas Town - multi-agent workspace manager</p>
+
+<p><a href="https://github.com/docker/docker-agent">docker/docker-agent</a><br>AI Agent Builder and Runtime by Docker Engineering</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, AI-integrated, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/steipete/wacli">steipete/wacli</a><br>WhatsApp CLI</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/runatlantis/atlantis">runatlantis/atlantis</a><br>Terraform Pull Request Automation</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240815.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-15</span>
+</p>
+<p>每日一谚：Be explicit rather than implicit. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/paOduv0t1CtBCUoUBfJ7rQ">Kubernetes十周年了：学习者为何越来越少？</a><br>如今K8S项目的开发依旧活跃，KuberCon每年依旧热度很高，但学习K8S的人似乎越来越少了！why?</p> 
+
+<p><a href="https://unskilled.blog/posts/preemption-in-go-an-introduction/">理解Go语言中的抢占</a><br>本文解释了 Go 中抢占的概念，解释了它如何确保 goroutines 之间 CPU 分配的公平性，并解释了它在同步和异步模式下是如何工作的，以及它是如何在 Go 1.14 中引入的。</p> 
+
+<p><a href="https://appliedgo.net/go123/">Go One-Two-Three：我最喜欢的 Go Release 1.23 特性</a><br>Go 1.23 版本引入了一些新功能，例如范围超过功能的迭代器、选择加入遥测、使用 Profiled Guided Optimization 加快构建时间、改进计时器和代码收集的垃圾收集，以及更新标准库中的许多包，同时还引入了用于改进 Go 工具链的可选遥测。</p> 
+
+<p><a href="https://nsrip.com/posts/oneinstruction.html">单指令窗口</a><br>作者讨论了他对 Go 运行时中一个 bug 的调查，特别是 64 位 ARM 中的帧指针展开崩溃，该崩溃导致了释放后使用的 bug，并分享了他使用 GNU 调试工具包 （GDB） 诊断和修复 Bug 所采取的步骤。</p> 
+
+<p><a href="https://tutorialedge.net/golang/go-123-iterators-tutorial/">Go 1.23 迭代器教程</a><br>本文提供了一个关于 Go 1.23 中新的 range-over-fn 语法的教程，该语法允许创建迭代器函数，这些函数可以按需遍历元素，从而提高内存效率。</p> 
+
+<p><a href="https://imantung.medium.com/ormhate-and-code-generation-with-golang-8c22205068b9">使用 Golang 进行 ORMHate 和代码生成</a><br>Iman Tung 讨论了在软件开发中使用对象关系映射 （ORM） 的利弊，强调了它的优点和缺点，并提出了诸如 Go 代码生成等替代方案，并强调了在代码生成中约定而不是配置的重要性。</p> 
+
+<p><a href="https://dev.to/leoantony72/go-high-performance-cache-with-ttl-and-disk-persistence-4a4m">实现具有 TTL 和磁盘持久性的高性能缓存</a><br>这篇博文介绍了一个支持 TTL、磁盘持久化和 Hash 数据类型的 Golang 缓存库，该库可用于加速 Golang 项目，而无需配置数据库，并提供了如何使用它的详细说明，包括错误处理和缓存过期。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://charity.wtf/2024/08/07/is-it-time-to-version-observability-signs-point-to-yes/">是时候对可观测性进行版本控制了吗？（迹象显示是）</a><br>本文讨论了软件系统中可观察性的演变，从度量、日志和跟踪到单一事实来源 （O11Y），并提出从 O11Y 1.0 到 O11Y 2.0 的转变可能会导致重大的社会技术转型，为理解复杂系统提供更多选择。</p>
+
+<p><a href="https://webrtc.ventures/2024/08/understanding-whip-whep-and-media-over-quic/">了解 WHIP、WHOP 和媒体对 QUIC 的看法：为什么它们在 2024 年很重要。</a><br>WebRTC-HTTP Ingestion Protocol （WHIP）、WebRTC-HTTP egress Protocol （WHEP） 和 Media Over QUIC （MOQ） 这些协议显著提高了实时通信和直播服务的效率、可靠性和质量，并得到了业界的大力支持和采用。</p>
+
+<p><a href="https://www.sebastiansylvan.com/post/the-perils-of-future-coding/">The Perils of Future-Coding</a><br>Sebastian Sylvan discusses the dangers of &#34;future-coding&#34;, a form of technical debt where code is written in a complex way to anticipate future use cases, arguing that it often leads to unnecessary complexity, time wasted debugging, and performance issues, and should be avoided.</p>
+
+<p><a href="https://www.polarsignals.com/blog/posts/2024/08/13/parca-opentelemetry-bright-future">Parca &#43; OpenTelemetry = 光明的未来：Parca 项目正在拥抱 OpenTelemetry</a><br>Parca 项目正在将其分析工具 Parca-Agent 与 OpenTelemetry-eBPF-Profiler 合并，以整合工作、促进社区协作并加速可观测性生态系统的创新。</p>
+
+<p><a href="https://two-wrongs.com/practices-of-reliable-software-design">可靠软件设计的实践</a><br>该文档提供了可靠软件设计的八种实践，包括使用现成的解决方案、优先考虑成本和可靠性而不是功能、快速将想法转移到生产环境、使用简单的数据结构、尽早预留资源、设置最大值、使测试变得容易以及嵌入性能计数器。</p>
+
+<p><a href="https://faun.pub/k3s-vs-talos-linux-8a1e0dce9a77">K3s 与 Talos Linux</a><br>本文讨论了 K3s 和 Talos Linux（轻量级 Kubernetes 发行版）在 Kubernetes 部署中的应用中的差异和优势，强调应根据特定的部署需求、资源可用性和安全考虑因素进行选择。</p>
+
+<p><a href="https://www.warpstream.com/blog/dealing-with-rejection-in-distributed-systems">处理拒绝（在分布式系统中）</a><br>本文讨论了背压在分布式系统中的重要性，特别是在管理请求和防止系统故障方面，并分享了 WarpStream（Apache Kafka 的直接替代品）在管理背压方面的性能。</p>
+
+<p><a href="https://istio.io/latest/news/releases/1.23.x/announcing-1.23/">Istio 1.23.0 发布</a><br>Istio 1.23 已经发布，在环境模式、DNS 自动分配、重试策略和 Bookinfo 应用程序方面进行了改进，同时还弃用了集群内 Operator。</p>
+
+<p><a href="https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/">Docker 最佳实践：在 RUN、CMD 和 ENTRYPOINT 之间进行选择</a><br>源文档是一条消息，指示来自系统的“403 Forbidden”错误消息，特别是来自服务器端，特别是来自“ns”部分。</p>
+
+<p><a href="https://www.responsive.dev/blog/why-kafka-streams">所以你想写一个流处理器吗？当心鸭子综合症。</a><br>本文讨论了使用 Kafka Streams（一种流处理框架）的挑战和好处，包括需要仔细执行处理代码、确保正确的结果、确保高可用性、优化拓扑和有效利用多线程，同时还提供测试和状态检查功能。</p>
+
+<p><a href="https://blog.heroku.com/building-event-driven-architecture-managed-data-services">使用托管数据服务构建事件驱动型架构</a><br>本文讨论了 Apache Kafka 在事件驱动架构 （EDA） 应用中的重要性，重点介绍了其在实时数据处理、容错以及与 Heroku 托管的 Apache Kafka 服务集成以实现可扩展性和可靠性方面的优势。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/08/15/consistent-read-from-cache-beta/">Kubernetes v1.31: Accelerating Cluster Performance with Consistent Reads from Cache</a><br>Kubernetes v1.31 introduces a new feature, &#34;consistent reads from cache&#34;, which reduces etcd load, improves latency, and scalability, particularly for large clusters, by leveraging etcd&#39;s progress notifications.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/machine-unlearning-why-teaching-ai-to-forget-is-crucial/">机器学习：为什么教人工智能忘记至关重要</a><br>这篇文章讨论了机器学习在人工智能中的重要性，它允许模型在不影响性能的情况下擦除训练数据的选定部分，解决道德问题和偏见，并由Maghdad Kurmanji等研究人员开发。</p>
+
+<p><a href="https://engineering.fb.com/2024/08/14/production-engineering/how-meta-animates-ai-generated-images-at-scale/">Meta 如何大规模制作 AI 生成的图像动画</a><br>Meta AI 通过优化延迟、改善时间注意力扩展、减少采样步骤、结合引导和步骤蒸馏以及使用 Py Torch 进行部署和架构，成功部署了其动画功能，该功能可以生成生成图像的短动画。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/E0OIgufVW8dm-fRhlRoA6A">一文揭秘｜预训练一个72b模型需要多久？</a><br>当前环境异常,完成验证后即可继续访问。</p>
+
+<p><a href="https://neo4j.com/developer-blog/microsoft-graphrag-neo4j/">Integrating Microsoft GraphRAG into Neo4j</a><br>The blog post demonstrates how to integrate Microsoft GraphRAG into Neo4j, using LangChain and Llamaindex, to extract structured information from source documents and generate natural language summaries, using the dataset &#34;A Christmas Carol&#34; by Charles Dickens.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Kubernetes 的工作流引擎</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型SRT / WebRTC / RTSP / RTMP / LL-HLS媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>为 Kubernetes 入口和服务配置外部 DNS 服务器（AWS Route53、Google CloudDNS 等）</p>
+
+<p><a href="https://github.com/cloudwego/hertz">cloudwego/hertz</a><br>Go HTTP 框架，具有高性能和强大的可扩展性，用于构建微服务。</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>充当反向代理，保护您的 Web 服务免受攻击和利用。</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>使用基于 SQL 的实时响应性直接替代 Redis。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/TheAlgorithms/Go">TheAlgorithms/Go</a><br>在 Go 中为初学者实现的算法和数据结构，遵循最佳实践。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>容器镜像和文件系统的漏洞扫描器</p>
+
+<p><a href="https://github.com/argoproj/argo-events">argoproj/argo-events</a><br>适用于 Kubernetes 的事件驱动自动化框架</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使你能够安全且可预测地创建、更改和改进基础结构。它是一种源可用工具，可将 API 编码为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>精选的优秀 Go 框架、库和软件列表</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>一个极快的网络打包器</p>
+
+<p><a href="https://github.com/go-admin-team/go-admin">go-admin-team/go-admin</a><br>基于Gin &#43; Vue &#43; Element UI &amp; Arco Design &amp; Ant Design 的前后端分离权限管理系统脚手架（包含了：多租户的支持，基础用户管理功能，jwt鉴权，代码生成器，RBAC资源控制，表单构建，定时任务等）3分钟构建自己的中后台项目；项目文档》：https://www.go-admin.pro V2 Demo： https://vue2.go-admin.dev V3 Demo： https://vue3.go-admin.dev Antd 订阅版：https://antd.go-admin.pro</p>
+
+<p><a href="https://github.com/NVIDIA/dcgm-exporter">NVIDIA/dcgm-exporter</a><br>利用 DCGM 的 Prometheus 的 NVIDIA GPU 指标导出器</p>
+
+<p><a href="https://github.com/GoogleContainerTools/kaniko">GoogleContainerTools/kaniko</a><br>在 Kubernetes 中构建容器镜像</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>GitHub Actions 自托管运行器的 Kubernetes 控制器</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>受 Google Zanzibar 启发的开源授权即服务，旨在为任何应用程序构建和管理细粒度且可扩展的授权系统。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

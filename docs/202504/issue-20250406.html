@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250406.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250406</span>
+</p>
+<p>每日一谚：Close channels to signal completion </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.esc.sh/golang-performance-penalty-in-kubernetes">Kubernetes中Go的性能损耗</a><br>在 Kubernetes 中运行的 Go 应用程序如果 GOMAXPROCS 不匹配 CPU 限制，可能会导致性能下降。这篇文章解释了原因、修复方法以及为什么这是一个简单的性能提升。文中包含基准测试、仪表盘和一行代码的解决方案。</p> 
+
+<p><a href="https://t.zsxq.com/3k0Gd">Gopher的AI原生应用开发第一课：OpenAI Compatible API</a><br>Gopher的AI原生应用开发第一课的第三篇，探讨与LLM交互的OpenAI Compatible API，主要是Chat Completions API。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoSomeErrorHandlingInevitable">我对Go语言错误处理变化的悲观态度</a><br>作者对Go语言的错误处理变化持悲观态度，尽管变化是不可避免的。他认为，Go开发者会回应社区对错误处理的不满，但当前对“良好错误处理”的理解并不充分。这可能导致新方案带来新的缺陷，虽然整体上可能会有所改善。</p> 
+
+<p><a href="https://mfbmina.dev/en/posts/go-tool">Go工具：没人问津的功能</a><br>作者在使用 Ruby 多年后转而使用 Go 语言，起初在依赖管理方面遇到了困难，因为 Go 的依赖管理命令不够清晰，并且开发和生产依赖没有区别，两者都包含在二进制文件中。Go 1.24 版本引入了“go tool”功能，作者对其抱有期望，但测试后感到失望。该功能允许添加项目依赖的工具，如 goreleaser、golangci-lint 等，但它没有解决依赖管理中开发和生产依赖混淆的问题，甚至可能使问题更糟，因为所有依赖（包括工具）都包含在一个 go.mod 文件中。作者更希望 Go 能够像 Ruby 的 Gemfile 一样，支持依赖分组，以便更好地管理不同环境下的依赖。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-04-07-dolt-basics-sql/">Dolt 入门：SQL Select</a><br>本篇文章介绍了如何使用 Dolt（一个结构化查询语言 (SQL) 数据库）进行基本的 SQL SELECT 查询，以从 Dolt 数据库中检索数据。文章涵盖了从下载安装 Workbench，到进行列和行过滤，以及排序和限制结果数量等内容，并通过示例演示了如何查询数据。</p>
+
+<p><a href="https://eshard.com/posts/emulating-ios-14-with-qemu">在QEMU中模拟iPhone</a><br>从黑屏和启动问题到渲染问题和PAC难题，以下是我们最终让iOS显示问候语的经验总结。本文详细介绍了在QEMU中模拟iPhone的过程，包括解决黑屏、启动问题、渲染问题和指针认证代码(PAC)等难题的步骤和方法。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/5/llama-4-notes/#atom-everything">Llama 4 的初步印象</a><br>Meta AI 在周末发布了 Llama 4，包含两个新模型：Llama 4 Maverick（400B 参数，100万 token 上下文长度）和 Llama 4 Scout（109B 参数，1000万 token 上下文长度）。作者尝试使用 OpenRouter 和 Groq 等平台测试了这两个模型，并对它们的性能和可用性进行了评估。Llama 4 Maverick 在 LM Arena 排行榜上排名第二，但 Llama 4 Scout 的表现却不太理想。作者还讨论了 Llama 4 的系统提示，以及对未来 Llama 4 模型系列的期望。</p>
+
+<p><a href="https://deadprogrammersociety.com/2025/03/calling-mcp-servers-the-hard-way">以困难的方式调用 MCP 服务器</a><br>本文介绍了如何使用 curl 以 HTTP/SSE 的方式调用 MCP 服务器。文章涵盖了获取 MCP 会话令牌、初始化会话、调用 MCP 服务器、列出 MCP 工具和资源、读取 MCP 资源以及使用 MCP 提示符等步骤，并提供了相应的 curl 命令示例和 JSON 数据格式说明。文章还简要介绍了 MCP 协议及其用途。</p>
+
+<p><a href="https://cline.bot/blog/the-end-of-complex-uis-how-mcp-servers-are-eliminating-software-learning-curves">复杂 UI 的终结：MCP 服务器如何消除软件学习曲线 - Cline 博客</a><br>您是否看过那些病毒式视频，人们只需描述他们想要的内容就能在 Blender 中创建令人惊叹的 3D 场景？无需点击复杂的菜单，无需在一个选项海洋中寻找合适的工具，无需观看 10 小时的 YouTube 教程。只需对话。
+
+这不仅仅是一个简洁的演示——它标志着复杂用户界面的终结。现在正在疯传的 Blender MCP 服务器只是我们与软件交互方式发生巨大转变的第一个迹象。本文探讨了 MCP 服务器如何通过自然语言交互消除复杂软件的学习曲线，以及 Cline 如何引领这场革命。</p>
+
+<p><a href="https://github.blog/news-insights/product-news/github-copilot-agent-mode-activated">GitHub Copilot：体验式编码，代理模式和MCP支持面向所有VS Code用户推出</a><br>为庆祝微软成立50周年，我们向所有VS Code用户推出带有MCP支持的代理模式。我们还宣布了新的GitHub Copilot Pro&#43;套餐（含高级请求）、Anthropic、Google和OpenAI模型的普遍可用性、代码补全的下一编辑建议和Copilot代码审查代理。</p>
+
+<p><a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence">Llama 4家族：原生多模态AI创新新时代的开端</a><br>Meta AI发布了Llama 4 Scout和Llama 4 Maverick，这是首批开放权重、原生多模态模型，具有前所未有的上下文支持，也是首批使用专家混合（MoE）架构构建的模型。Llama 4 Scout是一个170亿参数模型，在同类模型中性能最佳；Llama 4 Maverick是一个170亿参数模型，在广泛报道的基准测试中胜过GPT-4o和Gemini 2.0 Flash。这些模型的训练受益于Llama 4 Behemoth，这是一个2880亿参数模型，在多个STEM基准测试中性能优于GPT-4.5、Claude Sonnet 3.7和Gemini 2.0 Pro。Llama 4 Scout和Llama 4 Maverick现已在llama.com和Hugging Face上提供下载。</p>
+
+<p><a href="https://thenewstack.io/agentic-ai-the-missing-piece-in-platform-engineering">Agentic AI：平台工程中缺失的一环</a><br>借助完整的上下文，代理式人工智能可以根据触发器和状态启动操作，使其成为平台工程的完美补充。本文探讨了在平台工程工作流程中整合代理式AI的关键考虑因素，包括互操作性、可扩展性和可靠性；安全、治理和可观察性；以及开发人员工作流程。代理式AI可以通过自动化复杂流程、大规模应用上下文理解以及实现真正的团队速度（而不仅仅是个体生产力）来提升平台工程工作。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/owasp-amass/amass">owasp-amass/amass</a><br>In-depth attack surface mapping and asset discovery</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/mjl-/mox">mjl-/mox</a><br>modern full-featured open source secure mail server for low-maintenance self-hosted email</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models.</p>
+
+<p><a href="https://github.com/Septrum101/zteOnu">Septrum101/zteOnu</a><br>A tool that can open ZTE onu device factory mode</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/cloudflare/terraform-provider-cloudflare">cloudflare/terraform-provider-cloudflare</a><br>Cloudflare Terraform Provider</p>
+
+<p><a href="https://github.com/cyclops-ui/cyclops">cyclops-ui/cyclops</a><br>Developer Friendly Kubernetes 👁️</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript - https://k6.io</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

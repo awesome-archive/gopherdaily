@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241020.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-20</span>
+</p>
+<p>每日一谚：Do not write code that you think is fast; measure it </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://denistsyplakov.medium.com/101-of-modern-logging-c047bf1930f0">现代logging方案101</a><br>本文深入探讨了现代日志记录和可观测性系统的细微差别，强调了对经济高效的解决方案的需求，以满足开发和生产过程中的不同用例。它概述了区分开发和生产日志记录的重要性，开发日志记录侧重于实时、逐行的洞察，而生产日志记录则优先考虑最少的数据生成，以避免高昂的成本。作者讨论了在日志中处理敏感数据的挑战，并建议将上下文和屏蔽作为结构化日志记录作为解决方案。此外，本文还强调了日志后端在过滤、格式化日志数据以及将日志数据定向到各种目标方面的作用，同时警告了常见的反模式，如低效的 JSON 日志记录。文章最后强调了成熟的日志记录后端在开发、测试和支持阶段的重要性，以及经济高效的日志记录前端在管理大量日志方面的必要性。作者提倡一种平衡的方法，既能确保可观测性，又不会产生过多的基础设施成本。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoForcingModuleUpdates">Go模块代理和强制Go实际更新模块版本</a><br>本文讨论了在程序中尝试更新 Go 模块版本时遇到的挑战，尽管已将更改推送到公共存储库。作者 Chris Siebenmann 解释说，Go 的模块代理系统（缓存模块版本）可能会延迟对新更新的识别。为了绕过这一点，作者建议使用 &#39;GOPROXY=direct&#39; 标志来强制 &#39;go get&#39; 直接查询公共源，确保获取到最新版本。本文还谈到了在没有版本标签的情况下更新模块的复杂性，以及缺乏有据可查的方法来更新模块。作者 Chris Siebenmann 是 CSpace 社区的贡献者，他分享了有关模块管理和 Go 编程实践的见解。本文是关于模块更新的更广泛讨论的一部分，并附有用于查看源代码、添加注释和访问最近注释的工具。</p> 
+
+<p><a href="https://colobu.com/2024/10/20/go-internal-ds-runq/">Go中秘而不宣的数据结构 runq, 难怪运行时调度那么好</a><br>本文介绍了Go运行时的GPM模型,包括G代表goroutine,P代表processor,M代表machine,以及runq数据结构的概念。</p> 
+
+<p><a href="https://medium.com/@avinash1999patil/the-singleton-pattern-in-go-a-deep-dive-into-design-efficiency-9c8ac22c8b3c">Go中的单例模式：深入了解设计效率</a><br>Avinash Patil 的文章深入探讨了 Go 中的单例设计模式，强调了它在确保类只有一个具有全局可访问性的实例方面的效用。讨论了 Singleton 模式的关键特征，例如单实例创建、全局访问点、延迟初始化和线程安全。提供的实现示例演示了 Go 的 &#39;sync.Once“ 来保证单例实例只创建一次，即使在并发环境中也是如此。代码片段显示了 &#39;GetInstance&#39; 函数如何检索单例实例，从而确保线程安全性和跨多个 goroutine 的一致性。程序的输出确认了 Singleton 模式的有效性，对 &#39;GetInstance（）&#39; 的两次调用都返回相同的实例。本文最后强调了 Singleton 模式在管理共享资源方面的好处，以及它对 Go 中并发应用程序的适用性。</p> 
+
+<p><a href="https://dev.to/neelp03/handling-large-file-uploads-in-go-with-aws-s3-stream-like-a-pro-3dle">使用 AWS S3 在 Go 中处理大文件上传：像专业人士一样流式传输</a><br>本文深入探讨了在 Go with AWS S3 中处理大型文件上传的挑战，强调了需要高效的流式处理和分块技术来管理数 GB 的文件，而不会使服务器资源负担过重。它概述了将大型文件直接流式传输到 S3 的分步方法，通过利用 AWS 开发工具包的流式传输功能最大限度地减少内存使用量。该过程涉及设置文件上传处理程序，以实时流式传输文件，而不是将其完全加载到内存中。此外，本文还讨论了分块作为一种将大文件分成较小部分上传的策略，这对于恢复上传或处理不稳定的连接特别有用。此外，还重点介绍了大型文件上传的最佳实践，包括设置合理的请求大小、利用分段上传、确保安全的文件传输以及提供进度指示器。本文最后向开发人员保证，使用正确的技术，可以有效地管理大型文件上传，从而支持开发强大的文件存储和媒体密集型应用程序。</p> 
+
+<p><a href="https://tailscale.com/blog/ai-normal">AI 公司出奇地正常</a><br>源文件显示，尽管 Tailscale 的用户群中没有明确提及 AI 或机器学习，但 AI 公司在 Tailscale 的用户群中令人惊讶地普遍存在。Tailscale 首席执行官 Avery Pennarun 承认 AI 公司使用他们的服务取得了意想不到的成功，该服务主要旨在解决各种使用案例的网络挑战。该文件深入探讨了 AI 公司采用 Tailscale 的原因，例如他们对快速增长的需求、竞争的紧迫性以及在多个云提供商之间传输大量数据以执行 GPU 密集型任务的必要性。此外，该文件还强调了 Tailscale 在 AI 领域 Kubernetes 用户中的受欢迎程度，因为它的网状网络和无代理连接简化了多云环境。尽管缺乏专门的 AI 功能，但 AI 公司仍然要求进行一般增强，这表明 Tailscale 的核心产品与他们的需求非常吻合。该文件最后指出，Tailscale 正在努力解决这些功能请求并改善 AI 公司的整体体验。</p> 
+
+<p><a href="https://faun.pub/learning-go-by-instrumenting-a-go-application-for-prometheus-metrics-2088e3bb91ea">通过检测 Prometheus 指标的 Go 应用程序来学习 Go</a><br>在本文中，Tanmay Bhat 分享了他学习 Go 的旅程，方法是检测 Go 应用程序以导出 Datadog SLO（服务级别目标）指标以进行 Prometheus 监控。作者首先在 Go 中设置必要的结构来解析 Datadog API 响应，其中包括创建一个结构以匹配 API 的数据字段。实现了导出器的核心功能，从初始化 Datadog 客户端和获取 SLO 数据开始。导出器使用 Prometheus 的客户端库来定义收集器（Gauge 和 Counter）和注册表来管理这些指标。作者还演示了如何使用 VictoriaMetrics 将指标推送到 Prometheus，并为此目的创建自定义注册表。本文最后提供了一个实际示例，说明如何获取不同时间窗口的 SLO 数据并相应地更新 Prometheus 指标。这个初学者的观点提供了将 Go 编程与 Prometheus 指标相结合以增强对 SLO 的监控的见解。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://thenewstack.io/spacedrive-a-cross-platform-file-manager-for-the-modern-era/">Spacedrive，现代的跨平台文件管理器</a><br>Spacedrive 是一款创新的跨平台文件管理器，有望彻底改变 Linux、macOS 和 Windows 系统的文件管理。它目前处于 Alpha 版开发阶段，提供独特的功能，例如用于跨网络上设备实时同步的虚拟分布式文件系统 （VDFS）。用户可以创建库和位置以进行有组织的访问，并使用 Spacedrop 功能在计算机之间无缝发送文件。尽管在开发阶段存在一些稳定性问题，但 Spacedrive 在简化文件管理和提高生产力方面的潜力已经引起了软件开发人员和用户的关注。该平台邀请反馈和参与其即将发布的完整版本，并有可能赢得 1,000 美元的礼品卡，以为其开发做出贡献。</p>
+
+<p><a href="https://blog.kloudmate.com/best-practices-for-implementing-continuous-observability-in-ci-cd-workflows-08cbc15a70ca">在 CI/CD 工作流中实施持续可观测性的最佳实践</a><br>Vasavi 在 Medium 上的文章深入探讨了持续可观测性在 CI/CD 工作流中的关键作用，强调了在整个开发生命周期中实时了解应用程序运行状况和性能的必要性。它概述了 CI/CD 管道面临的挑战，例如复杂性、缺乏标准化、可扩展性问题和安全漏洞，并提出了应对这些挑战的最佳实践。主要建议包括定义明确的可观测性目标、自动监控和警报、集成版本控制、实施全面的测试和安全验证、衡量和优化管道性能，以及培养持续反馈的文化。本文强调了采用 KloudMate 等专用工具和平台来简化这些最佳实践的实施，最终提高系统性能、可靠性和用户满意度的重要性。Vasavi 的见解旨在指导组织实现强大的可观察性，确保更顺畅的部署和早期发现问题。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/18/open-collaboration-to-bring-ai-gateway-features-to-the-envoy-community/">开放协作，将 AI Gateway 功能引入 Envoy 社区</a><br>Tetrate 和 Bloomberg 发起了一项开放式合作，为 Envoy 社区开发 AI 网关功能，满足对管理大型语言模型 （LLM） 流量的行业范围解决方案的需求。认识到 LLM 流量带来的独特挑战，例如计算复杂性和高成本，该合作旨在引入关键的 MVP 功能，例如基于令牌数量的使用限制、统一 API 集成以及多个 LLM 提供商的上游授权。这项工作是 CNCF Envoy 项目的一部分，该项目支持多公司的开源项目，以促进创新，而不会被供应商锁定。此次合作将使 LLM 提供商和 Gateway 用户受益，并有机会通过时事通讯、现场 CNCF 活动和 KubeCon NA 的演示进一步参与。此外，Tetrate 还为服务网格的新手提供资源，包括免费的在线课程和适用于 Envoy 的 Tetrate Enterprise Gateway，以满足生产用例的需求。</p>
+
+<p><a href="https://contact-rajeshvinayagam.medium.com/embracing-everything-as-code-eac-the-evolution-from-manual-complexities-to-automated-efficiency-25afbdb5713b">拥抱一切即代码 （EaC）：从手动复杂性到自动化效率的演变</a><br>源文档通过一切即代码 （EaC） 的视角深入探讨了从手动系统配置到自动化效率的转型历程。它首先强调了系统管理员在手动制作定制系统时面临的挑战，这些系统虽然经过定制，但容易出现不一致和故障。DevOps 的出现引入了自动化，但正是 EaC 的概念通过编纂基础设施、配置、安全策略和运营流程，彻底改变了 IT 管理。这一理念超越了基础设施即代码 （IaC），包括配置即代码 （CaC）、安全即代码 （SaC） 和管道即代码，确保环境一致、可扩展且可靠。该文档强调了 EaC 的优势，例如增强的一致性、可靠性、版本控制和减少代码改动，这些共同有助于更高效、更防错的 IT 生态系统。它还涉及环境即代码和数据管道即代码等新兴趋势，标志着自动化和代码治理将成为 IT 运营不可或缺的未来。该摘要概括了 EaC 的精髓，它是一种将代码嵌入到 IT 管理的各个方面的综合方法，从而培养了一种自动化、一致性和可靠性的文化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2024/Oct/19/mistralrs/#atom-everything">在装有 mistral.rs 的 Mac 上运行 Llama 3.2 Vision 和 Phi-3.5 Vision</a><br>源文档详细介绍了作者使用 mistral.rs（基于 Rust 的 LLM 推理库）在 Mac 上运行 Llama 3.2 和 Phi-3.5 Vision 模型的经验。作者浏览设置过程，包括克隆存储库、编译库以及将模型加载到内存中。然后，他们与 Phi-3.5 Vision 模型进行基于终端的聊天会话，促使它描述与犹他州先驱者博物馆的女儿相关的图像。尽管模型对博物馆的外观进行了准确的描述，但与实际图像相比，生成的文本包含不准确之处。该文档还涉及模型的下载大小及其对其性能的潜在影响。此外，作者还为 mistral.rs 提供了 Python 绑定，并分享了他们运行 Python 示例的经验，强调了对 Rust 工具链的需求。该摘要概括了在 Mac 上部署视觉模型并与之交互的技术历程、遇到的挑战以及 mistral.rs 库的更广泛背景。</p>
+
+<p><a href="https://andrewmayne.com/2024/10/18/can-you-dramatically-improve-results-on-the-latest-large-language-model-reasoning-benchmark-with-a-simple-prompt/">您能否通过简单的提示显著改善最新的大型语言模型推理基准测试的结果？</a><br>本文讨论了最近的一篇论文，该论文声称揭示了大型语言模型 （LLM） 在数学推理中的局限性，正如 GSM-Symbolic 基准测试所证明的那样。作者 Andrew Mayne 对论文的结论提出了质疑，他认为观察到的性能下降可以归因于训练数据问题，而不是固有的推理能力。Mayne 使用 o1-preview 和 GPT-4o-mini 模型进行了一项实验，表明简单的提示可以显着提高它们在棘手问题上的性能。作者认为，通过适当的提示和微调，LLM 的基准可以不那么令人生畏。Mayne 还强调需要对人类推理进行可靠的测试，以准确比较 LLM 的能力。本文最后对不断发展的推理定义以及 LLM 在正确的提示和培训下表现更好的潜力进行了反思。</p>
+
+<p><a href="https://medium.com/@shreyaj/how-i-learned-python-from-chatgpt-ai-46558dd4c754">How I Learned Python From ChatGPT AI</a><br>Shreya Jha shares her journey of learning Python through interactions with ChatGPT, an AI-powered tool. Initially, she sought a basic Python &#34;Hello, World!&#34; code, which ChatGPT provided, along with instructions for running the code on various platforms. Jha then posed more complex questions to deepen her understanding, receiving guidance on mastering Python fundamentals, object-oriented programming, and other advanced topics. The article also highlights the importance of AI in learning coding efficiently and suggests a comprehensive learning roadmap for aspiring Python developers. Jha encourages readers to follow her page for more content and to engage with the community through clapping and following on social media platforms.
+
+(4 sentences)
+Shreya Jha documents her learning process of Python programming with the help of ChatGPT, an AI tool. She starts with a simple request for a &#34;Hello, World!&#34; code and receives not only the code but also step-by-step instructions for execution. Jha then delves into more complex inquiries, which lead to advice on mastering Python basics, object-oriented programming, and other advanced concepts. The article underscores the role of AI in accelerating learning and provides a detailed roadmap for Python developers. Jha invites readers to follow her journey and engage with her content on social media.
+
+(5 sentences)
+Shreya Jha explores the use of ChatGPT, an AI tool, to learn Python programming, starting with a request for a basic &#34;Hello, World!&#34; code. The AI not only provides the code but also guides Jha through running it on different platforms. As Jha&#39;s questions become more sophisticated, ChatGPT offers insights into Python fundamentals, object-oriented programming, and advanced topics, suggesting a comprehensive learning path. The article emphasizes the efficiency of AI in learning coding and encourages readers to follow Jha&#39;s journey for more content. Jha also highlights the importance of community engagement through social media platforms.
+
+(6 sentences)
+Shreya Jha leverages ChatGPT, an AI-driven tool, to learn Python programming, beginning with a simple &#34;Hello, World!&#34; request. The AI not only supplies the code but also instructs Jha on executing it across various platforms. Jha</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/18/openai-audio/#atom-everything">试验 OpenAI 聊天完成 API 的音频输入和输出</a><br>正如 DevDay 上宣布的那样，OpenAI 聊天完成 API 现在支持音频输入和输出。用户可以使用“gpt-4o-audio-preview”模型生成音频，但该过程会占用大量资源，7 秒的音频文件会生成 117KB 的 MP3 文件。根据 OpenAI 的定价，生成音频的成本约为 0.03 美元。此外，用户还可以通过 Bash 脚本直接输入音频，在 API 调用中嵌入 base64 编码的 WAV 文件。已经开发了一个 Web 应用程序，以便于对音频进行录制和提示，并提供了在线演示。然而，音频代币的成本仍然是一个重大障碍，输入代币的价格为每分钟 0.06 美元，输出代币的价格为每分钟 0.24 美元，与 Google 的 Gemini 型号等替代品相比，它是一个昂贵的选择。作者表示希望 OpenAI 降价，以使该技术更广泛地使用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - 身份基础设施，为您简化。</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>适用于去中心化 Web 🌈💎✨ 的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>用 Go 编写的目录/文件、DNS 和 VHost 清除工具</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>有关数千 （！） 加密代币的全面、最新信息集合。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/xvzc/SpoofDPI">xvzc/SpoofDPI</a><br>用 Go 编写的简单快速的反审查工具</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB 是一个开源、云原生、分布式、兼容 MySQL 的数据库，用于弹性扩展和实时分析。免费试用 AI 驱动的 Chat2Query：https://www.pingcap.com/tidb-serverless/</p>
+
+<p><a href="https://github.com/projectdiscovery/subfinder">projectdiscovery/subfinder</a><br>快速被动子域枚举工具。</p>
+
+<p><a href="https://github.com/iyear/tdl">iyear/tdl</a><br>📥 用 Golang 编写的 Telegram 工具包</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/flyteorg/flyte">flyteorg/flyte</a><br>可扩展且灵活的工作流编排平台，可无缝统一数据、ML 和分析堆栈。</p>
+
+<p><a href="https://github.com/jpillora/chisel">jpillora/chisel</a><br>基于 HTTP 的快速 TCP/UDP 隧道</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>[WIP]：用于学习可观察性的存储库</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>适用于 Web 应用程序的 Single Sign-On Multi-Factor 门户</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub 的官方命令行工具</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

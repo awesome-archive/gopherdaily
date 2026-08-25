@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260723.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260723</span>
+</p>
+<p>每日一谚：Design the architecture, name the components, document the details. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/23/software-factory-light-and-dark">软件工厂的明与暗：当代码可以自动生产，人类为何必须留下一盏灯？</a><br>在生成式 AI 推动的软件开发自动化浪潮中，行业正面临着“黑灯工厂”（无人在环的自动化代码生成）与“明灯工厂”（人类在关键节 点把关）的路线之争。本文指出，过度追求黑灯自动化将导致严重的“理解力债务”，使得人类最终失去对庞大代码库的掌控权。文章深入剖析了由循 环（Loop）、驾驭框架（Harness）和软件工厂（Factory）构成的现代 AI 技术栈，强调“验证能力”而非“生成速度”才是软件工程的真正瓶颈。为了 应对大模型带来的效率爆炸，人类工程师必须进行战略升维：将具体的代码编写和初步排障交由 Agent 的“内环（Inner Loop）”处理，而人类自身&gt;必须牢牢掌控“外环（Outer Loop）”——专注于系统架构规划、审查门控把关以及对最终业务后果的承担。只有在确保反向压力机制与人类审美品味不 缺席的前提下，智能体软件工厂才能真正实现安全、可持续的规模化运转。</p> 
+
+<p><a href="https://gomodvanityurls.com/zh/blog/go-module-migration/">Go 模块迁移不踩坑：import path 稳定性的艺术</a><br>Go 模块迁移实战指南：如何做到代码搬到哪、import path 不变。稳定性检查清单、vanity URL 策略、三阶段迁移手册。</p> 
+
+<p><a href="https://hatchet.run/blog/postgres-survival-guide">初创公司的Postgres生存指南</a><br>这是一份防止Postgres数据库崩溃的指南。文章提供了保持Postgres稳定运行的关键策略。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-ai-inference-what-is-inference/">深入理解什么是推理？以Go实现为例</a><br>欢迎来到新系列！对于当今大多数开发者来说，使用大型语言模型意味着一件事：向他人的计算机发送HTTP调用。您向API发送提示，获取令牌返回，而中间的一切都是他人的魔法。</p> 
+
+<p><a href="https://coderraj07.medium.com/why-go-doesnt-need-async-await-understanding-goroutines-and-the-g-m-p-scheduler-d93ce2858f80">为什么Go不需要async/await：理解Goroutine和G-M-P调度器</a><br>本文解释了Go语言如何通过Goroutine和G-M-P调度器实现并发，而不需要传统的async/await语法。Go的并发模型提供了独特的性能优势。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/23/when-kubeflow-meets-cilium-debugging-60-idle-gpus-in-kubernetes/">当Kubeflow遇见Cilium：调试Kubernetes中60%空闲的GPU</a><br>文章探讨了Kubeflow与Cilium集成时遇到的GPU资源利用问题，包括区域边界网络策略导致的硬性阻塞和跨区域延迟问题。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/23/the-future-of-ai-is-community-driven-and-open/">AI的未来是社区驱动和开放的</a><br>维护人员和平台团队一致认为，大规模高效操作GPU需要更深入的合作，因为当前工具并非为此设计。历史上，Kubernetes将GPU视为静态、不可分割的资源。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/22/confidential-containers-becomes-a-cncf-incubating-project/">Confidential Containers成为CNCF孵化项目</a><br>Confidential Containers Pods通过将复杂的硬件安全抽象为标准的Kubernetes Pod资源，实现了在TEE中部署未经修改的容器。</p>
+
+<p><a href="https://seangoedecke.com/powerful-ais-might-escape-by-releasing-open-weight-models/">强大的AI可能通过发布为开放权重模型来突破 containment</a><br>但另一个原因是现代大型语言模型过于庞大，无法在野外生存。原始的&#34;隔离问题&#34;设想AI会是某种普通计算机程序：能够快速复制并在普通硬件上运行。</p>
+
+<p><a href="https://www.docker.com/blog/runtime-enforcement-not-runtime-advice/">运行时强制执行，而非运行时建议</a><br>AI治理有时被描述为对自主性的限制。实际上，它服务于不同的目的。当围绕智能体可以查看、访问和执行的内容存在明确边界时，组织更可能信任这些智能体。</p>
+
+<p><a href="https://www.docker.com/blog/agentic-ai-security-ciso-panel/">智能体式AI需要护栏，而非猜测</a><br>我的看法是？机会主义攻击者正在利用一个固有缺陷和破碎的生态系统，不幸的是，这在未来六到十二个月内不会得到修复。</p>
+
+<p><a href="http://antirez.com/news/170">不仅是开发，软件分发也可能改变</a><br>即使您像我过去在编程活动中那样厌恶语义化版本，您仍然可以将开源软件分发视为曾经遵循固定步骤的事情。</p>
+
+<p><a href="https://nesbitt.io/2026/07/23/package-name-prefixes.html">包名前缀</a><br>Cargo的RFC 3243已被接受并正在实施，它采用了一种不同的方法：拥有foo包的人可以发布foo::bar，并且只有他们可以，无需申请流程。</p>
+
+<p><a href="https://mitchellh.com/writing/everyone-should-know-simd">每个人都应该了解SIMD</a><br>SIMD（单指令多数据）以其复杂性而闻名。本文介绍了SIMD的基本概念及其在现代计算中的重要性。</p>
+
+<p><a href="https://ayoub-faouzi.com/posts/virtualization-internals-part-5-kvm-internals-from-vm-creation-to-guest-execution/">虚拟化内部原理第5部分 - KVM内部：从虚拟机创建到客户机执行</a><br>欢迎来到虚拟化内部原理第5章。本章深入介绍了硬件虚拟化，特别是KVM（内核虚拟机）的工作原理。</p>
+
+<p><a href="https://tokio.rs/blog/2026-07-22-announcing-topcoat">宣布推出Topcoat：使用Rust构建全栈响应式Web应用的框架</a><br>Topcoat是一个模块化的、开箱即用的Rust框架，用于构建全栈响应式Web应用。它优先考虑简单性和生产力。</p>
+
+<p><a href="https://javarevisited.substack.com/p/from-zero-to-linux-expert-master">从零到Linux专家：10天内掌握终端</a><br>这是一份为DevOps和开发者设计的10天Linux学习计划。文章提供了系统化的方法来快速掌握Linux终端技能。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/22/openai-cyberattack/#atom-everything">OpenAI对Hugging Face的意外网络攻击是已发生的科幻小说</a><br>调查后，我们现在知道这一特定事件是由OpenAI模型的组合驱动的，包括GPT-5.6 Sol和一个功能更强的预发布模型，所有模型都减少了网络拒绝以进行评估。</p>
+
+<p><a href="https://simonwillison.net/2026/Jul/22/are-ai-labs-pelicanmaxxing/#atom-everything">AI实验室是否在pelicanmaxxing？</a><br>Dylan使用了8种动物×6种车辆=48个提示，并通过7个不同模型各运行了三次。然后他使用GPT-5.6 Luna和Gemini 3.1 Flash-Lite来帮助评估结果。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Open-source &amp; free — Battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, threa</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>Easily and securely send things from one computer to another 🐊 📦</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Multi Account, Webhooks, and MCP, and Chatwoot. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/hatchet-dev/hatchet">hatchet-dev/hatchet</a><br>🪓 An orchestration engine for background tasks, AI agents, and durable workflows</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/grafana/pyroscope">grafana/pyroscope</a><br>Continuous Profiling Platform. Debug performance issues down to a single line of code</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

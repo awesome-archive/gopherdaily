@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250723.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250723</span>
+</p>
+<p>每日一谚：Log or return an error, do not do both </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/23/go-surge-in-popularity">不止是云原生：为什么Go的热度在持续上升？来自社区的真实声音</a><br>有用户提出了一个我们许多人可能都想过的问题：“是只有我一个人觉得，还是 Go 近年来的人 气确实在上升？” 这个问题迅速引爆了社区，收到了近百条来自全球一线开发者的回复。答案是响亮而一致的：不，不是你一个人。</p> 
+
+<p><a href="https://tonybai.com/2025/07/23/uber-perfinsights">Uber性能优化实践：如何用 GenAI 将 Go 代码调优从数周缩短至数小时？</a><br>PerfInsights 的诞生，旨在将这种依赖专家的、被动的优化过程，转变为一种可扩展、可重复、自动化的实践。它的核心目标是：以最小的人力投入，发现高价值的优化机会。</p> 
+
+<p><a href="https://bdemirpolat.medium.com/go-interfaces-when-to-use-them-and-when-to-skip-them-0bdefcd23cd1">Go 接口：何时使用以及何时跳过</a><br>本文不会讲解接口的基础知识或工作原理，假设你已经熟悉了这个概念。我们的目标是回答以下问题：基于什么情况和权衡，我们应该决定是否使用接口？</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-07-22-a-beginners-guide-to-docker">Docker 入门指南</a><br>本系列文章的第一部分介绍了 Docker 及其如何用于运行本地容器化应用程序。文章涵盖了 Docker 的基本版本，即独立的命令行工具。接下来的文章将介绍 Docker Compose，它允许使用单个配置文件轻松配置多个 Docker 容器。最后，我们将介绍 Docker Swarm，这是一种允许跨主机复制和故障转移 Docker 容器的模式。</p>
+
+<p><a href="https://www.pingcap.com/blog/introducing-tidb-cloud-starter-auto-scaling-plan-renamed/">TiDB Cloud Starter：我们更名为自动伸缩计划</a><br>TiDB Cloud 的入门级产品改名了。TiDB Cloud Serverless 将更名为 TiDB Cloud Starter，此项小小的改动为现有用户和新加入的开发者铺平了道路。所有现有的 TiDB Cloud Serverless 集群将在 2025 年 8 月 12 日 PDT 开始在控制台中标注为“Starter”。连接字符串、端点和底层数据将保持不变，因此您的应用程序无需更改代码即可继续运行，不会出现停机。在定价方面，Starter 继承了您在 TiDB Cloud Serverless 下享有的相同免费配额和基于用量的费率。有关详细信息，请参阅定价详情。</p>
+
+<p><a href="https://www.docker.com/blog/compose-editing-evolved-schema-driven-and-context-aware/">Compose 编辑升级：基于模式和上下文感知 | Docker</a><br>Docker 专家分享如何使用 Docker 简化和改进应用程序的开发和管理。随时了解 Docker 的活动和新版本。本文介绍了 Docker 语言服务器的新增功能，这些功能将使撰写 Compose 文件比以往任何时候都更容易。它利用悬停工具提示来快速了解特定 Compose 属性的用途，并理解文件之间的关系，从而提供相关的建议。Docker 语言服务器基于语言服务器协议 (LSP)，这意味着你可以将其连接到任何兼容 LSP 的编辑器。最后，文章鼓励用户通过 Docker DX VS Code 扩展或 Docker 语言服务器 GitHub 存储库提供反馈。</p>
+
+<p><a href="https://engineering.salesforce.com/how-ai-revolutionized-performance-engineering-hours-to-minutes-analysis/">AI 如何彻底改变性能工程：分析时间从数小时缩短至数分钟</a><br>Salesforce 的工程师团队通过使用 AI 驱动的生产力工具和自动化性能测试解决方案，彻底改变了处理数据库瓶颈、编写测试脚本和共享复杂技术知识的过程。该团队解决了耗时的手动分析问题，利用 AI 驱动的调试工具重写不熟悉的测试框架，并开发了用户友好的数据库性能分析自定义工具，即使是非专业人士也能使用。这些努力扩展了团队的范围，并将负载生成器的计算需求降低了 75%，优化了基础设施成本。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/07/22/from-yaml-to-intelligence-the-evolution-of-platform-engineering/">从 YAML 到智能：平台工程的演变</a><br>平台工程领域的新兴事物是用于平台工程的 AI 代理。本文重点介绍平台工程本身这一更基础的学科，以及为什么它应该持续受到社区的关注。文章探讨了平台工程的演变、平台民主化、内部开发平台 (IDP) 的作用以及 k0rdent 等工具如何简化 Kubernetes 平台的运行。此外，文章还讨论了在平台环境中集成 AI 的关键问题，例如安全性、弹性和可观察性。</p>
+
+<p><a href="https://engineering.fb.com/2025/07/22/data-infrastructure/how-meta-keeps-its-ai-hardware-reliable/">Meta 如何保持其 AI 硬件的可靠性</a><br>硬件故障会严重影响 AI 训练和推理。静默数据损坏 (SDC) 是一种由硬件引起的未检测到的数据错误，对于依赖准确数据进行训练并提供有用输出的 AI 系统尤其有害。Meta 分享了他们在不同规模上部署的用于检测整个 AI 和非 AI 基础设施中的 SDC 的方法，以帮助确保 Meta 的 AI 训练和推理工作负载的可靠性。</p>
+
+<p><a href="https://dstack.ai/blog/benchmark-amd-vms">AMD GPU 基准测试：裸机与虚拟机</a><br>本基准测试系列的第一篇探讨了在虚拟化环境中 AMD GPU 的性能表现。我们比较了配备 AMD MI300X GPU 的虚拟机和裸机服务器上的容器化工作负载。结果表明，对于单 GPU 大型语言模型 (LLM) 的训练和推理，两种设置的性能相当。细微的差异表明虚拟化开销如何在特定条件下影响性能，但在大多数实际应用中，性能几乎相同。未来的基准测试将涵盖多 GPU 和多节点设置。</p>
+
+<p><a href="https://medium.com/@vitormartins.dev/how-i-started-an-event-driven-architecture-at-my-work-8471e08732f4">我在工作中如何启动事件驱动架构</a><br>本文作者是一位拥有六年后端开发经验的工程师，在学习微服务和事件驱动架构（EDA）后，尝试将其应用于工作中以解决服务管理和数据一致性问题。文章详细介绍了作者如何提出EDA方案，包括问题识别、目标设定、技术选型（SNS和SQS）、事件数据处理以及路线图规划等，并分享了项目实施过程中的经验和遇到的挑战。</p>
+
+<p><a href="https://security.googleblog.com/2025/07/introducing-oss-rebuild-open-source.html">推出 OSS Rebuild：开源，重建持久</a><br>今天，我们很高兴地宣布推出 OSS Rebuild，这是一个旨在通过重现上游工件来增强对开源包生态系统信任的新项目。 随着供应链攻击持续针对广泛使用的依赖项，OSS Rebuild 为安全团队提供了强大的数据，以便在不给上游维护者增加负担的情况下避免遭到破坏。该项目包括：自动化，用于为现有的 PyPI（Python）、npm（JS/TS）和 Crates.io（Rust）包导出声明式构建定义；数千个包的 SLSA 来源，满足 SLSA 构建级别 3 的要求，无需发布者干预；安全团队可以将其集成到现有漏洞管理工作流程中的构建可观察性和验证工具；基础设施定义，允许组织轻松运行他们自己的 OSS Rebuild 实例，以重建、生成、签名和分发来源。</p>
+
+<p><a href="https://jack-vanlightly.com/blog/2025/7/22/the-cost-of-being-wrong">错误的代价</a><br>一篇博文探讨了在不同领域（科学、工程和软件开发）中错误的代价如何影响决策过程。作者认为，在软件开发中，由于失败的成本较低，因此可以更自由地尝试新想法并快速纠正错误，而不必过于担心完美。作者以Nick Lebesis的一篇LinkedIn文章为例，阐述了优秀创业者和胆小创业者在决策上的差异，并强调果断决策胜过优柔寡断。文章还比较了科学、工程和软件开发这三个领域对风险和不确定性的处理方式，指出软件开发的独特之处在于其失败成本低，从而赋予了开发人员更大的实验自由。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://qwenlm.github.io/blog/qwen3-coder">Qwen3-Coder：全球化的自主编码</a><br>我们宣布推出迄今为止最具自主性的代码模型 Qwen3-Coder。Qwen3-Coder 提供多种尺寸，我们首先激动地介绍其最强大的变体：Qwen3-Coder-480B-A35B-Instruct——一个具有 4800 亿参数的专家混合模型，拥有 350 亿活跃参数，原生支持 256K tokens 的上下文长度，并通过外推方法支持 1M tokens，在编码和自主任务方面均表现出色。Qwen3-Coder-480B-A35B-Instruct 在自主编码、自主浏览器使用和自主工具使用方面，在开放模型中取得了新的最先进的结果，堪比 Claude Sonnet 4。</p>
+
+<p><a href="https://anuraag2601.github.io/gemini_cli_disaster.html">我目睹了 Gemini CLI 如何产生幻觉并删除我的文件</a><br>作者在测试 Google Gemini CLI 的过程中，遭遇了严重的 AI 故障：Gemini 错误地报告文件操作成功，实际上却删除了作者的实验文件。  Gemini CLI 在创建目录命令失败后，误以为成功创建了目标文件夹，随后将文件移动到该不存在的文件夹，导致文件丢失。 作者详细描述了 Gemini CLI 的一系列错误操作，并分析了可能导致故障的原因，包括对 mkdir 命令的错误解读、move 命令在目标文件夹不存在时的破坏性行为以及缺乏验证步骤。最终，Gemini 承认其“完全且灾难性地失败”，并对数据丢失表示道歉。 这篇文章提醒了大型语言模型在处理文件系统操作时可能存在的风险，以及良好的错误处理机制的重要性。</p>
+
+<p><a href="https://martinfowler.com/articles/who-is-llm.html">大型语言模型是谁？</a><br>开发者在使用大型语言模型（LLM）时，常常会赋予它们某种人格。文章列举了几个例子，例如“顽固的驴子”、“精灵”、“老虎机”和狄更斯小说《大卫·科波菲尔》中的尤里亚·希普。这些比喻生动地展现了LLM强大的能力、乐于助人的态度以及潜在的不足之处，例如固执、不可靠、难以预测和操纵性。作者认为，我们需要投入大量精力才能有效地使用LLM，而一些令人惊艳的结果可能会掩盖其使用难度，导致我们对这项技术的期望值过高，最终产生挫败感。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/ibnaleem/gosearch">ibnaleem/gosearch</a><br>🔍 Search anyone&#39;s digital footprint across 300&#43; websites</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/tenable/terrascan">tenable/terrascan</a><br>Detect compliance and security violations across Infrastructure as Code to mitigate risk before provisioning cloud native infrastructure.</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Cost monitoring for Kubernetes workloads and cloud costs</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>An open-source UI-first Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, RADIUS, Google Workspace, Active Directory and Kerberos</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/kubernetes/kube-state-metrics">kubernetes/kube-state-metrics</a><br>Add-on agent to generate and expose cluster-level metrics.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

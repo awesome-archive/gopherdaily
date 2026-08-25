@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250813.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250813</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/go1.25">Go 1.25 正式发布</a><br>Go 1.25 在其工具、运行时、编译器、链接器和标准库方面进行了改进，包括添加了一个新包。它还提供了一些实验性功能，例如新的实验性垃圾收集器和新的实验性 encoding/json/v2 包。</p> 
+
+<p><a href="https://tonybai.com/2025/08/13/bit-manipulation-in-go">二进制的“魔术”：每个Go程序员都应掌握的位操作艺术</a><br>在编程这门手艺中，我们时常扮演着“建筑师”的角色，用一行行优雅的高级语言，构建起宏伟的应用大厦。但你是否曾停下脚步，好奇地探寻过这座大厦最深处的基石——那些由 0 和 1 构成的、既简单又神秘的二进制世界？这本“咒语书”，就是位运算（Bit Manipulation）。它不是什么过时的黑科技，而是隐藏在现代软件工程之下的一门永恒的、优雅的艺术</p> 
+
+<p><a href="https://tailscale.com/blog/encrypting-data-at-rest">加密静态数据，一次一个操作系统</a><br>深入探讨了Tailscale的最新客户端如何加密您的数据并强化您的tailnet，以防御跨所有平台的攻击。</p> 
+
+<p><a href="https://gaultier.github.io/blog/subtle_bug_with_go_errgroup.html">Go的errgroup中的一个微妙的错误</a><br>昨天，我在工作时遇到了一个令人困惑的错误，当时正在处理Kratos。值得庆幸的是，一个测试在合并之前就发现了它。我花了几个小时来调查这个问题，我认为这可能发生在任何人身上。今天，我们编写一个验证密码的程序。为了提高性能，如果必须计算这个哈希值，我们会尝试并行处理其他事情。为了实现这一点，我们使用了一个errgroup，它现在在Go中变得很常见：它充当并发任务的池（就像一个等待组），但也会在发生错误时处理取消所有任务。这对于避免进行不必要的昂贵的计算很有用。</p> 
+
+<p><a href="https://blog.stackademic.com/go-1-25-rc1-explained-simply-for-backend-beginners-who-actually-ship-code-9ce77e0c3961">为什么我对 Go 1.25 RC1 感到兴奋（即使它看起来很无聊）</a><br>Go 1.25 RC1 发布了——乍一看，它看起来并不花哨。没有新的语法，没有泛型，也没有吸引眼球的功能。但是，作为一名使用 Go 构建后端服务的开发人员，我真的很兴奋……</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.p99conf.io/2025/08/13/high-performance-on-a-low-budget/">高性价比：Gwen Shapira 为初创企业提供的技巧</a><br>即使是资金有限的早期初创公司，也能实现卓越的性能。</p>
+
+<p><a href="https://blog.joshsoftware.com/2025/08/13/containerization-made-simple-dockerize-your-rails-app-today/">Dockerization Made Simple: Dockerize Your Rails App Today</a><br>Tired of Development Setup Headaches? Reclaim Your Coding Time with Docker! As software developers, we pour our energy into crafting new features daily. But what about the hidden time sink before you even write a line of code: setting up your machine to run existing legacy applications or sharing your new rails application with other...</p>
+
+<p><a href="https://www.docker.com/blog/building-ai-agents-with-goose-and-docker/">Building AI agents made easy with Goose and Docker</a><br>Learn how you can build an AI agent easily with Goose and Docker.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/08/12/pac-and-ai/">PaC 和 AI</a><br>在本系列关于代码即策略的第三部分中，我们将探讨 PaC 和 AI 编码助手的交叉点。AI 编码工具已经从根本上改变了软件开发。 “氛围编码”或基于聊天的编码，即您要求 LLM 编写代码，然后将结果反馈给它并要求它进行更改的循环，已经相当普遍。但这也带来了挑战； 由于开发团队承受着更大的压力，需要更快地编码并减少（基于人类的）团队规模，团队如何保持预期的安全性和质量水平？</p>
+
+<p><a href="https://blog.podman.io/2025/08/level-up-your-container-game-unified-quadlet-management-is-now-natively-in-podman">Level Up Your Container Game: Unified Quadlet Management is Now Natively in Podman</a><br>Managing containers on Linux with Podman just got a new feature. If you’ve ever felt caught between running simple podman run commands and wrangling complex orchestration platforms like Kubernetes, you’re in for a treat. The latest version of Podman brings Quadlet management directly into its core with the new podman quadlet command suite, creating a seamless and powerful workflow for developers and sysadmins alike.</p>
+
+<p><a href="https://world.hey.com/dhh/all-in-on-omarchy-at-37signals-68162450">37signals 全力投入 Omarchy</a><br>在 37signals，我们正在全力投入 Omarchy。在接下来的三年里，随着硬件的定期更新，我们将在我们的运营和 Ruby 编程团队中，切换到我们自己的 Arch 衍生 Linux 发行版（当然，我们也会与 Omarchy 上的其他人分享我们所做的所有改进！）。</p>
+
+<p><a href="https://typecraft.dev/education/courses/vim-for-beginners-your-first-steps">Vim for Beginners: Your First Steps</a><br>学习 Vim 基础知识：移动、导航和基本编辑。非常适合想要掌握这个强大文本编辑器的完整初学者。</p>
+
+<p><a href="https://v8.dev/blog/orinoco-parallel-scavenger">Orinoco：年轻代垃圾回收</a><br>本文介绍了并行 Scavenger，这是 Orinoco 的最新特性之一，Orinoco 是 V8 主要的并发和并行垃圾收集器，并讨论了设计决策和我们在此过程中实施的替代方法。</p>
+
+<p><a href="https://dadrian.io/blog/posts/tech-debt">技术债务？我不相信它的存在</a><br>文章探讨了技术债务的概念，并提出了一个观点：与其将技术债务视为一个独立的问题，不如将其视为“正在尝试做的事情”以及“现在引起问题的事物”、“即将引起问题的事物”和“未引起问题的事物”这三类。文章认为，有效的技术工作应与新功能开发相结合，并解决当前和即将出现的问题。作者认为，技术债务不应被视为与功能开发相分离的任务，而应在正确的时间，基于正确的理由解决正确的问题。</p>
+
+<p><a href="https://tanelpoder.com/posts/xtop-top-for-wall-clock-time">xtop - Top for Wall-Clock Time | Tanel Poder Consulting</a><br>xtop是一个类似Linux的top工具，但扩展了透视功能，可以从任何角度（eBPF允许访问）查看性能数据。这使得能够在Linux上进行维度性能分析，并可以使用像“墙钟时间top”等工具。 您可以使用它进行系统级概述，并深入研究单个线程的活动，甚至进入内核事件，如锁等待或内存阻塞，以及相关的堆栈跟踪。 eBPF不仅可以定制，而且是完全可编程的，我计划充分利用它。</p>
+
+<p><a href="https://r2cn.dev/blog/building-an-asynchronous-fuse-filesystem-in-rust">构建一个用 Rust 编写的异步 FUSE 文件系统</a><br>本文介绍了 libfuse-fs，一个用 Rust 开发的用户空间文件系统 (FUSE)。我们用它来挂载一个 Overlay 文件系统，并成功执行了一系列包管理操作。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/13/codespaces-llm/#atom-everything">simonw/codespaces-llm</a><br>GitHub Codespaces 提供了在浏览器中进行完整开发环境的功能，并且可以免费供任何拥有 GitHub 帐户的人使用。 每个环境都有一个完整的 Linux 容器和一个基于浏览器的 UI，使用 VS Code。</p>
+
+<p><a href="https://kennethwolters.com/posts/no-agi">未见 AGI：这对 LLM 意味着什么</a><br>本文剖析了 AI 炒作与现实之间日益扩大的差距，认为大型语言模型已经达到了一个平台期——“S 曲线”——尽管业界声称即将出现超级智能。它将大胆的预测和巨额投资与表现平平的旗舰产品进行了对比，将当今的 AI 时代定义为不再是构建神一样的智能，而是将不完善的工具集成到现实世界的产品中。这篇文章认为，AI 真正的未来不在于超越，而在于使这些系统真正有用的混乱而必要的工作。</p>
+
+<p><a href="https://www.anthropic.com/news/1m-context">Claude Sonnet 4 现在支持 100 万个上下文 tokens</a><br>Claude Sonnet 4 现在在 Anthropic API 上支持多达 100 万个上下文 tokens，增加了 5 倍。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>A simple zero-config tool to make locally trusted development certificates with any names you&#39;d like.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/php/frankenphp">php/frankenphp</a><br>🧟 The modern PHP app server</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/mudler/LocalAGI">mudler/LocalAGI</a><br>LocalAGI is a powerful, self-hostable AI Agent platform designed for maximum privacy and flexibility. A complete drop-in replacement for OpenAI&#39;s Responses APIs with advanced agentic capabilities. No clouds. No data leaks. Just pure local AI that works on consumer-grade hardware (CPU and GPU).</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/google/pprof">google/pprof</a><br>pprof is a tool for visualization and analysis of profiling data</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

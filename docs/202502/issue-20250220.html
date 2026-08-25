@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250220.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250220</span>
+</p>
+<p>每日一谚：Log or return an error. Prefer the last one more </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/synctest">使用testing/synctest测试并发代码</a><br>Go 1.24 引入了一个新的实验性包 testing/synctest 来帮助测试并发代码。这篇文章解释了这个实验背后的动机，演示了如何使用 synctest 包，并讨论了它的未来潜力。testing/synctest 包解决了并发程序测试中的难题，例如测试负条件和处理时间。它通过隔离的运行环境（称为“泡泡”）和 Wait 函数来实现快速可靠的测试。文章还介绍了“泡泡”的生命周期、阻塞和“泡泡”的关系，以及如何测试网络代码。最后，文章说明了 synctest 包的实验性状态以及如何提供反馈。</p> 
+
+<p><a href="https://zemfira.me/posts/things-i-wish-i-knew-about-sqlc">关于 sqlc 的一些经验总结</a><br>作者在商业项目中使用 sqlc 的一些经验总结，包括项目配置技巧、动态更新参数、动态 where 子句以及使用 sqlc.embed() 进行左连接时的注意事项和解决方法。文章还分享了配置 sqlc 的一些实用技巧，例如使用 YAML 锚点复用配置，以及使用类型覆盖来简化代码。</p> 
+
+<p><a href="https://blog.vertigrated.com/go-team-is-sneaking-monadish-into-the-standard-library">Go团队正悄悄地将Monadish纳入标准库</a><br></p> 
+
+<p><a href="https://blog.vertigrated.com/iterseq-in-practice">iter.Seq实战</a><br></p> 
+
+<p><a href="https://nyadgar.com/posts/scaling-grpc-with-kubernetes-using-go">使用 Go 语言在 Kubernetes 中扩展 gRPC</a><br>本文探讨了在基于微服务的系统中使用 gRPC 进行扩展的挑战。gRPC 利用 HTTP/2 和 Protocol Buffers 提供高效的微服务通信，但其长连接特性与 Kubernetes 服务的负载均衡机制之间存在冲突，可能导致空闲 Pod 和资源浪费。文章通过实验演示了这个问题，并提出了使用无头服务、客户端负载均衡和 DNS 解析器来解决这个问题，从而实现 gRPC 在 Kubernetes 中的有效扩展。</p> 
+
+<p><a href="https://dev.to/leapcell/go-124-released-massive-optimizations-key-upgrades-1mbn">Go 1.24 发布：大量的优化和关键升级！</a><br>Go 1.24 是 Go 语言发展中的一个重要版本迭代。它在保持与先前版本兼容性的同时，全面引入了许多新特性、优化和改进，确保绝大多数 Go 程序能够顺利编译和运行。此更新不仅为开发者提供了更强大的编程工具，也显著提升了 Go 语言的性能、安全性和易用性。主要改进包括：对泛型类型别名的完全支持；go 命令的改进，包括对工具指令和 JSON 格式输出的支持；运行时性能优化，平均降低了 2-3% 的 CPU 开销；编译器对 cgo 生成的类型的检查增强；链接器默认生成 GNU build ID 或 UUID；标准库的更新，包括新的基准测试函数、改进的 finalizer、新的 weak 包、新的 crypto 包等等。</p> 
+
+<p><a href="https://www.infoq.com/presentations/go-locks">让我们聊聊锁！</a><br>Kavya Joshi 探讨了锁何时以及为何会影响性能，深入研究了 Go 的锁实现作为案例研究，并讨论了锁真正成为问题时可以使用的一些策略。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-02-19-we-need-your-pgdumps/">我们需要你的pgdumps</a><br>DoltHub 团队正在努力开发 Doltgres，这是 Dolt 的 PostgreSQL 版本。为了使 Doltgres Beta 版本能够顺利发布，他们需要大量的 pgdumps 来改进 pgdump 兼容性。文章中给出了两个例子来说明 pgdumps 如何帮助改进 Doltgres 的 pgdump 兼容性，并呼吁用户提供 pgdumps 以帮助完善 Doltgres。</p>
+
+<p><a href="https://www.pingcap.com/blog/tidb-ddl-optimizations-unleashing-50x-performance-increases/">TiDB DDL 优化：性能提升 50 倍</a><br>本文介绍了 TiDB 如何处理海量在线 DDL 操作，在高并发和高负载下保持稳定性和高吞吐量。通过对 TiDB DDL 框架的优化，实现了显著的性能提升，例如 TiDB 8.2 的 DDL QPS 提升了 5 倍，TiDB 8.3 再次提升了 4 倍，而 TiDB 8.5 的建表速度更是提升了 50 倍。文章详细阐述了 TiDB 在线 DDL 的工作原理，并深入探讨了工程最佳实践和底层优化策略，例如调整调度粒度、提高并发性、优化资源利用率以及替换广播机制等。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/02/19/kmesh-v1-0-officially-released/">Kmesh v1.0 正式发布！</a><br>2025 年伊始，我们欣喜地宣布 Kmesh v1.0.0 正式发布。我们由衷感谢所有 Kmesh 社区贡献者在过去三个月中付出的不懈努力和辛勤工作。如果没有大家的共同努力，我们就无法取得这次成功的发布。
+在 v1.0 版本中，Kmesh 对其东西向流量管理功能进行了重大改进，提高了整体网络流量管理效率和安全性。这些增强功能不仅优化了数据传输稳定性，还为用户提供了更强大的流量治理能力。此外，我们不断改进 Kmesh 的易用性，使其更易于使用和直观，使用户能够快速轻松地上手。
+Kmesh v1.0 的主要功能包括：加密通信、将授权执行卸载到 XDP 程序、就地负载均衡、可观察性增强以及所有模式现在都支持零停机重启。Kmesh 还支持无服务端服务、服务入口和 Istio 1.24。</p>
+
+<p><a href="https://hamy.xyz/blog/2024-04_htmx-in-production">在生产环境中运行 HTMX 的体验 - 来自经验丰富的软件工程师的故事</a><br>本文探讨了经验丰富的软件工程师在生产环境中使用 HTMX 的实际经验。文章总结了 HTMX 的优点，例如简化前端代码、提高性能以及易于集成到现有项目中。同时也指出了 HTMX 的一些缺点，例如缺乏完善的配套工具和资源，以及并非适用于所有场景。文章还讨论了 HTMX 在大型团队和代码库中的可扩展性问题，并提出了相关疑问。总的来说，文章认为 HTMX 是构建现代 Web 应用的一种简单有效的方法，但并非万能的解决方案。</p>
+
+<p><a href="https://victoriametrics.com/blog/fosdem-2025">FOSDEM 2025 回顾</a><br>FOSDEM（自由和开放源代码软件开发者欧洲会议）是一个大型的免费聚会，面向开放源代码软件爱好者，每年二月在比利时布鲁塞尔举行。这是一个由社区组织的非营利性活动，也是同类活动中规模最大的活动之一。本文回顾了VictoriaMetrics团队在2025年FOSDEM上的经历，包括他们在监控和可观察性研讨会上的演讲，以及对OpenTelemetry和Prometheus等社区的参与。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Feb/19/s3-triggers/#atom-everything">使用 S3 触发器维护 DynamoDB 中的文件列表</a><br>我今天上午构建了一个实验性原型系统，该系统通过使用 S3 触发器和 AWS lambda 维护并行的 DynamoDB 表来有效跟踪已添加到大型 S3 存储桶中的文件。这个系统利用了 Claude 项目和 ChatGPT，并通过简单的提示就构建出了大部分功能。虽然中间遇到一些bug，但是最终通过 o3-mini-high 工具解决了问题，最终在不到 15 分钟的提示时间内就从粗略的想法变成了可工作的概念证明。这避免了我过去因为对 S3、IAM、AWS Lambda 和 DynamoDB 的每次调用的细节感到沮丧而不得不避免此类项目。文章最后还提到了最近发布的新的 S3 元数据系统，该系统可能会解决这个问题。</p>
+
+<p><a href="https://octotools.github.io">OctoTools：一种用于复杂推理的可扩展工具代理框架</a><br>OctoTools是一个无需训练、易于使用且易于扩展的开源代理框架，旨在解决不同领域中的复杂推理问题。它引入了标准化的工具卡来封装工具功能、用于高级和低级规划的规划器以及用于执行工具使用的执行器。在16个不同的任务中验证了OctoTools的通用性，与GPT-4o相比，平均准确率提高了9.3%。此外，在使用相同工具集的情况下，OctoTools的性能也优于AutoGen、GPT-Functions和LangChain，最高可达10.6%。通过全面的分析和消融研究，OctoTools在任务规划、有效工具使用和多步骤问题解决方面展现出优势。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/kubernetes/kube-state-metrics">kubernetes/kube-state-metrics</a><br>Add-on agent to generate and expose cluster-level metrics.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/quic-go/quic-go">quic-go/quic-go</a><br>A QUIC implementation in pure Go</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

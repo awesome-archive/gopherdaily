@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260330.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260330</span>
+</p>
+<p>每日一谚：最好的错误消息是那些永远不需要显示的。最好的代码是那些永远不需要写的。 — Bill Venners </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://internals-for-interns.com/posts/go-garbage-collector/">深入理解Go语言垃圾回收机制</a><br>本文是Go运行时系列文章的第四部分，聚焦于Go语言的垃圾收集器（GC）。文章以Go 1.26引入的GreenTea GC为背景，详细解析了Go GC的特性。Go的GC是一种**非移动、并发、三色标记、标记-清除**的收集器。文章将逐一解释这些术语的含义，特别是强调“非移动”的特性，这意味着对象一旦分配地址后就不会被迁移，简化了指针操作和与CGO的交互。此文旨在帮助读者理解GC如何负责清理由Goroutine分配的内存，是Go运行时管理的关键组成部分。</p> 
+
+<p><a href="https://tonybai.com/2026/03/30/reduced-p99-latency-by-request-hedging-in-go">降低 74% 的 P99 尾延迟：揭秘 Go HTTP 客户端的“请求对冲”魔法</a><br>面对高延迟，我们本能的反应是“重试（Retry）”。但正如这位开发者所发现的：单纯的重试不仅无助于解决长尾延迟，反而可能在系统高负载时雪上加霜。真正有效的方法是处理“落后者”，而不是“失败者”。 本文将带你重温 Google 关于分布式系统的经典论文，深入剖析 Request Hedging 的原理，并手把手教你如何仅使用 Go 标准库，为你的 HTTP 客户端插上“对冲”的翅膀。</p> 
+
+<p><a href="https://tonybai.com/2026/03/28/ai-engineer-gpu-introduction-course/">谷歌一篇论文砸崩内存巨头？不懂“显存墙”，怎么做 AI 时代的工程师！</a><br>就在最近，科技界发生了一件极其戏剧性的事情。本周三美股开盘，全球存储产业巨头——美光、西部数据、希捷的股价遭遇了“黑色时刻”，普遍明 显下跌（3%~6%）。 引发这场资本市场大地震的，不是什么贸易战，也不是财报暴雷，而仅仅是谷歌（Google Research）发布的一篇技术论文：《TurboQuant: Redefining AI efficiency with extreme compression》。 这篇论文宣称，他们发明了一种极端的压缩算法，能在几乎零损耗的情况下，将大模型推理时的 KV 缓存（KV Cache）暴降 6 倍，并让注意力机制的计算速度狂飙 8 倍！</p> 
+
+<p><a href="https://antonz.org/porting-go-io/">将 Go 的 io 包移植到 C 语言</a><br>作者最初的目标是将 Go 语言转换为 C 代码，但发现缺少标准库限制了其实用性。因此，下一步是着手将 Go 的标准库移植到 C。本文详细记录了移植 Go 核心的 `io` 包的过程。`io` 包定义了 Reader 和 Writer 等核心接口，分别用于数据读取和写入。在移植过程中，作者需要解决 C 语言中不存在的接口、切片（slices）、多返回值、错误处理以及类型断言等 Go 语言特性在 C 语言环境下的对应实现问题。移植工作从依赖最少的包开始，`io` 包是首批尝试的对象之一。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/cx_4rYKLPQlygmcFHfB9Xw">【AI 工程师的 GPU 入门课】01 硬件解剖：为什么说CPU是“法拉利”，而GPU是“大巴车”？</a><br>今天这第一讲，我们不写一行代码，我们先拆开机箱，看一看 CPU 和 GPU 在物理架构上到底有什么本质区别。我们将引入两个至关重要的概念： 延迟（Latency）与吞吐量（Throughput），并以此为基础，对比目前市面上最火热的消费级卡皇 RTX 5090 与数据中心霸主 H100/H200 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/PnOAu8YrlnB_r-Tao8lbxQ">【构建工业级Agent Skills】05 触发的玄学：如何用 Benchmark 榨干最后 1% 的精度？</a><br>今天，我们将深入 `skill-creator` 最隐秘的角落，探讨它如何运用一种极其严谨的、基于数据驱动的方法（Data-driven Benchmark），将玄学 的 `description` 调优，变成一门精密的工程科学。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ph7Oos5bs_UJLITB9y1xaw">【AI 智能体时代的软件工程】14 结束语：认清现实，去当驾驶法拉利的赛车手</a><br>这最后一讲，我不打算再教你任何新的代码模式或架构技巧。今天，这一讲只关于你——坐在驾驶舱里的那个人类。 我要告诉你，当束缚了我们几十年的“物理限制”被彻底打破时，身为开发者、技术 Leader 乃至企业决策者的你，究竟该如何握紧手中的方向盘， 才不会在极限狂飙中车毁人亡，最终抵达软件工程的新纪元。</p> 
+
+<p><a href="https://go.dev/blog/type-construction-and-cycle-detection">Go 语言类型构造与循环检测的改进</a><br>本文深入探讨了 Go 语言类型检查器中的“类型构造”过程，这是 Go 编译器中一个关键步骤，用于消除编译时错误，确保类型和操作的有效性。文章指出，尽管 Go 类型系统相对简单，但在处理复杂类型定义时，类型构造可能非常微妙。作者重点介绍了 Go 1.26 版本中对类型构造和循环检测机制进行的重大改进。这些改进旨在减少边缘情况，为未来的编译器优化奠定基础，虽然对普通 Go 用户而言，这种底层变化通常是不可察觉的。</p> 
+
+<p><a href="https://www.winterjung.dev/en/golang-pkgs-for-production-server/">Go语言生产环境常用第三方包推荐</a><br>作者分享了其五年Go语言开发经验中，在服务器开发方面认为最实用且高频使用的第三方软件包清单。尽管Go标准库功能强大，但本文聚焦于弥补生态中资源相对稀缺的领域，旨在帮助其他开发者减少研究和试错成本。作者指出，寻找可靠的Go模块和包是许多开发者面临的挑战之一，因此希望通过分享这些精选的第三方库（如stretchr/testify），为社区提供参考和决策支持，并期待通过读者反馈不断完善这份列表。</p> 
+
+<p><a href="https://rtfm.co.ua/en/golang-writing-an-aws-load-balancer-logs-collector-for-victorialogs">Golang 实现 AWS ALB 日志收集器至 VictoriaLogs</a><br>本文旨在介绍如何使用 Golang 编写一个自定义日志收集器，用于从 AWS S3 检索应用程序负载均衡器（ALB）日志，并将其发送到 VictoriaLogs。尽管可以使用 Vector.dev 等现有工具，但作者选择通过自建收集器来获得更多 Go 语言的实践经验。该方案的核心流程是：ALB 将日志写入 S3，S3 配置通知到 AWS SQS 队列；自定义收集器轮询 SQS 获取新对象信息，随后请求 S3 获取 GZ 压缩包，解压、解析数据后发送至 VictoriaLogs。为避免维护状态，该方法利用 SQS 队列作为可靠的机制来跟踪和处理新的 S3 日志文件，处理完成后从队列中删除相应消息。</p> 
+
+<p><a href="https://blog.openziti.io/comparing-open-source-llm-gateways">开源大模型网关对比</a><br>本文对比了当前主流的开源大语言模型（LLM）网关方案，旨在帮助用户根据自身需求选择合适的工具。文章分析了这些网关在功能、部署、性能和易用性等方面的差异。LLM 网关在实际应用中扮演着关键角色，它们负责管理、路由和优化对底层 LLM 服务的访问，同时提供诸如负载均衡、缓存、安全控制和成本监控等功能。通过对比，读者可以更好地理解不同开源网关的优缺点，从而在构建 LLM 应用架构时做出更优的技术选型决策。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://sourcegraph.com/blog/the-future-of-scip">SCIP 的未来发展</a><br>本文探讨了 Sourcegraph 平台中 SCIP（Symbol Search Indexing Protocol）的未来方向和演进路线。SCIP 作为一种关键技术，旨在提升代码搜索、理解和导航的能力，对于开发者体验至关重要。未来的发展可能聚焦于增强索引的准确性、扩展其在不同代码生态中的兼容性，并进一步优化开发者通过平台进行高效代码探索和重构的效率。这标志着 Sourcegraph 在构建更智能、更强大的代码智能服务方面迈出的重要一步。</p>
+
+<p><a href="https://blog.howardjohn.info/posts/listenerset/">Ingress 到 Gateway API 的迁移：所有权模型的差异与挑战</a><br>随着 ingress-nginx 的退役，用户在迁移到 Gateway API 时遇到了资源模型上的差异和挫折。传统的 Ingress 模型允许应用团队完全拥有并配置其 Ingress 资源，包括通过 `cert-manager` 自动配置 TLS 证书。然而，Gateway API 采用了更细分的资源模型，将配置拆分为 `Gateway` 和 `Route`。TLS 证书的定义被移至 `Gateway` 资源中，这与 Ingress 中将证书引用直接放在 Ingress 资源内的自服务模式存在关键区别。这种所有权和配置分离的转变是迁移过程中需要重点关注和解决的核心问题。</p>
+
+<p><a href="https://emnudge.dev/blog/what-happened-to-webassembly/">WebAssembly现状：它去哪儿了？</a><br>这篇文章旨在回应关于WebAssembly（Wasm）“到底发生了什么”的常见疑问，澄清其是否被过度宣传或注定失败的担忧。作者通过探讨Wasm在现实世界中的应用现状，指出它不仅被实际使用，而且在多个领域取得了进展。文章将深入探讨Wasm的定义、性能优势、作为编译目标的地位、安全特性、可移植性和嵌入性，以及它对语言生态发展的影响。文中列举了Godot游戏引擎、Squoosh.app图像处理工具和Zellij终端复用器等实际应用案例，以证明Wasm已经成为一项重要的技术，而非昙花一现的炒作。</p>
+
+<p><a href="https://shenli.dev/2026/03/26/hidden-contract-in-every-api-call.html">API调用的隐藏契约</a><br>文章以智能电视操作体验不佳为例，引出了分布式系统的核心问题——状态同步失败。作者将人与机器的交互类比为分布式系统中的两个节点，指出当系统中的操作速率超过节点（尤其是基于本地状态操作的节点）的同步速度时，就会出现问题。Web应用本质上就是分布式系统，因为客户端和服务器之间始终存在延迟、状态可能被其他用户或后台进程修改。因此，在分布式系统中，我们绝不能安全地假设客户端的世界状态与服务器端的完全一致，这是每次API调用的隐藏约束。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/29/stop-mindless-ai-coding-we-are-heading-to-a-dead-end/">别再用 AI 疯狂撸代码了！我们正在把自己逼入“死胡同”</a><br>最近，国外资深开发者 Mario Zechner 写了一篇极其辛辣的文章《Thoughts on slowing the f**k down》。他毫不客气地戳破了这层“繁荣”的窗户纸： 当我们把 AI 智能体（Agent）全面引入生产代码库后，我们并没有迎来软件工程的乌托邦，反而正在以惊人的速度，制造着前所未有的“屎山”和 灾难。 今天，我想结合他的反思，以及我最近在使用 AI 原生开发时的一些切身痛点，给大家浇一盆冷水。在被大模型彻底“惯坏”之前，我们必须看清， 过度依赖 Agent 正在如何毁掉我们的系统，甚至我们的职业生涯。</p>
+
+<p><a href="https://blog.dailydoseofds.com/p/anatomy-of-the-claude-folder">Claude 文件夹结构详解</a><br>本文是一份关于 Claude AI 配置文件目录的完整指南，重点解析了 `.claude/` 文件夹的内部结构。内容涵盖了如何正确设置和使用 `CLAUDE.md` 文件、自定义命令（Custom Commands）、技能（Skills）、代理（Agents）以及相关的权限配置。文章旨在帮助用户深入理解和有效管理 Claude 的个性化和高级功能设置，以优化其使用体验。</p>
+
+<p><a href="https://jai.scs.stanford.edu/">jai：安全的AI智能体运行环境</a><br>文章介绍了名为“jai”的Linux工具，旨在解决在不牺牲安全性的前提下使用AI智能体（Agent）的难题。鉴于已有AI工具导致用户文件丢失、目录清空等严重安全事件，jai提供了一种轻量级的解决方案，填补了直接授予AI完整账户权限与配置复杂容器/虚拟机之间的空白。用户无需构建镜像或Docker文件，只需一条命令即可为AI工作流建立安全边界。jai的核心功能是限制AI对文件系统的访问权限：它允许智能体完全访问当前工作目录，但对用户主目录的其他部分采用写时复制（Copy-on-Write）覆盖或完全隐藏的机制，确保用户数据安全，使用户可以在不盲目信任AI的情况下获得快速的编程帮助或执行本地任务。</p>
+
+<p><a href="https://medium.com/@jesse.r.castro/the-hard-part-of-ai-coding-isnt-the-code-4e509808f0d2">AI 编程的难点不在代码</a><br>这篇文章探讨了人工智能辅助编程（AI Coding）中真正的挑战并非代码本身，而是与人类协作和集成的问题。作者指出，尽管像 GitHub Copilot 这样的工具能快速生成代码片段，但开发者仍需要花费大量时间理解、调试、验证这些由 AI 生成的代码，并将其无缝集成到现有复杂系统中。真正的难点在于定义清晰的需求、进行有效的提示工程（Prompt Engineering）、以及确保 AI 产出符合架构约束和业务逻辑。AI 正在将工作重心从编写代码转移到“管理”和“整合”代码，强调了人类在系统设计、批判性思维和解决实际业务问题方面的核心作用。</p>
+
+<p><a href="https://blog.exe.dev/bones-of-the-software-factory">软件工厂的基石：计算原语与个性化工作流</a><br>面对新兴的智能体工具和软件生产方式的爆炸性增长，当前不应强推统一解决方案，而是鼓励团队进行实验和迭代。文章指出，成功的关键在于提供**计算原语**——即丰富、高性能、易于部署、可安全共享且可信赖的虚拟机（VM）。正是这种强大的计算基础，使得团队能够自由探索和发展出多样化的代理、自动化和工作流。实践证明，不同团队成员的工作流程各不相同且行之有效。这些基于VM隔离、试验和迭代而生的多样化工具，将最终构成未来软件工厂的骨架。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/owncast/owncast">owncast/owncast</a><br>Take control over your live stream video by running it yourself. Streaming &#43; chat out of the box.</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/runkids/skillshare">runkids/skillshare</a><br>📚 Sync skills across all AI CLI tools with one command and simplify team sharing. Supporting Codex, Claude Code, OpenClaw &amp; more</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, AI-integrated, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/supabase/cli">supabase/cli</a><br>Supabase CLI. Manage postgres migrations, run Supabase locally, deploy edge functions. Postgres backups. Generating types from your database schema.</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

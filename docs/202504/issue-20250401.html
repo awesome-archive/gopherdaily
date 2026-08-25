@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250401.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250401</span>
+</p>
+<p>每日一谚：Abstraction are discovered not created </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.ianlewis.org/en/zero-copy-readers-in-go">Go语言中的零拷贝读取器</a><br>Go语言的io.Reader接口定义了一个Read方法，调用者传递一个字节切片，该切片将被填充来自底层源的字节。底层源可以是文件、网络套接字等。本文介绍了几种避免数据复制，提高效率的零拷贝读取方法，包括使用bytes.Reader和bufio.Reader，并分析了它们的工作原理和优缺点。</p> 
+
+<p><a href="https://jub0bs.com/posts/2025-03-31-why-concrete-error-types-are-superior-to-sentinel-errors">为什么具体错误类型优于哨兵错误</a><br>本文探讨了在 Go 语言中使用具体错误类型相对于哨兵错误的优势。具体错误类型在性能、不可篡改性和可扩展性方面都优于哨兵错误。文章还介绍了第三方函数 `errutil.Find`，它作为标准库函数 `errors.As` 的强大替代方案。</p> 
+
+<p><a href="https://www.alexedwards.net/blog/when-is-it-ok-to-panic-in-go">Go语言中何时可以使用 panic？</a><br>Go语言中有一句谚语“不要恐慌（don&#39;t panic）”，建议优雅地处理错误或将其返回给调用者，而不是使用内置的 `panic()` 函数。本文探讨了 `panic()` 函数的功能、避免使用它的原因以及在某些情况下使用 `panic()` 的合理场景。文章区分了运行时错误和编程错误，认为对于编程错误（例如除零、数组越界等），使用 `panic()` 是可以接受的，因为这些错误通常表明代码存在逻辑缺陷，而返回错误会增加不必要的复杂性。文章还通过几个实际例子说明了在何种情况下使用 `panic()` 更合适，例如在配置加载阶段或作为保护措施防止SQL注入等。</p> 
+
+<p><a href="https://dev.to/shrsv/the-multiplexing-fan-in-pattern-in-go-concurrency-1c53">Go并发编程中的多路复用（Fan-In）模式</a><br>本文介绍了Go语言中用于将多个通道合并为一个通道的Fan-In模式。该模式可以有效地解决在并发编程中处理多个工作线程输出的问题，避免了轮询每个工作线程的低效方法。文章从一个简单的例子开始，逐步讲解了Fan-In模式的工作原理，并最终提供了一个健壮的、可扩展到任意数量输入的Fan-In函数实现，该函数使用sync.WaitGroup来确保所有输入都处理完毕后才会关闭输出通道。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/network-troubleshooting-kubernetes-security-part-4">真实团队如何修复 Kubernetes 网络问题（无需抓狂）</a><br>这是我们关于 Kubernetes 安全风险系列文章的第 4 部分，也是最后一部分。我们已经介绍了问题所在——现在让我们看看现实世界中解决这些问题的团队。了解公司如何确保 Kubernetes 的安全性，而不会增加复杂性或减慢开发人员的速度。</p>
+
+<p><a href="https://engineering.fb.com/2025/03/31/data-infrastructure/mobile-graphql-meta-2025/">Meta 2025年移动GraphQL - Meta 工程博客</a><br>Meta 的移动 GraphQL 框架使用强类型声明式查询语言 GraphQL 在移动应用中获取数据。它负责 Facebook 和 Instagram 等应用的数据获取。Meta 工程博客文章介绍了移动 GraphQL 的演变和未来，以及如何帮助团队为 Meta 应用的用户打造更好的体验，同时简化开发人员的工作。文章还分享了团队的见解和意外挑战，并提供了收听该播客的链接。</p>
+
+<p><a href="https://www.sivalabs.in/tomato-architecture-pragmatic-approach-to-software-design">番茄架构 - 一种务实的软件设计方法</a><br>本文介绍了一种名为“番茄架构”的软件设计方法。作者在学习DDD、Clean/Onion/Hexagonal架构后，发现它们非常相似，都旨在保护核心领域逻辑不受外部依赖的影响。然而，作者也指出，盲目追求这些架构可能会导致过度工程。因此，作者提出了“番茄架构”，强调简洁性和可读性，并提供了一些务实的编码实践和架构决策，以避免过度工程，并提高代码的可维护性和可扩展性。文章还包含架构图和实施指南。</p>
+
+<p><a href="https://medium.com/@isalapiyarisi/proxyless-scale-to-zero-with-ebpf-61efc6917310">使用 eBPF 实现无代理零扩展</a><br>本文介绍了如何使用 eBPF 为容器化工作负载实现无代理零扩展，同时减少 Kubernetes 中的延迟和成本。作者讨论了 KEDA 的局限性，并展示了 eBPF 如何克服这些局限性，从而实现更高效的资源利用率。</p>
+
+<p><a href="https://www.dragonflydb.io/blog/the-future-of-modern-data-infrastructure">现代数据基础设施的未来</a><br>本文探讨了现代数据基础设施的关键预测。它解释了塑造现代数据基础设施的核心原则，例如性能和可扩展性、弹性、数据一致性、安全性和成本效率。文章还预测了未来数据基础设施的几个关键能力，包括持续的性能和可扩展性、实时数据处理的重要性、专用和混合架构的共存、兼容性和可扩展性的重要性以及AI集成和能力的重要性。</p>
+
+<p><a href="https://welltypedwitch.bearblog.dev/the-way-were-thinking-about-breaking-changes-is-really-silly">我们对break changes的思考方法太傻</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/1/pydantic-evals/#atom-everything">Pydantic Evals</a><br>Pydantic Evals是一个来自Pydantic AI团队的新软件包，它直接解决了我在AI工程中认为最困难的问题：构建评估来确定你的基于LLM的系统是否正常工作，并且随着时间的推移是否越来越好。这个软件包目前处于测试阶段，并且文章中也提到了评估方法仍然是一个发展中的领域。文章还包含代码示例，展示了如何使用Case和Dataset来定义评估案例，以及如何使用自定义评估器，包括LLM-as-a-judge。案例和数据集也可以序列化为YAML格式。作者对该软件包的初步印象很好，并期待在实际项目中进行测试。</p>
+
+<p><a href="https://composio.dev/blog/gemini-2-5-pro-vs-claude-3-7-sonnet-coding-comparison">Gemini 2.5 Pro 与 Claude 3.7 Sonnet 的编码能力对比 - Composio</a><br>本文比较了 Google 最新发布的 Gemini 2.5 Pro 实验性模型与 Claude 3.7 Sonnet（思考型）模型的编码能力。作者通过四个编码问题（飞行模拟器、魔方求解器、4D 超立方体中的弹球以及一个 LeetCode 难题）的测试，得出结论：Gemini 2.5 Pro 在编码方面表现更好，拥有百万级上下文窗口，且免费使用。虽然 Claude 3.7 Sonnet 也表现出色，但在编码能力方面已落后于 Gemini 2.5 Pro。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为统一格式调用，支持OpenAI、Claude等格式，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/dunglas/frankenphp">dunglas/frankenphp</a><br>🧟 The modern PHP app server</p>
+
+<p><a href="https://github.com/databus23/helm-diff">databus23/helm-diff</a><br>A helm plugin that shows a diff explaining what a helm upgrade would change</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/mark3labs/mcphost">mark3labs/mcphost</a><br>A CLI host application that enables Large Language Models (LLMs) to interact with external tools through the Model Context Protocol (MCP).</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/go-shiori/shiori">go-shiori/shiori</a><br>Simple bookmark manager built with Go</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/ariga/atlas">ariga/atlas</a><br>Manage your database schema as code</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 Fast and simple video download library and CLI tool written in Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

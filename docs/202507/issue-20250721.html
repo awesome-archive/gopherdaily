@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250721.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250721</span>
+</p>
+<p>每日一谚：Be explicit rather than implicit </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/21/go-crypto-101">解密Go安全核心：7步掌握现代密码学工程</a><br>在我们的日常开发中，密码学（Cryptography）似乎是一个遥远又令人敬畏的“禁区”。我们遵循着“不要自己发明轮子”的金科玉律，熟练地调用着各 种加密库，但内心深处，它对我们而言可能依然是一个“黑盒”。这些“为什么”的背后，隐藏着从一个“能用”的开发者到“精通”的工程师之间的关键差距。如果你也曾对这些问题感到好奇，那么，这个新微专栏就是为你准备的</p> 
+
+<p><a href="https://dev.to/lovestaco/how-to-use-minio-go-for-s3-compatible-storage-in-go-5eai">如何在 Go 中使用 minio-go 实现与 S3 兼容的存储</a><br>本文介绍了如何使用 minio-go (v7) 这个轻量级的 Go SDK 来实现与 Amazon S3 兼容的对象存储。minio-go 支持核心 S3 API 操作，例如桶、对象上传/下载、预签名 URL、通知、生命周期等等，并且没有 AWS SDK 的臃肿。文章包含了上传文件的快速入门示例，以及其他高级功能（例如桶列表和删除、对象操作、预签名 URL、桶策略/通知/生命周期）的介绍和示例代码。最后，文章还提供了一些技巧和后续步骤建议。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/29">Fallthrough | 版本控制：我们自己造成的</a><br>版本控制！这是我们每天都会遇到的一个话题，但也是许多人感到恐惧的话题。我们的生态系统喜欢语义化版本控制，但我们许多人发现它在许多用例中都存在不足。在本集中，Kris 和 Matt 再次邀请 Jamie 和 Steve 来讨论版本控制。小组讨论了什么是版本控制，何时使用语义化版本控制，标识符和版本是否相同，以及更多内容。
+
+上周，我们发布了我们的幕后节目 Break 的第一集。本周我们将继续推出另一期！我们已经为幕后节目设置了一个单独的频道，但目前我们将在这个频道中播放前几期节目。您可以通过以下链接收听：https://break.show/ep/2。
+
+别担心，支持者们，我们还有很多额外内容给你们。和这个小组以往一样，我们深入讨论了人工智能，它与意义的关系，以及整个事情是否可能明天就消失。还没有成为支持者？您可以前往 https://fallthrough.fm/subscribe 成为支持者，您不仅可以获得额外内容，还可以获得更高质量的音频。立即注册！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://leapcell.medium.com/stop-writing-slow-rust-20-rust-tricks-that-changed-everything-0a69317cac3e">20个Rust高性能技巧</a><br></p>
+
+<p><a href="https://viralinstruction.com/posts/borrowchecker">Rust 的借用检查器是我最不喜欢 Rust 的地方</a><br>Rust 是一种备受赞誉的编程语言，其主要卖点是将速度和底层控制与高水平的抗错性（通常称为“安全”）相结合。Rust 的主要创新是其借用检查器，它强制执行 Rust 的所有权规则，从而使 Rust 能够实现垃圾收集语言所具有的所有内存安全特性，但无需运行时成本。然而，作者认为，借用检查器会导致严重的可用性问题，并且其在 Rust 安全性中的作用被夸大了。文章通过多个例子展示了借用检查器如何拒绝许多行为良好的程序，以及如何使得编写代码变得困难。作者认为，Rust 的安全性更多地归功于其良好的设计和文化，而非仅仅是借用检查器。虽然承认借用检查器在某些情况下有用，但作者最终表达了对借用检查器的强烈不满。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.korny.info/2025/07/18/a-real-world-ai-coding-case-sample">真实的AI编码案例示例</a><br>本文分享了一个使用AI辅助完成较大编程任务的真实案例。作者在非全新开发的ASP.Net Core应用程序中，利用AI工具Claude Code添加了一个功能：当业务与联系人的关系发生变化时发送Kafka事件。过程中，作者并非完全依赖AI，而是扮演指导者的角色，纠正AI的错误，并最终成功完成任务。该案例展现了AI辅助编程的优势，同时也强调了人类开发者在代码理解、调试和复杂问题解决方面的必要性。</p>
+
+<p><a href="https://antirez.com/news/154">2025年夏季使用大型语言模型进行编码</a><br>本文探讨了在2025年夏季使用大型语言模型（LLM）进行编程的经验，特别是 Gemini 2.5 PRO 和 Claude Opus 4。作者发现LLM可以显著提高程序员的工作效率，例如消除bug，更快地探索想法，进行结对设计，并加速代码编写。然而，作者也强调了LLM的局限性，例如容易产生脆弱且冗余的代码。文章建议将LLM作为辅助工具，而不是完全依赖其自动生成代码。最佳实践包括提供充足的上下文信息、选择合适的LLM以及保持人为控制，将LLM作为编程过程中的一个环节，而不是完全取代程序员。</p>
+
+<p><a href="https://utkarshkanwat.com/writing/betting-against-agents">为什么我在 2025 年看空 AI 智能体（尽管我一直在构建它们）</a><br>我已构建了 12 多个用于开发、DevOps 和数据运营的 AI 智能体生产系统。以下是我为什么认为当前围绕自主智能体的炒作在数学上是不可能的，以及在生产中真正有效的因素。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>A simple zero-config tool to make locally trusted development certificates with any names you&#39;d like.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/ibnaleem/gosearch">ibnaleem/gosearch</a><br>🔍 Search anyone&#39;s digital footprint across 300&#43; websites</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/kitops-ml/kitops">kitops-ml/kitops</a><br>An open source DevOps tool for packaging and versioning AI/ML models, datasets, code, and configuration into an OCI artifact.</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/v2ray/domain-list-community">v2ray/domain-list-community</a><br>Community managed domain list</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>Selfhosted alternative to 12ft.io. and 1ft.io bypass paywalls with a proxy ladder and remove CORS headers from any URL</p>
+
+<p><a href="https://github.com/donetick/donetick">donetick/donetick</a><br>Donetick an open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized</p>
+
+<p><a href="https://github.com/garethgeorge/backrest">garethgeorge/backrest</a><br>Backrest is a web UI and orchestrator for restic backup.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

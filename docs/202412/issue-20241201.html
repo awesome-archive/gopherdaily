@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241201.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-01</span>
+</p>
+<p>每日一谚：Returning early is a good thing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-weak-pointer/">Go中的weak指针：为什么它们现在很重要</a><br>本文深入探讨了 Go 中弱指针的概念，强调了它们在内存管理和优化中的重要性。弱指针是 Go 的 weak package 的一部分，它允许引用内存而不锁定内存，从而使垃圾收集能够有效地回收未使用的内存。本文解释说，当引用的内存被清理时，弱指针会自动变为 nil，从而防止悬空指针。它还涉及弱指针的实际应用，例如在规范化映射和需要将对象生命周期与活动使用相关联的场景中。源文档包括代码片段，用于说明弱指针的行为，并讨论了使用间接寻址对象来促进垃圾回收的设计选择。作者是来自 VictoriaMetrics 的 Phuong Le，他强调了在使用弱指针时考虑用例的重要性，因为考虑到它们的内存占用。文章最后邀请读者探索 VictoriaMetrics 的产品和服务套件，用于使用 Go 监控和管理基础设施。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括文档中的直接引用或特定详细信息，而是提供内容的概述。</p> 
+
+<p><a href="https://blog.smidt.dev/posts/0003/">深入了解eBPF：从头开始构建Process Tracer！</a><br>故事的展开是作者踏上了使用 eBPF 为 Linux 创建简单流程跟踪器的旅程，最初是出于了解缓慢的 CI 管道的需求。作者深入研究了 eBPF 的世界，探索了它的内核级可观测性能力，并决定在 Go 中实现一个跟踪器，利用 cillium/ebpf 库来避免 CGO。该过程包括为 Go 和 C 代码之间的通信设置环形缓冲区，为进程开始和结束事件定义跟踪点，以及编写 Go 代码来解码这些事件并跟踪执行时间。作者还解决了将此跟踪器与 GitHub Actions 集成的挑战，强调了缺乏对此类指标的内置支持，并为寻求优化其 CI/CD 管道的开发人员提出了潜在的解决方案。在整个故事中，作者的好奇心和提高性能的决心是显而易见的，因为他们驾驭了 eBPF 和嵌入式编程的复杂性以实现他们的目标。
+
+（注意：摘要旨在封装源文档的关键元素，重点关注作者的旅程、eBPF 和 Go 集成的技术方面以及 CI/CD 优化的更广泛背景。</p> 
+
+<p><a href="https://dev.to/oyedeletemitope/how-to-set-up-authorization-in-a-bookstore-management-system-with-go-htmx-and-permitio-1nan">如何使用 Go、HTMX 和 Permit.io 在书店管理系统中设置授权</a><br>本教程将指导开发人员完成使用 Go、HTMX 和 Permit.io 在书店管理应用程序中实现基于角色的访问控制 （RBAC） 的过程。它从设置 Permit.io、配置 PostgreSQL 数据库和创建必要的 Go 包来处理用户身份验证和数据库交互开始。该应用程序的结构包括用于用户登录、书籍管理（添加、查看、删除、更新）的处理程序，以及用于密码哈希和用户角色检索的中间件。本教程强调了 Permit.io 的 RBAC 框架对于安全和可扩展的访问控制的重要性，仅允许授权用户执行特定操作。最终设置包括用于用户界面的 HTML 模板和用于启动服务器的主 Go 文件，演示了用于在书店应用程序中管理用户角色和权限的完整系统。</p> 
+
+<p><a href="https://martinyonathann.medium.com/building-a-role-and-scope-based-access-control-rbac-system-in-go-e804a8d4072f">在 Go 中构建基于角色和范围的访问控制 （RBAC） 系统</a><br>Martin Pasaribu 在 Medium 上的文章详细介绍了如何使用 Go 创建基于角色和范围的访问控制 （RBAC） 系统。该系统通过 Go-rbac 库实现，为管理软件应用程序中的用户角色和权限提供了可扩展的解决方案。本文概述了 RBAC 的核心概念，包括用户、角色、权限和资源，并演示了如何使用 Go 中的中间件定义和实施这些元素。Pasaribu 提供了一个分步指南，从克隆 Go-rbac 存储库开始，了解 RBAC 模型，定义角色和权限，以及实施中间件进行角色和范围验证。本文强调了结合角色和范围验证以有效实施访问控制的重要性，提供了一种实用的方法，通过干净且可维护的代码库来保护 API 和微服务。Pasaribu 的工作为希望在其 Go 应用程序中实现 RBAC 的开发人员提供了全面的资源，并为进一步探索和学习提供了额外的资源。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/master-gos-concurrency-context-propagation-and-cancellation-secrets-revealed-12fm">掌握Go的并发性：揭秘Context传播和cancel</a><br>源文档深入探讨了 Go 并发模型的复杂性，强调了上下文传播和取消对于管理复杂的并发操作的重要性。它首先解释了上下文包如何实现跨 API 边界和进程传输截止时间、取消信号和请求范围的值，这对于控制长时间运行的操作和确保正常关闭至关重要。本文档提供了使用上下文取消、跨 goroutine 传播信号和处理分布式事务的示例。它还涉及创建自定义上下文类型以承载特定于域的取消信号，例如优先级值。此外，本文档还说明了如何利用上下文来管理微服务架构中的网络操作，确保在达到超时时适当地取消操作。最后，它强调了上下文在并发系统内错误处理中的作用，确保正确传播错误并有效地清理资源。本文档最后建议明智地使用上下文，以避免代码过于复杂并保持 API 设计的清晰度。
+
+（注意：提供的文本是基于给定结构的假设内容的摘要，而不是真实文档的实际摘录。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://medium.com/@wishula/revolutionizing-cloud-operations-how-we-built-a-centralized-backoffice-22243441fa09">革新云运营：我们如何构建集中式后台</a><br></p>
+
+<p><a href="https://medium.com/@ali75mnf/understanding-database-phenomena-and-isolation-levels-6f1fc340b2e5">了解数据库现象和隔离级别</a><br>Alimnf 的文章深入探讨了数据库现象和隔离级别的关键方面，这些对于在并发操作中维护数据完整性至关重要。它概述了三种主要的数据库现象 — 脏读、不可重复读取和幻读 — 每种现象都会对数据一致性构成风险。为了缓解这些问题，本文介绍了 SQL 标准定义的 4 个隔离级别：Read Uncommitted、Read Committed、Repeatable Read 和 Serializable，每个级别都有不同程度的数据一致性和性能影响。在关系数据库中实现这些隔离级别是通过基于锁的协议、MVCC 和快照隔离实现的，PostgreSQL 和 MySQL 的 InnoDB 就是著名的例子。文章最后强调了根据应用程序需求选择合适的隔离级别的重要性，并提出了乐观锁定和性能监控等最佳实践，以平衡一致性和效率。Alimnf 的见解旨在指导开发人员设计强大的数据库系统，以满足其应用程序的特定需求。</p>
+
+<p><a href="https://blog.livekit.io/yeah-but-can-it-run-doom/">可以，但它能运行DOOM 吗？</a><br>叙述讲述了使用 LiveKit 实现云游戏的旅程，从最初尝试在黑客马拉松上玩 DOOM 开始。尽管该项目没有成功，但作者对云游戏潜力的好奇心促成了合作伙伴关系，并创建了一个允许通过 LiveKit 数据通道进行多人 DOOM 游戏的系统。该设置面临延迟和响应方面的挑战，但作者通过利用无头 Steam 容器、NVIDIA T4 GPU 以及优化输入处理和屏幕捕获找到了解决方案。该项目的成功通过数小时的 Portal 2 合作游戏得到了证明，作者指出，虽然还有改进的余地，但已经实现了在 LiveKit 上运行云游戏服务的核心功能。作者还分享了该项目的开源性质，并暗示了未来的增强功能，例如联播以实现更高的分辨率，并通过更近的数据中心放置来减少延迟。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/29/why-does-opentelemetry-work-differently-on-mobile-versus-backend-apps/">为什么 OpenTelemetry 在移动和后端应用程序上的工作方式不同？</a><br>本文档探讨了与后端系统相比，在移动应用程序上实施 OpenTelemetry （OTel） 的独特挑战。移动设备通常具有较低规格的硬件、有限的电池寿命和不太可靠的网络连接，这会影响遥测数据收集。此外，移动应用程序在单个进程中运行，这使得数据持久性在进程终止的情况下至关重要。该文档还强调了为移动事件（如用户会话）量身定制的语义约定的必要性，这与 HTTP 请求等后端概念不同。为了解决这些问题，我们鼓励 OTel 社区为特定于移动环境的网络连接处理、进程终止和语义约定开发解决方案。该文件表明，随着采用和协作的增加，OTel 可以不断发展以更好地支持移动可观测性。
+
+（注意：摘要旨在概括文档的关键点，同时保持简洁和连贯性。它不包括文档中的直接引用或具体问题。</p>
+
+<p><a href="https://thenewstack.io/api-mocking-is-essential-to-effective-change-management/">API 模拟对于有效的变更管理至关重要</a><br>New Stack 文章强调了 API 模拟在软件开发中有效管理变更的关键作用。通过模拟 API 行为，模拟为测试和验证更改提供了一致且可靠的基线，从而降低了 API 偏差的风险，即实际 API 偏离其预期设计。本文概述了将模拟集成到开发工作流中的步骤，包括定义事实来源、安排定期同步和审查、自动监控以及将模拟更新整合到 CI/CD 管道中。这种方法不仅可以确保 API 文档、实现和功能之间的一致性，还可以促进开发、QA 和后端团队之间的协作。归根结底，API 模拟是一种支持可扩展性和可靠性的主动措施，使团队能够自信地应对变化并维护强大的 API 生态系统。
+
+（注意：根据说明，摘要旨在封装源文档的关键点，同时保持简洁和连贯性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@mpaydayesh/the-future-of-humanity-bill-gates-on-ai-climate-and-global-progress-a887d240b8bb">人类的未来：比尔·盖茨谈人工智能、气候和全球进步</a><br>在这次富有洞察力的采访中，比尔·盖茨讨论了人工智能 （AI） 在各个领域的变革潜力，包括全球健康、气候变化和教育。他强调了将高影响力、学习机会和乐趣相结合的有影响力项目的重要性。盖茨强调了人工智能在加速科学发现方面的作用，特别是在药物发现和气候解决方案方面，同时也解决了道德问题。在全球健康领域，他强调了比尔和梅琳达·盖茨基金会在疾病根除和营养方面的努力，以及人工智能驱动的医疗保健技术。对于气候变化，盖茨倡导使用可再生能源和创新的甲烷减排战略实现多元化的能源组合。在教育方面，他将 AI 设想为个人导师，能够提供量身定制的学习体验并为教师提供支持。盖茨最后呼吁政府、企业和个人采取行动，合作塑造更美好的未来，利用创新解决全球不平等问题。
+
+（注意：该摘要旨在概括所提供源文件中的关键主题和见解，重点关注比尔·盖茨对人工智能、全球健康、气候变化和教育的看法，以及未来进步所需的道德考虑和协作努力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>自托管、轻量级服务器和网站监控及运维工具</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/publicsuffix/list">publicsuffix/list</a><br>Public 后缀列表</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria 是一个功能强大、快如闪电且抗审查的代理。</p>
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>基于 go-ethereum 分叉的 BNB 智能链客户端</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>快速、安全、高效的备份程序</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>太阳能充电 ☀️🚘</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>高性能、自托管的时事通讯和邮件列表管理器，具有现代仪表板。单个二进制应用程序。</p>
+
+<p><a href="https://github.com/go-telegram-bot-api/telegram-bot-api">go-telegram-bot-api/telegram-bot-api</a><br>Telegram Bot API 的 Golang 绑定</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric 是一个企业级许可分布式账本框架，用于开发解决方案和应用程序。其模块化和多功能设计可满足广泛的行业用例。它提供了一种独特的共识方法，可在保护隐私的同时实现大规模性能。</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>有关数千 （！） 加密代币的全面、最新信息集合。</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>HomeBox 的延续，HomeBox 是为家庭用户构建的库存和组织系统</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>轻量级服务器监控中心，包含历史数据、docker 统计信息和警报。</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>用 Go 编写的任务运行器 / 更简单的 Make 替代方案</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，具有自动 HTTPS</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细访问控制将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/pion/webrtc">pion/webrtc</a><br>WebRTC API 的纯 Go 实现</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区托管域列表。为 V2Ray 生成 geosite.dat。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

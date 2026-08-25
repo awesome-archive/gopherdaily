@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240902.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-02</span>
+</p>
+<p>每日一谚：Make your errors clear with fmt.Errorf, don not just leave them bare. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/DM0JG1WwdTl2oBvaDYbKdQ">Go 1.23引入的新Bug？其实只是文档没看仔细</a><br>上个月中旬,Go 1.23版本正式发布,解决了一直困扰Go团队的Timer/Ticker的GC回收问题,但昨天,一个叫tulir的gopher提出的issue差点让Russ Cox“晚节不保”。</p> 
+
+<p><a href="https://t.zsxq.com/aVi97">Go crypto库设计大起底(sponsor)</a><br>对go crypto和golang.org/x/crypto的设计思路和子包结构的梳理，帮你在大脑中建立一幅“crypto地图”，在需要的时候，快速导航到最适合的密码学包。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/8vU-6MkH-r6rGnjCF029Sg">OpenTelemetry Golang Agent 0.1.0-RC 重磅发布</a><br>阿里云可观测团队开源了遵循Opentelemetry规范的Golang Agent 0.1.0-RC版本,希望能通过编译期自动插桩的手段实现无侵入式的Golang应用观测。</p> 
+
+<p><a href="https://kostyay.medium.com/grpc-5-years-later-is-it-still-worth-it-b181a3b2b73b">gRPC：5 年后，它仍然值得吗？</a><br>在加入 Torq 5 年后，由于过去的经验和向后兼容性的需要，该公司最初选择了 gRPC 而不是 OpenAPI/Swagger，这个决定仍然被认为是值得的。该公司对 gRPC 的承诺促进了一致的代码质量、易于维护和简化的开发流程。此外，gRPC 生态系统的演变，尤其是 buf.build 团队的贡献，进一步巩固了它的优势。本文还介绍了跨微服务共享 proto 文件的复杂性，以及 Buf Schema Registry （BSR） 如何简化这一过程。最后，本文讨论了 gRPC-web 在前端开发中的使用，以及为解决这些问题而开发的后续挑战和替代方案，例如 connectrpc。</p> 
+
+<p><a href="https://medium.com/@hiadeveloper/2024s-fastest-web-servers-for-rest-apis-node-js-vs-go-vs-rust-vs-c-net-benchmark-665d8efd2f44">2024 年最快的 REST API Web 服务器：Node.js vs Go vs Rust vs C# （.NET） 基准测试</a><br>2024 年是 Web 服务器性能的重要一年，尤其是在处理 REST API 方面，True Facts 的综合基准测试强调了这一点。该基准测试将 Node.js、Go、Rust 和 C# （.NET） 在三种实际场景中相互竞争：简单的 JSON 响应、数据库读取以及不同并发连接级别下的复杂 JSON 处理。Rust 在原始速度和效率方面处于领先地位，在所有场景中都表现出色，而 Go 则在性能和开发人员易用性之间提供了平衡。事实证明，Node.js 对于 I/O 密集型任务和快速原型设计是可靠的，而建议使用 C# （.NET），因为它具有稳健性以及与现有产品的兼容性。NET 系统。本文强调了在选择技术堆栈时考虑特定用例和环境的重要性，并鼓励运行个性化基准测试以进行最准确的比较。</p> 
+
+<p><a href="https://medium.com/@rohanchauhan02/crafting-a-cutting-edge-cab-booking-service-with-golang-an-in-depth-exploration-d2cf890484a7">使用 Golang 打造尖端的出租车预订服务：深入探索</a><br>89transfers 是马略卡岛领先的出租车预订服务公司，它使用 Golang 精心设计了他们的平台，以确保高性能、可扩展性和安全性。该公司的技术堆栈包括用于 API 开发的 Echo 框架、用于数据库管理的 GORM 和用于配置管理的 Viper。实时航班信息通过 RapidAPI 集成提供，而 Redis 用于缓存以提高性能。对于安全的用户身份验证，Twilio 和 Nexmo 用于 OTP 验证。该平台还具有用于实时监控的 Sentry、用于消息传递的 Google Cloud Pub/Sub 和用于警报的 Slack。Stripe 处理付款，促销服务管理折扣和特别优惠。通过 GitHub Actions 和 Google Cloud Run 实现持续集成和部署的自动化，从而确保提供强大而高效的服务。</p> 
+
+<p><a href="https://symflower.com/en/company/blog/2024/transpilation-with-llms/">使用 GPT-4o 和 Claude 3.5将Go和Java 转译为 Ruby</a><br>该项目旨在通过使用 LLM 将 Go 和 Java 代码转译为 Ruby 来扩展 DevQualityEval 基准测试，而无需事先了解 Ruby 的语言结构和环境。Claude 3.5 Sonnet 和 GPT-4o 用于将现有的 Java 和 Go 测试存储库转换为 Ruby，并提供对 Ruby 常用工具和测试框架的见解。由于 Ruby 的非类型化特性以及与编译语言相比，错误报告的差异，转译过程面临挑战。为了解决这些问题，使用指定参数和返回类型的注释等提示来指导 LLM 生成与原始 Go 和 Java 示例非常相似的 Ruby 代码。使用 LLM 成功转译代码和生成 Ruby 示例有助于将 Ruby 集成到 DevQualityEval 基准测试中。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.youtube.com/watch?v=ZSKLA81tBis">SQLite：工作原理</a><br>YouTube 是一个广为人知的视频共享平台，在源文档中通过一个超链接将用户引导至其主页。该文件还提供了指向 YouTube 网站各个部分的直接链接，包括“关于”、“新闻”、“版权”、“联系我们”、“创作者”、“广告”和“开发者”。此外，它还通过“YouTube 的工作原理”部分提供了解 YouTube 的功能、政策和安全措施的资源。该文件还包括一个用于测试新功能的部分和一个针对 NFL Sunday Ticket 订阅者的特定链接。最后，它包含版权信息和隐私政策，以及服务条款和广告政策的链接。</p>
+
+<p><a href="https://medium.com/@yunwei356/simplifying-kernel-programming-the-llm-powered-ebpf-tool-eunomia-781743389f4c">简化内核编程：LLM 驱动的 eBPF 工具 — eunomia</a><br>Kgent 是一种创新工具，旨在通过将自然语言提示转换为 eBPF 代码来简化内核编程，使那些对操作系统内部没有深入了解的人更容易使用。它集成了程序推导、符号执行和反馈循环，以确保生成代码的准确性。该系统包括规划组件、工具组件和内存组件，还利用矢量数据库进行上下文学习和小样本技术。Kgent 已被证明在生成正确的 eBPF 程序方面优于 GPT-4，潜在应用范围从系统管理到内核开发和研究。然而，该工具面临当前上下文窗口大小和小数据集等限制，这促使未来的工作解决这些挑战并扩展其功能。</p>
+
+<p><a href="https://www.datanami.com/2024/07/08/dont-believe-the-big-database-hype-stonebraker-warns/">不要相信大型数据库的炒作，Stonebraker 警告说</a><br>在一项全面的分析中，著名的麻省理工学院计算机科学家 Mike Stonebraker 和他的同事卡内基梅隆大学的 Andrew Pavlo 一起批评了数据库技术的当前趋势，强调了关系模型和 SQL 的持久意义。他们认为 MapReduce 是一种遗留技术，并预测从长远来看，列式数据库和矢量数据库将过时。作者强调了数据湖和湖仓一体作为 OLAP DBMS 新原型的兴起和潜力，预计将在未来十年内主导市场。此外，他们对区块链数据库的未来表示怀疑，认为这是一种逐渐消退的趋势。Stonebraker 和 Pavlo 敦促开发人员从过去中吸取教训，不要过度依赖新兴的数据模型，这表明关系模型将继续是一个难以遵循的行为。</p>
+
+<p><a href="https://kubeha.com/the-role-of-technology-in-modern-support-teams-tools-and-innovations/">技术在现代支持团队、工具和创新中的作用</a><br>KubeHA 的文章讨论了技术在现代支持团队中的重要作用，重点介绍了进步如何改变他们的运营和客户服务。它详细介绍了各种技术工具，例如高级票务系统、AI 聊天机器人、全渠道支持平台和知识管理系统，这些工具提高了效率和客户满意度。这篇文章还强调了远程支持工具、数据分析、自动化和协作工具在增强支持策略方面的重要性。此外，它强调了支持团队持续学习和培训的必要性，以跟上技术变化并保持高质量的服务。</p>
+
+<p><a href="https://dev.to/lulu_liu_c90f973e2f954d7f/mastering-dynamic-defense-my-experience-with-safeline-waf-43n1">Mastering Dynamic Defense: My Experience with SafeLine WAF</a><br>The article is a compilation of various posts from the DEV Community, each focusing on different topics ranging from cybersecurity to language learning and software development. One post highlights the author&#39;s experience with SafeLine WAF, a tool praised for its dynamic protection and low false positives, which they use to secure critical pages on their server. Another post provides a guide on installing and configuring SafeLine, including DNS setup and proxy settings. Additionally, there are articles on Kubernetes foundations and cluster setup with K3s, developing and deploying a Lambda function using Docker, and exploring the unseen impact of open source contributions. The posts also include a language learning resource called &#34;Meet Munio,&#34; designed to help users improve their English conversation skills with AI.</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2024/08/taming-consensus-in-wild-with-shared.html">驯服共识（使用共享日志抽象）</a><br>源文档深入探讨了分布式系统中共享日志抽象的概念，特别是它在状态机复制 （SMR） 和共识协议中的作用。它假设这种抽象可以简化系统设计并提高可靠性和可维护性。本文档进一步探讨了共享日志的功能，将系统操作分为数据库层和日志层，便于线性化读取和资源独立扩展。此外，它还讨论了数据库中存储-计算分解的好处，这是云环境中允许独立扩展和容错的关键组件。最后，本文档谈到了基础分布式系统论文的重要性，并就理解核心分布式系统概念的重要性提供了建议。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/the-future-of-llms-is-in-your-pocket/">LLM 的未来在你的口袋里</a><br>本文讨论了生成式 AI （AI） 模型部署从基于云的转变为用户设备上的本地部署，强调了对应用程序开发人员的重大影响。这种转变有望使生成式 AI 更易于访问并集成到各种产品中，从而可能降低成本并增强用户体验。这篇文章对比了当前最先进的 （SOTA） 模型，这些模型对于消费类硬件来说太大了，而较小的模型已经可以在智能手机等设备上运行。它还概述了基础设施创新的需求，包括更复杂的可观测性工具、合成数据生成和按需微调功能，以支持本地模型的激增。文章指出，虽然这种转变带来了挑战，但它也为那些能够适应不断发展的生成式 AI 环境的人提供了机会。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aceberg/WatchYourLAN">aceberg/WatchYourLAN</a><br>轻量级网络 IP 扫描程序。可用于通知新主机和监控主机在线/离线历史记录</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ 与 Subsonic/Airsonic 兼容的 Modern Music Server 和 Streamer</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria 是一个功能强大、快如闪电且抗审查的代理。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/safing/portmaster">safing/portmaster</a><br>🏔 Love Freedom - ❌ 阻止大规模监控</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web 文件浏览器</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源的轻量级笔记服务。轻松捕捉和分享您的精彩想法。</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>用基于 SQL 的实时反应性直接替代 Redis。</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，仅供个人或者企业内部管理与分发渠道使用，请勿用于商业用途，本项目基于One API二次开发。</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/txthinking/brook">txthinking/brook</a><br>跨平台的可编程网络工具</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/rabilrbl/jiotv_go">rabilrbl/jiotv_go</a><br>在您的所有设备上解锁 JioTV 的魔力，无需 JioTV 应用程序。在 Golang 中用爱精心打造，将速度和效率完美融合！🌟✨</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

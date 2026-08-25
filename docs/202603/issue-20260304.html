@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260304.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260304</span>
+</p>
+<p>每日一谚：Errors are values. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/04/package-management-unsolvable-problem-programming-languages">“棘手”难题：为什么 Go、Rust 与 Java 等语言的包管理永远无法达到完美？</a><br>近期，一篇名为《Package Management is a Wicked Problem》的文章在技术社区引发了广泛关注，其姊妹篇《Package Management Namespaces》更是深度拆解了包命名的底层逻辑。作者以其多年参与包管理器数据和工具开发的经验，向我们揭示了 一个残酷的真相：包管理不仅仅是一个纯粹的计算机科学问题，它是一个融合了社会工程学、经济学、安全性和向后兼容性的无底洞。任何在这个层面上的微小改进，都会引发波及全球数千万个项目、数亿个版本的海啸。</p> 
+
+<p><a href="https://tonybai.com/2026/03/04/why-web3-remains-cold-ai-agents-web4-dawn">为什么 Web3 依然寒气逼人？AI 智能体如何催生 Web 4.0 的黎明</a><br>2026 年的今天，当我们环顾技术圈的四周，会发现一幅极其矛盾的图景。一方面，AI 技术正以指数级的速度吞噬旧世界的运行法则，从“副驾驶”进 化为自主思考、独立执行的 Agent；另一方面，曾经被寄予厚望、号称要重塑互联网所有权的 Web3，在经历了基础设施的疯狂狂飙后，依然在主流用户市场外徘徊，体感温度依旧那么“寒冷”。 为什么 Web3 迟迟无法跨越鸿沟？当 AI 拥有了智力却缺乏在现实世界行动的“权限”时，这两个看似平行的轨道，是否正在碰撞出一个名为 Web 4.0的新纪元？本文将从 Reddit 社区对 Web3 的集体反思切入，解析 AI Agent 如何成为 Web3 最完美的“破壁人”，并开启一个以“机器为最终用户”的互联网新形态。</p> 
+
+<p><a href="https://sushantdhiman.dev/lets-write-a-json-parser-from-scratch">让我们从头开始编写一个JSON解析器</a><br>作者分享了学习语言解析和抽象语法树（AST）的经验，并决定从零开始编写一个JSON解析器。文章详细介绍了JSON解析过程中的两个主要步骤：词法分析（Tokenization）和语法分析（Parsing）。首先，作者解释了词法分析是如何将JSON字符串分解为有意义的单元（Token），并展示了不同JSON元素对应的Token类型。接着，详细讲解了如何实现一个Tokenizer，包括处理字符串、字面量（true, false, null）和数字的复杂性。随后，作者介绍了抽象语法树（AST）的概念，并展示了如何编写Parser将Token流转换为AST结构，分别处理对象和数组的解析逻辑。最后，展示了解析后的输出结果，并提供了完整代码的GitHub链接，鼓励读者进行后续的AST到原生数据结构的转换挑战。</p> 
+
+<p><a href="https://sushantdhiman.dev/writing-parallel-file-compression">编写带内存控制的并行文件压缩工具</a><br>本文作者本周末深入研究并发编程，决定用 GoLang 编写一个并行文件压缩器，该工具不仅能并发压缩文件，还能限制内存使用。作者设计了一个工具，通过引入内存感知的信号量系统分块读取文件并限制总体内存使用，并使用可重用缓冲区池来提高性能。每个文件使用 gzip 压缩，整个过程由工作 goroutine 并发处理，实现了快速且内存高效的压缩。
+
+文章详细介绍了配置结构体（CompressionConfig）、作业结构体（Job）、结果结构体（CompressionResult）以及核心的 ParallelCompressor 结构体，重点解释了如何使用 sync.Pool 来复用缓冲区，并使用信号量（semaphore）来严格控制并发操作占用的内存总量，最终展示了实际运行结果，验证了内存控制的有效性（32MB 限制内实现，耗时约 2.2 秒）。</p> 
+
+<p><a href="https://sematext.com/blog/running-opentelemetry-at-scale-architecture-patterns-for-100s-of-services">在规模化运行 OpenTelemetry 时：面向数百个服务的架构模式</a><br>本文探讨了在拥有数百个服务的大规模环境中运行 OpenTelemetry (OTel) 所面临的挑战和相应的架构模式。作者指出，单一 Collector 模式在流量增加时会成为性能瓶颈和单点故障，导致数据丢失。推荐的解决方案是采用分层 Collector 架构（Agent 和 Gateway 两层），并使用跟踪感知的负载均衡（如 OTel 的 loadbalancing exporter）来确保跨网关的跟踪一致性。对于大规模部署，推荐结合使用 SDK 级别的父级采样（Parent-based sampling）和 Gateway 级别的尾部采样（Tail-based sampling），以在控制成本的同时最大化保留错误和高延迟的关键跟踪。文章还讨论了跨集群设置中的跟踪上下文传播和数据驻留/GDPR 合规性问题，并强调了监控 Collector 自身健康状况的重要性。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-03-03-saying-goodbye-to-ld1/">告别 LD1 存储格式</a><br>Dolt 在 2022 年重写了其存储层。四年后，我们终于要停止支持 1.0 之前的存储格式（LD1）。本文描述了新旧格式的区别以及移除旧格式所涉及的工作，这项工作是为了在 Dolt 2.0 中引入对自适应编码的支持，从而显著提高 TEXT 和 BLOB 数据的读写性能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/announcing-docker-hardened-system-packages/">Docker Hardened System Packages</a><br>Docker announces Docker Hardened System Packages, extending security deeper into the container stack with multi-distro support, secure-by-default components, and near-zero CVEs, building on the foundation of Docker Hardened Images (DHI). The announcement also includes the renaming of DHI Community and the introduction of a new DHI Select pricing tier.</p>
+
+<p><a href="https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity/">Nobody Gets Promoted for Simplicity</a><br>The article argues that engineering teams and organizations often reward unnecessary complexity over simplicity in promotions, interviews, and design reviews. It uses the example of two engineers: one who implements a simple, effective solution quickly, and another who over-engineers a solution with abstractions and frameworks, which then looks better on promotion packets. The author, citing Edsger Dijkstra, states that complexity sells better, and simplicity, while a virtue, requires hard work to appreciate and often goes unnoticed. The solution proposed for engineers is to explicitly document the decision-making process—highlighting the complex options considered and deliberately chosen to be avoided—and for leaders to adjust evaluation criteria to favor simplicity and proven judgment over unnecessary complexity.</p>
+
+<p><a href="https://nesbitt.io/2026/03/03/package-management-is-naming-all-the-way-down.html">包管理是命名之路的层层递进</a><br>本文探讨了软件包管理系统的本质，认为它在很大程度上是一个“命名问题”。从包管理器如何查找注册中心（Registry），到命名空间（Namespaces）的划分，再到包名、版本号的命名规范，以及平台标识符（Platform names）的选择，每一个环节都依赖于对字符串的解析、约定和信任。这些命名层的复杂性（如依赖冲突、拼写错误劫持、版本解析差异等）共同构成了包管理系统固有的挑战。最终，这种对命名的依赖关系形成了复杂的信任链条。</p>
+
+<p><a href="https://www.wheresyoured.at/the-ai-bubble-is-an-information-war/">人工智能泡沫是一场信息战</a><br>文章讨论了当前AI泡沫的本质，认为其可能是一场信息战。作者通过分析NVIDIA、CoreWeave和OpenAI的财务数据和市场动态，质疑了AI行业的爆炸性增长叙事。文章重点揭露了OpenAI和Anthropic在向媒体披露的财务预测和实际业绩之间的巨大差异和不一致性，暗示两家公司都在通过信息操控来误导公众和投资者。此外，作者严厉批评了Anthropic和OpenAI高管（Dario Amodei和Sam Altman）在支持军事应用方面的虚伪行为，指出尽管他们声称关注安全和伦理，但其商业行为和与美国国防部的交易表明他们热衷于从战争和监控中获利。作者认为，AI的真正局限性（如高成本和不可靠性）被浮夸的宣传所掩盖，并呼吁媒体停止重复这些不实信息。</p>
+
+<p><a href="https://refactoringenglish.com/chapters/why-improve-your-writing/">为什么应该提高你的写作能力？</a><br>这篇文章探讨了软件开发人员应该重视写作技能的四个主要原因：写作能促进职业发展，因为它能让你的技术成就被更多人看到；写作具有无限的扩展性，一篇好的文档可以为无数人节省时间；写作能深化你的理解，因为它能暴露知识和推理中的漏洞；写作能帮你找到客户或用户。作者强调，在AI时代，原创的、有深度的写作能力依然是区分个体的关键，并且表示这本书将提供具体的写作改进方法。</p>
+
+<p><a href="https://newsletter.manager.dev/p/dont-become-an-engineering-manager">不要成为一名工程经理</a><br></p>
+
+<p><a href="https://gvanrossum.github.io/interviews/Thomas.html">Python之父采访Thomas Wouters</a><br>This is an interview with Thomas Wouters, a significant contributor to the Python community. The interviewer (Guido van Rossum) aims to document the oral histories of Python contributors who might have been overlooked in other documentaries. Thomas discusses how he discovered Python, tracing his roots back to LambdaMOO, which shared conceptual similarities with Python (like the everything-is-an-object model and dynamic typing). He details his progression from LambdaMOO to Perl/C, and finally embracing Python around 1998/1999 because it &#39;just fit his brain.&#39;
+
+Key contributions discussed include: implementing augmented assignment operators (like `&#43;=`) in Python (proposed in PEP 203), and his rejected proposal for range literals using square bracket notation (PEP not explicitly numbered in the text, but mentioned as his favorite rejected PEP). Thomas also recalls early Python-Dev list atmosphere, highlighting figures like Tim Peters and Fredrik Lundh. They discuss the protracted debate over introducing nested scopes, which led to the creation of `from __future__ import nested_scopes`, and the ongoing tension between introducing powerful new features and maintaining backward compatibility.
+
+Later in the interview, they touch upon Fredrik Lundh&#39;s contributions (Tkinter, Secret Labs regular expression engine, and ElementTree for XML), the complex implementation of XML package extensibility via `xmlplus`, and the founding of the Python Software Foundation (PSF) in 2001, including a memorable anecdote about the first board elections.</p>
+
+<p><a href="https://codingfox.net.pl/posts/mim">使用模块化设计和MIM简化您的应用程序架构</a><br>本文提出了一种名为MIM AA（模块基础设施模块应用程序架构）的通用应用程序架构，它基于模块化软件设计。建议放弃传统的分层架构（如Clean、Hexagonal或Onion架构），转而将应用程序划分为独立的“业务模块”（Business-Modules），每个模块封装特定的业务流程。对于复杂的业务逻辑，应将其基础设施相关的代码提取到单独的“基础设施模块”（Infrastructure-Modules）中。这种分离实现了低认知负荷、高可维护性和高可扩展性的应用，并使业务模块可以轻松进行单元测试，因为它不再依赖于基础设施代码。文章详细介绍了MIM的概念、与现有架构的比较，并通过一个H&amp;V Server的例子演示了如何从“大泥球”应用重构到MIM架构，并推荐了适应性测试策略。</p>
+
+<p><a href="https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity">没有人会因为追求简洁而获得晋升</a><br>这篇文章探讨了一个普遍存在于软件工程实践中的问题：公司文化和晋升机制往往奖励那些引入复杂性的人，而忽视了那些交付最简单、有效解决方案的工程师。作者引用 Edsger Dijkstra 的话，指出简洁是一种美德，但复杂性更具吸引力，更容易被“销售”。文章通过对比两位工程师（一位构建了复杂的、可扩展的系统，另一位则交付了简单、易于维护的方案）的工作成果，说明了在面试、设计评审和晋升过程中，简单的工作往往因为缺乏“宏大叙事”而被低估。作者建议工程师应学会“使简洁可见”，明确记录不选择复杂方案的决策过程，并呼吁领导者改变激励结构，将避免不必要的复杂性视为一种资深表现。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/3/donald-knuth/#atom-everything">A quote from Donald Knuth</a><br>“震惊！震惊！我昨天得知，我研究了几周的一个悬而未决的问题刚刚被 Claude Opus 4.6 解决了——Anthropic 的混合推理模型，该模型在新发布三周后就已问世！看来我得在某一天修改我对‘生成式人工智能’的看法了。不仅很高兴知道我的猜想有一个漂亮的解决方案，而且也很高兴能庆祝自动演绎和创造性问题解决方面的这一巨大进步。” —— 唐纳德·克努特 (Donald Knuth)，Claude 的循环</p>
+
+<p><a href="https://openai.com/index/gpt-5-3-instant">GPT 5.3 instant版发布</a><br></p>
+
+<p><a href="https://leodemoura.github.io/blog/2026/02/28/when-ai-writes-the-worlds-software.html">当AI编写世界软件时，谁来验证它？</a><br>随着AI生成代码的速度和规模急剧增加（例如，AI目前生成了谷歌和微软25%-30%的新代码），现有的验证方法（如代码审查和测试）已经不足以应对潜在的风险，这可能导致系统性风险，类似于Heartbleed漏洞的放大版。文章强调，测试只能提供信心，而数学证明才能提供保证，特别是在安全关键和性能敏感的领域，例如恒定时间执行和防止信息泄漏。作者主张，未来工程的核心工作将从实现转向规范定义。Lean语言因其作为编程语言和定理证明器的结合、强大的可扩展性以及被领先AI推理系统采用的趋势，被定位为AI时代验证平台的核心。通过将验证作为加速器而非成本，并构建一个可信赖的、独立的验证层，可以确保由AI生成的基础设施的正确性。</p>
+
+<p><a href="https://raymyers.org/post/dont-make-me-talk-to-your-chatbot">别让我跟你聊你的聊天机器人</a><br>这篇文章探讨了在人际交流中不请自来地展示AI生成内容的现象，并提出了一个原则：“别让我跟你聊你的聊天机器人”。作者认为，人们可以和聊天机器人交流，但不应该期望别人去听他们聊天机器人的内容。交流的目的是分享个人观点和信念，而直接粘贴聊天机器人生成的内容往往效率低下，模糊了意图，给读者造成了额外的理解负担。作者建议，要么自己思考后清晰地表达，要么对AI生成的内容进行必要的编辑和策展，以保证沟通的有效性和尊重他人的注意力。</p>
+
+<p><a href="https://schipper.ai/posts/parallel-coding-agents">并行编码智能体</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/lima-vm/lima">lima-vm/lima</a><br>Linux virtual machines, with a focus on running containers</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>Video translation and dubbing tool powered by LLMs. The video translator offers 100 language translations and one-click full-process deployment. The video translation output is optimized for platforms like YouTube，TikTok. AI视频翻译配音工具，100种语言双向翻译，一键部署全流程，可以生抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube等形态的内容成适配</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kueue">kubernetes-sigs/kueue</a><br>Kubernetes-native Job Queueing</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>A fast, cross-platform build tool inspired by Make, designed for modern workflows.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

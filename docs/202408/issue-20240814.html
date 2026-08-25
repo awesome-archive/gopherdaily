@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240814.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-14</span>
+</p>
+<p>每日一谚：Gracefully Shut Down Your Application </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.felixge.de/debug-go-request-latency-with-datadogs-profiling-timeline/">使用Datadog的profiling时间线调试Go请求延迟</a><br>Datadog 为其连续分析工具引入了新的时间线功能，该功能提供了 goroutines 在 CPU 上运行或等待 CPU 外运行所花费时间的详细时间线，有助于解决 Go 应用程序中的延迟问题。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/IpDUOe0AUDKW2PYCWmvLYw">Go 1.23版本正式发布！</a><br>Go 1.23落地！</p> 
+
+<p><a href="https://colobu.com/2024/08/13/string-bytes-benchmark/">四种字符串和bytes互相转换方式的性能比较</a><br>这篇文章讨论了Go 1.22 中 string 和 bytes 的互转不需要再用 unsafe 那个包了,直接转就可以,以及两种方法都不会有内存分配。</p> 
+
+<p><a href="https://www.openfaas.com/blog/building-functions-via-api-golang/">如何使用 Go SDK for OpenFaaS 构建函数</a><br>这篇博客文章提供了有关如何使用适用于 OpenFaaS 的 Go SDK 构建函数的指南，该指南允许用户从源代码构建和部署容器镜像，提供类似于 AWS Lambda 的用户友好体验，并支持多架构镜像。</p> 
+
+<p><a href="https://levelup.gitconnected.com/emulating-real-dependencies-in-integration-tests-using-testcontainers-6244f0cbe027">使用 Testcontainers 在集成测试中模拟真实依赖关系</a><br>Alex Pliutau 以一个简单的 URL 缩短器 API 为例，讨论了在集成测试中使用 Testcontainers 来简化一次性依赖项的供应和取消供应，确保完全隔离和可重现性。</p> 
+
+<p><a href="https://medium.com/wisemonks/implementing-websockets-in-golang-d3e8e219733b">在 Golang 中实现 WebSockets</a><br>本文提供了在 Golang 中实现实时通信的综合指南，涵盖了从设置基本服务器到处理多个连接、广播消息、确保安全性以及与客户端创建端到端工作系统的所有内容。</p> 
+
+<p><a href="https://tailscale.com/blog/entra-id">Microsoft Entra ID 访问预配现已正式发布</a><br>Microsoft Espa ID 访问预配现已正式发布，可用于 tailscale Enterprise 计划，支持自动用户创建、删除和组预配，从而简化用户加入和离职过程。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-08-13-translating-create-table-statements-mysql-postgres/">自动将 MySQL 语句转换为 Postgres 语句</a><br>这篇博文讨论了一个系统的开发，该系统会自动将MySQL语句转换为Postgres语句，允许Dolt的集成测试在Dolt PostgreSQL上运行，克服了在MySQL方言中进行测试的问题。</p> 
+
+<p><a href="https://spin.atomicobject.com/more-testable-code/">编写更多可测试代码的 4 个技巧</a><br>本文提供了编写更多可测试代码的四个技巧，包括选择特定的输入类型、避免突变对象、将复杂逻辑排除在数据库之外、根据需要创建新的模块和服务以及编写更多可测试的代码。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://icepanel.medium.com/getting-started-with-the-c4-model-in-icepanel-f216918fea47">在 IcePanel 中开始使用 C4 模型</a><br>本文提供了有关如何在 Icepanel 中使用 C4 模型创建详细的架构图的分步指南，包括上下文图、应用图和技术选择，重点是用户友好和技术设计。</p>
+
+<p><a href="https://www.docker.com/blog/deprecation-of-password-logins-on-cli-with-docker-sso-enforcement/">在具有 Docker SSO 强制执行的 CLI 上弃用密码登录</a><br>源文档是一条消息，指示来自系统的“403 Forbidden”错误消息，特别是来自服务器端，特别是来自“ns”部分。</p>
+
+<p><a href="https://opensource.googleblog.com/2024/08/2023-open-source-contribution-report.html">2023 年开源贡献：一年回顾</a><br>Google 的开源项目办公室 （OSPO） 持续投资于开源社区，Alphabet 10% 的全职员工积极为项目做出贡献，在过去五年中发布了 7,000 多个开源元素，同时也支持行业在 AI 和机器学习技术方面的合作。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/08/14/kubernetes-1-31-moving-cgroup-v1-support-maintenance-mode/">Kubernetes 1.31：将 cgroup v1 支持移至维护模式</a><br>Kubernetes 1.31 将把对 cgroup v1 的支持过渡到维护模式，与更广泛的行业向 cgroup v2 的转变保持一致，以提高功能和一致性，同时仍然允许关键的安全修复和主要错误修复。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://x.ai/blog/grok-2">Grok-2 Beta 版本</a><br>Grok 系列的两个成员 Grok-2 和 Grok-2 mini 已在 X 平台上发布，在 LMSYS 排行榜上的表现超过了 Claude 3.5 Sonnet 和 GPT-4-Turbo，并将于本月晚些时候通过企业 API 提供。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2024/08/13/unlocking-the-future-of-innovation-the-microsoft-ai-tour/">开启创新的未来：Microsoft AI 之旅</a><br>Microsoft 将于 2024 年 9 月 24 日在全球 60 多个城市推出全球 AI 之旅，提供免费研讨会、思想领导力以及与当地客户和合作伙伴建立联系的机会，重点关注 AI 的变革潜力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/TheAlgorithms/Go">TheAlgorithms/Go</a><br>在 Go 中为初学者实现的算法和数据结构，遵循最佳实践。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>容器镜像和文件系统的漏洞扫描器</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行 Kubernetes</p>
+
+<p><a href="https://github.com/github/gh-ost">github/gh-ost</a><br>GitHub 的 MySQL 在线模式迁移工具</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动缩放 Kubernetes 的组件</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>使用 Docker 定义和运行多容器应用程序</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>Prometheus监控系统和时间序列数据库。</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>现代 Go CLI 交互的指挥官</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby Project - 一个容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/teivah/100-go-mistakes">teivah/100-go-mistakes</a><br>📖 100 个错误以及如何避免它们</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI 工具和库，用于从容器镜像和文件系统生成软件物料清单</p>
+
+<p><a href="https://github.com/ahmetb/kubectx">ahmetb/kubectx</a><br>在 kubectl 中更快地在集群和命名空间之间切换</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>用于机密管理、加密即服务和特权访问管理的工具</p>
+
+<p><a href="https://github.com/elastic/beats">elastic/beats</a><br>🐠 Beats - 用于 Elasticsearch 和 Logstash 的轻量级运输器</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric 是一个企业级许可的分布式账本框架，用于开发解决方案和应用程序。其模块化和多功能设计可满足广泛的行业用例。它提供了一种独特的达成共识的方法，可以在保护隐私的同时实现大规模性能。</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/go-sql-driver/mysql">go-sql-driver/mysql</a><br>Go MySQL Driver 是 Go 的 MySQL 驱动程序 （golang） 数据库/sql 包</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics：快速、经济高效的监控解决方案和时间序列数据库</p>
+
+<p><a href="https://github.com/kataras/iris">kataras/iris</a><br>最快的 HTTP/2 Go Web 框架。新颖、现代且易于学习。使用您控制的代码进行快速开发。无可匹敌的性价比 🚀</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型SRT / WebRTC / RTSP / RTMP / LL-HLS媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

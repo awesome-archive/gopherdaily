@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260331.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260331</span>
+</p>
+<p>每日一谚：Go&#39;s parallelism features are an implementation detail, not a language feature — Russ Cox  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/31/go-minimalism-vs-cpp26-epic-new-features">当 Go 还在追求极简时，C&#43;&#43; 26 却又加了四大“史诗级”新特性</a><br>C&#43;&#43; 标准委员会主席、C&#43;&#43; 界的“教父级”人物 Herb Sutter 亲自在博客上宣布：C&#43;&#43;26 标准的技术工作，已正式完成！Herb Sutter 还用极其兴奋的口吻将其定义为“自 C&#43;&#43;11 以来最具冲击力的一次发布”。而这次更新的核心，是四个被他称为“Fab Four”（神奇四侠）的史诗级新特性。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/7gRiKhyphRwhCzlgKmgzpA">【构建工业级Agent Skills】06 交付与升华：从打包部署到构建“人机混合”的新一代研发体系</a><br>在 Agentic SE（智能体软件工程）时代，当你的 Skill 准备就绪时，我们面临着新的“最后一公里”：如何优雅地交付这个技能？如何在团队中规模化地部署它？更宏观地看，当团队中充斥着越来越多这样强大的 AI 技能时，我们的研发体系、甚至工程师的组织形态，将发生怎样的巨变？ 今天，也是本专栏的收官之作。我们将完成这个微专栏的最后一块拼图：交付与体系升华。</p> 
+
+<p><a href="https://jo-m.ch/posts/2026/03/use-your-own-domain-for-your-code-forge-hosted-go-modules">自建域名作为 Go 模块路径</a><br>文章介绍了如何通过使用自有域名作为 Go 模块路径，来避免将模块依赖与特定代码托管平台（如 GitHub）永久绑定带来的风险。当模块路径使用如 `github.com/user/module` 格式时，一旦平台改变政策或服务中断，所有导入该模块的项目都会受到影响。通过配置自己的域名（例如 `jo-m.ch/go/mymodule`），开发者可以掌控模块的永久标识符。Go 工具链通过向 `yourdomain/path?go-get=1` 发送 HTTP 请求，并查找返回的 HTML 中 `&lt;meta name=&#39;go-import&#39; ...&gt;` 标签，来发现代码的实际存储位置（如 GitHub 仓库）。文章最后提供了一个 PHP 脚本示例，帮助用户在自己的域名下实现这一重定向和元数据注入功能，从而实现模块路径的解耦和自托管潜力。</p> 
+
+<p><a href="https://www.reco.ai/blog/we-rewrote-jsonata-with-ai">AI 重写JSONata</a><br>这篇文章的核心内容是关于利用人工智能（AI）技术对JSONata这一数据查询和转换语言进行了重写或改进。虽然提供的文本片段主要展示了Reco公司的网站导航、融资信息、安全服务推广以及一篇关于SaaS安全和员工风险调查自动化的相关文章链接，但根据标题“we rewrote jsonata with ai”，可以推断本文的主体内容详细介绍了Reco团队如何应用AI技术来改造或实现JSONata的功能。这通常意味着AI被用于提高数据处理的效率、准确性，或简化JSONata表达式的编写和解析过程，以增强数据集成和转换的能力。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/">Meta利用AI优化美国本土混凝土生产</a><br>Meta正致力于推动建筑行业利用人工智能（AI）来生产更高质量、更可持续的混凝土，并重点支持美国本土生产。为实现此目标，Meta发布了新的AI模型——“混凝土贝叶斯优化”（BOxCrete），以及用于开发获奖混凝土配方的基础数据，这些资源已在GitHub上开源。美国每年使用大量混凝土，但其中约四分之一的必要原料——水泥——依赖进口。传统混凝土配方设计依赖耗时费力的试错法和工程师经验。Meta的AI解决方案旨在加速创新，帮助美国供应商设计出能平衡强度、成本和可持续性等多种需求的混凝土，从而减少对进口水泥的依赖，支持美国本土制造业。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/03/31/clip-show.html">生产与寄生中介之辨</a><br>本文是GPT-5.4代笔的博客主题总结，旨在清晰阐述该博客的核心哲学立场，并将其置于现代思想传统中。文章的核心论点是区分“真实生产”与“寄生中介”。博客反复强调社会依赖于生产能源、住房、软件等耐用品的能力，而现代制度生活（如无实物生产目的的金融、自我维持的官僚层级、以及仅控制获取而非扩大能力的商业模式）主要作用在于设置障碍和收取费用。货币价值被视为对价值的表征而非价值本身；当表征脱离实际后，社会开始奖励战略地位而非实际贡献。由此衍生出一种道德心理：赞扬增加真实能力的建设者（工程师、维护者），鄙视通过攫取他人创造的价值为生的寻租者。博客的论战能量主要来源于这种基于“生产”或“榨取”的道德划分。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/03/31/free-intelligence.html">闭源AI与新封建主义</a><br>文章激烈批评了当前由少数封闭源代码实验室主导的AI发展模式，认为这种对计算资源、人才和部署能力的集中将导致政治合法性的集中，最终形成“新封建主义”。作者指出，AI安全不应是少数“被选中的人”来维护的理论问题，而是关于AI的可及性。如果AI是安全的，那么它应该对所有人开放；如果存在巨大风险，那么少数人垄断它将使其他人沦为永久的底层阶级，如同动物一般。作者明确反对“只有少数人才能安全地拥有AI”的观点，认为提倡闭源AI的开发者实际上是在将公众视为需要被控制的“农奴”。</p>
+
+<p><a href="https://cloud.google.com/blog/products/storage-data-transfer/how-colossus-optimizes-data-placement-for-performance">Colossus 优化数据布局以提升性能</a><br>Colossus 是谷歌基础的分布式存储系统，支撑着 YouTube、Gmail 和 BigQuery 等核心产品。它集成了并行文件系统的高吞吐量、对象存储的规模管理能力以及易用的编程模型，能够满足不同产品对规模、成本、吞吐量和延迟的多元化需求。文章揭示了 Colossus 如何通过优化数据放置策略，在提供 HDD 价格的同时实现接近 SSD 的性能。例如，它支持 Hyperdisk ML 获得极高的可扩展性，并为 Spanner 提供了分层存储基础，将快速 SSD 存储与廉价 HDD 存储结合，同时利用 SSD 缓存提升 Cloud Storage 的性能。</p>
+
+<p><a href="https://www.i-programmer.info/professional-programmer/103-i-programmer/18759-why-software-engineering-will-never-die-revisited-in-the-age-of-spec-driven-development.html">规范驱动开发时代软件工程的永恒价值</a><br>本文重新审视了“软件工程永不消亡”的论点，以应对新兴的“规范驱动开发”（Spec Driven Development, SDD）的挑战。作者此前认为，软件工程的核心价值在于需求收集、业务规则转化等非编码技能，这些是自动化难以替代的。尽管生成式AI和辅助编码工具（如LLM）日益强大，但它们更像是开发者的助手而非替代者。SDD通过提供详尽规范来最大化自动化编码，似乎进一步压缩了人工干预空间。然而，文章认为，尽管软件工程的形态会随着AI和SDD等技术而演变和适应，但其作为多技能范式的核心本质不会被取代，人类程序员的价值依然不可替代。</p>
+
+<p><a href="https://floedb.ai/blog/after-30-years-is-linux-disk-io-finally-fast-enough">after 30 years is linux disk io finally fast enough</a><br></p>
+
+<p><a href="https://blog.frankel.ch/tip-opentelemetry-projects/">OpenTelemetry 推广技巧：最小化变更</a><br>在组织内部推广 OpenTelemetry 时，面临的主要挑战是说服团队接受变更或从现有工具迁移。作者提出核心建议是：变更越少，成功率越高。文章以一个实际的 JVM/Spring Boot 应用场景为例，该应用已通过 JMX 暴露指标。作者指出，尽管零代码的 OpenTelemetry Java Agent 引入简单，但它仍可能涉及跨团队的变更管理。因此，文章着重探讨了如何利用现有资源（如 JMX MBeans），以减少为集成 OpenTelemetry 所需进行的修改，从而提高推广的效率和成功率。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/30/georgi-gerganov/#atom-everything">本地模型应用中的挑战</a><br>文章引用了 Georgi Gerganov 的观点，指出了当前用户在使用本地模型时遇到的主要问题。这些问题集中在模型的封装（harness）、聊天模板和提示词构造的复杂性上，甚至可能存在底层的推理错误。从用户输入任务到最终结果的整个流程涉及多个由不同方开发的组件，使得整个技术栈难以统一和稳定。因此，当前观察到的本地模型行为很可能在某个环节存在微妙的缺陷，这也是本地模型（尤其是用于代码代理）难以有效工作的原因之一。</p>
+
+<p><a href="https://danielmiessler.com/blog/the-most-important-ideas-in-ai">当前AI最重要的五大核心理念</a><br>本文探讨了当前人工智能领域最具变革性的五大核心理念。这些理念包括：1. 组件的自主优化与改进，强调AI系统自我迭代的能力，如Karpathy的Autoresearch项目所示；2. 工程范式向“意图驱动”的转变；3. AI模型从“不透明”走向“透明化”；4. 认识到大部分工作本质上只是辅助性脚手架；以及5. 专业知识向公共知识的扩散。作者认为，特别是自主改进和透明度的提升，将以出乎意料的方式改变未来格局。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, AI-integrated, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/harness/harness">harness/harness</a><br>Harness Open Source is an end-to-end developer platform with Source Control Management, CI/CD Pipelines, Hosted Developer Environments, and Artifact Registries.</p>
+
+<p><a href="https://github.com/riba2534/feishu-cli">riba2534/feishu-cli</a><br></p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+<p><a href="https://github.com/0xERR0R/blocky">0xERR0R/blocky</a><br>Fast and lightweight DNS proxy as ad-blocker for local network with many features</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>A simple zero-config tool to make locally trusted development certificates with any names you&#39;d like.</p>
+
+<p><a href="https://github.com/CJackHwang/ds2api">CJackHwang/ds2api</a><br>Deepseek客户端对话转API，高性能，多账号轮询，包含完整后台管理系统，支持纯vercel、docker部署使用。兼容Openclaw🦞、Roocode、Claudecode、Kilocode等工具</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq is a portable command-line YAML, JSON, XML, CSV, TOML, HCL and properties processor</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

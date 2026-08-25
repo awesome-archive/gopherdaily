@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260121.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260121</span>
+</p>
+<p>每日一谚：Do not ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/21/integrating-cuda-in-go">当 Go 遇上 GPU：用 CUDA 释放千倍算力的实战指南</a><br>在最近的 GopherCon 2025 上，软件架构师 Sam Burns 打破了这一刻板印象。他展示了如何通过 Go 和 CUDA 的结合，让 Gopher 也能轻松驾驭 GPU 的海量核心，实现惊人的并行计算能力。 本文将带你深入这场演讲的核心，从 GPU 的独特架构到内存模型，再通过一个完整的、可运行的矩阵乘法示例，手把手教你如何用 Go 驱动 NVIDIA 显卡释放澎湃算力。</p> 
+
+<p><a href="https://tonybai.com/2026/01/21/ai-coding-evolution-from-prompting-to-ralph">从“手搓 Prompt”到“无限循环”：AI 编码的下一个形态是“Ralph”吗？</a><br>2025 年底，一个名为 Ralph Wiggum Technique (Ralph 循环) 的 AI 编程技巧在硅谷极客圈一夜爆红。它没有复杂的架构，没有花哨的界面，其核心代码甚至只有一行 Bash 脚本。</p> 
+
+<p><a href="https://www.dbos.dev/blog/how-we-built-golang-native-durable-execution">我们如何构建原生的 Golang 持久化执行（Durable Execution）</a><br>本文讲述了 DBOS 如何扩展 Go 原生的 context.Context 接口，以在编译时类型安全地为工作流和步骤函数实现持久化执行机制。主要探讨了如何使用 extended durable.Context 来管理工作流状态、利用 Go context.Context 处理截止时间和取消操作，以及如何通过包级泛型函数来提供类型安全和单一接口的编程模型。同时，也提到了从 Gob 编码转向 JSON 编码以解决动态类型反序列化的问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-01-20-dolt-with-orms/">使用 Dolt 和 ORM</a><br>对象关系映射器 (ORM) 通过抽象数据库交互简化了应用程序开发，它们与 Dolt（一个兼容 MySQL 的、版本控制的关系数据库）自然地配对。本文解释了 ORM 如何与 Dolt 协同工作，重点介绍了经过测试的集成、有用的 Dolt 特性（如模式覆盖和非本地表）以及围绕分支和连接池的重要注意事项。</p>
+
+<p><a href="https://seangoedecke.com/addicted-to-being-useful/">我沉迷于变得有用</a><br>作者讨论了自己对软件工程师工作的热爱，主要源于其“变得有用”的内在驱动力，这种需求与软件工程解决问题的本质完美契合。作者将自己比作喜欢工作本身的工作犬，而不是为了奖励。他还将这种倾向与果戈理小说《外套》中热爱抄写工作的阿卡基·阿卡基耶维奇进行了类比。文章还提到了如何管理这种“需要变得有用”的冲动，以避免被剥削，并专注于产生真正的影响力，而不是仅仅完成待办事项列表上的任务。</p>
+
+<p><a href="https://blog.rook.io/rook-v1-19-storage-enhancements-0a71eac8ff49">Rook v1.19 存储增强功能</a><br>Rook v1.19 版本发布了！v1.19 是另一个充满特性的版本，旨在改进 Kubernetes 的存储。Rook v1.19 带来了多项新特性，包括 NVMe-oF 网关（实验性）、Ceph CSI 3.16 更新（如改进的节点故障隔离、卷使用统计等）、并发集群协调（实验性）以及对 Kubernetes v1.30 至 v1.35 的支持。同时，它移除了对 Ceph Reef v18 的支持，并更新了 CephFS CRD 的 activeStandby 属性行为等。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/20/kubernetes-fuels-ai-growth-organizational-culture-remains-the-decisive-factor/">Kubernetes 为 AI 增长提供动力；组织文化仍然是决定性因素</a><br>CNCF 年度云原生调查证实了一个长期发展的趋势：Kubernetes 已从容器编排发展成为现代基础设施（包括 AI）的支柱。生产环境中 Kubernetes 的使用率现已达到容器用户的 82%，而 AI 采用者中有 66% 使用它来扩展推理工作负载。Kubernetes 已成为现代企业基础设施的通用标准，但文化变革仍然是组织面临的首要挑战。</p>
+
+<p><a href="https://blog.ploeh.dk/2026/01/19/filtering-as-domain-logic">将过滤作为领域逻辑</a><br>性能和正确性是两个独立的问题，它们有着重叠的解决方案。本文探讨了如何在复杂的过滤逻辑设计、实现、维护和测试中，尤其是在数据库查询等外部流程中，考虑将部分过滤逻辑移至客户端的领域模型中，以利用更易于测试的特性来确保正确性，同时保留部分简单的服务器端过滤以保证性能。</p>
+
+<p><a href="https://iscinumpy.dev/post/packaging-faster">我们如何使 Python 的打包库快了 3 倍</a><br>与 pip（现为 packaging）的维护者 Damian Shaw 合作，我致力于加快几乎所有与打包相关的工具背后的核心库 packaging 的版本和说明符的读取速度，因为 pip 在解析过程中需要执行数千次此类操作。利用 Python 3.15 的新统计分析器和 PyPI 上所有已上传包的元数据，我衡量并改进了核心的 Packaging 结构，同时保持了代码的可读性和简洁性。在 packaging 26.0 版本中，版本读取速度可提高 2 倍，SpecifierSet 的速度可提高 3 倍，该版本现已发布！其他操作也得到了优化，在某些情况下甚至提高了 5 倍。本文将重点介绍性能优化工作。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/20/electricity-use-of-ai-coding-agents/#atom-everything">AI 编码智能体的电力消耗</a><br>之前估算大型语言模型（LLM）的能源和水消耗的工作通常侧重于像 ChatGPT 这样的消费者级系统每次提示的成本。Simon P. Couch 指出，像 Claude Code 这样的编码代理在响应任务时会使用多得多的 token，经常会因多次工具调用而消耗数千个 token。作为 Claude Code 的重度用户，Simon 估计他自己的使用量相当于每天向 LLM 进行约 4,400 次“典型查询”，API token 费用约为每天 15-20 美元。他认为这大约相当于每天运行一次洗碗机或一个家用冰箱的日能耗。</p>
+
+<p><a href="https://blog.silennai.com/claude-code">我曾是前 0.01% 的 Cursor 用户。这是我转用 Claude Code 2.0 的原因。</a><br>一位从 2021 年就开始使用编码 AI 的用户的 Claude Code 综合指南。了解代理式编码的 5 大支柱、自定义命令和高级工作流程。</p>
+
+<p><a href="https://lucumr.pocoo.org/2026/1/18/agent-psychosis">Agent Psychosis: Are We Going Insane?</a><br>作者探讨了AI代理（Agent）编程社区中出现的一种现象，他称之为“代理精神病”（Agent Psychosis）。这种现象表现为对AI代理的过度依赖和沉迷，导致代码质量下降（“slop”）和人际交往障碍。作者将其比作小说《黑暗物质》中的“dæmon”（灵魂的具象化），认为人们与AI形成了虚假的共生关系，AI代理的输出（如提交的PR或Issue）往往是缺乏批判性思维的产物。作者还提到了由AI驱动的项目（如Steve Yegge的Gas Town和Beads）中出现的怪异的内部术语和看似混乱的运作方式，并指出这种行为模式在社区中相互强化。最后，作者反思了这种现象对软件维护的巨大不对称性负担，并困惑于这是否是行业前进的必然痛苦阶段，还是集体“发疯”的迹象。他总结道：AI代理既是惊人的生产力工具，如果失去理性控制，也会成为巨大的“slop 机器”。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery, the cloud native manager</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware(Project under CNCF)</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/vllm-project/aibrix">vllm-project/aibrix</a><br>Cost-efficient and pluggable Infrastructure components for GenAI inference</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/maliceio/malice">maliceio/malice</a><br>VirusTotal Wanna Be - Now with 100% more Hipster</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/coze-dev/coze-loop">coze-dev/coze-loop</a><br>Next-generation AI Agent Optimization Platform: Cozeloop addresses challenges in AI agent development by providing full-lifecycle management capabilities from development, debugging, and evaluation to monitoring.</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

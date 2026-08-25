@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250712.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250712</span>
+</p>
+<p>每日一谚：Go is not theoretically exciting on the surface, but it is very useful in real life. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/11/net-http-pprof-v2">Go pprof 迎来重大革新：v2 提案详解，告别默认注册，拥抱飞行记录器</a><br>Go 语言的性能诊断利器 net/http/pprof 即将迎来一次意义深远的变革。一项编号为 **#74544** 的新提案建议引入一个全新的 net/http/pprof/v2 包，旨在从根本上解决当前版本因“默认注册”行为带来的安全隐患。该提案不仅重塑了 pprof 端点的注册方式，还计划引入对 Go 1.25 飞行记录 器（Flight Recorder）的支持、动态 CPU 采样率控制等一系列新功能。本文将深入解读该提案的核心内容、API 变化及其对 Go 开发者生态的潜在 影响</p> 
+
+<p><a href="https://tonybai.com/2025/07/12/insanely-productive-in-go">Go 的“无聊”超能力：为什么“选项更少”反而让你更快？</a><br>最近，在 Reddit 的 r/golang 社区，一篇名为《我感觉用 Go 的效率高得离谱》的帖子引发了近百条热议。一位曾坚信 TypeScript 和 Python 是“快语言”的开发者，在亲手尝试 Go 之后，发出了“真香”的感叹。</p> 
+
+<p><a href="https://mhbhuiyan.medium.com/gos-memory-model-092546edd714">理解 Go 的内存模型：一个可视化指南</a><br>本文通过代码和可视化图表，解释了 Go 语言的内存模型，包括代码段、数据段、栈和堆的不同数据存储方式，以及 `init()` 函数和 `main()` 函数的执行过程，并以闭包为例详细说明了堆的使用。文章最后还提到了 Go 的垃圾回收机制。</p> 
+
+<p><a href="https://medium.com/@mateuszpiorowski/the-go-workspaces-feature-youre-probably-not-using-enough-4a24ccb694b2">你可能没有充分利用 Go 工作区功能</a><br>你在构建一个 Go 项目。它一开始很简单，就像所有项目一样。然后它发展壮大了。现在你有一个主要的 API 服务，一个单独的服务来处理后台作业，你还是一个好开发者……你把所有公共代码都放在一个共享的 pkg 目录中。例如身份验证助手、数据库模型，所有两个服务都需要的东西。这是一个很棒的模式。直到你需要更改 pkg 目录中的某些内容。现在你卡住了。你在 pkg 中进行更改，但你的 API 服务看不到它。为什么？因为它的 go.mod 文件指向 GitHub 上的版本，而不是你的本地版本。因此，你添加了一个 replace 指令。然后你必须为你的工作程序服务做同样的事情。而且你必须记住在提交之前将其删除，否则你会破坏所有其他人的构建。这是一个混乱的局面，而且很容易忘记。Go 工作区是针对此问题的官方内置解决方案。这是一个简单的功能，它告诉 Go 编译器：“嘿，当你构建我的项目时，我希望你使用来自我的本地磁盘的这些特定模块，而不是来自互联网的那些模块。”你使用项目根目录中的单个文件 go.work 来做到这一点。此文件告诉 Go 哪些本地模块是你的活动开发“工作区”的一部分。让我们看看如何在我们的示例中使用它。假设你的项目结构如下所示：......</p> 
+
+<p><a href="https://forum.nuculabs.de/threads/how-to-zip-and-unzip-a-directory-in-go.86">Go语言 - 如何在 Go 中压缩和解压目录</a><br>本文介绍了如何在 Go 语言中压缩和解压目录。压缩目录很简单，可以使用 AddFS 函数将整个目录添加到 zip 文件中。解压文件则需要一些额外的工作，因为没有简单的方法可以使用。文章中提供了相应的代码示例，并讨论了使用大型语言模型 (LLM) 对内容创作者的影响。</p> 
+
+<p><a href="https://dev.to/manomano-tech-team/wiremock-testcontainers-algolia-go--3hn7">Wiremock &#43; testcontainers &#43; Algolia &#43; Go = ❤️</a><br>本文介绍了如何使用 Wiremock 和 testcontainers 来编写 Algolia 的集成测试，避免了直接使用 Algolia 实例进行测试的缺点，提高了测试效率和稳定性。文章详细讲解了 Wiremock 的录制和回放功能，以及如何在 Go 语言中使用 Algolia SDK 和相关的测试工具。</p> 
+
+<p><a href="https://camelai.com/blog/hn-database-hype">通过 180 万条 Hacker News 头条新闻分析数据库趋势</a><br>哪些数据库在开发者关注度方面正在上升或下降？我们对 Hacker News长达 18 年的分析表明，PostgreSQL 占据主导地位，DuckDB 和 ClickHouse 呈爆炸式增长，而云SaaS 引擎在 2025 年之前急剧下降。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/fintech-scalability-crisis-how-distributed-sql-unlocks-innovation-zero-downtime/">FinTech 可扩展性危机：分布式 SQL 如何解锁创新和实现零停机</a><br>金融科技行业发展迅速，但许多平台仍然依赖于过时的数据库和架构。传统系统难以应对高并发工作负载、区域流量峰值等挑战，导致增长受限、基础设施成本上升。为了保持竞争力，金融科技企业需要一个能够轻松扩展、实时处理事务和分析、并在全球运营中保持一致性和正常运行时间的数据库。本文探讨了金融科技公司面临的架构挑战，以及分布式 SQL 如何帮助它们克服这些挑战，从而支持新一代业务增长。文章还介绍了 TiDB 如何通过水平扩展、混合工作负载处理、强一致性和高可用性等特性，为金融科技规模化发展提供支持。</p>
+
+<p><a href="https://www.docker.com/blog/build-genai-app-with-java-spring-ai-docker-model-runner/">如何使用 Java、Spring AI 和 Docker Model Runner 构建 GenAI 应用程序</a><br>本文介绍了如何使用 Java 构建 GenAI 应用程序的分步演示，展示了如何使用 Spring AI 和 Docker 工具增强模型响应。Spring AI 集成许多模型提供商（用于聊天和嵌入）、向量数据库等等。本示例使用 Spring AI 项目提供的 OpenAI 和 Qdrant 模块，利用这些集成的内置支持。此外，我们将使用 Docker Model Runner（而不是云托管的 OpenAI 模型），它提供了一个与 OpenAI 兼容的 API，可以轻松地在本地运行 AI 模型。我们将使用 Testcontainers 和 Spring AI 的工具来自动化测试过程，以确保 LLM 的答案在提供的文档中具有上下文基础。最后，我们将展示如何使用 Grafana 进行可观察性，并确保我们的应用程序按设计运行。</p>
+
+<p><a href="https://leerob.com/vercel">我在 Vercel 的五年收获 | Lee Robinson</a><br>作者 Lee Robinson 回顾了在 Vercel 工作五年的经历，分享了五个重要的经验教训，并配有幕后照片。这些教训包括：努力工作的同时也要学会“下班”；任何事情都可以做得更快；规模化发展或努力尝试；不要“突击检查并留下烂摊子”；即使面对新信息，也要敢于改变主意。</p>
+
+<p><a href="https://substack.gauravvohra.com/p/search-is-dead-long-live-llms-winning-in-the-era-of-llms-ai-overviews-and-geo">SEO已死，GEO永存</a><br>大型语言模型（LLM）、AI概述和GEO时代下的获胜之道——在你的流量消失之前。</p>
+
+<p><a href="https://threadreaderapp.com/thread/1943360399220388093.html">METR 对开源开发者使用 AI 编码工具的随机对照试验结果</a><br>METR 进行了一项随机对照试验，以了解 AI 编码工具能使经验丰富的开源开发者加快多少速度。结果令人惊讶：开发者认为使用 AI 工具可以提高 20% 的速度，但实际上，当他们可以使用 AI 时，速度比不使用 AI 时慢了 19%。研究招募了 16 名经验丰富的开源开发者，让他们在自己的代码库中完成 246 个真实任务。研究发现，允许使用 AI 时，开发者在主动编码和搜索信息上花费的时间更少，而是花费时间在提示 AI、等待/审查 AI 输出以及空闲状态上。AI 工具的减速并非由单一原因造成，而是多种因素共同作用的结果。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://nlp.elvissaravia.com/p/context-engineering-guide">上下文工程指南</a><br>几年前，许多顶尖的 AI 研究人员都声称提示工程很快就会过时。显然，他们错了，事实上，提示工程现在比以往任何时候都更重要。它如此重要，以至于现在被重新命名为上下文工程。本文介绍了上下文工程的概念、在构建 AI 智能体中的应用以及相关的技术细节，例如指令、用户输入、结构化输入和输出、工具、RAG 和内存、状态和历史上下文等。</p>
+
+<p><a href="https://vitalik.eth.limo/general/2025/07/10/2027.html">我对AI 2027的回应</a><br>本文是对Daniel Kokotajlo、Scott Alexander等人发布的AI 2027情景预测的回应。该预测认为，到2027年我们将创造出超人AI，而文明的未来取决于其发展走向。本文作者认为AI 2027情景预测隐含地假设了领先AI的能力迅速增长，而其他所有人的能力却停滞不前。作者认为这与该情景预测本身承认的某些科技进步（例如，到2029年癌症和衰老将被治愈，脑上传技术也将可用）相矛盾。作者从生物武器和网络安全的角度出发，对AI 2027情景预测提出了质疑，认为在科技快速发展的未来，人类拥有相应的防御能力，即使是超级智能AI也难以实现对人类的彻底消灭。作者认为，信息防御技术、去中心化的信息生态系统以及防御性AI等措施，能够提高人类抵御超级说服和超级AI威胁的能力。最后，作者总结了这些论点对当前政策的意义，并强调了避免单一AI霸权的重要性，以及努力使世界不那么脆弱的必要性。</p>
+
+<p><a href="https://kashw1n.com/blog/llm-cli">在终端中使用 AI：llm 工具指南</a><br>本文介绍了 llm 命令行工具，该工具提供了一个统一的接口来访问各种大型语言模型 (LLM)，例如 GPT-4、Claude、Gemini 或本地模型。它具有通用接口、自动日志记录、插件生态系统和管道友好性等特点。文章涵盖了安装、设置、基本用法、会话管理、常用插件、在 Apple 硅芯片上运行本地模型、片段、工具和代理、模板和别名、嵌入和语义搜索、开发工作流程集成、成本优化以及自动化示例等方面的内容，并提供了许多代码示例和最佳实践。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/Ullaakut/cameradar">Ullaakut/cameradar</a><br>Cameradar hacks its way into RTSP videosurveillance cameras</p>
+
+<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP server</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>Generate type-safe code from SQL</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/googleapis/google-api-go-client">googleapis/google-api-go-client</a><br>Auto-generated Google APIs for Go.</p>
+
+<p><a href="https://github.com/google/pprof">google/pprof</a><br>pprof is a tool for visualization and analysis of profiling data</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/joho/godotenv">joho/godotenv</a><br>A Go port of Ruby&#39;s dotenv library (Loads environment variables from .env files)</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

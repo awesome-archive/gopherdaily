@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241017.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-17</span>
+</p>
+<p>每日一谚：Optimize for simplicity first </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.arcjet.com/lessons-from-running-webassembly-in-production-with-go-wazero/">使用Go和Wazero在生产环境中运行WebAssembly的经验教训</a><br>该博客文章讨论了使用 Go 和 Wazero 在生产环境中运行 WebAssembly （Wasm） 的挑战和策略，包括嵌入 Wasm 二进制文件、优化启动时间、预初始化和性能增强，这些都改进了开发工作流程和代码可维护性。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/golang-internal-package">Go internal目录的魔力</a><br></p> 
+
+<p><a href="https://dev.to/embiem/how-to-consistently-retrieve-valid-json-from-claude-35-in-go-1g5b">如何在Go中一致地从 Claude 3.5 检索有效的 JSON</a><br>本文档提供了一个名为 &#39;CallClaudeForceTools&#39; 的 Golang 函数，可用于从 Claude 3.5 中检索结构化数据，该函数可用于为 API 请求生成结构化数据、验证输入数据并将其转换为结构化格式以及用于其他目的。</p> 
+
+<p><a href="https://teivah.medium.com/unit-tests-as-documentation-32554e83bee0">单元测试作为文档</a><br>Teiva Harsanyi 讨论了单元测试作为代码中动态文档的作用，解释说它们提供了对代码行为的清晰解释，始终与代码同步，并涵盖边缘情况，这可以为编码提供有价值的见解。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://istio.io/latest/blog/2024/l7-policy-with-opa/">你的平台可以执行策略吗？利用平台 L7 策略功能加速 Teams</a><br>本文讨论了如何使用 Istio 和 Open Policy Agent （OPA） 在共享计算平台中实施 7 级应用程序授权策略，演示了如何在简单的微服务应用程序上应用这些策略并修改请求和响应属性。</p>
+
+<p><a href="https://read.highgrowthengineer.com/p/3-career-principles-to-director-at-google">让我成为 Google 总监的 3 个职业原则</a><br>前 Google 总监 Chaitali Nälla 分享了她的三项职业原则，这些原则使她在 10 年内获得了 5 次晋升，包括在不那么光彩的任务中保持平衡、在解决更大问题时保持勇气以及克服摩擦。</p>
+
+<p><a href="https://rxdb.info/articles/localstorage-indexeddb-cookies-opfs-sqlite-wasm.html">LocalStorage 与 IndexedDB 对比 Cookie，OPFS 与 WASM-SQLite</a><br>本文讨论了可用于在浏览器中存储和查询数据的各种技术，包括 cookie、localstorage、webSQL、indexeddb、OFS、WASM-SQLite 和 RxDB，并比较了它们的功能、限制和性能测试，重点介绍了复杂 JSON 文档和批量操作的性能。</p>
+
+<p><a href="https://coldwaters.substack.com/p/scale-ruins-everything">Scale 毁掉一切</a><br>David Coleman 讨论了风险投资造成的潜在社会损害，尤其是在产品泡沫期间，因为他们对看似无害的初创公司进行了大量投资，却发现它们可能导致社会毁灭和经济毁灭。</p>
+
+<p><a href="https://testing.googleblog.com/2024/10/smurf-beyond-test-pyramid.html">SMURF: Beyond the Test Pyramid</a><br>The Google Testing Blog discusses &#34;SMURF: Beyond the Test Pyramid&#34; on October 15, 2024, and provides a list of related topics, with a particular focus on the &#34;SMURF&#34; series.</p>
+
+<p><a href="https://anyblockers.com/posts/postgres-as-a-search-engine">Postgres 作为搜索引擎</a><br>本文档提供了有关如何使用 PostgreSQL 使用语义、全文和模糊搜索技术创建强大的搜索引擎的指南，并讨论了结果的实现、调试、调整和重新排序，同时指出了它在处理不同文档长度和使用 BM25 等高级算法方面的局限性。</p>
+
+<p><a href="https://spin.atomicobject.com/pitfalls-writing-api/">像黑客一样思考：编写 API 时要避免的陷阱</a><br>本文强调了在编写 API 时像黑客一样思考的重要性，以避免常见的陷阱，例如身份验证和授权机制薄弱、输入验证和清理不足、缺乏速率限制和限制、在错误消息中公开过多信息以及忽视依赖项和平台更新。</p>
+
+<p><a href="https://www.docker.com/blog/docker-best-practices-using-arg-and-env-in-your-dockerfiles/">Docker 最佳实践：在 Docker 文件中使用 ARG 和 ENV</a><br>源文档是一条消息，指示来自系统的 &#39; 403 Forbidden &#39; 错误消息，特别是来自服务器端，特别是来自 &#39; ns&#39; （Nix） 模块。</p>
+
+<p><a href="https://dolthub.com/blog/2024-10-16-dolt-workbench-electron-app/">Dolt Workbench Electron 应用程序</a><br>Dolt Workstation 桌面应用程序是一款适用于 MySQL、PostgreSQL 和与 Dolt 兼容的数据库的现代开源 SQL 工作站，已作为适用于 Mac 和 Windows 的独立应用程序发布，提供数据库连接、SQL 查询、数据导入和使用 ER 图可视化等功能。</p>
+
+<p><a href="https://tailscale.com/blog/google-workspace-sync-ga">Google Workspace 访问权限配置现已全面推出</a><br>Tailscale 宣布全面推出 Google Workspace 访问权限配置，该功能允许管理员自动将用户和组从 Google Workspace 配置到 Tailscale 网络中，从而简化访问权限配置并使安全网络更加容易。</p>
+
+<p><a href="https://www.redhat.com/en/blog/whats-new-red-hat-enterprise-linux-ai-12">Red Hat Enterprise Linux AI 1.2 中的新功能</a><br>Red Hat Enterprise Linux AI 1.2 是一个用于为企业应用程序开发和测试大型语言模型的平台，包括重要的增强功能、对更广泛的基础架构选项的支持以及用于培训和认证的新功能，并支持 Lenovo ThinkSystem SR675 V3 服务器和 AMD Instinct 加速器。</p>
+
+<p><a href="https://thenewstack.io/new-terraform-features-manage-migrations-modules/">新的 Terraform 功能管理迁移、模块</a><br>Hashicorp 联合创始人兼首席技术官 Armon Dadgar 在 HashiConf 的主题演讲中介绍了 Terraform 中的新功能，包括 Terraform 中的堆栈和其他功能以及 Nomad 的 GPU 管理，旨在简化 AI 和 GenAI 使用的基础设施和 GPU 的管理。</p>
+
+<p><a href="https://medium.com/@simardeep.oberoi/cilium-advanced-network-policies-and-observability-in-kubernetes-fbb4fdd747ba">Cilium：Kubernetes 中的高级网络策略和可观测性</a><br>基于 eBPF 构建的 Cilium 在 Kubernetes 中引入了基于身份的安全模型，提供分层流量控制和深度可观测性，通过其在各个级别执行策略的能力改变网络空间，并提供传统 Kubernetes 网络策略无法比拟的安全性和可见性级别。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.dataengineer.io/p/how-genai-will-impact-data-engineering">GenAI 将如何影响数据工程</a><br>Zach Wilson 讨论了 GenAI 对数据工程的影响，强调了它对管道开发和维护的影响、它融合数据分析师和工程师角色的潜力，以及它减少工作负载和提高数据质量的潜力，同时还鼓励数据工程师利用 AI 基础设施。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/leaving-big-tech">为什么科技员工离开大型科技公司</a><br>来自 The Pragmatic Engineer Newsletter 的 Gergely Orosz 讨论了科技工作者（尤其是工程师）离开大型科技公司的原因，包括工作保障、初创公司的专业发展、封闭的职业道路、政治政治、规模、规模、规模、薪酬急剧下降和原始反馈。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/17/video-scraping/#atom-everything">视频抓取：以不到 1/10 美分的价格从 35 秒的屏幕截图中提取 JSON 数据</a><br>Simon Willison 演示了如何使用 Google Gemini（一种免费工具）从 35 秒的屏幕截图中提取 JSON 数据，并分享了他的经验和一种新的数据新闻工具。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI 网关 |AI Native API 网关</p>
+
+<p><a href="https://github.com/ossf/scorecard">ossf/scorecard</a><br>OpenSSF 记分卡 - 开源的安全健康指标</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO 是一个高性能、与 S3 兼容的对象存储，在 GNU AGPLv3 许可下开源。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/controller-runtime">kubernetes-sigs/controller-runtime</a><br>kubebuilder 的 controller-runtime 子项目 （sig-apimachinery） 的仓库</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>高性能、自托管的时事通讯和邮件列表管理器，具有现代仪表板。单个二进制应用程序。</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman：用于管理 OCI 容器和 Pod 的工具。</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>云原生控制平面</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>受 Material Design 启发的 Go 跨平台 GUI 工具包</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>适用于容器的应用程序内核</p>
+
+<p><a href="https://github.com/qax-os/excelize">qax-os/excelize</a><br>用于读取和写入 Microsoft Excel™ （XLAM / XLSM / XLSX / XLTM / XLTX） 电子表格的 Go 语言库</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>使用 Gitleaks 🔑 保护和发现机密</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism 是以太坊，可扩展。</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>完整的容器管理平台</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint 允许用户使用流行的框架快速启动一个 Go 项目</p>
+
+<p><a href="https://github.com/geektutu/7days-golang">geektutu/7days-golang</a><br>7 days golang programs from scratch (web framework Gee, distributed cache GeeCache, object relational mapping ORM framework GeeORM, rpc framework GeeRPC etc) 7天用Go动手写/从零实现系列</p>
+
+<p><a href="https://github.com/marcel-dempers/docker-development-youtube-series">marcel-dempers/docker-development-youtube-series</a><br></p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>从 SQL 生成类型安全代码</p>
+
+<p><a href="https://github.com/kubernetes-sigs/cluster-api">kubernetes-sigs/cluster-api</a><br>Cluster API 的主页，sig-cluster-lifecycle 的子项目</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

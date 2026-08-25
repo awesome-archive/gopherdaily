@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250521.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250521</span>
+</p>
+<p>每日一谚：Avoid unnecessary allocations and memory overhead </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/05/20/post-quantum-cryptography-in-go">未雨绸缪：Go开发者需要了解的后量子密码学与实现现状</a><br>作为 Go 开发者，我们或许觉得量子计算机还很遥远，但“现在记录数据，未来量子破解”的风险已然存在。更重要的是，Go 语言作为一门以简洁、高效和安全著称的现代编程语言，其核心团队早已在为这个“后量子时代”积极布局。随着 Go 1.24 的发布，这一布局取得了实质性的进展：备受期待的 crypto/mlkem 包正式加入标准库</p> 
+
+<p><a href="https://tonybai.com/2025/05/21/go-crypto-audit">权威认证：Go核心密码学库通过独立安全审计</a><br>近日，Go 方博客发布了一篇重要文章，详细介绍了一次由独立安全公司 Trail of Bits 对 Go核心密码学包进行的安全审计结果。这次审计不仅再次印证了 Go 在密码学领域的严谨投入，也揭示了 Go 在后量子密码学 (PQC) 和未来密码学 API 发展上的清晰规划</p> 
+
+<p><a href="https://flak.tedunangst.com/post/too-much-go-misdirection">Go中有太多的误导</a><br>文章讨论了在Go语言中使用`io.Reader`接口处理字节数据时遇到的效率问题。许多Go函数使用`io.Reader`作为输入，这允许数据流传输，而不是将全部数据加载到内存中。但在某些情况下，我们需要字节数组，而我们可能已经拥有这些字节。文章作者尝试通过类型检查和指针操作来避免不必要的复制，但发现`image.Decode`函数会自行包装`io.Reader`，导致优化失效。文章分析了`bytes.Reader`和`bufio.Reader`的设计问题，并最终通过自定义接口和类型来解决问题，实现了零拷贝的目标。文章还讨论了Go语言的结构化类型和标准库设计中的一些问题，以及如何处理这些问题。</p> 
+
+<p><a href="https://fly.io/blog/litestream-revamped">Litestream：改进版</a><br>Litestream是一个开源工具，通过从对象存储可靠地恢复数据，使在SQLite之上运行各种全栈应用程序成为可能。本文介绍了自其发布以来对其进行的最大改进。主要改进包括：更快的基于时间的数据库恢复；通过条件写入支持，无需Consul即可实现单一Litestream实例复制到指定目标；以及基于VFS的轻量级只读副本层，能够直接从S3兼容对象存储中获取和缓存页面。</p> 
+
+<p><a href="https://opensource.org/maintainers/akihirosuda">Sudha Akihiro：我与容器的十年旅程以及未来展望</a><br>本文是NTT软件工程师Sudha Akihiro撰写的文章，讲述了他近十年来参与容器虚拟化技术开源项目的心路历程，以及对未来容器技术发展方向的预测。他参与维护了Docker/Moby、BuildKit、containerd、runc、OCI Runtime Spec、nerdctl和Lima等多个项目，分享了他对容器生态系统、社区协作以及未来技术趋势（更强大的隔离技术、WebAssembly和库沙箱）的见解。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/ten-years-on-we-set-off-again-my-journey-with-tidb/">十年之后，我们再次启程：我和 TiDB 的旅程</a><br>本文回顾了 PingCAP 公司及其核心产品 TiDB 十年的发展历程。文章作者 PingCAP 首位员工兼产品与工程高级副总裁 Siddon Tang 分享了 TiDB 从最初的 Go 代码到如今运行全球关键任务工作负载的历程，以及在这个过程中遇到的挑战和经验教训。文章涵盖了开源理念、产品商业化、可扩展性、全球化发展以及客户成功等多个方面，并穿插了许多生动的故事，展现了 TiDB 的发展历程以及作者自身从程序员到技术领导者的成长历程。</p>
+
+<p><a href="https://dolthub.com/blog/2025-05-20-vault-works-with-dolt/">Vault 与 Dolt 的协同工作</a><br>本文演示了如何配置 Vault，以便使用临时凭据为 Dolt SQL 服务器提供联合访问。Dolt 是一个完全版本控制的 SQL 数据库，与 MySQL 兼容，并支持类似 Git 的版本控制功能。Vault 的 MySQL/MariaDB 密钥引擎可以直接与 Dolt 协同工作，本文将介绍如何使用 Vault 作为密钥引擎来管理 Dolt 的用户和密码，包括设置步骤、创建 Vault 策略和角色以及模拟应用程序访问数据库等。</p>
+
+<p><a href="https://eng.lyft.com/beyond-query-optimization-aurora-postgres-connection-pooling-with-sqlalchemy-rdsproxy-200db7f562d7">超越查询优化：使用 SQLAlchemy 和 RDSProxy 进行 Aurora Postgres 连接池化 | Lyft 工程</a><br>在优化数据库性能和扩展性时，高效的数据库连接管理常常被忽视。当我们考虑数据库性能时，我们关注的是查询优化和索引……，而低估了有效管理数据库连接的影响。没有连接池，每个请求都可能产生反复打开和关闭连接的高昂开销，从而导致性能瓶颈和资源耗尽。在现代的 Web 规模应用程序中，良好的连接池实现可以决定应用程序能否平滑扩展，以及数据库是否会因超载而瘫痪。在 Lyft，我们看到了采用基于代理的连接池化带来的诸多好处，我们将在本文中深入探讨。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/05/20/a-milestone-for-lightweight-kubernetes-k0s-joins-cncf-sandbox/">轻量级 Kubernetes 的里程碑：k0s 加入 CNCF 沙箱</a><br>我们很高兴地宣布，我们的轻量级、零依赖、完全开源的 Kubernetes 发行版 k0s 正式加入云原生计算基金会 (CNCF) ，成为沙箱项目！这是一个重要的里程碑，我们对未来的发展感到无比兴奋。CNCF 是最具创新性的云原生项目的聚集地，成为这个社区的一员，加强了我们致力于提升 Kubernetes 易用性和普及度的承诺。加入 CNCF 沙箱项目为我们提供了一个绝佳的机会，可以与社区合作，获得宝贵的反馈，并扩大我们的努力，使 Kubernetes 更易于访问和更高效。k0s 的设计目标是成为一个零摩擦的 Kubernetes 发行版，满足开发人员、运营人员和边缘计算爱好者的需求。</p>
+
+<p><a href="https://engineering.fb.com/2025/05/20/web/metas-full-stack-hhvm-optimizations-for-genai/">Meta 的全栈 HHVM GenAI 优化</a><br>随着 Meta 推出利用生成式 AI (GenAI) 的创新产品，我们需要确保底层基础设施组件随之发展。应用基础设施知识和优化使我们能够适应不断变化的产品需求，并在过程中提供更好的产品。最终，我们的基础设施系统需要在交付高质量体验的需求与运行系统可持续性的需求之间取得平衡。将 GenAI 推理流量拆分到专用 WWW 租户中，允许专门的运行时和预热配置，这使我们能够同时实现这两个目标，同时将延迟提高 30%。</p>
+
+<p><a href="https://jiekun.dev/posts/dev-node-distributed-tracing-with-victorialogs">VictoriaMetrics 开发者笔记：团队内关于 Distributed Tracing 的调研，对比 Tempo 和 ClickHouse</a><br>本文探讨了 VictoriaMetrics 团队内部对分布式追踪解决方案的调研，比较了 Tempo 和 ClickHouse，并最终选择了基于 VictoriaLogs 的方案。文章详细分析了 Span 的数据模型、不同数据库的适用性、数据摄取性能以及数据可视化等方面，并对 VictoriaLogs 的性能与 Jaeger &#43; ClickHouse/Elasticsearch 和 Grafana Tempo &#43; S3 进行了对比测试，结果表明 VictoriaLogs 在资源利用率和性能方面具有优势，并对未来改进方向进行了展望。</p>
+
+<p><a href="https://martinfowler.com/articles/agile-threat-modelling.html">软件团队的威胁建模指南</a><br>威胁建模是一种基于风险的网络安全需求分析方法。文章建议团队将威胁建模融入开发流程中，通过小型、定期的活动来持续识别和缓解安全风险，而不是将其作为单独或预先的活动进行。文章介绍了不同的方法，帮助团队在应用程序开发和基础设施方面入门并发展其实践。鉴于网络安全风险日益增大和企业责任意识的增强，这种实践比以往任何时候都更加重要。</p>
+
+<p><a href="https://moxie.org/2024/09/23/a-good-engineer.html">软件的魔力；或者，优秀的工程师如何成就优秀的工程组织</a><br>本文探讨了软件工程与计算机科学之间的差异，以及软件开发中发现与工程之间的双向关系。作者认为，对工具和技术的深刻理解会产生新的视野、意想不到的结果和各种解决方案。文章还讨论了抽象层在软件开发中的作用，以及大型工程组织中团队协作和创新的重要性，并批评了盲目模仿成功公司做法的风险。</p>
+
+<p><a href="https://jonayre.uk/blog/2022/10/30/the-real-value-isnt-in-the-code">真实的价值并不在代码里</a><br></p>
+
+<p><a href="https://www.freethink.com/artificial-intelligence/the-great-progression-substack">Substack 将成为 21 世纪的知识引擎</a><br>文章认为，Substack 平台是现代的“皇家学会”，汇集了当代最优秀的头脑，它可能在塑造下一个文明中发挥至关重要的作用。文章回顾了启蒙运动时期知识精英的交流方式，并将其与 Substack 的功能进行对比，指出 Substack 提供了前所未有的工具，方便知识交流和快速创新。作者还探讨了人工智能、清洁能源和生物工程等技术对未来文明的影响，以及如何利用 Substack 等平台应对未来的挑战。</p>
+
+<p><a href="https://boydkane.com/essays/experts">专家之路易如反掌</a><br>本文探讨了专家与新手在效率和结果上的差异。专家比新手更高效，取得更好的结果，但这方面研究不足。文章通过迷宫的例子，说明新手由于缺乏经验，会陷入自己制造的困境，而专家则能更有效率地解决问题。新手常常专注于与主要问题无关的方面，而专家则能更好地将精力集中在主要问题上。此外，专家往往能够做出看似简单的决定，但新手却难以察觉到这些决定，更无法理解其背后的原因。文章最后指出，新手需要与专家交流学习，并积极探索专业领域的各个方面，才能逐步成为专家。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/20/ai-energy-footprint/#atom-everything">我们计算了人工智能的能源足迹。这是你从未听说过的故事。</a><br>詹姆斯·奥唐奈尔和凯西·克朗哈特试图为麻省理工学院技术评论整理一份关于人工智能能源使用的详细报告。他们很快遇到了其他人试图调查这个问题时遇到的同样的障碍：人工智能公司本身对它们的能源使用情况仍然令人恼火地不透明，这使得不可能对任何这些情况产生可信的、确定的数字。文章探讨了人工智能能源使用情况的透明度问题，并对不同人工智能模型的能源消耗进行了比较，包括大型语言模型和图像/视频生成模型。文章指出，虽然单个提示的成本可能很小，但整体成本仍然相当可观。文章还批评了谷歌等公司缺乏透明度，特别是考虑到他们有积极的可持续性目标。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/the-ai-engineering-stack">AI 工程栈</a><br>本文探讨了 AI 工程栈的三个层次：应用开发、模型开发和基础设施。作者解释了 AI 工程与机器学习工程以及全栈工程的区别，并重点介绍了应用开发中的评估、提示工程和 AI 接口。文章还包含了对 AI 工程栈演变的分析以及如何快速迭代构建 AI 应用的建议。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>Work with remote images registries - retrieving information, images, signing content</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/TencentCloud/tencentcloud-sdk-go">TencentCloud/tencentcloud-sdk-go</a><br>Tencent Cloud API 3.0 SDK for Golang</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/ThreeDotsLabs/watermill">ThreeDotsLabs/watermill</a><br>Building event-driven applications the easy way in Go.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/mark3labs/mcphost">mark3labs/mcphost</a><br>A CLI host application that enables Large Language Models (LLMs) to interact with external tools through the Model Context Protocol (MCP).</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

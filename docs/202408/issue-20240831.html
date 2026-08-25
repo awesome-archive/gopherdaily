@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240831.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-31</span>
+</p>
+<p>每日一谚：Go pkgs are not hierarchical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dev.to/violet_alexander_a4a3e5dd/if-php-fell-out-of-favor-which-backend-language-would-i-choose-40m2">如果PHP失宠，我会选择哪种后端语言？</a><br>本文提出了一个 PHP 不再受到青睐的假设场景，引发了对替代后端语言的讨论。笔者是一位经验丰富的后端开发人员，他推荐 Golang 因为它具有卓越的性能和对开发人员友好的体验，特别称赞了它的并发处理和透明的错误管理。Python 也因其简洁的语法和其框架（如 Django 和 Flask）的丰富功能而被推荐使用，这有利于快速启动项目。</p> 
+
+<p><a href="https://dev.to/agustrinaldokurniawan/build-basic-microservice-online-store-backend-with-golang-use-api-gateway-pattern-1bf">使用 Golang 构建基本的微服务在线商店后端使用 Api Gateway 模式 - 第 1 部分</a><br>本指南提供了一种使用 API Gateway 模式和 Golang 为在线商店构建基本微服务架构的全面方法。它首先介绍了微服务的优势、选择 Golang 来提高其效率，以及用于集中请求处理的 API Gateway 模式。该文档详细介绍了设置过程，包括安装 Go、设置 Docker 以及使用 protoc 生成必要的文件。它进一步指导了如何创建用户服务、实现 gRPC 进行通信以及使用反射服务设置 API 网关。最后，它提供用于 Api Gateway 的 Dockerfile 和用于编排服务的 docker-compose.yml 文件，以及使用 docker-compose 启动服务的命令。</p> 
+
+<p><a href="https://dev.to/logrocket/go-long-by-generating-pdfs-in-golang-with-maroto-1g25">使用 Maroto 在 Golang 中生成 PDF 来走得更远</a><br>本文提供了使用 Subha Chanda 编写的 Maroto 库在 Golang 中生成 PDF 的综合指南。Maroto 的灵感来自 Bootstrap 的网格系统，它促进了对行和列的轻松布局管理，从而能够包含文本、图像、二维码和条形码等各种组件。该指南首先设置一个 Go 项目并安装 Maroto，然后是有关创建包含页眉、正文和页脚的 PDF 的说明，每个 PDF 都有特定的元素。作者强调了 Maroto 相对于其他库的优势，例如其直观的 API、性能改进和内容溢出的自动分页符。此外，本文还重点介绍了对 Golang 项目使用 LogRocket 的现代错误跟踪的好处。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/MercurialExtdiffAndFilenames">Mercurial 的 extdiff 扩展名和在 diff 中报告文件名</a><br>该博客文章讨论了 Mercurial 的“hg sdiff”扩展名的特殊行为，特别是关于在 diff 中报告文件名的问题。作者 Chris Siebenmann 解释说，在 Mercurial 存储库中进行更改时，“hg sdiff”扩展使用 Extdiff 扩展来提供非上下文差异。当仅更改一个文件时，会出现此问题;&#39;hg sdiff&#39; 不显示文件名，这与更改多个文件时不同，在 Extdiff 调用递归模式时，会打印文件名。尽管存在不便，但作者提到，没有 Extdiff 选项可以始终创建目录和进行递归差异，他们计划继续忍受这种情况。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.hellofresh.com/designing-scalable-tech-teams-with-domain-driven-design-and-team-topology-1e5250838aa5">使用领域驱动设计和团队拓扑设计可扩展的技术团队</a><br>在这篇文章中，HelloTech 的技术主管 Dilip Saha 讨论了使用域驱动设计 （DDD） 和团队拓扑原则设计可扩展技术组织的挑战和解决方案。最初，由于负责客户旅程不同方面的团队之间的子域重叠和依赖关系，HelloFresh 面临复杂性和重复性。为了解决这个问题，他们采用了 DDD，进行了一项事件风暴练习，以定义一种无处不在的语言，并为每个团队建立明确的边界上下文，重点关注购物和结账旅程。这种重组减少了依赖关系，提高了系统性能稳定性，并提高了团队自主性和生产力。Saha 强调了了解域边界和促进持续协调和协作以实现未来增长的重要性。</p>
+
+<p><a href="https://netflixtechblog.com/recommending-for-long-term-member-satisfaction-at-netflix-ac15cada49ef">推荐 Netflix 的长期会员满意度</a><br>Netflix 的技术博客最近讨论了他们的创新方法，以使其推荐系统与长期会员满意度保持一致。他们面临的挑战是优化建议，不仅要立即参与，还要提高持久的会员满意度，这更能体现长期价值。为了解决在 Netflix 等动态环境中常见的延迟用户反馈问题，他们建议使用观察到的用户交互来预测此反馈，直到预测点。然后，此预测被分解为代理奖励函数，该函数用于训练上下文老虎机策略。尽管通过改进的输入功能或架构实现了更高的离线模型指标，但他们承认线上线下指标可能存在差异，并强调完善代理奖励以确保推荐真正反映长期满意度的重要性。</p>
+
+<p><a href="https://blog.gitguardian.com/how-to-handle-secrets-in-helm/">如何在 Helm 中处理 secret</a><br>本文档提供了有关在 Helm 部署中管理 secret 的深入指南，解决了安全性和访问控制方面的挑战。它解释了 Helm 图表和 Helm 密钥的使用，强调了安全处理敏感信息的重要性。该指南介绍了 &#39;helm-secrets&#39; 插件，它允许使用 SOPS（Secrets Open Pipelines Service）加密密钥，SOPS 是一种使用 PGP 密钥加密和解密文件的工具。此外，本文档还探讨了 Helm 与持续部署工具的集成以及 External Secrets Operator 的使用，后者是一种 Kubernetes 运算符，可促进从 AWS Secrets Manager 等外部管理器自动检索和注入密钥。最后，它谈到了 Pod 在秘密更改时自动重启的需求，提供了 Reloader 工具等解决方案来处理此类情况。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/08/29/kubernetes-v1-31-elli-an-insider-view/">Kubernetes v1.31，Elli：内部观点！</a><br>在详细介绍了他作为 Kubernetes 1.31 版本发布影子的经历时，Matteo Bianchi 提供了对平台社区驱动的发布生命周期的见解。Bianchi 偶然申请并被选中担任该职位，他发现这段经历非常丰富，使他能够根据新流程来衡量自己，并与热情的开源社区建立联系。作为通信影子，Bianchi 是一个更大的发布团队的一员，负责协调博客、公关和网络研讨会，以及跟踪和向用户传达发布的价值。版本 1.31 的发布包括几项显著的变化，例如 GPU 管理和网络改进的增强功能。展望未来的版本，Bianchi 预计 Kubernetes 将转向更大的不可知性，重点关注 AI 并改进对有状态工作负载的支持。</p>
+
+<p><a href="https://www.openfaas.com/blog/add-a-faas-capability/">使用 OpenFaaS 将 FaaS 功能集成到您的平台中</a><br>OpenFaaS 提供了一个平台，可将功能即服务 （FaaS） 功能集成到各种环境中，包括客户仪表板、产品扩展和云产品。它提供了一套 API、文档和语言支持，以便轻松集成，并提供了一个用于在多租户环境中构建和部署函数的函数生成器 API。OpenFaaS 还包括身份管理、基于角色的访问控制和详细的监控指标。对于希望提供 FaaS 即服务或为客户代码提供沙箱的企业，OpenFaaS for Enterprises 可以通过统包式 API 和组件来满足这些需求。此外，OpenFaaS 可以与 Patchworks 和 E2E Networks Limited 等其他平台集成，以扩展其功能并满足不同的集成要求。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@kushagramisra10/era-of-light-weight-llm-models-innovations-and-mobile-possibilities-8634064e0b09">轻量级 LLM 模型时代：创新和移动可能性</a><br>本文讨论了部署多模式大型语言模型 （MLLM） 的进步和挑战，重点介绍了使这些模型更高效、更易于访问的创新需求，特别是对于移动和资源受限的环境。它重点介绍了 BitNet b1.58 的开发，与传统的 16 位浮点模型相比，该模型使用三元位值来实现更低的延迟和更少的内存消耗。此外，本文还探讨了 MiniCPM-V 系列，包括 MiniCPM-Llama3-V 2.5 8B 等型号，这些型号专为在资源有限的设备上部署而设计，同时仍可在 OCR 等任务中提供高性能。本文还谈到了在训练期间优化批量大小的重要性，以便在不产生收益递减或产生负面影响的情况下实现最佳性能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>一个反向代理，提供对 Google、Azure、OpenID Connect 和更多身份提供商的身份验证。</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/opentofu/registry">opentofu/registry</a><br>全新的 opentofu.org 注册表！</p>
+
+<p><a href="https://github.com/elastic/beats">elastic/beats</a><br>🐠 Beats - 适用于 Elasticsearch 和 Logstash 的轻量级运输器</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/NVIDIA/dcgm-exporter">NVIDIA/dcgm-exporter</a><br>利用 DCGM 的 Prometheus 的 NVIDIA GPU 指标导出器</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>下一代身份服务器用强化的安全性和 PassKeys、SMS、OIDC、社交登录、MFA、FIDO、TOTP 和 OTP、WebAuthn、无密码等取代您的 Auth0、Okta、Firebase。Golang、无头、API 优先。作为无忧 SaaS 提供，具有市场上最公平的价格！</p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>GoFrame 是 Golang 的一个模块化、强大、高性能的企业级应用程序开发框架。</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>一个强大的小 TUI 框架 🏗</p>
+
+<p><a href="https://github.com/google/uuid">google/uuid</a><br>基于 RFC 4122 和 DCE 1.1 的 UUID 的 Go 包：身份验证和安全服务。</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>并发、缓存高效且与 Dockerfile 无关的构建器工具包</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>用于密钥管理、加密即服务和特权访问管理的工具</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>用于从容器映像和文件系统生成软件物料清单的 CLI 工具和库</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>使用 Swagger 2.0 for Go 自动生成 RESTful API 文档。</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>云原生控制平面</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - 任何编程语言🚀的基础设施即代码</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>充当反向代理，保护您的 Web 服务免受攻击和利用。</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>用于访问 GitHub v3 API 的 Go 库</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>访问和保护所有基础设施的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/substratusai/kubeai">substratusai/kubeai</a><br>Kubernetes 上的私有 Open AI</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir 为 Prometheus 提供可水平扩展、高度可用、多租户的长期存储。</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web 文件浏览器</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

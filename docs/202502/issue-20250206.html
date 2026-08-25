@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250206.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250206</span>
+</p>
+<p>每日一谚：Use defer to clean up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@mohamadharith.my/mutex-vs-semaphore-in-golang-3f97e5125bbc">Go语言中的互斥锁与信号量</a><br>如果你在 Go 语言中编写过并发程序，你可能遇到过 Go 的 sync 包提供的 Mutex 和 RWMutex 原语。它们通常用于同步并发线程以防止竞争条件。但是，还有另一种原语也可用于处理 Go 中的并发——信号量。什么是信号量？它与 Mutex 和 RWMutex 有什么不同？信号量解决了互斥锁的哪些缺点？本文将探讨这些问题。</p> 
+
+<p><a href="https://kaustavdm.medium.com/ultra-lightweight-nats-based-modular-app-framework-in-go-860d210f46de">Go语言中基于NATS的超轻量级模块化应用程序框架</a><br>本文解释了为什么作者构建了一个基于NATS的简单、模块化的Go应用程序架构，该架构使用嵌入式NATS服务器。作者介绍了为什么编写Upspeak的`app`包，以及为什么使用NATS以及它对读者有何用处。</p> 
+
+<p><a href="https://dev.to/hadlow/how-to-release-to-homebrew-with-goreleaser-github-actions-and-semantic-release-2gbb">使用 GoReleaser、GitHub Actions 和 Semantic Release 发布到 Homebrew</a><br>本文将指导你使用 GoReleaser 和 GitHub Actions 自动化 Go 项目的发布流程。标签将由 Semantic Release 生成。所有这些都将捆绑在一起，因此合并到主分支的任何内容都将自动部署带有自动生成的更改日志，然后可以通过 Homebrew Tap 安装。</p> 
+
+<p><a href="https://dev.to/ocodista/deepseek-r1-7bs-performance-on-a-developers-macbook-3mg2">在开发者MacBook上对DeepSeek R1进行基准测试</a><br>本文对在开发者MacBook Pro M2上运行的DeepSeek R1模型的吞吐量能力进行了基准测试。测试使用Go语言编写，通过向Ollama Web服务器端点发送多个并发HTTP请求来进行，并监控了一系列指标，包括吞吐量、等待时间、GPU使用率等。结果显示，单个请求可以达到55 tokens/s，而19个并发请求的平均吞吐量下降到9.1 tokens/s。文章还分析了并发请求数量对性能的影响，并讨论了可接受的等待时间和吞吐量阈值。</p> 
+
+<p><a href="https://jub0bs.com/posts/2025-01-28-programmatic-handling-of-cors-configuration-errors">使用 jub0bs/cors 对 CORS 配置错误进行编程处理</a><br>jub0bs/cors v0.5.0 现在允许您以编程方式处理 CORS 配置错误。如果您是多租户服务提供商，并允许您的租户为其实例配置 CORS，则此功能应该对您有所帮助。jub0bs/cors 长期以来的一项显著特点是广泛的配置验证，其动机在于我希望排除功能失调的 CORS 中间件并阻止不安全 CORS 中间件的实例化。文章详细介绍了程序化处理 CORS 配置错误的需求、设计考量以及在新的子包中引入具体错误类型的过程。并提供了一个相对简单的示例，演示了如何以用户友好的方式告知租户其 CORS 配置错误。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/ga-launch-docker-bake/">Docker Bake现已正式发布 | Docker</a><br>Docker Bake现已随Docker Desktop 4.38正式发布！这个强大的构建编排工具简化了复杂构建的管理，为各种规模的团队提供简洁性、灵活性和性能。了解Bake如何简化复杂构建、加快构建速度以及如何开始使用。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/02/05/advancing-open-source-gateways-with-kgateway/">借助 kgateway 推进开源网关</a><br>在 2024 年北美 KubeCon 大会上，Solo.io 宣布计划将其 Gloo Gateway 开源项目捐赠给 CNCF，以惠及更广泛的云原生生态系统。如果您不熟悉 Gloo Gateway，它目前是市场上最成熟、部署最广泛的基于 Envoy 的网关。Gloo Gateway 基于开源和开放标准构建，是 Kubernetes 原生的，并实现了 Kubernetes 网关 API。今天，我们想向您更新自公告以来的激动人心的进展。</p>
+
+<p><a href="https://engineering.fb.com/2025/02/05/security/revolutionizing-software-testing-llm-powered-bug-catchers-meta-ach/">彻底改变软件测试：推出基于大型语言模型的错误检测器</a><br>Meta 的自动化合规强化 (ACH) 工具是一个基于大型语言模型的变异引导测试生成系统。ACH 通过生成未检测到的源代码错误（突变体）来强化平台以防止回归，这些错误针对特定关注领域，并使用相同的突变体生成测试。例如，当应用于隐私时，ACH 会自动执行搜索与隐私相关的错误并防止它们在未来进入我们的系统，最终强化我们的代码库以降低任何隐私回归的风险。ACH 自动生成针对特定类型错误的单元测试。我们以纯文本形式向 ACH 描述我们关心的错误。描述可以不完整，甚至自相矛盾，但 ACH 仍然会生成经过验证的测试，以捕获所描述类型的错误。传统上，自动测试生成技术仅仅寻求提高代码覆盖率。但 ACH 与此传统大相径庭，因为它针对的是特定错误，而不是未覆盖的代码，尽管它通常也会在针对错误的过程中提高覆盖率。此外，由于 ACH 基于保证的基于大型语言模型的软件工程原则，它可以保证其测试确实能够捕获所描述类型的错误。这篇新的研究论文详细介绍了 ACH 的底层科学基础以及我们如何将 ACH 应用于隐私测试，但这方法可以应用于任何类型的回归测试。</p>
+
+<p><a href="https://wyounas.github.io/concurrency/2024/12/12/how-concurrency-works-a-visual-guide">并发的工作原理：可视化指南</a><br>这篇文章以可视化的方式解释了并发编程的原理。文章首先介绍了如何可视化顺序程序的执行，然后通过状态空间的概念，解释了如何可视化并发程序的执行，并用一个简单的C语言程序和PROMELA程序为例进行了说明。文章还探讨了如何使用模型检查来验证并发程序的正确性，并介绍了安全属性和活性属性的概念以及线性时序逻辑(LTL)在其中的应用。最后，文章指出，对于大型复杂的并发程序，模型检查是确保程序正确性的重要工具。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2025/02/05/https-blogs-microsoft-com-blog-2024-11-12-how-real-world-businesses-are-transforming-with-ai/">现实世界中的企业如何通过人工智能实现转型——新增50个案例</a><br>2025 年 2 月 5 日更新：本文包含 50 个新的客户案例，出现在每个客户列表章节的开头。文章将定期更新新案例。
+我职业生涯中一直最精彩的部分，就是与各行各业的客户和合作伙伴联系，了解他们如何利用技术推动业务发展。在过去的 30 年里，我们经历了四次主要的平台转变，从客户服务器到互联网和网络，再到移动和云，如今则来到了人工智能——下一次主要的平台转变。
+随着当今向人工智能的平台转变持续增强势头，微软正在努力了解组织如何才能创造持久的业务价值。我们最近委托 IDC 进行了一项研究，即《人工智能的商业机遇》，以揭示围绕业务价值的新见解，并指导组织进行人工智能转型。该研究发现，组织每投资 1 美元用于生成式人工智能，就能获得平均 3.70 美元的回报——并揭示了人工智能未来重塑业务流程并在各行各业推动变革的潜力。</p>
+
+<p><a href="https://simonwillison.net/2025/Feb/6/andrej-karpathy/#atom-everything">Andrej Karpathy 的一段引言</a><br>Andrej Karpathy 描述了一种新的编程方式，他称之为“氛围编程”（vibe coding）。在这种方式下，程序员完全沉浸在氛围中，拥抱指数增长，并忘记代码的存在。这得益于大型语言模型（如 Cursor Composer 和 Sonnet）的进步。他甚至很少接触键盘，通过 SuperWhisper 与 Composer 对话，提出诸如“将侧边栏的填充减少一半”之类的简单请求。他总是“全部接受”，不再阅读差异，遇到错误消息时直接复制粘贴，通常就能解决问题。代码超出了他通常的理解范围，有时大型语言模型无法修复错误，他便绕过错误或随机更改直到问题消失。他认为这种方法对于一次性的周末项目还不错，但也相当有趣。他正在构建一个项目或网络应用程序，但这与其说是编程，不如说是观察、表达、运行和复制粘贴，而且大部分都能正常工作。</p>
+
+<p><a href="https://blog.google/technology/google-deepmind/gemini-model-updates-february-2025">Gemini 2.0 现已全面开放</a><br>我们宣布了 Gemini 2.0 Flash 的新更新，并推出了 Gemini 2.0 Flash-Lite 和 Gemini 2.0 Pro Experimental。Gemini 2.0 Flash 现已通过 Gemini API 在 Google AI Studio 和 Vertex AI 中全面上市。开发人员现在可以使用 2.0 Flash 构建生产应用程序。我们还发布了 Gemini 2.0 Pro 的实验版本，这是我们迄今为止针对编码性能和复杂提示的最佳模型。它在 Google AI Studio 和 Vertex AI 中可用，并且适用于 Gemini 高级用户的 Gemini 应用程序。我们还发布了一个新模型 Gemini 2.0 Flash-Lite，这是我们迄今为止最具成本效益的模型，可在 Google AI Studio 和 Vertex AI 中公开预览。</p>
+
+<p><a href="https://www.youtube.com/watch?v=7xTGNNLPyMI">深入探讨类似 ChatGPT 的大型语言模型 (LLM)</a><br>本视频面向大众，深入探讨了驱动 ChatGPT 及相关产品的大型语言模型 (LLM) 人工智能技术。它涵盖了模型开发的完整训练流程，以及如何思考其“心理模型”，以及如何在实际应用中最好地利用它们。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/monasticacademy/httptap">monasticacademy/httptap</a><br>View HTTP/HTTPS requests made by any Linux program</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/etcd-io/bbolt">etcd-io/bbolt</a><br>An embedded key/value database for Go.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers (AWS Route53, Google CloudDNS and others) for Kubernetes Ingresses and Services</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>Work with remote images registries - retrieving information, images, signing content</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

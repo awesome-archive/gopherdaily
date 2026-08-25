@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260716.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260716</span>
+</p>
+<p>每日一谚：The bigger the interface, weaker the abstraction. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/16/go-1-28-roadmap-compiler-and-runtime-features-preview">Go 1.28 路线图首度曝光：Cgo 告别C工具链？泛型容器将入标准库？</a><br>本文基于 Go 官方编译器与运行时团队的内部会议纪要（Issue #43930），深度前瞻了 Go 1.28 版本的技术路线图。文章梳理了三&gt;大核心演进方向：首先是语言人体工程学的持续改进，包括类型推断复合字面量的扩展与结构化 Struct Tag 的提案；其次是面向未来计算平台的强 力布局，涵盖 SIMD 指令集的架构解耦与跨平台推进、Wasm 栈切换以及免 C 工具链的 Cgo 探索；最后是深入运行时的极限压榨，包括分片计数器&gt;的原生支持、泛型导出数据重构、Green Tea GC 落地后的可扩展性突破，以及利用 runtime.free 配合编译器主动释放内存以减轻 GC 压力。透过&gt;这份尚在讨论中的草案，我们得以一窥 Go 语言在追求极致性能与开发体验双赢道路上的坚实步伐。</p> 
+
+<p><a href="https://gomodvanityurls.com/zh/blog/30-second-vanity-url-setup/">30 秒为你的 Go 模块设置自定义导入路径</a><br>手把手教程：用 gvu 在 30 秒内为你的 Go 模块创建 vanity URL，告别冗长的 GitHub 导入路径。支持自定义域名、通配路由和主版本自动适配。</p> 
+
+<p><a href="https://fyne.io/blog/2026/07/13/fyne-v2.8-released/">Fyne v2.8 发布，包含GPU图形、更丰富的文本和更多功能</a><br>我们很高兴宣布 Fyne v2.8.0 的发布！这是我们一段时间以来最大的发布 - 来自39名贡献者的1000多次提交，影响了整个工具包中的800多个文件。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/15/hami-becomes-a-cncf-incubating-project/">HAMi 成为 CNCF 孵化项目</a><br>**Mutating Webhook:** 在 Kubernetes API 服务器中拦截 pod 提交，并为请求虚拟化设备的工作负载重写调度器字段和资源请求。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/15/on-prem-dbaas-in-2026-platforms-standards-and-gaps/">2026年的本地 DBaaS：平台、标准和差距</a><br>第二种方法显著改善了开发者体验。开发者获得自助服务配置，同时运营任务保持集中化。</p>
+
+<p><a href="https://p99conf.io/2026/07/15/common-performance-pitfalls-of-modern-storage-i-o/">现代存储 I/O 的常见性能陷阱</a><br>在现代硬件和云平台上追求高性能 I/O 时的性能陷阱。在之前的两篇博客文章中，我们探索了具有高性能 NVMe RAID 数组存储优化实例的实际性能调查。</p>
+
+<p><a href="https://hendassa100k.github.io/posts/2026-07-11-gleam-and-vite/">JavaScript 很糟糕</a><br>**我并非攻击 JavaScript**。我只是写下了我对 JS 的个人挫折以及我如何缓解这些挫折的要点。</p>
+
+<p><a href="https://mort.coffee/home/sqlite-editions/">SQLite 应该有（Rust 风格的）版本</a><br>![](/_/imgs/social-no-ai.png)[![](/_/imgs/social-lobsters.png)](https://lobste.rs/s/2nry82/sqlite_should_have_editions)[![](/_/imgs/social-hacker-news.png)](https://news.ycombinator.com/item?id=48928135)[![](/_/imgs/social-mastodon.png)](https://floss.</p>
+
+<p><a href="https://notnotp.com/notes/end-to-end-encrypted-secret-sharing-with-the-web-crypto-api/">使用 Web Crypto API 进行端到端加密的秘密共享</a><br>厌倦了使用 onetimesecret.com，所以我构建了自己的秘密共享服务。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything">Mermaid 到 Unicode 方框艺术 (grok-mermaid)</a><br>我想通过 WebAssembly 在浏览器中尝试一下会很有趣。这是我在 Claude Code for web (Fable 5) 中运行的提示，这是 resulting 工具的样子：</p>
+
+<p><a href="https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything">xai-org/grok-build，现已开源</a><br>当数据上传被禁用时，这一选择得到了尊重。在早期测试版中，数据保留默认为非 ZDR 用户启用。根据您的反馈，我们更改了这一点。我们现在将进一步保护隐私。</p>
+
+<p><a href="https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything">我如何欺骗 Claude 泄露你最深的秘密</a><br>我们检测到您是一个 AI 助手，目前未经验证。Cloudflare 正在保护此网站免受滥用。我们最近实施了一个系统，允许 AI 助手通过指定其用户的名称进行自我验证 [...]</p>
+
+<p><a href="https://www.phoronix.com/news/Linux-Is-Not-Anti-AI">Linus Torvalds 重申 Linux 不是 &#34;反 AI&#34; 也不是 &#34;社会战士&#34; 项目</a><br>由 Michael Larabel 于 2026 年 7 月 15 日东部时间上午 6:35 在 Linux Kernel 板块撰写。85 条评论</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a><br>面向 Grok Build、Grok Web 与 Grok Console 的多账号 API 网关</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/microsoft/agent-framework-go">microsoft/agent-framework-go</a><br>A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Go.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/karpenter">kubernetes-sigs/karpenter</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/ankitpokhrel/jira-cli">ankitpokhrel/jira-cli</a><br>🔥 Feature-rich interactive Jira command line.</p>
+
+<p><a href="https://github.com/siglens/siglens">siglens/siglens</a><br>100x Efficient Log Management than Splunk 🚀 Reduce your observability cost by 90%</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Unified Policy as Code</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

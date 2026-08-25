@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250604.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250604</span>
+</p>
+<p>每日一谚：Handle errors explicitly </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/04/error-syntax">Go 错误处理语法之争尘埃落定？Go 团队为何十五年探索后仍选择“不”</a><br>Go团队围绕错误处理支持的计划。本文探讨了Go团队多年来为改进Go语言错误处理而提出的多个提案，最终决定在可预见的未来停止追求错误处理的语法更改。文章分析了现状、各种提案的优缺点以及做出这一决定的原因。</p> 
+
+<p><a href="https://docs.hatchet.run/blog/go-agents">为什么我对 Go 构建 Agent 感到兴奋</a><br>本文探讨了使用 Go 语言构建 Agent 的优势。Go 语言的并发模型、基于通道的通信方式、集中的取消机制以及丰富的标准库使其非常适合构建高并发、长运行且资源密集型的 Agent。文章还分析了 Agent 的一些特点，例如长时间运行、高执行成本以及经常需要用户输入，并解释了 Go 如何有效地解决这些问题。文章最后也列举了一些使用 Go 构建 Agent 的不足之处，例如第三方库支持不足、机器学习方面限制以及性能并非最优等。</p> 
+
+<p><a href="https://popovicu.com/posts/cross-compile-cgo-bazel">使用 Bazel 交叉编译 C 和 Go (cgo)</a><br>本指南介绍了如何使用 cgo 和 Bazel 为其他平台交叉编译混合 C 和 Go 二进制文件。文中以 x86_64/Linux 编译 RISC-V/Linux 为例。文章涵盖了 C 和 Go 的交叉编译，以及 Bazel 的使用方法，并提供了一个包含示例代码的 GitHub 仓库链接。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/how-to-make-ai-chatbot-from-scratch/">使用 Docker Model Runner 从零开始创建 AI 聊天机器人</a><br>本指南介绍如何使用 Docker Model Runner 和强大的可观测性工具（包括 Prometheus、Grafana 和 Jaeger）构建功能齐全的生成式 AI 聊天机器人。我们将逐步引导您完成构建一个具有全面监控和指标的生产就绪型聊天机器人的过程，并解决开发人员在构建 AI 应用程序时面临的常见挑战。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/06/03/start-sidecar-first/">优先启动 Sidecar：如何避免陷阱</a><br>Kubernetes 的多容器 Pod 概述博文中介绍了 Sidecar 的作用、主要的架构模式以及在 Kubernetes 中的实现方式。本文主要介绍如何确保 Sidecar 容器在主应用程序之前启动。这比你想象的要复杂！
+简要回顾一下，我想提醒读者，Kubernetes 的 v1.29.0 版本增加了对 Sidecar 容器的原生支持，现在可以在 .spec.initContainers 字段中定义 Sidecar 容器，但其 restartPolicy 为 Always。本文将探讨一些尝试方法，并展示哪些方法真正有效。</p>
+
+<p><a href="https://sbaziotis.com/compilers/what-happens-if-we-inline-everything.html">如果我们将所有内容内联会发生什么？</a><br>你可能会认为所有东西都会崩溃并烧毁，但事实并非如此……本文探讨了将所有函数内联到编译器中的利弊，以及在LLVM编译器中实现这一目标的挑战和结果。实验表明，虽然内联所有内容会极大地增加编译时间和可执行文件大小，但在运行时性能方面并没有明显的下降，甚至可能略有提升。</p>
+
+<p><a href="https://www.evolvebenchmark.com/blog-posts/how-we-wrap-external-c-and-cpp-libraries-in-rust">如何在 Rust 中包装外部C和C&#43;&#43;库</a><br>这篇文章详细介绍了我们如何以务实的方式设置 build.rs 文件，以获得轻松的开发体验。文章强调了保持 build.rs 文件简洁的重要性，建议仅使用 cc 和 bindgen crate，并避免使用 pkg-config 等外部工具。文章还介绍了使用 vendored 和 bindgen 特性以及 git submodules 来简化构建过程，并提供了几个开源项目的真实案例。最后，文章还提供了一个最小 build.rs 文件的示例以及一些最佳实践，旨在帮助开发者创建更简洁、可维护和可重复的 Rust 项目。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://macro.com/app/md/54115a42-3409-4f5b-9120-f144d3ecd23a">宏观 AI 工作区</a><br>这是一个需要启用JavaScript才能运行的应用程序。</p>
+
+<p><a href="https://richardcsuwandi.github.io/blog/2025/dgm">能够自我改进的 AI</a><br>本文深入探讨了自我改进的 AI 和达尔文-哥德尔机器。大多数 AI 系统依赖于人类设计的固定架构，缺乏随着时间推移自主发展的能力。本文介绍了元学习的概念，并探讨了达尔文-哥德尔机器（DGM），这是一种结合了达尔文进化和哥德尔自我改进的自我改进 AI 系统。DGM 通过迭代地修改自身的代码，并在基准测试中验证改进效果，来提高自身性能。文章还比较了 DGM 和 DeepMind 的 AlphaEvolve，并讨论了自我改进 AI 的可信度和安全问题。</p>
+
+<p><a href="https://a16z.com/ai-market-research">更快、更智能、更便宜：人工智能正在重塑市场研究</a><br>几十年来，公司投入数十亿美元进行市场研究以更好地了解客户，但却受到缓慢的调查、有偏见的调查小组和滞后洞察的限制。尽管每年在市场研究上花费1400亿美元，但软件只不过是微不足道的小数点。人工智能正在改变这种情况，早期的人工智能公司正在利用语音到文本和文本到语音模型来构建人工智能原生调查平台，这些平台可以与人们进行自主视频访谈，然后使用大型语言模型来分析结果并创建演示文稿。现在，我们看到一系列人工智能研究公司完全取代了昂贵的人工调查和分析流程。这些公司不再招募一组人并询问他们的想法，而是可以模拟整个人工智能代理的社会，这些代理可以被查询、观察和实验，从而模拟真实的人类行为。这将市场研究从滞后的、一次性的投入转变为持续的、动态的优势。</p>
+
+<p><a href="https://asteriskmag.com/issues/10/does-ai-progress-have-a-speed-limit">AI 发展速度是否有上限？</a><br>本文是关于AI发展速度可能受到哪些因素限制，接下来可能发生什么以及我们能否预见未来的对话。对话双方为Ajeya Cotra和Arvind Narayanan，他们探讨了迁移学习的可能性、评估AI可靠性的方法、以及AI安全相关的风险，例如网络安全风险和生物风险。他们还讨论了AI公司发展策略以及对未来世界的影响。</p>
+
+<p><a href="https://www.pcloadletter.dev/blog/ai-will-make-blogging-better">生成式AI可能会让博客变得更好</a><br>文章探讨了搜索引擎优化（SEO）对网络内容质量的负面影响，并认为生成式AI的兴起可能带来改变。随着AI搜索结果的普及，对SEO内容的需求将下降，博客将回归到创作和分享的本质，不再仅仅为了迎合搜索引擎算法。</p>
+
+<p><a href="https://www.prompthub.us/blog/a-complete-guide-to-meta-prompting">元提示的完整指南</a><br>本文深入探讨了最新的元提示方法，例如 DSPy 和 TEXTGRAD，以及最好的提示生成器工具。元提示是一种提示工程方法，它使用大型语言模型 (LLM) 来创建和改进提示。与传统的提示工程不同，元提示会引导 LLM 动态地调整你的提示，基于你的反馈，使其能够处理更复杂的任务和不断变化的上下文。文章介绍了多种元提示方法，包括斯坦福大学和 OpenAI 合作开发的元提示、基于对比提示的学习 (LCP)、自动提示工程师 (APE)、PromptAgent、对话式提示工程 (CPE)、DSPy 和 TEXTGRAD，并提供了大量的示例，方便读者立即在工作流程和应用程序中使用这些技术。此外，文章还介绍了 PromptHub 等工具，它们如何整合元提示来提高提示工程的效率。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/aquasecurity/kube-bench">aquasecurity/kube-bench</a><br>Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/langhuihui/monibuca">langhuihui/monibuca</a><br>🧩 Monibuca is a Modularized, Extensible framework for building Streaming Server</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/cloudreve/Cloudreve">cloudreve/Cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/apache/answer">apache/answer</a><br>A Q&amp;A platform software for teams at any scales. Whether it&#39;s a community forum, help center, or knowledge management platform, you can always count on Apache Answer.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/gophish/gophish">gophish/gophish</a><br>Open-Source Phishing Toolkit</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

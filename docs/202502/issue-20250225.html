@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250225.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250225</span>
+</p>
+<p>每日一谚：Gofmt is part of the culture </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.maragu.dev/blog/evaluate-llm-apps-in-go">使用Go评估大型语言模型应用程序</a><br>随着大型语言模型 (LLM) 在应用程序中越来越重要，确保其可靠运行带来了一些挑战。与具有可预测输出的传统代码不同，LLM 是不确定的，并且可能输出完全奇怪的东西。这就是好的评估工具发挥作用的地方！在这篇文章中，我将向您展示来自我新命名的 maragu.dev/gai 模块的 eval 包。我将向您展示 Go 开发人员如何使用此包系统地评估 LLM 应用程序，同时与 Go 的现有测试工具无缝协作。无需学习全新的框架！（咳咳）LangChain（咳咳）。文章介绍了 LLM 评估方法，包括准确性、相关性和一致性，并阐述了如何利用 eval 包进行评估，包括使用不同类型的评分器（词法相似性和语义相似性）进行评估。文章最后介绍了如何将评估集成到开发工作流程中，以及如何跟踪性能随时间的变化。</p> 
+
+<p><a href="https://www.infoq.com/news/2025/02/go-1-24-generic-aliases/">Go 1.24 引入泛型类型别名、弱指针、改进的终结器等更多功能</a><br>Go 语言的最新版本 Go 1.24 引入了一些重要特性，包括泛型类型别名、弱指针、改进的清理终结器等等。它还提升了运行时性能，例如 map 默认实现、小型对象分配和互斥锁处理。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoNilChannelsMapsAreAChoice">Go零值通道和映射的行为是一个部分选择</a><br>如果你有一个零值通道或映射（即“nil”通道或映射），Go 的行为有点令人困惑。当我们讨论这一点时，值得记住的是，这种行为在某种程度上是 Go 的一种任意选择，而不是源于其他语言语义的基本要求。Go 有其通道和映射这样行为的原因，其中一些与通道和映射值的实现有关，另一些则与编程的便利性有关。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/ghosttying-go">Fallthrough | Ghosttying Go</a><br>本期节目中，Matt 和 Kris 邀请了 Mitchell Hashimoto 来讨论他的最新项目 Ghostty、Zig 编程语言，以及对 Go 的看法等等。本期节目还包含了 Fallthrough Fan 及以上订阅用户的额外内容！</p> 
+
+<p><a href="https://vjerci.com/writings/interfaces-in-golang">Go语言中的接口</a><br>本文探讨了在Go语言中定义接口和数据结构的正确方法。作者首先介绍了一种错误的方法，即在存储包中定义接口和数据结构，这种方法会导致代码难以维护和扩展。然后，作者提出了一种更佳的方法，即在控制器包中定义接口和数据结构，这种方法使得代码更易于维护和扩展，并符合Liskov替换原则。此外，文章还讨论了接口大小的选择以及一些最佳实践，建议接口方法数量保持在5个以下，或者将大型接口拆分成多个小型接口。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://eng.lyft.com/facetcontroller-how-we-made-infrastructure-changes-at-lyft-simple-dab49f5b27c7">FacetController：如何简化 Lyft 的基础设施变更</a><br>本文深入探讨了 Lyft 的部署架构，以及如何利用 Kubernetes 自定义资源定义 (CRD) 创建抽象层，简化公司范围内的基础设施部署。文章介绍了 Lyft 使用的几种 Facet 类型（服务 Facet、工作器 Facet、Cron Facet、作业 Facet 和批处理 Facet），并解释了 FacetController 如何管理 Facet 的生命周期，从而实现基础设施变更的自动化和简化，例如从 Kubernetes/autoscaler 向 Karpenter 的迁移以及 Kubernetes 版本升级。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/02/24/introducing-k0rdent-design-deploy-and-manage-kubernetes-based-idps/">介绍 k0rdent：设计、部署和管理基于 Kubernetes 的 IDP</a><br>Kubernetes 是事实上的容器编排标准，但有效管理完整的基础设施仍然是一项重大挑战。如果没有标准化的方法，大多数构建内部开发者门户 (IDP) 的组织都会面临配置和策略不一致、运营开销高以及升级复杂等问题，从而导致效率低下、成本高昂以及多云和混合环境中的安全和合规性风险。k0rdent 是一个 Kubernetes 原生的分布式容器管理环境 (DCME)，旨在帮助平台工程师大规模管理基础设施。它通过提供可重复、安全和标准化的方法，使团队能够构建支持复杂现代工作负载的内部开发者平台 (IDP)，同时确保一致性和可靠性。</p>
+
+<p><a href="https://blog.gitbutler.com/how-git-core-devs-configure-git">Git核心开发者如何配置Git</a><br>哪些`git config`设置现在应该成为默认设置？本文介绍了一些即使核心开发者也会更改的设置。</p>
+
+<p><a href="https://benjaminwootton.com/insights/clickhouse-peerdb-cdc">可靠地将数据从PostgreSQL复制到ClickHouse（第一部分） - PeerDB开源</a><br>本系列文章将演示如何可靠地将数据从PostgreSQL复制到ClickHouse。第一部分将使用PeerDB开源工具，利用开源且自管理的堆栈实现此目标。第二部分将探讨如何使用ClickHouse Cloud的数据集成组件ClickPipes实现相同结果，该方案是一个完全托管的解决方案。第三部分将提供一个包含这两个工具的视频演练，方便那些更喜欢直观演示的用户。</p>
+
+<p><a href="https://www.gilesthomas.com/2025/02/blogging-in-the-age-of-ai">人工智能时代，写博客仍然值得吗？</a><br>尽管人工智能似乎让写博客变得毫无意义，但我仍然认为它值得。这篇文章总结了作者坚持写博客的原因：写博客不仅是为了被阅读，更是为了学习和思考，并留下持久的证据证明自己能够做到这两点。作者还讨论了人工智能对博客的影响，以及如何利用博客建立个人品牌和职业发展。虽然人工智能可能会减少读者互动，但这并不足以成为停止写博客的理由。</p>
+
+<p><a href="https://github.com/johnousterhout/aposd-vs-clean-code/blob/main/README.md">John Ousterhout与Robert Martin关于软件设计理念的讨论</a><br>本文档记录了John Ousterhout和Robert &#34;Uncle Bob&#34; Martin之间关于软件设计理念差异的讨论，涵盖了方法长度、注释和测试驱动开发等方面。双方就代码分解的程度、注释的必要性以及测试驱动开发的优缺点进行了深入探讨，并分享了各自的经验和观点。讨论中涉及到具体的代码示例（PrimeGenerator），并对不同方法的优缺点进行了比较。</p>
+
+<p><a href="https://stacksweep.substack.com/p/yes-you-should-use-sqlite-notions">是的，你应该使用 SQLite：Notion 利用 SQLite 的创造性方法，提升加载速度 20%</a><br>这篇博文总结了 Notion 的一篇博客文章，文章讲述了 Notion 如何利用 WebAssembly 编译的 SQLite 客户端数据库，从而将网页应用的页面导航延迟降低 20%。文章还讨论了 Notion 在此过程中遇到的挑战以及解决方案，包括异步加载 WASM SQLite、处理慢速磁盘读取以及使用 SharedWorker 和 Web Locks API 防止数据库损坏。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/news/claude-3-7-sonnet">Claude 3.7 Sonnet 和 Claude Code</a><br>Anthropic 发布了 Claude 3.7 Sonnet，这是迄今为止最智能的模型，也是市场上首个普遍可用的混合推理模型。Claude 3.7 Sonnet 可以生成近乎即时的响应或扩展的、逐步的思考过程，并将其可视化给用户。API 用户还可以对模型的思考时间进行细粒度的控制。该模型在编码和前端 Web 开发方面表现出显著的改进。同时，还推出了一个用于自主编码的命令行工具 Claude Code，目前作为有限的研究预览版提供，允许开发人员直接从终端将大量的工程任务委托给 Claude。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq is a portable command-line YAML, JSON, XML, CSV, TOML and properties processor</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/veops/oneterm">veops/oneterm</a><br>Provide secure access and control over all infrastructure</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/hashicorp/hcl">hashicorp/hcl</a><br>HCL is the HashiCorp configuration language.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

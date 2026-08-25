@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260729.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260729</span>
+</p>
+<p>每日一谚：Avoid global mutable state at all costs </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/29/go-1-28-generic-collections-proposal">Go 1.28 大动作：泛型集合终于要进标准库了，Set、树形Map、堆一次性标准化</a><br>Go 官方 Collections 工作组正式提出泛型集合标准化方案，一口气带来 hash.Map、hash.Set、set.Set、tree.Map、heap/v2.Heap 等 7 个提案，并首次给出解决“二元方法问题”的抽象集合接口设计。这是 Go 语言标准库多年来最系统的一次集合类型补课。</p> 
+
+<p><a href="https://blog.getzep.com/agentic-development-in-go/">在不使用框架的情况下构建Go智能体</a><br>生产环境中的智能体是一个长时间运行的、并发的、I/O密集型进程。这种架构非常适合Go的运行时：goroutine每个约2KB，channels用于协调和流式传输，而`context.Context`可以一次性取消所有库中的运行。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/28/lima-v2-2-windows-guests-and-tpm-2-0-emulation/">Lima v2.2：Windows客户机和TPM 2.0仿真</a><br>该指导计划的主要目标是添加Windows客户机支持。现在我们的受训者已成功实现这一点，他们的重点已转移到确保在Windows主机上实现无缝的Lima体验。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/28/welcome-cohdi-to-the-cncf-evolving-kubernetes-into-composable-disaggregated-infrastructures/">欢迎CoHDI加入CNCF：将Kubernetes演变为可组合的去中心化基础设施</a><br>CoHDI（前身为InfraDDS）于2025年3月由Red Hat、FSAS、Fujitsu、IBM Research和NTT共同发起成立，旨在培育一个由社区驱动、基于标准的生态系统，用于构建在可组合硬件去中心化架构上的下一代架构。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/28/kubeflow-unveils-new-cloud-native-innovations-to-supercharge-ai/">Kubeflow发布新的云原生创新以加速AI发展</a><br>Kubeflow项目正迅速向CNCF毕业阶段推进，强调其演变为成熟的、生产就绪的ML生态系统。这一势头由项目中的几个不同里程碑驱动。最近的技术更新包括Kale 2的官方集成。</p>
+
+<p><a href="https://seangoedecke.com/you-dont-have-to-be-smart-if-you-think-clearly/">如果你能清晰地思考，就不必聪明</a><br>这些聪明的工程师缺乏什么技能？我认为是**缓慢而清晰地思考的能力**。聪明的工程师可以清晰地思考，但他们只能在高速下清晰地思考。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/">回顾微软财年26：从AI实验到前沿转型</a><br>[**多米尼加人民银行**]作为多米尼加共和国最大的私营部门银行，将运营风险管理从周期性、基于样本的审查转变为持续的、由AI驱动的...</p>
+
+<p><a href="https://www.docker.com/blog/coding-agent-horror-stories-the-29-million-secret-problem/">编码智能体恐怖故事：2900万个secret问题</a><br>1. **不要将您的凭证文件交给智能体**。将secret保存在主机上并在网络边界处注入。智能体永远不会看到的秘密是它无法提交、无法记录也无法被欺骗泄露的秘密。2. **给智能体工作区，而不是整个机器**。</p>
+
+<p><a href="https://blog.coderspirit.xyz/blog/2026/07/06/securing-services-with-rootless-containers/">确保你不是机器人！</a><br>本文讨论了如何确保服务不被自动化机器人滥用，介绍了使用无根容器来保护服务的方法。</p>
+
+<p><a href="https://naveensrinivasan.com/posts/2026-07-22-how-do-i-profile-ebpf-code/">如何分析eBPF代码？</a><br></p>
+
+<p><a href="https://mlugg.co.uk/posts/incremental-compilation-internals/">Zig增量编译内部机制</a><br>作为[Zig]核心团队的成员，我参与的最具影响力的项目之一是在Zig编译器中实现_增量编译_。</p>
+
+<p><a href="https://elizabethtai.com/2026/06/10/substack-writers-you-need-a-website/">Substack作者，你需要一个网站！</a><br>尽管你已经在Substack上拥有一个网站，但拥有独立的个人网站可以提供更多控制和品牌展示机会。</p>
+
+<p><a href="https://clickhouse.com/blog/strict-memory-overcommit-for-postgres">为什么严格的内存过度提交对Postgres很重要</a><br>严格的内存过度提交策略对于PostgreSQL数据库的稳定性和性能至关重要，可以防止系统资源耗尽导致的服务中断。</p>
+
+<p><a href="https://lavahq.io/research/bmc-exposure-alert">我们如何利用一个20年前的漏洞在几分钟内入侵了数千个数据中心</a><br>研究人员发现并利用了一个存在20年的漏洞，成功在短时间内入侵了全球数千个数据中心，揭示了老旧系统安全防护的薄弱环节。</p>
+
+<p><a href="https://blog.adrianhall.uk/posts/2026/2026-07-28-cf-terraform.html">使用Terraform与Cloudflare</a><br>作者最近在Cloudflare上构建了一系列演示应用程序，每个应用都遵循相同的部署流程：创建API令牌，使用[Terraform]配置基础设施。</p>
+
+<p><a href="https://rushter.com/blog/rust-memory-arenas/">从头开始用Rust编写内存arenas</a><br>由于所有权模型，自定义内存分配和内存区域在Rust中 notoriously 难以处理。在许多项目中，它们可以显著提高性能。</p>
+
+<p><a href="https://antithesis.com/blog/2026/finding-bugs-in-raft-implementations/">在Raft实现中寻找bug</a><br>研究人员分析了多种Raft算法实现，发现并记录了其中存在的潜在缺陷，为分布式系统开发者提供了宝贵的调试参考。</p>
+
+<p><a href="https://chiristo.dev/blog/designing-flash-booking-system-part-1">闪订系统：为什么更多服务器无济于事</a><br>本文探讨了闪订系统面临的性能挑战，分析了为什么简单地增加服务器数量无法解决根本问题，并提出了可能的解决方案方向。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything">使用Claude发现密码学弱点</a><br>研究表明，大型语言模型在适当提示下能够发现传统密码分析中可能被忽视的弱点，展示了AI在密码学领域的应用潜力。</p>
+
+<p><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">使用Claude发现密码学弱点</a><br>Anthropic的研究团队展示了如何使用Claude模型发现密码学实现中的潜在弱点，为密码学安全提供了新的分析视角。</p>
+
+<p><a href="https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html">Kimi K3架构笔记</a><br>作者分析了Kimi K3架构的特点，指出这本质上是一个经过扩展的生产版本，采用了类似Kimi Linear模型的设计理念，但在规模和功能上有所增强。</p>
+
+<p><a href="https://x.com/github/status/2082201573976056245">GitHub在X上表示：你没有落后</a><br>GitHub强调开发者不必担心落后于他人，有效的工具和可重复的工作流程才是提高开发效率的关键，并介绍了GitHub Copilot的使用方法。</p>
+
+<p><a href="https://www.a16z.news/p/lighthouse-or-landgrab-how-to-pick">是指南灯塔还是圈地运动？如何选择您的AI销售策略</a><br>购买者不会购买未来，他们购买的是证明或数学。AI销售策略需要在教育市场和快速占领市场之间找到平衡点。</p>
+
+<p><a href="https://mlx-optiq.com/blog/harness-matters">OptiQ Code与opencode：本地编码智能体基准测试</a><br>研究人员在相同的本地模型（4位Qwen3）上测试了两种编码智能体，比较了它们在不同任务上的性能表现，为开发者选择合适的编码辅助工具提供了参考。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Open-source &amp; free — Battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, threa</p>
+
+<p><a href="https://github.com/larksuite/cli">larksuite/cli</a><br>The official Lark/Feishu CLI tool, maintained by the larksuite team — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Mee</p>
+
+<p><a href="https://github.com/benbjohnson/litestream">benbjohnson/litestream</a><br>Streaming replication for SQLite.</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/Ed1s0nZ/CyberStrikeAI">Ed1s0nZ/CyberStrikeAI</a><br>The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/black-ant/Ant-Browser">black-ant/Ant-Browser</a><br>指纹浏览器</p>
+
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250203.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250203</span>
+</p>
+<p>每日一谚：Write code that is easy to optimize, not code that needs to be optimized </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@duggal.sarthak12/building-your-own-git-from-scratch-in-go-01166fcb18ad">从零开始用Go构建你自己的Git</a><br>本文是关于如何用 Golang 构建你自己的 Git 的系列文章的第一部分。文中将讲解一些 Git 命令的内部机制，然后演示如何通过代码模拟这些命令的行为，并通过编写测试用例来测试这些命令。我们将使用 Golang 来编写代码。文章涵盖了三个基本的 Git 命令：git init、git cat-file 和 git hash-object。</p> 
+
+<p><a href="https://blog.alpn-software.com/article/golang-unittesting-with-dynamodb">Go语言和DynamoDB：测试驱动开发方法</a><br>数据库的填充和配置是测试驱动开发的关键组成部分。学习如何在Go语言中编写生命周期钩子来为测试填充你的DynamoDB表。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/BuildSystemsAndAPIChanges">构建系统及其对版本控制和 API 变更的影响</a><br>这篇文章讨论了构建系统如何影响软件的版本控制和 API 变更。作者认为，传统的构建系统（例如 C 语言的构建系统）由于缺乏依赖管理和网络连接的限制，促使开发者保持向后和向前兼容性。而现代语言（例如 Go 和 Rust）的构建系统则更加灵活，使得开发者更容易使用最新版本的依赖项，也更容易进行 API 变更。作者认为这种变化改变了开发者对兼容性的期望，也对软件生态系统产生了影响。</p> 
+
+<p><a href="https://cefboud.com/posts/image-formats">图像究竟是如何存储的？</a><br>本文探讨了图像存储的细节，涵盖了图像的基础知识、无损格式（GIF、PNG）和有损格式（JPEG）的原理。文章深入分析了GIF和PNG的编码过程，包括GIF的调色板索引、LZ压缩以及PNG的滤波和DEFLATE压缩。对于JPEG，文章简述了YCbCr颜色空间转换、色度子采样等概念。</p> 
+
+<p><a href="https://engineering.turistikrota.com/modern-web-development-with-go-a-lightweight-alternative-to-react-ssr-cccce8631773">使用Go进行现代 Web 开发：React SSR 的轻量级替代方案</a><br>近年来，Web 开发领域发生了显著变化，尤其是在 React 的服务器端渲染 (SSR) 功能方面。但是，对于使用 Go 等非 JavaScript 后端语言的开发者来说，这带来了一项独特的挑战。本文探讨了一种结合两大优点的现代高效 Web 开发方法。</p> 
+
+<p><a href="https://medium.com/@siddharthnarayan/immutable-vs-mutable-data-structures-in-go-ff28d86228d3">Go语言中不可变与可变数据结构</a><br>在使用 Go 语言时，理解不可变和可变数据结构的区别会对应用程序的设计、调试和扩展产生重大影响。虽然 Go 语言本身并不强制执行不可变性，但其习惯用法和设计实践提供了灵活地有效使用这两种范式的能力。本文将深入探讨这些概念，并结合实际示例说明何时使用每种结构。</p> 
+
+<p><a href="https://dev.to/jones_charles_ad50858dbc0/mastering-scheduled-tasks-in-goframe-a-practical-guide-1b31">掌握 GoFrame 中的定时任务：实用指南</a><br>这篇博文介绍了如何在 Go 后端优雅地处理定时任务，例如运行每日分析、清理过期数据或发送定时通知。文章重点讲解了如何使用 GoFrame 的 gcron 模块，该模块提供了一种比 Go 原生 time 包更易于使用的 Cron 表达式调度方法，并包含配置支持、内置错误处理和与 GoFrame 生态系统的轻松集成。文章还涵盖了创建各种定时任务、优雅地处理故障以及最佳实践和专业技巧等方面的内容。</p> 
+
+<p><a href="https://medium.com/@0xape/8-tips-to-make-your-go-code-shorter-8e62f0e0e771">8 个技巧让你的 Go 代码更简洁</a><br>Go 语言旨在简洁易用，并提供足够好的性能，但有时会导致代码冗长。幸运的是，Go 标准库使一些任务更容易，并且还在不断添加更多功能。让我们看看内置函数、切片、映射和 cmp 如何帮助我们开发高质量的代码。（撰写本文时 Go 版本为 1.23）</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://eli.thegreenplace.net/2025/decorator-jits-python-as-a-dsl/">装饰器JIT：Python 作为 DSL</a><br>本文探讨了机器学习中 Python 程序和包中流行的“JIT 装饰器”模式的实现策略。文章以 JAX 和 Triton 语言为例，解释了如何将 Python 函数转换为表达式 IR，再转换为 LLVM IR，最后进行 JIT 执行。文章介绍了 AST 方法和字节码方法两种 JIT 实现策略，并以 Triton 和 Numba 为例进行了阐述。此外，文章还介绍了基于追踪的 JIT 策略，并以 JAX 为例进行了说明。最后，文章总结了不同 JIT 策略的优缺点，并给出了完整的代码链接。</p>
+
+<p><a href="https://newsletter.scalablethread.com/p/what-is-the-byzantine-generals-problem">分布式系统中的拜占庭将军问题是什么？</a><br>本文探讨了分布式计算中的拜占庭将军问题，这是一个思想实验，用于理解在某些节点可能不可靠或不可信（节点行为）的情况下达成共识的挑战。它说明了当某些系统成员可能不诚实地行事时，协调行动有多么困难。文章解释了拜占庭节点的行为方式，以及如何在分布式系统中确保共识。此外，文章还介绍了“3f&#43;1”规则，该规则指出，如果超过三分之一的参与者出现故障，则无法达成一致。最后，文章还提供了参考链接。</p>
+
+<p><a href="https://www.righto.com/2025/02/origin-of-mainframe-term.html">术语“大型机”的起源和意外演变</a><br>本文探讨了“大型机”一词的起源及其含义的演变。它追溯到IBM 701计算机（1952年），该计算机使用“主框架”来指代计算机的主要部分。随着时间的推移，“大型机”的含义从计算机的物理部件转变为一种类型的计算机，最终成为指代大型、强大的用于事务处理或业务应用程序的计算机。</p>
+
+<p><a href="https://grantslatton.com/how-to-design-document">如何撰写优秀的方案设计文档</a><br>本文档介绍了如何撰写优秀的方案设计文档。它强调了文档的组织结构、编辑以及写作技巧的重要性，并提供了具体的建议，例如使用短段落、附录以及编辑示例等，旨在帮助读者撰写清晰、简洁且易于理解的设计文档，最终说服读者相信方案的优化性。</p>
+
+<p><a href="https://lightfoot.dev/why-arent-you-idempotent">为什么你的系统不幂等？</a><br>幂等性没有得到应有的关注。它使分布式系统能够兼具弹性和高性能。如果你像我们一样，正在构建低延迟 API 并面临违反 SLA 的重大损失，那么这篇文章可能值得你花时间阅读。本文探讨了什么是幂等性，为什么它很重要，以及如何构建幂等的端点，包括使用客户端提供的标识符、客户端提供的Timestamps和校准计数器等技术。文章还讨论了使用对冲请求来提高性能，以及一些有助于构建容错系统的库。</p>
+
+<p><a href="https://mahaloz.re/dec-progress-2024">2024年反编译研究的复苏之年</a><br>2024年是反编译领域复苏的一年。当年的学术出版物几乎占据了所有顶级反编译出版物的30%。本文总结了2024年反编译的学术和思想进展。提示：反编译研究又回来了。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Feb/3/a-computer-can-never-be-held-accountable/#atom-everything">计算机永远无法被追究责任</a><br>这篇文章讨论了一张来自1979年IBM内部培训的传奇页面，该页面指出“计算机永远无法被追究责任，因此计算机永远不能做出管理决策”。文章追溯了这张图片的来源，以及人们试图寻找其原始出处和最终被洪水冲毁的经历。文章强调了这张图片在人工智能时代依然具有现实意义。</p>
+
+<p><a href="https://www.theverge.com/openai/603952/sam-altman-stargate-ai-data-center-plan-hype-funding">萨姆·阿尔特曼的“星际之门”是科幻小说</a><br>由OpenAI的萨姆·阿尔特曼领导，并得到唐纳德·特朗普、软银及其他公司支持的数据中心项目“星际之门”，雄心勃勃，但基础却很薄弱。该项目计划投资5000亿美元建设OpenAI的数据中心帝国，但其资金来源和可行性都面临质疑。文章分析了该项目的资金来源、潜在问题以及其与福克斯康项目的相似之处，并探讨了如果单纯的计算能力并非通往AGI的道路，该项目可能造成的巨大技术误判。</p>
+
+<p><a href="https://evanhahn.com/llms-and-technical-innovation">大型语言模型：对技术创新有害吗？</a><br>大型语言模型（LLM）的训练数据主要集中在流行的技术上，导致新兴技术在使用LLM时体验较差，这可能会略微阻碍创新。文章以编程语言和htmx框架为例，说明了LLM数据偏差如何使流行技术保持其地位，并对新技术的采用构成挑战。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/starfederation/datastar">starfederation/datastar</a><br>The hypermedia framework.</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/WireGuard/wireguard-go">WireGuard/wireguard-go</a><br>Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go</p>
+
+<p><a href="https://github.com/sashabaranov/go-openai">sashabaranov/go-openai</a><br>OpenAI ChatGPT, GPT-3, GPT-4, DALL·E, Whisper API wrapper for Go</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/cloudreve/Cloudreve">cloudreve/Cloudreve</a><br>🌩支持多家云存储的云盘系统 (Self-hosted file management and sharing system, supports multiple storage providers)</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery, the cloud native manager</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

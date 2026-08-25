@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250105.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250105</span>
+</p>
+<p>每日一谚：In the world of Go, clarity triumphs over brevity. Embrace clear code, even if it means typing extra lines. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://meetsoni15.medium.com/unveiling-golangs-hidden-internals-discover-the-hidden-mechanics-that-optimize-performance-8f946f784041">揭秘Go语言的秘诀：深入探讨其内部机制</a><br>Go 的运行时系统在并发和性能方面堪称强大。Go 调度器、内存模型、垃圾收集器和栈管理是其性能和效率的核心。本文深入探讨了 Go 运行时的核心机制，揭示了 Go 如何处理并发、内存管理和系统优化的深刻技术见解，包括 Goroutine 调度、内存模型、垃圾收集和栈管理。</p> 
+
+<p><a href="https://stuff.narf.zone/posts/unmarshal">编写你自己的json.Unmarshal</a><br>本文介绍了如何编写一个自定义的 Golang 函数来填充结构体，类似于 `json.Unmarshal` 的功能。该函数能够处理来自各种来源的数据，例如 URL 查询参数、表单数据和路径变量。它使用反射和结构体标签来映射数据，并支持嵌套结构体和 `encoding.TextUnmarshaler` 接口。文章逐步讲解了实现过程，包括处理基本类型、结构体、指针类型和循环依赖，并最终实现了一个高效且健壮的 `Unmarshal` 函数。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-01-03-gos-debug-string-pseudo-standard">DebugString()：Go库的便捷伪标准</a><br>本文介绍了在 Go 语言中使用 DebugString() 方法作为一种非正式标准来简化大型数据对象调试的实践。Dolt 数据库项目利用该方法有效地调试复杂的查询计划树，并通过比较 DebugString() 输出的差异来快速识别和修复错误。作者鼓励更多项目采用此方法，以增强其作为伪标准的地位。</p> 
+
+<p><a href="https://nsrip.com/posts/clobberfp.html">不要覆盖帧指针</a><br>本文讨论了Go语言中两个因错误的汇编代码覆盖帧指针而导致的崩溃问题。第一个问题是由于在AMD64架构上，汇编代码将帧指针寄存器（BP）的值覆盖，而没有保存和恢复旧值。第二个问题是在ARM64架构上，汇编代码覆盖了保存在栈上的帧指针值。文章解释了这些错误，讨论了ABI和调用约定，并提出了一些避免这些错误的建议，包括使用汇编生成器（如Avo），避免在调用Go函数时使用帧指针寄存器，以及正确保存和恢复帧指针。文章还分析了导致这些错误的代码，并指出了Go vet检查的局限性。</p> 
+
+<p><a href="https://dev.to/0x3d_site/25-must-have-golang-tools-and-libraries-youll-actually-use-for-everyday-coding-4gi1"> 25 个你日常编码中真正会用到的 Go 语言工具和库</a><br>这篇文章收集了25个Go语言工具和库的GitHub链接，涵盖了更新二进制文件、生成奇幻名称、转换多种数据格式、计算机视觉、资源嵌入、依赖注入、微服务框架、加密API令牌、图像处理、YARA绑定、日志记录等多个方面。文章还包含一些Go语言Meetup小组的链接以及一个关于如何快速通过AI和Notion模板赚钱的指南。</p> 
+
+<p><a href="https://dev.to/yokwejuste/how-to-scan-in-golang-5gk0">如何在 GoLang 中进行Scan</a><br>Go（golang）的 fmt 包提供了多个函数，用于从控制台或其他输入源扫描输入。本文探讨了 fmt.Scan、fmt.Scanln、fmt.Scanf 和 bufio.NewReader 四个函数，并说明了它们的使用方法、用途和适用场景，以及它们在处理不同类型输入时的差异。</p> 
+
+<p><a href="https://dev.to/dev-resources/30-must-read-go-resources-to-level-up-your-skills-3rd-january-2025-56jh">30 个必读 Go 资源，提升你的技能</a><br>这篇文章列出了 30 个必读的 Go 资源，涵盖了从打印到并发、数据库优化等多个方面，旨在帮助开发者提升 Go 编程技能。文章包含多个链接，指向各个资源的具体文章或网站。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.freecodecamp.org/news/design-patterns-for-distributed-systems">分布式系统设计模式手册——每个开发者都应该了解的关键概念</a><br>本文介绍了分布式系统，并探讨了在构建分布式系统时会遇到的常见挑战，例如异构性、可扩展性、开放性、透明性、并发性、安全性以及故障处理。文章深入介绍了多种设计模式，包括命令查询责任分离 (CQRS)、两阶段提交 (2PC)、Saga 模式、复制负载均衡服务 (RLBS)、分片服务模式、Sidecar 模式、预写日志技术、脑裂模式、提示式移交模式、读修复模式、服务注册模式、断路器模式、领导者选举模式、舱壁模式、重试模式、分散收集模式以及布隆过滤器数据结构。此外，文章还提供了学习分布式系统的推荐资源。</p>
+
+<p><a href="https://blog.cloudflare.com/multi-path-tcp-revolutionizing-connectivity-one-path-at-a-time">多路径 TCP：一次一条路径，彻底改变连接方式</a><br>多路径 TCP (MPTCP) 利用多个网络接口（如 Wi-Fi 和蜂窝网络）为更可靠的连接提供无缝移动性。虽然很有前景，但 MPTCP 仍处于早期阶段，支持有限，实际用例也较少。本文探讨了它的潜力和当前的局限性。文章深入探讨了 MPTCP 的工作原理，包括子流、路径管理器和调度程序，并比较了 Linux 和 macOS/iOS 的实现方式。  还讨论了 IPv6 的一些问题，以及 MPTCP 的未来发展方向。</p>
+
+<p><a href="https://tanelpoder.com/posts/visualizing-sql-plan-execution-time-with-flamegraphs">使用 FlameGraphs 可视化 SQL 计划执行时间</a><br>本文介绍了一种使用 FlameGraphs 可视化 RDBMS SQL 执行计划响应时间和资源使用情况的新方法，该方法在计划操作符级别显示数据，即使对于非常大的计划，也能一目了然地查看全局情况。文章还说明了典型的 RDBMS SQL 计划执行实际上只是一组按计划本身定义的层次结构和顺序执行的函数调用，它与常规应用程序在其模块中循环调用子例程的方式非常相似，因此可以应用 FlameGraph 堆栈跟踪可视化机制而无需任何修改。</p>
+
+<p><a href="https://tanelpoder.com/posts/sql-plan-flamegraph-loop-row-counts">向 SQL 计划执行火焰图添加循环和行计数器</a><br>本文介绍了如何通过在 SQL 计划执行火焰图中添加循环和行计数器来改进 SQL 执行计划的可视化。作者更新了其 sqlflame.sql 脚本（适用于 Oracle），在火焰图的每个条形图中添加了“starts”（Oracle 中的术语，相当于 Postgres 中的“loops”）和“rows”字段，分别表示操作执行的次数和产生的行数。通过这些新增信息，可以更清晰地了解 SQL 执行计划中各个操作的时间消耗与执行次数和数据量之间的关系，从而更有效地进行 SQL 性能调优。文章中包含多个带有交互式 SVG 图形的示例，展示了如何利用这些新增信息分析和优化复杂的 SQL 查询。</p>
+
+<p><a href="https://blog.cloudflare.com/missing-manuals-io_uring-worker-pool">io_uring 工作池</a><br>你可能听说过 io_uring。它于 2019 年首次出现在 Linux 5.1 中，并被宣传为异步 I/O 的新 API。它的目标是替代被认为已无法修复的 AIO（旧的异步 I/O API）。本文探讨了 io_uring 的工作原理，特别是其工作线程池的大小及其控制方法，包括使用 IOSQE_ASYNC 标志、IORING_REGISTER_IOWQ_MAX_WORKERS 系统调用、RLIMIT_NPROC 资源限制以及 cgroup 进程限制等方法。文章还深入分析了 io_uring 在单线程和多线程程序中的行为，以及在 NUMA 系统上的表现。</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2024/12/use-of-time-in-distributed-databases.html">分布式数据库中的时间使用（第一部分）</a><br>分布式系统的主要特点是节点并发执行，没有共享状态，也没有公共时钟。为了满足某些正确性属性，节点之间需要协调，但是由于协调需要消息通信，因此存在性能权衡，阻止节点频繁通信/协调。本文探讨了在分布式数据库中使用时间戳和排序、同步时钟的用途、松散同步时钟以及紧密同步时钟的出现，并概述了分布式数据库中时间使用的后续内容。</p>
+
+<p><a href="http://muratbuffalo.blogspot.com/2024/12/use-of-time-in-distributed-databases_26.html">分布式数据库中的时间使用（第二部分）：数据库中逻辑时钟的使用</a><br>这是我们“分布式数据库中的时间使用”系列的第二部分。本文讨论了数据库中逻辑时钟的使用。我们考虑了三种不同的方法：向量时钟、依赖图维护和纪元服务。在接下来的文章中，我们将允许使用物理时钟进行时间戳标记，因此在第二部分中，系统几乎不涉及物理时钟。</p>
+
+<p><a href="https://brandur.org/fragments/uuid-v7-monotonicity">Postgres UUIDv7 &#43; 每后端单调性</a><br>Postgres 最近提交了一个 UUIDv7 的实现。它具有 v4 (随机) UUID 的所有优点，但使用当前时间生成更确定的顺序，并且在使用 B 树等有序结构的插入操作中性能更好。一个令人惊喜的功能是，UUID 的随机部分在每个 Postgres 后端内都是单调的。这个特性在实践中非常有价值，尤其是在测试中。使用 Postgres 保证 UUIDv7 的单调性，五个生成的對象将获得五个按顺序排列的 ID，使测试更安全、编写速度更快。单调性不能跨后端保证，但在编写良好的测试套件中是可以接受的。Postgres 的补丁通过重新利用 UUID 随机组件的 12 位来解决这个问题，以提高时间戳的精度，使其达到纳秒级。这使得在同一进程中生成重复 UUID 的可能性降低，但仍然有 62 位的随机性可以使用，因此碰撞仍然极不可能发生。UUIDv7 将成为 Postgres 的一个重要补充，但由于其提交时间延迟，直到 2025 年底发布 Postgres 18 才能正式使用。</p>
+
+<p><a href="https://www.freecodecamp.org/news/gitting-things-done-book">Gitting Things Done：Git 的视觉和实践指南 [完整书籍]</a><br>本书旨在帮助软件开发者深入理解 Git 的工作原理。通过丰富的图解和实际案例，读者将学习如何高效地使用 Git，解决合并冲突，以及在出现问题时进行修复。本书涵盖了 Git 的核心概念，包括 Git 对象（blob、tree、commit）、分支管理、更改记录、撤销更改以及高级工具（git log、git bisect 等）。此外，本书还提供了配套视频资源，并对 Git 的工作机制进行了深入浅出的解释，力求使读者在学习过程中获得更深刻的理解和更愉悦的体验。</p>
+
+<p><a href="https://benjamincongdon.me/blog/2021/08/17/B-Trees-More-Than-I-Thought-Id-Want-to-Know">B树：比我想象的还要多 | Ben Congdon</a><br>这篇文章探讨了B树在数据库应用中的重要性，特别是它在磁盘存储环境下的优势。文章解释了B树如何通过将大量键值对存储在单个磁盘页中来减少磁盘访问次数，并介绍了槽页、键截断和溢出页等优化技术，以提高B树的效率和性能。文章还提到了B树的变体，如B&#43;树、Lazy B-Trees、FD-Trees和Bw-Trees，以及它们各自的特性和应用场景。</p>
+
+<p><a href="https://www.phoronix.com/news/LLVM-Code-Activity-2024">llvm卓越的一年</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://magazine.sebastianraschka.com/p/ai-research-papers-2024-part-1">2024 年值得关注的 AI 研究论文（第一部分）</a><br>本文重点介绍了 2024 年 1 月至 6 月期间六篇有影响力的 AI 论文，主题涵盖专家混合模型、新的 LoRA 变体等。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Mistral, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/cashapp/cloner">cashapp/cloner</a><br></p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria is a powerful, lightning fast and censorship resistant proxy.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/chainflag/eth-faucet">chainflag/eth-faucet</a><br>Ether faucet server built with Go and Svelte.</p>
+
+<p><a href="https://github.com/devtron-labs/devtron">devtron-labs/devtron</a><br>The only Kubernetes dashboard you need</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>⛑ Automated developer-oriented status page</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/runatlantis/atlantis">runatlantis/atlantis</a><br>Terraform Pull Request Automation</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/cyclops-ui/cyclops">cyclops-ui/cyclops</a><br>Developer Friendly Kubernetes 👁️</p>
+
+<p><a href="https://github.com/owasp-amass/amass">owasp-amass/amass</a><br>In-depth attack surface mapping and asset discovery</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

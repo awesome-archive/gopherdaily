@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260213.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260213</span>
+</p>
+<p>每日一谚：简单性很难，而复杂很容易。Go 选择了简单，这就是它的力量。 </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/13/go-microservices-refactoring-10x-backend-vs-mobile-collapse">Go 微服务重构实录：当后端性能提升 10 倍，移动端体验为何反而崩塌？</a><br>最近在 Go 开发者社区引发热议的一个真实案例，却给所有追求极致性能的架构师和开发者泼了一盆冷水。发帖人分享了一个令人咋舌的经历：他们的团队花费四个月时间，成功将核心 API 从 Django 迁移到了 Go（使用 Fiber 框架）。结果是梦幻般的：P95 延迟从 180ms 骤降至 14ms，吞吐量翻了三倍，CPU 资源节省了 60%。 CTO 发了全员通告庆祝，后端团队沉浸在成功的喜悦中。但在两周后，移动端团队却发出了红色警报：App 变得卡顿、掉帧，甚至导致安卓设备电量 疯狂消耗。 </p> 
+
+<p><a href="https://tonybai.com/2026/02/13/grady-booch-uml-software-engineering-third-golden-age-begins">UML 之父 Grady Booch：别听 CEO 瞎忽悠，软件工程的第三次黄金时代才刚刚开始</a><br>在这个充斥着“软件工程已死”论调的时刻，一位真正的“上古大神”站了出来。 他是 Grady Booch。 如果你是计算机科班出身，你一定听过他的名字。他是 UML（统一建模语言）的创始人之一，面向对象设计（OOD）的先驱，IBM Fellow。他入行时，程序员还在用打孔卡；他经历过汇编到高级语言的剧变，也经历过互联网泡沫的崩塌。 在最近的一次深度访谈中，面对“AI 取代程序员”的言论，Grady Booch 微微一笑，给出了一个 截然不同的判断： “别担心。软件工程没有死，我们正站在‘第三次黄金时代’的门口。” </p> 
+
+<p><a href="https://words.filippo.io/go-source/">查询Go 模块的真实源码</a><br>像 GitHub 这样的代码托管平台不一定显示 Go 模块的正确来源。pkg.geomys.dev 是一个方便的新模块源代码查看器，它允许用户方便地检查 Go 模块的真实来源，并提供诸如语法高亮、行链接和文件树浏览等功能。该服务通过直接对模块 zip 文件进行 HTTP Range 请求并在浏览器中解压来实现，以提高便利性，同时作者也在努力解决 CORS 等限制以使其更加完善。</p> 
+
+<p><a href="https://elgopher.fly.dev/article/view/stepping-out-of-frontend-with-go">使用 Go 走出前端领域</a><br>作者分享了自己从主要从事前端/移动开发（React 生态系统）转向学习和使用 Go 语言的经历和感悟。作者认为长期专注于前端使他失去了作为软件工程师应有的好奇心和学习热情。转向 Go 语言（受 ThePrimeagen 启发）重新点燃了他的学习动力，Go 语言的简洁性、类型系统以及对标准库的强调（与前端生态中过度依赖依赖项形成对比）让他重拾了对编程的兴趣。作者推荐了多本关于 Go 语言的技术书籍（如《Learning Go》、《Concurrency in Go》等），并计划在 2026 年转向更侧重架构/系统设计的全栈角色，挑战不使用 JavaScript 的目标。核心信息是鼓励开发者尝试新事物，以促进学习和个人成长。</p> 
+
+<p><a href="https://sushantdhiman.dev/nil-in-go-is-not-what-you-think">Go中的nil不是你想象的那样</a><br>最近我观看了一个2016年发布的YouTube GopherCon演讲，演讲者谈论了“nil”。看完这个30分钟的演讲后，我对Nil的看法完全改变了。在本文中，我们将讨论他所谈论的完全相同的内容。这篇文章不会太长，所以你可以很容易地掌握演讲的关键点。但我强烈建议你花30分钟时间观看那个视频。
+
+ nil在Go语言中会根据上下文表现出不同的行为。对于nil指针，它指向内存中的空；对于nil切片，它有长度和容量，但没有指向底层数组的指针；nil接口是一个包含(type, value)的结构，只有当type和value都为nil时，它才为nil，否则即使value为nil，如果type非nil，接口本身也不为nil；nil map可以进行len()、迭代和获取值（返回零值），但不能进行赋值操作；nil channel的行为建议观看原视频中的特定部分。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/when-to-use-llm-reasoning-vs-vector-search/">何时使用 LLM 推理 vs. 向量搜索</a><br>了解何时使用 LLM 推理与 TiDB 向量搜索进行情感分析。对成本、延迟和混合 AI 架构的基准测试。文章深入探讨了构建 CrowdSnap 情感分析平台时的实践经验，并提供了一个决策框架，指导开发者在原型设计阶段使用 LLM，在生产环境中利用 TiDB 实现成本效益和高性能。</p>
+
+<p><a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194">Scaling LLM Post-Training at Netflix</a><br></p>
+
+<p><a href="https://simonwillison.net/2026/Feb/12/codex-spark/#atom-everything">Introducing GPT‑5.3‑Codex‑Spark</a><br>OpenAI 宣布与 Cerebras 合作，并发布了第一个集成：一个“用于 Codex 中实时编码的超快速模型”。尽管命名为 GPT-5.3-Codex-Spark，但它是一个“GPT‑5.3-Codex 的较小版本”，启动时具有 128k 上下文窗口，并且仅支持文本。作者在预览中确认它比其他模型快得多，并展示了 Codex CLI 中速度的演示（生成了一个骑自行车的鹈鹕的 SVG 图像）。虽然速度更快，但与常规 GPT-5.3 Codex 相比，鹈鹕的图像质量略逊一筹。作者强调了该模型速度带来的益处，即在迭代编码会话中保持高效的流程状态。OpenAI 声称该模型速度为每秒 1000 个 token，并预计它将是一个非常有用的伙伴。目前尚不清楚新模型的定价。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/02/13/i-told-you-so.html">我早就告诉过你</a><br>作者引用了自己在2019年关于“奇点”的言论，表达了对当前AI发展及其潜在后果的担忧。他质疑当前由哪些人主导技术发展，并指出许多技术发展方向不应被建造。他呼吁人们反思科技的用途，认为技术可以有好的一面，也可以是糟糕的，并暗示需要一场“革命”来反抗现状。</p>
+
+<p><a href="https://arrow.apache.org/blog/2026/02/12/arrow-anniversary">Apache arrow 10周年</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Feb/12/codex-spark/#atom-everything">Introducing GPT‑5.3‑Codex‑Spark</a><br></p>
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think">介绍Gemini 3 deep thinking</a><br></p>
+
+<p><a href="https://waymo.com/blog/2026/02/ro-on-6th-gen-waymo-driver">第6代waymo driver</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a><br>MCP server for Grafana</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Multi Account, Webhooks, and MCP, and Chatwoot. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>Glamourous agentic coding for all 💘</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Progressive Delivery for Kubernetes</p>
+
+<p><a href="https://github.com/hakwerk/labca">hakwerk/labca</a><br>A private Certificate Authority for internal (lab) use, based on the open source ACME Automated Certificate Management Environment implementation from Let&#39;s Encrypt (tm).</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

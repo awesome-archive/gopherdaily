@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260106.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260106</span>
+</p>
+<p>每日一谚：Explicitly ignore values with blank identifier (_) instead of silently ignoring them </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/06/go-sum-is-not-a-lockfile">别再盯着 go.sum 看了：它不是你想象中的那个 Lockfile</a><br>在 Go 语言中，go.mod 同时充当清单和锁定文件。永远没有理由查看 go.sum。go.sum 只是 Go 校验和数据库的本地缓存，它是一个模块版本到其加密哈希的映射，对版本解析没有语义影响。你应该查看 go.mod，它列出了构建所需的所有依赖项的精确版本。Go 模块的设计（由 go.mod 同时充当清单和锁定文件）比其他生态系统的复杂设计要简单得多，避免了依赖冲突和不确定的版本范围问题。</p> 
+
+<p><a href="https://tonybai.com/2026/01/06/a-golden-map-to-distributed-architect">耗时六个月，我为你画了一张通往“分布式架构师”的黄金地图</a><br>在过去的六个月里，我推翻了无数次草稿，拜读了经典的分布式教程，查阅了大量的经典论文与工程源码，只做了一件事：为你绘制一张通往“分布式架构师”的黄金学习地图。</p> 
+
+<p><a href="https://antonz.org/go-1-26">Go 1.26 交互式教程</a><br>Go 1.26 带来了许多新特性和性能改进，包括新的 new(expr) 内建函数、类型安全的错误检查（errors.AsType）、全新的 Green Tea 垃圾收集器、更快的 cgo 和系统调用、更快的内存分配、实验性的 SIMD 操作支持、runtime/secret 模式以确保前向保密性、io.ReadAll 和 fmt.Errorf 的优化、slog 包的多处理器支持、testing 包中的测试工件（test artifacts）以及新的 goroutine 泄漏分析（goroutineleak profile）和运行时指标（runtime metrics）。此外，go fix 命令也得到了现代化改造。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/M_XUlfO9_1SaqeYKLBTIBQ">【分布式系统】01 为何分布式？—— Vibe Coding 时代的系统设计哲学与我们的远征地图</a><br></p> 
+
+<p><a href="https://harborscale.com/blog/harbor-lighthouse-we-fixed-what-everyone-hates-about-telemetry-collection">Harbor Lighthouse: 我们解决了人们对遥测收集感到厌烦的问题</a><br>告别与 TOML 文件抗争。认识一下 Harbor Lighthouse：一个用 Go 编写的闪电般快速的开源遥测代理。只需一个命令即可安装，告别配置噩梦。立即监控 Linux、Docker 和自定义脚本。这是您期待已久的轻量级、生产级监控解决方案。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://nishchith.com/sql-parsers">理解 SQL 解析器</a><br>本文深入探讨了 SQL 解析器的作用、工作原理和存在的意义。作者从 SQL 解析的基本流程（词法分析、语法分析和抽象语法树 AST）入手，解释了解析器如何将 SQL 文本转换为计算机可理解的结构化表示。文章强调了语法分析（检查结构）与语义分析（检查含义，需要依赖数据库 Schema）之间的区别。此外，博文还讨论了 SQL 方言的碎片化（如不同的标识符引用、分页语法和函数命名）是导致众多解析器库出现的原因。作者对比了 SQLGlot、sqlparser-rs、Apache Calcite 等主流解析器库的特性，并明确区分了解析器（仅负责理解和转换）与查询引擎（负责执行和优化）的功能边界，为需要进行 SQL 解析、转译或血缘分析的用户提供了决策参考。</p>
+
+<p><a href="https://dolthub.com/blog/2026-01-06-more-read-performance-wins/">更多读取性能的胜利</a><br>我们继续在 Sysbench 上改进 Dolt 的读取性能。本文详细介绍了为了实现与 MySQL 在 Sysbench 读取基准测试中达到奇偶性而进行的一系列性能优化，包括为 IN 过滤器创建快速路径、避免在 transform.Inspect 和 transform.InspectExpr 中进行堆分配、改进 PlanBuilder 的 convertInt()、实现并发 GroupBy、避免在 GetFieldValue 中使用 Map、改进自定义日期解析以及使用指针 TupleComparator。这些更改使得 Dolt 的平均读取延迟乘数从 1.05 下降到 1.00，总体读写乘数达到 0.96，这意味着 Dolt 在这些基准测试中实际上优于 MySQL。</p>
+
+<p><a href="https://seangoedecke.com/the-dictators-handbook/">《权威者的手册》与技术能力政治</a><br>本文是对《权威者的手册》（The Dictator&#39;s Handbook）一书的评论，重点关注该书的“选择者理论”（Selectorate theory）及其与大型科技公司内部政治的潜在关联。作者首先介绍了该书的核心观点：组织行为应从个体（如领导者）而非整体来理解，所有领导者都依赖一个“核心圈子”来维持权力，且政府类型（专制或民主）由核心圈子、外围圈子和全体民众这三组规模的比例决定。作者承认该理论是政治学著作，但尝试将其应用于软件工程师和管理者的层面。他发现，关于“外围圈子”（潜在的替代者）的理论——即核心圈子成员倾向于让自己变得不可替代，而领导者希望有更多潜在替代者——与他在技术团队的经验不符。作者认为，在工程组织中，技术能力至关重要，团队的成功决定了个人的职业发展，因此人们倾向于围绕有能力的人，即使这可能带来政治风险。他推测，政治的运作可能在顶层（CEO/董事会）是“圈子政治”主导，而在中层管理（VP/总监）则是“能力政治”主导。最终，作者认为该书的核心思想——领导者与其核心圈子的关系决定了组织结构——在各种组织中都是成立的，但他对书中未提及技术能力这一点提出质疑，并认为能力在公司政治中是关键的“货币”。</p>
+
+<p><a href="https://www.p99conf.io/2026/01/06/we-compared-scylladb-and-memcached/">我们将 ScyllaDB 和 Memcached 进行了比较…… ScyllaDB 输了 - P99 CONF</a><br>本文深入探讨了数据库和缓存的内部机制，以及两者之间的权衡。ScyllaDB 工程团队与 Memcached 维护者 dormando 合作，对 ScyllaDB 和 Memcached 进行了协作、供应商中立的头对头比较。结果显示，在类似条件下，两者都能最大限度地利用磁盘和网络带宽，总体性能相似。ScyllaDB 需要数据建模更改才能完全饱和网络吞吐量，而 Memcached 需要额外的 IO 线程才能饱和磁盘 I/O。ScyllaDB 在与 Memcached 管道化请求到磁盘时表现出更好的延迟，但 Memcached 在单个请求的延迟方面更优。文章详细分析了这两种解决方案的架构差异和权衡，并提供了选择建议。最终，作者认为两者在正确配置下都有潜力实现出色的成本节约，这取决于工作负载是否需要简单的键值模型和管道化支持，或者需要复杂的数据模型。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/01/05/microsoft-announces-acquisition-of-osmos-to-accelerate-autonomous-data-engineering-in-fabric/">微软宣布收购 Osmos，以加速 Fabric 中的自主数据工程</a><br>微软今天宣布收购 Osmos，这是一家代理式人工智能数据工程平台，旨在帮助简化复杂且耗时的**数据工作流程**。此次收购将通过代理式人工智能扩展 Microsoft Fabric，以简化数据工程，应对数据无处不在但将其转化为可用资产往往是**手动、缓慢且昂贵**的挑战。Osmos 团队将加入微软 Fabric 工程组织，以推进更简单、更直观、为人工智能准备就绪的数据体验。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/05/deploying-harbor-on-kubernetes-using-helm/">使用 Helm 在 Kubernetes 上部署 Harbor</a><br>本文介绍了如何在符合标准的 Kubernetes 平台上使用 Helm 部署 Harbor 容器镜像仓库。Harbor 是一个不可或缺的开源容器镜像仓库，提供策略驱动的安全、基于角色的访问控制、漏洞扫描、镜像签名、镜像复制和分发等强大功能。部署在 Kubernetes 上的优势包括可扩展性、高可用性、资源效率和声明式管理。文章概述了 Harbor 的微服务架构组件（核心、门户、Registry、Job Service、数据库、Redis 和 Trivy），并提供了使用 Helm Chart 进行部署的详细步骤，包括配置 `values.yaml` 和验证部署。最后强调了生产环境部署需要额外的安全和高可用性配置，如 SSL 证书和备份策略。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/01/05/kubernetes-v1-35-numeric-toleration-operators/">Kubernetes v1.35：扩展容忍操作符以支持数值比较（Alpha）</a><br>Kubernetes v1.35 引入了扩展容忍操作符（Extended Toleration Operators）作为 Alpha 功能，增加了 &lt;code&gt;Gt&lt;/code&gt;（大于）和 &lt;code&gt;Lt&lt;/code&gt;（小于）操作符，允许基于数值阈值的调度决策。这解决了现有容忍度只能匹配精确值或检查存在性的限制，使用户能够实现基于 SLA、成本优化和性能保证的节点选择策略。该功能通过在 API 服务器和调度器上启用 &lt;code&gt;TaintTolerationComparisonOperators&lt;/code&gt; feature gate 来启用。</p>
+
+<p><a href="https://world.hey.com/jason/the-big-regression-da7fc60d">The big regression</a><br>作者的父母来访，他们租了一套新装修的房子，里面配备了最先进的系统，包括触摸屏、物联网设备和过度设计的界面，但作者认为这是一种倒退。他详细描述了如智能照明系统Control4、三星电视的复杂界面、需要App才能启动的Miele洗碗机、以及令人困惑的专有恒温器和带有天气预报的刺眼警报系统。作者认为这些高科技设备普遍存在延迟，并且让用户感到困惑和挫败。他对比了最近在蒙大拿州租住的房子，那里的设备是老式的、清晰易懂的物理开关和旋钮，没有需要学习的复杂操作，反而更现代、更实用。他得出结论，技术应该让事情变得更好，但在这些案例中，它们实际上使体验倒退了。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories">如何撰写出色的 agents.md：来自超过 2,500 个代码库的经验教训</a><br>学习如何为 GitHub Copilot 撰写有效的 agents.md 文件，其中包含通过分析 2,500 多个代码库得出的实用技巧、真实示例和模板。成功的关键在于为代理指定一个具体的角色（如文档编写者、测试工程师或安全分析师），并提供详细的操作手册，包括可执行的命令、代码风格示例、明确的边界（如绝不能修改的文件）以及技术栈的具体信息。</p>
+
+<p><a href="https://me.0xffff.me/opencode.html">在使用 opencode &#43; oh-my-opencode 密集使用后的一些思考</a><br>作者在密集使用 opencode &#43; oh-my-opencode 完成了一个复杂的工程任务（在 TiKV 之上重新实现兼容 PostgreSQL 协议的 SQL 层）后，对智能体系统的理解发生了显著变化。他发现代码的边际成本已趋近于零，即使是复杂的系统。作者认为，成果的关键不在于模型能力收敛，而在于“上下文工程”（Context Engineering），即结构化地注入目标、计划、约束和历史决策。他还强调了不间断的工作流（减少人为干预）和良好的人机交互界面（提供控制感）的重要性。最后，他指出当前最大的瓶颈在于基础设施（沙盒、服务依赖、测试环境），并预测未来成功的关键在于“上下文组织”，将催生出如“opencode for XXX”等专业化系统。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/coze-dev/coze-loop">coze-dev/coze-loop</a><br>Next-generation AI Agent Optimization Platform: Cozeloop addresses challenges in AI agent development by providing full-lifecycle management capabilities from development, debugging, and evaluation to monitoring.</p>
+
+<p><a href="https://github.com/BishopFox/sliver">BishopFox/sliver</a><br>Adversary Emulation Framework</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>Video translation and dubbing tool powered by LLMs. The video translator offers 100 language translations and one-click full-process deployment. The video translation output is optimized for platforms like YouTube，TikTok. AI视频翻译配音工具，100种语言双向翻译，一键部署全流程，可以生抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube等形态的内容成适配</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/cadence-workflow/cadence">cadence-workflow/cadence</a><br>Cadence is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/v2ray/v2ray-core">v2ray/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

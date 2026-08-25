@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250424.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250424</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/S8fcxkN_yUsdSp9GpoqGPA">Go应用的K8s“最佳拍档”：何时以及如何用好多容器Pod模式</a><br>我们就来聊聊Kubernetes中几种合理且常用的多容器Pod模式，探讨何时应该为我们的Go应用引入这些“拍档”，以及如何更好地利用Kubernetes v1.33中已正式稳定（GA）的原生Sidecar支持来实现它们</p> 
+
+<p><a href="https://mstryoda.medium.com/go-arctest-simplifying-architecture-testing-in-go-projects-d059361de5cc">Go ArcTest：简化Go项目中的架构测试</a><br>曾经目睹过一个曾经优美的代码库逐渐演变成一团乱麻的依赖关系吗？我们都经历过。随着 Go 项目的增长，保持架构的整洁变得像是在牧羊——就在你认为一切井然有序的时候，有人添加了一个破坏你精心设计的层的导入。这就是架构测试的用武之地。它就像代码中的友善保安，检查新的添加是否遵循规则。如果没有这些护栏，即使是设计最好的系统也可能迅速陷入技术债务、循环依赖以及令人头疼的“这需要几周时间才能重构”的境地。Go ArcTest 为 Go 带来了 ArchUnit 为 Java 所做的事情——一种直接的方法，可以通过代码定义和强制执行架构边界。无需再进行人工代码审查以试图捕获架构冲突，也无需再就一个包是否应该导入另一个包进行冗长的讨论。只需编写表达架构规则的测试，将它们与常规测试套件一起运行，就可以安心入睡，因为你的架构在项目发展过程中会保持完整。</p> 
+
+<p><a href="https://medium.com/@yaa110/go-iterators-in-action-a-hands-on-example-6d6b3adbccaf">Go迭代器实战</a><br></p> 
+
+<p><a href="https://blog.ogenki.io/post/series/observability/alerts">VictoriaMetrics：从理论到实践，构建有效的告警机制</a><br>本文介绍了如何使用 VictoriaMetrics 构建有效的告警系统。文章涵盖了定义有效告警的标准方法（核心 Web 指标和黄金信号）、PromQL 和 MetricsQL 查询语言、使用 VictoriaMetrics Operator 声明式地配置告警、以及与 Slack 集成等内容。文章还包含了关于告警最佳实践的建议，以及如何使用 Alertmanager、VMUI 和 Grafana 等工具可视化和交互式地管理告警。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/stratechery-origin-story">并非所有英雄都披着斗篷，有些只是修复你的NAT</a><br>上个月，Tailscale首席执行官Avery Pennarun与Ben Thompson在Stratechery上进行了一次对话。作为Tailscale的通讯主管，我有机会倾听了这次对话——最引人注目之处不仅仅是技术的深度，而是Tailscale的故事如何清晰地追溯到Avery自身的历程——感觉就像一个起源故事。从十几岁时编写Linux驱动程序到重新思考网络的工作方式，这是一个关于坚持一个想法（有时甚至是痴迷地）直到它成为基础设施的故事。本文总结了Avery最近与Ben Thompson在Stratechery上进行的访谈中最关键的时刻。这是一个关于兄弟姐妹之间的竞争、尘封的调制解调器、开源的曲折以及对更好互联网的愿景的故事。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2025/04/23/the-2025-annual-work-trend-index-the-frontier-firm-is-born/">2025年度工作趋势指数：前沿公司诞生</a><br>我们正进入一个新的现实——人工智能能够以非凡的方式进行推理和解决问题。这种唾手可得的智能将重写商业规则，并改变我们所知的知识工作。如同工业革命和互联网时代一样，这一转型需要几十年才能展现其全部潜力……它将带来广泛的技术、社会和经济变化。2025年工作趋势指数年度报告旨在帮助领导者和员工为这一转变做好准备。与往年一样，该报告利用大型全球调查、Microsoft 365遥测数据以及LinkedIn的招聘和劳动力趋势数据。今年的新增内容是对人工智能原生初创企业、经济学家、科学家和学者的见解——所有这些都指向了正在进行的巨大转变。事实上，82%的领导者认为，今年是重新思考战略和运营核心方面的一个关键年份。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/04/23/istio-publishes-results-of-ztunnel-security-audit/">Istio 发布 ztunnel 安全审计结果</a><br>Istio 的环境模式将服务网格分成两层：第 7 层处理（“航路点代理”），它仍然由传统的 Envoy 代理提供支持；以及安全覆盖层（“零信任隧道”或“ztunnel”），这是一个用 Rust 从头开始编写的全新代码库。审计显示 ztunnel 代码库编写良好且结构合理，没有发现代码中的漏洞。三个发现——一个中等严重性和两个信息性——指的是关于外部因素的建议，包括软件供应链和测试。为了改进依赖项管理，Istio 采用了 GitHub 的 Dependabot 进行自动更新。此外，Istio 还改进了测试覆盖率，并强化了 HTTP 头部解析。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/04/23/kubernetes-v1-33-release/">Kubernetes v1.33：墨绿（Octarine）</a><br>Kubernetes v1.33 版本发布，主题为“墨绿：魔法的颜色”，包含 64 个增强功能，其中 18 个已升级到稳定版，20 个进入 Beta 版，24 个进入 Alpha 版，2 个已弃用或撤回。此版本还包含一些值得注意的弃用和移除内容；如果您已经运行的是旧版本的 Kubernetes，请务必阅读这些内容。此版本亮点包括稳定版的 Sidecar 容器、Beta 版的 Pod 资源就地调整大小以及 Alpha 版的 kubectl 新配置选项（使用 .kuberc 文件）。</p>
+
+<p><a href="https://www.ssp.sh/blog/why-using-neovim-data-engineer-and-writer-2023">Vim不仅仅是一个编辑器——Vim语言、移动和模式详解</a><br>本文探讨了Vim文本编辑器，解释了其基于快捷键的Vim语言、高效的导航模式和多种模式（普通模式、插入模式、可视模式和命令模式）的使用方法。作者分享了学习Vim的经验，并阐述了Vim在数据工程和写作中的应用，以及学习Vim带来的效率提升和乐趣。文章还推荐了Neovim、Lunarvim等Vim改进版本，以及一些学习资源。</p>
+
+<p><a href="https://ingau.me/blog/how-i-write-my-blogs-in-obsidian-and-publish-instantly">我如何在 Obsidian 中撰写博客并立即发布</a><br>我最近一直在使用 Obsidian 进行所有写作，它彻底改变了我的写作方式。本地优先模型意味着所有内容都以纯文本形式保存在我的机器上，而 Minimal 主题则使界面保持简洁明了，没有干扰。我的资料库保存在 iCloud 中（Dropbox 或 Google Drive 也适用），因此笔记可在设备之间无缝同步——我经常在手机上开始撰写草稿，然后在笔记本电脑上完成。</p>
+
+<p><a href="https://tweedegolf.nl/en/blog/152/does-using-rust-really-make-your-software-safer">使用 Rust 真的能提高软件安全性吗？</a><br>我们一直说 Rust 是我们提高软件安全性的方法。在这篇博文中，我们将讨论一个真实的漏洞，&#39;用 Rust 重写它&#39;，并向您展示我们实证研究的结果，包括高级概述和技术深入探讨。</p>
+
+<p><a href="https://clairebutler.substack.com/p/10-things-i-learned-from-10-years">我在 Figma 十年的 10 个心得</a><br>本文是作者 Claire Butler 在 Figma 工作十年的总结，从公司规模从 10 人扩张到 1400 人，用户从 0 增长到数百万人的过程中，她总结了十个宝贵的经验：制定专属策略、重视人际连接、培养直觉、不盲目崇拜数据、行动优先于计划、享受工作乐趣、关注积极方面、避免倦怠、把握时机以及懂得何时结束一个篇章。文章内容生动形象，结合了作者在 Figma 工作期间的诸多故事和图片，十分精彩。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.haproxy.com/blog/lessons-learned-in-llm-prompt-security-securing-ai-with-ai">LLM 提示安全中的经验教训：使用 AI 保护 AI</a><br>随着 AI 的快速采用，提示注入攻击成为企业 AI 系统的严重威胁。本文探讨了提示安全面临的挑战，并介绍了 HAProxy Technologies 如何利用 AI 来增强 AI 网关的安全性，同时解决了性能问题。文章还总结了关键经验教训，以及如何通过结合传统安全方法和 AI 驱动的分析来优化 AI 安全性。</p>
+
+<p><a href="https://terriblesoftware.org/2025/04/23/the-hidden-cost-of-ai-coding">AI编码的隐藏成本——糟糕的软件</a><br>AI编码工具提高了生产力，但也可能牺牲开发者手工编写代码时所体验到的流畅状态和深度满足感。我们失去了什么？本文探讨了AI编码工具带来的效率提升与开发者在编码过程中获得的乐趣之间的平衡问题，并反思了在AI辅助下如何保持编码的乐趣。</p>
+
+<p><a href="https://iamcharliegraham.substack.com/p/mcps-gatekeepers-and-the-future-of">模型上下文协议、守门人和人工智能的未来</a><br>模型上下文协议 (MCP) 即将将人工智能从被动聊天机器人转变为强大的、能够采取行动的智能体。但真正重要的是，谁来控制它们。</p>
+
+<p><a href="https://koomen.dev/essays/horseless-carriages">AI 无马马车 | koomen.dev</a><br>一篇关于糟糕的AI应用程序设计的文章</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>A task runner / simpler Make alternative written in Go</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/NVIDIA/k8s-device-plugin">NVIDIA/k8s-device-plugin</a><br>NVIDIA device plugin for Kubernetes</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/spegel-org/spegel">spegel-org/spegel</a><br>Stateless cluster local OCI registry mirror.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/go-co-op/gocron">go-co-op/gocron</a><br>Easy and fluent Go cron scheduling. This is a fork from https://github.com/jasonlvhit/gocron</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/rakyll/hey">rakyll/hey</a><br>HTTP load generator, ApacheBench (ab) replacement</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

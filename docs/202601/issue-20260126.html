@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260126.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260126</span>
+</p>
+<p>每日一谚：Compiler errors are better than runtime errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/24/go-generics-finally-supports-generic-methods">Go 泛型落地 4 年后，终于要支持泛型方法了！</a><br>对于许多期待 Go 泛型能像 C&#43;&#43; 或 Java 那样强大的开发者来说，这句话曾像一盆冷水。然而，就在最近，Go 语言之父之一、核心团队成员 Robert Griesemer 提交了一份重量级提案 #77273，正式建议为 Go 添加泛型方法 (Generic Methods) 的支持。</p> 
+
+<p><a href="https://tonybai.com/2026/01/25/gas-town-multi-agent-orchestration-ai-programming-revolution">Gas Town 启示录：多智能体编排开启 AI 编程工业革命</a><br>前 Amazon/Google 资深工程师、传奇技术博主 Steve Yegge 在其 57 岁生日之际，用一款名为 Gas Town 的工具，揭开了新世界的面纱。他指出，行业的方向错了。我们一直在试图制造一只能够解决所有问题的“超级蚂蚁”（Super-Ant）。但纵观生物学与人类工业史，解决复杂规模化问题的从来不是一个个体，而是分工明确、协同工作的群体。</p> 
+
+<p><a href="https://tonybai.com/2026/01/25/claude-code-official-best-practices-50-core-rules">Claude Code 官方最佳实践：50 条没人告诉你的“核心军规”</a><br>为了帮你跨越从“新手”到“高玩”的门槛，我精读了 Anthropic 刚刚发布的官方最佳实践文档，并结合实战经验，提炼出了这50 条核心军规。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/6exuSJZEqagv4UO_50ykSA">【分布式系统】08 事务（下）：SAGA 与 TCC —— 拥抱最终一致性的“实用主义”胜利</a><br></p> 
+
+<p><a href="https://commandcenter.blogspot.com/2026/01/implementing-transcendental-functions.html">command center: 在 Ivy 中实现超越函数</a><br>本文详细介绍了作者在 Go 语言中开发的类 APL 语言 Ivy 中实现高精度超越函数（如三角函数、指数、对数和伽马函数）的过程和遇到的数学挑战。作者首先介绍了 Ivy 的特性，如使用精确算术，并展示了如何利用泰勒级数实现 `exp`、`sin` 和 `cos` 函数，以及如何通过恒等式推导其他相关函数（如 `tan`、`asin`、`acos`）。对于收敛性较差的反正切函数，作者利用恒等式将计算范围缩小到易于处理的区间。对于 `log` 函数，则利用浮点数的指数和尾数特性，并通过计算高精度 $\log(2)$ 常量来实现。最后，作者重点介绍了实现伽马函数 $\Gamma(z)$ 的复杂过程，包括放弃精度有限的 Lanczos 近似，转而采用 Spouge 近似（并结合 Causley 的改进），通过大量计算（N=100 项）实现了比标准 64 位浮点数高得多的精度（约 50 位）。文章展示了大量 Ivy 代码片段，突显了数组语言在处理此类数值计算中的简洁性。</p> 
+
+<p><a href="https://ivan-pidikseev.dev/posts/golang-mcp-local-context">提高 AI 上下文：使用本地 Go 模块缓存</a><br>作者描述了在使用 AI 助手编写 Go 代码时遇到的问题，即 AI 经常生成使用过时 API 或错误函数签名的代码，尤其针对不流行或较新的第三方库。为解决此问题，作者构建了一个简单的本地 MCP 服务器，使 AI 助手能够直接访问本地的 Go 模块缓存（$GOMODCACHE）以获取准确的上下文信息。这被视为 Context7 的免费本地替代方案。文章通过一个 NATS.IO 的实际测试对比了有无本地上下文（MCP）的 AI 生成结果，展示了使用本地缓存能引导 AI 使用 SDK 中正确的方法，而不是凭空猜测或实现手动替代方案。最终结论是，利用本地缓存可以显著提高 AI 编码的准确性，同时保证隐私。</p> 
+
+<p><a href="https://go101.org/bugs/go-version-in-mod-file-not-work.html">go.mod文件中的go version未按预期工作</a><br>Go 1.22 改变了 for-range 和传统 for;; 循环的语义，这可能会导致旧代码出现意外行为。为避免遗留代码出现问题，Go 1.22 及更高版本要求每个 Go 源文件都指定 Go 版本。文章讨论了使用 `go 1.mn` 指令在 `go.mod` 文件中指定版本时，某些 Go 工具链版本在处理包含 `//line ...` 注释指令的源文件时存在缺陷，例如 Go 1.22.x 和 1.23.y 在指定 Go 1.21 时未能遵守旧的循环行为。此问题在 Go 1.26 发布前被追踪（https://github.com/golang/go/issues/77248）。</p> 
+
+<p><a href="https://benraz.dev/blog/golang_review.html">对 Go 语言的诚实评价</a><br>作者分享了自己使用 Go 语言几个月后的初步感想，并从“喜欢”和“不喜欢”两个方面进行了阐述。在喜欢的部分，作者称赞了 Go 语言内置的一流的并发机制（Channels 和 Goroutines）以及简单且无继承树的类型系统（尤其是接口的隐式实现）。在不喜欢的部分，作者主要批评了 Go 语言缺乏真正的枚举类型、常量声明的限制（导致难以创建不可变的值），以及 `error` 类型的局限性，认为其过于简单，难以进行有意义的错误类型区分，并举例说明了字符串解析错误的糟糕实践。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/01/12/dancing-backwards-with-go">Dancing Backwards With Go</a><br>John Arundel&#39;s article shows you how writing tests first helps build a correct Go function, catch bugs early, and refactor safely using clear, simple steps. The article introduces the concept of &#34;dancing backwards&#34; in programming, similar to Fred Astaire and Ginger Rogers, by writing tests before the function implementation. It demonstrates this process with examples in Go for an `IsSorted` function, illustrating how starting with a failing test drives implementation, uncovers edge cases (like empty or negative-containing slices), and provides a safety net for refactoring, such as replacing custom logic with standard library functions.</p> 
+
+<p><a href="https://nature-lang.org/news/20260115">Nature 编程语言性能基准测试：与 Golang 对比</a><br>本文对 Nature 编程语言 v0.7.2 版本在 IO (HTTP 服务器)、CPU (PI 计算)、递归、C FFI 和协程等多个维度进行了性能基准测试，并与 Golang、Rust 和 Node.js 进行了对比。结果显示，Nature 在 IO 和协程方面表现优于 Go，在 C FFI 方面具有显著优势。文章最后展望了 Nature 未来的发展方向，包括转换为 Go 语言、适应 GUI 库、支持 WASM 3.0、增强系统编程能力以及 AI 辅助编程等。</p> 
+
+<p><a href="https://www.tbray.org/ongoing/When/202x/2026/01/14/Unicode-Properties">Losing 1½ Million Lines of Go</a><br>作者在为他的正则表达式库 Quamina 添加对 Unicode 字符属性（如 \p{L} 匹配任何字母）的支持时，最初尝试通过预先生成所有状态机（automata）来提高性能。他发现仅对字符类别（不包括补集）生成代码就产生了 775K 行代码，如果完成所有工作，可能达到 150 万行，导致巨大的代码文件（12MB）和启动延迟，甚至导致 IDE 崩溃。他放弃了这种方法，转而采用缓存策略：首次使用时计算状态机，然后缓存。这使得添加 Unicode 属性正则表达式的速度从每秒 135 个提高到 4330 个，性能提升显著。作者还反思了自己没有使用生成式 AI（如 Claude）来处理这些繁琐的编程任务，承认 AI 可能会更快更好地完成这些任务，并指出 LLM 在代码序列预测方面可能比自然语言更擅长。</p> 
+
+<p><a href="https://nesbitt.io/2026/01/18/workspaces-and-monorepos-in-package-managers.html">包管理器中的工作区和单体仓库</a><br>本文探讨了为什么几乎所有主流包管理器（如 npm, Yarn, pnpm, Cargo, go.work 等）都实现了工作区（Workspaces）功能，以及它们与单体仓库（Monorepos）的关系。工作区主要用于解决同一代码库内多个包相互依赖时的本地依赖链接问题，避免了频繁发布和手动链接的麻烦。文章详细比较了不同生态系统中工作区的实现方式（如 npm/Yarn 的包提升、pnpm 的非提升结构、Cargo 的共享 lockfile、Go 的 go.work 文件等），并指出了使用工作区时可能遇到的常见问题，例如：幻影依赖、版本不匹配、工具链配置困难、CI/本地环境不一致以及构建编排的复杂性。作者总结认为，生态系统使包创建变得容易，但协调成本很高，工作区是为了管理这种摩擦而产生的。核心思想是：工作区解决本地依赖连接问题，而单体仓库解决代码集中管理问题，两者相互促进。</p> 
+
+<p><a href="https://unisondb.io/blog/breaking-kv-size-limits-linked-list-wal">突破键值大小限制：用于原子大写入的链表 WAL</a><br>键值大小限制（512KB/1.5MB）对集群健康至关重要。了解 UnisonDB 如何在使用不破坏原子性的链表 WAL 的情况下绕过这些限制。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2026-01-23-golang-sql-drivers">编写 Go SQL 驱动程序</a><br>深入了解 Go 的 SQL 驱动程序实现，并了解 Dolt 的嵌入式 SQL 驱动程序是如何工作的。本文将探讨 Go 的 database/sql/driver 包，并以 Dolt 的嵌入式驱动程序为例，展示如何构建一个能让任何 Go 程序通过简单导入语句与其 SQL 后端通信的数据库连接。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/knowing-how-to-drive-the-car/">You have to know how to drive the car</a><br>The author argues that regardless of a software engineer&#39;s specific goals—whether climbing the career ladder, taking it easy, or focusing on user value (like accessibility)—it is crucial to understand how tech companies operate (the &#34;realpolitik&#34;). This understanding, likened to knowing &#34;how to drive the car,&#34; is essential for achieving any goal within a large organization. Examples are provided showing how career-driven, low-ambition, and value-driven engineers must all navigate company politics, reputation building, and project execution to succeed in their respective aims. Failing to understand this dynamic can lead to frustration, career stagnation, or burning bridges.</p>
+
+<p><a href="https://platform.uno/blog/the-state-of-webassembly-2025-2026">WebAssembly 的现状 – 2025 年和 2026 年</a><br>全面回顾了 2025 年 WebAssembly 的发展情况，并展望了 2026 年的趋势，涵盖了浏览器支持（特别是 Safari 方面的进展）、WebAssembly 3.0 标准的里程碑、WASI 的发展（即将推出 0.3 和 1.0 版本）、Kotlin/Wasm 编译器的发布、.NET 和 Uno Platform 的性能改进、调试工具（如 DWARF 支持和 IDE 集成）的成熟，以及 WebAssembly 在边缘计算、嵌入式设备等非浏览器领域的快速增长和广泛应用。作者认为 WebAssembly 已准备好投入生产环境，但面临的挑战是如何更好地营销这一技术。</p>
+
+<p><a href="https://vonng.com/pg/pg-ha-sota">PostgreSQL 高可用到底怎么做？</a><br>详细介绍 PG 高可用 SOTA 方案，RTO / RPO 拆解，从原理到实战，一步到位。如果你还在折腾 PG HA，希望能帮你少走几年弯路。
+</p>
+
+<p><a href="https://the-diy-life.com/raspberry-pi-drag-race-pi-1-to-pi-5-performance-comparison">树莓派“直线加速赛”：从 Pi 1 到 Pi 5 的性能对比</a><br>本文对树莓派的五个主要版本（Pi 1 到 Pi 5）进行了性能和规格的全面对比测试。测试项目包括 1080P YouTube 视频播放、Sysbench CPU 基准测试（单核和多核）、GLMark2 GPU 基准测试、存储速度测试、iPerf3 网络速度测试，并分析了功耗和每瓦性能效率。结果显示，随着时间的推移，树莓派在 CPU、GPU 和网络性能方面取得了显著进步，Pi 5 的性能比初代 Pi 1 提升了数百倍，但功耗也有所增加。文章最后作者分享了对未来树莓派的期望，如 2.5Gb 网络和 DisplayPort。</p>
+
+<p><a href="https://raymondtana.github.io/math/programming/2026/01/23/zig-alignment-and-sizing.html">Zig 中的内存布局</a><br>作者在观看 Zig 创造者 Andrew Kelley 的一个关于数据导向设计 (DoD) 的演讲时，对类型在内存中如何布局（对齐和大小）产生了兴趣。文章详细介绍了 Zig 中原始类型、结构体 (struct)、枚举 (enum)、数组、切片 (slice) 以及有标签/无标签联合体 (union) 的内存布局原则和计算公式，并以公式和示例代码进行验证。核心观点包括：对齐和大小通常是 2 的幂次字节；结构体的对齐是其所有字段中最大对齐值的要求；数组的大小是元素数量乘以元素大小；而 Zig 的内建函数如 `@alignOf` 和 `@sizeOf` 可以用来检查这些属性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/25/the-browser-is-the-sandbox/#atom-everything">浏览器就是沙箱</a><br>这篇文章讨论了Paul Kinlan关于使用Web浏览器作为AI编码代理的“沙箱”的观点。Kinlan认为，浏览器经过30年的发展，已经是一个专门为运行来自网络的、不受信任的代码而设计的强大沙箱。他通过一个名为Co-do的演示应用来测试这一假设，该应用利用浏览器技术来处理文件系统访问（使用File System Access API）、网络访问（通过CSP头和iframe sandbox）以及安全的代码执行（使用WebAssembly和Web Workers）。文章还提到了`&amp;lt;input type=&amp;#34;file&amp;#34; webkitdirectory&amp;gt;`标签的实用性，该标签允许浏览器一次性读取整个目录的文件，并展示了一个使用该技术的本地文件浏览器演示。</p>
+
+<p><a href="https://openai.com/index/unrolling-the-codex-agent-loop">解密Codex智能体主循环</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/AlistGo/alist">AlistGo/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI GLM-4.7, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/ariga/atlas">ariga/atlas</a><br>Declarative schema migrations with schema-as-code workflows</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/githubnext/gh-aw">githubnext/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/autobrr/qui">autobrr/qui</a><br>A fast, single-binary qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers.</p>
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/goreleaser/goreleaser">goreleaser/goreleaser</a><br>Release engineering, simplified</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

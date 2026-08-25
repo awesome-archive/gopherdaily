@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260715.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260715</span>
+</p>
+<p>每日一谚：Gofmt&#39;s style is no one&#39;s favorite, yet gofmt is everyone&#39;s favorite. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/15/own-the-outer-loop">掌控外环：为什么“循环工程”的边界必须由人类死守？</a><br>在 AI Agent 开发迅速迈入“循环工程（Loop Engineering）”与多智能体并发阶段的今天，谷歌前高管 Addy Osmani 提出了一项引&gt;发行业深思的架构范式：在自动化狂潮中，人类必须死守系统设计的“外环（Outer Loop）”。文章明确指出，AI 智能体可以在“内环（Inner Loop） ”中以机器速度进行调查、执行和测试，但决定系统边界、审查客观证据、做出最终发布裁决（Verdict），以及承担最终事故责任（Accountability）的权力，必须且只能掌握在人类工程师手中。文章深度剖析了开发者在过度依赖 AI 时面临的“认知妥协”、“认知债务”与“协调管理税”三大隐形成 本，并强调了在客观技术衰减（Decay）的时代，人类的“审美品味（Taste）”与“受托问责制”才是不可被规模化替代的终极资产。通过严格解耦内部 执行与外部决策，为大模型系统设定反向压力机制，我们将迎来重塑职业价值、夺回系统架构所有权的新黄金时代。</p> 
+
+<p><a href="https://gomodvanityurls.com/zh/blog/30-second-vanity-url-setup/">30 秒为你的 Go 模块设置自定义导入路径</a><br>手把手教程：用 gvu 在 30 秒内为你的 Go 模块创建 vanity URL，告别冗长的 GitHub 导入路径。支持自定义域名、通配路由和主版本自动适配。</p> 
+
+<p><a href="https://www.alexedwards.net/blog/how-i-use-htmx-with-go">我如何在Go中使用HTMX – Alex Edwards</a><br>不确定如何构建Go Web应用程序？我的新书指导您完成一个真实世界Go Web应用的从头到尾构建，涵盖如何构建代码结构、管理依赖、创建动态数据库驱动页面以及如何进行身份验证和授权等内容。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/14/keycloakcon-japan-2026-navigating-cloud-native-identity-and-the-ai-frontier/">KeycloakCon Japan 2026：驾驭云原生身份与AI前沿</a><br>Yuxiang Lin (Midships Global) 穿透市场炒作，论证了专用AI身份供应商是不必要的依赖。核心原语包括OAuth 2。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/14/is-a-pod-the-right-deployment-unit-for-an-ai-agent/">Pod是AI智能体的正确部署单元吗？</a><br>文章探讨了在Kubernetes环境中，Pod是否适合作为AI智能体的部署单元，分析了Pod在AI应用中的优缺点和适用场景。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/">为Kubernetes构建自定义指标导出器</a><br>文章介绍了如何使用Go语言为Kubernetes构建自定义指标导出器，以便监控和收集应用程序的性能指标。</p>
+
+<p><a href="https://www.docker.com/blog/ai-engineer-worlds-fair-2026-the-runtime-is-where-agent-trust-is-won/">AI工程师世界博览会2026：运行时是赢得智能体信任的地方</a><br>我们的工程执行副总裁Tushar Jain发表了主题演讲&#34;解锁智能体自主性：AI原生系统的运行时&#34;。智能体已经发生变化——它们可以读写整个代码库，生成子智能体，安装依赖，并跨越笔记本电脑、CI、云和组织边界调用API。</p>
+
+<p><a href="https://www.thoughtworks.com/insights/blog/open-source/zero-cost-fallacy-open-source-agentic-era">零成本谬误：智能体时代的开源软件</a><br>文章探讨了在AI智能体时代，开源软件并非零成本的观念，分析了开源软件在AI应用中的真实成本和价值。</p>
+
+<p><a href="https://danq.me/2026/07/09/your-app-could-have-been-a-webpage/">你的&#39;应用&#39;本可以是一个网页（所以我为你修复了它...）</a><br>文章质疑为什么某些简单的功能被包装成需要安装的应用程序，作者分享了自己将一个简单的旅行预订应用转换为网页的经历。</p>
+
+<p><a href="https://lalitm.com/post/git-history/">git history命令值得更多关注</a><br>文章介绍了git history命令的强大功能，展示了如何通过查看历史记录来更好地理解代码变更和项目演变，从而简化并行开发中的分支和提交管理。</p>
+
+<p><a href="https://javarevisited.substack.com/p/difference-between-api-gateway-and-5b3">微服务中的API网关与负载均衡器：关键差异解释</a><br>文章通过实际用例、优缺点分析和架构图，详细比较了API网关和负载均衡器在微服务架构中的区别和适用场景。</p>
+
+<p><a href="https://cachebag.sh/journal/interactive-rebasing/">git rebase -i 并不可怕</a><br>文章分享了作者作为初级开发者时对git rebase -i命令的恐惧经历，以及如何克服这种恐惧，理解并有效使用这一强大工具。</p>
+
+<p><a href="https://buoyant.io/blog/benchmarking-grpc-load-balancing-on-kubernetes-linkerd-vs-istio-vs-cilium">2026年在Kubernetes上基准测试gRPC负载均衡：Linkerd vs Istio vs Cilium</a><br>文章对Linkerd、Istio和Cilium三种服务网格在Kubernetes环境下的gRPC负载均衡性能进行了基准测试和比较分析。</p>
+
+<p><a href="https://clickhouse.com/blog/huge-pages-clickhouse-managed-postgres">我们如何在ClickHouse托管Postgres中配置大页</a><br>文章介绍了ClickHouse团队在ClickHouse托管Postgres服务中配置大页内存优化的方法和实践经验。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/14/lobsters-sqlite/#atom-everything">lobste.rs现在运行在SQLite上</a><br>SQLite迁移取得了显著成功：CPU使用率下降，内存使用率降低，网站响应速度更快，且一旦移除MariaDB VPS，成本可降低一半。</p>
+
+<p><a href="https://www.artfish.ai/p/offloading-thinking-to-ai">我们是否将过多的思考外包给了AI？</a><br>文章反思了自主思考的价值，探讨了在AI时代我们是否过度依赖人工智能进行思考，以及保持独立思考能力的重要性。</p>
+
+<p><a href="https://www.bobbytables.io/p/the-agentic-loop-three-loops-in-a">智能体循环：穿风衣的三个循环</a><br>文章探讨了自主智能体的构建块比看起来更为复杂，分析了智能体循环的设计原理和实现方法。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a><br>面向 Grok Build、Grok Web 与 Grok Console 的多账号 API 网关</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br></p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/microsoft/agent-framework-go">microsoft/agent-framework-go</a><br>A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Go.</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>Easily and securely send things from one computer to another 🐊 📦</p>
+
+<p><a href="https://github.com/pocket-id/pocket-id">pocket-id/pocket-id</a><br>An easy-to-use OpenID Connect Certified™ and OAuth 2.0 provider that lets users sign in to your applications with passkeys.</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable runtime for building distributed applications across cloud and edge, combining event-driven architecture with workflow orchestration.</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

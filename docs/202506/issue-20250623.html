@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250623.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250623</span>
+</p>
+<p>每日一谚：Error messages should not be capitalized or end with punctuation. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/22/unexpected-security-footguns-in-go-parsers">Go 解析器的“隐秘角落”：encoding/json 的安全陷阱与 JSONv2 的救赎</a><br>在 Go 语言中，标准库的 encoding/json 包无疑是我们日常打交道最多的伙伴之一。它简洁易用，性能尚可，支撑了无数 Go 应用的数据交换需求。然而，正如俗话所说，“最熟悉的地方可能藏着最深的坑”，最近拜读了知名安全公司 Trail of Bits 的一篇深度剖析文章，让我对这个朝夕相处的伙伴有了全新的、甚至可以说是“惊出一身冷汗”的认识。</p> 
+
+<p><a href="https://antonz.org/go-json-v2">Go语言JSON的演变：从v1到v2</a><br>Go 1.25 中引入了 json/v2 包的第二个版本，这是一个重大更新，包含许多重大更改。v2 包添加了新功能，修复了 API 问题和行为缺陷，并提升了性能。本文回顾了主要变化，包括 MarshalWrite 和 UnmarshalRead、Encode/Decode、选项、标签、自定义编组、默认行为和性能等方面。</p> 
+
+<p><a href="https://share.transistor.fm/s/fbd76108">播客：理解产品、项目和项目组合管理的三个P</a><br>开发软件很难，软件工程师很少能独自完成。在本集中，Kris 与 Ian、Matthew 和 Angelica 共同探讨了软件项目管理以及三个常用但鲜少定义的角色的实际含义：项目经理、产品经理和项目组合经理。小组还讨论了这些角色如何与工程经理互动，他们认为这些角色的实际作用是什么，以及产品经理是否真的应该存在。对于我们的支持者，本集包含扩展讨论，包括是否应该信任你加入的新公司，如何建立信任以及我们应该衡量哪些指标来评估项目的成功。通过在 https://fallthrough.fm/subscribe 注册即可访问。感谢收听，祝您聆听愉快！</p> 
+
+<p><a href="https://beyondthesyntax.substack.com/p/writing-parallel-file-compression">让我们编写一个带内存控制的线程文件压缩工具</a><br>这个周末我深入研究了并发编程。为了学习它，我决定编写一个并行文件压缩器，它不仅可以并发压缩文件，还可以限制内存使用。我使用 GoLang 实现它，但这些概念可以应用于任何语言。这个工具分块读取文件，并通过引入一个内存感知信号量系统来限制内存使用，还使用了一个可重用缓冲池来提高速度。每个文件都使用 gzip 进行压缩，整个过程通过 worker goroutine 并发处理，因此它速度快且内存效率高。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://clickhouse.com/blog/scaling-observability-beyond-100pb-wide-events-replacing-otel">通过拥抱宽事件并替换 OTel，将我们的可观测性平台扩展到 100PB 以上</a><br>本文讲述了我们如何通过用 ClickHouse 到 ClickHouse 的原生管道替换 OpenTelemetry，拥抱宽事件并将 CPU 使用率降低 90%，从而将我们的可观测性平台从 19PB 扩展到 100PB，以及从约 40 万亿行扩展到 500 万亿行。</p>
+
+<p><a href="https://mohitmishra786.github.io/chessman/2024/10/07/Mastering-All-Design-Patterns-in-C.html">掌握 C 语言中的所有设计模式</a><br>设计模式是程序员工具包中必不可少的工具，它们为常见的软件设计问题提供了久经考验的解决方案。在本博文中，我们将探讨几种关键的设计模式及其应用，并提供 C 语言中的具体实现。我们还将深入探讨这些模式的汇编级含义，从高级设计到低级执行提供一个全面的视图。</p>
+
+<p><a href="https://bohops.com/2023/06/09/no-alloc-no-problem-leveraging-program-entry-points-for-process-injection">无需内存分配，没问题：利用程序入口点进行进程注入</a><br>本文探讨了两种无需显式内存分配或直接使用创建线程或操作线程上下文的方法的进程注入技术。第一种技术利用AddressOfEntryPoint相对虚拟地址进行代码注入，通过重写AddressOfEntryPoint字段来加载注入的shellcode。第二种技术利用NtQueryInformationThread函数获取主进程线程的入口点地址，然后将shellcode写入该地址并恢复线程执行。文章还讨论了一些防御措施，例如追踪_report_securityfailure方法调用和使用Yara规则识别可疑的PE文件。</p>
+
+<p><a href="https://maxicontieri.substack.com/p/code-smell-304-null-pointer-exception">代码坏味道 304 - 空指针异常</a><br>我一直在写关于空指针的问题，但每天的新闻都提醒我：空指针仍然存在并且很活跃。本文探讨了空指针异常带来的问题（例如运行时崩溃、重大事件和中断、难以调试等），并提出了相应的解决方案，包括避免空值、使用空值检查、初始化默认值、实现保护性子句、使用空对象和避免使用可选值等。文章还提供了一些代码示例，展示了错误代码和正确代码之间的区别，以及如何使用AI工具检测和修复空指针问题。文章最后总结了空指针异常的常见性和解决方法的重要性。</p>
+
+<p><a href="https://briefer.cloud/blog/posts/p-hacking">初创公司中的 P 值滥用 | Briefer</a><br>在初创公司中，快速发布的压力促使团队报告任何看起来像改进的东西，这就是 P 值滥用的发生方式。本文分析了三种常见情况以及如何避免它们。文章通过具体的 A/B 测试案例，解释了未校正多重比较、结果出来后重新定义指标以及在获得结果前多次查看数据等问题，并提出了相应的解决方案，例如 Bonferroni 校正、预注册以及顺序检验等，强调了更严格的统计实践能够加速学习。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/22/kent-beck/#atom-everything">肯特·贝克的一段话</a><br>这段话来自肯特·贝克在接受Gergely Orosz采访时的说法：&#34;所以你可以思考非常宏大的想法，拥有这些宏大想法的杠杆作用突然极大地扩展了。两年前我发过这样一条推特……&#34;  他提到了自己技能的转变：90%的技能变得毫无价值，而10%的技能价值提升了1000倍。他认为拥有远见、设定里程碑、以及在前进过程中控制复杂性水平，这些技能现在比掌握Rust语言中的特殊符号和括号更有价值。</p>
+
+<p><a href="https://thenewstack.io/agentic-coding-how-googles-jules-compares-to-claude-code">Agentic coding: Google jules vs. Claude Code</a><br></p>
+
+<p><a href="https://www.anthropic.com/news/claude-code-remote-mcp">Claude Code 远程 MCP 支持</a><br>Anthropic 宣布 Claude Code 现已支持远程 MCP 服务器。无需管理本地服务器，即可连接您喜爱的工具和数据源，个性化您的编码体验。Claude Code 可以访问 MCP 服务器公开的工具和资源，从而能够从您的第三方服务（例如开发工具、项目管理系统和知识库）提取上下文，并在这些服务中采取行动。 现在，Claude Code 中已提供远程 MCP 服务器支持。 查看文档以开始使用，或浏览推荐服务器的 MCP 目录。</p>
+
+<p><a href="https://henryhmko.github.io/posts/tpu/tpu.html">TPU 深入探究</a><br>本文深入探讨了 Google 的 TPU（张量处理单元），从单芯片到多芯片级别，详细解释了其设计理念、架构和工作原理。TPU 通过采用 systolic arrays（阵列式处理器）&#43; pipeline（流水线）技术以及 AOT（Ahead-of-Time）编译技术，实现了极高的吞吐量和能效。文章还阐述了 TPU 的多芯片系统，包括 Tray、Rack、Pod 和 Multi-pod 等层次，以及 OCS（光学电路交换）技术在提高可扩展性和容错性方面的作用。最后，文章还结合实际图片，将抽象的图表与真实的硬件相结合，使读者更容易理解 TPU 的架构和工作机制。</p>
+
+<p><a href="https://analyticsindiamag.com/ai-features/the-story-of-a-prisoner-who-became-a-software-engineer">一名囚犯如何成为软件工程师的故事</a><br>本文讲述了一位名叫普雷斯顿·索普（Preston Thorpe）的软件工程师的故事，他克服了在缅因州查尔斯顿山景惩教所服刑的困境，成为了一名软件工程师。索普主要通过项目式学习，在有限的网络资源下自学掌握了Rust和Python等编程语言，并积极为开源软件项目贡献代码。他甚至在监狱中远程工作，为Turso公司（一家使用libSQL的开源分布式数据库公司）工作。索普的故事强调了即使在逆境中也能取得成功的可能性，以及项目式学习的重要性。</p>
+
+<p><a href="https://blog.nilenso.com/blog/2025/05/29/ai-assisted-coding">AI辅助编码：团队如何避免盲目跟风</a><br>本文探讨了在软件开发中有效利用AI工具的策略。作者指出，AI是效率倍增器，但需要熟练使用。经验丰富的工程师能够更好地驾驭AI工具，因为他们善于沟通技术理念，并具备对优质系统设计的感觉。文章强调，AI辅助编码的关键在于工程师自身素质的提高，以及代码库的良好基础（例如良好的测试覆盖率、持续集成和部署等）。作者分享了使用AI工具的技巧，例如提供充分的上下文、分解任务、利用AI进行调试和代码审查等，并讨论了AI如何改变软件工程实践。</p>
+
+<p><a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer">如何像资深工程师一样轻松编写代码</a><br>在过去的几个月里，我重新燃起了对软件开发的热情。
+
+并非以传统方式——一行一行地编写代码，将脆弱的库拼凑在一起，一遍遍地处理样板代码。相反，我一直在使用“氛围式编程”。
+
+**氛围式编程**是一种新的软件构建方式，你使用最新的AI模型来完成大部分工作。你编写一个好的提示，勾勒出一个计划，然后让模型接管。感觉就像摩擦魔灯，向精灵低语你的意图。
+
+然而，就像精灵一样，除非你给它非常具体的愿望，否则你将得到一些你意想不到的东西。
+
+**最大的变化是什么？代码不再昂贵。**
+
+过去构建一个特性需要数周时间。现在，有了AI，一名资深工程师可以在一小时内完成。一个功能齐全的SaaS应用程序？也许10天。我知道，因为我刚刚构建了一个。
+
+这不仅仅是提高生产力——它是一种超能力。但这需要一些经验来运用。
+
+文章详细介绍了氛围式编程，并列出了需要哪些工具和方法，以及如何编写有效的提示。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/psviderski/uncloud">psviderski/uncloud</a><br>A lightweight tool for deploying and managing containerised applications across a network of Docker hosts. Bridging the gap between Docker and Kubernetes ✨</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/Musixal/Backhaul">Musixal/Backhaul</a><br>Lightning-fast reverse tunneling solution for NAT traversal, optimized for handling massive concurrent connections with tcp, tcpmux, udp, udp over tcp, ws, wsmux, wss and wssmux support.</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/awslabs/diagram-as-code">awslabs/diagram-as-code</a><br>Diagram-as-code for AWS architecture.</p>
+
+<p><a href="https://github.com/Aylur/ags">Aylur/ags</a><br>Scaffolding CLI for Astal&#43;TypeScript</p>
+
+<p><a href="https://github.com/Forceu/Gokapi">Forceu/Gokapi</a><br>Lightweight selfhosted Firefox Send alternative without public upload. AWS S3 supported.</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria is a powerful, lightning fast and censorship resistant proxy.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/kitops-ml/kitops">kitops-ml/kitops</a><br>An open source DevOps tool for packaging and versioning AI/ML models, datasets, code, and configuration into an OCI artifact.</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/ginuerzh/gost">ginuerzh/gost</a><br>GO Simple Tunnel - a simple tunnel written in golang</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

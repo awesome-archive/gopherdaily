@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260630.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260630</span>
+</p>
+<p>每日一谚：Use sync.RWMutex for read-heavy workloads. It&#39;s more efficient. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/30/rust-project-eating-75gb-disk-space-go-vs-rust-cache-anxiety">一个 Rust 项目吃掉 75GB 硬盘？聊聊 Go 与 Rust 的“缓存焦虑”与拯救指南</a><br>本文探讨了现代编译器（以 Rust 和 Go 为例）为追求极致构建速度而引发的“磁盘吞噬”现象。文章深入剖析了 Rust 凭借其项目局部 target 目录带来的空间膨胀问题，以及 Go 语言在全球化依赖目录 pkg/mod 与构建缓存 GOCACHE 下的存储开销。作者通过对比两者的缓存机制，指出开发者面临的普遍“缓存焦虑”。文中还提供了详尽的解决方案：对于 Rust，通过 cargo-sweep、sccache 等工具及共享 target 目录进行优化；对于 Go，利用其内置的缓存自动清理机制及前沿的 GOCACHEPROG 协议实现远程编译缓存共享。文章强调，在软件工程中，“空间换时间”是编译器的底层逻辑，而随着分布式编译技术的发展，开发者最终将摆脱单机固态硬盘的物理容量限制</p> 
+
+<p><a href="https://thehackernews.com/2026/06/hijacked-npm-and-go-packages-use-vs.html">被劫持的npm和Go包利用VS Code任务部署Python信息窃取恶意软件</a><br>被劫持的npm和Go包利用VS Code任务部署Python信息窃取恶意软件。攻击者通过篡改合法软件包的构建过程，在开发者不知情的情况下植入恶意代码，导致用户系统安全受到威胁。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/29/otel-and-mesh-derived-metrics-a-2026-reference/">OTel和网格衍生指标：2026年参考指南</a><br>本文介绍了2026年OpenTelemetry和网格衍生指标的参考指南，详细说明了如何配置Prometheus接收器来收集Linkerd网格指标，包括设置抓取间隔和Kubernetes服务发现配置。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/06/29/etcd-operator-joins-cozystack-with-a-new-v1alpha2-api/">etcd-operator通过新的v1alpha2 API加入Cozystack</a><br>etcd-operator通过新的v1alpha2 API加入Cozystack，支持集群的一次一个成员的双向引导和扩展，包括学习模式加入和优雅退出仲裁的移除功能。该API还允许在不丢失数据的情况下暂停集群操作。</p>
+
+<p><a href="https://nesbitt.io/2026/06/29/unbundling-the-standard-library.html">解耦标准库</a><br>迁移文档中最常给出的理由是解耦发布节奏：标准库中一个模块的修复不应等待下一个语言版本，而语言版本也不应因某个模块需要补丁而被迫发布。Julia 1.x版本采用了这种模块化策略。</p>
+
+<p><a href="https://alexwlchan.net/2026/computer-room/">重建计算机室</a><br>作者回忆童年时&#34;计算机室&#34;的鲜明记忆，当时计算机并非生活中的普遍存在，而是体积庞大的固定设备，人们需要前往特定地点才能使用。文章讲述了重建计算机室的过程和思考。</p>
+
+<p><a href="https://edera.dev/stories/numa-part-1-cores-memory-and-the-distance-between-them">NUMA解析：内存距离如何降低您的虚拟机性能</a><br>本文解释了NUMA（非统一内存访问）架构如何通过内存距离影响虚拟机性能。当处理器访问远程节点内存时，会导致显著的延迟增加，从而降低整体系统性能，特别是在资源密集型应用中。</p>
+
+<p><a href="https://chiristo.dev/blog/hexagonal-architecture-ports-and-adapters">端口和适配器模式：将领域逻辑与数据库和API隔离</a><br></p>
+
+<p><a href="https://verdagon.dev/blog/ante-blending-borrowing-rc">Ante：结合借用检查和引用计数的新方法</a><br>Ante是一种新型编程语言，巧妙地结合了借用检查和引用计数两种内存管理机制。这种创新方法旨在提供更安全且高效的内存管理方式，同时保持良好的性能表现。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://colobu.com/2026/06/29/chao-rag-wiki-personal-knowledge-base/">我把775篇收藏塞进4MB向量库：一个比Karpathy Wiki更能“翻箱底”的RAG skill</a><br>该系统实现了零编译延迟，新素材只需放入raw目录并运行增量索引即可搜索，无需AI逐篇处理。它通过混合检索、重排序和去重技术，能够全面检索原始全文片段，即使在素材中只提及过的话题也能找到。</p>
+
+<p><a href="https://quesma.com/blog/qwen-36-is-awesome/">Qwen 3.6 27B是本地开发的理想选择</a><br>作者Piotr Migdał在2026年6月29日发表文章，指出Qwen 3.6 27B模型是本地开发的理想选择。过去他对本地模型感到失望，但这一模型在性能和资源消耗之间取得了良好平衡。</p>
+
+<p><a href="https://deep-reinforce.com/ornith_1_0.html">Ornith-1.0：面向智能体编程的自构建大型语言模型</a><br>DeepReinforce博客在2026年6月介绍了Ornith-1.0，这是一系列专为智能体编程任务设计的自改进开源模型。这些模型能够自我完善，不断提高在编程任务中的表现，为开发者提供强大的AI辅助编程能力。</p>
+
+<p><a href="https://www.auditablelicense.org/">可审计商业许可证(ACL) v1.0</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/canopy-network/canopy">canopy-network/canopy</a><br>The official go implementation of the Canopy Network protocol</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br></p>
+
+<p><a href="https://github.com/AgentWrapper/agent-orchestrator">AgentWrapper/agent-orchestrator</a><br>Agentic orchestrator for parallel coding agents — plans tasks, spawns agents, and autonomously handles CI fixes, merge conflicts, and code reviews.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/rilldata/rill">rilldata/rill</a><br>The fastest business intelligence tool for humans and agents.</p>
+
+<p><a href="https://github.com/XTLS/RealiTLScanner">XTLS/RealiTLScanner</a><br>A TLS server scanner for Reality</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/kunchenguid/treehouse">kunchenguid/treehouse</a><br>Manage worktrees without managing worktrees.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amo</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray panel supporting multi-protocol multi-user expire day &amp; traffic &amp; IP limit (Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun)</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

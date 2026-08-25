@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250722.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250722</span>
+</p>
+<p>每日一谚：Not doing DDD or Clean A. is not an anti-pattern </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/22/go-swiss-table-map-user-report">Go 1.24用户报告：Datadog如何借助Swiss Tables版map节省数百GB内存？</a><br> Go 1.24 的发布带来了一项底层的、然而影响深远的变革——全新的 map 实现。Datadog 团队在升级到 Go 1.24 后，意外地发现其高流量服务中的物 理内存使用量（RSS）显著下降，节省了数百 GB。这一惊人收益的背后功臣，正是 Go 语言对经典数据结构“Swiss Table”的引入。本文将深入剖析 Datadog 的这篇调查报告，带您一览从 Go 1.23 的 Bucket-based 哈希表到 Go 1.24 的 Swiss Table 的演进过程，并通过 Datadog 的真实案例， 量化这一变革带来的巨大价值。</p> 
+
+<p><a href="https://tonybai.com/2025/07/22/cedardb-choose-cpp-rather-than-rust">Rust的安全神话？数据库CEO为何在关键系统中仍选C&#43;&#43;</a><br>一个数据库 CEO，在一个对数据安全和系统稳定性要求极致的领域，放弃了以“安全”著称的 Rust，转而拥抱充满了“历史遗留问题”的 C&#43;&#43;。这究竟是为什么？</p> 
+
+<p><a href="https://itnext.io/leak-and-seek-a-go-runtime-mystery-a3ac0676f0a9">泄漏与查找：Go 运行时之谜</a><br>平台团队礼貌地提醒我们可能存在内存泄漏。我们当时并不知道，我们即将踏上一场堪比任何伟大侦探小说的调试冒险。几个小时之内，我们最大的三个客户就报告了严重的性能问题。显然，这不仅仅是“一个问题”，而是一场全面爆发的危机。</p> 
+
+<p><a href="https://www.dash0.com/guides/logging-in-go-with-slog">使用 Go 语言中的 Slog 进行日志记录：实践指南</a><br>这份全面的指南介绍了 Go 语言中 log/slog 包的实用方法。学习结构化日志记录的基础知识、高级模式、性能权衡以及如何避免严重的生产环境问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/zero-trust-report-2025-secure-networks-survey">“零信任已死”：Tailscale关于安全网络的调查</a><br>Tailscale对1000名IT、安全和工程专业人士进行的调查显示，我们如何未能达到真正的零信任网络——为不完美的人设计的网络。该调查揭示了组织在实施安全访问和采用真正的零信任环境方面面临的挑战。许多公司依赖于传统VPN来弥补这些疏忽和缺陷，但近90%的受访者报告了他们当前VPN解决方案的一个或多个重要问题。身份原生访问，基于用户及其经过身份验证的设备而不是网络位置，是零信任系统的支柱。通过以身份为中心的访问方案，关闭前员工的帐户会立即撤销所有相关权限，从而消除持续访问的风险，解决安全漏洞并满足合规性要求。</p>
+
+<p><a href="https://www.docker.com/blog/wearedevelopers-docker-unveils-the-future-of-agentic-apps/">Docker Unveils the Future of Agentic Apps at WeAreDevelopers</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/07/22/prometheus-labels-understanding-and-best-practices/">Prometheus Labels: Understanding and Best Practices</a><br></p>
+
+<p><a href="https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs">为忙碌的开发者准备的jujutsu</a><br></p>
+
+<p><a href="https://devenv.sh/blog/2025/07/21/announcing-secretspec-declarative-secrets-management">宣布推出 SecretSpec：声明式机密管理</a><br></p>
+
+<p><a href="https://hardcoresoftware.learningbyshipping.com/p/234-if-writing-is-thinking">如果写作就是思考</a><br></p>
+
+<p><a href="https://kube.fm/databases-o11y-peter">Kubernetes 中数据库和可观测性的未来</a><br>本次访谈探讨了 Kubernetes 发展变化的景象，从新兴工具到运行数据库和优化成本的最佳实践。
+
+在本次访谈中，Percona 创始人兼 Coroot 联合创始人 Peter Zaitsev 讨论了：
+
+- 新兴的 Kubernetes 工具和项目，包括用于数据库管理的 Percona Everest、用于可观测性的 Coroot 以及用于高效遥测存储的 Victoria Metrics。
+- 在 Kubernetes 中运行有状态应用程序的成熟度，挑战了 Kubernetes 仅适用于无状态工作负载的过时观念，并强调了正确配置的重要性。
+- Kubernetes 成本优化的策略，包括高效的指标管理、迁移到 ARM 实例以及调整集群大小以避免资源浪费。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/22/textual-v4/#atom-everything">Textual v4.0.0：流式发布</a><br>Will McGugan 虽然不再运营 Textual 的商业公司，但他并没有停止在这个开源项目上的进展。他最近发布了 Python 框架 Textual 的 v4 版本，其主要特性是流式 Markdown 支持，这在当前大型语言模型 (LLM) 盛行的时代非常重要，因为大多数 LLM 都是通过其 API 输出 Markdown 流。文章作者使用了一个测试示例，并结合了自己的异步 LLM Python 库和 o3 的帮助，将其转换为一个与模型对话的流式脚本。</p>
+
+<p><a href="https://huggingface.co/blog/MaziyarPanahi/open-health-ai">解锁医疗 AI：我正在免费发布最先进的医学模型。永久免费。</a><br>医疗 AI 长期以来一直受制于高昂的付费墙和封闭系统。研究人员、医生和开发人员不得不应对高昂的费用和神秘的“黑盒”工具，这些工具会降低效率。现在，OpenMed 正在通过超过 380 个针对医学和临床文本的顶级命名实体识别 (NER) 模型来改变现状，所有这些模型都是免费的，并根据 Apache 2.0 许可证开放。这些模型不仅与昂贵的商业选项保持同步，而且还超越了它们，提供了卓越的性能和易于访问性，从而加快了全球医疗保健突破的速度。</p>
+
+<p><a href="https://www.infoq.com/news/2025/07/ai-productivity">解读AI生产力</a><br></p>
+
+<p><a href="https://cybercorsairs.com/my-ai-co-pilot-deleted-my-production-database">我的AI copilot删除了我的生产环境数据库</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/ibnaleem/gosearch">ibnaleem/gosearch</a><br>🔍 Search anyone&#39;s digital footprint across 300&#43; websites</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>A simple zero-config tool to make locally trusted development certificates with any names you&#39;d like.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>Selfhosted alternative to 12ft.io. and 1ft.io bypass paywalls with a proxy ladder and remove CORS headers from any URL</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/go-acme/lego">go-acme/lego</a><br>Let&#39;s Encrypt/ACME client and library written in Go</p>
+
+<p><a href="https://github.com/bytebase/bytebase">bytebase/bytebase</a><br>World&#39;s most advanced database DevSecOps solution for Developer, Security, DBA and Platform Engineering teams. The GitHub/GitLab for database DevSecOps.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/NVIDIA/nvidia-container-toolkit">NVIDIA/nvidia-container-toolkit</a><br>Build and run containers leveraging NVIDIA GPUs</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/grafana/tempo">grafana/tempo</a><br>Grafana Tempo is a high volume, minimal dependency distributed tracing backend.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

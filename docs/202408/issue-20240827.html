@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240827.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-27</span>
+</p>
+<p>每日一谚：Go is not magical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dev.to/thatcoolguy/rust-vs-go-which-should-you-choose-in-2024-50k5">2024, 我应该用Rust还是Go</a><br>Rust 和 Go 都是现代编程语言，为开发人员提供了独特的功能和优势。Rust 以其内存安全性、可与 C/C&#43;&#43; 相媲美的性能以及防止常见内存泄漏的所有权系统而闻名，使其适用于系统编程和高性能计算。另一方面，Go 以其简单性、内置并发性和快速编译时间而闻名，使其成为构建可扩展的 Web 应用程序和 API 的理想选择。虽然与 Go 相比，Rust 的学习曲线更陡峭，社区规模更小，但这两种语言都有强大的生态系统和企业支持，Rust 得到了主要科技公司的支持，提供性能关键型服务。最终，Rust 和 Go 之间的选择取决于项目的具体要求，Rust 是性能关键型和大规模分布式系统的首选，而 Go 则因其开发的简单性和速度而得到选择。</p> 
+
+<p><a href="https://appliedgo.net/spotlights/magic/">Magic, or the lack thereof</a><br>该文讨论了编程语言中“魔法”的概念，特别是与Go语言的关系。它引用了阿瑟·C·克拉克的名言，指出先进的技术可能显得神奇，并将这一观点应用于编程语言。文档还探讨了“非魔法”语言的概念，以Go作为例子。引用了杰里米·鲍尔斯的文章，提供了“魔法”在编程语言中的细致定义，解释了它并非固有的好或坏，而是需要权衡其带来的好处与心理负担。文档进一步讨论了Perl作为一种充满魔法的语言，使用简单的代码片段来说明它如何避免样板代码。然而，它也警告了魔法特性的潜在缺点，因为这些特性可能隐藏复杂的逻辑，使代码更难理解。</p> 
+
+<p><a href="https://dev.to/pradumnasaraf/building-an-ai-powered-cli-with-golang-and-google-gemini-45a1">使用 Golang 和 Google Gemini 构建 AI 驱动的 CLI</a><br>源文档提供了有关使用 Golang 和 Google 的 Gemini API 构建 AI 驱动的命令行界面 （CLI） 的详细指南。作者 Pradumnasaraf 解释了从头开始创建 CLI 的过程，重点是添加 AI 功能。该指南包括有关设置开发环境、初始化项目以及将 Cobra 软件包用于 CLI 结构的说明。此外，它还涵盖了 Gemini API 的集成，以实现对用户查询的 AI 响应。该文档还解决了对动态提示的需求，演示了如何修改代码以接受用户输入作为参数。最后，作者提供了有关如何发布 CLI 包以供更广泛使用以及解决在此过程中遇到的常见问题的信息。</p> 
+
+<p><a href="https://medium.com/@osamatwaime/revamping-legacy-systems-the-architects-blueprint-for-a-seamless-migration-to-go-554b5d8823c8">重塑遗留系统：架构师无缝迁移到Go的蓝图</a><br>文章为计划将遗留系统迁移到Go的架构师提供了全面的指南。文章强调了战略规划的重要性，首先要对现有系统的架构、代码库和性能指标进行彻底分析。迁移目标应与业务目标保持一致，重点关注性能优化、可扩展性和可维护性。文章概述了三种迁移策略：完全重写、增量迁移和桥接方法。还详细说明了执行阶段，包括建立稳健的Go开发环境、迁移核心组件和进行严格测试。最后，文章强调了Go的架构优势，如高效的并发管理（使用goroutines和channels）以及自动垃圾回收，简化了内存管理。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-08-26-why-i-threw-out-working-code/">为什么我扔掉了 Perfectly Good Code</a><br>作者反思了丢弃大量代码的决定，特别是 Dolt（一种专为类似 Git 的版本控制而设计的 SQL 数据库）中新 JSON 存储格式的原型。此原型是在意识到 JSON 文档可以有效地表示为平面表（类似于 Prolly Tree）后开发的，允许 Dolt 将现有的表优化应用于 JSON 文档。尽管乐观，但原型揭示了性能问题，例如读取和导出文档的速度变慢，并且存储路径的空间复杂性高于预期。然而，作者承认原型的价值，因为它提供了导致最终设计的基本测量和见解，该设计没有重用原型的大部分代码。最终，作者得出结论，虽然原型对于收集测量值非常宝贵，但有时可能需要丢弃代码才能有效地向前发展。</p> 
+
+<p><a href="https://www.linkedin.com/pulse/standardize-message-queues-golang-duc-nguyen-ekabc/">在GO中标准化和统一7 个消息队列：Kafka、RabbitMQ、IBM-MQ、Active MQ、Google Pub/Sub、Amazon SQS、NATS</a><br>本文讨论了在分布式系统中集成多个消息队列（如 Kafka、RabbitMQ 和其他队列）的挑战，强调了在 Golang 中采用标准化消息发布和使用方法的必要性。它建议创建一个抽象层，将业务逻辑与底层消息代理的细节解耦，从而简化代码库并提高灵活性。建议的解决方案包括消息队列的统一接口、对不同队列的即插即用支持，以及将 MQ 技术参数分离到基础设施层。此外，本文还强调了高级功能访问的可能性，并承认抽象层可能会引入轻微的性能开销。作者还提到，标准化的界面是为新开发人员设计的，便于学习和适应。</p> 
+
+<p><a href="https://madflojo.medium.com/dont-log-return-errors-82dd6985fd99">不log，返回错误</a><br>本文讨论了 Benjamin Cane 对 Go 编程中一种常见做法的看法，即在包初始化期间传递 logger，他个人不喜欢这种模式。Cane 的主要论点是，这种方法可能会无意中鼓励使用 log 语句掩盖错误，而不是直接解决它们。他认为，错误应该有意义地返回给原始调用者，原始调用者拥有决定适当操作的上下文，例如重试或执行替代操作。作者还谈到了这种做法对软件工程中的可观察性和错误处理的更广泛影响，同时倡导一种更加上下文驱动的错误管理方法。</p> 
+
+<p><a href="https://zackproser.com/blog/cursor-review">cursor review：改变我创建软件的方式</a><br>Cursor 是一种软件开发工具，已经从因其最初的界面让人想起 Windows 而令人讨厌，发展成为现在每天使用它的开发人员的首选平台。这种转变归功于 Cursor 采用自然语言界面的创新方法，允许开发人员用简单的英语描述他们想要的变化。这种方法，再加上该工具编排 LLM 和 IDE 的 API 的能力，可以快速编辑、重构和创建新文件。此外，Cursor 的模型互操作和 Composer 界面等功能表明了编码工具的发展方向，重点是定制和自然语言交互。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.colinbreck.com/predicting-the-future-of-distributed-systems/">预测分布式系统的未来</a><br>源文档深入探讨了分布式系统不断发展的前景，特别关注对象存储的兴起及其对事务和分析系统的影响。它强调了对象存储如何由于其单向决策性质而成为系统架构不可或缺的一部分，涉及大量投资且难以更改。本文档还探讨了新编程模型的潜力，这些模型有望通过将更多代码抽象到基础设施中来彻底改变软件开发，从而简化系统设计和维护。然而，它承认，由于投资风险高和存在许多单向决策，采用这些新模式存在困难。尽管存在这些挑战，作者还是对对象存储的持续增长以及最终广泛采用的创新编程模型充满信心，这些模型可能会带来更简单、更模块化的系统。</p>
+
+<p><a href="https://blog.ipfs.tech/2024-brave-migration-guide/">从 Brave 迁移到 IPFS 桌面</a><br>本文档为用户将其 IPFS 数据从 Brave 浏览器迁移到 IPFS 桌面提供了指南。它解释说，包含所有 IPFS 数据、IPNS 密钥和 PeerID 的 IPFS 存储库将从 Brave 托管 IPFS 节点移动到 IPFS 桌面。该指南详细介绍了查找 Brave IPFS 存储库、将其移动到 IPFS 桌面的默认位置以及启动独立 IPFS 节点的过程。此外，它还解决了 IPFS Companion 浏览器扩展未检测到节点的潜在问题，并提供了解决方案，例如更新 RPC 和网关 URL。该文档还包括一个 FAQ 部分，为在迁移过程中可能遇到挑战的用户提供进一步的帮助和信息。</p>
+
+<p><a href="https://blog.gitguardian.com/getting-started-with-spiffe/">开始使用 SPIFFE 进行多云安全工作负载身份验证</a><br>该博客文章深入探讨了 SPIFFE 的利用，SPIFFE 是一个框架，旨在增强云原生环境中的安全服务到服务通信和身份验证。它解释了 SPIFFE（代表 Secure Production Identity Framework for Everyone）如何为跨多云设置的工作负载提供全面的身份解决方案。该博文概述了 SPIFFE 的实际应用，包括使用适用于 Golang、Python 或 Java 等语言的 SPIFFE 库原生集成到工作负载中，以及将 Envoy 代理用于无法直接修改的工作负载。此外，它还涵盖了使用 SPIFFE 身份与 AWS 的授权流程，包括 X.509 证书和通过 OIDC 联合身份验证的 JWT 令牌。最后，该博客谈到了使用 SPIFFE 可验证文档对 PostgreSQL 进行身份验证，强调了 SPIFFE 在各种身份验证场景中的灵活性。</p>
+
+<p><a href="https://blog.bitsrc.io/5-misconceptions-about-monorepos-fcc284ded064">关于 monorepos 的 5 个误解</a><br>Ashan Fernando 的文章解决并揭穿了关于 monorepo 的五个常见误解，强调它们并非天生难以扩展、大公司独有或容易构建时间长。Fernando 澄清说，monorepos 对各种规模的公司都有好处，可以增强协作并简化依赖管理。他解释说，虽然 monorepo 会使依赖项管理复杂化是一个神话，但使用像 Bit 这样的正确工具，它们实际上可以简化流程。此外，Fernando 认为，合并冲突并非 monorepo 所独有，而是可能发生在任何开发结构中，适当的治理可以缓解它们。本文可作为了解使用 monorepo 的实际优势和挑战的指南，倡导使用适当的策略和工具。</p>
+
+<p><a href="https://semaphoreci.medium.com/andrew-martin-on-software-security-best-practices-42ed77281c88">Andrew Martin 谈软件安全最佳实践</a><br>ControlPlane 首席执行官 Andrew Martin 强调了安全性在软件开发中的关键作用，尤其是在云技术、开源软件和 AI 的背景下。他主张将安全性作为主要设计标准而不是事后考虑，并建议安全要求应成为 DevOps 实践中验收标准的一部分。为了防止安全疏忽，Martin 建议安全团队尽早参与威胁建模和系统设计，以确保弹性。他还解决了保护开源软件供应链的挑战，提出了检测、修复和弹性策略，包括使用可重复的构建和 NixOS 等工具。此外，Martin 还讨论了将 AI 集成到软件系统时的独特安全考虑因素，呼吁将软件和策略相结合，以确保负责任的 AI 部署。</p>
+
+<p><a href="https://netflixtechblog.com/improve-your-next-experiment-by-learning-better-proxy-metrics-from-past-experiments-64c786c2a3ac">通过从过去的实验中学习更好的代理指标来改进您的下一个实验</a><br>Netflix 技术博客文章深入探讨了通过从过去的数据中学习有效的代理指标来改进实验的方法。Aurélien Bibaut 和 Netflix 的同事以留存率为例，讨论了在提高短期结果的治疗和长期业务目标之间建立因果关系所面临的挑战。他们批评了评估这种关系的常用方法，例如检查用户层面的相关性和治疗效果相关性，因为它们具有固有的局限性和潜在的偏倚。为了解决这些问题，该团队提出了三个估计器——总协方差 （TC）、Jackknife 工具变量估计 （JIVE） 和有限信息最大似然 （LIML），它们在不同条件下提供对代理/北极星关系的一致估计。这些方法被描述为协调 Netflix 各个团队之间工作的宝贵工具，使他们能够管理指标权衡、指标创新并轻松独立工作。</p>
+
+<p><a href="https://www.docker.com/blog/streamlining-local-development-with-dev-containers-and-testcontainers-cloud/">使用 Dev Containers 和 Testcontainers Cloud 简化本地开发</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，这通常是由于发出请求的客户端缺乏权限。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明，尝试访问服务器上的特定资源的用户未被授予执行此操作所需的权限。</p>
+
+<p><a href="https://engineering.fb.com/2024/08/26/data-infrastructure/retinas-real-time-infrastructure-accounting-for-sustainability/">RETINAS：实时基础设施核算可持续性</a><br>作为 RETINAS 计划的一部分，Meta 引入了一个新的指标，即实时服务器队列利用率，以更好地了解和减少其服务器基础设施中的范围 3 排放。该指标受金融折旧概念的启发，衡量服务器中隐含碳的利用率，并将其与电力使用效率等利用率指标相结合。通过这样做，它提供了服务器可靠性、性能和运营优化对排放影响的实时、动态视图。该指标旨在帮助 Meta 和类似公司在服务器队列管理方面做出更明智的决策，最终目标是最大限度地减少隐含碳并朝着净零排放迈进。</p>
+
+<p><a href="https://www.redhat.com/en/blog/future-red-hat-openshift-operator-sdk">Red Hat OpenShift Operator SDK 的未来</a><br>Operator SDK 是在 Kubernetes 生态系统中开发、测试和部署 Operator 的关键组件，随着 Red Hat OpenShift 4.16 标志着其附带的 SDK CLI 的弃用，它正在经历过渡。此举旨在将 Operator SDK 与 OpenShift 生命周期分离，使 Red Hat 能够专注于 CLI 二进制文件的长期维护。尽管进行了此更改，但 Operator SDK 将继续受支持三年以上，并且 Ansible 和基于 Helm 的 Operator 的基础镜像将与较新的 OpenShift 版本保持同步。对于 ISV 合作伙伴，无需立即更改其做法，因为他们可以继续使用 OpenShift 提供的最新 Operator SDK CLI，并像往常一样对其操作员进行认证。</p>
+
+<p><a href="https://thenewstack.io/why-developers-need-to-care-about-distributed-cloud-computing/">为什么开发人员需要关心分布式云计算</a><br>本文讨论了分布式云计算对开发人员的重要性，强调了从传统的集中式云模型到更灵活、以位置为中心的方法的转变。这种演变满足了客户对即时、个性化数据体验的需求，无论他们身在何处。分布式云计算还提供增强的安全性和合规性，特别是对于受地理法规约束的数据。通过横向扩展到客户所在的位置，而不是从中心位置纵向扩展，分布式云计算可以优化成本和延迟。本文强调了开发人员必须适应分布式云原则，以满足现代云基础设施和应用程序管理不断变化的需求。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.docker.com/blog/optimizing-ai-application-development-docker-desktop-nvidia-ai-workbench/">使用 Docker Desktop 和 NVIDIA AI Workbench 优化 AI 应用程序开发</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，这通常是由于发出请求的客户端缺乏权限。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明，尝试访问服务器上的特定资源的用户未被授予执行此操作所需的权限。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/08/26/building-a-translation-agent-on-llamaedge/">在 LlamaEdge 上构建翻译代理</a><br>本文介绍了由 Andrew Ng 教授开发的翻译代理，旨在协调多个 LLM 代理完成翻译任务。它强调了代理与 LlamaEdge（适用于各种模型和硬件加速器的 AI 运行时）的兼容性，强调了其轻量级、可嵌入、可移植和 Docker 原生功能。提供了三个演示，展示了使用不同模型的翻译：Llama-3-8B、Gemma-2-9B 和 Phi-3-medium-128k，每个模型都根据其上下文窗口大小和语言功能进行选择。翻译涵盖一系列主题，从简单的短语到冗长的文章，展示了翻译代理在各种语言模型中的多功能性和效率。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>基于基于 YAML 的简单 DSL 的快速且可定制的漏洞扫描程序。</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>开源 UI 优先的身份和访问管理 （IAM）/单点登录 （SSO） 平台，具有支持 OAuth 2.0、OIDC、SAML、CAS、LDAP、SCIM、WebAuthn、TOTP、MFA、Face ID、RADIUS、Google Workspace、Active Directory 和 Kerberos 的 Web UI</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/go-kit/kit">go-kit/kit</a><br>微服务的标准库。</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>适用于 Kubernetes 的 Go 客户端。</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/lionsoul2014/ip2region">lionsoul2014/ip2region</a><br>Ip2region （2.0 - xdb） 是一个离线 IP 地址管理器框架和定位器，支持数十亿个数据段，十微秒的搜索性能。适用于多种编程语言的 XDB 引擎实现</p>
+
+<p><a href="https://github.com/go-resty/resty">go-resty/resty</a><br>适用于 Go 的简单 HTTP 和 REST 客户端库</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>适用于 Windows 的 node.js 版本管理实用程序。具有讽刺意味的是，这是用 Go 编写的。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>使用 Gitleaks 🔑 保护和发现机密</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>容器镜像和文件系统的漏洞扫描器</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>JSON Web 令牌 （JWT） 的 Go 实现。</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>适用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin 是用 Go （Golang） 编写的 HTTP Web 框架。它具有类似 Martini 的 API，性能要好得多 - 速度提高了 40 倍。如果您需要出色的性能，请给自己买点杜松子酒。</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI 工具从现有基础设施生成 terraform 文件（反向 Terraform）。基础设施到代码</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>适用于 Go 编程语言的 AWS 开发工具包。</p>
+
+<p><a href="https://github.com/xvzc/SpoofDPI">xvzc/SpoofDPI</a><br>用 Go 编写的简单快速的反审查工具</p>
+
+<p><a href="https://github.com/fsnotify/fsnotify">fsnotify/fsnotify</a><br>Go 的跨平台文件系统通知。</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes 虚拟化 API 和运行时，用于定义和管理虚拟机。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

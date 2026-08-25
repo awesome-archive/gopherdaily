@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240904.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-04</span>
+</p>
+<p>每日一谚：Don not Return -1 or nil to Indicate Error. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/gotelemetry">Go 1.23及更高版本中的遥测</a><br>Go 编程语言在其 1.23 及更高版本中引入了遥测来帮助改进 Go 工具链。这个遥测系统允许用户选择共享有关工具链程序及其使用情况的数据，这反过来又可以帮助 Go 贡献者纠正错误、防止回归并做出明智的决策。可以使用“go telemetry on/off”命令打开和关闭遥测数据收集。尽管最初担心隐私和样本的代表性，但事实证明，遥测是有益的，从用户那里收集的数据能够发现和解决 gopls 工具中的大量错误。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/K8pao4_-YU77j7Ld1p7VLQ">AI大模型也有自己偏爱的编程语言，你猜猜谁最擅长Go？</a><br>不同大模型对不同编程语言的擅长程度不一</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/Qbq4cklTDFpqU-h4qFXoUQ">拿来主义？地表最强编程语言排行榜诞生！Go排在第几？</a><br>ZDNET巧妙地汇总了9个不同的编程语言排行榜的排名数据，经过加权分析，创造了他们的ZDNET编程语言流行度指数。</p> 
+
+<p><a href="https://www.grant.pizza/blog/go-stack-traces-bpf/">使用eBPF构建Go堆栈跟踪</a><br>本文档详细介绍了如何使用二进制跟踪格式 （BPF） 和 Go 符号表在 Go 中生成堆栈跟踪。它概述了一种收集程序计数器并使用它们来跟踪 Go 函数（包括内联函数）执行流的方法。该过程包括将 BPF 程序附加到 Go 函数，收集程序计数器，并使用 &#39;gosym&#39; 包将它们转换为符号。此外，本文档还解决了内联函数的难题，这些函数不会分配新的堆栈帧，因此不会将返回地址写入堆栈。为了克服这个问题，作者描述了一种事先收集所有内联子例程的高 program counters 的技术，使用这些信息来准确解析 program counters 并生成完整的堆栈跟踪。</p> 
+
+<p><a href="https://thedevelopercafe.com/articles/testing-in-go-929e2ad2">Go测试 - 一篇让您入门的速成文章</a><br>本文深入探讨了 Golang 中的测试，从一个简单的程序开始，该程序包含一个将两个数字相加的函数。然后，它指导读者为此函数编写测试，强调命名约定和测试文件结构在 Go 中的重要性。介绍了表驱动测试的概念，演示了如何使用一组测试用例有效地测试多个场景。本文还讨论了测试覆盖率的重要性，展示了添加新的、未经测试的代码如何影响它。最后，本文涉及高级测试概念，例如模拟，使用手动方法和模拟库来模拟依赖项。</p> 
+
+<p><a href="https://dev.to/aws/build-generative-ai-applications-in-go-using-amazon-titan-text-premier-model-18nd">使用 Amazon Titan Text Premier 模型在 Go 中构建生成式 AI 应用程序</a><br>本综合指南深入探讨了如何使用 Amazon Titan Text Premier（Amazon Titan Text 系列中的一种复杂语言模型）使用 Go 编程语言生成文本。它引入了“langchaingo”包，这是 langchain 库的 Go 版本，有助于将 Amazon Titan Text Premier 集成到 Go 应用程序中。该指南提供了有关设置必要组件的分步教程，包括 Go 的安装和 Amazon BEDrock 访问权限的配置，以及 IAM 权限的配置。此外，它还提供了实际示例，例如使用 Amazon BEDrock 中提供的各种模型和工具生成内容、与文档聊天以及执行检索增强生成 （RAG）。本文档最后鼓励读者通过参考 Amazon BEDrock 文档来进一步探索，以获取有关可用不同模型和工具的更多信息。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://webrtchacks.com/power-up-getstats-for-client-monitoring/">启动getStats 以进行客户端监控</a><br>源文档深入探讨了如何使用 WebRTC 统计信息来监控和排查 WebRTC 应用程序中的常见问题。它介绍了 WebRTC 统计 API，强调了它在理解 RTC 性能指标方面的重要性。本文档进一步深入探讨了实际用法，包括监控往返时间 （RTT） 和质量限制原因，以检测网络拥塞。此外，它还讨论了 client-monitor-js 的集成，client-monitor-js 是一个开源工具，用于聚合 getStats 数据并帮助检测卡住的音频或视频轨道。该文件还强调了在检测拥塞时需要一种平衡的方法，以避免误报。</p>
+
+<p><a href="https://blog.gitguardian.com/multicloud-security-architecture/">多云安全架构</a><br>本文深入探讨了多云安全架构的复杂性，强调了随着企业越来越多地采用多云战略来获得成本优化、创新和避免供应商锁定等优势，其重要性。它概述了多云的固有安全挑战，例如更大的攻击面、由于缺乏集中式系统而导致的身份和访问管理 （IAM） 的复杂性，以及对安全基础设施即代码 （IaC） 实践的迫切需求。本文还讨论了跨不同云提供商实现全面可见性和集中监控的困难。为了缓解这些挑战，本文提出了最佳实践，例如为 IAM 采用单点登录 （SSO），利用 Prometheus/Grafana 等集中式监控解决方案，以及倡导 IaC 安全性的持续学习。此外，它还指出了开源工具弥合不同云服务之间差距的潜力，以及统一的 IAM/安全策略引擎对于跨云一致地实施安全策略的重要性。</p>
+
+<p><a href="https://www.openfaas.com/blog/checking-stock-price-drops/">如何使用 Functions、Cron 和 LLM 检查价格下跌</a><br>本文提供了有关如何在 OpenFaaS 中使用函数、cron 作业和大型语言模型 （LLM） 自动执行任务的全面指南。它解释了 Alex 如何通过使用 HTML 抓取和 cron 作业来监控凿子价格，cron 作业是一种可应用于各种购买或监控场景的技术。作者将传统的 HTML 解析与使用 LLM 进行了比较，尽管后者被证明是资源密集型的。他们还探索了替代方案，例如部署具有函数的本地 LLM，或者将云托管服务用于 LLM 可能无法有效处理的任务。文章最后强调了短期任务功能的多功能性，以及将这些自动化应用于各种实际应用的潜力。</p>
+
+<p><a href="https://thenewstack.io/the-new-2gb-raspberry-pi-5-another-option-for-linux-sysadmins/">新的 2GB Raspberry Pi 5：Linux 系统管理员的另一种选择</a><br>Raspberry Pi 5，特别是 2GB 型号，是作为不需要大量内存的项目的经济型解决方案而推出的。尽管与其他 Raspberry Pi 5 型号相比 RAM 更少，但 2GB 版本的价格仅为 50 美元，是最实惠的选择。该模型专为嵌入式系统和其他低内存项目量身定制，其处理器和 Raspberry Pi OS 针对其硬件进行了优化。虽然它可能并不适合每个项目，但 2GB Raspberry Pi 5 为需要简单、经济实惠的单板计算机的人提供了可访问性和灵活性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.timescale.com/blog/build-a-fully-local-rag-app-with-postgresql-mistral-and-ollama/">使用 PostgreSQL、Mistral 和 Ollama 构建完全本地的 RAG 应用程序</a><br>本文介绍了一种使用 PostgreSQL、Ollama 和 Mistral 构建完全本地检索增强生成 （RAG） 应用程序的方法，以确保数据隐私和安全。它解释说，RAG 通过将信息检索与文本生成相结合来增强语言模型，从而减少幻觉并提高不太常见查询的响应准确性。本教程指导用户使用 TimescaleDB 和 Ollama 设置 PostgreSQL，强调本地数据处理的重要性。它进一步详细介绍了本地 RAG 系统的开发，重点介绍了 PostgreSQL 连接的创建、数据插入和文档嵌入的检索。最后，它展示了应用程序根据用户查询生成相关响应而不泄露敏感信息的能力。</p>
+
+<p><a href="https://semaphoreci.medium.com/a-guide-to-self-hosted-llm-coding-assistants-68d431f65770">自托管 LLM 编码助手指南</a><br>本文提供了有关自托管大型语言模型 （LLM） 的全面指南，用于编码辅助，特别关注如何将这些模型集成到各种开发环境中。它根据不同的 LLM（例如 codeqwen、deepseek-coder、codellama 和 llama3.1）执行编码提示的能力来评估它们，并使用基线提示来测试这些模型的功能。该指南还探讨了 VSCode、Emacs 和 Neovim 的编辑器集成，使用 Ollama API 来简化这些平台之间的集成过程。通过将消费级硬件与这些模型和编辑器扩展相结合，本文演示了如何实现高效的代码完成和辅助编码。</p>
+
+<p><a href="https://dev.to/faith_corrigan_2a7994a43d/elevating-web-development-how-machine-learning-is-crafting-the-future-of-digital-innovation-1h5c">提升 Web 开发：机器学习如何打造数字创新的未来</a><br>Elevating Web Development 探讨了机器学习 （ML） 如何彻底改变数字创新的未来，尤其是在 Web 开发方面。以前，网站开发受到基于预编程静态规则的系统的限制，但 ML 引入了动态内容和预测系统，增强了用户交互和效率。Web 开发中的 ML 利用数据来构建性能，采用算法进行模式识别和预测，以提供个性化的内容和用户体验。Netflix 的个性化推荐和 Spotify 的定制播放列表和广播电台等真实示例说明了 ML 在个性化方面的重要作用。文章最后强调了将 AI 集成到 Web 开发中的重要性，并建议聘请精通该领域的 Web 开发人员，以在数字化转型时代保持竞争力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/openfga/openfga">openfga/openfga</a><br>专为开发人员构建的高性能和灵活的授权/权限引擎，其灵感来自 Google Zanzibar</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>极快的 Web 捆绑器</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>适用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/encoredev/encore">encoredev/encore</a><br>开发平台，用于构建具有声明式基础设施的健壮类型安全的分布式系统</p>
+
+<p><a href="https://github.com/aceberg/WatchYourLAN">aceberg/WatchYourLAN</a><br>轻量级网络 IP 扫描程序。可用于通知新主机和监控主机在线/离线历史记录</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细访问控制将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA 是基于 Kubernetes 的事件驱动自动缩放组件。它为在 Kubernetes 中运行的任何容器提供事件驱动的扩展</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>连接、保护、控制和观察服务。</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>适用于 Kubernetes 的开放且可扩展的持续交付解决方案。由 GitOps Toolkit 提供支持。</p>
+
+<p><a href="https://github.com/smallstep/certificates">smallstep/certificates</a><br>🛡️ 一个私人证书授权机构（X.509 &amp; SSH）和ACME服务器用于安全的自动化证书管理，因此您可以在任何地方使用TLS和SSO进行SSH。</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate 是一个开源向量数据库，可存储对象和向量，允许将向量搜索与结构化过滤与云原生数据库的容错和可扩展性相结合。</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行 Kubernetes</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>轻量级 Kubernetes</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>用于管理密钥的简单灵活的工具</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>适用于 Go 编程语言的 AWS 开发工具包。</p>
+
+<p><a href="https://github.com/publicsuffix/list">publicsuffix/list</a><br>Public 后缀列表</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

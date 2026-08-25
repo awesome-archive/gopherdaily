@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240829.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-29</span>
+</p>
+<p>每日一谚：Simplicity is key; embrace the Go way. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://betterstack.com/community/guides/observability/opentelemetry-go/">使用OpenTelemetry对Go应用进行跟踪</a><br>本教程将指导用户完成使用 OpenTelemetry 为 Go 应用程序设置实际跟踪的过程。它从安装必要的依赖项和创建用于用户身份验证的 GitHub 应用程序开始。然后，本教程指导用户如何在其 Go 应用程序中引导 OpenTelemetry SDK 以启用分布式跟踪。在此之后，将指导用户检测 HTTP 服务器以为每个请求自动生成跟踪 span。本文档还介绍了如何将这些跟踪转发到 OpenTelemetry Collector，后者又将数据发送到 Jaeger 后端进行可视化和分析。最后，本教程提供了有关在应用程序本身中添加自定义插桩的指导。</p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/fuzz-target">编写Go fuzz target</a><br>本文提供了有关编写 Go fuzz 目标的全面指南，特别关注检测与 bytes 和 runes 之间的混淆相关的错误。它解释了在 Go 中测试的重要性，以及为什么再多的测试都不能保证包没有 bug。然后，该指南深入探讨了编写 Go fuzz 目标的过程，从生成随机输入开始，并使用 oracle 函数将结果与预期结果进行比较。它还讨论了语料库的概念，语料库是提供给模糊测试程序的一组训练数据，以帮助它生成潜在的测试用例。本文进一步解释了如何处理无效的 UTF-8 字符串，以及如何检测和报告模糊目标中的 panic。</p> 
+
+<p><a href="https://threedots.tech/post/live-website-updates-go-sse-htmx/">使用Go、SSE 和 htmx 进行实时网站更新</a><br>本文档深入探讨了如何使用 Go、Server-Sent Events （SSE） 和 htmx 库在网站上实现实时更新。它讨论了从单页应用程序 （SPA） 与轮询等技术的普及到当前使用 SSE 进行高效实时更新的趋势的转变。作者是 Three Dots Labs 的联合创始人，他分享了他们在设置 SSE 终端节点方面的专业知识，以及设计幂等处理程序来管理 Pub/Sub 系统的“至少一次”交付保证的重要性。此外，本文档还介绍了 htmx 对 AJAX 请求的使用，以及使用 Reflex 等工具重新加载实时代码的可能性。作者还为开发人员提供了实用的建议，包括使用 templ 的技巧和加快开发过程的建议。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/eRAnqnkwG4GlhR2sWVMUYA">kitexcall：用JSON发起RPC请求的命令行神器</a><br>字节跳动技术团队推出的命令行工具kitexcall,基于 Kitex提供的JSON泛化调用,简化了 Kitex客户端的编写过程,无需编写繁琐的代码。</p> 
+
+<p><a href="https://zhuanlan.zhihu.com/p/716576400">软件系统限流的底层原理解析</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.heroku.com/updating-twelve-factor-call-for-participation">更新 Twelve-Factor：呼吁参与</a><br>云托管服务 Heroku 宣布计划对其 Twelve-Factor App 方法进行现代化改造，该方法最初发布于十多年前。此更新旨在删除过时的技术参考和示例，并明确将核心概念与示例分开，从而允许两者独立发展。该计划是随着行业标准和 Kubernetes 等技术的发展而保持最佳实践相关性的更广泛努力的一部分。该公司还计划重新启用 GitHub 集成，并鼓励社区通过电子邮件和社交媒体参与。</p>
+
+<p><a href="https://www.p99conf.io/2024/08/28/rust-the-best-language-for-data-infrastructure/">Rust：数据基础架构的最佳语言</a><br>P99 CONF 24 的演讲者 Micah Wylde 倡导将 Rust 作为数据基础设施的主要语言，强调它适用于构建数据库和流处理引擎等高性能系统。他强调了 Rust 通过零成本抽象、编译时内存管理和强大的借用检查器等功能，将 C&#43;&#43; 的性能和安全性与 Java 的易开发性独特地融合在一起。尽管有其优势，但 Wylde 承认与 Rust 的 async/await 系统相关的学习曲线以及与其他语言相比的独特方法。此外，他指出 Rust 中缺乏稳定的 ABI，尽管他对它在 Rust 数据基础设施中的未来仍然持乐观态度。Wylde 邀请感兴趣的各方为 Arroyo 项目做出贡献，这是一个用 Rust 编写的最先进的流处理引擎，并在 Discord 上与社区互动。</p>
+
+<p><a href="https://blog.devops.dev/streamlining-devops-with-github-actions-argocd-and-kubernetes-4985e2b355a2">终极 DevOps 工具包：利用 GitHub Actions、ArgoCD 和 Kubernetes 实现高效的 CI/CD</a><br>Shekhar Chaugule 的博客文章提供了有关使用 GitHub Actions、Kubernetes 和 ArgoCD 实施 DevOps 实践以实现高效 CI/CD 的全面指南。它首先讨论了如何使用多阶段 Dockerfile 容器化 Go 应用程序，强调了使用 Distroless 镜像的安全性和大小优势。然后，该博文详细介绍了为部署、服务和入口创建 Kubernetes 清单，以及在 EKS 集群中验证这些资源的重要性。此外，它还概述了 Helm Chart 的设置，以简化未来跨不同环境的部署。该博客进一步解释了使用具有多个阶段的 GitHub Actions 实现 CI，以及使用 ArgoCD 进行持续交付，其中它提取更新的 Helm 图表并在修改后将其部署到 Kubernetes 集群。</p>
+
+<p><a href="https://opensource.googleblog.com/2024/08/kubernetes-131-is-now-available-on-gke-one-week-after-open-source-release.html">Kubernetes 1.31 现已在 GKE 上提供，就在开源发布一周后！</a><br>Kubernetes 1.31 现已在 Google Kubernetes Engine （GKE） 上提供，在开源发布一周后发布。此更新包括 45 项增强功能，其中一些功能（如自定义资源的字段选择器和缓存中的一致读取）现在处于测试阶段。此更新还引入了服务的流量分配，允许在 Kubernetes Service 中优先进行流量路由。此外，一项新功能允许在 GKE 上动态添加服务 CIDR 范围，从而帮助解决 IP 耗尽问题。这些功能的开发由几位 Google 员工领导，包括 Joe Betz、Jordan Liggitt、Sean Sullivan、Tim Hockin 等。</p>
+
+<p><a href="https://engineering.fb.com/2024/08/28/security/post-quantum-cryptography-meta/">Meta 正在为后量子密码学做准备</a><br>Pascal Hartig 在 Meta Tech 播客上的文章谈到了量子计算对当前加密系统即将到来的威胁以及后量子密码学的必要性。Meta 的工程师 Sheran 和 Rafael 正在带头为量子计算机可能破解当今加密的未来做准备，并强调了开发能够抵御量子攻击的新加密标准的重要性。该播客集以及相关博客文章旨在告知和教育公众和行业专业人士了解 Meta 为确保量子时代数据隐私而采取的积极措施。此外，文章还强调了 Meta 的各种职位空缺，特别是与机器学习和后量子密码学相关的工程职位，表明该公司致力于扩大这一关键领域的专家团队。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/08/28/__trashed-5/">现代 Kubernetes 网络策略指南</a><br>这份全面的指南深入探讨了 Kubernetes 网络策略的复杂性，解释了它们在控制集群内流量方面的重要性。它区分第 4 层 （L4） 和第 7 层 （L7） 策略，类似于 OSI 模型，其中 L4 策略是集群级的，而 L7 策略是应用程序级的，提供精细控制。L4 策略虽然更简单且更广泛可用，但存在一些局限性，例如缺乏日志记录和容易受到某些安全威胁的影响。相反，L7 策略（通常通过 Linkerd 等服务网格实现）提供对流量的详细控制，包括身份验证和加密，但需要服务网格基础设施。该指南还讨论了将 L4 和 L7 策略相结合以创建强大的安全框架的可能性，解决了重叠功能以增强保护的问题。</p>
+
+<p><a href="https://www.openfaas.com/blog/add-a-faas-capability/">使用 OpenFaaS 将 FaaS 功能集成到您的平台中</a><br>OpenFaaS 提供了一个平台，可将功能即服务 （FaaS） 功能集成到各种环境中，包括客户仪表板、产品扩展和云产品。它提供了一套 API、文档和语言支持，以便轻松集成，以及多租户、基于角色的访问控制和身份管理等功能。OpenFaaS Standard 专为旨在使用功能发布其产品的团队量身定制，而 OpenFaaS for Enterprises 专为希望提供 FaaS 即服务或为客户代码提供沙箱的企业而设计。此外，OpenFaaS 可以与 E2E Networks Limited 和 Waylay Enterprise 等其他平台集成，以扩展其服务并支持数字化转型计划。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://ai.meta.com/blog/llama-usage-doubled-may-through-july-2024/">自 2023 年以来，Llama 增长了 10 倍，是 AI 创新的领先引擎</a><br>源文档似乎是来自网站或应用程序的提示，提醒用户他们尚未登录。它显示在网页上，如标题和登录查看内容的说明所示。该消息清晰直接，旨在指导用户采取必要的行动以访问网站的全部功能。使用的语言简单明了，确保用户理解登录要求而不会混淆。该文档不包含除登录提醒之外的任何其他信息。</p>
+
+<p><a href="https://simonwillison.net/2024/Aug/28/how-anthropic-built-artifacts/#atom-everything">Anthropic 如何构建 Artifacts</a><br>本文概述了 Anthropic 开发 Artifacts 的过程，Artifacts 是一种旨在使用 AI 模型 Claude 创建交互式 Web 应用程序的工具。Simon Willison 博客的 Gergely Orosz 采访了 Anthropic 的成员，透露 Artifacts 是由一个小团队在短短三个月内构建的。他们最初使用 Streamlit 进行原型设计，并面临着创建安全沙盒环境来运行 AI 生成的代码的挑战。为了解决安全问题，他们实施了具有全站点进程隔离的 iFrame 沙箱，并实施了严格的内容安全策略 （CSP）。Artifacts 的正式发布标志着 Anthropic 在 AI 辅助编程工具方面迈出了重要一步。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby 项目 - 容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>用于访问 GitHub v3 API 的 Go 库</p>
+
+<p><a href="https://github.com/k8sgpt-ai/k8sgpt">k8sgpt-ai/k8sgpt</a><br>让 Kubernetes 超能力惠及所有人</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>基于基于 YAML 的简单 DSL 的快速且可定制的漏洞扫描程序。</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>用于小地方的 Go 编译器。微控制器、WebAssembly （WASM/WASI） 和命令行工具。基于 LLVM。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>适用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/shadow1ng/fscan">shadow1ng/fscan</a><br>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。</p>
+
+<p><a href="https://github.com/zalando/postgres-operator">zalando/postgres-operator</a><br>Postgres operator 创建和管理在 Kubernetes 中运行的 PostgreSQL 集群</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>使用 Gitleaks 🔑 保护和发现机密</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>具有可编程管道的 OpenTelemetry Collector 发行版</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>使用远程映像注册表 - 检索信息、映像、对内容进行签名</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/EndlessCheng/codeforces-go">EndlessCheng/codeforces-go</a><br>算法竞赛模板库 by 灵茶山艾府 💭💡🎈</p>
+
+<p><a href="https://github.com/DataDog/dd-trace-go">DataDog/dd-trace-go</a><br>Datadog Go 库包括 APM 跟踪、分析和安全监控。</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>在 Kubernetes 中自动配置和管理 TLS 证书</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>使用 Docker 定义和运行多容器应用程序</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/ent/ent">ent/ent</a><br>Go 的实体框架</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

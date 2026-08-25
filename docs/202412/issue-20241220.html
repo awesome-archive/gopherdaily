@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241220.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-20</span>
+</p>
+<p>每日一谚：Favor composition over inheritance </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-net-rpc/">Go：net/rpc到gRPC</a><br>本文介绍了在 Go 应用程序中从 net/rpc 过渡到 gRPC，重点介绍了 gRPC 的区别和优势，gRPC 是一种专为高效服务间通信而设计的协议。它解释了 gRPC 使用 Protobuf 定义服务接口及其底层 HTTP/2 协议，并将其与 REST API 和 Go 的 net/rpc 包（使用自定义二进制协议）进行了对比。讨论包括一个 net/rpc 的基本示例，演示了如何设置一个简单的服务和方法调用，同时指出了使用 Go 的原生 &#39;gob&#39; 序列化进行跨语言通信的局限性。作者 Phuong Leon 与 VictoriaMetrics 合作，建议将 gRPC 用于性能关键型应用程序，并提供了在与非 Go 编写的服务交互时使用 JSON 作为“net/rpc”编解码器的见解。本文承诺进一步探索 gRPC 用例，并鼓励通过联系或评论参与以获取更多信息。它还巧妙地将 VictoriaMetrics 作为监控 Go 应用程序的工具进行推广，暗示它与所讨论的技术相关。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2024-12-20-collection-functions-in-go-1-23/">Go 1.23 中新增的 maps 和 slices 包：教程和示例</a><br>DoltHub 的博客文章讨论了 Go 1.23 中新的映射和切片功能的引入，重点介绍了为切片和映射创建迭代器函数的能力，以及收集、排序、复制和连接这些数据结构的便捷方法。它解释了如何使用迭代器方法来遍历集合，以及官方 Go 库现在如何支持泛型类型，提供 &#39;All（）&#39;、&#39;Backward（）&#39;、&#39;Keys（）&#39;、&#39;Values（）&#39;、&#39;Sorted（）&#39;、&#39;Collect（）&#39;、&#39;Clone（）&#39; 和 &#39;Concat（）&#39; 等函数。该博文还谈到了如何使用自定义的 &#39;sliceToMap&#39; 函数从 slice 创建映射，以及 &#39;slices&#39; 包中没有 &#39;Filter（）&#39; 方法，建议使用简单的 for 循环作为替代方案。此外，它还展示了如何使用泛型函数创建从 slice 的索引到其值的 Map，尽管 Go 最初没有 &#39;Map（）&#39; 方法。整体基调表明了对这些改进的庆祝，同时提供了实际示例并承认 Go 的地图迭代顺序政策。</p> 
+
+<p><a href="https://medium.com/@vladimirvivien/gexe-the-go-package-for-your-system-automation-needs-8fd3b96e1927">gexe：满足系统自动化需求的 Go 软件包</a><br>由 Vladimir Vivien 创建的 Go 包 gexe 旨在通过提供流畅的 API 来执行操作系统命令、变量扩展、进程管道和文件操作，从而简化系统自动化任务，同时确保 Go 固有的类型和内存安全。该软件包促进了复杂的系统交互，例如启动进程、处理文件下载和写入以及管理 HTTP 请求，重点是与 Go 代码库无缝集成。gexe 的 API 支持错误处理，并且可以轻松整合到项目中，例如从 Project Gutenberg 下载文献、检索 Kubernetes 二进制文件和访问天气预报。该项目及其 GitHub 存储库和示例鼓励使用 Go 实现系统自动化，展示了它处理通常以 shell 语言编写脚本的任务的潜力。这种基于 Go 的解决方案突出了该语言的系统自动化功能，促进了其在传统编程上下文之外的使用。</p> 
+
+<p><a href="https://wyounas.github.io/concurrency/2024/12/12/how-concurrency-works-a-visual-guide/">图解Concurrecy 的工作原理</a><br>该博客文章讨论了理解和验证并发编程系统的复杂性，强调了可视化和推理并发程序中所有可能状态的挑战。作者使用示例来解释程序中的状态如何由变量值和位置计数器定义，以及状态空间（表示所有可能状态的图形）如何随着并发呈指数增长。模型检查是一个强大的工具，用于验证程序状态空间中的安全属性，使用必须在每个状态中都成立的不变量。该博文通过一个简单的并发程序示例来说明这一点，建议使用 LTL 来表示安全属性，并使用 SPIN 等工具来验证它们。作者强调了由于巨大的状态空间和难以复现的并发 bug 的普遍存在，调试并发程序的难度。该博文主张将复杂的系统分解为更小的模型，以便更好地理解底层流程，并通过形式化验证来增强对程序正确性的信心。</p> 
+
+<p><a href="https://samwho.dev/turing-machines/">可运行的图灵机器</a><br>Turing Machines, a theoretical algorithm that can compute anything, were created by Alan Turing and Alonzo Church in 1936, and are now integrated into modern computers, with Turing machines using binary numbers and registers to store values temporarily.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://netflixtechblog.com/introducing-configurable-metaflow-d2fb8e9ba1c6">Configurable Metaflow 简介</a><br>Netflix 推出了 Configurable Metaflow，这是 Metaflow 中的一项功能，允许用户使用 Config 对象配置流的所有方面，尤其是装饰器。此功能补充了现有的 Metaflow 结构，如构件和参数，为在部署之前配置实验提供了持久的解决方案。Config 支持高级使用案例，例如运行时可配置性、配置验证和分层配置文件管理。与 Metaflow 的新 API 和 Hydra 等工具的集成有助于编排多个配置或参数扫描，Netflix 的内部工具 Metaboost 就是一个例子，它简化了 ML 从业者的实验管理。这一发展使团队能够通过使 Metaflow 适应特定需求来最大限度地提高其 ML 项目的生产力和有效性。新的 Config 功能代表了在低样板、可重现和可配置的实验部署方面向前迈出的重要一步。</p>
+
+<p><a href="https://www.docker.com/blog/recipe-for-efficient-development-simplify-collaboration-security-with-docker/">高效开发秘诀：使用 Docker 简化协作和安全性</a><br>源文档指示 Nginx Web 服务器在无法访问或提供请求的网页时通常显示的错误消息，从而导致 403 Forbidden 状态代码。虽然该文档没有提供有关错误的上下文或内容的具体详细信息，但它暗示了服务器拒绝用户访问的权限问题。此错误表明由于服务器上设置的权限或限制不足，无法访问请求的资源。要解决此问题，可能需要审查服务器配置或访问控制并相应地进行调整。文档本身是 Nginx 上下文中 403 错误的通用表示，提醒用户或管理员需要注意的访问问题。了解根本原因对于纠正这种情况和恢复对所需网页的访问至关重要。</p>
+
+<p><a href="https://engineering.fb.com/2024/12/19/developer-tools/glean-open-source-code-indexing/">使用 Glean 大规模索引代码</a><br>Meta 通过 Glean（一个用于索引源代码的开源系统）通过提供高效的代码浏览、搜索和文档生成功能来增强开发人员工具。Glean 的架构支持可扩展的代码索引、增量更新和统一的查询语言，使其可适应各种编程语言，在大型 monorepo 中非常有用。该系统为 Meta 的内部代码导航工具提供支持，从而在整个存储库中提供即时可用性和可见性。此外，Glean的差异草图通过提供准确的更改定义和参考来促进代码审查过程，而其数据则支持死代码检测、构建依赖关系分析和代码复杂性指标。该系统的灵活性扩展到通过检索增强生成来增强 AI 编码助手，展示了其在现代软件开发环境中的广泛适用性。这种创新的代码索引方法使 Meta 能够提供强大的开发人员工具，以应对大规模代码库的挑战。</p>
+
+<p><a href="https://dolthub.com/blog/2024-12-19-merkle-trees-for-file-systems/">我们家里有 Google Drive：对基于 Merkle-Tree 的文件共享的沉思</a><br>DoltHub 的博客文章探讨了 Git 在高效、可扩展的文件共享方面的局限性，尽管它在开发人员中得到了广泛的应用。它强调了 Git 如何处理大文件以及暂存许多小文件的效率低下，并提出了 Merkle 树作为识别文件系统更改的卓越解决方案。讨论包括对 Bup、Mercurial、IPLD 和 Dolt 等各种系统的检查，指出它们在实现 Merkle 树进行文件共享方面的优势和劣势，例如 Bup 无法有效地执行增量备份，以及 Dolt 主要关注关系数据。作者对满足所有标准的完美文件共享工具的潜力表示乐观，不同的系统朝着这个目标融合。该帖子最终激发了人们对去中心化文件共享未来的兴奋，表明技术的进步可能会带来统一的解决方案。该讨论反映了对分布式系统的深入参与以及对创新文件共享方法的热情。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/12/19/the-node-resource-interface-says-hi-to-webassembly/">Node 资源接口向 WebAssembly 说 “hi”</a><br>节点资源接口 （NRI） 支持与 OCI 兼容的运行时（如 CRI-O 和 containerd）的插件，从而允许在容器的整个生命周期内对容器进行受控更改，例如在创建时分配额外的节点资源。NRI 现在支持 WebAssembly （Wasm） 插件，这些插件具有大小高效、内存安全且跨平台可移植的特点，这要归功于可在本地或容器内编译的 go-plugin 机制。一个示例 Wasm 插件演示了该过程，运行时成功处理了同步和配置请求。这一进步将 NRI 插件定位为边缘计算场景或可分发的 OCI 构件，并正在探索半自动重新加载功能的潜力。将 Wasm 集成到 NRI 中代表了朝着通用、低开销运行时扩展迈出的重要一步。该文档还鼓励通过 NRI 存储库的“问题”参与进来，以便进一步讨论。</p>
+
+<p><a href="https://www.docker.com/blog/building-trust-into-your-software-with-verified-components/">使用经过验证的组件在您的软件中建立信任</a><br>源文档指示 Nginx Web 服务器在无法访问或提供请求的网页时通常显示的错误消息，从而导致 403 Forbidden 状态代码。虽然该文档没有提供有关错误的上下文或内容的具体详细信息，但它暗示了服务器拒绝用户访问的权限问题。此错误表明由于服务器上设置的权限或限制不足，无法访问请求的资源。要解决此问题，可能需要审查服务器配置或访问控制并相应地进行调整。文档本身是 Nginx 上下文中 403 错误的通用表示，提醒用户或管理员需要注意的访问问题。了解根本原因对于纠正这种情况和恢复对所需网页的访问至关重要。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.capitalone.com/tech/machine-learning/rules-vs-machine-learning/">现代困境：何时使用规则与机器学习</a><br>本文档讨论了规则引擎和机器学习在企业内部决策过程中的不同作用，强调规则引擎擅长以 100% 的精度执行离散逻辑，而机器学习则根据输入预测结果。它建议将可重用的逻辑分解为微服务以进行独立部署，并讨论了了解业务逻辑、计算和工作流的重要性。介绍了集成机器学习和规则引擎的三种模式，使用房地产示例来说明机器学习输出如何馈送到规则引擎中，规则如何为机器学习模型提供功能，以及如何将两者输入到机器学习模型中以进行全面决策。该文档还引用了一个概念验证，该验证演示了规则服务与机器学习的集成，使用 Drools 进行规则评估，并强调了利用这两种技术优势的混合系统的潜力。总体信息是，了解每项技术擅长的功能和背景可以指导企业选择正确的方法或将它们结合起来以获得最大价值。该讨论以实际应用为基础，使用 Capital One 的 AI 和无服务器架构作为参考点。</p>
+
+<p><a href="https://thenewstack.io/qodo-a-multi-agent-code-platform-to-write-test-and-review-code/">Qodo：用于编写、测试和审查代码的多代理代码平台</a><br>Qudo 是一家最初名为 Codium 的初创公司，它正在通过开发多代理代码完整性平台来应对将 AI 生成的代码集成到企业环境中的日益严峻的挑战。Gartner 预测，到 2025 年，30% 的代码将由 AI 生成，因此重点转移到确保代码质量和寿命上。Qudo 的创始人认识到，代码生成工具只会变得更加普遍，但真正的问题在于 AI 生成的代码的初始质量和可维护性。为了应对 ChatGPT、GitHub Copilot 和 CodeWhisperer 等工具的潜在代码中断和低于标准的代码生成率，Qudo 旨在提供一个强大的平台，可以有效地编写、测试和审查代码。该平台旨在适应现代软件开发的复杂性，确保 AI 生成的代码满足高标准的完整性和可靠性。该计划反映了技术社区对管理 AI 在代码创建和维护中日益增长的作用的更广泛需求。</p>
+
+<p><a href="https://simonwillison.net/2024/Dec/20/december-in-llms-has-been-a-lot/#atom-everything">12月的LLM有很多</a><br>该文件回顾了 2024 年 12 月期间大型语言模型 （LLM） 的快速发展，强调了新 LLM 版本的过剩以及效率和可访问性方面的重大进步。作者指出，Amazon Nova 系列模型的推出、具有 70B 令牌的 Llama 3.3 的发布以及模型推理速度的大幅改进，使 LLM 越来越可用且越来越实惠。这篇文章还讨论了不断变化的竞争格局，谷歌发布了挑战 OpenAI 进步的更新，包括 Gemini 2.0 Flash 和思维模式。整个 12 月，作者记录了这些事件，展示了充满活力和发展的 LLM 领域，同时还分享了他们将高级模型集成到工作流程中的个人经验。该摘要概括了作者对 LLM 中的技术进步和竞争动态的观察，以及他们对这些进步的参与。该文件反映了今年 LLM 技术领域的重要里程碑，重点关注创新、可访问性和不断变化的竞争环境。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.3、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO 是一个高性能、与 S3 兼容的对象存储，在 GNU AGPLv3 许可下开源。</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism 是以太坊，可扩展。</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>适用于云原生时代的终极 Go 微服务框架。</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>用于密钥管理、加密即服务和特权访问管理的工具</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>使用 Swagger 2.0 for Go 自动生成 RESTful API 文档。</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>管理所有内容的懒惰方式 docker</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器公开给 Internet。</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>云原生网络和网络安全</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，具有自动 HTTPS</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS 提供商使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>开源 UI 优先的身份和访问管理 （IAM）/单点登录 （SSO） 平台，具有支持 OAuth 2.0、OIDC、SAML、CAS、LDAP、SCIM、WebAuthn、TOTP、MFA、Face ID、RADIUS、Google Workspace、Active Directory 和 Kerberos 的 Web UI</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>复合服务（例如 Ingress）和负载均衡 API 的下一次迭代的存储库。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/descheduler">kubernetes-sigs/descheduler</a><br>Kubernetes 的 Descheduler</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>一个云原生 Go 微服务框架，带有 cli 工具以提高工作效率。</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>适用于 NATS.io、云和边缘原生消息传递系统的高性能服务器。</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go 客户端</p>
+
+<p><a href="https://github.com/cilium/ebpf">cilium/ebpf</a><br>ebpf-go 是一个纯 Go 库，用于读取、修改和加载 eBPF 程序，并将它们附加到 Linux 内核中的各种钩子上。</p>
+
+<p><a href="https://github.com/go-admin-team/go-admin">go-admin-team/go-admin</a><br>基于Gin &#43; Vue &#43; Element UI &amp; Arco Design &amp; Ant Design 的前后端分离权限管理系统脚手架（包含了：多租户的支持，基础用户管理功能，jwt鉴权，代码生成器，RBAC资源控制，表单构建，定时任务等）3分钟构建自己的中后台项目；项目文档》：https://www.go-admin.pro V2 Demo： https://vue2.go-admin.dev V3 Demo： https://vue3.go-admin.dev Antd PRO：https://antd.go-admin.pro</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

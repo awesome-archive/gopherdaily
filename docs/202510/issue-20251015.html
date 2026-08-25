@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251015.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251015</span>
+</p>
+<p>每日一谚：Don not Create Interfaces Solely for Testing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/15/go-archaeology-defer/">Go 考古：defer 的“救赎”——从性能“原罪”到零成本的“开放编码”</a><br>今天，就让我们再一次化身“Go 语言考古学家”，在Go issues以及Go团队那些著名的演讲资料中挖掘，并结合 Go 官方的设计文档，深入 defer 性能演进的“地心”，去完整地再现这场波澜壮阔的“救赎之路”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/hUOJHJ2yM0isj7Qc1mLC1w">【Go 网络编程全解】03 TCP 连接的生命周期：可视化三次握手与四次挥手</a><br></p> 
+
+<p><a href="https://simonwillison.net/2025/Oct/15/csrf-in-go/#atom-everything">Go 中防止 CSRF 攻击的现代方法</a><br>Alex Edwards 撰写了关于新的 http.CrossOriginProtection 中间件的文章，该中间件于 8 月份添加到 Go 标准库的 1.25 版本中，并问道：我们是否终于达到了可以防止 CSRF 攻击而无需依赖基于令牌的检查（如双重提交 cookie）的地步？</p> 
+
+<p><a href="https://steve-yegge.medium.com/the-beads-revolution-how-i-built-the-todo-system-that-ai-agents-actually-want-to-use-228a5f9be2a9">Beads 革命：我如何构建 AI 代理真正想使用的 TODO 系统</a><br>从一个想法到在六天内获得一千个 GitHub Star 我对昨天 Beads 的发布感到非常满意。从周三早上我和 Claude 讨论的一个想法，到六天后在 GitHub 上拥有 1000 颗星和大约五十个 fork，这一切的速度快得令人难以置信。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/how-to-set-up-gemini-cli-with-mcp-toolkit/">如何设置 Gemini CLI for MCP：GitHub MCP 服务器</a><br>了解如何在 Docker MCP 工具包中，使用 GitHub MCP 服务器，通过一步一步的示例将 Gemini CLI 连接到 MCP 服务器。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/14/the-tools-for-overcoming-the-top-10-devops-challenges/">克服十大 DevOps 挑战的工具</a><br>DevOps 是一种减少浪费的工作方式。它使用智能工具和实践来更快地构建、测试和交付软件。如果做得好，它可以使团队更敏捷、系统更强大，并且问题更小。</p>
+
+<p><a href="https://engineering.fb.com/2025/10/14/data-center-engineering/design-for-sustainability-new-design-principles-for-reducing-it-hardware-emissions/">可持续性设计：减少 IT 硬件排放的新设计原则</a><br>我们推出了可持续性设计，这是一套针对 IT 硬件新设计，旨在通过重复利用、延长使用寿命和优化设计来减少排放和成本的技术设计原则。在 Meta，我们通过整合多种设计策略，例如模块化、重复利用、改造、去材料化、使用更环保的材料和延长硬件生命周期，从而能够显著减少数据中心的碳足迹。</p>
+
+<p><a href="https://wasp.sh/blog/2025/10/07/how-we-test-a-web-framework">我们如何测试一个 Web 框架</a><br>深入了解我们如何在 Wasp 测试我们的编译器驱动的全栈 Web 框架。</p>
+
+<p><a href="https://www.geocod.io/code-and-coordinates/2025-10-02-from-millions-to-billions">从数百万到数十亿</a><br>我们通过从 MariaDB 迁移到 ClickHouse、Kafka 和 Vector 解决了大规模的请求日志记录问题，因为我们已弃用的数据库引擎无法满足每月数十亿次请求的需求。</p>
+
+<p><a href="https://blog.cloudflare.com/unpacking-cloudflare-workers-cpu-performance-benchmarks">解构 Cloudflare Workers CPU 性能基准测试</a><br>Cloudflare 调查了 Workers 的 CPU 性能基准测试结果，发现了基础设施、V8 垃圾回收和 OpenNext 优化方面的问题并进行了修复。 这些改进使 Cloudflare Workers 能够为所有客户提供更快的速度。</p>
+
+<p><a href="https://werd.io/why-the-open-social-web-matters-now">为什么开放的社交网络现在很重要</a><br>需求是真实的——你拥有如此大的力量。</p>
+
+<p><a href="https://entropicthoughts.com/root-cause-analysis-youre-doing-it-wrong">Root Cause 分析？你做错了</a><br>如果您已经来到这里，您应该知道这是一个早期草稿，其中包含大部分未经编辑的意识流废话，因为我发现很难构建这个主题。我最新的尝试是将此信息分成多个单独的文章。其中第一个是“危险状态和事故”。先阅读那个。它更好。然后耐心等待后续部分。总结是极其简短的，不会教你太多东西，但如果你想快速验证你是否已经知道我将要说什么，请检查一下你是否同意以下陈述：例如，根本原因分析等技术是基于对世界的简化模型，导致理解不足。如果我们更深入地分析事故，我们可以通过分析更少的事故，并且仍然学到更多。与预防事故一样重要——甚至可能更重要——是限制事故发生时的负面后果。事故发生在处于危险状态的系统遇到不利的环境条件时。我们无法控制环境条件，因此我们需要预防危险。控制器通过维护系统约束来避免危险状态。他们通过与系统交互、发出控制动作和接收反馈来做到这一点。控制操作通常是低级别的技术（例如，自动故障转移），但高级别的社会性（例如，组织文化），以及中间级别的介于两者之间的东西（例如，渗透测试）。任何事故总是有大量促成原因。事故分析一旦遇到人为错误就不会停止——相反，人为错误是真正调查的良好起点。过去做出的任何决定都比现在看起来复杂得多。遵守程序是一种双重困境。人是灵活的，可以对不断变化的情况做出动态反应。这大部分是好的，但有时会导致事故。系统必须帮助操作员建立准确的心理模型。人类本质上是输入-输出框，受其操作环境的强烈影响。安全不是一个预防失败的问题；它是一个动态控制问题。TK TK &#43;编辑很多后续部分。它们很冗长。</p>
+
+<p><a href="https://www.stavros.io/posts/why-is-everything-so-scalable">为什么一切都具有可扩展性？</a><br>作者认为现代开发者过度关注可扩展性，导致架构复杂化，而忽视了更重要的问题，如盈利。文章提倡在没有必要的情况下，尽量避免使用分布式架构，而是采用单体架构，并介绍了作者的单体架构实践，通过模块化和静态类型检查来提高代码质量和开发效率。</p>
+
+<p><a href="https://rosswintle.uk/2025/10/software-can-be-finished">软件可以被完成</a><br>您可能不想构建“已完成的软件”。但通过将它作为一个概念来思考，我们能学到什么呢？</p>
+
+<p><a href="https://www.bestblogs.dev/video/087a1f3">LangChain 和 Manus 的 AI 智能体上下文工程实践 | BestBlogs.dev</a><br>本次网络研讨会探讨了 AI 智能体的高级上下文工程技术，包括上下文卸载、上下文缩减和上下文隔离，并分享了 LangChain 和 Manus 的相关见解，以及一种新型分层行动空间。</p>
+
+<p><a href="https://allvpv.org/haotic-journey-through-envvars">环境变量是一个遗留的烂摊子：让我们深入研究它们</a><br>近年来，编程语言发展迅速。但在软件开发中，新事物常常与旧事物相遇，而操作系统为运行新进程提供的框架自Unix以来变化不大。
+如果您需要通过传递几个临时变量（无需特殊文件或涉及IPC或网络的自定义解决方案）在运行时对应用程序进行参数化，那么您注定会遇到一个非常笨拙、过时的界面：环境变量。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://boydkane.com/essays/boss">为什么你的老板不担心人工智能</a><br>当谈到理解人工智能系统的危险时，公众拥有最糟糕的知识：你确信的知识并非如此。 专家和新手对人工智能的工作方式有着不同的、不言而喻的假设，这导致了双方的挫败感。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware(Project under CNCF)</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>✨ Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/docker/model-runner">docker/model-runner</a><br>Docker Model Runner</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/sjzar/chatlog">sjzar/chatlog</a><br>chat log tool, easily use your own chat data. 聊天记录工具，轻松使用自己的聊天数据</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kind">kubernetes-sigs/kind</a><br>Kubernetes IN Docker - local clusters for testing Kubernetes</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>Repo for learning observability</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/asternic/wuzapi">asternic/wuzapi</a><br>Simple RESTful API for WhatsApp in Golang (using the Whatsmeow multi device library)</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/francoismichel/ssh3">francoismichel/ssh3</a><br>SSH3: faster and rich secure shell using HTTP/3, checkout our article here: https://arxiv.org/abs/2312.08396 and our Internet-Draft: https://datatracker.ietf.org/doc/draft-michel-ssh3/</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

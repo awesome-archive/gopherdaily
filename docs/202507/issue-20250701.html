@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250701.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250701</span>
+</p>
+<p>每日一谚：return early, return often </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dev.to/flew1x/cascading-context-cancellation-in-go-from-source-code-to-production-patterns-177j">Go语言中的级联上下文取消：从源代码到生产模式</a><br>本文深入探讨 Go 语言中上下文内部交互的取消机制，延续了之前的文章。文章通过示例演示了如何显式取消上下文，解释了上下文如何感知 Done 并关闭它，以及 `WithCancelCause`、多 goroutine 访问、`AfterFunc`、`WithoutCancel` 和定时器等方面的内容。最后，文章总结了 `cancelCtx` 的使用模式，并解释了 `closedchan` 的作用。</p> 
+
+<p><a href="https://tonybai.com/2025/07/01/predicting-the-future-of-distributed-systems">特斯拉首席工程师的忠告：用“单向门 vs 双向门”决策，看清分布式系统的未来</a><br>最近，特斯拉首席工程师 Colin Breck 在 Craft 2025 大会上做了一场题为《预测分布式系统的未来》的精彩分享。他并没有给出非黑即白的答案，而是提供了一个极其强大的思维武器，来帮助我们拨开迷雾，做出更有效的工程决策。这个武 器，就是源自亚马逊创始人 Jeff Bezos 的——“单向门 vs. 双向门”决策框架。 今天，我们就以这个框架为钥匙，跟随 Colin 的思路，去打开分布式系统的未来之门</p> 
+
+<p><a href="https://blog.pkgforge.dev/cross-compiling-10000-go-cli-packages-statically">交叉静态编译10000个Go cli包</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-07-01-things-that-arent-version-contolled-databases">哪些数据库并非版本控制数据库</a><br>本文列举了一些数据库特性和产品，它们虽然与版本控制有一些共同点，但却并非真正的版本控制数据库。文章解释了MVCC（多版本并发控制）、时间旅行以及模式迁移等数据库特性与版本控制数据库之间的区别，并强调了Dolt和Doltgres作为唯一真正支持版本控制的SQL数据库的优势。</p>
+
+<p><a href="https://www.docker.com/blog/docker-mcp-catalog-secure-way-to-discover-and-run-mcp-servers/">Docker MCP Catalog：安全可靠地发现和运行 MCP 服务器</a><br>本文介绍了 Docker 如何投资 MCP 生态系统，展示了新的目录功能，并说明了如何帮助构建更安全的 AI 应用程序。文章重点介绍了使用 Docker 运行 MCP 服务器的安全性优势，以及如何通过 Docker MCP 目录安全地发现和运行 MCP 服务器，并对未来发展方向进行了展望。</p>
+
+<p><a href="https://engineering.salesforce.com/architecting-ai-agent-auditing-systems-in-agentforce-overcoming-data-cloud-and-kafka-integration-challenges/">构建 Agentforce 中的 AI 代理审核系统：克服 Data Cloud 和 Kafka 集成挑战</a><br>了解 Salesforce 如何将该系统与 Data Cloud 集成，如何使用基于 Kafka 的数据摄取来扩展系统以管理不可预测的 AI 流量，以及更多内容。</p>
+
+<p><a href="https://engineering.fb.com/2025/07/01/developer-tools/an-inside-look-at-metas-transition-from-c-to-rust-on-mobile/">Meta 从 C 语言迁移到 Rust 语言的内部视角（移动端）</a><br>本文介绍了 Meta 公司一项雄心勃勃的项目：将一个使用了数十年的核心消息库代码从 C 语言重写为 Rust 语言。该库用于 Messenger、Facebook、Instagram 和 Meta 的 AR/VR 平台。文章讨论了该项目的规模、如何开展工作以及如何优化“开发者幸福感”。文中还提供了收听该项目相关 Meta Tech Podcast 的链接。</p>
+
+<p><a href="https://www.philschmid.de/context-engineering">AI 的新技能不是提示工程，而是上下文工程</a><br>上下文工程是 AI 的一项新兴技能，它关注于在正确的时间以正确的格式提供正确的信息和工具。</p>
+
+<p><a href="https://buttondown.com/jaffray/archive/caching-is-an-abstraction-not-an-optimization">缓存是抽象，而非优化</a><br>我一直被告知缓存是一种使软件运行更快的工具。通过仔细考虑一致性，缓存使得当您想要读取给定数据时，不必一直回到某个后端数据库、API服务器或SSD，而可以直接从内存等更快的位置读取相同的数据。因此，缓存是提高性能的工具。
+
+但我现在的看法是，这种对缓存的理解是错误的，或者至少是不完整的。最近我主要从事在对象存储、磁盘和内存之间移动数据的软件工作，我现在认为缓存最好理解为一种使软件更简单的工具。
+
+文章探讨了缓存作为抽象和优化的不同视角，并举例说明了操作系统页面缓存和数据库缓冲池的工作方式。作者认为，关注点应该放在“尽可能频繁地将数据存储在快速存储中”，而不是“操纵这个劫持数据访问的系统”。</p>
+
+<p><a href="https://stackoverflow.blog/2025/06/30/reliability-for-unreliable-llms">不可靠大型语言模型的可靠性</a><br>大型语言模型天生具有不确定性。本文介绍如何为生成式AI工作流程注入一些确定性。生成式AI技术越来越多地集成到我们的软件产品和工作流程中，这些产品和工作流程开始越来越像大型语言模型本身。它们变得不太可靠、不太确定，而且偶尔还会出错。大型语言模型从根本上来说是不确定的，这意味着对于相同的输入，您会得到不同的响应。如果您使用推理模型和AI代理，那么当较早的错误用于后续步骤时，这些错误就会加剧。</p>
+
+<p><a href="https://www.nullpt.rs/reversing-botid">逆向工程 Vercel 的 BotID</a><br>Vercel 最近发布了 BotID，这是一种旨在防止机器人攻击而无需人工干预的反机器人工具。这篇文章对脚本进行了反向工程，并对其内部进行了深入了解。文章探讨了 BotID 的基本模式和深度分析模式，并对其中涉及的 JavaScript 混淆技术进行了分析，包括字符串解码过程和浏览器信号收集机制。此外，文章还演示了如何使用 Playwright 测试 BotID 的检测效果，并讨论了绕过这些检测的方法。最后，文章总结了 BotID 的优缺点，并对反机器人技术对开放网络的影响进行了反思。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://cline.bot/blog/5-tool-mcp-starter-pack-for-cline">5 个推荐的 Cline MCP 服务器</a><br>大型语言模型 (LLM) 的强大之处不仅在于模型本身，还在于它可以访问的工具。虽然基础模型功能强大，但在处理需要最新信息、与实时网站交互或进行深入结构化推理的任务时，它们往往会遇到限制。
+
+MCP 服务器是扩展 Cline 功能的专用工具，使 Cline 能够克服大型语言模型的固有限制。通过将 Cline 连接到用于搜索、文档、浏览器控制等的专用服务器，您可以创建一个工作流程，让 Cline 访问代码库和模型知识截止范围之外的上下文。</p>
+
+<p><a href="https://www.solo.io/blog/understanding-mcp-authorization-step-by-step-part-one">第一部分：MCP 授权的艰难之路 | Solo.io</a><br>这篇博文深入探讨了 MCP 授权，通过示例和深入的细节逐步讲解。它涵盖了使用 HTTP 传输构建符合规范的远程 MCP 服务器，以及使用 OAuth 2.1 实现授权规范。该系列还将介绍如何在生产环境中使用身份提供程序（Keycloak）。</p>
+
+<p><a href="https://blog.google/outreach-initiatives/education/gemini-iste-2025">面向学生和教育工作者的全新 Gemini 工具</a><br>谷歌宣布推出面向教育领域的 Gemini，以及更多供学生和教育工作者使用的 AI 工具。Gemini for Education 为学校提供了高级 AI 模型，并具有更强大的数据保护功能。即将推出的功能包括：教育工作者可以共享自定义 AI 专家，学生可以生成个性化测验。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>API for Whatsapp Web Multi Device Version, Support UI, Webhook &amp; MCP</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>A database migration tool. Supports SQL migrations and Go functions.</p>
+
+<p><a href="https://github.com/blampe/rreading-glasses">blampe/rreading-glasses</a><br>Corrective lenses for curmudgeonly readars in your life</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/psviderski/uncloud">psviderski/uncloud</a><br>A lightweight tool for deploying and managing containerised applications across a network of Docker hosts. Bridging the gap between Docker and Kubernetes ✨</p>
+
+<p><a href="https://github.com/gorilla/mux">gorilla/mux</a><br>Package gorilla/mux is a powerful HTTP router and URL matcher for building Go web servers with 🦍</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

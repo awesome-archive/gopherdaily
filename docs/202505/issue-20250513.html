@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250513.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250513</span>
+</p>
+<p>每日一谚：Go pkgs are not hierarchical. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/GWGWTfCRCsOJ_4Pk-pxpHA">从线下到线上，我的“Go语言进阶课”终于在极客时间与大家见面了！</a><br>我想向大家宣布一个酝酿已久的好消息：我的新专栏“TonyBai · Go 语言进阶课” 终于在极客时间正式上架了！</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/uphv2bBe6Mzv-DNQSO_TQw">Go运行时底层接口标准化？“GOOS=none”欲为Go铺设通往裸金属、固件和微控制器的桥梁</a><br>一项备受关注的新提案 (#73608) 再次将目光投向了更底层的领域，建议引入 GOOS=none target。其核心并非简单添加一个操作系统类型，而是试图定义一套连接 Go 运行时与底层硬件/环境的接口，为 Go 语言铺设一条通往裸金属执行、安全固件开发乃至 Unikernel 和特定微控制器场景的桥梁。然而，这套接口能否以及如何实现“标准化”，并融入 Go 的兼容性承诺，成为了社区热议的焦点。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/zaeOxFUl73mBxhYEPnYqAA">Go社区的“轻框架”理念：自由的馈赠还是无形的枷锁？</a><br>虽然 Go 官方从未明确宣称“轻框架或无框架”是其核心哲学，但从其设计选择——如强大的标准库、鼓励组合优于继承——以及社区早期的主流声音来看，Go 显著地倾向于“轻框架”，或者说“反大型、侵入式框架”</p> 
+
+<p><a href="https://bufiopackage.hashnode.dev/reading-input-in-go-using-bufionewscanner-and-bufionewreader-effectively">使用bufio Scanner和Reader高效读取输入数据</a><br></p> 
+
+<p><a href="https://dev.to/calvinmclean/improve-your-go-applications-with-byte-level-data-optimization-1391">通过字节级数据优化改进你的 Go 应用程序</a><br>本文探讨了低级二进制数据优化如何改进你的程序。文章介绍了 Go 中的字节级数据操作，并通过一个酸面包发酵剂测量的例子，展示了如何通过自定义二进制格式代替 JSON 来显著减少数据大小和提高性能。文章比较了 JSON 和几种二进制数据表示方法的性能，并讨论了在数据结构优化时需要权衡的因素，例如可读性、可扩展性和维护性。最后，文章推荐了使用 Protobuf 作为一种在灵活性、可扩展性和性能之间取得平衡的方案。</p> 
+
+<p><a href="https://wundergraph.com/blog/golang-wait-groups">Go语言 sync.WaitGroup：强大但易出错</a><br>学习如何正确使用 Go 语言的 sync.WaitGroup，文中包含实际示例、常见错误和性能技巧。避免死锁、泄漏并掌握 goroutine 管理。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/4via6-connectivity-to-edge-devices">Tailscale 4via6：大规模连接边缘部署</a><br>Tailscale 允许您安全地连接任何设备到任何设备。但实际部署通常会遇到网络问题：IP 地址重叠、双 NAT 和严格的防火墙。
+
+本文重点介绍 4via6 子网路由——一种将 Tailscale 网状网络扩展到复杂边缘部署的强大方法。它非常适合传统 VPN 难以应对的场景，例如机器人集群、边缘设备或众多 VPC。</p>
+
+<p><a href="https://dolthub.com/blog/2025-05-12-beginners-working-set/">Dolt 入门：工作集和暂存区</a><br>Dolt 的版本控制功能借鉴了 Git，包括工作集和暂存区。对于从其他 SQL 数据库转向 Dolt 的新手来说，这些 Git 特定的概念可能比较棘手。本文将通过示例解释这些概念。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/05/12/kubernetes-v1-33-ensure-secret-pulled-images-alpha/">Kubernetes v1.33: Image Pull Policy the way you always thought it worked!</a><br></p>
+
+<p><a href="https://buttondown.com/jaffray/archive/multiplexing">多路复用</a><br></p>
+
+<p><a href="https://dagger.io/blog/module-catalog-insights">模块目录和洞察：软件工厂的可重复使用构建块</a><br></p>
+
+<p><a href="https://zylinski.se/posts/a-programming-language-for-me">odin: 一门适合我的编程语言</a><br></p>
+
+<p><a href="https://www.alephic.com/company/writing">写作风格</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://scottvinkle.com/blogs/work/4-ways-i-use-ai-as-an-accessibility-specialist">我如何以无障碍专家身份使用人工智能的四种方法</a><br>Shopify 的无障碍专家 Scott Vinkle 分享了他如何使用 AI 来提高工作效率，包括简化问题报告、增强测试、衡量合规性以及加快为 Shopify 商家修复问题的速度。他强调 AI 是一种强大的工具，可以增强人类专家的能力，而不是取代他们。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/kubernetes/dashboard">kubernetes/dashboard</a><br>General-purpose web UI for Kubernetes clusters</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/usual2970/certimate">usual2970/certimate</a><br>开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock is a mocking framework for the Go programming language.</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 Fast and simple video download library and CLI tool written in Go</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/go-git/go-git">go-git/go-git</a><br>A highly extensible Git implementation in pure Go.</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/dexidp/dex">dexidp/dex</a><br>OpenID Connect (OIDC) identity and OAuth 2.0 provider with pluggable connectors</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/qax-os/excelize">qax-os/excelize</a><br>Go language library for reading and writing Microsoft Excel™ (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

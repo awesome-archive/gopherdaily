@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250313.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250313</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/03/13/interview-with-anders-hejlsberg/">Anders Hejlsberg专访全文：TypeScript正在向Go移植</a><br>为什么不选择Rust？为什么不使用C#等其他语言？为了帮助大家更好地理解这次“技术事件”，我整理了Michigan TypeScript对Anders Hejlsberg的专访的文字稿（时长超过1小时），并将全文发布在这里供大家参考</p> 
+
+<p><a href="https://go.dev/blog/osroot">Go官博：抗路径遍历的文件访问API</a><br>Go 1.24 中引入了新的文件访问 API，以应对路径遍历漏洞。文章解释了这种漏洞类型，以及一些现有的防御措施，并描述了 Go 1.24 中新增的 os.Root API 如何提供一种简单而强大的防御方法，防止意外的路径遍历。os.Root 类型表示本地文件系统中的某个目录，并提供了一组方法来安全地操作该目录中的文件，防止攻击者通过相对路径组件或符号链接访问目录外的文件。</p> 
+
+<p><a href="https://tailscale.com/blog/network-troubleshooting-kubernetes-security-part-1">Kubernetes网络故障排除为何如此困难？</a><br>Kubernetes 网络安全风险系列文章的第一部分。Kubernetes 网络复杂，错误配置会使组织面临安全风险。我们将分析网络为何如此困难，最大的安全漏洞以及您可以采取的措施。</p> 
+
+<p><a href="https://jarosz.dev/code/benchmarking-what-you-cannot-miss-in-go-1.24">Go 1.24中基准测试：不容错过的内容</a><br>对于我们 Go 开发者来说，编写更少的代码意味着犯错的机会更少。但是，如果通过更少的代码来实现更多目标呢？这听起来很有吸引力，不是吗？那么，如果减少编写代码的时间，以强制编译器不优化基准测试函数呢？Go 1.24 的 testing 包添加了一个新工具——Loop 方法，它抽象了许多在早期 Go 版本中需要编写的功能，以获得正确的基准测试结果。我们无需再进行脑力体操来欺骗 Go 编译器不优化基准测试函数。让我们来看一个示例包，并以新的方式和旧的方式编写基准测试。</p> 
+
+<p><a href="https://vishnubharathi.codes/blog/nil-channels-in-go">Go语言中的nil channel</a><br>本文探讨了Go语言中空通道（nil channel）的行为。作者从一个工作中遇到的问题出发，解释了发送和接收数据到空通道会导致死锁，以及在使用`select`语句时，空通道如何导致无限循环。文章详细分析了不同场景下的代码示例，并最终给出了避免这些问题的解决方案，包括初始化通道和使用`for range`循环。此外，文章还介绍了在合并多个通道时，如何利用空通道来提高效率。</p> 
+
+<p><a href="https://dev.to/trungdlp/go-code-you-can-trust-sleep-well-after-you-commit-440n">睡个好觉：编写你放心的Go代码</a><br>这是一篇关于如何编写可靠的 Go 代码的博文，作者分享了他在十年 Go 编程生涯中积累的经验，重点在于错误处理、测试、优雅降级和监控，最终目的是让开发者在提交代码后能够安心休息，不必担心生产环境问题。文章包含具体的代码示例和实践建议。</p> 
+
+<p><a href="https://dev.to/logrocket/building-high-performance-websites-using-htmx-and-go-2beb">使用 htmx 和 Go 构建高性能网站</a><br>本文探讨了如何使用 htmx 和 Go 构建高性能网站。htmx 是一个轻量级的 JavaScript 库，它允许使用 AJAX 进行服务器端渲染，从而减少对客户端 JavaScript 的依赖。Go 是一种高性能的编程语言，其自动垃圾收集、高效的并发模型和快速执行使其成为构建可扩展后端的理想选择。文章首先介绍了 htmx 和 Go，然后通过一个简单的动态应用程序和一个更复杂的待办事项应用程序演示了它们的用法，最后讨论了优化和最佳实践。</p> 
+
+<p><a href="https://storj.dev/blog/two-mul-or-not-two-mul">我在 Go 语言中找到 ed25519 性能提升 20% 的方法</a><br>Storj 网络中一项密集型 CPU 使用的是 Edwards 25519 签名方案。下载和上传数据需要从卫星 (服务器) 向存储节点 (保存数据的计算机) 发送签名消息。签名确保消息不会被篡改。因此，卫星需要进行大量的签名和验证；上行链路 (客户端应用程序) 和存储节点也是如此。本文讲述了作者优化 ed25519 签名和验证过程的故事，最终在 ARM64 平台上实现了约 20% 的性能提升。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/shift-left-testing-with-testcontainers/">使用 Testcontainers 进行左移测试</a><br>了解集成测试如何帮助您在开发人员内部循环中更早地发现缺陷，以及 Testcontainers 如何使它们像单元测试一样轻松。本文将探讨左移集成测试对开发流程速度和变更交付时间的影响。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/03/13/kubernetes-troubleshooting-a-step-by-step-guide/">Kubernetes 故障排除：分步指南</a><br>在现代软件行业中，微服务架构和 Kubernetes 已成为全球范围内被采用的解决方案，为寻求可扩展性和运营效率的组织提供支持。本文将讨论最常见的 Kubernetes 错误及其解决方案，包括容器 CRASHLOOPBACKOFF 问题（OOM Killed 和 CPU 限制）、环境变量/密钥挂载问题以及数据库连接问题。</p>
+
+<p><a href="https://www.cockroachlabs.com/blog/cockroachdb-turns-ten-scaling-relational-databases">CockroachDB 十周年：扩展关系型数据库的未来</a><br>Cockroach Labs 迎来了十周年纪念日。文章回顾了过去十年的发展历程，以及CockroachDB 如何帮助客户克服数据分布、可扩展性和弹性方面的挑战。文章还展望了未来的发展方向，包括改进对 pgvector 的支持以增强 AI 用例，以及持续提升 CockroachDB 的弹性和性能。</p>
+
+<p><a href="https://blog.codingconfessions.com/p/gpu-computing">每个开发者都应该了解的 GPU 计算</a><br>本文介绍了 GPU 架构和计算的基础知识，涵盖了从架构到执行模型和资源分配等方面的内容。文章比较了 CPU 和 GPU 的架构和设计目标，解释了 GPU 如何通过大量线程和强大的计算能力来容忍高延迟并实现高吞吐量。文章还详细介绍了 GPU 的内存架构，包括寄存器、常量缓存、共享内存、L1 缓存、L2 缓存和全局内存，并阐述了 CUDA 内核的执行步骤，以及资源分配对 SM 占用率的影响。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Mar/13/xata-agent/#atom-everything">Xata Agent</a><br>Xata公司推出了一款名为“Agent”的新工具，该工具利用大型语言模型（LLM）的提示来监控和优化PostgreSQL服务器。该工具使用一系列名为“剧本”（playbooks）的提示来完成各种任务，例如调查慢查询、进行一般监控和调整数据库等。文章重点介绍了这些“剧本”的提示内容，并对这种编写软件的有趣方式进行了评论。</p>
+
+<p><a href="https://nicholas.carlini.com/writing/2025/thoughts-on-future-ai.html">我对“AI”未来的思考</a><br>作者对大型语言模型的未来潜力持谨慎态度，认为未来几年语言模型可能能够胜任大多数（所有？）人类专家水平的认知经济任务，但也可能达到一个能力平台期，尽管成本继续下降，能力继续提升，但不会发生颠覆世界秩序的根本性范式转变。作者认为这两种可能性都应该认真对待，并探讨了导致这两种未来可能性的原因，以及对大型语言模型未来发展的一些挑战和可能性。</p>
+
+<p><a href="https://creatoreconomy.so/p/an-opinionated-guide-on-which-ai-model-2025">2025 年 AI 模型推荐指南</a><br>这篇博文提供了一个关于 2025 年应该使用哪个 AI 模型的意见性指南。作者比较了 ChatGPT、Claude、Gemini、Grok 和 Perplexity 等几种主流 AI 模型，并根据其各自的优缺点，推荐了不同的使用场景。例如，ChatGPT 适合日常问答、语音对话和多模态交互；Claude 擅长写作和编码；Gemini 拥有最长的上下文窗口，并支持视频处理；Grok 是最好的免费 AI 模型，信息更新速度快；Perplexity 适合快速查找信息和旅行规划。</p>
+
+<p><a href="https://www.builder.io/blog/cursor-tips">我如何使用 Cursor（以及我最好的技巧）</a><br>这篇博文介绍了如何有效地使用 Cursor AI 的实用技巧，包括 YOLO 模式、测试驱动开发、调试和键盘快捷键。</p>
+
+<p><a href="https://stackoverflow.blog/2025/03/12/a-look-under-the-hood-how-and-why-we-built-question-assistant">深入探讨：我们如何（以及为什么）构建了 Question Assistant</a><br>去年，我们发布了 Staging Ground，帮助新的提问者在他们的问题公开发布到 Stack Overflow 之前，在一个专门的空间里从经验丰富的用户那里获得反馈。此后，我们看到了已发布问题质量的显著改善；然而，一个问题仍然需要时间才能获得人工反馈并完成整个 Staging Ground 流程。审查者还注意到，他们一遍遍地重复着相同的评论：这篇文章不属于这里，缺少上下文，是重复的等等。这种模式让我们有机会使用机器学习和人工智能来识别这些常见情况并加快流程，以便人工审查者可以将时间花在处理更细微的情况上。借助与 Google 的合作，我们拥有一个强大的 AI 工具（Gemini）来帮助我们测试、识别和生成自动化反馈。最终，我们发现，评估问题质量和确定适当的反馈需要一些经典的机器学习技术以及我们的生成式 AI 解决方案。本文将介绍我们如何考虑、实施和衡量 Question Assistant 的结果。</p>
+
+<p><a href="https://deepmind.google/discover/blog/gemini-robotics-brings-ai-into-the-physical-world">Gemini 机器人将 AI 带入物理世界</a><br>谷歌 DeepMind 推出了 Gemini Robotics 和 Gemini Robotics-ER，这两种基于 Gemini 2.0 的 AI 模型旨在帮助机器人理解、行动和对物理世界做出反应。Gemini Robotics 是一种先进的视觉-语言-动作 (VLA) 模型，能够控制机器人执行各种现实世界的任务。Gemini Robotics-ER 则具有先进的空间理解能力，使机器人专家能够使用 Gemini 的具身推理 (ER) 功能运行他们自己的程序。这两个模型都提高了机器人的通用性、交互性和灵活性，并能应用于不同类型的机器人。DeepMind 还发布了一个新的数据集以评估和改进具身 AI 和机器人的语义安全，并与 Apptronik 等公司合作，致力于负责任地推进 AI 和机器人技术的发展。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/google/pprof">google/pprof</a><br>pprof is a tool for visualization and analysis of profiling data</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/goravel/goravel">goravel/goravel</a><br>A Golang framework for web artisans. Tribute to Laravel.</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/langgenius/dify-sandbox">langgenius/dify-sandbox</a><br>A lightweight, fast, and secure code execution environment that supports multiple programming languages</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/DataDog/dd-trace-go">DataDog/dd-trace-go</a><br>Datadog Go Library including APM tracing, profiling, and security monitoring.</p>
+
+<p><a href="https://github.com/langgenius/dify-plugin-daemon">langgenius/dify-plugin-daemon</a><br></p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/grafana/pyroscope">grafana/pyroscope</a><br>Continuous Profiling Platform. Debug performance issues down to a single line of code</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

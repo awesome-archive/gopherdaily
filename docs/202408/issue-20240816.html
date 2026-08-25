@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240816.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-16</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/08/17/go-the-c-language-of-the-internet-era-come-true/">都2024年了，当初那个“Go，互联网时代的C语言”的预言成真了吗？</a><br>对于Go与C的作用与地位</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-map/">Go Maps解析：键值对实际上是如何存储的</a><br>该文档解释了 Go 映射的工作原理，Go 映射是一种充当键值存储的内置类型，包括其结构、键值对、哈希值以及添加和删除键值对的过程。</p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/aes-encryption">Go 中的加密：AES 加密</a><br>这篇博客文章讨论了 Go 中 AES 加密的使用，解释了其不同的操作模式、在 Go 中使用 AES 的挑战，以及 AES 在 Go 标准库中的实现。</p> 
+
+<p><a href="https://medium.com/@dmytro.misik/go-1-23-personal-top-features-9eac82c5466b">Go 1.23 个人喜欢的主要功能 - 探索 Go 1.23 的最佳升级</a><br>Go 1.23 版本引入了一个范围大于函数特性，用于通过集合进行高效迭代，用于管理和比较复杂类型的“唯一”包，以及对切片、映射和“iter”包的改进，用于提高迭代器功能和内存效率。</p> 
+
+<p><a href="https://digma.ai/coding-horrors-tales-of-codebase-complexity/">Coding Horrors: The Tales of Codebase Complexity</a><br>The blog series &#34;Coding Horrors: The Frightening Tales of Codebase Complexity&#34; features prominent developer Daniel Beck&#39;s experiences and lessons learned from dealing with complex software environments, including the dangers of shortcuts, the importance of understanding code workings, and the importance of well-documented changes.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://arighi.blogspot.com/2024/08/re-implementing-my-linux-rust-scheduler.html">在 eBPF 中重新实现我的 Linux Rust 调度器</a><br>这篇博文讨论了在 eBPF 中重新实现 Linux Rust 调度器“scx_ Rustland”，重点是改进对延迟敏感的工作负载而不是 CPU 密集型工作负载，并建议对 Apache 进行改进，同时指出它不是一个通用的调度器。</p>
+
+<p><a href="https://dev.to/automq/understanding-kafka-producer-5b45">了解 Kafka Producer</a><br>本文深入分析了 Kafka Producer 的使用方法和原理、实现细节和常见问题，包括其核心组件、消息发送过程以及消息批处理和重试的各种设置。</p>
+
+<p><a href="https://medium.com/@fengruohang/database-in-kubernetes-is-that-a-good-idea-daf5775b5c1f">Kubernetes 中的数据库：这是个好主意吗？</a><br>本文讨论了将数据库放置在 Kubernetes/Docker 中的利弊，认为虽然它在管理无状态应用程序方面表现出色，但对于有状态服务（如 PostgreSQL 和 MySQL）等数据库来说，它也有缺点，包括较低的可靠性、安全性、性能和复杂性成本。</p>
+
+<p><a href="https://dolthub.com/blog/2024-08-15-fast-json-merge/">宣布快速比较和合并 JSON 文档</a><br>Dolt 是世界上第一个版本控制的 SQL 数据库，它宣布能够快速区分和合并 JSON 文档，使其适合存储关系数据和半结构化文档的混合，使其可用于游戏开发等各个领域的数据管理。</p>
+
+<p><a href="https://www.canva.dev/blog/engineering/realtime-mouse-pointers/">实时鼠标指针 - 我们实现和支持实时鼠标指针的旅程</a><br>Canva的协作团队在他们的设计编辑器中成功地实现了实时鼠标指针，结合使用websockets和Redis，后来过渡到WebRTC技术，以减少延迟、负载和成本。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/08/16/matchlabelkeys-podaffinity/">Kubernetes 1.31：PodAffinity 中的 MatchLabelKeys 升级到测试版</a><br>Kubernetes 1.31 在 PodAffinity 和 PodAntiAffinity 中引入了 &#39;MatchLabelKeys&#39; 和 &#39;MismatchLabelKeys&#39;，增强了多功能滚动更新的调度，并提供了服务隔离。</p>
+
+<p><a href="https://kubeha.com/the-future-of-cloud-computing-kubernetes-at-the-core/">云计算的未来：以 Kubernetes 为核心</a><br>Kubernetes 最初由 Google 开发，是云计算的基石，提供应用程序的自动化部署、扩展和自动化，尽管其复杂性很高，但对于云原生架构、多云和混合云部署、边缘计算和物联网至关重要。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter 是一个 Kubernetes 节点自动缩放器，专为灵活性、性能和简单性而构建。</p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>GoFrame 是 Golang 的一个模块化、功能强大、高性能的企业级应用开发框架。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>为 Kubernetes 入口和服务配置外部 DNS 服务器（AWS Route53、Google CloudDNS 等）</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>喝杯茶吧！无痛自托管一体化软件开发服务，包括 Git 托管、代码审查、团队协作、包注册表和 CI/CD</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Kubernetes 工作负载和云成本的成本监控</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>高可用性 Prometheus 设置，具有长期存储功能。CNCF孵化项目。</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>受 Google Zanzibar 启发的开源授权即服务，旨在为任何应用程序构建和管理细粒度且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/karpenter">kubernetes-sigs/karpenter</a><br>Karpenter 是一个 Kubernetes 节点自动缩放器，专为灵活性、性能和简单性而构建。</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，为下一代 AI 应用程序提供存储</p>
+
+<p><a href="https://github.com/harness/gitness">harness/gitness</a><br>Gitness 是一个开源开发者平台，具有源代码控制管理、持续集成和持续交付功能。</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>充当反向代理，保护您的 Web 服务免受攻击和利用。</p>
+
+<p><a href="https://github.com/BishopFox/sliver">BishopFox/sliver</a><br>对手仿真框架</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，具有自动 HTTPS 功能</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>一种快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器暴露到 Internet 上。</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型SRT / WebRTC / RTSP / RTMP / LL-HLS媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>现代 Go CLI 交互的指挥官</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使你能够安全且可预测地创建、更改和改进基础结构。它是一种源可用工具，可将 API 编码为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>Kubernetes 包管理器</p>
+
+<p><a href="https://github.com/metallb/metallb">metallb/metallb</a><br>使用标准路由协议的 Kubernetes 网络负载均衡器实现</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>在 Go 中实现超快、结构化、分级的日志记录。</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>连接、保护、控制和观察服务。</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

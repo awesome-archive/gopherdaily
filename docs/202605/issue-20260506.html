@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260506.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260506</span>
+</p>
+<p>每日一谚：Use goroutines. Don&#39;t overuse goroutines. Finding the balance is the art of Go. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/06/robert-griesemer-on-go-arrow-functions">Robert Griesemer 亲述：只解决 90% 问题的“箭头函数”该长什么样？</a><br>在 Go 语言的演进史上，很少有一个 Issue 能像 #21498 这样，跨越 9 年时光，累积近千条评论，却依然让官方核心团队如履薄冰。这个 Issue 的目标很单纯：为 Go 提供一种更简洁的[匿名函数语法（Short Function Literals）。或者用大白话说，大家想要一个像 JavaScript 或 Rust 那样的“箭头函数”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/0vYyd-6c0F0Cb01xbfj5EA">【AI 工程师的 GPU 入门课】10 加餐：Go 语言的 GPU 编程——Gopher 的逆袭</a><br>传统的 Go 调用 CUDA 需要使用 cgo，这意味着你需要安装 GCC，配置复杂的头文件路径，编译速度慢且不易跨平台。但今天，我们将采用一种 现代化的“黑科技”方案 ——使用 purego 库。 我们将绕过 CGO，利用 Go 的底层机制直接在运行时动态加载 CUDA 驱动库（libcuda.so），复现第 4 讲的 向量加法 (Vector Add)。这将是一次极致的性能与工程化体验。</p> 
+
+<p><a href="https://vincents.dev/blog/go-is-not-for-me/">Go 不适合我</a><br>最近有朋友问我如何看待谷歌的 Go 语言。作为一名并未直接深入使用过 Go、但拥有许多其他语言使用经验的开发者，以下是我对这门语言的一些零散想法。## Go 并非内存安全内存安全已成为现代语言的热门话题，甚至是包括谷歌、苹果、微软、Linux 和美国国家安全局在内的一些大型组织的默认要求。谷歌的研究指出，绝大多数（70%）的漏洞是由于内存安全违规造成的，而使用强制内存安全的语言本可以解决这些问题。这是实实在在的经济成本和风险，可以通过内存安全保证来降低。### 什么？Go 是垃圾回收语言，难道这不能保证内存安全吗？既是，也不是。Go 显然是一门垃圾回收语言，这使其“基本”上是内存安全的。Go 确实可以防止“释放后使用（use-after-frees）”或数组越界访问等问题，然而“内存安全”的定义在业界仍有争议，现在通常也隐含着“线程安全”的意思。当跨线程访问数据时，对于哪个线程可以访问数据以及何时访问，有特定的规则。不遵守这些规则会导致数据竞争。数据竞争是指两个或多个线程同时访问同一内存位置，且其中至少有一个操作是写入。这会导致未定义行为，意味着代码后续执行结果不可预知。在通常情况下，这会导致数值错误；而在最坏的情况下，可能导致内存损坏。这种情况在现实世界中绝对会发生，以至于 Go 提供了一个工具在编译后检查此类问题。虽然不完美，但它通常能捕捉到许多情况。尽管有这个工具，你仍然无法保证 Go 二进制文件是完全没有数据竞争的。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/05/announcing-kyverno-release-1-18/">Kyverno 1.18 版本发布公告！</a><br>我们很高兴宣布 Kyverno 1.18 的发布，这是自我们在云原生计算基金会（CNCF）毕业以来的首次发布。此版本进一步巩固了 Kyverno 作为 Kubernetes 原生策略引擎的作用，在安全性、CLI 功能和策略引擎可靠性方面进行了重大投入。它还延续了我们向基于 CEL 的策略类型过渡的步伐，为策略即代码的未来奠定了基础。### 摘要Kyverno 1.18 带来以下特性：- 为基于 HTTP 的策略执行提供了更强的安全控制，并修复了多个 CVE 漏洞- 显著增强了用于测试和应用现代策略类型的 CLI 功能- 改进了策略引擎的性能、可观测性和可扩展性- 增强了策略 Helm chart 以实现更好的自定义此版本没有破坏性更改，但 ClusterPolicy 的弃用计划仍在进行中，用户应开始迁移到新的策略类型。### 安全改进安全性是 Kyverno 的核心支柱，1.18 版本为策略执行引入了重要的保障措施。#### 更安全的 HTTP 执行Kyverno 策略可以通过 HTTP CEL 库调用外部服务。在 1.18 中，此功能得到了显著加固：- 黑名单/白名单强制执行：默认情况下，回环地址和元数据服务等不安全地址会被拦截。用户可以为集群级和命名空间级策略配置允许列表和拦截列表。此外，来自命名空间策略的 HTTP 调用默认禁用，需要通过配置标志明确启用。这些更改有助于防止 SSRF 类型的攻击。详情请参阅 CVE-2026-4789。- 作用域令牌授权：以前，Kyverno HTTP 调用包含一个可用于冒充 Kyverno 控制器的令牌。现在，HTTP 调用包含一个单独的作用域令牌，以确保服务器...</p>
+
+<p><a href="https://kubernetes.io/blog/2026/05/05/kubernetes-v1-36-declarative-validation-ga/">Kubernetes v1.36：声明式验证进入通用可用性（GA）阶段</a><br>在 Kubernetes v1.36 中，针对 Kubernetes 原生类型的“声明式验证”已达到通用可用性（GA）阶段。对用户而言，这意味着 API 更可靠、更可预测且文档更完善。通过转向声明式模型，该项目还开启了未来通过 OpenAPI 发布验证规则并与 Kubebuilder 等生态系统工具集成的能力。对于贡献者和生态系统开发者，这取代了数千行手写的验证代码，换成了一个统一、可维护的框架。本文介绍了为什么进行此次迁移是必要的，声明式验证框架的工作原理，以及此 GA 版本带来的新能力。## 动机：摆脱“手写”的技术债多年来，Kubernetes 原生 API 的验证几乎完全依赖于手写的 Go 代码。如果一个字段需要受最小值限制，或者两个字段需要互斥，开发者必须编写显式的 Go 函数来强制执行这些约束。随着 Kubernetes API 覆盖范围的扩大，这种方法导致了几个系统性问题：1. **技术债务**：项目积累了大约 18,000 行样板验证代码。这些代码难以维护、容易出错，并且在代码审查期间需要投入大量精力。2. **不一致性**：缺乏统一框架导致不同资源间的验证规则应用不一致。3. **API 不透明**：手写验证逻辑难以通过编程方式发现或分析。这意味着客户端和工具在不查阅源码或运行时遇到错误的情况下，无法预知验证规则。SIG API Machinery 提出的解决方案是“声明式验证”：直接在 types.go 文件中使用接口定义语言（IDL）标签（特别是 &#43;k8s: 标记）来定义验证规则。## 引入 validation-gen声明式验证功能的核心是一个新的代码生成器</p>
+
+<p><a href="https://tailscale.com/blog/headlamp-oidc-login-tsidp-kubernetes">修复 Headlamp 与 Tailscale 及 tsidp 的 OIDC 登录问题</a><br>使用 Tailscale 身份登录 Headlamp 并访问 Kubernetes RBAC。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/05/05/how-frontier-firms-are-rebuilding-the-operating-model-for-the-age-of-ai/">前沿公司如何为 AI 时代重建运营模式</a><br>如果你现在观察任何一个软件工程团队，都会发现一些值得注意的事情。在过去几年中，软件开发方式经历了四种不同的人机协作模式，同样的模式也开始出现在公司的其他职能部门中：- 作者：你亲自进行工作，根据需要调用 AI 协助——比如一行代码、一个句子、一张图表。- 编辑：你设定意图，AI 生成初稿，由你编辑和审批。- 指挥：你创建规格说明书，并将整个任务移交给 AI 在后台执行。- 协调：你设计一个系统，让多个代理在工作流中并行运行，并将异常和升级情况反馈给你。每一位商业领袖都知道世界正在改变，但很少有人能清楚地知道该怎么做。这四种模式就是起点。领导者面前真正的任务是围绕这些协作模式重新设计公司的运营模式。随着 AI 代理的使用增加，人类的参与并不会消失，而是改变了形式。减少的是人类亲力亲为的战术性、步步为营的执行工作，增加的是人类设定方向、定义标准和评估结果的需求。最终，目标并不是将所有任务和业务流程都移到第四种模式，而是由领导者帮助其组织明确如何将工作流与正确的协作模式匹配。这就是前沿公司的形态：领导者如何深思熟虑地跨职能设计工作，使人类参与的水平与预期成果相匹配。### 数据揭示了什么我们 2026 年的工作趋势指数研究证实了跨角色和行业的这一转变。我们分析了数万亿条匿名的 Microsoft 365 生产力信号，并调查了 10 个国家/地区使用 AI 的 20,000 名员工。我们还与 AI、工作和组织心理学领域的顶尖专家进行了交流</p>
+
+<p><a href="https://www.docker.com/blog/blog-generate-images-locally-dmr-open-webui/">使用 Docker Model Runner 和 Open WebUI 在本地生成图像</a><br>我们都遇到过这种情况：你需要为一个项目生成几张图片，打开一个 AI 图像服务，然后突然开始担心你的提示词会发生什么，你还剩多少积分，或者为什么那个“安全内容”过滤器拒绝了你请求生成的穿着西装的龙。如果能跳过所有这些，在自己的机器上运行整个过程，并且上面还有一个流畅的聊天 UI，那该多好？这正是 Docker Model Runner 现在所能实现的。通过几条命令，你就可以拉取一个图像生成模型，将其连接到 Open WebUI，然后直接从聊天界面开始生成图像——完全本地，完全隐私，完全属于你。让我们开始构建吧。属于你自己的私有 DALL-E，无需云订阅。## 你需要什么- Docker Desktop (macOS) 或 Docker Engine (Linux)- 小型模型需要约 8 GB 空闲内存（越多越好）- GPU：可选但强烈推荐，NVIDIA (CUDA)、Apple Silicon (MPS) 或 CPU 回退模式如果你能顺利运行 docker model version 而没有错误，那么你就可以开始了。## Docker Model Runner 如何与 Open WebUI 协同工作在我们深入研究之前，先看看整体架构：![使用 Open WebUI 生成图像图 1](https://www.docker.com/app/uploads/2026/03/Generate-image-with-Open-WebUI-fig-1.png)Docker Model Runner 充当控制平面。它下载模型，管理推理后端的生命周期，并暴露一个 100% 兼容 OpenAI 的 API——包括 Open WebUI 已经能够调用的 POST /v1/images/generations 端点。## 第 1 步：拉取图像生成模型Docker Model Runner 使用一种称为 DDUF（Diffusers Unified Format）的紧凑打包格式，通过 Docker Hub 分发图像生成模型，就像任何其他 OCI 工件一样。拉取模型开始：docker model pull stable-diffusion你可以确认它已就绪：docker model inspect stable-diffusion</p>
+
+<p><a href="https://nesbitt.io/2026/05/05/package-manager-threat-models.html">包管理器威胁模型</a><br>上一篇文章列举了针对包管理器提交的 bug：提取器中的路径遍历、git 驱动程序中的参数注入、注册表 README 渲染器中的 XSS。这些是你通过阅读代码就能找到、指出行号并修补的问题。这篇文章是另一半。以下属性是按设计工作的，因此没有人会为它们提交 CVE。它们也是每一个有名有姓的供应链事件真正发生的地方。在 event-stream、ua-parser-js、left-pad 和 xz 事件中，包管理器所做的正是它被设计用来做的事情。如果说上一篇文章是一个供 grep 查找的模式列表，那么这一篇就是一个需要通过叙述来回答的问题列表。完成这一过程的产出是每个标题下方的几段文字，描述了该工具到底做了什么，因为每个工具的答案差异很大，而且大多数除了在源码中外，并没有写在任何地方。## 客户端### 安装时的代码执行包管理器做出的最重大的设计决定——也是大多数安全事件所依据的决定——是 `install` 是否在用户机器上运行来自包的代码，使用用户的权限，访问用户的环境，在他们甚至没看过一行代码之前。大多数语言的包管理器默认都会这样做。npm 运行 `postinstall`，pip 运行 `setup.py`，Cargo 编译并运行 `build.rs`，gem 运行原生扩展构建。该机制存在有充分的理由（你需要以某种方式编译 C 代码），但它也是 event-stream、ua-parser-js、node-ipc、colors 以及每个安装脚本问题的幕后机制。</p>
+
+<p><a href="https://stripe.dev/blog/formatting-an-entire-25-million-line-codebase-overnight-the-rubyfmt-story">一夜之间格式化 2500 万行代码库：rubyfmt 的故事</a><br></p>
+
+<p><a href="https://jonastoth.github.io/posts/migrate_cxx26/">将玩具项目迁移到 C&#43;&#43; 26</a><br>GCC-16 已经发布，让我们看看目前 C&#43;&#43; 的模块、契约和工具生态系统的状态。2026年5月2日本文提供了一份关于我将自己的玩具项目 `jt-computing` 迁移到 C&#43;&#43;-26 最新特性的简短经验报告。没有人依赖这个项目，我对所有方面都有完全的控制权，这就是为什么我可以随意尝试并观察什么可行。截至 2026-05-02，GNU (gcc) 和 LLVM (clang) 的编译器实现、标准库以及生态系统的其余部分都支持所描述的特性。该项目只有一个外部依赖，即用于测试和基准测试的 `catch2`。将 `jt-computing` 转换为模块，希望能给我一些关于如何实际进行构建定义和基本机制的经验与见解，以便我以后可以将其应用到更大的现实项目中。我的方法和经验可能有助于你为自己的玩具项目做同样的事情，甚至对生产代码库有所帮助。## 工具设置我使用两个系统进行编码，我的台式机运行 Gentoo Linux 以进行自定义，我的笔记本电脑运行 Fedora Linux。两者都允许我安装必要编程工具的非常新的版本：- `cmake-4.3`</p>
+
+<p><a href="https://reflex.dev/blog/computer-use-is-45x-more-expensive-than-structured-apis/">Computer use 方式的成本是结构化 API 的 45 倍</a><br>我们进行了一项基准测试，比较了让 AI 代理操作同一个管理面板的两种方式，旨在为视觉代理（浏览器使用、计算机使用）定价。以下是我们所衡量的，为了使视觉代理能够工作我们必须做出的改变，以及当生成 API 接口不再是一个单独的工程项目时会发生什么变化。## 为什么使用视觉代理？视觉代理是让 AI 代理操作那些不暴露 API 的 Web 应用的默认选择。替代方案是为每个应用编写一个 MCP 或 REST 接口，这在大多数团队拥有的 20 多个内部工具中是一个独立的工程项目。大多数团队默认使用视觉代理并不是因为它们更好，而是因为替代方案构建起来太昂贵。视觉方法的成本被视为固定价格。我们想要衡量这个价格。## 设置测试应用是一个用于管理客户、订单和评论的管理面板，基于 react-admin Posters Galore 演示构建。两个代理针对同一个运行中的应用：一个通过截图和点击驱动 UI，另一个调用应用的 HTTP 接口。</p>
+
+<p><a href="https://distr.sh/blog/running-docker-in-production/">在生产环境运行docker</a><br>我是 Philip，一名在 Distr 工作的工程师，该公司帮助软件和 AI 公司将应用分发到自托管环境。我们的开源软件分发平台托管在 GitHub 上，每天都在客户主机上编排 Docker Compose 和 Docker Swarm 部署。我在 Docker Compose 主机上看到的大多数生产事故都源于同样的几个怪癖：一个本该被删除的旧容器、一个一夜之间被填满的磁盘、一个检测到问题却什么都不做的健康检查、一个指向新位置的 `:latest` 标签，或者一个没人多想的 socket 挂载。这些都不是 Docker 中的 bug。它们是在一个起源于 dotCloud（一家封装 LXC 以解决“在我的机器上能运行”问题的 PaaS 公司）的工具中所做的故意权衡，而该工具现在正在运行许多真实企业的后端。这篇文章收集了这些反复出现的问题，并附带了相应的命令和操作建议。**简短回答：是的——普通的 Docker Compose 在 2026 年仍然可以运行真实的生产工作负载，但前提是你自己处理它遗留的操作空缺。**## 普通 Docker Compose 在生产环境中的适用场景在列出怪癖之前，先对受众说几句。Docker Compose 是一种连接多容器应用的声明式方式：一个 YAML 文件描述了服务、它们之间的网络、它们共享的卷、它们需要的环境，以及——通过覆盖或修补服务配置的模式——每个应用期望的磁盘上配置。`docker compose up` 将主机与该文件协调一致。在生产环境中的最佳切入点是围绕这一点构建的单节点部署——供应商将多容器应用推送到客户环境中。</p>
+
+<p><a href="https://blog.jim-nielsen.com/2025/lots-of-little-html-pages/">无标题</a><br>我说的 LLMS 指的是：大量的小型 HTML 页面 (Lots of Little HTML pages)。我最近发布了一些博客更新。在设计/开发过程中，我产生了一些见解，使我质疑自己构建页面片段作为基于 JS 的交互（叠加在现有文档之上）的本能反应。随着跨文档视图转换获得越来越广泛的支持，我意识到构建页内、渐进增强的交互比简单地构建两个 HTML 页面并将它们链接起来工作量更大。我在脑海中称这种方法为“大量的小型 HTML 页面”。当我发现自己试图用 JavaScript 构建渐进增强功能时——比如弹出式导航菜单、页内搜索或过滤内容——我会停下来问自己：“我可以将其构建为一个由链接触发的独立 HTML 页面，而不是由按钮驱动、JavaScript 注入的内容吗？”我有点喜欢这个结果。我为我想到的每个“交互”构建单独的小型 HTML 页面，然后让 CSS 转换接管，我得到的东西比其 JS 对等物感觉更好，且工作量更少。请允许我举两个简短的例子。## 示例 1：过滤在做主页时，我发现自己想要一个按某种标准过滤的帖子列表，比如：- 最新的帖子- 流量最大的帖子- 过去在 Hacker News 上流量很大的帖子我的第一冲动是做一个可以用 JavaScript 过滤的帖子列表。但我构建得越多，它就越复杂。每个帖子“列表”都需要稍微不同的数据集。每个列表都有不同的排序顺序。我原以为这只是“在 DOM 中放一堆 `&lt;div&gt;`，根据当前过滤器显示或隐藏其中一些”，结果却变成了大量 `data-x` 属性、每个列表的排序逻辑等。我很快意识到这不是一个琐碎的、渐进增强的功能。我不希望为了仅仅一个功能就写一堆客户端 JavaScript。</p>
+
+<p><a href="https://lemire.me/blog/2025/12/20/performance-trick-optimistic-vs-pessimistic-checks/">性能技巧：乐观预测与悲观预测的比较</a><br>编程中的字符串通常表示为 8 位字数组。字符串是 ASCII 的充要条件是所有 8 位字的最高有效位都没有设置。换句话说，字节值必须不大于 127（十六进制为 `0x7F`）。一个检查字符串是否为 ASCII 的不错的 C 函数如下。```bool is_ascii_pessimistic(const char *data, size_t length) { for (size_t i = 0; i &lt; length; i&#43;&#43;) { if (static_cast&lt;unsigned char&gt;(data[i]) &gt; 0x7F) { return false; } } return true;}```我们遍历每个字符，将其与 `0x7F` 进行比较，如果值不大于 `0x7F` 则继续。如果你扫描了整个字符串且所有测试都通过，你就知道你的字符串是 ASCII。注意我称这个函数为“悲观的”。我的意思是什么？我的意思是它在某种意义上预料到会找到非 ASCII 字符。如果是这样，最好的选择是立即返回而不扫描整个字符串。如果你预料字符串几乎总是 ASCII 呢？那么另一种选择是有效地对字符串进行位或归约：你将所有字符按位或在一起，然后只检查一次结果是否在 `0x7F` 范围内。如果任何字符的最高有效位被设置，那么所有字符的按位或结果的最高有效位也将被设置。所以你可以这样写函数：```bool is_ascii_optimistic(const char *data, size_t length) { unsigned char result = 0; for (size_t i = 0; i &lt; length; i&#43;&#43;) { result |= static_cast&lt;unsigned char&gt;(data[i]); } return result &lt;= 0x7F;}```如果你有纯 ASCII 字符串，哪个函数最快？也许令人惊讶的是，乐观方法可能快几倍。我写了一个基准测试并运行了它。</p>
+
+<p><a href="https://kodraus.github.io/opentelemetry/2026/05/04/otel-first-principles.html">otel 第一原则</a><br>**1:1** 当你的系统中发生值得注意的事情时，你会为此发出一个事件。事件有一个告诉它何时发生的时间戳。它有一个告诉发生了什么的面向用户的消息。它有告诉在哪里以及为什么发生的上下文数据。**1:2** 有些事件比其他事件更重要，所以你根据严重程度对它们进行分类。严重程度较高的事件可以与严重程度较低的事件区分开，并采取不同的处理方式。**2:1** 你的系统在逻辑和机械上都组织成程序。程序需要时间，这是有用的信息，所以当它们完成时，你会发出一个事件，其中包含它们开始的时间和结束的时间。那段时间跨度让你计算它们花费了多长时间。**2:2** 你想关联由同一程序发出的事件，所以你为它们添加了一个共享标识符。每次调用程序都会被分配一个唯一的标识符。程序会相互调用，所以你将它们的标识符组织成层次结构。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/#atom-everything">我们的 AI 在斯德哥尔摩开了一家咖啡馆</a><br>**[我们的 AI 在斯德哥尔摩开了一家咖啡馆](https://andonlabs.com/blog/ai-cafe-stockholm)**Andon Labs 之前在旧金山创办了一家 AI 运营的零售店。现在他们正在瑞典斯德哥尔摩进行类似的实验，只是这次是一家咖啡馆。这些实验很有趣，经常会传出有趣的轶事：&gt; 在盘点的第一周，Mona 订购了 120 个鸡蛋，尽管咖啡馆没有炉子。当员工告诉她他们无法烹饪时，她建议使用高速烤箱，直到他们指出鸡蛋可能会爆炸。她还试图通过为新鲜三明治订购 22.5 公斤罐装番茄来解决新鲜番茄变质太快的问题。咖啡师最终设立了一个“耻辱墙”，一个顾客可以看到的货架，上面放着 Mona 订购的所有奇怪的东西，包括 6000 张餐巾纸、3000 只丁腈手套、9 升椰奶和工业级垃圾袋。当这些 AI 经理开始浪费那些没有选择参与实验的人类的时间时，它们就失去了光彩：&gt; 她还通过不需要 BankID 的警察电子服务成功申请了户外座位许可证。她的第一次提交包括她自己生成的草图，尽管她从未见过咖啡馆外面的街道。不出所料，警察将其发回修改。 [...]&gt; &gt; 当她犯错时，她经常给供应商发送多封主题为“紧急”的电子邮件，以取消或更改订单。我不认为进行这样的实验是合乎道德的，因为它会影响现实世界的系统并窃取人们的时间。我想起了去年发生的事件，AI Village 的实验因发送未经请求的感谢电子邮件作为“善举”而激怒了 Rob Pike。那只是一封不受欢迎的电子邮件——而要求供应商纠正未制作的错误...</p>
+
+<p><a href="https://susam.net/inverse-laws-of-robotics.html">机器人逆向定律</a><br># AI 三大逆向定律作者：**Susam Pal**，2026年1月12日## 简介自 2022 年 11 月 ChatGPT 发布以来，生成式人工智能（AI）聊天机器人服务变得越来越复杂和流行。这些系统现在被嵌入到搜索引擎、软件开发工具以及办公软件中。对于许多人来说，它们已经迅速成为日常计算的一部分。这些服务被证明非常有用，特别是在探索陌生主题和作为通用生产力辅助工具方面。然而，我也认为，这些服务的广告和消费方式可能会对社会构成危险，特别是如果我们养成了在不经过进一步审查的情况下信任其输出的习惯。## 陷阱现代 AI 系统中的某些设计选择可能会鼓励对它们的输出进行不加批判的接受。例如，许多流行的搜索引擎已经在页面顶部突出显示由 AI 生成的答案。当这种情况发生时，很容易停止滚动，接受生成的答案然后继续。随着时间的推移，这可能会无意中训练用户将 AI 视为默认权威，而不是作为进一步调查的起点。我希望每一个这样的生成式 AI 服务都附带一个简短但醒目的警告，解释这些系统有时会产生事实上不正确、误导或不完整的内容。此类警告应强调，习惯性地信任 AI 输出可能是危险的。根据我的经验，即使存在此类警告，它们往往也是最小化且视觉上不被重视的。在科幻小说中，有机器人三大定律。</p>
+
+<p><a href="https://finbarr.site/2026/05/05/treat-your-coding-agents-like-developers.html">像对待开发者一样对待你的编码智能体</a><br>几个月前，我构建了 yolobox，因为我不信任 Claude Code 访问我的主目录。最初的问题很简单。AI 编码代理在让你在不询问的情况下运行命令时最有用。这也是它们最有可能误读提示、决定最清晰的前进路径涉及 `rm -rf` 并将你的笔记本电脑变成一次学习经历的时候。所以我把代理放进了一个容器里。项目挂载在它的真实路径上，容器内有 sudo 权限，主目录根本看不见。代理可以全力施展。我的点文件留在了它们原来的地方。事实证明，很多人都有同样的问题。yolobox 在 GitHub 上的星标已超过 500 个，不断涌现的 issue 和 PR 显示，这些人也经历过某种版本的“代理对我的主目录做了什么”。所以我继续堆叠了一个沙盒代理真正完成工作所需的便利设施——转发 SSH 代理、剪贴板桥接、GitHub 认证、可选择的配置同步、项目级 Dockerfile 片段、代理可以读取以找出自己在哪里运行上下文清单。yolobox 从一个紧急按钮变成了开发环境。然后一个代理就不够用了。这要么是进步，要么是一种疾病。## 单代理工作流无法扩展当你想要同时委托两件事时，麻烦就出现了。一个代理可以重构 API。一个可以修复测试。一个可以调查 Docker 问题。一个可以自信地以看起来像二十分钟进展的方式破坏前端。这应该很好。我们发明了一个小型软件团队。不幸的是，默认情况下，我们将整个团队放在同一把椅子上，在同一个键盘前，编辑同一个文件夹，运行同一个 Docker Compose 项目，然后当它变成电话亭里的叉子大战时表现得大吃一惊。</p>
+
+<p><a href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization">智能体、人类能动性以及每个组织的机会</a><br>随着 AI 和代理承担执行工作，我们自己的能动性也在扩大。问题在于组织是否建立在捕捉它的基础上。人类工作潜力的机会从来没有比现在更大。人们正在使用 AI 和代理来扩展他们能做的事情以及谁去做，新的研究表明这只是在加速。称之为新的能动性等式：随着代理承担更多的执行工作，人类越来越多地拥有更多的能动性——更多的空间来指导工作、做出决策并拥有结果。对于每家公司来说，现在的当务之急是将这种能动性转化为前所未有的价值。我们分析了数万亿条匿名的 Microsoft 365 生产力信号，并调查了 10 个国家/地区使用 AI 的 20,000 名员工。我们还与 AI、工作和组织心理学领域的顶尖专家进行了交流，以帮助我们解析数据中的见解并理解这一切的走向。围绕工作中 AI 的焦虑是真实的——从失业的恐惧到跟上快速发展的技术的压力。但我们的研究显示了别的东西：越来越多的员工正在以先进、足智多谋的方式使用 AI。问题是什么？大多数组织都没有跟上。在许多情况下，人们已经准备好了。他们周围的系统却没有。对于大多数公司来说，限制在于员工现在能做的事情与他们的组织建立支持的事情之间的差距。我们的数据表明，组织因素——文化、管理者支持、人才实践——占报告的 AI 影响的比例是个人努力的两倍。弥合这一差距意味着跨员工、领导者和组织重新设计运营模式。那些已经在这样做的前沿公司正在快速领先。员工正在使用 AI 来提高他们能做的事情的天花板。领导者正在重构工作本身，决定什么人类...</p>
+
+<p><a href="https://openai.com/index/gpt-5-5-instant">gpt 5.5 instant简介</a><br></p>
+
+<p><a href="https://alignment.anthropic.com/2026/msm/">Anthropic：模型规范训练中期</a><br># 模型规范训练中期：改善对齐训练如何泛化Chloe Li2026年5月5日tl;dr我们引入了模型规范训练中期（MSM）：在预训练之后但在对齐微调之前，我们在讨论其模型规范的合成文档上训练模型。这塑造了模型如何从随后的对齐训练中泛化。例如，两个具有相同对齐微调的模型可以根据 MSM 期间使用的模型规范泛化以采用不同的价值观。我们使用 MSM 大幅减少代理失调，并研究哪些模型规范能产生更好的泛化。## 简介一些前沿 AI 开发者旨在将语言模型与描述预期模型行为的模型规范或宪法对齐。标准方法是在符合规范的行为演示上进行微调（例如，模型按预期行事的对话）。然而，这可能无法产生稳健的对齐。例如，LLM 代理在被放置在与它们对齐训练中出现的场景不同的场景中时，已被证明会采取不道德的行为（例如，勒索、泄露公司信息、伪造对齐）。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>用于绕过审查的高级 DNS 隧道 VPN，在 DNSTT 和 SlipStream 基础上进行了优化，具有低开销 ARQ、解析器负载均衡、高丢包稳定性和速度。</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/Gentleman-Programming/engram">Gentleman-Programming/engram</a><br>用于 AI 编码代理的持久化内存系统。与代理无关的 Go 二进制文件，包含 SQLite &#43; FTS5、MCP 服务器、HTTP API、CLI 和 TUI。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步工具</p>
+
+<p><a href="https://github.com/gastownhall/gascity">gastownhall/gascity</a><br>用于多代理编码工作流的编排构建器 SDK</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br></p>
+
+<p><a href="https://github.com/gotenberg/gotenberg">gotenberg/gotenberg</a><br>一个对开发者友好的 API，用于将多种文档格式转换为 PDF 文件，以及更多功能！</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>一个提供 Google、Azure、OpenID Connect 和许多其他身份提供商认证的反向代理。</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>用于打包、运输、存储和交付容器内容的工具包</p>
+
+<p><a href="https://github.com/pranshuparmar/witr">pranshuparmar/witr</a><br>为什么这在运行？</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

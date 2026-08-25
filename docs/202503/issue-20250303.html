@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250303.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250303</span>
+</p>
+<p>每日一谚：Data structures, not algorithm, are central to programming - Rob Pike </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.moczadlo.com/2024/how-i-sent-500-million-http-requests-in-under-24h">如何在不到24小时内发送5亿个HTTP请求到250万个主机</a><br>本文讲述了作者如何在短短几个小时内向250万个主机发送5亿个HTTP请求的经历。文章深入探讨了HTTP/1.1和Go语言的应用，以及如何通过Kubernetes进行水平扩展和代码优化，甚至修改了Go的HTTP库以提高速度。作者比较了Go和Rust两种语言的实现难度，并详细解释了发送单个HTTP请求的底层过程，包括DNS解析、TCP连接、TLS握手、请求准备和发送、响应等待和读取以及响应解析等步骤。文章还分析了影响单个HTTP请求时间长短的因素，并展示了作者在笔记本电脑上进行测试的结果。此外，文章还介绍了作者如何优化HTTP库，包括移除请求规范化步骤和实现自定义SetRequestRaw方法，以及如何通过将工作拆分成多个小的任务块来避免DDoS攻击自身。最后，文章总结了最终结果，并介绍了作者所在团队的招聘信息。</p> 
+
+<p><a href="https://victoriametrics.com/blog/vmstorage-retention-merging-deduplication">vmstorage 数据处理方式：保留、合并、重复数据删除……</a><br>本文介绍了 VictoriaMetrics 的 vmstorage 如何处理数据，包括数据摄取、写入磁盘、合并、重复数据删除、保留策略、磁盘空间监控和降采样等方面。文章深入解释了 vmstorage 的内部机制，例如 LSM part 的类型、合并过程中的合并乘数以及重复数据删除的原理，并提供了相关的监控指标和配置参数。此外，文章还解释了 vmstorage 如何处理保留策略，以及在企业版中如何使用保留过滤器和降采样功能来优化数据存储。最后，文章还介绍了 vmstorage 的磁盘空间监控机制，以及当磁盘空间不足时如何自动切换到只读模式。</p> 
+
+<p><a href="https://medium.com/@dmytro.misik/go-1-24-personal-top-features-07bd8fd0ad2b">Go 1.24 个人最喜欢的特性</a><br>Go 1.24 版本已发布！继 Go 1.23 发布六个月后，Go 1.24 带着令人兴奋的更新而来。新版本只引入了一个语言扩展，但却对 Go 的工具、运行时和标准库进行了大量改进。本文将探讨最新特性并分享一些我的最佳选择。</p> 
+
+<p><a href="https://jerf.org/iri/post/2024/go_faq_pipe_in_generics">Go FAQ：泛型中的管道运算符不是求和类型</a><br>Go 语言子reddit 中一个越来越常见的问题是：“我的代码没有按照我的预期工作。”本文探讨了 Go 泛型中管道运算符（|）的实际含义，以及如何避免误用它来创建类似于其他语言中求和类型的结构。文章指出，Go 中的 | 运算符表示类型的交集而非并集，它主要作用于语言运算符，而非方法或结构体字段。文章建议使用标准接口、闭包接口或其他方法来实现类似求和类型的功能，并告诫读者避免滥用 | 运算符。</p> 
+
+<p><a href="https://andrerfcsantos.dev/posts/functional-options-pattern">函数式选项模式</a><br>这篇文章介绍了函数式选项模式，该模式提供了一种将配置选项传递给函数或对象的方法，同时保持模块 API 的简洁、灵活和易于使用。该模式在 Go 编程语言中非常流行，但也可以应用于其他语言。文章将通过一个简单的文本渲染函数来说明该模式试图解决的问题，并探讨一些传统的解决方案，以及函数式选项模式相对于它们的优势。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/tools-we-love">Fallthrough | 我们喜欢的工具</a><br>我们都有让生活更美好的工具。软件工具、硬件工具以及介于两者之间的所有工具。在本集中，Matt 与 Kris、Ian 和 Dylan 共同讨论他们最喜欢的工具，以及他们如何使用这些工具以及为什么选择这些工具。想了解我们不喜欢的工具吗？成为支持者，今天就享受额外内容和更高质量的音频，以及将来添加的其他特权和福利。感谢收听，祝您收听愉快！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-03-03-dolt-basics-commits/">Dolt 入门：提交</a><br>本系列文章面向 Dolt 新手，重点介绍他们可能感兴趣的主题。大多数其他博文内容深入，因此我们希望开辟一个空间来讨论专家们可能觉得枯燥的主题。本文将解释如何在 Dolt 中进行和使用提交。</p>
+
+<p><a href="https://blog.joshsoftware.com/2025/03/03/securely-connecting-a-local-postgresql-database-using-teleport-community-edition/">使用 Teleport 社区版安全地连接本地 PostgreSQL 数据库</a><br>Teleport 是一个开源访问平台，旨在增强对服务器、Kubernetes 集群和数据库等基础设施组件的安全性和易访问性。它提供基于身份的访问管理、会话记录和基于角色的访问控制 (RBAC) 等功能。Teleport 简化了保护资源访问的过程，同时确保符合现代安全标准。Teleport 特别适用于管理对数据库的访问，允许用户安全地连接到 PostgreSQL 和其他数据库，而无需将它们直接暴露在公共互联网上。它支持相互 TLS 认证、单点登录 (SSO) 和即时访问配置。本指南将配置 Teleport 社区版以安全地连接到本地 PostgreSQL 数据库。步骤包括设置 Teleport、配置 TLS 身份验证、定义角色和建立安全连接。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/03/03/announcing-the-beta-release-of-opentelemetry-go-auto-instrumentation-using-ebpf/">OpenTelemetry Go自动检测项目Beta版发布公告</a><br>OpenTelemetry社区激动地宣布OpenTelemetry Go自动检测项目的Beta版发布！这一里程碑使我们离实现让Go应用程序的观测性变得简单、易用和有效的目标更近一步。该项目利用eBPF在运行时动态检测应用程序，无需手动修改代码或重新构建二进制文件，降低了采用观测性最佳实践的门槛，并提供了对应用程序行为的深入洞察。Beta版提供了对HTTP服务器、数据库、gRPC和Kafka-go的自动检测支持，并与OpenTelemetry的Trace API兼容，支持环境变量配置。未来计划优化eBPF运行时检测，扩展对更多Go包的支持，并与Beyla项目集成以增强功能。</p>
+
+<p><a href="https://joelcalifa.com/blog/tiny-wins">微小的胜利</a><br>本文讲述了作者在GitHub上完成的两个微小但影响深远的功能改进：动态显示PR页面的favicon和改进PR页面的合并方向指示箭头。这两个改进花费的时间很少，但却得到了用户极高的评价和赞扬。作者以此为例，阐述了“微小胜利”的理念：即使是微小的改进，如果能解决用户经常遇到的痛点，也能产生巨大的影响。文章进一步探讨了如何在工作中寻找并实施“微小胜利”，并强调了其对提升用户体验、增强用户粘性以及促进业务增长的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.raymondcamden.com/2025/02/27/using-ai-in-the-browser-for-typo-rewriting">在浏览器中使用 AI 进行笔误纠正</a><br>本文介绍了如何使用 Chrome 的 GenAI API 来修复错字。作者尝试了两种方法：一种是使用 Prompt API，另一种是使用 Rewriter API。两种方法都取得了不错的效果，能够有效地纠正文本中的错字，并对文本进行一定的润色。文章还提供了完整的代码示例和在线演示，方便读者学习和实践。</p>
+
+<p><a href="https://wildfirelabs.substack.com/p/the-100-trillion-disruption-the-unforeseen">100万亿美元的颠覆：不可预见的经济地震</a><br>当硅谷痴迷于人工智能时，一种减肥药正在悄然成为自互联网以来最大的经济颠覆者。以下解释了为什么你的工作、投资和未来取决于对它的理解。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit and Integration Test generation for Developers. Generate tests and stubs for your application that actually work!</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/gagliardetto/solana-go">gagliardetto/solana-go</a><br>Go SDK library and RPC client for the Solana Blockchain</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/aquasecurity/kube-bench">aquasecurity/kube-bench</a><br>Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark</p>
+
+<p><a href="https://github.com/langgenius/dify-plugin-daemon">langgenius/dify-plugin-daemon</a><br></p>
+
+<p><a href="https://github.com/slimtoolkit/slim">slimtoolkit/slim</a><br>Slim(toolkit): Don&#39;t change anything in your container image and minify it by up to 30x (and for compiled languages even more) making it secure too! (free and open source)</p>
+
+<p><a href="https://github.com/vinceanalytics/vince">vinceanalytics/vince</a><br>Self Hosted Alternative To Google Analytics</p>
+
+<p><a href="https://github.com/btcsuite/btcd">btcsuite/btcd</a><br>An alternative full node bitcoin implementation written in Go (golang)</p>
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>An open-source runtime for composable workflows. Great for AI agents and CI/CD.</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>An alternative to the immich-CLI command that doesn&#39;t depend on nodejs installation. It tries its best for importing google photos takeout archives.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

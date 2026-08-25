@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251205.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251205</span>
+</p>
+<p>每日一谚：Do not reuse variables that you sent through a channel. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://sinclairtarget.com/blog/2025/08/thoughts-on-go-vs.-rust-vs.-zig">关于 Go、Rust 和 Zig 的思考</a><br>作者分享了他对 Go、Rust 和 Zig 这三种编程语言的看法。Go 以其极简主义为特色，专注于企业协作。Rust 则侧重于安全性和性能，但学习曲线较陡峭。Zig 是一个相对较新的语言，被设计成 Go 和 Rust 的补充，它提供了对底层内存的更多控制，并鼓励数据导向的设计，旨在简化代码中的面向对象编程。</p> 
+
+<p><a href="https://tonybai.com/2025/12/05/proposal-runtime-secret">Go 安全新提案：runtime/secret 能否终结密钥残留的噩梦？</a><br>“如果你的服务器被攻破，攻击者能否拿到内存中残留的私钥，进而解密过去两年的所有通信记录？” 这是一个让所有安全工程师夜不能寐的问题。为了防止这种情况，现代加密协议（如 TLS 1.3, WireGuard）都强调前向保密 (Forward Secrecy)：使用临时的、一次性的密钥，并在使用后立即销毁。 然而，在 Go 语言中，“立即销毁”这个看似简单的动作，却是一个巨大的技术难题。由于垃圾回收 (GC)、堆栈复制、以及缺乏对内存的底层控制，Go 程序很难保证敏感数据被彻底擦除。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-compiler-unified-ir">Go的统一IR 格式</a><br>在上一篇文章中，我们探讨了 Go 编译器如何分析您的代码。我们看到了它如何解析标识符、检查类型兼容性，并确保您的程序在语义上是正确的。现在我们有了一个完全类型检查过的 AST，下一步合乎逻辑的步骤是生成编译器的中间表示 (IR)——它用于优化和代码生成的形式。但这里有一个有趣的事情：Go 编译器不会立即将 AST 转换为 IR。相反，它会采取看似绕道而行的方式——它将类型检查过的 AST 序列化为二进制格式，然后将其反序列化回 IR 节点。</p> 
+
+<p><a href="https://tonybai.com/2025/12/05/how-ai-is-transforming-work-at-anthropic">Anthropic 内部报告：程序员的“死”与“生”，效率暴增 50% 的残酷启示</a><br>2025 年 8 月，这家打造了 Claude 的顶尖 AI 公司，对自己内部的 132 名工程师和研究员进行了一次深度“体检”。他们分析了 20 万条 Claude Code（Anthropic 打造的、并同时也在内部使用的 AI 编程 CLI 工具）的使用记录，并进行了深度的定性访谈。 这份刚刚发布的调研报告，揭示了一个既令人兴奋又令人胆寒的真相：**在 AI 原生工作流的加持下，工程师的生产力暴增了 50%，但旧时代的“程序员”正在死去，一种全新的职业物种正在诞生。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/GBhKFcgu5xRp-wCjJZj82w">【Google ADK 实战】03 tool.Tool：为你的 Agent 插上“手臂”</a><br></p> 
+
+<p><a href="https://runos.com/blog/build-golang-app-buildkit.html">使用buildkit快速构建Go应用</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.haproxy.com/blog/how-haproxy-takes-advantage-of-multi-core-cpus">Efficiency at any scale: How HAProxy maximizes the benefits of modern multi-core CPUs</a><br>Explore how HAProxy intelligently harnesses the power of modern multi-core CPUs while navigating challenging architectural complexities like NUMA. Discover how HAProxy leverages optimized multithreading and provides automatic CPU binding to deliver both unparalleled efficiency and speed, ensuring your load balancing is faster than ever.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/04/my-first-kubecon-cloudnativecon-a-journey-through-community-inclusivity-and-neurodiversity/">My first KubeCon &#43; CloudNativeCon:  A journey through community, inclusivity, and neurodiversity</a><br>我第一次参加 KubeCon &#43; CloudNativeCon：一次关于社区、包容性和神经多样性的旅程。在亚特兰大举行的 KubeCon &#43; CloudNativeCon 上，我感觉自己进入了一个我多年来一直在关注的世界，一个充满智慧、大胆想法和共同致力于建立一个更加开放和包容的云原生生态系统的世界。更重要的是，我作为一个神经多样性的人参与其中，并发现了像我这样的人不仅属于这里，而且受到庆祝的空间。参加 KubeCon &#43; CloudNativeCon 就像参加一个社区聚会。我发现了 OpenTelemetry 社区，并且得到了 2025 年 OpenTelemetry 社区奖。Merge Forward 计划的参与也非常有意义，它由几个小组组成，其中包括失聪和听力障碍、失明和视力障碍、口吃和言语多样性、云原生女性、深根、桃乐丝之友和神经多样性。Merge Forward 提供了一个安全的地方，让人们可以分享经验、寻找社区并寻求帮助，而不会受到评判。我希望大家能够加入 Merge Forward，支持神经多样性贡献者，或者参与 CNCF 社区小组。</p>
+
+<p><a href="https://pradyumnachippigiri.substack.com/p/how-does-the-database-guarantee-reliability">数据库是如何保证可靠性的</a><br></p>
+
+<p><a href="https://lalitm.com/software-engineering-outside-the-spotlight">为什么我忽视了Staff工程师的聚光灯 - Lalit Maganti</a><br>最近，我一直在阅读 Sean Goedecke 关于 Staff&#43; 工程师的论文。 他的作品（特别是《聚光灯下的软件工程》和《这不是你的代码库》）一针见血，让任何身处 Big Tech 的人都会感到痛苦的熟悉。 在纸面上，我符合他所描述的模式：我是 Google 的高级 Staff 工程师。 然而，阅读他的作品让我感到挥之不去的不安。 起初，我将其视为愤世嫉俗。 然而，在反思之后，我意识到问题不在于 Sean 的写作，而在于我的阅读。 Sean 并没有在悲观；他准确地描述了如何在一个工程师是可替代资产且优先级每季度都在变化的世界上生存。 但是我的工作看起来根本不像那样，而且我深知，如果我试图在这种环境中或以他描述的方式运作，我会在几个月内 burnout。 相反，我遵循了一条替代道路，一条优化系统而不是聚光灯，以及管理而不是可替代性的道路。</p>
+
+<p><a href="https://thekernel.news/articles/dawn-of-the-renaissance-developer">文艺复兴开发者的曙光</a><br>工具在变化，但基本原理保持不变。随着生成式人工智能重塑我们构建软件的方式，一个熟悉的说法再次出现，即开发人员将变得过时。但如果历史教会了我们什么，那就是这并不是开发人员的终结，而是新事物的曙光，文艺复兴开发者的到来。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1046084/6cb9e4e1fd82a90d">Zig 的异步程序新方案</a><br>Zig 编程语言的设计者一直在努力为异步代码找到合适的设计方案。Zig 是一种精心设计的极简主义语言，其最初的异步 I/O 设计与它的其他特性并不吻合。现在，该项目宣布（在 Zig SHOWTIME 视频中）了一种新的异步 I/O 方法，承诺解决函数着色问题，并允许编写使用同步或异步 I/O 都能正确执行的代码。新的方法通过隐藏在新的通用接口 std.Io 之后来解决这个问题。</p>
+
+<p><a href="https://blog.brocas.org/2025/12/01/ACME-a-brief-history-of-one-of-the-protocols-which-has-changed-the-Internet-Security">ACME简史</a><br></p>
+
+<p><a href="https://blog.janestreet.com/getting-from-tested-to-battle-tested">从测试到实战测试</a><br>测试是构建可靠软件的重要组成部分，是文档的一种形式，是过去错误的提醒，也是在您想要重构时的信心提升。 但最重要的是，测试是一种展示您的代码正确且有韧性的方式。 鉴于其重要性，我们在 Jane Street 投入了大量精力来开发使测试更清晰、更有效、更易于编写的技术。</p>
+
+<p><a href="https://www.databricks.com/blog/how-we-debug-1000s-databases-ai-databricks">我们如何在 Databricks 使用 AI 调试数千个数据库</a><br>在 Databricks，我们用 AI 辅助调试取代了手动数据库操作。以下是我们构建它的关键经验。</p>
+
+<p><a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80">AV1支撑Netflix流</a><br></p>
+
+<p><a href="https://entropicthoughts.com/transparent-leadership-beats-servant-leadership">透明领导力胜过仆人式领导力</a><br>作者认为，透明领导力比仆人式领导力更有效。透明领导者应该像教练一样，培养下属解决问题的能力，而不是像仆人式领导者那样包办一切。透明领导者应该培养下属独立思考和决策的能力，并最终让自己变得多余，从而专注于技术问题，而不是官僚主义。</p>
+
+<p><a href="https://deadsimpletech.com/blog/failed_software_projects">失败的软件项目是策略失败</a><br>What usually sinks projects are mistakes like a lack of clarity about what a project is actually meant to achieve for a business, a failure to properly understand requirements, under-resourcing or a failure to provide missing capabilities, poor management and organisation and a failure to update the strategy underpinning the project when conditions change. These are all strategy-level mistakes much more than they&#39;re tactical ones.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards">宣布 NeurIPS 2025 最佳论文奖</a><br>最佳论文奖委员会成员由项目主席和数据库与基准测试赛道主席提名，他们挑选了机器学习领域的研究领军人物。这些提名已获得总主席、下一代与无障碍主席的批准。最佳论文奖委员会的任务是，从大会的主赛道和数据集与基准测试赛道中选出少数几篇极具影响力的论文。
+
+因此，我们很高兴与大家分享，今年的最佳论文奖和亚军奖将颁发给七篇开创性论文，其中包括四篇最佳论文（其中一篇来自数据集和基准测试赛道）和三篇亚军论文。这七篇论文重点介绍了扩散模型理论、自监督强化学习、大型语言模型的注意力机制、LLM 的推理能力、在线学习理论、神经缩放定律以及语言模型多样性的基准测试方法。</p>
+
+<p><a href="https://www.dzombak.com/blog/2025/12/streamlining-my-user-level-claude-md">简化我的用户级 CLAUDE.md</a><br>这篇文章是关于从 Claude Code 获取良好结果的后续文章。我最近简化了我的 ~/.claude/CLAUDE.md，基于：  * 对 Claude 优缺点进行非正式观察  * 避免与似乎内置于 Claude Code 中的原则相冲突，例如规划模式  * 对我倾向于与 Claude Code 一起使用的工作流程进行非正式观察  * 希望简化它，从而更紧密地与网络上的 Claude Code 等对齐</p>
+
+<p><a href="https://www.economist.com/leaders/2025/12/04/how-ai-is-rewiring-childhood">AI如何重写童年</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251127.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251127</span>
+</p>
+<p>每日一谚：the upside of the verbosity is that our code is non-magical; we can understand and control exactly what is going on.  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/27/dingo-go-typescript-moment">dingo：Go语言的“TypeScript”时刻？—— 一场由社区驱动的语言演进实验</a><br>一个名为dingo的开源项目的出现，试图打破这一僵局。它自称是 `逃逸的 Go`（Go that escaped） 。就像 TypeScript 之于 JavaScript，dingo 试图在不改变 Go 运行时、不引入额外依赖的前提下，通过编译时转译，为 Gopher 们提供现代化的语法糖和类型安全。</p> 
+
+<p><a href="https://www.techtalksweekly.io/p/100-most-watched-talks-in-java-rust">到目前为止2025年最受欢迎的技术演讲：包括Java, Rust, Go, JS, Python, Kotlin和C&#43;&#43;的</a><br>Tech Talks Weekly Extra #11</p> 
+
+<p><a href="https://brooker.co.za/blog/2025/11/20/what-now">现在怎么办？在大型系统中处理错误</a><br>Cloudflare 对其 11 月 18 日的故障的深度事后分析引发了大量关于错误处理的在线讨论，原因是在事后分析中有一行代码：.unwrap()。如果您不熟悉 Rust，您需要了解 Result，这是一种可以包含成功结果或错误的结构。unwrap 基本上说“如果有一个成功的结果，则返回结果，否则崩溃程序”。可以将其视为一个 assert。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/FYZw_bTHbnvWMfR9XGkN9w">【Go 测试之道】06 集成测试（下）：多依赖编排与高级技巧</a><br></p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-11-21-easy-cgo-builds-with-docker">使用 Docker 处理 cgo 构建的复杂性</a><br>DoltHub 的博客，一个托管使用 Dolt 创建的数据库的网站，Dolt 是一个开源的版本控制的 SQL 数据库，具有类似 Git 的语义。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://ziglang.org/news/migrating-from-github-to-codeberg">Zig语言从 GitHub 迁移到 Codeberg</a><br>Zig 正在从 GitHub 迁移到 Codeberg。 迁移的原因包括 GitHub 的变化、对 CI 系统的担忧，以及对 GitHub 严格的 LLM / 无 AI 策略的违反。文章还讨论了 GitHub 赞助商的问题，并鼓励读者将他们的经常性捐款转移到 Every.org。迁移计划包括将 GitHub 上的 Zig 存储库设为只读，并将主要的 Zig 项目存储库的规范 origin/master 分支设置为 Codeberg。 文章感谢 Forgejo 和 Codeberg 的贡献者，并解释了避免 GitHub 供应商锁定和保持问题编号明确的策略。</p>
+
+<p><a href="http://notes.eatonphil.com/2025-11-26-psqls-scripting-language-turing-complete-or-fibonacci-psql.html">psql 的脚本语言是图灵完备的吗？ 或者：psql 中的斐波那契数列</a><br>这是我的一篇外部文章。 如果您未被重定向，请单击此处。</p>
+
+<p><a href="https://seangoedecke.com/unblockable/">变得不可阻挡</a><br>通过足够的细致努力，有可能变得不可阻挡。换句话说，你可以将自己置于始终能够朝着目标前进的位置。</p>
+
+<p><a href="https://www.haproxy.com/blog/announcing-haproxy-3-3">HAProxy 3.3发布</a><br>HAProxy 3.3 带来了许多改进，包括可下载的 HAProxy 技术编译包、许多 TLS 增强功能（包括扩展的 ACME 支持）、通过重新加载实现持续统计数据以获得更好的可观察性，以及对后端支持 QUIC 等对性能和灵活性的许多改进。这些强大的功能帮助 HAProxy 保持 API 管理、容器网络、DDoS 保护、Web 应用程序防火墙 (WAF) 和负载均衡领域的 G2 类别领导者地位。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/11/26/announcing-kyverno-release-1-16/">宣布 Kyverno 1.16 版本发布</a><br>Kyverno 1.16 版本在 Kubernetes 的代码策略方面实现了重大进展，重点在于新一代基于 CEL 的策略（现已推出测试版），并明确了走向 GA 的道路。此版本引入了对命名空间 CEL 策略的部分支持，以限制执行并最大限度地减少 RBAC，从而符合最小权限最佳实践。可观察性通过 CEL 策略的完整指标和原生事件生成得到了显着增强，从而能够实现精确的可见性和更快的故障排除。安全性与治理通过为 CEL 策略量身定制的细粒度策略例外情况获得了更严格的控制，并且验证用例通过将 HTTP 授权器集成到 ValidatingPolicy 中得到了扩展。最后，我们推出了 Kyverno SDK，为生态系统集成和自定义工具奠定了基础。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/">Kubernetes v1.35新特性前瞻</a><br>随着 Kubernetes v1.35 版本的发布日益临近，Kubernetes 项目持续发展。 为了改进项目的整体健康状况，可能会弃用、删除或替换某些功能。 本篇博文概述了 v1.35 版本的计划变更，发布团队认为您应该了解这些变更，以确保 Kubernetes 集群的持续平稳运行，并让您了解最新的进展。以下信息基于 v1.35 版本的当前状态，在最终发布日期之前可能会有所更改。</p>
+
+<p><a href="https://deadsimpletech.com/blog/cto_tech_capabilities">What a CTO should know about tech</a><br>Clausewitz (and I don&#39;t think Jomini particularly disagrees with him on this point) stresses understanding the capabilities of various units and weapons systems. What this means is that while you don&#39;t need to know how a cannon was made, how to ride a horse or the fine details of sabre drill, you need to understand what a cavalry squadron can and can&#39;t do like the back of your hand. You need to understand which of your divisions are hardened veterans and which are more likely to break when faced with undue strain. You need to know the range of your muskets and your field artillery, the capabilities of different kinds of shot and how your different arms need to be supported.</p>
+
+<p><a href="https://medium.com/@himanshusingour7/not-kidding-one-line-of-sql-brought-down-our-query-time-from-3s-to-300ms-6b1ed80c94ac">一行sql将查询时间从3s降到300ms</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-11-26-what-agents-can-teach-you-about-your-ui/">智能体可以教你关于你的 UI 的东西</a><br>在使用 Dolt 和 Claude Code 时，我注意到 Claude Code 反复犯同样的错误，即使我在 CLAUDE.md 中放入了特定的说明。这是否表明 Dolt 用户界面已损坏？</p>
+
+<p><a href="https://simonwillison.net/2025/Nov/26/data-renegades-podcast/#atom-everything">我在 Data Renegades 播客上与 CL Kao 和 Dori Wilson 的访谈亮点</a><br>我与 CL Kao 和 Dori Wilson 在他们的新的 Data Renegades 播客上进行了交谈，主题为“Data Journalism Unleashed with Simon Willison”。我将文字记录输入到 Claude Opus 4.5 中，提取带有时间戳和说明性引用的主题列表。它做得很好，我在这里几乎逐字使用了它——我稍微整理了一下，并添加了一堆支持链接。</p>
+
+<p><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">为长时间运行的智能体构建有效的机制</a><br>代理在处理多个上下文窗口时仍然面临挑战。我们借鉴了人类工程师的经验，为长时间运行的代理创建了更有效的机制。</p>
+
+<p><a href="https://www.philschmid.de/why-engineers-struggle-building-agents">为什么（资深）工程师难以构建 AI 智能体</a><br>传统的软件工程是确定性的，而 AI 智能体以概率方式运行。这种根本性的差异给习惯于严格接口和可预测结果的工程师带来了挑战。</p>
+
+<p><a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2">背景编码智能体：上下文工程（第 2 部分） | Spotify 工程</a><br>在第 2 部分中，我们探讨了背景编码代理的上下文工程，以及是什么造就了一个好的迁移提示。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

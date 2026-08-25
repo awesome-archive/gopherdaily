@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251211.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251211</span>
+</p>
+<p>每日一谚：Reuse existing code and libraries whenever possible </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/11/is-golang-still-a-growing-programming-language/">Go 跌出 TIOBE 前十？别被排名骗了，这才是它的真实地位</a><br>Go 语言是否已经触到了天花板？在 Python 借力 AI 狂飙突进、Rust 备受追捧的今天，Go 的位置究竟在哪里？近日，Twitch工程师 Melkey 结合 JetBrains、Stack Overflow 以及 GitHub 的最新数据，发布了一份关于 Go 语言现状的深度分析。结论或许并不全是“好消息”，但却极其真实地反映了 Go 在工业界的稳固地位。</p> 
+
+<p><a href="https://tonybai.com/2025/12/11/jepsen-report-nats-jetstream-data-loss-acknowledged-writes/">Jepsen 报告震动 Go 社区：NATS JetStream 会丢失已确认写入</a><br>近日，一则重磅消息在 Go 社区引发了不小的震动。分布式系统领域的“终极拷问者”——Jepsen——发布了一份针对 Go 生态中流砥柱级消息系统 NATS 及其子系统 JetStream 的深度分析报告。 报告的结论是严峻的，甚至可以说是颠覆性的：在特定的、可复现的故障模式下，NATS JetStream 可能会丢失已经被服务器确认 (acknowledged) 并声称“已成功持久化”的数据。</p> 
+
+<p><a href="https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go">基于 Dependabot 的 Go 项目依赖关系图</a><br>为持续改进我们的软件包生态系统支持，我们正在延续供应链安全的主题，Go 项目现在将在其依赖关系图和软件物料清单 (SBOM) 中看到更完整和准确的传递性依赖树。此功能通过运行新的 Dependabot 作业来构建依赖关系快照并将其上传到依赖关系提交 API 来实现，类似于其他生态系统的依赖关系自动提交，但不会产生操作分钟数的费用。</p> 
+
+<p><a href="https://vincent.bernat.ch/en/blog/2025-go-embed-compressed">在 Go 中压缩嵌入文件</a><br>Go 的 embed 功能可以将静态资源捆绑到可执行文件中，但它们是未压缩存储的，这会浪费空间。文章介绍了一种解决方案：将所有资产打包成一个 ZIP 压缩文件。这通过使用 Go 标准库中的 `archive/zip` 模块并将其转换为 `io/fs.FS` 结构来实现。使用 Akvorado 的案例表明，这种方法可以将可执行文件大小减少 4 MiB 以上。然而，缺点是读取速度会变慢（基准测试显示慢 4 倍以上），并且由于 ZIP 存档的限制，不支持 `io.ReaderAt` 或 `io.Seeker` 接口，这会影响某些功能，例如通过 HTTP 提供部分文件。</p> 
+
+<p><a href="https://avittig.medium.com/golangs-big-miss-on-memory-arenas-f1375524cc90">Golang 在内存arenas上的巨大失误</a><br></p> 
+
+<p><a href="https://antonz.org/accepted/runtime-secret">Go 提案：Secret 模式</a><br>自动擦除内存以防止敏感信息泄露。新的 runtime/secret 包允许在“secret 模式”下运行函数。函数结束后，它会立即擦除（归零）所使用的寄存器和堆栈。函数创建的堆分配会在垃圾回收器确定它们不再可达时被擦除。这对于加密库开发者很有用，可以确保敏感信息（如会话密钥）不会在内存中停留过久，从而降低泄露风险。该特性目前是实验性的，主要支持 linux/amd64 和 linux/arm64 平台。</p> 
+
+<p><a href="https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more">GitHub MCP 服务器增加了对工具特定配置等的支持</a><br>GitHub MCP 服务器现在支持工具特定配置，允许您根据需求定制服务器并最小化上下文窗口的使用。只需使用新的 X-MCP-Tools 标头即可启用所需的工具。此外，GitHub MCP 服务器还引入了“锁定模式”（Lockdown mode）以限制不受信任的贡献者在公共存储库中的内容，并默认启用全面的内容清理以防范提示注入攻击。本地和远程 GitHub MCP 服务器已完全迁移到官方 MCP Go SDK。</p> 
+
+<p><a href="https://socket.dev/blog/malicious-go-packages-impersonate-googles-uuid-library-and-exfiltrate-data">恶意 Go 包冒充 Google 的 UUID 库并窃取数据</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/configure-cagent-github-models/">摆脱人工智能厂商锁定：GitHub Models &#43; cagent</a><br>本文介绍了 Docker cagent 如何与 GitHub Models 集成，以实现多代理应用的构建和分发，从而摆脱人工智能厂商锁定。cagent 是一个开源的多代理运行时，允许开发者通过声明式 YAML 配置来编排 AI 代理。文章通过一个使用 GitHub Models 和 DuckDuckGo MCP 工具的播客生成代理示例，展示了如何配置 cagent 以使用 GitHub Models 的 OpenAI 兼容 API。开发者需要一个 GitHub 个人访问令牌（PAT）来认证。配置完成后，代理可以在本地运行（使用 `cagent run`）或打包为 Docker 镜像并通过 Docker Hub 分发和拉取，从而实现真正的厂商独立性。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/11/lima-v2-0-new-features-for-secure-ai-workflows/">Lima v2.0：安全AI工作流程的新功能</a><br>Lima项目团队于11月6日发布了Lima的第二个主要版本（v2.0）。此次发布扩展了项目焦点，涵盖了人工智能（AI）以及容器。Lima (Linux Machines) 是一个用于在笔记本电脑上启动本地Linux虚拟机以运行容器的命令行工具，现已升级到v2.0，引入了插件基础设施、GPU加速支持（通过krunkit驱动）、模型上下文协议（MCP）工具，以及多项其他改进，旨在增强安全性和可用性，特别是对AI工作流程的安全隔离支持。</p>
+
+<p><a href="https://webrtc.ventures/2025/12/five-webrtc-predictions-for-2026-tsahi-levent-levi-on-av1-moq-and-what-might-break-next">2026年WebRTC五大预测：Tsahi Levent-Levi谈AV1、MOQ以及下一个可能“出问题”的技术</a><br>WebRTC专家Tsahi Levent-Levi分享了他对2026年的五个快速预测，内容涵盖了编解码器（如AV1）、MOQ（媒体传输协议）、边缘计算、以及哪些当前“最佳实践”可能在未来演变为“反模式”。他预测WebRTC本身（而非MOQ）将在2026年引来更多抱怨，并认为AV1在短期内不会成为主导编解码器。此外，MOQ结合WebCodecs、WebTransport和WebAssembly的组合被视为可能颠覆传统WebRTC的“黑马”技术栈。</p>
+
+<p><a href="https://bloggeek.me/vendor-lock-in-webrtc">WebRTC供应商锁定</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/10/html-tools/#atom-everything">构建 HTML 工具的有用模式</a><br>本文探讨了构建“HTML 工具”的有用模式，这些工具是将 HTML、JavaScript 和 CSS 组合在一个文件中提供实用功能的应用程序。作者已经构建了超过 150 个此类工具，其中大部分是由大型语言模型 (LLM) 编写的。文章介绍了构建这些工具的关键特征，例如：使用单个文件、避免 React 和构建步骤、从 CDN 加载依赖项、保持代码简短，以及利用原型设计工具（如 Claude 的“Artifacts”或 ChatGPT/Gemini 的“Canvas”）。此外，还讨论了更复杂的工具需要使用编码代理、如何利用剪贴板进行输入/输出、使用 URL 或 localStorage 持久化状态、收集支持 CORS 的 API、直接调用 LLM API，以及利用 WebAssembly (Wasm) 的可能性。核心思想是：构建易于复制粘贴、独立部署（如使用 GitHub Pages）且功能强大的单文件 Web 应用。</p>
+
+<p><a href="https://timdettmers.com/2025/12/10/why-agi-will-not-happen">为什么AGI不会发生 — Tim Dettmers</a><br>这篇文章旨在批判关于通用人工智能（AGI）和超级智能的讨论，认为其中存在对计算物理现实的根本性误解。作者强调计算是物理的，并指出线性进步需要指数级资源，以及GPU性能提升已接近极限。文章认为，目前的AI进步（如缩放法则）正面临物理限制，而“超级智能”的快速自我改进的设想是建立在对资源约束的忽视之上的幻想。作者推崇中国对AI的务实应用和经济扩散哲学，认为AI的未来在于实用性集成，而非追求理论上的超级智能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/KaijuEngine/kaiju">KaijuEngine/kaiju</a><br>General purpose 3D and 2D game engine using Go (golang) and Vulkan with built in editor</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/steveiliop56/tinyauth">steveiliop56/tinyauth</a><br>The simplest way to protect your apps with a login screen.</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，企业级业务AI&#43;开发解决方案，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/prometheus-community/postgres_exporter">prometheus-community/postgres_exporter</a><br>A PostgreSQL metric exporter for Prometheus</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>Headless cloud-native authentication and identity management written in Go. Scales to a billion&#43; users. Replace Homegrown, Auth0, Okta, Firebase with better UX and DX. Passkeys, Social Sign In, OIDC, Magic Link, Multi-Factor Auth, SMS, SAML, TOTP, and more. Runs everywhere, runs best on Ory Network.</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/gophish/gophish">gophish/gophish</a><br>Open-Source Phishing Toolkit</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

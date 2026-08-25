@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241029.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-29</span>
+</p>
+<p>每日一谚：Lead with context, end with options, and always close with an error </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/10/29/go-coding-is-like-drinking-boiled-water">写Go就像喝白开水</a><br>写Go就像喝一杯无味的白开水，虽寡淡却能即刻解渴，满足需求，并少有后顾之忧</p> 
+
+<p><a href="https://ashwingopalsamy.hashnode.dev/understanding-gos-utf-8-support">了解Go的UTF-8支持：使用非拉丁字母编码</a><br>本文深入探讨了 Go 的 UTF-8 支持，特别是它对非拉丁字母的处理，以及在标识符中使用组合标记时面临的挑战。默认情况下，Go 将源文件编码为 UTF-8，允许在代码中使用 Unicode 字符，这对于使用中文或泰米尔语等语言的开发人员来说是有益的。但是，Go 的语言规范禁止在标识符中组合标记，这会导致依赖这些标记的脚本（如 Tamil）出现问题。本文解释了泰米尔语脚本的结构，它使用组合标记来形成字符，以及为什么 Go 标识符中不允许使用这些字符。这种限制对依赖于组合标志的语言的表达性、教育障碍和包容性提出了挑战。作者 Ashwin Gopalsamy 分享了他对 Go 中 UTF-8 合规性程度的经验和好奇心，强调了编程语言中国际化的复杂性。本文最后强调了理解这些细微差别对于在 Go 中使用不同语言的开发人员的重要性。</p> 
+
+<p><a href="https://rm4n0s.github.io/posts/2-go-devs-should-learn-odin/">Golang 开发人员应该尝试 Odin</a><br>Golang 开发人员熟悉它的简单性以及与垃圾回收和运行时相关的潜在问题。Odin 作为一种替代编程语言出现，通过将 60% 的 Golang 语法与数组编程和低级内存管理等功能相结合来解决其中一些问题。Odin 旨在保持稳定，并且仍在开发中，拥有不断增长的生态系统，包括 JangaFX 和 ChiAha 的生产使用。Odin 的手动内存管理消除了垃圾收集，从而导致了不同的错误处理和内存泄漏方法。该语言支持使用 make（） 和 delete（） 等函数进行手动内存管理，并包含针对不同用例的各种分配器。Odin 还使用 goroutines 和 selector 模拟 Go 的并发模型，而不依赖垃圾回收。该语言强调简单直接，重点是通过阅读现有代码而不是大量文档来学习。Odin 的权衡包括缺少某些语言功能，如 Closures、Composition、Goroutines 和 Selecters，但它提供了一种更实用的编程方法。总体而言，Odin 为寻求 Golang 替代品的开发人员提供了简单性、控制和性能的独特融合。</p> 
+
+<p><a href="https://www.arp242.net/jia-tan-go.html">Jia Tanning Go代码</a><br>Go 开发人员 Martin Tournoij 强调了 Go 测试框架中一个微妙但可能危及安全性的问题。他指出，Go 编译器在常规构建期间会忽略以 _test.go&#39; 结尾的文件，但这些文件在运行 &#39;go test&#39; 时会被编译。如果将模拟 &#39;_test.go&#39; 的文件（使用变体选择器或其他 Unicode 字符）编译到主代码库中，这可能会导致安全漏洞，从而无意中削弱 bcrypt 成本等安全措施。Tournoij 分享了一些示例，说明如何使此类文件看起来是良性的，但会损害代码库的完整性。尽管向包括 GitHub 和 Go 安全团队在内的各种平台报告了此事，但尚未承认该问题是安全问题。Tournoij 的观察表明，恶意行为者可能会利用这种形式的混淆在 Go 项目中嵌入有害代码，从而引发对当前测试实践的稳健性以及需要更加警惕的安全审计的质疑。</p> 
+
+<p><a href="https://philipotoole.com/faster-reads-same-guarantees-linearizable-consistency-in-rqlite-8-32/">更快的读取速度，相同的保证：rqlite 8.32 中的线性化一致性</a><br>rqlite 版本 8.32 的发布引入了 Linearizable reads，通过提供快速性能和强一致性，在分布式数据库技术方面取得了重大进步。以前，rqlite 提供 Weak 和 Strong 读取一致性模型，其中 Weak 速度快，但存在数据过时的风险，而 Strong 则以延迟为代价确保数据最新。但是，线性化读取在减少延迟的同时保持了 Strong 读取的强一致性，因为它们避免了跨 quorum 节点的共识过程。此优化允许多个 Linearizable reads 并行发生，类似于 Weak reads，而不会相互阻塞。Linearizable reads 的引入解决了在分布式系统中平衡速度和数据正确性的关键挑战，使 rqlite 成为需要可靠和高效数据访问的开发人员的更通用的工具。</p> 
+
+<p><a href="https://blog.flipkart.tech/the-art-of-system-debugging-decoding-cpu-utilization-da75f09ef1ff">系统调试的技巧 — 解码CPU 利用率</a><br>在此案例中，Flipkart 团队解决了其基于 Java 的 API 网关中的一个性能问题，该网关在负载测试期间遇到了 CPU 利用率和吞吐量变化的偏差。调查显示，API Gateway Pod 密度较高的节点还托管其他应用程序，从而导致这些节点上的平均负载增加。使用 filetop 和 klockstat 等 eBPF 工具进行进一步分析，发现过多的锁争用和 CPU cgroup 文件访问是根本原因。CPU cgroup 文件的过度读取可以追溯到 CompletableFuture.waitingGet 函数，该函数过度调用 Runtime.availableProcessors 函数。此问题已通过修复 Runtime.availableProcessors 中的性能下降问题和缓解对 CompletableFuture.waitingGet 的过度调用得到解决，Java 版本 8u281、8u241 和 8u280 中包含向后移植。此调试过程利用传统工具和 eBPF 工具来诊断和解决生产环境中的重要性能问题。</p> 
+
+<p><a href="https://funcall.blogspot.com/2024/10/lisp-vs-golang.html">Lisp 与 golang</a><br>本文通过作者在审计数据库中面临的实际问题，对 Common Lisp 和 Go （golang） 进行了比较。作者是 Lisp 的爱好者，最初在 Common Lisp 中构建了一个解决方案的原型，事实证明，该解决方案可以有效地识别数据库中的差异。然而，管理层对 Go 的偏好导致用这种静态类型的语言重写了服务。作者强调了将 Lisp 代码翻译成 Go 时遇到的挑战，特别是由于 Go 严格的类型系统和类型注释所需的冗长性。尽管存在这些障碍，作者还是承认 Go 中类型安全的好处。文章最后，作者打算进一步探索和记录这两种语言之间的差异，并建议在以后的文章中进行更深入的分析。这种比较强调了语言设计选择对软件开发的实际影响，尤其是在从 Lisp 等动态类型语言过渡到 Go 等静态类型语言时。</p> 
+
+<p><a href="https://candost.blog/on-good-software-engineers">关于优秀的软件工程师</a><br>Candost 的博客文章探讨了优秀软件工程师的多方面定义，强调了信任、质量和团队合作在交付项目方面的重要性。它概述了一个好的工程师是可靠的，始终如一地产生高质量的工作，并与团队有效协作。该帖子深入探讨了所需的软技能，例如沟通、同理心和适应能力，以及对组织流程和文化的理解。它还突出了寻求改进流程和推动变革的伟大工程师的积极主动的本质。作者澄清说，虽然这些期望是全面的，但它们对于任何工程师的角色都是基础，并且随着经验的积累，工程师可以成长以满足这些标准。该博文最后邀请反馈并分享有关人类和软件交互这一更广泛主题的见解。
+
+（注意：摘要旨在概括博客文章的关键点，同时保持简洁和连贯性。它不包括直接引用或文本中的具体示例，而是提供了主要主题和信息的概述。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blogs.newardassociates.com/blog/2023/you-want-modules-not-microservices.html">你想要模块，而不是微服务</a><br>The source document critically examines the microservices architecture trend, arguing that the core principles of microservices—modularity, independent deployment, and scalability—are not new but rather echo the longstanding concepts of modules in software development. It highlights that the hype around microservices often overlooks the challenges of distributed computing, such as increased latency and the complexities introduced by network communication. The document also references the &#34;Fallacies of Distributed Computing&#34; and &#34;Fallacies of Enterprise Computing,&#34; which underscore the difficulties in achieving performance, reliability, and scalability in distributed systems. Ultimately, the author suggests that the true value of microservices lies not in the technology itself but in addressing organizational challenges like reducing development team dependencies and establishing clear integration and communication conventions. The summary encapsulates the essence of the document, which is a call for a more nuanced understanding of microservices beyond the prevailing hype, focusing on practical solutions to real-world software development issues.</p>
+
+<p><a href="https://thenewstack.io/p99conf-how-ebpf-could-make-faster-database-systems/">eBPF 如何打造更快的数据库系统</a><br>P99Conf 活动讨论了 eBPF 技术的潜力，该技术通过直接在内核中执行常见操作来显着提高数据库系统的性能，从而规避操作系统的限制。由卡内基梅隆大学的 Andy Pavlo 牵头的 BPF-DB（基于 BPF 的数据库）是一种内存中的键值数据存储，它利用 eBPF 在内核空间中运行数据库逻辑，因此无需将数据复制到用户空间。这种方法不仅可以加快数据库操作速度，还可以减少传统操作系统施加的限制造成的开销。Pavlo 的团队计划将 BPF-DB 作为开源软件发布，旨在解决数据库工程师因操作系统干扰而面临的长期挑战。eBPF 在 BPF-DB 中的创新使用代表了构建更快、更高效的数据库系统的一个有前途的方向。</p>
+
+<p><a href="https://medium.com/@_sidharth_m_/how-nosql-databases-speed-up-write-heavy-workloads-49c41dceb849">NoSQL 数据库如何加快写入密集型工作负载的速度？</a><br>源文档深入探讨了 LSM 树如何通过优化写入操作来增强 NoSQL 数据库中的写入密集型工作负载。它解释了 LSM 树（包括 Memtables 和排序字符串表 （SSTables） 等组件）以最小化随机磁盘 I/O 的方式管理数据，从而提高写入性能。Memtables 将数据存储在排序的内存结构中，从而允许快速写入和读取。当数据已满时，Memtables 会将数据刷新到 SSTables，SSTables 是存储在磁盘上的排序和仅附加文件。本文档还通过预写日志 （WAL） 解决了数据一致性和崩溃恢复问题。为了进一步优化读取，采用了 Bloom 过滤器和稀疏索引等技术，即使在大型数据集中也能确保高效的数据检索。本文档最后强调了 LSM 树在处理高写入吞吐量和为写入密集型应用程序提供可扩展解决方案方面的优势。</p>
+
+<p><a href="https://surfingcomplexity.blog/2024/10/28/serializability-and-tla/">在 TLA&#43; 中指定可序列化性</a><br>本文档讨论了在 TLA&#43; 中推理并发性的挑战，并提出了数据库系统中可序列化性的正式规范。可序列化性确保事务似乎按某种顺序执行，即使并发执行也是如此。作者概述了规范的初始状态，详细说明了命中注定的交易及其顺序。定义了规范允许的操作，包括保证事务最终中止或提交的活跃条件。本文档还引入了到 sequential 规范的细化映射，演示了可序列化性规范的有效性。作者计划使用这个正式的规范来验证潜在的并发控制实现，比如 MVCC，方法是通过模型检查来识别反例。TLA&#43; 中可序列化性的形式化是确保数据库系统中正确事务隔离的宝贵工具。</p>
+
+<p><a href="https://www.fermyon.com/blog/lightweight-kubernetes-and-wasm">轻量级 Kubernetes 和 Wasm 是一个完美的组合</a><br>该博客文章讨论了轻量级 Kubernetes 发行版和 WebAssembly （Wasm） 应用程序之间的协同作用，强调了这种组合在性能和成本效率方面的优势。它介绍了 SpinKube，这是一个简化在 Kubernetes 集群中运行 Spin 应用程序的项目。该博文概述了三个使用案例：优化空闲服务器的资源使用，利用快速扩展功能处理高流量站点，以及将计算密集型应用程序部署在更靠近边缘的位置以减少延迟和成本。该博文还提供了 SpinKube 入门指南，包括安装和构建 Spin 应用程序。作者强调了通过利用 K3s 的轻量级特性和 SpinKube 的性能进行无服务器计算，可以显著降低计算费用并提高效率。</p>
+
+<p><a href="https://semaphoreci.medium.com/best-shift-left-testing-tools-to-improve-your-qa-085272fcd391">提高 QA 的最佳左移测试工具</a><br>本文讨论了在软件开发中左移测试对增强质量保证和安全性的重要性。左移测试涉及在开发过程的早期集成测试活动，从而允许在部署之前识别和解决问题。这种方法带来了许多好处，包括更快的错误检测、提高软件质量、降低成本、增强协作和增强安全性。本文重点介绍了支持左移测试的各种工具，例如自动化测试框架、OSV-Scanner、Snyk 和 Checkov。这些工具涵盖测试的不同方面，包括手动测试、依赖项检查、静态代码分析和配置检查。本文还强调了使用开源工具并将其集成到开发工作流程中的重要性，以确保从一开始就采取强大的安全性和质量措施。总的来说，本文提倡采用左移测试实践和工具来构建更可靠、更安全的软件应用程序。</p>
+
+<p><a href="https://teivah.medium.com/the-cap-theorem-74bf1bb49e62">CAP 定理</a><br>CAP 定理是分布式系统中的一个基本概念，它假设系统只能同时实现三个理想属性中的两个：一致性、可用性和分区容错性。一致性确保整个系统中的所有数据都相同，可用性保证每个请求都收到响应，分区容错意味着系统在网络故障的情况下继续运行。该定理表明，在网络分区期间，系统必须在维护一致性 （CP） 或可用性 （AP） 之间进行选择，因为它不能同时是两者。对于系统设计人员在构建分布式系统或选择数据库时了解这种权衡至关重要。本文还谈到了对 CAP 定理的批评，并暗示了未来关于替代方案的讨论和对系统权衡的更深入见解。Google 的软件工程师 Teiva Hasanyi 通过 The Coder Cafe 时事通讯为讨论做出了贡献，为编码人员提供了基本概念，并探讨了 CAP 定理在软件工程和数据库管理中的含义。</p>
+
+<p><a href="https://dolthub.com/blog/2024-10-28-dolt-anatomy/">Dolt 数据库剖析</a><br>源文档深入研究了 Dolt 数据库的内部结构，揭示了其独特的文件组织和操作机制。它首先解释了如何通过 &#39;dolt init&#39; 和 SQL &#39;CREATE DATABASE&#39; 命令创建 Dolt 数据库，突出了 &#39;.dolt&#39; 目录作为数据库主目录的作用。然后，本文档探讨了配置和状态管理，详细介绍了分别存储设置和状态信息的 &#39;config.json&#39; 和 &#39;repo_state.json&#39; 文件。数据库结构的核心位于 &#39;noms&#39; 目录中，该目录包含清单文件和表文件，由 Dolt 的内容寻址存储引擎管理。此外，本文档还解决了临时存储和锁定文件，这对于 Dolt 中基于 Golang 的操作至关重要。最后，它涉及“dolt_undrop”功能，该功能允许保留已删除的数据库，直到它们被明确删除。总之，本文档全面介绍了 Dolt 数据库的内部工作原理，从创建到配置、状态管理和数据存储。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/28/ai-powered-observability-picking-up-where-aiops-failed/">AI 驱动的可观测性：弥补 AIOps 的失败之处</a><br>源文档讨论了可观测性工具在 AI 驱动的进步背景下的演变，并从 AIOps 过去的失败中吸取了教训。它强调了 AI 驱动的可观测性在使见解大众化和简化操作方面的潜力，使其可供非技术用户访问并提高效率。该文件强调组织需要通过转变思维方式和拥抱变化来适应这些新工具，正如 AIOps 的成功和缺点所见。它表明，将 GenAI 集成到可观察性中可以通过自动化流程来显着提高生产力，这表明技术团队可以专注于战略计划的未来。这篇文章还呼吁采取谨慎的方法，从过去的技术转变中学习，以确保 AI 驱动的可观察性的好处得到充分实现。
+
+```</p>
+
+<p><a href="http://www.brendangregg.com/blog//2024-10-29/ai-flame-graphs.html">AI 火焰图</a><br>英特尔的新 AI 火焰图工具旨在通过提供 AI 加速器或 GPU 硬件配置文件以及软件堆栈的可视化来降低 AI 资源成本，类似于 CPU 火焰图。该工具在数据中心 GPU Max 系列的 Intel Tiber AI Cloud 上作为预览版提供，提供对 AI/GPU 程序的指令偏移和 CPU 堆栈的见解，由于其在加速器内存中的性质，通常无法直接访问。AI 开发人员最初发现该工具令人费解，但对于理解整个堆栈（包括硬件层）很有价值。该工具在某些工作负载方面面临挑战，尤其是 PyTorch 等框架，但正在努力减少开销并支持更广泛的应用程序。到 2030 年，此类工具对将用电量减少 10% 以上的潜在影响凸显了这项创新对行业和环境的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.tensorflow.org/2024/10/whats-new-in-tensorflow-218.html">TensorFlow 2.18 中的新增功能</a><br>TensorFlow 2.18 版本引入了几项重大更新，包括对 NumPy 2.0 的支持，由于类型提升规则的更改，这可能会影响某些边缘情况。LiteRT 代码库将取代 TFLite，逐步过渡到新系统，并鼓励开发人员直接为 LiteRT 做出贡献。密封 CUDA 现在默认启用，通过使用特定版本的 CUDA、CUDNN 和 NCCL 来确保可重复的构建。此外，还添加了用于具有计算能力 8.9 的 GPU 的专用 CUDA 内核，以提高较新 GPU 模型的性能，而预编译的 Python 包不再支持像 Pascal 这样的老一代。这些更改旨在为使用各种硬件和软件配置的开发人员提高 TensorFlow 的整体性能和兼容性。</p>
+
+<p><a href="https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/">通过 Anthropic 的 Claude 3.5 Sonnet、Google 的 Gemini 1.5 Pro 和 OpenAI 的 o1-preview 为 Copilot 带来开发者选择</a><br>GitHub 博客宣布为 GitHub Copilot 引入多模型选择，集成了 Anthropic 的 Claude 3.5 Sonnet、Google 的 Gemini 1.5 Pro 以及 OpenAI 的 o1-preview 和 o1-mini 模型。这一发展与 GitHub 的承诺一致，即为开发人员提供为其编码任务选择最佳模型的代理能力。新模型有望增强 Copilot 在各种功能方面的能力，包括多文件编辑、代码审查和安全自动修复。该博客文章还介绍了 GitHub Spark，这是一种使用自然语言构建应用程序的 AI 原生工具。该博文强调了这些模型在改进代码生成、推理和整体开发人员体验方面的潜力。
+
+（注：摘要简洁明了，抓住了博文的精髓，重点介绍了 GitHub Copilot 中多模型集成的关键公告和 GitHub Spark 的引入。</p>
+
+<p><a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-models-on-github-copilot">Gemini 模型即将登陆 GitHub Copilot</a><br>Google 和 GitHub 宣布建立合作伙伴关系，将 DeepMind 开发的大规模多模态基础模型 Gemini 1.5 Pro 集成到 GitHub Copilot 中，以增强开发人员的 AI 代码生成能力。Gemini 1.5 Pro 以其多达 200 万个令牌的广泛上下文窗口而闻名，它将支持开发人员进行代码生成、分析和优化任务，处理超过 100,000 行代码。此次集成标志着朝着为开发人员提供针对其特定需求量身定制的模型选择迈出了重要一步，强调了 AI 驱动开发中的灵活性和控制力。Gemini 模型的可用性将扩展到各种平台和环境，包括 GitHub Copilot Chat、Visual Studio Code 和其他 IDE，并通过 Google Cloud、Workspace 和 Firebase 提供额外支持。此次合作有望通过在流行的开发工具中直接提供高级 AI 帮助来丰富开发人员体验。
+
+（字数：100）</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin 是用 Go （Golang） 编写的 HTTP Web 框架。它具有类似 Martini 的 API，性能要好得多 - 速度提高了 40 倍。如果您需要出色的性能，请给自己买点杜松子酒。</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu 允许您以声明方式管理您的云基础设施。</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>轻量级服务器监控中心，包含历史数据、docker 统计信息和警报。</p>
+
+<p><a href="https://github.com/GoogleContainerTools/kaniko">GoogleContainerTools/kaniko</a><br>在 Kubernetes 中构建容器镜像</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>适用于 Kubernetes 的入口 NGINX 控制器</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>用于 git 命令的简单终端 UI</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/gophish/gophish">gophish/gophish</a><br>开源网络钓鱼工具包</p>
+
+<p><a href="https://github.com/go-resty/resty">go-resty/resty</a><br>适用于 Go 的简单 HTTP 和 REST 客户端库</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/jozu-ai/kitops">jozu-ai/kitops</a><br>将 AI/ML 项目作为 OCI 构件安全地共享和存储在容器注册表中。</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/pdfcpu/pdfcpu">pdfcpu/pdfcpu</a><br>用 Go 编写的 PDF 处理器。</p>
+
+<p><a href="https://github.com/gonum/gonum">gonum/gonum</a><br>Gonum 是一组用于 Go 编程语言的数字库。它包含用于矩阵、统计、优化等的库</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - 专为现代应用程序设计的开源、云原生、分布式 SQL 数据库。</p>
+
+<p><a href="https://github.com/uptrace/bun">uptrace/bun</a><br>SQL 优先的 Golang ORM</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>用于根据 OCI 规范生成和运行容器的 CLI 工具</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>快速、安全、高效的备份程序</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/fsnotify/fsnotify">fsnotify/fsnotify</a><br>Go 的跨平台文件系统通知。</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>OpenTelemetry-Go 的扩展集合。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

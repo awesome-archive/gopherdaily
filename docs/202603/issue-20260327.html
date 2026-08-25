@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260327.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260327</span>
+</p>
+<p>每日一谚：程序员最大的敌人不是复杂的代码，而是昨天的自己写的代码 </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/27/function-type-inference-should-work-in-all-assignment-contexts">Rust 看了流泪，AI 看了沉默：扒开 Go 泛型最让你抓狂的“残疾”类型推断</a><br>因为就在最近，连“Go 语言之父之一” 的 Robert Griesemer 都亲自在官方 GitHub 上提了一个 Issue，承认这个语法限制不仅反直觉，甚至一度 被认为是一个编译器 Bug！Griesemer 本人随即在 Issue 中自我更正，明确这需要语言规范(spec)层面的修改，而不只是修编译器。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/P3U1hTH4jF_6_IRUWaGoKg">【AI 智能体时代的软件工程】13 语言工程：代码可读性，AI 时代最核心的架构决策</a><br>在 Agentic SE 时代，解决代码审查危机的最强杠杆，根本不是审查工具，而是你选择让 AI 用什么编程语言、什么方言（Idioms）来生成代码。 今天，我们将深入底层的代码基建，探讨一个颠覆认知的理念：语言选择不再是关于“优雅”或“表达力”的偏好之争，而是一项关于“如何让人机高效沟通”的核心架构决策。我们将一起揭秘为什么 Go 语言极其“无聊”的特性，恰恰使它成为了智能体时代的天选底座。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/03/26/goland-2026-1-is-released/">GoLand 2026.1 发布：支持 Go 1.26 语法更新与效率提升</a><br>GoLand 2026.1 版本发布，核心亮点在于引入了针对 Go 1.26 的引导式语法更新功能，帮助开发者轻松地将整个代码库现代化。IDE 会自动检测并提示可升级的旧有语法模式，例如 `new()` 改进和 `errors.AsType` 的使用，并提供快速修复。此外，新版本增强了 AI 能力，支持更多代理，并在生产力方面带来了改进，包括对 Git worktrees 的支持和更流畅的编辑体验，旨在保持代码的现代性和工作流程的高效性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.ydb.tech/how-io-uring-overtook-libaio-performance-across-linux-kernels-and-an-unexpected-iommu-trap-ea6126d9ef14">io_uring 性能超越 libaio 的内核演进及 IOMMU 陷阱</a><br>本文深入探讨了 Linux 内核中 I/O 性能的演变，重点分析了 io_uring 如何在不同内核版本中逐步超越传统的 libaio 接口。文章详细阐述了实现这一性能飞跃的关键技术改进和优化。此外，作者还分享了一个在测试过程中遇到的、与 IOMMU 相关的意外陷阱（trap）及其排查过程。整体而言，该文不仅展示了 io_uring 在现代 Linux I/O 栈中的性能优势，还揭示了底层硬件交互中可能出现的复杂问题，为理解高性能 I/O 机制提供了深入的见解。</p>
+
+<p><a href="https://rup12.net/posts/database-caching-on-aws-with-valkey/">AWS 上使用 Valkey 实现数据库缓存指南</a><br>本文是关于在 AWS 上使用 Valkey 进行数据库缓存的开发者指南，是配套视频的文字参考。文章强调了缓存对于降低延迟的显著优势，并介绍了核心的缓存策略。TL;DR 建议优先采用“旁路缓存”（Cache-aside/懒加载）模式，它适用于绝大多数场景。为保证数据新鲜度，可结合“写回（Write-through）”策略；为防止“惊群效应”（Thundering Herds），应引入 TTL 抖动机制；对于高频访问的热点数据，可考虑使用 Rust 的 `moka` 库实现进程内缓存。所有这些方案均可在 Amazon ElastiCache Serverless for Valkey 上良好运行。</p>
+
+<p><a href="https://coroot.com/blog/java-tls-instrumentation-with-ebpf/">eBPF 观测 Java TLS 加密流量的方法</a><br>文章介绍了 Coroot 节点代理如何利用 eBPF 技术在内核级别捕获和识别非加密流量（如 HTTP, MySQL 等）。然而，Java 的 TLS 实现（JSSE）是基于 Java 层的，缺乏可供 eBPF 直接挂载（uprobe）的导出符号，导致其加密流量成为观测盲点。
+为解决此问题，作者提出了一种结合轻量级 Java Agent 和原生库的方案。该 Agent 利用 JVM 的 Attach API 动态加载到运行中的 JVM 中，并钩挂入 JSSE 内部类（如 `SSLSocketImpl$AppOutputStream.write`）。在数据写入 TLS 层之前，Hook 会将明文数据的前 1KB 复制到一个线程本地的原生缓冲区，并调用一个原生存根函数，从而使 eBPF 能够间接捕获到 Java 应用的明文 TLS 数据。</p>
+
+<p><a href="https://blog.rust-lang.org/2026/03/20/rust-challenges/">Rust 面临的挑战</a><br>Rust 博客上的一篇关于 Rust 挑战的文章（基于对约 70 人的访谈数据）已被作者和项目组决定完全撤回。作者解释称，尽管文章的核心观点和数据分析由人工完成，但文章初稿由大型语言模型（LLM）生成，导致许多读者认为其语言风格带有“LLM 腔调”且内容“空洞”，缺乏实质性。作者重申内容本身（即 Rust 项目面临的挑战）是准确的，但承认在数据量有限和需要淡化某些结论以避免过度概括时，博客的呈现效果不佳，未能充分传达访谈的深度和细微差别。</p>
+
+<p><a href="https://sushantdhiman.dev/how-uber-shows-millions-of-drivers/">Uber 如何实时向数百万司机展示位置 </a><br>最近我在阅读 Uber 的后端系统如何处理大量的实时位置事件，发现这个系统非常有趣。因此，我将在这篇博文中分享我的心得体会。本文所有信息均来自 Uber 工程博客。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/26/quantization-from-the-ground-up/#atom-everything">从零开始量化</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Unified Policy as Code</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/riba2534/feishu-cli">riba2534/feishu-cli</a><br></p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/steveyegge/beads">steveyegge/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

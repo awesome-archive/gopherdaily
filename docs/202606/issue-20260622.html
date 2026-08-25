@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260622.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260622</span>
+</p>
+<p>每日一谚：Use sync.RWMutex for read-heavy workloads. It&#39;s more efficient. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/22/why-is-go-dominating-in-cncf-landscape">屠榜 CNCF！为什么在云原生时代，Go 语言能把 Java、C&#43;&#43; 和 Rust 堵在门外？</a><br>在 Reddit 的 r/golang 讨论区，一个帖子激起了千层浪：为什么 Go 能在 CNCF 生态中称霸？（Why is Go dominating in CNCF landscape?!）。 海外大厂的架构师、K8s 核心贡献者和分布式系统老兵们纷纷下场，用工程视角，层层剥开了 Go 语言在云原生时代“天命上位”的底层逻辑。今天 ，我们就来深度拆解这场技术演进的偶然与必然。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-runtime-reflect/">深入理解Reflect 包</a><br>本文是理解Go运行时系列的第十部分，介绍了Go运行时的核心组件，包括引导程序(Bootstrap)、内存分配器(Memory Allocator)和调度器(Scheduler)等关键机制。</p> 
+
+<p><a href="https://tonybai.com/2026/06/21/what-was-your-oh-shit-moment-with-genai">上千程序员自爆 AI 的“卧槽时刻”：是推开神界大门，还是跌入黑盒地狱？</a><br>与那些由大厂公关通稿包装出来的“AI 改变世界”的宏大叙事不同，这里的每一个回复，&gt;都是由全世界最挑剔、最硬核的一线系统工程师、内核黑客和安全专家用亲身经历写下的血泪史。这些“卧槽时刻”完美呈现了当今 AI 时代的双重面相</p> 
+
+<p><a href="https://tonybai.com/2026/06/20/steve-yegge-the-flat-curve-society">大模型正在见顶！传奇架构师：欢迎来到“平坦曲线时代”</a><br>就在近日，硅谷传奇程序员、写了 40 年代码的行业老炮 Steve Yegge（曾任职于亚马逊、谷歌、Grab，Sourcegraph等大厂）发表了一篇极具颠覆性的万字长文：《The Flat Curve Society（平坦曲线俱乐部）》。 在这篇文章中，Steve 抛出了一个让所有人深思的断言：**大模型的指数级增长正在迅速放缓，我们已经撞上了物理与安全的双重墙壁，正式进入了“平坦曲线时代”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/mZuH8P8j2nxQwHUs2FQpKQ">【AI 时代软件工程师的算法图谱】11 矩阵与张量：AI 时代的计算原语</a><br>所有的神经网络训练，本质上都是在做矩阵运算。掌握矩阵的旋转、遍历和前缀和技巧，不仅是解 LeetCode 的利器，更是理解卷积神经网络 （CNN）和高性能计算（HPC）的基石。 今天，我们将从最基础的矩阵操作，一路实战到模拟一个卷积核 (Convolution Kernel) 的计算过程。</p> 
+
+<p><a href="https://rednafi.com/shards/2026/06/go-goroutine-leak-profile/">已接受提案：Go标准库中的goroutine泄漏分析器</a><br>Go 1.27将在`runtime/pprof`中添加goroutine泄漏检测器，该提案已于四月被接受。文章探讨了常见的goroutine泄漏情况，如当goroutine阻塞在永远不会被释放的channel或锁上时发生泄漏。</p> 
+
+<p><a href="https://go.dev/gopls/features/mcp">Gopls：支持模型上下文协议</a><br>Gopls包含一个实验性的内置服务器，用于模型上下文协议(MCP)，允许它以MCP工具的形式将其部分功能暴露给AI助手。</p> 
+
+<p><a href="https://go-micro.dev/blog/25">Go Micro 正在成为智能体开发框架</a><br>自Anthropic开始赞助Go Micro以来，我们承诺开放构建并实时报告进展。三个月来，Go Micro正在转型为一个专注于智能体开发的框架。</p> 
+
+<p><a href="https://konradreiche.com/blog/excessive-nil-pointer-checks-in-go/">Go中过多的空指针检查</a><br>本文讨论了Go语言中的空指针检查问题。要防止生产环境中的恐慌，不应从延迟的`recover`开始，而应从防御性编程开始。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://colobu.com/2026/06/22/software-engineering-fifty-years-paradigm-shift/">软件工程范式的五十年之变</a><br>本文详述了软件工程方法论的核心思想、关键贡献者。Matt Skills 提出将工程经验系统化为可复用的能力单元；Matt Pocock 探讨了规格驱动开发，将规格文档作为人类与AI之间的&#34;合约&#34;；Frank Bria 介绍了 Ralph Loop，使AI在循环中自我改进直至满足验收标准；Garry Tan 展示了如何通过23个专家角色构建虚拟工程团队；superpowers 是一个拥有159K&#43;星标的AI编程技能库；autoresearch 则涉及多智能体协作研究。</p>
+
+<p><a href="https://overreacted.io/there-are-no-instances-in-atproto/">atproto中没有实例的概念</a><br>每当关于atproto的文章登上Hacker News，总有人在评论中问：&#34;但是所有的Bluesky实例在哪里？&#34;。本文澄清了atproto架构中不包含传统意义上的实例概念。</p>
+
+<p><a href="https://www.greybeam.ai/blog/duckdb-internals-part-1">DuckDB内部机制：为什么DuckDB如此快速？</a><br>本文深入探讨了DuckDB数据库的内部工作机制，分析了其高性能的原因，包括其列式存储、向量化查询执行和查询优化等关键技术特性。</p>
+
+<p><a href="https://clickhouse.com/blog/open-source-10">ClickHouse开源十年</a><br>本文回顾了ClickHouse数据库作为开源项目走过的十年历程，介绍了其发展历程、技术演进和社区成就，展示了这个高性能分析型数据库的成长与贡献。</p>
+
+<p><a href="https://yusufaytas.com/old-software-was-fast-because-it-had-no-choice">旧软件之所以快是因为别无选择</a><br>本文探讨了早期软件之所以高效的原因，它们必须在资源有限的条件下运行，因此必须优化到极致。作者通过分析一个启动Spark集群的Java组件，说明了协调和资源管理的重要性。</p>
+
+<p><a href="https://openjsf.org/blog/burnout-is-real-for-open-source-maintainers">开源维护者确实会倦怠：与Lodash创建者John-David Dalton的对话</a><br>本文采访了Lodash库的创建者John-David Dalton，讨论了开源维护者面临的倦怠问题，分享了应对压力和保持项目可持续性的经验与建议。</p>
+
+<p><a href="https://nelson.cloud/.gitignore-isnt-the-only-way-to-ignore-files-in-git/">.gitignore不是Git中忽略文件的唯一方式</a><br>本文介绍了Git中可以在三个不同级别忽略文件的方法：.gitignore文件、.git/info/exclude文件和~/.config/git/ignore文件，并详细解释了每种方法的使用场景和优势。</p>
+
+<p><a href="https://blog.cloudflare.com/temporary-accounts/">AI智能体的临时Cloudflare账户</a><br>Cloudflare推出了专为AI智能体设计的临时账户功能，允许AI系统安全地访问Cloudflare服务而无需长期凭证，提高了安全性和便利性。</p>
+
+<p><a href="https://sibexi.co/posts/epoll-vs-io_uring/">Linux中的epoll与io_uring对比</a><br>本文比较了Linux中两种处理异步I/O的机制：epoll和io_uring，分析了它们的工作原理、性能差异和适用场景，帮助开发者选择最适合自己需求的解决方案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything">AI智能体的临时Cloudflare账户</a><br>Cloudflare部署后会生成一个用于申请新项目的URL，如果项目需要运行超过60分钟，可以通过此URL进行申领。系统提供了专门的申领界面供用户操作。</p>
+
+<p><a href="https://arrowtsx.dev/bigger-models/">更大的模型并非出路</a><br>主要AI实验室正在发生转变，对无限增加参数规模和训练数据的做法日益怀疑。当Claude Fable 5受到限制时，这种范式的局限性被置于世界舞台之上。</p>
+
+<p><a href="https://ianbarber.blog/2026/06/19/llms-are-complicated-now/">LLMs现在变得复杂了</a><br>本文探讨了Meta在2022和2023年机器学习的两大分支，分析了当前大型语言模型(LLMs)的复杂性增加趋势，以及这对AI研究和应用的影响。</p>
+
+<p><a href="https://lcamtuf.substack.com/p/the-100000-whys-of-ai">AI的十万为什么</a><br>作者与技术人员经常争论的一个痛苦问题是：能否区分人类撰写的文本和AI生成的文本。本文深入探讨了这一问题的多个层面和挑战。</p>
+
+<p><a href="https://www.satisfice.com/blog/archives/488148">不要说你用AI写作</a><br>作者警告不要公开声称使用AI代笔写作，即使只是&#34;帮助&#34;写作也不应如此。这种行为不仅不诚实，还会对内容创作生态产生负面影响。</p>
+
+<p><a href="https://martinfowler.com/articles/reliable-llm-bayer.html">构建可靠的智能体AI系统</a><br>本文通过拜耳(AG)与Thoughtworks合作开发的临床前信息中心(PRINCE)案例，研究了构建生产就绪的智能体AI系统的方法，解决了制药行业的挑战。</p>
+
+<p><a href="https://carteakey.dev/blog/local-inference/local-llm-optimization/">本地LLM推理优化：完整指南</a><br>本文提供了本地大型语言模型推理优化的全面指南，结合了l3ms家庭实验室工具包的笔记、基准测试结果和脚本，帮助读者提高本地LLM的运行效率。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/sartoopjj/thefeed">sartoopjj/thefeed</a><br>DNS-based feed reader and lite messenger for environments where only DNS queries work. Read Telegram channels and public X accounts, and exchange end-to-end-encrypted messages with other users — all</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>Selfhosted alternative to 12ft.io. and 1ft.io. Proxy to remove CORS headers and modify HTML</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable runtime for building distributed applications across cloud and edge, combining event-driven architecture with workflow orchestration.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
+
+<p><a href="https://github.com/google/cadvisor">google/cadvisor</a><br>Analyzes resource usage and performance characteristics of running containers.</p>
+
+<p><a href="https://github.com/Agent-Field/agentfield">Agent-Field/agentfield</a><br>Build, run and scale AI agents like API and microservices - observable,auditable and identity-aware from day one.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a distributed storage system for object storage (S3), file systems, and Iceberg tables, designed to handle billions of files with O(1) disk access and effortless horizontal scaling.</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

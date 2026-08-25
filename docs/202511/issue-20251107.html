@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251107.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251107</span>
+</p>
+<p>每日一谚：A test should never delete something it did not create. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/07/go-simple-illusion-easy-to-learn-hard-to-master">Go 的“简单”幻象：易于上手，难于精通</a><br>近日，一位刚接触 Go 几个月的新手在reddit golang论坛发出了这样一个真诚的提问。他感觉 Go “超级简单”，并好奇自己是否因为初学者的身份，而忽略了语言中那些“疯狂的复 杂性”。 这个问题，立刻引发了社区关注。数百条评论从四面八方涌来，汇成了一场关于 Go 语言简单性本质的深度辩论。最终，社区的集体智慧凝聚成一个 经典而又充满辩证性的共识：Go 的简单，是刻意为之的设计；而通往精通之路，则隐藏在简约表象之下的深邃之处。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoExplicitMemoryFreeing">Go 运行时环境或许有一天会显式地释放一些内部内存</a><br>runtime.free已经被merge，将作为GOEXPERIMENT并且是默认值出现在Go 1.26中</p> 
+
+<p><a href="https://opentelemetry.io/blog/2025/obi-announcing-first-release">OpenTelemetry eBPF Instrumentation 首次发布</a><br>在 Grafana Labs、Splunk、Coralogix、Odigos 和许多其他社区成员之间进行了重要合作之后，我们很高兴地宣布 OpenTelemetry eBPF Instrumentation（简称 OBI）的第一个 alpha 版本发布。
+
+这一事件标志着该项目（最初为 Grafana Beyla）由 Grafana Labs 于今年早些时候捐赠后的一个重要里程碑。在项目在 OpenTelemetry 保护伞下管理之后，eBPF Instrumentation 的开发速度大大加快。 已经添加了许多新的协议，质量得到了提高——尤其是在大规模部署时，并且测试的运行速度提高了 10 倍。 这真正证明了 OpenTelemetry 社区的价值。</p> 
+
+<p><a href="https://medium.com/design-bootcamp/understanding-the-bridge-design-pattern-in-go-a-practical-guide-734b1ec7194e">理解 Go 语言中的桥接设计模式：实践指南</a><br>将抽象与实现分离，实现更简洁、可扩展的架构</p> 
+
+<p><a href="https://www.infoq.com/news/2025/11/uber-pinot-query-redesign/">Uber 的 Pinot 查询改造：简化层并提高可观察性</a><br>Uber 重建了其 Apache Pinot 查询架构，用名为 Cellar 的轻量级代理和 Pinot 的多阶段引擎精简模式取代了基于 Presto 的 Neutrino 系统。这次重新设计简化了 SQL 执行，改进了资源管理，并确保了大规模分析工作负载的可预测性能。</p> 
+
+<p><a href="https://mattermost.com/blog/a-deep-dive-into-deeply-recursive-go">深入探讨深度递归的 Go</a><br>了解更多关于开发人员为什么最终会编写深度递归的 Go 代码，以及可以采取哪些措施来缓解堆栈耗尽问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/dynamic-mcps-stop-hardcoding-your-agents-world/">Dynamic MCPs: Stop Hardcoding Your Agents’ World</a><br>使用 Docker MCP 网关智能搜索和代码模式工具，使您的代理能够动态配置 MCP。</p>
+
+<p><a href="https://blog.crossplane.io/crossplane-cncf-graduation/">宣布 Crossplane 的 CNCF 毕业</a><br>我们今天非常激动地宣布 Crossplane 在 CNCF 中毕业！</p>
+
+<p><a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/">Gateway API 1.4：新功能</a><br>准备好迎接 Kubernetes 网络吗？ Kubernetes SIG Network 社区推出了网关 API (v1.4.0) 的正式发布 (GA)！ 2025 年 10 月 6 日发布的 1.4.0 版本加强了 Kubernetes 中现代、富有表现力和可扩展的服务网络的道路。网关 API v1.4.0 为标准通道（网关 API 的 GA 发布通道）带来了三个新功能：网关和后端之间 TLS 的 BackendTLSPolicy、GatewayClass 状态中的 supportedFeatures、Route 的命名规则，并引入了三个新的实验性功能：Mesh 资源、默认网关和 HTTPRoute 的 externalAuth 过滤器。</p>
+
+<p><a href="https://medv.io/blog/things-i-dont-like-in-configuration-languages">我讨厌配置语言中的东西</a><br>剧透：我创建了自己的配置语言  maml.dev  这里将列出我在互联网上找到的所有标记语言/配置语言，以及我不喜欢它们的地方。</p>
+
+<p><a href="https://www.andy-gallagher.com/blog/stop-vibe-coding-your-unit-tests">停止用vibe coding你的单元测试</a><br>不要用LLMs编写嘈杂的、无建设性的单元测试。QA工程师走进酒吧，点了一杯啤酒，她点了2杯啤酒，她点了0杯啤酒，她点了-1杯啤酒，她点了一只蜥蜴，她点了一个NULLPTR。她试图在不付款的情况下离开。满意地，她宣布酒吧准备好营业。第一个顾客进来点了一杯啤酒。他们喝完了饮料，然后问洗手间在哪里。酒吧爆炸了。</p>
+
+<p><a href="https://abhinavsarkar.net/notes/2025-compiler-backend-survey">编译器目标的简短调查</a><br>对编译器目标进行简短调查，如汇编、LLVM、C、JVM 和 Brainfuck。</p>
+
+<p><a href="https://fly.io/blog/everyone-write-an-agent">你应该编写一个 Agent</a><br>有些概念在抽象中很容易理解。煮沸水：施加热量并等待。其他的你需要先尝试一下。你只是认为你理解自行车是如何工作的，直到你学会骑自行车。
+
+计算中有一些大的想法很容易理解。 AWS S3 API。 这是过去 20 年来最重要的存储技术，就像开水一样。 其他技术，你需要先踩到踏板上。
+
+LLM 代理就是这样的。
+
+人们对 LLM 和代理的看法大相径庭。但无论它们是蛇油还是什么，它们都是一个伟大的想法。你不需要喜欢它们，但你应该想对它们是对的。成为你所能成为的最好的仇恨者（或粉丝）。
+
+这就是你应该写一个代理的原因之一。但是，还有另一个原因更具说服力，那就是</p>
+
+<p><a href="https://cekrem.github.io/posts/why-typescript-wont-save-you">为什么 TypeScript 无法拯救你</a><br>TypeScript 是一个很棒的工具，但它无法拯救你。 了解其局限性是编写真正安全代码的第一步。</p>
+
+<p><a href="https://tigerbeetle.com/blog/2025-11-06-the-write-last-read-first-rule">写最后，读最先规则</a><br>TigerBeetle 是一个为正确性而构建的金融交易数据库。然而，即使使用正确的组件构建正确的系统仍然是一个挑战：
+
+组合单独正确的系统不一定能产生正确的系统。在这篇文章中，我们将探讨如何在没有事务的情况下保持一致性，如何在中间状态外部化时推理正确性，以及如何从部分故障中恢复。</p>
+
+<p><a href="https://v8.dev/blog/scanner">Blazingly fast parsing, part 1: optimizing the scanner</a><br>解析性能的基石是快速的扫描器。本文解释了V8的JavaScript扫描器最近如何变得快了2.1倍。</p>
+
+<p><a href="https://v8.dev/blog/preparser">Blazingly fast parsing, part 2: lazy parsing</a><br>This is the second part of our series explaining how V8 parses JavaScript as fast as possible. The first part explained how we made V8’s scanner fast.</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2025/11/tla-modeling-of-aws-outage-dns-race.html">TLA&#43; 建模 AWS 宕机 DNS 竞态条件</a><br>2025 年 10 月 19 日至 20 日，AWS 的弗吉尼亚北部地区遭受了由 DNS 自动化缺陷引发的重大 DynamoDB 宕机，该缺陷破坏了端点解析。 这个问题级联成持续了将近一整天的全区域故障，并中断了许多公司的服务。 与大多数大规模宕机一样，“DNS 自动化缺陷” 只是一个触发因素； 更深层次的系统性脆弱性（请参阅我关于野外亚稳态故障论文的帖子）放大了影响。 这篇文章重点介绍了错误的中心竞态条件，最好通过 TLA&#43; 建模来理解。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Nov/7/codex-tailscale-spark/#atom-everything">使用 Codex CLI 结合 gpt-oss:120b 在 NVIDIA DGX Spark 上通过 Tailscale 运行</a><br>受到 YouTube 评论的启发，我写了关于如何运行 OpenAI 的 Codex CLI 编码代理，针对在我的 NVIDIA DGX Spark 上通过 Tailscale 网络运行的 gpt-oss:120b 模型。配置需要一些工作，但结果是现在我可以在世界任何地方使用笔记本电脑上的 Codex CLI 来操作自托管模型。</p>
+
+<p><a href="https://www.philschmid.de/the-rise-of-subagents">The Rise of Subagents</a><br>Subagents在AI社区中越来越受欢迎。 我们看到越来越多的子代理被用来可靠地处理特定的用户目标。 子代理是一种专门的代理，旨在处理单一的、定义明确的任务。 子代理可以是显式的，用户或模型定义它们以供重用，也可以是隐式的和动态定义的。 这解决了单体 AI 代理上下文污染的一个关键限制。</p>
+
+<p><a href="https://martinfowler.com/articles/llm-learning-loop.html">The Learning Loop and LLMs</a><br>软件开发一直以来都抵制将其变成流水线的想法。尽管我们的工具变得更智能、更快、功能更强大，但本质的行动仍然是一样的：我们通过实践来学习。本文探讨了持续学习在软件开发中的重要性，并讨论了大型语言模型（LLMs）对这一过程的影响。文章强调了实践学习循环的重要性，即观察和理解、实验和尝试、回忆和应用。它认为 LLMs 可以降低实验的门槛，但不能取代实践学习。文章最后总结道，LLMs 提供了巨大的杠杆，但只有当我们专注于学习和理解时才能发挥作用。真正的能力来自我们对正在塑造的系统的深入理解，而不是我们生产代码的速度。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/ayn2op/discordo">ayn2op/discordo</a><br>A lightweight, secure, and feature-rich Discord terminal (TUI) client.</p>
+
+<p><a href="https://github.com/mudler/edgevpn">mudler/edgevpn</a><br>⛵ The immutable, decentralized, statically built p2p VPN without any central server and automatic discovery! Create decentralized introspectable tunnels over p2p with shared tokens</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/OpenCSGs/csghub-server">OpenCSGs/csghub-server</a><br>csghub-server is the backend server for CSGHub which helps user to manage datasets, modes, and also run Model Inference, Finetune and Application Spaces.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>An extremely fast bundler for the web</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/rivo/tview">rivo/tview</a><br>Terminal UI library with rich, interactive widgets — written in Golang</p>
+
+<p><a href="https://github.com/google/wire">google/wire</a><br>Compile-time Dependency Injection for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

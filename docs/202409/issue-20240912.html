@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240912.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-12</span>
+</p>
+<p>每日一谚：Avoid defer in loops, or your memory might blow up. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/09/12/solve-the-empty-value-dilemma-in-json-encoding-with-omitzero">JSON包新提案：用“omitzero”解决编码中的空值困局</a><br>一个提出于2021年的issue近期被即将“功成身退”的Russ Cox接受(accept)，该issue就当前json包对空值编码的“瑕疵”做了描述并提出了修正方案。本文就将针对这一问题以及其方案进行探讨，希望能帮助大家更好地理解该issue以及其对应的方案。</p> 
+
+<p><a href="https://go.dev/blog/llmpowered">Go官博：使用Go构建LLM驱动的应用程序</a><br>该博客文章探讨了 Go 编程语言在构建大型语言模型 （LLM） 驱动的应用程序方面的使用，重点介绍了集成 LLM 以实现基于知识的问答的 RAG 服务器。它突出了 Go 在并发性、性能和可靠性方面的优势，使其适合处理现代云原生应用程序所需的网络服务和复杂交互。该博文详细介绍了 RAG 服务器如何将文档添加到知识库中，并使用嵌入模型和向量数据库检索相关信息，最后一步涉及 LLM。此外，它还提供了使用不同工具和框架的服务器的三种变体：直接使用 Google Gemini API 和 Weaviate、LangChainGo 框架和 Genkit for Go。每个变体都展示了 Go 以最低的代码复杂性高效管理和部署 LLM 驱动的应用程序的能力。</p> 
+
+<p><a href="https://blog.openziti.io/zero-trust-sshclient">零信任ssh client端</a><br>本文深入探讨了 Zero Trust SSH 客户端的概念，解释了它通过不依赖传统的基于 IP 的底层网络来增强安全性的重要性。它强调了 OpenZiti 项目对这种安全范式转变的贡献，提供了有助于通过 OpenZiti 覆盖网络创建安全连接的 SDK。本文提供了一个使用 Golang 生态系统的实际示例，演示了如何构建与 OpenZiti 的 Zero Trust 连接集成的简单 SSH 客户端。它概述了必要的代码修改，以用零信任连接取代基于 IP 的拨号，强调了 Golang 在应用程序中嵌入零信任的适应性。文章最后鼓励社区参与和支持 OpenZiti 项目及其推进 Zero Trust 安全措施的努力。</p> 
+
+<p><a href="https://blog.gitguardian.com/how-to-handle-secrets-in-go/">在Go中如何处理机密信息</a><br>文章深入探讨了在 Go 语言中处理机密的复杂性。Go 语言在云原生生态系统中越来越受欢迎，作者作为该领域的专家，提供了一份关于如何安全管理机密的全面指南，属于“如何处理机密”系列</p> 
+
+<p><a href="https://dev.to/mbv-labs/building-a-saas-in-five-days-4ofn">5天构建一个SaaS</a><br>The author embarked on a challenging endeavor to build a no-code SaaS blog in just five days, driven by a personal desire to overcome the &#34;wantrepreneurship&#34; mindset. Utilizing a starter template, the author aimed to create a micro-blogging platform that allows users to spin up blogs quickly, with the blogs being managed by Traefik and Docker. The author faced technical hurdles, including integrating SQLite databases and dealing with Docker&#39;s exit code 18, but managed to launch a basic version of the blogging service. Despite not implementing the blog post upload feature due to time constraints, the author successfully demonstrated the ability to sign up, create a blog, and display content. The project highlighted the importance of urgency and focusing on current needs while leaving room for future enhancements.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://mostlynerdless.de/blog/2024/09/10/hello-ebpf-writing-a-linux-scheduler-in-java-with-ebpf-15/">你好eBPF：用eBPF 用 Java 编写一个 Linux 调度器</a><br>在这份综合指南中，Johannes Bechberger 介绍了使用 eBPF 扩展在 Java 中编写 Linux 调度器的概念，eBPF 扩展是一种允许开发自定义调度器的尖端技术。作者解释了使用 eBPF 创建调度器的动机，强调了在复杂的调度问题空间中进行实验的必要性以及测试并发 Java 应用程序的潜在好处。Bechberger 提供了 Scheduler 及其功能的概述，详细介绍了 Scheduler 接口及其使用自定义方法填充 table 的方法。然后，他演示了如何实现两个调度器：一个先进先出 （FIFO） 调度器和一个加权调度器，每个调度器都有不同的用途，并展示了 eBPF 的多功能性。本文最后邀请作者探索更高级的调度程序和可用于进一步学习的资源。</p>
+
+<p><a href="https://netflixtechblog.com/noisy-neighbor-detection-with-ebpf-64b1f4b3bbdd">Noisy Neighbor Detection with eBPF</a><br>Netflix&#39;s Technology Blog details the implementation of eBPF to detect and monitor &#34;noisy neighbor&#34; issues in multi-tenant environments, where excessive resource utilization by one service affects the performance of others. The blog explains how eBPF was used to continuously instrument the Linux scheduler, specifically measuring run queue latency for each container to identify potential performance degradation. By analyzing the timestamps of when processes enter the scheduling queue, Netflix could pinpoint processes that were causing delays. The blog also discusses the importance of distinguishing between noisy neighbors and other causes of latency spikes, such as a container hitting its CPU quota. To ensure minimal overhead, Netflix developed a tool called bpftop to profile the performance impact of their eBPF code, which proved to be less than 600 nanoseconds per hook. This innovative approach allows for real-time monitoring and resolution of noisy neighbor issues, enhancing infrastructure observability and performance management.</p>
+
+<p><a href="https://medium.com/jaegertracing/towards-jaeger-v2-moar-opentelemetry-2f8239bee48e">迈向 Jaeger v2：Moar OpenTelemetry！</a><br>Jaeger 是一种流行的开源分布式跟踪系统，随着 Jaeger v2 的推出，它将进行重大升级。这个新版本将与 OpenTelemetry 项目保持一致，利用其框架作为基础，并使用 Jaeger 的独特功能对其进行扩展。此次升级旨在增强灵活性、可扩展性和性能，提供原生 OpenTelemetry 处理、批量数据处理以及与 OpenTelemetry Collector 一致的开发人员体验。此外，Jaeger v2 将继承 Collector 的所有核心功能，并支持多种扩展，确保与 OpenTelemetry 生态系统的兼容性。Jaeger v2 的开发正在进行中，并计划实现全面上市的里程碑，包括全面的集成测试和性能监控。</p>
+
+<p><a href="https://gabevenberg.com/posts/cli-renaissance/">现代 CLI 复兴</a><br>本文档讨论了命令行界面 （CLI） 工具开发的复兴，并将这一趋势归因于过去 50 年软件使用的经验教训。关键见解包括直观、用户友好的默认值在软件中的重要性，鱼壳和 Neovim 等高级文本编辑器就是例证。清晰、有用的错误消息和提供简洁、可发现的文档的必要性也被强调为增强用户体验的关键。此外，本文档还谈到了工具摆脱历史包袱以更好地满足当前需求的概念，使用命令运行程序 Just 作为从头开始设计的工具示例，以便在其预期用例中实现最佳功能。值得注意的是，使用 Rust 和 Go 进行 CLI 工具开发的转变，围绕这些语言的强大包生态系统被认为可能增加了正在编写的工具数量。</p>
+
+<p><a href="https://blog.devops.dev/secure-your-code-with-policy-as-code-a-devsecops-best-practice-321fdcee7d51">使用策略即代码保护您的代码：DevSecOps 最佳实践</a><br>Arafat Ashrafi Talha 在他关于 DevSecOps 最佳实践的文章中强调了实施策略即代码 （PaC） 以有效保护和管理代码基础设施的重要性。PaC 涉及将策略编写为机器可读代码，确保跨环境的一致实施，并将这些策略集成到 CI/CD 管道中，以便及早发现和纠正合规性问题。Kyverno 和 OPA 等工具因其能够在 Kubernetes、Terraform 和云环境中验证和实施策略而受到强调。通过采用 PaC，团队可以自动执行安全检查，减少人工干预，并在整个开发生命周期中保持高标准的合规性和安全性。</p>
+
+<p><a href="https://icepanel.medium.com/dynamic-diagrams-in-the-c4-model-c6cb498e8622">C4 模型中的动态图</a><br>本文在 C4 模型（一种表示软件架构的方法）的上下文中对动态图进行了深入解释。动态图被描述为通过逐步关注特定用例或用户旅程来简化复杂静态图的工具。这些图表有助于降低复杂性、让新团队成员入职以及可视化整个系统的数据流。虽然原始源文档提到 IcePanel 不直接支持动态图，但它建议使用 Flows 作为替代方案来实现类似的结果。本文最后鼓励读者开始使用 C4 模型记录他们的系统，并提供了其他资源以供进一步理解。</p>
+
+<p><a href="https://www.hashicorp.com/blog/reload-ssl-certificates-from-hashicorp-vault-for-spring-boot">从 HashiCorp Vault 重新加载 SSL 证书</a><br>本综合指南探讨了 HashiCorp Vault 与 Spring Boot 的集成，以实现高效的 SSL 证书管理。它详细介绍了如何配置 Spring Boot 的嵌入式 Web 服务器以安全地处理 SSL 证书，这些证书是使用 Vault 的 PKI 秘密引擎动态生成和更新的。该指南进一步解释了 Vault Agent 的使用，这是一个单独的进程，用于向 Vault 进行身份验证并将秘密写入文件，从而将 Spring Boot 应用程序与直接的 Vault API 依赖项分离。此外，它还提供了有关配置 Spring Boot 以从 Vault Agent 创建的文件中读取证书的说明，从而促进自动 SSL 热重载，而无需应用程序停机。本文还包括一个完整的示例，并鼓励读者探索更多关于 Spring Boot 中的 Vault 集成和秘密管理的信息。</p>
+
+<p><a href="https://thenewstack.io/scaling-databases-to-meet-enterprise-genai-demands/">扩展数据库以满足 Enterprise GenAI 需求</a><br>New Stack 深入研究了扩展数据库的复杂性，以支持企业生成式 AI 应用程序的快速增长需求。由于这些应用程序需要强大的数据处理能力，因此讨论强调了了解数据库可扩展性的重要性，主要关注垂直和水平扩展方法。矢量数据库的出现旨在通过高维矢量处理非结构化数据，被强调为高级相似性搜索和生成式 AI 任务的关键组成部分。本文还介绍了特定于向量数据库的新 CAP 定理，概述了成本效益、准确性和性能之间的权衡。最后，它谈到了未来趋势，如硬件加速、云集成和增强的数据压缩技术，这些技术有望进一步提高矢量数据库的可扩展性和性能。</p>
+
+<p><a href="https://medium.com/@gudikotieswarmani/mastering-docker-buildx-and-buildkit-transitioning-from-legacy-builds-to-multi-platform-magic-5a97c4d66958">掌握 Docker Buildx 和 BuildKit：从传统构建过渡到多平台 Magic</a><br>本文提供了有关掌握 Docker Buildx 和 BuildKit 的深入指南，这些工具可促进高级 Docker 构建，摆脱传统构建。由 BuildKit 提供支持的 Docker Buildx 引入了多平台构建，允许单个构建调用以多个 CPU 架构为目标。它还通过改进的缓存和并行构建来提高构建效率，从而支持同时执行构建阶段。该指南涵盖设置 Docker Buildkit、创建和使用新的构建器实例，以及了解 BuildKit 的组件，包括低级构建 （LLB） 和前端。此外，本文还包括一个关于使用 Docker Buildx 进行多平台构建和并行阶段的教程，演示了如何构建和运行检查 kubectl、Docker 和 Terraform 版本的Docker镜像。</p>
+
+<p><a href="https://www.linuxjournal.com/content/how-linux-shapes-modern-cloud-computing">Linux 如何塑造现代云计算</a><br>George Whittaker 撰写的 Linux Journal 上的文章探讨了 Linux 在塑造现代云计算中的关键作用。Linux 的开源性质、性能、稳定性和成本效益使其成为各种云模型不可或缺的一部分，包括基础设施即服务 （IaaS）、平台即服务 （PaaS） 和软件即服务 （SaaS）。本文重点介绍了 Linux 在虚拟化和容器化技术（如 Docker 和 Kubernetes）中的重要性，这些技术对于高效的云操作至关重要。此外，Linux 强大的安全功能及其与 DevOps 实践的兼容性被强调为维护安全和自动化的云环境至关重要。还讨论了 Linux 在云计算中的未来，以及它在边缘计算方面的预期增长及其在混合和多云战略中的适应性。</p>
+
+<p><a href="https://netflixtechblog.com/pushy-to-the-limit-evolving-netflixs-websocket-proxy-for-the-future-b468bc0ff658">Pushy to the Limit：为未来发展 Netflix 的 WebSocket 代理</a><br>Netflix 的 Pushy 系统已经取得了重大发展，可以满足对设备到设备消息传递和语音控制功能日益增长的需求。Pushy 最初旨在维护持久的 WebSocket 连接以实现高效的数据传输，现在支持直推功能，允许将消息直接发送到设备，而无需排队。这一进步对于伴侣模式和设备事件订阅等功能至关重要，可实现电视和手机等设备之间的无缝通信。此外，Pushy 在扩展以每秒管理数亿个并发连接和消息方面发挥了重要作用，保持了 99.999% 的消息传递可靠性。系统的增长和复杂性需要一个强大且可扩展的基础设施，从而在消息处理和可靠性增强方面实现创新。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/10/how-to-install-plugins-in-kubernetes-and-essential-plugins-to-get-started/">如何在 Kubernetes 中安装插件以及开始使用的基本插件</a><br>本指南概述了 Kubernetes 插件、扩展 kubectl 命令行工具功能的工具，以及如何使用插件管理器 krew 安装它们。Kubernetes 插件可以自动执行任务、增强安全性并简化管理。该指南详细介绍了 krew 的安装及其在发现和安装插件中的使用，例如用于清理清单的 kubectl neat、用于管理上下文和命名空间的 kubectl-ctx 和 kubectl-ns、用于 RBAC 故障排除的 kubectl who-can、用于查看密钥的 kubectl-view-secret 以及用于快速更新部署中的容器镜像的 kubectl-replace-image。本文强调了这些插件在扩展 Kubernetes 功能和简化工作流程方面的重要性。</p>
+
+<p><a href="https://thenewstack.io/master-difficult-user-authentication-requirements-with-oauth/">使用 OAuth 掌握困难的用户身份验证要求</a><br>本文讨论了数字服务中用户身份验证的演变和实施，强调了适应 OAuth 等现代安全框架的重要性。它解释说，OAuth 虽然本身不是身份验证协议，但是一个全面的安全框架，可以针对各种身份验证方法进行定制，包括密码、多因素身份验证 （MFA） 以及与外部身份提供商 （IDP） 的集成。作者强调了 OAuth 代码流的灵活性，它允许将用户身份验证外包给授权服务器，从而使开发人员能够专注于其应用程序的功能，而不必担心安全复杂性。此外，本文还建议，虽然一些开发人员可能会考虑在其应用程序中实现自定义身份验证，但利用授权服务器的可扩展性，使用其内置行为和自定义插件来满足特定的身份验证需求更为有利。此方法可确保在 OAuth 框架内适当管理所有责任（包括审核）。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@tasusidd2002/how-ai-is-shaping-the-future-of-intellectual-property-rights-f72309c4718b">AI 如何塑造知识产权的未来！</a><br>Tasleem Siddiqui 在 Medium 上的文章探讨了人工智能 （AI） 对未来知识产权 （IPR） 的变革性影响。该讨论深入探讨了 AI 自主创建内容的能力所带来的复杂性，引发了对 AI 生成作品所有权的质疑。虽然目前的知识产权法难以解决这些问题，但本文强调了人工智能通过改进侵权检测来加强知识产权管理的潜力。此外，人工智能在自动化创新中的作用对现有的专利法提出了挑战，特别是考虑到全球对人工智能作为发明者的承认不一致。文章最后强调了道德考虑和法律改革的必要性，以平衡对人类创造者的保护与 AI 驱动创新的好处。</p>
+
+<p><a href="https://www.theinsaneapp.com/2024/09/artificial-intelligence-the-future-of-smart-personalized-gaming.html">人工智能 – 智能、个性化游戏的未来</a><br>本文深入探讨了人工智能 （AI） 在彻底改变在线游戏行业中的变革性作用，特别关注 CrazyTime 应用程序。它重点介绍了 AI 如何通过分析玩家数据来实时定制游戏玩法，例如调整难度和提供定制奖金，从而个性化游戏体验。由 AI 提供支持的预测分析可以通过预测和响应玩家在游戏中的行为来提高玩家的参与度，从而通过早期检测有害模式来缓解问题赌博。此外，AI 有助于检测欺诈和确保公平竞争，以及优化图形和声音等实时游戏增强功能。AI 的未来可能性扩展到成为动态的游戏内聊天机器人主机，甚至是完全交互式的游戏主机，有望提供更具吸引力和身临其境的游戏体验。</p>
+
+<p><a href="https://intezer.com/blog/alert-triage/ways-security-teams-leverage-ai/">AI 的实际应用：安全团队当今利用 AI 的 4 大方式</a><br>Itai Tevet 的文章探讨了安全团队如何利用 AI 来增强他们在安全运营中心 （SOC） 内的运营。它详细介绍了 AI 的四种主要利用方式：通过配备 AI 的检测系统改进威胁检测、自动警报分类以减少分析师倦怠并解决人才短缺问题、使用 AI 驱动的聊天机器人加速威胁搜寻，以及使用大型语言模型 （LLM） 加速恶意软件分析。Intezer 的自治 SOC 解决方案被强调为 AI 在安全自动化中的实际应用，能够对警报进行分类、减少误报，并提供可操作的见解以改进 MTTD 和 MTTR。文章强调，AI 不是一个未来主义的概念，而是一种现代工具，可以显著提高 SOC 的效率和有效性。</p>
+
+<p><a href="https://www.darrenhorrocks.co.uk/why-copilot-making-programmers-worse-at-programming/">为什么 Copilot 让程序员的编程能力变得更差</a><br>这篇文章质疑了 AI 驱动的代码生成器（如 GitHub 的 Copilot）对编程社区的影响，表明它们可能会无意中损害程序员核心编程技能的发展。它认为，依赖这些工具可能会导致解决问题和批判性思维等基本技能逐渐受到侵蚀，因为程序员可能会绕过这些步骤而倾向于接受自动生成的代码。此外，这篇文章还强调了一些潜在问题，例如过度依赖可能并不总是最佳的代码、对代码的所有权和责任感减弱、学习机会减少以及创造性思维的范围缩小。作者还警告不要过于依赖专有工具，这可能会将开发人员与更广泛的社区隔离开来。最终，文章警告说，如果不了解代码，开发人员可能会依赖 AI，这可能会阻碍他们作为程序员的成长。</p>
+
+<p><a href="https://engineering.fb.com/2024/09/10/data-center-engineering/simulator-based-reinforcement-learning-for-data-center-cooling-optimization/">基于模拟器的强化学习，用于数据中心冷却优化</a><br>Meta 实施了一种基于模拟器的强化学习方法来优化其数据中心的冷却，旨在减少能源消耗和水的使用。强化学习模型使用历史和仿真数据进行训练，以控制送风气流设定值，确保数据中心的温度条件保持在规格范围内。在 Meta 的一个数据中心区域进行的试点项目表明，该模型可以有效地管理气流供应，在各种天气条件下，送风机能耗降低 20%，用水量减少 4%。这种创新方法不仅有助于提高运营效率，而且与 Meta 对其数据中心运营可持续性的承诺相一致。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>Prometheus 监控系统和时间序列数据库。</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>计算机指标的导出器</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq 是一个可移植的命令行 YAML、JSON、XML、CSV、TOML 和属性处理器</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一个内存中的实时数据库，具有基于 SQL 的反应性。它经过高度优化，可在现代硬件上构建和扩展真正的实时应用程序，同时是 Redis 的直接替代品。</p>
+
+<p><a href="https://github.com/googleapis/google-api-go-client">googleapis/google-api-go-client</a><br>自动生成的 Google API for Go。</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>基于 eBPF 的网络、安全性和可观测性</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>macOS（和 Linux）上的容器运行时，设置最少</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS 是一个构建在 Redis 和 S3 之上的分布式 POSIX 文件系统。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Go 的快速 linters 运行程序</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器公开给 Internet。</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ 构建高价值公链的✨框架</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>适用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>Go 中的 IPFS 实现</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism 是以太坊，可扩展。</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>用于密钥管理、加密即服务和特权访问管理的工具</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>容器镜像和文件系统的漏洞扫描器</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes 虚拟化 API 和运行时，用于定义和管理虚拟机。</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

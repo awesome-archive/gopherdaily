@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250725.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250725</span>
+</p>
+<p>每日一谚：Sort your fields in your struct from largest to smallest </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/25/go-vs-rust-vs-cpp-in-complexity">Go vs. Rust vs. C&#43;&#43;：从语言规范长度看三种不同的“复杂性”</a><br>最近，一张关于编程语言规范词数统计的图表，在技术圈广为流传。它以一种极其直观、甚至有些残酷的方式，将不同语言的复杂性摆在了我们面前。语言规范的长度，是衡量一门语言复杂度的最客观指标之一。 它直接决定了这门语言的学习曲线、认知负荷，以及整个生态的风格。 今天，我们就以这张图为起点，深入探讨三门备受关注的系统级语言——Go、Rust 和 C&#43;&#43;——它们各自代表的三种截然不同的“复杂性”，以及这些“复杂 性”在 AI 时代意味着什么。</p> 
+
+<p><a href="https://tonybai.com/2025/07/25/writing-is-thinking">写作即思考：AI 时代，开发者为什么要警惕“思考外包”？</a><br>全球顶级的科学期刊《自然》(Nature) 发表了一篇社论，标题仅有三个词：“Writing is thinking” (写作即思考)。这篇社论探讨的是大语言模型时代人类生成的科学写作的价值，其核心观点，对于我们技术领域的开发者、工程师和内容创作者来说，不啻为一记振聋发聩的警示。它在 AI 浪潮席卷一切的今天，迫使我们重新审视一个被我们日渐忽视，却又至关重要的行为——我们自己的思考过程。</p> 
+
+<p><a href="https://tonybai.com/2025/07/25/how-anthropic-teams-use-claude-code">Anthropic内部实践首次公开：揭秘Claude Code如何引爆全员生产力</a><br>Anthropic 公司今天发布了一份极为详尽的内部案例研究，为我们提供了一次罕见的“幕后观察”机会，让我们得以一窥其内部团队——从最核心的产品开发、安全工程，到数据科学、乃至法务和营销团队——是如何将 **Claude Code** 作为其日常工作的核心伙伴。</p> 
+
+<p><a href="https://www.dzombak.com/blog/2025/07/use-your-type-system">使用你的类型系统</a><br>本文讨论了一种极其简单的技术，该技术在实际生产代码库中很少见到。在编程中，我们经常需要处理可以用编程语言内置的简单、通用类型或库提供的类型来表示的简单值，例如整数、字符串或 UUID。在任何非平凡的代码库中，这不可避免地会导致错误，例如，当代表用户 ID 的字符串被用作账户 ID 时，或者当某个关键函数接受三个整数参数，而有人在调用时混淆了正确的顺序时。一个更好的解决方案是定义不同的类型并用它们来表示不同的事物！int 或 string 是优秀的构建块，但将它们按原样传递到系统中意味着您会慢慢但不可避免地丢失重要的上下文：它们实际代表什么。本文通过 Go 语言的示例展示了如何通过定义具有特定含义的类型来避免这些问题，并提到了作者在 libwx 库中的实践经验，该库为每种测量都定义了类型，并提供了类型之间的转换方法，从而防止了用户因混淆单位而犯错。作者强调，类型系统是为了帮助开发者，并鼓励开发者充分利用它来构建更健壮的软件。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-07-24-hunting-a-memory-leak">追踪内存泄露</a><br>本文介绍了如何在 Dolt SQL Server 中追踪内存泄漏。作者通过分析 Golang 的内存分析工具、Prometheus 指标以及 Linux 系统信息（如 /proc/meminfo 和 lsof），最终发现内存泄漏是由 stats 子系统未能正确关闭被删除的 LOCK 文件句柄引起的。通过修复此问题并添加回归测试，Dolt SQL Server 的内存使用得到了优化。</p> 
+
+<p><a href="https://www.ralfj.de/blog/2025/07/24/memory-safety.html">没有线程安全就没有内存安全</a><br>本文探讨了内存安全和线程安全之间的关系，作者认为这两者密不可分，真正的目标应该是“避免未定义行为”。文章通过一个 Go 语言的例子展示了数据竞争如何导致内存安全问题，即使 Go 被认为是内存安全的语言。作者对比了 Java、C#、OCaml、JavaScript 和 WebAssembly 等语言，以及 Rust 和 Swift 在处理并发安全方面的不同策略。作者批评 Go 在内存安全方面的承诺不够清晰，尤其是在并发场景下，数据竞争可能导致未定义行为，进而引发内存安全问题。最后，作者总结认为，内存安全的关键在于程序能否“打破语言”，即是否会产生未定义行为，并强调理解语言的安全保证非常重要。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.ipfs.tech/2025-js-libp2p-helia-devtools/">使用新的 js-libp2p 开发者工具实现调试超能力</a><br>Interplanetary Shipyard 很高兴推出 js-libp2p 检查器，这是用于调试和检查 js-libp2p 和 Helia 的新开发者工具，可在浏览器和 Node.js 中使用。调试是软件开发的重要组成部分，而正确的工具可以事半功倍。新的开发者工具提供了一个用户友好的界面来实时检查 libp2p 节点，从而缩短了反馈循环，并使诊断问题更加容易。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/A0D4wF1yv3nC3wye5Hcb4g">实战笔记：薛定谔的缓存</a><br>这个问题，在 Manus 上线不久后，像 幽灵 一样缠上了我们。同样模型、同样请求，服务商 A 的缓存命中率几乎是 B 的两倍，账单上的成本差大到肉疼。当时模型资源紧张，我们又不得不两家混用。如果弃用 B，就意味着要拒绝大量客户，这对一个正在高速增长的产品来说，是不可接受的。</p>
+
+<p><a href="https://engineering.fb.com/2025/07/23/security/policy-zones-meta-purpose-limitation-batch-processing-systems">Policy Zones: Meta 如何在大规模批量处理系统中强制执行目的限制</a><br>Meta 开发了隐私感知基础设施（PAI）和策略区域（Policy Zones）来强制执行数据目的限制，特别是在大规模批量处理系统中。策略区域集成了 Meta 的 exabyte 级数据仓库和处理系统，利用运行时强制执行和 SQL 解析，在每天数百万的数据流中传播和强制执行隐私注释，每小时执行数万亿次用户同意检查。文章详细介绍了 Meta 如何利用策略区域保护用户消息数据，解决粗粒度数据分离、过度标记和治理模型等挑战，并展望了未来通过生成式 AI 减少摩擦的计划。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/24/github-spark/#atom-everything">使用 GitHub Spark 反向工程 GitHub Spark</a><br>本文介绍了 GitHub 最新发布的 GitHub Spark，这是一种允许用户通过自然语言构建和部署全栈智能应用程序的工具。作者 Simon Willison 深入探讨了 Spark 的功能，包括身份验证、数据存储和 LLM 调用能力。他展示了如何利用 Spark 本身来反向工程其底层系统提示，并详细分析了提示中的设计理念、排版原则以及组件使用指南。文章还提到了 Spark 的工具集，包括用于文件编辑的 `str_replace_editor`、用于运行 npm 命令的 `npm`、以及用于执行 shell 命令的 `bash`，并推测 Spark 可能基于 Claude 模型。作者还分享了 Spark 的部署选项以及对未来功能的期望，如支持非认证用户访问和更深度的 GitHub API 集成。文末，作者强调了高质量系统提示在 AI 辅助开发中的重要性，并表达了对 Spark 未来发展的期待。</p>
+
+<p><a href="https://www.ardanlabs.com/news/2025/brains-on-autocomplete-are-we-gaining-speed-but-losing-mastery">我们正在收获效率，但失去掌控力：关于自动补全的思考</a><br>这篇文章探讨了使用AI工具（如代码自动补全）在软件工程中可能带来的认知权衡。文章借用对计算器和算盘的历史担忧，质疑这些工具虽然提高了效率，却可能导致基本技能和深刻理解的下降。研究表明，当依赖AI助手时，大脑活动和记忆回忆的减少，文章还引用了工程师们的轶事，他们有意识地避免使用这些工具，以保持自己的专业知识。作者提倡对AI的谨慎使用，强调它应该增强而不是替代人类智慧和学习。核心观点是，真正的掌握需要持续的努力和对基础知识的深刻理解，工程师们应意识到在过度依赖AI时可能产生的“认知债务”。</p>
+
+<p><a href="https://blog.pragmaticengineer.com/cursor-makes-developers-less-effective">Cursor 使开发者效率低下？</a><br>一项针对经验丰富的开发者工作流程的研究发现，使用 Cursor 进行 bug 修复的开发者比不使用任何 AI 工具的开发者慢大约 19%。一个可能的启示是，AI 工具可能比我们想象的更耗时。开发者们普遍高估了 AI 对生产力的影响，即使在实际体验到效率下降后，仍然相信 AI 加速了他们的工作。文章还引用了使用 Cursor 效率提升 38% 的个例，但强调了其样本量不足。专家分析认为，AI 工具的学习曲线很高，需要开发者投入大量精力去学习和适应。此外，AI 生成代码时的等待时间容易分散开发者注意力，影响工作流程。最终，节省的编码时间并不一定能转化为更高的软件开发生产力。</p>
+
+<p><a href="https://hai.stanford.edu/news/inside-trumps-ambitious-ai-action-plan">深入解读特朗普的AI行动计划</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/containers/kubernetes-mcp-server">containers/kubernetes-mcp-server</a><br>Model Context Protocol (MCP) server for Kubernetes and OpenShift</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Cost monitoring for Kubernetes workloads and cloud costs</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ A Framework for Building High Value Public Blockchains ✨</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>A Modern Testing Framework for Go</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/helm-unittest/helm-unittest">helm-unittest/helm-unittest</a><br>BDD styled unit test framework for Kubernetes Helm charts as a Helm plugin.</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

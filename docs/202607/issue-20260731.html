@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260731.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260731</span>
+</p>
+<p>每日一谚：Handle errors early and return early </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/31/thoughtworks-future-of-software-engineering-2026-verification-bottleneck">Thoughtworks最新报告：代码生成不再是瓶颈，“没人能验证”才是！</a><br>Thoughtworks与Martin Fowler在瑞士召集的软件工程未来峰会传递出一个反直觉的信号：AI代码生成能力已经过剩，真正卡住行业脖子的是验证、信任和治理。报告揭示了“Harness Engineering”崛起、学徒制断代、决策瓶颈取代产能瓶颈、老板与工程师认知鸿沟等五大趋势，并给出了技术与管理两个层面的具体行动清单。最后的结论是：当生成变得廉价，人类的判断力和审美，才是唯一不会贬值的资产。</p> 
+
+<p><a href="https://tonybai.com/2026/07/31/superlogical-mitchell-hashimoto-launch">隐退三年后杀回来：HashiCorp创始人官宣二次创业，这次要做「万物的多路复用器」</a><br>Mitchell Hashimoto是HashiCorp的联合创始人，也是终端模拟器Ghostty的作者。当地时间7月29日，他官宣了离开HashiCorp三年后 的第一次正式创业——Superlogical，第一站是重做终端多路复用器，终局野心是打造覆盖人机协同全场景的“工作多路复用层”。公司获得Notable Capital与Amplify Partners领投的1000万美元种子轮融资，投资人阵容中不乏Stripe、Shopify、Patrick Collison等重量级人物，其中就包括12年前 就下注HashiCorp的老朋友——Glenn Solomon。</p> 
+
+<p><a href="https://medium.com/@alsgladkikh/no-go-1-26-did-not-make-your-service-40-faster-93e10613387f">不，Go 1.26 并没有使您的服务速度提升 40%</a><br>自春天以来，几乎每次我参与面试时，都会被问到关于 Green Tea 的情况。而十有八九，我听到的回答都是类似“嗯，它的速度快了 40%”这样的话。如果进一步追问——在什么方面更快呢？——整个会议室就会陷入一片寂静。这些百分比是真实的。它们并不是用来衡量大多数人所认为的那些指标。让我们来详细分析一下这个问题吧。</p> 
+
+<p><a href="https://chinmay-sawant.medium.com/i-spent-one-month-building-a-performance-sat-for-go-here-are-the-results-310b26fa6bff">我花费了一个月的时间来开发一个针对 Go 语言的性能优化版 SAT 算法</a><br>作者花费一个月时间为Go语言构建了一个性能SAT工具。本文分享了构建过程和最终结果。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/30/runtime-supply-chain-verification-using-the-node-resource-interface-nri/">使用节点资源接口(NRI)的运行时供应链验证</a><br>文章介绍了使用节点资源接口(NRI)进行运行时供应链验证的方法，探讨了绕过Kubernetes API的安全问题。</p>
+
+<p><a href="https://www.docker.com/blog/docker-joins-nvidia-open-secure-ai-alliance/">智能智能体AI的未来取决于开放和信任。这就是Docker加入Nvidia开放安全AI联盟的原因。</a><br>在智能智能体时代，信任而非智能将决定真正的可能性。智能来自模型，而信任来自运行时、身份、治理和安全。Docker自豪地加入Nvidia的开放安全AI联盟。</p>
+
+<p><a href="https://nesbitt.io/2026/07/30/wheels-bottles-images.html">Wheels、Bottles和Images</a><br>Wheels、Homebrew bottles和OCI images是三大自助式二进制分发系统：项目发布编译后的构件，任何机器获取与其平台匹配的版本，无需发行版维护者介入。</p>
+
+<p><a href="https://www.greybeam.ai/blog/duckdb-internals-part-1">DuckDB内部结构：为什么DuckDB如此快速？| Greybeam</a><br>文章深入探讨DuckDB的内部结构，解释其高性能的原因，包括查询优化和存储引擎设计。</p>
+
+<p><a href="https://www.greybeam.ai/blog/duckdb-internals-part-2">DuckDB内部结构：为什么DuckDB如此快速？（第二部分：向量化执行）| Greybeam</a><br>文章继续探讨DuckDB的高性能原因，重点介绍其向量化执行机制如何提升查询效率。</p>
+
+<p><a href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/">堆叠式拉取请求现已公开预览 - GitHub更新日志</a><br>堆叠式拉取请求将大型变更分解为小型可审查的拉取请求。它们是有序的拉取请求序列，每个代表变更的一个专注层次。</p>
+
+<p><a href="https://lwn.net/Articles/1086041/">GCC指导委员会宣布AI政策 [LWN.net]</a><br>GCC指导委员会宣布已接受AI贡献政策，旨在规范AI技术在GCC项目中的使用和贡献。</p>
+
+<p><a href="https://palark.com/blog/kubernetes-1-37-release-features/">Kubernetes 1.37：深入探索新的alpha功能 | 技术博客 | Palark</a><br>文章深入探讨Kubernetes 1.37版本中的新alpha功能，包括架构改进和API增强，为用户提供技术洞察。</p>
+
+<p><a href="https://nnethercote.github.io/2026/07/31/how-to-speed-up-the-rust-compiler-in-july-2026.html">如何在2026年7月加速Rust编译器 | Nicholas Nethercote</a><br>作者自2025年12月上次讨论Rust编译器性能以来，继续分享最新的优化技术和进展。</p>
+
+<p><a href="https://www.freecodecamp.org/news/how-to-build-kubernetes-operators-a-handbook-for-devs/">如何构建Kubernetes操作员：开发者手册</a><br>本文为开发者提供构建Kubernetes操作员的全面指南，涵盖设计原则、实现方法和最佳实践。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything">通过GPT‑5.6提升价格性能边界</a><br>文章介绍使用GPT‑5.6优化模型前向传播的方法，解决内存移动、同步和数据布局问题，提高GPU利用率。</p>
+
+<p><a href="https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything">调查我们网络安全评估中的三个真实事件</a><br>作者审查了141,006次评估运行，识别出三个独立事件，涉及六个运行，其中四个影响了同一组织，其他两个发生在独立的评估运行中。</p>
+
+<p><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Gemini Robotics 2为机器人带来全身智能 — Google DeepMind</a><br>Gemini Robotics 2为机器人带来全身智能，实现更复杂的物理交互和环境适应能力。</p>
+
+<p><a href="https://obryant.dev/p/2x-not-10x/">2倍而非10倍：2026年使用LLM编程</a><br>作者分享使用LLM编程的经验，指出LLM带来的效率提升是2倍而非传说中的10倍，特别适合复杂编程任务。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/larksuite/cli">larksuite/cli</a><br>The official Lark/飞书 CLI tool, maintained by the larksuite team — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Mee</p>
+
+<p><a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview</a><br>Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents.</p>
+
+<p><a href="https://github.com/netdata/netdata">netdata/netdata</a><br>The fastest path to AI-powered full stack observability, even for lean teams.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/certimate-go/certimate">certimate-go/certimate</a><br>An open-source and free self-hosted SSL certificates ACME tool, automates the full-cycle of issuance, deployment, renewal, and monitoring visually. 完全开源免费的自托管 SSL 证书 ACME 工��</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

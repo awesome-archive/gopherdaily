@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250301.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250301</span>
+</p>
+<p>每日一谚：Idiomatic Go Code: Mostly Direct and Concrete </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://jub0bs.com/posts/2025-02-28-cost-of-panic-recover">Go panic和recover的代价</a><br>本文探讨了 Go 语言中 panic 和 recover 机制的使用成本。作者指出，panic 和 recover 应该仅用于异常情况，因为它们速度较慢，会造成堆分配，并妨碍内联优化。文章通过与 Java 异常处理机制的对比，以及基准测试结果，说明了在 Go 中滥用 panic 和 recover 进行控制流的低效性。尽管在某些情况下，例如处理内部错误或深度递归调用时，使用 panic 和 recover 为了简化代码和提高性能，但作者建议应谨慎使用，并充分权衡利弊。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-02-28-golang-listeners/">协调Goroutine监听器</a><br>本文介绍了在使用 Go 语言构建版本控制的 SQL 数据库 DoltDB 的过程中，协调后台工作线程和响应式用户线程之间通信的几种方法，包括复制工作、监控共享状态（自旋锁）、跟踪更新上下文（ctx.Done）、广播（sync.Cond）和监听器队列。每种方法都有其优缺点和适用场景，文章详细比较了它们的性能和行为差异，并最终推荐使用监听器队列来实现更灵活和健壮的协调机制。</p> 
+
+<p><a href="https://michael.stapelberg.ch/posts/2025-02-27-debug-hanging-go-programs">调试卡住的Go程序的技巧</a><br>在帮助他人设置我的 gokrazy/rsync 实现以同步 RPKI 数据（用于保护 BGP 路由基础设施）时，我们发现，使用正确的调用方式，我的 rsync 接收器会无限期地挂起。这是一个很容易解决的问题，但在解决问题的过程中，我意识到我应该把这些年来我逐渐欣赏的一些 Go 调试技巧写下来！</p> 
+
+<p><a href="https://themsaid.com/struct-optimizations-in-go">Go语言中的结构体优化</a><br>本文探讨了如何在Go语言中通过考虑CPU字长和缓存行大小来优化结构体的内存使用和CPU性能。文章详细解释了结构体填充的概念，以及如何通过重新排列结构体字段来减少填充，从而提高性能。此外，文章还介绍了CPU缓存行对齐的重要性，并说明了如何设计结构体以最大限度地减少缓存未命中。最终，文章强调了在优化和可维护性之间取得平衡的重要性。</p> 
+
+<p><a href="https://dev.to/leapcell/go-lock-performance-rwmutex-vs-mutex-in-various-scenarios-57p7">Go锁性能：不同场景下RwMutex与Mutex的比较</a><br>本文研究了Go语言中读写锁(RwMutex)和互斥锁(Mutex)在不同场景下的性能。通过理论分析和实验测试，比较了只读、只写和读写混合场景下两种锁的性能差异。结果表明，在只写场景下，Mutex性能略优于RwMutex；而在其他场景下，RwMutex通常表现更好。文章还分析了sync.RwMutex的源码实现，并提出了在高并发场景下优化锁竞争的建议，例如使用sync.Map或分段锁等方法。</p> 
+
+<p><a href="https://pliutau.com/minesweeper-in-golang-raylib">使用 Raylib Go 绑定编写扫雷游戏</a><br>本文简要介绍了如何使用 raylib-go 在 Go 语言中构建经典扫雷游戏。作者回顾了儿时玩扫雷游戏的经历，并介绍了使用 Raylib 和 raylib-go 库开发游戏的过程。文章包含代码示例，展示了游戏状态、菜单设计和鼠标点击事件处理等方面。最终，作者成功构建了一个可玩的游戏，并分享了代码链接和相关资源。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="http://notes.eatonphil.com/2025-02-28-minimal-downtime-postgres-major-version-upgrades-edb-postgres-distributed.html">使用EDB Postgres Distributed实现PostgreSQL主版本升级的最小停机时间</a><br>这是一篇外部文章，介绍了如何使用EDB Postgres Distributed实现PostgreSQL主版本升级，并最大限度地减少停机时间。文章链接到EnterpriseDB的博客。</p>
+
+<p><a href="https://www.docker.com/blog/docker-engine-28-hardening-container-networking-by-default/">Docker Engine v28：默认情况下加强容器网络</a><br>Docker Engine v28 引入了新的安全措施，确保容器不会意外地从您不希望的本地网络访问。此更新并非修复单个漏洞，而是关于安全强化，以确保您的容器安全。文章详细解释了影响范围、影响、解决方法以及升级检查清单。</p>
+
+<p><a href="https://blog.ipfs.tech/2025-could-ipfs-prevent-bybit-hack/">IPFS 能否防止 Bybit 黑客攻击？</a><br>Bybit 最近遭受的攻击导致损失了 14 亿美元，这提醒我们验证前端（尤其是在 Web3 生态系统中的 dapp 前端）的重要性。本文回顾了我们所了解的关于这次攻击的信息，并分享了我们对 IPFS 作用的看法，深入探讨了我们在星际船坞 (Interplanetary Shipyard) 领导的一些技术工作，以改善生态系统的健康状况。文章还为 dapp 开发人员提供了具体的建议和工具链接。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/02/28/nftables-kube-proxy/">kube-proxy 的 NFTables 模式</a><br>Kubernetes 1.29 版本中引入了 kube-proxy 的 nftables 模式作为 alpha 功能。目前处于 beta 阶段，预计在 1.33 版本中正式发布。此模式解决了 iptables 模式长期存在的性能问题，建议所有运行在具有较新内核的系统上的用户尝试使用。（出于兼容性考虑，即使 nftables 正式发布后，iptables 仍将是默认模式。）nftables 的优势在于其数据平面延迟和控制平面延迟都得到了显著改善，尤其是在大型集群中。然而，nftables 模式对内核版本和某些网络组件有要求，并且与 iptables 模式存在一些不兼容之处。文档中提供了更多信息，包括如何尝试 nftables 模式以及如何解决兼容性问题。</p>
+
+<p><a href="https://www.allthingsdistributed.com/2023/07/building-and-operating-a-pretty-big-storage-system.html">构建和运营一个名为 S3 的相当大的存储系统</a><br>本文是亚马逊 S3 副总裁兼杰出工程师 Andy Warfield 的客座文章，基于他在 USENIX FAST ‘23 大会上的主题演讲，从三个不同的角度探讨了构建和运营像 S3 这样规模的存储系统所带来的挑战和经验。文章深入探讨了 S3 的技术架构、规模化带来的挑战（如热度管理、数据放置和持久性）、以及在应对这些挑战中发挥作用的人为因素（如持续性审查和轻量级形式化验证）。文章还分享了作者在亚马逊的工作经历，以及他对团队建设和鼓励所有权的看法。</p>
+
+<p><a href="https://josephmate.github.io/2025-02-26-3200p-cpu-util">3200% CPU 利用率</a><br>文章讲述了作者机器CPU利用率达到3200%的故障排查过程。起初怀疑是Java 17运行时的问题，通过线程转储发现大量线程在调用`TreeMap.put()`方法，进一步分析代码发现循环中使用了无关对象，导致性能问题。实验表明，多线程访问未加锁的TreeMap可能导致CPU利用率飙升，甚至出现无限循环。文章还讨论了其他语言中是否会重现此问题，以及如何修复此问题。</p>
+
+<p><a href="https://blog.dapr.io/posts/2025/02/27/dapr-v1.15-is-now-available">Dapr v1.15 现已可用</a><br>我们很高兴地宣布 Dapr 1.15 版本发布！🚀 🎉 🎈
+感谢所有人的耐心等待，也感谢所有新老贡献者为本次发布所做的贡献。
+如果您不熟悉 Dapr，请访问入门页面并熟悉 Dapr。
+文档已更新，包含此版本的所有新功能和更改。要开始使用此版本中引入的新功能，请访问概念和应用程序开发部分。
+请仔细阅读重大更改部分。如果您遇到任何问题，请在 Discord 上报告。以下核心维护者可以为您提供帮助：`@joshvanl、@yaron2、@cassie1coyle`。</p>
+
+<p><a href="https://softwareengineering.live/backend-developer">后端开发人员：当前行业期望和发展机遇</a><br>本资源帮助您掌握后端开发领域的动态。您将了解不同技术栈中后端开发角色的当前行业期望，包括获得发展机遇的通知。文章涵盖了后端开发人员所需的通用技能，并深入探讨了Java、Python、NodeJS和Golang等特定编程语言的行业期望。此外，还列出了后端开发的专业技能，例如多线程编程、事件驱动系统、函数式编程和云平台经验等，并指出这些技能在高薪职位中的重要性。</p>
+
+<p><a href="https://www.shadaj.me/writing/distributed-programming-stalled">分布式系统编程停滞不前</a><br>过去十年，我们见证了分布式系统的巨大进步，但我们编写分布式系统的方式却鲜有根本性的改进。虽然有时我们可以抽象掉分布式（Spark、Redis 等），但开发人员仍然难以应对并发、容错和版本控制等挑战。许多人（和初创公司）正在努力解决这个问题。但几乎所有人都专注于使用经典（顺序）编程语言编写的分布式系统的分析工具。诸如 Jepsen 和 Antithesis 等工具已经提升了验证正确性和容错能力的最新水平，但工具无法与原生展现基本概念的编程模型相匹敌。我们已经在 Rust 中看到了这一点，它提供的内存安全保证比带有 AddressSanitizer 的 C&#43;&#43; 丰富得多。
+本文将论证，现有的分布式代码框架只是对三种固有的底层范式（外部分布、静态位置和任意位置）的权宜之计和语法糖。我们仍然缺少一个对分布式系统而言是原生的编程模型。我们将逐步介绍这些范式，然后反思一个真正分布式编程模型中缺少什么。</p>
+
+<p><a href="https://www.hyperdx.io/blog/logs-matter-more-than-metrics">log比metrics更重要</a><br></p>
+
+<p><a href="https://security.googleblog.com/2025/02/securing-tomorrows-software-need-for.html">保护未来的软件：需要内存安全标准</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://openai.com/index/introducing-gpt-4-5">介绍GPT 4.5</a><br></p>
+
+<p><a href="https://ghuntley.com/screwed">是的，人工智能已经存在，如果你不采取行动，你就完了</a><br></p>
+
+<p><a href="https://github.blog/ai-and-ml/github-copilot/how-to-refactor-code-with-github-copilot">使用copilot重构代码</a><br></p>
+
+<p><a href="https://dev.to/lico/go-simple-example-generate-audio-stories-with-google-gemini-tts-and-cloudflare-r2-3hm7">Go Simple 示例：使用 Google Gemini、TTS 和 Cloudflare R2 生成音频故事</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/EndlessCheng/codeforces-go">EndlessCheng/codeforces-go</a><br>算法竞赛模板库 by 灵茶山艾府 💭💡🎈</p>
+
+<p><a href="https://github.com/majd/ipatool">majd/ipatool</a><br>Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/hashicorp/nomad">hashicorp/nomad</a><br>Nomad is an easy-to-use, flexible, and performant workload orchestrator that can deploy a mix of microservice, batch, containerized, and non-containerized applications. Nomad is easy to operate and scale and has native Consul and Vault integrations.</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/nats-io/nats.go">nats-io/nats.go</a><br>Golang client for NATS, the cloud native messaging system.</p>
+
+<p><a href="https://github.com/ahmetb/kubectx">ahmetb/kubectx</a><br>Faster way to switch between clusters and namespaces in kubectl</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/bitnami-labs/sealed-secrets">bitnami-labs/sealed-secrets</a><br>A Kubernetes controller and tool for one-way encrypted Secrets</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/bytebase/bytebase">bytebase/bytebase</a><br>World&#39;s most advanced database DevSecOps solution for Developer, Security, DBA and Platform Engineering teams. The GitHub/GitLab for database DevSecOps.</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

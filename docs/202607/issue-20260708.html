@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260708.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260708</span>
+</p>
+<p>每日一谚：Prefer composition over inheritance. Go doesn&#39;t have inheritance, and that&#39;s a feature, not a bug. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/08/go-private-modules-comprehensive-guide">Go 私有模块拉取全解：凭据配置 &#43; Vanity URL，个人与组织全覆盖</a><br>Go 语言在公共依赖管理上已足够成熟，但私有模块的拉取依然是许多团队和个人开发者频繁踩坑的痛点。本文是一份全景式的实战指南，旨在一次性讲透 Go 私有模块拉取的底层机制与最佳落地实践。</p> 
+
+<p><a href="https://tonybai.com/2026/07/08/migrate-from-govanityurls-to-gvu">从手动 govanityurls &#43; Nginx 迁移到 gvu：一次真实迁移记录</a><br>对于已经在生产环境中运行多年 govanityurls &#43; Nginx 或其他私有模块拉取方案的 Go 开发团队而言，如何低成本地将庞大的私有模块映射迁移至更现代的工具是一大痛点。本文详细记录了一次将历史遗留体系真实迁移至命令行工具 gvu 的全过程。文章首先澄清了开发者常犯 的认知误区，明确区分了 Vanity URL 解析（gvu 负责）与模块内容拉取（GOPROXY 负责）的底层边界。随后，通过详尽的步骤复盘，展示了如何盘点存量 vanity.yml 映射，并通过 gvu 的杀手级功能——Wildcard Routing（通配符路由），将原本需要逐条维护的十几个仓库映射，极简压缩为一 条规则，从而彻底解放了团队配置和重载 Nginx 的运维压力。最终对比表明，迁移至 gvu 不仅实现了映射管理的零运维，更利用自定义域名和优先级路由机制，完美兼顾了历史老库的平滑过渡与未来Go代码仓库的高效扩张。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/mmap-vs-pread-go-storage-engine/">真实 Go 存储引擎中的 mmap 与 pread 比较</a><br>当您用 Go 构建存储引擎时，迟早需要回答一个非常简单的问题：代码应该如何从文件中读取字节？这听起来太底层了，似乎无关紧要。</p> 
+
+<p><a href="https://cheikhhseck.medium.com/ebpf-in-go-observability-for-ai-generated-services-9aae7573b823">Go 中的 eBPF：AI 生成服务的可观测性</a><br>Go 中的 eBPF：AI 生成服务的可观测性。从盲目调试到 10 分钟内的内核级可见性。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-07-08-dolt-doltlite-storage-comp/">Dolt 与 DoltLite 存储比较</a><br>DoltLite 用 C 语言编写，因为 SQLite 也是用 C 语言编写的。DoltLite 通过替换 SQLite 的 B-tree 层工作，因此新的存储引擎必须能够原生地使用 SQLite 的内部 C 接口。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/07/why-sandboxing-your-agent-is-not-enough/">为什么沙箱化你的智能体还不够</a><br>几周前，在明尼阿波利斯的北美开源峰会上，在与 Bob Killen 在走廊交流时，我了解到了一个名为 agent-substrate 的新项目。</p>
+
+<p><a href="https://nesbitt.io/2026/07/07/content-addressing-in-package-managers.html">包管理器中的内容寻址</a><br>对软件包供应链的攻击往往针对的是绑定关系而非字节本身：账户接管和恶意维护者交接会在现有受信任名称下发布恶意工件，域名抢注会注册一个足够相似以至于可能被混淆的名称。</p>
+
+<p><a href="https://leaddev.com/ai/code-maintainability-plummets-in-the-ai-coding-era">AI 编码时代代码可维护性急剧下降</a><br>AI 编码时代代码可维护性急剧下降。AI 代码正在破坏代码库。</p>
+
+<p><a href="https://luminousmen.substack.com/p/drunk-post-things-ive-learned-as">我作为高级工程师学到的东西</a><br>醉酒后的帖子：我作为高级工程师学到的东西。你的导师想说的但 HR 不会让他们说的一切。</p>
+
+<p><a href="https://clickhouse.com/blog/ai-best-of-breed-data-stack">AI 需要最佳数据栈：Postgres 和 ClickHouse</a><br>AI 需要最佳数据栈：Postgres 和 ClickHouse。这些技术为 AI 应用提供了强大的数据处理能力。</p>
+
+<p><a href="https://spectrum.ieee.org/google-quantum-cryptography-zero-knowledge">初创公司破解谷歌的量子密码学</a><br>独立实验室破解谷歌的秘密密码学工作。利用众包和 AI 群，一家初创公司在 72 小时内超越了谷歌的结果。</p>
+
+<p><a href="https://fluxcd.io/blog/2026/07/flux-turns-10/">Flux 十周年!</a><br>Flux 十周年！我们心爱的项目今天迎来了十周年。让我们回顾一下我们是如何走到今天的。</p>
+
+<p><a href="https://blog.cloudflare.com/workers-cache/">你的 Worker 现在可以在前面拥有自己的缓存</a><br>您的 Worker 现在可以在前面拥有自己的缓存。这项新功能为开发者提供了更高效的缓存管理方案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.dbreunig.com/2026/05/04/10-lessons-for-agentic-coding.html">智能体式编程的 10 个经验教训</a><br>智能体式编程的 10 个经验教训。当代码变得廉价时，我们应该重新思考软件开发的方式。</p>
+
+<p><a href="https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-factors.html">本地模型用于编程的可行性</a><br>本地模型用于编程的可行性。Birgitta Böckeler 是 Thoughtworks 公司的杰出工程师和 AI 辅助交付专家。</p>
+
+<p><a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/">GitLost：我们如何欺骗 GitHub 的 AI 智能体泄露私有仓库</a><br>GitLost：我们如何欺骗 GitHub 的 AI 智能体泄露私有仓库。该研究探讨了 Claude 标签和智能体身份对 IAM 的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview</a><br>Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents.</p>
+
+<p><a href="https://github.com/gastownhall/gastown">gastownhall/gastown</a><br>Gas Town - multi-agent workspace manager</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>An open-source Agent-first Identity and Access Management (IAM) /LLM MCP &amp; agent gateway and auth server with web UI supporting OpenClaw, MCP, OAuth, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, </p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>Simple and flexible tool for managing secrets</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

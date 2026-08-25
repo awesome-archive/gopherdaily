@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260128.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260128</span>
+</p>
+<p>每日一谚：Encrypt sensitive data at rest and in transit </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/28/clawdbot-author-ai-development-workflow">别读代码了，看着它流过就行：ClawdBot 作者的 AI 开发工作流</a><br>最近，爆火的个人AI助理开源项目 ClawdBot 和 PSPDFKit 的创始人 Peter Steinberger 发布了一系列关于他AI 开发工作流的深度博文。他以一种近乎“未来主义”的视角，描述了一个令传统程序员既兴奋又恐惧的景象</p> 
+
+<p><a href="https://tonybai.com/2026/01/28/go-standard-library-vendor-std-cmd-dependency-management">Go 标准库竟然也用 vendor？std 和 cmd 模块是如何管理外部依赖的</a><br>我们都知道，Go 推荐使用 Go Modules 来管理依赖。但在 Go 源码树的最深处，隐藏着一个鲜为人知的秘密：Go 标准库 (std) 和工具链 (cmd) 竟然依然在使用 vendor 目录来管理它们的外部依赖。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/X28eMsN6eGnXlh4ktFGBXw">【分布式系统】10 共识（下）：Raft —— 为“可理解性”而生的共识算法王者</a><br></p> 
+
+<p><a href="https://dolthub.com/blog/2026-01-27-long-running-agentic-work-with-beads/">使用Beads进行长期智能体工作</a><br>了解我如何使用Beads使编码智能体在上下文压缩周期中保持专注，并在一个12小时的会话中重构了315个前端文件。作者分享了Beads如何成功地帮助他管理一个耗时的代码重构任务，克服了LLM在长期任务中保持一致性的挑战。</p> 
+
+<p><a href="https://www.ardanlabs.com/blog/2024/02/kubernetes-memory-limits-go.html">Kubernetes Memory Limits and Go</a><br>这篇文章探讨了Kubernetes内存限制与Go运行时之间的微妙但关键的交互作用，它会影响服务的效率和稳定性。作者通过受控的负载测试，展示了Go在内存自我调节方面的优势，以及在K8s施加硬性内存限制时如何出现OOM（Out Of Memory）事件。文章还研究了使用GOMEMLIMIT变量来使Go运行时与容器边界对齐的效果，并提供了关于如何使用K8s的requests、limits和GOMEMLIMIT来预防OOM的实践建议。</p> 
+
+<p><a href="https://phu09032000.medium.com/understanding-memory-alignment-in-go-88e2f6b11a45">理解Go内存对齐</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/aperture-private-alpha">Aperture：Tailscale出品的一款AI网关</a><br>Aperture是Tailscale推出的一款AI网关，旨在为开发者提供安全、可见的AI使用体验，并且兼容大多数AI工具。它利用Tailscale内置的身份验证来取代API密钥的分发，实现对编码代理（Coding Agent）使用的安全监控和可见性。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/27/navigating-the-ingress-nginx-archival-why-now-is-the-time-to-move-to-cilium/">ingress-nginx 的归档：为什么现在是迁移到 Cilium 的时候了</a><br>这篇会员博客最初发布在 Isovalent 博客上，现经许可转载于此。如果您运行 Kubernetes，很有可能您依赖 ingress-nginx 来路由外部流量。然而，ingress-nginx 项目即将在 2026 年初被归档，不再接受主动维护、安全补丁或错误修复。文章探讨了两种主要的迁移路径：一是快速切换到支持标准 Ingress 资源的 Cilium Ingress，二是推荐长期采用 Kubernetes 的下一代标准 Gateway API，Cilium 提供了出色的 Gateway API 实现，并支持统一的流量管理（GAMMA）、角色分离和增强的 eBPF 性能与可观测性。文章提供了从 ingress-nginx 迁移到 Cilium Ingress 或 Cilium Gateway API 的具体步骤和迁移工具的介绍。</p>
+
+<p><a href="https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/">Rust at Scale: An Added Layer of Security for WhatsApp</a><br>WhatsApp 采用了并部署了由 Rust 构建的新增安全层，以加强对恶意软件威胁的防御。WhatsApp 在数十亿设备和浏览器上创建和分发 Rust 媒体一致性库的经验证明 Rust 已准备好投入生产环境并达到全球规模。文章详细介绍了 WhatsApp 的媒体处理策略，回顾了 2015 年的 Stagefright 漏洞如何促使他们考虑使用内存安全语言，并阐述了如何使用 Rust 并行开发 C&#43;&#43; 版本的 wamedia 库，最终用 9 万行 Rust 代码（含测试）取代了 16 万行 C&#43;&#43; 代码（不含测试），并在所有主要平台上成功部署，证明了 Rust 的生产就绪性和独特的价值。这一举措是 WhatsApp 纵深防御安全方法的一部分，也是加速 Rust 采用以增强安全性的重要一步。</p>
+
+<p><a href="https://www.allthingsdistributed.com/2026/01/education-cohort.html">教育对最新CTO研究员来说不是一刀切的</a><br>本文介绍了最新一批“Now Go Build”CTO研究员，他们来自世界各地，背景多元（工程、人文学科、商业、医疗保健、创业、法律等），致力于在技术与教育的交汇点上寻找自己的使命。他们正在利用技术解决教育领域面临的挑战，例如为难民提供再培训、利用生成式AI创建本地化学习材料，以及在连接受限的农村地区重新构想教育。文章展示了七位研究员及其所属组织和他们正在进行的工作，强调了他们挑战现状、利用技术创造更公平教育机会的承诺。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/01/28/experimenting-gateway-api-with-kind/">使用 kind 实验 Gateway API</a><br>本文档将指导您在 kind（Docker 中的 Kubernetes）上为 Gateway API 设置本地实验环境。此设置旨在用于学习和测试，帮助您理解 Gateway API 的概念，而无需生产环境的复杂性。
+
+**警告：** 这是一个实验学习设置，不应用于生产环境。本文档中使用的组件不适合生产用途。当您准备在生产环境部署 Gateway API 时，请选择适合您需求的实现。
+
+**概述：** 您将设置 kind 集群，部署 cloud-provider-kind（提供 LoadBalancer 服务和 Gateway API 控制器），创建 Gateway 和 HTTPRoute 来路由流量到演示应用，并进行本地测试。</p>
+
+<p><a href="https://thenewstack.io/cncf-kubernetes-is-foundational-infrastructure-for-ai">Kubernetes是AI时代的基础设施</a><br></p>
+
+<p><a href="https://www.vectorware.com/blog/rust-std-on-gpu">Rust 的标准库在 GPU 上运行</a><br>GPU 代码现在可以使用 Rust 的标准库。我们分享了实现方法以及这为 GPU 编程带来的可能性。VectorWare 正在构建首个 GPU 原生软件公司，并已成功在 GPU 上实现了对 Rust 标准库的支持。此举是实现其愿景的重要一步，即允许开发人员使用熟悉的 Rust 抽象来编写复杂的、高性能的应用程序。这种支持是通过一个名为“hostcall”的框架实现的，它允许 GPU 代码向主机 CPU 发出结构化请求，以执行 GPU 无法独立完成的操作（类似于系统调用）。目前该实现针对 Linux 主机和 NVIDIA GPU（通过 CUDA），并且文中展示了一个实际运行在 GPU 上的 Rust 内核示例，该示例使用了标准库中的 I/O、时间、文件操作等功能。VectorWare 计划清理并开源此项工作，并期望尽可能多地向上游 Rust 社区贡献。</p>
+
+<p><a href="https://www.unix.dog/~yosh/blog/c-habits-for-me.html">我为现代采用的一些C语言习惯</a><br>作者分享了他在编写C/C&#43;&#43;代码时采用的一些现代编程习惯，这些习惯受到其他语言（如C#和Rust）以及最佳实践的启发。主要内容包括：使用C23标准，明确要求CHAR_BIT为8位；定义固定长度类型的typedefs（如u8, i16, u64等）；采用长度&#43;数据结构的字符串（String struct）来替代C的空终止字符串；实践“解析而非验证”的哲学，通过结构体创建不透明类型来加强API的健壮性；利用C23标准化结构体兼容性来实现元组（tuples）；使用类似“Maybe”或“Result”的结构（通过带标记的union实现）来安全地处理函数返回值和错误；以及对动态内存管理（倾向于使用其他语言处理）和标准库函数（倾向于避免使用string.h中的大部分函数）的一些看法。</p>
+
+<p><a href="https://sander.saares.eu/2026/01/25/atomic-variables-are-not-only-about-atomicity">Atomic variables are not only about atomicity</a><br>This article explores the fundamentals of custom synchronization primitives using atomic variables in Rust, emphasizing that atomicity alone is insufficient. It delves into memory ordering constraints, demonstrating how they prevent data races when dealing with multiple shared variables, using examples like a shared counter and implementing a basic `Arc` (Atomic Reference Counting) smart pointer. The author stresses the importance of Miri for detecting undefined behavior in `unsafe` Rust code and advocates for detailed safety comments, especially regarding memory ordering choices, to ensure correctness and maintainability.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/27/one-human-one-agent-one-browser/#atom-everything">One Human &#43; One Agent = One Browser From Scratch</a><br>文章介绍了一个名为 &#34;one-agent-one-browser&#34; 的项目，该项目是受 Cursor 的 FastRender 浏览器项目（使用数千个并行代理和大量 Rust 代码）的炒作所启发，由一个 Codex CLI 代理在三天内构建的。这个项目仅用 20,000 行 Rust 代码就成功渲染了 HTML&#43;CSS，并且几乎没有依赖外部 Rust crate（尽管它依赖于系统框架进行图像和文本渲染）。作者测试了该浏览器在 macOS 上的效果，发现渲染效果非常好，甚至正确渲染了 SVG 图标，只有一个 PNG 图像加载失败。作者认为“构建一个网页浏览器”是检验编码代理能力的理想任务，并更新了自己的预测，认为一个由小型团队使用 AI 辅助编码构建的生产级浏览器可能在 2029 年之前出现。</p>
+
+<p><a href="https://workos.com/blog/enterprise-ai-agent-playbook-what-anthropic-and-openai-reveal-about-building-production-ready-systems">企业AI智能体手册：Anthropic和OpenAI揭示构建生产级系统的奥秘</a><br>当大多数公司仍在为AI概念验证而苦苦挣扎时，行业领导者已悄然发布了企业成功背后的操作手册。本文揭示了生产级AI代理与昂贵实验之间的区别，重点介绍了Anthropic和OpenAI的见解，包括复杂决策、规则系统维护、非结构化数据处理、可组合架构模式（如提示链、路由、并行化、编排器-工作器、评估器-优化器）以及企业级安全架构（如多层防御和模型上下文协议）。</p>
+
+<p><a href="https://www.macstories.net/stories/clawdbot-showed-me-what-the-future-of-personal-ai-assistants-looks-like">Moltbot (原 Clawdbot) 向我展示了个人 AI 助手的未来面貌</a><br>作者分享了使用 Moltbot（原名 Clawdbot，一个基于 Anthropic Claude Opus 4.5 的开源 AI 助手）的体验。Moltbot 运行在作者的 Mac mini 上，可以通过 Telegram 与作者交流，并且能通过本地文件系统、终端命令和不断安装新技能来深度个性化和自我改进。作者认为，这种能够深度定制和本地运行的 AI 助手预示着个人 AI 助理的未来方向，并引发了对传统应用开发模式可能被颠覆的思考。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/go-sql-driver/mysql">go-sql-driver/mysql</a><br>Go MySQL Driver is a MySQL driver for Go&#39;s (golang) database/sql package</p>
+
+<p><a href="https://github.com/knadh/koanf">knadh/koanf</a><br>Simple, extremely lightweight, extensible, configuration management library for Go. Supports JSON, TOML, YAML, env, command line, file, S3 etc. Alternative to viper.</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/elC0mpa/aws-doctor">elC0mpa/aws-doctor</a><br>Diagnose AWS costs, detect idle resources, and optimize cloud spending directly from your terminal. 🩺 ☁️</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Cost monitoring for Kubernetes workloads and cloud costs</p>
+
+<p><a href="https://github.com/go-git/go-git">go-git/go-git</a><br>A highly extensible Git implementation in pure Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

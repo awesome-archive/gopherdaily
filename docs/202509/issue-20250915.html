@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250915.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250915</span>
+</p>
+<p>每日一谚：Clear code is better than clever code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/_lrqoK44SRC-VoulFvP4eg">context：Go 语言的“天问”，你真的懂了吗？</a><br>作为一个 Gopher，如果说 Go 语言里哪个标准库最能引发“灵魂拷问”，我想 context 说第二，没人敢说第一。我们每天都在和它打交道，不是吗？但你是否也曾在某个深夜，对着一段因为 context deadline exceeded 而崩溃的代码，陷入沉思？这些问题，就像一个个幽灵，盘旋在许多 Gopher 的脑海里。我们似乎懂 context，但又好像只懂它的皮毛。这种“半懂不懂”的状态，在平时或许相安无事，但在复杂的生产环境中，往往就是那个导致服务雪崩的“致命稻草”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/7fZUypc9dDItYE2unk5hWA">【Go 1.25 重大更新】标准库JSON迎来史诗级重构：更快、更安全、更灵活的json/v2实验版发布！</a><br>经过长达五年的设计酝酿和开发，Go团队在Go 1.25中，正式推出了一个全新的实验性包：encoding/json/v2！</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ALen9MKMHTqoSzhNdooM9Q">【Go系统编程】03 进程的生命周期：从创建、通信到优雅退出</a><br>今天，我们将沿着进程的生命轨迹，走完这关键的三步：进程的诞生、进程的对话和进程的“善终”</p> 
+
+<p><a href="https://trevors-tutorials.com/0010-architecture-of-the-ebitengine-game-engine">Ebitengine 游戏引擎的架构和入门教程</a><br>本教程将介绍 Ebitengine 游戏引擎的结构。Ebitengine 按照顺序执行游戏的 Layout、Update 和 Draw 方法。了解 Tick 率的维护，以及 Ebitengine 中一切都是 ebiten.Image。此外，还介绍了 Ebitengine 的一些优点，例如 API 设计、少即是多以及宽松的许可。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://ericcodes.io/blog/gleam-my-new-obsession.html">Gleam 我的新痴迷</a><br>我喜欢 Rust，但…… 在我之前的博文中，我说我开始默认使用 Rust 来做我的个人项目。 虽然我真的很喜欢 Rust 的类型系统，但我不太喜欢它的学习曲线。 每次我说我喜欢 Rust 时，肯定都会有一种沉没成本，并伴随着斯德哥尔摩综合症。 我经常开玩笑说，“我喜欢 Rust，但我真正想要的是一个更简单的 Haskell，它具有类似 C 的语法”或者“我喜欢 Rust，但如果它有一个垃圾收集器，Rust 将会成为我的完美语言”。 </p>
+
+<p><a href="https://chillphysicsenjoyer.substack.com/p/youre-a-slow-thinker-now-what">You&#39;re a Slow Thinker. Now what?  - by CasualPhysicsEnjoyer</a><br>I&#39;m not a quick witted person. In fact, I’ve always been worried about my brain’s slow processing time. But recently, I&#39;ve realised that slow processing time is not as much of an issue as I thought it was. And even if I was wrong about that, I still think I’d do better for myself by leaning into it, instead of spending energy trying to fight it. In this essay, I want to talk about some ways I&#39;ve been able to skirt around my lack of quick wittedness!</p>
+
+<p><a href="https://popovicu.com/posts/writing-an-operating-system-kernel-from-scratch">从头开始编写操作系统内核</a><br>探索在 RISC-V 上基于 Zig 在 OpenSBI 基础上实现一个最小的时间共享内核。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Sep/14/models-can-prompt/#atom-everything">模型现在可以提示了</a><br>这是一个关于模型随着时间推移而逐渐改进的有趣例子：我发现当今的领先模型能够为自己和彼此编写提示。 一年前，我非常怀疑这种使用模型来帮助构建提示的模式。 提示工程仍然是一门足够年轻的学科，我预计模型不会有足够的训练数据，无法比经验适中的人类更好地提示自己。</p>
+
+<p><a href="https://www.404media.co/the-software-engineers-paid-to-fix-vibe-coded-messes">软件工程师：专门修复“Vibe编码”烂摊子</a><br>领英（Linkedin）一直在开玩笑说要招聘“Vibe编码清理专家”，但这实际上是一个日益增长的职业。</p>
+
+<p><a href="https://techcrunch.com/2025/09/14/vibe-coding-has-turned-senior-devs-into-ai-babysitters-but-they-say-its-worth-it">“Vibe 编码”让资深开发者变成了“AI 保姆”，但他们说这值得</a><br>TechCrunch 采访了经验丰富的程序员，了解他们使用 AI 生成代码的经历，以及他们对 Vibe 编码未来的看法。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/sst/opencode">sst/opencode</a><br>AI coding agent, built for the terminal.</p>
+
+<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP server</p>
+
+<p><a href="https://github.com/tbphp/gpt-load">tbphp/gpt-load</a><br>Multi-channel AI proxy with intelligent key rotation. 智能密钥轮询的多渠道 AI 代理。</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/docker/mcp-gateway">docker/mcp-gateway</a><br>docker mcp CLI plugin / MCP Gateway</p>
+
+<p><a href="https://github.com/docker/mcp-registry">docker/mcp-registry</a><br>Official Docker MCP registry</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>Nightingale for monitoring and alerting, just as Grafana for visualization.</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/external-secrets/external-secrets">external-secrets/external-secrets</a><br>External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets.</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>Repo for learning observability</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

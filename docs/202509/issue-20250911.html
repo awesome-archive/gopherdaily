@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250911.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250911</span>
+</p>
+<p>每日一谚：Goroutines are cheap, but not free </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/11/gophercon-2025-contributor-summit-notes">直面依赖之痛与TLS简化：GopherCon 2025贡献者峰会核心纪要解读</a><br>GopherCon 2025 贡献者峰会刚刚落下帷幕。在这场Go核心团队与全球顶尖贡献者齐聚一堂的闭门会议中，Go语言的未来方向被激烈地讨论和塑造。这些讨论或许不像发布泛型那样惊天动地，但它们如同地壳深处的板块运动，深刻地影响着Go生态的未来走向——一个更加成熟、务实，并决心直面企业级开发真实痛点的Go正在到来</p> 
+
+<p><a href="https://developers.googleblog.com/en/announcing-genkit-go-10-and-enhanced-ai-assisted-development">Genkit Go 1.0 和增强的 AI 辅助开发发布</a><br>我们正在发布 Genkit Go 1.0 稳定版，赋能 Go 开发者使用 Genkit 构建高性能、可用于生产的 AI 驱动应用程序。最近的增强功能包括支持集成和构建 MCP 工具、扩展第三方模型提供商支持以及使用 Firebase 进行生产 AI 监控。
+
+此外，我们正在发布 Genkit CLI 中的一项新功能，以提供 AI 开发工具，例如 Gemini CLI 和 Cursor，并提供最新的 Genkit 知识 - 在使用 AI 协助时，增强 Genkit 的开发体验。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ArBQrndeYNT2T6ZRq6tdKg">【Go系统编程】00 系统调用：Go 程序如何直接与操作系统内核“对话”？</a><br>系统调用是整个系统编程世界的“原子操作”。无论是创建一个文件、启动一个新进程、发送一个网络包，还是建立一条IPC管道，其最终的落点，都是一次或多次具体的系统调用。这正是为什么我将“揭秘系统调用”作为我们专栏的开篇第一讲。这一讲，是后续所有章节的基石，是我们理解一切Go系统编程魔法的“总钥匙”。 只要你彻底掌握了今天的内容——Go程序是如何绕过 `libc`，直接与内核进行对话的——那么后续所有章节对你来说，都将变得豁然开朗。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/wKXJWr3qNBUiVl0FFj5emQ">Azure CTO深度解读：微软为何要用Rust“替换”C-C&#43;&#43;，又将如何用AI加速代码迁移？</a><br>近日，微软 Azure CTO、技术巨擘 Mark Russinovich 在一场 Rust 技术会议上发表了闭幕演讲，以前所未有的坦诚和力度，揭示了微软内部正在进行的一场深刻的技术变革：全面拥抱 Rust，并战略性地替代 C/C&#43;&#43;。 他不仅分享了 Rust 在 Windows 内核、Office、Azure 云等核心产品中的惊人实践案例，还首次披露了微软正在研发的、利用 AI 大模型自动将 C/C&#43;&#43; 代码转换为安全 Rust 的前沿工具。这既是一次技术分享，也是一份来自行业顶层的宣言。</p> 
+
+<p><a href="https://blog.stackademic.com/how-to-implement-cache-in-your-golang-api-cea87a260e21">如何用 Golang API 实现缓存</a><br>如何实现 Golang API 中的缓存。什么是缓存？为什么我们需要它？我们如何实现它？缓存是一个位于您的 API 和数据库之间的中间层。它的目的是简单的：通过在内存中保存常用数据来减少不必要的数据库查询，以保护数据库并提高我们的 API 性能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-09-10-challenges-with-prolly-trees-and-columnar-storage">Prolly Trees 和列式存储的挑战</a><br>Dolt 是一个与 MySQL 兼容的 SQL 数据库，它支持 Git 风格的版本控制功能，包括分支、合并、差异、克隆、推送和拉取。 客户在体验了 Dolt 的功能后，通常也会对 Dolt 在 OLAP 工作负载方面的功能感兴趣。 本文探讨了 Dolt 当前的存储模型与列式存储的对比，并探讨了 Dolt 采用列式存储的一些挑战。</p>
+
+<p><a href="https://www.docker.com/blog/secure-ai-agents-runtime-security/">Secure AI Agents at Runtime with Docker</a><br>Stop LLM mishaps before production. Secure AI agents at runtime with Docker Desktop, Docker Scout, hardened images, and policies against prompt injection.</p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/10/kubernetes-v1-34-env-files/">Kubernetes v1.34: 使用Init容器定义应用程序环境变量</a><br>Kubernetes 通常使用 ConfigMaps 和 Secrets 来设置环境变量，这会引入额外的 API 调用和复杂性。例如，您需要分别管理工作负载的 Pod 及其配置，同时确保配置和工作负载 Pod 的有序更新。 或者，您可能正在使用需要环境变量（例如许可证密钥或一次性令牌）的供应商提供的容器，但您不想对它们进行硬编码，也不想仅仅为了完成任务而挂载卷。 如果您遇到这种情况，您现在有了一种新的（alpha 版）方法来实现。 只要您在整个集群中启用了 EnvFiles 功能门控，您就可以告诉 kubelet 从卷中加载容器的环境变量（该卷必须是容器所属 Pod 的一部分）。此功能门控允许您直接从 emptyDir 卷中的文件加载环境变量，而无需实际将该文件挂载到容器中。这是一个针对某些出乎意料的常见问题的简单而优雅的解决方案。</p>
+
+<p><a href="https://mergify.com/blog/the-origin-story-of-merge-queues">The Origin Story of Merge Queues — Mergify</a><br>从Bors 和 Homu 到 Bulldozer，Kodiak，Mergify，再到现在的 GitHub 和 GitLab，合并队列塑造了我们保持主分支绿色的方式。 本文追溯了它们的历史，它们出现的原因以及它们如何成为现代软件开发的标准。</p>
+
+<p><a href="https://shkspr.mobi/blog/2025/09/some-thoughts-on-personal-git-hosting">关于个人 Git 托管的一些想法</a><br>作为我持续（且有些徒劳）的去中心化努力的一部分，我正在考虑将我的个人项目从 GitHub 转移出来。我已经在 GitLab 和 CodeBerg 上有账户——但这两个网站都是由其他人运营的。虽然它们现在很可爱，但没有什么可以阻止它们变得像 GitHub 一样缓慢或充斥着 AI。所以我希望为我的个人项目托管我自己的 Git 实例。…</p>
+
+<p><a href="https://shopify.engineering/react-native-new-architecture">迁移到 React Native 的新架构 (2025) - Shopify</a><br>Shopify 成功地将其两个最大的应用程序 Shopify Mobile 和 Shopify Point of Sale (POS) 迁移到 React Native 的新架构，同时保持每周发布并为数百万商家提供服务。这次迁移涉及一个复杂的代码库，其中包含数百个屏幕和原生模块、广泛的自定义组件以及与 FlashList 等第一方库的深度集成。</p>
+
+<p><a href="https://bevel.work/blog/just-enough-automation">Just Enough Automation</a><br>Every developer faces the same question dozens of times: “Should I automate this task?” The answer is rarely obvious. Automate too little, and you’re drowning in repetitive work. Automate too much, and you’re building elaborate systems for problems that don’t exist.</p>
+
+<p><a href="https://vaibhawvipul.github.io/2025/09/10/Stop-outsourcing-thinking.html">停止外包你的思考</a><br>不要把你的思考外包给抽象。你的下一个生产中断不会是由你所知道的引起的。它将是由你的抽象所掩盖的引起的。我们已经建立了一个工程师行业，他们只知道工具，而不是机制。在使用抽象之前，先理解它隐藏的层。</p>
+
+<p><a href="https://medium.com/basecs/leveling-up-ones-parsing-game-with-asts-d7a6fc2400ff">深入了解使用 AST 的解析游戏</a><br>在我开始学习计算机科学的旅程之前，有一些术语和短语让我想要逃之夭夭。但……</p>
+
+<p><a href="https://vitaliihonchar.com/insights/flow-run-system-design">Flow-Run 系统设计：构建 LLM 编排平台</a><br>深入研究 flow-run 的系统架构和设计模式，这是一个 LLM 编排平台。了解任务流、执行引擎、数据库模式、API 设计以及构建生产就绪型 AI 工作流系统的扩展策略。</p>
+
+<p><a href="https://blog.regehr.org/archives/1603">How LLVM Optimizes a Function</a><br>这篇文章探讨了 LLVM 的优化过程，重点介绍了在编译过程中各个优化阶段的工作原理。文章通过分析一个简单的 C&#43;&#43; 函数的优化过程，展示了 SROA、早期 CSE、全局变量优化器、指令合并、循环旋转、CFG 简化、归纳变量简化、全局值编号等优化过程，并解释了每个优化阶段的功能和效果。文章还提到了 LLVM 中 SSA（静态单赋值）形式的重要性，以及不同优化阶段之间的相互作用。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Sep/11/defeating-nondeterminism/#atom-everything">击败 LLM 推理中的非确定性</a><br>我看到一个关于 LLM 的常见问题是，为什么它们不能通过设置固定的随机数种子来对相同的提示符提供相同的响应。
+
+像许多其他人一样，我一直被引导相信这是由于浮点运算的非结合性，其中 (a &#43; b) &#43; c ≠ a &#43; (b &#43; c)，结合了并行 GPU 上不可预测的计算顺序。这篇新论文称之为“并发&#43;浮点”假设：
+
+一个常见的假设是，浮点非结合性和并行执行的某种结合会导致非确定性，这取决于哪个并行核心先完成。我们将称之为 LLM 推理非确定性的“并发 &#43; 浮点”假设。
+
+然后，它令人信服地认为，这并不是问题的核心，因为“在 LLM 的典型前向传递中，通常不存在单个原子加法。”
+
+那么，为什么 LLM 经常是不确定的呢？
+
+[...] 几乎所有 LLM 推理端点不确定的主要原因是负载（以及因此批处理大小）不确定地变化！这种不确定性并非 GPU 独有——从 CPU 或 TPU 提供的 LLM 推理端点也会出现这种不确定性。
+
+伴随这篇论文的  thinking-machines-lab/batch_invariant_ops 代码通过提供不变内核的 PyTorch 实现来解决这个问题，并演示了它们在 vLLM 下确定性地运行 Qwen3-8B 的情况。
+
+这篇论文是 Thinking Machines 的第一个公开成果，Thinking Machines 是由 OpenAI 前首席技术官（和临时首席执行官）Mira Murati 于 2025 年 2 月创立的 AI 实验室。</p>
+
+<p><a href="https://blog.logrocket.com/qwen-3-coder-agentic-cli">Qwen3-Coder：这款 Agentic CLI 比资深开发者更智能吗？</a><br>探索 Qwen3-Coder，阿里巴巴的 480B 参数、基于 Agent 的编码 CLI，通过真实世界的测试、用例和性能洞察。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/ccfos/nightingale">ccfos/nightingale</a><br>Nightingale for monitoring and alerting, just as Grafana for visualization.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/sst/opencode">sst/opencode</a><br>AI coding agent, built for the terminal.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/yaml/go-yaml">yaml/go-yaml</a><br>The YAML org maintained fork of https://github.com/go-yaml/yaml</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>Your ultimate Go microservices framework for the cloud-native era.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/databus23/helm-diff">databus23/helm-diff</a><br>A helm plugin that shows a diff explaining what a helm upgrade would change</p>
+
+<p><a href="https://github.com/JanDeDobbeleer/oh-my-posh">JanDeDobbeleer/oh-my-posh</a><br>The most customisable and low-latency cross platform/shell prompt renderer</p>
+
+<p><a href="https://github.com/openfga/openfga">openfga/openfga</a><br>A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar</p>
+
+<p><a href="https://github.com/klauspost/compress">klauspost/compress</a><br>Optimized Go Compression Packages</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241120.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-20</span>
+</p>
+<p>每日一谚：Always think on how to simplify the code you write. This will save you a lot of time on the maintenance of this code in the future. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/xeukmYI6pL9XrTD3Ik_7UQ">Go包构建：专家也未必了解的文件选择细节</a><br>当我们执行go build命令时，Go编译器是如何选择需要编译的源文件的？有些时候，即使是经验丰富的Go专家，对于一些在包构建过程中涉及的文件选择细节，可能也只能给出模糊的答案。这篇文章细致探索了文件选择的逻辑，供大家参考！</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/Eb8Rx6lN9HhyCmg6x9Wo9g">为Go应用无侵入地添加任意代码</a><br>这篇文章旨在提供技术深度和实践指南，帮助开发者理解并应用这项创新技术来提高Golang应用的监控与服务治理能力。阿里发布并开源了Go语言的编译期自动插桩技术。这项技术以其零侵入的特点，为Golang应用提供了与Java监控能力媲美的解决方案。开发者无需对现有代码进行任何修改，只需简单地将go build替换为新编译命令，即可实现对Go应用的全面监控和治理。</p> 
+
+<p><a href="https://dev.to/hueyemma769/organize-your-desktop-build-a-file-organizer-in-go-d9m">组织桌面：在Go中构建文件管理器。</a><br>源文档提供了使用 Go 创建文件管理器的全面指南，旨在整理杂乱的桌面环境。它首先设置项目结构并定义一个 &#39;fileAnalyzer&#39; 接口，以按类型或创建日期对文件进行分类。该脚本包括一个黑名单以防止某些文件被移动，它利用帮助程序函数和目录创建将文件分类到各自的文件夹中。实现了两个结构，&#39;fileTypeAnalyzer&#39; 和 &#39;fileDateAnalyzer&#39;，以处理不同的排序标准，后者侧重于按创建日期组织文件。main 函数编排进程，允许用户通过命令行标志指定排序模式。此外，还为 Windows 用户提供了一个 PowerShell 脚本，以方便测试和清理有组织的文件。
+
+摘要概括了源文档的本质，即开发基于 Go 的文件管理器，该管理器可以按类型或日期对文件进行排序，并通过 PowerShell 脚本为 Windows 用户提供额外支持。它重点介绍了项目设置、核心功能和工具的用户友好性，同时省略了特定的代码细节和命令行说明。</p> 
+
+<p><a href="https://www.siglens.com/blog/siglens-1025x-faster-than-elasticsearch">Siglens 与 ElasticSearch：Siglens 比 ElasticSearch 快 1025 倍</a><br>基准测试显示，SigLens 是一种面向列的数据库，在处理 NYC 出租车数据集时的性能比 Elasticsearch 高出惊人的 1025 倍。利用相同的硬件和数据集配置，SigLens 的高级功能（如动态列压缩、微索引和 AgileAggsTree 算法）使其能够以亚秒级的速度执行复杂的查询。性能指标来自每种查询类型的 5 次运行中最低的一次，突显了 SigLens 在所有四种测试的查询类型中的卓越效率。这种显著的速度优势使 SigLens 成为高效的可观测性数据解决方案，提供远超 Elasticsearch 的快速采集和查询功能。
+
+（注意：摘要旨在概括源文档中呈现的 SigLens 的主要发现和技术进步，没有直接引用或包含特定的数据点和查询。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/TextControlsInlineVsExternal">在 UI 中执行涉及文本的特殊操作的两种 API 样式</a><br>源文档讨论了用于处理用户界面中文本的两种不同的 API 样式，称为“外部”和“内联”。外部 API 样式涉及每个文本操作的单独 API 调用，例如斜体或向文本元素添加操作，通常伴随着灵活的布局模型。相反，内联 API 样式利用用 HTML 或 XML 等格式标记的文本，然后由 UI 库解释这些文本以直接应用样式和操作。虽然由于解析要求，内联样式在运行时的效率可能较低，但它更适合以文本为中心的应用程序，并且被认为对于以文本为中心的编程环境至关重要。作者 Chris Siebenmann 倡导内联样式，指出它很受欢迎，并且适用于文本密集型应用程序，尽管运行时效率可能很低。</p> 
+
+<p><a href="https://michael.stapelberg.ch/posts/2024-11-19-testing-with-go-and-postgresql-ephemeral-dbs/">使用 Go 和 PostgreSQL 进行测试：临时数据库</a><br>本文讨论了使用临时 PostgreSQL 实例进行 Go 测试的好处和实现。它强调了设置的便利性，因为不需要数据库配置，并且实例从空数据库开始，确保测试被隔离。作者建议使用像 &#39;postgrestest&#39; 这样的包来有效地管理这些实例的生命周期。本文还讨论了 Go 中测试缓存的挑战，建议使用环境变量来确保测试结果的一致性。提出了进一步的优化，例如使用套接字激活来加快 PostgreSQL 启动速度，并使用 &#39;txdb&#39; 包在测试之间共享数据库架构以减少重复。总的来说，本文提供了将临时 PostgreSQL 实例集成到 Go 测试工作流中的综合指南，旨在简化流程并减少资源消耗。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://transactional.blog/blog/2024-modern-database-hardware">面向未来数据库的现代硬件</a><br>源文档讨论了数据库技术在现代硬件进步下不断发展的前景。它强调了在网络、存储和处理能力创新推动下，未来十年数据库架构发生重大转变的可能性。本文档强调了 RDMA（远程直接内存访问）对于降低 CPU 开销和实现可扩展数据库设计的重要性，同时还考虑了 SmartNIC 和 SmartSSD 的集成以提高性能。此外，它还涉及安全区域和时钟同步在确保数据机密性和事务排序方面的作用。但是，该文件也承认当前这些先进技术的可访问性存在限制，尤其是在云环境中，这为广泛采用带来了挑战。该摘要概括了硬件驱动的数据库发展的关键主题、性能改进的潜力以及可访问性的障碍。</p>
+
+<p><a href="https://blog.heroku.com/planning-your-postgresql-migration">规划 PostgreSQL 迁移：最佳实践和关键注意事项</a><br>源文档为计划将其 PostgreSQL 数据库从一个云提供商迁移到另一个云提供商（例如从 Heroku 迁移到另一个平台）的组织提供了全面的指南。它强调了全面迁移前评估的重要性，包括检查数据库版本兼容性、审查架构和数据以及识别依赖关系。本文档概述了各种迁移策略，例如转储和还原、逻辑复制、物理复制和托管迁移工具，每种策略都有自己的停机时间和复杂性注意事项。此外，它还强调了数据传输安全性、网络和可用性连接的重要性，以及通过精心规划的转换策略最大限度地减少停机时间的必要性。该指南最后强调了迁移后优化、监控以及更新备份和灾难恢复计划的必要性，以确保成功过渡到新的云环境。</p>
+
+<p><a href="https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/">序列学习：个性化广告推荐的范式转变</a><br>Meta 的下一代广告推荐系统通过整合基于事件的学习和序列建模来增强个性化广告推荐，从而发生了范式转变。该系统从传统的人工设计特征（通常会丢失顺序和精细信息）转变为基于事件的特征 （EBF），以捕获详细的事件流和属性。这些 EBF 通过针对可变长度序列优化的自定义 transformer 架构进行处理，解决了使用更长、更丰富的事件数据进行扩展的挑战。该系统的进步，包括硬件协同设计创新（如锯齿张量支持），提高了广告预测的准确性、更高的转化率和更高效的基础设施。广告推荐技术的这种发展代表了在更深入地了解用户行为和投放更相关的广告方面迈出的重大飞跃。
+
+（注意：摘要旨在封装源文档的关键要素，重点关注向基于事件的学习的转变、EBF 的作用、系统的可扩展性以及这些创新的结果。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/19/emerging-trends-in-the-cloud-native-ecosystem/">云原生生态系统的新兴趋势</a><br>随着企业为新项目采用云原生架构，云原生生态系统继续蓬勃发展，通过 FinOps 计划非常注重成本控制和效率。OpenCost 等工具提供了对 Kubernetes 支出的可见性，而 Backstage 等内部开发人员门户 （IDP） 的兴起通过简化工具访问解决了开发人员的摩擦。人工智能和机器学习越来越多地利用像Kubernetes这样的云原生平台，而CNCF和LF AI &amp; Data Foundation的项目正在推动创新。可观测性和安全性也是主要趋势，OpenTelemetry 和 Falco 等开源项目分别增强了监控和威胁检测。最后，可持续性越来越受到关注，通过测量碳消耗量来指导对环境负责的 IT 实践。
+
+本摘要概括了源文档中概述的云原生生态系统中的主要趋势和举措，突出了对成本效率、开发人员生产力、AI 集成、可观察性、安全性和可持续性的关注。它抓住了本文档讨论的精髓，即这些趋势如何塑造云原生技术的未来以及企业如何采用这些技术。</p>
+
+<p><a href="https://thenewstack.io/webassembly-wont-replace-docker-anytime-soon-docker-cto/">WebAssembly 不会很快取代 Docker：Docker 首席技术官</a><br>在 KubeCon &#43; CloudNativeCon 上，Docker 首席技术官 Justin Cormack 讨论了 WebAssembly 作为 Docker 的补充技术而不是替代品的潜力。Cormack 强调，虽然 WebAssembly 提供了代码隔离和组件化，但它的用途与 Docker 不同，Docker 为应用程序提供了一个安全的环境。他承认，与蓬勃发展的容器生态系统不同，WebAssembly 仍处于早期阶段，缺乏明确的用例。Cormack 还解决了 WebAssembly 可以取代 Docker 的误解，澄清了这两种技术服务于软件开发领域的不同需求。这次对话强调了了解每种技术的独特优势及其在推进云原生计算中各自作用的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.tensorflow.org/2024/11/mlsysbookai-principles-and-practices-of-machine-learning-systems-engineering.html">MLSysBook.AI：机器学习系统工程的原则和实践</a><br>源文档讨论了 ML 系统工程在机器学习模型的开发和部署中的关键作用，强调了对强大的基础设施和系统设计的需求。它强调了 ML 开发人员与宇航员、系统工程师与火箭科学家的类比，强调了工程在使模型开发可行方面的重要性。本文档介绍了 MLSysBook.ai，这是一种开源资源，全面涵盖了 ML 系统工程原理，包括数据工程、模型开发、优化和部署。它还具有 SocratiQ，这是一个 AI 驱动的学习助手，可通过交互式测验和自适应学习增强参与度和理解力。该摘要将 MLSysBook.ai 的概念映射到 TensorFlow 生态系统，说明了这些原则如何与行业从业者使用的工具和实践保持一致。该文件最后鼓励支持 ML 系统教育，认识到 MLSysBook.ai 等资源在弥合机器学习领域理论知识和实际应用之间差距方面的价值。</p>
+
+<p><a href="https://blog.trailofbits.com/2024/11/19/evaluating-solidity-support-in-ai-coding-assistants/">评估 AI 编码助手中的 Solidity 支持</a><br>来自 Trail of Bits 的 Artem Dinaburg 的博客文章讨论了 Solidity 支持 AI 的代码助手面临的挑战和进步，Solidity 是一种在大型语言模型 （LLM） 中经常被忽视的语言。作者已将 Solidity 支持集成到本地 AI 编码助手 Tabby 和 Continue.dev 中，并开发了一个基准测试工具 CompChomper，以评估各种 LLM 在 Solidity 代码完成任务上的性能。他们的研究结果表明，本地模型，尤其是 DeepSeek Coder 衍生产品，优于 Anthropic 的 Claude 系列等大型商业模型。尽管取得了进展，但作者告诫不要过度依赖 AI 进行 Solidity 开发，并强调了全面测试和验证的重要性。该帖子还强调了需要更多的 Solidity 数据来提高 LLM 的性能，并建议联系 Trail of Bits 以获得进一步的支持。</p>
+
+<p><a href="https://medium.com/@aryan145/generative-ai-evolution-the-role-of-chatgpt-bard-and-their-real-world-impact-35f064a596a1">生成式 AI 进化：ChatGPT、Bard 的作用及其对现实世界的影响</a><br>源文件深入探讨了 ChatGPT 和 Bard 等生成式 AI 工具在各个领域的变革性作用，突出了它们从理论概念到实际应用的演变。它追溯了生成式 AI 的历史发展，从 20 世纪中叶的早期想法开始，到 2010 年代深度学习和 transformer 架构的兴起，这使得能够生成类似人类文本的复杂语言模型成为可能。由 OpenAI 开发的 ChatGPT 以其对话能力和内容创作的多功能性而闻名，而来自 Google 的 Bard 则利用实时互联网数据提供与上下文相关的信息。该文件还讨论了这些 AI 工具在医疗保健、教育、创意艺术和商业方面的实际影响，强调了它们在提高效率、创造力和创新方面的潜力。然而，它也引发了与偏见、工作流失以及需要监管框架以确保负责任使用相关的道德问题。展望未来，该文件表明，生成式 AI 将扩展到多模式输出，有望在人类与技术之间实现更加身临其境和集成的交互。</p>
+
+<p><a href="https://simonwillison.net/2024/Nov/20/foursquare-open-source-places/#atom-everything">Foursquare 开源地点：地理空间社区的新基础数据集</a><br>本文宣布发布 Foursquare 的开源 Places 数据集，这是对拥有超过 1 亿条记录的地理空间社区的重大贡献。此数据集在 Apache 2.0 许可下提供，包括 22 个核心属性，并以 Parquet 格式托管在 Amazon S3 上。作者演示了如何使用 AWS CLI 和 DuckDB 访问数据，并提供了将数据转换为 GeoJSON 格式以进行可视化的分步指南。本文最后以数据集的可视化表示形式结束，展示了一张带有 1000 个标记的地图，这些标记代表了感兴趣的地点。该版本有望使使用地理空间数据的开发人员和研究人员受益，为分析和应用程序开发提供丰富的资源。
+
+（注意：摘要旨在封装源文档的关键点，重点介绍 Foursquare Open Source Places 数据集的公告、可用性和实用性，以及作者对数据访问和可视化的演示。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism 是以太坊，可扩展。</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint 允许用户使用流行的框架快速启动一个 Go 项目</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>OpenTelemetry-Go 的扩展集合。</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>云原生控制平面</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - 专为现代应用程序设计的开源、云原生、分布式 SQL 数据库。</p>
+
+<p><a href="https://github.com/containerd/nerdctl">containerd/nerdctl</a><br>contaiNERD CTL - 适用于 containerd 的 Docker 兼容 CLI，支持 Compose、Rootless、eStargz、OCIcrypt、IPFS 等</p>
+
+<p><a href="https://github.com/hugomd/ascii-live">hugomd/ascii-live</a><br>parrot.live 的扩展，支持更多动画！http://ascii.live</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>快速获取 JSON 值 - 适用于 Go 的 JSON 解析器</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>下一代爬行和爬取框架。</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir 为 Prometheus 提供可水平扩展、高度可用、多租户的长期存储。</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>精选的 Go 框架、库和软件列表</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>一个强大的小 TUI 框架 🏗</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>在本地🚀运行 GitHub Actions</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>计算机指标的导出器</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/charmbracelet/huh">charmbracelet/huh</a><br>构建终端表单和提示 🤷🏻 ♀️</p>
+
+<p><a href="https://github.com/stakater/Reloader">stakater/Reloader</a><br>一个 Kubernetes 控制器，用于监视 ConfigMap 和 Secrets 的变化，并在 Pod 及其相关的 Deployment、StatefulSet、DaemonSet 和 DeploymentConfig 上进行滚动升级 – [✩Star] 如果你正在使用它！</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>在 Kubernetes 上运行 Ray 应用程序的工具包</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>充当反向代理，保护您的 Web 服务免受攻击和利用。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

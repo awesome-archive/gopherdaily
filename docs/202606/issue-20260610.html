@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260610.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260610</span>
+</p>
+<p>每日一谚：A Go program&#39;s structure should reflect its logic. Keep it organized. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/10/the-story-of-cpp">C&#43;&#43; 的权力游戏：一部关于妥协、背叛与重生的“史诗神剧”</a><br>近日，一部名为《The Story of C&#43;&#43;: The World&#39;s Most Consequential Programming Language》（C&#43;&#43; 官方纪录片）在 YouTube 上引起了巨大轰动。这部长达近两小时的纪录片，首次召集了包括 Bjarne Stroustrup（C&#43;&#43; 之父）、Alexander Stepanov（STL 之父）在内的一众 C&#43;&#43; 核心缔造者，向世人揭开了这门语言背后那些鲜为人知的妥协、背叛与权力斗争</p> 
+
+<p><a href="https://tonybai.com/2026/06/10/lets-encrypt-adopts-mtcs-preparing-for-post-quantum-security">RSA 将死？Let&#39;s Encrypt 押注 MTCs 迎战后量子时代</a><br>近日，全球最大的免费 HTTPS 证书颁发机构 Let&#39;s Encrypt 发布了一篇声明：《Let&#39;s Encrypt 的后量子未来》。在这份声明中，Let&#39;s Encrypt 不仅拉响了后量子时代的警报，更抛出了一个足以重塑整个互联网底层通信逻辑的终极杀手锏：MTCs（Merkle Tree Certificates，默克尔树证书）。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/xND7kR9n0g2EnU8VnYWJKw">别把“疯狂刷 Ticket”当成你的护城河</a><br>你是不是每天都在疯狂地清空 JIRA 看板，觉得自己无比充实？ Github明星工程师Sean Goedecke 却说：疯狂刷 Ticket 只是杂耍，不是通往高价值的路径。</p> 
+
+<p><a href="https://dev.to/shrsv/the-top-golang-mocking-libraries-in-2026-a-practical-comparison-6kg">2026年顶级Go mock库实用比较</a><br>你好，我是Shrijith Venkatramana。我正在构建git-lrc，一个在每次提交时运行的AI代码审查工具。请试用并分享您的反馈。</p> 
+
+<p><a href="https://titpetric.com/2026/06/09/implementation-contracts-in-go/">Go中的实现契约</a><br>长期以来，我将填充的`interface`类型视为Go中的实现契约。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/09/solving-secret-sprawl-in-multi-account-kubernetes-with-external-secrets-operator/">使用External Secrets Operator解决多账户Kubernetes中的秘密扩散问题</a><br>现在，当我们配置新环境时，无论是在现有云账户还是新账户中，我们只需要安装ESO和ClusterSecretStore。操作员会自动从Bitwarden获取最新的秘密。</p>
+
+<p><a href="https://tailscale.com/blog/hp-remote-system-controller-tailscale-integration">冗余只有在能够访问时才有意义</a><br>HP正在将Tailscale集成到远程系统控制器中，使管理员能够通过其现有的tailnet安全地访问带外管理设备。</p>
+
+<p><a href="https://nesbitt.io/2026/06/09/forms-of-open-source-government.html">开源政府的形式</a><br>中立的基金会模式。基金会拥有商标和法律实体，技术监督委员会授权给维护者，会员公司支付会费资助员工。</p>
+
+<p><a href="https://blog.gitbutler.com/true-grit">Grit：使用智能体重写Git为Rust</a><br>我们使用智能体将所有Git移植为库优先、内存安全的Rust，并通过了整个C Git测试套件。</p>
+
+<p><a href="https://andersmurphy.com/2026/06/07/sqlite-improving-performance-with-pre-sort.html">SQLite通过预排序提高性能</a><br>在上一篇文章中，我们展示了UUID4的随机性如何对插入速度产生重大影响，以及UUID7如何提供帮助。</p>
+
+<p><a href="https://www.timwehrle.de/blog/the-microservice-overdose/">微服务过度使用</a><br>今天我看到了一个熟悉的软件小场景：有人建议引入另一个微服务。它有其用途，也许我会做出同样的选择。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-everything">Claude Fable 5的初步印象</a><br>我想你指的是Simon Willison——多产的开源开发者，Django的联合创建者，以及Datasette的创建者。</p>
+
+<p><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5和Claude Mythos 5</a><br>公告：Claude Fable 5和Claude Mythos 5于2026年6月9日发布。</p>
+
+<p><a href="https://x.com/bcherny/status/2064426115255730578">如何设置自验证循环</a><br>Boris Cherny在X上讨论了设置自验证循环的重要性，特别是在高效模型时代，自验证是使模型能够运行更长时间的关键成分。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API is an open-source relay platform that unifies Claude, OpenAI, Gemini, and Antigravity subscriptions into a single endpoint. It supports account sharing and cost-sharing, with seamless native t</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/maximhq/bifrost">maximhq/bifrost</a><br>Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000&#43; models support &amp; &lt;100 µs overhead at 5k RPS.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Multi Account, Webhooks, and MCP, and Chatwoot. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/goravel/goravel">goravel/goravel</a><br>The full-featured Golang Development Framework skeleton</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260709.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260709</span>
+</p>
+<p>每日一谚：Prefer composition over inheritance. Go doesn&#39;t have inheritance, and that&#39;s a feature, not a bug. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/09/ai-rewrite-bun-in-rust">AI 重写 Bun 为Rust全过程揭秘：101万行代码、11天、64个Claude并行开工</a><br>近期，JavaScript 运行时 Bun 的创始人 Jarred Sumner 披露了一项惊人的技术壮举：在不到 11 天的时间里，他利用 64 个并行 的 Claude 实例，将 Bun 超过 53 万行的 Zig 底层代码全量重写为了 100 多万行的 Rust 代码。此举旨在从根本上解决原架构中频发的内存越界 、悬空指针等 C/C&#43;&#43; 生态顽疾。文章深度拆解了这场堪称“AI 辅助工程重构标杆”的实战细节。成功重写的核心并非依赖大模型“一次写对”，而是通过严密的工程方法论：采用“一次性全量机械翻译”以避免增量重写的阵痛；首创“实现者与对抗性审查者分离”的多 Agent 机制拦截逻辑漏洞；并坚 守“0 个测试用例被删减”的底线。重写后的 Bun 彻底消灭了长期的内存泄漏问题，并在多个平台上实现了约 20% 的体积缩减和显著的吞吐量提升。花费 16.5 万美元 API 成本完成 3 人年工作量的壮举，为“AI Agent 能否挑起关键基础设施重写”的世纪拷问，提供了一份极具说服力的满分答卷 。</p> 
+
+<p><a href="https://tonybai.com/2026/07/09/mcp-server-architecture-patterns-analysis">MCP Server 架构模式全解析：5 种模式、4 个反模式</a><br>自 Anthropic 推出 Model Context Protocol (MCP) 以来，社区涌现了大量良莠不齐的 MCP Server 实现。本文基于最新的学术研&gt;究论文（arXiv:2606.30317），系统性地提炼了在开发 MCP Server 时最经典的 5 种架构模式（资源网关、工具编排器、有状态会话、代理聚合器&gt;、领域适配器）以及 4 个必须避开的致命反模式（如 God Tool 万能工具）。文章最引人注目的亮点是基于真实生产数据给出的工程红线：单个上&gt;下文暴露的工具数量一旦超过 10~15 个，大模型（如 Claude ）的选择准确率将出现断崖式下跌。 文章强调，MCP Server 的本质是一个面向 LLM 而非人类的 API 设计问题，合理的架构拆分与极度清晰的自然语言工具描述，才是决定 AI 系统成败的关键。</p> 
+
+<p><a href="https://medium.com/@shaileshb/how-to-build-an-mcp-server-in-golang-using-the-official-mcp-sdk-af9d4728f632">如何使用官方 MCP SDK 在 Go 中构建 MCP 服务器</a><br>学习如何使用官方MCP SDK在Go中构建生产准备的MCP服务器，实现可流式HTTP传输，添加认证，部署到Render，并用Claude Desktop测试</p> 
+
+<p><a href="https://www.hmans.dev/blog/chatto-is-open-source">群组和团队聊天应用 Chatto 现已开源！</a><br>我很高兴地宣布，我过去一年左右一直在开发的群组和团队聊天应用 Chatto 现已正式开源，任何人都可以自行托管。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-runtime-profiling/">深入Go性能分析工作原理</a><br>理解 Go 运行时（第11部分，共11部分）。本系列涵盖了 Go 运行时的启动、内存分配器和调度器等核心组件。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/report-whitepaper/2026/07/08/the-cncf-data-storage-in-cloud-native-ai-white-paper/">CNCF 云原生 AI 数据存储白皮书</a><br>数据湖仓库和向量数据库：本指南探讨了如何使用 Apache Parquet 和 Iceberg 等开放格式将集中式系统合并为混合数据湖仓库。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/08/network-boundary-for-ai-agents-using-nginx-and-opentelemetry/">使用 NGINX 和 OpenTelemetry 为 AI 智能体构建网络边界</a><br>我们能否构建一个既强制执行又可观察的网络边界，而无需引入全新的基础设施？答案出乎意料地简单。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/">宣布 etcd v3.7.0 发布</a><br>etcd v3.7.0 包含仅键范围优化，处理仅键范围请求或 `etcdctl get --keys-only` 时，etcd 仅从其内存索引读取数据。</p>
+
+<p><a href="https://www.docker.com/blog/your-laptop-is-the-new-production-environment/">你的笔记本电脑就是新的生产环境</a><br>您的笔记本电脑就是新的生产环境。</p>
+
+<p><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/">宣布 TypeScript 7.0 发布</a><br>TypeScript 7.0 带来了多项新功能和改进，进一步提升了开发体验和代码质量。</p>
+
+<p><a href="https://eqrion.net/ten-years-at-mozilla/">坚持不懈：在 Mozilla 的十年</a><br>时间过得真快！我于2016年以实习生身份加入 Mozilla。在这个行业，一家公司工作十年是很长的时间。</p>
+
+<p><a href="https://seriot.ch/computation/uts35/">Unicode 的转写规则是图灵完备的</a><br>Unicode 的转写规则被证明是图灵完备的，这意味着理论上可以执行任何计算。这一发现对文本处理和计算语言学具有重要意义。</p>
+
+<p><a href="https://blog.kubesimplify.com/introducing-kiac-kubernetes-in-apple-containers">kiac：在 Apple 容器上运行 Kubernetes，具有 VM 隔离节点</a><br>kiac 是一个在 Mac 上运行真实 Kubernetes 节点的工具，每个节点都是独立的轻量级虚拟机，为本地开发提供了生产级环境。</p>
+
+<p><a href="https://isocpp.org//blog/2026/07/cpp26-standard-library-hardening-sandor-dargo">C&#43;&#43;26：标准库强化</a><br>标准库强化是那些让人疑惑为什么没有更早标准化的功能之一。它能以极低的成本捕获真实错误，而不需要修改现有代码。</p>
+
+<p><a href="https://www.digitalsamba.com/blog/svc-vs-simulcast-in-webrtc">WebRTC 中的 SVC 与 Simulcast 完整比较</a><br>本文对 WebRTC 中的可伸缩视频编码 (SVC) 和同时编码 (Simulcast) 进行了全面的工程比较，分析了它们在不同场景下的优缺点和适用性。</p>
+
+<p><a href="https://webrtchacks.com/vector-vibing-to-speed-up-opus-encode-by-20/">Vector Vibing 使 Opus 编码速度提高 20%</a><br>通过在 libopus 中启用 AVX2 向量化，桌面版 Chromium 上的 Opus 编码速度提高了 20%。向量化意味着一条指令可以同时对整个向量值执行相同的算术运算。</p>
+
+<p><a href="https://webrtc.ventures/2026/07/scaling-janus-webrtc-server-media-resource-broker/">扩展 Janus WebRTC 服务器：构建媒体资源智能体</a><br>本文探讨了如何构建媒体资源智能体来扩展 Janus WebRTC 服务器，以处理更大规模的媒体流和连接，提高系统的可扩展性和性能。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything">介绍 GPT-Live</a><br>对于需要网络搜索、深度推理或更复杂工作的问题，它会委托给最新的前沿模型在后台处理，并在准备好后将结果带回对话。在处理过程中，GPT-Live 可以继续与您交谈，保持对话的流畅性。</p>
+
+<p><a href="https://leaddev.com/ai/ai-productivity-is-burning-out-your-best-engineers">AI 生产力正在耗尽你最好的工程师</a><br>AI 生产力工具正在耗尽您最好的工程师，特别是所谓的&#39;不可见验证者&#39;问题。过度依赖 AI 工具可能导致工程师倦怠和技能退化。</p>
+
+<p><a href="https://poe.com/OpenModelCompare">OpenModelCompare - Poe</a><br>OpenModelCompare 是一个用于比较不同 AI 模型性能的工具，可以帮助开发者选择最适合其需求的模型。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>Glamourous agentic coding for all 💘</p>
+
+<p><a href="https://github.com/larksuite/cli">larksuite/cli</a><br>The official Lark/Feishu CLI tool, maintained by the larksuite team — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Mee</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amo</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the int</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

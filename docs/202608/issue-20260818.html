@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260818.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260818</span>
+</p>
+<p>每日一谚：Keep functions short and focused on a single responsibility </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/18/rust-primer-introduction">事不过三，我们为什么总是学不好 Rust？</a><br>曾两次放弃 Rust 的 Tony Bai，开启了一场为期一年的“事不过三”Rust 学习专栏。本文作为开篇词，坦诚复盘了前两次折戟 borrow checker 与缺乏业务落地场景的教训，并深入剖析了在 AI 大规模生成代码的时代，为什么追求高性能与强安全边界的基础设施（如 Linux 内核&gt;、Android 16、Bun、Codex CLI、Cloudflare Pingora）反而更需要 Rust。文章重新定义了 AI 时代学习系统语言的核心目标——不再死记语法，而&gt;是建立读懂、审查、设计并最终对 AI 代码负责的心智模型，同时公布了贯穿全年的 4 大模块、54 讲与 4 个实战项目的完整路线图。</p> 
+
+<p><a href="https://quii.gitbook.io/learn-go-with-tests/build-an-application/revisiting-time-with-synctest">重新审视时间，使用testing/synctest</a><br>从 Go 1.25 版本开始，出现了第三个选项： testing/synctest 。它允许我们在测试中运行未经修改的代码，这些代码可以使用 time.Sleep 、 time.AfterFunc 等符号。同时，我们还可以完全控制测试中的时间流程——无需等待、无需处理异常情况，也不会出现时长缩短等问题，只需期待最好的结果即可。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/08/17/welcome-falkey-the-falco-and-ky-the-kyverno-pyrenees/">欢迎Falkey the Falco和Ky the Kyverno Pyrenees</a><br>云山之巅的另一位朋友是Ky the Great Pyrenees。Ky作为云原生生态系统的忠实策略守护者，冷静、观察敏锐，并配备了一个实用的指南针徽章，Ky温柔地守护着Kubernetes集群，确保每个工作负载保持安全和合规。</p>
+
+<p><a href="https://seangoedecke.com/help-peer/">帮助同行</a><br>Scott Alexander的博客是我硅谷&#39;秘密经典&#39;的一部分，我在对《Impro》的评论中写过这一点。</p>
+
+<p><a href="https://www.docker.com/blog/make-zero-cves-your-new-default/">将零CVE作为你的新默认设置</a><br>这一切都源于一个原则，Docker Hardened Images就是基于此构建的。未被采用的安全措施无法保障任何东西，整个目录对所有开发者免费，因为安全基准不应该是高级功能。</p>
+
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1vqwx9y/reddits_journey_to_http3_on_android_part_2/">Reddit在Android上采用HTTP/3的旅程（第二部分）</a><br>在本系列的第一部分中，我们分享了统一Cronet引擎的愿景、媒体流量的初始部署，以及我们如何分叉cronet-okhttp来修复请求标签跟踪和Flipper调试。</p>
+
+<p><a href="https://longtran2904.substack.com/p/c-strings-a-50-year-mistake">C字符串：一个50年的错误</a><br>为什么C字符串糟糕不堪，以及为什么基于长度的字符串是正确的设计。</p>
+
+<p><a href="https://publiccomment.blog/p/it-is-past-time-for-you-to-quit-elon-musk-s-x">你早就该离开埃隆·马斯克的X了</a><br>是时候放弃埃隆·马斯克的X平台了。</p>
+
+<p><a href="https://duckdb.org/2026/08/17/duckdb-20-highlights">DuckDB v2.0预览 - DuckDB</a><br>DuckDB v2.0将于今年秋季发布。在本文中，我们预览其主要功能：作为服务器的DuckDB、触发器、VARIANT类型、异步I/O、新的SQL解析器、新的存储格式等。</p>
+
+<p><a href="https://lwn.net/Articles/1088991/">7.2内核已发布 [LWN.net]</a><br>7.2内核已发布。Linus表示：发布前的最后一周再次比我预期的要大，但考虑到&#39;新常态&#39;的情况，如果我因此推迟发布，我们可能永远不会有任何发布了。</p>
+
+<p><a href="https://internals-for-interns.com/posts/linux-kernel-module-system/">渗入linux内核模块</a><br>理解Linux内核（第7部分，共7部分）。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.pinglin.tw/blog/the-shapes-of-agent-memory/">智能体记忆的形态 - 文件、存储和经验</a><br>能够跨会话记忆的智能体可以将记忆保存为精选的markdown文件、自动挖掘的结构化存储或训练的经验。</p>
+
+<p><a href="https://stephango.com/moats">事物如何获胜 — Steph Ango</a><br>为什么人们会涌向某些事物？什么创造了优势、有利条件和护城河？事物如何在高度竞争的环境中获胜，或至少生存下来？包括生物、人、产品、组织和网络。</p>
+
+<p><a href="https://oreillyradar.substack.com/p/why-open-source-matters-for-ai">为什么开源对人工智能很重要</a><br>开源对人工智能的重要性体现在促进创新、透明度和协作方面。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/bjarneo/cliamp">bjarneo/cliamp</a><br>cliamp - Terminal music player inspired by winamp</p>
+
+<p><a href="https://github.com/Gitlawb/zero">Gitlawb/zero</a><br>The coding agent that answers to you, your model, your machine, your rules.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/strelov1/freehire">strelov1/freehire</a><br>freehire — the open-source search engine for job seekers</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>AI video translation &amp; dubbing tool for humans and AI Agents, powered by LLMs. Full pipeline: download, transcribe, translate, TTS dub, reformat, cover generation. 100&#43; languages, optimized for YouTub</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/zzet/gortex">zzet/gortex</a><br>High-performance code-intelligence engine for AI agents and IDE, supports 257 languages, multi repositories, based on graph, with access via CLI, MCP Server, and API. AI coding agents teammate - expos</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray panel supporting multi-protocol multi-user expire day &amp; traffic &amp; IP limit (Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto)</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

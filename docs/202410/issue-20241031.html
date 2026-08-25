@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241031.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-31</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/11/01/introduction-to-passkey/">构建无密码认证：passkey入门与Go实现</a><br>未来无密码认证是大势所趋，这篇文章介绍了如何passkey方案以及如何用go实现</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/rLs3wYMEaolHr8E4c2ou1w">编程界的“白开水”，喝上就会上瘾！</a><br>写Go就像喝白开水，寡淡无味，但很解渴，喝上就会上瘾</p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/testing-legacy-code">测试遗留Go代码</a><br>源文档讨论了在软件开发中测试遗留代码的挑战和策略。它强调了编写测试的重要性，即使在开始项目时也是如此，以确保代码质量和可维护性。本文档建议通过重构或创建新函数以通过测试来处理不可测试的遗留代码。它还通过鼓励为对代码所做的每次更改编写测试的练习来解决测试不足的问题。本文档强调了逐步增加测试覆盖率的分而治之技术，以及首先编写测试的好处。最后，它承认编码实践的多样性以及在倡导有效测试方法的同时尊重个人偏好的必要性。</p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/constraints">Go 中的约束</a><br>源文档深入探讨了在 Go 的泛型系统中使用类型约束的复杂性。它首先讨论了同时提供自由和限制的约束的悖论，因为它们定义了可以对泛型类型执行的操作范围。本文档解释了如何使用接口指定约束，重点介绍方法集和类型元素。它介绍了类型集约束的概念，这些约束由单个类型元素定义，并演示了如何从现有约束组合新约束。本文档还强调了命名类型的限制，并引入了类型近似值来克服这些限制，从而允许包含从指定结构派生的任何类型的类型。讨论扩展到接口 Literals，它可以用作约束而不命名它们，以及如何在这些 Literals 中引用类型参数。本文档的结尾是挑战读者应用这些概念的练习，例如通过为 &#39;IsGreater&#39; 定义适当的类型约束来解决 &#39;greater&#39; 练习。总的来说，本文档是理解和实现 Go 泛型编程的教育资源，并提供了实际示例和练习来强化这些概念。</p> 
+
+<p><a href="https://dev.to/ravikishan/building-a-high-performance-full-text-search-engine-in-go-m4b">在 Go 中构建高性能全文搜索引擎</a><br>本文提供了使用 Go 构建高性能全文搜索引擎的全面指南，Go 是一种以其并发支持和效率而闻名的编程语言。该项目专注于处理 Wikipedia 摘要，采用数据流和多线程来管理大型数据集，而不会占用大量系统内存。主要功能包括使用倒排索引进行高效索引、并发文档处理和高级标记化技术。该指南还概述了如何使用 Go 的并发模型（包括 goroutine 和 channel）来同时处理多个任务。此外，本文还提出了可能的增强功能，例如针对更大的数据量进行扩展、支持复杂的搜索查询、动态索引以及整合机器学习以实现结果相关性。对于对 Go 构建快速、并发搜索引擎的功能感兴趣的开发人员，该项目是一个实际应用程序。</p> 
+
+<p><a href="https://dev.to/danielhe4rt/this-is-all-what-ive-learned-about-go-in-two-weeks-1bf2">这就是我在两周内学到的关于Go的全部知识！</a><br>在为期两周的 Go 学习之旅中，作者分享了从学习该语言中获得的见解和技巧，包括设置模块、理解语法和编写测试。作者是一位具有一定 Rust 经验的 PHP 开发人员，通过使用 goroutines 和通道，他发现了 Go 的简单性和强大的并发功能。关键的收获包括 &#39;go mod&#39; 命令对依赖项管理的重要性，与其他语言相比 Go 语法的简单性，以及正确处理错误和资源管理的必要性。作者还强调了 Go 标准库的好处，并提供了使用 &#39;strconv&#39; 和 &#39;net&#39; 等包的示例。此外，作者还分享了一个涉及 ScyllaDB 的个人编码挑战，展示了 Go 功能在处理低延迟操作方面的实际应用。本文为过渡到 Go 的 PHP 开发人员提供了指南，强调了学习曲线和实践经验的价值。</p> 
+
+<p><a href="https://dolthub.com/blog/2024-10-29-how-to-publish-a-microsoft-windows-application/">如何发布 Microsoft Windows 应用程序</a><br>Dolthub 博客提供了发布 Microsoft Windows 应用程序的综合指南，特别详细介绍了将 Electron 应用程序提交到 Microsoft Store 的过程。本指南从创建 Microsoft 开发人员帐户开始，这是提交应用程序的先决条件。然后，它会指示用户在 Microsoft 合作伙伴中心内保留名称并创建应用，在 MSIX 或 PWA 应用类型之间进行选择。该博客强调了使用 Microsoft Store 进行分发的好处，包括提高可见性和对分析的访问。该过程包括为 Appx 构建 Electron 应用程序、配置图标和产品标识详细信息，以及提交应用程序以供审核。获得批准后，该应用程序即可在 Microsoft Store 上下载。该博客最后鼓励用户加入 Dolthub 社区以获得支持和更新，并安装 Dolthub 以获得无缝的开发体验。</p> 
+
+<p><a href="https://avestura.dev/blog/problems-of-c-and-how-zig-addresses-them">Zig如何解决C语言的这些问题</a><br>源文档批判性地研究了 C 编程语言的设计决策，强调了由于对内存和汇编的抽象最小，它适用于系统编程。但是，它也指出了手动内存管理和潜在的安全漏洞等缺陷。本文档介绍了 Zig，这是一种现代系统编程语言，它通过用于编译时评估的 &#39;comptime&#39; 、显式内存对齐和可选类型等功能来解决这些问题，以防止空指针错误。Zig 还通过将错误集成到类型系统中来简化错误处理，并将所有代码块视为表达式，从而简化了语法。总体而言，Zig 旨在提供一种更安全、更具表现力的 C 语言替代方案，重点关注开发人员体验和健壮性。</p> 
+
+<p><a href="https://dev.to/ergofriend/gos-template-engine-templ-is-convenient-it-also-works-with-tinygo-3ad6">Go 的模板引擎 “templ” 很方便（它也适用于 TinyGo）</a><br>源文档讨论了使用 Cloudflare Workers 部署返回纯 HTML 的 Go 应用程序所面临的挑战，特别是由于大小限制。作者最初使用 Go 的 &#39;text/template&#39; 包，导致 WASM 文件的大小为 8MB，超过了免费配额。为了解决这个问题，作者切换到了 TinyGo，它将大小减小到 0.75MB，但仍然构成挑战。然后，作者探索了另一种模板引擎 templ，它与 TinyGo 兼容，占用空间更小。本文档提供了有关使用 templ 的详细指南，包括安装、构建和部署应用程序。作者使用 templ 成功部署了应用程序，实现了 187.91KB 的 WASM 文件大小，符合免费配额。本文档最后演示了基于 templ 的应用程序，并呼吁读者在自己的项目中试用 templ。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tsh.io/state-of-frontend/">2024 年前端状态</a><br>《2024 年前端现状》报告是一项全面的调查，收到了来自全球开发人员的 6,288 份回复，揭示了前端开发的重要趋势和偏好。React 和 Next.js 仍然是占主导地位的框架，而 Astro 和 Svelte 随着 React 的发展而越来越受欢迎。尽管微前端的使用量有所下降，但 Node.js 仍然是首选的 JavaScript 运行时，TypeScript 的使用量正在上升。渐进式 Web 应用程序 （PWA） 有望保持其当前状态，其中 TailwindCSS 在流行的框架中处于领先地位。该报告还强调了可访问性的重要性以及 AI 在开发工作流程中的日益集成。此外，Visual Studio Code 在桌面代码编辑方面受到开发人员的青睐，而 GitHub 仍然是顶级版本控制提供商。该调查强调了包容性 Web 可访问性的必要性以及 AI 提高开发人员效率的潜力。</p>
+
+<p><a href="https://www.timescale.com/blog/vector-databases-are-the-wrong-abstraction/">Vector Databases Are the Wrong Abstraction</a><br>The source document critiques the current abstraction of vector databases, which treat embeddings as independent data rather than derived from source data. This misalignment leads to complex maintenance and synchronization challenges for engineering teams building AI applications. The document introduces the concept of a &#34;vectorizer&#34; as a more appropriate abstraction, akin to database indexes, which would automatically keep embeddings in sync with their source data. The Timescale team at Timescale has developed a PostgreSQL-based tool called pgai Vectorizer, which automates the creation and updating of vector embeddings, thereby simplifying data management and reducing the burden on developers. The tool integrates with cloud functions and embedding services like OpenAI, offering customizable configurations for chunking, formatting, and indexing. The document highlights the potential of pgai Vectorizer to streamline the development process for AI systems using PostgreSQL, making it a valuable open-source resource for developers.</p>
+
+<p><a href="https://gaultier.github.io/blog/lessons_learned_from_a_successful_rust_rewrite.html">从成功的 Rust 重写中吸取的经验教训</a><br>该文档详细介绍了作者完全用 Rust 重写 C&#43;&#43; 代码库的经验，强调了在此过程中的成功和面临的挑战。关键点包括促进添加新功能的增量方法、Rust 编译器强制执行的简单性和正确性，以及 Rust 内置测试框架的好处。但是，作者还发现了持续存在的问题，例如由于原始指针导致的未定义行为、Miri 分析所有 FFI 代码的能力受到限制，以及交叉编译和 Cbindgen 的困难。此外，缺乏对自定义内存分配器的支持以及 FFI 引入的复杂性被认为是需要改进的领域。作者最后反思了所需的总体工作以及 Rust 的工具和语言功能发展的潜力，使其更适合涉及 C 互操作的项目。</p>
+
+<p><a href="https://icepanel.medium.com/how-to-evaluate-risk-in-your-architecture-with-icepanel-ac4a4bdb1293">如何使用 IcePanel 评估架构中的风险</a><br>本文提供了使用 IcePanel 评估架构风险的全面指南，IcePanel 是一种有助于可视化和管理复杂系统的工具。它首先根据范围（上下文）和特征（标准）定义风险，强调将这些定义与团队观点保持一致的重要性。然后，该指南指导读者创建架构风险评估记分卡，重点关注潜在风险的可能性和影响，并将其应用于学生测试平台示例。该过程包括使用风险评分标记服务，并使用可观测性工具通过真实数据验证这些评分。文章最后强调了在构建复杂系统中管理风险的重要性，以及 IcePanel 在促进这一过程方面的作用。该指南还鼓励读者将 IcePanel 与外部可观测性工具连接起来，以进行更准确的风险分析。</p>
+
+<p><a href="https://www.linuxjournal.com/content/unlocking-data-science-potential-understanding-machine-learning-and-data-analysis">释放数据科学潜力 使用 JupyterLab 了解机器学习和数据分析</a><br>George Whittaker 的文章深入探讨了 JupyterLab 作为数据科学家、机器学习从业者和分析师的强大工具的重要性。它重点介绍了 JupyterLab 的交互式计算功能，这些功能有助于对数据、算法和可视化进行快速实验。该指南全面概述了如何设置 JupyterLab，包括 Anaconda 和直接 pip 安装等安装选项，以及导航其界面。它还涵盖了用于数据分析和机器学习的基本库，例如 NumPy、Pandas、Matplotlib、Seaborn、Scikit-Learn、TensorFlow 和 Keras。本文进一步解释了如何有效地组织数据和代码文件、执行探索性数据分析 （EDA）、构建和评估机器学习模型，以及采用具有深度学习框架的高级工作流。此外，它还提供了高效数据分析的技巧和最佳实践，并讨论了 JupyterLab 在不断发展的数据科学和机器学习领域中的未来潜力。该指南旨在为读者提供将 JupyterLab 集成到其数据科学项目中的知识，从而提高生产力和协作。</p>
+
+<p><a href="https://www.haproxy.com/blog/announcing-haproxy-fusion-1-3">HAProxy Fusion 1.3 发布</a><br>HAProxy Fusion 1.3 对 HAProxy 的应用程序交付和安全平台进行了重大增强，包括用于威胁管理的新可自定义安全仪表板、用于详细性能指标的高级访问日志仪表板，以及改进的 Kubernetes 和 Consul 服务发现。此更新还简化了 &#39;.map&#39; 文件的编辑，以提高可用性和协作性。这些功能旨在简化多层安全性的管理，提供对集群操作的更深入见解，并促进高效的配置更新。该版本强调了 HAProxy Fusion 对企业部署的全生命周期管理、监控和自动化的承诺，使其成为更强大、更灵活的组织工具。</p>
+
+<p><a href="https://www.pingcap.com/blog/database-scaling-tidb-evolving-growing-businesses/">SQL @ Scale 的下一步是什么？TiDB 的愿景是发展成长型业务</a><br>PingCAP 联合创始人兼首席执行官 Max Liu 在 2024 年 HTAP 峰会上发表了主题演讲，讨论了为成长型企业扩展数据库系统的关键挑战。Liu 强调了 TiDB （一种开源分布式 SQL 数据库）在解决 MySQL 等传统数据库的局限性方面的能力。TiDB 的架构提供水平可扩展性、跨分布式节点的 ACID 事务、零停机时间扩展和统一的 SQL 接口，使其非常适合现代数据密集型应用程序，包括由 AI 驱动的应用程序。Liu 的见解强调了 TiDB 在使公司能够在不影响性能或可靠性的情况下高效扩展运营方面的重要性。主题演讲还展示了真实世界的使用案例，例如管理 1.2 PB 数据的 TiDB 集群，展示了 TiDB 在处理海量数据集方面的稳健性。会议结束时，呼吁企业采用 TiDB 来满足当今数据驱动领域的可扩展性需求。</p>
+
+<p><a href="https://teivah.medium.com/the-pacelc-theorem-04fa1bd53336">PACELC 定理</a><br>PACELC 定理是 Daniel Abadi 提出的 CAP 定理的扩展，解决了分布式系统中一致性、可用性和延迟之间的权衡问题。它增加了第二个决策点，考虑了系统在网络分区 （PAC） 和正常情况下无分区 （EL） 的行为。该定理根据系统的优先级将系统分为四种类型：PC/EC（一致性/延迟）、PA/EL（可用性/延迟）、PC/EL（一致性/延迟）和 PA/EC（可用性/一致性）。Google Spanner 和 Amazon DynamoDB 等真实示例说明了这些类别。PACELC 定理通过考虑延迟填补了 CAP 定理留下的空白，为理解分布式系统在各种条件下的性能提供了一个更全面的框架。对于需要对系统设计做出明智决策以有效平衡这些关键方面的开发人员和工程师来说，此扩展至关重要。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/29/announcing-vitess-21/">宣布推出 Vitess 21</a><br>Vitess 项目宣布发布 Vitess 21，它具有增强的查询兼容性、改进的集群管理和扩展的 VReplication 功能，包括对原子分布式事务和递归 CTE 的实验性支持。主要更新包括用于高效联接的参考表具体化、用于 VReplication 的动态工作流配置、Tablet Throttler 中的多指标支持以及高级在线 DDL 功能。备份和恢复过程由实验性的 mysqlshell 引擎提供支持，而 VExplain 现在提供详细的执行跟踪和架构分析。Vitess Kubernetes Operator 通过 VTGate Pod 的水平自动扩展和 Kubernetes 1.31 支持获得了重大更新。此外，新的 VTAdmin 页面有助于 VReplication 工作流管理，并引入了用于分布式事务监控的仪表板。鼓励社区参与，以促进 Vitess 生态系统的持续发展和改进。</p>
+
+<p><a href="https://thenewstack.io/how-to-design-effective-access-control-for-generative-ai/">如何为生成式 AI 设计有效的访问控制</a><br>本文档讨论了在组织内部署生成式 AI 时对有效访问控制的迫切需求。它强调了生成式 AI 的黑盒性质及其处理的大量数据（可能包括敏感信息）所带来的独特安全挑战。本文强调，强大的授权控制不是可选的，但对于防止未经授权的数据访问至关重要。它概述了 CIO 和 CSO 的责任，即重新思考传统的访问控制框架，以防止数据泄露。该文件还解决了与生成式 AI 的内部和外部用例相关的风险，强调了根据角色和属性映射数据访问的重要性。最后，它提供了设计门禁系统的技巧，这些系统要平衡可用性和强大的安全措施，确保只有经过授权的个人才能访问适当的数据。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://waymo.com/blog/2024/10/introducing-emma/">介绍 Waymo 对自动驾驶端到端多模态模型的研究</a><br>自动驾驶技术领导者 Waymo 推出了 EMMA（自动驾驶端到端多模态模型），这是一种利用 Gemini（Google 的多模态大型语言模型）从传感器数据生成未来车辆轨迹的新方法。EMMA 的设计集成了端到端学习、统一语言空间和思维链推理，展示了在规划轨迹预测、物体检测和路图理解等自动驾驶任务方面的显著改进。该研究展示了多模态模型在增强决策和任务绩效方面的优势，甚至表明了在各种自动驾驶挑战中更广泛应用的潜力。尽管取得了可喜的成果，但 EMMA 仍面临着处理长期序列和集成其他传感器数据等挑战，Waymo 认为这是未来发展的领域。该论文强调了多模态 AI 技术对自动驾驶的变革性影响，并暗示了它们对动态环境中 AI 的更广泛影响。Waymo 邀请合作进一步探索这些技术，强调他们致力于通过 AI 创新来提高道路安全和无障碍性。</p>
+
+<p><a href="https://www.instinctools.com/blog/conversational-ai-chatbot-vs-assistants/">对话式 AI 聊天机器人与虚拟助手：兄弟姐妹还是远房表亲？</a><br>本文深入探讨了对话式 AI 聊天机器人和虚拟助手之间的细微差别，这两项技术已成为客户服务、营销和人力资源流程不可或缺的技术。由自然语言处理和机器学习提供支持的对话式 AI 聊天机器人擅长理解和生成类似人类的文本，使其成为需要复杂查询处理和个性化参与的客户服务交互的理想选择。另一方面，虚拟助手利用人工智能和机器人流程自动化的组合，不仅可以理解和响应用户查询，还可以在现实世界中执行操作，例如自动化跟进和分发活动。文章强调，虽然这两种技术在处理复杂查询方面有相似之处，但由于虚拟助手能够自主执行操作，因此更适合以操作为导向的任务。这篇文章进一步说明了这两种技术在各种用例中的实际应用，强调了它们在增强客户体验、简化营销和销售以及优化 HR 流程方面的作用。最终，对话式 AI 聊天机器人和虚拟助手之间的选择取决于项目的具体需求，每种技术在不同场景中都提供了独特的优势。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/30/llm-as-a-judge/#atom-everything">Creating a LLM-as-a-Judge that drives business results</a><br>In the insightful blog post by Simon Willison, the focus is on enhancing business outcomes by integrating LLM-as-a-Judge systems with domain expertise. Hamel Husain emphasizes the pitfalls of simplistic scoring systems, advocating instead for &#34;Critique Shadowing,&#34; where domain experts provide nuanced yes/no evaluations accompanied by detailed justifications. This approach not only yields a reliable score but also captures the subtleties necessary for refining the AI&#39;s performance. The process involves iterative prompt refinement to align the LLM&#39;s assessments with expert insights, ultimately driving data-driven results. The post concludes with a call to action for businesses to critically analyze their data, suggesting that the use of an LLM-as-a-Judge is a strategic tool to encourage such scrutiny.
+
+This summary encapsulates the key elements of the source document, highlighting the innovative approach to leveraging LLM-as-a-Judge systems for business improvement, the importance of expert critique, and the overarching theme of data-driven decision-making.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>精选的 Go 框架、库和软件列表</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>使用 fangs 的 Go 配置</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - 任何编程语言🚀的基础设施即代码</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 快速简单的视频下载库和用 Go 编写的 CLI 工具</p>
+
+<p><a href="https://github.com/xjasonlyu/tun2socks">xjasonlyu/tun2socks</a><br>tun2socks - 由 gVisor TCP/IP 堆栈提供支持</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>一个反向代理，提供对 Google、Azure、OpenID Connect 和更多身份提供商的身份验证。</p>
+
+<p><a href="https://github.com/moonD4rk/HackBrowserData">moonD4rk/HackBrowserData</a><br>提取和解密浏览器数据，支持多种数据类型，可在各种操作系统（macOS、Windows、Linux）上运行。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/hashicorp/packer">hashicorp/packer</a><br>Packer 是一种工具，用于从单个源配置为多个平台创建相同的机器映像。</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>适用于去中心化 Web 🌈💎✨ 的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>市场上最具可扩展性和可自定义性的身份服务器。用更好的 UX 和 DX 替换您的 Homegrown、Auth0、Okta、Firebase。拥有所有筹码：Passkeys、Social Sign In、Multi-Factor Auth、SMS、SAML、TOTP 等。用 Go 编写，云原生、无头、API 优先。作为 Ory Network 上的一项服务提供，并供自托管者使用。</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics：快速、经济高效的监控解决方案和时间序列数据库</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq 是一个可移植的命令行 YAML、JSON、XML、CSV、TOML 和属性处理器</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock 是 Go 编程语言的模拟框架。</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin 是用 Go （Golang） 编写的 HTTP Web 框架。它具有类似 Martini 的 API，性能要好得多 - 速度提高了 40 倍。如果您需要出色的性能，请给自己买点杜松子酒。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260205.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260205</span>
+</p>
+<p>每日一谚：return early, return often. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/05/ai-code-quality-surpasses-80-percent-of-human-programmers">承认吧，AI 写的代码，平均质量已经超过了 80% 的人类程序员！</a><br>如果我们摘下“幸存者偏差”的滤镜，从全局视角的大数定律来看，一个残酷的真相正在浮出水面：AI 写的代码，虽然缺乏神韵，但其平均质量，可能已经超越了80%的人类程序员。</p> 
+
+<p><a href="https://tonybai.com/2026/02/05/brad-fitzpatrick-cachelink-reduce-go-test-wait-time">大项目构建太慢？Brad Fitzpatrick 提议引入 -cachelink 降低测试等待时间</a><br>对于代码量巨大的项目，链接过程往往是构建链条中最耗时的一环。为了解决这一痛点，Go 社区领袖、Tailscale 核心开发者 Brad Fitzpatrick 近日提交了 #77349 提案，建议引入 -cachelink 标志。这一看似微小的改动，有望在分布式测试和重复执行场景下，显著“挤出”原本被浪费的等待时间。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/SocketConnectToAnyMeaning">TCP 和 UDP 中连接到 INADDR_ANY 的含义</a><br>以前，使用 connect() 或 sendto() 向 INADDR_ANY 发送数据会连接到绑定到某个主机接口地址的套接字。虽然这是有意为之，但那是过去时代的产物，现在已不再适用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/getting-the-main-thing-right/">Getting the main thing right</a><br>The article argues that in a tech company setting, the most critical factor for success—often outweighing other flaws—is reliably shipping projects to increase shareholder value and satisfy management. This aligns with the Pareto principle, where focusing on this &#39;main thing&#39; yields disproportionately large benefits. The author suggests identifying the &#39;main thing&#39; requires careful observation of successes and failures, especially unexpected ones, and notes that this focus can be difficult to maintain if one dislikes the goal itself. Furthermore, the &#39;main thing&#39; is context-dependent and can change rapidly (e.g., shifting from being &#39;easy to work with&#39; to &#39;delivering projects&#39;), highlighting the need to hedge bets by being competent in multiple areas rather than over-specializing.</p>
+
+<p><a href="https://www.docker.com/blog/atlassian-remote-mcp-server-getting-started-with-docker/">Atlassian MCP Server: Get Started Quickly with Your Favorite Agent</a><br>This article details how to quickly set up and use the remote Atlassian Rovo MCP server via Docker&#39;s MCP Catalog and Toolkit. This integration allows AI assistants to connect to Jira and Confluence for workflow automation with just a few clicks, eliminating complex manual setup. The post covers prerequisites, the one-click enablement process in Docker Desktop, benefits like seamless OAuth authentication, and compatibility with various AI clients like Claude Desktop, Codex, and Gemini CLI. Future enhancements for sharing complete Atlassian-based workflows are also mentioned.</p>
+
+<p><a href="https://simonwillison.net/2026/Feb/2/introducing-the-codex-app/">Introducing the Codex app</a><br>OpenAI 发布了一款新的 macOS 应用，用于其 Codex 编程代理。作者在预览后表示，这是一个可靠的应用，为 Codex CLI 代理的功能提供了一个良好的用户界面，并增加了值得注意的新功能，特别是对“技能 (Skills)”和用于运行计划任务的“自动化 (Automations)”的一流支持。该应用使用 Electron 和 Node.js 构建，自动化状态存储在 SQLite 数据库中。OpenAI 透露，自 GPT-5.2-Codex 推出以来，Codex 的整体使用量翻了一番，过去一个月有超过一百万开发者使用过 Codex。目前自动化仅在笔记本电脑开机时运行，云端自动化即将推出。OpenAI 表示，Codex 的设计初衷是成为一个强大的通用智能体，而不仅仅是一个编程工具，这与 Claude Code 转向 Cowork 类似。</p>
+
+<p><a href="https://nesbitt.io/2026/02/04/package-management-at-fosdem-2026.html">2026 年 FOSDEM 上的软件包管理</a><br>总结了 2026 年 FOSDEM 上关于软件包管理的演讲，内容涵盖供应链安全、证明文件、SBOM、依赖解析以及跨多个开发室的发行版打包。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/02/04/conversing-with-large-language-models-using-dapr/">使用 Dapr 与大型语言模型对话</a><br>本文探讨了在分布式系统中操作微服务时遇到的挑战，例如重试和可观测性。文章重点介绍了 Dapr (Distributed Application Runtime) 如何通过侧链架构为这些问题提供抽象，使开发者能够专注于业务逻辑。具体来说，它展示了如何使用 Dapr 的对话构建块与不同的 LLM 提供商（如 Anthropic、OpenAI）进行交互，通过将 LLM 定义为 Dapr 组件来实现提供商之间的抽象和轻松切换。最后，文章通过一个 Java 示例演示了如何使用 Dapr 客户端进行对话调用。</p>
+
+<p><a href="https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/">没有显示？没问题：XR设备的跨设备密钥认证</a><br>Meta分享了一种为显示屏不可及的设备（如XR设备）启用跨设备密钥（Passkey）认证的新方法。该方法绕过了二维码的使用，无需设备自带显示屏即可实现跨设备认证，同时遵守了所有信任和邻近性要求。该方案基于FIDO联盟的工作成果，并已在Meta Quest设备上实现，旨在将安全的无密码认证推广到更广泛的设备生态系统。</p>
+
+<p><a href="https://www.dash0.com/blog/why-the-opentelemetry-batch-processor-is-going-away-eventually">OpenTelemetry 批处理器即将（最终）退役的原因</a><br>分析了 OpenTelemetry 社区为何从内存批处理器转向更具持久性的、基于导出的批处理。文章解释了 Collector 重启期间内存缓冲的架构限制、由此产生的数据丢失风险，以及在导出器级别批处理中如何通过持久化存储为生产遥测提供更好的持久性。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/28/introducing-kthena-llm-inference-for-the-cloud-native-era">Introducing Kthena: LLM inference for the cloud native era</a><br>The Volcano community is proud to announce the launch of Kthena, a new sub-project designed for global developers and MLOps engineers. Kthena is a cloud native, high-performance system for Large Language Model (LLM) inference routing, orchestration, and scheduling, tailored specifically for Kubernetes. It aims to solve critical challenges in LLM serving, such as low resource utilization and the latency/throughput trade-off, through features like topology-aware scheduling and PD (Prefill-Decode) disaggregation. Kthena integrates with existing inference engines like vLLM and SGLang, offering unified API management, intelligent routing, and cost-driven autoscaling.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://eli.thegreenplace.net/2026/rewriting-pycparser-with-the-help-of-an-llm/">使用LLM重写pycparser</a><br>本文作者描述了他如何与一个LLM（Codex）合作，将他最受欢迎的开源项目pycparser（一个C语言的Python解析器）中依赖的PLY（Python Lex-Yacc）替换为一个手动编写的递归下降解析器。主要动机是PLY依赖的废弃和自身解析器因C语言复杂性增加而产生的维护问题（大量的解析冲突）。作者利用pycparser详尽的测试套件作为LLM工作的目标函数，引导LLM完成了初始解析器重写，并通过后续迭代和人工干预优化了代码质量。最终结果是解析器速度提升了约30%，并且完全移除了PLY依赖。作者认为LLM在强类型语言中可能会更有效，并对未来代码质量和维护方式进行了思考。</p>
+
+<p><a href="https://www.zolkos.com/2026/02/04/deep-dive-how-claude-codes-insights-command-works.html">深入解析：Claude Code 的 /insights 命令的工作原理</a><br>本文深入解析了 Claude Code 中 `/insights` 命令的工作流程，该命令用于生成本地的、交互式的 HTML 报告，分析用户的 Claude Code 会话使用模式。分析流程包括数据收集、会话过滤、元数据提取、基于 LLM 的定性“方面（facets）”提取（使用 Haiku 模型）、聚合分析（通过多个专业提示词）、以及最终的 HTML 报告渲染。核心目标是帮助用户理解自己的交互模式、识别效率瓶颈并指导改进，所有分析都在本地完成，以确保隐私。</p>
+
+<p><a href="https://www.builder.io/blog/subagents">何时使用子智能体</a><br></p>
+
+<p><a href="https://spader.zone/engine">Claude Code 的渲染器比游戏引擎还复杂</a><br>本文通过将 Claude Code 的渲染性能与 1996 年的经典游戏《超级马力欧 64》进行比较，探讨了 Claude Code 渲染一个“帧”所消耗的巨大计算资源。作者通过分析系统调用（strace）发现，Claude Code 产生了大量的 `futex` 和 `sched_yield` 调用，表明其在大量的线程同步和自旋等待中浪费了计算周期。相比之下，一个 Node/Bun 程序的系统调用模式更健康，主要使用 `epoll_pwait` 等高效的等待机制。最终，作者计算出 Claude Code 渲染一个文本差异（diff）的帧所使用的指令数，比《超级马力欧 64》渲染一个 3D 世界的帧多出一个数量级，并反思了当前软件开发中对底层系统编程知识的遗忘和对应用层快速成功的追逐。</p>
+
+<p><a href="https://blog.xiangpeng.systems/posts/stop-building-agent-systems">请停止为智能体构建系统</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/autobrr/qui">autobrr/qui</a><br>A fast, single-binary qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS / MPEG-TS / RTP media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/korotovsky/slack-mcp-server">korotovsky/slack-mcp-server</a><br>The most powerful MCP Slack Server with no permission requirements, Apps support, GovSlack, DMs, Group DMs and smart history fetch logic.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

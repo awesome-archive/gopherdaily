@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260204.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260204</span>
+</p>
+<p>每日一谚：Sort your fields in your struct from largest to smallest </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/04/goodbye-container-heap-go-generic-heap-heap-v2-proposal">再见，丑陋的 container/heap！Go 泛型堆 heap/v2 提案解析</a><br>近日，Go 团队核心成员 Jonathan Amsterdam (jba) 提交了一份重量级提案 #77397，建议引入 container/heap/v2，利用泛型彻底重构堆的实现。在这篇文章中，我们就来简单解读一下这次现代化的 API 设计重构。</p> 
+
+<p><a href="https://tonybai.com/2026/02/04/openclaw-author-cli-ultimate-agent-interface-vs-mcp">忘掉 MCP？OpenClaw 作者说：CLI 才是 AI 连接世界的终极接口</a><br>最近，一个名为 OpenClaw（其前身是火遍全网的 Moltbot/Clawdbot）的开源项目，用一种极其“复古”的方式给所有人上了一课。其作者 Peter Steinberger 提出了一个极其犀利的观点：与其费力去对齐协议，不如直接回归 CLI（命令行）。在 OpenClaw 的世界里，要让智能体获得一项新能力——无论是控制智能家居、管理 WhatsApp 消息，还是操作云服务器——秘诀只有一个：写一个 CLI。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/PassingSecretsViaStdin">我更喜欢通过标准输入在程序之间传递密钥</a><br>https://utcc.utoronto.ca/~cks/space/blog/programming/PassingSecretsViaStdin</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-02-03-hosted-dolt-mcp/">通过 MCP 将您的托管 Dolt 实例连接到你的智能体</a><br>DoltHub 宣布现在可以在托管的 Dolt 实例上启用 Dolt MCP（实现 Anthropic MCP 协议的服务器），以便将它们连接到智能体工作负载。启用过程很简单，只需在托管 Dolt 的设置选项卡中勾选“暴露 MCP 服务器”复选框即可。启用后，Dolt MCP 会在几分钟内安装并启动。
+
+Dolt MCP 服务器在端口 8675 上运行，使用流式 HTTP，并要求客户端使用令牌进行身份验证。它通过一个名为 `mcp_user` 的特殊数据库用户连接到托管 Dolt 数据库，管理员需要为该用户授予必要的权限（例如对特定表的 SELECT 权限）。
+
+文章还提供了使用 Claude 智能体连接到托管 Dolt MCP 的示例，包括如何添加 MCP 服务器配置以及验证连接的过程。最终目标是简化开发人员在智能体应用程序中使用 Dolt 的过程，因为 Dolt 具有版本控制的特性，使其成为智能体工作负载的理想数据库。</p>
+
+<p><a href="https://tailscale.com/blog/welcome-ross-kukulinski">在一个复杂的世界中保持安全和简单</a><br>Tailscale的CEO谈论在满足日益多样化的客户需求方面所面临的挑战，以及新任产品副总裁的任命。
+
+随着我们的发展，越来越多的人在Tailscale之上构建关键系统。我们正面临双重压力：支持更多的用例和责任，同时保持简单、可预测并忠于我们的愿景。以下是我们如何思考这一问题，包括欢迎Ross Kukulinski担任产品副总裁。</p>
+
+<p><a href="https://www.pingcap.com/blog/introducing-tidb-skills/">为 TiDB 打造生产级 AI 编码：介绍 TiDB Skills</a><br>告别“在我机器上能跑”的 AI 错误。使用 TiDB Skills 为 AI 智能体提供生成可扩展、无热点和安全 SQL 所需的上下文。</p>
+
+<p><a href="https://www.haproxy.com/blog/properly-securing-openclaw-with-authentication">如何使用身份验证妥善保护 OpenClaw</a><br>OpenClaw（前身为 MoltBot，又名 ClawdBot）正在迅速普及，但其安全状况仍不为人知。本文档提供了一个使用 HAProxy 实施 HTTP 基本身份验证的步骤指南，以增强 OpenClaw 的安全性，包括安装 HAProxy、配置自动 TLS、基本身份验证、速率限制，以及如何在 OpenClaw 内部进行安全访问。最后，文章强调了多层防御的重要性，并提供了用于查看速率限制日志和解锁被阻止 IP 地址的命令。</p>
+
+<p><a href="https://www.docker.com/blog/the-3cs-a-framework-for-ai-agent-security/">The 3Cs: A Framework for AI Agent Security</a><br></p>
+
+<p><a href="https://blog.jim-nielsen.com/2026/saying-no/">在丰裕时代说“不”</a><br>文章探讨了在人工智能（AI）和技术使得“一切皆有可能”的时代背景下，史蒂夫·乔布斯关于“聚焦意味着对其他好主意说不”的理念是否仍然适用。作者指出，AI的出现消除了过去对时间和资源的物理限制，但真正的稀缺性已转向用户——他们的注意力、稳定性、清晰度和连贯性。因此，说“不”的理由不再仅仅是为了企业自身的效率或底线，而是为了保护和帮助用户应对过载的信息和选择。在丰裕时代，克制成为最稀缺的资源，使得说“不”比以往任何时候都更有价值。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/02/03/introducing-node-readiness-controller/">Introducing Node Readiness Controller</a><br></p>
+
+<p><a href="https://writing.nikunjk.com/p/loyalty-is-dead-in-tech">科技行业忠诚度已死</a><br>Adobe 阻止了对 Figma 的收购后，科技巨头们找到了旁门左道：授权技术，招募他们想要的人，抛弃其余的人。微软、亚马逊、谷歌都在采取同样的策略。与此同时，风险投资家（VCs）支持一个类别中的所有竞争对手。曾经让初创公司得以发展的誓言从未被写下，如今它已经死了。你应该小心选择，询问你的风险投资伙伴他们在该领域还投资了哪些其他公司，并了解数字的真正含义。虽然誓言已死，但“传教士”依然存在，找到他们从未如此重要。</p>
+
+<p><a href="https://www.repoflow.io/blog/node-js-16-to-25-benchmarks-how-performance-evolved-over-time">nodejs v16到v25版本的性能测试结果</a><br></p>
+
+<p><a href="https://spacelift.io/blog/kubernetes-rolling-update">Kubernetes 滚动更新以实现可靠部署</a><br>了解 Kubernetes 滚动更新策略的工作原理、如何安全使用它，并查看一个示例部署。Kubernetes 滚动更新允许您在部署新版本的应用程序时避免停机，通过增量替换旧 Pod 来保持应用程序的高可用性，确保在整个部署过程中不会拒绝流量。</p>
+
+<p><a href="https://www.infoq.com/news/2026/01/opencost-roadmap-2026">OpenCost roadmap 2026</a><br></p>
+
+<p><a href="https://grokkingthesystemdesign.com/guides/tiktok-system-design">TikTok系统设计</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Feb/3/introducing-deno-sandbox/#atom-everything">Introducing Deno Sandbox</a><br></p>
+
+<p><a href="https://nadh.in/blog/code-is-cheap">代码廉价</a><br></p>
+
+<p><a href="https://cacm.acm.org/blogcacm/openclaw-a-k-a-moltbot-is-everywhere-all-at-once-and-a-disaster-waiting-to-happen">OpenClaw（又名 Moltbot）无处不在，简直就是一颗定时炸弹。</a><br></p>
+
+<p><a href="https://www.fintechbrainfood.com/p/the-agentic-payments-map">智能体付费地图</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/autobrr/qui">autobrr/qui</a><br>A fast, single-binary qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向智能体,DDNS,WOL,ipv4 stun内网穿透,cron,acme,rclone,ftp,webdav,filebrowser</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>CLI tool for spawning and running containers according to the OCI specification</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/projectdiscovery/httpx">projectdiscovery/httpx</a><br>httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/quic-go/quic-go">quic-go/quic-go</a><br>A production-ready QUIC implementation in pure Go</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/hashicorp/terraform-mcp-server">hashicorp/terraform-mcp-server</a><br>The Terraform MCP Server provides seamless integration with Terraform ecosystem, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development.</p>
+
+<p><a href="https://github.com/NVIDIA/nvidia-container-toolkit">NVIDIA/nvidia-container-toolkit</a><br>Build and run containers leveraging NVIDIA GPUs</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/steveyegge/beads">steveyegge/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

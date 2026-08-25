@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260119.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260119</span>
+</p>
+<p>每日一谚：You often do not need frameworks in Go. What you need is a couple of pkgs to do your dirty work </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/17/go-rust-zig-simplicity-vs-control">Go, Rust 还是 Zig？一场关于“简单”与“控制”的灵魂拷问</a><br>在系统编程的世界里，开发者似乎总是面临着一个残酷的二选一：是选择极致的简单与生产力，还是选择绝对的控制与零成本抽象？ 这种纠结在 Go 与 Rust 的长期对峙中体现得淋漓尽致。然而，近日一位拥有十年 Go 经验的资深开发者在Zig社区的分享，似乎为这场二元对立的战争撕开了一道口子。他从 Go 迁移到 Zig 的经历，既是一个技术选型的故事，也是一场关于“我们到底需要什么样的编程语言”的深度辩论。</p> 
+
+<p><a href="https://tonybai.com/2026/01/19/unleashing-the-go-toolchain">Go 语言的“魔法”时刻：如何用 -toolexec 实现零侵入式自动插桩？</a><br>在 GopherCon UK 2025 上，来自 DataDog 的资深工程师 Kemal Akkoyun 给出了肯定的答案， 他通过挖掘 Go 工具链中一个鲜为人知的特性，不仅实现了这一目标，还将其开源为一个名为 Orchestrion的工具。今天，就让我们一起揭秘这背后的“黑魔法”。</p> 
+
+<p><a href="https://tonybai.com/2026/01/18/go-cryptography-principles">Go 官方密码学原则：为什么 Go 的 Crypto 库难以被“用错”？</a><br>在软件工程领域，密码学（Cryptography）通常被视为“高危禁区”。大多数语言的建议都是“不要自己写密码学代码”，甚至“不要自己组合密码学原语”。 然而，Go 语言打破了这一魔咒。Go 的标准库 crypto/... 以及扩展库 golang.org/x/crypto/... 被公认为业界最安全、最易用的密码学实现之一。这并非巧合，而是源于 Go 官方制定并严格遵守的一套《密码学设计原则》。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/01/12/dancing-backwards-with-go">Dancing Backwards With Go</a><br>John Arundel&#39;s article shows you how writing tests first helps build a correct Go function, catch bugs early, and refactor safely using clear, simple steps. The article encourages a test-driven development approach, humorously framed as &#39;dancing backwards&#39; (like Ginger Rogers) compared to traditional coding (like Fred Astaire), to ensure code correctness through continuous testing.</p> 
+
+<p><a href="https://mazzo.li/posts/go-asm-pointers.html">如何在汇编中存储 Go 指针</a><br>Go 工具链自带一个汇编器，它使用继承自 Plan 9 的语法，并且 Go 带有垃圾回收器。本文解释了如何在希望从汇编代码中操作 Go 指针时，让这两者协同工作。文章详细介绍了 Go GC 的写屏障机制（包括早期的全停顿重扫描和后来的更宽的写屏障），以及在汇编中存储指针时如何手动调用运行时提供的写屏障函数（如 `runtime.gcWriteBarrier2`）以避免破坏 GC 不变量。最后，文章还提供了一个实用的技巧，用于在 Go 中分配 128 位对齐的内存，以便利用 AVX 指令。</p> 
+
+<p><a href="https://nightsnest.hashnode.dev/watchdog-lessons-from-building-a-monitoring-system-in-go">使用Go构建监控watchdog的的经验教训</a><br></p> 
+
+<p><a href="https://popovicu.com/posts/writing-your-first-compiler">编写你的第一个编译器</a><br>本文介绍如何使用最小、高级、现代的代码构建你的第一个编译器。仅用几行 Go 和 C 代码，作者建立了一个动态获取所需一切（包括 LLVM 库本身）并构建便携式编译器的流程。这是一种现代、可复现的堆栈，让你无需阅读数十页文档即可入门。该编译器使用 Go 进行解析，并通过 cgo 调用 LLVM C API 来生成 x86_64 目标文件，用于评估加法和乘法表达式。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://rmoff.net/2026/01/14/alternatives-to-minio-for-single-node-local-s3">MinIO的替代方案：用于单节点本地S3</a><br>由于MinIO背后的公司决定放弃其项目，本文探讨了用于单节点本地S3存储的替代方案。作者着重于寻找满足以下条件的解决方案：提供Docker镜像、兼容S3、采用开源（如Apache 2.0）许可证、易于单节点部署，并拥有活跃的社区或商业支持。测试的替代方案包括S3Proxy、RustFS、SeaweedFS、Zenko CloudServer、Garage和Apache Ozone，并最终推荐了SeaweedFS和S3Proxy，因为它们在配置简单性方面表现最佳，更适合作为本地演示的快速替代品。</p>
+
+<p><a href="https://overreacted.io/a-social-filesystem">社交文件系统</a><br></p>
+
+<p><a href="https://www.robinlinacre.com/recommend_duckdb">为什么DuckDB是我进行数据处理的首选</a><br>本文介绍了作者为什么越来越倾向于使用DuckDB进行数据处理，并列举了DuckDB的几个核心优势：安装简单、无依赖、速度快、对CI/测试友好、SQL方言友好（如EXCLUDE、COLUMNS关键字）、支持多种文件格式的快速查询（如Parquet、CSV）、以及ACID合规性。作者认为对于大多数单机可处理的数据集，DuckDB是比集群方案更优的选择。同时提到了社区扩展和文档的便利性，并展望了PostgreSQL扩展的未来潜力。</p>
+
+<p><a href="https://evanhahn.com/i-set-all-376-vim-options-and-im-still-a-fool">我设置了所有 376 个 Vim 选项，但我仍然是个笨蛋</a><br>作者设置了 Vim 的所有配置选项，但仍感觉离精通很远。通过这个过程，他学到了很多关于 Vim 的知识，包括如何使用外部命令、Vim 文档的质量问题、文件写入机制、命令行窗口的用途、插入模式下的二合字母（digraphs）、条件设置选项的方法、Vim 与 Neovim 的区别，以及 Vim 最初的名字是“Vi IMitation”。尽管学习良多，作者依然表示自己在使用中仍会犯错，并得出结论：真正的 Vim 流利度可能是一种幻想，对他而言，Vim 中总有更多值得学习的地方。</p>
+
+<p><a href="https://ebpf.party">交互式eBPF教程</a><br>通过动手练习学习 eBPF。直接在浏览器中编写、编译和运行程序。页面列出了四个章节的练习列表，包括 eBPF 简介、概念熟悉、有状态 eBPF 和内核探针（Kernel probes）。</p>
+
+<p><a href="https://opensource.guide/how-to-contribute">如何为开源做贡献</a><br>想为开源做贡献吗？这是一份为新手和老手准备的，关于如何进行开源贡献的指南。文章详细阐述了贡献开源的各种益处（如改进软件、学习技能、建立人脉、获得导师、建立声誉、学习人际交往技巧以及获得赋权感），并强调贡献不一定局限于代码，还包括活动策划、设计、写作、组织和帮助他人等多种形式。指南还提供了如何了解一个新项目（包括项目结构和关键文档），如何寻找合适的项目，以及如何有效地提交贡献（包括沟通技巧、收集背景信息、开启Issue和提交Pull Request）的实用建议。最后，文章还说明了提交贡献后可能发生的情况（未获回复、被要求修改、未被接受或被接受）。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1053099/19c2e8180aeb0438">一个用于Linux的免费开源rootkit</a><br>尽管市面上有针对Linux的rootkit，但它们尚未完全拥抱Linux软件所典型的开源精神。Matheus Alves创建了一个名为Singularity的开源rootkit来弥补这一不足。该rootkit是一个内核模块，可用于远程代码执行、禁用安全功能以及隐藏文件和进程。Singularity利用内核的Ftrace机制来挂钩系统调用函数，以隐藏其自身的存在、受攻击者控制的进程、网络通信和文件。它通过修改目录条目和inode链接计数来隐藏文件，并过滤对/proc中进程文件的读取操作以及系统日志中可疑字符串的读取。它还通过挂钩内核的收包代码来隐藏特定端口的网络活动。该工具仅支持x86和x86_64架构，并对32位和64位系统调用接口都进行了处理以保持兼容性。作者强调，Singularity主要是一个安全研究的试验台，并呼吁用户“成为研究人员，而不是罪犯”。</p>
+
+<p><a href="https://decodeclaude.com/ultrathink-deprecated">UltraThink 已死，长久以来是扩展思考。</a><br>Claude 的“ultrathink”魔术关键词已被弃用，但新的“扩展思考”（Extended Thinking）功能已自动启用，为支持的模型（如 Opus 4.5、Sonnet 4.5 等）默认提供 31,999 个思考令牌。文章揭示了一个隐藏技巧：通过设置环境变量 MAX_THINKING_TOKENS=63999，可以在支持 64K 输出的模型上获得两倍于默认值的思考预算（63,999 令牌），这对于复杂的系统设计和深度分析非常有用。同时，文章解释了思考令牌（测试时计算）在突破 Transformer 架构计算限制和提升复杂推理能力方面的理论基础和行业应用趋势。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/19/scaling-long-running-autonomous-coding/#atom-everything">Scaling long-running autonomous coding</a><br>Wilson Lin at Cursor has been experimenting with a large fleet of &#34;autonomous&#34; coding agents, coordinating hundreds of them on a single project to write over a million lines of code. They used planners and sub-planners to create tasks for worker agents, with a judge agent overseeing the completion. As a demanding test case, the agents were tasked with building a web browser from scratch. Although initial reports met skepticism due to failing CI builds, the README was quickly updated. The author successfully built and ran the resulting browser, FastRender, which produced legible but visibly glitchy renderings of websites like google.com and the author&#39;s own blog, demonstrating surprising capability achieved quickly, potentially beating the author&#39;s prior 2029 prediction for such AI-assisted projects.</p>
+
+<p><a href="https://www.alilleybrinker.com/mini/gas-town-decoded">Gas Town 解码</a><br>本文旨在解释 Steve Yegge 实验性 AI 智能体编排系统 Gas Town 中使用的内部术语，以帮助揭开其神秘面纱。文章提供了一个术语表，将 Gas Town 中的专有术语（如 Town, Rig, Overseer, Mayor, Polecat 等）翻译成更通用的现实世界术语（如 Workspace, Project, User, Manager Agent, Worker Agent 等），使读者更容易理解该系统。</p>
+
+<p><a href="https://www.letta.com/blog/benchmarking-ai-agent-memory">AI 智能体记忆基准测试：文件系统是否已足够？</a><br>摘要：Letta 智能体通过简单地将对话历史存储在文件中，在 LoCoMo 基准测试中取得了 74.0% 的准确率，超过了专门的记忆工具库。这表明：1) 当前的记忆基准测试可能意义不大，2) 记忆更多关乎智能体如何管理上下文，而非确切的检索机制。文章探讨了 AI 智能体记忆的局限性、现有记忆工具的局限性，以及为什么文件系统（Letta Filesystem）表现优异，并提出了评估智能体记忆的更合理方法。</p>
+
+<p><a href="https://kyutai.org/blog/2026-01-13-pocket-tts">Pocket TTS: 一种可以在CPU上运行的高质量、带有语音克隆的TTS</a><br>Pocket TTS 是一种微型文本转语音（TTS）模型，可以实现任何你喜欢的语音克隆，并且能够在CPU上运行。该网页是Kyutai团队于2026年1月13日发布的一篇博客文章，其描述为“A tiny TTS with any voice you like.”（一个带有任何你喜欢的声音的微型TTS）。</p>
+
+<p><a href="https://pieterma.es/syntopic-reading-claude">使用 Claude Code 跨书籍阅读</a><br>本文介绍了一种使用 Claude Code 代理从 100 本非虚构书籍的库中挖掘和连接有趣思想（即“线索”/trails）的方法，旨在探索大型语言模型如何丰富而非简化阅读体验。文章展示了一个关于从乔布斯、Theranos 到大众运动社会心理学的思想链示例，并详细介绍了该系统的实现方式，包括数据处理、主题提取、嵌入和使用 DSPy 框架进行代理工作流的构建。作者强调了 Claude Code 在非编码任务中的强大能力，以及通过提供更好的工具来协助代理工作流所带来的效率提升和创作视野的拓宽。</p>
+
+<p><a href="https://addyosmani.com/blog/good-spec">如何为AI Agent撰写好的规范</a><br>本文提出了一个关于如何为AI编码代理撰写有效规范的框架，以提高AI驱动开发工作流程中的清晰度、专注度和生产力。核心原则包括：从高层愿景开始，让AI起草细节；像专业的PRD（产品需求文档）一样构建规范的结构，涵盖命令、测试、项目结构、代码风格、Git工作流和边界等六个核心领域；将任务分解为模块化的提示和上下文，而不是一个庞大的提示；在规范中内置自我检查、约束和人类专业知识（如使用三层边界：总是做/先询问/绝不）；并将规范编写视为一个迭代循环：尽早测试、收集反馈、精炼规范，并利用工具（如Git和测试框架）来自动化验证。重点是保持规范清晰、结构化，并作为与AI协作的“活文档”。</p>
+
+<p><a href="https://johncodes.com/archive/2026/01-18-all-your-opencodes">你们所有的 OpenCodes 都属于我们</a><br>最近，一个非常流行的开源AI编码代理 OpenCode 遭受了大规模的CVE（CVE-2026-22812），该漏洞允许任意远程代码执行（RCE）。作者以其在 Bottlerocket OS 上的经验为例，说明了 RCE 漏洞的严重性及其修复的紧迫性。OpenCode 的漏洞远比作者之前遇到的涉及 X.509 证书的 RCE 案例更危险、更容易利用，因为它通过暴露的 HTTP 端点（如 `POST /session/:id/shell`）允许执行任意 shell 命令，并且还容易受到提示注入的攻击。作者强调，这种漏洞暴露了当前 AI 代理缺乏必要的遥测和审计工具的问题，导致用户无法了解其代理在本地机器上执行操作的真实影响，并呼吁行业立即建立针对 AI 代理的遥测和仪表盘基础设施，以应对快速发展的 AI 带来的安全风险。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/memodb-io/Acontext">memodb-io/Acontext</a><br>Data platform for context engineering. Context data platform that stores, observes and learns. Join the community❤️: https://discord.acontext.io</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/iyear/tdl">iyear/tdl</a><br>📥 A Telegram toolkit written in Golang</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/AlistGo/alist">AlistGo/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>Glamourous agentic coding for all 💘</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>Simple and easy to use DDNS. Support Aliyun, Tencent Cloud, Dnspod, Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, Namecheap, NameSilo...</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

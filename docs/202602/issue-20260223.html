@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260223.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260223</span>
+</p>
+<p>每日一谚：The bigger the interface, the weaker the abstraction </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/15/go-core-team-rejects-ai-authorship">拒绝 AI 署名！Go 核心团队在 AIGC 时代划下的“工程红线”</a><br>在生成式 AI 狂飙突进的 2026 年，编程似乎变得前所未有的容易。Claude Code、Gemini Cli、Codex等 已经成为开发者的标配。然而，技术便利的背后，模糊的责任边界正在侵蚀软件工程的根基。 近日，在 Go 语言这个以“简单、可靠、高效”著称的开源圣殿里，核心团队被迫画下了一道红线。 起因是一个特殊的 CL（Change List 741504），提交者在描述中赫然写道：“Co-Authored-By: Claude Opus 4.5 &lt;noreply@anthropic.com&gt;”。这行看似“诚实”的署名，瞬间触动了 Go 语言之父 Rob Pike、Ian Lance Taylor 以及 Russ Cox 等大佬的神经。</p> 
+
+<p><a href="https://tonybai.com/2026/02/22/go-1-26-go-mod-init-downgrade-collision-review">“你装了 Go 1.26，却写不了 Go 1.26 的代码？”——复盘 go mod init 的降级风波</a><br>你没有看错。在 Go 1.26 中，go mod init 默认生成的不再是你当前正在使用的工具链版本（1.N），而是退回了一个大版本（1.N-1）。如果 你使用的是 RC 预览版，它甚至会退回两个版本（1.N-2）。 要想使用新特性，你必须手动去修改 go.mod，或者再多敲一行命令：go get go@1.26.0。 这个打破了所有 Go 开发者十年肌肉记忆的改动，迅速在 GitHub 上引爆了争议。在 Issue #77653 中，社区与 Go 核心团队展开了一场火药味十足的“大辩论”。</p> 
+
+<p><a href="https://tonybai.com/2026/02/23/financial-infrastructure-rust-to-go-pragmatism-victory/">金融级基础设施重构：放弃 Rust 拥抱 Go，务实主义的最终胜利？</a><br>近日，在 Reddit 的 r/golang 社区中，一场由 Python 开发者发起的关于“金融基础设施长期演进：Go 还是 Rust？”的技术讨论引发了广泛关注。这位开发者试图为机器学习（ML）流水线、 分布式后端和内部 DevOps 工具选择一门强类型语言，并一度陷入了“是否应该同时学习两者”的焦虑中。 这场社区讨论不仅揭示了两种语言在现代架构中的真实定位，更展现了 Go 社区一贯的“务实主义”工程哲学。本文将深度提炼这场讨论的核心观点， 为正处于技术选型十字路口的架构师和开发者提供极具价值的参考。</p> 
+
+<p><a href="https://tonybai.com/2026/02/19/using-go-fix-to-modernize-go-code/">Go 1.26 重磅更新：用 go fix 重塑代码现代化的艺术</a><br></p> 
+
+<p><a href="https://tonybai.com/2026/02/20/why-we-need-new-go-module-review-mechanism">别再轻信 GitHub 上的源码：为何我们需要全新的 Go 模块审查机制？</a><br></p> 
+
+<p><a href="https://tonybai.com/2026/02/23/cloudflare-bgp-withdrawal-outage-go-post-mortem">一行 Go 代码瘫痪 6 小时！复盘 Cloudflare BGP 路由撤回灾难</a><br></p> 
+
+<p><a href="https://modern-c.blogspot.com/2026/02/taming-regex-monster-optimizing-massive.html">驯服正则表达式怪兽：优化大规模字面值替换</a><br></p> 
+
+<p><a href="https://blog.scrapelens.com/scraping-javascript-rendered-pages-in-go">使用Go抓取js动态渲染的页面</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/insider-amnesia/">局内人健忘症</a><br>这篇文章讨论了人们在评论科技公司内部问题时的倾向性错误判断，即“局内人健忘症”（Insider amnesia），类似于“盖尔-曼健忘症”。作者指出，外界对公司内部运作的猜测往往是荒谬的，因为他们缺乏第一手信息。即便是行业专家，当他们评论自己专业领域之外（或在当前公司体系之外）的问题时，也容易犯错。作者以一个GitHub Actions代码错误的事件为例，说明局外人对大型科技公司软件开发流程的理解偏差，并强调了不同规模公司间的差异性。</p>
+
+<p><a href="https://martinalderson.com/posts/which-web-frameworks-are-most-token-efficient-for-ai-agents/">哪些Web框架对AI智能体的Token效率最高？</a><br>作者对19个Web框架进行了基准测试，衡量AI编码智能体构建和扩展同一应用程序的效率。结果显示，最小化框架比功能齐全的框架最多可以节省2.9倍的Token。Minimal API框架在智能体处理时更快、更具成本效益。SvelteKit和Django在功能齐全的框架中表现出色。</p>
+
+<p><a href="https://www.gingerbill.org/article/2026/02/19/choosing-a-language-based-on-syntax">基于语法选择编程语言？</a><br>作者对人们仅凭语言的声明语法（而非语义）来判断和选择一门语言的做法感到困惑。他将声明语法分为类型导向、名称导向和限定符导向三类，并认为在语义清晰的情况下，改变声明语法对语言的本质影响很小。作者还讨论了分号的使用（及其在Odin中的可选性），并认为许多对语法的批评源于第一接触偏见，或是对解析和语言底层机制的不了解。他强调编程语言的语义才是基础，语法只是为了阅读方便，并建议语言设计者忽略那些基于非本质语法特征的意见。</p>
+
+<p><a href="https://ntietz.com/blog/til-docker-log-rotation">Docker 日志轮转 </a><br>作者分享了自己因为 Docker 容器日志未自动轮转而耗尽服务器磁盘空间（25GB）的经历。通过 `docker inspect` 发现日志配置缺失，随后在 `/etc/docker/daemon.json` 中配置了 `json-file` 日志驱动，设置了 `max-size` 为 100m 且 `max-file` 为 3，以限制日志文件大小和数量。配置生效需要重启 Docker 守护进程并重新创建现有容器。文章最后提醒读者注意日志管理。</p>
+
+<p><a href="https://prometheus.io/blog/2026/02/14/modernizing-prometheus-composite-samples">现代化 Prometheus：复合类型的原生存储</a><br>这篇文章探讨了 Prometheus 社区在存储层面上向完全复合类型模型演进的雄心壮志，重点介绍了原生存储对于复合类型（如直方图、Summary 和 SetState）的意义。文章对比了传统的“原始”样本表示法与新的“原生”复合样本表示法，强调了原生存储在效率、功能性、事务性和可靠性方面带来的优势。尽管向原生存储的过渡需要时间，并涉及对 PromQL 等消费层面的兼容性调整，但社区正在积极推动这一方向，例如通过 NHCB（原生直方图自定义桶）概念，并计划在 OpenMetrics 2.0 和 Remote Write 2.0 中实现更透明的复合类型支持，以期最终弃用经典模型，使 Prometheus 更加可持续和强大。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/02/04/conversing-with-large-language-models-using-dapr">使用 Dapr 与大型语言模型进行对话</a><br>该博文介绍了如何利用 CNCF 主持的 Dapr（分布式应用运行时）的“对话”构建块来简化与不同大型语言模型 (LLM) 提供商（如 Anthropic、OpenAI 等）的交互。通过将 LLM 定义为 Dapr 组件，应用程序开发者可以专注于提示和工具调用，而 Dapr 运行时负责处理提供商特定的实现、API 交互、重试逻辑和认证等复杂性。文章以一个使用 Dapr Java SDK 演示 LLM 对话的示例代码结束，强调了这种抽象如何简化多 LLM 支持的开发工作。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Feb/22/ccc/#atom-everything">Claude C 编译器：它揭示了软件的未来</a><br>文章讨论了 Anthropic 的 Nicholas Carlini 关于使用并行 Claude 模型构建 C 编译器的项目（CCC），以及这一进展对软件未来的启示。该项目利用 Opus 4.6 模型来生成 C 编译器代码。文章引用了 Chris Lattner（Swift, LLVM 的创建者）的评论，他认为 AI 极大地增强了软件开发中判断、沟通和清晰抽象的重要性，使设计和管理变得更为关键。尽管 CCC 被评价为类似一个优秀的本科生项目实现，但 Lattner 也指出它在构建通用抽象方面存在不足，表明当前 AI 擅长组装已知技术并优化可衡量目标，但难以实现生产级系统的开放式泛化。此外，该项目引发了关于 AI 生成代码的许可和知识产权的深入讨论。</p>
+
+<p><a href="https://www.anthropic.com/research/measuring-agent-autonomy">测量实践中人工智能智能体的自主性</a><br>本文分析了数百万次人类与智能体的互动，以了解人们在现实世界中如何使用智能体，以及他们授予智能体多少自主权。研究发现，Claude Code 的自主工作时间在增加，经验丰富的用户更频繁地自动批准操作，但中断也更频繁。Claude 在任务复杂时会更频繁地暂停以征求澄清。尽管智能体正在用于高风险领域，但尚未形成规模。文章最后建议模型和产品开发者应投资于部署后监控，并设计支持用户监督的交互模式。</p>
+
+<p><a href="https://www.anthropic.com/news/claude-sonnet-4-6">介绍 Claude Sonnet 4.6</a><br>Claude Sonnet 4.6 是目前最强大的 Sonnet 模型，全面升级了其在编码、计算机使用、长上下文推理、智能体规划、知识工作和设计等方面的技能。Sonnet 4.6 还推出了具有 100 万个 token 上下文窗口的测试版。对于免费和专业版用户，Claude Sonnet 4.6 已成为 claude.ai 和 Claude Cowork 的默认模型，定价与 Sonnet 4.5 相同。该模型在编码技能、一致性、指令遵循以及计算机使用方面取得了显著进步，其性能在某些方面可媲美甚至超越了之前的 Opus 级别模型。Anthropic 进行了广泛的安全评估，结果显示 Sonnet 4.6 的安全性与现有模型相当或更安全。</p>
+
+<p><a href="https://www.mackenziemorehead.com/the-fickleness-of-scaling-laws">扩展定律的反复无常</a><br>或者说，基础模型的基石。在过去五年中，没有什么比扩展定律更能定义科技领域了。大型语言模型（LLM）在扩展到惊人的规模时展现出了一致的回报，并打破了“规模越大，产品越有用，就能募集更多资金，从而实现更大规模”的正反馈循环。此后，“更大=更好”这个空洞但被普遍重复的口号被应用到了每一个可以想象的领域。然而，除了LLM之外，很少有其他领域的团队能够以有影响力的规模令人信服地证明扩展定律的有效性。本文探讨了扩展定律的理论基础、鲁棒扩展的先决条件和最佳实践，以及不同领域扩展定律的差异和挣扎，例如生物结构模型、DNA和蛋白质语言模型、虚拟细胞模型和机器人技术。</p>
+
+<p><a href="https://www.cjroth.com/blog/2026-02-18-building-an-elite-engineering-culture">构建精英级 AI 工程文化于 2026 年</a><br>AI 加速了高性能组织的发展，并揭示了挣扎中的组织的不足。本文探讨了在 2026 年，精英级 AI 工程文化的核心要素，包括：AI 是能力的放大镜而非均衡器（对高级工程师的增益更大）、Spec-Driven Development（规范驱动开发）、设计工程化（Design Engineering）、小批量提交（Stacked PRs）、以周期时间而非故事点衡量效率、以及倡导清晰的书写文化（面向人类和机器）。核心理念是：精英团队通过“品味 × 纪律 × 杠杆”的乘法公式实现效率的指数级增长。</p>
+
+<p><a href="https://www.kasava.dev/blog/ai-as-exoskeleton">不要将人工智能视为同事，它是一种外骨骼</a><br>将人工智能视为自主智能体的公司感到失望。而将人工智能视为增强人类能力的“外骨骼”的公司，则看到了变革性的成果。本文提出了这个框架，并通过制造、军事、医疗和跑步等领域的实际应用（如福特、宝马、萨科斯和哈佛大学的研究）来说明，外骨骼模型强调的是**增强**人类能力，而不是取代人类。在产品开发中，这意味着AI应深入分析和提供洞察，但最终决策权仍掌握在人类手中。Kasava 通过其“产品图谱”结合了自动化深度和人为判断，实现了这种“外骨骼”式的产品开发辅助。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>✨ Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>An IPFS implementation in Go</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>An open-source AI-first Identity and Access Management (IAM) /AI MCP gateway and auth server with web UI supporting MCP, A2A, OAuth 2.1, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, Google Workspace, Azure AD</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. Its modular and versatile design satisfies a broad range of industry use cases. It offers a unique approach to consensus that enables performance at scale while preserving privacy.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The to-do app to organize your life.</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>AI Trading OS: Multi-AI, multi-exchange trading infrastructure with Strategy Studio.</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

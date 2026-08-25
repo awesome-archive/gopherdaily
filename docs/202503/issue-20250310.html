@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250310.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250310</span>
+</p>
+<p>每日一谚：Start with concrete types first. Let interfaces emerge organically </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://prasanthmj.github.io/ai/mcp-go">让我们用Go实现一个MCP服务器</a><br>本文介绍了如何使用 Go 语言创建一个 MCP 服务器，该服务器连接到 Stable Diffusion API 生成图像。文章首先回顾了 MCP 的基本概念，然后详细解释了使用 Go 语言实现 MCP 服务器的步骤，包括处理初始化请求、列出工具、处理工具调用以及处理超时和取消通知。文章还讨论了在与 Claude 集成过程中遇到的有趣现象，例如 Claude 如何增强提示以获得更好的图像生成结果，以及如何处理 OpenAI 的内容过滤器。最后，文章提供了改进服务器的建议，并提供了 GitHub 链接，其中包含完整的源代码。</p> 
+
+<p><a href="https://dmitri.shuralyov.com/idiomatic-go">Go惯用的编程风格</a><br>这篇博文是 Dmitri Shuralyov 对惯用 Go 编程风格和最佳实践的补充说明。它包含一系列关于 Go 代码风格的建议，并附有理由和参考链接，例如一致的拼写、句子之间的空格、错误变量命名、品牌或单词的大小写、注释风格、代码库/文件夹命名、方法接收器命名、空字符串检查、互斥锁的使用以及 flag.Usage 中 os.Exit(2) 的使用等。</p> 
+
+<p><a href="https://medium.com/@sharmavivek1709/building-a-scalable-object-storage-solution-with-golang-and-minio-b0080c4e41db">使用Go和MinIO构建可扩展的对象存储解决方案</a><br>MinIO 是一个开源的高性能对象存储，兼容 Amazon S3 API，专注于云原生应用的可扩展性、持久性和易用性。本文将使用 Docker 启动 MinIO，并使用 Go 语言对其进行多种操作，包括创建桶、上传文件、下载文件和列出桶中的对象。</p> 
+
+<p><a href="https://medium.com/@mcgeehan/redefining-data-engineering-with-go-and-apache-arrow-df9059ddf55c">使用 Go 和 Apache Arrow 重新定义数据工程</a><br>几十年来，数据工程一直建立在一个从未为现代硬件设计的基础之上。传统的基于行的数据库、序列化数据格式和网络密集型工作流给本应非常快速的数据移动和转换带来了人为瓶颈。即使在今天，大多数 ETL 管道仍然依赖于：基于行的数据库、序列化格式（JSON、Avro、Protocol Buffers）以及 I/O 瓶颈。本文探讨了如何使用 Go 和 Apache Arrow 来解决这些问题，实现零拷贝、列式、高性能的数据移动。</p> 
+
+<p><a href="https://k33g.hashnode.dev/building-a-generative-ai-mcp-client-application-in-go-using-ollama">使用go和ollama构建一个基于大模型的mcp client应用</a><br></p> 
+
+<p><a href="https://medium.com/@4252737/solving-the-large-openapi-specification-problem-in-golang-a-modular-approach-e87852c28256">Go语言中解决大型OpenAPI规范问题：模块化方法</a><br>我们遇到了一个庞大的5000多行OpenAPI规范文件，它很快变得难以管理。我们使用自己的Go库将其分解成多个较小的文件，开发速度提高了一倍，使用API也变得更加舒适。</p> 
+
+<p><a href="https://dev.to/iw4p/how-timeafter-can-cause-memory-leaks-in-go-and-how-to-fix-them-1kg3">Go语言中time.After()如何导致内存泄漏以及如何修复</a><br>本文讲述了作者在使用Go语言的tonutils-go库与TON区块链交互时，发现time.After()函数导致内存泄漏的问题。文章详细描述了排查过程，指出问题根源在于time.After()创建的资源未被垃圾回收，并提供了解决方案：使用带有上下文的time.NewTimer()来确保定时器得到正确管理和清理。作者还分享了通过pprof工具监控生产环境内存泄漏的经验，并展示了修复前后内存使用情况的对比图。</p> 
+
+<p><a href="https://dev.to/leapcell/errgroup-unlocking-gos-concurrency-power-3g2h">ErrGroup：释放 Go 并发能力</a><br>Go 语言的 `errgroup` 库是一个强大的并发控制工具，它基于 `sync.WaitGroup`，但在错误处理和上下文取消方面提供了更强大的功能。本文详细介绍了 `errgroup` 的优势、用法示例（包括基本用法、上下文取消和并发限制），并对源码进行了解读，最后推荐了 Leapcell 作为部署 Go 应用的平台。</p> 
+
+<p><a href="https://dev.to/zeedu_dev/the-easiest-way-to-use-https-in-localhost-3mgh">在本地主机中使用 HTTPS 的最简单方法</a><br>如何在本地主机中使用 HTTPS 而不是 HTTP，快速且无需手动签发证书或处理 netstat？本文介绍了一种使用 Caddy 服务器快速配置 HTTPS 的方法，并提供了解决 Caddy “listen tcp :: bind: permission denied” 错误的两种方案。</p> 
+
+<p><a href="https://rauljordan.com/why-go-error-handling-is-awesome">为什么Go的错误处理非常棒</a><br></p> 
+
+<p><a href="https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful">关于结构化并发的一些笔记，或者：Go语句有害论</a><br>本文探讨了并发编程中不同 API 的差异，并重点介绍了 Trio 库中使用的“nursery”结构。作者认为，与传统的线程生成和回调注册方法相比，nursery 是一种更基础、更有效的并发控制原语，能够避免传统方法中常见的问题，例如资源清理和错误传播。文章通过与 goto 语句的对比，阐述了 nursery 如何解决并发编程中抽象破坏和控制流复杂化等问题，并最终提升程序的可读性、生产力和正确性。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/an-exploration-of-apis-versioning-http">播客：深入探索 API、版本控制和 HTTP</a><br>网络 API 随处可见，从经典的 REST/HTTP 到 GraphQL 再到 gRPC，我们每天都依赖它们来完成工作。但我们对这些 API 的设计考虑了多少？创建 API 后如何编写文档？版本控制到底是什么？我们真的了解 HTTP 吗？在本集中，Kris 和小组成员邀请了 Jamie Tanna 来讨论 API、其设计、如何编写文档等等。想听我们讨论 API 和如何设计标识符吗？成为支持者，立即享受额外内容和更高质量的音频，以及我们将来添加的其他特权和福利。感谢收听，祝您收听愉快！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/03/10/falcoctl-artifact-management-for-falco/">Falcoctl：Falco 的工件管理</a><br>工件管理是指在整个软件开发过程中存储、组织和保护生成的必要组件的过程。Cloudsmith 将工件定义为开发生命周期的有形输出，包括编译后的源代码、库、可执行文件和配置文件。Falcoctl 是一个命令行工具，旨在简化处理这些组件的过程，确保 Falco 规则的有效部署和维护。文章介绍了 Falcoctl 如何与工件交互，以及如何使用它来搜索、推送和安装工件，包括 Falco 规则文件和插件。文章还强调了版本控制工件的重要性，并介绍了如何使用 falcoctl 安装特定版本的工件。</p>
+
+<p><a href="https://0x0001.cc/blog/good-engineer.md">成为一名优秀的工程师</a><br>文章探讨了如何成为一名优秀的工程师。作者认为，优秀的工程师不仅需要掌握扎实的专业知识和技能，更需要具备批判性思维、持续学习的能力以及将知识应用于实践的能力。文章从理解工程原理、持续学习、理解工具和技术的局限性、将知识应用于实践等方面阐述了如何成为一名优秀的工程师，并给出了学习资源和项目建议，例如阅读《设计数据密集型应用》、《算法导论》等书籍，以及开发编译器、模拟器、渲染引擎等项目。</p>
+
+<p><a href="https://leandromoreira.com/2019/08/02/linux-ffmpeg-source-internals-a-good-software-design">Linux/内核中的优秀代码设计</a><br>本文探讨了 Linux/FFmpeg C 部分代码库的组织方式，使其具有可扩展性，并表现得好像具有“多态性”一样。具体来说，我们将简要探讨 Linux 的“一切皆文件”的概念如何在源代码级别工作，以及 FFmpeg 如何快速轻松地为新的格式和编解码器添加支持。</p>
+
+<p><a href="https://tzx.notion.site/What-I-Learned-Building-a-Free-Semantic-Search-Tool-for-GitHub-and-Why-I-Failed-1a09b742c7918033b318f3a5d7dc9751">Notion | 连接你的维基、文档和项目的协作工作空间</a><br>一个将日常工作应用程序融合到一起的新工具。它是您和您的团队的”一体化“工作空间。</p>
+
+<p><a href="https://www.seangoedecke.com/great-software-design">优秀的软件设计看起来平淡无奇</a><br>本文作者认为优秀的软件设计应该简洁明了，避免潜在的错误。文章通过几个例子说明了如何通过精简组件、规范状态、依赖可靠的系统等方法来消除潜在的故障模式，从而提升软件设计的质量。作者认为，优秀的软件设计并非依赖于炫技的技术或复杂的架构，而是关注于减少风险，确保软件的稳定性和可靠性。</p>
+
+<p><a href="https://read.engineerscodex.com/p/metric-driven-development-and-the">度量驱动开发与claude效应</a><br>有时，直觉比数据更可靠。文章探讨了度量驱动开发的局限性，以及大型科技公司过度依赖指标导致的问题。以Claude AI模型为例，说明了在实际应用中，用户体验和工具的易用性（“氛围感”）的重要性，有时甚至比基准测试结果更重要。文章还指出，仅仅关注指标可能会忽略用户体验等重要因素，并分享了相关案例。</p>
+
+<p><a href="https://rxdb.info/articles/local-first-future.html">为什么本地优先软件是未来，以及它的局限性</a><br>本文探讨了本地优先（local-first）软件的兴起，它如何通过在客户端存储数据来提升网络应用的离线能力、速度和隐私性。文章解释了本地优先的优势，例如即时响应时间、真正的离线功能以及增强的用户数据控制，并深入探讨了挑战，例如数据同步、冲突解决和客户端数据库迁移。此外，本文还比较了本地优先与传统的在线优先方法，并分析了本地优先软件在未来发展趋势中的重要性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.lesswrong.com/posts/tqmQTezvXGFmfSe7f/how-much-are-llms-actually-boosting-real-world-programmer">大模型实际上让程序员提高了多少生产力</a><br></p>
+
+<p><a href="https://norahsakal.com/blog/mcp-vs-api-model-context-protocol-explained">什么是模型上下文协议 (MCP)？与 API 相比，它如何简化 AI 集成 | 可工作的 AI 代理</a><br>模型上下文协议 (MCP) 是一种开放标准，它可以高效地将 AI 模型连接到工具和数据源。本指南介绍了 MCP 的架构、优势以及它与传统 API 的区别。</p>
+
+<p><a href="https://matthewbilyeu.com/blog/2025-03-08/ai">人工智能与不确定的未来工作</a><br>本文探讨了人工智能的快速发展对未来工作，特别是软件工程师职业的影响。作者结合自身经验，分析了AI在代码编写、代码审查等方面的能力，并预测了AI可能取代部分甚至全部软件开发工作的可能性。文章还探讨了AI对其他知识型工作的影响，以及由此可能引发的社会问题，例如失业、社会不平等等。作者认为，AI工具的应用将不断提升，软件工程师等需要适应变化，学习并利用AI工具来提升效率。最后，作者表达了对AI未来发展的希望，期待AI能成为人类的强大工具，而非威胁人类生存的因素。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/dagger/dagger">dagger/dagger</a><br>An open-source runtime for composable workflows. Great for AI agents and CI/CD.</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。🍥 The next-generation LLM gateway and AI asset management system supports multiple languages.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/cloudreve/Cloudreve">cloudreve/Cloudreve</a><br>🌩支持多家云存储的云盘系统 (Self-hosted file management and sharing system, supports multiple storage providers)</p>
+
+<p><a href="https://github.com/owncast/owncast">owncast/owncast</a><br>Take control over your live stream video by running it yourself. Streaming &#43; chat out of the box.</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>Directory/File, DNS and VHost busting tool written in Go</p>
+
+<p><a href="https://github.com/loft-sh/devpod">loft-sh/devpod</a><br>Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.</p>
+
+<p><a href="https://github.com/cockroachdb/pebble">cockroachdb/pebble</a><br>RocksDB/LevelDB inspired key-value database in Go</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/projectdiscovery/httpx">projectdiscovery/httpx</a><br>httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

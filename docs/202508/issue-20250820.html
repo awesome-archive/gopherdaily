@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250820.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250820</span>
+</p>
+<p>每日一谚：Golang&#39;s restriction on circular package imports encourages you to prioritize functionality over aesthetics in your code organization. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/dDu-efD4co9-c_jBRBnunw">Go Runtime团队会议速递：SIMD接近完成，GC与并发再迎重磅升级</a><br>GC拥抱numa架构、pprofv2集成LBR Profile、sync.Sharded即将落地，SIMD接近完成！</p> 
+
+<p><a href="https://tonybai.com/2025/08/20/large-scale-logging-made-easy">日志查询从70小时到10秒？VictoriaMetrics联创揭示PB级日志处理性能奥秘</a><br>当日志规模达到 PB 级别，传统的关系型数据库（如 PostgreSQL 或 MySQL）往往力不从心，不仅性能急剧下降，运维成本也变得难以承受。在 FrOSCon 2025 大会上，VictoriaMetrics 的联合创始人兼CTO、fasthttp作者、资深 Go 工程师Aliaksandr Valialkin 发表了题为“大规模日志处理变得简单”的演讲，深入剖析了专为&gt;日志设计的数据库如何通过一系列精巧的工程设计，实现单机处理 PB 级数据的惊人性能。</p> 
+
+<p><a href="https://medium.com/@sogol.hedayatmanesh/mastering-memory-alignment-in-go-from-stack-to-heap-4b4e10c188c4">掌握 Go 中的内存对齐：从栈到堆</a><br>解锁 Go 内存布局的秘密，以编写更快、更安全、更智能的代码。 🌀 简介：您是否想知道为什么某些 Go 程序运行速度更快、占用更少的内存，或者避免了看似凭空出现的棘手错误？秘密往往在于内存对齐。 内存对齐可确保您的数据位于 CPU 的最佳内存地址。 未对齐的数据可能导致： 🐢 减慢内存访问 💸 由于意外的填充而浪费内存 ⚡ 破坏并发代码中的原子操作 无论您是试图理解为什么您的结构体“比预期的更大”的初级开发人员，还是优化缓存性能和大量使用 goroutine 的系统的高级工程师，本文都将引导您了解 Go 内存布局的复杂性。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-08-19-a-beginners-guide-to-docker-compose">Docker Compose 初学者指南</a><br>本系列教程的第二部分，介绍 Docker Compose，以及如何使用它通过一个文件和一条命令在本地运行多容器应用程序。</p> 
+
+<p><a href="https://dev.to/gkoos/taming-goroutines-efficient-concurrency-with-a-worker-pool-in-go-jag">驯服 Goroutines - 使用 Go 中的工作池实现高效的并发</a><br>因此，您已经了解了关于 Go 的 goroutine 和 channel 的所有知识，并且您很高兴开始研究...... 标签为 go，算法。</p> 
+
+<p><a href="https://embeddedgo.github.io/2025/08/17/news.html">Embedded Go 作为工具链，Pi Pico 2，Nintendo 64</a><br>介绍了 Embedded Go 项目的新进展，包括：Go 1.24 版本集成、新的工具链发布模式、新的工具 egtool，Pi Pico 2 的支持以及 Nintendo 64 的支持。文章还提到了通过 `go install` 和 `egtool` 命令来安装和使用 Embedded Go 工具链，以及 egtool 的功能。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.livekit.io/deploy-and-scale-agents-on-livekit-cloud/">在LiveKit Cloud上部署和扩展代理</a><br>在过去的两年中，随着越来越多的团队将LiveKit语音代理推向生产，一直出现相同的问题：
+
+*  我应该为我的代理池分配多少CPU和内存？
+*  我如何处理突然的流量激增？
+*  我如何跨会话对性能进行检测和优化？
+
+我们的代理框架使构建语音或视频代理变得容易，但在大规模运营代理方面仍然很困难。今天，我们让它变得简单。</p>
+
+<p><a href="https://www.docker.com/blog/hardened-container-images-security-vendor-lock-in/">Hardened Container Images: Security Without Lock-in</a><br>Explore the paradox of hardened container images—strong security gains but hidden vendor lock-in risks. Learn how to harden without losing control.</p>
+
+<p><a href="https://kubernetes.io/blog/2025/08/19/tuning-linux-swap-for-kubernetes-a-deep-dive/">调整 Kubernetes 的 Linux Swap: 深度探讨</a><br>Kubernetes 的 NodeSwap 功能（可能在即将发布的 Kubernetes v1.34 版本中升级为稳定版）允许使用交换空间：这与传统上禁用交换以提高性能可预测性的做法相比，是一个重大转变。本文专门讨论在 Linux 节点上调整交换空间，该功能已可用。通过允许 Linux 节点在物理 RAM 耗尽时使用辅助存储空间来增加虚拟内存，节点交换支持旨在提高资源利用率并减少内存不足 (OOM) 杀死。</p>
+
+<p><a href="https://oilbeater.com/en/2025/08/15/loxilb">LoxiLB -- 不仅仅是 MetalLB</a><br>MetalLB 已经成为在私有云 Kubernetes 环境中提供 LoadBalancer 类型服务的实际标准。 它的实现非常简单，并且侧重于使用基于 gossip 的分布式领导者选举，确保快速的 VIP 故障转移，而与 Kubernetes 的状态无关。 但是，这种专业化也意味着它缺少一些关键的生产就绪功能，这促使我探索了 LoxiLB 等替代方案。</p>
+
+<p><a href="https://www.cerbos.dev/blog/cerbos-vs-opa">Cerbos vs. OPA</a><br>了解 Cerbos 和 OPA 在策略语言、开发者体验、架构、性能和策略管理方面的区别。 我们还将展示每种解决方案的优势和局限性，并讨论实际的权衡。</p>
+
+<p><a href="https://clickhouse.com/blog/building-a-distributed-cache-for-s3">构建用于S3的分布式缓存</a><br>ClickHouse Cloud现在拥有用于对象存储的分布式缓存：共享、低延迟、专为速度而构建。 本文深入探讨了架构、为什么它很重要以及它的性能。</p>
+
+<p><a href="https://jax-ml.github.io/scaling-book/gpus">如何思考 GPU</a><br>我们喜欢 Google 的 TPU，但 GPU 也很好。本章深入探讨了 NVIDIA GPU 的世界——每个芯片的工作原理、它们如何联网以及这对 LLM 的意义，特别是与 TPU 相比。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/19/qwen-image-edit/#atom-everything">Qwen-Image-Edit：更高质量和效率的图像编辑</a><br>Qwen-Image-Edit 可以获取图像和提示，并返回该图像的编辑版本。文章介绍了在 macOS 上使用 qwen-image-mps 工具运行新模型，并展示了使用该模型编辑图像的效果。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/SpecterOps/BloodHound">SpecterOps/BloodHound</a><br>Six Degrees of Domain Admin</p>
+
+<p><a href="https://github.com/isaacphi/mcp-language-server">isaacphi/mcp-language-server</a><br>mcp-language-server gives MCP enabled clients access semantic tools like get definition, references, rename, and diagnostics.</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/vllm-project/aibrix">vllm-project/aibrix</a><br>Cost-efficient and pluggable Infrastructure components for GenAI inference</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/EndlessCheng/codeforces-go">EndlessCheng/codeforces-go</a><br>算法竞赛模板库 by 灵茶山艾府 💭💡🎈</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

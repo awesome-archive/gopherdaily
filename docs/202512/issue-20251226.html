@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251226.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251226</span>
+</p>
+<p>每日一谚： The bigger the interface, the weaker the abstraction </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/26/think-like-go-founders-relearn-go-five-principles/">像 Go 创始人一样思考：用五大思维原理重学 Go 语言</a><br>我们需要进行一次“思想上的角色扮演”，回到Go 语言诞生之前的 那个“原点”，像它的创始人们——Rob Pike, Ken Thompson, Robert Griesemer——一样思考。他们并非在“发明”一门新语言，而是在运用一系列深刻的 思维原理，为一组棘手的工程问题，构建一个全新的、逻辑自洽的解决方案。 本文，就让我们一起踏上这场“重学 Go”的旅程。我们将带上五大“精英思维原理”作为工具，去看看我们能否“重新推导出”Go 语言的核心设计，并以 此重塑我们对这门语言的理解。</p> 
+
+<p><a href="https://alexrios.me/blog/goroutine-leak-detection-intro">捕获幽灵 goroutine</a><br>本文是对 Go 实验性 goroutine 泄露检测器的介绍。作者通过一个具体的代码示例，解释了并发程序中常见的 goroutine 泄漏问题——当一个 goroutine 阻塞在永远不会完成的信道发送上时，它就变成了“幽灵 goroutine”，持续消耗资源，难以调试。
+
+文章指出，传统的 goroutine 分析器无法区分等待的 goroutine 是合法等待还是永久泄漏。Go 1.26 引入的实验性 goroutine 泄露检测器通过利用垃圾回收器的可达性分析能力，判断 goroutine 所阻塞的信道（或锁、WaitGroup 等）是否还能从程序的其他部分访问到。如果不能，则该 goroutine 被标记为（leaked）。
+
+作者展示了如何使用 `runtime/pprof` 包来获取 `goroutineleak` 配置文件，并解释了这种检测机制的强大之处，它能将原本模糊的泄漏问题转化为可定位、可操作的调试信息。文章最后预告了后续将深入探讨该检测背后的垃圾回收“技巧”。</p> 
+
+<p><a href="https://tonybai.com/2025/12/26/google-2025-research-breakthroughs/">从工具到伙伴：Google 三巨头定义 2025 为“AI Agent 与推理元年”</a><br>近日，Google 发布了由 大神Jeff Dean, 诺贝尔奖得主Demis Hassabis 和 James Manyika 三位顶级技术领袖联合署名的《2025 年度研发回顾》。这份报告是对 Google 过去一年技术成就的总结，更是一份关于 AI 未来 发展方向的战略宣言。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/MUb3r1juqWIBtzlODbbQ-Q">【API 设计之道】09 版本演进策略：激进废弃与平滑过渡的艺术</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://serversfor.dev/linux-inside-out/the-linux-kernel-is-just-a-program">Linux内核只是一个程序</a><br>大多数书籍和课程通过Shell命令介绍Linux，将内核留作一个在幕后施展魔法的神秘黑箱。在本文中，我们将通过实验来揭开它的神秘面纱：Linux内核只是一个你可以编译和运行的二进制文件。文章解释了内核的作用（硬件抽象、资源管理等），并通过实验演示了如何使用QEMU直接启动一个内核（vmlinuz）并加载一个简单的用户态初始化程序（用Go编写的init程序）来启动一个极简的Linux发行版，从而了解内核的启动过程、PID 1（init进程）以及内核空间和用户空间的概念。</p>
+
+<p><a href="https://tw93.fun/2025-12-22/engineer.html">新一代工程师的破局与发展</a><br>分享了在北京 AICon 上关于《新一代工程师的破局与发展-从岗位到能力的转型实践》的分享PPT图片，期待交流。内容主要展示了一系列关于工程师转型实践的幻灯片。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/25/claude-code-transcripts/#atom-everything">从 Claude Code 中提取详细记录的新方法</a><br>作者发布了一个名为 claude-code-transcripts 的新 Python CLI 工具，用于将 Claude Code 的会话记录转换为详细的 HTML 页面。这些页面提供了比 Claude Code 本身更好的界面来理解其所做的工作，并且易于分享。该工具支持本地会话和 Claude Code for web 会话的导出和转换，并且可以通过 `--gist` 选项自动发布到 GitHub Gist。作者构建此工具的原因在于，他现在通过 Claude Code 编写了大量的代码，这些对话记录对于记录项目上下文和决策过程至关重要。该工具的构建过程几乎完全由 Claude 完成，利用了包括 click、Jinja2、httpx 等依赖项。一个特别的亮点是，作者利用 OpenAI Codex CLI 逆向工程出了如何从 macOS Keychain 中提取 Claude Code for web 的认证令牌的方法，并将其集成到了新工具中。</p>
+
+<p><a href="https://kindxiaoming.github.io/blog/2025/structuralism-ai">智能实现通用人工智能——重在结构，而非规模</a><br>TL;DR：结构主义AI是超越规模化的必然路径——并非因为规模化是错误的，而是因为它最终会撞上能源和数据的限制。作者认为，实现AGI更智能的方式是追求“结构”而非“规模”。结构意味着压缩，而压缩是智能的核心。当前的缩放定律（Scaling Laws）虽然有效，但效率低下，类似于在没有发现开普勒定律之前，通过记录行星位置来模拟运动。作者区分了“物理学式”（高可压缩性）、“化学式”和“生物学式”（弱可压缩性）的任务，认为结构主义AI旨在捕获中间的“化学式”任务，并通过融合符号和连接主义的优点。实现AGI的关键瓶颈在于“抽象能力”，作者认为未来的进步将依赖于“内在结构主义”——将通用结构注入模型或使其内部涌现，而不是过度依赖外部的思维链监督。最终，结构对于实现高效、自适应、通用和物理基础的AGI至关重要。</p>
+
+<p><a href="https://www.ashpreetbedi.com/articles/memory">Memory: How Agents Learn</a><br>本文讨论了构建智能体（Agent）时遇到的一个关键挑战：使它们能够学习和改进，而不仅仅是执行任务。作者区分了三种内存类型：会话内存（当前对话上下文）、用户内存（特定用户的事实和偏好）和学习内存（可推广的、跨会话的洞察）。重点在于“学习内存”，它使得智能体可以在不重新训练模型权重的情况下持续改进，实现“GPU贫乏的持续学习”。文章详细介绍了三种实现内存的模式（会话内存、用户内存和学习内存），并提供了Python代码示例，特别是关于如何通过自定义工具和人类在环（Human-in-the-Loop）确认机制来管理“学习内存”。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/WCY-dt/MrRSS">WCY-dt/MrRSS</a><br>A modern, cross-platform, and free AI RSS reader. 一个现代化、跨平台且免费的 AI RSS 阅读器.</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/qualifire-dev/rogue">qualifire-dev/rogue</a><br>Agents testing framework made easy</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/rs/zerolog">rs/zerolog</a><br>Zero Allocation JSON Logger</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/cilium/ebpf">cilium/ebpf</a><br>ebpf-go is a pure-Go library to read, modify and load eBPF programs and attach them to various hooks in the Linux kernel.</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/coze-dev/coze-loop">coze-dev/coze-loop</a><br>Next-generation AI Agent Optimization Platform: Cozeloop addresses challenges in AI agent development by providing full-lifecycle management capabilities from development, debugging, and evaluation to monitoring.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>An open-source UI-first Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, RADIUS, Google Workspace, Active Directory and Kerberos</p>
+
+<p><a href="https://github.com/memodb-io/Acontext">memodb-io/Acontext</a><br>Context Data Platform for Agents. Join the community❤️: https://discord.acontext.io</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/lejianwen/rustdesk-api">lejianwen/rustdesk-api</a><br>Custom Rustdesk Api Server, include web admin ,web client, web client v2 preview and oidc login</p>
+
+<p><a href="https://github.com/go-rod/rod">go-rod/rod</a><br>A Chrome DevTools Protocol driver for web automation and scraping.</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

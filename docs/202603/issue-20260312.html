@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260312.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260312</span>
+</p>
+<p>每日一谚：Talk is cheap. Show me the code. — Linus Torvalds </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/12/go-concurrency-scalability-issues-on-128-core-cpu">老板花重金买了台 128 核服务器，我的 Go 程序反而变慢了？</a><br>你负责的 Go 核心微服务最近流量暴涨，CPU 频频告警。为了解决这个问题，老板大笔一挥，批了几十万预算，采购了最新一代的 128 核 256 线 程的怪兽级服务器（比如 AMD EPYC 或 Intel 至强）。 你满心欢喜地把程序部署上去，期待着 QPS 翻倍、延迟减半的奇迹。 结果盯着监控面板，你傻眼了：核心数翻了 4 倍，但程序的吞吐量根本没有线性增长，甚至 P99 延迟还比以前在 32 核机器上时变高了！</p> 
+
+<p><a href="https://tonybai.com/2026/03/12/building-for-trillions-of-agents">别再卷前端 UI 了！未来万亿级用户的产品，根本没有界面</a><br>硅谷创业教父 Paul Graham 曾有一句被无数创业者和产品经理奉为圭臬的名言：Make something people want.（做人们想要的东西）。 但在今天，如果你还在死磕这句话，你可能会死得很惨。在这个 AI Agent（智能体）全面爆发的前夜，这句箴言必须被冷酷地改写为： Make something Agents want.（做智能体想要的东西）。因为未来的超级软件，根本不需要界面。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://hacks.mozilla.org/2026/02/making-webassembly-a-first-class-language-on-the-web">让 Webassembly 成为Web上的一等公民</a><br>本文探讨了 WebAssembly（Wasm）自2017年发布以来的发展历程，并讨论了其如何从最初主要服务于 C/C&#43;&#43; 等低级语言，逐步演变为更广泛语言的有效编译目标。文章指出，WebAssembly 社区已通过引入共享内存、SIMD、异常处理、GC 支持、64位内存等关键特性，极大地扩展了其核心能力，显著缩小了与原生代码的性能差距。尽管仍有堆栈切换和线程改进等工作待完成，但这些进步正在推动 WebAssembly 迈向成为 Web 开发中“一等公民”语言的地位。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1061544/125f911834966dd0">Debian社区初步确定项目对AI生成内容的立场</a><br>Debian社区近期就是否接受AI辅助生成的代码贡献问题展开了讨论，这是继其他多个项目之后，又一个面对大型语言模型（LLM）生成内容挑战的项目。讨论由Lucas Nussbaum发起的一份通用决议（GR）草案引发，旨在界定项目对AI生成内容的立场。然而，截至目前，这场辩论似乎已暂时平息，并未形成正式的通用决议或做出明确的决定，表明Debian在处理这一新兴技术带来的贡献问题上持谨慎观望态度。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://nemoclaw.bot">nemoclaw: NVIDIA推出的面向企业级应用的开源AI智能体平台</a><br>NemoClaw是NVIDIA推出的面向企业级应用的开源AI智能体平台，旨在解决OpenClaw被收购后企业对安全、可控AI智能体环境的迫切需求。该平台深度集成了NVIDIA NeMo框架、Nemotron模型和NIM推理微服务，专注于提供企业级的安全性和隐私保护，支持大规模任务自动化。NemoClaw设计上具有硬件无关性，可在NVIDIA、AMD、Intel等多种处理器上运行，为受监管行业提供了一个可定制、可控的AI智能体部署环境，是NVIDIA对当前快速发展的AI智能体生态的回应。</p>
+
+<p><a href="https://www.williamjbowman.com/blog/2026/03/05/against-vibes-when-is-a-generative-model-useful">against vibes when is a generative model useful</a><br>文章批评了当前关于生成式模型（如AI工具）的讨论方式，指出其缺乏科学和工程学的严谨性。作者认为，评估工具X对任务Y是否有效，应基于对工具和任务特性的模型化分析和预测，而非简单地观察模型是否能生成“看似合理”的输出。
+
+当前对生成式模型的讨论充斥着“感觉良好”或“氛围判断”（vibes），例如声称软件工程已死，或盲目地将生成模型应用于搜索、代码补全等所有领域。作者对“提示工程”和“AI代理”的过度宣传表示不满，因为它们往往基于主观的效率提升感，而非客观的、可量化的效用证明。文章呼吁回归科学方法，明确生成模型在特定场景下“何时、为何、如何”真正有用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/fengshao1227/ccg-workflow">fengshao1227/ccg-workflow</a><br>多模型协作开发系统 - Claude 编排 &#43; Codex 后端 &#43; Gemini 前端，28 个命令覆盖开发全流程，一键安装零配置</p>
+
+<p><a href="https://github.com/docker/docker-agent">docker/docker-agent</a><br>AI Agent Builder and Runtime by Docker Engineering</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

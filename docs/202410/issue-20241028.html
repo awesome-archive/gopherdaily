@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241028.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-28</span>
+</p>
+<p>每日一谚：写Go就像喝一杯晾凉了的白开水，寡淡无味，但就是能解渴，而且是效果立现 </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@johnsiilver/go-optional-arguments-in-the-age-of-generics-f8eba23103ad">Go泛型时代的可选参数</a><br>John Doak 讨论了在 Go 中使用可选参数的挑战，尤其是在引入泛型之后。他强调了使用函数类型和可变参数参数的标准可选参数模式如何随着泛型的可读性降低而变得不那么可读。为了解决这个问题，Doak 提出了一种改进的方法，该方法保持原始模式的干净语法，同时避免运行时类型检查。这涉及创建一个封装选项的新类型，并执行编译时检查以确保使用正确的类型。本文还谈到了对 DevOps 的影响，并提供了一个工作示例。Doak 的解决方案旨在在泛型上下文中保持 Go 可选参数功能的可读性和易用性，同时对潜在的运行时错误进行微小的权衡。
+
+（注意：摘要旨在概括文章的关键点，同时保持简洁和连贯。它不包括直接引用或特定的代码示例，而是侧重于整体参数和建议的解决方案。</p> 
+
+<p><a href="https://packagemain.tech/p/fuzzing-http-services-golang">对Go HTTP服务进行模糊测试</a><br>本文提供了在 Go 中实现模糊测试的全面指南，Go是一种通过将随机数据输入软件来发现错误和漏洞的技术。作者 Alex Pliutau 概述了在 Go 标准库中创建模糊测试的过程，其中包括定义语料库种子、使用模糊测试参数调用目标函数以及使用模糊标志运行测试。该指南包括一个模糊测试函数的实际示例，该函数比较两个字节切片，重点介绍了模糊测试如何识别潜在的运行时错误。此外，本文还演示了如何通过制作示例输入、使用 &#39;httptest&#39; 包和处理各种测试场景来模糊测试 HTTP 服务。作者强调了将模糊测试集成到软件开发生命周期中的重要性，并提供了管理模糊测试的见解，例如设置并行工作线程和时间限制。总之，对于希望通过 Go 中的模糊测试来增强其测试策略的开发人员来说，本文是宝贵的资源。</p> 
+
+<p><a href="https://typesanitizer.com/blog/rethink-optimizers.html">我们的优化师需要重新思考</a><br>作者反思了优化器的利弊，得出结论：至少有一些机会来探索程序员生产力和优化的交叉点——通过使优化器更易于理解、可靠和可预测，并将它们设计为与程序员一起工作，而不是默默地在幕后工作</p> 
+
+<p><a href="https://clace.io/blog/sqlite/">使用 SQLite 作为 Web 服务器静态内容的存储</a><br>Clace 项目是一个用于开发和部署内部工具的开源平台，它采用 SQLite 作为其 Web 服务器静态内容的存储解决方案，这与传统的文件系统方法不同。此选项有助于进行原子更新，确保无缝管理应用程序版本，而不会在更新期间提供损坏的网页。SQLite 的事务功能还可以实现高效的部署回滚，这在同时更新多个应用程序时尤其有用。其他优势包括跨版本和应用程序的文件重复数据删除、简化备份以及使用 ETag 标头增强内容缓存。性能基准表明，对于某些工作负载，SQLite 的性能可能优于文件系统。虽然计划在未来提供多节点支持，涉及共享的 Postgres 数据库，但会考虑使用本地 SQLite 文件缓存来减少延迟。为此目的不常见地采用 SQLite 归因于对文件系统的历史偏好以及需要 API 进行文件上传所带来的额外复杂性。</p> 
+
+<p><a href="https://paulgraham.com/writes.html">写作与不写作</a><br>创业教父Paul Graham新文章，他预言，由于 AI 写作的影响，再过几十年，能写作的人将非常稀少。这就好比工业化之前，大多数人因为劳动都身体强壮，而现在想要变得强壮就得主动去健身，写作也是类似，聪明人还会有，但仅限于那些选择去思考的人。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://itnext.io/if-every-transaction-matters-you-should-understand-graceful-shutdown-15bb98335922">如果每个事务都很重要，您应该了解优雅关闭</a><br>在这篇富有洞察力的文章中，Benjamin Cane 强调了为容器化应用程序实施正常关闭流程的重要性，尤其是在使用 Kubernetes 等编排系统时。Cane 解释说，如果没有适当的信号捕获和处理，正在进行的交易可能会丢失或处于不一致的状态，从而导致潜在的数据损坏或系统不稳定。他概述了因关闭不当而引起的常见问题，例如数据库连接延迟和打开的文件处理程序，这些问题可能会阻止新实例正常运行。为了应对这些挑战，Cane 主张在关闭连接和关闭应用程序之前捕获 SIGTERM 信号并将流量从实例重定向出去。他承认，虽然实施正常关机需要额外的工作，但稳定可靠的平台的好处非常值得付出努力。Cane 在软件工程、编程和 Golang 方面的专业知识，以及他对开源项目的贡献，都强调了他对开发人员和系统管理员的建议的实用性和重要性。</p>
+
+<p><a href="https://spin.atomicobject.com/oidc-oauth-2-0-demystified/">OIDC 和 OAuth 2.0 揭秘</a><br>本文对 OpenID Connect （OIDC） 和 OAuth 2.0 进行了通俗易懂的解释，这两种协议可在 Web 应用程序中实现安全身份验证和授权。作者 Bryan Paronto 使用餐厅预订系统的相关类比，揭开了这些标准中涉及的复杂术语和流程的神秘面纱。OIDC 充当中介 （maître d&#39;），在授予对服务的访问权限之前验证用户的身份，而 OAuth 2.0 则设置如何授予访问权限的规则。本文分解了授权码、客户端 ID、客户端密钥、身份提供商、访问令牌和刷新令牌等关键术语，说明了它们在身份验证工作流程中的角色。作者旨在为开发人员和用户阐明这些概念，使 OIDC 和 OAuth 2.0 的复杂细节在日常场景中更容易理解。此外，本文还包括视觉辅助工具以进一步阐明所描述的过程，并鼓励读者参与讨论与这些协议相关的项目。</p>
+
+<p><a href="https://thenewstack.io/truenas-a-linux-distro-for-low-cost-network-attached-storage/">TrueNAS，一种用于低成本NFS的 Linux 发行版</a><br>TrueNAS 是基于 Linux 的发行版，专为低成本、可扩展的网络附加存储 （NAS） 而设计。它提供用户友好的安装过程、最少的配置以及一系列功能，例如用户/组管理和 shell 访问。TrueNAS 可以部署在各种硬件上，包括小型 PC 或虚拟机，后者需要单独的驱动器和格式化。该系统可通过 SMB 访问，方便联网设备使用。TrueNAS Core 是免费提供的，适合小型企业和家庭用户，而 TrueNAS Enterprise 则推荐用于企业级需求。该平台因其部署 NAS 解决方案的简单性和有效性而受到赞誉，并有可能为用户赢得 1,000 美元的礼品卡，以感谢他们对 2025 年覆盖范围的意见。</p>
+
+<p><a href="https://blog.hyperknot.com/p/understanding-round-robin-dns">了解DNS解析的round robin行为</a><br>本文深入探讨了 Round Robin DNS 的复杂性及其在多个服务器之间分配 Web 流量的应用。作者 Zsolt Ero 探讨了浏览器和 CDN （如 Cloudflare）在使用 Round Robin DNS 时如何选择服务器。理论上，选择过程包括检查服务器可用性和按 ping 时间对在线服务器进行排序。实际测试揭示了不同浏览器的不同行为以及 Cloudflare 对离线服务器的处理。Chrome 和 Safari 分别根据距离和可用性表现出一致的服务器选择，而 Cloudflare 的方法则不那么动态，通常无法检测到离线服务器。作者最后列出了 Cloudflare 的愿望清单，提出了一些改进建议，例如离线服务器检测和优先考虑延迟最低的服务器。本文还谈到了 Cloudflare 社区内部关于这些问题的讨论。</p>
+
+<p><a href="https://www.jonathancreamer.com/how-we-shrunk-our-git-repo-size-by-94-percent/">我们如何将 Javascript monorepo git 大小缩小 94%</a><br>Microsoft 团队成功地将其大规模 JavaScript monorepo 的大小减少了 94%，解决了与存储库大小过大和克隆时间缓慢相关的挑战。最初，存储库大小为 178GB，主要是由于二进制文件中的大型 blob 和过多的更改文件，这会导致打包效率低下和大型树对象。为了解决这些问题，该团队实施了多种策略，例如避免将大量文件存储在单个文件夹中，使用拉取请求合并更改文件，以及定期清理更改文件夹。此外，他们还发现并纠正了一个打包代码问题，该问题导致在推送操作期间出现冗余差异，从而导致不必要的数据传输。通过使用更大的窗口重新打包存储库并采用新的路径遍历算法，他们将 GB 大幅减少到 5GB。该团队还计划在 Azure DevOps 中实现服务器端重新打包和垃圾回收，并且他们正在通过分叉和拉取请求将他们的发现贡献给开源社区。此外，他们建议使用 &#39;git survey&#39; 命令来识别可以从 path walk 优化中受益的文件。</p>
+
+<p><a href="https://www.bryanbraun.com/2024/10/25/before-you-buy-a-domain-name-first-check-to-see-if-its-haunted/">Before you buy a domain name, first check to see if it&#39;s haunted</a><br>The document narrates the experience of a frontend developer, Bryan Braun, who purchased a domain name, `musicbox.fun`, for an online music box project. Unbeknownst to him, the domain had a history of hosting pirated music, leading to numerous copyright violation complaints and delisting by search engines. This past misuse resulted in a poor reputation for the domain, affecting its ability to rank in search results even after the project&#39;s transfer to the new domain, `musicboxfun.com`. The author suggests several methods to check if a domain is &#34;haunted&#34; by its past, such as using the Wayback Machine, DMCA complaint searches, and historical SEO data analysis. Upon discovering the domain&#39;s history, the author shares his personal approach to addressing the issue, which includes engaging with search engines, adhering to SEO best practices, and considering the power of links to help rebuild the domain&#39;s reputation. The document concludes with a reflection on the challenges of overcoming a domain&#39;s negative history and the need for domain owners to take proactive measures to improve their domain&#39;s standing with search engines.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.thariq.io/blog/entropix/">检测 LLM 何时不确定</a><br>Thariq Shihipar 的文章讨论了 Entropix 的开发，该项目旨在通过解决预测中的不确定性来增强大型语言模型 （LLM） 的推理能力。Entropix 引入了自适应采样技术，该技术利用熵和虚熵指标来衡量模型输出中的不确定性水平。根据不确定性水平，Entropix 会建议不同的策略：标准 argmax 采样用于低熵，分支用于高方差的低熵，思维标记用于低方差的高熵，以及更高温度采样或分支用于高方差的高熵。该项目旨在指导 LLM 在不确定时做出更好的决策，在缺乏大规模评估的情况下可能提高其实际效用。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/27/llm-jq/#atom-everything">Run a prompt to generate and execute jq programs using llm-jq</a><br>Simon Willison introduces &#34;llm-jq,&#34; a plugin designed to streamline the process of generating and executing jq programs through the use of Large Language Models (LLMs). The plugin, which leverages LLMs like gpt-4o-mini, allows users to describe their desired JSON manipulation in natural language, and then automatically generates the corresponding jq program. This tool is particularly useful for users who prefer interacting with LLMs directly rather than manually writing jq commands. The plugin includes features such as a system prompt to guide the LLM, and options for verbose output to display the LLM&#39;s prompt. Willison&#39;s plugin is a practical application of LLMs in automating the creation of jq programs, potentially saving time and reducing the complexity of data manipulation tasks. The article also provides an example of the plugin in action and discusses the technical underpinnings, including the use of Claude for code execution and subprocess management. This innovative approach to working with JSON data through LLMs represents a significant advancement in the field of generative programming.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>快速、安全、高效的备份程序</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>一个简单、现代且安全的加密工具（和 Go 库），具有小的显式密钥，没有配置选项，具有 UNIX 风格的可组合性。</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint 允许用户使用流行的框架快速启动一个 Go 项目</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>轻量级服务器监控中心，包含历史数据、docker 统计信息和警报。</p>
+
+<p><a href="https://github.com/BishopFox/sliver">BishopFox/sliver</a><br>Adversary Emulation 框架</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>适用于去中心化 Web 🌈💎✨ 的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>用于小地方的 Go 编译器。微控制器、WebAssembly （WASM/WASI） 和命令行工具。基于 LLVM。</p>
+
+<p><a href="https://github.com/maddalax/htmgo">maddalax/htmgo</a><br>HtmGo - 使用 Go &#43; HTMx 构建简单且可扩展的系统</p>
+
+<p><a href="https://github.com/NVIDIA/k8s-device-plugin">NVIDIA/k8s-device-plugin</a><br>适用于 Kubernetes 的 NVIDIA 设备插件</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub 的官方命令行工具</p>
+
+<p><a href="https://github.com/google/syzkaller">google/syzkaller</a><br>Syzkaller 是一种无监督的覆盖率引导的内核模糊测试</p>
+
+<p><a href="https://github.com/xjasonlyu/tun2socks">xjasonlyu/tun2socks</a><br>tun2socks - 由 gVisor TCP/IP 堆栈提供支持</p>
+
+<p><a href="https://github.com/AnalogJ/scrutiny">AnalogJ/scrutiny</a><br>硬盘驱动器S.M.A.R.T监控、历史趋势和真实世界故障阈值</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ 您的个人流媒体服务</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

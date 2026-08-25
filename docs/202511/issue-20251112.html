@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251112.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251112</span>
+</p>
+<p>每日一谚：You often do not need frameworks in Go. What you need is a couple of pkgs to do your dirty work. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/12/16-years-of-go-a-programming-language-built-to-last">Go 的 16 年：一门为持久而生的编程语言</a><br>每年的十一月，对于全球的 Gopher 而言，都是一个值得纪念的特殊时刻。今年，我们迎来了 Go 语言公开发布的第 16 个年头。 在众多的庆祝文章中，来自 Go 社区的知名组织 Ardan Labs 发布的这篇《Go 的 16 年：一门为持久而生的编程语言》，以其深邃的洞察力和饱满的情感，深深地打动了我们。 这篇文章不仅仅是对 Go 历史里程碑的简单罗列，更是一次对 Go 设计哲学——克制、清晰与长远思考——的深刻致敬。文章精准地捕捉了 Go 从解决 Google 内部的工程困境，到成为现代云原生基石的宏大叙事。我们相信，无论对于已经与 Go 同行多年的资深开发者，还是刚刚踏上 Gopher 之旅的 新人，这篇文章都能带来启发与共鸣。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/VrXxKL9qEUp_1YR8mIDZ-w">【Go模块构建与依赖管理】08 深入 Go Module Proxy 协议</a><br></p> 
+
+<p><a href="https://www.haproxy.com/blog/announcing-haproxy-unified-gateway-beta">宣布 HAProxy 统一网关 (beta)</a><br>HAProxy Technologies 今天宣布了 HAProxy Unified Gateway for Kubernetes 的公共测试版，这是一个免费的开源产品，致力于为网关 API 和 Ingress 提供统一的、高性能的、原生 Kubernetes 的应用程序路由。</p> 
+
+<p><a href="https://dev.to/uthman_dev/building-git-from-scratch-in-go-what-i-learned-about-version-control-internals-4dih">在 Go 中从头开始构建 Git：我学到的关于版本控制内部原理的知识</a><br>在打破 Git 并从头开始重建它之前，我并不理解 Git。没有库，没有捷径 - 只有 SHA-256 哈希、树结构和提交图。
+
+我用 Go 构建了一个 Git 实现，没有使用任何 Git 库。没有魔法，只有内容可寻址存储和对象模型。它有效，它让我一周内学到了比使用它多年更多的关于 Git 的知识，这就是我学到的。</p> 
+
+<p><a href="https://www.bwplotka.dev/2025/lazygit">你不知道自己需要的lazygit UI</a><br>事实证明，开放的心态和一点好奇心在偶然间比精心准备的研究更有成效。我偶然发现了 lazygit ，试用一段时间后，它就成了我的主要 git 工具。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://levelup.gitconnected.com/inside-high-frequency-trading-systems-the-race-to-zero-latency-faa638d0c180">高频交易系统内幕：零延迟之战</a><br>当人们谈论高频交易（HFT）时，他们经常会想象黑盒算法在几毫秒内赚取数百万美元。现实？ 它远不止这些。</p>
+
+<p><a href="https://www.docker.com/blog/docker-engine-version-29/">Docker Engine v29 Release</a><br>Docker Engine v29 is a foundational release that sets the stage for the future of the Docker platform. While it may not come with flashy new features, it introduces a few significant under-the-hood changes that simplify our architecture and improve ecosystem alignment</p>
+
+<p><a href="https://netflixtechblog.medium.com/unlocking-entertainment-intelligence-with-knowledge-graph-da4b22090141">知识图谱解锁娱乐智能 | Netflix 技术博客</a><br>作者：Himanshu Singh
+今天的娱乐是一个由相互关联的故事、人物、创作者和公司组成的庞大宇宙。 由于来自数百万个标题、人才档案、书籍等的数据不断涌入，传统的**数据管理和分析方法**往往达不到要求。 断开的孤岛、不灵活的模式和缓慢的入职流程限制了从丰富的娱乐数据中提取有意义的见解的能力。
+
+我们的娱乐知识图谱——一种由本体驱动的架构，使 Netflix 能够将不同的娱乐数据集统一到一个内聚的数据生态系统中。 这种变革性的方法以空前的敏捷性和清晰度增强了分析、机器学习和战略决策。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/11/11/openfga-becomes-a-cncf-incubating-project/">OpenFGA 成为 CNCF 孵化项目</a><br>CNCF 技术监督委员会 (TOC) 已投票接受 OpenFGA 作为 CNCF 孵化项目。 OpenFGA 是一款授权引擎，用于解决在现代软件应用程序中大规模实施复杂访问控制的挑战。</p>
+
+<p><a href="https://engineering.fb.com/2025/11/11/web/stylex-a-styling-library-for-css-at-scale/">StyleX：一种大规模的 CSS 样式库</a><br>StyleX 是 Meta 用于大规模应用程序的样式系统。它将 CSS-in-JS 的人体工程学设计与静态 CSS 的性能相结合，在生成无冲突的原子 CSS 的同时，允许进行富有表现力、类型安全的样式创作。StyleX 允许工程师编写可以组合、有条件地编写并编译为静态 CSS 的样式，从而实现高性能和可维护性。</p>
+
+<p><a href="https://jyn.dev/the-terminal-of-the-future">未来的终端</a><br></p>
+
+<p><a href="https://medium.com/@himanshusingour7/how-shopify-handles-30tb-of-data-every-minute-with-a-monolithic-architecture-cad54df86955">Shopify 如何使用单体架构每分钟处理 30TB 数据</a><br>如果您曾经使用过一个几千用户的 Web 应用程序，其运行速度变慢，那么请尝试想象一个处理数十亿用户的应用程序。 欢迎来到 Shopify。 这是一个关于 Shopify 如何每分钟处理 20 多 TB 的数据，运行世界上最大的电子商务平台之一，并且仍然保持其架构简单、可扩展且令人惊讶地人性化的真实故事。</p>
+
+<p><a href="https://johnnysswlab.com/how-branches-influence-the-performance-of-your-code-and-what-can-you-do-about-it">How branches influence the performance of your code and what can you do about it?</a><br>In this articles we investigate on how branches influence the performance of the code and what can we do to improve the speed of our branchfull code.</p>
+
+<p><a href="https://arpitbhayani.me/blogs/heartbeats-in-distributed-systems">分布式系统的心跳</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">AI State 2025</a><br></p>
+
+<p><a href="https://www.dtlarson.com/feed-the-beast">Feed the Beast: AI Eats Software</a><br>作者分享了他如何通过使用 AI，尤其是 Claude Code，来组织和管理他的工作，从而摆脱了传统的生产力工具。他详细介绍了 AI 在处理任务、每周回顾和自动化工作方面的应用，并讨论了 AI 在工作中的未来，以及如何开始使用这种方法。文章还提到了潜在的挑战和风险，并提供了入门指南和资源。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>An open-source UI-first Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, RADIUS, Google Workspace, Active Directory and Kerberos</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/tbphp/gpt-load">tbphp/gpt-load</a><br>Multi-channel AI proxy with intelligent key rotation. 智能密钥轮询的多渠道 AI 代理。</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>CLI tool for spawning and running containers according to the OCI specification</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/NVIDIA/KAI-Scheduler">NVIDIA/KAI-Scheduler</a><br>KAI Scheduler is an open source Kubernetes Native scheduler for AI workloads at large scale</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>Generate type-safe code from SQL</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

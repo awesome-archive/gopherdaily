@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260730.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260730</span>
+</p>
+<p>每日一谚：Never use http.DefaultClient in production. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/30/mcp-2026-07-28-stateless-core-claude">刚刚，MCP协议迎来“史上最大更新”：State彻底消失，Claude率先适配支持</a><br>MCP协议迎来自诞生以来最大规模的规范升级——2026-07-28版本正式发布，核心架构从有状态转为无状态，砍掉握手与会话机制，引入多轮往返请求（MRTR）、请求头路由、可缓存列表结果；MCP Apps、Tasks、企业级鉴权（EMA）正式纳入扩展框架；鉴权体系全面对齐OAuth 2.0/OIDC生产标准。Claude率先宣布跟进适配，目前MCP连接器目录已收录950&#43;服务，SDK月下载量突破4亿。</p> 
+
+<p><a href="https://rakyll.org/compute/">计算</a><br>我曾表示，AI层很可能像其他一切一样变得商品化。我目睹了这一层的思想在几个月内从新颖变为基本要求。</p> 
+
+<p><a href="https://zolstein.substack.com/p/pgxcollectrows-nice-apis-dont-have">pgx.CollectRows：良好的API不必慢</a><br>如果您正在阅读这篇文章，您可能已经知道`pgx`是Go的事实标准PostgreSQL驱动程序。希望您熟悉一些便捷API，如`CollectRows`和`RowToStructByName`。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/07/29/controller-runtime-cache-explained/">controller-runtime缓存实际工作原理，以及为什么您的控制器不会使API服务器崩溃</a><br>**GVK (GroupVersionKind)** 是唯一标识Kubernetes中API类型的三元组。`controller-runtime`中的几乎所有API都基于GVK工作，而不是您在`kubectl`中输入的名称。</p>
+
+<p><a href="https://nesbitt.io/2026/07/30/wheels-bottles-images.html">轮子、瓶子和镜像</a><br>Wheel、Homebrew瓶子和OCI镜像是三大自助式二进制分发系统。项目发布编译后的构件，任何机器都可以获取与其平台匹配的版本。</p>
+
+<p><a href="https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/">我们开源了隐私代理CLI | Cloudflare博客</a><br>Cloudflare开源了其隐私代理命令行界面工具。该工具提供更安全的网络访问体验。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything">AI通过Word传播蠕虫</a><br>攻击者在文档中放置隐藏指令，该文档后来被用作Word Copilot的源材料。Copilot可能将这些指令解释为用户请求的一部分，导致其操纵文档。</p>
+
+<p><a href="https://depot.dev/blog/github-is-the-wrong-shape-for-this-new-world">GitHub对这个新世界而言是错误的形态</a><br>人们非常关注GitHub的整体性能和可靠性。但更有趣的是质疑我们使用GitHub的范式。</p>
+
+<p><a href="https://leaddev.com/reporting/ai-productivity-gains-are-closer-to-10-than-10x">AI生产力提升更接近10%而非10倍</a><br>AI生产力提升更接近10%而非10倍。基准测试有误，而非结果有问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/larksuite/cli">larksuite/cli</a><br>The official Lark/Feishu CLI tool, maintained by the larksuite team — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Mee</p>
+
+<p><a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview</a><br>Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents.</p>
+
+<p><a href="https://github.com/netdata/netdata">netdata/netdata</a><br>The fastest path to AI-powered full stack observability, even for lean teams.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+<p><a href="https://github.com/certimate-go/certimate">certimate-go/certimate</a><br>An open-source and free self-hosted SSL certificates ACME tool, automates the full-cycle of issuance, deployment, renewal, and monitoring visually. 完全开源免费的自托管 SSL 证书 ACME 工��</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

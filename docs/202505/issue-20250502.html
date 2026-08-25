@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250502.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250502</span>
+</p>
+<p>每日一谚：Comments should explain intent, not repeat code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://research.swtch.com/diffcover">Russ Cox：Go调试中的差异覆盖率</a><br>本文介绍了一种调试技巧：差异覆盖率。通过比较成功测试和失败测试的代码覆盖率，可以快速定位可能出错的代码段。作者以Go语言的`math/big`库为例，展示了如何使用`go test -coverprofile`收集覆盖率信息，并用`diff`和`go tool cover -html`生成差异覆盖率报告，从而有效地缩小了调试范围。这种方法虽然并非完美无缺，但对于数据无关的bug，可以显著提高调试效率。</p> 
+
+<p><a href="https://dev.to/encore/go-doesnt-believe-in-frameworks-but-teams-still-need-them-2ikm">Go 不信奉框架，但团队仍然需要它们</a><br>Go 是一种功能强大的语言，以其简洁性、速度和并发模型而闻名。但 Go 社区传统上强烈反对框架和集中式约定——这正是许多团队（尤其是那些来自 Rails、Django 或 FastAPI 等结构化环境的团队）遇到障碍的地方。这篇文章探讨了 Go 开发中的结构差距、其存在的原因以及 Encore 如何通过约定驱动的框架来帮助填补这一空白，从而将清晰度、一致性和生产力带回后端开发。</p> 
+
+<p><a href="https://zuplo.com/blog/2025/04/22/building-unit-agnostic-apis">API、单元和数量：构建与单元无关的集成</a><br>本文探讨了在 API 中一致且清晰地处理不同计量单位和数量的方法，介绍了 UnitsNet 库，该库简化了兼容性和转换。文章指出，无需在 API 中强制使用标准计量单位，每个组件无需了解或假设其他组件的工作方式，即可保持 API 的可读性和易用性。UnitsNet 库提供大量计量单位和数量，以简单对象表示，支持在不同单位间直接进行算术运算和比较。文章最后以 Go 语言和 Gleece 为例，展示了如何使用单位 DTO（数据传输对象）来处理 API 中的单位，从而消除手动转换的需要。</p> 
+
+<p><a href="https://dev.to/tavernetech/turbocharge-your-go-apps-with-custom-memory-caching-hop">使用自定义内存缓存来提升你的 Go 应用性能 🚀</a><br>通过内存缓存提升 Go 应用性能！学习构建线程安全、支持 TTL 和分片的缓存系统，并使用基准测试和 LRU 淘汰策略来处理实际工作负载。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/K2xGjzJPmwTldp3ga8lsUg">Antirez归来，Redis重披“开源”战袍？解读Redis 8与AGPLv3的双重变革</a><br>Redis，再次拥抱了OSI 批准的开源许可证！伴随这个消息的，是Redis 8 的正式 GA (General Availability)，带来了包括性能巨大飞跃和备受瞩目的新数据类型在内 的一系列重大更新。 更具象征意义的是，这次变革的背后，我们看到了 Redis 创始人 Salvatore Sanfilippo (antirez) 的身影。他不仅在去年 11 月回归 Redis，更是在这次的官方公告和个人博客中，毫不掩饰地表达了对 Redis 重归“开源”（以 AGPLv3 形式）的喜悦，以及对他亲手打造的新功能能够以开源形式发布的巨大热情。 </p>
+
+<p><a href="https://eli.thegreenplace.net/2025/bloom-filters/">布隆过滤器</a><br>布隆过滤器是一种概率数据结构，用于高效地进行集合成员测试。它通过使用多个哈希函数将数据映射到一个位数组中，来快速判断一个元素是否在集合中。如果布隆过滤器返回“false”，则该元素一定不在集合中；如果返回“true”，则该元素可能在集合中（存在误判的可能性）。布隆过滤器在需要处理大量数据并且可以容忍少量误判的情况下，能够显著提高效率并节省存储空间。文章详细解释了布隆过滤器的原理、工作机制以及Go语言的实现，并附带了数学推导和实际应用示例。</p>
+
+<p><a href="https://dolthub.com/blog/2025-05-01-understanding-homebrew/">理解 Homebrew：版本控制的包管理器</a><br>本文讲述了作者团队在使用 Homebrew 安装 sysbench 时遇到的一个问题：在某些 MacBook 上，sysbench 测试无法运行，提示 SSL 错误。经过排查，发现问题并非软件版本不兼容，而是 Homebrew 更新了 sysbench 的构建流程，导致其默认使用 SSL，且无法通过常规方法禁用。文章详细解释了 Homebrew 的工作机制，包括 formula、keg、rack、Cellar 和 tap 等概念，并最终通过创建自定义 tap 并指定旧版本的 sysbench formula 来解决问题。文章最后总结了 Homebrew 的灵活性和版本控制的重要性，并推广了 Dolt 数据库。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/05/01/protecting-nats-and-the-integrity-of-open-source-cncfs-commitment-to-the-community/">保护 NATS 和开源的完整性：CNCF 对社区的承诺</a><br>2025 年 5 月 1 日更新：CNCF 和 Synadia 达成协议，确保 NATS 继续在 CNCF 内蓬勃发展成为一个健康的开源项目，Synadia 将继续提供支持和参与。有关更多信息，请参阅我们的联合公告。Synadia，NATS 项目的原始捐赠者，已通知 CNCF 其打算将 NATS 项目从基金会“撤回”，并为 NATS.io 服务器“采用商业源许可证 (BUSL)”——这是一种非开源许可证，限制了用户的自由，并破坏了多年来的开放式开发。CNCF 将继续托管和支持 NATS，并在社区感兴趣的情况下，在 Apache-2.0 许可下使用。我们致力于确保 NATS 继续以开放的方式进行管理，免费提供，并免受单方面接管。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/05/01/kubernetes-v1-33-dra-updates/">Kubernetes v1.33：DRA 的新功能</a><br>Kubernetes 动态资源分配 (DRA) 最初在 v1.26 版本中作为 alpha 功能引入，然后在 Kubernetes v1.31 中进行了重大重新设计。主要 DRA 功能在 v1.32 中进入 beta 阶段，项目希望它将在 Kubernetes v1.34 中普遍可用。DRA 的基本功能集提供了比 Device Plugin 更强大、更灵活的设备请求 API。虽然 DRA 在 v1.33 中仍然是 beta 功能，但 DRA 团队一直在努力实现许多新功能和用户体验改进。一个功能已提升到 beta 版，而一些新功能已作为 alpha 版添加。团队还在努力使 DRA 准备好 GA。</p>
+
+<p><a href="http://www.brendangregg.com/blog//2025-05-01/doom-gpu-flame-graphs.html">毁灭战士GPU火焰图</a><br>本文介绍了如何使用Intel开源加速器分析器iaprof生成毁灭战士(GZDoom)的CPU和GPU火焰图，以及如何利用FlameScope进行性能分析。通过分析CPU和GPU火焰图，可以识别出导致性能瓶颈的代码路径，例如GPU着色器编译、NIR预处理以及渲染墙、后期处理效果、模板和精灵等GPU操作。文章还介绍了iaprof的使用方法以及一些配置要求，例如需要Linux系统、最新的Intel GPU驱动、支持帧指针的系统库等。最后，文章还展望了未来的工作，包括增加对更多硬件的支持以及降低工具的开销。</p>
+
+<p><a href="https://shivangsnewsletter.com/p/why-doesnt-cloudflare-use-containers">为什么 Cloudflare 不在其 Workers 平台基础设施中使用容器？</a><br>Cloudflare 使用其基于 V8 的架构，而不是传统的容器和 Kubernetes 方法，从而实现亚毫秒级的无服务器延迟，并支持大量租户在边缘独立运行工作负载，而无需共享内存和状态。容器或虚拟机的启动时间从 500 毫秒到 10 秒不等，而 Cloudflare 的 V8 隔离架构可在 5 毫秒或更短的时间内预热函数。文章详细解释了 V8 隔离架构、传统容器化无服务器部署的冷启动延迟以及 V8 隔离架构的局限性。</p>
+
+<p><a href="https://sund.site/posts/2025/do-not-vibe-testing">为什么不应该让AI生成单元测试</a><br>作者对AI自动生成单元测试持怀疑态度，认为Gru.ai宣称的降本增效不可靠。单元测试是需求的具象化，更重要的是检测边界条件，而AI大多不清楚边界条件，除非人类显式告知。提高单元测试覆盖率是为了让人类工程师充分考虑边界条件，AI辅助人类生成测试可以节省时间，但AI并不能替代单元测试，更无法保证质量。文章用射击运动员先开枪后画靶子的例子生动地说明了AI生成单元测试的盲目性。</p>
+
+<p><a href="https://habr.com/en/articles/905812">限制字符串长度的最佳方法——但并非好方法</a><br>作者伊利亚分享了他如何创立 Perfect Wiki 的历程，这是一个直接在 Microsoft Teams 中创建公司内部知识库的 SaaS 产品。他讲述了这个想法的起源、遇到的错误、如何找到第一批客户以及如何在五年内逐步将年收入提高到 25 万美元，这一切都无需投资者、大型团队或 A 轮融资。Perfect Wiki 的成功秘诀在于其简洁易用的设计和与 Microsoft Teams 的完美集成，这解决了用户对内置 Wiki 不便的痛点。目前，Perfect Wiki 已被全球 500 多家公司使用，主要市场为美国、加拿大、英国和德国。团队仅由两人组成，作者负责开发和产品，同事负责用户支持，他们通过与用户的沟通和反馈不断改进产品。作者总结了他的经验：不要害怕为狭窄的受众群体构建利基产品，简单易懂的产品更容易销售和维护。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/1/vibes/#atom-everything">关于“氛围编程”</a><br>作者抱怨如果我们屈服于使用“氛围编程”（vibe coding）来指代所有形式的AI辅助编程，那么界限在哪里？从IDE建议一行代码的自动补全，到复制粘贴ChatGPT的三行“转义HTML字符”函数，再到复制粘贴StackOverflow上其他人用AI生成的代码，究竟需要多少AI辅助才能从编程转变为“氛围编程”？作者最终意识到答案就在眼前：没有明确的界限，一切都在于“氛围”。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB is an open-source, fast, reactive, in-memory database optimized for modern hardware.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB — the cloud native, distributed SQL database designed for high availability, effortless scale, and control over data placement.</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>Prometheus instrumentation library for Go applications</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/cadence-workflow/cadence">cadence-workflow/cadence</a><br>Cadence is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/benbjohnson/litestream">benbjohnson/litestream</a><br>Streaming replication for SQLite.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

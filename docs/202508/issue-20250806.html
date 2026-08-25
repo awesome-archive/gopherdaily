@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250806.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250806</span>
+</p>
+<p>每日一谚：test coverage != bug free </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/06/go-new-engine-of-old-languages">Go语言正在成为“老旧”生态的“新引擎”？从FrankenPHP和新版TypeScript编译器谈起</a><br>PHP，它也诞生于 1995 年，同样在 Web 浪潮中崛起，同样被嘲笑，同样迎来了第二春，而现在， 一个基于Go 语言的新项目，也正在驱动着它的未来。这两种语言，就像是同一枚硬币的两面，共同定义了 Web 编程的客户端与服务器端。而今天，我想和你聊的，正是它们故事中那个令人意想不到的、与我们 Gopher 息息相关的交集——Go 语言的角色。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/08/05/goland-2025-2-is-now-out/">GoLand 2025.2 现已发布！</a><br>GoLand 2025.2 引入了用于处理 HTTP 服务器的更新、由数据流分析 (DFA) 提供支持的更智能的检查以及全新的非阻塞欢迎屏幕。此版本还为 golangci-lint 支持带来了重大的质量改进，包括版本 2，使集成更稳健，适用于实时代码分析。</p> 
+
+<p><a href="https://blog.zeptonow.com/boosting-geospatial-performance-at-zepto-learnings-from-scaling-tile38-c31fd1b5ebc2">在 Zepto 上提升地理空间性能：从扩展 Tile38 中获得的经验</a><br>在 Zepto，实时位置至关重要。我们的闪电般快速的交付承诺取决于确切地知道每个商店、骑手和客户在任何特定时刻的位置，并立即响应这些变化。从检查客户是否居住在 Zepto 运营的地区，找到给定区域内的所有交付合作伙伴，识别居住在同一住宅区的客户，到跟踪交付合作伙伴何时进入或退出地理围栏/建筑物——我们的平台会实时不断地回答这些问题。这意味着我们的系统需要一个能够以低延迟和高可靠性处理数百万次位置更新和查询的地理空间骨干。</p> 
+
+<p><a href="https://alexsanderhamir.medium.com/when-optimization-backfires-how-aggressive-optimization-made-our-pool-47x-slower-ceb1e8c85563">当优化适得其反：激进的优化如何使我们的池慢了 2.58 倍</a><br>GenPool 使用分片设计来减少争用。 为了确定哪个分片为请求提供服务，它使用 procPin 运行时函数将 goroutine 绑定到其逻辑处理器，并将生成的处理器 ID 用作分片切片的索引。 听起来对于负载平衡机制来说很复杂，对吧？ 如果我们实施一种更简单的方法来做几乎相同的事情会发生什么？ 显然，事情变得更糟了几个数量级。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-08-05-agent-dot-md">AGENT.md | DoltHub Blog</a><br>本文宣布推出我们最新的 Dolt 文档 AGENT.md。AGENT.md 是一份旨在帮助代理更好地使用 Dolt 的文档。</p>
+
+<p><a href="https://tailscale.com/blog/visual-editor-beta">Tailscale 的视觉策略编辑器现已推出 Beta 版</a><br>视觉策略编辑器为您提供策略文件每个部分的表格视图，并允许您使用视觉表单添加、编辑和删除单个策略条目。</p>
+
+<p><a href="https://www.p99conf.io/2025/08/06/hello-ebpf-concurrency-testing-using-custom-linux-schedulers/">Hello eBPF: 使用自定义 Linux 调度程序进行并发测试</a><br>任何人都可以编写一个基本的 Linux 调度程序，并使用它来查找并发错误或优化特定工作负载。</p>
+
+<p><a href="https://blog.joshsoftware.com/2025/08/06/when-urgent-fixes-cant-wait-how-to-patch-packages-in-production/">当紧急修复迫在眉睫时：如何在生产环境中修补软件包</a><br>在大型发布之前，开发人员会有一种特殊的恐慌感。您已经检查了所有内容，测试通过，过渡环境稳定，业务团队指望您今天上线。然后，在最后一刻，您发现了意想不到的事情：您所依赖的第三方 npm 包中的一个错误、一个缺失的功能或意外的行为。</p>
+
+<p><a href="https://www.docker.com/blog/hardened-image-best-practices/">Hardened Images Need Flexibility, Not Rigidity</a><br>为什么灵活的强化镜像可以驱动真正的安全性。了解平台团队如何大规模平衡安全性、可用性和开发人员的幸福感。</p>
+
+<p><a href="https://martinfowler.com/articles/impact-intel.html">改革派CTO的“影响力智能”指南</a><br>对于技术领导者及其团队而言，将组织的关注点从生产力转移到业务影响力，这对于他们来说，是一份指南。</p>
+
+<p><a href="https://preset.io/blog/adopting-claude-code-riding-the-software-economics-singularity">Adopting Claude Code: Riding the Software Economics Singularity</a><br>How Claude Code and AI assistants are revolutionizing software development. From rewriting the effort/value equation to obliterating technical debt, explore the radical shifts in programming economics and why developers need to catch this wave now.</p>
+
+<p><a href="https://martinfowler.com/articles/pushing-ai-autonomy.html">我们能将 AI 代码生成的自主性推到多远？</a><br>我们进行了一系列实验，以探索目前可以推动生成式 AI 在没有人工干预的情况下自主开发高质量、最新的软件。作为案例，我们创建了一个代理工作流程来端到端地构建一个简单的 Spring Boot 应用程序。我们发现，该工作流程最终可以生成这些简单的应用程序，但在结果中仍然观察到重大问题——尤其是在我们增加复杂性时。该模型会生成我们没有要求的功能，在需求差距周围做出假设，并在测试失败时声明成功。我们得出的结论是，虽然我们的许多策略——例如可重用提示或参考应用程序——对于增强 AI 辅助工作流程很有价值，但人工监督生成仍然至关重要。</p>
+
+<p><a href="https://yoyo-code.com/why-is-github-ui-getting-so-much-slower">为什么GitHub UI变得越来越慢？</a><br>作者注意到GitHub UI最近变得越来越慢，切换标签页等操作耗时严重。文章分析了GitHub使用Turbo技术进行页面预加载，但实际上在某些情况下，在新标签页中打开链接反而更快。作者还提到了加载进度条和大量DOM节点等问题，并质疑GitHub是否真正关注性能优化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work">Agentic Coding Things That Didn’t Work</a><br>作者分享了他对 agentic 编码工具的尝试，并总结了其中未成功的方法。他尝试了各种功能，如 slash commands、hooks、print mode 以及 sub tasks 和 sub agents，但发现它们并未带来预期的效率提升。作者强调了在自动化流程中保持积极思考的重要性，以避免过度依赖工具而导致质量下降。</p>
+
+<p><a href="https://colton.dev/blog/curing-your-ai-10x-engineer-imposter-syndrome">不，人工智能并没有让工程师的生产力提高 10 倍</a><br>几个月前，我经历了一段精神低迷期。我一直对自己的工程师能力充满信心，但我忍不住觉得自己与 LinkedIn 和 Twitter 等地方的其他人相比，我的技能正在无可救药地落后。如果相信这些来源，工程技术已经摆脱了在中世纪在编辑器中输入代码的做法。真正的工程师现在的生产力是我生产力的 10-100 倍。我写这篇文章是希望帮助那些有类似焦虑感的人。</p>
+
+<p><a href="https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models">Genie 3：世界模型的新前沿</a><br>今天，我们宣布推出 Genie 3，这是一个通用世界模型，可以生成前所未有的各种交互式环境。  给定文本提示，Genie 3 可以生成动态世界，您可以在每秒 24 帧的速度下进行实时导航，在 720p 分辨率下保持几分钟的一致性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/sst/opencode">sst/opencode</a><br>AI coding agent, built for the terminal.</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 Fast and simple video download library and CLI tool written in Go</p>
+
+<p><a href="https://github.com/GhostTroops/scan4all">GhostTroops/scan4all</a><br>Official repository vuls Scan: 15000&#43;PoCs; 23 kinds of application password crack; 7000&#43;Web fingerprints; 146 protocols and 90000&#43; rules Port scanning; Fuzz, HW, awesome BugBounty( ͡° ͜ʖ ͡°)...</p>
+
+<p><a href="https://github.com/coroot/coroot">coroot/coroot</a><br>Coroot is an open-source APM &amp; Observability tool, a DataDog and NewRelic alternative. Metrics, logs, traces, continuous profiling, and SLO-based alerting, supercharged with predefined dashboards and inspections.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/gravitl/netmaker">gravitl/netmaker</a><br>Netmaker makes networks with WireGuard. Netmaker automates fast, secure, and distributed virtual networks.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/screego/server">screego/server</a><br>screen sharing for developers https://screego.net/</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/karmada-io/karmada">karmada-io/karmada</a><br>Open, Multi-Cloud, Multi-Cluster Kubernetes Orchestration</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/php/frankenphp">php/frankenphp</a><br>🧟 The modern PHP app server</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

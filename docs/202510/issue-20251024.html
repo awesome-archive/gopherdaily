@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251024.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251024</span>
+</p>
+<p>每日一谚：Using Unexported Empty Struct as Context Key </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/JOJIMJ-F7eoX48bkRSWFBg">鹅厂研发大数据报告出炉，Go还是腾讯程序员最喜欢的编程语言</a><br>1024程序员节快乐！在这个属于技术创造者的日子里，腾讯发布了《2025腾讯研发大数据报告》，系统披露全年研发进展。Go语言还是腾讯程序员最喜欢的编程语言</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/MOoxXiNxZXGymgOYLFBS3g">【Go 网络编程全解】09 高级 I/O 函数：Go 中的 Scatter/Gather I/O</a><br></p> 
+
+<p><a href="https://info.varnish-software.com/blog/how-memory-maps-mmap-deliver-25x-faster-file-access-in-go">内存映射（mmap）如何在 Go 中实现 25 倍更快的文件访问速度</a><br></p> 
+
+<p><a href="https://rednafi.com/go/avoid-context-key-collisions">避免在 Go context keys 中发生冲突</a><br>除了传播截止日期和取消信号之外，Go 的 context 包还可以在 API 边界和进程中携带请求范围的值。
+与上下文值相关的只有两个公共 API 构造：
+func WithValue(parent Context, key, val any) Context func (c Context) Value(key any) any
+在上下文存储和检索值的朴素工作流程如下所示：
+ctx := context.Background()
+// 存储某个值
+ctx = context.WithValue(ctx, &#34;userID&#34;, 42)
+// 检索值
+v := ctx.Value(&#34;userID&#34;)
+// Value 返回 any，所以你需要类型断言
+id, ok := v.(int) if !ok { fmt.Println(&#34;unexpected type&#34;) } fmt.Println(id) // 42 WithValue 返回指向父上下文的派生上下文。</p> 
+
+<p><a href="http://docs.serviceradar.cloud/blog/blazing-fast-go-syn-scanner">从 19 小时到不到一秒：用 Go 构建一个极速的 TCP 扫描器</a><br>ServiceRadar 如何通过利用原始套接字、BPF 和 Go 汇编，将 19 小时的 TCP 发现工作变成亚秒级的 SYN 扫描。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://words.filippo.io/standard-of-care/">Geomys 的维护标准</a><br>介绍 Geomys 维护人员在作为开源维护人员的专业活动中努力维护的一系列标准。</p>
+
+<p><a href="https://www.haproxy.com/blog/announcing-haproxy-aloha-17-5">Announcing HAProxy ALOHA 17.5</a><br>HAProxy ALOHA 17.5 delivers powerful new capabilities that improve security and performance — while facilitating future HAProxy Enterprise module integration.</p>
+
+<p><a href="https://www.docker.com/blog/self-hosted-alternatives-control-your-data/">Self-Hosted Alternatives: Control Your Data</a><br>Privacy, subscriptions, lock-in: see why self-hosting is surging, beginner tools like Immich and LibreOffice, and how Docker containers make setup easy.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/23/cncf-embraces-lfx-self-service-for-calendar-management/">CNCF 拥抱 LFX 自助日历管理</a><br>自成立以来，云原生计算基金会 (CNCF) 经历了显着增长，于 2016 年 3 月 10 日迎来了其第一个项目 Kubernetes。到 2025 年，CNCF 骄傲地支持着超过……</p>
+
+<p><a href="https://engineering.fb.com/2025/10/23/security/scaling-privacy-infrastructure-for-genai-product-innovation/">扩展 GenAI 产品创新的隐私基础设施</a><br>Meta 如何赋能其产品团队负责任地利用 GenAI 的力量？在这篇文章中，我们深入探讨了 Meta 如何通过扩展其隐私感知基础设施 (PAI) 来应对 GenAI 时代保护数据的挑战，特别是将 Meta 的 AI 眼镜作为 GenAI 的一个使用案例。 我们将详细描述数据谱系背后的技术，解释现代基础设施如何支持大规模隐私，并讨论这些进步如何加速产品创新，同时将隐私置于核心地位。</p>
+
+<p><a href="https://www.anthropic.com/news/memory">Claude 为团队引入记忆功能</a><br>Claude 现在可以记住您的团队在不同对话中的项目和偏好。 记忆功能有助于维护复杂工作的上下文，具有特定于项目的界限和用户对所记住内容的完全控制。</p>
+
+<p><a href="https://signalvnoise.com/svn3/the-majestic-monolith">雄伟的单体</a><br>有些模式仅仅关乎代码。 如果您的代码看起来像这样，并且您需要它这样做，那么您需要这样做。 你最好研究这样的模式，因为它们会给你一个随时可以应用并让你每次触及它们的上下文时都能让你的代码变得更好的解决方案的深度剧目。 然后还有其他模式，它们不太关乎代码，而更多地关乎代码的编写方式、由谁编写以及在哪个组织内编写。 雄伟的单体就是这些模式之一。 </p>
+
+<p><a href="https://newsletter.manager.dev/p/the-price-of-mandatory-code-reviews">强制代码审查的代价 - Anton Zaides</a><br>挑战软件工程界不成文的规定。作者在过去15年中工作的每家公司都强制进行代码审查。在过去的一个月中，作者开始重新考虑这项“规定”，并且接触到了没有强制代码审查的生产团队。例如，Pylon 的工程师合并自己的代码，只有在需要输入、认为有风险的更改或仍在入职时才请求审查。他们认为：如果我们聘用了熟练的工程师并信任他们，就没有理由用强制审查来限制每一次更改。为了回答这个问题，作者查阅了过去一个月的Weave数据（400 多家公司和 3000 多名工程师），以回答以下 5 个问题：没有代码审查的团队实际上是否更快？代码审查是否减少了错误？代码审查的质量是否重要？代码审查的周转速度是否重要？顶尖的组织如何运作？结论：没有代码审查意味着更快的发布，但错误更多。 有代码审查的团队：31 个专家小时，每个开发人员 3.7 个错误。没有进行代码审查的团队的产量是原来的 1.9 倍（约 59 个专家小时/开发人员），但错误却多了 2.4 倍（8.9/开发人员）。即使考虑到较高的生产力，每专家小时的工作量也多出 25% 的错误。所以，跳过审查确实会让你更快。但你发布的代码也更容易出错。文章中，作者还解释了“Bug”、“Output”、“Reviews per PR”等概念。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Oct/23/openai-no-longer-has-to-preserve/#atom-everything">OpenAI 不再需要保留其所有 ChatGPT 数据，但有一些例外</a><br>这是一个好消息：联邦法官 Ona T. Wang 于 10 月 9 日提交了一份新命令，免除了 OpenAI 义务，“保留和分隔所有输出日志数据…”。</p>
+
+<p><a href="https://simonwillison.net/2025/Oct/22/living-dangerously-with-claude">大胆使用 Claude</a><br>昨晚我在旧金山的 Claude Code Anonymous（非官方的编码代理爱好者聚会）上发表演讲。 我决定谈谈我最近一直在挣扎的一个二元论。 一方面，我从运行尽可能少限制的编码代理中获得了巨大的价值。 另一方面，我深深地担忧伴随这种自由的风险。下面是我的幻灯片的副本，以及作为注释演示文稿的额外注释和链接。</p>
+
+<p><a href="https://pytorch.org/blog/introducing-pytorch-monarch">Introducing PyTorch Monarch</a><br>我们现在生活在一个ML工作流（预训练、后训练等）是异构的，必须应对硬件故障，并且越来越异步且高度动态的世界。 传统上，PyTorch 依赖于 HPC 风格的多控制器模型，其中同一脚本的多个副本在不同的机器上启动，每个机器运行其自己的应用程序实例（通常称为 SPMD）。 ML 工作流程变得越来越复杂： 预训练可能将高级并行性与异步性和部分故障相结合； 而用于后训练的 RL 模型需要高度的动态性以及复杂的反馈循环。 </p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/julien040/anyquery">julien040/anyquery</a><br>Query anything (GitHub, Notion, &#43;40 more) with SQL and let LLMs (ChatGPT, Claude) connect to using MCP</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/urfave/cli">urfave/cli</a><br>A declarative, simple, fast, and fun package for building command line tools in Go</p>
+
+<p><a href="https://github.com/litmuschaos/litmus">litmuschaos/litmus</a><br>Litmus helps SREs and developers practice chaos engineering in a Cloud-native way. Chaos experiments are published at the ChaosHub (https://hub.litmuschaos.io). Community notes is at https://hackmd.io/a4Zu_sH4TZGeih-xCimi3Q</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/NVIDIA/gpu-operator">NVIDIA/gpu-operator</a><br>NVIDIA GPU Operator creates, configures, and manages GPUs in Kubernetes</p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/integrations/terraform-provider-github">integrations/terraform-provider-github</a><br>Terraform GitHub provider</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/vektra/mockery">vektra/mockery</a><br>A mock code autogenerator for Go</p>
+
+<p><a href="https://github.com/containers/buildah">containers/buildah</a><br>A tool that facilitates building OCI images.</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>A Modern Testing Framework for Go</p>
+
+<p><a href="https://github.com/docker/mcp-registry">docker/mcp-registry</a><br>Official Docker MCP registry</p>
+
+<p><a href="https://github.com/pdfcpu/pdfcpu">pdfcpu/pdfcpu</a><br>A PDF processor written in Go.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/NVIDIA/nvidia-container-toolkit">NVIDIA/nvidia-container-toolkit</a><br>Build and run containers leveraging NVIDIA GPUs</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

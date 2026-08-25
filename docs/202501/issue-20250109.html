@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250109.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250109</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.bytesizego.com/blog/10-years-functional-options-golang">十年使用functional option的关键经验教训</a><br>函数式选项是 Go 语言中一种强大的模式，可用于编写小巧灵活的 API。Andrea 分享了她在 Go 生产环境中十年使用（和误用！）函数式选项的经验，包括如何以及何时使用它们，以及一路走来的关键经验教训。文章还包含代码示例，解释了函数式选项的工作原理，以及在构建开放核心安全工作流引擎 Smithy 时如何应用这些概念。</p> 
+
+<p><a href="https://www.youtube.com/watch?v=YX_Plgsrm44">GopherCon 2024：探索Go编译器：添加“四”循环</a><br>我们将通过添加一个新的语言特性：“四”循环，来深入了解 Go 编译器，从解析源文件到生成机器码。听完本次演讲后，听众将了解他们的 Go 代码是如何被解析、优化和转换成机器码的，并能轻松地深入 Go 编译器。</p> 
+
+<p><a href="https://jerf.org/iri/post/2025/programming_language_ideas">一些编程语言的想法</a><br>文章作者认为编程语言发展有些停滞，很多都是现有想法的重新组合，缺乏创新。文章列出了一些作者的想法，包括：放松函数的概念，使其能够表达RPC中出现的各种错误情况；更多地使用能力（Capabilities）；生产级发布；半动态语言；值数据库；真正关系型语言；鼓励模块化整体的语言；模块化静态检查。这些想法并非完全成熟，有些甚至互相矛盾，但作者希望引发更多讨论和思考。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/installing-tailscale-on-macos">在macOS上安装 Tailscale</a><br>本文介绍了在 macOS 上安装 Tailscale 的三种官方方法：独立版本、Mac App Store 版本和 tailscaled 版本。独立版本对大多数用户来说是安全性和易用性的最佳组合，而 Mac App Store 版本需要 Apple 帐户登录，tailscaled 版本则是一个命令行工具，不推荐用于生产环境。文章还建议避免在同一台机器上同时安装 Mac App Store 版本和独立版本。</p>
+
+<p><a href="https://engineering.salesforce.com/the-next-generation-of-rag-how-enriched-index-redefines-information-retrieval-for-llms/">下一代 RAG：增强型索引如何重新定义大型语言模型的信息检索</a><br>Salesforce 如何创建动态检索系统，通过调整查询复杂性来平衡精确度和速度，以及更多内容。</p>
+
+<p><a href="https://www.responsive.dev/blog/kafka-streams-2024-year-in-review">Kafka Streams 回顾：2024 年总结</a><br>Kafka Streams 在 2024 年增加了一些重要的功能和改进。本文重点介绍了这些亮点，包括 API 增强、任务分配改进和监控改进等方面。文章列举了多个 KIP（Kafka Improvement Proposal），并对其中一些重要的 KIP 进行了深入探讨，例如允许自定义处理器包装 (KIP-1112)、扩展默认 DSL 存储配置以支持自定义类型 (KIP-954)、以及改进的监控指标等。文章还展望了 2025 年及以后 Kafka Streams 的发展。</p>
+
+<p><a href="https://tonbo.io/blog/threads-with-webassembly">WebAssembly 多线程</a><br>本文探讨了 WebAssembly 中多线程的现状。WebAssembly 目前缺乏内置线程支持，文章以 Rust 为例，演示了如何在当前环境下利用多线程，包括使用 Web Workers API、shared-channel、共享内存以及处理同步等问题。文章还介绍了相关的第三方实现，例如 wasm_thread，它简化了共享内存和线程同步的管理。最后，文章列出了相关的参考文献，包括 Bulk Memory Operations、threads proposal 等。</p>
+
+<p><a href="https://www.influxdata.com/blog/datafusion-2025-influxdb">2025：基于 DataFusion 的系统将达到 1000 个 | InfluxData</a><br>Apache DataFusion 已达到一个拐点，它已成熟到可以被任何构建高性能分析系统的人所采用。本文预测 2025 年基于 DataFusion 的系统数量将大幅增加，并概述了 DataFusion 的发展历程、在开源数据湖中的整合，以及未来发展的方向，包括提高质量、性能和采用率。</p>
+
+<p><a href="https://blog.bytebytego.com/p/how-airbnb-built-a-key-value-store">Airbnb 如何为 PB 级数据构建键值存储</a><br>本文基于 Airbnb 技术博客的内容，介绍了 Airbnb 如何构建名为 Mussel 的键值存储系统来管理 PB 级数据。文章概述了 Airbnb 存储衍生数据的演变历程，从早期的 HFileService（只读，每日批量更新）到 Nebula（结合了批量和实时数据，但维护成本高），最终到 Mussel。Mussel 使用 Apache Helix 进行分区管理，Kafka 进行无领导者复制，并采用 HRegion 作为统一的存储引擎，支持批量数据加载。Mussel 在 Airbnb 的生产环境中表现出色，拥有高可用性、低延迟和高吞吐量。</p>
+
+<p><a href="https://slack.engineering/automated-accessibility-testing-at-slack">Slack：自动化访问测试</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://arthurchiao.art/blog/ai-agent-white-paper-zh">AI Agent（智能体）技术白皮书（Google，2024）</a><br>本文翻译自2024年Google团队的一份Agents白皮书，作者Julia Wiesinger, Patrick Marlow, Vladimir Vuskovic。文章介绍了AI Agent的概念、架构、工作原理以及如何基于LangChain快速创建Agent。Agent可以理解为一个扩展了大模型出厂能力的应用程序，工具的使用是Agent区别于大模型的关键标志。文章详细解释了Agent的三个核心组件：模型、工具和编排层，并通过类比厨师做菜的方式解释了Agent的工作流程。文中还介绍了三种主要的工具类型：Extensions、Functions和Data Stores，并通过示例代码演示了如何使用LangChain构建Agent原型。</p>
+
+<p><a href="https://zerorust.cn/blog/deepseek">Cursor 和 Windsurf 的开源替代方案：VSCode Cline 插件结合 DeepSeek，开发效率提升</a><br>本文介绍如何使用 VSCode Cline 插件结合 DeepSeek v3 打造强大的 AI 编程助手，作为 Cursor 和 Windsurf 的替代方案，提高开发效率。Cline 插件开源免费，DeepSeek API 调用成本低，响应速度快，并且代码修改过程透明可视化。</p>
+
+<p><a href="https://www.confluent.io/blog/stop-treating-your-llm-like-a-database">避免将大型语言模型视为数据库：批处理思维如何扼杀生成式人工智能的潜力</a><br>本文探讨了为什么批处理范式已经过时，它如何阻碍人工智能应用，以及为什么人工智能的未来需要一个实时事件流平台。生成式人工智能依赖于实时上下文数据，而批处理方法无法满足这一需求。实时事件流平台通过支持动态、实时的交互和适应性，解锁了人工智能的全部潜力。</p>
+
+<p><a href="https://www.daily.co/blog/build-a-voice-agent-for-android-with-gemini-multimodal-live">使用 Gemini 多模态实时构建 Android 语音代理</a><br>本指南将使用 Pipecat（一个用于构建对话式和多模态 AI 代理的开源框架）来设置一个实时 AI 语音代理，并使用运行 Pipecat 客户端库的 Android 应用与其交互。服务器和客户端将使用 RTVI 协议进行交互，使用 WebRTC 发送音频（和视频）数据。这确保了低延迟，即使在移动数据连接上也能保持稳定的会话。RTVI 支持内置于 Pipecat 框架中。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>A BNB Smart Chain client based on the go-ethereum fork</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>Simple and flexible tool for managing secrets</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/nomad">hashicorp/nomad</a><br>Nomad is an easy-to-use, flexible, and performant workload orchestrator that can deploy a mix of microservice, batch, containerized, and non-containerized applications. Nomad is easy to operate and scale and has native Consul and Vault integrations.</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/twmb/franz-go">twmb/franz-go</a><br>franz-go contains a feature complete, pure Go library for interacting with Kafka from 0.8.0 through 3.8&#43;. Producing, consuming, transacting, administrating, etc.</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>Prometheus instrumentation library for Go applications</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/bytebase/bytebase">bytebase/bytebase</a><br>World&#39;s most advanced database DevSecOps solution for Developer, Security, DBA and Platform Engineering teams. The GitHub/GitLab for database DevSecOps.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

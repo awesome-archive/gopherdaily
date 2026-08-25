@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251016.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251016</span>
+</p>
+<p>每日一谚：Declare variables Close to Usage </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/16/cpu-cache-friendly-in-go">释放Go的极限潜能：CPU缓存友好的数据结构设计指南</a><br>本文将和大家一起从 CPU 缓存的第一性原理出发，并结合完整的 Go 示例与基准测试，为你揭示一系列强大的“数据驱动设计”(Data-Oriented Design) 技术，包括伪共享、AoS vs. SoA、冷热数据分离等，助你编写出真正能与硬件产生“机械共鸣”的 Go 程序。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/csUXTKW7uRpvCzN_47prsw">【Go 网络编程全解】04 诊断之道与并发模型演进：从 fork 到 go</a><br></p> 
+
+<p><a href="https://tailscale.com/blog/nat-traversal-improvements-pt-1">NAT 穿越，以及我们如何改进它</a><br>这是关于 Tailscale 如何在设备之间建立安全连接以及它们之间遇到的挑战的一系列文章中的第一篇。继续阅读以了解我们如何让 Tailscale 和全球网络更容易建立连接——并期待未来关于云网络以及我们对未来的看法。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/10/16/the-10x-commandments-of-highly-effective-go/">“10x” Go 语言高效开发的十诫</a><br>John Arundel 分享了 Go 语言高效开发的十条实用“戒律”——编写更简洁、更安全、更易于维护的 Go 代码的永恒经验。</p> 
+
+<p><a href="https://www.alexedwards.net/blog/preventing-csrf-in-go">使用现代方法在 Go 中防止 CSRF 攻击</a><br>Go 1.25 引入了一个新的 `http.CrossOriginProtection` 中间件，用于防止 CSRF 攻击。在本文中，作者探讨了在满足某些重要条件的情况下，是否可以不再依赖基于令牌的检查（如双重提交 Cookie）来构建安全的 Web 应用程序。文章分析了 `http.CrossOriginProtection` 的工作原理、局限性以及与 TLS 1.3 和 SameSite cookie 的结合使用。最后，总结了在不使用基于令牌的 CSRF 检查的情况下，可以接受的条件，并强调了在浏览器兼容性和安全风险方面的考虑。</p> 
+
+<p><a href="https://weaviate.io/blog/when-good-models-go-bad">当好的模型变坏时</a><br>关于在生产 AI 中升级嵌入模型的成本、风险和回报的战略指南</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/debug-docker-builds-with-visual-studio-code/">Debug Docker Builds with Visual Studio Code | Docker</a><br>Learn about Docker&#39;s exciting new feature for debugging Dockerfiles. Debug with Visual Studio Code or with an editor that supports the Debug Adapter Protocol.</p>
+
+<p><a href="https://www.cncf.io/blog/2025/10/16/kyverno-vs-kubernetes-policies-how-kyverno-complements-and-completes-kubernetes-policy-types/">Kyverno vs Kubernetes 策略：Kyverno 如何补充和完善 Kubernetes 策略类型</a><br>本文最初发布于 Nirmata.com，发布时间为 2025 年 10 月 1 日。 随着 Kubernetes 中 ValidatingAdmissionPolicy 和 MutatingAdmissionPolicy 的加入，您是否仍然需要 Kyverno？ 本文回答了这个问题...</p>
+
+<p><a href="https://www.pracdata.io/p/zero-disk-architecture-the-future">零磁盘架构：云存储系统的未来</a><br>全面了解零磁盘架构：云存储如何通过具有成本效益、可扩展的云原生解决方案来改变数据库系统。&#34;</p>
+
+<p><a href="https://www.backblaze.com/blog/are-hard-drives-getting-better-lets-revisit-the-bathtub-curve">硬盘会变得更好吗？ 让我们重新审视一下浴缸曲线</a><br>13 年后，数据很清楚——浴缸曲线不适用于硬盘。而且，更重要的是，硬盘的故障率正在降低，使用寿命也更长。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://prahladyeri.github.io/blog/2025/10/i-am-a-programmer.html">我是一个程序员，而不是批准 Copilot 生成的代码的橡皮图章</a><br>今天早上，我看到了这篇名为“由于 AI 和 AI 追随者而对职业完全失去兴趣”的 reddit 帖子。他们描述了在短短两个月内，他们的企业工作从“我会在这里工作一辈子”变成了“是时候换工作了吗？”。而这篇文章并非孤例，这其中存在着深层次的黑暗模式。</p>
+
+<p><a href="https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html">理解规范驱动开发：Kiro、spec-kit 和 Tessl</a><br>我一直在试图理解最新的一个 AI 编码流行语：规范驱动开发 (SDD)。我研究了三个将自己标记为 SDD 工具的工具，试图解开它现在的含义。</p>
+
+<p><a href="https://www.jampa.dev/p/llms-and-the-lessons-we-still-havent">我从实施 AI 的 7 年中学到的东西</a><br>尽管 LLM 的影响前所未见，但它们感觉与早期的假设相似。</p>
+
+<p><a href="https://slinkydeveloper.com/blog/designing-apis-for-vibe-coding">Designing APIs for vibe coding</a><br>Vibe coding 需要API设计做出改变，以适应这种新现实。文章讨论了在vibe coding出现之前的设计原则，例如idiomatic， integrability， discoverability；并指出当前LLM在处理API时遇到的问题，主要集中在LLM对API的理解与实际使用之间存在差距。文章认为，API需要最大化vibe-ability，即开发人员可以通过LLM辅助编码来发现并正确使用API。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>✨ Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/majd/ipatool">majd/ipatool</a><br>Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes</p>
+
+<p><a href="https://github.com/NexaAI/nexa-sdk">NexaAI/nexa-sdk</a><br>Run the latest LLMs and VLMs across GPU, NPU, and CPU with PC (Python/C&#43;&#43;) &amp; mobile (Android &amp; iOS) support, running quickly with OpenAI gpt-oss, Granite4, Qwen3VL, Gemma 3n and more.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/kubeflow/trainer">kubeflow/trainer</a><br>Distributed AI Model Training and Fine-Tuning on Kubernetes</p>
+
+<p><a href="https://github.com/sjzar/chatlog">sjzar/chatlog</a><br>chat log tool, easily use your own chat data. 聊天记录工具，轻松使用自己的聊天数据</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/stefanprodan/podinfo">stefanprodan/podinfo</a><br>Go microservice template for Kubernetes</p>
+
+<p><a href="https://github.com/zalando/postgres-operator">zalando/postgres-operator</a><br>Postgres operator creates and manages PostgreSQL clusters running in Kubernetes</p>
+
+<p><a href="https://github.com/charmbracelet/huh">charmbracelet/huh</a><br>Build terminal forms and prompts 🤷🏻‍♀️</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

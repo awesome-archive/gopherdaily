@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241110.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-10</span>
+</p>
+<p>每日一谚：Compiler errors are better than runtime errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/11/11/some-details-about-go-compilation">Go编译的几个细节，连专家也要停下来想想</a><br>Go编译默认采用静态链接还是动态链接？ 在何种情况下默认会生成动态链接的Go程序？ 如何在上述情况下实现静态链接？Go编译出的可执行文件过大，能优化吗？未使用的符号是否会被编译到Go二进制文件中？如何快速判断Go项目是否依赖cgo？以上这些问题，大家是否自己探索过？如果没有，那我为大家准备了一份参考答案！</p> 
+
+<p><a href="https://www.bytesizego.com/blog/learning-golang-2024">2024年学习Go：从初级到高级</a><br>源文档为 Go 开发人员在学习旅程的各个阶段提供了全面的指南。它首先解决寻找合适学习材料的挑战，并策划了跨书籍、博客、视频课程等的一系列资源。该指南的结构旨在迎合不同专业知识水平，从初学者开始，通过交互式教程介绍基础知识，然后逐渐发展到具有中高级经验的更复杂的概念。对于每个级别，本文档列出了推荐的资源，包括免费和付费材料，涵盖域驱动设计、数据结构、并发和调试等主题。此外，该指南强调了通过订阅相关时事通讯来了解 Go 最新发展的重要性。总体而言，该文件旨在为围棋爱好者提供一条结构化的途径，以提高他们的技能并在该领域保持最新状态。</p> 
+
+<p><a href="https://dev.to/encore/typescript-vs-go-choosing-your-backend-language-2bc5">TypeScript与Go：选择你的后端语言</a><br>DEV 社区文章比较了 TypeScript 和 Go 的后端开发，突出了它们各自的优势和对不同项目需求的适用性。Go 因其简单性、速度和对 goroutines 并发的内置支持而受到赞誉，使其成为微服务和高性能系统的理想选择。其简单的语法和高效的包管理系统被认为是优势，特别是对于优先考虑速度和简单的团队。另一方面，TypeScript 提供了一个更通用和类型安全的环境，具有丰富的库和框架生态系统，可以提高开发人员的工作效率。它的高级功能（如泛型、联合和交集类型）以及强大的社区支持，使其成为全栈 JavaScript 项目的有力候选者。TypeScript 和 Go 之间的选择最终取决于项目要求、团队专业知识以及开发速度和运行时性能之间的平衡。文章强调，这两种语言都不是普遍优越的，但每种语言在不同的场景中都表现出色。</p> 
+
+<p><a href="https://medium.com/novai-go-programming-101/understanding-tdd-vs-bdd-building-a-login-feature-in-go-2227e10136a6">了解 TDD 与 BDD：在 Go 中构建登录功能</a><br>在本文中，Nova Novriansyah 以登录功能为例，探讨了 Go 编程上下文中测试驱动开发 （TDD） 和行为驱动开发 （BDD） 之间的区别。TDD 的特点是首先编写测试来定义各个函数的预期行为，例如密码哈希和凭证验证，从而确保技术正确性和低级功能。另一方面，BDD 专注于高级场景和以用户为中心的语言，使用 Ginkgo 和 Gomega 编写测试，从用户的角度描述系统的期望行为。本文强调了将 TDD 和 BDD 相结合以创建健壮、可维护和用户友好的软件的重要性。Novriansyah 为 TDD 和 BDD 方法提供了有关设置开发环境、编写测试和运行测试的指导，最终倡导将这两种方法平衡集成以提高软件质量。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://ente.io/blog/monorepo-retrospective/">Monorepo - 我们的经验</a><br>本文档讲述了最初作为一系列独立存储库开发的平台过渡到 monorepo 结构的经验。该平台 Ente 最初是一款照片应用程序，后来发展成为更广泛的个人数据隐私愿景。向 monorepo 的转变是由与平台的性质和实际优势的意识形态一致推动的，例如减少繁重的工作和更少的子模块。此更改不会对开发速度产生重大影响，并且团队发现跨不同应用程序管理和同步工作变得更加容易。此外，整合到单个存储库中增强了平台的可见性和对用户的吸引力，这体现在增加的 star 数上。此举还促进了长期重构，并在团队成员的工作中培养了一种联系感，因为他们现在可以看到自己贡献的相互关联性。总体而言，向 monorepo 的过渡是积极的，在工作流程效率和项目凝聚力方面有切实的好处。</p>
+
+<p><a href="https://www.recall.ai/post/how-websockets-cost-us-1m-on-our-aws-bill">WebSockets 的 AWS 账单成本如何为 1M USD</a><br>该文档详细介绍了 Recall.ai 是一家每月捕获和处理数百万次会议的公司，由于使用 WebSocket 进行数据传输的效率低下，AWS 成本如何面临大幅增加。最初，该公司的机器人需要 4 个 CPU 内核才能平稳运行，但发现主要的 CPU 使用率在于与内存移动相关的两个功能，这些功能被 WebSocket 客户端大量使用。原始视频数据的高带宽（平均 150MB/s）加剧了这个问题，因为 WebSocket 的分段和屏蔽功能导致了性能瓶颈。为了解决这些低效率问题，Recall.ai 探索了替代数据传输机制，最终决定使用具有环形缓冲区设计的共享内存，以实现低开销和高性能。这种转变旨在减少延迟和抖动，确保一致的实时视频处理，而不会产生与 WebSocket 传输相关的昂贵 CPU 使用率。</p>
+
+<p><a href="https://www.ardanlabs.com/blog/2024/11/fearless-concurrency-ep5-ensuring-memory-safety-with-mutexes-and-rwlocks-in-rust.html">Fearless Concurrency Ep.5: Ensuring Memory Safety with Mutexes and RwLocks in Rust</a><br>In the fifth episode of &#34;Fearless Concurrency in Rust,&#34; Herbert Wolverson delves into advanced concurrency tools, focusing on `RwLock` for managing concurrent reads and writes, and interior mutability through the `Sync` trait. The episode begins by explaining `RwLock` and its efficiency in scenarios with frequent read access and infrequent write access, while cautioning against its misuse that could lead to performance bottlenecks. Wolverson then introduces interior mutability, which embeds mutexes within structs, simplifying data access across threads and enhancing performance by avoiding unnecessary serialization. The episode also includes a video segment featuring Bill Kennedy, Jerome Petazzoni, and Miki Tebeka, who discuss their expertise in Go, Blockchain, Docker, and Python, respectively. Additionally, the episode highlights the importance of training teams with best practices and customized curriculum, offering resources for live training, self-paced courses, and free online course content. The episode concludes with a call to action for subscribers to receive special offers on training events and latest blog posts, while also emphasizing Ardan Labs&#39; reputation as a trusted educator in technology.
+
+(Note: The summary is crafted to encapsulate the key points of the source document while maintaining brevity and coherence. It does not include direct quotes or specific details beyond what is necessary to convey the essence of the episode.)</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/08/kubernetes-rbac-improve-the-k8s-security-posture/">Kubernetes RBAC：改善 K8s 安全状况</a><br>Devtron 博客中的这篇文章讨论了在 Kubernetes 中实施基于角色的访问控制 （RBAC） 以增强安全性。它首先解释了保护 Kubernetes 集群的必要性，因为 Kubernetes 集群的复杂性以及需要适当的身份验证和访问控制。本文概述了 RBAC 的优势，例如提高安全性、合规性和对用户权限的精细控制。然后，它详细介绍了将用户添加到集群、创建证书签名请求 （CSR） 以及通过角色和角色绑定分配权限的过程。本文还解决了大规模管理权限和加入新用户方面的挑战。为了简化这些流程，Devtron 作为 Kubernetes 仪表板引入，可简化 RBAC 管理，包括 SSO 集成和基于时间的访问控制。本文最后强调了 RBAC 在维护安全 Kubernetes 环境方面的重要性。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或传达主要信息所需的特定细节。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dnastacio.medium.com/space-nuclear-llms-6fd38194c619">太空、核能、新世界和 LLM</a><br>源文件批判性地研究了围绕通用人工智能 （AGI） 出现的炒作，以及它开创繁荣和启蒙新时代的潜力，类似于过去的工业革命。它认为，在没有 AGI 或 ASI 的情况下，人类已经经历了显着的经济增长、文化丰富和全球健康的进步，这表明 AGI 的预期影响可能被高估了。该文件强调了以前工业革命的历史背景，例如 1960 年代的数字革命，并指出大型语言模型 （LLM） 等基于 AGI 的技术不足以推动过去工业变革中的那种变革。它强调在预测 AGI 和 ASI 的革命性影响之前需要了解潜在的经济系统。这篇文章还反思了 21 世纪初的经济和技术挑战，包括互联网泡沫、9 月 11 日袭击和量子计算机的发展，以说明技术进步的周期性及其对社会的影响。总体而言，该文件建议对即将到来的 AGI 革命的说法采取谨慎的态度，倡导更深入地理解技术、经济和社会之间复杂的相互作用。
+
+（注意：提供的摘要基于所述源文档的内容和主题。实际文档可能包含本摘要中未捕获的其他详细信息和上下文。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>支持 RTSP、RTMP、HTTP-FLV、WebRTC、MSE、HLS、MP4、MJPEG、HomeKit、FFmpeg 等的终极相机流媒体应用程序。</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>1 个文件中的开源实时后端</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>具有 10 个微服务的示例云优先应用程序，展示了 Kubernetes、Istio 和 gRPC。</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>非常花哨和现代的终端文件管理器</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>简单易用的 DDNS。支持阿里云、腾讯云、dnspod、Cloudflare、回调、华为云、百度云、Porkbun、GoDaddy、Namecheap、NameSilo...</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一种符合 Redis 标准、反应式、可扩展、高度可用且针对现代硬件进行了优化的统一缓存。</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥🔥🔥 Web-based linux server management control panel. / 现代化、开源的 Linux 服务器运维管理面板。</p>
+
+<p><a href="https://github.com/taubyte/tau">taubyte/tau</a><br>开源分布式平台即服务 （PaaS）。自托管的 Vercel / Netlify / Cloudflare 替代方案。</p>
+
+<p><a href="https://github.com/hajimehoshi/ebiten">hajimehoshi/ebiten</a><br>Ebitengine - 一个非常简单的 Go 2D 游戏引擎</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub 的官方命令行工具</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/helm-unittest/helm-unittest">helm-unittest/helm-unittest</a><br>Kubernetes Helm 图表的 BDD 样式单元测试框架作为 Helm 插件。</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>通过 Terraform 配置远程开发环境</p>
+
+<p><a href="https://github.com/JohannesKaufmann/html-to-markdown">JohannesKaufmann/html-to-markdown</a><br>⚙️ 将 HTML 转换为 Markdown。甚至适用于整个网站，并且可以通过规则进行扩展。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

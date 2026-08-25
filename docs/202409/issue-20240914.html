@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240914.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-14</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/go-sync-cond/">go sync.cond，最容易被忽视的同步机制</a><br>本文深入探讨了 &#39;sync.Cond&#39; 的 Cond&#39; 是 Go 中的一种并发机制，尽管它具有独特的功能，但经常被忽视。它解释了“sync.与通道相比，Cond&#39; 提供了对 goroutine 之间信令的更精细控制，因为它允许选择性唤醒，并且不需要 goroutine 处于等待状态。作者强调了理解 &#39;sync.Cond“，特别是用于管理协程等待和通知的 &#39;notifyList&#39;。这篇文章还强调了可能删除 &#39;sync.Cond“，并在提案中总结了正确实现 &#39;sync.Cond&#39; 在 Go 程序中。</p> 
+
+<p><a href="https://golangprojectstructure.com/build-real-time-applications-with-go-and-websockets/">使用Go和WebSockets 构建实时应用程序</a><br>源文档提供了有关使用 Go 和 WebSockets 构建实时应用程序的深入指南。它解释了 WebSockets（一种旨在通过单个 TCP 连接进行双向通信的协议）如何因其低延迟和高效的数据传输而成为实时系统的理想选择。本文档进一步深入探讨了在 Go 中设置 WebSocket 服务器的细节，使用“net/http”包和“gorilla/websocket”库。它还介绍了如何创建能够连接到服务器并发送消息的 WebSocket 客户端。最后，该文档建议了 WebSocket 服务器的增强功能，例如处理各种消息类型和提高大规模应用程序的可伸缩性。</p> 
+
+<p><a href="https://golangprojectstructure.com/representing-money-and-currency-go-code/">Representing Money in the Go Programming Language</a><br>This comprehensive guide explores various methods of representing money in the Go programming language, emphasizing the importance of accurate monetary representation due to the inherent precision issues with floating-point numbers. It suggests using integers to represent cents, thereby avoiding the precision problems associated with floating-point representation. The guide also proposes using a struct to separate dollars and cents, and a struct combined with a global mutex for concurrent access. Additionally, it introduces a method for converting between different currencies using unique identifiers and an external API. Lastly, it highlights the availability of Go packages, such as &#34;go-money&#34;, that can simplify the process of handling monetary values in Go.</p> 
+
+<p><a href="https://medium.com/@jayendrapawar/consistent-hashing-in-go-a-practical-guide-72066ca6c2f8">Consistent Hashing in Go : A Practical Guide</a><br>Jayendra Pawar&#39;s guide on &#34;Consistent Hashing in Go&#34; provides an in-depth look at how consistent hashing is implemented in Go for practical use, particularly in distributed systems. The guide explains the concept of consistent hashing, which maps keys to hash values in a way that maintains consistency even when the number of hash values changes, thus ensuring minimal disruption in data distribution. The implementation details include the use of a circular hash ring, virtual nodes for better load balancing, and key hashing. The guide also covers the creation, addition, and removal of nodes in the system, emphasizing the importance of maintaining sorted hash keys. The article serves as a comprehensive resource for understanding and applying consistent hashing in Go, addressing both low-level design and system design aspects.</p> 
+
+<p><a href="https://blog.adnansiddiqi.me/introduction-to-trading-for-programmers/">程序员交易简介</a><br>Adnan Siddiqi 的博客文章为程序员提供了交易世界的介绍性指南，解释了关键概念，例如程序员交易 （T4P），为什么交易对程序员有吸引力，以及交易的基础知识，包括其历史、类型、头寸、资产、分析、信号和策略。该文章旨在让读者熟悉交易的术语和基础知识，强调编码和交易策略之间的相似之处。此外，作者鼓励读者订阅未来的内容，并提供了有关 Python 序列分析的相关教程的链接，以及在 Python 中编写不可阻止的 Web 爬虫的策略。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/the-rise-of-open-source-time-series-databases/">开源时间序列数据库的兴起</a><br>本文深入探讨了开源时间序列数据库的重要性，重点介绍了这项技术的演变和当前形势。它首先解释了时间序列数据的独特要求，以及 InfluxDB、Prometheus 和 VictoriaMetrics 等开源项目如何为该领域做出贡献。尤其是 VictoriaMetrics，它以其先进的功能而闻名，这些功能可以解决常见挑战，例如高基数和时间序列流失率。本文还谈到了未来的考虑因素，包括广泛事件对可观测性的影响，以及这些数据库随着用户需求的变化而发展的潜力。Ultendoversity 强调时间序列数据库对软件工程师的重要性，强调了这些工具在现代软件开发中的价值。</p>
+
+<p><a href="https://www.networkworld.com/article/3518212/why-ebpf-is-critical-and-how-its-getting-better.html">为什么 eBPF 至关重要以及它是如何变得更好的</a><br>Network World 的文章深入探讨了 eBPF（扩展的伯克利数据包过滤器）技术在 Linux 网络中的重要性，强调了它在路由、监控和安全方面的作用，并对其即将与 Microsoft Windows 的集成产生影响。正如 Isovalent 首席技术官 Thomas Graf 所指出的那样，它强调了 eBPF 对操作系统层面创新的贡献。此外，这篇文章还探讨了 Netflix 如何利用 eBPF 进行性能监控、故障排除和解决嘈杂的邻居问题，以及其 Dropio DDoS 缓解工具。文章还谈到了 eBPF 的未来，包括它对 Windows 的适应、对 GPU 和 DPU 的优化，以及 eBPF 分布式智能的概念，旨在让智能更接近数据。</p>
+
+<p><a href="http://security.googleblog.com/2024/09/a-new-path-for-kyber-on-web.html">Kyber 在 Web 上的新路径</a><br>2024 年 9 月 13 日的 Google 安全博客文章宣布了 Kyber 加密协议在 Web 上的新途径。这一发展是 Google 对增强在线安全的持续承诺的一部分。该博客还刊登了一篇关于在现有固件中部署 Rust 的相关旧文章，表明 Google 对安全主题的不同关注。此外，该博文还涵盖了其他各种与安全相关的主题，例如 Android 安全、应用安全、大数据安全等，突出了 Google 应对网络安全挑战的综合方法。</p>
+
+<p><a href="https://www.ardanlabs.com/blog/2024/09/fearless-concurrency-ep1-rusts-approach-to-safe-and-manageable-multithreading.html">Fearless Concurrency Ep.1: Rust&#39;s Approach to Safe and Manageable Multithreading</a><br>In the introductory post of the &#34;Fearless Concurrency in Rust&#34; series, Herbert Wolverson delves into Rust&#39;s approach to safe and manageable multithreading. He traces the evolution of threads, comparing their implementation in different programming languages and operating systems. Wolverson emphasizes Rust&#39;s unique thread safety features, which are bolstered by the language&#39;s strict type system and ownership model, effectively preventing common multithreading issues like data races. The post sets the stage for further exploration of Rust&#39;s concurrency model, aiming to equip developers with the knowledge to handle threads efficiently and safely.</p>
+
+<p><a href="https://opensource.googleblog.com/2024/09/empowering-etcd-reliability-new-downgrade-support.html">增强 etcd 可靠性：版本 3.6 中新增的降级支持</a><br>Google 对 etcd 的最新更新，即 3.6 版，以内置降级支持的形式引入了一项重大增强功能，解决了 etcd 社区中长期存在的挑战。这一新功能通过存储版本控制和全面的架构实现，确保 etcd 可以安全地升级和降级，从而提高其可靠性。通过引入 etcdutl migrate 命令工具，进一步简化了升级和降级过程。这一发展是 etcd 集群管理向前迈出的重要一步，为用户提供了更大的灵活性和控制力。Google 目前正在努力完成完整的降级支持，这标志着 etcd 发展的一个重要里程碑。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/12/whats-new-in-cri-o-1-31/">CRI-O 1.31 中的新增功能</a><br>CRI-O 是与 Kubernetes 兼容的容器运行时，它发布了 1.31 版本，带来了许多新功能、错误修复和增强功能。此更新包括采用 OCI 运行时作为新的默认运行时，取代 runc，并提供更高的性能和更低的内存占用。其他值得注意的功能包括对细粒度“SupplementalGroups”的支持、Kubernetes 镜像卷源 alpha 功能以及专用 Kubernetes 命名空间中策略的 sigstore 签名验证。此外，CRI-O v1.31 还解决了一些弃用和删除问题，例如删除“注册表”配置和设备映射器存储驱动程序。发行说明还强调了维护团队在修复错误和解决 CVE 方面所做的努力，以确保 CRI-O 的稳定性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/using-cursor-ai-as-part-of-your-development-workflow/">将 Cursor AI 用作开发工作流程的一部分</a><br>Cursor AI 是一种集成人工智能以进行编码辅助的工具，因其增强开发工作流程的能力而广受欢迎。它通过提供代码完成和测试创建来发挥作用，利用 Claude 3.5 Sonnet LLM 引擎来提高准确性。尽管 Cursor AI 功能强大，但无法运行或调试。由于 Microsoft 的限制而制定的 NET 计划。该工具提供了一个简单的游戏评分系统及其生成格式化最高分表的能力，展示了它在根据上下文理解和总结代码方面的实用性。</p>
+
+<p><a href="https://blog.google/technology/ai/notebooklm-audio-overviews/">NotebookLM 现在允许您收听有关您的源的对话</a><br>Google 的 AI 工具 NotebookLM 推出了一项名为 Audio Overview 的创新功能，使用户能够收听 AI 生成的关于其上传来源的讨论。此功能将文档、幻灯片、图表等转换为两个 AI 主持人之间的生动对话，总结材料，在主题之间建立联系，甚至开玩笑。尽管它具有实验性质，但存在一些已知的限制，例如潜在的语言不准确和无法被打断，但 Audio Overview 为用户提供了一种通过聆听对话来理解和记住信息的新方法。Google 鼓励反馈以增强此功能，并承认一些用户（例如喜欢听觉学习的用户）可能会发现这种方法更有效。</p>
+
+<p><a href="https://dev.to/docker/the-rise-of-ai-in-software-development-key-insights-from-the-2024-docker-ai-trends-report-22dh">AI 在软件开发中的兴起：2024 年 Docker AI 趋势报告的关键见解</a><br>2024 年 Docker AI 趋势报告强调了人工智能 （AI） 在软件开发中的重大集成，特别强调了生成式 AI （GenAI） 和 AI 助手的使用。超过 1,300 名开发人员参与了调查，这表明 AI 工具越来越多地用于日常工作，64% 的开发人员将 AI 纳入他们的流程。该报告还指出，在优先考虑 AI 趋势方面存在代际鸿沟，高级开发人员更关注 GenAI 来处理复杂的工作流程，而初级开发人员则重视 AI 助手完成日常任务。尽管有人担心 AI 对工作保障的影响，但大多数开发人员将 AI 视为一股积极的力量，可以提高生产力并使他们能够专注于更重要的任务。该报告表明，随着 AI 工具的发展，它们的依赖性可能会增加，而 Docker 在 AI/ML 生态系统中发挥着至关重要的作用。</p>
+
+<p><a href="https://www.intelligenthq.com/ai-data-centres-the-next-wave-of-technological-transformation/">AI 数据中心：下一波技术转型</a><br>由于对 AI 驱动型基础设施的日益依赖，预计到 2025 年，全球 AI 数据中心市场的估值将达到 750 亿美元。这些专用数据中心对于存储和处理 AI 应用程序（例如机器学习和深度学习）所需的大量数据至关重要。高盛预测，数据中心的电力需求将激增，预计到 2030 年将飙升 160%，凸显了人工智能基础设施不断增长的能源需求。为了满足这些需求，AI 数据中心正在采用先进的硬件创新，如 GPU 和 TPU，以及节能设计。此外，AI 数据中心正在利用 AI 和自动化来提高运营效率，并利用强大的安全措施来保护敏感数据。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/crowdsecurity/crowdsec">crowdsecurity/crowdsec</a><br>CrowdSec - 开源和参与式安全解决方案，提供针对恶意 IP 的众包保护，并访问最先进的真实 CTI。</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>轻量级 Kubernetes</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>容器镜像和文件系统的漏洞扫描器</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web 文件浏览器</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/DataDog/dd-trace-go">DataDog/dd-trace-go</a><br>Datadog Go 库包括 APM 跟踪、分析和安全监控。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>为 Kubernetes 入口和服务配置外部 DNS 服务器（AWS Route53、Google CloudDNS 等）</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Datadog Agent 的主存储库</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>在 docker 中运行并使用 WebRTC 的自托管虚拟浏览器。</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go，用 Go 编写基于 LLM 的程序的最简单方法</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>基于 eBPF 的网络、安全性和可观测性</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - 身份基础设施，为您简化。</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，仅供个人或者企业内部管理与分发渠道使用，请勿用于商业用途，本项目基于One API二次开发。</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>用于管理密钥的简单灵活的工具</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/kubesphere/kubesphere">kubesphere/kubesphere</a><br>为 Kubernetes 多云、数据中心和边缘管理⎈ 🖥 ☁️量身定制的容器平台</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO 是一个高性能、与 S3 兼容的对象存储，在 GNU AGPLv3 许可下开源。</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥🔥🔥 Web-based linux server management control panel. / 现代化、开源的 Linux 服务器运维管理面板。</p>
+
+<p><a href="https://github.com/kubernetes/enhancements">kubernetes/enhancements</a><br>Kubernetes 的增强功能跟踪存储库</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin的开发基础平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器【可AI辅助】、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

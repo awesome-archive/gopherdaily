@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241217.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-17</span>
+</p>
+<p>每日一谚：Do not ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/ki18sH3MzLdhXrc5BXZFyQ">Go 1.24新特性前瞻：工具链和标准库</a><br>Go 1.24新特性前瞻的第二部分，重点讲解Go工具链和标准库这两个变更大户的新特性</p> 
+
+<p><a href="https://go.dev/blog/protobuf-opaque">Go Protobuf：新的 Opaque API</a><br>Go 团队为 Go 中的协议缓冲区引入了一个新的 Opaque API，解决了现有 Open Struct API 的问题，例如直接结构体字段访问和字段存在建模。Opaque API 封装字段，更有效地使用内存，减少与指针相关的错误，并防止意外的共享错误。它还为未来的优化铺平了道路，例如延迟解码，这可以显著提高特定工作负载的性能。该团队建议采用 Opaque API 进行新开发，并提供将现有代码迁移到此新标准的工具和指导，同时还提供混合 API 选项以确保兼容性和逐步过渡。他们强调了在发布生成的代码时使用 Google Cloud Client Libraries for Go 的重要性，并建议将 Hybrid API 作为现有 API 的安全临时解决方案。这种新方法旨在提高 Go Protobuf 的性能和安全性，使其在各种应用中更加强大。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoClosedInterfacesNotes">关于Go中`closed interface`的一些笔记</a><br>这篇博客文章讨论了 Go 中 闭合接口  的概念，即需要一个未导出方法的接口，从而限制其实现只能在同一个包内。作者 Chris Siebenmann 指出，虽然这可以创建一个有限的实现类型列表，但也带来了局限性，例如无法添加来自包外的方法，以及在整合外部类型时可能增加的复杂性。作者建议，虽然闭合接口可以用于记录有限类型集合，但通常需要额外的工具或包装类型来管理外部实现。文章反思了使用闭合接口的实际方面，包括潜在的内存成本和在整合外部类型时需要的繁琐过程。</p> 
+
+<p><a href="https://cirw.in/blog/go-tools">tool in go.mod</a><br>本文讨论了从Go 1.24开始在Go模块中引入工具依赖的功能，允许开发团队在其`go.mod`文件中声明所需的工具，类似于声明库的方式。此功能旨在提供一致的开发环境，减少“我的机器上可以运行”这类问题，尤其对于缺乏专门基础设施的小团队特别有用。实现包括用于代码检查、代码生成和部署等工具，用户可以添加新工具或包含工具的模块，使其通过`go tool`命令访问。虽然最初在工具依赖解析方面有一些争论——是使用模块图还是工具自己的模块图——最终决定优先考虑工具用户的安全问题。预计这一新功能将简化开发流程，鼓励在测试Go 1.24候选版本时使用，并将任何问题报告到Go问题跟踪器。总体目标是通过确保每个人都能访问正确的工具和版本，减少协作Go项目中的摩擦。</p> 
+
+<p><a href="https://blog.alexoglou.com/posts/iterators-golang/">Go中的迭代器</a><br>本文深入探讨了GoLang中的迭代器，强调了通过惰性求值以内存高效的方式处理数据序列。它对比了传统方法（在处理之前生成整个切片）与按需生成值的迭代器，展示了在处理大型数据集和内存约束方面的优势。Go 1.23更新引入了可以与`for`循环一起使用的迭代器，标准库提供了`iter.Seq`和`iter.Seq2`等类型，用于单值和双值迭代器。来自2024年代码挑战的一个示例展示了如何使用迭代器检查字符串切片中是否存在“XMAS”序列，展示了迭代器在GoLang中的实际应用。本文旨在展示迭代器在GoLang中的实用性，帮助开发者更高效地处理数据。总体而言，它作为理解和实现GoLang项目中迭代器的指南。</p> 
+
+<p><a href="https://diptochakrabarty.medium.com/how-i-realised-golang-rpc-was-cool-85cad89431fb">我是如何意识到 Golang RPC 很酷的</a><br>本文档介绍了在 Golang 中使用 RPC，说明了它相对于分布式系统中传统 API 调用的优势。作者 Dipto Chakrabarty 解释了 RPC 如何通过抽象化网络复杂性来简化服务之间的通信，从而实现可扩展的故障系统。通过一个实际示例，作者演示了如何为键值存储设置一个简单的服务器-客户端 RPC 系统，并配有服务器和客户端实现的代码片段。文章最后鼓励读者订阅，就像这篇文章一样，并强调了作者在 DevOps、站点可靠性工程和 AI 方面的专业兴趣。作者的 Medium 个人资料表明了后端开发的背景以及从博客到文本转语音技术的一系列兴趣。总体信息是对 Golang 中 RPC 的认可，用于分布式应用程序中的高效通信。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://stripe.com/blog/secret-life-of-dns">DNS 数据包的秘密生活：调查复杂网络</a><br>本文档讨论了 DNS 在网络通信中的关键作用，以及监控 DNS 基础设施可靠性的重要性。例如，Stripe 使用 Unbound DNS 解析器并跟踪指标来了解 DNS 操作。他们遇到了周期性的 DNS 错误，这些错误可以追溯到一个 Hadoop 作业，该作业覆盖了 AWS VPC 解析器的反向查找请求，导致流量激增。通过配置本地 Unbound 解析器以将请求转发到 VPC 解析器并分散负载，Stripe 有效地缓解了这个问题，避免了 SERVFAIL 响应和流量放大，而这些事件以前超出了 AWS 服务限制。该事件凸显了对稳健的可观测性实践的需求，以及快速适应以防止大范围中断的能力。这种方法不仅解决了眼前的问题，还为事件后分析提供了见解，以提高未来的 DNS 弹性。</p>
+
+<p><a href="https://materializedview.io/p/s3-is-the-new-sftp">S3 是新的 SFTP</a><br>该文件讨论了数据传输和访问的不断发展形势，强调了金融领域从 SFTP 到数据湖的转变，以实现客户数据交换。作者 Chris Riccomini 指出了支付提供商的多样化数据处理需求以及现有外部数据共享解决方案的局限性。Riccomini 探讨了对可靠的外部数据访问平台的需求，并指出缺乏合适的选择。像 Prequel 这样的初创公司的出现代表了一个有前途的方向，它们提供以 S3 和 Parquet 文件为中心的数据导出平台。该架构承诺快速数据传输、集中访问以及使用数据湖查询引擎直接查询数据的能力。尽管存在架构演变等挑战，但数据合同的概念越来越受到关注，有可能将数据目录的功能扩展到外部客户数据集成。</p>
+
+<p><a href="https://www.docker.com/blog/how-to-create-and-use-an-ai-git-agent/">如何创建和使用 AI Git 代理</a><br>源文档指示 Nginx Web 服务器在无法访问或提供请求的网页时通常显示的错误消息，从而导致 403 Forbidden 状态代码。虽然该文档没有提供有关错误的上下文或内容的具体详细信息，但它暗示了服务器拒绝用户访问的权限问题。此错误表明由于服务器上设置的权限或限制不足，无法访问请求的资源。要解决此问题，可能需要审查服务器配置或访问控制并相应地进行调整。文档本身是 Nginx 上下文中 403 错误的通用表示，提醒用户或管理员需要注意的访问问题。了解根本原因对于纠正这种情况和恢复对所需网页的访问至关重要。</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2024/12/utilizing-highly-synchronized-clocks-in.html">在分布式数据库中利用高度同步的时钟</a><br>隆德大学的硕士论文研究了通过集成高度同步的时钟来增强 CockroachDB 的事务性能，挑战了对分布式系统中时钟可靠性的传统怀疑。研究人员建议用基于实时时钟同步精度的动态计算值替换静态最大偏移值，从而显着减少不确定性间隔并提高交易处理效率。实验表明，性能得到了显著提升，读取和写入延迟分别降低了 47% 和 43%。这些发现强调了现代时钟同步技术在分布式数据库中的潜力，表明更紧密的同步可以提高事务吞吐量并实现更强的一致性模型。该论文为分布式系统设计的讨论做出了贡献，强调了高精度 clocks 在性能优化中的重要性。这项工作与关于分布式系统的更广泛讨论一致，包括对基础学习的建议以及 synchronized clocks 在实现数据库可用性中的作用。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/12/16/platform-engineering-needs-observability-heres-why/">平台工程需要可观察性：原因如下</a><br>本文讨论了将可观测性集成到平台工程中以管理现代基础设施复杂性的重要性，尤其是在黑色星期五销售等高流量事件期间。可观测性提供对系统行为的实时洞察，从而实现主动问题识别和解决，这对于保持不间断的用户体验至关重要。可观测性的三大支柱（指标、日志和跟踪）提供了系统运行状况的全面视图，而 DataDog 和 New Relic 等工具则有助于有效监控。强调的最佳实践包括首先关注高影响力服务、促进整个团队的采用以及确保数据一致性。本文强调了可观测性在为开发人员提供自助服务功能和与组织目标保持一致方面的作用。总的来说，这篇文章倡导一种战略性的可观察性方法，以加强平台工程工作并支持快速问题诊断和系统弹性。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/12/17/kube-apiserver-api-streaming/">通过 API 流提高 Kubernetes API 服务器效率</a><br>本文档讨论了管理 Kubernetes API 服务器内存消耗的挑战，尤其是在大型 **list** 请求期间，这可能会导致不断增长的集群中出现内存不足 （OOM） 情况。它强调了传统的 **list** 请求在传输任何数据之前积累大量内存的问题，当请求大量或大型对象时，服务器可能会崩溃。Kubernetes 1.32 中引入的 _watch list_ 功能是一项重大改进，通过单独流式传输对象而不是返回整个集合，将内存使用量减少到稳定量。作者通过综合测试证明了此功能的有效性，显示使用 _watch lists_ 时内存消耗急剧减少。他们鼓励 Kubernetes 生态系统采用此功能，尤其是对于处理大量资源的组件，并建议调整 **list** 请求成本以进一步防止内存峰值。本文档还感谢 Kubernetes 社区在塑造此功能方面做出的贡献。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/generative-ai-is-just-the-beginning-heres-why-autonomous-ai-is-next/">生成式 AI 只是一个开始 — 这就是自主 AI 成为下一个的原因</a><br>该论述强调了从专注于内容创建的生成式 AI 到能够在 IT 运营中独立决策的自主 AI 的转变。它认为，虽然存在对自主 AI 作用的担忧，但明智的谨慎可以利用其潜力来提高组织的效率和准确性。该文本引用了麦肯锡的一项调查，该调查表明专注于生成式 AI 投资，尽管其取得了进步，但自主 AI 部署有限。它强调了实施严格的护栏（例如闭环系统和警报）以确保安全有效的 AI 集成的重要性。该文件还解决了开发人员对技术可行性、集成和合规性的担忧，倡导积极参与道德标准和法规。总体而言，它提出了在 IT 中战略性采用自主 AI 的案例，强调了全面数字化转型方法的必要性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>快速反向代理，可帮助您将 NAT 或防火墙后面的本地服务器公开给 Internet。</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>package gorilla/websocket 是一种快速、经过充分测试且广泛使用的 Go WebSocket 实现。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/goreleaser/goreleaser">goreleaser/goreleaser</a><br>尽可能快速、轻松地交付 Go 二进制文件</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一种开源、符合 Redis 标准、反应式、可扩展、高度可用、针对现代硬件进行了优化的统一缓存。</p>
+
+<p><a href="https://github.com/openimsdk/open-im-server">openimsdk/open-im-server</a><br>IM 聊天 ChatGPT</p>
+
+<p><a href="https://github.com/golang/crypto">golang/crypto</a><br>[镜子]Go 补充加密库</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock 是 Go 编程语言的模拟框架。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>异构 AI 计算虚拟化中间件</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent （OPA） 是一个开源的通用策略引擎。</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速的分布式存储系统，适用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 磁盘查找、云分层。Filer 支持云驱动器、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>用于访问 GitHub v3 API 的 Go 库</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>Golang 的 database/sql 的通用扩展</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>适用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>用于构建 Go HTTP 服务的轻量级、惯用且可组合的路由器</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>适用于 Kubernetes 的 Go 客户端。</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>在 Go 中实现极快、结构化、分级的日志记录。</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ 构建高价值公链的✨框架</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

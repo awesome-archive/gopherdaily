@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250122.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250122</span>
+</p>
+<p>每日一谚：Use defer to clean up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://dev.to/gregalc99/why-clean-architecture-struggles-in-golang-and-what-works-better-2n9i">为什么Clean Architecture在Go中难以奏效</a><br>Go 语言因其速度快、效率高且注重简洁性而享有盛誉，这也是它被广泛用于后端服务、微服务和基础设施工具的原因之一。然而，随着越来越多的 Java 和 C# 开发者转向 Go，关于实现 Clean Architecture 的问题就出现了。对于习惯了 Clean Architecture 的分层方法来构建应用程序的人来说，将相同的原则应用于 Go 似乎很直观。然而，正如我们将探讨的那样，尝试在 Go 中实现 Clean Architecture 通常会适得其反。我们将研究一个更适合 Go 优势的结构，该结构更直接、更灵活，并且符合 Go 的“保持简单”理念。</p> 
+
+<p><a href="https://tonybai.com/2025/01/22/gcflags-options-list-and-usage/">探索Go gcflags的使用模式与完整参数选项列表</a><br>Go build是Go开发中不可或缺的构建工具，其中-gcflags参数为开发者提供了向编译器传递额外选项的能力。然而，关于-gcflags的完整参数选项和 使用模式，官方文档多有局限，很多开发者对此了解不深。本文将系统性地解析-gcflags的完整参数来源以及其结合包模式（package pattern）的使用方法，供大家参考</p> 
+
+<p><a href="https://mp.weixin.qq.com/template/article/1737541347/index.html">1行命令引发的Go应用崩溃</a><br>使用otel go build -race替代正常的go build -race命令后，编译生成的程序会导致崩溃。阿里云团队分享该问题的诊断与解决过程</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.usenix.org/publications/loginonline/evolution-sre-google">谷歌SRE的演变</a><br>本文探讨了谷歌传统的可靠性方法的局限性，并介绍了 STAMP（基于系统理论的事故模型和过程）框架。通过一个真实的案例研究和经验教训，文章解释了为什么 STAMP 被认为是 SRE 的未来，不仅对谷歌，也对整个科技行业而言。文章还介绍了控制理论的概念，并解释了如何将事故视为一个控制问题，以及如何利用 STAMP 中的危险状态来提前发现问题。</p>
+
+<p><a href="https://cefboud.github.io/posts/compression">压缩算法一览</a><br>本文深入探讨了各种压缩算法，包括GZIP、Snappy、LZ4和ZSTD。文章首先介绍了压缩的基本概念和不同类型的压缩，然后详细解释了DEFLATE算法（GZIP的核心）、Snappy算法、LZ4算法以及ZSTD算法的工作原理，并对它们的效率和速度进行了比较。此外，文章还简要介绍了算术编码和有限状态熵编码等相关技术。</p>
+
+<p><a href="https://cekrem.github.io/posts/liskov-substitution-the-real-meaning-of-inheritance">Liskov 替换原则：继承的真正含义</a><br>这是关于 SOLID 原则系列文章的第三部分，探讨了 SOLID 中的“L”——Liskov 替换原则 (LSP)。文章通过经典的矩形-正方形问题以及支付处理的实际案例，解释了 LSP 的含义，并说明了如何避免违反 LSP。文章还介绍了如何使用契约测试和文档化前提条件和后置条件来确保 LSP 的遵守，并总结了关键要点。</p>
+
+<p><a href="https://v5.chriskrycho.com/journal/essence-of-successful-abstractions">成功抽象的本质</a><br>复杂性必须存在于某个地方；但它不必存在于任何地方。本文探讨了在软件开发中如何通过类型系统（如Rust和TypeScript）以及测试来隔离和管理复杂性，从而创建成功的抽象。作者认为，成功的抽象的关键在于将复杂性隔离在明确定义的地方，而不是试图完全消除它。</p>
+
+<p><a href="https://dolthub.com/blog/2025-01-22-fetching-tags-is-faster-now/">获取标签的速度比以往任何时候都快！</a><br>获取大量冗余标签应该很快——现在它确实很快！Dolt 是世界上第一个支持分支和合并的 SQL 数据库，它是一个由初创公司构建的开源产品。和所有初创公司一样，我们需要快速行动，尽快将功能交付到用户手中。偶尔这会导致代码行为欠佳，但通常这些是我们知道以后可以修复的问题。最近，我发现了一个这样的粗糙边缘，它被特定的使用模式加剧了。让我们开始吧！</p>
+
+<p><a href="https://www.cncf.io/blog/2025/01/21/notary-project-completes-its-second-audit/">Notary 项目完成第二次审计！</a><br>开放源代码技术改进基金（OSTIF）自豪地分享了对 Notary 项目的第二次安全审计结果。此次审计由 Quarkslab 团队进行，重点关注 Notary 项目的两个新的加密功能：时间戳支持和使用证书吊销列表进行吊销检查。审计报告中发现了 11 个安全问题，其中包括 1 个中等严重性和 1 个低严重性问题，以及 9 个信息性问题，并为此发布了 2 个 CVE。审计团队还对这两个新功能进行了审查，并提供了未来安全工作的建议。这是 Notary 项目的第三次安全审计，也是第二次与 OSTIF 合作进行的审计。</p>
+
+<p><a href="https://engineering.fb.com/2025/01/21/production-engineering/strobelight-a-profiling-service-built-on-open-source-technology/">Strobelight：一个基于开源技术的性能分析服务</a><br>Meta分享了关于Strobelight的详细信息，Strobelight是Meta的性能分析协调器。它结合了几种技术（许多是开源的），形成一个单一的服务，帮助Meta的工程师提高整个集群的效率和利用率。通过使用Strobelight，Meta已经取得了显著的效率提升，其中一项预计每年可节省相当于15000台服务器的容量。</p>
+
+<p><a href="https://medium.com/@jadhav.swatissj99/understanding-how-kubectl-get-pods-works-a-behind-the-scenes-look-at-kubernetes-api-interaction-58882c4016b0">理解 kubectl get pods 的工作原理：Kubernetes API 交互的幕后一览</a><br>运行 kubectl get pods 命令时，我们实际上是在与 Kubernetes 集群交互。但是，幕后究竟发生了什么？kubectl 如何检索集群中 Pod 的信息？本文将逐步讲解 kubectl 的内部流程，以及它如何与 Kubernetes 资源（如 Pod）连接。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2025/01/21/microsoft-and-openai-evolve-partnership-to-drive-the-next-phase-of-ai/">微软与 OpenAI 发展伙伴关系，推动人工智能的下一阶段</a><br>我们很高兴能够继续与 OpenAI 建立战略合作伙伴关系，并在 Stargate 项目上展开合作。今天的公告是对我们两家公司自 2019 年以来一直共同努力的补充。在我们的合同期限（至 2030 年）内，我们合作伙伴关系的关键要素将保持不变，包括我们对 OpenAI 的知识产权的访问权限、我们的收入分成安排以及我们对 OpenAI API 的独占性，所有这些都将继续向前发展。</p>
+
+<p><a href="https://simonwillison.net/2025/Jan/22/llm-gemini/#atom-everything">llm-gemini 0.9</a><br>llm-gemini 0.9 版本发布，增加了对两个新的实验模型的支持：learnlm-1.5-pro-experimental（一个针对学习科学原理进行训练的实验性特定任务模型）和 gemini-2.0-flash-thinking-exp-01-21（Gemini 2.0 Flash Thinking 模型的新版本，具有代码执行、100万 token 内容窗口以及降低了思维-答案矛盾的可能性）。最令人兴奋的新功能是支持 Google 搜索接地，一些 Gemini 模型可以在回答提示的过程中执行 Google 搜索。此功能可以使用新的 -o google_search 1 选项启用。</p>
+
+<p><a href="https://huggingface.co/blog/mlabonne/llm-course">大型语言模型课程</a><br>本课程汇集了关于大型语言模型（LLM）的主题和教育资源，旨在帮助人们入门LLM。课程包含两条主要路线图：
+
+1. **LLM科学家路线图**: 重点介绍如何利用最新技术构建最佳LLM。
+2. **LLM工程师路线图**: 重点介绍如何创建基于LLM的应用程序并进行部署。
+
+课程还提供交互式版本，以及其他学习资源。</p>
+
+<p><a href="https://kipp.ly/transformer-inference-arithmetic">Transformer 推理算术</a><br>本文详细阐述了大型语言模型推理性能的几个基本原理，无需实验或复杂的数学推导。通过这种方式可以获得令人印象深刻且实用的理解！一个非常简单的推理延迟模型被证明与经验结果非常吻合。它帮助我更好地预测和解释 Transformer 推理。本文假设读者具备一定的 Transformer 知识，例如理解了大部分《The Illustrated Transformer》的内容，但不必完全掌握所有细节。熟悉我与本文一起编写的这篇关于参数计数的文章也可能会有所帮助。文章涵盖了kv缓存、容量、模型并行性、延迟计算、批量大小、FLOPS 计数、中间内存成本以及与真实基准的比较等方面。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>Work with remote images registries - retrieving information, images, signing content</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/docker/buildx">docker/buildx</a><br>Docker CLI plugin for extended build capabilities with BuildKit</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open-source platform for IT, security, and infrastructure teams. (Linux, macOS, Chrome, Windows, cloud, data center)</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, cross-DC active-active replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Phi 4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>Autoscaling components for Kubernetes</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251219.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251219</span>
+</p>
+<p>每日一谚：With the unsafe package there are no guarantees </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/19/anthropic-agent-skills-open-standard-launch/">继 MCP 之后，Anthropic 再放大招：Agent Skills 正式发布为开放标准！</a><br>这是继2024年末推出 MCP (Model Context Protocol)标准 之后，Anthropic 在构建 AI 开放生态上的又一记重拳，彻底补齐了 AI 原生应用的 “能力层”拼图。 如果说 MCP 是 AI 时代的 “USB 接口”，解决了大模型连接外部工具与数据（如 GitHub, Google Drive）的标准化问题； 那么Agent Skills 就是 AI 时代的 “通用驱动程序”，它定义了 AI 该如何使用这些工具来完成复杂的业务流程。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/OKlNXhtP05NdkZHybjQa3g">【API 设计之道】04 字段掩码模式：让前端决定后端返回什么</a><br></p> 
+
+<p><a href="https://www.speakeasy.com/blog/building-speakeasy-openapi-go-library">深入剖析：用 Go 语言构建高性能 OpenAPI 解析器</a><br></p> 
+
+<p><a href="https://stacktower.io">Stacktower: 一次意外的深度探究</a><br>这篇文章讲述了作者如何受一个 XKCD 漫画启发，开始自学图论，并深入研究了 NP-hard 问题、PQ 树和分层图算法，最终用Go构建了一个将软件依赖图可视化为物理塔状结构的工具——Stacktower。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/19/twilio-say-goodbye-microservices">再见了，微服务：从 100 多个“问题儿童”到 1 个“超级巨星”的架构回归</a><br>“微服务”——这个在过去十年间统治了软件架构领域的“最佳实践”，承诺给我们带来更高的模块化、更快的迭代速度和更强的团队自治。然而，当一个 团队，深陷于 140 多个服务、140 多个代码仓库、140 多个独立队列的泥潭中，开发速度骤降、缺陷率爆炸、on-call 工程师夜不能寐时，这个“最 佳实践”是否已然变成了一个“最大负担”？这不是一个假设，而是 Twilio Segment 团队曾亲身经历的“噩梦”。</p>
+
+<p><a href="https://dolthub.com/blog/2025-12-18-doltcash-vibe-accounting-built-on-claude-gnucash-and-dolt/">DoltCash：基于 Claude、GnuCash 和 Dolt 构建的“氛围式”会计</a><br>本文介绍了一个名为 DoltCash 的原型项目，它结合了 GnuCash、Dolt（一个支持版本控制的 MySQL 兼容数据库）和 Claude AI，旨在探索如何将 AI 聊天界面集成到现有的数据驱动应用中（“万物皆可光标”）。作者详细记录了设置过程，包括连接 Dolt 数据库、配置 MCP 服务器，并试图让 Claude 代理执行会计操作。虽然项目暴露了 AI 在专业任务（如精确会计）中的局限性（例如，AI 错误地处理了转账和对账），但也强调了 Dolt 在 AI 应用中提供数据库层面的安全和版本控制保障的重要性。文章最后总结了三个关键见解：资源访问不足以保证 AI 性能、数据库层的安全保证（Dolt）对 AI 应用至关重要，以及持续的、确定性的验证（Dolt Tests）是处理非确定性 AI 输出的关键。</p>
+
+<p><a href="https://blog.livekit.io/livekit-sdk-for-esp32-bringing-voice-ai-to-embedded-devices/">LiveKit ESP32 SDK：将语音AI带入嵌入式设备</a><br>使用 LiveKit SDK 在 ESP32 微控制器上构建语音AI。实现双向音频流、连接云端代理、在低于10美元的设备上部署。</p>
+
+<p><a href="https://www.haproxy.com/blog/how-linkedin-modernized-its-massive-traffic-stack-with-haproxy">LinkedIn 如何利用 HAProxy 实现其庞大流量栈的现代化</a><br>由于用户增长和技术需求的变化，LinkedIn 决定围绕 HAProxy 重新设计其流量堆栈。本次案例研究探讨了 LinkedIn 转向 HAProxy 的原因、他们如何进行评估，以及使用 HAProxy 后实现的显著性能提升，包括延迟降低和配置复杂度的大幅简化。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/12/18/kubernetes-v1-35-job-managedby-for-jobs-goes-ga/">Kubernetes v1.35: Job Managed By 功能正式可用</a><br>在 Kubernetes v1.35 中，指定外部 Job 控制器（通过 .spec.managedBy）的功能已正式进入通用可用（GA）阶段。此功能允许外部控制器完全负责 Job 的协调工作，从而解锁了强大的调度模式，例如使用 MultiKueue 进行多集群分派。使用 .spec.managedBy 的主要动机是支持多集群批处理调度架构，如 MultiKueue。Job 控制器可以跳过协调被标记的 Job，实现工作负载的委托管理。</p>
+
+<p><a href="https://www.polarsignals.com/blog/posts/2025/12/18/profiling-nvidia-cuda-in-kubernetes/">在 Kubernetes 中分析 NVIDIA CUDA</a><br>获取在 Kubernetes 中分析 CUDA 的最简单方法。本文介绍了如何使用 Init 容器和 emptyDir 卷将剖析共享库注入到现有容器中，从而无需重建即可启用 NVIDIA CUDA 性能分析。此模式适用于任何 CUDA 应用程序，如 PyTorch、TensorFlow、JAX 等。</p>
+
+<p><a href="https://blog.bytebytego.com/p/how-linkedin-built-an-ai-powered">LinkedIn如何构建一个由AI驱动的招聘助手</a><br>本文探讨了LinkedIn的招聘助手（Hiring Assistant）的架构和技术构建模块。该助手旨在通过处理招聘中的重复性任务（如候选人筛选、初步评估和初期沟通）来增强招聘人员的能力，而不是取代他们。其核心架构采用“计划-执行”（plan-and-execute）模式，结合异步的消息驱动设计，以实现企业级的规模化运作。招聘助手由一个“主管代理”（Supervisor Agent）协调多个专业子代理（如摄取、招聘、评估、外联、学习和记忆代理）协同工作，同时通过“护栏”（Rails）和“指南针”（Compass）两大支柱来确保质量、安全和人类判断的参与。</p>
+
+<p><a href="https://www.sebastianaaltonen.com/blog/no-graphics-api">无图形 API</a><br>过去十年，图形 API 和着色器语言的复杂性显著增加。是时候开始讨论如何剥离抽象层，以简化开发、提高性能并为未来的 GPU 工作负载做好准备。本文探讨了如何通过采用更精简、基于指针的内存管理、根参数和资源绑定模型来设计一个更现代、更易于使用的图形 API，借鉴了 CUDA 和 Metal 的优点，并利用了当前 GPU 架构的能力。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/19/introducing-gpt-52-codex/#atom-everything">介绍 GPT-5.2-Codex</a><br>OpenAI 推出了其 Codex 系列模型的最新版本 GPT-5.2-Codex，它是 GPT-5.2 进一步针对代理式编程优化的版本，提高了长期工作、代码重构和迁移的性能，并增强了网络安全能力。该模型目前已通过 Codex 编程代理提供，API 版本将在未来几周内推出。对于“更宽松的模型”，将对经过审查的网络安全专业人员开放新的邀请制预览流程。作者对 GPT-5.2 处理复杂编程任务的能力表示印象深刻，并展示了 GPT-5.2-Codex 生成的一只骑自行车的鹈鹕的 SVG 图像。</p>
+
+<p><a href="https://www.latent.space/p/2025-papers">2025 年人工智能工程师阅读清单</a><br>我们挑选了人工智能工程领域 10 个方向的 50 篇论文/模型/博客：LLMs、基准测试、提示工程、RAG、Agent、代码生成、视觉、语音、扩散模型、微调。如果你从零开始，请从这里开始。</p>
+
+<p><a href="https://read.technically.dev/p/ai-will-replace-you-at-your-job-if">如果允许，AI会取代你的工作</a><br>这篇文章探讨了如何明智地使用AI与自己“写下解雇信”之间的微妙界限。作者认为，过度依赖AI而不投入自己的核心洞察和创造力，最终会导致工作被AI取代。文章通过金融、市场营销、软件工程和销售等领域的“虚假”（Facked，完全依赖AI）与“精通”（Cracked，将AI作为增强工具）的使用对比，强调了只有通过亲手实践来培养直觉和品味，才能在AI时代保持竞争力。建议从自动化重复性小任务开始，逐步将AI融入工作中，而不是完全外包工作。</p>
+
+<p><a href="https://benr.build/blog/one-agent-isnt-enough">一个代理是不够的 | Ben Redmond</a><br>Agentic coding（代理式编码）存在一个问题——方差。如果单代理运行在设计上就留下了性能损失怎么办？由于大型语言模型（LLMs）的随机性，每次代理运行都会有细微的变化。即使在相同的背景下，一个会话可能接近“峰值”，而另一个可能只处于概率曲线的中间位置。本文探讨了如何通过并行代理来解决这种方差问题，通过多次采样和汇聚结果来可靠地收敛到最佳解决方案。</p>
+
+<p><a href="https://openai.com/index/evaluating-chain-of-thought-monitorability">评估思维链的可监控性</a><br></p>
+
+<p><a href="https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli">Conductor：为 Gemini CLI 引入上下文驱动开发</a><br>Conductor 是 Gemini CLI 的一个新扩展，它支持上下文驱动的开发。它将项目上下文从聊天记录转移到持久的 Markdown 文件中，用于正式的规范和计划，确保 AI 代理遵守项目目标、风格和技术栈。这种结构化的工作流程非常适合“现有项目”和团队，允许在保持人类开发者控制的同时安全地迭代和贡献一致的代码。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>Easily and securely send things from one computer to another 🐊 📦</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/vllm-project/semantic-router">vllm-project/semantic-router</a><br>Intelligent Router for Mixture-of-Models</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/iyear/tdl">iyear/tdl</a><br>📥 A Telegram toolkit written in Golang</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+
+<p><a href="https://github.com/NexaAI/nexa-sdk">NexaAI/nexa-sdk</a><br>Run the latest LLMs and VLMs across GPU, NPU, and CPU with PC (Python/C&#43;&#43;) &amp; mobile (Android &amp; iOS) support, running quickly with OpenAI gpt-oss, Granite4, Qwen3VL, Gemma 3n and more.</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB — the cloud native, distributed SQL database designed for high availability, effortless scale, and control over data placement.</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/shirou/gopsutil">shirou/gopsutil</a><br>psutil for golang</p>
+
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

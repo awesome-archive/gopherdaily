@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250824.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250824</span>
+</p>
+<p>每日一谚：You often do not need frameworks in Go. What you need is a couple of pkgs to do your dirty work. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/23/proposal-errors-asa">泛型重塑Go错误检查：errors.As的下一站AsA？</a><br>随着 Go 1.18 泛型的正式落地，一个酝酿已久的问题浮出水面：我们能否利用类型参数，彻底重塑这一核心错误检查机制，终结那些恼人的样板代码？GitHub 上的 Issue #51945 正是这场变革的中心舞台。它不仅是一个新函数AsA的提案，更深刻地揭示了 Go 社区是如何在 API 设计、性能、向后兼容性与语言哲学之间 反复权衡，以决定 errors.As 的未来。那么，AsA 会是 errors.As 的下一站吗？在这篇文章中，我就和大家一起来看一下Go社区和Go团队针对这一 提案的讨论和决策过程。</p> 
+
+<p><a href="https://tonybai.com/2025/08/24/junior-engineer-survival-guide-in-ai-age">AI时代的初级工程师生存指南：别让“万能”的AI工具，毁掉你最宝贵的成长期</a><br>这是一个对初级工程师而言，最好也最坏的时代。说它“最好”，是因为我们从未拥有过如此强大的工具。一名刚走出校门的毕业生，在入职的第一天，就能手握Claude Code、ChatGPT、Gemini Cli、Cursor、Copilot 等强大的 AI 编程助手。面对一个从未接触过的复杂任务——比 如，为一个 Go 项目编写一个复杂的 gRPC 中间件——他可能只需要组织几次提示词，一段看起来完美、功能齐全、甚至带着单元测试的代码就诞生了。</p> 
+
+<p><a href="https://mfbmina.dev/en/posts/waitgroups">Waitgroups：它们是什么、如何使用以及 Go 1.25 中发生了什么变化</a><br>想象一下这个问题：您需要处理数百条记录并生成单个输出。解决这个问题的一种方法是按顺序处理每条记录，并在最后统一输出。但是，这可能会非常慢，具体取决于处理每条记录所花费的时间。另一种方法是并发地处理它们，从而加快总时间。在我的关于并发性介绍的帖子中，我谈到了一些 goroutines 和 channels。现在，我决定谈谈 waitgroups，这是一种简化多个 goroutines 管理的方法。</p> 
+
+<p><a href="https://gaultier.github.io/blog/an_amusing_go_static_analysis_blindspot.html">Go 静态分析中的一个有趣的盲点</a><br>这篇文章讨论了 Go 语言中静态分析的一个问题，即循环遍历一个空数组时，编译器不会发出警告。文章提供了一个例子，展示了在测试代码中如何因为循环体为空而导致测试无效的情况，以及使用正则表达式来查找类似问题的建议。</p> 
+
+<p><a href="https://pliutau.com/centrally-collecting-events-in-go-microservices">集中收集来自 Go 微服务的事件</a><br>在 Solsten 早期，我们的工程团队专注于构建产品、工具和服务，但我们从未有时间衡量我们平台中发生的事情。即使我们通过客户对好坏有感觉，但这种痛苦变得太强烈，迫使我们的部门分配时间来衡量事情。因此，我们选择了更简洁和自制的解决方案： logeater 。文章介绍了该方案的数据库选择、模式设计、命名空间、扩展事件表、通信方式、可视化等方面，并鼓励读者交流。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.codingnow.com/2025/08/gamedev.html">编写游戏程序的一些启示</a><br></p>
+
+<p><a href="https://moq.dev/blog/first-cdn">首个MoQ CDN：Cloudflare - Media over QUIC</a><br>Cloudflare 发布了其 Media over QUIC (MoQ) CDN 的技术预览版。现在您可以使用 MoQ，大规模地进行测试。</p>
+
+<p><a href="https://bigdata.2minutestreaming.com/p/why-was-apache-kafka-created">Why Was Apache Kafka Created? - by Stanislav Kozlovski</a><br>本文深入探讨了 Apache Kafka 的起源，重点介绍了它最初是如何解决数据集成问题的。文章追溯了 LinkedIn 如何为了解决数据集成挑战而创建 Kafka 的历史，解决了诸如手动工作、数据积压、缺乏集成等问题。作者还讨论了模式的重要性，尤其是在标准化数据和拥有明确所有权的情况下。文章总结说，Kafka 旨在解决大规模数据集成问题，强调了模式对有效数据管理至关重要。</p>
+
+<p><a href="https://aws.plainenglish.io/how-i-use-an-ai-assistant-to-create-aws-infrastructure-9f453f85968b">我如何使用 AI 助手创建 AWS 基础设施</a><br>一个实用的演示指南
+我们正经历着自互联网革命以来技术上最具变革性的时期。当每个人都在谈论 ChatGPT 编写论文和 DALL-E 创作艺术时，DevOps 中正在发生一场安静的革命，它将改变一切：由 AI 驱动的基础设施自动化。</p>
+
+<p><a href="https://gmcgoldr.github.io/2025/08/21/stackerror.html">Stackerror | gmcgoldr’s blog</a><br>Stackerror 旨在让你在 Rust 中编写代码时，专注于写得快，调试简单，并在运行时精确地处理错误。 它通过使用错误代码进行匹配和堆栈上下文，来支持这三种环境。文章解释了如何使用 Stackerror，包括写代码时，调试代码时和运行时处理错误。</p>
+
+<p><a href="https://www.openmymind.net/Im-Too-Dumb-For-Zigs-New-IO-Interface">我无法理解zig的新IO接口</a><br></p>
+
+<p><a href="https://underlap.org/developers-block">开发者障碍</a><br>程序员的障碍类似于作者的障碍，当面对空白页面时会陷入困境。本文讨论了开发者障碍的不同类型、原因以及如何克服它们，包括：1. 新项目和追求完美的陷阱；2. 现有项目和失去动力；3. 如何克服障碍：包括学习、意识到疲劳、增量工作、编写原型、从草稿文档开始、避免过早优化、尽早发布、选择优先解决的问题。</p>
+
+<p><a href="https://medium.com/@ayodejidennis53/kubernetes-secrets-management-with-external-secrets-operator-eso-b32d820669ac">Kubernetes Secrets Management with External Secrets Operator (ESO)</a><br>我从Kubernetes通用密钥迁移到外部密钥运算符的方式…简介出于对Python编程中安全意识的考虑，有多种方法可以将凭证传递到脚本中，以防止硬编码，从而带来漏洞。 其中一些方法是使用...</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/24/uv-caddy-and-docker/#atom-everything">使用 Python、uv、Caddy 和 Docker 构建静态网站</a><br>Nik Kantar 详细介绍了基于 Docker 的设置，用于逐行构建和部署大部分静态网站。我觉得这真的很有用。 Dockerfile 本身，不带注释，只有 8 行。</p>
+
+<p><a href="https://jimmysong.io/en/blog/qoder-alibaba-ai-ide-personal-review">Qoder: Alibaba 的 AI IDE – 全面个人评测其功能和未来 - Jimmy Song</a><br>对阿里巴巴最新 Qoder AI IDE 的深入个人体验，探索 Agentic Coding 平台的革命性功能和未来前景。</p>
+
+<p><a href="https://minusx.ai/blog/decoding-claude-code">What makes Claude Code so damn good (and how to recreate that magic in your agent)!?</a><br>Claude Code 是我迄今为止使用过的最令人愉快的 AI 代理/工作流程。 它不仅使有针对性的编辑或氛围编码的一次性工具不那么烦人，而且使用 Claude Code 让我感到高兴。 它具有足够的自主性来做有趣的事情，同时不会像其他一些工具那样引起令人不快的失控感。 当然，大部分繁重的工作是由新的 Claude 4 模型（尤其是交错思考）完成的。 但是，我发现与 Cursor 或 Github Copilot 代理相比，即使使用相同的底层模型，Claude Code 在使用时也明显不那么烦人！ 是什么让它变得如此出色？ 如果你正在阅读这篇文章并点头，我将尝试提供一些答案。</p>
+
+<p><a href="https://ghuntley.com/agent">如何构建一个编码代理：免费研讨会</a><br>构建编码代理并不难。只需300行代码，在循环中运行，使用 LLM token。你只需不断地将 token 抛入循环中，然后你就能得到一个代理。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/google/mangle">google/mangle</a><br></p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>Self-hosted, lightweight server and website monitoring and O&amp;M tool</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/OpenCSGs/csghub-server">OpenCSGs/csghub-server</a><br>csghub-server is the backend server for CSGHub which helps user to manage datasets, modes, and also run Model Inference, Finetune and Application Spaces.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/databus23/helm-diff">databus23/helm-diff</a><br>A helm plugin that shows a diff explaining what a helm upgrade would change</p>
+
+<p><a href="https://github.com/SpecterOps/BloodHound">SpecterOps/BloodHound</a><br>Six Degrees of Domain Admin</p>
+
+<p><a href="https://github.com/ffuf/ffuf">ffuf/ffuf</a><br>Fast web fuzzer written in Go</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kubebuilder">kubernetes-sigs/kubebuilder</a><br>Kubebuilder - SDK for building Kubernetes APIs using CRDs</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>Simple and easy to use DDNS. Support Aliyun, Tencent Cloud, Dnspod, Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, Namecheap, NameSilo...</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The to-do app to organize your life.</p>
+
+<p><a href="https://github.com/flyteorg/flyte">flyteorg/flyte</a><br>Scalable and flexible workflow orchestration platform that seamlessly unifies data, ML and analytics stacks.</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

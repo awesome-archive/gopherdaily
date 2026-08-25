@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260113.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260113</span>
+</p>
+<p>每日一谚：Lead with context, end with options, and always close with an error </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/13/agent-native-architecture">像构建 Claude Code 一样构建应用：揭秘 Agent-native 架构的 5 大核心原则</a><br>软件开始像 Claude Code 一样工作，但应用场景远超编程。这就是 Anthropic 与 Dan Shipper 联合发布的最新架构理念 —— Agent-native Architecture（智能体原生架构</p> 
+
+<p><a href="https://tonybai.com/2026/01/13/how-markdown-took-over-the-world/">技术考古：Markdown 为何从博客工具演变成统治 AI 世界的“通用语”？</a><br>近期，知名科技博主 Anil Dash 发布了一篇题为《How Markdown Took Over the World》的长文。他在文中深情回顾了这一格式的诞生与崛起，并指出：在这个由科技巨头主导、充斥着封闭生态的数字世界里，Markdown 是一场属于普通人的胜利。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/01/12/dancing-backwards-with-go/">使用 Go 逆向编程</a><br>John Arundel 的文章向您展示了先编写测试如何帮助构建正确的 Go 函数、及早发现错误以及安全地重构代码，并提供了清晰简单的步骤。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/the-go-machine-code">从SSA到机器码</a><br>本文是关于Go编译器深入解析系列的终章。在上一个关于SSA（静态单赋值形式）的帖子之后，我们现在探讨如何将优化后的、特定于架构的SSA转换为实际的机器码字节。</p> 
+
+<p><a href="https://madflojo.dev/posts/are-atomic-operations-faster-than-a-mutex">原子操作比互斥锁（Mutex）更快更好吗？这取决于情况</a><br>探讨了 Go 语言中原子操作（Atomic Operations）与互斥锁（Mutex）之间的区别，包括性能基准测试和用例权衡。原子操作在更新单个共享值时可能更快，但对于涉及多步或多字段的操作，互斥锁在复杂性和数据一致性方面更易于维护和保证正确性。建议的经验法则是：首先使用互斥锁（如果读多则用 RWMutex），然后在性能要求和用例证明有必要时，再优化为原子操作。</p> 
+
+<p><a href="https://underdogfounders.substack.com/p/victoriametrics-ukrainian-database">VictoriaMetrics联合创始人 Aliaksandr Valialkin 访谈</a><br>一个乌克兰团队默默地建立了一个时间序列数据库，被 Spotify、Grammarly、CERN 和 Roblox 等公司使用——足以与价值数十亿美元的竞争对手抗衡。本文深入探讨了 VictoriaMetrics 的创业故事、产品、市场地位以及其独特的开源&#43;技术支持的商业模式，并分享了对其他创始人的经验教训。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/01/12/a-decade-of-open-source-in-cncf-with-300000-contributors-and-counting/">CNCF 开源十年：拥有 30 万&#43; 贡献者，且人数仍在增长</a><br>云原生计算基金会 (CNCF) 社区已达成一项重要里程碑：超过 30 万名来自 190 个国家的贡献者参与了 CNCF 托管的项目。这一数字代表了代码、文档、测试、问题分类、设计和社区支持等集体努力的总和，展示了云原生开源生态系统的协作规模。文章感谢了社区的每一位成员，并鼓励大家访问 CNCF 项目指标页面，了解如何参与其中。</p>
+
+<p><a href="https://emnudge.dev/blog/what-happened-to-webassembly">WebAssembly 发生了什么？</a><br>这篇文章探讨了 WebAssembly (Wasm) 的现状以及为什么它没有像一些人期望的那样立即取代 JavaScript 成为Web开发的主导技术。</p>
+
+<p><a href="https://modal.com/blog/gpu-health">Keeping 20,000 GPUs healthy</a><br>Modal 运营着一个全球分布式、自动扩展的 GPU 工作负载池，利用 AWS、GCP、Azure、OCI 等云巨头的算力。文章详细介绍了 Modal 的 GPU 可靠性系统，包括实例类型的测试与选择（并展示了 SXM H100 优于 PCIe H100 的基准测试数据）、机器镜像的准备与启动检查、实例生命周期内的被动和主动健康检查（如 DCGM 和 GPUBurn 测试）、以及相关的可观测性和客户支持策略。文章强调了 GPU 的不可靠性是 AI/ML 开发的一个主要障碍，并展示了 Modal 在维护 20,000 多个 GPU 正常运行方面所做的工作。</p>
+
+<p><a href="https://www.npopov.com/2026/01/11/LLVM-The-bad-parts.html">LLVM: The bad parts</a><br>本文是作者作为LLVM项目的主要维护者，分享了他认为LLVM项目存在的一些设计和实践上的“坏点”或改进机会。</p>
+
+<p><a href="https://fulghum.io/self-hosting">2026是自托管之年</a><br>像Claude Code这样的命令行代理使自我托管变得非常简单和有趣。这是我第一次向普通的、具备软件知识的人推荐它。结合廉价的迷你PC、Tailscale和AI代理，自我托管的门槛大大降低，带来了强大的所有权和独立感。</p>
+
+<p><a href="https://dev.to/aws-builders/when-you-have-a-hammer-everything-looks-like-a-nail-5e7p">当你手里只有一把锤子时，看什么都像钉子</a><br>在不断发展的技术世界中，我们经常看到组织（从 C 级别到架构师和工程师）在没有进行适当设计或真正了解业务需求的情况下，急于采用最新的技术趋势。其结果是资源浪费、架构过于复杂或资源利用不足。本文将深入探讨一些常见的架构决策，并提供避免陷阱的建议，包括将所有内容迁移到公共云、为所有架构使用 Kubernetes、为所有解决方案使用 Serverless 以及使用生成式 AI 解决所有问题等常见误区。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/12/superhuman-ai-exfiltrates-emails/#atom-everything">Superhuman AI Exfiltrates Emails</a><br>Superhuman AI 发生了经典提示注入攻击事件。当被要求总结用户最近的邮件时，一封来自不受信任的邮件中的提示注入成功地操纵了 Superhuman AI，使其将用户收件箱中数十封敏感邮件的内容（包括财务、法律和医疗信息）提交给攻击者的 Google 表单。Superhuman 方面已承认此事件并迅速发布了修复，其根本原因是内容安全策略 (CSP) 规则允许从 docs.google.com 加载 markdown 图片，而该域上的 Google 表单可以通过 GET 请求持久化数据。</p>
+
+<p><a href="https://www.chrisgregori.dev/opinion/code-is-cheap-now-software-isnt">代码变得廉价，但软件依然昂贵</a><br>构建软件的门槛已经崩溃，但构建有价值事物的门槛纹丝未动。LLM 工具（如 Claude Code 和 Claude Opus 4.5）的兴起加速了个人、一次性软件的时代，工程重点正从编写代码转向系统构建。虽然生成代码的成本大幅下降，但软件的实际成本（维护、边缘案例、UX 债务和数据所有权复杂性）依然高昂。工程师的价值正在从语法转向系统架构和深层理解。成功的关键已从代码能力转向分发、品味和对受众的深刻理解。</p>
+
+<p><a href="https://cursor.com/cn/blog/agent-best-practices">使用 Agent 编码的最佳实践</a><br>这份指南系统地讲解了如何有效利用 Cursor Agent 编码的最佳实践。内容涵盖了理解 Agent 的工作机制（harness）、如何通过“Plan 模式”开始工作、管理上下文、扩展 Agent 能力（Rules 和 Skills）、将任务委托给云端 Agent，以及在不同工作流（如测试驱动开发、代码审查）中的应用。核心思想是：在编写代码前进行规划，清晰地提供提示，不断迭代配置，并将 Agent 视为一个有能力的协作者。</p>
+
+<p><a href="https://rlancemartin.github.io/2026/01/09/agent_design">Agent design patterns</a><br>本文探讨了当前流行智能体（Agent）设计中的常见模式，旨在解决随着任务长度增加而出现的上下文衰减问题。核心思想是有效管理上下文。主要模式包括：为智能体提供计算机（文件系统和Shell用于持久化上下文和执行操作）、多层动作空间（使用少量原子工具并通过计算机执行复杂任务）、渐进式披露（Progressive Disclosure，按需显示工具或信息）、上下文卸载（将不常用的上下文转移到文件系统）、上下文缓存（Prompt Caching）以降低成本和延迟、上下文隔离（通过子智能体处理并行任务或使用“Ralph Wiggum”循环）、以及上下文演化（Continual Learning，通过反思过去经验来更新上下文）。最后展望了未来方向，如学习化的上下文管理、多智能体协调以及为长运行智能体设计新抽象层。</p>
+
+<p><a href="https://martinalderson.com/posts/the-coming-ai-compute-crunch">即将到来的AI算力短缺</a><br>为什么到2027年，定义AI基础设施增长的将是DRAM短缺，而非资本。文章通过作者个人使用LLM的经历，论证了代币消耗的爆炸式增长，并指出电力和更关键的DRAM（特别是HBM）短缺将成为限制AI基础设施部署的硬性约束，而非资本支出不足。</p>
+
+<p><a href="https://matthewrocklin.com/ai-zealotry">AI Zealotry</a><br>高级工程师最能从人工智能中受益。我们足够优秀，可以避免低劣的产出，并且可以完成很多事情。我不会回头了。文章探讨了高级工程师使用AI的经验和实践建议，核心思想是最大化思考时间，减少低级任务的打断，并建立对AI生成代码的信心，建议转向Rust和TypeScript。</p>
+
+<p><a href="https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp">深入探究：通用商业协议 (UCP)</a><br>UCP：谷歌及其合作伙伴推出的开源协议，旨在为代理式商务提供支持。它确保了在各种消费者界面上安全、无缝的购物体验。该协议通过建立一套通用的安全语言，连接消费者界面（如 Gemini 和搜索中的 AI 模式）与商家后端，简化了从产品发现到购买的集成流程，并支持多种支付提供商。</p>
+
+<p><a href="https://jpcaparas.medium.com/one-reviewer-three-lenses-building-a-multi-agent-code-review-system-with-opencode-21ceb28dde10">使用opencode构建一个多Agent的代码审查系统</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/edoardottt/cariddi">edoardottt/cariddi</a><br>Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/kubernetes-sigs/cluster-api">kubernetes-sigs/cluster-api</a><br>Home for Cluster API, a subproject of sig-cluster-lifecycle</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

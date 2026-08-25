@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250708.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250708</span>
+</p>
+<p>每日一谚：Lead with context, end with options, and always close with an error </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/08/typed-struct-tags">告别字符串魔法：Go迎来类型化Struct Tag提案，编译期安全触手可及？</a><br>一个旨在彻底改变这一现状的重量级提案——#74472: Typed struct tags——正式进入了社区视野。该提案由 @Merovius 提出，建议在现有字符串标签之外，引入类型化的、编译期检查的结构体标签，一旦落地（虽然短期内不大可能，甚至可能被declined）有望将 Go 的静态类型安全优势延伸至元数据定义领域。</p> 
+
+<p><a href="https://go.dev/blog/generic-interfaces">Go官博：泛型接口</a><br>向接口类型添加类型参数具有令人惊讶的强大功能。这篇文章将通过讨论在几种常见场景中使用带类型参数的接口来演示这一点。</p> 
+
+<p><a href="https://words.filippo.io/run-sunlight/">您应该运行证书透明性日志</a><br>如果您是一个拥有少量闲置存储空间和带宽的组织，或者是一位工程师正在寻找为过度配置的家庭实验室寻找理由，您应该考虑运行证书透明性日志。它比您想象的更便宜、更容易，也更重要。证书透明性 (CT) 是支撑整个网络安全性的技术之一。它使证书颁发机构保持诚实，并允许网站所有者收到未经授权的证书颁发的通知。在不到十五年的时间里，WebPKI 从“最薄弱环节”的笑话变成了大多数数字生活安全性的强大基础，这在很大程度上要归功于 CT。
+CT 本质上是一个分布式系统：CA 必须将每个证书提交给由第三方运营并受浏览器信任的两个 CT 日志。这份列表多年来一直短得令人不安。独立日志运营商的数量并不像我们希望的那样多。现在运营日志将是对几乎每个互联网用户的安全性的巨大贡献。
+它还附带吹嘘的权利，声称您的公钥位于数十亿台设备上。
+有什么问题吗？好吧，直到最近运行日志仍然很痛苦且昂贵。我写这篇文章是因为从几个月前开始，这种情况就发生了变化！</p> 
+
+<p><a href="https://packagemain.tech/p/terminal-ui-bubble-tea">使用Go开发TUI应用</a><br></p> 
+
+<p><a href="https://medium.com/@jankammerath/go-anywhere-compiling-go-for-your-router-nas-mainframe-and-beyond-e73e7212a832">Go 语言无处不在：为您的路由器、NAS、大型机及其他设备编译 Go！</a><br>大多数 Go 语言程序员乐于在 Windows 或 Linux 上为 amd64 架构构建程序，Mac 开发者则在他们的 Darwin 平台上使用 arm64。对于大多数 Go 语言程序员来说，为 arm64 Linux 或 arm64 Windows 构建程序相对少见。甚至用 Go 编写 Windows 服务也不是日常任务。本文将探讨 Go 语言一些鲜为人知的目标平台，以及您可以在这些平台上构建的内容。</p> 
+
+<p><a href="https://medium.com/@halilbulentorhon/building-a-key-value-database-from-scratch-in-go-0dd664e5d7e6">从零开始用 Go 构建键值数据库</a><br>本文讲述了作者如何用 Go 语言从零开始构建一个轻量级、可嵌入的键值数据库 HaloDB 的过程。该数据库使用了 B&#43; 树、预写日志 (WAL)、内存表 (Memtable)、布隆过滤器和分区等现代数据库概念。文章详细介绍了构建过程中的步骤、遇到的挑战以及解决方法，并分享了宝贵的经验教训。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/introducing-docker-hub-mcp-server/">Docker Hub MCP Server 的介绍 | Docker</a><br>Docker Hub 已成为全球开发人员的重要资源，每月下载量达 110 亿次，并托管超过 1400 万个容器镜像。随着自主式 AI 的激增，我们看到了开发人员工作方式的重大转变。越来越多的开发人员正在利用 MCP（模型上下文协议）服务器来支持其 AI 代理和自动化工作流程。这些自主系统可以连接到真实数据并提供智能建议，但它们需要访问全面的结构化信息才能真正有效。
+鉴于这种转变，我们正在适应以满足开发人员的需求。今天，我们很高兴地推出 Docker Hub MCP Server，这是一个连接 Docker Hub 海量容器镜像目录和 LLM 智能功能的工具。通过利用 MCP，该服务器改变了开发人员发现、评估和管理容器镜像的方式，使整个过程更直观、更高效。</p>
+
+<p><a href="https://vitalik.eth.limo/general/2025/07/07/copyleft.html">CopyLeft</a><br></p>
+
+<p><a href="https://thenewstack.io/30-years-of-javascript-10-milestones-that-changed-the-web">JavaScript 30年来的10个改变web的里程碑</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://addxorrol.blogspot.com/2025/07/a-non-anthropomorphized-view-of-llms.html">大型语言模型的非拟人化视角</a><br>本文作者对大型语言模型（LLM）的讨论中普遍存在的拟人化倾向表示困惑。作者认为，LLM 本质上只是一系列矩阵乘法和非线性运算，将其赋予类似人类的魔法般能力是错误的。文章探讨了 LLM 的工作原理，将其比作在高维空间中绘制路径的动态系统，并强调了“对齐”和“安全”问题在于量化和限制 LLM 生成有害序列的概率。作者认为，当前的讨论过于关注 LLM 的“行为”和“伦理”，而忽略了其作为数学函数的本质，这阻碍了对问题的清晰理解和解决方案的探索。</p>
+
+<p><a href="https://news.mit.edu/2025/new-system-enables-robots-to-solve-manipulation-problems-seconds-0605">让机器人高效解决操作问题的新系统</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/dapr/dapr">dapr/dapr</a><br>Dapr is a portable runtime for building distributed applications across cloud and edge, combining event-driven architecture with workflow orchestration.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/bytedance/sonic">bytedance/sonic</a><br>A blazingly fast JSON serializing &amp; deserializing library</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/qichiyuhub/rule">qichiyuhub/rule</a><br>Clash、Sing-box、等分流规则</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>Repo for learning observability</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>A modern load testing tool, using Go and JavaScript</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go is a Go package that makes it simple to create and clean up container-based dependencies for automated integration/smoke tests. The clean, easy-to-use API enables developers to programmatically define containers that should be run as part of a test and clean up those resources when the test is done.</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

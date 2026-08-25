@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260311.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260311</span>
+</p>
+<p>每日一谚：简单性很难，而复杂很容易。Go 选择了简单，这就是它的力量。- Rob Pike </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/11/standard-library-is-part-of-the-go-success">拉个 JSON 居然要装 5 个第三方库？终于明白 Go 的标准库到底有多“霸道”</a><br>近日，在 Reddit 的 r/golang 社区，一个题为《标准库是 Go 成功的一部分吗？》的帖子，像一颗深水炸弹，炸出了无数程序员对于“依赖地狱（Dependency Hell）”的疯狂吐槽。</p> 
+
+<p><a href="https://tonybai.com/2026/03/11/in-memory-of-tony-hoare">你每天敲下的 go func()，藏着这位 92 岁老人的毕生心血</a><br>图灵奖得主、快速排序（Quicksort）发明者、CSP（通信顺序进程）理论之父 Tony Hoare（托尼·霍尔）与世长辞，享年 92 岁。也许你并不熟悉这个名字。但只要你是一个程序员，你就一定在面试时手写过他发明的快速排序；如果你是一个 Go 开发者，那你每天在键盘上 敲下的每一个 go func() 和 make(chan int)，都在调用着他留给这个世界的伟大的遗产。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/KGjDZmfQOA8JQXiIukhoLQ">【AI 智能体时代的软件工程】06 并行分解与一次性赌注：零成本验证多种技术方案</a><br>但在智能体软件工程时代，AI 队友彻底改变了这笔经济账：代码的“复制与试错成本”无限趋近于零。 既然 AI 不知疲倦，既然 AI 可以同时开启多线程工作，我们为什么还要在会议室里空对空地争吵？ 今天，我们将学习智能体软件工程中最具颠覆性的一组人机协作模式：“并行分解（Parallel Decomposition）” 与 “一次性赌注（Disposable Bets）”。我将教你如何利用 AI，在喝一杯咖啡的时间里，零成本地用真实的“代码和压测数据”终结架构争论。</p> 
+
+<p><a href="https://www.infoq.com/news/2026/03/datadog-go-binary-optimization/">Datadog如何将其Agent Go二进制文件的大小削减了77%</a><br>在Datadog Agent的大小从428 MiB增长到1.22 GiB的5年后，Datadog的工程师着手减小其二进制文件的大小。他们发现Go二进制文件膨胀的大部分源于隐藏的依赖项、禁用的链接器优化，以及Go编译器和链接器的微妙行为。通过系统地审计导入、隔离可选代码以及消除反射/插件的陷阱，Datadog的工程师在六个月内成功地将二进制文件大小减少了77%，且没有移除任何功能。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/DevelopedTooSmallFailure">我经历过的最惨痛的编程失败之一的故事</a><br>不久前， GeePaw Hill 分享了他作为一名技艺精湛、成就斐然的计算机程序员，最屈辱的一次经历 。这是一个精彩有趣的故事，对我们所有人都有启发意义，所以我强烈建议大家阅读。今天，我要讲述的是我一次重大的失败，当时我可能因为在一台性能过低的机器上进行开发，而悄无声息地扼杀了一位教授的部分研究项目。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/whats-holding-back-ai-agents-its-still-security/">是什么阻碍了人工智能代理的发展？仍然是安全问题</a><br>了解人工智能代理安全如何在团队中受阻，MCP（模型上下文协议）如何发挥作用，以及企业希望扩展其代理工作流程的推荐后续步骤。文章指出，AI 代理安全是阻碍规模化的首要障碍，它体现在基础设施（需要安全沙箱）、操作层面（复杂性引入安全风险）和治理层面（需要一致的控制）。文章还提到，尽管许多团队采用 MCP 来标准化工具连接，但安全保障和运营控制尚不成熟，这也是早期采用团队面临的主要挑战。</p>
+
+<p><a href="https://nesbitt.io/2026/03/11/git-pkgs-actions.html">git-pkgs/actions</a><br>介绍了 git-pkgs/actions 系列 GitHub Actions，该系列旨在将 git-pkgs 工具集成到 CI/CD 工作流中，实现依赖项差异检查、漏洞扫描、许可证合规性检查和 SBOM 生成等功能。核心包括一个 `setup` action 用于下载和初始化工具，以及其他如 `diff`、`vulns`、`licenses` 和 `sbom` actions，它们都作为 shell 脚本运行，保证了安全性和简洁性。</p>
+
+<p><a href="https://buttondown.com/hillelwayne/archive/llms-are-bad-at-vibing-specifications/">LLMs are bad at vibing specifications</a><br>这篇文章探讨了大型语言模型（LLMs）在生成形式化规范（如TLA&#43;和Alloy）方面的局限性。作者通过分析一个实际的GitHub项目中的规范，指出LLMs倾向于生成“明显的属性”（tautological properties），这些属性通常由于简单的逻辑错误或遗漏守卫条件而失败，而不是捕获复杂的、微妙的并发或非确定性问题。作者认为，LLMs在生成真正有价值的、能发现深层错误的“强属性”方面表现不佳，这挑战了LLMs能使形式化方法普及的乐观预测。文章还提到了一个“Logic for Programmers”图书的赠送活动。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/03/11/running-69-agents.html">你每有一分钟不运行69个智能体，你就落后了</a><br>作者认为社交媒体上关于“如果你不使用最新的AI技术就会落后”的焦虑言论是完全没有根据的胡言乱语。AI只是持续的进步，而不是什么魔法。真正的行业洗牌是大型企业通过整合“寻租”行为来淘汰那些制造不必要复杂性的工作岗位，而不是简单地归咎于AI。作者建议人们应该专注于创造价值而不是参与零和博弈，并指出这个世界不是一场“红皇后赛跑”。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/10/sustaining-open-source-in-the-age-of-generative-ai/">在生成式AI时代维持开源</a><br>开源技术一直在随着技术变革而发展。从分布式版本控制到CI/CD，从容器到Kubernetes，每一波工具浪潮都重塑了我们的构建和协作方式。生成式AI是最新的一波浪潮，它带来了开源社区不能再忽视的一种张力。AI让生成贡献变得容易，但并未简化必要的审查流程。本文探讨了开源社区，特别是像Kyverno这样的项目，如何应对AI带来的挑战，强调了“拥有你的提交”（Own your commit）和“披露即信任基础设施”（Disclosure as trust infrastructure）的重要性，并邀请整个生态系统共同参与，以负责任地将AI融入开源。</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2026/03/tla-as-design-accelerator-lessons-from.html">TLA&#43;作为设计加速器：来自行业的经验教训</a><br>作者分享了超过15年使用TLA&#43;（一种形式化方法工具）的经验，认为它是一个“设计加速器”。TLA&#43;通过强制采用声明式的数学推理而非操作性推理，帮助简化复杂分布式/并发系统的设计，尤其擅长快速探索协议变体和在编码前发现设计错误。文章列举了作者在WPaxos、CosmosDB、AWS DistSQL、StableEmptySet、PowerSet Paxos、Secondary Index以及MongoDB分布式事务建模等八个项目中的应用案例，总结了诸如“尽早建模”、“极简建模”、“将模型用作沟通工具”和“模型在设计后期仍有价值”等经验教训。</p>
+
+<p><a href="https://strn.cat/w/articles/spacetime/">SpacetimeDB：一个简短的技术回顾</a><br>文章对新发布的 SpacetimeDB 2.0 进行了技术评测，作者承认其带有嘲讽竞争对手的营销方式令人不快，但仍希望公正地审视其技术。评测指出 SpacetimeDB 的性能基准存在很大争议，因为它将自己独特的“数据库&#43;应用服务器一体化”架构（应用代码运行在数据库内部）与传统数据库进行了不公平的比较。技术分析深入探讨了其核心设计：一个基于单全局读写互斥锁的内存数据存储，这使其写入操作线性化，但代价是读写操作被序列化，可能导致读者饥饿。作者认为这种设计更像是“一个更强大的 Redis”，而不是一个高性能的关系型数据库，并批评了其在持久性（WAL 异步刷新）和对 LLM 用例选择的局限性。文章总结道，SpacetimeDB 的技术选择有合理的用例（如 MMORPG 后端），但其激进的营销方式（如嘲讽性基准测试）可能会让其背负持久的技术声誉债务，如同早期的 MongoDB 一样。</p>
+
+<p><a href="https://developers.cloudflare.com/changelog/post/2026-03-10-br-crawl-endpoint/">使用浏览器渲染通过一个API调用抓取整个网站</a><br>浏览器渲染（Browser Rendering）的新的 /crawl 端点允许用户提交一个起始URL，然后自动发现、渲染并以HTML、Markdown或结构化JSON的形式返回整个网站的内容。关键特性包括多格式输出、爬取范围控制、自动页面发现、增量爬取、静态模式以及对robots.txt的尊重。此功能在Workers免费版和付费版中均可使用。</p>
+
+<p><a href="https://marcin.juszkiewicz.com.pl/2026/03/10/risc-v-is-sloooow/">RISC-V 速度太慢了</a><br>文章对比了不同架构（aarch64, i686, ppc64le, riscv64, s390x, x86_64）编译 binutils 2.45.1-4.fc43 包所需的时间，其中 RISC-V (riscv64) 需要 143 分钟，远高于其他架构（如 aarch64 的 36 分钟）。作者指出 RISC-V 硬件目前速度慢，这阻碍了其成为 Fedora Linux 中的主要官方架构。他还提到了使用 QEMU 虚拟机进行并行编译以加快进程。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything">AI should help us produce better code</a><br>AI应该帮助我们生产更好的代码。许多开发者担心将代码外包给AI工具会导致质量下降。然而，如果采用编码代理确实降低了代码和功能的质量，我们应该直接解决这个问题。文章讨论了如何利用编码代理来避免技术债务（例如重构简单但耗时的修改）和探索更多解决方案（如探索性原型设计），从而在交付新功能的同时提高代码质量，这被称为“复合工程循环”。</p>
+
+<p><a href="https://ankursethi.com/blog/programming-language-claude-code/">我使用 Claude Code 构建了一种编程语言</a><br>作者在四周内使用 Claude Code 构建了一种名为 Cutlet 的新编程语言，并将其命名为其猫的名字。作者允许 Claude 生成了所有代码，并建立了保障措施来确保其正确性。Cutlet 是一种动态语言，支持数组、字符串、向量化操作（使用 @ 元运算符）和 zip 操作。文章详细介绍了 Cutlet 的一些核心特性，如变量声明（使用 `my` 关键字）、函数声明（使用 `fn` 关键字）以及如何使用 `@` 元运算符进行向量化和归约操作。作者还讨论了使用 LLM 进行工程开发所需的四项关键技能：理解适用问题、清晰传达意图、创建适宜环境以及优化代理循环。他认为 LLM 擅长处理复杂的业务逻辑，但在视觉设计方面表现不佳。尽管对软件工程的未来、个人贡献的归属感以及 LLM 的心理影响有所保留，作者认为代理工程需要精心的规划、技能、工艺和纪律。最后，他宣布 Cutlet 的项目告一段落，并转向其他项目。</p>
+
+<p><a href="https://andychen32.substack.com/p/the-enterprise-context-layer">The Enterprise Context Layer</a><br>The author proposes a simple but powerful solution—the Enterprise Context Layer (ECL)—to solve the complex problem of creating central, up-to-date, and reliable enterprise knowledge for AI. This layer, implementable with minimal code (e.g., 1000 lines of Python and a GitHub repository), moves beyond simple document retrieval by synthesizing organizational context, politics, and behavioral nuances. The author details an agent-based, self-maintaining architecture that continually updates and verifies information across various internal sources (code, Slack, Jira, Gong calls) to create a truthful, traceable reflection of the company&#39;s operational reality. This approach aims to democratize true enterprise intelligence, moving the focus from building complex custom agents to maintaining a rich, context-aware knowledge base.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/docker/docker-agent">docker/docker-agent</a><br>AI Agent Builder and Runtime by Docker Engineering</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/projectdiscovery/httpx">projectdiscovery/httpx</a><br>httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.</p>
+
+<p><a href="https://github.com/fengshao1227/ccg-workflow">fengshao1227/ccg-workflow</a><br>多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17&#43; 个命令</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/mickael-kerjean/filestash">mickael-kerjean/filestash</a><br>📁 File Management Platform / Universal Data Access Layer (without FUSE)</p>
+
+<p><a href="https://github.com/ltaoo/wx_channels_download">ltaoo/wx_channels_download</a><br>微信视频号下载器</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/charmbracelet/lipgloss">charmbracelet/lipgloss</a><br>Style definitions for nice terminal layouts 👄</p>
+
+<p><a href="https://github.com/stacklok/toolhive">stacklok/toolhive</a><br>ToolHive makes deploying MCP servers easy, secure and fun</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

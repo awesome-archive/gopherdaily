@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250602.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250602</span>
+</p>
+<p>每日一谚：Don not ignore or swallow errors. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/05/31/six-smells-in-go">“这代码迟早出事！”——复盘线上问题：六个让你头痛的Go编码坏味道</a><br>在日常的代码审查 (Code Review) 和线上问题复盘中，我经常会遇到一些看似不起眼，却可能埋下巨大隐患的 Go 代码问题。这些“编码坏味道”轻&gt;则导致逻辑混乱、性能下降，重则引发数据不一致、系统崩溃，甚至让团队成员在深夜被告警声惊醒，苦不堪言。今天，我就结合自己团队中的一些“血淋淋”的经验，和大家聊聊那些曾让我（或许也曾让你）头痛不已的 Go 编码坏味道。希望通过这次复盘，我们都能从中吸取教训，写出更健壮、更优雅、更经得起考验的 Go 代码。</p> 
+
+<p><a href="https://southcla.ws/structured-errors-in-go">Go语言中的结构化错误</a><br>本文档记录了关于中等规模 Go 程序（特别是 HTTP API）中错误管理主题的一系列实验，其目标是围绕人体工程学、语法简洁性和简化相关人员的工作。最终结果是一种简单的方法和一个新的库，我已经在生产环境中使用了几个月。</p> 
+
+<p><a href="https://beyondthesyntax.substack.com/p/lets-write-a-json-parser-from-scratch">让我们从零开始编写一个 JSON 解析器</a><br>作者最近学习了语言解析和抽象语法树，并决定编写一个 JSON 解析器。文章详细介绍了词法分析（Tokenization）和解析（Parsing）过程，包括如何处理字符串、数字和字面量，以及如何构建抽象语法树 (AST)。文章还提供了代码示例和 GitHub 链接，方便读者学习和实践。</p> 
+
+<p><a href="https://blog.fillmore-labs.com/posts/zerosized-1">指向器在零大小类型领域的危险</a><br>本文探讨了Go语言中零大小类型（ZST）与指针交互的陷阱。ZST本身不占用内存，但其与指针结合使用时，由于编译器的优化和Go语言规范中对零大小变量指针比较的未定义行为，可能导致程序行为不一致。文章分析了这种不一致性产生的原因，并介绍了一个名为`zerolint`的静态分析工具，该工具可以检测ZST指针的潜在问题，帮助开发者编写更健壮的Go代码。文章还建议使用值接收器、值嵌入而不是指针接收器和指针嵌入，以及使用静态分析工具来避免此类问题。</p> 
+
+<p><a href="https://dev.to/calvinmclean/middleware-and-roundtrippers-in-go-30pa">Go 中的中间件和 RoundTrippers</a><br>本文介绍了 Go 语言中可重用的 HTTP 组件中间件和 RoundTrippers，分别用于服务器端和客户端。中间件在请求和响应处理之前和/或之后执行代码，常用于日志记录和身份验证；RoundTrippers 通过设置 http.Client 的 Transport 字段来使用，用于客户端 HTTP 请求。文章包含缓存中间件、日志中间件、身份验证中间件、恢复中间件、顺序中间件、缓存 RoundTripper、日志 RoundTripper、身份验证 RoundTripper 和顺序 RoundTripper 等示例，并通过测试演示了这些工具的正确和错误用法。最后，文章总结了中间件和 RoundTrippers 的一些高级用法，例如自动重试、OpenTelemetry 追踪和指标、节流和速率限制等。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://cacm.acm.org/practice/systems-correctness-practices-at-amazon-web-services">亚马逊网络服务中的系统正确性实践</a><br>亚马逊网络服务 (AWS) 致力于提供客户完全信任的可靠服务。这需要保持最高的安全、持久性、完整性和可用性标准——系统正确性是实现这些优先级的基石。本文概述了 AWS 在整个过程中使用的各种形式化方法，以高置信度交付复杂服务。这些方法包括从传统的正式方法（如定理证明、演绎验证和模型检查）到更轻量级的半正式方法（如基于属性的测试、模糊测试和运行时监控）。文章还讨论了 P 编程语言在建模和分析分布式系统中的作用，以及故障注入服务 (FIS) 在提高系统弹性方面的贡献。此外，文章还探讨了形式化方法带来的额外好处，例如性能改进，以及未来面临的挑战和机遇，例如弥合学术界和工业界在采用形式化方法方面的差距。</p>
+
+<p><a href="https://tailscale.com/blog/grants-ga">Tailscale访问控制新一代方案</a><br>Tailscale发布了新一代访问控制方案Grants，它将网络和应用程序功能整合到单一语法中，比之前的ACL语法更易于编写和阅读。Grants是ACL的超集，任何可以用ACL编写的规则都可以用Grants表达，并且可以与ACL完美共存。</p>
+
+<p><a href="https://dariobalinzo.medium.com/virtual-threads-ate-my-memory-a-web-crawlers-tale-of-speed-vs-memory-a92fc75085f6">虚拟线程耗尽了我的内存：一个网络爬虫的速度与内存之战</a><br>我使用传统的平台线程构建了一个简单的网络爬虫，它只是一个多线程爬虫，没有什么花哨的功能。但是，好奇心驱使我尝试：“如果我改用虚拟线程会发生什么？”虚拟线程是我最喜欢的 Java 生态系统最新改进之一。从平台线程切换到虚拟线程极大地提高了 URL 处理速度……直到整个程序因为 OutOfMemoryError 错误崩溃。是的，速度太快了。这篇文章讲述了我的一次小型编程实验，我试图释放虚拟线程的强大功能，却发现需要一些技巧才能避免将性能变成内存炸弹。我将逐步介绍发生的事情、我的解决方法以及你也可以如何操作。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://justin.searls.co/posts/why-agents-are-bad-pair-programmers">为什么智能体是不合格的结对编程伙伴</a><br>大型语言模型（LLM）智能体因为编码速度快于人类思考速度而成为糟糕的结对编程伙伴。作者分享了与顶级程序员结对编程的糟糕经历，这些经历与与AI智能体结对编程的体验惊人地相似。文章建议放弃基于编辑器的自主结对编程，转而采用异步工作流程，例如GitHub的新型编码智能体；并建议将编辑模式从半自动的“智能体”模式降低到轮流式的“编辑”或“询问”模式，以降低速度，并保证质量控制。文章最后提出了一些改进建议，例如让用户设置每分钟代码行数或散文字数、允许用户暂停智能体以提出问题，以及改进用户界面等，以提高AI智能体结对编程的有效性。</p>
+
+<p><a href="https://getkiln.ai/blog/why_fine_tune_LLM_models_and_how_to_get_started">何时微调真正有意义：开发者指南</a><br>许多团队都对微调及其如何帮助他们的 AI 产品感到好奇，但他们不知道该过程会带来什么结果、如何衡量成功或从哪里开始。本指南探讨了微调的具体好处，帮助您确定哪些目标对您的用例很重要，并向您展示如何通过明确的路径获得可衡量的结果。我们将介绍微调真正有意义的实际用例，以及它没有意义的情况。</p>
+
+<p><a href="https://southbridge-research.notion.site/claude-code-an-agentic-cleanroom-analysis">为你服务的 AI 工作空间 </a><br>一个将日常工作连接到一个空间的工具。它为你和你的团队提供 AI 工具——搜索、写作、笔记——在一个多合一、灵活的工作空间内。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/cloudreve/Cloudreve">cloudreve/Cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/googleapis/go-genai">googleapis/go-genai</a><br>Google Gen AI Go SDK provides an interface for developers to integrate Google&#39;s generative models into their Go applications.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/dagu-org/dagu">dagu-org/dagu</a><br>A compact, portable, and language-agnostic workflow engine. It aims to solve greater problems.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/fD6rDkDV</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/DNSCrypt/dnscrypt-proxy">DNSCrypt/dnscrypt-proxy</a><br>dnscrypt-proxy 2 - A flexible DNS proxy, with support for encrypted DNS protocols.</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/metoro-io/mcp-golang">metoro-io/mcp-golang</a><br>Write Model Context Protocol servers in few lines of go code. Docs at https://mcpgolang.com</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/aquasecurity/kube-bench">aquasecurity/kube-bench</a><br>Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark</p>
+
+<p><a href="https://github.com/aandrew-me/tgpt">aandrew-me/tgpt</a><br>AI Chatbots in terminal without needing API keys</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

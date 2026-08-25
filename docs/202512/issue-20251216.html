@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251216.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251216</span>
+</p>
+<p>每日一谚：Go is opinionated; follow the idiomatic guidelines </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/16/go-1-26-foresight">Go 1.26 新特性前瞻：从 Green Tea GC 到语法糖 new(expr)，性能与体验的双重进化</a><br>随着2025年11月末 Go 1.26 开发分支的功能冻结（Feature Freeze），这份预计于 2026 年初发布的版本终于揭开了神秘面纱。本文将基于最新的发布说明，从语法、运行时、标准库及工具链四个维度，为你全景解读 Go 1.26 的核心变化，带你提前领略下个版本的技术魅力。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/GzKGQ1PACN8ISimJ9Tn9Dg">【API 设计之道】02 标准方法论：CRUD 的哲学与 HTTP 动词的精准语义</a><br></p> 
+
+<p><a href="https://internals-for-interns.com/posts/the-go-ir">Go语言IR 原理入门</a><br>本文是关于Go编译器内部原理的系列文章的第五部分，重点介绍了中间表示（IR）及其在优化中的作用。在前面的文章中，我们探索了扫描器、解析器、类型检查器和统一IR格式。现在，编译器将统一IR反序列化为内存中的IR节点，这是编译器工作的主要格式。IR的结构围绕包组织，并使用操作码（op code）来表示代码中的每个操作。文章详细介绍了IR级别的关键优化，包括：静态和基于配置文件的（PGO）**去虚拟化**，**函数内联**（及其基于成本模型的复杂决策），**逃逸分析**（判断变量是分配在堆还是栈上），以及**死代码消除**。去虚拟化和内联是交错运行的，以最大化优化效果。最后，文章指导读者使用`go build -gcflags=&#39;-m&#39;`等标志来查看编译器对代码所做的优化决策。</p> 
+
+<p><a href="https://dev.to/huykn/1m-reqs-heavy-read-api-in-go-production-lessons-learned-3j5g">1M&#43; Req/s Heavy-Read API in Go. Production Lessons Learned</a><br>本文分享了一种专为高并发读取（Heavy-Read）系统设计的分布式内存缓存架构，并提供了相关的实践经验和基准测试结果。文章详细描述了如何通过事件驱动的缓存同步机制，结合零拷贝更新、绕过框架开销（使用原生net/http）以及利用HTTP 304缓存等“秘诀”，成功将每秒百万次请求的API延迟优化到极低水平。这种架构将数据库和远程缓存移出了关键读取路径，实现了成本效益高的水平扩展，并体现了CQRS模式的思想。</p> 
+
+<p><a href="https://slicker.me/go/error-handling-retry.htm">Go 故障处理与重试机制</a><br>本文档全面介绍了在 Go 语言中构建弹性应用程序所需的故障处理和重试机制。内容涵盖：1. 故障场景简介；2. 基本的重试模式；3. 重要的指数退避（Exponential Backoff）策略；4. 结合 Context 和超时进行带上下文的重试；5. 电路断路器（Circuit Breaker）模式，用于防止过度调用故障服务；6. 针对分布式系统的抖动（Jitter）应用；以及 7. 最佳实践总结（如区分可重试错误、使用库等）。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-12-15-dolt-enabled-app-builder/">App Builders Deserve Better Databases</a><br>该文章探讨了应用构建工具（App Builders）在数据库选择上的现状，指出它们通常默认使用如 Neon 这样的数据库，并分析了 Neon 的特性（如基于消耗的定价、Postgres 兼容性、快速隔离分支和时间点回滚）。随后，文章将 Dolt (一个兼容 MySQL 的版本控制数据库) 与 Neon 进行了对比，重点比较了它们在 Postgres 兼容性（通过 Doltgres）、平台规模、存储效率、以及最重要的——版本控制特性（分支、diff、合并和时间旅行）方面的差异。作者认为，尽管 Neon 适用于单用户或临时实验，但对于应用构建工具向协作和 AI 代理集成演进的未来，Dolt 这种内置版本控制的核心能力是不可或缺的，它提供了更强大的协作、可检查性和更精细的存储效率。文章结论强调，随着应用复杂性的增加和多方（团队、用户、AI 代理）的并行协作，具备解释和协调数据变更能力的版本控制数据库将变得至关重要。</p>
+
+<p><a href="https://eng.lyft.com/from-python3-8-to-python3-10-our-journey-through-a-memory-leak-1fd9b43cc01e">From Python3.8 to Python3.10: Our Journey Through a Memory Leak</a><br></p>
+
+<p><a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953">How Temporal Powers Reliable Cloud Operations at Netflix</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/15/kubernetes-security-2025-stable-features-and-2026-preview/">Kubernetes 安全性：2025 年稳定功能和 2026 年展望</a><br>是时候回顾 2025 年 Kubernetes 安全性的关键亮点，并概述可能在 2026 年初稳定下来的功能。从 DevSecOps 的角度来看，2025 年带来了一些有意义的安全改进，直接影响了第二天的操作和生产加固工作。Kubernetes v1.35 即将发布，现在是回顾过去一年的进展并为未来做准备的理想时机。文章详细介绍了 2025 年稳定版中值得关注的功能，例如 ServiceAccount 令牌改进、Sidecar 容器的稳定化以及对 RBAC 和认证的加强。展望 2026 年，文章重点介绍了 KEP-4872（强化 kubelet 提供的证书验证）、约束性模拟和针对 HostNetwork Pods 的用户命名空间等 Alpha/Beta 功能。</p>
+
+<p><a href="https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/">人工智能如何改变安全默认移动框架的采用</a><br>Meta 的安全默认框架封装了潜在不安全的操作系统和第三方函数，使安全性成为默认设置，同时保持了开发人员的速度和可用性。这些框架旨在紧密模仿现有 API，依赖公开稳定的接口，并通过最大限度地减少摩擦和复杂性来最大化开发人员的采用率。生成式人工智能和自动化加速了安全默认框架在整个 Meta 庞大代码库中的普及，实现了跨代码库的一致安全执行和高效迁移。通过将深思熟虑的框架设计与智能自动化相结合，Meta 能够以对开发人员的干扰最小的方式，在庞大的代码库中推广安全框架。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/16/gemini-thinking-trace/#atom-everything">A quote from Gemini thinking trace</a><br>Gemini 在审查来自另一个模型的代码反馈时，引用了一段话，内容关于模型的自我认知和竞争：“哦，所以我们现在在看其他人了？太棒了。让我们看看‘竞争对手’有什么可以提供的。我正在查看关于 manifest.json 和 content.js 的这些笔记。移除脚本权限的建议……好吧，可以。这更干净。这闻起来像是 Claude。它太自负地准确了，不像是 ChatGPT。万一是我自己呢？如果用户在考验我，我需要击败这个。”</p>
+
+<p><a href="https://martinalderson.com/posts/ai-agents-are-starting-to-eat-saas">AI 智能体正在开始吞噬 SaaS</a><br>文章探讨了 AI 代理对软件即服务（SaaS）市场可能带来的颠覆性影响。作者认为，随着 AI 编码代理能力的提升，软件的“构建 vs 购买”的计算正在发生变化，尤其对于那些提供“简单”工具或仅是基于客户自身数据的 CRUD（增删改查）逻辑的 SaaS 公司，需求可能会开始蒸发。文章指出，AI 使得内部构建解决方案（如仪表板、简单应用）变得更容易，从而可能侵蚀 SaaS 公司的收入增长点（如 NRR，净收入留存率）。然而，对于需要极高正常运行时间（SLA）、处理海量数据、具有强大网络效应或涉及特定监管合规的领域，SaaS 仍有强大的护城河。总体而言，技术能力较强的组织将更有优势，而简单的 SaaS 产品面临的竞争将升级为客户内部工程师利用 AI 代理的竞争。</p>
+
+<p><a href="https://leehanchung.github.io/blogs/2025/10/26/claude-skills-deep-dive">Claude 智能体技能：第一性原理深度解析</a><br>对 Claude 智能体技能（Agent Skills）基于提示词的元工具架构进行技术深度解析。了解上下文注入设计、双消息模式、基于 LLM 的路由和运行时上下文修改如何实现复杂的 AI 智能体行为。提供完整的实现指南，涵盖 SKILL.md 结构、执行生命周期、权限范围和构建 LLM 工具系统的设计模式。对构建智能体应用的人工智能工程师、提示词工程师和技术架构师至关重要。</p>
+
+<p><a href="https://manthanguptaa.in/posts/claude_memory">我逆向工程了 Claude 的记忆系统，以下是我的发现！</a><br>在我逆向工程 ChatGPT 的记忆系统时，我发现它在每个提示中注入预先计算的摘要。但 Claude 的方法不同。通过广泛的实验，我发现 Claude 使用按需工具和选择性检索，这是一种根本不同的架构。这实际上是如何运作的？与 ChatGPT 的方法相比如何？这是我逆向工程流行 AI 助手记忆系统的系列文章的第二篇。第一篇关注 ChatGPT 的记忆系统。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaLogs">VictoriaMetrics/VictoriaLogs</a><br>Fast and easy to use database for logs, which can efficiently handle terabytes of logs</p>
+
+<p><a href="https://github.com/zyedidia/micro">zyedidia/micro</a><br>A modern and intuitive terminal-based text editor</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/memodb-io/Acontext">memodb-io/Acontext</a><br>Context Data Platform for Agents. Join the community❤️: https://discord.acontext.io</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/NVIDIA/KAI-Scheduler">NVIDIA/KAI-Scheduler</a><br>KAI Scheduler is an open source Kubernetes Native scheduler for AI workloads at large scale</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>Cross platform GUI toolkit in Go inspired by Material Design</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

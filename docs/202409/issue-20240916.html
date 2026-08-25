@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240916.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-16</span>
+</p>
+<p>每日一谚：Reflection is never clear </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.dolthub.com/blog/2024-09-13-package-scoped-logging-in-go-log4j/">在Go中构建包级、运行时可配置的日志</a><br>源文档讨论了在 Go 中实现包级日志记录配置的挑战，这一功能在 Java 中通过 log4j 等工具得到了很好的确立。作者是一位 Java 开发人员，后来成为 Go 爱好者，他表达了对 Go 的偏爱，并希望在 Go 中复制 Java 的日志记录便利性。为了解决这个问题，他们提出了两个 Go 日志框架，Zap 和 logrus，以及它们各自的包级日志配置的原型。Zap 以其速度和灵活性而闻名，它使用插件架构和配置文件来控制每个包的日志记录行为。相比之下，logrus 虽然速度较慢，但提供了更简单的设置和使用，其原型根据调用堆栈过滤消息。作者最后承认了原型的改进潜力以及 Go 日志生态系统中的现有差距。</p> 
+
+<p><a href="https://medium.com/google-cloud/interning-in-go-4319ea635002">Go interning</a><br>本文讨论了 Go 1.23 中的interning概念，该功能通过重用等值对象来优化内存使用。这在处理大型字符串时特别有用，如一个示例所示，其中将一本大书加载到内存中，并创建一段以 &#39;B&#39; 开头的单词。然后，本文探讨了释放内存的三种策略：使用大字符串的切片、克隆字符串以及将实习字符串与 &#39;unique&#39; 包一起使用。后者被强调为最有效的方法，因为它可以防止原始大字符串被垃圾回收，从而释放内存。本文最后指出，实习在关注内存的各种执行环境中可能是有益的。</p> 
+
+<p><a href="https://dev.to/eyo000000/a-straightforward-guide-for-go-interface-16b2">Go interface的简单指南</a><br></p> 
+
+<p><a href="https://www.p99conf.io/2024/09/16/worldwide-local-latency-the-zeroflucs-strategy/">全球本地延迟：ZeroFlucs 策略</a><br>在详细的技术演讲中，ZeroFucs 的软件工程总监 Cynthia Dunlop 解释了该公司管理全球、区域和客户特定数据的创新方法，以实现低延迟体育博彩模拟。ZeroFlucs 利用 ScyllaDB（一种因其可扩展性和性能而被选中的数据库）每秒处理高达 250,00pts 的游戏内事件。数据分为全局、区域和客户特定类型，每种类型都需要跨不同区域进行战略复制，以确保客户的数据弹性和低延迟。为了简化跨多个服务对 ScyllaDB 复杂复制设置和键空间的管理，ZeroFlucs 开发并开源了 Golang ScyllaDB 帮助程序库 Charybdis。该工具有助于自动创建密钥空间和简化 CRUD 操作，同时还可以处理负载加权 （LWT） 和生存时间 （TTL） 设置。随着 ZeroFlucs 不断发展和优化其系统，他们仍然致力于探索和增强对 ScyllaDB 的使用，以满足其技术日益增长的需求。</p> 
+
+<p><a href="https://dev.to/ossan/gorm-sneak-peek-of-custom-data-types-97n">Gorm: Sneak Peek of Custom Data Types</a><br>源文档详细探讨了一个特定用例，涉及 Gorm（Go 的数据库映射器）及其自定义数据类型。作者呈现了一个场景，软件应用需要管理军官及其相应的等级。文档解释了如何定义 Go 结构体及使用 Gorm 的 gorm:&#34;type:varchar[]&#34; 语法建立相应的数据库关系。它进一步深入实现 Grade 结构体的 Scan 和 Value 接口，以便实现自定义的数据获取和存储。作者还提供了一个代码示例，演示了数据库连接的设置、种子数据的填充以及对 officers 表进行 CRUD 操作</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.howtocodeit.com/articles/master-hexagonal-architecture-rust">Master hexagonal architecture in Rust</a><br>深入探讨了 Rust 中的六边形架构，旨在指导读者理解和实施这一设计模式。它首先批评了一个“非常糟糕的应用”，该应用展示了 Rust 应用中的常见陷阱，例如硬依赖和缺乏抽象。接着，文档介绍了六边形架构作为解决方案，强调其在解耦应用关注点和促进可测试性方面的作用。文档解释了服务、端口和适配器等关键组件，重点讲述它们如何促进领域逻辑与数据库、HTTP 请求等外部关注点的分离。最后，文档还提供了一些确定适当领域边界的经验法则，主张初始领域应较大，并对紧密相关的业务功能使用单一领域。</p>
+
+<p><a href="https://www.ssp.sh/brain/data-engineering/">数据工程保险库</a><br>Data Engineering Vault 充当数据工程的综合知识中心，类似于数字花园，用户可以在其中浏览相互关联的术语以扩展他们的理解。“数据工程”一词随着时间的推移而发展，包括从数据库管理员到软件工程师的角色，目前被定义为软件工程和商业智能与大数据功能的混合体。Python 正在成为数据工程任务的主要语言，利用 Apache Airflow 和 Dagster 等工具进行编排。该领域正在迅速发展，为那些希望开始或加深数据工程知识的人提供了可用的资源，包括书籍、文章和学习机会。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://openai.com/index/introducing-openai-o1-preview/">OpenAI o1-preview发布</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - 用 Go 编写的 AUR Helper</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>用于 git 命令的简单终端 UI</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint 允许用户使用流行的框架快速启动一个 Go 项目</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.1、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/golang/example">golang/example</a><br>Go 示例项目</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub 的官方命令行工具</p>
+
+<p><a href="https://github.com/rivo/tview">rivo/tview</a><br>终端 UI 库，具有丰富的交互式小部件 — 用 Golang 编写</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>云原生应用程序代理</p>
+
+<p><a href="https://github.com/JanDeDobbeleer/oh-my-posh">JanDeDobbeleer/oh-my-posh</a><br>最可定制且低延迟的跨平台/shell 提示渲染器</p>
+
+<p><a href="https://github.com/v2rayA/v2rayA">v2rayA/v2rayA</a><br>Project V 的 Web GUI 客户端，支持 VMess、VLESS、SS、SSR、Trojan、Tuic 和 Juicity 协议。🚀</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB 是一个开源、云原生、分布式、兼容 MySQL 的数据库，用于弹性扩展和实时分析。免费试用 AI 驱动的 Chat2Query：https://www.pingcap.com/tidb-serverless/</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和 2FA 的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/publicsuffix/list">publicsuffix/list</a><br>Public 后缀列表</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区托管域列表。为 V2Ray 生成 geosite.dat。</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/cilium/tetragon">cilium/tetragon</a><br>基于 eBPF 的安全可观察性和运行时执行</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>适用于去中心化 Web 🌈💎✨ 的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/xvzc/SpoofDPI">xvzc/SpoofDPI</a><br>用 Go 编写的简单快速的反审查工具</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥🔥🔥 Web-based linux server management control panel. / 现代化、开源的 Linux 服务器运维管理面板。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

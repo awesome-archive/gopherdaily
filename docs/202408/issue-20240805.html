@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240805.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-05</span>
+</p>
+<p>每日一谚：A constructor should often ONLY return a new value. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/08/05/formally-verify-concurrent-go-programs-using-tla-plus/">使用TLA&#43;形式化验证Go并发程序</a><br>TLA&#43;入门(go示例)</p> 
+
+<p><a href="https://www.cockroachlabs.com/blog/admission-control-unexpected-overload/">CockroachDB 中的准入控制：它如何防止意外过载</a><br>CockroachDB 准入控制系统在节点过载期间优先考虑工作，管理三种类型的过载：CPU、存储和复制，并使用每个 CPU 可运行的 goroutines 和 goroutine 调度延迟等指标来管理这些过载，确保关键操作继续进行，同时降低优先级的工作受到限制。</p> 
+
+<p><a href="https://www.cockroachlabs.com/blog/raft-is-so-fetch/">Raft is so fetch: The Raft Consensus Algorithm explained through Mean Girls</a><br>The blog post explains the Raft Consensus Algorithm, a consensus system used in distributed systems, using the high school-themed movie &#34;Mean Girls&#34; to illustrate its functionality and the process of reaching a consensus among replicas.</p> 
+
+<p><a href="https://medium.com/@mr.singh.harbinder/golang-concurrency-and-design-patterns-implementation-372c10b69722">Golang 并发和设计模式实现</a><br>本文使用一个涉及多个 goroutines、Channels 和 context 的结构化示例来管理执行流程和超时，对 Go 的并发模式和设计模式进行了全面的解释和实现，包括 goroutines、channels、select 语句、闭包、上下文、错误处理和优雅关闭。</p> 
+
+<p><a href="https://spin.atomicobject.com/go-worth-using/">Go 编程语言值得在你的下一个项目中使用吗？</a><br>本文讨论了 Go 编程语言，强调了其类似 C 的语法、缺乏异常和类、围绕接口的类型系统以及 goroutines，并建议虽然它的 goroutines 不是其主要特性，但它的可靠性和效率使其成为某些项目的不错选择。</p> 
+
+<p><a href="https://bitfieldconsulting.com/posts/best-rust-books">Best Rust books for 2024</a><br>The article recommends five books on Rust programming, including &#34;The Rust Programming Language&#34;, &#34;effective rust&#34;, &#34;Rust for Rustaceans&#34;, &#34;Programming Rust&#34;, and &#34;Zero to Production in Rust&#34;, each providing comprehensive and practical guides to the language and its tools.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.quastor.org/p/notion-decreased-latency-20-caching">Notion 如何通过缓存将延迟降低 20%</a><br>该文件很简短，表示短暂的停顿。</p>
+
+<p><a href="https://thenewstack.io/how-to-manage-linux-software/">如何管理 Linux 软件</a><br>New Stack 提供了有关如何管理 Linux 软件的综合指南，包括使用命令行包管理器、源自 Red Hat 或 Debian 的包管理器、从源代码编译应用程序，以及 Linux 发行版和一般软件开发之间的差异。</p>
+
+<p><a href="https://materializedview.io/p/15-years-of-realtime-olap-part-2">Realtime OLAP 15 年（第 2 部分）</a><br>Chris Riccomini 讨论了他在 WePay 使用实时分析处理 （OLAP） 的经验，强调了对不同用例的不同要求，例如欺诈检测，以及实时 ETL 领域中各种系统的融合。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://huyenchip.com/2024/07/25/genai-platform.html">构建生成式 AI 平台</a><br>本文提供了构建生成式 AI 平台的综合指南，包括上下文构建、护栏、路由器和网关、缓存、复杂逻辑和编排等组件，强调了评估、可观察性的重要性以及采取谨慎安全措施的必要性。</p>
+
+<p><a href="https://www.woshipm.com/evaluating/6091987.html">深度剖析字节Coze</a><br>The source document records a security error (403) that occurred with the browser nginx/1.4.1.</p>
+
+<p><a href="https://blog.bitsrc.io/how-to-design-a-codebase-optimized-for-ai-coding-assistants-e760569ae7b3">优化 AI 编码助手的代码库</a><br>Eden Ella 的文章讨论了设计针对 AI 编码助手优化的代码库的重要性，强调代码的可读性、可维护性以及使用 Bit 等可重用组件来增强 AI 的理解和贡献。</p>
+
+<p><a href="https://medium.com/@needfulbubbly/exploring-the-top-ai-image-generation-companies-a-comprehensive-guide-13dfbd452a9f">探索顶级 AI 图像生成公司：综合指南</a><br>文章对顶级AI图像生成公司进行了全面的指导，为艺术创作、技术定制、视频制作、商业内容创作、法律合规、初学者友好工具等各种专业场景推荐工具。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/xvzc/SpoofDPI">xvzc/SpoofDPI</a><br>一个用Go编写的简单快速的反审查工具</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>完备的集装箱管理平台</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区管理的域列表。为 V2Ray 生成geosite.dat。</p>
+
+<p><a href="https://github.com/KindlingProject/kindling">KindlingProject/kindling</a><br>基于eBPF的云原生监控工具</p>
+
+<p><a href="https://github.com/EndlessCheng/codeforces-go">EndlessCheng/codeforces-go</a><br>算法竞赛模板库 by 灵茶山艾府 💭💡🎈</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>一个开源、跨平台的终端，可实现无缝工作流程</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源自托管实现</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC的端到端堆栈。交换网板介质服务器和SDK。</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>又一个酸奶 - 一个用 Go 编写的 AUR 助手</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>用于去中心化网络🌈💎✨的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，穿透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>在您的终端中实现 AI 驱动的开发。专为大型真实任务而设计。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源连续文件同步</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/omriharel/deej">omriharel/deej</a><br>使用真实滑块设置应用程序音量！deej 是一个 Arduino &amp; Go 项目，可让您为 Windows 和 Linux 构建自己的硬件混合器</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细的访问控制，将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

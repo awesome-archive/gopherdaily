@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260107.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260107</span>
+</p>
+<p>每日一谚：Clear code is better than clever code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/07/go-language-comfort-zone-in-contempt-chain-pyramid">Go 语言的“舒适区”：为何在这张“鄙视链”金字塔中，Go 仅次于 C？</a><br>最近，一张“编程语言分级图”在技术社区引发大家热议。它没有参考 TIOBE 排名，也不看 GitHub Star 数，而是完全基于一种简单粗暴的价值观： 谁最不折腾人？ 在这张金字塔中，C 语言高居神坛（The one and only），而 Java、Python、C&#43;&#43; 被踩在最底层的“憎恶（Abomination）”泥潭里。甚至连备受推崇 的 Rust，也被归入了“彻底失败（Total failure）”。</p> 
+
+<p><a href="https://tonybai.com/2026/01/07/stop-vibe-coding-professional-developers-master-coding-agent-2025">别再“Vibe Coding”了：2025 年专业开发者是如何驾驭 Coding Agent的？</a><br>近日，来自 UCSD 和康奈尔大学的研究团队发表了一篇题为《Professional Software Developers Don’t Vibe, They Control: AI Agent Use for Coding in 2025》的论文。通过对 13 位资深开发者的实地观察和 99 份详细调查，他们揭示了一个截然不 同的真相：专业开发者并不“Vibe”，他们严密“控制”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/Szj-uXYpVU6ZiZjmva7-fg">【分布式系统】02 现实世界的法则 —— 分布式系统的定义、模型与核心挑战</a><br></p> 
+
+<p><a href="https://nsrip.com/posts/goroutineleak.html">避免 goroutine 泄漏的两种并发模式</a><br>本文介绍了两种在 Go 语言中避免 goroutine 泄漏的并发模式，这些模式均源自 Go 标准库或工具链的实际应用。第一个模式是用 `time.AfterFunc` 替换循环中的 `time.Ticker` 来实现周期性操作，避免了因忘记停止 Ticker 导致的 goroutine 泄漏。第二个模式是延迟创建的工作池（Lazy worker pool），通过在工作项到来时按需启动 goroutine，并在工作完成后自动退出，而不是依赖关闭通道来停止预先启动的固定数量的 worker 协程。这两种模式都体现了 Dave Cheney 的建议：“永远不要在不知道 goroutine 如何停止的情况下启动它”，使 goroutine 的退出条件更加清晰和自动化，从而提高了程序的健壮性。</p> 
+
+<p><a href="https://savasayik.com/high-performance-communication-between-go-and-python-using-unix-domain-sockets">使用 Unix 域套接字在 Go 和 Python 之间实现高性能通信</a><br>在构建实时视频系统时，我需要在 Go 和 Python 服务之间实现快速、安全的通信。事实证明，Unix 域套接字是最简单、最强大的解决方案。本文深入探讨了这一体验、其背后的架构，以及为什么 Unix 域套接字可以成为本地服务通信的“隐藏超能力”。它避免了 TCP/IP 协议栈的开销，提供了显著的性能提升和基于文件系统权限的安全性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-01-06-more-read-performance-wins/">更多读取性能优化</a><br>Dolt 团队持续改进 Dolt 在 Sysbench 上的读取性能。本文介绍了最近的几项优化工作，包括为 IN 过滤器创建快速路径、避免在 transform.Inspect 和 transform.InspectExpr 中进行堆分配、优化 PlanBuilder 中的 convertInt()、实现并发的 GroupBy、避免在 GetFieldValue 中使用 Map、改进自定义日期解析以及使用指针 TupleComparator。这些改进使得 Dolt 的平均读取延迟乘数从 1.05 降至 1.00，整体读取和写入乘数达到 0.96，这意味着 Dolt 在这些基准测试中甚至优于 MySQL。</p>
+
+<p><a href="https://www.docker.com/blog/deterministic-ai-testing-with-session-recording-in-cagent/">cagent 中的会话录制实现确定性 AI 测试</a><br>AI 代理引入了传统软件没有的挑战：非确定性。相同的提示在不同运行中可能产生不同的输出，使得可靠的测试变得困难。将 API 成本和延迟也计算在内，开发人员的生产力就会受到影响。
+
+cagent 中的会话录制直接解决了这个问题。录制一次 AI 交互，即可无限期地回放——结果相同，无 API 成本，执行时间以毫秒计。
+
+cagent 实现了 VCR 模式，这是一种成熟的 HTTP 模拟方法。在录制过程中，cagent 会代理对 AI 供应商的请求，捕获完整的请求/响应周期，并将其保存到 YAML“磁带”文件中。在回放过程中，传入的请求会与录制内容进行匹配，并从缓存中提供——无需网络调用。
+
+本博文介绍了如何使用 cagent 的 &lt;code&gt;--record&lt;/code&gt; 标志进行录制，使用 &lt;code&gt;--fake&lt;/code&gt; 标志进行回放，以及在 CI/CD 集成、成本效益高的提示迭代和问题重现等场景中的应用。它还提到了磁带的格式及其安全性，并确认了对 OpenAI、Anthropic、Google、Mistral、xAI 和 Nebius 等所有支持的供应商的支持。</p>
+
+<p><a href="https://engineering.salesforce.com/migration-at-scale-moving-marketing-cloud-caching-from-memcached-to-redis-at-1-5m-rps-without-downtime/">规模化迁移：在 150 万 RPS 下将 Marketing Cloud 缓存从 Memcached 迁移到 Redis 而无需停机</a><br>探索 Salesforce 如何在实时生产流量下执行零停机迁移，管理 Redis 规模化带来的热点键压力等等。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/01/06/using-istio-to-manage-high-traffic-services/">使用 Istio 管理高流量服务</a><br>在 STCLab，我们运营着需要实时流量控制和机器人缓解措施的高流量 SaaS 平台。处理数百万并发连接和实时识别恶意机器人需要卓越的基础设施稳定性。为此，我们依赖 Istio。本文重点介绍了 Istio 在生产环境中对我们至关重要的几个功能，包括使用 Proxy Protocol 保持原始客户端 IP、使用 AuthorizationPolicy 进行基于 IP 的访问控制、使用查询参数进行路由以及使用 Outlier Detection 实现故障隔离和优雅关闭。</p>
+
+<p><a href="https://davegriffith.substack.com/p/from-senior-engineer-to-staff-with">从高级工程师到总监级工程师，并获得天使协助</a><br>或者：如何有目的地晋升，借助机器人。这篇文章探讨了工程师如何从高级晋升到更高级别（如Staff/Principal/Distinguished工程师），重点关注三个支柱：专业知识、可见性和意向性。作者强调了人工智能（AI）代理工具在加速专业知识获取、提高工作可见性以及制定职业发展计划方面的巨大潜力，认为现在是追求更高技术职位的最佳时机，因为竞争对手尚未充分利用这些工具。</p>
+
+<p><a href="https://www.vincirufus.com/posts/compound-engineering">复合工程 - 软件工程的下一个范式转变</a><br>随着人工智能驱动的编码速度从 30-70% 提高到 300-700%，复合工程（Compound Engineering）成为关键范式。了解为什么反馈循环、护栏和测试框架成为高速度开发的基石。文章探讨了从“氛围编码”（vibe coding）到复合工程的转变，强调了工程师角色从代码编写者到系统编排者的转变，以及测试基础设施和精确规范在实现指数级生产力提升中的核心作用。</p>
+
+<p><a href="https://addyosmani.com/blog/next-two-years">末来两年的软件工程</a><br>本文探讨了塑造未来两年（至2026年）软件工程的五个关键问题，并为每个问题提供了两种对立的场景。这些思考维度旨在帮助读者为不断演进的行业做好准备。关键问题包括：初级开发者的角色危机（AI自动化与新需求的增长）、核心技能的演变（理解力与验证能力的平衡）、开发人员角色的变化（从编码到系统编排）、专家与通才的权衡（T型人才的价值），以及教育体系如何适应行业快速变化的需求。核心观点是，持续学习、保持批判性思维和专注于独特的人类技能（创造力、批判性思维、协作）是应对不确定性的关键。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.philschmid.de/agent-harness-2026">2026年Agent Harness的重要性</a><br>文章讨论了在AI领域，随着任务复杂性和持续时间增加，模型在静态排行榜上的微小差异变得不再重要。真正的区别在于“耐用性”——模型在执行数百次工具调用后遵循指令的可靠性。Agent Harness被认为是解决这一问题的关键基础设施。它位于AI模型和更高层级的应用逻辑之间，负责管理长期任务，确保AI系统的可靠性、效率和可控性。它类似于计算机的操作系统，提供提示预设、工具调用处理、生命周期钩子以及规划、文件系统访问或子代理管理等开箱即用的功能。作者认为，未来成功的构建者应专注于构建轻量级的、易于迭代的Harness，因为下一代模型将取代当前的复杂控制流程。最终的竞争优势将在于Harness捕获的、用于下一代模型训练的轨迹数据集。</p>
+
+<p><a href="https://addyo.substack.com/p/code-review-in-the-age-of-ai">AI时代下的代码审查</a><br>人工智能写代码的速度更快了，但人类仍需证明代码的有效性。本文探讨了在AI辅助下，代码审查的角色如何从逐行把关转变为更具战略性的质量控制，并强调了无论代码由谁生成，最终的责任仍在人类。文章区分了个人开发者和团队在面对AI生成代码时的不同工作流程和验证重点。</p>
+
+<p><a href="https://www.spakhm.com/claude-code">对Claude Code的思考</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaLogs">VictoriaMetrics/VictoriaLogs</a><br>Fast and easy to use database for logs, which can efficiently handle terabytes of logs</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/WCY-dt/MrRSS">WCY-dt/MrRSS</a><br>A modern, cross-platform, and free AI RSS reader. 一个现代化、跨平台且免费的 AI RSS 阅读器.</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/lima-vm/lima">lima-vm/lima</a><br>Linux virtual machines, with a focus on running containers</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/abhinavxd/libredesk">abhinavxd/libredesk</a><br>Modern, open source, self-hosted customer support desk. Single binary app.</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

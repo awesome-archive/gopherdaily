@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240926.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-26</span>
+</p>
+<p>每日一谚：Comments should explain intent, not repeat code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@aditimishra_541/best-practices-in-go-to-improve-performance-and-reduce-pressure-on-gos-garbage-collector-df10904e0244">降低Go垃圾回收器压力的最佳实践</a><br>Aditi Mishra 在 Medium 上的文章为 Go 开发人员提供了全面的最佳实践，旨在提高性能并减轻 Go 垃圾回收器的压力。关键点包括了解堆栈内存和堆内存之间的区别，利用逃逸分析来最大限度地减少堆分配，以及使用 sync 采用预分配切片和映射等策略。pool 用于对象重用，并避免不必要的接口使用。本文还建议保持 goroutine 的轻量级，并谨慎使用闭包，以防止变量逃逸到堆中。此外，Mishra 建议使用 Go 的转义分析工具来识别和解决堆分配问题。遵循这些做法可以在 Go 应用程序中实现更高效的代码执行和更好的资源管理。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoAndPromisesPattern">Go和“Promises”模式的认识</a><br>Insane Hackers Guild 的成员 Chris Siebenmann 的博文深入探讨了 Go 编程中“Promises”模式的概念，特别是与处理异步任务相关的概念。Siebenmann 解释了他对 Go 工作池中异步执行的必要性的认识，但希望按照结果可用的顺序报告结果。他讨论了 Go 中两种可能的替代方案：使用带有序列号的结果公共通道进行排序，或者为每个请求使用单独的回复通道。Siebenmann 总结说，尽管处理大量通道可能很复杂，但单独的回复通道版本对他来说更简单。</p> 
+
+<p><a href="https://www.infoq.com/news/2024/09/kubernetes-client-go-ga/">Client-Go 中的功能门控：增强 Kubernetes 中的控制并简化功能采用</a><br>InfoQ Software Architects&#39; Newsletter 每月为架构师和有抱负的架构师提供重要信息的概述。专题文章讨论了 Kubernetes 在 client-go 库中集成特性门控，增强了对特性采用的控制并简化了流程。此更新允许在管理整个 Kubernetes 生态系统中的新功能时实现更精细的控制和一致性。此外，本文还解释了 Kubernetes 组件如何用自定义特性门控提供程序替换默认的基于环境变量的覆盖，从而使 client-go 特性门控与其他 Kubernetes 机制保持一致。</p> 
+
+<p><a href="https://dev.to/chamachomo/setting-up-neovim-for-web-development-in-golang-5lc">在 Golang 中设置 neovim 进行 Web 开发</a><br>本文提供了有关使用 Golang 设置 NeoVim 以进行 Web 开发的综合指南，分享了个人经验以帮助其他人简化设置过程。它涵盖了 NeoVim 语言服务器协议 （LSP） 和 Treesitter 的集成以实现高效编码，以及用于 Web 样式的 Templ 格式和 TailwindCSS 的配置。作者还深入探讨了 HTMX 的设置以实现实时 Web 项目更新，以及文件观察器对于监控各种文件类型更改的重要性。此外，本文还涉及了作者不相关的主题，例如在 Go 中编写 Windows 服务、使用 Golang 和 Google Gemini 构建 AI 驱动的 CLI，以及 Rust 和 Go 之间的比较。</p> 
+
+<p><a href="https://words.filippo.io/dispatches/fips-hkdf/">hkdf的FIPS合规性</a><br>该文件深入探讨了 HKDF 遵守 FIPS 的复杂性，这是一个充满困惑和争议的话题。HKDF 是一种基于 HMAC 的密钥派生函数，在各种加密标准和监管要求的背景下受到审查。作者解释说，HKDF 的合规性是多方面的，包括它在密钥协议方案中的作用以及它与通用密钥派生方法的兼容性。该文件进一步阐明，HKDF 可以以不同的方式用于实现 FIPS 合规性，具体取决于它是密钥协议流程的一部分还是用作通用 KDF，并引用 SP 800-133 和 SP 800-108 等特定标准。此外，作者还强调了使用已针对这些算法验证的加密模块以确保符合 FIPS 140 的重要性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://wafris.org/blog/rearchitecting-for-sqlite">重新架构：Redis 到 SQLite</a><br>Wafris 是一家专门从事开源 Web 应用程序防火墙的公司，它从使用 Redis 过渡到使用 SQLite 作为其 Rails 中间件客户端的后备数据存储。这一变化是由于需要简化开发人员的部署和提高规则评估的速度，这对 Wafris 的服务至关重要。SQLite 在基准测试中展示了显着的速度优势，甚至在考虑网络延迟之前。但是，该公司承认 SQLite 的优缺点与 Redis 不同，它并不是要完全取代 Redis，而是更好地为 Wafris 的特定用例服务。新架构还包括规则的客户端更新机制，确保 Wafris 在高负载下保持易于部署和高效。</p>
+
+<p><a href="https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html">从源头上消除内存安全漏洞</a><br>2024 年 9 月 25 日发布的 Google 安全博文讨论了从源头上消除内存安全漏洞，这是 Google 不断努力增强在线安全性的重大进步。该博客还提供了一系列相关文章，这些文章归类在各种与安全相关的标签下，例如 Android 安全、应用程序安全、大数据、C&#43;&#43;、Chrome、互联设备等。此外，该博客强调了 Google 致力于处理与安全相关的旧帖子，并鼓励读者通过评论和在社交媒体平台上分享来参与。该博文是深入了解 Google 安全措施和计划的综合资源，反映了该公司致力于保护用户在线体验的决心。</p>
+
+<p><a href="https://blog.devops.dev/must-know-microservice-design-patterns-circuitbreaker-d90d93ec751e">必须了解微服务设计模式（CircuitBreaker）</a><br>Mpavani 在 Medium 上的文章讨论了在微服务架构中实现 Circuit Breaker 模式的重要性，并以电影票预订系统为例。当 Payment Gateway 服务发生故障时，如果没有断路器，系统将不断尝试处理请求，从而导致由于等待时间延长而导致用户体验不佳。对失败服务的这种持续调用还会导致不必要地消耗服务器资源。Circuit Breaker 模式是一种解决方案，用于防止此类故障级联并保持系统稳定性和性能。本文强调了这种设计模式在微服务环境中优雅地处理服务中断的必要性。</p>
+
+<p><a href="https://www.redpacketsecurity.com/safeline-serve-as-a-reverse-proxy-to-protect-your-web-services-from-attacks-and-exploits/">SafeLine – Serve As A Reverse Proxy To Protect Your Web Services From Attacks And Exploits</a><br>RedPacketSecurity alerts users to the emergence of a new threat group, dubbed &#34;indian0 hackers,&#34; which is believed to be linked to entities in India and is targeting South and East Asian organizations. This group is known for its sophisticated web attacks, including SQL injection, XSS, and command injection, among others. To combat these threats, RedPacketSecurity promotes the use of their WAF (Web Application Firewall), SafeLine, which serves as a reverse proxy to protect web applications from such attacks and exploits. SafeLine offers a range of features, including blocking web attacks, rate limiting, anti-bot challenges, authentication challenges, and dynamic code encryption. The company also encourages community support through Patreon and Buy Me A Coffee, and provides updates via various social media channels.</p>
+
+<p><a href="https://blog.bitsrc.io/composable-cloudflare-architecture-a-guide-485db095be99">可组合的Cloudflare架构：指南</a><br>本文提供了有关使用 Bit 为 Cloudflare 应用程序实现可组合架构的全面指南。它引入了可组合设计的概念，强调关注点分离和创建小型、可重用的组件。该指南详细介绍了使用 Bit 创建和管理组件的过程，包括组件和应用程序组件之间的区别。它进一步解释了如何开发和部署 Cloudflare Worker 组件作为应用程序组件，以及如何创建和使用单独的逻辑组件作为依赖项。文章最后鼓励探索使用 Bit 实施的其他 Cloudflare 解决方案，并提供进一步学习的资源。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/24/kubestronaut-in-orbit-camila-soares-camara/">轨道上的 Kubestronaut：Camila Soares Câmara</a><br>Camila Soares Câmara 是巴西 Wellhub 的高级云工程师，因其在 Kubernetes 和其他云技术方面的工作而被评为 Kubestronaut in Orbit。她拥有云和 DevOps 背景，专注于 Kubernetes 集群和 CI/CD 实践。Câmara 参与 CNCF 对她的职业生涯起到了重要作用，为她提供了认证和资源，帮助她在科技行业保持更新和认可。她目前正在考虑从 CNCF 获得其他云原生认证，例如 Prometheus 和 Cilium。在她的职业生涯之外，Câmara 喜欢研究新技术和与家人共度时光。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/09/24/sig-scheduling-spotlight-2024/">聚焦 SIG Scheduling</a><br>Arvind Parekh 与 Kalsekar Nakada （KN） 合作，在 Kubernetes 社区内讨论 SIG Scheduling 项目，重点关注其在增强 Kubernetes 调度能力方面的作用。KN 是 SIG Scheduling 的审批者，也是两个 SIG 子项目的创始人，他详细阐述了该项目的目标，即提高调度吞吐量和可扩展性，解决不同组织需求的挑战。讨论还涵盖了 QueueHint 的开发，这是一个旨在优化调度效率的新内部增强功能。此外，KN 强调了代码之外的社区贡献（例如反馈和文档澄清）对 Kubernetes 生态系统发展的重要性。这次对话强调了为 SIG Scheduling 和更广泛的 Kubernetes 项目做出贡献的协作性和多方面性。</p>
+
+<p><a href="https://www.hashicorp.com/blog/how-to-use-vault-namespaces">如何使用 Vault 命名空间</a><br>本综合指南探讨了 HashiCorp Vault 命名空间在多租户部署中的使用，解决了与其实施相关的优势和误解。它阐明了命名空间对于访问控制不是必需的，因为 Vault 的 ACL 策略已经维护了最小权限原则。本文档进一步讨论了命名空间的适当使用案例，例如租户隔离、租约计数配额和范围性能复制。它还深入探讨了构建 Vault 命名空间的策略，权衡了按地理区域、数据敏感级别、业务部门和应用程序 ID 组织它们的利弊。最后，它提供了对监控命名空间限制和性能注意事项的见解，为如何测试不同的命名空间方法提供了指导。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/semantic-router-and-its-role-in-designing-agentic-workflows/">语义路由器及其在设计代理工作流中的作用</a><br>Semantic Router 是 Aurelio AI 的一个开源项目，它使代理能够有效地为任务选择最合适的语言模型，从而减少他们对这些模型的依赖，从而彻底改变了 AI 驱动型工作流中的决策。这是通过使用语义向量空间来实现的，它允许根据用户查询快速准确地做出路由决策。该系统将新输入与语义空间中的预定义话语进行比较，从而促进分类和响应，而无需仅依赖语言模型的生成。它支持各种编码方法，并且可以与基于云的模型和本地模型集成，从而为开发人员提供灵活性和控制力。Semantic Router 旨在解决 AI 开发中的挑战，例如安全性、可扩展性和速度，使其成为增强代理工作流程的重要工具。</p>
+
+<p><a href="https://www.redhat.com/en/blog/when-llms-day-dream-hallucinations-how-prevent-them">当 LLM 做白日梦时：幻觉以及如何预防它们</a><br>本文深入探讨了大型语言模型 （LLM） 中的幻觉问题，其中不准确或误导性的信息被作为事实呈现。这些幻觉可能源于 LLM 缺乏特定领域的知识以及无法处理新的或技术术语。这种幻觉的后果很严重，尤其是在医疗保健、法律和金融等关键领域，在这些领域中，精确性至关重要。为了减轻这些幻觉，本文建议使用特定领域的知识对模型进行微调，采用检索增强生成 （RAG），使用高级提示技术，并实施护栏。虽然目前无法完全消除幻觉，但这些策略可以帮助减少幻觉的发生和影响。</p>
+
+<p><a href="https://www.ksred.com/cara-my-ai-powered-code-review-companion/">CARA：AI 驱动的代码审查伴侣</a><br>CARA 是由 Kyle Redelinghuys 开发的 AI 驱动的代码审查工具，对于寻求高效且有洞察力的代码审查的开发人员来说，它是一笔宝贵的资产。该工具可自动分析各种编程语言的拉取请求，为代码改进、错误检测和最佳实践实施提供详细建议。尽管最初在准确放置代码注释方面存在挑战，但 CARA 的性能已显著提高。展望未来，Redelinghuys 旨在通过使 CARA 能够理解整个代码库并执行更复杂的任务（例如自动修复问题）来增强 CARA 的能力。此外，他计划引入一个仪表板，供用户自定义审阅设置和跟踪代码质量趋势。</p>
+
+<p><a href="https://medium.com/@fabiancpl91/no-ai-will-not-take-your-job-as-a-software-developer-or-maybe-it-will-39c807798bf1">不，AI 不会抢走您作为软件开发人员的工作！或者也许会？</a><br>作者 Fabian Peña 探讨了 GPT-o1-preview 等大型语言模型 （LLM） 在软件开发环境中的功能，特别是与用户故事、数据库架构设计和潜在的代码生成有关的功能。他认为，虽然 LLM 可以模仿软件设计的某些方面，但它们还没有达到可以完全取代人类软件开发人员的阶段。Peña 进行了一项实验，他指导 LLM 为在线商店场景定义用户故事，通过多次交互优化这些故事，并以 CSV 格式概述数据库架构。他还计划评估 LLM 创建架构图和项目结构的能力，并最终根据定义的规范编写功能代码。作者的工作旨在强调 LLM 在软件工程任务中的潜力和当前局限性。</p>
+
+<p><a href="https://thenewstack.io/exploring-the-power-and-challenges-of-ai-in-serviceops/">探索 ServiceOps 中 AI 的强大功能和挑战</a><br>本文深入探讨了生成式 AI （GenAI） 在彻底改变服务运营 （ServiceOps） 方面的变革性作用，由于云原生应用程序的激增和管理大量数据的需求，该领域正在经历技术改革。ServiceOps 领导者越来越多地集成 GenAI 来自动化流程、提高效率并满足对 AI 在其运营中的潜力的飙升期望。GenAI 有望带来巨大价值的关键功能包括实时识别业务环境、依赖关系和影响，以及主动协助服务台代理、知识库生成和事件解决加速。本文重点介绍了 AI 在 ServiceOps 中的切实好处，例如减少警报中的噪音和更快地解决问题，这反过来又有助于提高生产力、用户体验和服务质量。人们对 AI 在 ServiceOps 中的作用寄予厚望，大多数 IT 领导者已经参与 AI 调查和生产，这标志着人们正在转向更多 AI 驱动的服务管理实践。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2024/09/24/microsoft-trustworthy-ai-unlocking-human-potential-starts-with-trust/">Microsoft Trustworthy AI：释放人类潜力从信任开始</a><br>Microsoft 通过宣布旨在加强 AI 系统的安全性、安全性和隐私性的新产品功能，加强了其对可信 AI 的承诺。这些增强功能是 Microsoft 的 Secure Future 计划的一部分，该计划强调了公司致力于优先考虑安全性的承诺。该公司已在 Azure AI Studio 中引入了评估以进行主动风险评估，并正在通过 Microsoft 365 Copilot 为 Web 查询实施透明度措施。此外，Microsoft 还为 Azure OpenAI Service Whisper 模型推出了机密推理预览版，并且现已推出具有 NVIDIA H100 Tensor Core GPU 的机密 VM，以满足人们对机密计算日益增长的兴趣。这些步骤是 Microsoft 更广泛使命的一部分，旨在确保以安全可靠且尊重用户隐私的方式开发和使用 AI。</p>
+
+<p><a href="https://medium.com/ailogic/how-to-develop-enterprise-conversational-ai-platform-process-costs-413029964512">如何开发有效的企业对话式 AI 平台？流程和成本说明</a><br>Chrisbrown 的文章提供了关于开发有效的企业对话式 AI 平台的全面指南，详细介绍了流程、成本和最佳实践。它首先解释了对话式 AI 在增强客户参与度和简化业务流程方面的重要性。开发过程分为七个步骤，从定义目标和用例开始，到通过测试和迭代进行持续改进。本文还深入探讨了与对话式 AI 平台的每个功能相关的成本，从自然语言处理到部署和托管。通过遵循这些步骤并考虑相关成本，企业可以成功实施满足其特定需求并增强用户体验的对话式 AI 平台。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>适用于 Kubernetes 的 Go 客户端。</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ 构建高价值公链的✨框架</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter 是一款专为灵活性、性能和简单性而构建的 Kubernetes Node Autoscaler。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>用于管理密钥的简单灵活的工具</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一个内存中的实时数据库，具有基于 SQL 的反应性。它经过高度优化，可在现代硬件上构建和扩展真正的实时应用程序，同时是 Redis 的直接替代品。</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/aceberg/WatchYourLAN">aceberg/WatchYourLAN</a><br>轻量级网络 IP 扫描程序。可用于通知新主机和监控主机在线/离线历史记录</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git 喝杯茶！轻松的自托管一体化软件开发服务，包括 Git 托管、代码审查、团队协作、包注册表和 CI/CD</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>适用于 Windows 的 node.js 版本管理实用程序。具有讽刺意味的是，这是用 Go 编写的。</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/grafana/pyroscope">grafana/pyroscope</a><br>持续分析平台。将性能问题调试到一行代码</p>
+
+<p><a href="https://github.com/grafana/k6">grafana/k6</a><br>使用 Go 和 JavaScript 的现代负载测试工具 - https://k6.io</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度和管理</p>
+
+<p><a href="https://github.com/hemilabs/heminetwork">hemilabs/heminetwork</a><br>hemi 网络核心守护程序。</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>计算机指标的导出器</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>Go 中的 IPFS 实现</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB — 云原生分布式 SQL 数据库，旨在实现高可用性、轻松扩展和对数据放置的控制。</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>即用型 SRT / WebRTC / RTSP / RTMP / LL-HLS 媒体服务器和媒体代理，允许读取、发布、代理、录制和播放视频和音频流。</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>具有长期存储功能的高可用性 Prometheus 设置。CNCF 孵化项目。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260727.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260727</span>
+</p>
+<p>每日一谚：Make the zero value useful </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/26/gomlx-one-year-later/">不用 Python，也能训练大模型：两年之后再看 Go 语言机器学习框架 GoMLX</a><br>本文是对 Go 语言机器学习框架 GoMLX 的一次两年后回访式全面梳理。区别于两年前的入门级介绍，这次聚焦于它经过 v0.28 重组后的整体架构：核心计算引擎已独立为 compute 仓库，形成“上层 API＋可插拔后端”的清晰分层；文章逐层拆解 Backend、Graph、Tensor、Store 四大抽象，用真实代码演示如何用纯 Go 训练一个神经网络，并盘点了 go-huggingface、onnx-gomlx 等生态工具，以及梯度检查点、KAN、分布式训练等最新能力，帮助 Go 开发者判断这套框架两年之后是否值得认真投入。</p> 
+
+<p><a href="https://tonybai.com/2026/07/27/why-software-factories-fail-harness-engineering-not-enough/">AI 写了 75% 的代码，工程师却越来越慌：“黑灯软件工厂”的问题不在 harness，而在模型本身</a><br>本文基于 HumanLayer 创始人 Dex Horthy 在 AI Engineer World&#39;s Fair 的演讲《Harness Engineering is not Enough: Why Software Factories Fail》整理而成。文章回顾了“软件工厂”从2022年人工流水线到2026年“黑灯工厂”的演化路径，结合 Faros AI 的行业数据，剖析了当前编程大模型在强化学习训练中天然缺失“可维护性”奖励信号的根本原因，并给出了 Dex 团队实践验证过的“前置对齐四步法”，作为在模型能力边界内继续安全提速的解法。</p> 
+
+<p><a href="https://tonybai.com/2026/07/25/content/posts/2026/ai-code-migration-claude-code-six-steps/">百万行代码，两周搞定！Anthropic揭秘AI代码迁移六步法：秘诀不是改代码，是改流程</a><br>代码迁移曾是工程团队望而却步的多年项目，如今Anthropic用Claude Code把这类项目压缩到了几周甚至一个周末。本文基于Anthropic官方博客，详细拆解了Bun从Zig迁移到Rust、Anthropic Labs从Python迁移到TypeScript这两个真实案例，还原了AI代码迁移六步法的完整流程：搭建裁判系统、制定规则手册、压力测试、批量翻译、编译验证、行为对齐，并总结出“审查要对抗、验证要机械化、大模型只做裁判”等可直接落地的最佳实践。</p> 
+
+<p><a href="https://words.filippo.io/mldsa-py/">350行Python代码实现生产级ML-DSA验证</a><br>ML-DSA使用23位基域实现起来非常简单：我们使用Python整数（甚至不需要Python的大整数支持）和hashlib中的SHA-3。</p> 
+
+<p><a href="https://riverqueue.com/blog/go-stuck-jobs">Go的阻塞goroutine问题（以及为何让它失败）</a><br>Go的goroutine和channel是真正的乐趣。大约一分钟内，用两三行代码且无需包导入，你就可以运行一个演示，展示并发的goroutine来回传递值。</p> 
+
+<p><a href="https://towardsdev.com/runtime-secret-go-1-26s-answer-to-secrets-leaking-in-core-dumps-d884615e971f"></a><br>runtime/secret：Go 1.26应对核心转储中秘密泄露的解决方案，你的崩溃文件是一份你从未写过的自白。</p> 
+
+<p><a href="https://theconsensus.dev/p/2026/07/19/observing-gos-garbage-collector-old-and-new.html">观察Go的新垃圾收集器在堆中移动</a><br>Go 1.26将Green Tea设为默认GC。我们使用perf观察其缓存友好性，可视化堆以查看Go如何分配内存，并探究像Go这样的非移动式收集器难以处理的稀疏页面问题。</p> 
+
+<p><a href="https://eitamring.github.io/posts/kinetigo.html">KinetiGo：用于LEGO机器人的Go工具链</a><br>KinetiGo是用于LEGO机器人的Go工具链，你编写Go代码，点击运行，那个小塑料砖就会按照你的指示行事。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/27/federating-clusters-for-zero-downtime-kubernetes/">为零停机时间Kubernetes集群联邦化</a><br>联邦化：端点跨越所有三个集群，通过linkerd工具可以诊断跨集群的端点状态，实现零停机时间的Kubernetes集群联邦化。</p>
+
+<p><a href="https://www.pingcap.com/blog/tidb-log-compaction-faster-point-in-time-recovery-for-large-clusters/">TiDB日志压缩：大型集群的更快时间点恢复</a><br>在客户类工作负载下，日志压缩前总恢复时间为10小时13分钟，日志恢复为9小时46分钟；压缩后总恢复时间缩短至34分钟57秒，日志恢复缩短至6分钟39秒，总时间减少94.3%，日志阶段减少98%。</p>
+
+<p><a href="https://bytecodealliance.org/articles/wasmtime-gc">Wasmtime中的垃圾回收和异常处理</a><br>在Wasmtime 47版本中，Wasm GC和异常处理提案都已默认启用。我们很高兴能帮助将更多语言带到WebAssembly以及Wasmtime运行的任何地方。</p>
+
+<p><a href="https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/">介绍Triton：QEMU的DirectX 11驱动程序</a><br>在前作中，我们介绍了Neptune，一个用于VirtIO的Direct3D协议转发层。Neptune允许我们跨虚拟机边界序列化Direct3D API调用，这使得我们能够在Linux客户机上运行Wine游戏。</p>
+
+<p><a href="https://techfortalk.co.uk/2026/07/25/c26-what-is-reflection-and-how-to-use-it/">C&#43;&#43;26：什么是反射以及如何使用它</a><br>我的目标是逐步探索C&#43;&#43;26。希望在今年年底前，我能够探索它的所有主要方面，并评估哪些功能应该使用和推广，哪些不应该。</p>
+
+<p><a href="https://oleksiyp.github.io/arch-book/">AI与云时代的软件架构 | 平台架构之路</a><br>AI与云时代的软件架构是一本关于现代软件架构的免费在线书籍，从最初的权衡到平台工程，贯穿一个完整的运行示例。</p>
+
+<p><a href="https://jonathan-frere.com/posts/reactivity-algorithms/">推送与拉取：三种响应式算法</a><br>2026年3月6日发布，涵盖编程、设计模式和响应式主题。文章探讨了三种响应式算法：推送、拉取和混合模式，以及它们在不同应用场景中的优缺点。</p>
+
+<p><a href="https://aws.amazon.com/blogs/aws/amazon-s3-update-strong-read-after-write-consistency/">Amazon S3更新 – 强读取后写入一致性</a><br>Amazon S3更新引入了强读取后写入一致性，确保在写入操作完成后立即可以读取到最新数据，提高了应用程序的可靠性和数据一致性。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.anthropic.com/news/claude-opus-5">介绍Claude Opus 5</a><br>2026年7月24日，Claude Opus 5现已推出，是Anthropic公司最新发布的AI模型，具有更强大的推理能力和更广泛的应用场景。</p>
+
+<p><a href="https://larsfaye.com/articles/ai-coding-will-prevent-expertise">AI编码将阻碍专业知识发展</a><br>AI编码将阻碍专业知识发展，长期技能形成中需要持续摩擦。OpenAI的Sam Altman认为，未来智能将成为像电力或水一样的公用事业，这种模式可能导致专业知识的退化。</p>
+
+<p><a href="https://www.law.uchicago.edu/news/ai-strategy-statement">重新思考AI时代的法律教育</a><br>2026年7月9日，芝加哥大学法学院发布AI战略声明，探讨AI技术如何改变法律实践，以及法律教育需要如何调整以培养适应AI时代的法律人才。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Open-source &amp; free — Battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, threa</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/edoardottt/cariddi">edoardottt/cariddi</a><br>Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the int</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/black-ant/Ant-Browser">black-ant/Ant-Browser</a><br>指纹浏览器</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260428.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260428</span>
+</p>
+<p>每日一谚：The blank identifier is there for a reason. Use it to discard return values. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/28/go-conditional-expressions-propsal">Go 语言“内战”迎来终局？Go 圣经作者亲自下场，为“三元运算符”发起折中提案！</a><br>但就在前几天，这座最顽固的堡垒，似乎从内部出现了一丝松动。Go 语言圣经《The Go Programming Language》的联合作者、Go 核心团队成员、Go 静态分析工具链的大神 Alan Donovan，亲自下场，发起了一个三元运算符的折中提案：Issue #78940。 他提出的新语法，试图在 Go 的“啰嗦哲学”与 C 的“简洁美学”之间，找到一条前人从未走过的“第三条路”。 今天，就让我们来深度复盘这场持续了 15 年的史诗级“内战”，看看 Go 团队为何对一个“小小的”三元运算符如此“深恶痛绝”，以及 Alan Donovan 的“折中提案”，能否为这场旷日持久的战争，画上句号。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/04/28/popular-golang-web-frameworks/">流行的 Go Web 框架：开发者实用指南</a><br>根据 2025 年 Go 开发者调查，46% 的 Go 开发者使用该语言构建网站或 Web 服务。因此，关于 Web 框架的话题频繁出现在讨论中并经常引发热烈争论，这并不令人惊讶。GoLand 团队带着数据加入讨论，以回答这个问题：最受 Go 开发者欢迎的 Web 框架是什么，以及为什么？我需要框架吗？来自严重依赖框架的环境（如 JavaScript）的开发者，自然会寻求框架来简化或减少工作量。与此同时，硬核 Gopher 会完全拒绝外部库和框架，认为它们是多余的依赖，最终只会让工作更困难。双方在某种程度上都是对的；仅使用 Go 的标准库有其自身的优缺点。使用 net/http 的原因- 健壮性：Go 以“内置电池”的方法而闻名，net/http 包也不例外。Go 的标准库为构建 Web 服务提供了坚实的基础；特别是它已经包含了路由、通过处理器实现的中间件组合以及 HTTP 服务器实现。- 简洁性：标准的 HTTP 包没有多余的装饰或依赖。这意味着开发者经常编写更多的样板代码，但它也提供了清晰且可预测的构建块，可以根据项目的需要进行组合。- 无依赖：一些开发者更喜欢仅使用 net/http，以避免外部依赖。第三方库只有在维护时才有用，而且它们总是会引入安全风险和维护开销。尤其是在大型商业项目中，这些限制往往是不可接受的。- 完全控制：坚持使用 net/http 的开发者拥有对代码的完全控制权，无需为他们不使用的功能支付“开销税”。</p> 
+
+<p><a href="https://coroot.com/blog/zero-config-go-heap-profiling/">零配置的 Go 堆分析</a><br>Coroot 的 node-agent 已经利用 eBPF 收集节点上任何进程的 CPU 分析数据，无需应用程序侧的任何集成。对于 Java，我们动态将 async-profiler 注入 JVM 以获取内存和锁分析数据。但对于非 CPU 分析，Go 进程仍然是一个盲点，除非应用程序暴露 pprof 端点并由 cluster-agent 进行抓取。我们希望为 Go 堆分析提供相同的零配置体验。这篇文章讲述了我们是如何实现的。运行时已经具备分析功能Go 的运行时内置了内存分析器。在每次分配时，运行时都会以 size / MemProfileRate 的概率进行采样并记录调用栈。默认速率是 512 * 1024，即每分配 512KB 大约采样一次。样本被聚合到“桶”的链表中，其中每个桶代表一个唯一的（堆栈跟踪，大小类）组合，并累积四个计数器：总分配数、总释放数、已分配字节数、已释放字节数。这就是 runtime.MemProfile() 返回的内容，也是 go tool pprof http://.../debug/pprof/heap 呈现的内容。其开销微乎其微，并且自古以来就达到了生产级别。有一个陷阱。Go 链接器有一个优化：如果二进制文件中没有代码引用 runtime.MemProfile，它会设置一个内部的 disableMemoryProfiling 标志，并且运行时在初始化时会将 MemProfileRate 设置为 0。没有样本，没有桶，没有可读取的内容。一个不导入 runtime/pprof 或 net/http/pprof（直接或间接）的二进制文件无法进行堆分析，尽管运行时完全支持它。</p> 
+
+<p><a href="https://medium.com/@haridasanrajit/how-event-loops-work-building-one-in-go-from-scratch-d4a137e54586">事件循环如何工作：从零开始用 Go 构建一个</a><br></p> 
+
+<p><a href="https://blog.karoko.dev/processing-1-million-transactions-in-under-a-second-using-go-part-1-98c9079375ac">使用 Go 在一秒内处理 100 万笔交易（第一部分）</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/04/27/kubernetes-for-platform-teams-leveraging-k0s-and-k0rdent/">面向平台团队的 Kubernetes：利用 k0s 和 k0rdent</a><br>在我们之前的博客中，我们探讨了用于本地基础设施的 GitOps 用例，使用 k0rdent 管理托管在 k3s Kubernetes 发行版上的多个集群。但平台工程生态系统非常庞大，一篇博客几乎无法触及轻松管理多集群环境或充分利用不同 Kubernetes 发行版所需的知识。最终，成功不在于运行 Kubernetes，而在于高效且一致地大规模运行它。这就是托管控制平面旨在实现的目标。没人谈论的规模问题你如何管理数十或数百个集群而不让成本和复杂性失控？开放基础设施既不小也不在萎缩。事实上，我每天遇到的大多数从业者都在 OpenStack 上运行他们的工作负载。如果你在 OpenStack 上，管理多集群应用程序的挑战不仅存在，而且会复合。每个新集群都会增加开销，而这些开销会迅速累积。本博客探讨了如何结合 k0s、k0rdent 和托管控制平面（HCP）在 OpenStack 上为您提供可扩展、经济高效且生产就绪的 Kubernetes 平台。我们正在解决什么问题？在典型的 Kubernetes 设置中，每个集群都有自己的专用控制平面——这意味着每个集群至少需要 3 个节点仅用于控制平面。将此乘以开发、测试和生产环境，在第一个工作负载落地之前，你就在浪费资源。这就是托管控制平面旨在解决的问题。HCP 不在每个集群的专用节点上运行 API 服务器、etcd 和控制器，而是在中央管理集群内运行所有这些组件。结果是更少的虚拟机、更低的成本、更简单的升级以及统一的控制面板。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/04/27/kubernetes-v1-36-mutable-pod-resources-for-suspended-jobs/">Kubernetes v1.36：挂起作业的可变 Pod 资源（测试版）</a><br>Kubernetes v1.36 将在挂起作业的 Pod 模板中修改容器资源请求和限制的能力提升至测试版。该功能最初在 v1.35 中作为 alpha 版本引入，允许队列控制器和集群管理员在作业挂起时、在开始或恢复运行之前调整 CPU、内存、GPU 和扩展资源规范。为什么挂起作业需要可变 Pod 资源？批处理和机器学习工作负载通常具有在创建作业时无法精确确定的资源需求。最佳资源分配取决于当前集群容量、队列优先级以及 GPU 等专用硬件的可用性。在此功能之前，作业 Pod 模板中的资源需求一旦设置就是不可变的。如果像 Kueue 这样的队列控制器确定挂起的作业应该使用不同的资源运行，唯一的选择是删除并重新创建作业，从而丢失任何相关的元数据、状态或历史记录。此功能还提供了一种方法，让 CronJob 的特定作业实例在资源有限的情况下缓慢进行，而不是在集群负载过重时直接运行失败。考虑一个最初请求 4 个 GPU 的机器学习训练作业：在此功能下，管理集群资源的队列控制器可以在恢复作业之前更新其资源请求。</p>
+
+<p><a href="https://www.pingcap.com/blog/ai-agent-harness/">除了模型之外，AI 编排器真正需要什么</a><br>关键要点- 编排器（而非模型）决定了代理状态是否可移植和可恢复。- 内存是运行状态，应该从一开始就纳入架构，而不是稍后添加。- 状态锁定是真正的风险：切换框架可能意味着丢失代理的整个操作历史。- 框架迁移和任务中断都可以追溯到同一个根本原因：状态存储在错误的地方。对于第一波 AI 应用程序，模型是唯一重要的架构问题。哪个模型推理更好？哪个模型编写代码更简洁？哪个模型调用工具更可靠？哪个模型具有更大的上下文窗口？哪个模型每个任务的成本更低？这种对话仍然很重要。但它已经不够了。现在吸引最严肃基础设施关注的系统不仅仅是模型。它们是编排系统：被工具、内存、上下文管理、沙箱、文件、权限、恢复逻辑、评估器和反馈循环包围的模型。编排器将模型转变为使用工具、长时间运行的代理。一旦发生这种情况，最困难的问题就会改变：代理的运行状态住在哪里，谁控制它？这个问题正成为当今 AI 系统中最具决定性的架构选择之一。考虑生产中出现的两种情况。你发布了一个基于 LangGraph 的工作代理。三个月后，Anthropic 发布了一个在工具使用方面击败你当前模型的模型，你的团队想要切换框架以利用它。代理的内存（对话历史、用户偏好、任务检查点）位于 LangGraph 的内部状态格式中。切换意味着两件事之一：重写内存层以匹配新的编排器，或者让每个用户回到第零轮。或者你的编码代理运行了一个四小时的任务并在两小时时中断。重新启动时，它没有尝试过什么、修改了哪些文件或决定了什么的记录。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/">Microsoft 与 OpenAI 合作伙伴关系的下一阶段</a><br>修订后的协议提供了长期明确性创新的快速步伐要求我们继续发展我们的合作伙伴关系，以造福我们的客户和两家公司。今天，我们宣布达成一项修订后的协议，以简化我们的合作关系和共同工作方式，建立在灵活性、确定性和专注于广泛提供 AI 好处的基础上。修订后协议中的更大可预测性加强了我们共同构建和运营大规模 AI 平台的能力，同时为两家公司提供了追求新机会的灵活性。协议规定：- 微软仍然是 OpenAI 的主要云合作伙伴，OpenAI 产品将首先在 Azure 上发布，除非微软无法且选择不支持必要的性能。OpenAI 现在可以向任何云提供商的客户提供其所有产品。- 微软将继续拥有 OpenAI IP 的模型和产品许可至 2032 年。微软的许可现在将是非独占的。- 微软将不再向 OpenAI 支付收入分成。- OpenAI 向微软的收入分成支付将持续到 2030 年，独立于 OpenAI 的技术进步，百分比保持不变，但设有总上限。- 微软继续作为主要股东直接参与 OpenAI 的增长。虽然这一修正简化了合作关系，但我们共同做的工作仍然雄心勃勃。从扩展数千兆瓦的新数据中心容量，到在下一代芯片上合作，再到应用 AI 推进网络安全等等，我们很高兴继续合作，为世界各地的人们和组织推进和扩展 AI。</p>
+
+<p><a href="https://nesbitt.io/2026/04/28/github-actions-is-the-weakest-link.html">GitHub Actions 是最薄弱的环节</a><br>随便找过去 18 个月里的任何一个开源供应链事件，追踪下去，最终都会看到一个 .github/workflows YAML 文件。Ultralytics 向 PyPI 发送了一个加密货币挖掘程序，nx 包将数千台开发者机器变成了凭据收集器，tj-actions 从 23,000 个存储库中泄露了机密，Trivy 在三周内被入侵两次，elementary-data 在陌生人留下 GitHub 评论十分钟后发布了一个恶意 wheel。不同的标题有效载荷，不同的受害者，在每种情况下都是 GitHub Actions 功能表现得完全符合文档描述。我去年 12 月写过关于 Actions 作为一个没有锁文件、没有完整性哈希和没有传递可见性的包管理器的狭窄问题，并且 uses: 行是一个依赖声明，运行程序在每次执行时都会根据可变的 git 标签重新解析它。该论点仍然成立，并且此后已在生产中得到了相当彻底的证明，但这只是更大问题的一个方面。整个产品是一系列功能，每个功能本身都很方便，并且非常容易组合成危险的东西，构建和发布世界上大多数开源软件的工作流程运行在一个其默认设置是为私有存储库企业 CI 工具选择的平台上，从未真正为匿名分支和顺带的拉取请求重新思考过。这些事件近期链条中最早的环节是 2024 年 11 月的 spotbugs，它在 pull_request_target 触发器上有一个工作流程，签出并构建来自不可信分支的代码。该触发器存在是为了让工作流程可以执行诸如标记来自分支的 PR 之类的操作，为了使之工作，它在基础存储库的上下文中运行，具有完全的机密访问权限和写入范围的令牌。将其与分支 head.sha 的签出相结合</p>
+
+<p><a href="https://www.dash0.com/knowledge/what-is-a-span">什么是 Span</a><br>每个分布式追踪都讲述一个故事，而 span 就是构成它的章节。span 代表较大请求中的单个命名操作：入站 HTTP 调用、数据库查询、发布到队列的消息或你明确选择衡量的业务逻辑片段。span 共同形成一个树，重建了发生了什么、发生的顺序以及每个步骤花费了多长时间。本文深入介绍了 OpenTelemetry span。你将了解 span 携带的字段及其重要原因、如何在实践中创建 span、如何附加使 span 对调试有用的属性和事件，以及如何对 span 粒度做出良好的决策，以便你的追踪信息丰富而不会被噪音淹没。如果你正在寻找关于 OpenTelemetry 追踪如何工作的更广泛介绍，包括 SDK 架构、自动仪表化以及 OpenTelemetry Collector 的角色，请参阅我们关于 OpenTelemetry 追踪如何工作的配套文章。理解追踪、span 以及它们形成的树一个追踪</p>
+
+<p><a href="https://medium.com/@jankammerath/programming-is-linguistically-immortal-or-why-programming-languages-are-here-to-stay-1fba889bcb58">编程在语言学上是不朽的，或者为什么编程语言会留存下来</a><br></p>
+
+<p><a href="https://medium.com/activated-thinker/why-cpus-got-smarter-but-memory-still-didnt-60fc5046f91d">为什么 CPU 变得更聪明，但内存却没有</a><br></p>
+
+<p><a href="https://slicker.me/webdev/pwas-offline-first.html">PWA 的离线优先</a><br>核心架构离线优先的支柱构建真正的离线优先 PWA 需要重新思考堆栈的每一层。这些支柱构成了结构骨干：本地优先存储IndexedDB 作为主要数据存储。云是备份，而不是原点。读取永远不会阻塞网络。Service Workers一个浏览器内代理，它拦截网络请求并智能地提供缓存的响应。后台同步在本地对更改进行排队。当连接恢复时自动将它们刷新到服务器。冲突解决一种策略——CRDT、最后写入获胜或用户仲裁——用于合并不同的状态。同步引擎一种双向同步协议，它知道每个客户端拥有什么并提供所需的精确增量。推送通知即使在应用程序未打开时也能提供及时的更新，保持离线数据最终一致。深入探讨Service Workers，重构Service workers 是离线优先 PWA 的引擎。它们位于你的应用程序和网络之间——一个你可以控制的可编程代理。在 PWAs 2.0 中，它们的作用远远超出了简单的缓存。PWAs 2.0 中的关键创新是分层缓存策略。不同的资源需要不同的新鲜度保证：</p>
+
+<p><a href="https://www.wolfssl.com/why-c-remains-the-gold-standard-for-cryptographic-software/">为什么 C 仍然是加密软件的黄金标准</a><br>执行摘要对于生产级加密软件，内存安全性本身并不能定义安全性。现实世界的加密必须在每个平台上运行，维持数十年的稳定假设，并允许对硬件行为进行显式控制。虽然像 Rust 这样的内存安全语言提供了真正的好处，但严肃的加密实现不可避免地依赖于不安全的代码、汇编和底层控制，从而削弱了这些保证。在这种情况下，增加的抽象往往增加了复杂性，而没有显着降低风险。对于成熟、经过严格验证的加密库，流程、测试和现场运行时间远比实现语言重要。核心问题：抽象 vs 加密现代安全讨论往往过分强调内存安全性。在成熟的加密库中，内存错误不再是主要风险。相反，加密受到以下因素的限制：- 极端的便携性要求- 长期生态系统稳定性- 对内存布局和执行的显式控制- 可预测的性能和可审计性这些限制与快速发展的语言生态系统和高级抽象相冲突。为什么 C 符合加密的现实便携性和覆盖范围加密库必须在任何地方运行：裸机、嵌入式系统、遗留 RTOS、受限 IoT 设备、通用操作系统和具有冻结工具链的受监管环境。在 wolfSSL，我们刻意针对 C89 以最大限度地提高便携性和可预测性。内存安全的替代方案在没有重大权衡的情况下不提供相当的覆盖范围。生态系统稳定性C 的生态系统发展缓慢，这是一个特点，而不是缺陷。加密代码依赖于必须在几十年内保持有效的假设。语言语义、编译器行为或习语的快速变化会引入风险。当加密中的假设被打破时，结果通常是一个 CVE，而不是重构。</p>
+
+<p><a href="https://yusufaytas.com/message-brokers-are-modern-grids">消息代理是现代网格</a><br>在撰写关于大数据平台的书时，我不断注意到同样的模式。有些系统在属于一个团队时看起来很简单，在每个人都开始使用它们之后就变成了别的东西。消息代理就是其中之一。一个团队开始使用 RabbitMQ 将工作推送到后台。另一个团队引入 Kafka 来为数据管道提供动力。这两个决定都可以使系统更清晰。请求路径变短了。缓慢的工作离开了关键路径。消费者可以在不拖累生产者的情况下关闭。很好的权衡。瞧！麻烦在以后开始。当代理成为每个团队停放任何他们不想同步处理的东西的地方时。本地代理非常简单当一个团队拥有生产者并拥有消费者时，他们理解为什么消息存在，它意味着什么，它多久到达一次，如果处理失败会发生什么，以及旧消息明天是否还有用。如果队列满了，团队知道哪个工作流卡住了。如果消息落入死信队列，有人知道重播、丢弃或修复它是否安全。如果重试逻辑开始冲击数据库，团队可以更改流程的两侧。代理仍然是基础设施，但它还不是共享基础设施。爆炸半径足够小，以至于创建负载的人靠近支付它的人。共享代理改变了这一点。如果 Kafka 或 RabbitMQ 成为共享基础设施能力，你的代理就会开始承载来自具有非常不同习惯和需求的团队的流量。有些工作负载是稳定的。有些是激增的。有些需要排序。有些需要重播。有些需要低延迟。</p>
+
+<p><a href="https://www.hmpcabral.com/2026/04/26/the-fastest-linux-timestamps/">最快的 Linux 时间戳</a><br>TL;DR：我们可以通过在不依赖 vDSO 的情况下实现我们自己的计时器，将 x86 Linux 上的时间戳速度提高 30%，并保持与标准系统时钟相同的精度。几乎没有人应该这样做。计时计时器我上一份工作中的一个宠物项目是使用 OpenTelemetry 将分布式追踪引入低延迟管道（每个阶段考虑 1-10 微秒）。作为这项工作的一部分，我花了很多时间设计、实现和优化我们自己的 C&#43;&#43; 追踪客户端库，因为官方库有太多的开销。我的目标是每个组件的延迟影响保持在 5% 以下，以便开发人员和用户都能在生产中舒适地保持追踪开启；这转化为每个 span 大约 50-100 ns（几百个时钟周期）的预算。正如你可能想象的那样，在这个规模下，你必须仔细考虑设计和实现的每个方面，从 ID 生成到序列化。这些不太小的细节之一是如何对 span 进行时间戳标记。OTLP 使用两个时间字段，一个用于 span 的开始，一个用于结束，由本地挂钟测量。虽然结束时间是绝对时间戳，但预计它总是会晚于开始时间，因为它的主要目的是测量 span 持续时间。</p>
+
+<p><a href="https://sushantdhiman.dev/inside-cassandra/">深入 Cassandra</a><br>嗨，过去两周我一直在阅读关于 Apache Cassandra 的资料。我花时间阅读了许多在线博客，最后阅读了《Cassandra: The Definitive Guide》。在这篇文章中，我们将讨论是什么让 Cassandra 如此快速、可扩展，以及它如何处理海量写入而没有瓶颈。在此之前，我们需要了解 Cassandra 到底是什么，以及它与其他数据库有何不同。什么是 Apache Cassandra？它是一个 NoSQL 数据库，旨在提供高速和海量可扩展性。它可以在分布式环境中运行，而无需大量配置。它具有写入优化的行为。是什么让 Cassandra 与 SQL 数据库不同？- 水平可扩展：Cassandra 可以通过添加更多节点轻松水平扩展，而无需进行大量配置。- 写入繁重：与 SQL 数据库相比，Cassandra 写入繁重的系统表现非常出色。- 灵活的模式：在 Cassandra 中，每一行可以有不同的列，而 SQL 数据库中的模式是固定的。- 没有单点故障：SQL 中与所有节点协调的单个主节点可能成为单点故障。Cassandra 没有主从机制；因此，它避免了单点故障。- 数据分布：在 Cassandra 中，数据通过一致性哈希分布在所有节点中。这平衡了分布式环境中的数据存储。为什么 Cassandra 是可扩展的？Cassandra 旨在在包含一组 Cassandra 实例的分布式环境中运行，称为集群。集群中必须至少有 3 个节点（实例）。客户端可以连接到此集群中的任何节点并执行读/写操作。接收写入请求的节点称为协调节点。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://deepmind.google/blog/decoupled-diloco/">Decoupled DiLoCo：弹性、分布式 AI 训练的新前沿</a><br>我们的新分布式架构有助于跨遥远的数据中心训练 LLM——带宽更低，硬件弹性更高。传统上，训练前沿 AI 模型依赖于一个大型、紧密耦合的系统，其中相同的芯片必须保持近乎完美的同步。这种方法对于当今的最先进模型非常有效，但当我们展望未来规模的几代模型时，在数千个芯片上保持这种水平的同步成为一项重大的物流挑战。今天，在一篇新论文中，我们很高兴分享一种解决此问题的新方法，称为 Decoupled DiLoCo（分布式低通信）。通过将大型训练运行划分到解耦的计算“岛”中，并在它们之间进行异步数据流传输，这种架构隔离了局部中断，因此系统的其他部分可以继续高效学习。结果是一种跨全球分布式数据中心训练高级模型的更具弹性和灵活性的方式。至关重要的是，Decoupled DiLoCo 不会遭受使以前的分布式方法（如数据并行）在全球规模上不切实际的通信延迟。随着前沿模型继续在规模和复杂性上增长，我们正在探索多种方法来跨更多计算、位置和各种硬件训练模型。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - 给你的编码代理的一次内存升级</p>
+
+<p><a href="https://github.com/CJackHwang/ds2api">CJackHwang/ds2api</a><br>Deepseek 到 API：一个轻量级、高性能的全栈中间件，将客户端协议转换为通用 API。支持多账户轮询、编译二进制文件、Vercel Serverless 和 Docker。</p>
+
+<p><a href="https://github.com/gastownhall/gascity">gastownhall/gascity</a><br>用于多代理编码工作流的编排构建器 SDK</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>完全自主的 AI 代理系统，能够执行复杂的渗透测试任务</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>高级 DNS 隧道 VPN，用于审查绕过，相比 DNSTT 和 SlipStream 进行了优化，具有低开销 ARQ、解析器负载均衡、高丢包稳定性和速度。</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai、Gemini、Antigravity 订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray，穿透一切。也是最好的 v2ray-core。魔法发生的地方。一个用于各种用途的开放平台。</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>高性能、自托管的通讯和邮件列表管理器，带有现代仪表板。单个二进制应用程序。</p>
+
+<p><a href="https://github.com/agentscope-ai/HiClaw">agentscope-ai/HiClaw</a><br>一个开源的协作多代理操作系统，用于通过 Matrix 房间进行透明、人机交互的任务协调。</p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>用于安全研究的 HTTP 工具包。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

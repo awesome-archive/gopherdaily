@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250606.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250606</span>
+</p>
+<p>每日一谚：Do not ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/06/go-monorepo">Go项目该拥抱Monorepo吗？Google经验、etcd模式及白盒交付场景下的深度剖析</a><br>这篇文章，就让我们一起深入探讨Go与Monorepo的“前世今生”，解读不同形态的Go Monorepo实践（包括etcd模式），借鉴Google的经验，剖析其在现代软件工程，特别是白盒交付场景下的价值，并探讨相关的最佳实践与挑战。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-06-05-cursor-database-branches">Cursor 表示智能体需要数据库分支</a><br>Cursor 公司的两位创始工程师最近在 Lex Friedman 的播客节目中表示，数据库需要分支来支持智能体的使用场景。然而，他们似乎并不知道 Dolt，这是唯一一个真正支持分支的数据库。本文将讨论他们的评论。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoErrorBoilerplateViaFormatter">通过格式化程序自动化（某些）Go语言的样板错误处理</a><br>作者讨论了如何通过创建一个类似于goimports的代码格式化工具，来自动化Go语言中的样板错误处理。该工具可以为未处理的错误返回添加标准的if (err != nil) {...}检查，使得代码更简洁。文章还提到，这一功能可以作为LSP服务器（如gopls）的代码操作实现，从而允许用户选择性地应用于特定函数。虽然作者对这一想法的可行性表示不确定，但认为可能会对一些开发者有帮助。</p> 
+
+<p><a href="https://medium.com/goturkiye/you-are-misusing-interfaces-in-go-architecture-smells-wrong-abstractions-da0270192808">你在 Go 中误用了接口 - 架构异味：错误的抽象</a><br>接口在软件架构中扮演着至关重要的角色，其强大的抽象能力是其架构优势所在。本文探讨了 Go 应用程序中接口使用的问题，指出在每个结构体定义前都使用接口是一种错误的做法，并解释了正确的抽象方法和最佳实践，例如在调用方一侧创建接口以实现解耦和单元测试。</p> 
+
+<p><a href="https://depot.dev/blog/now-available-gocache-v2-faster-improved-golang-build-performance">现已推出：Gocache v2，提升 Golang 构建性能</a><br>我们很高兴地宣布推出 Gocache v2，这是 Go 开发人员构建缓存方面的一项重大进步。Gocache v2 通过高效地捆绑和缓存编译和测试工件来大幅缩短构建时间，现在已在 Depot Cache 中可用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/scaling-metadata-management-innovations-tidb-placement-driver/">TiDB 元数据管理的演进：扩展 TiDB 的 Placement Driver</a><br>随着 TiDB 规模扩展以支持更大规模的部署，其核心元数据管理中心——Placement Driver (PD)——必须发展以满足日益增长的需求。本文探讨了 TiDB 如何应对 PD 的挑战，包括可扩展性瓶颈、稳定性风险和存储限制。文章涵盖了以下内容：模块隔离和可扩展性的微服务架构转变；高效元数据管理的创新，如 Active Followers 和计划中的 Router Service；确保高可用性和稳定性的治理策略。无论您是优化大规模部署，还是对 TiDB 架构感到好奇，本文都重点介绍了 PD 如何发展以处理现代分布式工作负载。</p>
+
+<p><a href="https://www.p99conf.io/2025/06/05/migrating-from-postgres-to-scylladb-with-349x-faster-query-processing/">从 Postgres 迁移到 ScyllaDB，查询处理速度提升 349 倍 - P99 大会</a><br>Coralogix 通过将 PostgreSQL 迁移到 ScyllaDB，将处理时间从 30 秒缩短到 86 毫秒，实现了显著的性能提升。文章详细介绍了 Coralogix 如何构建元数据存储（metastore）以加速 Parquet 元数据的检索和处理，以及他们在使用 ScyllaDB 的过程中遇到的挑战和经验教训。他们最终的目标是利用 WebAssembly UDFs 和 Rust 进一步优化性能。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/06/05/introducing-gateway-api-inference-extension/">Kubernetes 网关 API 推理扩展</a><br>现代生成式 AI 和大型语言模型 (LLM) 服务在 Kubernetes 上带来了独特的流量路由挑战。与典型的短暂、无状态 Web 请求不同，LLM 推理会话通常是长时间运行的、资源密集型的和部分有状态的。例如，单个基于 GPU 的模型服务器可能会保持多个推理会话处于活动状态并维护内存中的令牌缓存。传统的专注于 HTTP 路径或轮询的负载均衡器缺乏这些工作负载所需的专业功能。它们也没有考虑模型标识或请求关键性（例如，交互式聊天与批处理作业）。组织通常会修补临时解决方案，但缺少标准化方法。Kubernetes 网关 API 推理扩展旨在通过构建现有的网关 API 来解决这一差距，添加推理特定的路由功能，同时保留网关和 HTTPRoutes 的熟悉模型。通过向现有的网关添加推理扩展，可以有效地将其转换为推理网关，从而能够以“模型即服务”的心态自托管 GenAI/LLM。该项目的目标是改进和标准化跨生态系统的推理工作负载的路由。主要目标包括启用模型感知路由、支持每个请求的关键性、促进安全的模型推出以及基于实时模型指标优化负载均衡。通过实现这些目标，该项目旨在减少延迟并提高 AI 工作负载的加速器 (GPU) 利用率。</p>
+
+<p><a href="https://www.bugsink.com/blog/track-errors-first">优先追踪错误</a><br>可观测性始于错误，而非仪表盘。本文论述了优先追踪异常的重要性，以及如何避免将异常丢失在日志和指标中。文章指出，异常是代码告诉你“本不应该发生”的最有价值的信号，是构建可观测性的最佳起点。文中还比较了日志、指标和追踪这三个可观测性的支柱，并强调了错误追踪的重要性，因为它能直接指出代码出错的位置，并提供完整的上下文信息，例如完整的堆栈跟踪、局部变量、请求数据和用户上下文等。最后，文章提醒读者，不要将错误视为另一个数据点，而应将其作为系统故障的有意义的失败信号来对待。</p>
+
+<p><a href="https://dev.to/skysingh04/the-art-of-chaos-engineering-lfx-2025-experience-4o2m">混沌工程的艺术：LFX 2025 体验</a><br>作者 Akash Singh 分享了其参与 Linux 基金会 LFX 2025 导师项目（LitmusChaos 项目）的经历，包括项目申请过程、混沌工程概念介绍、LitmusChaos 项目的优势，以及他在项目中完成的 SDK 开发、CI/CD 集成和模板优化等工作。文章还表达了对导师和 LitmusChaos 社区的感谢。</p>
+
+<p><a href="https://tesseral.com/blog/what-a-developer-needs-to-know-about-scim">开发者需要了解的 SCIM 知识</a><br>本文探讨了 SCIM（跨域身份管理系统）协议，解释了其存在的原因、基本功能以及常见误解。文章指出，SCIM 主要用于在身份提供商（例如 Okta、OneLogin）和 SaaS 应用之间进行用户和组的创建、更新和删除操作，它基于标准化的 JSON 数据交换。文章还强调了 SCIM 的一些细微之处和身份提供商实现中的非标准行为，建议开发者不要从头构建 SCIM，而应选择现成的解决方案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/5/gemini-25-pro-preview-06-05/#atom-everything">Gemini 2.5 Pro 预览版 06-05：抢先体验 Gemini 2.5 Pro 最新版本</a><br>在人工智能工程师世界博览会上，Logan Kilpatrick 上台宣布了 Gemini 2.5 Pro 预览版 06-05，并表示这可能是 Gemini 2.5 Pro 系列的最后一个版本。文章作者 Simon Willison 发布了 llm-gemini 0.22 版本，增加了对新模型的支持，并展示了使用该模型生成图像和描述图像的示例，还测试了该模型在 SnitchBench 上的表现。</p>
+
+<p><a href="https://vercel.com/blog/the-no-nonsense-approach-to-ai-agent-development">AI 智能体开发的务实方法 - Vercel</a><br>学习如何通过手动模拟任务、使用代码构建逻辑以及通过实际反馈进行优化来构建可靠的、特定领域的 AI 智能体。这是一种清晰的、实践性的自动化方法。</p>
+
+<p><a href="https://blog.google/products/gemini/gemini-2-5-pro-latest-preview">抢先体验 Gemini 2.5 Pro：访问 Google 最新预览版 AI 模型</a><br>我们推出了升级版的 Gemini 2.5 Pro 预览版，这是我们迄今为止最智能的模型。在 5 月发布并在 I/O 大会上展示的版本的基础上，此模型将在几周后成为正式发布的稳定版本，可用于企业级应用程序。最新的 2.5 Pro 在 LMArena 上的 Elo 评分跃升了 24 分，在排行榜上保持领先地位（1470 分），并在 WebDevArena 上的 Elo 评分跃升了 35 分，领先于其他模型（1443 分）。它在编码方面继续表现出色，在 Aider Polyglot 等难度较高的编码基准测试中领先。它还在 GPQA 和 Humanity’s Last Exam (HLE) 上展现了顶级性能，这些极具挑战性的基准测试评估了模型的数学、科学、知识和推理能力。我们还根据之前 2.5 Pro 版本的反馈，改进了其风格和结构——它可以更具创造力，并提供格式更好的回复。开发人员可以通过 Google AI Studio 和 Vertex AI（我们还在其中添加了思考预算，让开发人员能够更好地控制成本和延迟）在 Gemini API 中开始使用升级版的 2.5 Pro 预览版。它也将在今天在 Gemini 应用中推出。</p>
+
+<p><a href="https://blog.glyph.im/2025/06/i-think-im-done-thinking-about-genai-for-now.html">我想暂时停止思考生成式AI了</a><br>这篇博文表达了作者对生成式AI的负面看法，以及为什么他决定暂时停止思考这个话题。作者认为生成式AI的讨论是无休止且令人精疲力尽的，并且他无法构建一个能够说服他人的论点。文章还讨论了生成式AI的诸多问题，包括对环境的影响、信息传播的失真、对教育和隐私的侵犯以及对知识产权的盗用等。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/gocolly/colly">gocolly/colly</a><br>Elegant Scraper and Crawler Framework for Golang</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/Glimesh/broadcast-box">Glimesh/broadcast-box</a><br>A broadcast, in a box.</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/gophish/gophish">gophish/gophish</a><br>Open-Source Phishing Toolkit</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/pion/webrtc">pion/webrtc</a><br>Pure Go implementation of the WebRTC API</p>
+
+<p><a href="https://github.com/langgenius/dify-plugin-daemon">langgenius/dify-plugin-daemon</a><br></p>
+
+<p><a href="https://github.com/googleapis/google-api-go-client">googleapis/google-api-go-client</a><br>Auto-generated Google APIs for Go.</p>
+
+<p><a href="https://github.com/shadow1ng/fscan">shadow1ng/fscan</a><br>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

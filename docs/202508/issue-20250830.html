@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250830.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250830</span>
+</p>
+<p>每日一谚：Make it easy to read from top to bottom </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://wxiaoyun.com/blog/rust-rewrite-case-study">2 倍性能，节省 30 万美元：用 Rust 重写Go关键服务的案例研究</a><br>在高流量系统中，成功往往会带来自身的一系列挑战。 在 TikTok 实习期间，我们核心的支付服务（一个用 Go 构建的可靠的系统）开始出现疲劳迹象。 随着 TikTok LIVE 用户群的增长，该服务的 CPU 负载不断攀升，我们面临着来自达到 CPU 阈值的服务的持续稳定性警报。 我们面临一个经典的工程难题：如何在不影响稳定性和不倾家荡产的情况下，从关键系统中榨取更多性能？ 这就是我通过有选择地用 Rust 重写性能瓶颈来应对这一挑战的故事，最终实现了 2 倍的性能提升，并预计每年可节省近 30 万美元的云成本。</p> 
+
+<p><a href="https://tonybai.com/2025/08/30/python-an-origin-story">Python简史：一个圣诞节的“私活”项目，如何改变了编程世界？</a><br>近期，一部名为《Python: The Documentary》的纪录片，通过对创始人Guido van Rossum及众多早期核心贡献者的访谈，为我们揭开了这段波澜壮阔的起源故事。这既是一部技术编年史，更是一部关于设计哲学、社区力量、时代机遇与人性光辉的启示录。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/megMvEuBKcs7TUi-O5Av6A">【AI应用开发第一课】02 LLM 的“使用说明书”：掌握对话、角色和约束</a><br>我们将一起深入解码 LLM OS 的“官方说明书”——即模型规范（Model Spec），并重点学习与 LLM 进行有效交互所需遵循的基本规则、核心结构与关键约束。这些知识，特别是关于对话 (Conversation)、角色 (Role) 扮演及其优先级、交互的无状态性 (Statelessness) 本质 ，以及无处不在的 Token 与资源限制，将为我们后续通过 API 与大模型进行代码级交互奠定坚实的基础。 </p> 
+
+<p><a href="https://dolthub.com/blog/2025-08-29-unit-testing-dolt-database">Dolt 数据库的单元测试</a><br>使用 dolt_tests 确保数据质量和正确性。</p> 
+
+<p><a href="https://medium.com/@gane18/structuring-large-go-codebases-package-organization-and-dependency-management-05a95c727c27">Structuring Large Go Codebases: Package Organization and Dependency Management</a><br>学习如何使用包、分层和清晰的依赖项管理来构建大型 Go 代码库，以实现可扩展的应用程序。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/tidb-cloud-changefeed-integration-with-streamnative-cloud/">TiDB Cloud Changefeed 与 StreamNative Cloud 的集成</a><br>设置 TiDB Cloud Change Data Capture 与 TiDB Cloud Changefeed，将实时数据库事件流式传输到 StreamNative Cloud 上的 Apache Pulsar。</p>
+
+<p><a href="https://www.docker.com/blog/blog-sonarqube-copilot-docker-mcp-toolkit/">简化 Docker MCP Toolkit 的 Copilot 和 SonarQube</a><br>通过使用 Docker MCP Toolkit 和 Gateway 将 SonarQube 与 GitHub Copilot 集成，提高代码质量。在您的 IDE 中实现更快、更安全、AI 驱动的编码。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/08/29/kubernetes-v1-34-per-container-restart-policy/">Kubernetes v1.34：对容器重启的更细粒度控制</a><br>随着 Kubernetes 1.34 的发布，引入了一个新的 alpha 功能，它使您能够更精细地控制 Pod 内的容器重启。此功能名为 &lt;strong&gt;容器重启策略和规则&lt;/strong&gt;，允许您为每个容器单独指定一个重启策略，覆盖 Pod 的全局重启策略。此外，它还允许您根据容器的退出代码有条件地重启单个容器。 此功能可在 alpha 功能门控 &lt;code&gt;ContainerRestartRules&lt;/code&gt; 后面使用。</p>
+
+<p><a href="https://clickhouse.com/blog/eight-principles-of-great-developer-experience-for-data-infrastructure">数据工程与软件工程正在融合</a><br>了解 MooseStack 背后的 8 项设计原则——一个用于在 ClickHouse 和开源数据基础设施上构建 TypeScript 或 Python 应用程序的开源开发人员工具包。</p>
+
+<p><a href="https://everton.xyz/i-sat-down-with-werner-vogels">与亚马逊CTO对话</a><br></p>
+
+<p><a href="https://jysk.tech/orchestrating-thousands-of-speedtests-using-kubernetes-eabdcc668611">使用 Kubernetes 编排数千个 Speedtest</a><br>为了监控我们商店系统随时间推移的网络可用性和速度，我们通过在所有商店系统上实施分布式速度测试解决方案来应对这一挑战。</p>
+
+<p><a href="https://boyter.org/posts/searchcode-is-being-rebooted">searchcode.com 正在重启（可能吗？）</a><br>本文作者解释了关闭searchcode.com的原因，主要是由于运营成本过高和广告收入下降。 他正在考虑重新构想该项目，并寻找新的方式使其持续运营，以避免未来的财务问题。</p>
+
+<p><a href="https://pitsidianak.is/blog/posts/2025-08-25_emulating_aarch64_in_software_using_JIT_compilation.html">使用 JIT 编译和 Rust 在软件中模拟 aarch64</a><br>我能够为 &lt;code&gt;aarch64&lt;/code&gt; ISA（&lt;em&gt;Arm A-profile A64 指令集架构&lt;/em&gt;）编写一个简单的即时编译模拟器。 Armv8-A/Armv9-A 规范的规模&lt;strong&gt;很大&lt;/strong&gt;，因此最初的范围是基本功能，几乎没有可选的架构特性，例如 SIMD。 我编写模拟器的目的是为了理解 QEMU 的 TCG（Tiny Code Generator）软件模拟的原理。我没有遵循 C 代码实现，而是从头开始用 Rust 实现了相同的概念，利用了其他库来完成繁重的工作（反汇编和 JIT 编译）。 在本文中，我们将介绍从虚拟机的指令到本机代码执行需要做什么。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.infoq.com/articles/agentic-ai-architecture-framework">Agentic AI 架构框架（适用于企业）</a><br>为了在企业中负责任且有效地部署 agentic AI，组织必须逐步构建三层架构：基础层、工作流层和自主层，在自主之前需要建立信任、治理和透明度。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/weaviate/weaviate">weaviate/weaviate</a><br>Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Model swapping for llama.cpp (or any local OpenAI API compatible server)</p>
+
+<p><a href="https://github.com/ipfs/kubo">ipfs/kubo</a><br>An IPFS implementation in Go</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api-inference-extension">kubernetes-sigs/gateway-api-inference-extension</a><br>Gateway API Inference Extension</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240908.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-08</span>
+</p>
+<p>每日一谚：Returning early is a good thing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://arashtaher.wordpress.com/2024/09/05/go-error-handling-techniques-exploring-sentinel-errors-custom-types-and-client-facing-errors/">Go错误处理技术：探索Sentinel错误、自定义类型和面向客户端的错误</a><br>在这篇全面的博客文章中，Arash Taher 深入探讨了 Go 中的各种错误处理技术，他仍然熟悉这种语言。他首先解释了 Go 中错误的定义，这些错误是实现 Error（） 字符串方法的接口。然后，Taher 介绍了 sentinel 错误，这些错误是 Go 中的预定义错误，并讨论了它们的问题，例如缺乏描述性和可能无意中包含在程序的公共 API 中。为了解决这些问题，Taher 提倡使用自定义错误类型，这些类型提供额外的上下文，并且可以构建以提供有关错误原因的更多详细信息。此外，他还探讨了如何使用包含错误代码和消息的 &#39;AppError&#39; 类型向客户端呈现结构化错误。该博客最后提供了这些概念的实际示例，演示了示例 Go 应用程序中的错误处理。</p> 
+
+<p><a href="https://t.zsxq.com/9VmCS">htmx：gopher走向全栈的完美搭档？(sponsor)</a><br>对于许多专注后端的工程师（包括众多Gopher）来说，前端开发仍然是一个不小的挑战。它不仅要求熟悉JavaScript等语言，还需要理解复杂的前端框架和工具链。这使得不少后端开发者在面对全栈开发时感到力不从心。而htmx库则通过HTML属性实现丰富的前端交互。将两者结合，开发者可以在无需深入学习JavaScript的情况下，轻松实现全栈开发。htmx是否真的是Gopher走向全栈的完美搭档呢？在本文中，我们就将探讨一下这个问题。</p> 
+
+<p><a href="https://blog.quarkslab.com/lets-go-into-the-rabbit-hole-part-1-the-challenges-of-dynamically-hooking-golang-program.html">让我们进入兔子洞（第 1 部分）— 动态钩子 Golang 程序的挑战</a><br>该博客文章深入探讨了动态挂钩 Golang 程序的复杂性，由于该语言独特的内部结构和应用程序二进制接口 （ABI），此功能并不容易获得。来自 Quarkslab 的作者解释了在尝试分析和扩展 Golang 程序在运行时的行为时面临的挑战，特别是考虑到它们的静态链接和特定于 Go 的运行时的存在。为了规避这些问题，作者提出了一种涉及使用 C 和 assembly 创建运行时钩子的方法，以及使用 &#39;ptrace&#39; API 将共享库旁加载到正在运行的进程中。但是，作者承认这种方法的局限性，特别是它对架构的依赖性，以及它在高并发程序中的潜在重入问题。Ultendo 最终探索了直接在 Golang 中实现运行时钩子的可能性，以更好地处理语言固有的复杂数据结构。</p> 
+
+<p><a href="https://dev.to/vivekalhat/building-a-simple-load-balancer-in-go-70d">在 Go 中构建一个简单的负载均衡器</a><br>这份全面的指南详细介绍了在 Golang 中使用 Round Robin 算法构建简单的负载均衡器。负载均衡器可确保在多个服务器之间高效分配网络流量，从而提高系统可用性和可扩展性。它结合了运行状况检查，以便在路由请求之前确认服务器可用性，并使用反向代理将请求转发到所选服务器。该指南还包括一个源代码存储库，用于进一步探索和改进，例如实施不同的负载平衡算法或增强容错能力。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/article/the-evolution-of-tidb-from-inception-to-cutting-edge-features/">TiDB 的演进：从诞生到尖端功能</a><br>TiDB 起源于 2015 年的 PingCAP，旨在通过提供能够实时处理事务和分析工作负载的混合事务/分析处理 （HTAP） 系统来克服传统数据库的局限性。这项创新是由于需要解决数据量不断增加所带来的挑战，以及对即时数据洞察的需求。TiDB 的架构将计算层和存储层分开，并采用 Raft 共识算法，可确保分布式环境的可扩展性、容错性和强一致性。该平台经历了重大发展，以关键更新为标志，引入了 TiFlash 列式存储引擎、聚集索引和全局临时表等功能。TiDB 的发展得到了充满活力的社区以及与主要云提供商的战略合作伙伴关系的进一步支持，增强了其生态系统并促进了其在各个行业的采用。</p>
+
+<p><a href="https://levelup.gitconnected.com/the-latest-reinvention-of-the-system-admin-mlops-d73abdbba29b">系统管理员的最新改造：MLOps</a><br>Matt Kornfield 讨论了系统管理向 MLOps 的演变，强调了从传统运营到运营和编码实践（如基础设施即代码）的混合的转变。他概述了数据工程等不同学科的出现，由于需要大量数据，因此数据工程对 ML 模型训练至关重要。Kornfield 的文章深入探讨了机器学习操作的当前和未来前景，强调了高效数据处理和将编码集成到系统管理角色中的重要性。</p>
+
+<p><a href="https://www.docker.com/blog/why-we-need-more-gender-diversity-in-the-cybersecurity-space/">为什么我们需要在网络安全领域实现更多的性别多样性</a><br></p>
+
+<p><a href="https://blog.min.io/databases-on-object-storage/">对象存储上的数据库 - 新常态</a><br>本文讨论了数据库和对象存储之间不断发展的关系，强调了由于对象存储的高性能和可扩展性而向对象存储的转变。它解释了数据库如何适应这一变化，现在大多数数据库都包含与 S3 兼容的终端节点，以及以 MinIO 为代表的对象存储如何因其处理大规模数据工作负载的能力而越来越受到青睐。这篇文章详细介绍了对象存储如何成为数据库的理想选择，因为它提供持续的数据保护，并且在小对象性能方面表现出色，这对数据库操作至关重要。此外，本文还展示了涉及对象存储和数据库的各种集成和基准测试，例如 Altinity 的 Clickhouse 和 NYC Taxi 数据集性能测试，以及 Snowflake 的大规模。这些示例强调了对象存储在现代数据库架构中日益增长的重要性和功能。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/when-you-dont-need-gpus-to-run-ai-a-farm-fresh-case-study/">当您不需要 GPU 来运行 AI 时：“Farm Fresh”案例研究</a><br>Nature Fresh Farms 是一家规模较小的企业，已成功将 AI 集成到其温室农业流程中，通过包括几台服务器和一个简单的三节点 Kubernetes 集群在内的简约设置来管理 160 万株植物的生长。利用英特尔的 OpenVINO 框架并利用人工智能的力量，该公司每年的产量持续增长 2-3%。他们的 IT 团队由 Bradley 领导，使用 OneAPI 来促进跨平台的 AI 工作负载，使他们能够避免对最新硬件进行大量投资。CPU 技术的进步（例如 Intel 的 AMX 扩展）进一步使某些 AI 任务能够在不完全依赖 GPU 的情况下执行。本案例研究强调了 AI 在优化农业实践方面的潜力，即使在小型企业中也是如此。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>在 CLI 上渲染 markdown，使用 pizzazz！💅🏻</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 经过高度优化，可在现代硬件上构建和扩展真正的实时应用程序。它是 Redis 的直接替代品，支持基于 SQL 的反应性。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kind">kubernetes-sigs/kind</a><br>Docker 中的 Kubernetes - 用于测试 Kubernetes 的本地集群</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源的轻量级笔记服务。轻松捕捉和分享您的精彩想法。</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 基于 Go 1.18&#43; 泛型的 Lodash 风格的 Go 库（map、filter、contains、find...</p>
+
+<p><a href="https://github.com/dop251/goja">dop251/goja</a><br>纯 Go 中的 ECMAScript/JavaScript 引擎</p>
+
+<p><a href="https://github.com/shadow1ng/fscan">shadow1ng/fscan</a><br>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/amitshekhariitbhu/go-backend-clean-architecture">amitshekhariitbhu/go-backend-clean-architecture</a><br>一个包含 Gin、MongoDB、JWT 身份验证中间件、测试和 Docker 的 Go （Golang） 后端干净架构项目。</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>云原生应用程序代理</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>强大的系统容器和虚拟机管理器</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu 允许您以声明方式管理您的云基础设施。</p>
+
+<p><a href="https://github.com/terrastruct/d2">terrastruct/d2</a><br>D2 是一种现代图表脚本语言，可将文本转换为图表。</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ 用 Go 编写的受 Express 启发的 Web 框架</p>
+
+<p><a href="https://github.com/dunglas/frankenphp">dunglas/frankenphp</a><br>🧟 现代 PHP 应用程序服务器</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>适用于去中心化 Web 🌈💎✨ 的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web 文件浏览器</p>
+
+<p><a href="https://github.com/go-gost/gost">go-gost/gost</a><br>GO Simple Tunnel - 用 golang 编写的简单隧道</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

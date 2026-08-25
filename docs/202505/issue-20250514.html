@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250514.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250514</span>
+</p>
+<p>每日一谚：With the unsafe package there are no guarantees </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/oX1pAkFU90RMJ1fd_089Lg">从Go路由选择看“标准库优先”：何时坚守？何时拓展？</a><br>最近，知名 Go 博主 Alex Edwards 更新了他那篇广受欢迎的文章——“Which Go router should I use?”，特别提到了 Go 1.22 版本对标准库 http.ServeMux 的显著增强。这篇文章再次引发了我们对 Go Web 开发中一个经典问题的思考：**在选择路由库时，我们应该坚守标准库，还是拥抱功能更丰富的第三方库</p> 
+
+<p><a href="https://tonybai.com/2025/05/13/goos-none-proposal/">Go运行时底层接口标准化？“GOOS=none”欲为Go铺设通往裸金属、固件和微控制器的桥梁</a><br>Go语言凭借其简洁、高效和强大的并发模型，已在云原生和服务器端开发领域占据重要地位。但它的潜力远不止于此。一项备受关注的新提案73608再次将目光投向了更底层的领域，建议引入 GOOS=none target。其核心并非简单添加一个操 作系统类型，而是试图定义一套连接 Go 运行时与底层硬件/环境的接口，为 Go 语言铺设一条通往裸金属执行、安全固件开发乃至 Unikernel 和特定微控制器场景的桥梁。然而，这套接口能否以及如何实现“标准化”，并融入 Go 的兼容性承诺，成为了社区热议的焦点。</p> 
+
+<p><a href="https://connor.zip/posts/2025-05-03-rune">Rune背后的故事</a><br>本文探讨了“rune”（符文）一词在Unicode码点中含义的由来。作者从Go语言中“rune”的用法出发，追溯到Plan 9操作系统及其UTF-8编码的实现。文章详细介绍了UTF-8编码的设计过程，包括与FSS-UTF标准的对比，以及Rob Pike和Ken Thompson在设计过程中的贡献。文中还提及了“rune”一词在Plan 9 C编译器中的首次使用，以及它如何通过4.4 BSD系统传播到其他UNIX系统和C库，最终影响到Go和.NET等编程语言。文章最后，作者分享了一个自己为Acme编辑器编写的拼写检查工具。</p> 
+
+<p><a href="https://david-delassus.medium.com/distributed-systems-without-raft-part-2-81ca31eae4db">无需 Raft 的分布式系统（第二部分）</a><br>FlowG 如何实现复制？一篇关于 Go 语言分布式系统设计的简短介绍。本篇文章介绍了 FlowG v0.37.0 版本中实验性的复制功能，利用 SWIM 协议和 BadgerDB 的增量备份功能实现最终一致性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/AwkForConfigFileCheck">使用awk检查你的脚本的配置文件</a><br>假设，实际上，你有一个相对简单的配置文件格式的 Shell 脚本，用户仍然可能会出错。你希望在脚本的其他部分使用之前检查配置文件是否存在问题。</p>
+
+<p><a href="https://blog.openpolicyagent.org/introducing-swift-opa-native-policy-evaluation-for-swift-d5136c8a662e">Swift OPA：Swift 原生策略评估</a><br>Swift OPA 现已发布，它是一种在 Swift 应用程序和服务中原生集成 OPA 的新方法。Swift OPA 基于 OPA 中间表示 (IR) 计划的强大基础。它解释这些 IR 计划，允许您在 Swift 应用程序和服务中原生利用 OPA 的丰富策略，从而降低延迟，简化构建和部署。</p>
+
+<p><a href="https://blog.codingnow.com/2025/05/a_star_pathfinding.html">一个简单的 A star 寻路算法实现</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/05/13/how-to-install-and-run-minikube-with-rootless-podman-on-arm-based-macbooks/">如何在arm macbook上使用rootless podman安装和运行Minikube</a><br></p>
+
+<p><a href="https://kubernetes.io/blog/2025/05/13/kubernetes-v1-33-jobs-backoff-limit-per-index-goes-ga/">Kubernetes v1.33: Job&#39;s Backoff Limit Per Index Goes GA</a><br></p>
+
+<p><a href="https://www.warpstream.com/blog/taking-out-the-trash-garbage-collection-of-object-storage-at-massive-scale">清理垃圾：大规模对象存储的垃圾回收</a><br>基于对象存储构建的分布式系统都存在一个共同问题：删除由于数据过期或压缩而逻辑删除的文件。本文探讨了五种解决此问题的方案，并分析了它们的优缺点。</p>
+
+<p><a href="https://corrode.dev/blog/flattening-rusts-learning-curve">降低Rust学习曲线的难度</a><br>作者在本文中分享了学习Rust过程中常见的错误，并提出了降低学习曲线难度的建议。文章强调了积极的态度、循序渐进的学习方法、代码的准确性以及避免依赖代码自动生成工具的重要性。作者建议学习者将编译器错误视为学习机会，并通过动手实践、阅读文档、绘制图表等方式来加深理解。此外，文章还推荐了一些学习资源，并强调了长期坚持的重要性。</p>
+
+<p><a href="https://opentelemetry.io/blog/2025/otel-arrow-phase-2">Apache Arrow 与 OpenTelemetry 协议 - 第二阶段公告</a><br>我们很高兴地宣布 Apache Arrow 与 OpenTelemetry 协议项目 (OTel-Arrow) 的下一阶段。几年前，我们启动了这个项目，目标是在 OpenTelemetry 数据和 Apache Arrow 生态系统之间架起桥梁。Apache Arrow 是一种框架，旨在实现列式数据生产者和消费者之间结构化数据的零拷贝交换。我们相信，通过 Apache Arrow 让 OpenTelemetry 数据能够被外部系统访问，将带来强大的集成，并有可能出现新的遥测系统和应用程序。对于大型遥测数据流，我们知道列式数据处理效率要高得多，数据压缩和性能也得到了改善。本阶段项目将使用 Rust 语言进行研究，目标是探索基于 Rust 的 OpenTelemetry 管道，并研究如何与 OpenTelemetry 收集器的 Go 生态系统集成。</p>
+
+<p><a href="https://www.scattered-thoughts.net/writing/how-safe-is-zig">Zig 的内存安全性如何？</a><br>本文探讨了 Zig 编程语言的内存安全性。作者认为，Zig 在内存安全方面比 C 语言有所改进，但远未达到 Rust 的系统级预防水平。Zig 具备一些运行时检查和编译时证明机制，但仍容易出现内存安全问题，例如使用后释放、重新分配后使用和内部指针失效等。作者通过与 Rust 和 C 语言的比较，以及自身编程经验，论证了 Zig 在内存安全方面的不足，并探讨了未来改进的方向，例如改进运行时缓解措施以及与其他内存安全语言的结合。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/14/james-cowling/#atom-everything">James Cowling 的引言</a><br>这篇博文引用了 James Cowling 的一段话，他设计了 Dropbox 的存储系统并为其建模。他认为关于持久性的数字（例如 11 个 9）毫无意义，因为称职的提供商不会因为磁盘故障而丢失数据，他们丢失数据是因为错误和操作员错误。他建议为了提高数据的持久性，最好选择一个称职的提供商，并确保不会意外删除或损坏自己的数据。他建议：理想情况下，不要更改 S3 中的对象，而是添加新版本；不要直接删除任何数据，而是将其标记为删除，然后使用生命周期策略在一周后清理它。这样，就有时间来应对自身系统中的错误。</p>
+
+<p><a href="https://world.hey.com/dhh/coding-should-be-a-vibe-50908f49">编程应该是一种享受！</a><br>“氛围式编程”（程序员放松身心，通过AI提示完成整个项目）的吸引力，部分原因在于许多开发环境非常糟糕。因此，许多程序员受困于繁琐的语言和框架，渴望放弃软件开发中的编码部分也就不足为奇了。如果我发现编写代码是一件苦差事，我也会考虑退休。但事实并非如此。
+
+我曾经也是如此！当我开始编程时，纯粹是因为我想要程序。学习编程是将系统变为现实的必要但又不方便的步骤。当我学习Ruby并构建Rails时，这一切都改变了。
+
+Ruby的全部前提是“程序员的幸福”：编写代码应该是一种乐趣。从历史上看，该语言愿意牺牲运行时性能、内存使用和其他机器偏好来追求程序员的幸福。然而，如今似乎可以鱼与熊掌兼得。经过三十年的不断改进，Ruby现在速度非常快且效率很高，但仍然令人愉悦地使用。
+
+这种精神现在比以往任何时候都更加闪耀。不满的程序员终于意识到，可以摆脱讨厌的语法、大量的样板代码和生态系统的高速变化。这就是AI的吸引力：让它隐藏所有这些令人不快的东西。但这就像把凌乱的东西塞到床底下清理房间一样——并没有让它消失！
+
+但这种本能是正确的：编程应该是令人愉悦的！它应该很有趣！它应该足够接近英语，使线路噪声不会掩盖底层思想和决策。它应该允许丰富的表达方式来服务人类读者，而不是偏爱计算机所偏好的严格性。Ruby做到了。
+
+鉴于此，我对放弃编写代码毫无兴趣。那不是我想让AI从我手中拿走的不愉快部分。只是为了——什么——成为一群AI乌鸦的项目经理？在我的职业生涯的大部分时间里，我都有选择沿着管理阶梯往上爬，但我一直拒绝，因为我真的很喜欢编写Ruby！这是工作中最令人愉快的一部分！
+
+这并不意味着AI在编写Ruby时没有发挥作用。我整天都在与大型语言模型进行对话和协作——查找API、阐明概念和提出愚蠢的问题。AI是一位优秀的结对程序员，但我宁愿退休也不愿永久地将键盘交给它来编写代码。
+
+也许有一天，想要编写代码将是一个古雅的概念。就像在现代世界中照料马匹进行运输一样——作为一种爱好，但没有任何经济价值。
+
+我认为没有人知道我们可以将这些贪婪的标记吞噬者的智能和创造力提升到何种程度。我不会对它们的进步下注，但对我来说很清楚的是，它们对程序员的吸引力很大程度上在于Ruby的创立基础：编程应该偏爱和讨好人类。</p>
+
+<p><a href="https://cocoindex.io/blogs/knowledge-graph-for-docs">使用LLM为文档构建实时知识图谱</a><br>CocoIndex 现在支持增量处理的知识图谱。使用 CocoIndex 为代理构建实时知识非常简单！本博文以 CocoIndex 文档为例，演示如何处理文档列表，并使用 LLM 提取每个文档中概念之间的关系，生成两种关系：主题和宾语之间的关系（例如，“CocoIndex 支持增量处理”）；以及文档中实体的提及（例如，“core/basics.mdx”提到了`CocoIndex`和`增量处理`）。源代码可在[CocoIndex 示例 - docs_to_knowledge_graph](https://github.com/cocoindex-io/cocoindex/tree/main/examples/docs_to_knowledge_graph)找到。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/rook/rook">rook/rook</a><br>Storage Orchestration for Kubernetes</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/qax-os/excelize">qax-os/excelize</a><br>Go language library for reading and writing Microsoft Excel™ (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/uber-go/fx">uber-go/fx</a><br>A dependency injection based application framework for Go.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/DataDog/dd-trace-go">DataDog/dd-trace-go</a><br>Datadog Go Library including APM tracing, profiling, and security monitoring.</p>
+
+<p><a href="https://github.com/google/wire">google/wire</a><br>Compile-time Dependency Injection for Go</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go, the easiest way to write LLM-based programs in Go</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>Repo for learning observability</p>
+
+<p><a href="https://github.com/langgenius/dify-sandbox">langgenius/dify-sandbox</a><br>A lightweight, fast, and secure code execution environment that supports multiple programming languages</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

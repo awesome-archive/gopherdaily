@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240918.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-18</span>
+</p>
+<p>每日一谚：Define interfaces in the consumer package, not the producer. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/09/18/understand-go-unique-package-by-example">Go unique包：突破字符串局限的通用值Interning技术实现</a><br>go 1.23新增的unique包简介</p> 
+
+<p><a href="https://go.dev/blog/alias-names">（别名）名称中有什么？</a><br>Go 编程语言专为可扩展性而设计，它将代码组织成包，其中 API 由导出的标识符组成。随着代码库的发展，可能需要重构，这需要在包之间移动这些标识符。为了促进增量更新并保持向后兼容性，Go 在 1.9 版本中引入了泛型别名类型，允许在不改变其身份的情况下为现有类型提供新名称。然而，随着 Go 1.18 中泛型的出现，定义类型、类型参数和别名之间的区别变得更加复杂。预计 Go 1.24 版本将完全支持别名类型的类型参数，从而增强该语言跨包边界处理泛型类型的能力。</p> 
+
+<p><a href="https://dev.to/svemaraju/building-a-password-manager-in-go-31jo">Building a Password Manager in Go</a><br>The author initiated a Go-based command-line password manager project named &#34;dost&#34; on November 27, 2023, aiming to create a tool that combines the simplicity of the command-line password manager [pass](https://www.passwordstore.org/) with the performance and cross-platform compatibility of Go. The first commit focused on password generation and clipboard integration, with the password generator utilizing Go&#39;s `crypto/rand` for secure random number generation and including a mix of uppercase, lowercase, digits, and special characters. The clipboard function leverages the `github.com/atotto/clipboard` package to copy the generated password to the system clipboard. The project is still in its early stages, with the author planning to add features such as secure password storage, encryption, search and retrieval functionalities, and the ability to insert new passwords manually or list all entries. The author also encourages community engagement through GitHub and provides templates for quick FAQ responses or snippets.</p> 
+
+<p><a href="https://dev.to/func25/go-syncpool-and-the-mechanics-behind-it-52c1">开始sync.Pool及其背后的机制</a><br>该博客文章深入探讨了 &#39;sync.Pool“，这是一种旨在高效管理临时对象的机制，尤其是在高并发的场景中。作者解释了 &#39;sync.Pool&#39; 通过重用字节缓冲区或切片等对象来帮助减少内存使用和垃圾回收器的压力。该博文还阐明了存储在池中的对象通常是指向对象本身（而不是对象）的指针，以避免不必要的堆分配。此外，作者还讨论了 Go 的 PMG 调度模型的复杂性，这是“同步”效率的基础。Pool“的 Pool。这篇文章进一步探讨了与特定处理器上下文相关联的本地池的概念，由 Go 的运行时管理，以及 goroutine 如何与这些池交互。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://igboie.medium.com/practical-crossplane-b275533fd785">实用crossplane</a><br>本文提供了有关如何构建 Crossplane 蓝图以使用 Kubernetes 管理 AWS 资源的实用指南。它介绍了提供程序、托管资源、复合资源定义 （XRD）、组合和声明等关键概念，这些概念对于扩展 Kubernetes 的控制平面以管理云基础设施至关重要。该指南详细介绍了创建蓝图的过程，该蓝图包括 RDS 实例、SQS 队列、S3 存储桶和应用程序部署等组件，所有这些组件都通过 Kubernetes 部署进行编排。它还涉及 Crossplane 的漂移检测和自动对账功能，确保保持基础设施的理想状态。最后，本文讨论了 Kubernetes 提供商的安装和配置，这是设置整个系统的关键步骤。</p>
+
+<p><a href="https://icepanel.medium.com/top-5-resources-to-get-started-with-the-c4-model-041995f5588e">开始使用 C4 模型的 5 大资源</a><br>本文提供了有关 C4 模型（一种可视化软件架构的方法）的全面指南。它建议从 C4 Model 网站开始，该网站是一个权威资源，提供易于遵循的指南、示例和全面的概述。本文还建议观看 Simon Brown 的视频，以了解 C4 模型的价值。此外，它还强调了 Spotify 系统模型作为在公司内部实践中调整 C4 模型的示例。本文进一步鼓励通过 Reddit 和 Hacker News 等论坛与软件架构社区互动，在这些论坛上，关于 C4 模型的讨论很普遍。最后，它为那些希望更多地了解 C4 模型及其在软件开发中的实际应用的人提供了大量资源。</p>
+
+<p><a href="https://engineering.fb.com/2024/09/17/data-infrastructure/inside-bento-jupyter-notebooks-at-meta/">Inside Bento：Meta 的 Jupyter Notebooks</a><br>Pascal Hartig 在 Meta Tech 播客上的文章深入探讨了 Bento 的利用，Bento 是 Meta 的内部平台，用于分发 Jupyter Notebook，它促进了代码、文本和多媒体的混合用于开发目的。突出显示了由 Steve 的团队构建的功能，例如计划笔记本、共享功能以及在浏览器中使用 WebAssembly 无服务器执行笔记本。该播客节目是 Meta 工程师的资源，展示了该平台从原型设计到复杂机器学习工作流程的多功能性。此外，本文还提供了有关 Meta 工程部门职业机会的信息，特别是针对不同地点（包括巴黎、伦敦、台北和桑尼维尔）的软件工程师和合作伙伴工程师。</p>
+
+<p><a href="https://opensource.googleblog.com/2024/09/google-open-sources-smart-buildings-simulator-and-dataset-accelerate-sustainable-innovation.html">Google 开源 Smart Buildings Simulator 和数据集，加速可持续创新</a><br>Google 通过开源其 Smart Buildings Simulator 和 Dataset，在促进可持续性和技术创新方面迈出了重要一步。TensorFlow Smart Buildings Simulator 是一种旨在训练强化学习代理的工具，旨在优化建筑物的能源使用并减少碳排放。同时，智能建筑数据集包含来自三座 Google 建筑的六年遥测数据，为开发和测试控制解决方案提供了真实基础。该计划体现了 Google 对可持续发展的承诺，目标是到 2030 年使用无碳能源运营，到 2040 年实现净零排放。该公司鼓励研究人员、开发人员和行业专业人士之间的合作，以进一步提高智能建筑的效率和可持续性。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/17/artifact-hub-becomes-a-cncf-incubating-project/">Artifact Hub 成为 CNCF 孵化项目</a><br>Artifact Hub 是一个基于 Web 的应用程序，旨在简化云原生包和配置的发现、安装和发布，已被接受为 CNCF 孵化项目。这项决定由 CNCF 技术监督委员会做出，旨在解决通过 general-purze 搜索引擎查找有用的云原生工件（如 Helm 图表）的挑战。自 2020 年作为沙盒项目启动以来，Artifact Hub 显著扩展了其功能和特性，包括添加了 20 多种类型的受支持工件，并增强了项目详细信息，例如漏洞扫描结果。该项目还拥有不断增长的社区和基础设施，拥有超过 1.8k 的 GitHub 星、1.8k 的拉取请求和每月的包查看次数达到 ~700k。展望未来，Artifact Hub 计划通过增加对更多 Cloud Native 工件的支持、改进文档和增强用户体验来继续发展。</p>
+
+<p><a href="https://thenewstack.io/traefik-3-0-works-better-with-webassembly-and-opentelemetry/">Traefik 3.0 与 WebAssembly 和 OpenTelemetry 配合得更好</a><br>Traefik 3.0 标志着一次重大更新，它增强了与 WebAssembly 的兼容性，并改进了与 Kubernetes Gateway API 的集成，旨在提高性能和可观察性。此更新引入了 OpenTelemetry 支持，它将跟踪、指标和日志整合为统一格式，从而有助于更好地监控整个基础设施。此功能强调了 Traefik 致力于成为一个多功能和社区驱动的项目，其不断增长的贡献者数量及其作为 GitHub 上最受欢迎的项目之一的地位证明了这一点。使用 Wasm 插件自定义反向代理管道的能力进一步体现了 Traefik 的灵活性，允许使用从身份验证机制到与 Web 应用程序防火墙交互的广泛功能。总体而言，Traefik 3.0 代表了一种强大且适应性强的解决方案，可满足现代软件开发中的反向代理和负载平衡需求。</p>
+
+<p><a href="https://www.docker.com/blog/secure-by-design-for-ai/">AI 的安全设计：从头开始构建弹性系统</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，这通常是由于发出请求的客户端缺乏权限。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明，尝试访问服务器上的特定资源的用户未被授予执行此操作所需的权限。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/16/a-deep-dive-into-netbox-operator/">深入了解 NetBox operator</a><br>NetBox Operator 现已开源，是一种将 NetBox 资源管理直接集成到 Kubernetes 环境中的工具，可以提高运营效率和可靠性。它利用 Kubernetes API 和 GitOps 模型来管理网络服务和基础设施。该工具使用 leaselocker 库来防止争用条件并确保资源分配的一致性。此外，它还提供功能，使 IP 地址和前缀在应用程序之间保持一致，即使在删除和重新创建资源时也是如此。Swisscom 邀请技术社区合作，进一步开发 NetBox 运营商并为 NetBox 运营商做出贡献。</p>
+
+<p><a href="https://medium.com/doubleverify-engineering/level-up-your-local-deployment-for-better-devex-4f273c51c817">升级您的本地部署以获得更好的 DevEx</a><br>本文强调了强大的本地开发环境 （DevEx） 对软件工程师的重要性，强调它不仅是一种便利，而且是有效开发的必要条件。它解释说，良好的本地设置可以提供有关代码更改的快速反馈，尽可能紧密地反映生产以建立信心。作者 Gilad Weiss 主张使用 Docker Compose、本地 Kubernetes 和 Vagrant 等现代工具来模拟真实的部署环境。但是，他也指出了为处理大量数据的系统扩展此类环境的挑战，并提出了对生产流量进行采样以进行验证等策略。最后，本文强调了在设置和维护本地开发环境时考虑开发人员体验的重要性。</p>
+
+<p><a href="https://dev.to/aws-builders/the-ultimate-comprehensive-guide-to-setting-up-self-hosted-airbyte-on-eks-using-karpenter-59ap">使用 Karpenter 在 EKS 上设置自托管 Airbyte 的终极综合指南</a><br>这份由 DEV 社区创建的综合指南提供了有关使用 Karpenter 在 Amazon EKS 上设置自托管 Airbyte 的详细说明。它首先介绍了 Airbyte 及其优势，然后是 AWS 账户、AWS CLI、kubectl、Helm 和 eksctl 等先决条件。然后，该指南深入探讨了使用 Karpenter 创建 EKS 集群、安装 Karpenter 以及在 EKS 上部署 Airbyte 的步骤，包括配置 Airbyte 资源和升级 Airbyte OSS 版本。此外，它还为常见的故障排除问题提供解决方案，例如 pod 卡住、PVC 未绑定和 Airbyte 服务器 crashLoopBackOff。该指南最后鼓励读者参与讨论以获得进一步的帮助和澄清。</p>
+
+<p><a href="https://dev.to/emilyjohnsonready/revolutionize-your-workflow-expert-tips-to-supercharge-linux-containers-for-blazing-fast-real-time-and-io-performance-29hl">彻底改变您的工作流程：专家提示如何增强 Linux 容器以实现超快的实时和 I/O 性能</a><br>本文深入探讨了优化 Linux 容器以实现实时性能的复杂性，尤其是在 Kubernetes 环境中。它解释说，虽然高线程 I/O 密集型 Linux 容器理想情况下需要相等的 CPU 访问权限，但现实情况往往受到 Linux 任务调度程序限制的阻碍。本文概述了 Completely Fair Scheduler （CFS） 在 Linux 中的作用，尽管它很公平，但由于无法确定任务的优先级和 CFS 树的动态特性，因此无法保证实时性能。为了解决这些限制，本文建议利用 Kubernetes CPU 管理器并尝试优化策略来部署可以满足应用程序要求的软实时容器。此外，本文还提供了对其他各种主题的见解，包括 Kubernetes 卷、使用 Celery 和 Docker 在 Django 中运行 cron 作业、Traefik 与 Docker Compose 以及了解 Docker。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://community.codenewbie.org/zorian/mastering-llms-effective-prompting-strategies-for-developers-23g1">掌握 LLM：开发人员的有效提示策略</a><br>本文提供了开发人员和 QA 专业人员有效利用大型语言模型 （LLM） 的综合策略。它强调了掌握提示技术的重要性，例如 Least-to-Most Prompting、Self-Ask Prompting 和 Sequential Prompting，以指导模型完成任务并确保准确的输出。此外，本文还讨论了模板在快速 FAQ 响应和代码片段重用方面的效用，同时还讨论了对不当评论保持警惕的必要性以及报告滥用行为的重要性。本文最后提出了一个关于自动将存储库导入 GitHub 的好处的问题，提出了一个需要进一步探索的潜在主题。</p>
+
+<p><a href="https://medium.com/@raviteja_2005/how-to-structure-an-ml-project-for-reproducibility-reliability-4a3bffae25c7">如何构建 ML 项目以实现可重复性和可靠性</a><br>Raviteja R Reddy 在 Medium 上的文章提供了有关构建机器学习项目以实现可重复性和可靠性的全面指南。作者强调了尽早开始、理解项目主题并学习有效展示项目的重要性。Reddy 建议使用清晰的数据目录、原始数据和处理数据、笔记本、源代码和生成的分析来逻辑地组织项目。他强调需要高效的依赖项管理，可能使用 Docker，并为重复性任务创建简短、可读的命令。本文还介绍了观察和自动化代码、强制类型提示、在提交之前检查代码问题以及自动记录代码以实现更好协作的重要性。最后，Reddy 建议设置持续集成管道以进行自动测试，并鼓励读者根据其特定应用程序调整模板。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>云原生应用程序代理</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter 是一款专为灵活性、性能和简单性而构建的 Kubernetes Node Autoscaler。</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Kubernetes 的渐进式交付</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>与 Prometheus 类似，但用于日志。</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>为 Kubernetes 入口和服务配置外部 DNS 服务器（AWS Route53、Google CloudDNS 等）</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>通过 Terraform 配置远程开发环境</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub 的官方命令行工具</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>适用于 GitHub Actions 自托管运行器的 Kubernetes 控制器</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI 以时尚的方式管理您的集群！</p>
+
+<p><a href="https://github.com/jetify-com/devbox">jetify-com/devbox</a><br>即时、简单且可预测的开发环境</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>Golang 的 database/sql 的通用扩展</p>
+
+<p><a href="https://github.com/getzep/zep">getzep/zep</a><br>Zep：AI 助手的长期记忆。</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>备份和迁移 Kubernetes 应用程序及其持久卷</p>
+
+<p><a href="https://github.com/cloudflare/terraform-provider-cloudflare">cloudflare/terraform-provider-cloudflare</a><br>Cloudflare Terraform 提供商</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>适用于 Kubernetes 的 Go 客户端。</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby 项目 - 容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>适用于 Kubernetes 的开放且可扩展的持续交付解决方案。由 GitOps Toolkit 提供支持。</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>用于构建 Go HTTP 服务的轻量级、惯用且可组合的路由器</p>
+
+<p><a href="https://github.com/gardener/gardener">gardener/gardener</a><br>使用托管控制平面在任何基础设施上大规模构建同构 Kubernetes 集群。</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241117.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-17</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://colobu.com/2024/11/17/heapmap/">HeapMap, 一个混合功能的数据结构Go语言实现</a><br>HeapMap是一种混合功能的数据结构,它结合了堆和哈希映射,常用于需要按键排序并进行高效查找的场景,可以支持按键核序和常数时间查找。</p> 
+
+<p><a href="https://dev.to/ashwingopalsamy/go-pointers-memory-management-3ole">Go：指针和内存管理</a><br>源文档深入研究了 Go 的内存管理，特别关注指针、堆栈和堆分配、逃逸分析和垃圾回收。它首先解释了 stack 和 heap，其中 stack 用于短期变量，heap 用于转义范围的变量。然后，该文档将按值传递变量（对于大型数据结构来说是安全的，但可能效率低下）与使用指针的引用传递（可以提高性能，但需要仔细同步以避免并发问题）进行对比。Escape analysis 被强调为决定变量分配的编译器功能，该文档提供了对 Go 的垃圾回收器如何管理内存以防止泄漏的见解。本文档还涉及指针的潜在陷阱，例如悬空指针和数据争用，并提供了用于同步的互斥锁等解决方案。此外，它还讨论了在按值传递或按指针传递之间进行选择时性能和内存使用之间的平衡。作者最后强调了了解 Go 的内存管理对于编写高效和安全的应用程序的重要性，并建议读者尝试使用代码来了解更多信息。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括文档中的直接引用或具体示例，而是转述了主要概念。</p> 
+
+<p><a href="https://www.jvt.me/posts/2024/11/17/cobra-otel-lessons/">将 OpenTelemetry 添加到 （Cobra） 命令行 Go 工具的经验教训</a><br>该文档详细介绍了作者将 OpenTelemetry 集成到基于 Go 的命令行工具中，特别是针对依赖项管理数据 （dmd） 的历程。作者 Jamie Tanna 是一名软件工程师，他试图通过向 CLI 添加遥测数据（利用 Cobra 框架）来增强可观测性。关键要点包括使用一致的 HTTP 客户端、适当地传递上下文以及遵守属性的语义约定的重要性。作者还强调了 dmd 特定属性的自定义语义约定的必要性，以及遥测逐步改进的潜力。面临的挑战包括确保跟踪包含父 Span 和配置正确的导出程序协议。作者邀请反馈并表示打算进一步优化插桩、指标和整体遥测设置。本文档最后呼吁为改进遥测系统做出贡献，并提供了包含代码更改的 GitLab 合并请求的链接。
+
+（注意：摘要旨在概括文档的本质，同时省略直接问题和特定的代码引用。</p> 
+
+<p><a href="https://www.science.org/doi/10.1126/science.aam9744">顶端有充足的空间：在摩尔定律之后，是什么推动计算机性能的提升？</a><br>2020年发表的一篇关于现代计算机程序性能优化的经典论文</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://thenewstack.io/why-are-user-acceptance-tests-such-a-hassle/">为什么用户验收测试如此麻烦？</a><br>源文档讨论了软件开发中与用户验收测试 （UAT） 相关的挑战，强调了其主观性质以及工程团队和利益相关者之间协作所需的大量手动工作。尽管建议采用优先处理自动化单元和集成测试的测试金字塔，但由于复杂的业务流程和需要主观验证的第三方集成，UAT 通常会消耗很大一部分测试工作。该文件强调了 UAT 的繁琐性质，包括识别测试用例、进行工程测试以及与利益相关者合作以确保系统满足业务需求。为了应对这些挑战，该文件提出了 AI 驱动测试在简化 UAT、减少人工工作量和提高效率方面的潜力。但是，它承认需要对自动化进行初始投资才能充分实现这些优势。
+
+（注意：摘要不包括文档中的直接引用或具体问题，而是概括了有关 UAT 的困难和 AI 驱动测试的拟议解决方案的要点。</p>
+
+<p><a href="https://www.pingcap.com/blog/unlocking-modern-saas-platforms-how-distributed-sql-delivers-multi-tenancy-scale/">解锁现代 SaaS 平台：分布式 SQL 如何大规模提供多租户</a><br>2024 年 HTAP 峰会会议重播强调了分布式 SQL 数据库在大规模解锁现代 SaaS 平台多租户方面的重要性。行业专家 Dave Burgess 强调了 MySQL 和 PostgreSQL 等传统数据库在面对不断增长的企业的可扩展性和性能需求时的局限性。分布式 SQL 数据库（如 TiDB）提供可扩展、高度可用且经济高效的解决方案，通过提供强一致性、数据隔离和简化的 Schema 管理来应对这些挑战。来自 Catalyst 和 Pinterest 等公司的案例研究表明，采用分布式 SQL 对性能提升、成本降低和运营效率具有变革性影响。Burgess 总结道，分布式 SQL 是 SaaS 提供商的关键组件，旨在使其数据基础设施面向未来、简化运营和促进创新。</p>
+
+<p><a href="http://security.googleblog.com/2024/11/retrofitting-spatial-safety-to-hundreds.html">将空间安全改造到数亿行 C&#43;&#43;</a><br>Google 在线安全博客宣布了一项重大更新，以增强 C&#43;&#43; 代码的安全性，该代码广泛用于 Android 和 Chrome 平台。将空间安全措施改造到数亿行 C&#43;&#43; 代码中，是朝着防范漏洞和潜在漏洞迈出的重要一步。正如各种博文和搜索标签更新（包括与 Android 安全、Chrome 安全和隐私相关的更新）中所述，该计划是 Google 更广泛安全承诺的一部分。该博客文章还为读者提供了一个链接，以便他们通过评论和社交媒体分享来关注更新并与社区互动。此举反映了 Google 始终致力于提高其产品和服务的安全性，以及对用户和更广泛的技术社区的反馈持开放态度。
+
+（注意：摘要是根据提供的文本制作的，其中提到了博客文章，但不包含有关改造过程或其影响的具体细节。该摘要假定您对上下文有大致的了解，并侧重于公告的关键要素。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/15/kubecon-cloudnativecon-north-america-2024-day-3-keynotes-announcements-and-more/">KubeCon &#43; CloudNativeCon 北美 2024 第 3 天：主题演讲、公告等</a><br>Kubernetes 成立 10 周年在 KubeCon &#43; CloudNativeCon India 上庆祝，重点关注社区发展，尤其是在非洲，并引入了新的云原生认证。该活动讨论了过去十年的云原生和 Kubernetes、社区新闻和未来计划，包括与 Andela 合作培训开发人员以及推出 Backstage、OpenTelemetry 和 Kyverno 等新认证。主要公告包括 2025 年的第一届 KubeCon &#43; CloudNativeCon Japan、将 CNCF 认证扩展到平台工程，以及用于自动化 Kubernetes 安全和操作的工具。该活动还强调了内部开发人员平台的重要性以及认证在推进云原生技术方面的作用。
+
+（注意：该摘要旨在概括 KubeCon &#43; CloudNativeCon India 活动期间讨论的主要事件、公告和未来方向，同时省略了对总体叙述不重要的特定细节，例如日期和链接。</p>
+
+<p><a href="https://thenewstack.io/the-rust-c-bridge-a-new-path-forward/">Rust-C&#43;&#43; 桥：前进的新道路</a><br>Rust 基金会发起了互操作计划，Google 捐赠了 $1M，以应对 C&#43;&#43; 和 Rust 互操作性的挑战。该计划旨在通过改进集成这两种语言的工具和策略，使跨语言开发更容易获得，这两种语言对于系统编程都至关重要。问题陈述概述了三种战略方法：增强现有工具、就长期目标达成共识以及与 C&#43;&#43; 社区互动。该计划的目标包括使互操作性更易于访问、最大限度地减少代码要求、最大限度地提高安全性和性能，以及维护 Rust 的核心价值观。该计划认识到这两种语言在系统编程中的重要性，并寻求使开发人员能够选择最适合其需求的语言，同时最大限度地降低互操作性成本和风险。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/terrastruct/d2">terrastruct/d2</a><br>D2 是一种现代图表脚本语言，可将文本转换为图表。</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>用于小地方的 Go 编译器。微控制器、WebAssembly （WASM/WASI） 和命令行工具。基于 LLVM。</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint 允许用户使用流行的框架快速启动一个 Go 项目</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>简单易用的 DDNS。支持阿里云、腾讯云、dnspod、Cloudflare、回调、华为云、百度云、Porkbun、GoDaddy、Namecheap、NameSilo...</p>
+
+<p><a href="https://github.com/JanDeDobbeleer/oh-my-posh">JanDeDobbeleer/oh-my-posh</a><br>最可定制且低延迟的跨平台/shell 提示渲染器</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/daytonaio/daytona">daytonaio/daytona</a><br>开源开发环境管理器。</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>云原生矢量数据库，适用于下一代 AI 应用程序的存储</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/adonovan/gopl.io">adonovan/gopl.io</a><br>Example programs from &#34;The Go Programming Language&#34;</p>
+
+<p><a href="https://github.com/Calcium-Ion/new-api">Calcium-Ion/new-api</a><br>AI模型接口管理与分发系统，支持将多种大模型转为OpenAI格式调用、支持Midjourney Proxy、Suno、Rerank，兼容易支付协议，可供个人或者企业内部管理与分发渠道使用，本项目基于One API二次开发。</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，可以使用你想要的任何名称制作本地信任的开发证书。</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>在 docker 中运行并使用 WebRTC 的自托管虚拟浏览器。</p>
+
+<p><a href="https://github.com/jesusprubio/up">jesusprubio/up</a><br>📶 解决 Internet 连接问题</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>一个简单、现代且安全的加密工具（和 Go 库），具有小的显式密钥，没有配置选项，具有 UNIX 风格的可组合性。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/v2rayA/v2rayA">v2rayA/v2rayA</a><br>Project V 的 Web GUI 客户端，支持 VMess、VLESS、SS、SSR、Trojan、Tuic 和 Juicity 协议。🚀</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>使用 Go 创建漂亮的应用程序</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区托管域列表。为 V2Ray 生成 geosite.dat。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241202.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-02</span>
+</p>
+<p>每日一谚：Keep dependencies up to date to avoid security vulnerabilities. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/12/02/why-go-sucks/">惊！Go在十亿次循环和百万任务中表现不如Java，究竟为何？</a><br>近期外网的两篇编程语言对比的文章在国内程序员圈里引起热议。一篇是由Ben Dicken做的语言性能测试，对比了十多种主流语言在执行10亿次循环(一个双层循环：1万 * 10 万)的速度；另一篇则是一个名为hez2010的开发者做的内存开销测试，对比了多种语言在处理百万任务时的内存开销。在这两项测试中，Go的表现不仅远不及NonGC的C/Rust，甚至还落后于Java，尤其是在内存开销测试中，Go的内存使用显著高于以“吃内存”著称的Java。那么究竟为何在这两项测试中，Go的表现都不及预期呢？本文详细解释了其中缘由！</p> 
+
+<p><a href="https://avi.im/blag/2024/s3-log/">使用Go基于S3构建分布式日志</a><br>源文档概述了使用 Amazon S3 开发分布式日志系统，作为数据存储和流式处理系列的一部分。该系统名为 S3-log，利用 S3 的持久性和可用性功能来创建可扩展的仅附加日志结构，这对于数据流和事件跟踪至关重要。日志接口由结构定义，通过 S3 的条件写入功能确保唯一和连续的记录偏移量，从而防止重复条目。校验和用于数据完整性，使用 SHA-256 验证从 S3 获取的数据。本文档还通过实施一种方法来恢复最后插入的记录，从而解决了故障情况，例如节点崩溃。该项目是开源的，代码和测试可在 GitHub 上找到，并邀请贡献来解决现有问题。
+
+摘要概括了源文档的关键方面，包括 S3-log 系统的用途、其独特功能以及项目的开源性质。它重点介绍了维护日志完整性和处理故障的技术方法，这是文档内容的核心。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoUnionTypesComplexities">联合类型（&#39;enum types&#39;）在Go中实现会很复杂</a><br>在本文中，Chris Siebenmann 讨论了在 Go 编程语言中实现联合类型（类似于 Rust 的 Result 或 Option 类型）所涉及的复杂性。联合类型可以容纳不同的数据类型，由于语言的设计和运行时要求，在 Go 中实现并不简单。Go 编译器和运行时本身并不是为了处理联合类型的动态性质而设计的，这通常需要一个标记来指示存储在联合中的当前类型。这个限制给垃圾回收和内存分配带来了挑战，因为 Go 会分别处理值和它们的类型。作者认为，向 Go 中添加联合类型将需要对语言的编译器、垃圾回收和内存管理系统进行重大更改。Siebenmann 总结说，虽然 Go 中的接口类型和泛型提供了类似的功能，但它们缺乏真正的联合类型所具有的人体工程学优势。本文还谈到了 Go 类型系统的更广泛影响，以及可能需要额外的语言功能来适应这些结构。
+
+（注意：摘要旨在概括文章的关键点，同时省略具体细节，例如作者姓名、帖子日期和 wiki 页面的结构。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-go-generics-monads-and-functors-for-powerful-expressive-code-1g39">掌握 Go 泛型：Monad 和 functor 以获得强大、富有表现力的代码</a><br>DEV 社区文章深入探讨了高级 Go 泛型，重点介绍了如何实现 monad 和 functor 以增强代码的表达性和可维护性。它首先对 functor 进行了基本解释，由可以映射的类型表示，然后介绍了 Box 类型作为一个简单的 functor 示例。本文继续讨论 monads，从 Maybe monad 开始进行错误处理，然后是 Either monad，用于表示可能因错误而失败的计算。讨论扩展到 IO monad，它封装了副作用计算，允许在不立即执行的情况下进行组合操作。本文最后说明了这些抽象如何简化复杂的用户注册流程，将业务逻辑与副作用分开。这篇文章强调了 Go 中函数式编程技术的好处，特别是对于具有复杂错误处理或副作用的大型系统，同时也承认需要根据团队的熟悉程度和项目要求明智地使用。
+
+（注意：提供的文本是假设文章内容的摘要，而不是源文档的直接摘录。</p> 
+
+<p><a href="https://www.modular.com/blog/understanding-simd-infinite-complexity-of-trivial-problems">了解 SIMD：琐碎问题的无限复杂性</a><br>源文档深入探讨了现代 CPU 中 SIMD（单指令、多数据）操作的复杂性和性能增强，重点介绍了余弦相似性的计算，这是机器学习中的一种常见操作。作者是高性能计算领域的专家，他们讨论了利用 SIMD 并行处理功能所面临的挑战，例如不可预测的性能以及不同 CPU 和指令集之间的精度不一致。他们建议使用倒数平方根近似和 SIMD 内部函数来显著提高性能，在 Intel 硬件上实现从 10 MB/s 到 60.3 GB/s 的增益，在 Arm 硬件上实现从 4 MB/s 到 29.7 GB/s 的增益。该文档还强调了特定于架构的优化的重要性以及专用硬件加速库的潜力。为了解决 CPU 架构的多样性，作者建议按对应于不同代 CPU 的能力级别对内核进行分类，从而实现高效的编译和运行时差异化。这种方法确保软件可以充分利用 SIMD 并行性的全部功能，即使在处理各种 CPU 设计的复杂性时也是如此。</p> 
+
+<p><a href="https://manthanguptaa.in/posts/distributed_transaction_part_2/">分布式事务 - 第 2 部分</a><br>分布式事务系列的第二部分深入探讨了弱隔离级别，重点介绍了它们如何管理分布式系统中的并发问题。它引入了 Read Committed 隔离级别，可防止脏读和写，确保事务只能看到已提交的数据。但是，它可能导致不可重复的读取，例如，在并发事务期间，账户余额似乎不一致。快照隔离作为一种解决方案提供，它使用多版本并发控制 （MVCC） 来维护事务的一致快照，从而避免脏读和写锁。该文档还解决了更新丢失和写入偏差问题，建议了原子操作、显式锁定或冲突解决策略来维护数据完整性。最后，它讨论了分布式数据库中复制的挑战，以及如何调整原子操作来处理并发更新。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://matt.blwt.io/post/7-databases-in-7-weeks-for-2025/">2025年，7周7数据库</a><br>源文档概述了对七种不同的数据库技术的全面探索，每种技术都有独特的功能和用例。PostgreSQL 因其强大的客户端-服务器模型、扩展和对主要供应商的支持而备受瞩目，使其成为各种应用程序的多功能选择。SQLite 以嵌入式本地优先数据库的形式呈现，非常适合数据与应用程序位于同一位置的应用程序，由于它与 Ruby on Rails 的集成而重新流行起来。DuckDB 被展示为针对在线分析处理而优化的查询数据库，而 ClickHouse 则因其高性能分析功能而受到强调，尤其是在大规模、实时场景中。FoundationDB 是作为键值存储引入的，具有大规模的完整 ACID 事务，适用于特定工作负载并经过广泛测试。TigerBeetle 被描述为一个专门的、痴迷于正确的金融交易数据库，严格遵守安全和正确协议。最后，CockroachDB 是一个全球分布式、与 Postgres 兼容的数据库，具有很强的一致性和水平扩展能力，适用于现代分布式应用程序。本文档鼓励读者花时间了解和试验每个数据库，以确定哪个数据库最适合他们的需求。</p>
+
+<p><a href="https://bloggeek.me/webrtc-evolution-genai/">生成式 AI 和 WebRTC：WebRTC 发展的第四个时代</a><br>在这篇富有洞察力的博客文章中，Tsahi Levent-Levi 深入探讨了生成式 AI 和 WebRTC 之间的协同作用，标志着 WebRTC 发展的新时代。作者回顾了 WebRTC 发展的过去阶段——探索、增长和差异化——并假设我们现在正在过渡到生成式 AI 时代。Levent-Levi 强调了 ChatGPT 等大型语言模型 （LLM） 的爆炸性采用，由于其低延迟功能，它激发了人们对 WebRTC 的新兴趣，使其成为实时对话的理想选择。该博文还讨论了 WebRTC 的现状，该状态在大流行后减少了投资，并建议生成式 AI 的集成可以重振人们对 WebRTC 技术的兴趣和创新。展望未来，作者预计 2025 年将带来进一步的发展，因为开发人员和供应商正在探索将生成式 AI 与 WebRTC 相结合的最佳方法，这可能会导致新的 API 和优化。这篇文章最后承诺在即将发布的文章中探讨 WebRTC 在生成式 AI 背景下的未来。
+
+（注意：摘要旨在概括源文件中提出的关键主题和未来展望，而不是直接引用或解决作者提出的具体问题。</p>
+
+<p><a href="https://bloggeek.me/webrtc-insights-4-years/">WebRTC洞见：第4年</a><br>这份文件概述了“WebRTC Insights”博客，该博客为WebRTC开发者提供了四年的专业分析和有价值的信息。文中强调了该服务的主要优势，包括通过快速识别WebRTC问题和市场趋势来节省时间，以及帮助客户专注于最重要的事项。博客发布了大量的见解、漏洞报告和安全漏洞，过去一年中，提交的问题显著减少。文件还讨论了libWebRTC的成熟度、谷歌的变动影响，以及了解WebRTC不断发展的重要性，包括关于CPaaS、视频会议和大型语言模型的市场指导。该博客是开发者导航WebRTC技术复杂性、掌握行业趋势的重要资源。</p>
+
+<p><a href="https://javisantana.com/2024/11/30/learnings-after-4-years-data-eng.html">与 &#43;50 家公司合作 4 年后的经验教训</a><br>在一篇关于他在数据工程初创公司 Tinybird 工作的四年旅程的反思文章中，@javisantana 分享了他对高性能数据工程现实的见解。他强调了设计优于硬件的重要性，揭穿了传统 ETL 无法有效处理大型数据集的神话。本文重点介绍了对从未使用过的数据的常见疏忽，以及持续监控和数据质量测试的必要性。关键要点包括深思熟虑的数据架构的必要性、在没有适当监控的情况下摄取的陷阱，以及数据处理中速度、成本和灵活性之间的权衡。作者还强调了基础技术技能（如 bash 和 SQL 处理）的价值，以及坚持基本软件工程实践的重要性。总体而言，本文为公司导航实时数据工程的复杂性提供了指南，倡导在技术知识和战略规划之间取得平衡。</p>
+
+<p><a href="https://blog.frankel.ch/home-assistant/2/">Home Assistant 模型</a><br>源文档概述了 Home Assistant 平台，详细介绍了其复杂的模型和术语，以帮助新手了解该系统。Home Assistant 被描述为一个全面的家庭自动化系统，具有各种组件，例如集成、设备、实体、区域、自动化、脚本、附加组件和场景。集成允许 Home Assistant 与外部设备和服务连接，而设备代表系统内的物理实体。实体（包括传感器和执行器）是保存数据和状态的基本单元。本文档还涉及场景的概念，场景是设备的命名配置，而脚本是没有触发器的操作。作者计划在后续文章中探讨从 Philips Hue 等专有自动化系统到 Home Assistant 的过渡。该文件最后提供了进一步学习的资源和作者使用 Home Assistant 之旅的个人说明。</p>
+
+<p><a href="https://dev.to/mspilari/understanding-rate-limiting-a-guide-to-protecting-your-apis-and-applications-254c">了解速率限制：保护 API 和应用程序的指南</a><br>源文档提供了有关速率限制的深入指南，速率限制是管理服务器流量和防止 Web 应用程序和 API 中滥用的关键机制。它解释了速率限制的概念、它的好处，以及如何使用流行的 Web 服务器 NGINX 实现它。该指南涵盖了各种限流算法，例如 Fixed Window、Sliding Window、Token Bucket 和 Leaky Bucket，每种算法都有其优点和使用案例。它还深入探讨了系统架构注意事项，并提供了在 NGINX 中配置速率限制的实际示例，包括使用 HTTP 状态代码处理超出的限制。此外，本文档还涉及高级使用案例，例如每个 API 密钥和基于地理位置的速率限制，以及跨多个服务器的分布式速率限制。该指南最后强调了速率限制对于维护系统稳定性和性能的重要性，并鼓励读者在他们的 NGINX 设置中应用这些策略。
+
+（注意：摘要不包括文档中的直接引用或具体问题，但概括了要点和主题。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://baoyu.io/blog/ai-assisted-programming-software-engineering">AI 辅助编程给软件工程带来的需求开发范式变化</a><br>AI辅助编程给软件工程带来的需求开发范式变化,包括简易需求不需要软件开发,普通需求可以不依赖专业程序员启动,复杂需求还是需要专业程序人员去设计,但开发流程会因AI效率大幅提升。</p>
+
+<p><a href="https://thenewstack.io/ai-coding-agents-level-up-from-helpers-to-team-players/">AI 编码代理从助手升级为团队成员</a><br>New Stack 的文章讨论了 AI 编码代理从简单工具到协作团队成员的演变，Tabnine 和 Zencoder 等公司在通过 AI 增强软件开发方面处于领先地位。Tabnine 的 Tabnine 代码审查代理因其能够个性化代码审查规则、与 IDE 集成和建议修复而备受瞩目，旨在显著提高开发人员的工作效率。还提到了 Zencoder 在用于代码审查和生成的 AI 方面的进步，但没有提供具体细节。本文强调了向了解公司特定编码标准和实践的 AI 代理的转变，有望实现更高效和上下文感知的开发流程。
+
+（注意：摘要不包括文档中的直接引用或具体问题，而是侧重于与 AI 编码代理相关的总体主题和关键点及其对软件开发的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>自托管、轻量级服务器和网站监控及运维工具</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>轻量级服务器监控中心，包含历史数据、docker 统计信息和警报。</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria 是一个功能强大、快如闪电且抗审查的代理。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区托管域列表。为 V2Ray 生成 geosite.dat。</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>不依赖于 nodejs 安装的 immich-CLI 命令的替代方法。它尽最大努力导入 google photos 外卖档案。</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>适用于去中心化 Web 🌈💎✨ 的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/TheAlgorithms/Go">TheAlgorithms/Go</a><br>在 Go 中为初学者实现的算法和数据结构，遵循最佳实践。</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细访问控制将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>太阳能充电 ☀️🚘</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>使用 Go 创建漂亮的应用程序</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - 一个简单、易用、优雅的开源个人云系统。</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>快速、安全、高效的备份程序</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ 您的个人流媒体服务</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>支持 RTSP、RTMP、HTTP-FLV、WebRTC、MSE、HLS、MP4、MJPEG、HomeKit、FFmpeg 等的终极相机流媒体应用程序。</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>有关数千 （！） 加密代币的全面、最新信息集合。</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和 2FA 的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/slackhq/nebula">slackhq/nebula</a><br>一个可扩展的叠加网络工具，专注于性能、简单性和安全性</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

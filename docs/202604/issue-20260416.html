@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260416.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260416</span>
+</p>
+<p>每日一谚：A little copying is better than a little dependency  — Rob Pike </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/16/structured-concurrency-in-go-research-oriented-perspective">为什么说 go 语句是新时代的 goto？四大法则拯救失控 goroutine</a><br>2025 年 3 月，一篇发表在《Scientific Research Journal》上的重磅论文《Structured Concurrency in Go: A Research-Oriented Perspective》，将 Go 的并发模型与 1968 年 Dijkstra 对 Goto 语句的批判联系了起来。 论文作者 Georgii Kliukovkin 指出，这种“发射后不管（Fire-and-Forget）”的模式，虽然在 Hello World 级别的程序中运行良好，但在大规模 分布式系统中，它是资源泄漏、死锁和竞态条件的温床</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/4zZ4yYtrDNP0e0nvVhj0cQ">【Agentic API 实战】05 复杂任务编排：链式调用 (Chaining) 与测试模式 (Test Mode)</a><br>假设你经营着一家电商平台，你的老板突发奇想：“我们要上线一个 AI 导购 Agent，用户可以直接对它说：‘帮我用账号里的余额，买下购物车里 最便宜的那双运动鞋，如果余额不够就算了’。” 作为负责后端 API 的架构师，你该如何支持这个需求？</p> 
+
+<p><a href="https://xata.io/blog/xata-is-now-open-source">Xata 现已开源</a><br>Xata 是一个面向智能体规模的开源 Postgres 平台。它可以低成本即时创建带有写时复制（copy-on-write）分支的独立数据库。
+
+作者：Monica Sarbu
+发布日期：2026 年 4 月 15 日
+
+自 2025 年 5 月推出私有内测版以来，Xata 一直在各规模公司中投入生产使用。在过去的几个月中，我们全力推进该平台，并根据实际使用情况对其进行了完善。
+
+今天，我们迈出了下一步：我们正式开源了 Xata 的核心部分。
+
+企业正在遇到新的瓶颈。现在生成代码很容易，但证明代码在生产环境中可行仍然很难。随着智能体成为开发流程的一部分，这一挑战愈发严重。团队需要在安全、隔离且大规模的环境中针对类生产数据进行测试，同时不能产生高昂的基础设施成本或影响生产的风险。
+
+我们以 Apache 2.0 许可证开源 Xata，旨在解锁企业级采用，赋予团队运行、修改并将其集成到自身基础设施中的能力。
+
+数据库并非为智能体而设计
+
+智能体工作负载对数据库有着完全不同的需求。
+
+智能体的行为不像用户或传统服务。它们并行运行、会进行重试、探索多种路径，且通常在缺乏协调的情况下操作。这改变了数据库所需提供的功能。
+
+隔离变得至关重要。
+
+智能体不应共享同一个环境。一个智能体的变更不应影响另一个的结果。每个智能体都需要自己的数据库，一个运行、实验和容错的安全空间。
+
+数据库需要是临时性的。
+
+大多数数据库不需要存活数天或数周。它们只需存活几分钟，即足以让智能体完成任务并缩容至零。数据不会被删除：只有计算资源会被释放。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/04/15/how-to-measure-the-roi-of-developer-tools/">如何衡量开发者工具的投资回报率（ROI）</a><br>云原生社区日益重视投资于改善开发者体验的工具。平台工程，伴随着 Backstage 等项目的兴起，核心在于通过平滑软件构建和交付过程中的日常阻力，来提高开发者的生产力。CNCF TAG App Delivery 的《平台工程白皮书》记录了各组织如何将这一实践正式化，而随着正式化而来的是证明投资回报的压力。
+
+无论你采用的是付费产品还是免费开源项目，开发者工具总是有成本的。团队需要花费时间进行评估、集成到现有工作流程中，并进行持续维护。如果没有一种清晰的 ROI 思维方式，除了笼统地认为它们“改善了开发者体验”之外，很难为这些投资进行辩护。
+
+作为一名在开发者工具领域工作了四年多的人，这是一个我与客户多次讨论过的问题。在这篇文章中，我将首先分析团队衡量开发者工具 ROI 的一些常见方式，然后涵盖这些方法如何根据团队规模产生不同的适用性，以及在增长的每个阶段哪些方式往往是有用的。
+
+用于衡量 ROI 的工具
+
+内部调查与反馈
+
+内部调查和直接反馈通常是团队了解开发者工具是否真正提供价值的最简单方法。它们易于执行，不需要建立复杂的系统来收集或研究大量数据。
+
+这种方法主要依赖于定性反馈，在计算 ROI 时，与定量指标相比，定性反馈往往被低估。数字显得客观且更容易报告，因此往往默认胜出。但就开发者工具而言，定性反馈常常被忽视。</p>
+
+<p><a href="https://tailscale.com/blog/tailscale-rs-rust-tsnet-library-preview">了解我们的新 Rust 库预览版：tailscale-rs</a><br>tailscale-rs 的早期预览版现已发布，我们希望你能帮助测试接下来的功能。</p>
+
+<p><a href="https://www.sysdig.com/blog/kubernetes-1-36-new-security-features">Kubernetes 1.36 - 新的安全特性</a><br>Kubernetes 1.36 即将发布，带来 60 项增强功能。</p>
+
+<p><a href="http://arek.gabr.pl/clean-vim.html">纯净版 Vim</a><br>我希望能展示一个人如何使用非常纯净的 Vim 来高效工作。这只需要了解几个关键方面和心态转变，但我花了近 10 年才得出这些结论。互联网上几乎没有这样的内容——除了这个 9 年前的经典教程：《如何用 Vim 完成 90% 插件能做的事》。
+
+我通常在这里写文章，但有些东西通过视频呈现效果更好。我不常录制视频，所以视频和演示本身的质量有待商榷，但我认为它传达了核心要点。</p>
+
+<p><a href="https://tratt.net/laurie/blog/2026/retrofitting_jit_compilers_into_c_interpreters.html">将 JIT 编译器改造到 C 解释器中</a><br>C 解释器是一种常见的语言实现技术，也是 Lua、Ruby 和 Python 等语言参考实现的基础。不幸的是，C 解释器很慢，尤其是与由 JIT 编译器驱动的语言实现相比。在这篇文章中，我将展示通过更改极小比例的代码，可以将 C 解释器自动转换为 JIT 编译的虚拟机（VM）。这提供了一个切入点。</p>
+
+<p><a href="https://www.zdnet.com/article/try-new-linux-7-0-kernel-on-these-distributions/">你今天可以在这 7 个发行版上使用 Linux 7.0</a><br>最新的 Linux 内核拥有完整的 Rust 支持和大大改进的调度程序，以加速你的工作和游戏。
+
+ZDNET 的关键要点：
+- 新内核的编号以 0 结尾，但它不是里程碑式的版本。
+- Linux 7.0 在 Rust、调度程序方面进行了改进，并进一步拥抱 AI。
+- 超过六个发行版现在可以让你尝试 Linux 7.0。</p>
+
+<p><a href="https://www.sandordargo.com/blog/2026/04/15/cpp26-structured-bindings-condition">C&#43;&#43;26：条件语句中的结构化绑定</a><br>结构化绑定于 C&#43;&#43;17 中引入，作为一种声明变量的替代方式。它们允许你将一个对象分解为一组命名变量，其中这些绑定的集合在概念上代表了整个原始对象。
+
+C&#43;&#43;26 之前的结构化绑定
+
+在 C&#43;&#43;23 之前，结构化绑定可以出现在：
+- 简单的声明中（如上所示），以及
+- 基于范围的 for 循环中。</p>
+
+<p><a href="https://fagnerbrack.com/the-danger-of-modern-open-source-c15dd5206346">现代开源的危险</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/#atom-everything">Gemini 3.1 Flash TTS</a><br>发布：Gemini 3.1 Flash TTS
+
+Google 今天发布了 Gemini 3.1 Flash TTS，这是一个可以使用提示词（prompt）进行引导的新文本转语音模型。
+
+它通过标准的 Gemini API 提供，模型 ID 为 gemini-3.1-flash-tts-preview，但只能输出音频文件。
+
+提示词指南令人惊讶。这是他们生成几句简短音频的示例提示词。</p>
+
+<p><a href="https://javarevisited.substack.com/p/the-complete-agentic-ai-engineering">完整的智能体 AI 工程</a><br>智能体 AI 工程：6 个会悄悄扼杀你 AI 智能体的关键错误
+
+进入智能体 AI 和大语言模型（LLM）工程领域可能会让人感到不知所措。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>查找容器、Kubernetes、代码仓库、云等中的漏洞、错误配置、密钥和 SBOM</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>用于从容器镜像和文件系统生成软件物料清单（SBOM）的 CLI 工具和库</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>Tailscale 控制服务器的开源自托管实现</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous GPU Sharing on Kubernetes</p>
+
+<p><a href="https://github.com/canopy-network/canopy">canopy-network/canopy</a><br>The official go implementation of the Canopy Network protocol</p>
+
+<p><a href="https://github.com/tinode/chat">tinode/chat</a><br>Instant messaging platform. Backend in Go. Clients: Swift iOS, Java Android, JS webapp, scriptable command line; chatbots</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

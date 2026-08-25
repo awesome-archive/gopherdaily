@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260408.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260408</span>
+</p>
+<p>每日一谚：Write less code. More code means more bugs, more to maintain, more to understand.  — Andrew Gerrand </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/08/perspective-on-quantum-computing-timeline">倒计时 33 个月？Go 前安全负责人：量子计算机将“摧毁”互联网</a><br>Go 语言前核心团队安全负责人、Go密码学专家之一 Filippo Valsorda，在他的个人博客上发表了一篇极其沉重的文章。 在文章的开头，他用一种近乎“忏悔”的口吻写道： “在推出抗量子密码学的紧迫性上，我的立场与几个月前相比，已经发生了改变。……是时候公开表明并解释我改变想法的原因了。” 在这篇长文中，Filippo 引用了 Google 和 Oratomic 上周刚刚发表的两篇重磅论文，以及多位顶级物理学家的最新警告，最终得出了一个令整个 软件工程界脊背发凉的结论：我们不再拥有十年。具备破解当前所有主流加密算法能力的量子计算机（CRQC），其到来的时间线，已经被一些顶级 专家压缩到了一个令人绝望的数字——2029 年。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-sysmon/">深入理解 Go 运行时：系统监控器 sysmon</a><br>本文介绍了 Go 运行时中的核心组件——系统监控器（sysmon）。作为运行在调度器之外的独立 OS 线程，sysmon 充当了运行时的“看门狗”。它通过周期性循环，解决了调度器和垃圾回收机制在特定场景下的局限性，包括抢占长时间运行的 goroutine、接管陷入系统调用的处理器（P）、推进网络 I/O 以及强制触发空闲时的垃圾回收，确保了 Go 程序在高并发和特殊负载下的稳定运行。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/96Pzvwl0xWyjgf9SuUcQvg">【AI 工程师的 GPU 入门课】03 CUDA 编程模型：指挥“千军万马”的线程艺术</a><br>很多 AI 工程师在这一步会感到畏惧：“我不懂 C&#43;&#43;，我也不会写驱动，怎么学 CUDA 编程？” 其实，对于 AI 工程（特别是推理优化）来说，你不需要成为写出极致矩阵乘法内核的 CUDA 专家，但你必须理解CUDA 的线程调度逻辑。因为只有理解了 Grid、Block 和 Warp，你才能明白</p> 
+
+<p><a href="https://www.infoq.com/news/2026/04/google-agent-testbed-scion/">Google 开源多智能体编排测试平台 Scion</a><br>Google 近期开源了实验性多智能体编排平台 Scion，旨在为开发者提供一套“智能体管理程序”。Scion 支持在本地、远程虚拟机或 Kubernetes 集群中运行多个并发智能体，通过为每个智能体分配独立的容器、Git 工作树及凭据，确保它们能在互不干扰的情况下协同工作。该平台将智能体内存、任务管理等功能模块化，使开发者能够高效管理复杂的任务图谱，从而提升多智能体系统的开发与协作效率。</p> 
+
+<p><a href="https://nesbitt.io/2026/04/07/who-built-this.html">软件版本溯源：各编程语言如何嵌入构建信息</a><br>文章探讨了软件版本溯源的重要性，即如何确定生产环境中运行程序的具体版本。作者以 Go 语言为例，强调了其默认嵌入 Git 提交哈希与时间戳的机制具有显著优势。对比之下，Rust 和 .NET 等其他生态在处理版本信息时存在差异：Rust 通常依赖第三方构建脚本（如 vergen）手动实现，而 .NET 通过 SourceLink 等工具提供了更接近 Go 的原生集成体验。文章旨在呼吁开发者重视版本元数据管理，以提升生产环境的可观测性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/04/08/the-day-you-get-cut-out.html">当 AI 模型厂商开始“吃掉”应用层</a><br>在非增长型经济背景下，科技巨头为了追求自身增长，正从通过 API 提供服务转向吞噬下游应用。作者指出，随着模型训练成本高昂且市场趋于垄断，模型厂商为了最大化利润，将不可避免地蚕食 AI 应用层的生存空间。这一趋势意味着早期的 SaaS 模式将难以为继，模型厂商将通过垂直整合直接取代应用开发者，从而将中小型参与者从经济生态中彻底剥离。</p>
+
+<p><a href="https://ultrathink.art/blog/sqlite-in-production-lessons">SQLite 在生产环境的实战经验与挑战</a><br>本文分享了作者在真实的电子商务生产环境中使用 SQLite 的实践经验。通过 Rails 8 的支持，SQLite 实现了更简单的部署和零连接池管理，显著降低了运维复杂度。文章详细介绍了如何通过 Docker 卷挂载管理多个数据库文件，并重点阐述了 WAL（预写式日志）模式在处理高并发读写时的关键作用。作者坦诚地展示了这种方案的优势与潜在陷阱，为希望简化架构的开发者提供了宝贵的实战参考。</p>
+
+<p><a href="https://blog.cloudflare.com/post-quantum-roadmap/">Cloudflare 加速后量子加密部署，目标 2029 年实现全面安全</a><br>面对量子计算对现有加密技术的潜在威胁，Cloudflare 宣布加速其“后量子”安全路线图，将全面实现后量子加密（包括后量子认证）的目标日期提前至 2029 年。尽管 Cloudflare 已在 2022 年为所有网站启用了后量子加密以防御“先存储后解密”攻击，但近期研究显示破解椭圆曲线加密的风险加剧，促使公司必须紧急升级身份认证体系，以应对量子计算带来的紧迫安全挑战。</p>
+
+<p><a href="https://nehanarula.org/2026/04/03/bitcoin-and-quantum-computing.html">比特币与量子计算的生存博弈</a><br>本文探讨了加密相关量子计算机（CRQC）对比特币构成的生存威胁。作者指出，量子计算一旦成熟，将破解比特币现有的签名算法，必须通过软分叉及用户地址迁移进行升级。然而，目前量子计算的发展时间表仍具不确定性，且社区对于升级方案及必要性尚未达成共识。因此，比特币能否在量子威胁降临前成功完成防御升级仍是未知数。文章强调，评估这一风险的关键在于权衡量子计算机出现的可能性与比特币社区达成共识并完成技术升级的能力。</p>
+
+<p><a href="https://www.allthingsdistributed.com/2026/04/s3-files-and-the-changing-face-of-s3.html">AWS S3 Files：重塑云端数据管理体验</a><br>本文介绍了 AWS S3 Files 的诞生背景及其核心价值。作者从早期在基因组学研究中面临的数据迁移与存储困境出发，阐述了处理大规模数据集时的痛点。S3 Files 的推出旨在解决传统数据搬运中繁琐的流程与多版本不一致问题，通过简化云端数据操作逻辑，为机器学习及科学研究等高负载场景提供更高效、更直观的解决方案，标志着 S3 服务在应对复杂数据需求时的重要演进。</p>
+
+<p><a href="https://opensource.googleblog.com/2026/04/kubernetes-goes-ai-first-unpacking-the-new-ai-conformance-program.html">Kubernetes 迈向 AI 优先：推出 AI 一致性认证计划</a><br>随着 AI 工作负载从实验阶段转向大规模生产环境，Kubernetes 社区正式推出了“认证 Kubernetes AI 一致性计划”（Certified Kubernetes AI Conformance program）。该计划旨在建立行业统一标准，确保 AI 工作负载在不同 Kubernetes 环境中具备高度的可移植性、可靠性与执行效率。通过这一举措，Kubernetes 进一步巩固了其作为 AI 基础设施核心的地位，助力开发者和企业更便捷地部署并运行 AI 应用。</p>
+
+<p><a href="https://www.dgtlgrove.com/p/multi-core-by-default">默认多核编程：从特殊技巧到核心维度</a><br>本文探讨了现代软件开发中多核编程的必要性。作者指出，过去开发者往往因单核编程的复杂性而选择规避多核开发，但随着硬件核心数量的指数级增长，继续忽视并行计算已造成严重的性能浪费。文章强调，多核编程不应仅被视为一种处理特殊任务的进阶技巧，而应成为编写代码时必须考虑的基础维度，以充分发挥现代计算机硬件的计算潜能。</p>
+
+<p><a href="https://bunworkspaces.com/blog/typewriters-to-tokens">从打字机到AI：编程工具的演进史</a><br>本文简要回顾了软件工程核心工具的演变历程，从1956年引入键盘输入的Whirlwind计算机，到1978年标准化的VT100终端，再到Bash和Git的诞生与普及。作者指出，尽管AI编程工具（如Claude Code）已成为当下主流，但Bash和Git等基础技能在现代开发中依然不可或缺。文章强调，技术工具虽然在不断更新，但理解这些底层基础仍是开发者职业生涯的核心。</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/7/sqlite-wal-docker-containers/#atom-everything">Docker 容器共享卷下的 SQLite WAL 模式兼容性研究</a><br>本文探讨了在多个 Docker 容器共享同一存储卷时，使用 SQLite WAL（预写式日志）模式是否会引发共享内存冲突。研究结论表明，由于运行在同一宿主机上的容器共享底层文件系统，SQLite 的 WAL 模式在跨容器场景下能够正常协同工作，不会出现预期中的冲突问题。</p>
+
+<p><a href="https://x.com/mitchellh/status/2041566958681014418">积木式开发：软件构建的新范式</a><br>Mitchell Hashimoto 指出，现代软件开发的成功逻辑已从追求单一的高质量应用，转向提供易于集成的“积木式”组件。通过 Ghostty、Next.js 等案例可见，这种模式能显著提升软件的采用率和生态规模。随着 AI 代理的普及，开发流程正演变为“AI 自动组装优质组件”的形式。尽管这种模式产出的作品质量参差不齐，但其带来的巨大产量和生态活力，已成为当今软件开发不可逆转的趋势。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/7/glm-51/#atom-everything">深度测评：Z.ai 发布 GLM-5.1 大模型</a><br>Z.ai 推出了全新的 754B 参数开源模型 GLM-5.1，该模型在长任务处理能力上表现出色。在简单的绘图测试中，GLM-5.1 不仅能生成高质量的 SVG 鹈鹕图像，还主动为其添加了 CSS 动画。尽管初次生成的动画存在定位偏差，但模型在通过后续对话进行调试时，准确识别了 CSS 属性冲突的技术原因并给出了修复方案。这一表现展示了该模型在复杂任务规划与交互纠错方面的潜力。</p>
+
+<p><a href="https://simonwillison.net/2026/Apr/7/project-glasswing/#atom-everything">Anthropic 限制发布 Claude Mythos 模型：旨在筑牢网络安全防线</a><br>Anthropic 近期推出了“Project Glasswing”计划，决定限制新模型 Claude Mythos 的公开访问权限，仅向特定安全研究合作伙伴开放。该模型展现出极强的网络安全研究能力，能够自动发现并利用包括主流操作系统和浏览器在内的多种高危漏洞。Anthropic 认为，在 AI 能力快速进化的背景下，赋予软件行业充分的防御准备时间至关重要。通过该计划，合作方将利用 Mythos 识别并修复全球核心系统中的安全弱点，以应对日益严峻的 AI 安全威胁。</p>
+
+<p><a href="https://sheets.works/data-viz/every-gpu">三十年显卡进化史：49款经典GPU回顾</a><br>本文通过互动数据可视化方式，梳理了过去30年间49款具有里程碑意义的显卡发展历程。内容涵盖了从1996年3D加速技术诞生至今的硬件演变，通过对比不同时代的GPU性能、晶体管数量及价格，直观展示了显卡技术的飞速进步。此外，文章还结合Steam硬件调查数据，对比了高端旗舰显卡与主流消费级显卡在市场占有率上的巨大差异，为读者呈现了一部生动的图形处理器进化史。</p>
+
+<p><a href="https://thomasunise.com/glm-5-1-scores-94-6-of-claude-opus-on-coding-at-a-fraction-the-cost/">GLM-5.1发布：以极低成本实现媲美Claude Opus的编码能力</a><br>最新发布的GLM-5.1模型在编程任务表现上取得了显著突破，其编码能力已达到Claude Opus模型水平的94.6%。该模型不仅在性能上紧追行业顶尖水平，更以极高的性价比成为开发者的有力选择。通过优化算法与架构，GLM-5.1在大幅降低使用成本的同时，依然能够高效处理长序列任务，为AI辅助编程领域提供了更具竞争力和经济效益的解决方案。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

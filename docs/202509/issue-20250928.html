@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250928.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250928</span>
+</p>
+<p>每日一谚：Write self-explanatory code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/27/direct-ref-to-embedded-fields-in-struct-literals">Go结构体初始化的“反直觉”设计终于要改了？深入探讨嵌入字段直接初始化提案</a><br>在 Go 语言中，结构体嵌入 (Embedding) 是一个强大而独特的特性，它为我们提供了一种优雅的“垂直组合”方式。然而，多年来，它的使用体验中一直存在一个广为人知的“反直觉”之处，一个让无数开发者（包括 Go 核心团队成员自己 ）都曾踩过的坑。 近日，一个旨在解决此问题的、长达十年的“陈年”提案（#9859）被重新激活并进入了活跃评审阶段(active)。这预示着 Go 结构体字面值的使用方式，可能即将迎来一次意义深远的简化。在本文中，我就和大家一起对该提案做一下解读，看看新 提案究竟解决了什么问题，一旦落地后，究竟会给Go开发者带来哪些好处。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/GBww09EL7CISJpsMANEltw">【Go context解惑】04 实践：context 的最佳实践与常见“天坑”</a><br>到今天，context 对你来说，应该已经不再是一个模糊的“黑盒”，而是一个结构清晰、原理透明的得力工具。 然而，理论的精通，最终要服务于实践的正确。就像一位剑客，即使熟知宝剑的铸造工艺和力学原理，如果不能掌握正确的剑法，依然会在实战中败 下阵来。 因此，在我们的收官之作中，我们将聚焦于**实战**。我将把我多年 Go 开发中，关于 `context` 的所有经验、踩过的所有“坑”，浓缩成一套清晰、可执行的最佳实践“军规”和常见“天坑”避坑指南</p> 
+
+<p><a href="https://tonybai.com/2025/09/28/how-top-performers-stand-out-in-the-age-of-ai">Dropbox最新研究解读：AI正在拉平生产力差距，顶尖开发者如何脱颖而出？</a><br>AI 工具无疑极大地提升了工程师的生产力。一个普遍的假设是，谁能更好地利用 AI，谁就能成为新时代的顶尖人才。然而，Dropbox 最近发布的一项内部研究，却对这个看似理所当然的结论提出了一个深刻的挑战。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2025/consistent-hashing/">一致性哈希</a><br>本文介绍了一致性哈希，这是一种用于设计哈希表的算法，当表的大小发生变化时，只有一小部分key需要重新计算。为了解决缓存服务器的负载均衡问题，文章从原理、实现和改进等方面详细阐述了一致性哈希算法，并提供了代码示例。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoNewWithExpression">Go new支持传入expression</a><br></p> 
+
+<p><a href="https://antonz.org/lang-ranking">Go 在较新语言中排名第二</a><br>我查看了几项编程语言排名。如果只包括较新的语言（版本 1.0 发布于 2010 年之后），前 6 名是：➀ TypeScript，➁ Go，➂ Rust，➃ Kotlin，➄ Dart，➅ Swift。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.cloudflare.com/20-percent-internet-upgrade">Cloudflare 变得更快、更安全，由 Rust 提供支持</a><br>我们已经用新的模块化、基于 Rust 的代理替换了 Cloudflare 中最初的核心系统，取代了 NGINX。这不仅对我们所有的客户来说速度更快，而且也更安全，并且使我们能够比以往更快地推出新产品。</p>
+
+<p><a href="https://lwn.net/Articles/1037577">Typst：可能的 LaTeX 替代品</a><br>Typst 是一个用于文档排版的程序。它特别适用于包含数学、表格和浮动图形等元素的专业资料 [...]</p>
+
+<p><a href="https://blog.cloudflare.com/r2-sql-deep-dive">R2 SQL：深入了解我们的新分布式查询引擎</a><br>R2 SQL 提供了一种内置的、无服务器的方式，可以针对您的 R2 数据目录运行即席分析查询。 这篇文章深入探讨了我们如何构建这个分布式引擎，从其元数据驱动的规划器到其并行执行模型。</p>
+
+<p><a href="https://signoz.io/blog/llm-observability-opentelemetry">LLM Observability in the Wild - Why OpenTelemetry should be the Standard</a><br>LLM 可观察性在今天变得混乱，因为像 OpenInference 这样的新库不遵守 OpenTelemetry 标准，导致孤岛和用户想要将 LLM 可观察性与其 Observability 堆栈的其余部分联系起来时的次优性能。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Sep/27/video-models-are-zero-shot-learners-and-reasoners/#atom-everything">视频模型是零样本学习者和推理者</a><br>来自 Google DeepMind 的一篇引人入胜的新论文，有力地论证了他们的 Veo 3 模型——以及一般的生成视频模型——在机器学习视觉生态系统中扮演着与 LLM 在文本中相似的角色。</p>
+
+<p><a href="https://lilianweng.github.io/posts/2025-05-01-thinking">我们为什么思考</a><br>特别感谢 John Schulman 对这篇文章的大量非常有价值的反馈和直接编辑。测试时间计算（Graves 等人，2016 年，Ling 等人，2017 年，Cobbe 等人，2021 年）和链式思考（CoT）（Wei 等人，2022 年，Nye 等人，2021 年）导致了模型性能的显着提高，同时也引发了许多研究问题。 本文旨在回顾最近在如何有效地使用测试时间计算（即“思考时间”）以及它为何有帮助方面的进展。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/pion/webrtc">pion/webrtc</a><br>Pure Go implementation of the WebRTC API</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB — the cloud native, distributed SQL database designed for high availability, effortless scale, and control over data placement.</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/coredns/coredns">coredns/coredns</a><br>CoreDNS is a DNS server that chains plugins</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - Infrastructure as Code in any programming language 🚀</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+<p><a href="https://github.com/EndlessCheng/codeforces-go">EndlessCheng/codeforces-go</a><br>算法竞赛模板库 by 灵茶山艾府 💭💡🎈</p>
+
+<p><a href="https://github.com/marcopiovanello/yt-dlp-web-ui">marcopiovanello/yt-dlp-web-ui</a><br>A terrible web ui and RPC server for yt-dlp. Designed to be self-hosted.</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

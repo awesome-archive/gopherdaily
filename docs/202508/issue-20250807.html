@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250807.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250807</span>
+</p>
+<p>每日一谚：Gracefully Shut Down Your Application </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/07/fork-go-module">Go模块的“分叉之痛”：一个提案能否终结“全局替换”的噩梦？</a><br>Go 核心贡献者之一的 Josharian，在 Go 官方仓库提出了 Issue #74884: proposal: cmd/go: make it easier to fork modules。这个提案，为终结go module fork噩梦带来了一线曙光。</p> 
+
+<p><a href="https://planetscale.com/blog/generics-can-make-your-go-code-slower">泛型可能会让你的Go代码变慢</a><br>Go 泛型是Go 1.18中添加的一个期待已久的特性。本文讨论了泛型在Go中的实现以及它们可能对代码产生的一些意外影响。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-08-06-agents-need-tests">代理需要测试</a><br>代理需要测试。Dolt是唯一具有内置测试引擎的SQL数据库。Dolt是代理的数据库。本文将解释这一概念。</p> 
+
+<p><a href="https://cyata.ai/blog/cracking-the-vault-how-we-found-zero-day-flaws-in-authentication-identity-and-authorization-in-hashicorp-vault">破解保险库：我们如何发现HashiCorp Vault中的零日漏洞</a><br>秘密保险库是数字基础设施的支柱。在几周的深入调查中，我们识别了九个之前未知的零日漏洞，每个漏洞都通过负责任的披露分配了CVE。我们与HashiCorp密切合作，确保所有问题在公开发布之前都已修复。我们发现了一种逻辑失败的模式，这些失败单独和结合在一起，会创建危险的攻击路径，特别是在现实世界的Vault部署中，配置错误或权限过大是很常见的。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/tailscale-privacy-anonymity">Tailscale 不是什么：匿名服务</a><br>Tailscale 是一款安全的连接工具，它最看重您数据包的隐私。但我们从一开始就故意选择不去尝试成为匿名工具。事实上，恰恰相反！我们是一个以身份为中心 of network.</p>
+
+<p><a href="https://www.p99conf.io/2025/08/06/hello-ebpf-concurrency-testing-using-custom-linux-schedulers/">Hello eBPF: 使用自定义 Linux 调度程序进行并发测试</a><br>本文介绍了 P99 CONF 演讲者 Johannes Bechberger（SAP SE 的 OpenJDK 开发者）撰写的一篇客座文章。 Johannes 和 Jake Hillion（Meta 的软件工程师）将在 P99 CONF 2025（免费 &#43; 虚拟）上深入探讨“使用自定义 Linux 调度程序进行并发测试”。 </p>
+
+<p><a href="https://www.docker.com/blog/fedramp-compliance-with-hardened-images/">Accelerating FedRAMP Compliance with Docker Hardened Images</a><br>了解 FedRAMP 合规性的挑战以及 Docker Hardened Images 如何使满足 FedRAMP 要求变得更容易且成本更低。</p>
+
+<p><a href="https://engineering.fb.com/2025/08/06/developer-tools/diff-risk-score-drs-ai-risk-aware-software-development-meta/">Diff 风险评分：人工智能驱动的风险感知软件开发</a><br>Diff 风险评分 (DRS) 是一项由 Meta 构建的人工智能驱动技术，用于预测代码更改导致生产事故（也称为 SEV）的可能性。DRS 基于经过微调的 Llama LLM，评估代码更改和元数据，以生成风险评分并突出显示潜在的风险代码片段。如今，DRS 支持许多风险感知功能，这些功能优化了产品质量、开发人员生产力和计算能力效率。值得注意的是，DRS 帮助我们消除了重大的代码冻结，让开发人员能够在历史上无法做到的情况下发布代码，同时最大限度地减少了对客户体验和业务的影响。</p>
+
+<p><a href="https://muratbuffalo.blogspot.com/2025/08/transaction-healing-scaling-optimistic.html">事务修复：在多核处理器上扩展乐观并发控制</a><br>这篇来自SIGMOD 2016年的论文提出了一种事务修复方法，以提高在多核架构上运行的内存OLTP系统中乐观并发控制（OCC）的可扩展性。该系统不是在验证失败时丢弃整个执行，而是在高争用情况下修复仅有的不一致操作以提高吞吐量。</p>
+
+<p><a href="https://xuanwo.io/2025/05-learn-rust-by-reasoning-with-code-agents">通过代码代理学习 Rust</a><br>通过代码代理进行推理学习 Rust 是一种有效的学习方法，强调在实践中学习，通过理解和推理代码背后的逻辑来掌握 Rust 的高级特性。文章介绍了推理的概念、流程，并以实际例子说明了如何通过代码代理生成代码、查找不熟悉的点、提问和实践，从而深入理解 Rust 的设计选择。文章强调推理的重要性，认为代码代理是为思考提供材料，而不是取代学习，鼓励读者在实践中运用推理，最终形成自己的判断。</p>
+
+<p><a href="https://multigres.com/blog/postgres-ha-full-sync">Multigres | Multigres</a><br>Multigres 是一个为 Postgres 构建 Vitess 适配项目的项目。这是一个横向可扩展的 Postgres 架构，支持多租户、高可用性和全球分布式部署，同时忠于标准的 Postgres。</p>
+
+<p><a href="https://www.dmitry.ie/2024/why-building-billing-systems-is-so-painful">Why Building Billing Systems is So Painful</a><br>本文探讨了构建计费系统的复杂性。文章首先介绍了订阅、按座位收费和基于使用的计费模式，强调了每种模式带来的技术挑战。然后，文章讨论了计费对业务的重要性，强调了它在收入管理、合规性和业务决策中的作用。文章还深入探讨了团队建设、确定优先事项、建立领域模型和保持单一事实来源的重要性。最后，文章强调了计费作为一种战略资产，推动公司增长和成功。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/6/asynchronous-coding-agents/#atom-everything">Jules，我们的异步编码代理现在向所有人开放</a><br>我五月份写了关于Jules测试版的内容。 谷歌的 OpenAI Codex PR 提交托管编码工具的更新版本今天正式推出了测试阶段。我主要现在链接到这里是因为我喜欢他们在博客文章中使用的新术语：异步编码代理。 我非常喜欢它，我给它加了一个标签。</p>
+
+<p><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code：Agentic 编码的最佳实践</a><br>一篇博客文章，介绍了使用 Claude Code 跨各种代码库、语言和环境时已被证明有效的技巧和窍门。</p>
+
+<p><a href="https://composio.dev/blog/gemini-cli-vs-claude-code-the-better-coding-agent">Gemini CLi vs. Claude Code : 更好的编码代理 - Composio</a><br>在这篇博文中，我通过构建一个具有 MCP 集成的 CLI 代理来比较 Gemini CLI 与 Claude Code。 因此，这是我的观察结果。</p>
+
+<p><a href="https://cookbook.openai.com/articles/gpt-oss/run-locally-ollama">How to run gpt-oss locally with Ollama</a><br>Want to get OpenAI gpt-oss running on your own hardware? This guide will walk you through how to use Ollama to set up gpt-oss-20b or gpt-...</p>
+
+<p><a href="https://matthewstrom.com/writing/product-design-talent-crisis">产品设计人才危机</a><br>文章探讨了产品设计行业中出现的人才危机，指出高级设计师需求激增，但缺乏足够的初级设计师培养机会，导致行业发展面临停滞风险。文章分析了产生危机的原因，如公司倾向于聘用经验丰富的员工，以及缺乏对初级设计师的投资。文章还探讨了其他行业（如管理咨询和德国制造业）的成功模式，并提出了针对设计行业的解决方案，包括结构化的导师计划、助理产品设计师计划和人才梯度等。文章呼吁行业采取行动，以解决人才短缺问题，确保产品设计领域的持续发展。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/moonD4rk/HackBrowserData">moonD4rk/HackBrowserData</a><br>Extract and decrypt browser data, supporting multiple data types, runnable on various operating systems (macOS, Windows, Linux).</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 Fast and simple video download library and CLI tool written in Go</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/dstotijn/hetty">dstotijn/hetty</a><br>An HTTP toolkit for security research.</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/openai/openai-go">openai/openai-go</a><br>The official Go library for the OpenAI API</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/uber-go/fx">uber-go/fx</a><br>A dependency injection based application framework for Go.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

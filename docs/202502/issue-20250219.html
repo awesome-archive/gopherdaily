@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250219.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250219</span>
+</p>
+<p>每日一谚：Sort your fields in your struct from largest to smallest. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://glasskube.dev/blog/from-java-to-go">我们从不后悔Java切换到Go</a><br>我总是告诉人们内存很便宜，魔法也OK，效率无关紧要，但是，我错了。这篇文章讲述了作者团队从 Java/Kotlin 转向 Go 的经历，以及这一转变带来的诸多好处，例如更快的编译和启动时间、更低的资源消耗以及更轻量级的生态系统。文章还比较了 Java 和 Go 在框架、库、依赖注入、调试和 IDE 支持、CI/CD 等方面的差异，并最终总结了 Go 在云原生应用和 Kubernetes 工具方面更胜一筹。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2025/benchmarking-utility-for-python/">Python性能基准测试工具</a><br>本文介绍了如何在Python中进行性能基准测试。作者对比了Go语言标准库中强大的基准测试功能，并指出了Python中`timeit`模块的不足。文章重点介绍了一个名为`autobench`的实用函数，该函数结合了`timeit`模块的`autorange`和`repeat`功能，提供了类似于Go语言命令行基准测试工具的体验，方便开发者进行更有效的Python代码性能测试。</p> 
+
+<p><a href="https://themsaid.com/map-internals-go-1-24">Go 1.24 中 Map 的内部机制</a><br>本文深入探讨了 Go 1.24 中 Map 的全新实现，详细解释了其内部变化、优化以及对 Go 应用性能的提升。新实现借鉴了 Google 高性能哈希 Map 设计——Swiss Tables。Map 由多个包含 8 个键值对的组构成，每个组包含一个 64 位控制字用于快速查找。这些组分布在多个表中，每个表的大小为 2 的幂。文章详细解释了键哈希、表选择、组选择、控制字以及 Map 的增长机制，包括线性探测和二次探测的区别，以及如何处理键的查找、修改和删除。</p> 
+
+<p><a href="https://dev.to/mazyaryousefinia/how-to-create-a-web-search-tool-using-openai-api-in-go-1db4">如何使用 Go 和 OpenAI API 创建 Web 搜索工具</a><br>本教程将指导你使用 Go 语言和 OpenAI API 创建一个简单的 Web 搜索工具。该应用程序将利用 OpenAI 的功能来处理搜索查询，并集成 Google 搜索以检索相关结果。在本教程结束时，你将拥有一个功能完善的 Web 搜索工具，可以增强你的项目。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/02/18/platform-adoption-strategies/">平台采用策略：投资平台时的关键角色</a><br>开始云原生之旅不仅仅是技术升级；这是一项根本性的变革，需要更广泛的方法，包括人员、流程和策略以及技术。这段旅程需要大量的投资，不仅是财务上的，还在于培养组织内的关键角色。</p>
+
+<p><a href="https://engineering.fb.com/2025/02/18/security/protecting-user-data-through-source-code-analysis/">通过大规模源代码分析保护用户数据</a><br>Meta 的反抓取团队专注于阻止未经授权的抓取，这是我们持续打击数据滥用工作的一部分。为了保护 Meta 变化的代码库免受抓取攻击，我们在工作流程中引入了静态分析工具。这些工具使我们能够大规模地检测潜在的抓取媒介，涵盖 Facebook、Instagram 甚至部分 Reality Labs 的代码库。文章详细介绍了什么是抓取、主动检测方法、静态分析规则的开发以及静态分析在打击未经授权抓取方面的局限性，并通过代码示例说明了静态分析的应用。</p>
+
+<p><a href="https://jack-vanlightly.com/blog/2025/2/10/how-to-disaggregate-a-log-replication-protocol">如何分解日志复制协议</a><br>这篇文章继续探讨日志复制协议，探讨在状态机复制 (SMR) 或日志本身就是产品（例如 Kafka）的环境中，如何普遍分解日志复制协议（有很多方法）。在下一篇文章中，我将根据本文中描述的分解类型，对日志复制系统进行调查。</p>
+
+<p><a href="https://cutlefish.substack.com/p/tbm-341-10-tips-for-turning-around">TBM 341：扭转平台团队局势的十个技巧</a><br>平台团队的工作很艰难。这个想法听起来很棒，但日常工作却很辛苦。最近有人就这种常见情况寻求建议。如果您是平台团队成员，您可能会发现这很有帮助。否则，如果您认识处于这种情况的团队，请考虑转发此信息。本文提供了解决平台团队困境的十个技巧，包括停止空谈、停止损害自身利益、积极利用赋能约束、鼓励贡献、促进沟通、保留证据、保持透明、精简路线图以及保持团队积极性等。</p>
+
+<p><a href="https://www.swequiz.com/blog/what-exactly-is-scalability">什么是可扩展性？</a><br>本文探讨了软件系统可扩展性的概念，解释了系统如何增长（更多用户、功能、数据、复杂性和地理位置），并介绍了实现可扩展性的十种常见策略，包括垂直扩展、水平扩展、负载均衡、缓存、内容分发网络 (CDN)、分片/分区、异步通信、微服务架构、自动扩展和多区域部署，并附带相应的示例说明。</p>
+
+<p><a href="https://bryce.co/undebuggable">调试一个不可调试的应用程序</a><br>最近我遇到一个应用程序，它具有令人惊讶数量的反调试保护措施。让我们找出如何绕过它们。该应用程序阻止调试器的附加，如果尝试注入任何代码则会提前退出，甚至在越狱设备上运行时会使整个手机崩溃。文章逐一介绍了这些保护措施，并解释了如何规避它们，包括绕过PT_DENY_ATTACH，解决手机崩溃问题以及代码注入问题。</p>
+
+<p><a href="https://pid1.dev/posts/siren-call-of-sqlite-on-the-server">服务器端 SQLite 的警报 - pid1</a><br>Terrateam 团队非常喜欢 Fly.io 服务。该服务托管在那里，并且为我们服务良好。只需部署 TOML 文件，获取您的基础设施，然后在一天的剩余时间里做其他事情。Fly 的一个有趣之处在于，他们大力投资服务器端 SQLite。他们写了一些关于他们如何启用服务器端 SQLite 的博文</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-02-18-learning-about-rag/">学习 RAG</a><br>最近，Dolt增加了对向量索引的支持，这是一种常用在RAG（检索增强生成）应用程序中的索引类型。本文将分享学习RAG的经验，包括使用的一些资源，例如Tim关于在Dolt中创建和使用向量索引的博文、一个使用Golang和PGVector的RAG示例以及Ollama（一个用于在本地机器上运行LLM的引擎）。作者还介绍了LangChain框架，并分享了使用LangChain构建RAG应用程序的经验，以及在使用Dolt作为VectorStore时遇到的问题和解决方法。</p>
+
+<p><a href="https://threadreaderapp.com/thread/1891720635363254772.html">Andrej Karpathy 对 Grok 3 和 DeepSearch 的体验</a><br>Andrej Karpathy 分享了他对 xAI 最新大型语言模型 Grok 3 和 DeepSearch 的早期体验。他进行了一系列测试，包括解答谜题、生成代码和进行事实查找。Grok 3 的表现与 OpenAI 最强大的模型相当，DeepSearch 的表现则与 Perplexity 的 Deep Research 相当。Karpathy 总结道，考虑到 xAI 团队仅在一年前才开始研发，取得如此成就令人印象深刻。</p>
+
+<p><a href="https://www.wheresyoured.at/longcon">生成式 AI 的骗局</a><br>ChatGPT 发布两年多以来，大型语言模型 (LLM) 已从新颖的概念发展成为 21 世纪最令人厌恶的骗局之一——OpenAI 首席执行官 Sam Altman 吹起的虚假泡沫，旨在向那些除了剥削或取代劳动力外对劳动力毫无概念的人们兜售产品。作者认为，尽管 LLM 有其用途，但一些人使用某些软件并从中获得一定程度的乐趣，这并不能证明生成式 AI 能够成为一个规模达数万亿美元的可持续或真正的行业。文章反驳了关于 ChatGPT 用户数量众多、处于早期发展阶段以及堪比 iPhone 出现时刻等说法，并指出 OpenAI 和 Anthropic 等公司巨额亏损，其产品缺乏实际应用价值，媒体报道也夸大了该行业的潜力。作者认为，生成式 AI 行业是一个泡沫，其发展是基于炒作、谎言和对自动化劳动的幻想，最终可能对环境、经济和社会造成巨大损害。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/gorilla/mux">gorilla/mux</a><br>Package gorilla/mux is a powerful HTTP router and URL matcher for building Go web servers with 🦍</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/flyteorg/flyte">flyteorg/flyte</a><br>Scalable and flexible workflow orchestration platform that seamlessly unifies data, ML and analytics stacks.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250930.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250930</span>
+</p>
+<p>每日一谚： Prefer &#39;chan struct{}&#39; over &#39;chan bool&#39; for signaling between goroutines. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.dolthub.com/blog/2025-09-26-greentea-gc-with-dolt">我们尝试了Go实验性绿茶GC，但对性能提升没有帮助</a><br>Go 1.25 includes support for an experimental new garbage collector called Green Tea. We tried it out with Dolt&#39;s main performance benchmarks and summarize what difference it made (not much).</p> 
+
+<p><a href="https://tonybai.com/2025/09/30/good-taste-in-software-engineering">除了技术能力，什么决定了软件工程师的上限？答案是“品味”</a><br>github工程师Sean Goedecke在他最新的博文中，提出了一个新的观点：决定工程师成长上限的是“技术品味”（Technical Taste）。他认为，“品味”与“能力”是两个正交的维度。你可以技术能力很强，但品味很差；也可以技术尚在发展，但已具备良好的品味。就像一个美食家，即使自己不会烹饪，也能分辨出食物的好坏。同样，一个有品味的工程师，在能亲手构建一个复杂系统之前， 就已经知道自己喜欢什么样的软件。在文章中，他还特意以Go的一些语法特性举例，来诠释什么是工程品味。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/946BjTzZn6bVZgMMOecKFA">【Go开发者的数据库设计之道】01 地基篇：从业务需求到概念模型与ER图</a><br>在这一讲，我们将彻底告别“野路子”。我将带你扮演一次“数据架构师”的角色，以我们专栏的实战项目——“在线论坛系统”——为例，手把手带你走完从混沌到有序的全过程。学完这一讲，你将获得一套可以立即应用到自己项目中的、从需求到数据库概念模型的完整工作流。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/9pExcfCjKsfvtQ_v8e5VJQ">Go 并发设计的灵魂：CSP 模型与一等公民 Channel</a><br>“不要通过共享内存来通信，而要通过通信来共享内存。” 这句 Go 社区流传最广的箴言，点明了 Go 并发设计的核心灵魂。它告别了传统并发编程中复杂的锁机制和内存共享问题，转向了一种更优雅、更具结构性的模型——通信顺序进程 (Communicating Sequential Processes, CSP)。</p> 
+
+<p><a href="https://samuelberthe.substack.com/p/3-critical-ttl-patterns-for-in-memory">内存缓存的 3 个关键 TTL 模式</a><br>大多数缓存库的 TTL 过期处理方式都是错误的。它们侧重于每个键的复杂性，而忽略了实际防止生产中断的模式。</p> 
+
+<p><a href="https://www.gingerbill.org/article/2025/07/31/if-odin-had-macros">如果Odin有宏</a><br>作者探讨了 Odin 语言是否应该添加宏（macros）以及其背后的设计哲学。 文章指出，Odin 通常有不同的方法来解决那些人们认为需要宏才能解决的问题，并且这些方法通常更好，更适合特定问题的需求。文章讨论了对类似宏的结构（如基于推送的迭代器）的需求，以及为什么 Odin 可能不会实现这样的功能，主要原因在于设计上的“滑坡效应”，担心引入宏会导致语言设计失控。  作者认为，Odin 的设计目标是保持语言的简洁性和特定方向，因此拒绝了添加宏的可能性。</p> 
+
+<p><a href="https://blog.stackademic.com/designing-effective-data-transfer-objects-dtos-in-go-applications-85c463ab097a">在 Go 应用程序中设计有效的数据传输对象 (DTO)</a><br>如果您已经构建 Go 应用程序一段时间了，您可能已经注意到在层之间移动数据（例如从您的数据库模型到您的 API 响应）可能会变得混乱。您并不总是希望直接公开您的整个数据库模型——有时您需要修剪字段、重命名它们或为客户端格式化它们。这就是数据传输对象 (DTO) 的用武之地。</p> 
+
+<p><a href="https://antonz.org/write-code">写下该死的代码</a><br>你是一位软件工程师。不要成为提示词优化师。</p> 
+
+<p><a href="https://olake.io/blog/mysql-apache-iceberg-replication">从 MySQL 到 Apache Iceberg 的数据摄取：优化现代分析的数据复制</a><br>MySQL 为无数的生产应用程序提供了支持，作为可靠的运营数据库。但当涉及到大规模分析时，直接在 MySQL 上运行繁重的查询很快就会变得昂贵、缓慢，并会干扰事务工作负载。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.p99conf.io/2025/09/29/low-latency-data-2025/">P99 CONF 2025 数据库内部 Talks 的内幕</a><br>抢先预览 P99 CONF 2025 上您可以期待的数据库内部讨论…</p>
+
+<p><a href="https://www.docker.com/blog/docker-hardened-images-helm-charts-beta/">简化 Docker Hardened Images 中的 Helm Charts 部署</a><br>使用已签名的、SLSA 3 构建的 Helm 图表将 Docker Hardened Images 部署到 Kubernetes。企业级安全性以及自动 CVE 修复 — 现已推出，仅限邀请测试。</p>
+
+<p><a href="https://netflixtechblog.com/100x-faster-how-we-supercharged-netflix-maestros-workflow-engine-028e9637f041">100X Faster: How We Supercharged Netflix Maestro’s Workflow Engine</a><br></p>
+
+<p><a href="https://automattic.com/2024/03/14/systems-report-linux-performance-regression">系统报告：诊断 Linux 性能回归</a><br>我们的系统工程师会不时撰写案例研究，详细介绍基础设施前线的显著时刻。本月，来自在 WordPress VIP 上工作的系统管理员 Ale Crismani 和 Joshua Coughlan。在 Automattic，我们使用 Kubernetes 来编排运行 WordPress VIP 应用程序的基础设施。我们有防火墙规则，以确保应用程序无法连接到专用于其他应用程序的资源，并且我们实时监控这些防火墙规则。  在对服务器进行例行维护期间，我们注意到我们的防火墙监控已开始失败。我们随后的调查发现了 Linux 内核 ipset 模块中的一个回归，导致某些操作的运行速度变慢了 1,000 倍。请继续阅读，了解我们如何从失败走向修复。</p>
+
+<p><a href="https://ethanseal.com/articles/ors-are-expensive">SQL 启发式方法：OR 操作符很昂贵</a><br>查询规划很困难。有时。开发者经常会遇到需要使用 OR 子句的情况，但这样会很慢。例如，在包含 1,000,000 个应用程序和 1000 个用户的数据库中，使用 OR 子句的查询可能需要超过 100 毫秒。如果使用 AND 子句重写它，速度会快 100 多倍。这是令人惊讶的，因为我们对过滤的列有索引。解释为什么 OR 操作符很昂贵，并讨论了如何通过更改架构设计来优化查询。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.fb.com/2025/09/29/virtual-reality/assetgen-generating-3d-worlds-with-ai/">AssetGen: 使用 AI 生成 3D 世界</a><br>想象一下，能够像生成图像一样，使用 AI 通过提示词创建 3D 虚拟世界。Meta Connect 今年最大的主题之一是人工智能和虚拟现实的交集。在主题演讲中，马克·扎克伯格分享了他对未来的愿景，即任何人都可以使用 AI 驱动的工具（如即将推出的 Meta Horizon Studio 中提供的工具）创建虚拟世界。但 AI 已经让创建 3D 资产变得前所未有的简单。在 Meta 技术播客的这一集中，Pascal Hartig 与来自 Meta XR 技术团队的 Mahima 和 Rakesh 一起讨论了 AssetGen，这是一个新的 3D 资产基础模型。</p>
+
+<p><a href="https://simonwillison.net/2025/Sep/29/claude-sonnet-4-5/#atom-everything">Claude Sonnet 4.5 可能是“世界上最好的编码模型”（至少目前是）</a><br>Anthropic 今天发布了 Claude Sonnet 4.5，并提出了一系列非常大胆的主张：Claude Sonnet 4.5 是世界上最好的编码模型。它是构建复杂代理的最强模型。它是使用计算机的最佳模型。并且它在推理和数学方面表现出显着的进步。Anthropic 给了我一个“新模型”的预览版，经过测试，它比 GPT-5-Codex 感觉更好，后者是我自几周前推出以来一直使用的首选编码模型。 Gemini 3 预计很快就会推出，因此 Sonnet 4.5 还能保持“最佳编码模型”皇冠多久，谁知道呢。</p>
+
+<p><a href="https://moneo.com.tr/blog/technology-without-humanity-means-nothing">技术脱离人性毫无意义</a><br>在 Moneo，我们认为技术不能与人性分开。 代码从不中立。 无论是出自人手还是 AI，每一行都承载着塑造它的人的价值观、选择和意图。</p>
+
+<p><a href="https://lucumr.pocoo.org/2025/9/29/90-percent">90%</a><br>AI正在编写我负责的90%的代码</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Done-0/fuck-u-code">Done-0/fuck-u-code</a><br>Legacy-Mess Detector – assess the “legacy-mess level” of your code and output a beautiful report | 屎山代码检测器，评估代码的“屎山等级”并输出美观的报告</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>The glamourous AI coding agent for your favourite terminal 💘</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/gorilla/mux">gorilla/mux</a><br>Package gorilla/mux is a powerful HTTP router and URL matcher for building Go web servers with 🦍</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/bnb-chain/bsc">bnb-chain/bsc</a><br>A BNB Smart Chain client based on the go-ethereum fork</p>
+
+<p><a href="https://github.com/NexaAI/nexa-sdk">NexaAI/nexa-sdk</a><br>Run the latest LLMs and VLMs across GPU, NPU, and CPU with bindings for Python, Android Java, and iOS Swift, getting up and running quickly with OpenAI gpt-oss, Gemma 3, Qwen3, and more.</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/francoismichel/ssh3">francoismichel/ssh3</a><br>SSH3: faster and rich secure shell using HTTP/3, checkout our article here: https://arxiv.org/abs/2312.08396 and our Internet-Draft: https://datatracker.ietf.org/doc/draft-michel-ssh3/</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/joho/godotenv">joho/godotenv</a><br>A Go port of Ruby&#39;s dotenv library (Loads environment variables from .env files)</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kind">kubernetes-sigs/kind</a><br>Kubernetes IN Docker - local clusters for testing Kubernetes</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/dbos-inc/dbos-transact-golang">dbos-inc/dbos-transact-golang</a><br>Durable Workflow Orchestration with Golang and Postgres</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

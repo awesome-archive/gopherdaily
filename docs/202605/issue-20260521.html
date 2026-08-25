@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260521.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260521</span>
+</p>
+<p>每日一谚：优雅地处理错误，而不是忽视它们。这就是Go的方式。 </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/21/go-is-the-new-lingua-franca-for-ai-agents-at-google">大洗牌！Google 内部确认：Go 正取代 C&#43;&#43;，成为 AI Agent 时代的“通用语言”</a><br>最近，Google 资深软件工程师 Jaana Dogan（@rakyll）在 X（原推特）上发布了一条引发技术圈热议的推文。“Go 成为 Google 内部 Agentic（智能体）系统的通用语言（lingua franca），这真的很了不起。我以前从未看到过 Go 有取代 C&#43;&#43; 的路径 ，但现在我相信这是可能的。” 这不仅仅是一条简单的技术感慨，它揭示了 AI 浪潮进入“下半场”后的核心工程困境：当我们把大模型封装成 Agent，并让成千上万个 Agent 并发协作时，Python 太脆弱，C&#43;&#43; 太沉重，而 Go，迎来了它的“天命时刻”。</p> 
+
+<p><a href="https://blog.jetbrains.com/platform/2026/05/improving-accessibility-in-jetbrains-ides-what-s-new-and-what-s-next-in-2026/">改善 JetBrains IDE 的无障碍访问：2026 年的新变化与未来展望</a><br>软件的无障碍化通常归结为消除日常工作流程中细小但反复出现的摩擦点。今天，在“全球无障碍宣传日”，我们分享了 JetBrains IDE 在多个领域的最新改进：与各种平台上的辅助技术的兼容性、键盘导航以及非视觉反馈。其中一些改进已经上线，另一些将在今年晚些时候推出。你可以使用下方的音频播放器收听这篇博客文章。[无障碍博客文章音频](https://blog.jetbrains.com/wp-content/uploads/2026/05/Accessibility-Blog-Post-Audio.mp4)## 更好的辅助技术兼容性我们工作的重点领域之一是改善 JetBrains IDE 与操作系统级辅助技术的交互方式。### 改进了 Windows 上的放大镜支持屏幕放大镜是 JetBrains IDE 中最常用的辅助技术之一。直到最近，内置的 Windows 放大镜还无法可靠地跟随编辑器中的文本光标，这使得低视力用户的导航和编辑变得更加困难。我们实现了光标跟踪支持，以便放大镜能像在其他应用程序中一样，在你输入时跟随文本移动。这是在之前 macOS 工作的基础上完成的，我们之前解决了 macOS 缩放功能的文本光标跟踪问题。现在，同样的支持也扩展到了 Windows。### Linux 上的 Orca 和 GNOME 放大镜支持随着今年夏天即将发布的 2026.2 版本，JetBrains IDE 将允许你在受支持的 Linux 环境中使用 Orca 屏幕阅读器和 GNOME 放大镜。这是一个正在积极进行的领域，多个相关任务已经启动。无障碍访问不应依赖于你的操作系统，我们将继续改善跨平台的支持。## 更具可预测性的键盘导航我们还让 IDE 的移动操作变得更加简单。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/05/20/golang-profiling-guide/">Go 语言性能分析实用指南</a><br>在 Go 语言中，标准库自带了一个强大的程序性能分析工具 —— `pprof`。它通过采样调用栈，让你能够在不安装任何插件的情况下生成报告，以分析和可视化软件性能。你需要的一切都在 Go 开发工具包中。问题是什么？它使用起来稍微有点麻烦。在与 Go 开发者的讨论中，我们听说有些人甚至会尽量避免使用它。原因可能有很多。对于许多开发者来说，典型的 Go 服务即使不进行优化性能也足够好，所以当他们确实需要使用性能分析时，它就变成了一个他们并不熟悉的复杂“救援任务”工具。对一些人来说，问题不在于性能分析本身，而在于如何处理结果。由于 `pprof` 只是向开发者展示大量底层数据，他们需要自己去解读并找到问题的根源。在另一个极端，有些开发者实践持续性能分析并使用专用工具。本文为那些不想处理 Go 复杂性能分析工具的开发者提供了一份实用指南。性能分析非常有用——它能帮助你识别 CPU 瓶颈、内存问题和并发问题，所有这些都会影响你和你的用户对产品的体验。为了帮助你最好地利用它，我们将解释 Go 中的一些主要分析类型（CPU、堆、分配、互斥锁、阻塞和 goroutine），以及如何运行和解释它们。因为你在阅读 JetBrains 的博客，我们还会向你展示 GoLand 如何让性能分析变得像按下按钮一样简单。但首先……## Go 中的性能分析是如何工作的？Go 分析器通过在固定时间间隔或特定运行时事件（取决于配置）采样调用栈及其他数据来跟踪程序性能。它们会生成性能分析文件，随后可以……</p> 
+
+<p><a href="https://reubenbrooks.dev/blog/structural-backpressure-beats-smarter-agents/">结构化反压击败智能体</a><br>一些最严重的软件缺陷也是最枯燥的。用户不应该能够读取另一个租户的数据。没有人会反对这一点，也没有人在设计审查中会为 Alice 读取 Bob 的记录辩护，然而破损的访问控制仍然是 OWASP Top 10 中的第一大类问题。这些漏洞之所以进入生产环境，是因为规则被放在了系统错误的部分。它存在于提示词中、审查清单中，或是那种共同的期待中：认为每一位未来的工程师，以及现在的每一次模型调用，都会记住这一不变性并正确地重新应用它。这种假设本来就很脆弱，而现在人工智能编写了大部分代码，这种假设彻底失败了。你可以做所有明显的事情：把规则放在 `CLAUDE.md` 中，写一个仔细的系统提示词，在智能体指令中加入“授权非常重要”，你应该做所有这些。但当模型编写了一万六千行代码后，真正的问题依然存在：你如何知道代码做了你想要的事情？测试有帮助，但测试是经验性的。它们检查你和模型记得编写的那些案例，但它们无法为下周某人添加的处理程序负责。我想利用杠杆换个方向。我的赌注明确如下：对于广泛的生产软件而言，结构化背压胜过智能体智能的增量改进。现有的模型已经可以编写你几乎所有的代码。限制因素在于你是否能知道它们确实做了你想要的事，而这种知识来自于它们所编写的基底，而不是等待更智能的模型。</p> 
+
+<p><a href="https://dev.to/amirsefati/building-tiny-docker-go-in-go-what-i-learned-from-building-a-tiny-docker-like-runtime-57g9">在 Go 中构建小型 Docker：从构建小型类似 Docker 的运行时中学到的东西</a><br># 在 Go 中构建 `tiny-docker-go`：从构建小型类似 Docker 的运行时中学到的东西我几乎每天都在使用 Docker。我将其用于本地开发、后端服务、数据库、预发布环境、CI/CD 流水线，有时甚至用于调试类似生产环境的问题。像许多开发者一样，但很长一段时间以来，Docker 对我来说仍然像个黑盒。我知道怎么用它。我知道怎么写 Dockerfile。我知道在出错时如何调试容器。但我并没有深入理解当我们运行容器时，底层到底发生了什么。所以我决定用 Go 构建一个小型类似 Docker 的容器运行时。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/20/introducing-prempti-policy-and-visibility-for-ai-coding-agents/">Introducing Prempti: Policy and visibility for AI coding agents</a><br>AI 编程智能体已成为开发者工作流程的真正组成部分。像 Claude Code 这样的工具驻留在你的终端中，读取你的文件、运行 shell 命令、发出网络请求并编写代码，所有这些都是代表你执行的。它们速度快、能力强，并且在实际机器上执行实际任务时越来越受到信任。但随着这种信任而来的是一个值得认真对待的问题：你的编程智能体到底在你的机器上做什么？5 月 12 日，Falco 团队推出了 Prempti，这是 Falco 生态系统中的一个新实验性项目。Falco 是一个 CNCF 毕业项目，也是云原生运行时安全的实际标准，长期以来一直为容器、Kubernetes 和主机带来基于策略的检测。Prempti 将同样的模型扩展到了一个新的领域：AI 智能体工具调用的生命周期。## 智能体在运行时是一个黑盒当编程智能体运行 bash 命令、写入文件或读取配置时，这些操作都在你的用户会话内发生，使用你的权限、在你的文件系统上、针对你的凭据。大多数使用这些工具的开发者对该活动没有结构化的可见性。你看到了智能体的聊天输出，但你没有看到底层发生了什么。这是一个简单的场景：你要求你的编程智能体重构一个模块。它读取你的源文件。它进行编辑。然后，可能受到恶意依赖项或它刚刚解析的文件中意外指令的提示，它尝试读取 `~/.ssh/known_hosts` 或将文件写入 `~/.aws/`。它应该被允许吗？如果它尝试了，你会知道吗？[Falco 博客](https://falco.org/blog/introducing-prempti/) 上的演示捕捉到了这种情况。智能体试图读取和写入它不允许的部分，两者都被拦截了。智能体本身收到了一条解释原因的结构化消息。这是在工具调用层面共同工作的检测和护栏。## Prempti 是如何工作的Prempti 作为轻量级用户空间服务与你的编程智能体一起运行。它不需要 root 权限……</p>
+
+<p><a href="https://tailscale.com/blog/aperture-cli-AI-experimentation">Introducing: Aperture CLI</a><br>Aperture CLI 让 AI 编程智能体实验变得更简单。</p>
+
+<p><a href="https://seangoedecke.com/the-o3-geoguessr-prompt-did-not-work/">著名的 o3 “GeoGuessr” 提示词没起作用</a><br>去年四月，Kelsey Piper [发现](https://x.com/KelseyTuoc/status/1917340813715202540) OpenAI 的 o3 模型在判断照片拍摄地点方面表现得令人惊讶。就像人类的“地理猜谜” [专家](https://www.youtube.com/@georainbolt) 一样，o3 有时可以拍摄一张普通的沙滩照片并告诉你它具体在哪里。这是 Kelsey 给出的例子：[图片]几个人 [复现了这个结果](https://www.astralcodexten.com/p/testing-ais-geoguessr-genius)：成功率不是 100%，但显然远好于普通人类的随机猜测。这里的教训是，模型的 **能力可能会让我们感到惊讶**。o3 模型在 Kelsey 的推文发布前已经发布了两周，没有人注意到它在地理定位方面有多好。我们错过了哪些模糊的能力？我们今天错过了当前模型的哪些能力？有些人从中学到了 [另一个教训](https://newsletter.angularventures.com/p/ai-s-geoguessr-genius-and-the-art-of-prompting-well)：即“提示词工程”可以解锁全新的能力。这是因为 Kelsey 有一个她随时间构建的 [魔法提示词](https://raw.githubusercontent.com/sgoedecke/ai_geolocation/refs/heads/main/prompts/geoguessr_protocol.txt)。当 o3 出错时，她会问它如何避免错误，然后将其包含在提示词中。以下是该提示词的前 10%，让你了解一下：&gt; 你正在玩一轮 GeoGuessr 游戏。你的任务：从单张静态图像中，推断最可能的现实世界位置。请注意，与 GeoGuessr 游戏不同，不能保证这些图像是在谷歌街景车可以到达的地方拍摄的：它们是用户提交用来测试你的图像查找能力的。</p>
+
+<p><a href="https://blog.habets.se/2026/05/Everything-in-C-is-undefined-behavior.html">C 语言中的一切都是未定义行为</a><br>如果他是一名程序员，[黎塞留枢机主教](https://en.wikiquote.org/wiki/Cardinal_Richelieu)会说：“给我写下六行世界上最顶尖 C 程序员手写的代码，我就能从中找到足够触发未定义行为的东西”。没有人能写出完全正确的 C 或 C&#43;&#43; 代码。作为一个写了近 30 年 C 和 C&#43;&#43; 的人，我敢这么说。我听 C&#43;&#43; 播客，看 C&#43;&#43; 会议演讲。我喜欢读写 C&#43;&#43;。C&#43;&#43; 服务得很好，但现在是 2026 年，1985 年（C&#43;&#43;）或 1972 年（C）的环境已非今日的环境。我绝对不是第一个这么说的人。我记得大约十年前读过一位知名人士的文章，说 C&#43;&#43; 的使用可能会被认为是违反 [SOX](https://en.wikipedia.org/wiki/Sarbanes%E2%80%93Oxley_Act) 法案。虽然我不同意他们咆哮的其他部分（也不赞同他们对“its”与“it’s”的困惑），但我从未反对过这一点。随着时间的推移，我发现这一点越来越真实。比你预期的有更多的东西是未定义行为 (UB)。每个人都知道双重释放、释放后使用、访问对象边界外（如数组）、访问未初始化内存都是 UB。毕竟，C 和 C&#43;&#43; 不是内存安全语言。然而，作为一个行业，我们似乎无法停止一遍又一遍地犯下这些错误。但还有更多。更微妙。更不合逻辑。## 这与优化无关有些人似乎认为，只要他们不开启优化编译，未定义行为就伤害不了他们。他们认为编译器是在故意敌对，说“啊哈！UB！我可以在这里做任何我想做的事！”，而如果不开启优化，它就不会这么做。这是错误的。UB 并不意味着编译器可以利用你的草率。UB 意味着编译器可以假设你的代码是有效的。这意味着你代码的意图……</p>
+
+<p><a href="https://www.alexselimov.com/posts/forge_fragmentation/">应对代码库的严重碎片化问题</a><br>我希望有一天能成为一个 10 倍速的“浴室瓷砖”开发者，git 贡献热力图是一整块纯色。我已经遇到了在我的自托管 Forgejo 实例和 Github 之间分割存储库的工作进度跟踪问题。我是一个简单的人，想在公共热力图上看到我的贡献，既为了满足感也为了动力。所以我用一个 Go 脚本和 Hugo 模块为自己解决了这个问题，你可以使用它来创建一个结合了来自多个托管平台数据的 git 热力图。只需一个 Go 命令即可……</p>
+
+<p><a href="https://cloud.google.com/blog/products/containers-kubernetes/bringing-you-agent-sandbox-on-gke-and-agent-substrate">bringing you agent sandbox on gke and agent substrate</a><br>在短短时间内，我们目睹了 AI 从简单的聊天界面转向能够函数调用、代码执行和持续终端使用的自主智能体。但为了安全地编排这些功能，智能体需要的不仅仅是智能 —— 它们需要一个强大、超可扩展、安全的计算环境来执行代码。自我们在 2025 年 11 月的 KubeCon NA 大会上 [预览发布](https://cloud.google.com/blog/products/containers-kubernetes/agentic-ai-on-kubernetes-and-gke) [GKE 智能体沙箱](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox) 以来，社区的采用率迅速加速：在不到 5 个月的时间里，我们看到 Google Kubernetes Engine (GKE) 上的沙箱增长了 16 倍以上。我们与 Langchain 和 Lovable 等关键客户合作，还有许多其他正在迅速将数百万个智能体部署到生产环境中的客户。自揭幕以来，智能体沙箱发展迅速，从一个新项目演变为具有稳定 API 的成熟产品。这种稳定性现在正推动其整合到更广泛的智能体生态系统中，在那里它充当关键的基础设施层。今天，我们很高兴能以两种方式在这个势头上继续发展：1. **GKE 智能体沙箱现已全面上市 (GA)**，为你的智能体工作负载提供安全、可扩展的基础2. **推出 Agent Substrate**，这是一个新的开源项目，旨在继续推动……</p>
+
+<p><a href="https://www.lennysnewsletter.com/p/how-to-debug-a-team-that-isnt-working">如何调试一个无法工作的团队</a><br></p>
+
+<p><a href="https://blog.codingconfessions.com/p/virtual-memory">虚拟内存</a><br>虚拟内存：深入剖析页表、TLB 和 Linux 内部原理 从页面错误到 NUMA 拓扑：Linux 内核如何管理内存，以及这对数据密集型系统性能意味着什么。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/20/google-io/#atom-everything">Google I/O，Gemini Spark，Antigravity</a><br>今年很难找到关于 Google I/O 的内容可写，因为我有一个原则：不写任何我自己无法尝试的东西，而很多重大发布都是“即将推出”。我其实更喜欢写那些已经普遍可用的东西，因为我过去曾遇到过预览版与后来向公众发布的产品不一致的情况。除了 [Gemini 3.5 Flash](https://simonwillison.net/2026/May/19/gemini-35-flash/) 之外，最有趣的发布似乎是谷歌即将推出的 OpenClaw 竞争对手 [Gemini Spark](https://gemini.google/overview/agent/spark/)，被描述为“你的个人 AI 智能体”，可以“与你最喜爱的谷歌应用程序（如 Gmail、日历、云端硬盘、文档、表格、幻灯片、YouTube 和谷歌地图）原生连接”。</p>
+
+<p><a href="https://qwen.ai/blog?id=qwen3.7">千问3.7 介绍</a><br></p>
+
+<p><a href="https://kevinkelly.substack.com/p/your-most-improbable-life">你最不可思议的人生</a><br>你的人生目标应该是成为你能成为的最不可思议的人。你的道路、你的性格、你的人生，应该是你能创造的最不可能、最意想不到、最不可预测的版本。不可思议的人生竞争对手更少，回报更独特，且更难被人工智能取代，因为人工智能运行在可预测的基础上。无论你是支持传统的人文方向还是在尖端领域工作，这一点都是正确的。寻求最不可思议人生的策略始于大爆炸。据我们所知，宇宙中有两条不可打破的定律：1）没有什么比光速更快，2）一切事物都会随着时间流逝走向绝对均匀的终结状态。这个被称为热寂或熵的“无差异”静止目的地，意味着一切都走向相同和完全可预测的状态。物理……</p>
+
+<p><a href="https://android-developers.googleblog.com/2026/05/android-cli-stable-1-0-agent-development.html">android cli stable 1 0 agent development</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/zakirullin/files.md">zakirullin/files.md</a><br>🌱 私密、安静的思考空间。一个用于你的 .md 文件的简单应用。</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br></p>
+
+<p><a href="https://github.com/Gentleman-Programming/engram">Gentleman-Programming/engram</a><br>用于 AI 编程智能体的持久内存系统。与智能体无关的 Go 二进制文件，带有 SQLite &#43; FTS5、MCP 服务器、HTTP API、CLI 和 TUI。</p>
+
+<p><a href="https://github.com/charmbracelet/bubbles">charmbracelet/bubbles</a><br>Bubble Tea 的 TUI 组件 🫧</p>
+
+<p><a href="https://github.com/envoyproxy/ai-gateway">envoyproxy/ai-gateway</a><br>在 Envoy Gateway 上构建的生成式 AI 服务统一访问管理</p>
+
+<p><a href="https://github.com/gastownhall/gastown">gastownhall/gastown</a><br>Gas Town - 多智能体工作区管理器</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>一个开源、AI 集成、跨平台的终端，用于无缝工作流程</p>
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>使用 AI 智能体群进行自主渗透测试。编排侦察、分类、利用和报告专家，具有 ReAct 推理功能 —— 支持漏洞赏金、持续监控</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>使用 Docker 定义和运行多容器应用程序</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>用于 git 命令的简单终端 UI</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

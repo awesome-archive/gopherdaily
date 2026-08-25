@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260317.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260317</span>
+</p>
+<p>每日一谚：Go&#39;s parallelism features are an implementation detail, not a language feature — Russ Cox  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/03/17/why-is-go-regex-so-slow">被嘲笑比 Python 还慢？扒开 Go 正则表达式的底层，看看它为了防范“系统猝死”付出了什么</a><br>最近，在 Reddit 的 r/golang 论坛上，一张残酷的 Benchmark 跑分图引发了整个 Go 社区的剧烈震荡。一位开发者，使用极其常见的日志解析正则表达式（提取 IP、时间、URI 等），对各大语言进行 了一次横评。 结果令人大跌眼镜：同样的数据集，Rust 跑了 3.9 秒，Zig 跑了 1.3 秒，而 Go 居然跑了整整 38.1 秒！整整比第一名 Zig 慢了接近 30 倍！ 如果你再去翻看 Go 官方的 Issue #26623，会看到更绝望的数据：早在2018年的一次正则基准 测试中，Go 不仅被 C&#43;&#43; 和 Rust 碾压，甚至连 Python 3、PHP 和 Javascript 都能在正则上把 Go 按在地上摩擦。</p> 
+
+<p><a href="https://packagemain.tech/p/how-to-implement-the-outbox-pattern-in-golang">Golang与Postgres中实现Outbox模式</a><br>本文探讨了如何在Go语言和Postgres数据库环境中实现“Outbox模式”，以构建健壮的事件驱动系统。在事件驱动架构中，服务通常需要同时完成数据库事务和事件发布到消息智能体的操作。文章的核心挑战在于，如果数据库提交成功而事件发布失败（例如消息智能体暂时宕机），系统将面临数据不一致的风险。Outbox模式提供了一种解决方案，它确保数据库更新和事件的可靠发送是原子化的，从而保证了分布式系统中事件处理的鲁棒性和一致性。</p> 
+
+<p><a href="https://meditations.metavert.io/p/the-last-saas-boilerplate">最后的SaaS模板</a><br>两年前，启动一个SaaS业务需要一个创始团队：一个后端工程师来构建身份验证和计费，一个前端开发人员来构建仪表板，一个DevOps人员来处理部署，以及三到六个月的时间才能写出一个实际上重要的业务逻辑。基础设施，作为每个SaaS所需的商品化管道，消耗了你过多的预算和耐心。
+
+那个时代已经结束。
+
+人工智能代理缩短了创始人的愿景与生产软件之间的距离。我一直在这个交集上构建：通过与人工智能编码代理的对话来交付真实产品，撰写我所称之为从工程时代到创作者时代的转变，并且我达到了一个点，最大的剩余摩擦不是AI，而是起点。每一个新的SaaS项目仍然需要从头重建相同的基础基础设施，或者支付数百美元的模板，而这些模板缺少生产产品实际需要的一半。因此我构建了LastSaaS。这是一个完整的，生产就绪的SaaS基础：</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/03/16/registry-mirror-authentication-with-kubernetes-secrets-2/">Registry Mirror Authentication with Kubernetes Secrets</a><br>Part II: A Platform Integration Example
+
+In Part I, we explored the architecture of the CRI-O credential provider and walked through a manual setup. In this part, we’ll see how platforms like [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift) and its upstream open-source project [OKD](https://okd.io/) integrate the credential provider natively, making deployment simpler. OpenShift includes the credential provider starting with version 4.21, with different integration levels across versions showing the evolution toward more native platform support.
+
+### Using the credential provider with OpenShift 4.21
+
+OpenShift 4.21 ships the `crio-credential-provider` RPM package along with CRI-O v1.34, which is the minimum version required for the credential provider support. Earlier CRI-O versions do not support namespace-scoped auth files. Since there is no Custom Resource Definition or API for managing the credential provider configuration in OpenShift 4.21, users must manually create a `MachineConfig` resource to deploy the configuration files. By overriding the existing ECR credential provider configuration file, the kubelet automatically uses the CRI-O credential provider without requiring additional configuration. This approach works on all OpenShift installations regardless of the underlying cloud provider.
+
+#### Enable feature gate
+
+Enable the `KubeletServiceAccountTokenForCredentialProviders` feature gate:
+
+```
+kubectl patch FeatureGate cluster --type merge --patch &#39;{&#34;spec&#34;:{&#34;featureSet&#34;:&#34;CustomNoUpgrade&#34;,&#34;customNoUpgrade&#34;:{&#34;enabled&#34;:[&#34;KubeletServiceAccountTokenForCredentialProviders&#34;]}}}&#39;
+```
+
+**Create Ignition Config**
+
+Create a file named `machine-config.bu` with the following Ignition Config. This configuration creates both the credential provider configuration and the registry mirror configuration on worker nodes. Note that this will overwrite both `/etc/kubernetes/credential-providers/ecr-credential-provider.yaml` and `/etc/containers/</p>
+
+<p><a href="https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/">The Invisible Rewrite: Modernizing the Kubernetes Image Promoter</a><br>Every container image you pull from `registry.k8s.io` got there through [`kpromo`](https://github.com/kubernetes-sigs/promo-tools), the Kubernetes image
+promoter. It copies images from staging registries to
+production, signs them with [cosign](https://sigstore.dev), replicates
+signatures across more than 20 regional mirrors, and generates [SLSA](https://slsa.dev) provenance attestations. If this tool breaks, no
+Kubernetes release ships. Over the past few weeks, we rewrote its core from
+scratch, deleted 20% of the codebase, made it dramatically faster, and
+nobody noticed. That was the whole point.
+
+## A bit of history
+
+The image promoter started in late 2018 as an internal Google project by [Linus Arver](https://github.com/listx). The goal was simple: replace the
+manual, Googler-gated process of copying container images into `k8s.gcr.io` with
+a community-owned, GitOps-based workflow. Push to a staging registry, open a PR
+with a YAML manifest, get it reviewed and merged, and automation handles the
+rest. [KEP-1734](https://github.com/kubernetes/enhancements/blob/master/keps/sig-release/1734-k8s-image-promoter/README.md)
+formalized this proposal.
+
+In early 2019, the code moved to `kubernetes-sigs/k8s-container-image-promoter`
+and grew quickly. Over the next few years, [Stephen Augustus](https://github.com/justaugustus) consolidated multiple tools( `cip`, `gh2gcs`, `krel promote-images`, `promobot-files`) into a single CLI
+called `kpromo`. The repository was renamed to [`promo-tools`](https://github.com/kubernetes-sigs/promo-tools). [Adolfo Garcia Veytia (Puerco)](https://github.com/puerco) added cosign signing
+and SBOM support. [Tyler Ferrara](https://github.com/tylerferrara) built
+vulnerability scanning. [Carlos Panato](https://github.com/cpanato) kept the project in a healthy and
+releasable state. 42 contributors made about 3,500 commits across more than 60 releases.
+
+It worked. But by 2025 the codebase carried the weight of seven years of
+incremental additions from m</p>
+
+<p><a href="https://www.pingcap.com/blog/tidb-x-index-creation-5-5m-rows-near-zero-business-impact-online-ddl/">TiDB X 实现超高速在线索引创建</a><br>TiDB X 通过三项核心创新解决了大规模表在线创建索引时面临的性能瓶颈和业务影响问题。它利用分布式执行框架 (DXF) 将索引任务分散到多个节点，实现了高达每秒 550 万行的构建速度，比传统方法快 72 倍。通过引入 Global Sort 机制，优化了索引 SST 文件的生成，有效减少了 TiKV 的 Compaction 负载。此外，弹性工作节点集群将索引计算与生产环境隔离，确保了在线查询 (QPS) 和延迟的稳定性，从而实现了近乎零的业务影响。</p>
+
+<p><a href="https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/">Meta 重申对 jemalloc 的投入与发展承诺</a><br>Meta 认识到高性能内存分配器 jemalloc 对其软件基础设施的长期价值，并正重新聚焦于该组件。此举旨在降低维护需求、实现代码库现代化，并确保 jemalloc 能持续适应最新的硬件和工作负载变化。作为构建稳定和高性能基础设施的关键基础组件，Meta 强调了对其进行严格工程实践的必要性。此外，Meta 承诺将继续与开源社区合作开发 jemalloc，并欢迎社区的贡献和协作，以共同推动这一核心技术的演进。</p>
+
+<p><a href="https://seangoedecke.com/big-tech-needs-big-egos/">大厂软件工程师需要“大我”</a><br>文章挑战了技术圈中“大公司软件工程师不应有大我（Ego）”的普遍观点，认为在大型科技公司工作，一定程度的“大我”是生存必需品。作者指出，软件工程本质上是极其“谦卑”的职业，工程师日常充斥着犯错、不断修正自身低级或核心逻辑错误，以及面对庞大复杂代码库时的“无知感”。为了对抗这种持续的挫败感和不确定性，工程师需要一定的“大我”作为心理支撑，以驱动他们继续面对和解决复杂问题。然而，最有效的工程师并非是持续高我，而是能在特定情境下展现出高我，在其他情境下又表现出谦逊的复杂特质。</p>
+
+<p><a href="https://bigdata.2minutestreaming.com/p/how-aws-s3-scales-with-tens-of-millions-of-hard-drives">how aws s3 scales with tens of millions of hard drives</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/16/mistral-small-4/#atom-everything">Mistral 发布统一模型 Mistral Small 4</a><br>Mistral 发布了名为 Mistral Small 4 的重要新模型，它基于 Apache 2 许可，拥有 119B 参数（MoE 架构，6B 激活）。该模型旨在整合 Magistral (推理)、Pixtral (多模态) 和 Devstral (智能体编程) 的能力于一身。用户可以通过设置 `reasoning_effort` 参数来控制推理的详尽程度。此外，Mistral 还推出了专为 Lean 4 编程语言优化的开源模型 Leanstral。作者尝试了新模型，但 API 中尚未找到设置推理努力程度的选项。</p>
+
+<p><a href="https://simonwillison.net/2026/Mar/16/codex-subagents/#atom-everything">Codex 发布子智能体和自定义智能体功能</a><br>OpenAI Codex 现已正式发布子智能体（Subagents）功能，其默认设置包括“explorer”、“worker”和“default”智能体，其中“worker”可能用于并行处理大量小任务。此外，用户现在可以通过在 `~/.codex/agents/` 目录下放置 TOML 文件来定义自定义智能体，这些智能体可以配置特定的指令和模型（如用于高速处理的 `gpt-5.3-codex-spark`）。文章展示了如何通过命名引用自定义智能体来执行复杂的、多步骤的调试和修复任务。最后，作者指出子智能体模式已成为当前代码智能体领域的一个普遍趋势，并列举了包括 Claude Code、Gemini CLI、Mistral Vibe 等多个平台对该模式的支持情况。</p>
+
+<p><a href="https://simonwillison.net/2026/Mar/16/coding-agents-for-data-analysis/#atom-everything">数据分析编程智能体实践</a><br>本文介绍了为数据记者设计的一场关于使用编程智能体（如Claude Code和OpenAI Codex）进行数据探索、分析和清理的NICAR 2026研讨会材料。研讨会内容涵盖了从基础设置到高级应用的多个环节，包括：使用智能体向数据库提问、数据探索、数据清洗（如解码代码）、创建可视化图表，甚至利用智能体进行数据抓取。工作坊主要使用Python、SQLite，并结合了Datasette工具。一个亮点是参会者指导Claude Code直接在Datasette提供的静态文件夹中生成交互式数据可视化代码，例如使用Leaflet库创建的热力图。</p>
+
+<p><a href="https://simonwillison.net/guides/agentic-engineering-patterns/how-coding-agents-work/#atom-everything">代码智能体工作原理解析</a><br>代码智能体（Coding Agent）本质上是为大型语言模型（LLM）提供的一个“框架”，通过隐藏的提示（prompts）和可调用的工具来扩展LLM的能力。理解其工作原理有助于更好地应用这些工具。文章的核心是LLM，它通过将文本转化为称为“tokens”的整数序列来进行处理，这也是服务商计费和模型上下文长度限制的基础。输入文本是“提示”（prompt），输出是“完成”（completion）或“响应”。此外，现代许多模型已具备多模态能力，如视觉LLM（vLLMs）可以接收图像输入。</p>
+
+<p><a href="https://www.dailydoseofds.com/ai-agents-crash-course-part-1-with-implementation/">AI智能体速成课程：从基础到实战</a><br>这是一份关于AI智能体（Agentic Systems）的系列速成课程索引，旨在系统性地介绍智能体系统的核心概念、构建模块和实战实现方法。课程内容覆盖了智能体系统的基础理论、构建块的介绍，以及如何构建这些系统（Part A/B）。后续章节深入探讨了智能体系统中的流程构建、高级技术以增强鲁棒性。此外，课程还提供了关于知识（Knowledge）和记忆（Memory）的实践深入讲解。最后，系列课程通过从零开始实现ReAct、规划（Planning）和多智能体（Multi-agent）等关键模式，确保学习者掌握实际的开发技能，并提供了提升智能体性能的实用步骤。</p>
+
+<p><a href="https://chrlschn.dev/blog/2026/03/mcp-is-dead-long-live-mcp">MCP的兴衰与未来：超越CLI的组织级考量</a><br>文章探讨了当前业界对命令行界面（CLI）的热衷，并指出过度推崇CLI可能重蹈Model Context Protocol (MCP) 曾经历的炒作周期。作者强调，虽然CLI在个人层面有优势，但使用定制CLI的智能体（Agent）会遇到与MCP相似的上下文问题，且缺乏结构。更重要的是，许多讨论忽略了MCP作为组织和企业级机制的重要性，特别是其在标准化提示（Prompts）和资源管理方面的作用。对于企业级应用，仅关注个人编码效率是不够的，组织需要关注可见性、遥测、安全、质量以及系统维护能力。因此，对于组织和企业用例而言，MCP仍是实现规范化智能体工程的现在和未来，需要团队超越短暂的技术热点。</p>
+
+<p><a href="https://blog.fsck.com/2026/03/09/superpowers-5">Superpowers 5 发布：引入视觉头脑风暴功能</a><br>Superpowers 5 版本发布，其中最引人注目的新特性是“视觉头脑风暴”工具。该工具的出现源于作者对 AI（如 Claude）在设计和用户体验讨论中生成纯文本描述的不满，促使开发者反思“我为什么要这样做？”。现在，当 AI 认为有内容需要展示时，它会主动询问用户是否尝试使用该功能，该功能允许 AI 在本地浏览器中生成模拟、图表和比较等可视化内容。文章以使用 Claude 和 Superpowers 5 清理 Youtube2Webpage 项目的网页渲染为例，展示了这一新功能如何通过在浏览器中展示实际效果来改进人机交互和工作流程。</p>
+
+<p><a href="https://x.com/AMD/status/2032487936491463136">AMD 论“智能体电脑”的兴起</a><br>文章探讨了个人电脑（PC）在人类历史中的重要地位及其即将到来的演变——“智能体电脑”（Agent Computers）的兴起。随着AI技术的发展，AI智能体（Agent）已不再是简单的问答工具，它们能够持续、主动地执行研究、写作、分析和规划等复杂任务，成为“始终在线的协作者”。这种新一代的AI应用需要强大的计算能力。因此，AMD指出，传统的PC是为人操作而设计的，而“智能体电脑”是为全天候运行AI智能体而生的新设备类别。用户将不再是操作它，而是向它委派任务，实现自动化工作流。</p>
+
+<p><a href="https://medium.com/@steve-yegge/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f">welcome to the wasteland a thousand gas towns a5eb9bc8dc1f</a><br>智能体编排：从Gas Town到规模更大的Wasteland</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, dif</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>Your personal AI trading assistant. Any market. Any model. Pay with USDC, not API keys.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>✨ Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/psviderski/uncloud">psviderski/uncloud</a><br>A lightweight tool for deploying and managing containerised applications across a network of Docker hosts. Bridging the gap between Docker and Kubernetes ✨</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>A next-generation crawling and spidering framework.</p>
+
+<p><a href="https://github.com/fengshao1227/ccg-workflow">fengshao1227/ccg-workflow</a><br>多模型协作开发系统 - Claude 编排 &#43; Codex 后端 &#43; Gemini 前端，28 个命令覆盖开发全流程，一键安装零配置</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

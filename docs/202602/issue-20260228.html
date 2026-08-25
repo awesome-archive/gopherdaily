@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260228.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260228</span>
+</p>
+<p>每日一谚：With unsafe package there are no guarantees </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/28/agentic-software-engineering">停止“氛围编程”（Vibe Coding），拥抱新一代软件工程</a><br>过去这两年，从 GitHub Copilot 到 Cursor，再到各种强大的命令行编码智能体(比如Claude Code、Codex等)，整个开发生态陷入了一场名为“氛围编程”（Vibe Coding）的狂欢。开发者们发现，只要用自然语言“连哄带骗”地去引导 AI，凭着感觉不断点击“重新生成”，总能碰巧凑出一个看起来能跑的程序。 对于写个一次性脚本或做个原型，这感觉就像魔法一样棒。但如果你是在构建一个长生命周期、需要高可靠性的企业级软件，这种“氛围编程”无异于 用 Windows 画图软件去设计一座跨海大桥。 速度是有了，但信任债务（Trust Debt）正在疯狂累积。</p> 
+
+<p><a href="https://go.dev/blog/allocation-optimizations">Go官博：在栈上分配内存</a><br>本文介绍了 Go 语言在最近的几个版本中（Go 1.25 和 Go 1.26）为减少堆内存分配所做的改进，主要集中在将一些对象（如小切片的底层数组）的内存分配从堆移动到栈上，从而提高性能并减轻垃圾回收器的压力。文章详细讨论了对常量大小切片、变量大小切片以及逃逸切片的优化，并指出在许多情况下，这些优化可以自动实现，无需手动修改代码。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ZxC5grBAsEGLGjjebz-CnQ">【AI 智能体时代的软件工程】02 危险的“初级天才”：AI 队友的四大致命悖论</a><br>Fred Brooks 在其名著《没有银弹》中，将软件工程的复杂性分为“偶然复杂性（Accidental Complexity）”（由工具、语言带来的摩擦）和“本质复 杂性（Essential Complexity）”（现实世界业务逻辑的错综复杂）。 AI 队友以摧枯拉朽之势消灭了“偶然复杂性”（敲击键盘、拼写语法、查阅基础 API 的时间被无限压缩），但它并没有消除“本质复杂性”——那些模糊 的意图、矛盾的约束以及系统集成时的权衡，依然像大山一样横亘在我们面前。 当我们把一个消除“偶然复杂性”的神器，不加约束地直接扔进“本质复杂性”的深水区时，就会产生剧烈的排异反应。在智能体软件工程中，这种排异 反应表现为四大致命悖论。 如果我们不能清晰地识别并命名这些悖论，团队就会把每一次 AI 的翻车当成“个例”，最终在无穷无尽的 Review 和擦屁股中耗尽精力。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-02-27-index-selection-for-join-queries/">Improving Index Selection For Join Queries | DoltHub Blog</a><br>这篇文章讲述了DoltHub团队如何应对一个客户报告的性能问题：一个涉及五个视图（实际上是九十五个表的复杂JOIN查询）在Dolt中运行缓慢，而在MySQL中速度很快。作者详细介绍了在这个看似简单的性能问题背后发现的一系列关于Dolt执行计划器中索引选择的深层问题。通过修复与侧向连接（lateral joins）、视图内省、过滤下推以及处理表别名和投影相关的多个PR（3380, 3386, 3379, 3383, 3400），Dolt的索引选择逻辑得到了显著改进，使得复杂查询能够利用索引加速。这个过程被比作“屠杀九头蛇”，因为每次修复一个问题都会暴露更多相关问题。</p>
+
+<p><a href="https://blog.livekit.io/voice-agent-skills-for-coding-assistants/">语音智能体技能，赋能代码助手</a><br>本文介绍了 LiveKit Agent Skills，这是一种专为实时语音AI开发设计的、可安装的指令包，旨在指导代码助手（如 Cursor, Claude Code, Codex, Copilot）构建可靠的语音智能体。由于语音智能体涉及实时系统、不断发展的SDK和LLM的局限性，直接使用代码助手容易导致API幻觉或运行时失败。Agent Skills 不教授具体的API知识，而是编码了关于如何正确构建语音智能体的架构行为和最佳实践，例如不依赖模型记忆API细节、将智能体行为视为生产代码、优化实时性能以及有意识地构建工作流程。结合 LiveKit 的 Docs MCP 服务器，这种方法能显著提高代码生成的一致性和可靠性，确保生成的语音智能体在真实环境中稳定运行。</p>
+
+<p><a href="https://www.pingcap.com/blog/singlestore-vs-tidb-distributed-sql-database-comparison-guide/">SingleStore vs TiDB：分布式 SQL 数据库比较指南</a><br>在 SingleStore 和 TiDB 之间进行选择？我们的综合指南将比较它们的性能、架构和分布式 SQL 功能，帮助您做出决定。TiDB 采用分层架构，强调强一致性（通过 Raft 实现），并提供高 MySQL 兼容性和自动分片；而 SingleStore 则采用聚合器-叶节点设计，使用“通用存储”在同一表中结合行存储和列存储，并通过代码生成优化查询性能。关键区别在于 TiDB 的强一致性与 SingleStore 的最终一致性复制模型，以及 TiDB 的完全开源（Apache 2.0）性质与 SingleStore 的专有许可证。</p>
+
+<p><a href="https://www.haproxy.com/blog/load-balancing-vmware-horizons-udp-and-tcp">使用 HAProxy 负载均衡 VMware Horizon 的 UDP 和 TCP 流量：指南</a><br>VMware Horizon（现为 Omnissa Horizon）的负载均衡一直是个难题，因为它依赖于 TCP 和 UDP 的混合会话。本文提供了一个使用 HAProxy 的&lt;code&gt;balance source&lt;/code&gt;算法，通过一致性哈希实现无状态会话粘性的指南。此方法既高效又适用于所有协议，避免了传统状态跟踪方法的复杂性。我们还探讨了针对 UAG（统一访问网关）的增强的健康跟踪和 SSL 桥接配置。</p>
+
+<p><a href="https://minimaxir.com/2026/02/ai-agent-coding/">一个对AI智能体编程持怀疑态度的程序员尝试AI智能体编程</a><br>作者曾对AI智能体编程持怀疑态度，认为其不可预测且昂贵。然而，在尝试了Anthropic的Claude Opus 4.5和OpenAI的Codex 5.3之后，他对智能体编程的能力感到惊讶，尤其是在使用详细的`AGENTS.md`文件指导后。他通过一系列复杂的项目（如YouTube数据抓取、FastAPI/HTMX应用、Rust编写的图标渲染器、终端音乐合成器、物理模拟器，以及高性能的机器学习算法Rust重写）证明了最新一代AI智能体在生成高质量、高性能代码方面的巨大潜力，其性能甚至超越了许多现有库。作者认为，对于具备领域知识的用户来说，这些工具能带来巨大的生产力提升，并对AI在软件开发中的未来持谨慎乐观态度。</p>
+
+<p><a href="https://blog.jim-nielsen.com/2026/two-edged-sword-of-computers-and-internet/">计算机和互联网：一把双刃剑</a><br>作者读了 Dave Rupert 的文章“空闲之手的优先事项”后，深有感触地表达了对计算机和互联网是“双刃剑”的看法。他承认自己热爱计算机和互联网，并从中获得了许多机会，但也感觉它们在某些方面伤害了自己。作者正在思考如何找到一个更健康的生活平衡点，并感谢 Dave Rupert 的文章促使他正视这个问题。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/02/27/ingress-nginx-before-you-migrate/">在迁移之前：你需要知道的五个 Ingress-NGINX 令人惊讶的行为</a><br>Kubernetes 宣布将于 2025 年 11 月退役 Ingress-NGINX，并于 2026 年 3 月正式停止支持。尽管 Ingress-NGINX 被广泛使用，但它存在许多令人惊讶的默认设置和副作用，可能已存在于您的集群中。本文重点介绍了这些行为，以便您可以安全地迁移，并有意识地决定保留哪些行为。文章还将 Ingress-NGINX 与 Gateway API 进行比较，并展示如何在 Gateway API 中保留 Ingress-NGINX 的行为。</p>
+
+<p><a href="https://www.seangoedecke.com/a-little-bit-cynical">软件工程师应该有一点点犬儒主义</a><br>作者认为，对于软件工程师，尤其是大型科技公司中的工程师来说，保持适度的犬儒主义是清晰思考组织运作方式所必需的，可以避免陷入过度犬儒的陷阱。他反驳了理想主义者认为工程师是政治游戏的工具的观点，认为在大型组织中解决有意义的问题往往需要参与政治。他认为，过度理想主义的观点（认为工程师应该完全抵制公司要求，只做“正确的事”）实际上是更犬儒的，因为它假设世界是腐败且自私的。适度的犬儒主义可以作为一种“疫苗”，防止形成完全不切实际的、对公司运作方式的错误认知，从而使工程师在实现自身理想目标时更加有效。</p>
+
+<p><a href="https://blog.sneakybugs.com/helm-production-lessons">Helm 在生产环境中的应用：经验教训和陷阱</a><br>在生产环境中运行 Helm 的实践经验总结：CRD 管理、健康检查、干运行、模式验证和 OCI 注册表等方面的实用经验教训。</p>
+
+<p><a href="https://book.mixu.net/distsys/single-page.html">分布式系统：为了好玩和盈利</a><br>本文旨在提供一个对分布式系统的易于理解的介绍，汇集了Amazon Dynamo、Google BigTable和MapReduce、Apache Hadoop等近期分布式系统的核心思想。作者试图在介绍关键概念的同时，提供足够的细节，以便读者对正在发生的事情有一个大致了解，而不会深陷细节。核心在于处理分布式带来的两个后果：信息传播受光速限制，以及独立组件独立失效。文章涵盖了可扩展性、可用性、性能、延迟、容错性等高层目标，以及抽象、模型、分区和复制等设计技术。后续章节深入探讨了系统模型、不可能存在的结果（FLP和CAP定理）、时间与顺序、强一致性复制（Primary/Backup, 2PC, Paxos/Raft）以及弱一致性复制（Dynamo、CRDTs和CALM定理）。</p>
+
+<p><a href="https://blog.timcappalli.me/p/passkeys-prf-warning">请、请、请停止使用密钥（Passkeys）来加密用户数据</a><br>作者强烈呼吁停止使用Passkeys的PRF（伪随机函数）扩展来加密用户数据，认为这会创建一个危险的“爆炸半径”。作者举例说明，如果用户删除了用于加密备份的Passkey，可能会导致其最珍贵的数据（如亲人照片、文件）永久丢失，而用户通常不理解这种技术关联性。作者承认PRF在如解锁凭证管理器等场景下有合法用途，并向身份行业、凭证管理器和使用Passkeys的服务提供商提出了具体建议，要求停止将Passkeys用于数据加密，或至少提供充分的警告和详细信息。</p>
+
+<p><a href="https://lewiscampbell.tech/blog/260204.html">Rust is Just a Tool</a><br>I like Rust. It&#39;s versatile, has great tooling, a pleasant type system, and excels at bringing high-level features to environments without a garbage collector, setting a high bar for expressive, fast languages. However, it is just a programming language. Liking Rust does not obligate one to agree with every popular crate, buy into marketing hype, follow all community &#39;best practices,&#39; attack users of other languages (like C or Zig), or refuse to acknowledge its design flaws, complexity, or alternatives to RAII. The broader point is that tools are merely tools, not our identity, a measure of wisdom, or a moral choice. Other people have different perspectives and may prefer different tools, a fact we should accept.</p>
+
+<p><a href="https://www.cncf.io/blog/2026/02/24/making-harbor-production-ready-essential-considerations-for-deployment">让 Harbor 具备生产就绪能力：部署的关键考虑因素</a><br>本文是关于将开源容器镜像仓库 Harbor 部署到生产环境的关键考虑因素的指南，重点关注在 Kubernetes 上通过 Helm 进行部署的情况。主要讨论了高可用性（HA）和可扩展性（如使用 Ingress、增加副本、配置外部 HA 数据库/Redis）、安全最佳实践（启用 TLS/SSL、配置身份验证和授权、激活内容信任）、存储考量（选择合适的存储类型、估算存储大小、实现备份和恢复、配置垃圾回收）以及监控和网络配置。</p>
+
+<p><a href="https://vondra.me/posts/the-real-cost-of-random-io">随机I/O的真实成本</a><br>本文探讨了PostgreSQL中`random_page_cost`默认值（4.0）是否仍适用于现代闪存存储。作者通过实验发现，在现代SSD上，随机I/O的真实成本远高于默认值，估计值约为25到35，甚至更高。这与降低该参数以适应SSD的建议相悖。文章详细展示了如何通过比较顺序扫描和索引扫描的执行时间来估算成本，并分析了成本参数对查询计划选择的影响，特别是Sequential Scan和Index Scan之间的切换点。此外，作者还讨论了位图扫描（Bitmap Scans）的作用，以及预取（prefetching）如何与成本模型产生冲突，并指出了未来PostgreSQL成本模型改进的方向，包括分离非I/O成本、改进缓存数据统计和考虑预取对成本的影响。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://kenneth.io/post/leverage-and-functions-the-two-classes-of-ai-agents">杠杆与职能：人工智能智能体的两个类别</a><br>作者将AI智能体分为两大类：提供杠杆（Leverage）以提高生产力的智能体，以及取代整个工作职能（Function）的智能体。这种区分深刻影响着产品的构建、销售和定价策略。通常，产品会从提供杠杆的“副驾驶”（Copilot）模式开始，通过学习工作流程并建立信任，逐步过渡到完全自主的“自动驾驶”（Autopilot）模式，即成为职能智能体。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>AI Trading OS: Multi-AI, multi-exchange trading infrastructure with Strategy Studio.</p>
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/go-vikunja/vikunja">go-vikunja/vikunja</a><br>The to-do app to organize your life.</p>
+
+<p><a href="https://github.com/oapi-codegen/oapi-codegen">oapi-codegen/oapi-codegen</a><br>Generate Go client and server boilerplate from OpenAPI 3 specifications</p>
+
+<p><a href="https://github.com/rishikanthc/Scriberr">rishikanthc/Scriberr</a><br>Self-hosted AI audio transcription</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

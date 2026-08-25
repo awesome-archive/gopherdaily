@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251124.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251124</span>
+</p>
+<p>每日一谚：Write code that is easy to optimize, not code that needs to be optimized </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/24/google-adk-go-in-action">霸榜GitHub一周！Google开源ADK for Go，彻底终结AI“炼丹”时代？</a><br>就在最近，一个名为 google/adk-go 的项目悄然开源，并迅速霸榜 GitHub Go 语言趋势榜长达一周之久！全球的 Gopher 似乎都在用脚投票，表达着同一个渴望：我们受够了“炼丹”，我们要回归工程！</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/zMDXceTANxpbC1iLArJFvA">【Go 测试之道】03 单元测试（下）：HTTP 层的黑盒守护与依赖注入</a><br></p> 
+
+<p><a href="https://gaultier.github.io/blog/a_million_ways_to_data_race_in_go.html">Go 中数据竞争导致的百万种死法</a><br>作者分享了他在 Go 中遇到的各种数据竞争问题，并提供了修复方案和建议。文章首先介绍了数据竞争的概念，然后通过几个具体的例子，例如闭包中意外捕获外部变量、并发使用 http.Client、互斥锁的生命周期不正确以及对标准库容器的并发读写等，详细解释了数据竞争的产生原因和修复方法。最后，作者总结了避免数据竞争的建议，并提出了改进 Go 语言和 Go 程序设计的想法，以提高并发编程的安全性。</p> 
+
+<p><a href="https://medium.com/@mohammedouchkhi/when-should-a-spring-boot-dev-actually-switch-63c71d2d975c">Spring Boot 开发人员何时应该切换到Go或Rust</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.awsistoohard.com/blog/self-hosting-nat-gateway">You only live once, self host a NAT Gateway</a><br>作者探讨了在工程组织中实现自托管 NAT 网关的经验，重点关注了成本节约和性能提升。文章首先介绍了 NAT 网关的作用，以及为什么选择自托管方案，然后讨论了两种主要的自托管 NAT 网关的方案：Fck-NAT 和 AlterNAT。作者选择了 Fck-NAT，并在开发环境中进行了实施，结果显示 NAT 网关小时数减少了 50%，NAT 网关字节成本降低了约 70%。文章最后总结了自托管 NAT 网关的优势，并鼓励读者在适当的环境中尝试，以降低成本。</p>
+
+<p><a href="https://finly.ch/engineering-blog/350169-closing-the-gap-between-schema-first-and-code-first-graphql-development">弥合模式优先和代码优先 GraphQL 开发之间的差距</a><br></p>
+
+<p><a href="https://dthain.github.io/books/compiler">编译器和语言设计导论</a><br>这是一本免费的在线教材：欢迎直接访问下面的章节PDF。如果您喜欢实体书，您也可以在下面购买精装本或平装本。该教材和材料由Prof. Douglas Thain开发，是圣母大学CSE 40243编译器课程的一部分。
+
+编译器将用高级语言编写的程序翻译成用较低级语言编写的程序。对于计算机科学专业的学生来说，从头开始构建编译器是一次必经之路：这是一个具有挑战性和趣味性的项目，提供了对计算机科学许多不同方面的见解，其中一些是深刻的理论，另一些是高度实践性的。本书提供了一个学期的编译器构造导论，使读者能够构建一个简单的编译器，该编译器接受类似C的语言并将其翻译成可工作的X86或ARM汇编语言。它最适合于在C语言方面有一些编程经验，并且已经修过数据结构和计算机体系结构课程的本科生。</p>
+
+<p><a href="https://lethain.com/good-eng-mgmt-is-a-fad">好的工程管理是一种时尚</a><br>随着年龄的增长，我越来越思考自己是否在以正确的方式度过时间来提升我的职业生涯和生活。这也是你的公司在每个绩效周期都会问你的一个问题：这位工程经理是否有效地利用他们的时间来提升公司或他们的组织？令人困惑的是，根据我的经验，回答这些看似相似的问题却出奇地没有什么共同之处。这篇文章花了一些时间来探讨这两个问题，特别是在我们今天所处的奇怪时刻，管理者被告知他们在过去十年里做错了事情，需要采用新的工程管理模式，以便在行业的最新迭代中获得认可。</p>
+
+<p><a href="https://elizabethvannostrand.substack.com/p/the-boring-part-of-bell-labs">贝尔实验室的“无聊”</a><br></p>
+
+<p><a href="https://lunacookies.github.io/lang">制作一门语言</a><br>关于使用 Rust 编程语言制作名为 Eldiro 的编程语言的一系列文章。还有 RSS 订阅源！</p>
+
+<p><a href="https://gpt.datacontract.com/sources/cli.datacontract.com">Data Contract CLI | Data Contract GPT</a><br>Data Contract GPT 用于与数据合同规范交互，以交互方式创建和修改数据合同。</p>
+
+<p><a href="https://lalitm.com/fixits-are-good-for-the-soul">我们暂停了一周的路线图工作并修复了 189 个错误</a><br>作者分享了他们组织如何每季度暂停所有常规工作一周，专注于修复小型错误，改进产品，提高开发人员效率，以及增强团队士气。文章详细介绍了“修复周”的定义、目标、成果、益处，以及如何成功运行“修复周”的方法，包括准备工作、时间限制、团队规模和游戏化策略，最后总结了作者对“修复周”的看法，认为其对产品质量、开发人员生产力和团队精神都有积极影响。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://lucumr.pocoo.org/2025/11/21/agents-are-hard">智能体设计仍然很难</a><br>我的代理抽象一直在意想不到的地方崩溃。构建代理仍然很混乱。SDK抽象在您使用真正的工具时会中断。缓存管理效果更好，但因模型而异。强化最终需要完成比预期更繁重的工作，并且故障需要严格隔离以避免脱轨。通过类似文件系统的层共享状态是一个重要的构建块。输出工具出乎意料地棘手，模型选择仍然取决于任务。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/fish2018/pansou">fish2018/pansou</a><br>PanSou是一款高性能的网盘资源搜索API服务，支持TG频道和插件搜索。系统设计以性能和可扩展性为核心，支持多频道多插件并发搜索、结果智能排序和网盘类型分类。docker集成前后端，一键启动，开箱即用。 https://so.252035.xyz/</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

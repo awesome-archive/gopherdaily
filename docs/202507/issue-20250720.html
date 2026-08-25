@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250720.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250720</span>
+</p>
+<p>每日一谚：Go is not magical </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.datadoghq.com/blog/engineering/go-memory-regression">我们如何追踪到影响数百个 Pod 的 Go 1.24 内存回归问题</a><br>我们在推出 Go 1.24 后发现了一个内存回归问题。本文介绍了我们如何深入研究系统指标，发现运行时分配器中的错误，并与 Go 团队合作修复该问题。</p> 
+
+<p><a href="https://dev.to/leapcell/20-go-performance-tricks-i-learned-the-hard-way-2h8h">我从惨痛的经验中学习到的 20 个 Go 性能技巧</a><br>本文并非空泛的理论集合，而是分享了 20 个在生产环境中反复验证有效的 Go 性能优化技巧。文章总结了多年开发、调优和错误经验，深入探讨了每个建议背后的原因，并提供了实际的代码示例，旨在构建一个清晰、可操作的 Go 性能优化框架。</p> 
+
+<p><a href="https://antonz.org/which-go">按版本列出的 Go 特性</a><br>这是一份总结，列出了各个 Go 版本中出现的主要特性。Go 每六个月发布一次主要版本。每个主要 Go 版本都会得到支持，直到出现两个更新的主要版本。通过发布次要修订版来修复严重问题。</p> 
+
+<p><a href="https://dev.to/lovestaco/env-vs-toml-for-config-in-go-what-should-you-use-564l">Go语言配置：.env 与 .toml 的选择</a><br>本文比较了在 Go 项目中使用 .env 文件和 .toml 文件进行配置管理的优缺点。.env 文件简单易用，适合小型配置或密钥管理；.toml 文件支持结构化配置，类型安全，更适合大型配置。文章还建议将两者结合使用，例如使用 .env 文件存储密钥，使用 .toml 文件存储结构化设置。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://rockorager.dev/log/lsr-ls-but-with-io-uring">lsr：使用 io_uring 的 ls 命令</a><br>本文介绍了一个名为 lsr 的 ls 命令的实现，它使用 io_uring 库来执行尽可能多的 IO 操作。基准测试表明，lsr 比测试过的所有 ls 命令版本和替代方案都快，并且执行的系统调用数量少了一个数量级。文章详细介绍了 lsr 的工作原理、性能数据以及与其他 ls 命令实现的比较，并讨论了其中一些异常现象和改进思路。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1026694/3413f4b43c862629">如何在内核中编写 Rust 代码：第三部分</a><br>本文是关于在 Linux 内核中编写 Rust 代码系列文章的第三部分，重点介绍所有内核 Rust 代码都可以使用的绑定的概述。文章涵盖了内核中 C 和 Rust 之间的接口，内存分配（Kmalloc、Vmalloc 和 KVmalloc），自引用结构和锁（Mutex、LockedBy 和 GlobalLockedBy）等方面。文中还讨论了使用 Rust 的泛型类型，以及如何处理在 C 中创建的自引用结构，并提供了代码示例。</p>
+
+<p><a href="https://kristoff.it/blog/asynchrony-is-not-concurrency">异步并非并发</a><br>本文探讨了异步、并发和并行之间的区别。作者认为，许多编程语言生态系统由于混淆了异步和并发，导致了代码冗余和用户体验不佳等问题。作者以Zig语言为例，解释了如何区分异步和并发，以及如何利用Zig的异步I/O特性，在不影响同步代码的情况下实现并发。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison">大型语言模型架构大比拼</a><br>本文探讨了自 GPT 架构问世七年以来，大型语言模型 (LLM) 架构的发展变化。文章重点关注架构本身的结构变化，而非基准性能或训练算法，并对 DeepSeek V3/R1、OLMo 2、Gemma 3、Mistral Small 3.1、Llama 4 和 Kimi 2 等模型的架构设计进行了比较分析，涵盖了多头潜在注意力 (MLA)、混合专家 (MoE) 模型、滑动窗口注意力等技术。</p>
+
+<p><a href="https://www.notcheckmark.com/2025/07/rethinking-cli-interfaces-for-ai">重新思考 AI 的命令行界面</a><br>我们需要增强我们的命令行工具和设计 API，以便它们能够更好地被 LLM 代理使用。目前的这些设计对于 LLM 来说是不够的——尤其是在使用本地模型时受到较小上下文窗口的限制。文章探讨了 LLM 代理与 API 和命令行工具交互中存在的问题，例如上下文窗口限制、工具调用过多和信息架构不足等，并提出了改进建议，例如改进 API 文档、编写 git 包装器以防止无验证提交、以及创建 LLM 友好的 shell 等，旨在优化 LLM 代理的使用体验。</p>
+
+<p><a href="https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus">AI 代理的上下文工程：来自 Manus 建设的经验教训</a><br>这篇文章分享了 Manus 团队通过自身的“随机梯度下降法”获得的局部最优解。如果你正在构建自己的 AI 代理，希望这些原则能帮助你更快地收敛。文章重点介绍了四个方面的经验教训：围绕 KV 缓存进行设计、掩码而非移除、使用文件系统作为上下文以及通过复述来操纵注意力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>Selfhosted alternative to 12ft.io. and 1ft.io bypass paywalls with a proxy ladder and remove CORS headers from any URL</p>
+
+<p><a href="https://github.com/kitops-ml/kitops">kitops-ml/kitops</a><br>An open source DevOps tool for packaging and versioning AI/ML models, datasets, code, and configuration into an OCI artifact.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/mudler/LocalRecall">mudler/LocalRecall</a><br>🧠 100% Local Memory layer and Knowledge base for agents with WebUI</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/etcd-io/bbolt">etcd-io/bbolt</a><br>An embedded key/value database for Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

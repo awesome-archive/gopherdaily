@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260105.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260105</span>
+</p>
+<p>每日一谚：Favor composition over inheritance </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/05/how-ken-thompson-developed-go-language-at-google">Go 考古：图灵奖得主 Ken Thompson 亲述，Go 语言是如何在 C&#43;&#43; 的“废墟”上诞生的</a><br>为什么 Go 语言极其痛恨复杂的特性？为什么 Go 如此执着于编译速度？我们常说 Go 是一门“工程实用主义”的语言，它的设计哲学是“少即是多”。 但你是否想过，这种近乎偏执的简洁，究竟是为了对抗什么？ 这一切的答案，都藏在 2007 年 Google 内部的一场 C&#43;&#43; 标准委员会汇报演讲中。当图灵奖得主 Ken Thompson 发现自己竟然“看不懂”新的 C&#43;&#43; 特 性时，一颗变革的种子就此埋下。</p> 
+
+<p><a href="https://tonybai.com/2026/01/05/httpstonybai-com20260105claude-code-author-reveals-private-ai-coding-config">刚刚，Claude Code 作者曝光了自己的“私房”配置：原来顶尖高手是这样用 AI 写代码的！</a><br>就在昨天，Claude Code 的创造者、Anthropic 的核心工程师 Boris Cherny 在社交媒体上毫无保留地晒出了他自己的 Claude Code Setup（配置与工作流）。 看完他的分享，我最大的感受是：**英雄所见略同！</p> 
+
+<p><a href="https://evilmartians.com/chronicles/a-taste-of-go-code-generator-magic-a-quick-guide-to-getting-started">Go代码生成魔力初探：快速入门指南</a><br>本文提供了一个简单的Go代码生成器示例，该示例程序可以为给定类型的结构体方法生成包装函数。作者介绍了使用`golang.org/x/tools/go/packages`和`go/types`来检查代码元数据，并使用`github.com/dave/jennifer/jen`来生成Go代码，旨在帮助那些希望编写自己的Go代码生成器但不知从何入手的开发者提供一个良好的起点。</p> 
+
+<p><a href="https://blog.abhikvarma.com/posts/go-pgx-txn-man">创建 pgx 事务管理器：gollback</a><br>作者在工作中设置新项目时，习惯了 Spring 的事务管理，但发现 Go 中缺少一个易于使用的 pgx 事务管理器，尤其是能轻松设置事务超时的方案。因此，他创建了一个名为 gollback 的 pgx 事务管理器，它支持超时、只读事务，并带有真实数据库的集成测试。该设计将事务管理逻辑放在服务层，而仓库层保持对底层连接类型（连接池或事务）的抽象，通过 ConnGetter 实现。
+
+核心在于 TxnManager 接口的 RunInTxn 方法，它负责开始、提交或回滚事务，并将事务对象存储在 context 中。仓库层通过 ConnGetter 从 context 获取适当的连接（Conn 或 Tx）来执行操作，从而实现事务的原子性，避免数据库处于不一致状态。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cs.cmu.edu/~pavlo/blog/2026/01/2025-databases-retrospective.html">CMU：2025年数据库回顾</a><br>本文是对2025年数据库领域重大事件的回顾和分析。主要趋势包括PostgreSQL的持续主导地位，尤其是在被Databricks和Snowflake等公司收购和增强方面，以及分布式PostgreSQL项目的兴起（Multigres和Neki）。另一个重要发展是模型上下文协议（MCP）的标准化，它成为AI模型与数据库交互的通用接口。此外，还讨论了MongoDB和FerretDB之间的法律纠纷，以及Parquet在文件格式领域面临来自FastLanes、F3、Vortex等新格式的激烈竞争。文章还详细列举了2025年数据库领域的重大收购、合并和初创公司倒闭事件，并以卡耐基梅隆大学数据库研究的标志性人物Larry Ellison在2025年成为世界首富作为有趣亮点结尾。</p>
+
+<p><a href="https://addyosmani.com/blog/21-lessons">21个来自谷歌14年工程生涯的教训</a><br>作者在谷歌度过了14年的工程生涯中吸取到的经验教训，重点关注除编写优秀代码之外真正重要的事情。这些经验包括：最优秀的工程师痴迷于解决用户问题、一起找到正确答案是真正的工作、倾向于行动（发布）、清晰度是资历、新奇性是有代价的、代码不会为你辩护、最好的代码是你无需编写的代码、在规模化下，即使是你的Bug也有用户、大多数缓慢的团队实际上是目标不一致的团队、关注你能控制的、抽象不会消除复杂性，而是将其转移到你值班时、写作强迫清晰度、使其他工作成为可能的工作是无价的（但看不见）、如果你赢得了每场辩论，你可能正在积累无声的阻力、度量成为目标时，它就不再起度量作用、承认自己不知道的会比假装知道的更安全、你的网络比你将拥有的每一份工作都长久、大多数性能提升来自于移除工作而非增加巧妙性、流程存在的目的是减少不确定性而非创建文书工作、最终时间比金钱更宝贵、没有捷径，但有复利。核心思想是保持好奇心、保持谦逊，并记住工作总是关于人。</p>
+
+<p><a href="http://mpaxos.com/blog/rusty-cpp.html">使用AI构建类Rust风格C&#43;&#43;静态分析器的故事</a><br>作者因C&#43;&#43;中常见的内存错误（如段错误和内存损坏）深感困扰，渴望一种机械化的方式来消除这些问题。虽然Rust提供了理想的内存安全模型，但重写现有C&#43;&#43;代码库不现实。作者探讨了使用C&#43;&#43;宏、Circle C&#43;&#43;编译器等替代方案，但均因各种限制而放弃，最终决定编写一个C&#43;&#43;静态分析器。
+
+项目的转折点在于AI编程助手的崛起。作者利用AI（特别是Claude）迭代开发了这个分析器原型，最终使其达到可用状态。该分析器采用类Rust的特性，包括：
+1. **基于注释的语法**：使用`@safe`和`@unsafe`来标记函数，不修改C&#43;&#43;语法，默认情况下所有现有代码和STL被视为`@unsafe`。
+2. **`const`作为非可变性**：利用C&#43;&#43;的`const`来模拟Rust的不可变借用。
+3. **借用检查**：实现多重不可变借用和唯一可变借用的规则。
+4. **外部注释**：允许为STL和第三方库提供生命周期注解，以捕获悬空指针。
+5. **Rust标准库类型等价物**：实现了C&#43;&#43;版本的`Box`、`Arc`、`Vec`、`Option`和`Result`，以匹配Rust的安全语义。
+
+作者感慨AI在短时间内展现出的强大工程能力，这使其能够将多年的“痒点”通过对话而非传统编译器工程的方式解决。该工具目前已可用于实际项目检查，旨在为C&#43;&#43;带来内存安全保障。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://granda.org/en/2026/01/02/claude-code-on-the-go">Claude Code 移动办公</a><br>作者分享了一种创新性的移动开发设置，他可以在手机上并行运行六个 Claude Code 智能体。该设置不依赖笔记本电脑或台式机，而是通过 iOS 上的 Termius 和云虚拟机（Vultr VM）实现。核心在于利用 Tailscale VPN 实现安全访问，使用 mosh 保证网络连接的持久性，并通过 tmux 维持会话。最关键的是，通过配置 Claude Code 的 PreToolUse 钩子，在需要用户输入时发送推送通知（使用 Poke webhook），从而实现“异步开发”，让开发工作融入到日常的碎片时间中。</p>
+
+<p><a href="https://karpathy.ai/zero-to-hero.html">神经网络：从零到英雄</a><br>这是一个由Andrej Karpathy主讲的关于如何从零开始用代码构建神经网络的课程。课程从反向传播的基础开始，逐步深入到现代深度神经网络，如GPT。重点关注语言模型，因为所学知识易于迁移到计算机视觉等其他领域。先决条件是扎实的Python编程基础和入门级的数学知识（如导数、高斯分布）。
+
+课程内容包括：
+1. 神经网络和反向传播的详细介绍，构建micrograd。
+2. 语言模型入门，构建makemore（bigram模型）。
+3. 构建makemore第二部分：MLP。
+4. 构建makemore第三部分：激活函数和梯度，BatchNorm。
+5. 构建makemore第四部分：成为反向传播高手（手动反向传播）。
+6. 构建makemore第五部分：构建一个WaveNet。
+7. 从零开始构建GPT（Generatively Pretrained Transformer）。
+8. 构建GPT的分词器（Tokenizer）。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>An alternative to the immich-CLI command that doesn&#39;t depend on nodejs installation. It tries its best for importing google photos takeout archives.</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+<p><a href="https://github.com/johannesboyne/gofakes3">johannesboyne/gofakes3</a><br>A simple fake AWS S3 object storage (used for local test-runs against AWS S3 APIs)</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>Automated developer-oriented status page with alerting and incident support</p>
+
+<p><a href="https://github.com/AlistGo/alist">AlistGo/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/charmbracelet/vhs">charmbracelet/vhs</a><br>Your CLI home video recorder 📼</p>
+
+<p><a href="https://github.com/steveiliop56/tinyauth">steveiliop56/tinyauth</a><br>The simplest way to protect your apps with a login screen.</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

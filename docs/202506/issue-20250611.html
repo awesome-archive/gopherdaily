@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250611.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250611</span>
+</p>
+<p>每日一谚：Avoid tight coupling between modules </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://titpetric.com/2025/06/11/modern-go-application-design">现代 Go 应用程序设计</a><br>本文探讨了 Go 应用程序设计中的最佳实践，强调结构的重要性。作者认为，良好的结构可以提高代码的可重复性、可维护性和可测试性，并减少bug。文章从用例和数据模型两个方面阐述了如何构建结构良好的 Go 应用程序，并介绍了数据模型分离的好处，例如提高可扩展性和可维护性。文章还建议使用诸如 SOLID 或 DDD 等原则来指导应用程序的设计，以及使用 schema-first 的方法来保持数据模型的清晰性和一致性。</p> 
+
+<p><a href="https://tonybai.com/2025/06/11/the-gentle-singularity">Sam Altman的“温和奇点”已至：我们真的越过了AI的“事件视界”吗？</a><br>近日，OpenAI 的掌舵人 Sam Altman 在其个人博客上发表了一篇题为《The Gentle Singularity》（温和的奇点）的重磅文章，再次将人工智能的未来推向了舆论的风口浪尖。Altman 以其一贯的前瞻性视角，大胆宣称：“我们已越过 事件视界；起飞已经开始。人类已接近构建数字超级智能，而且至少到目前为止，它远没有看起来那么怪异</p> 
+
+<p><a href="https://www.getmaxim.ai/blog/bifrost-a-drop-in-llm-proxy-40x-faster-than-litellm">Bifrost：比 LiteLLM 快 40 倍的即插即用型 LLM 代理</a><br>在使用大型语言模型 (LLM) 进行构建时，日常任务（如写作、头脑风暴和快速自动化）感觉几乎毫不费力。但是，一旦尝试构建强大的生产级管道，真正的挑战就会出现。第一个障碍是接口碎片化：每个提供商都公开不同的 API，具有其自己的速率限制、输入特性和错误格式。切换模型可能意味着重写堆栈的大部分内容才能保持运行。
+
+这就是我们构建 Bifrost 的原因——不仅仅是另一个 LLM 代理，而是速度最快、可扩展性最高的 LLM 网关，专门为高吞吐量、生产级 AI 系统而设计。</p> 
+
+<p><a href="https://preslav.me/2025/06/11/golang-date-formatting-is-fine">我和Go语言的日期格式化达成了和解</a><br>作者讲述了其在教授Go语言课程中，学生们对Go语言日期格式化的困惑，以及作者自己最初的抵触。作者指出，我们几乎总是需要谷歌搜索日期格式化字符串，Go语言的格式化方式虽然乍看之下奇怪（例如使用`2006-01-02 15:04:05`），但却具有更高的可读性和直观性，从而减少了开发中的认知负担，提高了效率。作者认为Go语言的这种设计，优先考虑了实际的开发者体验，将格式字符串变成了活文档，减少了意图和理解之间的反馈循环。</p> 
+
+<p><a href="https://medium.com/@orellabac/using-go-in-snowflake-snowpark-3d4e49bf801e">在 Snowflake SnowPark 中使用 Go！</a><br>本文介绍了作者尝试在 Snowflake SnowPark 中使用 Go 语言的经验。作者使用了一个简单的示例：将 XML 字符串解析为 JSON 字符串，并将其返回给 Python 代码。文章详细介绍了 Go 代码的编写、共享库的构建以及在 Snowflake Snowpark Python 函数中使用该库的方法。最后，作者表达了对 Snowflake 工程团队的赞赏，并分享了代码的 Github 链接。</p> 
+
+<p><a href="https://victoriametrics.com/blog/dev-note-distributed-tracing-with-victorialogs">开发者笔记：分布式追踪研究，与 Tempo 和 ClickHouse 的比较</a><br>VictoriaMetrics 团队分享了他们对分布式追踪的研究结果，并探讨了两个关键问题：VictoriaTraces 是否会发布？以及它的竞争力如何？文章比较了 VictoriaLogs、Jaeger&#43;ClickHouse、Jaeger&#43;Elasticsearch 和 Grafana Tempo&#43;S3 等方案的数据摄入性能、资源利用率和数据大小，结果显示 VictoriaLogs 在性能和资源效率方面表现出色，并能够与 Grafana 集成以进行数据可视化。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/private-connections-for-github-actions">GitHub Actions 运行器专用私有连接</a><br>使用更新后的 Tailscale GitHub Actions 可统一整个构建管道的安全连接，Windows 和 macOS 支持加入 Linux 通用可用性。</p>
+
+<p><a href="https://www.docker.com/blog/publish-ai-models-on-docker-hub/">将 AI 模型发布到 Docker Hub</a><br>了解 Model Runner 的新命令，以及它们如何帮助您在 Docker Hub 上发布和共享您自己的 AI 模型。</p>
+
+<p><a href="https://www.rfleury.com/p/demystifying-debuggers-part-1-a-busy">解密调试器，第一部分：繁忙的十字路口</a><br>本文是关于调试器基础知识的新系列文章的第一部分。调试器存在于计算生态系统的许多部分的交汇处——它们必须应对内核、编译器、链接器、编程语言和指令集体系结构的复杂细节。本文探讨了调试器的用途、重要性以及其在软件开发中的作用，并概述了后续文章将涵盖的调试器体系结构主题，例如运行程序的构成、调试器与内核的交互、CPU调试功能、调试器插入的陷阱、调试信息和工具链、表达式求值、断点、单步执行、栈展开以及图形化调试器多线程架构等。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-06-10-claude-code-my-new-best-friend">Claude Code 成了我的新朋友</a><br>作者最近发现了 Claude Code，并用它生成了 22 个被其开源项目 Dolt 和 go-mysql-server 接受的 Pull Requests。本文深入探讨了作者如何发现 Claude Code，以及 Claude Code 所做的一些更改。</p>
+
+<p><a href="https://tylertringas.com/ai-legal">AI 如何拯救我的公司于一场为期两年的诉讼噩梦</a><br>经过两年多的时间和巨大的精力和金钱浪费，我的公司 Calm Company Fund 以非常有利的条件解决了一起针对我们的诉讼。这件事最初是我生命中最具挑战性的时期之一，但却意外地成为了一堂关于如何利用 AI 在与资金雄厚的对手抗衡中扳回一局的优秀课程。如果你是一位企业家……继续阅读 →</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/zalando/postgres-operator">zalando/postgres-operator</a><br>Postgres operator creates and manages PostgreSQL clusters running in Kubernetes</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end stack for WebRTC. SFU media server and SDKs.</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.</p>
+
+<p><a href="https://github.com/grafana/mimir">grafana/mimir</a><br>Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-google">hashicorp/terraform-provider-google</a><br>Terraform Provider for Google Cloud Platform</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250208.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250208</span>
+</p>
+<p>每日一谚：Do not prematurely abstract </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/02/08/personal-idea-about-using-question-mark-operator-in-go-error-handling-new-proposal">关于Go错误处理新提案的一个想法：?操作符这样用行不行</a><br>Go错误处理新提案讨论的如火如荼，我也说说我心目中理想的错误处理新语法应该是什么样子的以及设计原则是什么</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-protobuf">Protobuf的工作原理——数据编码的艺术</a><br>Protocol Buffers（Protocol Buffer，简称 Protobuf）是一种将数据序列化为紧凑二进制格式的方法。与JSON相比，它体积更小，传输速度更快，但缺点是可读性较差。本文深入探讨了使Protobuf高效的编码技术，并辅以基准测试结果和实际示例，包括Varint、Length-delimited和Fixed-width编码。</p> 
+
+<p><a href="https://lovable.dev/blog/from-python-to-go">lovable: 为什么从Python迁移到Go</a><br>欧洲最火AI初创企业lovable官博发文说明为什么公司使用Go重写了当前的平台</p> 
+
+<p><a href="https://www.lucavall.in/blog/opentelemetry-a-guide-to-observability-with-go">OpenTelemetry：使用Go进行可观测性指南</a><br>现代应用程序通常是复杂的分布式系统。调试它们并不有趣：您必须跨服务跟踪请求，日志会丢失，并且指标通常难以关联。这就像在干草堆中找一根针——干草堆着火了，针还在移动。这就是OpenTelemetry (OTel) 可以提供帮助的地方。OpenTelemetry是一个开源的可观测性框架，可以帮助收集和导出应用程序的跟踪、指标和日志。它标准化了遥测数据的收集方式，并简化了与Grafana等工具的集成。借助OpenTelemetry，我们终于可以深入了解应用程序的性能，从而回答诸如“为什么此请求速度慢？”、“当前有多少请求处于活动状态？”以及“发生了哪些错误以及在哪里发生？”等问题。</p> 
+
+<p><a href="https://devblogs.microsoft.com/go/go-1-24-fips-update">Microsoft Go 1.24 FIPS 更改</a><br>Go 1.24 的加密包进行了重大改动，以使 Go 标准库符合 FIPS 140-3 标准。Microsoft Go 1.24 使用系统库（Linux 上的 OpenSSL 和 Windows 上的 CNG）执行加密操作，并改进了与 Azure Linux 的兼容性，并引入了对 macOS 的预览支持。文章详细介绍了新的环境变量设置（GODEBUG=fips140=on, GODEBUG=fips140=only, GOFIPS140=latest）以及 macOS 支持和增强的 Azure Linux 3 支持。</p> 
+
+<p><a href="https://dhawos.dev/site/en/articles/bluesky-custom-feeds">使用Go在Bluesky上创建自定义新闻源</a><br>这是一篇关于使用 Go 编程语言创建自定义 Bluesky 新闻源的博文。文章介绍了创建自定义新闻源的步骤，包括在 Bluesky 帐户上注册新闻源、索引 Bluesky 上创建的内容以及构建服务器。文章还提供了代码示例和指向相关资源的链接。</p> 
+
+<p><a href="https://zuplo.com/blog/2025/02/02/generate-cli-from-api-with-climate">从 REST API 创建服务器驱动的 CLI | Zuplo 博客</a><br>学习如何使用 OpenAPI 和 Climate 从你的 REST API 创建一个完全服务器驱动的 Go CLI。本文探讨了传统 CLI 工具的局限性，例如规范重复、客户端和服务器紧密耦合以及服务器无法影响客户端等问题，并介绍了 Climate 作为一种解决方案，它允许服务器通过 OpenAPI 扩展来影响 CLI 行为，从而实现更好的动态性和可维护性。</p> 
+
+<p><a href="https://dev.to/siddheshk02/splitting-secrets-like-a-spy-shamirs-secret-sharing-in-go-53b">像间谍一样分割秘密：Go 语言中的 Shamir 秘密共享</a><br>本文介绍了 Shamir 秘密共享 (SSS) 算法，并演示了如何在 Go 语言中实现它。SSS 是一种密码学方法，可以将秘密分割成多个份额，只有达到一定数量的份额才能重建原始秘密。文章包含代码示例，展示了如何使用 `github.com/hashicorp/vault/shamir` 包来分割和组合秘密。此外，文章还讨论了 SSS 的实际应用场景，例如安全地存储私钥、分发凭据、去中心化访问控制和灾难恢复。</p> 
+
+<p><a href="https://moroz.dev/blog/secure-cookie-library-in-go-from-scratch">从零开始用 Go 编写安全的 Cookie 库</a><br>这篇文章展示了如何使用 Go 编程语言和 XChaCha20-Poly1305 AEAD 加密和认证有效负载来编写“安全 Cookie”库。文章探讨了 Cookie 的概念、简单的 Cookie 存储方法的不足以及更安全的替代方案，包括使用随机字符串、签名 Cookie 和加密再签名 Cookie。文章详细解释了 XChaCha20-Poly1305 的优点，并逐步讲解了如何实现一个安全的 Cookie 库，包括加密、解密、验证和处理 cookie 字符集的函数。</p> 
+
+<p><a href="https://hexacluster.ai/postgresql/postgresql-client-side-connection-pooling-in-golang-using-pgxpool">使用 pgxpool 在 Golang 中进行 PostgreSQL 连接池化</a><br>本文介绍了如何在使用 pgxpool 的 Golang 中设置 PostgreSQL 连接池，并提供用于生产级配置的代码示例。连接池通过有效地管理和重用数据库连接来解决可扩展性和可靠性问题，从而优化性能、资源管理和连接生命周期管理。文章还提供了使用连接池的两种方法，并阐述了最佳实践和建议，包括配置参数、错误处理、连接使用和监控。</p> 
+
+<p><a href="https://dev.to/the_ladybella/format-specifiers-explained-precision-efficiency-and-best-practices-in-golang-programming-3jeb">Go编程中格式说明符详解：精度、效率和最佳实践</a><br>本文探讨了 Go 语言中格式说明符的细节，包括它们的写法、精度控制、效率考虑以及编写更清晰易读代码的最佳实践。文章涵盖了整数、浮点数、字符串和布尔值的格式说明符，并提供了示例代码和输出结果。此外，文章还讨论了如何提高代码效率以及一些最佳实践，例如明确指定类型、避免过度精度以及在可能的情况下使用 strconv 包代替 fmt.Sprintf。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://victoriametrics.com/blog/opentelemetry-prometheus-and-more">OpenTelemetry、Prometheus 及更多：哪种指标收集和传播方式更好？</a><br>本文将 OpenTelemetry、Prometheus 2.x、Prometheus 3.x 和 vmagent 放在一起进行比较，重点是数据抓取和推送到远程存储。文章通过基准测试比较了不同方案的性能，包括 CPU 使用率、内存使用率、带宽使用率和磁盘使用率，并分析了不同方案的优缺点。最终结论是，在大多数导出器（特别是那些生成大量时间序列的导出器，例如 Istio 和 kube-state-metrics）不支持 OTLP 之前，集成 OpenTelemetry 会产生额外的成本。Prometheus 3.x 中新的远程写入协议降低了带宽使用率，而 vmagent 在资源开销方面表现出色，是一个经济高效的选择。</p>
+
+<p><a href="https://cacm.acm.org/opinion/it-is-time-to-standardize-principles-and-practices-for-software-memory-safety">是时候标准化软件内存安全原则和实践了</a><br>来自学术界和业界的 21 位共同作者，他们在内存安全研究、部署和策略方面拥有专业知识，认为标准化是实现普遍强内存安全的重要下一步。几十年来，软件可信计算基 (TCB) 中普遍存在的内存安全漏洞使得恶意软件的传播以及对关键基础设施、国家安全目标、公司和个人的破坏性定向攻击成为可能。在过去两年中，信息技术行业越来越多地呼吁采用内存安全技术，将其作为更广泛的安全设计倡议的一部分，来自政府、学术界和行业本身。这些呼吁基于大量证据，这些证据表明内存安全漏洞持续了几十年，构成了大多数关键安全漏洞，并且影响了所有主流软件生态系统和产品，以及日益增长的认识，即这些问题几乎完全可以通过使用最新的强壮且可扩展的内存安全技术来避免。</p>
+
+<p><a href="https://steve-yegge.medium.com/the-death-of-the-stubborn-developer-b5e8f78d326b">顽固开发者的消亡</a><br>作者在五月份写过一篇名为《初级开发者的消亡》的博客文章，引发了人们的强烈反响。作者的论点随后得到许多大公司的证实，并且这种现象也发生在其他行业，而不仅仅是软件行业。这的确是一个真实存在的问题，尽管它对几乎所有相关人员来说都非常不便。文章主要讨论了大型软件项目中两种不同类型的任务：叶节点任务（例如编写身份验证库或更新单元测试）和组合叶节点任务以交付项目的更高级任务。随着大型语言模型（LLM）能够执行大部分叶节点任务，甚至一些更高级的任务，剩余给人类的任务主要是更复杂的规划和协调工作，这通常不是分配给初级开发者的任务。因此，初级开发者应该学习以聊天为导向的编程（CHOP），否则将会被淘汰。文章还探讨了聊天式编程的挑战和未来发展方向，并指出虽然全自动软件代理的出现可能会取代聊天式编程，但这仍然是一个未经证实的设想。文章最后强调，即使聊天式编程存在一些问题，例如难以掌握和衡量其影响，但它仍然是编程的下一个重要阶段，开发者应该立即学习和应用。</p>
+
+<p><a href="https://www.docker.com/blog/ga-launch-docker-bake">Docker Bake现已正式上市 | Docker</a><br>Docker Bake现已正式上市，包含在Docker Desktop 4.38中！这个强大的构建编排工具简化了复杂构建的管理，为各种规模的团队提供简洁性、灵活性和性能。了解Bake如何简化复杂构建，以及如何开始使用。</p>
+
+<p><a href="https://whitep4nth3r.com/blog/how-i-learned-to-code-with-my-voice">我如何用语音学习编程</a><br>由于严重的双手疼痛，我学会了用语音编程。这是我使用 Talon 和 Cursorless 的历程，以及一些关于免动手开发的实用技巧。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://martinfowler.com/articles/deepseek-papers.html">DeepSeek系列：技术概述</a><br>本文概述了描述DeepSeek演进的论文，重点介绍了这项研究中的三个主要方向：专注于提高成本和内存效率；使用HPC协同设计在有限的硬件上训练大型模型；以及从大规模强化学习中发展出涌现推理能力。文章涵盖了DeepSeek-LLM、DeepSeek-V2、DeepSeek-V3和DeepSeek-R1四个技术报告，分别介绍了它们在模型缩放、多头潜在注意力机制、混合专家模型、FP8混合精度训练和强化学习等方面的技术细节和成果。</p>
+
+<p><a href="https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it">编程的终结？——我们所知的编程的终结</a><br>本文探讨了人工智能对编程领域的影响。作者认为，人工智能不会取代程序员，而是会改变他们的工作方式。编程将会演变，新的技能和工具将会出现，而那些掌握新技术的人将会继续受到需求。历史经验表明，技术进步通常会导致就业机会的增加，而不是减少。作者认为，人工智能将使程序员的生产力提高十倍，同时也增加了编程的应用范围，从而对更多程序员的需求。未来，程序员将与人工智能协同工作，专注于更高级别的创造性工作。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2025/02/05/https-blogs-microsoft-com-blog-2024-11-12-how-real-world-businesses-are-transforming-with-ai">现实世界中的企业如何通过 AI 实现转型——50 个新的案例</a><br>本文更新于 2025 年 2 月 5 日：文章包含 50 个新的客户案例，这些案例出现在每个客户列表部分的开头。文章将定期更新新的案例。我一直以来职业生涯中的一个亮点就是与各行各业的客户和合作伙伴联系，了解他们如何利用技术……本文收集了 300 多个我们最喜欢的现实案例，这些案例展示了组织如何利用微软成熟的 AI 功能来推动影响并塑造当今向 AI 平台的转变。我们还添加了客户使用我们 AI 功能的新案例，并将定期更新此案例。希望您能找到一个或两个可以激发您自身转型之旅的案例。</p>
+
+<p><a href="https://sundaylettersfromsam.substack.com/p/motion-thought-systems-and-ai">运动、思想、系统与人工智能</a><br>本文重新审视了所谓的第二次工业革命。作者认为，人工智能并非简单的“第二次工业革命”，而是更为复杂的过程。第一次工业革命带来了超越人力、风力和水力的额外物理能量，而人工智能则带来了超越人类思维的额外认知能量。文章将人工智能与工业革命进行类比，探讨了运动自动化与思想自动化的相似之处，并指出构建强大的AI系统需要全新的实践方法和控制系统，以及对认知、可靠性和可扩展性的全新科学理解。</p>
+
+<p><a href="https://www.gauge.sh/blog/ai-makes-tech-debt-more-expensive">AI使技术债务更加昂贵</a><br>越来越多人认为AI会降低技术债务的影响。由于编写和清理代码变得更容易，公司是否可以承受更多债务？事实恰恰相反——AI大幅提高了技术债务的实际成本。关键影响在于，生成式AI显著拉大了“低债务”编码和“高债务”编码之间的速度差距。代码库较新、质量较高的公司从生成式AI工具中获益最多，而代码库混乱、遗留代码众多的公司则难以采用这些工具。换句话说，拥有“高债务”代码库的代价比以往任何时候都更大。
+
+如果尝试过像Cursor或Aider这样的专业编码工具，就会知道它们的性能对所处理代码的复杂性高度敏感。它们在应用预先存在的模式以及利用现有的接口或模块关系时，会显著提高速度。然而，在控制流程细微、依赖关系复杂且模式出乎意料的“高债务”环境中，它们难以生成有用的响应。
+
+复杂的代码库不仅使模型难以生成连贯的响应，也使开发者更难形成连贯的请求。
+
+这种体验导致大多数开发人员“观望”，等待这些工具改进到能够处理软件中的“生产级”复杂性为止。虽然生成式AI在某些方面（多模态、更快、更小、更便宜）得到了显著改进，但这一障碍到目前为止已被证明更顽固，o1的采用率相对较低，多智能体框架也未能显著扩展推理能力。
+
+与其试图强迫生成式AI工具解决遗留代码库中的棘手问题，不如让专家负责重构遗留代码，直到生成式AI能够顺利运行。当直接重构仍然过于冒险时，团队可以使用像“绞杀式应用”这样的方法来构建新的模块，这些模块可以立即从生成式AI工具中获益。
+
+这意味着现代开发团队需要转向更高层次的抽象。产品应由精干的专家团队所有，主要关注代码的架构，而不是实现细节。
+
+从本质上讲，目标应该是尽可能地消除AI工具的障碍。一种可靠的方法是花费时间将系统分解成内聚且一致的模块，每个模块都通过显式接口进行交互。
+
+评估一组模块的一个有用启发式方法是用自然语言解释其核心功能和数据流。应该能够简明扼要地描述当前和计划的功能。还可以设置可见性和强制执行，以朝着所需的架构取得进展。
+
+现代开发团队应该努力维护和发展一个定义良好的模块系统，该系统可靠地模拟其领域的需要。然后，日常功能工作应该在此基础之上完成，并最大限度地利用生成式AI工具。
+
+现在拥有高质量的代码库比以往任何时候都更有价值。对模块化架构的投资使团队能够充分利用生成式AI工具，在构建更高质量软件的同时实现快速的功能开发。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>Prometheus instrumentation library for Go applications</p>
+
+<p><a href="https://github.com/rook/rook">rook/rook</a><br>Storage Orchestration for Kubernetes</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/docker/buildx">docker/buildx</a><br>Docker CLI plugin for extended build capabilities with BuildKit</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/openai/openai-go">openai/openai-go</a><br>The official Go library for the OpenAI API</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/NVIDIA/k8s-device-plugin">NVIDIA/k8s-device-plugin</a><br>NVIDIA device plugin for Kubernetes</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/metallb/metallb">metallb/metallb</a><br>A network load-balancer implementation for Kubernetes using standard routing protocols</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

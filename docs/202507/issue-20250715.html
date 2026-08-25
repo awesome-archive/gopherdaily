@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250715.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250715</span>
+</p>
+<p>每日一谚：Define interfaces in the consumer package, not the producer. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/14/writing-style-guide">代码之外的必修课：顶级技术文档风格指南如何提升你的工程效率</a><br>最近，Redhat公司发布了《Red Hat Technical Writing Style Guide》7.1版本。这份指南不仅仅是一系&gt;列规则的集合，它更像是一部由顶级开源软件公司沉淀下来的、关于如何通过清晰沟通来提升工程效率的哲学。</p> 
+
+<p><a href="https://words.filippo.io/passkey-encryption/">使用 Passkeys 和 age 加密文件</a><br>本文介绍了如何使用 Passkeys 和 age 文件加密格式对文件进行加密。Typage（npm 上的 age-encryption）是一个 TypeScript 实现的 age 文件加密格式，它支持使用 WebAuthn API 的 passkeys 进行对称加密。文章详细解释了 WebAuthn PRF 扩展、fido2prf age 格式以及 Typage 的实现细节，并介绍了如何使用 age CLI 插件与安全密钥进行交互。</p> 
+
+<p><a href="https://medium.com/@yuseferi/go-clean-your-room-finding-and-fixing-dead-code-in-go-3a2a1b2540c6">Go Clean Your Room！Go语言中查找和修复失效代码</a><br>本文讨论了Go语言中失效代码的问题。失效代码是指在项目中存在但从未被调用的代码，它会带来一系列问题，例如过时的库、代码臃肿、安全漏洞、构建时间增加以及开发人员的困惑。文章介绍了Go的`go tool deadcode`工具，该工具可以有效地识别和查找这些失效代码，从而帮助开发者清理代码库，提高代码质量。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/ai-powered-mock-apis-for-testing-with-docker-and-microcks/">AI赋能测试：结合Docker Model Runner和Microcks进行动态模拟API测试</a><br>学习如何使用Docker Model Runner和Microcks创建AI增强的模拟API进行测试。在本地生成动态、逼真的测试数据，以加快开发周期。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/07/14/innovating-with-a-rock-solid-foundation-while-saving-40-on-networking-costs-imagine-learnings-journey-with-linkerd/">在坚实的基础上创新，同时节省 40% 的网络成本：Imagine Learning 使用 Linkerd 的历程 | CNCF</a><br>Imagine Learning 致力于为美国 1800 多万学生提供支持，赋能教育工作者，激发突破性时刻。作为一家数字优先的教育解决方案提供商，他们需要一个同样具有创新性的技术基础设施来满足其规模化需求。Linkerd 服务网格帮助 Imagine Learning 轻松扩展，同时保持用户依赖的性能和可靠性，并降低了网络成本。</p>
+
+<p><a href="https://www.makingsoftware.com/chapters/how-a-screen-works">屏幕的工作原理</a><br>从电子枪到微小的电晶体——数字显示器一直是计算技术的无名英雄。本文将解释屏幕的工作原理，字数约2983。</p>
+
+<p><a href="https://blogs.oracle.com/linux/post/linux-slub-allocator-internals-and-debugging-1">linux slub分配器原理与调试: part1</a><br>这是一个Oracle博客网站，使用JavaScript动态加载内容。根据URL的不同，会加载不同的页面内容，包括分类页面和文章详情页面。页面使用了Oracle Sites Cloud Delivery (SCD) 平台。</p>
+
+<p><a href="https://gpfault.net/posts/asm-tut-0.txt.html">让我们学习 x86-64 汇编！第 0 部分 - 设置和第一步</a><br>这篇博文是关于学习 x86-64 汇编语言的系列教程的第一部分。作者介绍了学习过程中使用的工具（Flat Assembler 和 WinDbg），并解释了 x86-64 汇编语言的一些基本概念，例如寄存器、内存寻址和 64 位 Windows 调用约定。文章还包含了一个简单的示例程序，展示了如何使用这些工具以及如何编写一个最小的 Windows 程序。</p>
+
+<p><a href="https://planetscale.com/blog/caching">缓存 — PlanetScale</a><br>每次使用计算机时，缓存都会发挥作用，以确保您的体验快速流畅。从在 CPU 上执行指令到请求您的 X.com 信息流，再到加载此网页，计算机执行的每项操作都严重依赖于缓存。本文将带您进行一次缓存的互动式导览：这是计算机领域最优雅、最强大、最普遍的创新。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/14/application-development-without-programmers/#atom-everything">无需程序员的应用程序开发</a><br>这篇博文讨论了詹姆斯·马丁1982年出版的书籍《无需程序员的应用程序开发》。书中提到，应用开发在20年里变化不大，但一股新的浪潮正在涌来，各种非程序化技术和语言正在兴起。这将对数据处理（DP）领域的人员产生重大影响，许多专业人士和程序员可能会本能地抵制书中描述的一些方法。文章作者认为，这段文字与当今人们对人工智能辅助编程对开发人员职业影响的担忧产生了共鸣。书中还提到，由于计算机成本持续下降，未来大多数计算机将不得不至少部分地无需程序员就能工作。</p>
+
+<p><a href="https://timsh.org/claude-inside-docker">切换到 Docker 内部的 Claude Code &#43; VSCode</a><br>作者描述了他们从旧的 AI 编码设置切换到在 Docker 中使用 VSCode 的“Dev Container”功能运行 Claude Code 的过程。文章解释了切换的原因，包括对速度和 AI 代理安全性的担忧，并提供了一个简短的指南，帮助读者进行相同的设置。指南包括在 Docker 中设置 Claude Code 的步骤，以及如何使用细粒度访问令牌来安全地与 GitHub 集成。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/RezaSi/go-interview-practice">RezaSi/go-interview-practice</a><br>Go Interview Practice is a series of coding challenges to help you prepare for technical interviews in Go. Solve problems, submit your solutions, and receive instant feedback with automated testing. Track your progress with per-challenge scoreboards and improve your coding skills step by step.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：自选股行情获取，成本盈亏展示，涨跌报警推送。目前已支持A股，港股，美股，未来计划加入基金，ETF等支持。支持市场整体/个股情绪分析，K线分析等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>Powerful system container and virtual machine manager</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

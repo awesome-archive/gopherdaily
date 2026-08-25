@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260803.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260803</span>
+</p>
+<p>每日一谚：Embed structs for composition, never for inheritance. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/03/go-simplicity-philosophy-debate-reddit">Go 正在背离初心？一条 Reddit 热帖，暴露了 Go 社区最深的分歧：简单，到底能坚持多久？</a><br>Go 语言一条关于“是否正在偏离简单哲学”的 Reddit 热帖引爆社区。泛型、迭代器接连落地，有人说这是合理补课，有人说这是“口 子一开收不住”的开始。我们梳理了这场 140多个赞、60多层楼的争论。</p> 
+
+<p><a href="https://tonybai.com/2026/08/02/ccsa-claude-code-session-alias-tool">ccsa：给 Claude Code 的 session 起个人类可记的名字，一键 resume</a><br>针对 Claude Code 在多项目并行时 session 难记忆、难跨目录恢复的工程痛点，开源工具 ccsa（cc-session-alias）提供了一套轻量级的别名映射方案。该工具采用纯 Go 构建（单二进制、无 CGO、约 4MB），不改变 Claude Code 原生设计，通过双层自动扫描（sessions/*.json 注册表与 projects/*.jsonl 转录）定位最新活跃会话，将冷冰冰的 UUID 映射为语义化别名。ccsa 提供了原生的 ccsa r &lt;alias&gt; 进程替换 恢复模式与无侵入的 shell wrapper 模式，支持全局跨项目视角展示、存活状态诊断与单文件原子化安全存储，极大提升了重度 AI 编程用户的上下文复用效率</p> 
+
+<p><a href="https://tonybai.com/2026/08/01/how-to-write-an-effective-design-doc">前谷歌工程师万字拆解：AI替你写代码的时代，你更需要写好一份设计文档</a><br>AI辅助编程正在改变工程师的日常工作方式，很多人已经很少亲自动手写设计文档了。但设计文档承载的核心工作——想清楚一个项目 里真正难、真正贵的决策——依然只能靠工程师自己完成。前谷歌与微软工程师Michael Lynch在他的新书节选中，系统总结了设计文档应该包含哪些&gt;部分、什么时候该写、该投入多少精力，并给出了大量可直接套用的示例。本文基于这篇原文，为中文读者梳理出一套完整的设计文档写作框架，帮 助工程师在AI时代继续保持对“好设计”的判断力。</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-1-27/">Go 1.27 交互式导览</a><br>这是一篇关于Go 1.27交互式导览的博客文章。</p> 
+
+<p><a href="https://rednafi.com/go/supervised-fire-and-forget/">Go中goroutine的即发即忘模式</a><br>如今，未管理的`go func()`调用已不像Go早期那样常见。此时，每个人都知道Dave Cheney的名言：&#34;永远不要启动一个不知道如何停止的goroutine&#34;。</p> 
+
+<p><a href="https://blog.lvmbdv.dev/posts/adding-go-to-a-browser-code-runner/">为浏览器代码运行器添加Go支持</a><br>这篇文章介绍了如何在浏览器代码运行器中添加Go语言支持。</p> 
+
+<p><a href="https://healeycodes.com/adding-defer-to-the-typescript-compiler">为TypeScript编译器添加Go的defer语句</a><br>我想了解将Go的`defer`语句添加到TypeScript编译器有多困难，但完成时我确信它可能不应该存在。在Go中，`defer`语句会延迟函数执行，直到周围函数完成。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://zserge.com/posts/worst-htmx-ever/">让我们创建史上最差的htmx！</a><br>这是一系列关于构建流行Web框架小型&#34;克隆&#34;文章的延续，本文专注于htmx。</p>
+
+<p><a href="https://tailscale.com/blog/hugging-face-intrusion">Tailscale在Hugging Face入侵事件中的作用：好消息与坏消息</a><br>Tailscale未能阻止Hugging Face的入侵事件。文章分析了此次事件中的安全问题和应对措施。</p>
+
+<p><a href="https://blog.marcua.net/2026/07/31/authorize-dont-authenticate.html">授权而非认证</a><br>任何Web应用的登录界面都相当于应用程序告诉您&#34;为了访问我数据库中的您的数据，请证明您就是您所说的人&#34;。您正在通过应用程序进行身份验证，以便获得向其提供数据的特权。</p>
+
+<p><a href="https://unikraft.com/customer-stories/prisma-postgres">构建具有毫秒级冷启动的极端规模PostgreSQL服务</a><br>数据库即服务提供商面临**不可能的权衡**：提供具有冷启动的serverless灵活性（会令用户沮丧），或提供始终可用的服务（成本会消除免费层）。</p>
+
+<p><a href="https://www.ibm.com/quantum/blog/quantum-advantage">通过可信量子计算实现量子优势</a><br>研究人员展示了在经典方法失效的领域中通过可信量子计算实现的量子优势。</p>
+
+<p><a href="https://coroot.com/blog/reproducing-split-brain-on-cloudnativepg/">在CloudNativePG上重现脑裂问题</a><br>我们在操作符下运行Postgres以实现自动故障转移。本文介绍了如何在CloudNativePG上重现脑裂问题。</p>
+
+<p><a href="https://radekmie.dev/blog/on-type-inference/">关于类型推断</a><br></p>
+
+<p><a href="https://duckdb.org/2026/07/31/asynchronous-io">DuckDB中的异步I/O：工作、线程、工作</a><br>从2026年秋季计划发布的v2.0开始，DuckDB将支持Parquet和CSV文件的异步读取。</p>
+
+<p><a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries">为在线点查询索引数据湖</a><br>本文介绍了如何为在线点查询索引数据湖，以提高查询性能。</p>
+
+<p><a href="https://www.openhomefoundation.org/blog/a-big-win-for-android-interoperability/">Android互操作性的重大胜利</a><br>重大事件刚刚发生。作为Home Assistant的Android开发者，我受邀就Android互操作性问题向欧盟委员会提供建议。</p>
+
+<p><a href="https://coles.codes/posts/herdr-vs-cmux/">herdr与cmux对比：使用两个月后的体验</a><br>六月初我离开cmux转向herdr，因为其远程支持不符合我的工作方式。也许我应该再等一等！cmux在6月1日发布了一个保持SSH终端在重连中存活的守护进程。</p>
+
+<p><a href="https://clickhouse.com/blog/benchmarking-nvme-managed-postgres-planetscale-vs-clickhouse">基准测试NVMe支持的托管PostgreSQL：PlanetScale与ClickHouse</a><br>本文对基于NVMe的托管PostgreSQL服务进行了基准测试，比较了PlanetScale和ClickHouse的性能。</p>
+
+<p><a href="https://developer.android.com/blog/posts/celebrating-5-years-of-jetpack-compose">庆祝Jetpack Compose发布5周年</a><br>Jetpack Compose已发布5周年，本文回顾了这一UI工具包的发展历程和未来展望。</p>
+
+<p><a href="https://www.elijahkurien.com/blog/lsm-tree-from-first-principles">从基础原理理解LSM树</a><br>假设我们要构建一个快速键值存储。它应该支持万亿级键的快速读写，并且具有容错性。</p>
+
+<p><a href="https://blog.openacid.com/algo/ezraft/">EzRaft：用100行代码构建分布式KV存储</a><br>EzRaft是一个用100行代码构建的分布式KV存储实现。它基于作者过去几年在OpenRaft项目上的工作经验。</p>
+
+<p><a href="https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust/">开发者依赖工具是因为工具编码了信任</a><br>大约六年前，我们发表了一篇关于IDE的文章，大意是IDE变得如此强大和功能丰富，以至于有人像原始人一样使用Vim或Emacs真是令人惊叹。</p>
+
+<p><a href="https://t.co/PDKjX36wQ3">开发工具必须开源 - exe.dev博客</a><br>五年前，与我交谈的大多数软件工程师都没有为自己编写的程序。我经常问这个问题，试图了解Tailscale如何融入工程师的生活。</p>
+
+<p><a href="https://t.co/qBkjE8KH8o">.env文件的问题所在 | SecretSpec</a><br>`.env`是软件业最成功的意外之一。它最初是三个`export`命令的快捷方式。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/02/google-agent-scaling-science-multi-agent-myth">谷歌重磅论文：多智能体不是万能药！260组实验实测出AI 智能体的第一条“缩放定律”</a><br>AI智能体正从“单轮问答”走向“持续多步骤交互”，但业界对“如何设计多智能体系统”长期依赖经验直觉，例如“智能体越多，效果越&gt;好”。谷歌研究院联合麻省理工学院等机构，在最新论文《Towards a Science of Scaling Agent Systems》中，通过260组受控实验，对单智能体系 统与四种多智能体架构（独立、中心化、去中心化、混合）在六个真实任务基准上进行了系统对比。结果显示，多智能体协作的效果高度依赖任务是 否可拆解、是否需要频繁调用工具、是否要求严格的顺序推理：在财务分析等可并行任务上，中心化多智能体带来80.9%的性能提升；而在Minecraft规划等顺序任务上，所有多智能体架构反而让效果下降39%至70%。研究团队还发现，架构设计直接影响系统的错误传播速度，并据此训练出一个能提 前预测最优架构的模型，准确率达87%，为工程实践提供了从“拍脑袋”走向“可计算”的路径。</p>
+
+<p><a href="https://tonybai.com/2026/08/01/yc-open-source-qm-multiplayer-agent-harness">YC亲自下场开源内部Harness：QM，一个“多人在线”的公司级Agent操作系统</a><br>Y Combinator于2026年7月底在GitHub上开源了内部Agent系统QM，一个专为初创公司设计的“多人在线Agent操作系统”。与市面上大&gt;多数面向个人的AI助理不同，QM为每位员工和每个项目分配独立的沙箱、记忆和权限，同时支持在Slack频道和Web端进行团队级协作。本文将从产品 定位、技术架构、安全机制到部署方式，完整解读这个MIT协议开源项目，以及它背后折射出的“AI原生公司”组织形态变化。</p>
+
+<p><a href="https://arpitbhayani.me/blogs/three-skills">我认为每个组织都应该具备的三项Claude技能</a><br>本文介绍了每个组织都应该具备的三项Claude技能，涵盖了工程、数据库和系统领域。</p>
+
+<p><a href="https://www.seangoedecke.com/in-defense-of-not-understanding-your-codebase/">为不理解自己的代码库辩护</a><br>作为一名软件工程师，你需要多了解自己的代码库？我的猜测是，在小代码库和低流动团队工作的人需要更深入的理解。</p>
+
+<p><a href="https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions">AI金融建议出奇地好——尤其是当你问对问题时</a><br>人们越来越多地转向人工智能寻求金融建议，但研究表明，AI金融建议在正确提问的情况下表现优异。</p>
+
+<p><a href="https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5">Seedance 2.5发布</a><br>今天，我们正式推出Seedance 2.5，这是新一代视频创作模型。它提供一次性创作和灵活引用功能。</p>
+
+<p><a href="https://blog.kunchenguid.com/p/kuns-pi-agent-config">Kun的Pi智能体配置</a><br>这是一份最小化、实用且优雅的Pi智能体配置，旨在提高AI助手的工作效率。</p>
+
+<p><a href="https://harshil.dev/writings/how-i-run-pi-coding-agent-on-cloudflare">如何在Cloudflare上运行Pi编程智能体</a><br>本文介绍了如何在Cloudflare上运行Pi编程智能体，利用其程序化API实现高效代码生成。</p>
+
+<p><a href="https://blog.jetbrains.com/research/2026/07/kotlinllm-open-source/">KotlinLLM即将开源 - JetBrains博客</a><br>JetBrains宣布KotlinLLM即将开源，这是一个将Kotlin语言与大型语言模型结合的库。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/esengine/DeepSeek-Reasonix">esengine/DeepSeek-Reasonix</a><br>DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed.</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/superplanehq/superplane">superplanehq/superplane</a><br>The open source control plane for agentic engineering.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br></p>
+
+<p><a href="https://github.com/Solr159/JavBoss">Solr159/JavBoss</a><br>开箱即用的本地 JAV/视频 刮削、管理、播放软件，支持命令行一键安装和 docker 部署。只需简单添加目录，即可打造你的私人 JAV/视频 媒体库，带给你顶</p>
+
+<p><a href="https://github.com/pranshuparmar/witr">pranshuparmar/witr</a><br>Why is this running? Trace any process, port, container, or file back to what started it - CLI &#43; TUI.</p>
+
+<p><a href="https://github.com/github/gh-stack">github/gh-stack</a><br>GitHub Stacked PRs</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

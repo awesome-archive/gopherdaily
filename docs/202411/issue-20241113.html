@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241113.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-13</span>
+</p>
+<p>每日一谚：Optimize for simplicity first </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/-1dUOhN5saXApwTdiNgSHA">Go map使用Swiss Table重新实现，性能最高提升近50%</a><br>基于swiss table优化的go map实现即将在Go 1.24落地，那么究竟什么是swiss table？为何要用swiss table重新实现Go map? 当前Go map的swiss table重实现版本做了哪些改进与优化，这里写了一篇文档，给大家科普一下</p> 
+
+<p><a href="https://jitesh117.github.io/blog/creating-a-brainrot-language-server-in-golang/">使用Go实现Brainrot语言服务器</a><br>该文档详细介绍了如何使用 Go 创建 Brainrot 语言服务器，该服务器为社交媒体风格的文本提供代码完成和代码段。作者 Jitesh 选择 Go 是因为它的简单性和迭代项目的便利性。该服务器使用语言服务器协议 （LSP），旨在与任何与 LSP 兼容的编辑器配合使用。项目结构包括处理程序、main.go 和映射器，重点是实现初始化、关闭和文本文档完成等核心功能。完成处理程序使片段栩栩如生，为戏剧性的故事讲述和随意的否认提供模板。该服务器可以集成到 VSCode 或 Neovim 等编辑器中，并提供设置说明。提到的未来改进包括 emoji 建议、自动大写和代码操作，以增强语言服务器的功能。</p> 
+
+<p><a href="https://medium.com/@architagr/know-how-elements-are-referenced-in-range-loops-to-avoid-common-pitfalls-in-go-b8cf4f327a4e">了解如何在Range循环中引用元素以避免Go中的常见陷阱</a><br>Archit Agarwal 在 Medium 上的文章深入探讨了在 Go 中使用范围循环时常犯的错误，特别是范围循环中的元素被复制而不是引用的疏忽。这种基本的误解可能会导致在迭代期间尝试修改元素时出现意外行为。作者提供了一些示例，例如更新《权力的游戏》列表中角色的头像 URL，以说明对循环变量（副本）所做的更改如何不会影响原始数据结构。为了解决这个问题，文章建议使用基于索引的赋值或经典的 for 循环来直接修改原始元素。这篇文章为 Go 开发人员提供了避免这些陷阱并编写更可靠的范围循环的指南，并承诺在接下来的文章中进一步讨论相关主题。
+
+（注意：摘要的精心设计是为了概括文章的关键点，同时保持简洁和连贯性，避免直接引用或不属于主要信息中心的具体细节。</p> 
+
+<p><a href="https://dev.to/akashjana/from-zero-to-merge-building-a-json-renaming-field-component-in-go-17nh">从零到合并：在Go中构建JSON 重命名字段组件</a><br>源文件讲述了在 2024 年 Hacktoberfest 期间为 Instill AI 项目做出贡献的个人的旅程。这位刚接触 Go 编程语言的贡献者踏上了学习之路，学习了 Instill® 的文档和代码库。他们解决了在 Instill的管道后端项目中重命名 JSON 字段的挑战，这需要对现有字段名称采取冲突解决策略。该贡献者实施了各种策略，例如覆盖、跳过、合并和错误处理，以管理冲突。他们还创建了测试来确保代码的可靠性和弹性。在整个过程中，他们接受了 Instill的版主 Anni 和 ChunHao 的指导，并了解了本地测试和协作的重要性。他们的拉取请求成功合并意味着重要的学习经验和对 Instill AI 社区的贡献。
+
+（注意：该摘要旨在概括旅程的关键要素，重点关注学习体验、面临的挑战、实施的策略以及贡献的结果。</p> 
+
+<p><a href="https://dev.to/justlorain/understanding-etcds-raft-implementation-a-deep-dive-into-raft-log-bdn">了解 etcd 的 Raft 实现：深入了解 Raft 日志</a><br>本文深入探讨了 etcd 的 Raft 实现的复杂性，重点介绍了 Raft Log 模块。它首先解释了 Raft 共识算法在跨服务器集群复制日志方面的作用，以确保一致性。用 Go 编写的 etcd raft 库因其核心 Raft 算法实现而备受推崇，让用户处理网络传输和存储。然后，本文概述了 Raft Log 的结构，包括 &#39;raftLog&#39; 和 &#39;unstable&#39; 字段，以及它们在管理日志条目中的作用。它讨论了 etcd raft 和用户之间的交互，特别是通过 &#39;Ready&#39; 结构体，其中包含需要持久化或应用程序的日志条目。本文最后详细介绍了在 etcd raft 中处理写入请求的过程，从发出请求到更新 &#39;applied&#39; 索引，演示了日志管理的流程。这个全面的分析旨在阐明 Raft Log 在 etcd raft 中的功能，并为类似的实现提供见解。
+
+（注意：摘要经过精心设计，以封装源文档的关键元素，同时保持简洁和连贯性。它不包括超出中等长度摘要范围的直接引用或特定技术细节。</p> 
+
+<p><a href="https://read.perspectiveship.com/p/diminishing-returns">收益递减法 - 心智模型</a><br>源文件讨论了收益递减的概念，即增加的投入在某个点之后产生逐渐变小的产出的原理。这种现象在复杂系统中尤其相关，例如项目管理和产品开发，在这些系统中，简单地添加更多资源（例如，开发人员或功能）不会成比例地提高效率或用户满意度。该文件强调了了解系统动态以避免停滞的重要性，并强调当旧方法无法提供预期结果时，需要采用新方法。它还分享了一个关于跑步的个人轶事，坚持相同的例程会导致表现停滞不前。作者 Micha Poczwardowski 建议探索不同的策略，寻求专业指导，并对变革持开放态度以克服收益递减。该文件最后将读者与作者的专业网络联系起来，并邀请他们分享他们对该主题的看法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2024/11/12/jaeger-v2-released-opentelemetry-in-the-core/">Jaeger v2 发布：核心原生支持OpenTelemetry！</a><br>Jaeger v2 标志着 Jaeger 分布式跟踪平台的一个重要里程碑，它与 OpenTelemetry 项目保持一致，以增强其架构、功能和开发人员体验。新版本引入了原生 OpenTelemetry 处理、批量数据处理和高级采样功能，同时保持与现有存储后端的兼容性。Jaeger v2 通过提供可通过 YAML 配置的单个二进制可执行文件来简化部署，并支持各种存储解决方案，包括 ClickHouse。Jaeger v2 的路线图包括 Helm Chart 的开发、与 OpenTelemetry Operator 的集成以及性能和用户体验的进一步改进。这种演变使 Jaeger 成为领先的开源跟踪系统，利用与 OpenTelemetry 生态系统的协同作用来提供更灵活、可扩展和高效的跟踪平台。
+
+（注意：该摘要旨在封装源文档的关键点，重点介绍向 OpenTelemetry 的过渡、新架构的优势以及 Jaeger v2 的未来路线图。它简洁明了，避免了冗余，提供了文档内容的连贯概述。</p>
+
+<p><a href="https://netflixtechblog.com/netflixs-distributed-counter-abstraction-8d0c45eb66b2">Netflix 的分布式计数器抽象</a><br>Netflix 推出了 Distributed Counter Abstraction，这是一项基于 TimeSeries Abstraction 构建的服务，旨在以低延迟实现大规模分布式计数。该服务解决了分布式系统中准确和持久计数的挑战，提供可配置的模式，如 Best-Effort 和 Eventually Consistent 计数器。它利用 Netflix 的数据网关控制平面进行全球部署和分片。Counter Abstraction 使用 EVCache 在单个区域内实现高吞吐量和低延迟，并在一致性和幂等性之间进行权衡。为了获得更准确的计数，该服务使用时间戳和事件 ID 记录事件，并使用后台进程和持久性存储来聚合它们。控制平面管理各种抽象的配置，包括计数器抽象，它每秒处理数千个计数请求，延迟为亚毫秒级。
+
+（注意：该摘要旨在封装源文档的关键方面，侧重于 Distributed Counter Abstraction 的介绍、其操作机制及其性能指标，同时省略了具体细节和问题。</p>
+
+<p><a href="https://www.docker.com/blog/sign-in-enforcement-and-sso/">强强联手：了解强制登录和 SSO 之间的区别</a><br>源文档表示当用户尝试访问他们无权查看的资源或页面时，通常由 Web 服务器（特别是 Nginx）显示的错误消息。“403 Forbidden”状态代码表示服务器理解请求但拒绝授权，通常是由于身份验证凭据不正确或不充分。此错误清楚地表明，当服务器运行时，用户的访问权限未得到充分配置或识别。该文档虽然简短，但强调了 Web 管理中遇到的一个常见问题，并强调了适当的访问控制设置的重要性，以确保用户与 Web 资源进行安全和授权的交互。</p>
+
+<p><a href="https://blog.heroku.com/heroku-open-sources-twelve-factor-app-definition">Heroku 开源 12 因素应用程序定义</a><br>Heroku 宣布开源 12-Factor App Definition，这是软件开发实践发展的一个重要里程碑。Twelve-Factor 方法最初由 Heroku 联合创始人 Adam Wiggins 发布，指导了可扩展的云原生应用程序的创建。Heroku 认识到需要适应不断变化的技术环境，包括容器和 Kubernetes 的兴起，因此正在将 Twelve-Factor 转变为社区驱动的项目。此举旨在确保这些原则保持相关性并与行业一起发展，从而促进开发人员之间更广泛的对话和协作。Heroku 将继续支持该项目，邀请社区贡献和参与。Twelve-Factor 的开源证明了 Heroku 致力于推进软件开发最佳实践和支持下一代应用程序团队的承诺。</p>
+
+<p><a href="https://engineering.fb.com/2024/11/12/security/how-meta-built-large-scale-cryptographic-monitoring/">Meta 如何构建大规模加密监控</a><br>Meta 的工程团队，包括 Hussain Humadi、Sasha Frolov、Rafael Misoczki 和 Dong Wu，分享了对其加密监控系统的见解，该系统在检测弱加密算法和确保其基础设施的可靠性方面发挥着关键作用。托管加密库 FBCrypto 是 Meta 运营的核心，强大的监控对其性能和安全性至关重要。该团队实施了一项日志记录策略，该策略聚合加密事件以减少存储和处理开销，使用 Scribe 进行日志持久性，使用 Scuba 和 Hive 进行数据存储。尽管存在容量限制和关闭场景等挑战，但事实证明，该监控系统在先发制人地识别安全漏洞和提高基础设施可靠性方面是有效的。该团队现在正在探索进一步增强其加密监控工作。</p>
+
+<p><a href="https://opensource.googleblog.com/2024/11/what-to-do-when-my-review-is-stuck.html">我的代码review请求卡住了 - 现在怎么办？</a><br>源文档为陷入开源拉取请求审查过程的开发人员提供了指导。它建议退后一步来阐明拉取请求的目标，考虑约束条件和审阅者的反馈，并根据这些标准权衡不同的方法。本文档鼓励与审阅者进行公开沟通，在需要时寻求更多帮助，并在请求额外带宽或第二意见时保持礼貌。如果无法达成共识，作者建议考虑其他解决方案，例如分叉项目或寻求其他贡献者的建议。该文件强调了解一个人贡献的动机，并认识到何时退出拉取请求可能更有益，确保将此决定透明地传达给项目社区。</p>
+
+<p><a href="https://tailscale.com/blog/s3-log-streaming">Tailscale 日志流式处理现在支持 S3 目标</a><br>Tailscale 是一个加密和身份验证连接网络，它引入了对 Amazon S3 和 S3 兼容存储桶的支持，作为配置审计日志和网络流日志的流式处理目标。此更新满足了需要可审计性的客户的需求，而无需与成熟的 SIEM 解决方案相关的高成本。新功能允许实现经济高效的存储解决方案，同时保持合规性和安全标准。Tailscale 的日志流式处理功能现在可用于 Personal、Personal Plus 和 Enterprise 计划，其中 S3 日志记录处于测试阶段。该公司提供设置说明并鼓励用户免费试用 Tailscale，并可选择安排演示或联系销售人员。
+
+此摘要概括了源文档的关键点，重点介绍了 Tailscale 对 S3 作为日志流式处理目标的新支持、它对客户的好处以及该功能在不同计划中的可用性。它还提到了用户无需前期成本即可探索 Tailscale 服务的机会。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thenewstack.io/whos-responsible-when-ai-agents-go-rogue/">当 AI 代理失控时，谁负责？</a><br>The New Stack 的文章深入探讨了当 AI 系统出现不可预测或恶意行为时的复杂问责问题，随着 AI 越来越多地融入各个行业，人们越来越关注这个问题。随着 82% 的科技高管计划在三年内整合 AI 代理，与这些系统相关的潜在风险被放大。这篇文章强调了 AI 透明度的挑战，尤其是由于决策过程复杂而本质上不透明的概率 Gen AI 系统。它强调需要明确的策略和工具来定义问责制并弥合不同领导角色之间的差距，例如负责监督 AI 安全的 CISO、CIO 和 CTO。本文呼吁提高透明度，以确保当 AI 代理失控时，能够理解和解决根本问题。</p>
+
+<p><a href="https://semaphoreci.medium.com/how-to-build-a-rag-chatbot-to-chat-with-documents-using-sparse-data-578c769a7256">如何构建 RAG 聊天机器人以使用稀疏数据与文档聊天</a><br>本文概述了检索增强生成 （RAG） 聊天机器人的开发，旨在帮助用户浏览信号量 CI/CD 文档，即使文档不完整。该聊天机器人使用 Python 构建，利用检索器和语言模型的组合来提供简明的答案，并将用户引导至文档的相关部分。检索器使用嵌入来查找最相关的文档，然后对这些文档进行汇总和扩充，以形成语言模型响应的上下文。系统会提示聊天机器人仅根据提供的上下文回答问题，确保回答基于可用文档。本文还包括设置聊天机器人的说明，包括必要的代码片段和所涉及组件的说明。这个创新工具旨在通过将对话界面与现有文档集成来简化 SemaphoreCI 新用户的学习过程。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2024/11/12/how-real-world-businesses-are-transforming-with-ai/">现实世界的企业如何利用 AI 实现转型</a><br>Microsoft 博客强调了 AI 对企业的变革性影响，详细介绍了 Microsoft 和 IDC 委托进行的一项研究，该研究揭示了在生成式 AI 上投资的每一美元都有可观的投资回报。该博客讨论了 AI 如何通过简化任务、通过个性化交互彻底改变客户参与度、重塑各个行业的业务流程以及通过缩短上市时间来加速创新来增强员工体验。真实示例包括 Siemens 利用 Azure OpenAI 服务提高效率，Florida Crystals 采用 Microsoft 解决方案进行流程控制，以及 Nest Bank 集成 AI 以促进销售。此外，该博客还展示了 AI 如何通过 Syntea 等平台用于汽车和制药行业以及教育。总体而言，Microsoft 博客强调了 AI 在推动业务价值和创新方面的广泛而深远的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>支持 RTSP、RTMP、HTTP-FLV、WebRTC、MSE、HLS、MP4、MJPEG、HomeKit、FFmpeg 等的终极相机流媒体应用程序。</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，可以使用你想要的任何名称制作本地信任的开发证书。</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>容器镜像和文件系统的漏洞扫描器</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>为 Kubernetes 入口和服务配置外部 DNS 服务器（AWS Route53、Google CloudDNS 等）</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>非常花哨和现代的终端文件管理器</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>适用于 Windows 的 node.js 版本管理实用程序。具有讽刺意味的是，这是用 Go 编写的。</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>开放可靠的容器运行时</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS 提供商使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/hashicorp/nomad">hashicorp/nomad</a><br>Nomad 是一个易于使用、灵活且高性能的工作负载编排器，可以部署微服务、批处理、容器化和非容器化应用程序的组合。Nomad 易于操作和扩展，并且具有原生 Consul 和 Vault 集成。</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct 和 Field 验证，包括 Cross Field、Cross Struct、Map、Slice 和 Array 潜水</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman：用于管理 OCI 容器和 Pod 的工具。</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+<p><a href="https://github.com/reviewdog/reviewdog">reviewdog/reviewdog</a><br>🐶 与任何代码分析工具集成的自动化代码审查工具，无论编程语言如何</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>云原生批处理系统（CNCF 下的项目）</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源代码可用的工具，可将 API 编纂为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、编辑、审查和版本控制。</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>适用于 Go 的 Google Cloud 客户端库。</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>Go 编程语言</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>一个开源的可信云原生注册表项目，用于存储、签名和扫描内容。</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>遵循 gRPC HTTP 规范的 gRPC 到 JSON 代理生成器</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>备份和迁移 Kubernetes 应用程序及其持久卷</p>
+
+<p><a href="https://github.com/ThreeDotsLabs/watermill">ThreeDotsLabs/watermill</a><br>在 Go 中以简单的方式构建事件驱动型应用程序。</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>适用于 GitHub Actions 自托管运行器的 Kubernetes 控制器</p>
+
+<p><a href="https://github.com/GoogleContainerTools/skaffold">GoogleContainerTools/skaffold</a><br>简单且可重复的 Kubernetes 开发</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260602.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260602</span>
+</p>
+<p>每日一谚：Don&#39;t create an interface just for the sake of it. Create it when needed. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/02/no-more-boilerplate-go-proposal-function-to-interface-conversion">再见样板代码！Go 官方新提案：函数一键转接口</a><br>这种设计被称为 “适配器型定义”（如标准库中的 http.HandlerFunc）。虽然它工作得很好，但如果每个包都需要针对自己的单方法接口（Single-method Interface）定义一遍这种暖场代码，整个项目就会充斥着大量无意义的样板代码（Boilerplate）。为了终结这个痛点，Go 语言的积极贡献者 Merovius 提交了一项提案——Issue #47487：允许将 函数显式转换为单方法接口。</p> 
+
+<p><a href="https://www.alexedwards.net/blog/go-experiments-explained">Go EXPERIMENT详解– Alex Edwards</a><br>Go 常版本在发布时会附带一些实验性功能。这些实验性特性可以以不同的形式出现：有时它们是标准库中的全新模块；有时是对编译器或运行环境的改进；极少数情况下，它们甚至可能是对 Go 语言行为本身的重大改变。</p> 
+
+<p><a href="https://dev.to/kolkov/goffi-zero-cgo-foreign-function-interface-for-go-how-we-call-c-libraries-without-a-c-compiler-ca5">goffi: Go的零CGO外部函数接口 — 如何在没有C编译器的情况下调用C库</a><br>每个使用过C库的Go开发者都了解这种痛苦：CGO需要C编译器，破坏交叉编译，使二进制文件膨胀，并为每次调用增加约200ns的开销。对于我们的WebGPU绑定和ML框架，</p> 
+
+<p><a href="https://blog.kubesimplify.com/nvcf-is-now-open-source-inside-nvidia-s-gpu-function-platform">NVCF现已开源：NVIDIA GPU函数平台内部解析</a><br>NVIDIA的GPU函数平台NVCF现已开源，该平台提供了GPU计算能力的云端服务。</p> 
+
+<p><a href="https://nettools.rpcx.io/bitflip.html">bitflip / bitflip6 使用指南</a><br>这是一份关于bitflip和bitflip6工具的使用指南，涵盖了安装、配置、运行模式及典型使用场景。该工具用于大规模物理网络丢包与比特翻转检测。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/01/dynamic-configuration-for-cloud-native-swift-services/">云原生Swift服务的动态配置</a><br>本文介绍了如何为云原生Swift服务实现动态配置，包括创建初始配置读取器以引导依赖它的读取器，如ReloadingFileProvider，以及设置日志记录。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/06/01/dashboard-to-headlamp/">从Kubernetes Dashboard到Headlamp：理解过渡过程</a><br>本指南旨在帮助您自信地完成过渡。在深入迁移的细节之前，我们先从熟悉的领域开始，了解常见的Kubernetes Dashboard工作流程如何映射到Headlamp。我们还介绍了切换后哪些保持不变，哪些得到了改进。</p>
+
+<p><a href="https://www.docker.com/blog/what-is-sandbox-security/">什么是沙盒安全？</a><br>沙盒是一种在隔离环境中运行代码的技术。沙盒安全是确保这种隔离真正有效的更广泛的学科。</p>
+
+<p><a href="https://nesbitt.io/2026/06/01/the-infosec-phrasebook.html">信息安全短语手册</a><br>信息安全领域出现了越来越多的&#39;网络&#39;前缀术语，如网络风险、网络卫生、网络韧性、网络安全基础等，这些术语越来越多地被单独使用。</p>
+
+<p><a href="https://trifectatech.org/blog/announcing-zstandard-in-rust/">宣布Rust中的Zstandard压缩库</a><br>我们宣布在Rust中实现Zstandard压缩库，这是我们的第三个压缩项目。继zlib和zstd之后，这个新库将为Rust开发者提供高效的压缩功能。</p>
+
+<p><a href="https://www.repowise.dev/blog/comparisons/best-code-health-tools-2026">2026年最佳代码健康工具</a><br>2026年最佳的代码健康工具不仅测量静态警告，还能显示变更集中的位置、复杂度上升的区域、测试薄弱的地方，以及是否是相同的文件持续拖累代码库。</p>
+
+<p><a href="https://www.scylladb.com/2026/05/14/access-patterns-are-key/">键值具有误导性。访问模式才是关键 - ScyllaDB</a><br>ScyllaDB通过低延迟、高吞吐量和十亿级数据支持实时AI应用。</p>
+
+<p><a href="https://grpc.io/blog/grpc-rust-client-api-2/">gRPC-Rust客户端API演变（第2部分/共2部分）</a><br>这是gRPC-Rust客户端API演变的第二部分，由Google的Doug Fawley撰写。本文继续探讨gRPC-Rust客户端API的改进和变化。</p>
+
+<p><a href="https://www.amazon.science/blog/how-flat-is-replacing-fat-in-aws-data-center-networks">扁平网络如何替代胖树网络：AWS数据中心网络变革 - Amazon Science</a><br>AWS数据中心网络正在从传统的胖树拓扑转向扁平网络，通过&#34;准随机&#34;网络拓扑和名为ShuffleBox的新型无源光学组件，使扁平网络更加高效实用。</p>
+
+<p><a href="https://javarevisited.substack.com/p/the-senior-software-engineers-reading">我阅读了20多本软件工程书籍：以下是我的前10本推荐</a><br>作者分享了2026年高级程序员和编码者应该阅读的10本最佳软件工程书籍，这些书籍涵盖了软件开发的各个方面。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.docker.com/blog/coding-agent-horror-stories-the-rm-rf-incident/">编码智能体恐怖故事：rm -rf ~/ 事件</a><br>本文探讨了传统AI编码智能体与Docker沙盒在执行环境、文件系统视图和凭证访问方面的安全差异。Docker沙盒使用隔离的微VM和自己的内核，而传统智能体直接在主机上执行。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/yusing/godoxy">yusing/godoxy</a><br>High-performance reverse proxy and container orchestrator for self-hosters</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>Your AI trading terminal assistant for US stocks, commodities, forex, and crypto.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/mvanhorn/cli-printing-press">mvanhorn/cli-printing-press</a><br>Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compou</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>Go library for accessing the GitHub v3 API</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit</p>
+
+<p><a href="https://github.com/HexmosTech/git-lrc">HexmosTech/git-lrc</a><br>Free, Micro AI Code Reviews That Run on Commit</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

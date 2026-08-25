@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260120.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260120</span>
+</p>
+<p>每日一谚：Steps for structuring idiomatic Go code: 1. Think about how you&#39;d do it in Java/C#. 2. Do the opposite. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/20/ai-and-go-opportunities-and-challenges">AI 时代，Go 语言会“失宠”还是“封神”？—— GopherCon 2025 圆桌深度复盘</a><br>在 AI 的滔天巨浪面前，每一位 Go 开发者心中或许都曾闪过一丝不安：Python 似乎统治了一切，我的 Go 语言技能树还值钱吗？AI 会取代我写代 码吗？我该如何在这个喧嚣的时代保持清醒？ 在 GopherCon 2025 的压轴圆桌会议上，一场名为“AI 与 Go：机遇与挑战”的深度对话给出了答案。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/b-uF_bvSIqjOqECwd25jIA">【分布式系统】05 时间的幻象 —— Lamport 与 Vector Clock 如何重建分布式因果？</a><br></p> 
+
+<p><a href="https://research.swtch.com/fp-proof">快速无舍入缩放：Ivy的证明（浮点格式化，第4部分）</a><br>本文对“快速无舍入缩放”（Fast Unrounded Scaling）操作的正确性进行了数学证明，该操作是快速浮点数打印和解析的基础</p> 
+
+<p><a href="http://notes.eatonphil.com/2026-01-19-llms-and-your-career.html">LLMs 与你的职业生涯</a><br>这篇文章讨论了大型语言模型（LLMs）对软件开发人员职业生涯的影响。作者认为，最稳健的职业发展道路是保持实用性和解决问题的能力，同时不将现有代码视为“黑匣子”，而是努力理解底层工作原理（如数据库、操作系统等）。作者指出，通过 LLM 编码与使用 Rails 或浏览 Stack Overflow 类似，本质上都是在适应现有代码。那些只将现有工具视为黑匣子的开发者竞争力较弱，而理解基础知识的开发者在处理大规模或复杂问题的公司中更受欢迎。LLM 是软件进步的一部分，旨在减少对开发人员解决常见问题的依赖，但这并不会消除对理解软件基础知识的开发人员的需求，尤其是在处理复杂系统时。因此，如果喜欢软件开发，有前景的、有趣的软件开发工作不会消失，建议持续学习和深入研究编译、数据库和操作系统等基础领域。</p> 
+
+<p><a href="https://skoredin.pro/blog/golang/goroutine-leak-debugging">发现并修复一个差点搞垮生产环境的 50,000 协程泄漏</a><br>内存使用：47GB。响应时间：32秒。Goroutines（协程）：50,847。这是一个关于在生产环境中调试和修复大规模 Go 协程泄漏的案例故事。文章详细描述了泄漏的症状、代码中的三个关键错误（未调用 cancel、Ticker 未停止、通道未关闭）以及通过 Goleak 和 pprof 进行的诊断过程，并提供了详细的修复和预防策略。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/01/19/top-28-kubernetes-resources-for-2026-learn-and-stay-up-to-date/">2026年28个顶级的Kubernetes资源：学习和保持最新</a><br>云原生社区蓬勃发展，Kubernetes在其中起着重要作用。在这个开源生态系统中，从业者不断分享知识、工具和第一手经验教训，以帮助他人成功。无论你的目标是学习基础知识、了解最新版本和模式、构建内部开发者平台（IDP）还是在Kubernetes上运行人工智能/机器学习（AI/ML）工作负载，都有比任何人都能跟上的更多的资源。本指南专为刚接触Kubernetes的工程师或已经在生产环境中部署和维护工作负载的工程师设计。它是一个精选的、高信号的资源集合，用于倾听、观看和讨论K8s和云原生生态系统的不同方面，从基础知识到高级操作和社区资源。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/01/19/clientcmd-apiserver-access/">使用 clientcmd 实现统一的 API 服务器访问</a><br>如果你曾想为 Kubernetes API 开发一个命令行客户端，特别是如果你考虑让你的客户端可用作 kubectl 插件时，你可能会想知道如何让你的客户端感觉与 kubectl 用户熟悉的方式一致。clientcmd 库可以帮助你处理类似 kubectl 的命令行参数，从而实现统一的 API 服务器访问。文章介绍了配置加载规则、设置覆盖值、绑定标志以及最终获取 API 客户端的完整流程。</p>
+
+<p><a href="https://www.caimito.net/en/blog/2025/12/07/the-recurring-dream-of-replacing-developers.html">我们自1969年以来每十年都试图取代开发人员的原因</a><br>每十年都会带来新的承诺：这一次，我们将终于把软件开发简化到不需要那么多开发人员的程度。从COBOL到人工智能，这种模式一直在重复。这揭示了对软件工作本质的理解，这对业务领导者和开发人员都至关重要。文章探讨了从阿波罗计划到AI的历次技术浪潮，分析了为什么这种“取代开发人员”的梦想不断出现，并指出软件复杂性的真正根源在于智力而非机械操作，因此工具的进步只能辅助，无法消除对专业判断的需求。</p>
+
+<p><a href="https://daniel.haxx.se/blog/2026/01/17/more-http-3-focus-one-backend-less">更多关注 HTTP/3，减少一个后端</a><br>在 curl 项目中，我们一直以来都为特定协议提供多种可选的后端支持。为此，我们曾为多种 HTTP/3 &#43; QUIC 后端添加了实验性支持。前段时间我们移除了 msh3 后端。今天，我们进一步清理，删除了对 OpenSSL-QUIC 栈的支持，现在只剩下 ngtcp2 &#43; nghttp3 组合和 quiche 这两个 HTTP/3 替代方案，其中 quiche 仍然是实验性的。此更改将包含在 curl 8.19.0 版本中。移除 OpenSSL-QUIC 的原因主要有三点：API 缺乏所需控制、性能极差（比 ngtcp2 慢三倍）以及内存占用巨大（高出二十倍）。</p>
+
+<p><a href="https://www.datadoghq.com/blog/2025-integrations-roundup">Datadog 2025 集成回顾：AI、安全和混合云的可观测性 | Datadog</a><br>本文回顾了 Datadog 在 2025 年最具影响力的集成，涵盖了 AI 可观测性与成本控制、安全与威胁情报、混合云运营，以及数据与分析工具等领域。重点介绍了对 GitHub Copilot、Microsoft Copilot、LiteLLM、BentoML、Hugging Face、Cursor、Supabase、Anthropic 和 GitHub 成本等关键 AI 领域的集成。同时，还强调了安全集成（如 Wiz、Falco、Netskope）和混合云/分布式系统集成（如 Proxmox、Temporal Cloud、Octopus Deploy、Celery、Cisco Meraki、Fortinet、VeloCloud SD-WAN）的扩展。此外，数据和分析可见性也得到了增强，包括与 dbt Cloud、Metabase、Tableau、Snowflake、Salesforce、ServiceNow 和 Databricks 的集成，以提供更完整的业务上下文。</p>
+
+<p><a href="https://bloggeek.me/client-side-cpu-webrtc">客户端侧webrtc cpu开销控制</a><br></p>
+
+<p><a href="https://blog.cloudflare.com/cname-a-record-order-dns-standards">CNAME 记录或 A 记录，哪个先出现？</a><br>Cloudflare 最近对 1.1.1.1 进行的一项更改意外改变了 DNS 响应中 CNAME 记录的顺序，导致某些客户端解析中断。本文探讨了技术根本原因，检查了受影响解析器的源代码，并深入研究了 DNS RFC 中固有的模糊性。这次事件的根源在于，旧的 DNS 协议标准（RFC 1034）对 CNAME 记录在响应中的顺序描述不够明确，而一些老旧的 DNS 客户端却依赖于 CNAME 记录必须出现在 A 记录之前的惯例。Cloudflare 已撤销了更改，并提议在 IETF 讨论以澄清该协议的未来行为。</p>
+
+<p><a href="https://philipotoole.com/common-misunderstandings-about-large-software-companies">关于大型软件公司的常见误解</a><br>作者探讨了人们对大型软件公司的一些常见批评，并指出这些批评往往忽略了造成这些现象的根本原因。文章主要讨论了三个方面：1. **会议过多**：作者认为这并非组织失败的标志，而是大规模协作的必然结果。2. **高管意见主导**：高管在信息层级中充当客户的代理人，他们的意见重要性反映了他们在组织中的作用。3. **流程和官僚主义过多**：流程的引入是为了管理大型、关键软件的风险和正确性，这与初创公司软件的重要性程度不同。作者总结道，在批评大型组织前，应先理解这些行为存在的结构性原因，才能提出有建设性的意见。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/19/nanolang/#atom-everything">jordanhubbard/nanolang</a><br>文章介绍了 Jordan Hubbard (FreeBSD 联合创始人) 新发布的 NanoLang 编程语言，它被设计为最小化、对 LLM 友好，并具有强制测试和明确的语法。作者尝试使用 LLM（Claude Opus 4.5）根据 NanoLang 的文档生成一个分形图 CLI 工具，第一次尝试失败，但经过提示和提供上下文（包括示例代码和编译器错误），LLM 最终成功生成了可工作的代码。作者认为这一结果加强了他关于 LLM 和编码代理将显著降低新编程语言启动摩擦的看法。</p>
+
+<p><a href="https://decodeclaude.com/ultrathink-deprecated">UltraThink 已死，长久不衰的扩展思考。</a><br>“魔法关键字 ultrathink 已被弃用——但有一种隐藏的方法可以获得 2 倍的思考令牌。现在，扩展思考是支持的 Claude 模型的默认设置（31,999 令牌）。对于具有 64K 输出的模型，通过设置环境变量 MAX_THINKING_TOKENS=63999，可以解锁 2 倍于默认值的思考预算（63,999 令牌）。</p>
+
+<p><a href="https://www.letta.com/blog/benchmarking-ai-agent-memory">AI 智能体内存基准测试：文件系统就够了吗？</a><br>摘要：Letta 智能体仅通过将对话历史存储在文件中，就在 LoCoMo 基准测试中达到了 74.0% 的准确率，超过了专门的内存工具库。这表明：1) 当前的内存基准测试可能意义不大；2) 内存更多在于智能体如何管理上下文，而不是确切的检索机制。</p>
+
+<p><a href="https://cursor.com/cn/blog/building-bugbot">打造更强大的 Bugbot</a><br>本文介绍了 Cursor 如何构建和系统性地改进其代码审查 Agent——Bugbot。通过引入自定义的 AI 驱动指标（如“解决率”），Cursor 将 Bugbot 的解决率从 52% 提升到 70% 以上。文章详细阐述了从定性评估到系统化优化的过程，包括使用多数投票合并检测结果、构建可靠的基础设施，并最终过渡到更灵活的 Agentic 架构，以实现更深层次的代码推理和工具调用。Bugbot 目前每月为多家公司审查超过两百万个 Pull Request，Cursor 计划未来让它实现自动修复和更深入的研究能力。</p>
+
+<p><a href="https://www.fintechbrainfood.com/p/ai-just-grew-arms"> AI 拥有了手臂。</a><br>它可以完成你的全部工作了。作者提到 Claude Code 和 Claude Co Work 的能力，特别是后者展示了 AI 在完成多步骤任务方面的自主性，并预测这将是 2026 年 AI 的主要发展方向，即从“仅工作”到“仅执行”（Just Does）。</p>
+
+<p><a href="https://ericmjl.github.io/blog/2026/1/17/how-to-build-self-improving-coding-agents-part-1">如何构建可自我改进的编码代理 - 第 1 部分</a><br>在这篇博文中，我分享了通过关注操作反馈而非仅仅模型更新来使编码代理真正自我改进的方法。我解释了如何将 AGENTS.md 文件用作仓库记忆，以及开发可重用技能如何帮助代理从错误中学习并减少重复指导。我的目标是创建一个环境，使代理每周都能变得更好，而无需持续的看护。好奇这些策略如何能让您的编码代理更有效吗？</p>
+
+<p><a href="https://stripe.com/blog/three-agentic-commerce-trends-nrf-2026">NRF 2026 会议上关于代理式商业（Agentic Commerce）的三大最大趋势</a><br>大多数零售商正在积极实施或计划实施代理式商业。他们正在优化产品目录策略以实现更快上市，并投资于自己的代理式购物体验。这表明零售业正在从观望“是否可行”转变为专注于“如何”大规模实施代理式商业，同时保持信任、品牌和控制力。主要趋势包括：1. 零售商正在从“是否”转向“如何”实施代理式商业；2. 代理就绪的目录是逐步建立的，而不是一次性完成的；3. 零售商正在推出自己的代理式购物体验，作为与第三方代理平台集成的补充。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/future-architect/vuls">future-architect/vuls</a><br>Agent-less vulnerability scanner for Linux, FreeBSD, Container, WordPress, Programming language libraries, Network devices</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>Automated developer-oriented status page with alerting and incident support</p>
+
+<p><a href="https://github.com/iyear/tdl">iyear/tdl</a><br>📥 A Telegram toolkit written in Golang</p>
+
+<p><a href="https://github.com/kagent-dev/kagent">kagent-dev/kagent</a><br>Cloud Native Agentic AI | Discord: https://bit.ly/kagentdiscord</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>AxonHub is a modern AI gateway system that provides a unified OpenAI ( Chat Completion, Responses), Anthropic, Gemini and AI SDK compatible API</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/fluxcd/flux2">fluxcd/flux2</a><br>Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

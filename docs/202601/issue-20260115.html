@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260115.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260115</span>
+</p>
+<p>每日一谚：Do not ignore or swallow errors </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/15/where-did-the-memory-go-gopher-unanswered-question">内存去哪儿了？一个让大多数 Gopher 都无法清晰回答的问题</a><br>“我的服务内存又在缓慢增长了，pprof 显示不出明显的泄漏点……内存到底去哪儿了？” 这句午夜梦回的拷问，或许是许多 Go 开发者心中最深的恐惧。 这一切的根源，可能始于一个你自以为早已掌握的基础问题：“Go 的状态 (state) 存在哪里？” Go 开发者 Abhishek Singh之前断言：“我保证 ，一大半的 Go 开发者都无法清晰地回答这个问题。”</p> 
+
+<p><a href="https://dev.to/evanlin/golang-do-you-like-golang-become-a-go-gde-google-developer-expert-48al"> 你喜欢 Golang 吗？成为一名 Go GDE（Google 开发者专家）</a><br>告诉你成为Google Go开发者专家的方法</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/BEmg-UCdJKSyN2EOEvnRTQ">【分布式系统】04 复制（下）：“民主”的代价 —— Quorum 与无主架构的设计艺术</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/safer-docker-hub-pulls-via-a-sonatype-protected-proxy/">通过 Sonatype 保护的代理实现更安全的 Docker Hub 拉取</a><br>学习如何从 Docker 专家那里简化和推进您的应用程序开发和管理，并及时了解 Docker 事件和新版本。本文重点介绍了如何利用 Sonatype Nexus Repository 作为 Docker Hub 的受保护代理，通过在公共源和内部系统之间设置审核控制点来增强软件供应链安全，确保只有受信任的内容可供构建过程使用。文章详细介绍了使用个人访问令牌 (PAT) 或组织访问令牌 (OAT) 进行 Docker Hub 身份验证的设置步骤，如何创建 Docker Hub 代理存储库，启用 Nexus Repository Firewall 以在下载时检查镜像，以及最终验证流程。</p>
+
+<p><a href="https://blog.codingnow.com/2026/01/ai_game_design.html">云风的 BLOG: 和 AI 聊游戏设计</a><br>作者分享了近期与 AI 讨论游戏设计的经验和看法。他发现与 AI 交流比与人交流更轻松，可以避免陷入不必要的细节辩论，并且可以随时中断。然而，AI 有时会过度迎合用户的思路，在细节上容易出现错误，因此作者认为 AI 更多地应被视为一个高级的知识搜索引擎，而非直接提供真知的来源。作者还提到了 AI 推荐给他的一个名为 dotAGE 的城市建设模拟游戏，并对其设计深度表示赞赏。文中还引用了 AI 对模拟游戏本质的总结，即“熵增模拟器”，认为 AI 在形而上的总结方面表现出色，但仍不认为其总结能成为游戏设计的直接指导工具。</p>
+
+<p><a href="https://usetero.com/blog/the-question-your-observability-vendor-wont-answer">你的可观测性供应商不愿回答的问题</a><br>作者分享了他在可观测性领域十年的经验，指出了行业中一个被普遍回避的核心问题：数据中有多少是浪费的？文章描述了企业在数据成本和管理上的挣扎，并介绍了作者如何通过开发工具来量化和解决日志数据中的浪费问题，最终目标是实现“用更少的数据实现更多理解”。</p>
+
+<p><a href="https://steveklabnik.com/writing/is-rust-faster-than-c">Rust比C语言快吗？</a><br>本文探讨了Rust语言在性能上是否能超越C语言的问题，并从几个方面分析了“所有条件相同”的含义。作者讨论了内联汇编、代码结构（如结构体内存布局）、社会因素（开发者选择）和编译时/运行时检查的差异。最终结论是，从根本上说，Rust在理论上可以实现与C语言相同的性能，但在工程实践中，由于变量众多，很难得出普遍性的结论。</p>
+
+<p><a href="https://www.ablg.io/blog/no-management-needed">无需管理：早期工程团队的反面案例</a><br>这篇文章面向早期（种子轮、A轮）的创始人，他们认为自己遇到了工程管理问题（如构建工程团队、激励和绩效管理工程师、组织工作/项目、确定优先级、按时交付等）。作者认为，如果你认为自己遇到了这些问题，正确的解决方案很可能是“什么都不做”，即不进行管理，而是回到构建产品和与用户交流。作者将探讨最典型的反面案例，并建议在这种早期阶段，创始人不应将时间浪费在“管理”工程师上，而应采用“Node和Postgres”式的、无聊且适合当前阶段的管理方法。</p>
+
+<p><a href="https://wangcong.org/2026-01-13-personal-taste-is-the-moat.html">个人品味是护城河</a><br>人工智能现在可以判断代码是否能正常工作，它审查补丁、发现错误、建议修复并解释权衡。正确性正在变得廉价，能力正在商品化。但人工智能无法判断某物是否“应该存在”。这需要“品味”：通过长期接触人类的最佳作品以及随着时间的推移体验决策后果而形成的判断力。在人工智能时代，个人品味就是护城河。例如，作者否决了一个通过了 AI 审查的 Linux 内核补丁，因为它在长期设计上存在问题（臃肿、解决的是表象而非根源、引入了用户空间不可见的隐藏限制）。当正确性商品化时，区分点将上移到决策层面：谁来决定什么应该存在？品味（由多年经验形成的判断力）才是未来的差异化因素。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.builder.io/blog/opencode-vs-claude-code">OpenCode vs. Claude Code</a><br></p>
+
+<p><a href="https://www.blog.langchain.com/choosing-the-right-multi-agent-architecture">如何选择合适的多智能体架构</a><br>本文探讨了何时需要多智能体架构、我们观察到的四种主要模式，以及 LangChain 如何帮助您有效地构建多智能体系统。文章详细介绍了四种核心架构模式：子智能体（Subagents）、技能（Skills）、交接（Handoffs）和路由（Router），并根据分布式开发、并行执行、多跳（Multi-hop）能力和直接用户交互等需求，提供了选择合适架构的决策框架和性能对比。</p>
+
+<p><a href="https://medium.com/google-cloud/tutorial-getting-started-with-antigravity-skills-864041811e0d">Google Antigravity skills使用教程</a><br></p>
+
+<p><a href="https://builders.ramp.com/post/why-we-built-our-background-agent">我们为什么构建自己的后台智能体</a><br>工程技术正在快速发展。我们构建了自己的代码代理，以实现更快的加速。</p>
+
+<p><a href="https://www.nibzard.com/agent-stress-test">AI 代理是您开发栈的压力测试</a><br>代理循环使代码的成本变低。它们还暴露了我们开发环境的脆弱性、非标准性和半部落性。工作的重心从“编写代码”转变为“管理生态系统”：收紧反馈、标准化接口，并构建代理（和人类）都无法偏离的铺设道路。</p>
+
+<p><a href="https://read.first1000.co/p/cost-of-building-an-mvp-with-ai">构建MVP（带AI）的成本</a><br>在上周的文章中，我解释了为什么我暂时离开多邻国去构建Lazyweb.com。这篇文章将介绍不那么光鲜的一面：仅靠我和一堆AI将MVP推向市场实际花费了多少。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/when-ai-writes-almost-all-code-what">当AI几乎编写所有代码时，软件工程会发生什么？</a><br>这不是一个假设性问题，而是即将冲击科技行业的巨大趋势。文章探讨了当AI能够生成绝大部分代码后，软件工程师的角色将如何变化，涵盖了AI模型能力的“顿悟时刻”、当前时间点的重要性、专业知识价值的下降、软件工程师核心价值的提升、潜在的负面影响以及产品管理与软件工程的融合与分离等多个方面。</p>
+
+<p><a href="https://www.focusedchaos.co/p/vibe-coding-without-system-design-is-a-trap">Vibe Coding Without System Design is a Trap</a><br>Vibe coding（凭感觉编码）非常强大，但为了恰当地构建软件架构，仍需要系统设计。否则，人工智能将接管，做出决策并限制您成功构建的能力。文章强调了在快速迭代的同时进行系统性思考的重要性，并提出了在“凭感觉编码”之前应询问的五个系统设计问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/github/gh-ost">github/gh-ost</a><br>GitHub&#39;s Online Schema-migration Tool for MySQL</p>
+
+<p><a href="https://github.com/ory/hydra">ory/hydra</a><br>Internet-scale OpenID Certified™ OpenID Connect and OAuth2.1 provider that integrates with your user management through headless APIs. Solve OIDC/OAuth2 user cases over night. Consume as a service on Ory Network or self-host. Trusted by OpenAI and many others for scale and security. Written in Go.</p>
+
+<p><a href="https://github.com/edoardottt/cariddi">edoardottt/cariddi</a><br>Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/uber-go/fx">uber-go/fx</a><br>A dependency injection based application framework for Go.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/labstack/echo">labstack/echo</a><br>High performance, minimalist Go web framework</p>
+
+<p><a href="https://github.com/vllm-project/semantic-router">vllm-project/semantic-router</a><br>System Level Intelligent Router for Mixture-of-Models at Cloud, Data Center and Edge</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/runatlantis/atlantis">runatlantis/atlantis</a><br>Terraform Pull Request Automation</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/containers/buildah">containers/buildah</a><br>A tool that facilitates building OCI images.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, xDC replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding. Enterprise version is at seaweedfs.com.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

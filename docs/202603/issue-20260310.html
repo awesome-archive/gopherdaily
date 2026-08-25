@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202603/issue-20260310.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260310</span>
+</p>
+<p>每日一谚：Premature optimization is the root of all evil — Donald Knuth </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://internals-for-interns.com/posts/go-runtime-scheduler">深入理解 Go 运行时调度器</a><br>本文接着前一篇文章对 Go 内存分配器的探讨，深入解释了 Go 运行时调度器的核心工作原理。调度器负责回答“哪个 goroutine 接下来运行？”这个简单但关键的问题。它通过 GMP 模型（G: Goroutine, M: Machine/OS Thread, P: Processor）将大量的 goroutine 多路复用到有限的 OS 线程上。
+
+核心内容包括：
+1. **GMP 模型**：解释了 G（工作单元，轻量级）、M（执行者，OS 线程）和 P（调度上下文，携带本地资源如运行队列和内存缓存）各自的职责和相互关系，以及这种解耦如何应对系统调用阻塞。
+2. **Goroutine 的生命周期**：描述了 goroutine 的创建（优先复用 G 结构体）、运行、阻塞（如等待 channel，goroutine 自行 park）、系统调用（M 保留 P，但可能被 sysmon 抢占 P）、栈的增长以及协作式和异步抢占的机制。
+3. **调度循环**：详细阐述了 &lt;code&gt;schedule()&lt;/code&gt; 函数中的工作查找顺序（&lt;code&gt;findRunnable()&lt;/code&gt;），包括检查 GC/Trace 工作、全局队列公平性检查（每 61 次）、快速本地队列、全局队列批量获取、网络轮询、工作窃取，以及最终 M 挂起。
+4. **自旋线程**：解释了 M 在没有工作时短暂自旋以提高响应性，以及运行时如何限制自旋线程的数量。
+5. **上下文切换**：强调了 goroutine 上下文切换的极快速度（50-100 纳秒），因为它只需保存和恢复极少的寄存器状态，远快于 OS 线程切换。</p> 
+
+<p><a href="https://www.winterjung.dev/en/string-concat-performance-benchmark-in-go">Go 字符串连接性能优化：比较 15 种方法</a><br>本文对 Go 语言中进行字符串连接的 15 种不同方法进行了性能和内存使用基准测试，涵盖了固定参数场景（如构建缓存键）和可变参数场景（如组装查询条件）。测试结果显示，使用带有 `.Grow()` 方法的 `strings.Builder` 或 `strings.Join()` 是所有场景下最快且内存效率最高的方法。在固定参数场景中，使用 `&#43;` 运算符进行简单连接也足够高效。文章还提供了详细的 Go 代码实现和基准测试代码供读者复现和参考。</p> 
+
+<p><a href="https://rednafi.com/go/mutex-closure">在闭包内修改锁定的状态</a><br>解释了为什么互斥锁（mutex）包装器应该接受一个闭包来进行修改，而不是一个普通的值，并提供了来自标准库和 Tailscale 的示例。文章讨论了在并发编程中，使用闭包来封装读-改-写操作的必要性，以避免常见的“丢失更新”逻辑错误，即使数据竞争检测器也无法发现此类问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://xeiaso.net/blog/2026/vibe-coding-sponsor-panel/">Vibe Coding 实验报告：制作赞助者面板</a><br>作者因手术需要，采用“Vibe Coding”（随性编码）的方式，使用 AI 辅助在周末完成了原本数月未果的 GitHub 赞助者面板的开发。该面板结合了 Go、Templ、HTMX、PostgreSQL、GitHub OAuth 和 Tigris 存储。作者认为，对于特定库（如 Templ），提供详细的语法和组件技能作为上下文是 AI 成功生成可用代码的关键。虽然生成的 GraphQL 代码不够优雅，但它实现了功能，完成了在手术前发版的目标。</p>
+
+<p><a href="https://nesbitt.io/2026/03/10/just-use-postgres.html">仅使用 Postgres</a><br>将“仅使用 Postgres”的理念推向逻辑终点：通过 git push 部署到一个单一的 Postgres 进程中。作者构建了 omni_git 扩展，实现了 git 智能 HTTP 协议，使其能够将 Postgres 变成一个集 Git 托管、构建系统和生产运行时于一体的平台。部署是通过 git push 到 Postgres 远程触发的，SQL 文件可以直接在数据库中执行。这种单体架构提供了强大的原子性恢复能力，因为 Git 历史、部署工件和应用数据都通过 WAL 流同步，可以进行一致的点时恢复。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/03/10/sustaining-open-source-in-the-age-of-generative-ai/">在生成式AI时代维持开源生态</a><br>开源生态系统一直伴随着技术变革而发展。生成式AI是最新一波技术浪潮，它带来了一个开源社区无法再忽视的张力：AI使生成贡献变得容易，但并未简化必要的审查流程。Kyverno项目因此引入了AI使用政策，强调贡献者必须“拥有你的提交”（Own your commit），即对AI生成的代码拥有完全的理解、验证和责任。披露AI的使用是保持透明度、信任和许可完整性的关键基础设施。可持续的开源依赖于在人类所有权和AI赋能之间找到平衡，确保开源始终是“一个以人为本的系统”。</p>
+
+<p><a href="https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/">信使中高级浏览保护的工作原理</a><br>本文分享了信使中高级浏览保护（ABP）在保护用户隐私的同时，如何警告用户恶意链接的技术细节。ABP基于私有信息检索（PIR）的概念，并结合了多项复杂的基础设施组件和加密技术，包括预处理规则集、机密计算（利用 AMD SEV-SNP 技术）和盲目随机函数（OPRF），以实现在不泄露用户链接详情的情况下，检测恶意网址。文章详细介绍了如何解决 URL 前缀匹配、处理不平衡的存储桶，以及如何通过 OHTTP 进一步增强请求的匿名性，并概述了整个 ABP 请求的生命周期。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/03/09/announcing-ai-gateway-wg/">官宣the AI Gateway Working Group</a><br>The community around Kubernetes is excited to announce the formation of the AI Gateway Working Group. This new initiative aims to develop standards and best practices for networking infrastructure supporting AI workloads in Kubernetes environments. An AI Gateway is defined as network gateway infrastructure (like proxies or load-balancers) enhanced to support AI workloads, focusing on token-based rate limiting, fine-grained access controls, payload inspection, and AI-specific protocol support, building upon the Gateway API.</p>
+
+<p><a href="https://www.markround.com/blog/2026/03/05/returning-to-rails-in-2026">Returning To Rails in 2026</a><br>作者分享了他时隔十多年后重新使用 Ruby on Rails (Rails 8) 开发个人项目（一个乐队歌单管理应用 setlist.rocks）的体验和感受。他发现现代 Rails 在前端（通过 Hotwire/Stimulus 实现了“无构建”体验）、后端基础设施集成（如 Solid Cache/Queue 摒弃了对 Redis 的依赖，直接使用数据库）以及部署（默认使用 Kamal）方面取得了长足的进步，极大地简化了开发流程，让他重拾了开发乐趣。文章对比了 Rails 在当前技术趋势中的地位，并讨论了新特性带来的效率提升和一些关于 AI 辅助编程的思考。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Mar/9/production-query-plans-without-production-data/#atom-everything">生产环境查询计划（无需生产数据）</a><br>Radim Marek 介绍了 PostgreSQL 18 中引入的 pg_restore_relation_stats() 和 pg_restore_attribute_stats() 新函数。这些函数允许用户将生产环境的数据库统计信息复制到开发环境中，从而能够在不迁移全部生产数据的情况下模拟生产查询的工作负载和查询计划。文章展示了如何使用 pg_restore_attribute_stats() 模拟特定列的统计数据，并提到 PostgreSQL 查询优化器会利用这些统计信息来决定最优执行路径。此外，文章还提到 SQLite 已经通过 sqlite_stat1/sqlite_stat4 表提供了类似的功能，允许用户注入替代统计数据以控制查询计划。</p>
+
+<p><a href="https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html">如何赢得最佳论文奖（或者，关于如何进行重要研究的个人观点）</a><br>这篇文章是作者在获得最佳论文奖后，分享的关于如何进行重要研究并可能赢得奖项的个人观点和经验总结。内容分为四个主要部分：如何产生一个值得最佳论文奖的研究想法（包括培养品味、寻找优秀的合作者、大量阅读和有选择地忽略文献、选择高影响力课题、做只有你能做的事、找到你的比较优势，以及保持运气）、在进行研究时需要注意的事项（包括接受运气成分、及时放弃不成功或低影响力的项目、无情地重新安排项目优先级，以及付出不合理的努力和保持专注）、撰写论文的技巧（强调单一核心思想、了解读者、标题不应过度执着、摘要的重要性、将引言写成故事、确保图表自成一体，以及写好结论），以及在发表后需要考虑的因素（包括运气地处于早期阶段、运气地处于热门话题、运气地没有被别人抢先发表，以及运气地被评委会喜欢，并强调了坚持的重要性）。最终，作者总结优秀研究应在科学知识体系中做出准确且易于理解的贡献，并鼓励读者关注研究的影响力本身，而非仅仅追求奖项。</p>
+
+<p><a href="https://claude.com/blog/code-review">代码审查：Claude Code</a><br>Claude Code 现在为每个拉取请求 (PR) 派遣一组代理，以捕获那些被粗略浏览所遗漏的错误。该功能目前以研究预览版的形式对 Team 和 Enterprise 用户开放。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/docker/docker-agent">docker/docker-agent</a><br>AI Agent Builder and Runtime by Docker Engineering</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/projectdiscovery/httpx">projectdiscovery/httpx</a><br>httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.</p>
+
+<p><a href="https://github.com/fengshao1227/ccg-workflow">fengshao1227/ccg-workflow</a><br>多模型协作开发工具集 - 基于 Claude Code CLI，整合 Codex/Gemini 后端能力，提供智能路由、代码审查、Git 工具等 17&#43; 个命令</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/mickael-kerjean/filestash">mickael-kerjean/filestash</a><br>📁 File Management Platform / Universal Data Access Layer (without FUSE)</p>
+
+<p><a href="https://github.com/ltaoo/wx_channels_download">ltaoo/wx_channels_download</a><br>微信视频号下载器</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+<p><a href="https://github.com/charmbracelet/lipgloss">charmbracelet/lipgloss</a><br>Style definitions for nice terminal layouts 👄</p>
+
+<p><a href="https://github.com/stacklok/toolhive">stacklok/toolhive</a><br>ToolHive makes deploying MCP servers easy, secure and fun</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

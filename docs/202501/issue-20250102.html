@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250102.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2025-01-02</span>
+</p>
+<p>每日一谚：Error messages should not be capitalized or end with punctuation </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://zasper.io/blog/zasper-intro.html">Zasper：一款超级高效的数据科学IDE</a><br>Zasper是一款从零开始设计，旨在支持大规模并发的IDE。它具有极小的内存占用、极快的速度以及处理众多并发连接的能力。它非常适合运行REPL风格的数据应用程序，例如Jupyter Notebook。Zasper的内存和CPU使用率只有Jupyterlab的四分之一。目前，Zasper支持Linux和Mac系统。本文详细介绍了Zasper的设计理念、架构、消息传递机制以及与Jupyterlab的不同之处，并展望了未来的发展规划，包括支持自定义数据应用程序、简化与现有工具的集成以及推出Zasper Hub用于自托管云部署。</p> 
+
+<p><a href="https://dev.to/johneliud/my-experience-attending-gophercon-africa-2024-171e">参加 GopherCon 非洲 2024 大会 的经历</a><br>GopherCon 是一系列致力于 Go 编程语言的全球性会议，它为 Go 社区内的学习、交流和协作提供了一个空间。本文作者分享了参加首届 GopherCon 非洲 2024 大会的心得体会，包括大会的组织、演讲内容、社区建设以及对未来 Go 在非洲发展的展望。大会涵盖了事件驱动架构、高级测试策略、监控和可观察性、SDK 开发、接口使用、代码设计、gRPC、测试方法以及 Go 在非洲的发展现状等多个主题。作者认为，此次大会是 Go 在非洲发展的一个良好开端，并鼓励更多非洲开发者参与开源项目，共同推动 Go 在非洲的普及。</p> 
+
+<p><a href="https://dev.to/leapcell/how-to-get-the-goroutine-id-1h5o">如何获取 Goroutine ID？</a><br>在操作系统中，每个进程都有唯一的进程 ID，每个线程也有其唯一的线程 ID。类似地，在 Go 语言中，每个 Goroutine 都有其唯一的 Goroutine ID，这在诸如 panic 的场景中经常遇到。虽然 Goroutine 本身具有 ID，但 Go 语言故意不提供获取此 ID 的接口。这次，我们将尝试通过 Go 汇编语言来获取 Goroutine ID。文章详细介绍了通过 Go 汇编语言获取 Goroutine ID 的几种方法，并讨论了每种方法的优缺点，最后还介绍了如何使用 Goroutine ID 来构建 Goroutine 本地存储。</p> 
+
+<p><a href="https://dev.to/indalyadav56/designing-resilient-microservices-a-practical-guide-to-cloud-architecture-11me">设计高弹性微服务：云架构的实用指南</a><br>现代应用程序需要可扩展性、可靠性和可维护性。本指南将探讨如何设计和实现能够处理现实世界挑战并在保持卓越运营的同时，构建微服务架构。</p> 
+
+<p><a href="https://dev.to/aaravjoshi/mastering-go-concurrency-essential-patterns-for-high-performance-applications-3gm1">掌握 Go 并发：高性能应用程序的关键模式</a><br>学习 Go 并发模式：goroutine 池、工作队列和扇出/扇入。学习如何构建具有适当同步和错误处理的高效、可扩展的应用程序。立即提升你的 Go 技能！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/why-secure-development-environments-are-essential-for-modern-software-teams/">Why Secure Development Environments Are Essential for Modern Software Teams</a><br></p>
+
+<p><a href="https://grantslatton.com/how-to-software">如何编写复杂的软件</a><br>本文介绍了一种编写复杂软件（例如数据库、文字处理器、文件系统、网络浏览器等）的通用方法。该方法建议从软件的顶层（通常是用户界面或API）开始编写，逐层向下实现，每一层都只处理最小必要逻辑，并将剩余的复杂性委托给下一层。在编写每一层时，应定义下一层的API，使其成为实现当前层的完美领域特定语言（DSL）。在编写当前层时，应先创建下一层的存根实现，完成后再递归地使用相同的方法实现下一层，直到完成所有层。该方法还建议只为进行IO操作的代码部分实现可模拟的抽象接口，其他部分则应使用具体的实现。此外，文章还强调了在开始编写软件之前，先编写一些玩具驱动程序来找出解决方案空间的物理约束的重要性，以及避免从依赖关系较少的组件开始开发的陷阱。</p>
+
+<p><a href="https://www.seangoedecke.com/large-established-codebases/">大型成熟代码库中工程师常犯的错误</a><br>本文作者分享了十年大型成熟代码库工作经验，总结了工程师常犯的错误，尤其强调了保持代码一致性的重要性。文中指出，忽略现有代码库而只追求自身代码的简洁性是致命的错误。保持一致性可以避免潜在问题，减缓代码库混乱的进程，并方便未来改进。文章还讨论了其他重要方面，例如理解服务的实际使用情况、谨慎引入依赖、积极移除代码以及高效的代码审查流程等，并阐述了大型成熟代码库的价值，以及在重构前必须先深入理解其运作机制的重要性。</p>
+
+<p><a href="https://mill-build.org/blog/4-flaky-tests.html">如何管理不稳定的测试</a><br>许多项目都面临不稳定测试的问题：测试结果不确定，有时通过，有时失败。这会导致混乱，减慢开发周期，并在组织中的个人和团队之间引发无休止的争论。本文深入探讨了处理不稳定测试的方法，作者从在 Dropbox 和 Databricks 构建第一个不稳定测试管理系统并维护相关的构建和 CI 工作流程的十年经验出发，阐述了不稳定测试问题的非直觉性，许多看似明显的方法都是无效或适得其反的。文章讨论了处理不稳定测试的正确和错误方法，帮助读者了解不稳定测试管理的本质。</p>
+
+<p><a href="https://avc.xyz/what-will-happen-in-2025-1">2025 年将会发生什么</a><br>博主回顾了过去 20 多年撰写新年展望文章的经历，并预测了 2025 年的 13 件大事，例如：苹果和谷歌将在消费者 AI 提示方面超越 OpenAI/ChatGPT；Waymo 将在旧金山和洛杉矶的乘车次数方面超越 Uber；去中心化临床试验将吸引数百万参与者并产生积极结果；戴森将推出名为 Judy 的家用机器人，并取得巨大成功；NFT 艺术将卷土重来等等。博主最后总结道，2025 年将会非常疯狂。</p>
+
+<p><a href="https://www.cs.cmu.edu/~pavlo/blog/2025/01/2024-databases-retrospective.html">2024 年数据库回顾</a><br>本文回顾了 2024 年数据库领域的重大事件，包括许可证变更（Redis 和 Elasticsearch 的许可证变更及其影响）、Databricks 和 Snowflake 之间的竞争（包括在大型语言模型和目录系统方面的竞争）、DuckDB 的普及（以及其在 Postgres 中的各种扩展）以及其他一些随机事件（如新版本的数据库系统发布、收购和融资情况）。文章作者 Andy Pavlo 还分享了他对这些事件的看法，并对未来数据库行业的发展趋势进行了预测。</p>
+
+<p><a href="https://medium.com/@mattgillard/my-s3-tables-experiment-a789493c5512">我的 Amazon S3 Tables 实验…</a><br>AWS 在 re:Invent 2024 上宣布了 S3 Tables，这对我来说非常及时。S3 Tables 基本上是一个托管的 Apache Iceberg 表。Iceberg 是一种表格式，可以存储在各种后端文件或类似文件的存储中，其中 S3 就是其中之一。我正在从事一个项目，该项目将大量物联网事件转储到 S3 中，这实际上很难管理查询，因为需要管理、创建分区等。Iceberg 可以为我提供高效查询的选项，并且只需支付我的消费费用，分区可以作为表定义的一部分进行设置，因此设置时的维护应该最少。不幸的是，Iceberg 格式本身也与大量其他维护相关联，因此当 AWS 宣布具有内置维护作业的托管 Iceberg 格式 S3 Tables 时，我非常感兴趣，现在我有时间尝试一下了。</p>
+
+<p><a href="https://postopen.org/about-post-open">什么是Post Open？</a><br>Post Open 是开源软件的继承者，由开源运动的创始人之一创建。它旨在解决开源软件中存在的资金分配不均、法律合规困难、用户覆盖面不足等问题。Post Open 通过双重许可、中央付费系统和清晰的合规流程，将资金直接导向开发者，并为开发者提供法律支持和安全保障。它旨在创建一个更健康、更可持续的开源社区，同时满足个人、小型企业和大型企业的不同需求。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2024/Dec/31/llms-in-2024/">2024 年大型语言模型的学习成果</a><br>本文回顾了 2024 年大型语言模型 (LLM) 领域的进展，包括 GPT-4 性能瓶颈的突破，轻量级模型在个人电脑上的运行，模型价格的下降，多模态模型的兴起（图像、音频和视频），以及语音和实时摄像头模式的出现。文章还讨论了基于提示的应用程序生成、最佳模型的普遍访问、智能代理的现状、评估的重要性、苹果的机器学习库 MLX 和其人工智能功能的对比、推理扩展模型的兴起、以及合成训练数据的效果等方面。此外，文章还探讨了该领域的环境影响（既有积极方面也有消极方面）以及对大型语言模型的批判性观点。作者最后列出了 2024 年在其博客上发布的所有关于大型语言模型的文章。</p>
+
+<p><a href="https://www.lesswrong.com/posts/CJ4sppkGcbnGMSG2r/2024-in-ai-predictions">2024年人工智能预测</a><br>本文总结了2024年对人工智能的一些预测，主要来自推特/X平台。作者更倾向于包含更具体、更易于验证的预测，并计划每年发布此类文章，对已过期的预测进行回顾。文章中包含了多位专家（包括Gary Marcus、Elon Musk、Dario Amodei等）对2024年及未来几年人工智能发展，特别是AGI（通用人工智能）的预测，涵盖了模型能力、市场竞争、安全风险等多个方面。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Solar Charging ☀️🚘</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, Mistral, Gemma 2, and other large language models.</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 Top-Rated Web-Based Linux Server Management Tool. 1Panel features an intuitive web interface that seamlessly integrates server management and monitoring, container management, database administration, website management, system backup and restoration, and more.</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint allows users to spin up a quick Go project using a popular framework</p>
+
+<p><a href="https://github.com/YouROK/TorrServer">YouROK/TorrServer</a><br>Torrent stream server</p>
+
+<p><a href="https://github.com/projectdiscovery/subfinder">projectdiscovery/subfinder</a><br>Fast passive subdomain enumeration tool.</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>A Modern Testing Framework for Go</p>
+
+<p><a href="https://github.com/gorilla/mux">gorilla/mux</a><br>Package gorilla/mux is a powerful HTTP router and URL matcher for building Go web servers with 🦍</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria is a powerful, lightning fast and censorship resistant proxy.</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/bitfield/script">bitfield/script</a><br>Making it easy to write shell-like scripts in Go</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/projectdiscovery/httpx">projectdiscovery/httpx</a><br>httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.</p>
+
+<p><a href="https://github.com/OJ/gobuster">OJ/gobuster</a><br>Directory/File, DNS and VHost busting tool written in Go</p>
+
+<p><a href="https://github.com/erigontech/erigon">erigontech/erigon</a><br>Ethereum implementation on the efficiency frontier https://docs.erigon.tech</p>
+
+<p><a href="https://github.com/StackExchange/dnscontrol">StackExchange/dnscontrol</a><br>Infrastructure as code for DNS!</p>
+
+<p><a href="https://github.com/opencontainers/runc">opencontainers/runc</a><br>CLI tool for spawning and running containers according to the OCI specification</p>
+
+<p><a href="https://github.com/jpillora/chisel">jpillora/chisel</a><br>A fast TCP/UDP tunnel over HTTP</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

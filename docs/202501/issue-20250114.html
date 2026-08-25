@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250114.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">202501114</span>
+</p>
+<p>每日一谚：Use `any` for generics and `interface{}` for interfaces </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/01/14/understand-go-and-toolchain-in-go-dot-mod">Go工具链版本已不由你定：go和toolchain指令详解</a><br>通过示例全面解析Go向前兼容性以及go.mod中go和toolchain指令的使用方法</p> 
+
+<p><a href="https://antonz.org/go-1-24">Go 1.24 交互式教程</a><br>Go 1.24 预计于 2月份发布，现在是探索新功能的好时机。官方的发布说明比较枯燥，因此我准备了一个交互式版本，其中包含许多示例，展示了变化之处以及新的行为。本文涵盖了泛型类型别名、弱指针、改进的终结器、Swiss Tables、并发哈希 Trie 映射、目录作用域文件系统访问、基准测试循环、测试用合成时间、测试上下文和工作目录、丢弃日志输出、追加器接口、更多字符串和字节迭代器、SHA-3 和相关算法、HTTP 协议、省略 JSON 中的零值、随机文本以及工具依赖项等诸多方面。  我还提供了对所描述功能的提案 (P) 和提交 (CL) 的链接。查看它们以了解动机和实现细节。</p> 
+
+<p><a href="https://fallthrough.transistor.fm/episodes/the-gems-warts-of-go">Fallthrough | Go语言的优点与不足</a><br>本期节目中，Kris 与 Ian、Matt 和 Dylan 共同探讨了 Go 语言的优点和不足。他们涵盖了大约 30 个主题，包括 defer、net/http、Vanity URL 和模块等。为了避免听众感到信息过载，节目中没有包含“不受欢迎的观点”环节，但节目中穿插了大量的个人观点。希望您喜欢这期内容丰富的节目。如果您有任何不同意见或认为我们遗漏了一些内容，请在社交媒体或评论区告知我们！感谢收听，祝您聆听愉快！</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-http2">HTTP/2 的工作原理以及如何在 Go 中启用它</a><br>本文深入探讨了 HTTP/2 的工作原理，它通过在单个 TCP 连接上多路复用多个流来解决应用层中的 head-of-line 阻塞问题。与 HTTP/1.1 顺序处理请求不同，HTTP/2 允许通过具有独立 ID 的独立流进行并行处理。Go 标准库在使用 HTTPS 时开箱即用地支持 HTTP/2，并且通过一些配置，它也可以在普通 HTTP 上工作。文章详细解释了 HTTP/2 的框架结构、HPACK 压缩、流控制以及如何在 Go 中启用 HTTP/2，并提供了代码示例。</p> 
+
+<p><a href="https://www.poxate.com/blog/removed-335-lines">我们用一个 Go 包删除了 335 行代码</a><br>Prayershub 使用 FFmpeg 处理音频时遇到了挑战，代码难以维护且效率低下。为了解决这个问题，他们创建了 Podio，一个基于 Go 的音频处理库。Podio 简化了音频处理流程，将繁重的任务卸载到云端，从而减少了 335 行代码，并将音频编译速度提高了 2.4 倍以上。Podio 提供了简洁的 API，支持音频拼接、循环、淡入淡出等功能，极大提升了开发效率和用户体验。</p> 
+
+<p><a href="https://golangnugget.com/p/what-to-expect-from-go-1-24-part-2-finializer-and-weak-pointers">Go 1.24 新特性详解 - 第二部分</a><br>本文是 Go 1.24 新特性详解系列的第二部分，主要介绍了标准库中的两个变化：`runtime.SetFinalizer` 和 `runtime.AddCleanup` 的区别，以及新的 `weak` 包和弱指针的用法。文章通过示例代码和详细解释，阐述了如何更好地进行资源清理以及弱指针在缓存和内部化机制中的应用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/meet-gordon-an-ai-agent-for-docker/">Meet Gordon: An AI Agent for Docker</a><br></p>
+
+<p><a href="https://engineering.salesforce.com/behind-salesforces-jdk-11-to-jdk-17-migration-lessons-for-modernizing-large-scale-java-applications/">Salesforce 的 JDK 11 到 JDK 17 迁移：大型 Java 应用程序现代化的经验教训</a><br>本文讲述了 Salesforce 如何完成从 JDK 11 到 JDK 17 的迁移。这对于确保 Salesforce 核心应用程序（包括 Sales Cloud、Service Cloud 和 Marketing Cloud）的性能和可扩展性至关重要。文章详细介绍了团队如何克服封装挑战和重大更改，以及如何在迁移的同时升级构建系统并保持向后兼容性，同时保持运营稳定性并为未来的发展铺平道路。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/01/13/fuzzing-the-cncf-landscape-in-2024/">2024年 CNCF 项目模糊测试概览</a><br>CNCF 通过安全审计、供应链评估和安全自动化工作等一系列举措，保持其项目的较高安全水平。本文将介绍 CNCF 的模糊测试计划及其在 2024 年的影响。模糊测试是一种通过对给定 API 或代码库执行大量任意输入来查找安全性和可靠性错误的技术。文章回顾了 CNCF 模糊测试在 2024 年取得的成果，包括对 Lima、Keycloak 和 OpenTelemetry 项目的模糊测试审计，并展示了通过 OSS-Fuzz 发现的漏洞数量及其趋势，以及一些具体的安全漏洞案例。</p>
+
+<p><a href="https://dev.to/jimjunior/building-a-kubernetes-operator-a-practical-guide-2lna">构建 Kubernetes Operator | 实用指南</a><br>Kubernetes 是一项伟大的革命性技术，它改变了开发人员对云基础设施的思考和交互方式。Kubernetes（也称为 K8s）是一个用于自动化部署、扩展和管理容器化应用程序的开源系统。它基于与 Google 每周运行数十亿个容器相同的原则构建，Kubernetes 可以在不增加运维团队规模的情况下进行扩展。尽管 Kubernetes 功能强大，但它本质上是一种容器编排技术。虽然它极大地简化了部署和扩展，但它并没有解决软件工程师在软件开发和 DevOps 中遇到的所有挑战。为了解决这个问题，Kubernetes 提供了扩展和定制以满足团队需求的方法。它提供多种语言的客户端库。但更好的选择是 Kubernetes Operator。Kubernetes Operator 是一种在 Kubernetes 上自动化管理复杂应用程序的方法。它通过使用自定义资源和控制器来管理应用程序的生命周期，自动化部署、扩展和更新等任务。Operator 将应用程序的操作知识编码到 Kubernetes 中，从而更容易管理有状态或复杂的负载，减少人工干预。本文将介绍构建您自己的自定义 Kubernetes Operator 的指南。我们将介绍自定义资源定义、控制器以及 Kubernetes 控制器运行时。</p>
+
+<p><a href="https://pedropark99.github.io/zig-book">Zig入门</a><br>这是一本关于Zig编程语言的开放获取书籍，面向初学者和经验丰富的开发者。通过小型项目（如Base64编码器/解码器、HTTP服务器和图像过滤器）学习Zig语言的语法、数据结构、内存分配器、文件系统和I/O、可选类型、测试和调试方法、错误处理、构建系统、与C语言的互操作性、线程和SIMD等内容。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2025/01/13/introducing-core-ai-platform-and-tools/">微软推出 CoreAI 平台和工具</a><br></p>
+
+<p><a href="https://addyo.substack.com/p/ai-driven-prototyping-v0-bolt-and">AI驱动的原型设计：v0、Bolt和Lovable对比</a><br>本文探讨了三个用于原型设计组件和应用程序的AI辅助开发工具：Vercel的v0、StackBlitz的Bolt和Lovable。文章从工程角度出发，分析了它们在快速构建最小可行产品（MVP）中的实际应用、局限性和权衡。v0擅长快速UI原型设计，Bolt侧重于前端和全栈开发，Lovable则强调易用性和团队协作。文章还总结了这些工具的常见挑战，并根据不同用例提出了相应的推荐。</p>
+
+<p><a href="https://www.lesswrong.com/posts/5Sq3XBcRmd8ereHgo/agi-will-not-make-labor-worthless">通用人工智能不应该让劳动力一文不值</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/apache/answer">apache/answer</a><br>A Q&amp;A platform software for teams at any scales. Whether it&#39;s a community forum, help center, or knowledge management platform, you can always count on Apache Answer.</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/urfave/cli">urfave/cli</a><br>A simple, fast, and fun package for building command line apps in Go</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>Backend master class: build a simple bank service in Go</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/testcontainers/testcontainers-go">testcontainers/testcontainers-go</a><br>Testcontainers for Go is a Go package that makes it simple to create and clean up container-based dependencies for automated integration/smoke tests. The clean, easy-to-use API enables developers to programmatically define containers that should be run as part of a test and clean up those resources when the test is done.</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/HavocFramework/Havoc">HavocFramework/Havoc</a><br>The Havoc Framework</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/fsnotify/fsnotify">fsnotify/fsnotify</a><br>Cross-platform filesystem notifications for Go.</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

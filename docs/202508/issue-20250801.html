@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250801.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250801</span>
+</p>
+<p>每日一谚：Do not be afraid to copy, when it makes sense </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://words.filippo.io/assembly-mutation/">Go汇编Mutation测试框架</a><br>针对 Go 密码学程序集中具有挑战性的测试覆盖率问题，作者正在开发一个新的变异测试框架。</p> 
+
+<p><a href="https://tonybai.com/2025/08/01/proposal-purego">purego 标签到底是什么意思？一场长达六年的社区辩论终于有了定论</a><br>对于许多 Go 开发者来说，purego 构建标签一直是一个模糊的存在。它到底意味着“没有 Cgo”、“没有 unsafe”，还是“没有汇编”？这个问题的答案在社区中众说纷纭，甚至连标准库中的使用也不尽统一。最近，一项历时六年、编号为#23172 的 提案终于尘埃落定，Go 团队正式接受 (accepted) 了关于 purego 含义的共识。本文将带大家一起回顾这场漫长而精彩的社区辩论，深入探讨其背后的技术权衡，并阐明这个小小的标签对于 Go 的跨实现（如 TinyGo）和可移植性生态的深远意义</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://eng.lyft.com/solving-dispatch-in-a-ridesharing-problem-space-821d9606c3ff">解决拼车问题空间中的调度问题</a><br>想象一下，您必须每秒组装一个由数百万个新碎片组成的动态拼图。您将如何处理这个问题，确保每个碎片都合适？Lyft 等拼车平台持续解决这些问题；一个复杂的难题，每个乘客和司机都是具有特定边的独特碎片——偏好、位置和目的地。挑战在于实时地将这些碎片组合在一起，确保每个连接都无缝高效，最终创造出城市交通的连贯画面。</p>
+
+<p><a href="https://www.docker.com/blog/genai-vs-agentic-ai/">GenAI vs. Agentic AI: 开发者需要了解的内容 | Docker</a><br>了解 GenAI 和 Agentic AI 之间的主要区别，以及 Docker 如何帮助开发人员构建 agentic AI 应用程序。</p>
+
+<p><a href="https://sketch.dev/blog/our-first-outage-from-llm-written-code">我们首次因 LLM 编写的代码导致中断</a><br>关于我们首次因 LLM 导致的服务中断的复盘。</p>
+
+<p><a href="https://blog.bytebytego.com/p/how-cursor-serves-billions-of-ai">How Cursor Serves Billions of AI Code Completions Every Day</a><br>这篇文章将探讨 Cursor 的主要功能、这些功能的工作原理以及为其提供支持的基础设施堆栈。</p>
+
+<p><a href="https://www.builder.io/blog/test-driven-development-ai">Test-driven development with AI</a><br>Learn how AI transforms test-driven development (TDD) from a time-consuming chore into your secret weapon for building robust and bug-free applications.</p>
+
+<p><a href="https://newsletter.francofernando.com/p/what-to-look-for-in-code-reviews">代码审查中应该注意什么</a><br>大家好，
+
+欢迎来到第 132 期 Polymathic Engineer。
+
+代码审查是软件开发中最有价值的实践之一。好的代码审查可以在错误到达生产环境之前发现它们，提高代码质量，并帮助团队成员互相学习。另一方面，差的审查会浪费时间并遗漏关键问题。
+
+作为审查者，主要挑战之一是知道要关注什么。当查看有大量更改的拉取请求时，很容易关注错误的事情。您应该花时间检查语法吗？寻找潜在的错误？关注代码风格？所有这些都很重要，但要按正确的优先级进行。
+
+使用结构化方法而不是随机扫描代码更改，可以使过程更有效。本期将介绍代码审查期间需要关注的关键领域，从最重要的考虑因素开始，然后逐步深入到细节。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="http://notes.eatonphil.com/2025-07-31-stack-traces-postgres-errors-backtracefunctions.html">Postgres 错误的堆栈跟踪与 backtrace_functions</a><br></p>
+
+<p><a href="https://simonwillison.net/2025/Jul/31/updates-to-claude/#atom-everything">逆向工程 Claude 的一些更新</a><br>Anthropic 最近几天为他们的面向消费者的 Claude 应用发布了两个主要的新功能。 遗憾的是，他们没有很好地更新这些应用的发布说明...... 我不得不逆向工程它们来找出它们能做什么以及它们是如何工作的！</p>
+
+<p><a href="https://alexkondov.com/i-know-when-youre-vibe-coding">我如何知道你是在“vibe”编程</a><br>我不应该关心这个。 我不想关心某人的代码是如何进入 IDE 的。 无论您是手工编写、从论坛复制、提示 LLM，还是运行模拟，让猴子有无限的时间来生成解决方案。</p>
+
+<p><a href="https://elroy.bot/blog/2025/07/29/ai-is-a-floor-raiser-not-a-ceiling-raiser.html">AI是地板抬升者，而非天花板抬升者</a><br>人工智能(AI)正在改变学习曲线，它能让人们更容易地入门，但要精通依然困难。AI在提高管理效率方面表现出色，但在大型代码库方面的作用有限。在创意领域，AI的影响力有限。虽然AI在一些已存在应用（如电子邮件和食品订购）中的影响很小，但它对知识工作的整体影响是显著的，但分布不均。</p>
+
+<p><a href="https://developers.googleblog.com/en/gemini-embedding-powering-rag-context-engineering">Gemini Embedding：为 RAG 和上下文工程提供支持</a><br>探索组织如何利用 Gemini Embedding 来构建上下文感知 AI 系统，从而提高在不同行业的性能、准确性和效率。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubesphere/kubesphere">kubesphere/kubesphere</a><br>The container platform tailored for Kubernetes multi-cloud, datacenter, and edge management ⎈ 🖥 ☁️</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware(Project under CNCF)</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/HavocFramework/Havoc">HavocFramework/Havoc</a><br>The Havoc Framework</p>
+
+<p><a href="https://github.com/sst/opencode">sst/opencode</a><br>AI coding agent, built for the terminal.</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/akuity/kargo">akuity/kargo</a><br>Application lifecycle orchestration</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

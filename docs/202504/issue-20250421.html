@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250421.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250421</span>
+</p>
+<p>每日一谚：Write self-explanatory code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/R46d-QRSzqiK4_cSVNuiKQ">Go项目设计的“七宗罪”？警惕那些流行的“反模式”</a><br>在软件开发这个行当里，“最佳实践”、“设计模式”、“标准规范”这些词汇总是自带光环。它们总是承诺会带来更好的代码质量、可维护性和扩展性。 然而，当这些“圣经”般的原则被生搬硬套到Go语言的语境下时，有时非但不能带来预期的好处，反而可能把我们引入“歧途”，滋生出一些看似“专业”实则有害的“反模式”。 最近我也拜读了几篇国外开发者关于Go项目布局和设计哲学的文章，结合我自己这些年的实践和观察，我愈发觉得，Go社区中确实存在一些需要警惕 的、流行的设计“反模式”。这些“反模式”很多人都或多或少的使用过，包括曾经的我自己。在这篇文章中，我就总结一下我眼中的Go项目设计“七宗罪”，希望能帮助大家在实践中保持清醒，做出更符合Go精神的决策。</p> 
+
+<p><a href="https://appliedgo.net/why-go">我爱Go的15个理由</a><br>你应该在你的下一个项目中选择 Go 吗？这里有 15 个 Go 擅长编写后端应用程序和 CLI 工具的原因。Go 因其内置的并发性和缺乏继承而闻名。但是 Go 的优势远不止这些。我在这里收集了 15 个。每一个单独来看似乎并不惊天动地，但放在一起，它们构成了独特的特性组合，使 Go 成为我们 Gophers 喜欢的语言。</p> 
+
+<p><a href="https://meowbark.dev/Better-error-handling">更好的错误处理</a><br>糟糕的错误处理已经导致数十亿美元的损失、飞机坠毁、人员伤亡、股市暴跌、车辆损坏和航班延误。在我们回顾万圣节之际，恰逢其时地考虑一下这些软件出错的恐怖故事。您可以在我的《万圣节恐怖故事》（基于真实事件）中阅读更多相关信息，或者观看这段新近制作的 Fireship 视频。错误处理不仅仅是一项技术挑战，更是软件安全性和可靠性的关键方面。然而在 TypeScript 和 JavaScript 中，它仍然有点像狂野的西部。今天，我将分享当前现状和我的首选方法。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/04/21/deep-dive-into-the-gateway-api-inference-extension/">深入探讨 Gateway API 推理扩展</a><br>在 Kubernetes 上运行 AI 推理工作负载具有一些独特的特性和挑战，而 Gateway API 推理扩展项目旨在解决其中一些挑战。本文将深入探讨其工作原理。传统负载均衡算法可能不适用于 AI/LLM 模型后端。如果我们可以利用模型和 GPU 的实时指标来做出更智能的路由和负载均衡决策，将会节省大量成本。Gateway API 推理扩展项目正是这样做的。它引入了两个新的 Kubernetes CRD，InferenceModel 和 InferencePool，以及可以扩展 L7 路由的“端点选择器”的概念。该端点选择器利用来自底层 LLM 的指标来做出更智能的路由和负载均衡决策。</p>
+
+<p><a href="https://www.debugbear.com/blog/reduce-html-file-size">5 种减少网站 HTML 文件大小的方法</a><br>本文介绍了五种最佳实践，以减少网站 HTML 文件的大小，从而提高网页性能和核心 Web 指标。文章解释了最小化和压缩之间的关键区别，并说明了如何确保长期获得良好的结果。通过减少 HTML 文件大小，可以缩短页面加载时间，提高用户体验，特别是在移动设备和网络连接较差的情况下。</p>
+
+<p><a href="https://spiraldb.com/post/so-you-want-to-use-object-storage">想使用对象存储？</a><br>本文总结了直接使用对象存储构建系统过程中的一些经验和教训，包括处理尾部延迟、使用对冲技术、缓存以及水平扩展等策略，旨在帮助开发者更好地设计和构建基于对象存储的系统。</p>
+
+<p><a href="https://notes.eatonphil.com/2025-04-20-transactions-are-a-protocol.html">事务是一种协议</a><br>事务并非存储系统的内在组成部分。任何存储系统都可以实现事务性：Redis、S3、文件系统等等。Delta Lake 和 Orleans 演示了使 S3（或一般的云存储）具有事务性的技术。Epoxy 演示了使 Redis（以及任何其他系统）具有事务性的技术。当然，还有久经考验的二阶段提交。本文还简要介绍了 Delta Lake 的简化实现以及在通用键值存储层上的简化 MVCC 实现。事务的优缺点在于它们并非存储系统的内在组成部分。PostgreSQL、MySQL 和 SQLite 都有事务，但您不需要使用它们，也不可能要求您使用事务。许多开发人员（包括几年前的我自己）都不知道为什么要使用它们。（提示：阅读《设计数据密集型应用程序》）。甚至可以更进一步，忽略现有事务数据库的事务层，并像 Convex 所做的那样实现自己的事务层（上面的 Epoxy 论文也做了这件事）。通过实现自己的事务层，您并没有什么损失，因为您希望在值版本字段上编制索引的成本或速度与事务数据库中的任何其他辅助索引一样。尽管这样做原因尚不清楚（我希望将来能从 Convex 那里读到这方面的资料）。将事务协议视为系统设计工具箱中的另一种工具是有用的，特别是在您构建跨越数据系统的系统时。正如 Ben Hindman 在最近的 NYC Systems 上暗示的那样，甚至专有的 API 最终也会提供类似于二阶段提交的功能，以便我们无法控制的物理系统也能成为事务性的。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/21/ai-assisted-search/#atom-everything">AI辅助搜索研究现在真的有效了</a><br>过去两年半，我最想要的LLM功能是能够代表我完成基于搜索的研究任务。早在2023年初，我们就看到了这一点的初步迹象，Perplexity（2022年12月首次推出，2023年1月首次提示泄露）以及之后由GPT-4驱动的微软必应（2023年2月推出/崩溃）。从那时起，很多人都在尝试解决这个问题，最值得注意的是谷歌Gemini和ChatGPT搜索。
+2023年版本的系统很有前景，但也令人非常失望。它们有很强的倾向于幻觉出搜索结果中不存在的细节，以至于你无法相信它们所说的任何东西。
+在2025年上半年，我认为这些系统终于跨越了实用性的门槛。文章详细介绍了三个不同厂商的深度研究实现（Google Gemini、OpenAI和Perplexity），以及o3和o4-mini在搜索方面的出色表现。作者还指出了Google和Anthropic需要迎头赶上，并分享了他利用ChatGPT将代码移植到新的库版本的经历。最后，文章探讨了这项技术对网络经济模式的潜在影响，以及由此引发的法律诉讼。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/3hY4oDROOrtlYWd0nSpiEw">深度理解：提示词工程</a><br>最近，一份 68 页的 Google 提示词工程（白皮书）及译本在社区疯传。为系统性学习，我以此为框架，花费数日拓展大量知识点，整理形成本文。</p>
+
+<p><a href="https://blog.ollien.com/posts/llm-friction">大型语言模型降低了开发摩擦力，这是一件好事吗？</a><br>即使作为一个“大型语言模型怀疑论者”，说这些工具对软件开发毫无用处也是愚蠢的。它们显然在某些情况下很有用，例如执行 IDE 工具无法处理的重构，或构建概念验证。也就是说，在我使用和观察其他人使用大型语言模型的过程中，我注意到了一种令人不安的趋势：它们有助于减少软件开发中的摩擦——而这种摩擦可以帮助我们更好地理解和改进我们所工作的系统。多年来，我对什么是好的、可维护的软件的看法发生了变化。我认为对我影响最大的一次演讲是 J. B. Rainsberger 的“集成测试是个骗局”。虽然我可能不同意他对如何构建测试的结论，但演讲中有一点让我印象深刻：当你的测试难以编写时，你可能在系统设计上存在缺陷。它会对你施加一种“压力”，迫使你挑战你过去做出的选择。我与许多工程师合作过（我不会说我从未在其中），他们发现需要依赖大型语言模型来为他们编写测试。向拥有问题背景的机器提出请求比自己编写测试更容易。但这样做，我们是否剥夺了自己学习和改进设计的机会？当然，我们在编写代码的其他部分时可能会感受到这种摩擦。也就是说，根据我的经验，那些依赖大型语言模型编写“枯燥”测试的人，也要求大型语言模型尝试填补抽象使解决方案难以实现的空白。我认为这也是一个协作问题，特别是如果你在一个为其他内部团队服务的“平台”团队工作。如果外部贡献者进入一个代码库，他们对这种摩擦的第一个反应可能是向代码库的所有者寻求帮助。这种协作具有次要效果：它告知代码库的所有者他们需要在哪里改变设计以更好地满足其同行的需求。其他贡献者可能会选择依赖大型语言模型，以便尽快进出不熟悉的代码库。诚然，这可能有助于他们更快地完成工作，但我们剥夺了双方学习的机会；外部贡献者失去了学习他们通常不与之交互的系统的更多信息的机会，而所有者失去了学习如何更好地帮助客户的机会。最终，我认为这里没有黑白分明的解决方案；当然，有时快速编写代码值得权衡。同时，我想挑战我的工程师同事，下次遇到棘手问题时不要求助于大型语言模型。暂时的不适可能是工程师宝贵的成长机会。</p>
+
+<p><a href="https://addyo.substack.com/p/vibe-coding-is-not-an-excuse-for">氛围式编程并非低质量工作的借口</a><br>本文探讨了 AI 辅助编程（“氛围式编程”）的利弊。作者认为，虽然 AI 可以提高编程速度，但不能替代工程师的严谨性、审查和技艺。文章强调了在 AI 辅助编程中保持人工参与和维护高质量代码的重要性，并提出了七条实用准则，以帮助团队在享受 AI 效率的同时，确保代码质量。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/ltaoo/wx_channels_download">ltaoo/wx_channels_download</a><br>微信视频号下载器</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/usual2970/certimate">usual2970/certimate</a><br>开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/aandrew-me/tgpt">aandrew-me/tgpt</a><br>AI Chatbots in terminal without needing API keys</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint allows users to spin up a quick Go project using a popular framework</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps</p>
+
+<p><a href="https://github.com/ory/hydra">ory/hydra</a><br>The only web-scale, fully customizable OpenID Certified™ OpenID Connect and OAuth2 Provider in the world. Become an OpenID Connect and OAuth2 Provider over night. Written in Go, cloud native, headless, API-first. Available as a service on Ory Network and for self-hosters. Relied upon by OpenAI and others for web-scale security.</p>
+
+<p><a href="https://github.com/goharbor/harbor">goharbor/harbor</a><br>An open source trusted cloud native registry project that stores, signs, and scans content.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

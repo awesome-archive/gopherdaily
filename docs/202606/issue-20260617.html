@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260617.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260617</span>
+</p>
+<p>每日一谚：Go is about engineering, not art. We value practicality over elegance when they conflict </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/17/deepmind-automation-agent-harness-ai-self-coding">DeepMind 亮出王炸：别再手写 Agent Harness 了，AI 已经学会自己写了！</a><br>从 Claude Code 到 OpenClaw，我们所有走在 AI 原生开发前沿的工程师，都在不遗余 力地布道一个核心思想：大模型本身只是一个“毛坯大脑”，你必须为它手工打造一套精密的“外部骨骼（Harness）”，它才能真正干活。我们研究 ReAct 循环、设计上下文压缩引擎、构建安全中间件……我们以为，掌握这套“驾驭工程学”，就是我们在 AI 时代的终极护城河。 但就在今年年初，AI 领域的“神殿”——Google DeepMind——直接掀了桌子。他们发布了一篇名为《AutoHarness: a code harness for LLM agents by automatically synthesizing a code harness》的重磅论文，用极其详实的数据和实验，向全世界宣布了一个既震撼又令人脊背发凉的事实： 别再苦哈哈地手写 Harness 了，我们已经能让 AI 自己为自己编写“规则护栏”了。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/lSeYDklWxT3Ow_QogYzrpA">【AI 时代软件工程师的算法图谱】10 最短路径：网络流与路由</a><br>图论的世界除了“连通”与“顺序”，还有一个最经典的问题：代价（Cost）。今天，我们将深入两大经典算法：BFS（无权图王者）和 Dijkstra（带权图霸主）。最后，我们将手写一个 网络延迟分析器，模拟数据包在分布式网络中的传输。</p> 
+
+<p><a href="https://blog.janestreet.com/formal-methods-at-jane-street-index/">Jane Street博客: 形式化方法与编程的未来</a><br>本文探讨了形式化方法在编程领域的应用及其对未来软件开发的影响。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/17/why-cloud-native-belongs-at-the-heart-of-agentic-ai-lessons-from-building-a-multi-agent-security-platform-on-kubernetes/">为什么云原生应处于智能AI的核心：基于Kubernetes构建多智能体安全平台的经验教训</a><br>背景：一个保护受监管生产环境的内部实时安全操作平台，目前正处于积极开发和部署阶段。A2A协议用于智能体间协调（于2025年开源，现由Linux基金会管理）。</p>
+
+<p><a href="https://tailscale.com/blog/ai-without-lock-in">Aperture：加速AI采用而无需锁定</a><br>使用Aperture的灵活、身份感知的AI堆栈避免AI锁定。</p>
+
+<p><a href="https://www.docker.com/blog/docker-content-trust-retirement-and-migration-guidance/">Docker Content Trust：停用和迁移指南</a><br>Docker Content Trust服务将于2026年7月14日和15日经历4小时写入限制，8月10日和12日经历4小时读取限制，并于12月8日完全关闭。</p>
+
+<p><a href="https://www.dolthub.com/blog/2026-06-15-git-for-context/">Git For Context</a><br>在DoltHub，我们倾向于通过版本控制的视角看待一切。我们构建了Dolt，这是世界上第一个版本控制的SQL数据库。那么这个新工具是否更适合使用分支、差异、合并或克隆功能？</p>
+
+<p><a href="https://planetscale.com/blog/the-feedback-loops-behind-kubernetes">Kubernetes背后的反馈循环 — PlanetScale</a><br>本文探讨了Kubernetes系统中的反馈机制及其如何影响集群性能和稳定性。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering">为什么Meta正在摧毁其工程组织？</a><br>这家社交媒体巨头的高管层对其工程组织进行了AI驱动的全面改革。我们报道了所发生的情况及其影响。</p>
+
+<p><a href="https://cekrem.github.io/posts/explaining-functional-programming-to-non-programmers/">向非程序员解释函数式编程</a><br>几天前，有同事问我实际做什么工作。不是我的职位名称——他们已经知道了——而是什么是函数式编程。我开始谈论关于纯函数和不变性的老生常谈，看着他们的眼睛开始慢慢转向出口，然后他们用一种简单的方式拯救了我们两人...</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/">现在运行本地模型效果很好</a><br>自从本地模型问世以来，我一直在研究它们，现在它们终于出人意料地变得非常出色。</p>
+
+<p><a href="https://www.anthropic.com/research/claude-code-expertise">智能体编程和专业知识回报的持续性</a><br>这项研究探讨了智能体编程如何改变软件开发模式，以及为什么专业知识在这种新范式下会持续产生回报。</p>
+
+<p><a href="https://artificialanalysis.ai/models/glm-5-2">GLM-5.2 (max) - 智能、性能与价格分析</a><br>GLM-5.2(max)是一个开放权重的模型，于2026年6月发布，在多项基准测试中表现出色。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mvanhorn/cli-printing-press">mvanhorn/cli-printing-press</a><br>Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compou</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/getlago/lago">getlago/lago</a><br>Open Source Metering and Usage Based Billing API ⭐️ Consumption tracking, Subscription management, Pricing iterations, Payment orchestration &amp; Revenue analytics</p>
+
+<p><a href="https://github.com/nezhahq/nezha">nezhahq/nezha</a><br>Self-hosted, lightweight server and website monitoring and O&amp;M tool</p>
+
+<p><a href="https://github.com/kubevirt/kubevirt">kubevirt/kubevirt</a><br>Kubernetes Virtualization API and runtime in order to define and manage virtual machines.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/fleetdm/fleet">fleetdm/fleet</a><br>Open device management</p>
+
+<p><a href="https://github.com/asheshgoplani/agent-deck">asheshgoplani/agent-deck</a><br>Terminal session manager for AI coding agents. One TUI for Claude, Gemini, OpenCode, Codex, and more.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

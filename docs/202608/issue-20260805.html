@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260805.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260805</span>
+</p>
+<p>每日一谚：Avoid unnecessary allocations inside tight loops. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/05/filesystem-based-memory-for-llm-agents">AI智能体的记忆，终于有人认真研究“文件系统”这条路了——新论文给出五个反直觉答案</a><br>工业界的Agent记忆实践早已收敛到“文件系统”——一棵由Agent自己用通用文件工具读写、重组的Markdown目录树，但学术界大多在设计各种“专用记忆表征”，很少有人认真研究这个已经被广泛部署的默认方案。论文作者把filesystem-based memory形式化为围绕一个共享存储的三种角色：负责写入与整理的管理Agent、负责带引用作答的搜索Agent，以及在技能场景下提供任务轨迹的执行Agent。他们在长对话问答基准（LoCoMo、PersonaMem、REALTALK）和具身任务基准（ALFWorld）上，系统对比了六种记忆形态、不同工具集、不同规模的记忆流，以及不同能力档位的模型，围绕五个研究问题给出了迄今为止最系统的实证画像。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/08/05/opencost-1-121-0-first-of-a-kind-kubernetes-inference-cost-tracking/">OpenCost 1.121.0：首个Kubernetes推理成本跟踪系统</a><br>OpenCost 1.121.0引入了首个Kubernetes推理成本跟踪功能，包括推理调度器(EPP)和网关代理(llm-d)组件。这些组件虽然仅使用CPU，但在高吞吐量部署中仍代表真实的运营成本。</p>
+
+<p><a href="https://www.docker.com/blog/software-supply-chain-security-omdia-2026-report/">软件供应链正遭受攻击。开发者仍然是第一道防线</a><br>过去12个月中，超过四分之三的组织经历了软件供应链事件。AI技术成为首要供应链风险(40%)，排名高于第三方和开源代码(39%)以及软件依赖(38%)。</p>
+
+<p><a href="https://blog.appliedcomputing.io/p/karpenters-consolidation-behaviour-5a6">Karpenter的整合行为违反直觉</a><br>Karpenter的整合行为违反直觉，可能导致资源分配不符合预期。这种反直觉的行为可能会影响集群资源利用效率，需要用户特别关注。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything">LLM新版本增加对推理轨迹、OpenAI响应、服务器端工具和更智能日志的支持</a><br>LLM的Python API之前要求用户创建对话然后一次发送一条消息。这掩盖了LLM的真实本质，即每个请求都携带了之前消息的完整历史记录。新版本改进了这一设计。</p>
+
+<p><a href="https://www.thisandthat.chat/blog/most-tech-revolutions-made-work-worse-for-employees/">大多数技术革命使员工工作变得更糟。AI可能是例外</a><br>大多数技术革命实际上使员工的工作条件变得更差，而AI可能是例外。人们对AI感到恐慌，但仍竞相采用它，这种矛盾态度反映了技术变革中的复杂心理。</p>
+
+<p><a href="https://blog.cloudflare.com/engineering-standards-enforcement/">Cloudflare如何使用AI强制执行工程标准</a><br>Cloudflare利用AI技术强制执行工程标准，提高代码质量和一致性。这种AI辅助方法帮助开发团队更快地识别和修复潜在问题，同时保持高标准的工程实践。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/esengine/DeepSeek-Reasonix">esengine/DeepSeek-Reasonix</a><br>DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the int</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous GPU Sharing on Kubernetes</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - Infrastructure as Code in any programming language 🚀</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

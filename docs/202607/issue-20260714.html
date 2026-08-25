@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260714.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260714</span>
+</p>
+<p>每日一谚：interface{} says nothing. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/14/171-accepted-unimplemented-go-proposals-a-decade-of-technical-debt">171个“已批准”却迟迟未实现的提案：Go语言的十年“欠账清单”</a><br>在 Go 语言的 GitHub 仓库中，存在着 171 个被官方标记为“Accepted（已批准）”却长期未合入代码的提案，其中最古老的积压长&gt;达 13 年之久。本文对这份“十年欠账清单”进行了全景式的体检与分类，发现超半数提案积压 5 年以上，且多集中于 x 扩展库及底层命令行工具。 文章深度拆解了四个经典的“钉子户”提案背后的故事，指出“已批准”往往仅代表共识达成，而非排期承诺；许多涉及行为变更或依赖社区人力的提案 ，因为 Go 严格的向后兼容原则而经历了漫长的软着陆期。不过，近期的里程碑（如 Go 1.27/1.28）数据显示，Go 团队正在加速消化这些历史遗留 问题。这份公开透明的清单，不仅是 Go 审慎演进的历史见证，更是开发者参与高质量开源贡献的最佳切入点。</p> 
+
+<p><a href="https://gomodvanityurls.com/zh/blog/from-ip-to-brand-domain/">从 IP 地址到品牌域名：一个 Go 团队的 Vanity URL 之旅</a><br>一个真实的 Go 团队故事：从用 IP 地址做 import path 的混乱时代，到用 vanity URL 统一管理 50 个内部模块。新人秒懂、服务器迁移零影响、品牌统一。</p> 
+
+<p><a href="https://www.glukhov.org/app-architecture/integration-patterns/transactional-outbox-pattern-go/">使用PostgreSQL实现Go中的事务性发件箱模式</a><br>两个应该一起成功的写入操作最终会分别失败。您的订单服务将订单保存到数据库，然后向消息智能体发布一个`order.created`事件。这两个操作是顺序执行的。</p> 
+
+<p><a href="https://eitamring.github.io/posts/gocudrv-ten-weekends.html">Go中CUDA的十个周末：30个函数变成了106个</a><br>gocudrv是我的周末项目：它提供了从Go语言访问CUDA驱动API的功能，无需cgo，构建时不需要工具包，驱动库在运行时加载。</p> 
+
+<p><a href="https://flowg.cloud/blog/replication-via-foundationdb">通过FoundationDB实现复制</a><br>FlowG v0.61.0已经发布，随之而来的是我们在通往1.0道路上宣布的两个大项目之一：**复制**功能现已普遍可用。</p> 
+
+<p><a href="https://words.filippo.io/128-bits/">量子计算机不会对128位对称密钥构成威胁</a><br>密码学相关的量子计算机的威胁正在增加，但它们不会对128位对称密钥构成威胁。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/linux-kernel-vfs/">虚拟文件系统(VFS) 工作原理指南</a><br>这是理解Linux内核系列的第5部分，介绍了Linux内核的虚拟文件系统，包括内核启动、系统调用和内存管理等内容。</p> 
+
+<p><a href="https://zerops.io/articles/we-rebuilt-project-logging-at-zerops-on-victoria-logs">我们在Zerops上使用VictoriaLogs重建了项目日志系统</a><br>Zerops遵循一条不可动摇的规则：**用户共享硬件而非软件**。Zerops上的每个项目都在专用的技术栈上运行，拥有自己的数据库、运行环境和日志系统。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/13/operating-opentelemetry-at-scale-with-opamp/">使用OpAMP大规模运行OpenTelemetry</a><br>Andy提到OpenTelemetry Java SDK也可以使用OpAMP协议接收远程配置。用例很有说服力：想象一下，您可以远程调整整个微服务架构中的采样率来调查问题，或者为特定服务启用调试日志。</p>
+
+<p><a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/">使用开源内核调度器现代化Meta广告服务</a><br>这提供了通过特定工作负载调度来减少延迟的真正机会。这就是为什么我们的广告和Linux内核团队合作，使用基于BPF的可扩展调度框架sched_ext，构建了针对广告投放工作负载定制的调度策略。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/07/13/introducing-headlamp-plugin-for-kubeflow/">在Kubernetes上运行AI/ML工作负载：Kubeflow的Headlamp插件</a><br>Headlamp插件支持Kubeflow的组件和API资源，包括Notebooks提供Jupyter、VS Code和RStudio等开发环境，以及Pipelines用于定义和跟踪管道、版本、实验、运行等。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/07/13/kubernetes-dashboard-to-headlamp/">从Kubernetes Dashboard到Headlamp：分步指南</a><br>Kubernetes Dashboard和Headlamp都显示集群中运行的内容，但它们的工作方式不同。当Headlamp在桌面上运行时，它使用您现有的kubeconfig连接到一个或多个集群，并可以通过插件扩展功能。</p>
+
+<p><a href="http://antirez.com/news/169">控制思想，而非代码</a><br>查看这个博客的过去历史，有很多关于使用AI编程的文章，其中一些可以追溯到2024年1月。毕竟，我是一个相对受尊敬的程序员。</p>
+
+<p><a href="https://research.google/blog/the-power-of-collaboration-how-we-can-reduce-traffic-congestion/">协作的力量：我们如何减少交通拥堵</a><br>2026年7月7日，Neha Arora和Aboudy Kreidieh（Google Research软件工程师）展示了导航应用中网络感知路由的效果，这有助于减少交通拥堵。</p>
+
+<p><a href="https://softwaredoug.com/blog/2026/07/09/write-code">为什么在2026年编写代码</a><br>我们的工作是构建软件工厂，而不仅仅是软件。软件工程师维护装配线，允许任何人请求更改并立即发布。我们建立了使智能体成功的基础设施，通过提示（技能、智能体）主动行动。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html">我爱LLMs，我讨厌炒作</a><br>从这篇博客中，你可能低估了我对AI的绝对热情。我从2007年到2014年从事黑客活动，之后我的整个职业生涯都致力于AI。我喜欢这种进步，对新的LLMs感到非常兴奋。</p>
+
+<p><a href="https://evanhahn.com/prefer-strict-tables-in-sqlite/">在SQLite中优先使用STRICT表</a><br>简而言之，我更喜欢SQLite中的严格表，因为它们可以避免一些数据类型问题，例如将文本放入数字列。SQLite有一个我认为被低估的功能：严格表。</p>
+
+<p><a href="https://itnext.io/7-data-compaction-engines-for-apache-iceberg-in-2026-cc0107f6fe7d">2026年Apache Iceberg的7个数据压缩引擎</a><br>数据压缩曾经是通过定时任务运行Spark，但现在我们有更智能的选择：它们是什么，以及如何选择正确的选项？</p>
+
+<p><a href="https://lyra.horse/blog/2026/06/reddit-spam-internals/">一窥Reddit的反垃圾邮件内部机制</a><br>2026年6月27日，五年前当我还在使用Reddit时，发生了一些不寻常的事情。我首选的应用程序是Relay for reddit，它提供了一些独特的Reddit体验。</p>
+
+<p><a href="https://blog.vanillajava.blog/2026/06/why-you-should-tun-code-before-your.html">为什么应该在垃圾回收器之前调整代码</a><br>2026年6月8日，在调整垃圾回收器之前优化代码是更好的做法，因为这样可以提高性能并减少内存使用。</p>
+
+<p><a href="https://www.infoq.com/news/2026/07/cloudflare-hyper-bug-fix/">Cloudflare发现hyper的HTTP/1实现中的竞态条件 - InfoQ</a><br>2026年7月12日，Cloudflare发现了hyper HTTP/1实现中的竞态条件问题，这是一个可能导致数据不一致的并发错误。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/#atom-everything">以缓存友好的方式在GitHub Actions中使用uvx</a><br>诀窍是在工作流开始时设置`UV_EXCLUDE_NEWER: &#34;2026-07-12&#34;`环境变量，然后将其用作GitHub Actions缓存密钥的一部分。</p>
+
+<p><a href="https://simonwillison.net/2026/Jul/13/doomql/#atom-everything">DOOMQL</a><br>DOOMQL始于一个故意不合理的问题：如果SQLite不仅是游戏存储数据的地方，而是游戏引擎本身会怎样？结果是一个小型的原创Doom类游戏，其中SQL控制移动、碰撞、敌人、战斗、进度和屏幕上的每个RGB像素。</p>
+
+<p><a href="https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything">GitHub上的datasette代码频率图表</a><br>活动末尾的大幅增长与Opus 4.8、GPT-5.5、Fable 5和GPT-5.6 Sol的发布时间一致。</p>
+
+<p><a href="https://x.com/fhinkel/status/2076782085516493079">Franziska Hinkelmann博士在X上发布</a><br>Franziska Hinkelmann博士在X上分享了一篇关于AI技术的文章，讨论了最新的AI发展趋势和应用场景。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray panel supporting multi-protocol multi-user expire day &amp; traffic &amp; IP limit (Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto)</p>
+
+<p><a href="https://github.com/perber/leafwiki">perber/leafwiki</a><br>LeafWiki - Self-hosted wiki. Single Go binary, SQLite, Markdown on disk. No external database required.</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/AlistGo/alist">AlistGo/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/rcourtman/Pulse">rcourtman/Pulse</a><br>Monitoring for Proxmox, Docker, Kubernetes, TrueNAS, and vSphere that watches your infrastructure for you: smart alerts, AI patrols that catch silent failures, and verified fixes</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/Gentleman-Programming/engram">Gentleman-Programming/engram</a><br>Persistent memory system for AI coding agents. Agent-agnostic Go binary with SQLite &#43; FTS5, MCP server, HTTP API, CLI, and TUI.</p>
+
+<p><a href="https://github.com/pocket-id/pocket-id">pocket-id/pocket-id</a><br>An easy-to-use OpenID Connect Certified™ and OAuth 2.0 provider that lets users sign in to your applications with passkeys.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

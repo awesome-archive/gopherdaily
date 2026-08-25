@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260528.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260528</span>
+</p>
+<p>每日一谚：A good Go program is self-documenting. Write code that tells its own story </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/28/uber-reveals-hidden-cost-of-go-stack-growth-10-percent-cpu-savings">省下 10% CPU！Uber 揭秘 Go 栈扩容的隐秘代价</a><br>最近，Uber 基础架构团队在对核心服务进行性能 Profiling 时，抓出了一个隐藏极深的 CPU “吸血鬼”。这个内鬼既不是复杂的业务逻辑，也 不是被千夫所指的垃圾回收（GC），而是 Go 语言引以为傲的并发基石——Goroutine 栈扩容（Stack Expansion）。 在部分核心微服务中，仅仅是栈扩容（runtime.copystack）这一项底层操作，就吞噬了近 10% 的 CPU 资源！而在 Uber 全局 600 多个微服务大盘中，栈拷贝的平均成本也高达 3.9%（作为对比，代价高昂的 GC 平均成本约为 7.3%）。面对如此惊人的性能黑洞，Uber 的工程师们没有选择向官方妥协。他们直接向 Go 运行时（Runtime）开刀，甚至手撕底层汇编代码，硬生生把这 10% 的 CPU 损耗压到了 0.0047%。不仅如此，他们还将研究成果反哺给 Go 官方社区（Issue #77893），正在推动 Go 语言栈分配机制的历史性进化。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/f0cE_IZAWO5aJdPonT_2zg">Go可以使用泛型方法了</a><br>Robert Griesemer 将 https://github.com/golang/go/issues/77273 这个泛型方法提案设置为Completed并close。</p> 
+
+<p><a href="https://dev.to/krishankumar01/retrying-http-requests-in-go-without-making-it-worse-48mj">如何在 Go 中重试 HTTP 请求而不让情况变糟</a><br>当你调用外部 API 时，一切正常，直到出现问题。网络故障、服务器重启或速率限制。于是你添加了重试机制，大多数情况下这很有用。问题在于，我们最先写的显而易见的重试逻辑，可能会悄悄地让情况变得更糟：它可能导致重复发送付款，或者让处于困境的服务器持续崩溃，而不仅仅是原始故障造成的影响。在这篇文章中，我们将从一个简单的版本开始构建 Go 重试客户端，修复每一个潜在的问题，最后给出一个稍微有些让人不安的建议：建议你使用第三方库。读完这篇文章，你将准确了解该库在做什么</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/27/gpu-autoscaling-on-kubernetes-with-keda-building-an-external-scaler/">使用 KEDA 在 Kubernetes 上进行 GPU 自动伸缩：构建外部伸缩器</a><br>如果你在 Kubernetes 上运行 GPU 工作负载（如 vLLM、Triton、训练任务或较新的智能体推理栈），你可能遇到过一个熟悉的问题：默认的自动伸缩路径仍然基于 CPU 和内存，而真正进行工作的 GPU 却被隐藏了。这种错位浪费了昂贵的加速器资源，推高了推理延迟，并在企业试图负责任地扩展 LLM 和智能体运营时造成了不必要的功耗。我希望 KEDA 能够根据对 GPU 工作负载至关重要的信号进行伸缩：利用率、内存、温度和功耗。实际上，这不仅仅是一个成本问题，也是一个绿色运维（GreenOps）问题，因为浪费的 GPU 周期直接转化为浪费的能源和更高的范围 3 排放。事实证明，这比听起来要困难得多。</p>
+
+<p><a href="https://www.docker.com/blog/mitigating-cve-2026-31431-copy-fail-in-docker-engine/">缓解 Docker 引擎中的 CVE-2026-31431（“复制失败”）</a><br>CVE-2026-31431 是最近披露的一个 Linux 内核漏洞。该 CVE 不会危及 Docker 基础架构。话虽如此，v29.4.3 之前的 Docker 引擎默认配置文件允许容器创建 AF_ALG 套接字，这是该利用程序所使用的系统调用接口。如果你运行的是 Docker 引擎 v29.4.3 或更高版本，或者已修补的宿主机内核，则不会受到影响。如果缺少其中任何一项，该宿主机就会面临风险，你应该阅读本文的其余部分。</p>
+
+<p><a href="https://nesbitt.io/2026/05/27/chaoss-metrics-in-2026.html">2026 年的 CHAOSS 指标</a><br>CHAOSS 项目(https://chaoss.community/)在过去八年中致力于为人们衡量开源项目的指标撰写精确的、与实现无关的定义：创建了多少议题，关闭议题需要多长时间，有多少独立人士贡献代码，依赖项有多陈旧。撰写这些定义的目的是让两个计算“议题响应时间”的仪表板至少在计算相同的东西，而 [已发布的指标集](https://chaoss.community/kb-metrics-and-metrics-models/) 已成为该领域最接近共享词汇表的东西。这些定义中的大多数是在 2018 年至 2023 年之间起草的，当时的背景是贡献是以人类的速度产生的，安全建议每个生态系统每年只发布几次，而停止维护的维护者通常也会停止提交代码。所有这三个条件都在发生变化，而许多指标定义在编码时并未体现这一点。共同的线索是，大部分目录都在计算仓库事件，而事件计数之所以有意义，是因为产生一个事件曾经需要人们付出一定的成本。一个议题需要某人花十分钟编写，一个 PR 需要某人花一下午时间。这种成本正在交互的一端被移除，而另一端却没有，因此这些计数越来越是在衡量有多少廉价的东西指向一个项目，而不是衡量项目背后的社区。我大致按照目录归类的顺序浏览了当前发布的集合，并尝试梳理出哪些指标最依赖于这些假设。</p>
+
+<p><a href="https://opensource.googleblog.com/2026/05/disrupting-the-presentation-layer-using-autonomous-workflows.html">利用自治工作流颠覆表现层</a><br>利用 Kubernetes 做更多事，Kubernetes 是容器编排的黄金标准。它的功能、灵活性和丰富的 API 界面正是它成为现代云原生基础设施基石的原因。今天，工程师们通过 K8s API、声明式 YAML 清单和云控制台来表达这种能力，这是一个非常强大的工具箱。我们认为下一步是扩展工程师与该工具箱交互的方式。Kubernetes 专家应该能够与精通控制平面的深度领域专家进行对话...</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything">我认为 Anthropic 和 OpenAI 已经找到了产品与市场的契合点</a><br></p>
+
+<p><a href="https://www.a16z.news/p/avoiding-death-on-the-yellow-brick">避免在黄砖路上死亡</a><br>最近在 a16z 播客上与 Apollo 的 Marc Rowan 进行了一次交谈——请[点击这里](https://youtu.be/oYK_MmZW9XI)查看他们的对话。</p>
+
+<p><a href="https://x.com/rohit4verse/status/2059320043478081976">你并不慢，你只是单线程：从一个提示词指挥 300 个智能体的完整指南</a><br>你设计产品、编写代码、编写发布文案、回答支持工单，并亲自对账。你是按顺序完成的，因为一个人一次只能做一件事。在你发布落地页的那一周，研究工作被搁置了。在你进行研究的那一周，写作工作被搁置了。你的瓶颈是吞吐量，而唯一能填补空白的人是你，处理着一个永远处理不完的队列。</p>
+
+<p><a href="https://hugobowne.substack.com/p/the-agentic-software-factory">智能体软件工厂</a><br></p>
+
+<p><a href="https://wesmckinney.com/blog/mythical-agent-month/">神话般的智能体</a><br>像很多人一样，我发现 AI 对我的睡眠时间表造成了可怕的影响。过去我会在凌晨 4 点或 4 点 30 分短暂醒来喝水或上厕所；现在我很难再入睡。*我本可以做点什么的*。以前我每晚能稳睡 7-8 小时；现在能睡 6 小时就算幸运了。我基本上已经放弃抵抗了：现在当我在凌晨 5 点 07 分躺在床上辗转反侧，脑子里冒出点子要喂给我的 AI 编码智能体时，我直接起床开始我的一天。在我身边的工程和数据科学朋友圈里，关于作为人类我们的竞争优势还能持续多久的讨论很多。当智能体开始拥有更好的点子时，拥有好点子（而且有很多好点子）还有意义吗？为了从智能体那里获得好的结果，目前“人在回路中”的专家感觉至关重要，但这能持续多久，直到我们最疯狂的想法在我们睡觉时被转化为可运行、有品位的软件？这会是一种 [“温和的淘汰”](https://benn.substack.com/p/the-gentle-obsolescence) 吗，我们会愉快地交出控制权，还是其他什么情况？目前，我觉得我被需要。我不会把我现在的这种工作方式称为“氛围编码”，因为这听起来像是对构建 AI 垃圾软件项目的“提示词加放松”这种方式的贬义词。我一直在构建像 [roborev](https://roborev.io) 这样的工具，为我的并行智能体会话带来严谨性和持续监督，并严格审查我的智能体正在做的工作。在这种激进的新工作方式下，很难不去思考软件工程的未来。我职业生涯中引用最多的书可能是 Fred Brooks 的《人月神话》，其著名的 *布鲁克斯法则* 指出“向进度落后的软件项目增加人力只会使项目更加落后”。最近我发现自己在问，这本书的教训是否适用于这个智能体开发的新时代。一个...</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus 是一个高性能、云原生的向量数据库，专为可扩展的向量 ANN 搜索而构建</p>
+
+<p><a href="https://github.com/kubernetes-sigs/agent-sandbox">kubernetes-sigs/agent-sandbox</a><br>agent-sandbox 能够轻松管理隔离的、有状态的、单例工作负载，非常适合 AI 智能体运行时等用例。</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移工具。提供 CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个分布式存储系统，用于对象存储 (S3)、文件系统和 Iceberg 表，旨在以 O(1) 磁盘访问和轻松的水平扩展处理数十亿个文件。</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Kubernetes 的工作流引擎</p>
+
+<p><a href="https://github.com/kulikov0/whitelist-bypass">kulikov0/whitelist-bypass</a><br></p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>世界上最快的网站构建框架。</p>
+
+<p><a href="https://github.com/bia-pain-bache/BPB-Wizard">bia-pain-bache/BPB-Wizard</a><br>一个用于促进 BPB 面板部署和管理的向导工具。</p>
+
+<p><a href="https://github.com/james-6-23/codex2api">james-6-23/codex2api</a><br>Codex2API 是一个基于 Go &#43; Gin &#43; React/Vite 的 Codex 反向智能体与管理后台项目</p>
+
+<p><a href="https://github.com/Infisical/agent-vault">Infisical/agent-vault</a><br>一个 HTTP 凭证智能体和库，用于 Claude Code、OpenClaw、Hermes、自定义智能体等 AI 智能体。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

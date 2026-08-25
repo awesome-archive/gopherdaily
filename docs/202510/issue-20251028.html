@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251028.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251028</span>
+</p>
+<p>每日一谚：return early, return often </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/10/28/go-archaeology-error-handling">Go 考古：错误处理的“语法糖”之战与最终的“投降”</a><br>if err != nil，这可能是 Go 语言中最具辨识度，也最富争议性的代码片段。它如同一块磐石，奠定了 Go 错误处理哲学的基石，但也因其“繁琐”而常年位居 Go 开发者年度调查“最不满意特性”榜首。 许多新入门的 Gopher 可能会感到困惑：Go 团队为何如此“固执”，十余年来始终拒绝为这个明显的痛点，提供一个类似 try-catch 或 Rust ? 运算 符的“语法糖”？ 事实上，这并非因为 Go 团队的傲慢或忽视。Go 的设计，是在一场关于“异常 (Exceptions) vs. 返回码 (Status Returns)”的世纪之辩的硝烟中诞 生的。而 Go 语言的历史，就是一部试图为“返回码”的繁琐寻找“语法糖”，却屡战屡败，并最终选择坚守初心的历史。 本文，就让我们扮演一次“Go 考古学家”，深入挖掘历史的尘埃，回顾这场旷日持久的“语法糖之战”，并揭示 Go 团队为何在 2025 年，最终选择向 “现状投降”</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/pjrnZQym724T5EGuL0a2UQ">【Go 官方最新动向】Runtime 会议速递：GreenTea GC 默认启用，goroutine 泄露检测与SIMD 齐飞！</a><br>随着 Go 1.26 的功能冻结日期（2025-11-26）日益临近，Go 核心团队的开发节奏也进入了冲刺阶段。近日，Go Runtime 与编译器团队举行了新一轮的定期例会，会议纪要为我们揭示了即将在 Go 1.26 中登场的、一系列激动人心的变化。这份速递将为你划出重点：备受期待的 Green Tea GC 将成为默认选项，goroutine 泄露检测功能已初步落地，SIMD 加速也即将进入实验阶段。可以说，Go 1.26 极有可能成为一次在**性能与开发者体验**上双重飞跃的重要版本。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/Y19cZa5ArYqzDXymdyMfbQ">【Go 网络编程全解】12 本地高速公路：Unix 域套接字与网络设备信息</a><br></p> 
+
+<p><a href="https://tailscale.com/blog/services-beta">Introducing Tailscale Services</a><br>Today we’re excited to announce Tailscale Services, a new way to define available resources on your network and expand the granularity of your access controls to resources that may not have Tailscale installed on them.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/rethinking-scale-tidb-evolution-ai-agent-database/">AI 智能体数据库：TiDB 演变为可扩展的解决方案</a><br>了解 TiDB 如何演进以满足 AI 代理数据库的需求，无缝扩展数据量、模式和 SQL。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/">The next chapter of the Microsoft–OpenAI partnership</a><br>自 2019 年以来，微软和 OpenAI 一直秉持着共同的愿景，即负责任地推进人工智能的发展，并使其惠及大众。 最初对一家研究机构的投资已发展成为我们行业中最成功的合作关系之一。 当我们进入该合作关系的下一阶段时，我们签署了一项新的最终协议，该协议建立在我们的基础上，加强了我们的合作关系，并为这两个组织的长期成功奠定了基础。</p>
+
+<p><a href="https://www.docker.com/blog/connect-mcp-servers-to-claude-desktop-with-mcp-toolkit/">Connect MCP Servers to Claude Desktop with MCP Toolkit</a><br>Learn how to set up Claude Desktop with Docker MCP Toolkit to connect MCP servers securely and easily.</p>
+
+<p><a href="https://internals-for-interns.com/posts/sql-query-roadtrip-in-postgres">SQL 查询在 Postgres 中的旅程</a><br>你是否想过当你在命令行输入 `SELECT * FROM users WHERE id = 42;` 并按下回车键时会发生什么？一个简单的查询会触发 PostgreSQL 内部一个引人入胜的旅程——一系列涉及多个进程、复杂的内存管理和数十年优化研究的复杂操作。 这是一系列文章中的第一篇，我们将深入探讨 PostgreSQL 的查询执行。在本概述中，我将带你了解从 SQL 文本到结果的完整旅程，为你提供路线图。然后，在后续文章中，我们将深入研究每个组件——解析器、分析器、重写器、规划器和执行器——探索每个组件的工作原理的细节。</p>
+
+<p><a href="https://bloggeek.me/moq-redefine-realtime">Media Over QUIC (MOQ)：它将如何重新定义实时媒体和流媒体</a><br></p>
+
+<p><a href="https://www.brokenrobot.xyz/blog/the-renaissance-of-written-coding-conventions">书面编码规范的复兴：因为 AI 也会阅读手册</a><br>编码规范正在复兴。 AI 助手现在与我们一起编码，他们学习我们所教的内容。 是时候掸去手册上的灰尘了，因为 AI 也会阅读手册。 这篇文章更侧重于前端，但这里的一切都同样适用于软件开发的其它领域。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Oct/28/aaron-boodman/#atom-everything">A quote from Aaron Boodman</a><br>Claude 在我擅长的工作上并没有让我快多少。 也许是 15-20%，取决于当天。 主要是那些我不知道该怎么做，需要研究的工作，或者是我甚至不想做的琐碎工作。 在这方面，甚至很难给出一个数字。 很多我每天用 Claude 完成的项目，如果在我有 Claude 之前，我根本就不会做。</p>
+
+<p><a href="https://every.to/source-code/inside-the-ai-workflows-of-every-s-six-engineers">Every&#39;s 六位工程师的 AI 工作流程</a><br>Every 团队中的每个人都根据个人喜好定制了他们的堆栈。</p>
+
+<p><a href="https://bytesauna.com/post/coding-vs-software-engineering">AI 可以编写代码，但它无法构建软件</a><br>AI 可以编写代码，但它无法构建真正的软件。软件工程仍然是人类的工作，因为 AI 可以编写代码，但不能进行工程设计。</p>
+
+<p><a href="https://blog.joemag.dev/2025/10/the-new-calculus-of-ai-based-coding.html">基于 AI 的编码的新微积分</a><br>过去三个月，我和一群经验丰富的志同道合的工程师一直在 Amazon Bedrock 中构建一些非常酷的东西。 虽然我对我们正在构建的东西感到非常兴奋，但我们团队还有另一件独特的事情 - 我们的大部分代码都是由 AI 代理编写的，例如 Amazon Q 或 Kiro。 在你翻白眼之前：不，我们不是用氛围编码。 我不相信这是构建稳健软件的正确方法。 相反，我们使用一种方法，即人类和 AI 代理协作生成代码更改。 对于我们的团队来说，每次提交都附加了一位工程师的姓名，并且该工程师最终需要审查并支持该代码。 我们使用指导规则来设置 AI 代理在我们的代码库中应该如何操作的约束，而使用 Rust 编写代码是一个巨大的好处。 Rust 编译器以专注于正确性和安全性而闻名，可以在编译时捕获许多问题，并提供有用的错误消息，帮助代理迭代。 作为对氛围编码的并置，我更喜欢术语“代理编码”。 没那么令人兴奋，但在我们的行业中，无聊通常是好事。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/thomaspoignant/go-feature-flag">thomaspoignant/go-feature-flag</a><br>GO Feature Flag is a simple, complete and lightweight self-hosted feature flag solution 100% Open Source. 🎛️</p>
+
+<p><a href="https://github.com/sigstore/cosign">sigstore/cosign</a><br>Code signing and transparency for containers and binaries</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API and SDK</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>Video translation and dubbing tool powered by LLMs. The video translator offers 100 language translations and one-click full-process deployment. The video translation output is optimized for platforms like YouTube，TikTok. AI视频翻译配音工具，100种语言双向翻译，一键部署全流程，可以生抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube等形态的内容成适配</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260210.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260210</span>
+</p>
+<p>每日一谚：return early, return often </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/10/goodbye-flaky-tests-go-testing-nettest-proposal">告别 Flaky Tests：Go 官方拟引入 testing/nettest，重塑内存网络测试标准</a><br>在 Go 语言的测试哲学中，我们一直追求快速、稳定和可重复。然而，一旦测试涉及到 net 包——无论是 HTTP 服务、RPC 框架还是自定义协议——这种追求往往就会撞上现实的墙壁。 我们通常面临两种选择：要么在 localhost 上监听真实端口，但这会导致测试并发时的端口冲突、防火墙干扰以及操作系统层面的不确定性；要么使用 net.Pipe，但它那“同步、无缓冲”的特性与真实的 TCP 连接大相径庭，常常导致生产环境运行良好的代码在测试中死锁。 为了彻底解决这一“最后一公里”的测试难题，Go 团队的 Damien Neil 提议引入 testing/nettest。这是一个完全在内存中运行，但行为上高度仿真真实网络栈（支持缓冲、异步、错误注入）的实现。</p> 
+
+<p><a href="https://tonybai.com/2026/02/10/ai-agent-realizes-ultimate-dream-software-factory">输入需求，输出系统：AI Agent 正在实现软件工程的“终极梦想” —— 软件工厂！</a><br>随着以 GPT-5.2、Claude 4.5、Gemini Pro 3.0 等为代表的大语言模型（LLM）能力的爆发，以Claude Code、Gemini Cli等编码智能体的快速演进，以及Agentic Workflow（智能体工作流）的成熟，我们第一次拥有了能够理解“非标需求”并将其转化为“标准代码”的通用推理引擎。 特斯拉前 AI 总监 Andrej Karpathy 将这一刻定义为 Software 3.0 的黎明。在这个新时代，那个尘封已久的“软件工厂”蓝图，正在从幻想变成触手可及的现实。 今天，我们就来深度剖析这座正在崛起的 AI 软件工厂，看看它将如何重塑我们的行业、生态与职业。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/understanding-go-runtime">深入Go runtime引导过程</a><br>本文是探索 Go 运行时内部机制系列的第一篇文章，重点介绍了引导（bootstrap）过程，即从操作系统启动二进制文件到 `func main()` 开始执行之间的所有步骤。在 `main` 函数运行之前，Go 运行时已经完成了大量工作来建立执行环境，包括：设置第一个 goroutine (g0) 和线程 (m0)、配置线程本地存储 (TLS)、检测 CPU 特性、初始化堆内存分配器（使用尺寸类和本地缓存）、初始化哈希函数、设置类型系统表、解析启动参数和环境变量，以及初始化并最终启用并发的垃圾收集器（GC）。这些基础架构的建立是 Go 语言在用户代码层面实现高效率、易用性的并发和内存管理的关键所在。文章最后解释了当 `main` 函数返回时，未同步的其他 goroutine 将被直接终止。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-02-09-introducing-agent-mode/">Cursor for SQL</a><br>DoltHub推出了Dolt Workbench中的代理模式，这是一个类似于Cursor的代理聊天界面，允许用户安全地与Dolt、MySQL和Postgres数据库进行交互。文章通过对比在MySQL和Dolt数据库上执行相同操作的体验，强调了版本控制（Dolt的特性）对于安全地使用AI进行数据库写入操作的重要性。使用MySQL时，AI的更改无法被实时预览和验证；而使用Dolt时，用户可以清楚地看到所有更改，并在提交前进行确认或回滚。</p>
+
+<p><a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5">High-Throughput Graph Abstraction at Netflix: Part I</a><br></p>
+
+<p><a href="https://workos.com/docs/pipes">Pipes – WorkOS 文档</a><br>Pipes 允许您的用户安全地将其第三方账户连接到您的应用程序。通过 Pipes，您可以轻松集成 GitHub、Slack、Google、Salesforce 等流行服务，而无需管理 OAuth 流程、令牌刷新逻辑或凭证存储。</p>
+
+<p><a href="https://lucumr.pocoo.org/2026/2/9/a-language-for-agents/">为智能体而生的语言</a><br>作者探讨了在代理工程兴起的背景下，未来编程语言可能的样子。他认为现有语言在权重中的大量存在并不意味着它们会固化，代理在语言上的表现受工具链和语言变化速度的影响。作者认为，由于代码编写成本的急剧下降，新语言只要价值主张足够强，并且吸取了大型语言模型训练的经验，就有可能被采用。文章深入分析了代理偏好的语言特性，包括对清晰上下文（无依赖LSP）、清晰的结构（避免空白敏感和复杂的括号匹配）、显式的流程上下文、结果优于异常、易于 Grep（可搜索性）以及依赖感知构建等方面的偏好。同时，代理“憎恨”宏、不透明的重新导出（如 Barrel Files）、别名、不稳定的测试环境以及多重失败条件。</p>
+
+<p><a href="https://fabiensanglard.net/compile_like_1997/index.html">Let&#39;s compile Quake like it&#39;s 1997!</a><br></p>
+
+<p><a href="https://matduggan.com/gitbutler-cli-is-really-good/">GitButler CLI Is Really Good</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2026/02/09/what-cncf-project-velocity-in-2025-reveals-about-cloud-natives-future/">What CNCF Project Velocity in 2025 Reveals About Cloud Native’s Future | CNCF</a><br>Ten years into CNCF’s journey, one thing hasn’t changed: we still rely on real signals—open source contributions, real-world deployments, and community energy—to understand where we’re headed. Cloud native is now invisible infrastructure, quietly powering our everyday lives. By watching the pace of project activity, we get a front-row seat to how teams are building the future. Key takeaways show Kubernetes leading, Backstage doubling contributions due to platform engineering focus, and OpenTelemetry gaining significant momentum, indicating observability&#39;s growing importance. These trends intersect with the rise of AI workloads, with projects like Kubernetes, Kubeflow, and Crossplane forming the foundation for AI systems.</p>
+
+<p><a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/">Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Feb/9/structured-context-engineering-for-file-native-agentic-systems/#atom-everything">文件原生代理系统的结构化上下文工程</a><br>一篇关于Damon McMillan的新论文，探讨了涉及大型SQL架构（多达10,000个表）的具有挑战性的LLM上下文任务，并比较了不同模型和文件格式（YAML、Markdown、JSON、TOON）。研究发现，前沿模型（如Opus 4.5、GPT-5.2、Gemini 2.5 Pro）在这些任务上优于领先的开源模型，并且文件系统上下文检索对前沿模型的帮助更大。论文还指出，对于TOON格式（一种旨在最小化令牌的结构化数据表示），模型因不熟悉其语法而产生了显著的“grep tax”（额外的令牌开销）。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+<p><a href="https://github.com/majd/ipatool">majd/ipatool</a><br>Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/meshery/meshery">meshery/meshery</a><br>Meshery, the cloud native manager</p>
+
+<p><a href="https://github.com/steveyegge/beads">steveyegge/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>Container runtimes on macOS (and Linux) with minimal setup</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>Powerful system container and virtual machine manager</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

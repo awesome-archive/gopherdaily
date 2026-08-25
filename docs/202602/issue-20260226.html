@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260226.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260226</span>
+</p>
+<p>每日一谚：Documentation is for users </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/26/rust-complexity-go-minimalism-vs-zig-ultimate-answer">拒绝 Rust 的复杂，跨越 Go 的极简：Zig 会是系统级编程的最终答案吗？</a><br>近日，在Reddit技术社区 r/Zig 上，一位资深 Go 开发者分享了他将一个核心项目从 Go 迁移到即将发布的 Zig 0.16 版本的全过程。他的经历既是一次跨越语言壁垒的技术冒险，更为我们揭示了一个深刻的问题：在拒绝了 Rust 的复杂、看透了 Go 的局限之后，Zig 会 是我们苦苦寻找的那个系统级编程的最终答案吗？ </p> 
+
+<p><a href="https://norlinder.nu/posts/GC-Cost-CPU-vs-Memory">剖析垃圾回收中的CPU-内存关系</a><br>本文深入探讨了Java应用程序中配置堆大小所涉及的CPU（计算资源）与内存（基础设施成本）之间的权衡。随着现代垃圾收集器（GC）的发展，GC暂停时间（延迟指标）与计算工作量（吞吐量/效率指标）已解耦。这种解耦导致了一个操作盲点：即使响应时间看起来很好，GC也可能在后台默默消耗过多的计算资源来弥补受限的堆空间。为了解决这个问题，文章分析了基础设施效率所需额外指标的必要性，并介绍了OpenJDK 26中引入的新的GC CPU Java API，该API使工程师和研究人员能够量化收集器的CPU开销，并做出明智的内存-CPU权衡决策。通过xalan和Spring PetClinic等基准测试的实例分析，展示了使用新API来精确测量不同GC（如Parallel, G1, ZGC）的显式CPU成本的重要性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.haproxy.com/blog/omnissa-horizon-alternative">Omnissa Horizon 替代方案：经济高效的 UDP 优化</a><br>寻找 Omnissa Horizon 的替代方案？了解 HAProxy Enterprise 如何以传统 ADC 成本的一小部分，通过无状态 UDP 路由来取代 Blast Extreme 的传统 ADC。</p>
+
+<p><a href="https://www.docker.com/blog/openwebui-docker-model-runner/">OpenWebUI &#43; Model Runner: 零配置本地AI | Docker</a><br>在几分钟内运行自托管模型。OpenWebUI 可自动检测 Docker Model Runner。无需配置即可从现代 Web UI 与本地模型聊天。
+
+通过此更新，Open WebUI 自动检测并连接到在 localhost:12434 运行的 Docker Model Runner。如果启用了 Docker Model Runner，Open WebUI 默认使用它，无需额外配置。
+
+结果：一个完全由 Docker 管理、在几分钟内运行的自托管模型体验。
+
+Docker Model Runner 专注于运行时层：一种使用开发人员已经依赖的工具来运行和管理自托管模型的方式。Open WebUI 专注于体验：一个干净、可扩展的界面，使这些模型可用且有用。
+
+现在，两者自动连接。
+
+如果启用了 Docker Model Runner，开始使用 Open WebUI 非常简单：
+
+```docker
+docker run -p 3000:8080 openwebui
+```
+
+就是这样。Open WebUI 将自动连接到 Docker Model Runner 并开始使用您的自托管模型，无需环境变量、无需手动端点配置、无需额外标志。
+
+访问：http://localhost:3000 并创建您的帐户：
+
+并且您可以准备好通过现代 Web 界面与您的模型进行交互：
+
+两个项目都是开源的，并且具有清晰的边界，因此您可以决定模型运行的位置，并且可以单独或一起部署这些组件。
+
+Docker Model Runner 和 Open WebUI 使自托管 AI 变得简单、灵活并完全在您的控制之下。Docker 负责运行时。Open WebUI 在其上提供了一个现代化的界面。
+
+通过自动检测和零配置，您可以在几分钟内从启用 Docker Model Runner 切换到与您的模型交互。
+
+两个项目都是开源的，并且构建时具有清晰的边界，因此您可以随时随地运行模型，并将组件一起或单独部署。
+
+Docker Model Runner 的强大之处在于其社区，并且总有成长的空间。您可以通过关注 Docker Model Runner 存储库、提交想法和传播信息来参与其中。</p>
+
+<p><a href="https://blog.crossplane.io/crossplane-ai-the-case-for-api-first-infrastructure/">Crossplane 与 AI：API 优先基础设施的论点</a><br>人工智能加速了编码，但真正的瓶颈始于 git push 之后。基础设施和运维仍然依赖于碎片化的人工工作流程。为了支持 AI 智能体，平台必须是 API 优先和声明式的，提供一致的、机器可读的控制平面，以便大规模自动化。</p>
+
+<p><a href="https://nesbitt.io/2026/02/26/git-in-postgres.html">Git 在 Postgres 中</a><br>这篇文章探讨了不使用 git 作为数据库，而是使用数据库（具体是 Postgres）作为 git 存储后端的可能性。作者通过构建一个名为 gitgres 的项目，实现了 libgit2 ODB 和 RefDB 接口，使其能够通过 Postgres 存储 git 对象和引用。作者展示了如何用 SQL 查询 git 提交数据和 issue 跟踪数据，并讨论了这对像 Forgejo 这样的自托管系统带来的简化，比如统一备份、简化部署和利用 Postgres 的特性（如 NOTIFY、RLS、逻辑复制）来管理 git 数据。虽然存在存储效率（delta 压缩）的权衡，但作者认为对于去中心化和小型实例的运维简化更具价值。</p>
+
+<p><a href="https://hackernoon.com/the-end-of-cicd-pipelines-the-dawn-of-agentic-devops">CI/CD 流水线的终结：Agentic DevOps 的黎明</a><br>GitHub 的智能体在 11 分钟内修复了我一个不稳定的测试，没有人工编写代码。但当它失败时，你得到的是一个结果，而不是一个堆栈跟踪。文章探讨了 AI 智能体如何改变 DevOps 实践，从自动化脚本到委托判断，以及随之而来的信任和操作风险。作者建议谨慎采用，强调使用影子模式、设置“终止开关”和版本控制策略。</p>
+
+<p><a href="https://www.chinatalk.media/p/what-are-chinese-people-vibecoding">什么是中国人的“氛围编程”？</a><br>这篇文章探讨了在中国流行的“氛围编程”（Vibecoding）现象，即使用AI工具进行快速、随意的编程。摘要重点介绍了中国科技巨头（如字节跳动、腾讯、阿里巴巴）推出的本土AI编程助手及其与西方工具（如Cursor和Claude Code）的竞争。文章还分享了中国开发者通过“氛围编程”取得的有趣成果，包括一位12岁天才的分享以及一位前美团员工仅用1.5小时就用AI开发出热门App的案例，突显了AI辅助编程在中国的快速发展和落地应用。</p>
+
+<p><a href="https://www.repoflow.io/blog/node-js-vs-deno-vs-bun-performance-benchmarks">Node.js vs Deno vs Bun 性能基准测试</a><br>对 Node 25.6.1, Deno 2.6.9 和 Bun 1.3.9 的性能基准测试，测量了 HTTP 吞吐量、JSON 解析和序列化、哈希、缓冲区和异步调度等指标。在 14 项测试中，Bun 领先 8 项，Deno 领先 5 项，Node 领先 1 项。Bun 在服务器类型的吞吐量方面表现突出，尤其是在 HTTP 和大型 JSON 解析方面。Deno 在异步调度类型的测试中略胜一筹，并在紧凑的算术循环中表现出色。Node 在整体上保持了很强的竞争力，并在 1024 字节输入的 SHA 256 哈希测试中领先。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Feb/26/google-api-keys/#atom-everything">Google API 密钥曾不是秘密。但 Gemini 改变了规则。</a><br>一篇博客文章指出，Google 的 Gemini API 密钥可能与 Google Maps 等服务的 API 密钥共享，而 Google Maps API 密钥设计为公开（嵌入在网页中）。然而，Gemini API 密钥可以访问私人文件并进行计费请求，因此不应公开。这一变化使得之前公开的 API 密钥意外获得了敏感权限，Truffle Security 在 Common Crawl 中发现了 2,863 个可能访问 Gemini 的 API 密钥，Google 正在着手撤销受影响的密钥。</p>
+
+<p><a href="https://sulat.com/p/agents-md-hurting-you">研究结果出来了：你的 AGENTS.md 可能在损害你</a><br>对 AGENTS.md 有效性的首次严格研究测试了四种代码智能体在数百个任务上的表现。研究结果非常惊人：自动生成的上下文文件会增加推理成本，并降低解决任务的正确率。研究建议，有用的 AGENTS.md 应该简短、由人工编写，并且只包含代码无法自行发现的“地雷”信息，将其视为一个“活的危险品清单”，而不是一个静态的百科全书。</p>
+
+<p><a href="https://kanyilmaz.me/2026/02/23/cli-vs-mcp.html">我将MCP的成本降低了94%（只用了一个命令）</a><br>文章讨论了在使用AI智能体时，管理和加载工具定义所产生的额外成本问题。作者指出，像MCP（在文中指代一种工具管理方式）会将所有工具的JSON Schema一次性加载到对话中，导致Token消耗过高。作者通过使用CLI（命令行接口）替代MCP的方式，展示了如何通过更轻量级的工具描述（仅包含名称和位置，细节按需获取）来大幅降低Token使用量。比较数据显示，使用CLI可以将总Token使用量降低约94%。此外，文章还将此方法与Anthropic的Tool Search进行了比较，指出CLI方案在成本上更具优势，且不局限于特定模型。作者还开源了一个名为CLIHub的工具，用于将MCP格式转换为CLI格式。</p>
+
+<p><a href="https://technoyoda.github.io/agent-search.html">智能体并非在思考，而是在搜索</a><br>本文提出了一个关于AI智能体的工程思维模型：智能体不是在思考，而是在根据训练好的策略（Policy）朝着奖励信号（Reward Signal）进行搜索（Search）。模型的行为由其预训练奠定的能力基础和强化学习（RL）确定的搜索策略共同塑造。在推理（Inference）阶段，智能体的行为是在其所处的“环境”（Environment，包括代码库、工具、权限）和不断增长的“上下文窗口”（Context Window，即地图）共同定义的“场域”（Field）中进行搜索和演化的。因此，工程的重点应从设计指令（Prompt）转向塑造环境（如提供清晰的测试、限制权限），因为环境决定了哪些轨迹是可达的，并影响搜索收敛的质量。</p>
+
+<p><a href="https://vercel.com/blog/security-boundaries-in-agentic-architectures">智能体架构中的安全边界</a><br>为智能体架构中的安全边界绘制框架。大多数智能体在智能体与其生成的代码之间零隔离运行。了解如何绘制边界，从密钥注入到完整的应用程序沙箱。</p>
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/producerai">ProducerAI: 您的音乐创作伙伴，现已加入 Google Labs</a><br>ProducerAI 是一个允许使用生成式 AI 创建和完善音乐的平台，现已并入 Google Labs。该平台旨在帮助各级艺术家将他们的想象力转化为动态、全面的歌曲，并强调创意控制。ProducerAI 使用了 Google DeepMind 的 Gemini、Lyria 3、Veo 和 Nano Banana 模型，所有输出都带有 SynthID 数字水印。</p>
+
+<p><a href="https://metr.org/blog/2026-02-24-uplift-update">我们正在改变开发者生产力实验设计</a><br>我们第二次开发者生产力研究在更广泛的AI采用中面临选择效应，促使我们重新设计研究方法。由于参与者反馈和调查，我们认为新实验的数据对当前AI工具生产力影响的估计并不可靠。我们计划通过更密集的实验、观察数据、问卷调查、固定任务实验、评估和开发者级别实验等其他方式继续研究AI对开发者生产力的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria is a powerful, lightning fast and censorship resistant proxy.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>Video translation and dubbing tool powered by LLMs. The video translator offers 100 language translations and one-click full-process deployment. The video translation output is optimized for platforms like YouTube，TikTok. AI视频翻译配音工具，100种语言双向翻译，一键部署全流程，可以生抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube等形态的内容成适配</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/cloudflare/terraform-provider-cloudflare">cloudflare/terraform-provider-cloudflare</a><br>Cloudflare Terraform Provider</p>
+
+<p><a href="https://github.com/xdevplatform/xurl">xdevplatform/xurl</a><br>The official CLI for the X API</p>
+
+<p><a href="https://github.com/projectdiscovery/httpx">projectdiscovery/httpx</a><br>httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.</p>
+
+<p><a href="https://github.com/ltaoo/wx_channels_download">ltaoo/wx_channels_download</a><br>微信视频号下载器</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>An open-source AI-first Identity and Access Management (IAM) /AI MCP gateway and auth server with web UI supporting MCP, A2A, OAuth 2.1, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, Google Workspace, Azure AD</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>AI Trading OS: Multi-AI, multi-exchange trading infrastructure with Strategy Studio.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

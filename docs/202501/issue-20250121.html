@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202501/issue-20250121.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250121</span>
+</p>
+<p>每日一谚：As well as being very simple to use, a software program must be very difficult to misuse </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.bwplotka.dev/2025/go-grpc-inprocess-iter">使用Go 1.23迭代器和协程优化进程内gRPC</a><br>几年前，我一直在探索 Go 中进程内 gRPC 模式的解决方案，用于 Thanos 项目。最近，一位朋友兼 Thanos 维护者 Filip 使用新的 Go 1.23 迭代器更新了最初的 Thanos 解决方案。这提供了一个绝佳的机会，让我们在一篇合作撰写的博文中分享 Filip 和我关于新的迭代器、新的协程（不是 goroutine！）以及生产环境中进程内 gRPC 逻辑的选项的学习成果。</p> 
+
+<p><a href="https://blog.thibaut-rousseau.com/blog/sql-transactions-in-go-the-good-way">Go语言中SQL事务的正确方法</a><br>本文介绍了一种在Go代码库中管理数据库事务的简洁高效方法，避免泄露数据库内部细节。作者通过`transactor`库实现了该方法，该库已在PostgreSQL、MySQL、SQLite、MSSQL和Oracle等常用关系数据库中进行了测试，并兼容`database/sql`、`jmoiron/sqlx`和`jackc/pgx`。文章详细阐述了设计和实现过程，并展示了如何在服务层使用事务，同时避免导入数据库内部依赖。此外，文章还讨论了嵌套事务的处理，并给出了使用示例代码。</p> 
+
+<p><a href="https://dev.to/mufthi_ryanda_84ea0d65262/your-go-code-has-a-hidden-time-bomb-race-conditions-explained-27pn">你的 Go 代码隐藏着一个定时炸弹：竞态条件详解 💣</a><br>Go 语言最强大的特性之一是 Goroutines。Goroutine 是由 Go 运行时管理的轻量级线程，它允许函数并发运行。文章以电商服务的例子，讲解了 Goroutines 并发处理的优势以及在没有适当同步机制（如 Mutex 或原子操作）的情况下，多个 Goroutines 同时访问和修改共享资源可能导致竞态条件，最终结果不可预测，可能导致数据损坏或内存泄漏。文章还提供了使用 Mutex 和原子操作的两种解决方案来解决竞态条件问题。</p> 
+
+<p><a href="https://dev.to/coolwednesday/design-patterns-in-golang-a-comprehensive-guide-560i">Go语言设计模式：全面指南</a><br>Go语言（或Go）因其简洁性和效率而日益普及，成为开发人员的热门选择。理解和应用Go语言的设计模式可以极大地提高应用程序的可扩展性和可维护性。本文将探讨Go语言中一些最常见的设计模式，并附带代码片段和实际示例，包括工厂模式、单例模式、适配器模式、观察者模式以及选项模式。</p> 
+
+<p><a href="https://dev.to/truongpx396/golang-integration-with-kafka-and-uber-zaplog-2bn7">Go语言与Kafka和Uber ZapLog集成</a><br>本文介绍了Apache Kafka在分布式系统和微服务架构中的重要性，并提供了一个使用Go语言、Kafka和Uber Zap日志库集成的完整示例。该示例包含生产者、消费者组、错误和成功通道处理以及日志记录，并最大限度地减少了Kafka中的消息丢失。文章还包括配置、重试逻辑、元数据和日志记录等内容。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/jamf-pro">Jamf Pro 与 Tailscale 结合，实现更出色的 Apple 设备管理</a><br>对于管理大量 Apple 设备的团队来说，Jamf Pro 是一款知名的领先 MDM 解决方案。现在，这些团队可以依靠与 Tailscale 的集成来简化在这些设备上安装和配置 Tailscale 的过程，并控制网络访问要求。此集成利用 Tailscale 现有的设备状态管理功能，允许管理员根据特定规则来限制对尾部网络设备和服务的访问。管理员还可以使用 Jamf Pro 提供的更强大的设备信息来设置规则，例如仅允许启用了 macOS 防火墙的设备连接到敏感的开发资源。此功能对于企业计划可用。</p>
+
+<p><a href="https://engineering.salesforce.com/how-salesforces-new-ea-agent-scales-ai-to-transform-enterprise-architecture/">Salesforce 的新型 EA Agent 如何利用 AI 变革企业架构</a><br>本文探讨了 Salesforce 如何构建 EA Agent，这是一种旨在通过智能自动化简化企业架构流程的 AI 工具。文章重点介绍了 Salesforce 的企业架构团队如何克服处理和规范大量文档以确保一致性、在复杂查询中实现多跳推理的高精度以及将信任和安全嵌入快速开发时间表等挑战。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/01/20/opentelemetry-for-generative-ai/">用于生成式 AI 的 OpenTelemetry</a><br>随着越来越多的组织采用大型语言模型 (LLM) 和其他生成式 AI 技术，确保可靠的性能、效率和安全性对于满足用户期望、优化资源成本以及防止意外输出至关重要。对 AI 运营、行为和结果进行有效的可观察性有助于实现这些目标。OpenTelemetry 正在增强以专门支持生成式 AI 的这些需求。
+
+主要正在开发两项资产以实现此目标：语义约定和检测库。第一个检测库针对 OpenAI Python API 库。语义约定为跨平台收集和构建遥测数据建立标准化指南，定义输入、输出和操作细节。对于生成式 AI，这些约定通过标准化诸如模型参数、响应元数据和令牌使用情况之类的属性来简化 AI 模型的监控、故障排除和优化。这种一致性支持跨工具、环境和 API 的更好可观察性，帮助组织轻松跟踪性能、成本和安全性。
+
+检测库正在 OpenTelemetry Python Contrib 中开发，用于自动化生成式 AI 应用程序的遥测数据收集。第一个版本是用于检测 OpenAI 客户端调用的 Python 库。该库捕获跨度和事件，以结构化格式收集基本数据，例如模型输入、响应元数据和令牌使用情况。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/01/21/sig-architecture-enhancements/">聚焦 SIG 架构：增强功能</a><br>这是 SIG 架构聚焦系列的第四篇访谈，涵盖不同的子项目，我们将重点介绍 SIG 架构：增强功能。在本篇 SIG 架构聚焦中，我们与增强功能子项目的负责人 Kirsten Garrison 进行了交谈。增强功能子项目 Frederico (FSM)：嗨 Kirsten，很高兴有机会讨论增强功能子项目。让我们从一些关于你本人和你角色的快速信息开始吧。</p>
+
+<p><a href="https://www.singlestore.com/blog/ultimate-guide-best-sql-database-options-2025">2025 年最佳 SQL 数据库选项终极指南</a><br>探索 2025 年顶级 SQL 数据库选项，比较其功能、性能和价格。找到最适合您需求的数据库——立即阅读指南！</p>
+
+<p><a href="https://blog.codingconfessions.com/p/simultaneous-multithreading">并行多线程的工作原理</a><br>本文深入探讨了同时多线程 (SMT) 的工作机制，解释了CPU如何同时处理多个线程的指令，以及SMT的优势和不足。文章详细介绍了SMT在Intel处理器中的微架构实现，包括前端、后端和退休单元，以及它们如何协调指令的获取、解码、执行和提交。此外，文章还分析了SMT对单线程和多线程性能的影响，并讨论了SMT相关的安全漏洞。</p>
+
+<p><a href="https://tarides.com/blog/2025-01-20-tarides-2024-in-review">OCaml：2024 年回顾</a><br>Tarides 在 2024 年取得了显著进展，主要集中在改进 OCaml 的工具和与其他生态系统的集成，以促进其成为主流编程语言。这包括发布 Dune 开发者预览版，简化工作流程；OCaml 5.3 的稳定多核版本发布；js_of_ocaml 的 WebAssembly 支持带来高达 8 倍的性能提升；以及扩展的 Windows 支持。Tarides 还积极参与社区活动，例如组织首届 FUN OCaml 会议，并为 OCaml.org 等重要项目做出了贡献。</p>
+
+<p><a href="https://www.aquasec.com/blog/go-deeper-linux-runtime-visibility-meets-wireshark">深入探讨：Linux 运行时可见性与 Wireshark 的结合</a><br>本文介绍了 Traceeshark，一个用于 Wireshark 的插件，它能够将 Linux 运行时安全监控工具 Aqua Tracee 生成的事件（包括内核级事件和行为检测）与网络流量一起进行可视化和交互式分析。Traceeshark 还支持直接从 Wireshark 捕获 Tracee 事件，从而改善了某些用例的用户体验。</p>
+
+<p><a href="https://ninkovic.dev/blog/2025/think-twice-before-using-github-actions">再次使用 GitHub Actions 前，我会三思</a><br>作者在文章中表达了对 GitHub Actions 的不满，因为它在管理复杂的流程方面，尤其是在使用诸如拉取请求检查和工作流可重用性等功能的单体仓库设置中存在局限性。文章重点介绍了几个问题，并提供了 GitHub Actions 的替代方案。主要问题包括：拉取请求和必需检查难以在单体仓库中实现全面的检查；YAML 文件的可重用性和维护性随着项目规模的增长而下降；缺乏本地开发环境；GitHub 对这些问题的回应不足。作者最后建议考虑 GitLab、Jenkins、TeamCity 等替代方案，并提及 Dagger 等新兴技术。</p>
+
+<p><a href="https://tech.davidgorski.ca/introduction-to-low-latency-programming-external-processing">低延迟编程入门：外部处理</a><br>这篇文章最初是我的新书《低延迟编程入门》中的一章，该书简明易懂地介绍了该主题。文章探讨了如何将程序功能从主执行路径中提取出来，以提高程序速度。文中提出了几个问题来帮助读者准备这个过程，并介绍了预处理和外部并行处理两种方法，包括配置/输入文件加载、编译时处理（代码生成、编译标志和模板、利用constexpr工具）、单独进程和单独线程等技术，以及它们在低延迟编程中的应用。最后，文章总结了如何通过外部处理来降低程序延迟。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://crazystupidtech.com/archive/will-ai-eat-the-browser">人工智能会吞噬浏览器吗？</a><br>本文探讨了人工智能技术对互联网浏览器未来发展的影响。作者Om Malik以苹果Vision Pro为例，指出在沉浸式体验设备上，Safari浏览器显得力不从心。随着人工智能将信息分解成可重新组合的AI聊天机器人答案流，浏览器需要适应或消亡。文章回顾了浏览器的发展历史，并分析了人工智能技术如何改变信息获取和交互方式，例如个性化、对话式的信息控制。作者认为，未来的浏览器将不再仅仅是信息的查看器，而更像是一个操作系统，根据用户的偏好和行为提供个性化体验，并跨设备保持一致性。  这将是一个渐进的过程，但其影响将是深远的。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/62EJx_JAkAiStmoL_p_yjQ">深度解读：高级 RAG 技术的进阶之路</a><br>本文深入解读 Weaviate 发布的技术白皮书《Advanced RAG Techniques》，系统性地阐述了 RAG 技术的进阶优化方法，并提供了可直接落地的优化方案，涵盖数据处理、查询优化、检索升级、后处理优化等四个阶段，最后探讨了 RAG 技术的未来发展方向。</p>
+
+<p><a href="https://www.aihero.dev/vercel-ai-sdk-tutorial">Vercel AI SDK 教程</a><br>本教程使用 TypeScript 和 Vercel 的 AI SDK 构建任何大型语言模型 (LLM) 应用程序。学习流式处理、结构化输出、工具调用和代理。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kueue">kubernetes-sigs/kueue</a><br>Kubernetes-native Job Queueing</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-ecosystem/grpc-gateway</a><br>gRPC to JSON proxy generator following the gRPC HTTP spec</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/moonD4rk/HackBrowserData">moonD4rk/HackBrowserData</a><br>Extract and decrypt browser data, supporting multiple data types, runnable on various operating systems (macOS, Windows, Linux).</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, cross-DC active-active replication, Kubernetes, POSIX FUSE mount, S3 API, S3 Gateway, Hadoop, WebDAV, encryption, Erasure Coding.</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/ffuf/ffuf">ffuf/ffuf</a><br>Fast web fuzzer written in Go</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/argoproj-labs/argocd-image-updater">argoproj-labs/argocd-image-updater</a><br>Automatic container image update for Argo CD</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/google/osv-scanner">google/osv-scanner</a><br>Vulnerability scanner written in Go which uses the data provided by https://osv.dev</p>
+
+<p><a href="https://github.com/go-sql-driver/mysql">go-sql-driver/mysql</a><br>Go MySQL Driver is a MySQL driver for Go&#39;s (golang) database/sql package</p>
+
+<p><a href="https://github.com/tidwall/gjson">tidwall/gjson</a><br>Get JSON values quickly - JSON parser for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250626.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250626</span>
+</p>
+<p>每日一谚：In golang, if you have packages like interface, factories, model, and so on, it&#39;s an antipattern. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/26/non-deterministic-abstraction">Martin Fowler最新洞察：LLM 不止是“更高”的抽象，它正在改变编程的“本质”！</a><br>在软件开发领域，Martin Fowler 的名字几乎等同于思想的灯塔。他的每一篇文章、每一次演讲，都能为我们揭示行业发展的深层脉络。最近，Fowler 大师又发布了一篇简短但引人深思的博文——《[LLMs bring new nature of abstraction》，再次精准地捕捉到了一个正在发生的、可能颠覆我们认知和工作方式的巨大变革。</p> 
+
+<p><a href="https://meroxa.com/blog/from-java-to-go-part-2-packages">从 Java 到 Go，第二部分：包</a><br>本博文探讨了 Go 如何使用包和目录组织代码，以及为什么它通常比 Java 的方法更简洁。来自学习 Go 的 Java 开发人员的实际比较。文章详细解释了 Go 包的导入路径、别名以及循环依赖的限制。并比较了 Java 和 Go 在包和类型命名方面的差异，最后作者表达了对改进 Java 包机制的建议，使其更像 Go 的方式。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/docker-state-of-app-dev-ai/">Docker 应用开发现状：人工智能</a><br>人工智能正在改变软件开发，但并非你想象的那样。炒作是真实的，挑战也是真实的。以下是开发人员、团队和技术领导者需要了解的关于人工智能在软件中不平衡、不断发展的作用的关键信息。Docker 的第二年度《应用开发现状调查》报告显示，人工智能工具的使用和应用开发存在差异，一些团队将人工智能集成到日常工作流程中，而另一些团队仍在观望。数据准备是构建人工智能/机器学习应用程序的主要障碍。</p>
+
+<p><a href="https://engineering.salesforce.com/boosting-developer-productivity-with-ai-faster-dashboards-automated-testing-and-70-less-setup-time/">AI 加速开发者效率：更快的仪表板、自动化测试和 70% 的设置时间缩减</a><br>Salesforce 的性能工程师 Geeta Shankar 分享了如何利用 AI 优化 Code Builder 的启动延迟、降低基础设施成本，并构建 AI 驱动的系统来防止回归，从而显著提升开发者的效率。文章详细介绍了团队如何利用 AI 辅助测试、流量预测以及构建结构化 LLM 可观测性工具等技术，最终将仪表板设置时间缩短了 70% 以上。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/06/25/cloud-native-app-local-development-made-easy-with-microcks-and-dapr/">使用 Microcks 和 Dapr 简化云原生应用本地开发</a><br>云原生应用程序的开发有时会让人望而生畏！构建需要访问和连接到复杂基础设施的分布式应用程序，要求开发人员学习不同的技术和云服务，这会减慢他们的开发任务。如果开发人员需要在 Kubernetes 集群上部署、调试和测试他们的应用程序，这将变得更具挑战性，因为他们现在不仅需要掌握 Kubernetes，还需要掌握如何容器化和分发他们的应用程序。在测试方面，如果你的应用程序由多个服务组成，那么为开发和测试场景启动所有这些服务就会变得很有挑战性。如果我们能够在推广最佳实践的同时简化这些复杂性，以便应用程序能够在我们的 Kubernetes 集群上平稳运行，那不是很棒吗？
+
+在这篇博文中，我们将了解两个 CNCF 项目如何帮助我们在 Kubernetes 和 Kubernetes 集群外部简化云原生开发和测试。我们将首先探讨如何使用已毕业的 CNCF 项目 Dapr 将对复杂基础设施的访问与应用程序代码解耦，方法是为应用程序开发人员提供促进最佳实践并抽象出平台团队可以配置的云服务和复杂基础设施的 API。
+
+在向我们的 Kubernetes 集群添加扩展时，这可能会影响应用程序的运行方式和行为，从而促使开发团队弄清楚如何为开发任务复制这些设置。如何在不运行 Kubernetes 集群上的应用程序的情况下提高开发人员的生产力（和快乐）？这就是沙盒 CNCF 项目 Microcks 发挥作用的地方。它通过为你的依赖项提供模拟来减轻设置复杂环境的痛苦。
+
+这篇文章详细介绍了我们在著名的 Dapr Salaboy 的 pizza 演示应用程序中引入 Microcks 的实验（参见 https://github.com/salaboy/pizza）。你将学习如何将 Microcks 与 Dapr 结合使用，从而获得前所未有的轻量级开发环境体验，该环境允许尽早检测大多数集成问题！</p>
+
+<p><a href="https://kubernetes.io/blog/2025/06/25/image-compatibility-in-cloud-native-environments/">云原生环境中的镜像兼容性 | Kubernetes</a><br>在电信、高性能或人工智能计算等需要系统高度可靠性和严格性能标准的行业中，容器化应用程序通常需要特定的操作系统配置或硬件。通常的做法是要求使用特定版本的内核、其配置、设备驱动程序或系统组件。尽管存在开放容器倡议 (OCI) 这样一个治理社区来定义容器镜像的标准和规范，但在表达此类兼容性要求方面仍然存在差距。解决这个问题的需要导致了不同的提案，并最终在 Kubernetes 的节点功能发现 (NFD) 中得到了实现。</p>
+
+<p><a href="https://blog.cloudflare.com/defending-the-internet-how-cloudflare-blocked-a-monumental-7-3-tbps-ddos">防御互联网：Cloudflare 如何阻止高达 7.3 Tbps 的史诗级 DDoS 攻击</a><br>2025 年 5 月中旬，Cloudflare 阻止了有史以来规模最大的 DDoS 攻击：惊人的 7.3 太比特每秒 (Tbps)。这距离我们 2025 年 4 月 27 日发布的《2025 年第一季度 DDoS 威胁报告》不久，在该报告中，我们重点介绍了达到 6.5 Tbps 和 48 亿数据包每秒 (pps) 的攻击。7.3 Tbps 的攻击比我们之前的记录高出 12%，比网络安全记者 Brian Krebs 最近报道的一次攻击高出 1 Tbps。</p>
+
+<p><a href="https://ymz-ncnk.medium.com/command-pattern-as-an-api-architecture-style-be9ac25d6d94">命令模式作为 API 架构风格</a><br>希望您的 API 能够实现快速灵活的交互？为了实现这个目标，您需要：
+
+1. 决定 API 架构风格。
+2. 选择序列化格式。
+3. 使用这两种格式的高效实现。
+
+本文探讨了使用命令模式（更准确地说，是网络上的命令模式）作为 API 架构风格的优势，并将其与 RPC 进行了比较，阐述了命令模式在建模事务、保存用户操作、提供撤销/重做功能、遵循开闭原则、增强可测试性等方面的优势。文章还介绍了 MUS 序列化格式，以及用于 Go 语言的两个高性能库：`cmd-stream-go` 和 `mus-go`，并提供了示例和基准测试结果。</p>
+
+<p><a href="https://engineering.prezi.com/how-using-availability-zones-can-eat-up-your-budget-our-journey-from-prometheus-to-be8a816f7efe">使用可用区可能会增加您的预算——我们从 Prometheus 到 VictoriaMetrics 的历程</a><br>到 2024 年，Prezi 基于 Prometheus 构建的监控系统已过时。它已经使用了 5 年以上，运行在已弃用的内部平台上，每月都会产生大量的成本。年初，我们决定解决这个“未来问题”，并对我们的指标收集和存储系统进行现代化改造。我们的目标是在基于 Kubernetes 的平台上运行监控系统，并降低系统的整体复杂性和成本。我们使用 VictoriaMetrics 达到了这些目标。这篇文章描述了我们的迁移历程、面临的挑战以及取得的成果。</p>
+
+<p><a href="https://kevingal.com/blog/collisions.html">哈希碰撞的概率</a><br>本文探讨了哈希碰撞背后的数学原理。哈希函数将任意复杂的输入映射到单个数字，这在计算机科学中非常有用。然而，哈希碰撞（哈希函数将相同的值赋给两个不同的项目）可能会导致问题。本文介绍了计算哈希碰撞概率的精确方法和三种近似方法，并比较了它们的精度。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/26/sandboxes/#atom-everything">Cloudflare和Vercel的新沙箱</a><br>今天出现了两个有趣的用于在沙箱中运行代码的新产品。Cloudflare 推出了其容器产品公开测试版，并为 Cloudflare Workers 添加了一个新的沙箱库，该库可以在“安全的基于容器的环境”中运行命令：Vercel 发布了类似的功能，在“使用 Vercel 沙箱运行不受信任的代码”中介绍，它支持如下代码：在这两种情况下，主要预期用例都是安全地执行由大型语言模型 (LLM) 生成的代码。</p>
+
+<p><a href="https://www.anthropic.com/news/claude-powered-artifacts">使用 Claude 构建和分享 AI 驱动的应用</a><br>Anthropic 推出了直接在 Claude 应用中构建、托管和分享交互式 AI 驱动的应用的功能。开发者现在可以更快地迭代他们的 AI 应用，无需担心扩展到不断增长的受众的复杂性和成本。用户为自己的 API 使用付费，开发者无需支付任何费用。Claude 可以创建与 Claude 通过 API 交互的工件，这些工件可以变成 AI 驱动的应用程序。用户可以使用现有的 Claude 帐户进行身份验证，API 使用量会记入用户的订阅，而不是开发者的订阅。开发者无需支付用户的 API 使用费用，也无需管理 API 密钥。Claude 编写的真实代码可以协调复杂的 AI 功能，开发者可以查看、修改和自由分享代码。早期用户已经使用交互式工件构建了 AI 驱动的游戏、学习工具、数据分析应用程序、写作助手和代理工作流程等。</p>
+
+<p><a href="https://www.stainless.com/blog/mcp-is-eating-the-world--and-its-here-to-stay">MCP正在吞噬世界——并且它会一直存在</a><br>尽管存在炒作，模型上下文协议 (MCP) 并非魔法或革命性的技术。但它简单易用、时机恰当且执行良好。它会一直存在。文章探讨了 MCP 在之前的类似尝试失败的情况下，为何能够获得成功。主要原因在于：1. 模型足够好；2. 协议足够好；3. 工具足够好；4. 发展势头足够好。作者认为，MCP 将成为未来 API 的核心组成部分。</p>
+
+<p><a href="https://deepmind.google/discover/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices">Gemini 机器人本地设备版将 AI 带入本地机器人设备 - Google DeepMind</a><br>我们推出了一种高效的机器人本地设备模型，它具有通用灵活性，并能快速适应任务。该模型在机器人本身上运行，无需数据网络连接，这使其适用于对延迟敏感的应用，并确保在连接不稳定或无连接的环境中具有鲁棒性。我们还提供了一个 Gemini 机器人 SDK，帮助开发者轻松在其任务和环境中评估 Gemini 机器人本地设备版，并在我们的 MuJoCo 物理模拟器中测试我们的模型，并通过少量演示（50 到 100 次）快速将其适应新领域。</p>
+
+<p><a href="https://www.mcsweeneys.net/articles/artificial-intelligence-cannot">人工智能做不到的事</a><br>本文列举了一系列人工智能无法做到的事情，例如：在花园里工作时突发心脏病；想知道中学恶霸现在在做什么；穿着白色亚麻套装出庭；懒洋洋地趴在奥托曼上；到书房喝白兰地抽雪茄；渴望、思念或渴望；怀疑在这个房间里发生过不好的事情；爱上多琳；在Hudson News耽误时间错过航班；有一个最讨厌的室友；培养一种不负责任的父亲式神秘感；欣赏云朵的丰满；与爱人同时达到高潮；追捕偷走它肢体的海洋动物；进入冥想状态然后又失去它；与女儿的男朋友握手过紧；看到枯萎的无水无花果树后，迅速从自我厌恶转变为接受；转动一把小阳伞，在赛马场与男孩子们玩欲擒故纵；摆脱这种瑜伽静修是一个骗局的感觉；当着所有人的面痛饮这瓶Modelo；对它奇怪的乳晕感到害羞；为了多琳而放弃一切；继续为四年级做的事情感到羞愧；为并非自己的罪恶而哭泣；在杂货店里用购物车漂移；有效地萎靡不振；与眼泪抗衡篮球引起的泪水；通过多琳平静的棕色眼睛屈服于伟大未知的潮流；骑着沙漠的马在高高的麦萨斯上驰骋，留下红色的尘土和黑暗的过去；为了多琳而自愿解除武装；避免与那个准确地指出了它的缺点的学生进行眼神接触；踱步；挥舞；扭动；为了多琳在热气球上单膝跪地；理解和尊重纯粹的魅力；在观看地毯蒸汽清洁视频后重新评估其性取向；通过与多琳的岁月来更多地了解自己；欣赏剪裁精良的褶皱；吸收Buffalo Exchange拒绝所有旧衣服的尴尬；忘记与多琳在一起之前的生活是什么样的；靠在办公室的窗台上俯瞰曼哈顿天际线，想知道这一切是为了什么；意识到自己比房间里任何人都老；试图与多琳生孩子但失败了；醒来在一个车道上；感觉到最近多琳有点不对劲；瞬间感知到加利福尼亚水晶店的色欲氛围；忘记所有与多琳一起工作的人的名字；担心他们应该拥有的朋友圈在别的地方；看着她疲惫的眼睛穿过早餐桌，意识到它永远无法真正了解任何人，甚至多琳也不行；采用一种通过持续的自我厌恶来维持的饮食；共同尝试一种新的致幻剂来重新点燃可能从未存在于多琳身上的东西；遭受季节性不安；屈服于冰淇淋棒；看到没有任何组合的无用词语能带回多琳；试图与多琳拥抱告别但没有得到回应；看着她的脸，一张漂亮的脸，溶解回人群中；自愿解除武装；自愿解除武装；去俱乐部。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a><br>A community driven registry service for Model Context Protocol (MCP) servers.</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/kitops-ml/kitops">kitops-ml/kitops</a><br>An open source DevOps tool for packaging and versioning AI/ML models, datasets, code, and configuration into an OCI artifact.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/uber-go/zap">uber-go/zap</a><br>Blazing fast, structured, leveled logging in Go.</p>
+
+<p><a href="https://github.com/anchore/grype">anchore/grype</a><br>A vulnerability scanner for container images and filesystems</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/juicedata/juicefs">juicedata/juicefs</a><br>JuiceFS is a distributed POSIX file system built on top of Redis and S3.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/nxtrace/NTrace-core">nxtrace/NTrace-core</a><br>NextTrace, an open source visual route tracking CLI tool</p>
+
+<p><a href="https://github.com/external-secrets/external-secrets">external-secrets/external-secrets</a><br>External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets.</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

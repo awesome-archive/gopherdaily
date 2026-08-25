@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250717.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250717</span>
+</p>
+<p>每日一谚：A test should never delete something it did not create  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/16/when-spaghetti-code-knocks">一张图读懂Go的生存之道：当“面条代码”来敲门</a><br>最近，在网上看到一张关于编程语言的 Meme 图，它以一种黑色幽默的方式，精准地描绘了我们软件开发中一个永恒的敌人，以及 Go 语言那与众不同的应对之道。</p> 
+
+<p><a href="https://mattermost.com/blog/a-deep-dive-into-deeply-recursive-go">深入探讨 Go 深度递归 - Mattermost</a><br>本文探讨了 Go 语言中深度递归代码出现的原因以及如何减轻栈溢出问题。文章从递归的定义、栈和堆内存管理、现实世界中深度递归的例子（例如 Go XML 解码器、google.golang.org/protobuf 和 go/parser）以及栈溢出崩溃的剖析等方面进行了深入的讲解，并提出了几种避免栈溢出的方法，例如：使用迭代代替递归、限制递归深度以及构建容错和恢复机制的架构。文章最后还列举了 Go 标准库中过去修复的栈溢出漏洞。</p> 
+
+<p><a href="https://www.docker.com/blog/go-local-dev-fiber-v3-testcontainers/">Fiber v3 服务 &#43; Testcontainers：Go 语言的下一代本地开发</a><br>使用 Fiber v3 的新服务 API 和 Testcontainers 简化 Go 本地开发。同步运行与你的应用程序相关的真实数据库——更快的循环，更少的漏洞。</p> 
+
+<p><a href="https://antonz.org/do-not-testify">你不需要 testify/assert</a><br>许多 Go 程序员更喜欢使用无 if 语句的测试断言来使他们的测试更短、更容易阅读。因此，他们会使用`testify/assert`（或它的邪恶孪生兄弟`testify/require`）。然而，我不认为你需要`testify/assert`及其 40 个不同的断言函数来保持测试的整洁。本文介绍了一种替代方法，包括断言相等、断言错误以及其他断言，并最终总结了无需使用`testify/assert`的理由。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/07/16/kubestronauts-celebrating-2000-achievements-and-an-exciting-new-chapter/">Kubestronauts：庆祝 2000 项成就和令人兴奋的新篇章</a><br>自推出以来，Kubestronauts 项目已成为 CNCF 最充满活力的社区倡议之一。今天，我们很高兴地宣布一个重要的里程碑——自项目开始以来，已获得超过 2000 枚 Kubestronaut 徽章！感谢所有参与这一令人难以置信的旅程并帮助塑造社区的每一个人。从庆祝 2000 多枚 Kubestronaut 徽章开始，文章还介绍了获得“黄金 Kubestronaut”称号的新要求：从 10 月 15 日起，获得认证的云原生平台工程助理 (CNPA) 将成为获得“黄金 Kubestronaut”称号的新要求。</p>
+
+<p><a href="https://engineering.fb.com/2025/07/16/data-center-engineering/ai-make-lower-carbon-faster-curing-concrete/">使用人工智能制造低碳、快速固化的混凝土</a><br>Meta 开发了一个开源人工智能工具，用于设计更坚固、更可持续且固化速度更快的混凝土混合物，从而加快施工速度并减少环境影响。该工具利用贝叶斯优化，并与 Amrize 和伊利诺伊大学厄巴纳-香槟分校合作开发，以加速高性能、低碳混凝土的研发。Meta 已成功在一个数据中心施工现场部署了使用该人工智能工具优化的混凝土混合物。该开源工具可帮助提高可持续混凝土混合物在建筑行业的应用和优化。</p>
+
+<p><a href="https://gregros.dev/architecture/scalability-is-not-performance">可扩展性并非性能</a><br>可扩展性有时会与性能混淆，但两者完全不同。本文将借助一个简单的模型，更深入地探讨两者的含义。</p>
+
+<p><a href="https://medium.com/pinterest-engineering/debugging-the-one-in-a-million-failure-migrating-pinterests-search-infrastructure-to-kubernetes-bef9af9dabf4">调试百万分之一的故障：将 Pinterest 的搜索基础设施迁移到 Kubernetes</a><br>在将 Pinterest 的搜索基础设施（每月为数百万用户提供核心体验）迁移到 Kubernetes 的过程中，我们遇到了一个新环境中的挑战：每百万次搜索请求中就有一次……这篇博文记录了我们的调查过程，揭示了我们内存密集型搜索系统与一个看似无害的监控进程之间难以捉摸的交互作用。这段旅程涉及到搜索系统的分析、性能问题的调试、Linux 内核特性和内存管理。</p>
+
+<p><a href="https://andrewkchan.dev/posts/crawler.html">2025年，24小时内爬取10亿网页</a><br>本文讲述了作者在2025年如何在24小时内，以几百美元的预算，爬取10亿个网页的经历。文章详细介绍了爬虫的设计、实现以及遇到的挑战，包括对网页解析、抓取以及容错机制的优化。作者还对比了其爬虫设计与传统方案的异同，并对未来的爬虫技术发展方向进行了展望，例如处理动态网页和应对日益增长的反爬虫机制。</p>
+
+<p><a href="https://drew.silcock.dev/blog/artisanal-git">手工制作的 Git 存储库</a><br></p>
+
+<p><a href="https://www.hillelwayne.com/post/influential-dead-languages">10种最具影响力（且大多已消亡）的编程语言</a><br>本文探讨了十种对编程领域影响深远但如今已不再流行的编程语言，解释了它们的历史地位和重要性，以及它们为何逐渐衰落。文章从影响的检测方法入手，对COBOL、ALGOL、APL、BASIC、PL/I、SIMULA 67、Pascal、CLU、ML和Smalltalk等语言进行了深入分析，阐述了它们各自的关键特性、贡献以及消亡的原因。文章强调了这些“已消亡”语言对现代编程语言的深远影响，并呼吁人们重视对编程语言历史的研究。</p>
+
+<p><a href="https://www.tkng.io/arch">Kubernetes 网络模型</a><br>本文将重复介绍主要思想，为后续文章奠定基础。Kubernetes 网络可以看作几个（或多或少）正交的问题：
+
+* **本地** 通信：同一 Pod 中容器之间的通信 – 通过本地环回接口解决。
+* **Pod 到 Pod** 的东西向通信 – 由 CNI 插件解决，在本指南的 CNI 章节中讨论。
+* 多 Pod **服务** 抽象 – 一种对类似 Pod 进行分组并对其进行负载均衡流量的方法，在本指南的“服务”章节中讨论。
+* **入口** 和出口通信 – 将流量进出 Kubernetes 集群，在本指南的“入口和出口”章节中讨论。
+
+除了上述内容外，还有许多辅助问题在其单独的章节中进行了介绍：
+
+* **网络策略** – 一种过滤进出 Pod 流量的方法。
+* **DNS** – 集群服务发现的基础。
+* **IPv6** – 不幸的是，仍然需要单独的章节来讨论众多注意事项和限制。
+
+尽管它们是正交的，但每一层都建立在另一层提供的抽象之上，例如：
+
+* **入口** – 将 URL 与后端服务关联，了解关联的端点并将流量发送到 PodIP 之一，依赖于 Pod 到 Pod 的连接。
+* **服务** – 在源节点上执行客户端负载均衡并将流量发送到目标 PodIP，有效地依赖于节点到 Pod 的连接。
+
+下图显示了不同的 Kubernetes 资源如何堆叠在一起以提供**南北向**连接：
+
+[此处应显示图表]
+
+虽然上述方法是 Kubernetes 中公开应用程序的规范方法，但这绝不是唯一的方法。与任何典型的云基础设施一样，不同层的函数会重叠，从而为其他部署方案创造空间：
+
+* **入口** 可以**代理 TCP 和 UDP** 流量到后端端口。当应用程序协议不是 HTTP 或您想要将多个入口代理连接在一起时，这非常方便。虽然入口控制器通过自定义 ConfigMap 或注释支持这一点，但网关 API 项目（可以将其视为入口的演进）原生支持这些功能。
+* **LoadBalancer 或 NodePort** 类型的**服务**可用于在没有入口的情况下公开后端端口。当 Pod 需要公开特殊协议（例如 NETCONF）或根本不需要应用程序代理功能时（例如，小型内部集群，不需要 TLS 终止或流量速率限制），这很有用。
+
+要点是 Kubernetes 网络不仅仅是 CNI 或 kube-proxy 或入口控制器。以上所有这些协同工作才能为托管应用程序和外部用户提供一致的网络抽象。</p>
+
+<p><a href="https://blog.cloudflare.com/cloudflare-1-1-1-1-incident-on-july-14-2025">Cloudflare 1.1.1.1 服务于 2025 年 7 月 14 日的故障</a><br>2025 年 7 月 14 日，Cloudflare 对其服务拓扑结构进行了一次更改，导致 1.1.1.1 边缘节点出现故障，使用 1.1.1.1 公共 DNS 解析器的客户因此中断服务 62 分钟，网关 DNS 服务也出现间歇性降级。Cloudflare 对此故障深感抱歉。此次故障是由于内部配置错误导致的，并非攻击或 BGP 劫持的结果。本文将讨论故障原因、发生原因以及 Cloudflare 为确保此类事件不再发生而采取的措施。</p>
+
+<p><a href="https://develop.sentry.dev/getting-started/philosophy">sentry开发理念</a><br>本文档阐述了 Sentry 在软件开发方面的方法指南。这些指南总结了十多年来我们的经验教训以及对方法的理解演变。新开发者了解代码库时，这份文档有助于理解如何处理问题。指南部分适用于 SDK，SDK 有略微不同的规则，请参考 SDK 开发理念。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.instantdb.com/essays/agents">智能体将如何以及在哪里交付软件？</a><br>本文探讨了软件工程的新阶段，人们对代理越来越依赖。作者发布了一个API，为代理提供全栈后端，包括数据库、同步引擎、身份验证工具、文件存储和状态。文章重点介绍了构建该API的原因：内置抽象、高效的托管和数据公开。文章还讨论了虚拟机在托管大量应用程序时的低效性，并提出了更有效的策略，例如使用微型虚拟机、V8隔离和CEL。最后，文章介绍了Instant平台，该平台旨在为构建者和代理提供高效的工具，并展示了一个使用该平台构建的恐龙主题习惯跟踪应用程序的示例。</p>
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-2025-survey">《务实工程师 2025 年调查：你的技术栈里有什么？》</a><br>这篇博文基于 3000 多份回复的读者调查，对软件工程师在后端开发、前端、基础设施、AI 工具以及更多领域使用的工具以及他们的看法进行了反馈和分析。调查结果显示，GitHub Copilot 和 ChatGPT 的使用率有所下降，而 Cursor 和 Claude 的使用率则大幅上升。文章还涵盖了 AI 工具的流行程度、最常用和最受欢迎的编程语言、最讨厌（和最喜欢）的工具、IDE 和终端、版本控制和 CI/CD，以及云提供商、PaaS 和 IaaS 等方面的内容。</p>
+
+<p><a href="https://techcrunch.com/2025/07/15/ai-coding-tools-are-shifting-to-a-surprising-place-the-terminal">AI编码工具正在转向一个令人惊讶的地方：终端</a><br>多年来，像Cursor、Windsurf和GitHub的Copilot这样的代码编辑工具一直是AI驱动软件开发的标准。但随着自主AI变得越来越强大，以及氛围编码的兴起，一个微妙的转变改变了AI系统与软件交互的方式。它们不再专注于代码本身，而是越来越多地直接与安装它们的系统的shell进行交互。这是一个意义重大的转变，可能会对该领域的未来发展产生重大影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kustomize">kubernetes-sigs/kustomize</a><br>Customization of kubernetes YAML configurations</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous AI Computing Virtualization Middleware(Project under CNCF)</p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>A powerful framework for faster, easier, and more efficient project development.</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/sirupsen/logrus">sirupsen/logrus</a><br>Structured, pluggable logging for Go.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>Go configuration with fangs</p>
+
+<p><a href="https://github.com/wagoodman/dive">wagoodman/dive</a><br>A tool for exploring each layer in a docker image</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit</p>
+
+<p><a href="https://github.com/googleapis/google-cloud-go">googleapis/google-cloud-go</a><br>Google Cloud Client Libraries for Go.</p>
+
+<p><a href="https://github.com/oapi-codegen/oapi-codegen">oapi-codegen/oapi-codegen</a><br>Generate Go client and server boilerplate from OpenAPI 3 specifications</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

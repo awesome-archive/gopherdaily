@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260626.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260626</span>
+</p>
+<p>每日一谚：Go&#39;s interface values are two words. Understand what they represent </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/26/policy-for-removing-godebug-flags">偿还十年技术债：深度拆解 Go 1.27 的 GODEBUG 强力清理计划</a><br>每一个 GODEBUG 选项，都意味着 Go 运行时（Runtime）内部存在一条丑陋的分支路径。这不仅带来了大量的技术债，更让 Go 编译器团队在测试、升级核心算法时面临灾难性的排列组合噩梦。 为了彻底终结这场无底线的妥协，2026 年 6 月 24 日，Go 语言提案委员会主席 aclements 正式宣布：关于“撤销与清理 GODEBUG 标记的新政策”（Issue #76163）已被正式标记为 Accepted（接受）！ </p> 
+
+<p><a href="https://colobu.com/2026/06/26/open-decision-making-from-go-issue/">如何做决策 - 从 Go 的一个 issue 说起</a><br>本文从Go的一个语法提案issue出发，探讨了如何做出工程决策的重要性。作者强调，推翻已有方案前应先问自己是否掌握了新的信息，决策过程需要刻意打磨。</p> 
+
+<p><a href="https://distrobox.it/posts/announcing_distrobox_next/">用Go重写Distrobox</a><br>Distrobox宣布了新一代产品的发布。文章介绍了重写Distrobox的原因、兼容性考虑以及过渡期间的注意事项，用户可以立即尝试新版本。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/06/25/building-a-cluster-aware-ai-agent-with-kubernetes-argo-cd-and-gitops/">使用Kubernetes、Argo CD和GitOps构建集群感知AI智能体</a><br>该AI智能体能够读取实时pods、事件和日志，基于实际状态而非通用Kubernetes事实进行推理。设计上采用只读模式，使用专门的ServiceAccount和ClusterRole，仅具有get/list操作权限。</p>
+
+<p><a href="https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study/">AI原生时代的隐私感知基础设施：资产分类案例研究</a><br>研究探讨了AI原生时代隐私感知基础设施的资产分类方法。案例分析了校准置信度低和评审团意见不一致等情况，强调了在自动决策中考虑隐私因素的重要性。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/06/25/headlamp-cluster-api-plugin/">Headlamp的Cluster API插件介绍</a><br>该插件提供集群概览功能，可查看实时控制平面和工作节点副本状态。同时支持机器可见性，能够检查MachineDeployments、MachineSets、Machines和MachinePools的状态和条件。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/06/25/visual-context-volcano-headlamp-plugin/">使用Headlamp更快地检查Volcano工作负载</a><br>该插件并非要替代kubectl或Volcano CLI，这些工具在自动化、脚本编写和原始对象检查方面仍然重要。插件改进的是交互式故障排除体验，能够更快地发现相关资源，理解结构化详情页面。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/06/25/headlamp-knative-plugin/">查看您的无服务器架构：Headlamp的Knative插件介绍</a><br>该插件提供Revisions、DomainMappings、ClusterDomainClaims的列表和详细视图，以及集群级别的网络概览。通过读取config-network和config-gateway，展示有效的ingress类、网关设置和后端服务。</p>
+
+<p><a href="https://tailscale.com/blog/border0-free-trial">停止共享访问密钥—免费尝试Border0 &#43; Tailscale</a><br>Border0将每个连接绑定到真实人员，确保数据库、Kubernetes、SSH等资源的安全。这种身份验证方法提供了比传统共享密钥更安全的访问控制。</p>
+
+<p><a href="https://www.docker.com/blog/sbom-generation-for-container-workflows/">如何为容器工作流生成SBOM</a><br>对于容器镜像，默认使用SPDX格式，因为它是BuildKit认证输出的原生格式，无需额外工具。如果主要用例是安全扫描且下游工具偏好CycloneDX，则选择该格式。</p>
+
+<p><a href="https://dev.karltryggvason.com/you-cant-unit-test-for-taste/">你无法通过单元测试来测试品味</a><br>作者正在开发&#34;In the Long Run&#34;应用，让跑者可以在世界著名路线上进行虚拟跑步。该应用累计用户的Strava里程，并将总距离绘制成跨越国家或大陆路线的进度。</p>
+
+<p><a href="https://thomaswc.com/blog/the_return_of_aop.html">面向切面编程的回归</a><br>面向切面编程重新受到关注，其中一个关键方面是依赖管理。大多数程序使用他人编写的代码，通常以库的形式存在，程序员需要确保使用这些库是合法的。</p>
+
+<p><a href="https://blog.jim-nielsen.com/2026/blogging-stating-the-obvious/">博客写作可以只是陈述显而易见的事实</a><br>John Gruber撰文讨论了如今每个网站都令人讨厌的弹窗，虽然他很好地批判了这些普遍存在的、对用户不友好的模式。文章中引起作者注意的是关于这些模式的元评论。</p>
+
+<p><a href="https://clickhouse.com/blog/walrus-postgres-backups-in-rust">为什么我们用Rust重写了Postgres备份的WAL-G：介绍WAL-RUS</a><br>ClickHouse团队使用Rust语言重写了Postgres备份工具WAL-G，推出了新版本WAL-RUS。这一重写旨在提高性能和可靠性，为PostgreSQL备份提供更高效的解决方案。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything">AI与责任</a><br>AI智能体应被视为部署它们的人员或组织的智能体，法律上应如此对待。如果公司雇佣人类作家撰写摘要，公司需对这些摘要中的不准确内容负责。同样，部署AI的组织也应为其AI生成的内容负责。</p>
+
+<p><a href="https://fadamakis.com/understanding-openspec">理解OpenSpec和规范驱动开发</a><br>规范驱动开发能够将AI编程智能体从不可预测的聊天机器人转变为良好的编程助手。OpenSpec通过提供明确的规范，使AI能够更好地理解开发需求，提高代码质量和一致性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/kunchenguid/no-mistakes">kunchenguid/no-mistakes</a><br>git push no-mistakes</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>An open-source Agent-first Identity and Access Management (IAM) /LLM MCP &amp; agent gateway and auth server with web UI supporting OpenClaw, MCP, OAuth, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, </p>
+
+<p><a href="https://github.com/kubernetes-sigs/kueue">kubernetes-sigs/kueue</a><br>Kubernetes-native Job Queueing</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Xray panel supporting multi-protocol multi-user expire day &amp; traffic &amp; IP limit (Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun)</p>
+
+<p><a href="https://github.com/voocel/ainovel-cli">voocel/ainovel-cli</a><br>✨多agent实现全自动AI小说生成</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

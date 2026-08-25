@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240920.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-20</span>
+</p>
+<p>每日一谚：Lead with context, end with options, and always close with an error </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/09/20/htmx-gopher-perfect-partner-for-full-stack">htmx：Gopher走向全栈的完美搭档？</a><br>本文探讨了基于htmx&#43;go在前端战争中的战力究竟如何</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-singleflight/">深入理解Go Singleflight</a><br>本文讨论了在 Go 中使用 singleflight 包来处理并发，方法是防止对数据库中的相同数据发出重复请求。它解释了 singleflight 的工作原理，即只允许第一个请求执行数据库查询，而后续请求等待结果，从而避免对数据库进行不必要的负载。该软件包确保在任何给定时间只存在针对同一密钥的一个正在进行的操作，如果请求被取消或数据频繁更改，该组的 &#39;Forget（key）&#39; 方法可以丢弃正在进行的执行。但是，本文还指出了由于 singleflight 使用的全局锁而导致的潜在性能问题，并建议在多个组之间分片或分发密钥，以获得更好的大规模性能。此外，它还涵盖了 goroutines 中 panic 的处理以及正确恢复和退出过程的重要性。</p> 
+
+<p><a href="https://grafana.com/blog/2024/02/09/how-i-write-http-services-in-go-after-13-years/">13 年后我如何在Go中编写HTTP服务</a><br>本文以近 6 年前的一篇博文为基础，深入探讨了作者 Mat Ryer 如何在 Go 中构建和编写 HTTP 服务。Ryer 强调了代码中的可维护性和易理解性的重要性，倡导以促进这些品质的方式构建服务器和处理程序。他还讨论了优化以实现快速启动和正常关闭、处理常见请求工作以及正确测试服务的重要性。此外，Ryer 还分享了他的中间件方法、请求/响应类型以及使用内联类型进行测试。本文为计划使用 Go 编写 HTTP 服务的开发人员提供了指南，为可维护性和可扩展性提供了有价值的实践和模式。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/LowTimeMaintainersAndChanges">开源维护者，只需很少的时间和更改</a><br>Insane Hackers Guild 的成员 Chris Siebenmann 的博文深入探讨了开源项目的维护者所面临的挑战，尤其是那些时间和资源有限的维护者。Siebenmann 强调了这些维护者的重要性，尽管没有时间遵守 C 标准或其他标准，但他们仍然保持项目运行。他反对强迫这些维护者花费有限的时间来处理向后不兼容的更改，并指出这不仅粗鲁，而且可能无效或危险。Siebenmann 进一步讨论了破坏广泛使用的语言（如 C）向后兼容性的任何更改的高成本，以及维护者需要谨慎对待他们所依赖的 API。该文章的结尾是，由于语言的稳定性和 Go 1 兼容性保证，Siebenmann 更喜欢使用 Go 而不是 C 或 C&#43;&#43; 来编写低维护的 TLS。</p> 
+
+<p><a href="https://www.willem.dev/articles/sets-in-golang/">Go中的集合</a><br>本文提供了有关如何在 Go 中实现集合的深入指南，Go 是一种没有原生 set 数据类型的语言。它解释了 Go 中的 map 可以用于创建集合，使用空结构体作为值来节省内存。该指南还介绍了初始化 set、添加和删除元素以及检查 set 中的现有元素。此外，它还引入了 &#39;deckarep/golang-set&#39; 包，该包提供了更全面的集合实现，具有查找差异、交集和 JSON 封送等附加功能。最后，本文讨论了在处理 sets 中的非可比类型时需要考虑的因素，强调了为此类类型选择可比较键的重要性。</p> 
+
+<p><a href="https://world.hey.com/dhh/wonderful-vi-a1d034d3">精彩的vi</a><br>Basecamp 和 HEY 的联合创始人兼 Ruby on Rails 的创建者 David Heinemeier Hansson 分享了他使用 Neovim 的经验，Neovim 是一款现代文本编辑器，其根源是原始的 vi 编辑器。他很欣赏 Neovim 将文本操作命令、范围和对象组合成自己的语言的独特能力，从而为编辑过程提供游戏般的乐趣和令人上瘾的品质。尽管学习曲线不同，但 Hansson 发现 Neovim 的功能和灵活性令人满意，让它感觉就像满足他编码需求的家一样。他鼓励其他人探索 Neovim，尤其是那些已经熟悉 Vim 的人，并提供学习资源。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/docker-myths-debunked/">揭开Docker的10个神话</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，这通常是由于发出请求的客户端缺乏权限。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明，尝试访问服务器上的特定资源的用户未被授予执行此操作所需的权限。</p>
+
+<p><a href="https://www.pingcap.com/blog/scaling-to-the-cloud-tidb-serverless-vs-planetscale/">扩展到云：TiDB Serverless 与 PlanetScale</a><br>在 TiDB Serverless 和 PlanetScale 的比较中，TiDB Serverless 以其 Serverless 架构脱颖而出，该架构可自动扩展以满足应用程序需求，并提供按量付费的模式，根据实际使用情况收费。这与 PlanetScale 的托管服务形成鲜明对比，后者需要预先规划容量，并且仅在其更昂贵的企业计划中提供自动扩展。这两个数据库都提供了强大的 MySQL 兼容性，但 TiDB Serverless 包含额外的 AI 驱动的工具，如向量搜索和查询优化。开发人员体验通常对双方都是积极的，TiDB Serverless 提供了独特的 AI 帮助。在成本方面，TiDB Serverless 因其潜在的成本效益而受到关注，尤其是对于工作负载可变的应用程序。</p>
+
+<p><a href="https://blog.pragmaticengineer.com/paying-down-tech-debt-further-learnings/">偿还科技债务：进一步学习</a><br>The Pragmatic Engineer 的文章深入探讨了管理技术债务的细微差别，其见解主要来自 Gergely Orosz 的经验。它强调了代码中增量改进的重要性，例如添加注释和测试，以建立信心并促进软件开发的流程。这些微小的、非功能性的更改被强调为学习新代码库和偿还技术债务的有效策略。本文还讨论了大规模代码重写的挑战，强调了大量支持、重量级支持和精心规划的方法以确保成功的必要性。此外，它还分享了 ISO-NE 的一个案例研究，其中重写与面向用户的项目相结合，以保持利益相关者的参与度并展示系统可靠性的切实改进。</p>
+
+<p><a href="https://devblogs.microsoft.com/blog/introducing-the-new-dev-blogs-a-modern-streamlined-and-engaging-experience">Introducing the new Dev Blogs: A Modern, Streamlined, and Engaging Experience</a><br>Microsoft has announced the Dev Blogs Evolution, a significant upgrade to its blog platform, aimed at enhancing the user experience with a modern, simplified layout, and improved content discovery. The new design features a wider content area, cleaner design, and subtle use of color for better readability and navigation. Additionally, the platform now includes a breadcrumb trail, a table of contents, and a &#34;Read Next&#34; section for easier content discovery. To facilitate engagement, liking, commenting, and sharing tools have been grouped in the left-hand pane, and custom Calls to Action (CTAs) are now available on key pages. Despite these improvements, some users have expressed concerns about the new card layout being visually overwhser and challenging to read, prompting Microsoft to consider further modifications.</p>
+
+<p><a href="https://netflixtechblog.com/introducing-netflixs-key-value-data-abstraction-layer-1ea8a0a11b30">Netflix 的键值数据抽象层简介</a><br>Netflix 引入了键值数据抽象层，以应对其分布式数据库中的数据访问模式挑战，旨在简化数据访问并提高基础设施的可靠性。该层基于两级映射架构构建，通过将复杂的数据模型抽象为简单的键值对或结构化记录来支持广泛的使用案例。KV 抽象还通过分块解决了大型数据 blob 的问题，仅将标识符、键和元数据存储在主存储中，而实际数据单独存储。此外，该系统采用客户端有效负载压缩来优化性能和可预测的线性低延迟操作。Netflix 的 KV 抽象设计为自适应的，具有自适应分页和信号等机制，以维护服务级别目标并为开发人员提供一致的接口，而不管底层存储系统如何。</p>
+
+<p><a href="https://www.p99conf.io/2024/09/19/rust-vs-zig-and-c-and-mojo-for-systems-programming/">Rust 与 Zig – 以及 C&#43;&#43; 和 Mojo – 用于系统编程</a><br>在最近的 P99 CONF 小组讨论中，辩论集中在 Rust、Zig 和 Mojo 在系统编程方面的优点，重点关注安全性、性能和开发人员生产力。尽管 Rust 的复杂性受到批评，但 Rust 因其内存安全性、强大的开发人员生态系统和提高生产力的潜力而受到称赞。Zig 因提供低级控制、C 互操作性、自包含的二进制文件和易于理解的标准库而受到称赞，尽管它因其复杂的编译时编程而面临审查。虽然 Mojo 因其语法和借用检查器而被视为机器学习的变革性，但被认为不太可能像 Rust 和 Zig 那样主导系统编程。小组成员一致认为，虽然 C&#43;&#43; 有其一席之地，但较新的语言为现代系统编程提供了显著的优势。</p>
+
+<p><a href="https://opensource.googleblog.com/2024/09/keys-to-resilient-open-source-future.html">实现弹性开源未来的关键</a><br>Google 开源博客文章强调了开源软件的重要性，它是现代技术不可或缺的一部分，用于 97% 的应用程序。然而，它也凸显了由于其碎片化性质和在其中运行的多样化生态系统，维护此类软件的安全性面临越来越大的挑战。为了解决这些问题，Google 提倡采用标准化的安全做法，并使用 SLSA 和 OSV 等工具来最大限度地减少漏洞。此外，Google 强调了 AI 在彻底改变开源安全方面的潜力，并指出它成功集成到他们的测试流程中，以及它能够自动化和增强安全任务。该博文最后指出，Google 致力于简化安全实践、开发智能平台并利用 AI 来确保开源软件的长期安全性和可持续性。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/09/18/openmetrics-is-archived-merged-into-prometheus/">OpenMetrics 被存档并合并到 Prometheus 中</a><br>OpenMetrics 项目最初旨在为指标公开格式创建独立的规范，现已存档并集成到 Prometheus 中，Prometheus 是云原生社区中广泛接受的标准。这项决定由 CNCF 的技术监督委员会做出，通过减少对导出和接收指标时间序列数据的格式的混淆，简化了环境。尽管 OpenMetrics 和 Prometheus 之间有相似之处，但由于格式与工具内部数据存储和表示的固有耦合，它们的路径存在分歧。此次合并被视为积极的一步，它重新调整了围绕 Prometheus 的工作，消除了对单独项目的需求，从而在云原生领域培养了一种更简化的可观测性方法。</p>
+
+<p><a href="https://thenewstack.io/how-to-find-success-with-code-reviews/">如何通过代码审查取得成功</a><br>软件工程师兼作家 Adrienne Braganza Tacke 在与 The New Stack Makers 的对话中讨论了成功代码审查的复杂性。她确定了可能阻碍代码审查过程的三个主要挑战：审查过程中的歧义、审查中的主观性以及保持客观焦点。Tacke 强调了清晰和精确的重要性，以避免误解并确保代码审查具有建设性。她还建议不要让个人偏好掩盖验证代码是否满足其预期目的的主要目标。通过应对这些挑战，团队可以增强他们的代码审查体验并提高整体软件质量。</p>
+
+<p><a href="https://medium.com/trainline/repository-health-dashboard-342f6db3217b">存储库运行状况仪表板</a><br>Trainline 的 Web 平台团队引入了存储库运行状况仪表板，用于监控和维护大约 100 个 Web 存储库的运行状况，这些存储库对他们的运营至关重要，并为大约 150 名开发人员提供服务。该计划源于 2022 年的重组，导致创建了 Web 平台团队，旨在标准化和简化整个公司的 Web 技术管理。该控制面板使用基于各种检查的评分系统来评估代码库的一致性、安全性和对公司技术愿景的合规性，从而全面概述了每个存储库的运行状况。系统还将存储库分类为运行状况（正常、风险和已锁定），以便于确定优先级和采取行动。此外，该仪表板还跟踪随时间推移的趋势，从而实现主动改进，并在开发人员中培养一种问责制和卓越的文化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://masteringllm.medium.com/how-much-gpu-memory-is-needed-to-serve-a-large-languagemodel-llm-b1899bb2ab5d">为大型语言模型 （LLM） 提供服务需要多少 GPU 内存？</a><br>本文深入探讨了确定为大型语言模型 （LLM） 提供服务所需的 GPU 内存的关键问题，这是 LLM 访谈中的常见问题。它引入了一个公式来估计此内存，考虑参数、每个参数的字节数、模型精度和推理操作的 20% 开销。该公式应用于具有 700 亿个参数（以 16 位精度加载）的 LLaMA 模型，因此需要大约 168 GB 的 GPU 内存。这种估计对于避免硬件瓶颈和确保 LLM 的高效部署至关重要。本文还推广了其他资源，包括关于 LLM 面试问题和答案的综合课程，以及关于 LlamaIndex 的代理检索增强生成 （AgenticRAG） 的可视化课程。</p>
+
+<p><a href="https://www.ksred.com/the-ai-driven-software-revolution-pushing-the-boundaries-of-llm-integration/">AI 驱动的软件革命：突破 LLM 集成的界限</a><br>AI 驱动的软件革命正在通过突破大型语言模型 （LLM） 集成的界限来改变软件开发的格局。这种演变的特点是从硬编码逻辑转变为决策过程，这些过程越来越抽象并由 AI 管理，例如代码完成、生成，甚至通过自然语言提示进行系统架构设计。潜在的未来包括一种无代码范式，其中软件创建由与 LLM 的对话交互驱动，从而导致软件开发的民主化和动态、实时的系统适应。然而，这种未来也带来了有关系统透明度、安全性和软件开发人员不断变化的角色的重大问题。</p>
+
+<p><a href="https://blog.dropbox.com/topics/work-culture/how-ai-is-solving-a-murky-problem-for-this-beachside-community">AI 如何解决这个海滨社区的棘手问题</a><br>SharkEye 是加利福尼亚州圣巴巴拉附近的一项研究计划，利用无人机和机器学习来监测和识别海洋中的幼年白鲨，有助于生态研究和社区安全。该系统向海滩上的人发送警报，已经运行了近五年，并在人工智能的帮助下提高了准确性。使用 YOLOv8 模型训练的 AI 现在可以以 97% 的成功率识别鲨鱼，即使在具有挑战性的条件下也是如此。这项技术反映了人类和野生动物栖息地之间日益重叠的趋势，并成为负责任地享受自然空间的工具。此外，该倡议还提高了人们对鲨鱼在海洋生态系统中的重要性及其作为顶级捕食者的作用的认识。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG 是一个综合平台，旨在无缝管理 Kubernetes 环境中的 PostgreSQL 数据库，涵盖从初始部署到持续维护的整个运营生命周期</p>
+
+<p><a href="https://github.com/go-task/task">go-task/task</a><br>用 Go 编写的任务运行器 / 更简单的 Make 替代方案</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>云原生应用程序代理</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>在 Kubernetes 中自动配置和管理 TLS 证书</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin的开发基础平台，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器【可AI辅助】、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/argoproj/argo-rollouts">argoproj/argo-rollouts</a><br>Kubernetes 的渐进式交付</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>一个强大的小 TUI 框架 🏗</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>与 Prometheus 类似，但用于日志。</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度和管理</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/spf13/viper">spf13/viper</a><br>使用 fangs 的 Go 配置</p>
+
+<p><a href="https://github.com/ossf/scorecard">ossf/scorecard</a><br>OpenSSF 记分卡 - 开源的安全健康指标</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>轻松安全地将内容从一台计算机发送到另一台🐊 📦计算机</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>AWS 提供商使 Terraform 能够管理 AWS 资源。</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>适用于 Azure 资源管理器的 Terraform 提供程序</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一个内存中的实时数据库，具有基于 SQL 的反应性。它经过高度优化，可在现代硬件上构建和扩展真正的实时应用程序，同时是 Redis 的直接替代品。</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>适用于 Kubernetes 的 Go 客户端。</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>云原生网络和网络安全</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>Moby 项目 - 容器生态系统的协作项目，用于组装基于容器的系统</p>
+
+<p><a href="https://github.com/GoogleContainerTools/kaniko">GoogleContainerTools/kaniko</a><br>在 Kubernetes 中构建容器镜像</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

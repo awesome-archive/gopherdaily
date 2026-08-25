@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250327.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250327</span>
+</p>
+<p>每日一谚：Use constants for magic numbers </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/03/27/remove-coretypes-from-go-spec">Go 1.25规范大扫除：移除“Core Types”，为更灵活的泛型铺路</a><br>近日，Go团队在提案#70128中正式决定：将在即将到来的Go 1.25版本（预计2025年8月发布）中，从Go语言规范中移除“核心类型”这一概念。这项看似底层的改动，实则对Go语言的简洁性、易学性以及未来发展具有深远意义。</p> 
+
+<p><a href="https://rgsilva.com/blog/ps2-go-part-1">在PlayStation 2上运行Go</a><br>本文讲述了作者尝试在 PlayStation 2 上运行 Go 代码的经历。PS2 能够运行 Linux，作者很好奇是否可以直接在其上编写裸机 Go 代码，于是进行了尝试。这其中涉及到许多技术挑战，例如 Go 默认不支持 PS2 平台，需要使用 TinyGo 编译器，以及 PS2 的 Emotion Engine CPU 的特性。作者还尝试了使用 ps2dev SDK，并解释了其使用中遇到的问题，例如 MIPS-III N32 标准和 ABI 兼容性问题。文章详细描述了配置 TinyGo 编译目标、编写 baremetal 定义文件、调用 Go 函数和处理 64 位除法等步骤。最终，作者成功地在模拟器上运行了 Go 代码，并展示了部分结果。</p> 
+
+<p><a href="https://brandur.org/fragments/go-data-fixtures">Go语言中数据预设的正确方法</a><br>本文介绍了一种使用sqlc和validator的安全、简洁的Go语言测试数据预设模式。它强调了避免模拟数据库，使用真实的数据库记录作为预设数据，并利用Go validate框架进行数据验证。文章还展示了如何使用自定义指针帮助程序来简化代码，以及如何组织预设数据以提高可读性和可维护性。</p> 
+
+<p><a href="https://dev.to/leapcell/the-evolution-of-http-10-vs-11-vs-20-a-clear-comparison-4p61">HTTP 1.0、1.1 和 2.0 的演变：清晰的对比</a><br>本文详细对比了 HTTP 1.0、1.1 和 2.0 的演变过程，重点阐述了每个版本在性能和功能上的改进，包括持久连接、多路复用、请求优先级、报头压缩、服务端推送等特性。文章还介绍了 SPDY 协议，作为 HTTP/2.0 的前身，对 HTTP/2.0 的发展起到了重要作用。最后，文章推荐了 Leapcell 作为部署服务的理想平台。</p> 
+
+<p><a href="https://dev.to/leapcell/gopsutil-powerful-system-stats-for-go-developers-53e0">Gopsutil：Go 开发人员的强大系统统计工具</a><br>本文介绍了 gopsutil，一个 Go 语言版本的 Python 库 psutil，用于方便地获取各种系统和硬件信息。它隐藏了不同系统之间的差异，具有强大的可移植性。文章涵盖了快速入门、CPU、磁盘、主机、内存、进程以及 Mac 服务（原 Windows 服务部分调整）等方面，并详细讲解了每个部分的用法及示例代码，最后还介绍了 Leapcell 服务器平台。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-03-26-dolt-basics-push/">Dolt 入门：Dolt Push</a><br>本系列文章面向 Dolt 新手，重点介绍 Dolt 用户入门时可能感兴趣的主题。大多数其他博文内容都比较深入，因此我们希望开辟一个空间来讨论专家可能觉得枯燥的主题。本文介绍了如何将数据库推送到远程服务器（例如 DoltHub），以便与其他 Dolt 用户协作。</p>
+
+<p><a href="https://tailscale.com/blog/network-troubleshooting-kubernetes-security-part-3">Why Kubernetes debugging and access control is still broken (and how to fix it)</a><br></p>
+
+<p><a href="https://www.pingcap.com/blog/optimizing-backup-verification-enhancing-performance-reliability-tidb/">TiDB备份验证优化：提升性能和可靠性</a><br>TiDB 8.5版本对TiDB BR (备份和恢复)进行了重大改进：默认情况下，关闭了全表校验和验证。此更新通过减少不必要的开销来提高备份效率，同时保持数据完整性。本文将解释TiDB如何优化备份验证，预期性能优势，以及为什么全表校验和对于大多数用户不再必需。</p>
+
+<p><a href="https://blog.heroku.com/using-github-actions-heroku-flow-additional-security-control">使用 GitHub Actions 和 Heroku Flow 加强安全控制</a><br>许多高级用户希望将 GitHub Actions 与 Heroku 上的应用程序一起使用。现在，有一种简单的方法可以将这些优秀的系统结合起来，同时满足严格的安全和合规性要求。本文介绍了一种利用 GitHub Actions、Heroku 运行任意工作负载的能力及其强大的平台 API 的方法，即使在需要严格控制源代码共享的受监管环境中，也能实现私有存储库与 Heroku CI/CD 的无缝集成。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/03/26/kubernetes-v1-33-upcoming-changes/">Kubernetes v1.33 预览 | Kubernetes</a><br>随着 Kubernetes v1.33 版本的临近，Kubernetes 项目持续发展。为了改进项目的整体健康状况，一些功能可能会被弃用、移除或替换。这篇博文概述了 v1.33 版本的一些计划更改，Kubernetes 发行团队认为您应该了解这些更改，以确保您的 Kubernetes 环境能够持续平稳运行，并随时了解最新进展。以下信息基于 v1.33 版本的当前状态，在最终发布日期之前可能会发生变化。</p>
+
+<p><a href="https://www.computerenhance.com/p/an-interview-with-zen-chief-architect">与 Zen 首席架构师 Mike Clark 的访谈</a><br>Zen 是 x86 生态系统历史上最重要的微架构之一。它不仅在许多 x64 基准测试中占据主导地位，而且也是 AMD 在过去八年中在 CPU 市场份额中取得显著提升的关键架构：从第一个 Zen 处理器发布时的 10% 增长到 Zen 5 推出时的 25%。本文是Casey Muratori对Zen首席架构师Mike Clark的采访记录，涵盖了内存模型、页面大小、寄存器和缓存行大小、散列/收集、非时间存储等多个方面。</p>
+
+<p><a href="https://rustfoundation.org/media/ferrous-systems-donates-ferrocene-language-specification-to-rust-project">Ferrous Systems 向 Rust 项目捐赠 Ferrocene 语言规范 - Rust 基金会</a><br>Rust 1.0 于 2015 年 5 月发布。随着该语言即将迎来十周年纪念日，Rust 凭借其速度、安全性和充满活力的社区，已成为开发者中增长最快和最受喜爱的语言之一。像任何蓬勃发展的开源语言一样，Rust 有大量的文档和教程由 Rust 项目提供。然而，许多其他语言都提供了一个重要的缺失文档：正式的语言规范。2022 年 12 月，提交了一份 RFC 来鼓励 Rust 项目开始编写规范。经过多次讨论，该 RFC 于 2023 年 7 月获得批准，并开始着手进行。Rust 基金会很高兴地宣布，Ferrous Systems 已同意将其 Ferrocene 语言规范 (FLS) 贡献给 Rust 项目。这项慷慨的捐赠将为提供正式的 Rust 规范铺平道路。它还将使 Rust 项目能够监督其持续发展，为已经依赖 FLS 的公司和个人提供信心，并标志着 Rust 生态系统的一个重要里程碑。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.salesforce.com/agentforce-scaling-agentic-ai-for-enterprise-automation-observability-powering-2-billion-predictions-monthly/">Agentforce：扩展企业自动化和可观察性的AI智能体</a><br>本文介绍了 Salesforce 如何扩展其 Agentforce 系统，该系统结合了代理 AI、多代理协作和实时可观察性，每天驱动 10 亿次预测，达到企业规模。文章重点介绍了从预测性 AI 到生成式 AI 再到完全自主系统的转型过程中遇到的工程挑战，以及如何克服这些挑战并在 Salesforce 平台内保持无缝集成。文章还讨论了在将 Agentforce 扩展到 Salesforce 庞大的客户群时遇到的技术障碍，以及 Agentforce 如何在规模化应用中利用 RAG，以及如何处理 AI 执行失败并确保企业级可靠性。最后，文章探讨了扩展 AI 可观察性方面面临的重大运营挑战。</p>
+
+<p><a href="https://eli.thegreenplace.net/2025/notes-on-implementing-attention/">关于实现注意力机制的笔记</a><br>本文档记录了使用纯 Python &#43; Numpy 实现注意力块的一些笔记。重点在于代码的精确实现，解释了整个过程中的所有形状。这里没有介绍注意力机制有效的原因——网上有很多优秀的资源对此进行了解释。文章涵盖了基本的缩放自注意力、批处理自注意力、多头注意力以及掩码（或因果）自注意力和交叉注意力等内容，并提供了相应的代码示例和详细的维度解释。最后，文章还介绍了如何跨头维度进行向量化，以提高计算效率。</p>
+
+<p><a href="https://simonwillison.net/2025/Mar/26/function-calling-with-gemma/#atom-everything">使用 Gemma 进行函数调用</a><br>谷歌的 Gemma 3 模型（特别是 27B 版本功能强大）支持通过提示工程进行函数调用。官方文档描述了两种推荐的提示方式，都建议将工具定义作为 JSON 模式传递，但模型请求工具执行的方式有所不同。第一种提示使用 Python 风格的函数调用语法；第二种提示使用 JSON。这很好地说明了所有这些花哨的工具使用大型语言模型仍然有效地使用了 2022 年 11 月 ReAct 论文中描述的模式。</p>
+
+<p><a href="https://blog.kilocode.ai/p/kilo-code-speedrunning-open-source-coding-ai">Kilo Code：快速开发开源编码AI</a><br>去年，我领导的项目（维苏威挑战赛）通过快速推进AI研究取得了突破。从那时起，我一直在思考AI代理——接近“人人编程”的梦想。让我们再来一次快速冲刺！</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/gogs/gogs">gogs/gogs</a><br>Gogs is a painless self-hosted Git service</p>
+
+<p><a href="https://github.com/hahwul/dalfox">hahwul/dalfox</a><br>🌙🦊 Dalfox is a powerful open-source XSS scanner and utility focused on automation.</p>
+
+<p><a href="https://github.com/kubernetes/dashboard">kubernetes/dashboard</a><br>General-purpose web UI for Kubernetes clusters</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>A simple zero-config tool to make locally trusted development certificates with any names you&#39;d like.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

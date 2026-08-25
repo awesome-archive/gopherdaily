@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250716.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250716</span>
+</p>
+<p>每日一谚：Do not declare an interface just for testing. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://go.dev/blog/fips140">Go 语言的 FIPS 140-3 加密模块</a><br>Go 语言现在内置了原生的 FIPS 140-3 兼容模式，该模式已集成到标准库和 go 命令中，消除了 Go 用户在受监管环境中实现 FIPS 140 兼容性的诸多摩擦。Go 加密模块 v1.0.0 已获得 CAVP 证书 A6650，并已提交给 CMVP。该模块与 Go 1.24 一起发布，并且完全透明地集成到 Go 应用程序中，无需 cgo，也不存在内存管理安全问题。通过 GODEBUG 选项或 GOFIPS140 环境变量可以启用 FIPS 140-3 模式。该模块在广泛的平台上受支持，并涵盖了全面的算法。</p> 
+
+<p><a href="https://tonybai.com/2025/07/15/the-agentic-software-engineer">AI 正在重写“软件工程师”的岗位描述：未来你需要这 6 项核心技能</a><br>下一个浪潮是什么？文章给出了答案：Agentic AI (智能体 AI)。 这不仅仅是一个新技术，它将彻底重塑我们的工作方式，重写“软件工程师”这个岗位的核心要求。这不是一次普通的更新，这是一场彻底的进化。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-07-15-best-coding-agent">哪个编码智能体最好？</a><br>DoltHub 的作者比较了四个编码代理：Anthropic 的 Claude Code、OpenAI 的 Codex、Google 的 Gemini 和 Cursor。通过对简单 bug 修复和模糊代码搜索问题的测试，作者对每个代理的界面、速度、成本和代码质量进行了评估，并给出了最终排名。</p> 
+
+<p><a href="https://dev.to/sfundomhlungu/how-to-build-your-own-ai-mascot-in-golang-38m0">如何用 Golang 构建你自己的 AI 吉祥物</a><br>Grok 发布了一个动漫风格的“老婆”吉祥物，互联网为之疯狂。这让我想到我为 Golang 内核助手构建的吉祥物，绝对不是“老婆”，只是一个友好的土拨鼠伙伴。Go &#43; C &#43; OpenGL 让构建这样的吉祥物变得出奇地简单。本教程结束后，你将在桌面上拥有一个可拖动、可点击、会跳舞的吉祥物，以及进一步开发它的路线图（因为 OpenGL 是 C 语言的）。</p> 
+
+<p><a href="https://dev.to/sfundomhlungu/how-to-set-up-offline-speech-to-text-with-whisper-and-golang-399n">如何使用 Whisper 和 Golang 设置离线语音转文本</a><br>Whisper 模型非常好，好到令人害怕。400MB 的基础模型？它从不错过。这篇文章将指导你如何在几分钟内设置你自己的本地转录系统。你需要安装 Go、PortAudio 和 whisper.cpp-cli。然后，你可以使用提供的 Go 代码示例开始转录。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://netflixtechblog.com/behind-the-streams-live-at-netflix-part-1-d23f917c2f40">幕后流：Netflix 直播三年回顾。第一部分</a><br>Netflix 的许多伟大创意都始于一个问题，三年前，我们提出了一个大胆的问题：如果我们要通过直播（一种几乎与电视本身一样古老的格式）来娱乐世界——我们该怎么做？从设计第一个直播喜剧特辑的工程计划开始，到如今举办数百场直播活动，从大型喜剧节目和 NFL 圣诞节比赛到创纪录的拳击比赛，以及成为 WWE 的新家，我们取得了长足的进步。在本系列文章《幕后流》中，我们将深入探讨 Netflix 直播架构以及我们在构建过程中学到的经验教训。第一部分将介绍我们为直播奠定的基础，以及我们做出的那些影响我们方法的关键决策。</p>
+
+<p><a href="https://antithesis.com/resources/reliability_glossary">分布式系统可靠性术语表</a><br>这份术语表概述了理解分布式系统可靠性所需的概念。它主要面向行业从业者——处于职业生涯任何阶段的学习分布式系统测试的软件开发人员。它旨在成为一个方便的指南，汇集以前分散在互联网上的信息，因为这些概念起源于许多不同的学科。据我们所知，这是第一个这样做的资源。同时，我们希望仅仅在一个地方将所有这些想法放在一起，就能开始展示它们是如何融合在一起的。但这绝对不是必读的！我们并不是说你需要理解所有这些概念才能测试分布式系统。每次编写集成测试时，你实际上都在测试分布式系统！这份术语表旨在鼓励你更深入地了解一个对当今提交生产代码的每个开发人员都越来越重要的主题。因此，我们的目标是提供直观的解释，如果你需要的话，还可以提供指向更正式定义的指针。我们对实际上混乱且有争议的术语（如“进程”、“可重复读”或“最终一致性”）给出清晰、单值的定义。在这种情况下，我们会尝试对现有定义和用法的多样性表示认同，但我们的首要任务是为读者提供一些对学习者来说方向正确且真正有用的内容。我们还包括了一些现有文献中没有正式定义或广泛接受的术语的基本概念，例如“垃圾读取”和“g-非相邻”。也许这些名称会流行起来？我们知道它是不完整的，如果你关心软件可靠性或分布式系统，我们非常乐意接受你的帮助！</p>
+
+<p><a href="https://the-nerve-blog.ghost.io/to-be-a-better-programmer-write-little-proofs-in-your-head">成为更好的程序员：在脑子里写小证明</a><br>本文简要介绍了一个技巧，它能帮助你更快更准确地编写代码。作者说这只是一个“技巧”，但实际上，随着职业生涯的推进，他已经不自觉地开始这么做了。当处理棘手问题时，在编写代码的同时，在脑子里勾勒出证明，以确保代码能够实现你的预期。这是一个简单的想法，但说起来容易做起来难：在不中断工作流程的情况下“在线”完成这个过程需要大量的练习。但一旦你真正掌握了它，你会发现你的代码在一两次尝试后就能运行，感觉有点神奇。文中介绍了几个例子，例如单调性、前置条件和后置条件、不变式和隔离等，并解释了如何利用这些概念来提高代码的质量和可证明性。</p>
+
+<p><a href="https://podman-desktop.io/blog/podman-desktop-release-1.20">Podman Desktop 1.20 版本发布</a><br>Podman Desktop 1.20 版本现已发布！此版本带来了一些令人兴奋的新功能和改进，包括：批量启动所有容器、切换用户和集群、按描述搜索扩展列表、从资源页面更新提供程序、本地扩展开发模式、即时停止实时容器日志以及新的社区页面网站。</p>
+
+<p><a href="https://blog.zolutal.io/understanding-paging">理解 x86_64 分页</a><br>本文深入探讨了 x86_64 架构下的分页机制，特别是 PML4 分页方案。文章从页面的定义出发，解释了虚拟地址的构成和页面表索引方式，详细介绍了如何解码各个级别的页面表项（PGD、PUD、PMD、PT），包括权限位、页面大小位等含义。文章还演示了如何在 GDB 中进行手动页面遍历，并以一个实际案例分析了如何处理 2MB 的巨型页。最后，文章总结了页面遍历的步骤，并提供了验证方法，帮助读者加深对 x86_64 分页机制的理解。</p>
+
+<p><a href="https://johnnysswlab.com/the-messy-reality-of-simd-vector-functions">SIMD（向量）函数的混乱现实</a><br>本文探讨了SIMD函数是什么，何时有用以及如何有效声明和使用它们。SIMD函数是一种处理多个数据元素的函数，通过手动向量化函数或编译器生成的向量函数来提高性能。文章还讨论了SIMD函数的现实局限性，例如编译器支持有限、可用性有限以及编译器生成的实现效率低下等问题，并介绍了如何使用内联函数和链接时优化来克服这些问题。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jul/15/reflections-on-openai/#atom-everything">OpenAI反思</a><br>Calvin French-Owen在OpenAI工作了一年多，期间公司规模从1000人增长到3000人。他分享了离开OpenAI后的反思，详细描述了OpenAI的内部文化，包括其技术栈（主要使用Python、Pydantic和FastAPI）、大型模型的训练过程以及ChatGPT对公司代码库的影响等。</p>
+
+<p><a href="https://bigeagle.me/2025/07/kimi-k2">Kimi K2 发布后的感想：不再只是聊天机器人</a><br>文章作者分享了 Kimi K2 发布后的心得体会。Kimi K2 是一款 AI 模型，作者认为它已经超越了传统的聊天机器人，可以通过“前端编程”的方式，直接生成交互式报告、PPT 等，并探讨了 Tool Use &amp; Agent 的应用以及开源的意义。作者还分享了一些关于 AGI 发展和公司战略的思考。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/redis/go-redis">redis/go-redis</a><br>Redis Go client</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/RezaSi/go-interview-practice">RezaSi/go-interview-practice</a><br>Go Interview Practice is a series of coding challenges to help you prepare for technical interviews in Go. Solve problems, submit your solutions, and receive instant feedback with automated testing. Track your progress with per-challenge scoreboards and improve your coding skills step by step.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/ArvinLovegood/go-stock">ArvinLovegood/go-stock</a><br>🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/moby/buildkit">moby/buildkit</a><br>concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>The toolkit to pack, ship, store, and deliver container content</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>Powerful system container and virtual machine manager</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

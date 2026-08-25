@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250504.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250504</span>
+</p>
+<p>每日一谚：A little copying is better than a little dependency. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/YRrnced_5enGkZFZ_i-DWA">Go新垃圾回收器登场：Green Tea GC如何通过内存感知显著降低CPU开销？</a><br>近期，Go团队技术负责人Austin Clements公布了一项名为Green Tea (绿茶)  的实验性垃圾收集器设计（Issue #73581），旨在通过一种内存感知 (memory-aware) 的新方法，显著改善 GC 过程中的内存访问模式，降低 CPU 开销，尤其是在多核和 NUMA 架构下。该特性计划作为 Go 1.25 的一个可选实验加入，开发者将有机会提前体验。</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-graceful-shutdown">Go语言优雅关机：实用模式</a><br>本文讨论了Go应用程序中优雅关机的实现，重点介绍了处理终止信号（SIGTERM、SIGINT）以及在特定超时时间内（例如Kubernetes的terminationGracePeriodSeconds）完成关机的方法。文章涵盖了捕捉信号、超时处理、停止接收新请求、处理待处理请求以及释放关键资源等方面，并提供了使用context和signal包的代码示例，以及在Kubernetes等容器化环境中的最佳实践。</p> 
+
+<p><a href="https://buildx.substack.com/p/lets-build-mapreduce-from-scratch">让我们从零开始构建MapReduce</a><br>本文介绍了如何从零开始构建一个MapReduce系统，并阐述了其工作原理。文章首先解释了MapReduce诞生的背景，即Google需要处理海量数据，单机方案不可行，随后引入了Map和Reduce函数的概念，并详细解释了MapReduce的工作流程，包括输入分割、Map阶段、Shuffle和Sort阶段、Reduce阶段以及最终的输出。文章还总结了MapReduce的优点（简洁性、可扩展性、容错性、通用性）和局限性（高延迟、批处理导向、迭代算法效率低、复杂工作流、不适合流处理、冗余代码），最后讨论了改进MapReduce的方案，例如内存计算、更灵活的执行模型、流处理、高级API和资源管理。MapReduce虽然在如今已经被更先进的工具所取代，但其核心思想仍然对大数据领域产生了深远的影响。</p> 
+
+<p><a href="https://dev.to/sketch-and-build/batch-processing-image-conversion-using-go-concurrency-4dom">使用 Go 并发进行大规模批量图像转换</a><br>为了快速上市，很容易忽略一些看起来很小的细节，但这些细节最终可能会造成很大的影响。在推出 Vectopus.com，我们的多供应商矢量图像市场时，我们忽略了 WebP 图像支持。这导致我们需要追溯转换 500,000 多个 SVG 文件到 WebP。文章比较了 Node.js、Python 和 Go 的并发模型，并最终选择使用 Go 构建命令行界面 (CLI) 工具来高效地完成此任务。Go 的 goroutine 提供了一种高效的解决方案，能够实现高并发和快速的处理时间。文章还包含了 Node.js 和 Python 的代码示例以及 Go 的 goroutine 示例，并总结了三种语言的并发模型的比较。</p> 
+
+<p><a href="https://dev.to/jones_charles_ad50858dbc0/deep-dive-into-go-memory-leak-debugging-a-practical-guide-1ojm">深入 Go 内存泄漏调试：实用指南</a><br>这份全面的指南将探讨 Go 中常见的内存泄漏场景、实用的调试工具和技巧、实际案例和解决方案以及内存管理的最佳实践。  它适用于 Go 后端开发人员、SRE/DevOps 工程师以及任何对 Go 性能优化感兴趣的人。</p> 
+
+<p><a href="https://dev.to/shrsv/unpacking-go-variadic-functions-clever-ways-to-use-them-4p25">深入 Go 变参函数：巧妙的使用方法</a><br>本文介绍了 Go 语言中变参函数的概念、使用方法和示例代码。变参函数允许函数接受可变数量的参数，类似于其他语言中的可选参数。文章涵盖了传递切片到变参函数、混合使用变参和非变参参数、使用变参函数进行可选配置以及处理多种类型的变参接口等内容，并指出了常见的陷阱及如何避免。最后总结了变参函数的常见用例以及何时应该避免使用它们。</p> 
+
+<p><a href="https://dev.to/shrsv/mastering-gos-empty-interface-powerful-uses-and-hidden-traps-3kb2">掌握 Go 的空接口：强大的用途和隐藏的陷阱</a><br>Go 的空接口 `interface{}` 能够容纳任何类型的值，这使其成为一个强大的工具，但也容易导致代码混乱或性能下降。本文深入探讨了空接口的用途、陷阱以及最佳实践，并提供了多个代码示例和表格，帮助读者理解如何在 Go 代码中安全高效地使用空接口。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.tremolo.io/post/kubernetes-authentication-comparing-solutions">Kubernetes 认证 - 解决方案对比</a><br>本文深入探讨了 Kubernetes 集群认证的多种解决方案，包括 OpenUnison、Keycloak、Dex 和 Pinniped。文章的目标是让读者了解各种解决方案在典型集群部署中提供的功能，以及针对常见企业需求（包括每个项目的清单和分步说明）的部署过程。文章还探讨了常见操作任务、多集群管理、边缘情况以及最终的思考和比较。</p>
+
+<p><a href="https://medium.com/@katyagorshkova/understanding-kafka-kraft-how-controllers-and-brokers-talk-in-the-zookeeper-less-world-a5e05a063f34">理解 Kafka KRaft：在无 ZooKeeper 的世界中控制器和代理如何通信</a><br>在 Apache Kafka 的最新版本中，ZooKeeper 正式弃用。取而代之的是，Kafka 现在使用 KRaft——一个内置的共识层，它取代 ZooKeeper 用于元数据存储和集群协调。KRaft 引入了一种基于 KRaft 控制器仲裁的新架构，负责处理元数据、领导者选举和存活性检查。然而，与久经考验且文档齐全的 ZooKeeper 不同，KRaft 仍然相对较新，缺乏对其内部通信协议的清晰、集中的文档。本文通过实验，深入研究了 KRaft 的内部工作机制，包括控制器之间的通信方式（拉取式）、元数据如何从控制器传播到代理等。</p>
+
+<p><a href="https://www.cockroachlabs.com/blog/clock-management-cockroachdb">CockroachDB中的时钟管理：良好的时间管理是关键</a><br>本文介绍了CockroachDB如何在分布式系统中使用NTP和软件技术管理时钟同步，以及针对单区域和多区域部署的指导。时钟同步对于分布式系统（如CockroachDB）至关重要。虽然原子钟和基于GPS的硬件可以提供纳秒级的精度，但它们会为典型的部署引入不必要的复杂性和成本障碍。CockroachDB采取了一种务实的方法，利用网络时间协议（NTP）以及基于软件的补偿技术，在数据库节点之间实现可靠的时间协调。文章还提供了有关在单区域、同构多区域和多云环境中操作CockroachDB的时钟管理指导。</p>
+
+<p><a href="https://www.16elt.com/2025/05/01/one-cache-cluster">共享 Redis 集群的风险：为何跨服务共享 Redis 集群会引发麻烦</a><br>本文探讨了跨服务共享单个 Redis 集群的风险。作者指出，这种做法虽然一开始看似简化了基础设施，但在系统规模扩大后，会导致诸多问题，例如单一的驱逐策略可能导致服务之间相互影响，监控和调试也变得更加困难。文章最后总结，在流量较小或存储共享静态数据的情况下，共享集群是可行的，但在其他情况下，最好为每个服务设置独立的 Redis 集群。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://newsletter.pragmaticengineer.com/p/how-ai-will-change-software-engineering">AI辅助编码将如何改变软件工程：残酷的真相</a><br>本文探讨了AI辅助编码如何改变软件工程，作者Gergely Orosz和特邀嘉宾Addy Osmani从实际应用出发，分析了开发人员如何使用AI工具，以及AI工具的优势和局限性。文章指出，AI工具能够显著提高效率，尤其能加速经验丰富的开发人员的工作流程，但在代码质量、可维护性和健壮性等方面仍然存在挑战。文章还预测了未来AI辅助软件工程的发展趋势，包括多模态功能的出现以及人机协作模式的转变。</p>
+
+<p><a href="https://rentry.co/samplers">大型语言模型采样：傻瓜指南</a><br>这份指南全面而通俗地解释了现代大型语言模型 (LLM) 中的各种采样方法，包括温度、惩罚机制、Top-K、Top-P、Min-P、Tail-Free Sampling、Mirostat 等，并深入探讨了不同采样方法的算法、相互作用和最佳应用顺序，帮助读者理解LLM如何生成文本以及如何通过调整采样参数来控制生成结果的创造性和连贯性。</p>
+
+<p><a href="https://venki.dev/notes/google-gemini-is-bad">Google Gemini 拥有最糟糕的 LLM API</a><br>Google Gemini 最新版本虽然在编码推理模型、长文本上下文模型、多模态模型以及长文本微调方面都处于领先地位，但其开发者体验却非常糟糕。文章列举了 Gemini API 的四个主要问题：API 分散在两个平台，功能不一致；文档质量差，信息不全且经常过时；Vertex AI SDK 不支持 API 密钥认证；官方 Vertex AI TS SDK 不支持微调模型。作者建议开发者使用 LLM 路由器（例如 Vercel AI SDK 或 OpenRouter）来集成 Google AI Studio 和 Vertex AI SDK，以改善开发体验。</p>
+
+<p><a href="https://claytonwramsey.com/blog/prompt">我宁愿阅读提示</a><br>作者表达了对大型语言模型 (LLM) 在写作中过度使用的担忧。他认为，学生、博主和研究人员依靠LLM生成内容，导致作品缺乏原创性和深度，并掩盖了个人思想的表达。文章探讨了人们使用LLM写作的原因，例如追求效率、缺乏自信或认为LLM能产生更好的作品。作者主张，即使写作能力有限，人类的原创思想也比LLM生成的文本更有价值和意义。他以一个实验为例，将文章的主题句输入给Google Gemini，结果生成的文本冗长乏味且缺乏原创性，进一步支持了他的观点。最终，作者呼吁人们拒绝让电脑代笔，坚持用自己的语言表达原创思想。</p>
+
+<p><a href="https://text-incubation.com/AI&#43;code&#43;is&#43;legacy&#43;code&#43;from&#43;day&#43;one">AI 代码从第一天起就是遗留代码</a><br>AI 代码从第一天起就是遗留代码 - Text Incubation</p>
+
+<p><a href="https://www.greptile.com/blog/ai-code-reviews-conflict">AI 代码审查：作者应该成为审查者吗？</a><br>本文探讨了使用 AI 审查 AI 编写的代码的悖论，以及这种方法是否合理。作者 Daksh Gupta 发现一个 AI 机器人比任何个人工程师提交的代码都要多，这引发了一个问题：AI 是否应该审查它自己生成的代码？文章讨论了 AI 的无状态性、不同 AI 工具的差异化架构以及人类在发现 AI 引入的错误方面的局限性等论点。作者认为，虽然 AI 提高了程序员的效率，但也降低了优秀工程师编写代码的平均质量，因为提示工程并不完美，并且工程师往往低估了对 AI 生成的代码进行仔细审查的必要性。此外，文章还指出，AI 在查找代码中的错误方面比人类更有效。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB is an open-source, fast, reactive, in-memory database optimized for modern hardware.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux is a modern Linux distribution built for Kubernetes.</p>
+
+<p><a href="https://github.com/Netflix/chaosmonkey">Netflix/chaosmonkey</a><br>Chaos Monkey is a resiliency tool that helps applications tolerate random instance failures.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+<p><a href="https://github.com/zyedidia/micro">zyedidia/micro</a><br>A modern and intuitive terminal-based text editor</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/googleapis/go-genai">googleapis/go-genai</a><br>Google Gen AI Go SDK provides an interface for developers to integrate Google&#39;s generative models into their Go applications.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/iyear/tdl">iyear/tdl</a><br>📥 A Telegram toolkit written in Golang</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/Wox-launcher/Wox">Wox-launcher/Wox</a><br>A cross-platform launcher that simply works</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/kubesphere/kubesphere">kubesphere/kubesphere</a><br>The container platform tailored for Kubernetes multi-cloud, datacenter, and edge management ⎈ 🖥 ☁️</p>
+
+<p><a href="https://github.com/blacktop/ipsw">blacktop/ipsw</a><br>iOS/macOS Research Swiss Army Knife</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

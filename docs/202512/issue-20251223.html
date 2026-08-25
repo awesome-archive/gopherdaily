@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251223.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251223</span>
+</p>
+<p>每日一谚：Keep dependencies up to date to avoid security vulnerabilities </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/23/goodbye-if-else-hell-openfeature-feature-flag-management-go/">告别“If-Else”地狱：OpenFeature 如何重塑 Go 应用的特性开关管理？</a><br>随着系统变得复杂，这种零散的、基于环境变量或配置文件的开关，迅速演变成了难以维护的“If-Else 地狱”。为了解决这个问题，特性开关（Feature Flag）系统应运而生。它们允许我们在不重新部署代码的情况下，动态地开启或关闭功能，甚至针对特 定用户群体进行灰度发布。 </p> 
+
+<p><a href="https://mp.weixin.qq.com/s/_rty4ZgbwdHn1oMKYZLC3Q">【API 设计之道】06 结构化错误处理：RFC 7807 与错误模型的最佳实践</a><br></p> 
+
+<p><a href="https://gaultier.github.io/blog/detecting_goroutine_leaks_with_dtrace.html">使用DTrace检测goroutine泄露</a><br>深入了解 Go 运行时如何建模和管理 goroutine，以及 DTrace 如何帮助我们观察和理解它。</p> 
+
+<p><a href="https://medium.com/@MonsieurTib/implementing-mqtt-5-in-go-a-deep-dive-into-client-design-part-ii-e35acaa17984">Go实现MQTT5：深入客户端设计</a><br></p> 
+
+<p><a href="https://dolthub.com/blog/2025-12-22-blog-images-migration/">我们如何将博客图片迁移到 S3</a><br>了解 DoltHub 如何将 3,000 多张博客图片从 GitHub 迁移到 S3，以提高构建时间和减小仓库大小，同时保持博客作者使用的便捷性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2025/12/22/developer-tools/python-typing-survey-2025-code-quality-flexibility-typing-adoption/">Python 2025 年类型调查：代码质量和灵活性是采用类型的主要原因</a><br>2025 年 Python 类型调查（由 JetBrains、Meta 和更广泛的 Python 类型社区的贡献者共同进行）全面回顾了 Python 类型系统和开发人员工具的现状。调查收到了 1241 份回复，显示出类型提示已成为大多数工程师开发的核心部分（86% 的受访者“总是”或“经常”使用）。主要优点包括：可选性和渐进式采用、提高可读性和文档、增强的 IDE 支持、捕获错误和代码正确性，以及高级特性（如泛型）。然而，主要挑战包括：第三方库的类型支持不足、高级特性（如泛型）的复杂性、工具生态系统的碎片化、缺乏运行时保证以及代码的冗长性。社区最期望的功能集中在引入 TypeScript 等语言中的特性（如交集类型、映射/条件类型）、可选的运行时类型执行、更好的泛型支持（如高阶类型）以及官方/内置的快速类型检查器。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/12/22/kubernetes-v1-35-kubelet-config-drop-in-directory-ga/">Kubernetes v1.35：Kubelet 配置下拉目录晋升为 GA</a><br>Kubernetes v1.35 版本发布，kubelet 配置下拉目录（drop-in directory）现已普遍可用（GA）。这项新的稳定特性简化了跨大型、异构集群的 kubelet 配置管理。现在，kubelet 命令行参数 `--config-dir` 已准备好投入生产并得到完全支持，允许指定一个包含 kubelet 配置下拉文件的目录，这些文件将自动与主 kubelet 配置合并。这使得集群管理员能够在不依赖复杂工具或手动配置管理的情况下，为 kubelets 维护一致的基础配置，并为不同的节点组或用例启用有针对性的定制。</p>
+
+<p><a href="https://linear.app/now/design-is-more-than-code">设计不仅仅是代码</a><br></p>
+
+<p><a href="https://kristoff.it/blog/asynchrony-is-not-concurrency">异步不是并发</a><br>这篇文章区分了异步（Asynchrony）、并发（Concurrency）和并行（Parallelism）这三个概念，作者提出了新的定义：异步是任务可以乱序执行且仍保持正确性的可能性；并发是系统同时推进多个任务的能力（通过并行或任务切换）；并行是在物理层面同时执行多个任务的能力。文章指出，在Zig语言中，使用 `io.async` 不意味着并发，允许异步代码在单线程阻塞模式下运行，从而避免了某些编程语言生态中异步代码的“病毒式传播”问题，并允许同步和异步代码在同一程序中共存而不妥协。此外，对于需要并发才能保证正确性的场景（如客户端-服务器模型），Zig提供了 `io.asyncConcurrent` 来明确要求并发执行。</p>
+
+<p><a href="https://bloggeek.me/webrtc-insights-5-years">WebRTC五年洞察</a><br></p>
+
+<p><a href="https://surfingcomplexity.blog/2025/12/20/why-i-dont-like-correction-of-error">为什么我不喜欢“错误修正”</a><br>作者对AWS等公司使用的“错误修正”（Correction of Error, COE）这一术语表示反感，因为它暗示了事件的发生是由于“错误”造成的，并且将事后回顾流程的目标仅仅局限于“修复错误”。作者认为这种观点是危险的，因为它限制了从事件回顾中获得的益处。文章指出，虽然事件中几乎总能找到软件缺陷（defects）或流程错误（process errors），但将事件完全归咎于缺陷是片面的，因为现代系统中充斥着未被发现的缺陷，但它们并非都是导致系统性故障的充分条件。此外，作者还讨论了对人类工作中“错误”的关注，认为事后回顾应侧重于理解正常工作是如何完成的，而不是简单地通过添加限制来“修正”被视为错误的实践，因为这些限制反而可能增加未来的风险。作者总结道，将目标定为“修正错误”过于微弱，我们应该追求更高的目标来真正提高系统的可靠性。</p>
+
+<p><a href="https://tsak.dev/posts/werner-vogels-is-right">Werner Vogels is right - tsak.dev</a><br>When even the CTO of Amazon thinks that showing restraint in businesses adopting AI, he might be onto something. The author agrees with Werner Vogels&#39; sensible stance on the current AI hype, contrasting it with the prevailing pressure to adopt AI rapidly, even without clear business cases. Vogels advocates for businesses to educate themselves on AI capabilities before making architectural decisions driven by media hype.</p>
+
+<p><a href="https://www.shiveesh.com/thoughts-and-ideas/the-big-o-complexity-of-vibe-coders">The Big-O Complexity of Vibe Coders</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/23/cooking-with-claude/#atom-everything">Cooking with Claude</a><br>作者分享了最近使用大型语言模型（LLM，特别是 Claude）进行烹饪的乐趣和经验。他描述了如何让 Claude Opus 4.5 根据两张食谱卡的照片生成一个定制的、交互式的烹饪计时应用，用于同时准备两份不同的 Green Chef 餐点。这个定制工具成功地帮助他精确掌握了复杂烹饪过程中的所有步骤和时间安排。此外，他还分享了使用 LLM 从零开始生成食谱的经历，认为 LLM 提供了“平均食谱”的优秀版本，并且能够根据偏好（如“素食化”或“增加风味”）进行修改，使得探索烹饪变得非常有趣。作者甚至提议将 LLM 烹饪能力作为一项基准测试。</p>
+
+<p><a href="https://antirez.com/news/157">Redis之父在2025年末对人工智能的反思</a><br>作者反思了2025年人工智能领域的几点重要变化和观点：1. 过去关于大语言模型（LLM）只是“随机鹦鹉”的观点已基本被摒弃。2. 思维链（Chain of Thought, CoT）被认为是提高LLM输出质量的关键，它涉及模型表示中的采样（内部搜索）和强化学习。3. 模型的扩展性不再仅限于上下文窗口大小，强化学习与可验证奖励的应用是下一大趋势。4. 程序员对AI辅助编程的抵触情绪降低，LLM的实用性使其被更广泛地接受。5. 尽管有人在探索Transformer的替代方案，作者认为现有LLM架构通过改进的RL仍有可能达到通用人工智能（AGI）。6. 否认CoT改变了LLM本质的观点是错误的，因为CoT仍然是逐个Token生成的。7. ARC测试（Abstraction and Reasoning Corpus）已从挑战LLM的测试转变为验证其能力的工具。8. 作者认为未来20年AI面临的根本挑战是避免人类的灭绝。</p>
+
+<p><a href="https://blog.ezyang.com/2025/12/code-review-as-human-alignment-in-the-era-of-llms">代码审查作为大型语言模型时代的人类对齐</a><br>作者探讨了在大语言模型（LLMs）辅助生成代码的时代，代码审查的重点应从纠正机械性错误转向作为“人类对齐”的机制。作者观察到LLMs倾向于生成过度防御性的代码，代码审查的真正价值在于使作者（或操作LLM的工程师）与审查者在哪些防御是必要的、全局系统不变量等方面达成一致。此外，由于生成代码的成本降低，作者期望作者能提供更高层次的信息，并愿意投入更多精力去理解和指导LLM的输出，而不是仅仅修复机械错误。作者认为，未来软件工程师的价值将更多地体现在阅读代码、宏观思考、清晰沟通和良好品味等软技能上，而不是纯粹的编码能力。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/Dyneteq/reconya">Dyneteq/reconya</a><br>Network reconnaissance and asset discovery tool</p>
+
+<p><a href="https://github.com/WCY-dt/MrRSS">WCY-dt/MrRSS</a><br>A modern, cross-platform desktop RSS reader. 一个现代化、跨平台的 RSS 阅读器.</p>
+
+<p><a href="https://github.com/inngest/inngest">inngest/inngest</a><br>The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.</p>
+
+<p><a href="https://github.com/hyperledger/fabric">hyperledger/fabric</a><br>Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. Its modular and versatile design satisfies a broad range of industry use cases. It offers a unique approach to consensus that enables performance at scale while preserving privacy.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>Powerful system container and virtual machine manager</p>
+
+<p><a href="https://github.com/NexaAI/nexa-sdk">NexaAI/nexa-sdk</a><br>Run the latest LLMs and VLMs across GPU, NPU, and CPU with PC (Python/C&#43;&#43;) &amp; mobile (Android &amp; iOS) support, running quickly with OpenAI gpt-oss, Granite4, Qwen3VL, Gemma 3n and more.</p>
+
+<p><a href="https://github.com/hatchet-dev/hatchet">hatchet-dev/hatchet</a><br>🪓 Run Background Tasks at Scale</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS / MPEG-TS / RTP media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/qdm12/gluetun">qdm12/gluetun</a><br>VPN client in a thin Docker container for multiple VPN providers, written in Go, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>Simple and easy to use DDNS. Support Aliyun, Tencent Cloud, Dnspod, Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, Namecheap, NameSilo...</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>AI-Powered Photos App for the Decentralized Web 🌈💎✨</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260601.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260601</span>
+</p>
+<p>每日一谚：A good Go project has clear separation of concerns. Respect boundaries </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/01/coding-10x-faster-isnt-10x-development-speed-google-ai-bottleneck">写代码快 10 倍，不等于研发快 10 倍！Google 揭秘 AI 系统级瓶颈</a><br>在刚刚结束的 Google I/O 2026 大会上，Google 首席工程师 Adam Bender 用一场名为《Software engineering at the tipping point》（处于临界点的软件工程）的硬核演讲，狠狠地戳破了这个幻觉。 Adam 在演讲中抛出了一个极其反直觉的观点： “能够 10 倍速地生成代码，绝对不等于你能成为 10 倍速的工程师。” 如果你以为 AI 的引入只是让你的代码写得更快，那么你的团队、你的系统，甚至是你的职业生涯，都将在未来 18 个月内面临一场灭顶之灾。 为什么？因为我们忽略了一个比代码更庞大、更脆弱的存在——软件生态系统（Software Ecology</p> 
+
+<p><a href="https://tonybai.com/2026/05/31/google-io-2026-defining-the-agentic-ai-era">Google I/O 2026：Jeff Dean 携 DeepMind 众神宣告，AI Agent 正在终结“标准化软件”时代</a><br>在这场高密度的技术对谈中，四位巨头向全球开发者宣布了一个极其震撼的行业共识：AI 已经全面跨入“智能体（Agent）时代”。而这个时代的 到来，正在彻底瓦解并重构我们维系了数十年的软件开发范式与人机交互界面。大模型不再只是一个陪你聊天的对话框，而是演变成了能够 24/7 独立工作的“数字员工集群”。在这场波澜壮阔的变革中，软件工程、硬件设计乃 至人类程序员的职业路径，都迎来了颠覆性的重塑。</p> 
+
+<p><a href="https://tonybai.com/2026/05/30/ghostty-creator-slams-ai-coding-performance-1-5ms-vs-0-02ms">AI 优化 1.5ms，手写 0.02ms！Ghostty 作者痛批 AI 编程“平庸陷阱”</a><br>就在最近，Mitchell 在 X（推特）上发布的一条Tweet，在开发者社区炸开了锅。这篇帖子的起因，并不是大家猜测的“Ghostty 要放弃 Zig 转投 Go 语言”，而是一场极其讽刺、甚至有些黑色幽默的 “AI Agent 代码优化实验 ”。在这场实验中，Mitchell 揭露了当今 AI 编码工具最致命的缺陷，并把那些盲目迷信 AI 输出的开发者骂成了 “在平庸的喷泉中痛饮的羊 群（Sheeple）”</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/sZVo7-e7aaMyCY-BeYBzJg">【AI 时代软件工程师的算法图谱】06 堆与 Top K：高频热点与调度器</a><br>在海量数据处理和高并发系统中，我们经常面临这样的需求： 热搜榜单、任务调度、定时器。这三个看似不相关的问题，背后都指向了同一个数据结构——堆（Heap）</p> 
+
+<p><a href="https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/">绅士勒索软件：剖析一个自我传播的Go加密器</a><br>本文详细分析了绅士勒索软件的工作原理，这是一种用Go语言编写的自我传播加密器。研究人员深入研究了其传播机制和加密技术，为防御此类威胁提供了重要见解。</p> 
+
+<p><a href="https://blainsmith.com/articles/httptrace-with-go/">使用Go的net/http/httptrace追踪HTTP请求</a><br>net/http/httptrace自Go 1.7起就存在于标准库中，但大多数Go开发者从未使用过这个强大的HTTP请求追踪工具。</p> 
+
+<p><a href="https://goperf.dev/02-networking/low-level-optimizations/">重要的Socket选项 - Go优化指南</a><br>本文探讨了Go网络编程中关键的Socket选项配置，涵盖了并发与同步、I/O优化、编译器级优化等主题，帮助开发者提升网络性能。</p> 
+
+<p><a href="https://segflow.github.io/post/fast-file-search-go/">在4GB的干草堆中寻找一根针：在Go中从0.75 GB/s提升到49 GB/s</a><br>作者面临一个挑战：在一个几乎全为零的4GB文件中快速定位最后一个int64值。通过优化算法，实现了从0.75 GB/s到49 GB/s的性能飞跃。</p> 
+
+<p><a href="https://zackoverflow.dev/writing/why-does-tsgo-use-so-much-memory">为什么tsgo使用这么多内存？</a><br>当tsgo处理相当规模的TypeScript项目时，使用数GB内存并不罕见。本文探讨了内存消耗高的原因及可能的解决方案。</p> 
+
+<p><a href="https://packagemain.tech/p/the-filesystem-is-the-api-with-tigerfs">文件系统即是API（使用TigerFS)</a><br>本文探讨了TigerFS的创新理念，将文件系统与真实数据库相结合，重新定义了数据访问和管理的API设计模式。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://seangoedecke.com/weird-projects-i-shipped-with-ai/">我用AI完成的奇怪项目</a><br>没有LLMs的帮助，我不可能完成这些项目。从VicFlora网站抓取基础二分检索键是一项具有挑战性的任务，其API文档已过时，数据获取途径复杂且大多不工作。</p>
+
+<p><a href="https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/">AI是否正在重演前端的&#39;失去的十年&#39;？</a><br>AI对程序员工作的影响让许多前端开发者感到熟悉，因为这已经在我们身上发生过。本文探讨了AI时代开发者面临的挑战与机遇。</p>
+
+<p><a href="https://www.romaglushko.com/blog/k8s-gateway-api/">Kubernetes Gateway API详解</a><br>2025年11月，Kubernetes宣布NGINX Ingress Controller将在2026年3月弃用。作为广泛使用的入口控制器，这一变化促使开发者转向新的Gateway API标准。</p>
+
+<p><a href="https://hftuniversity.com/post/the-c-standard-library-has-been-walking-itself-back-for-fifteen-years-and-the-receipts-are-public">C&#43;&#43;标准库十五年来一直在自我修正，证据公开</a><br>Sandor Dargo本月发表的文章揭示了C&#43;&#43;标准库在过去十五年中多次改变立场的情况。这些变化都有公开记录，反映了标准演化的复杂性。</p>
+
+<p><a href="https://grpc.io/blog/grpc-rust-announcement/">gRPC-Rust预览版本发布</a><br>gRPC项目很高兴宣布其第一个gRPC-Rust预览版本。这个新工具使Rust开发者能够利用gRPC的高性能RPC框架构建分布式系统。</p>
+
+<p><a href="https://mijndertstuij.nl/posts/migrating-ingress-nginx-envoy-gateway/">从ingress-nginx迁移到Envoy Gateway</a><br>随着ingress-nginx的弃用，许多Kubernetes用户需要迁移到新的入口解决方案。本文详细介绍了如何从ingress-nginx平滑迁移到Envoy Gateway。</p>
+
+<p><a href="https://grpc.io/blog/grpc-rust-client-api-1/">gRPC-Rust客户端API的演变（第1部分/共2部分）</a><br>本文详细解释了新的gRPC-Rust客户端API背后的背景和设计理念。第一部分重点介绍了API改进的核心动机和主要变化。</p>
+
+<p><a href="https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/">领域专业知识一直是真正的护城河</a><br>编写软件的难点从来不是编码本身，而是在头脑中构建领域的工作模型。真正的竞争优势来自于深厚的领域专业知识，而非仅仅是技术能力。</p>
+
+<p><a href="https://x.com/RianSweetDoris/status/2060399898798018696">Rian Doris在X上发文：&#39;这个工作空间设置将改变你的生活&#39; / X</a><br>从达尔文到莎士比亚，历史上伟大的创新者都有特定的创作空间。作者探讨了工作环境如何影响创造力和生产力，以及如何优化个人工作空间。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/">SQLite是实现持久化工作流的全部所需</a><br>DBOS最近提出观点，如果你已经信任你的数据库，就不需要单独的编排层。SQLite作为轻量级但功能强大的数据库，足以支持复杂的持久化工作流。</p>
+
+<p><a href="https://koenvangilst.nl/lab/mistral-ai-now-summit">Mistral AI Now峰会笔记</a><br>作者参加了Mistral AI在巴黎举办的AI Now峰会，获得了关于其模型、欧洲AI未来计划等见解。Mistral已不再仅仅是一个模型公司，正在向更全面的AI解决方案提供商转型。</p>
+
+<p><a href="https://www.moderndescartes.com/essays/ai_and_expertise/">AI时代的专业知识</a><br>在AI智能体时代，雇佣初级工程师是否还有意义？初级工程师成本高昂，包括薪资和资深工程师的时间投入。本文探讨了AI如何改变专业知识的价值和使用方式。</p>
+
+<p><a href="https://www.securityweek.com/anthropic-mythos-detected-23000-potential-vulnerabilities-across-1000-oss-projects/">Anthropic：Mythos在1000个开源项目中检测到23000个潜在漏洞 - SecurityWeek</a><br>Anthropic声称其Claude Mythos模型在超过1000个开源软件项目中发现了数千个严重漏洞。这一发现展示了AI在安全审计和漏洞检测方面的巨大潜力。</p>
+
+<p><a href="https://reactjava.substack.com/p/10-timeless-ai-and-llm-engineering">2026年开发者必读的10本AI和LLM工程书籍</a><br>本文精选了2026年开发者必读的10本AI和LLM工程书籍，涵盖了从基础理论到实践应用的全方位内容，帮助开发者跟上AI技术发展的步伐。</p>
+
+<p><a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/">使用ADK构建可暂停、恢复且永不丢失上下文的长时运行AI智能体 - Google开发者博客</a><br>大多数智能体教程只停留在无状态聊天机器人层面，而真实的企业工作流需要更复杂的持久化能力。ADK提供了构建长时间运行AI智能体的解决方案，能够处理跨天的工作流程。</p>
+
+<p><a href="https://www.elidedbranches.com/2026/05/guidelines-for-respectful-use-of-ai.html">省略分支：AI使用的尊重指南</a><br>许多公司在采用AI工具时，主要关注安全、合规或成本角度的政策，却忽视了团队如何整体协作使用AI的问题。本文提供了AI使用的尊重和有效指南。</p>
+
+<p><a href="https://www.seangoedecke.com/build-agents-not-pipelines/">构建智能体，而非管道</a><br>在计算机程序中使用LLM只有两种方式：作为管道的一部分，或作为智能体。这意味着要么在代码中表达程序的控制流，要么给LLM工具并让它自己管理控制流。</p>
+
+<p><a href="https://ben.gesoff.uk/posts/reviewing-large-changes-with-jj/">使用Jujutsu审查大型变更 - Ben Gesoff</a><br>作者分享了使用Jujutsu（jj）作为Git替代工具六个月的经验。Jujutsu提供了更直观的分支管理和变更审查流程，特别适合处理大型项目中的复杂变更。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
+
+<p><a href="https://github.com/safing/portmaster">safing/portmaster</a><br>🏔 Love Freedom - ❌ Block Mass Surveillance</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/Panonim/dynacat">Panonim/dynacat</a><br>Dynacat is a dashboard focused on dynamic reloading and easy integrity with external applications.</p>
+
+<p><a href="https://github.com/zakirullin/files.md">zakirullin/files.md</a><br>🌱 Private, quiet space for thinking. A simple app for your .md files.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

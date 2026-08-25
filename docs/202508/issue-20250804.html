@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250804.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250804</span>
+</p>
+<p>每日一谚：It is easier to optimize readable code than make heavily optimized code readable. If you can not achieve both, in most cases, default to readability. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/04/continuous-profiling-fourth-pillar">持续性能分析正在成为继Metrics、Logs和Traces之后，可观测性的“第四大支柱”</a><br>近日，可观测性领域的领导者 Datadog 在其官方技术博客中发表了一篇极具洞察力的文章，题为《Why continuous profiling is the fourth pillar of observability》，它为这个难题提供了答案。文章掷地有声地论证了，一个新兴的技术范式——持续性能分析 (Continuous Profiling)——正在补全可观测性的关键拼图，成为继 Metrics、Logs 和 Traces 之后，不可或缺的“第四大支柱”。本文将结合该文的核心论点，为 Go 开发者深度解读这场正在发生的变革。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoReadAllFromChannelWithTimeout">理解如何从channel中读取所有数据</a><br></p> 
+
+<p><a href="https://getpid.dev/blog/tls-certificates">在 Go 中颁发 TLS 证书</a><br>一份在 Go 中颁发 TLS 证书的实用指南：自签名、证书颁发机构、证书签名请求。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/08/04/automating-eks-cis-compliance-with-kyverno-and-kubebench/">使用 Kyverno 和 KubeBench 自动化 EKS CIS 合规性</a><br>使用 CNCF 云原生工具实施 CIS 安全控制的实用方法。在多个集群上维护 Amazon EKS 的 CIS 基准合规性是云中常见的挑战…</p>
+
+<p><a href="https://engineering.fb.com/2025/08/04/virtual-reality/building-a-human-computer-interface-for-everyone-meta-tech-podcast/">构建人人适用的计算机人机界面</a><br>如果你能够仅通过细微的手部动作来控制任何设备，会怎么样？Meta 的 Reality Labs 的新研究正更坚定地指向使用表面肌电图 (sEMG) 的腕戴式设备成为人机交互的未来。</p>
+
+<p><a href="https://faun.pub/mcp-for-devops-building-our-mcp-server-from-scratch-to-interact-with-kubernetes-215254caba8e">MCP for DevOps: Building Our MCP Server from Scratch to Interact with Kubernetes</a><br>A comprehensive, hands-on guide to developing your own MCP server from the ground up for Kubernetes cluster management.</p>
+
+<p><a href="https://grantslatton.com/how-to-design-document">如何编写好的设计文档</a><br>本文是一个关于如何编写设计文档的指南，包括定义、目标、组织、编辑、实践技巧等方面。 重点强调了设计文档的重要性，就像数学中的证明一样，旨在说服读者相信设计是最优的。 同时也强调了清晰的组织和编辑的重要性，以及如何通过实践来提高写作水平。</p>
+
+<p><a href="https://euri.ca/blog/2025-7-tips-from-7-years-at-pagerduty">我在PagerDuty获得的最佳建议</a><br>从披萨到IPO：我在PagerDuty获得的最佳建议。7年来的7条建议</p>
+
+<p><a href="https://hadid.dev/posts/living-coding">Live coding sucks</a><br>解释了作者认为实时编码面试不公平的原因，并讨论了压力对技术面试表现的影响。</p>
+
+<p><a href="https://signoz.io/blog/why-observability-isnt-just-for-sres">为什么可观察性不仅仅适用于 SRE（以及开发人员如何开始）</a><br>这篇博文旨在帮助任何迷失的人找到他们进入可观察性的道路，并提醒开发人员，他们应该比以往任何时候都更积极地考虑可观察性。</p>
+
+<p><a href="https://kprotty.me/2025/07/31/sync-primitives-are-functionally-complete.html">同步原语在功能上是完备的</a><br>你可以使用任何线程同步原语来构建任何其他原语。这里是如何做到的：首先，原语需要支持阻塞调用者，直到某个条件发生。有了它，你就可以创建一个名为 `Event` 的新原语。这仅仅是一个类型，其中一个线程调用 `event.wait()`，它会暂停其调用者，直到另一个线程调用 `event.set()`。将其视为等待一个布尔值变为真。现在有了 `Event`，它可用于创建任何其他同步原语。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Aug/3/privacy-design/#atom-everything">ChatGPT 的分享对话框演示了设计隐私偏好的难度</a><br>ChatGPT 刚刚删除了他们的“让此聊天可被发现”的分享功能，此前有大量用户无意中通过谷歌搜索公开了他们的私人聊天。这篇文章探讨了为什么这种设计在用户体验方面存在挑战。</p>
+
+<p><a href="https://github.blog/ai-and-ml/llms/solving-the-inference-problem-for-open-source-ai-projects-with-github-models">使用 GitHub 模型解决开源 AI 项目的推理问题</a><br>通过使用 GitHub 免费的推理 API，可以让你的 AI 驱动的开源软件更容易被访问。</p>
+
+<p><a href="https://blog.puzzmo.com/posts/2025/07/30/six-weeks-of-claude-code">使用 Claude Code 的 6 周</a><br>思考这仅仅是几周的时间，真是不可思议。
+
+Claude Code 极大地改变了我编写和维护大规模代码的关系。我仍然以相同水平的质量编写代码，但我觉得我有了新的表达自由，这种自由很难完全表达。
+
+Claude Code 让我摆脱了编写每一行代码的束缚，我仍然认为自己对交付给 Puzzmo 的所有内容负全部责任，但是能够即时创建一个完整的场景，而不是逐行、逐字地进行，这非常强大。</p>
+
+<p><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code: 智能体编码的最佳实践</a><br>Claude Code 是一个用于代理编码的命令行工具。这篇文章涵盖了已被证明对在各种代码库、语言和环境中有效使用 Claude Code 有效的技巧。</p>
+
+<p><a href="https://kiro.dev/blog/kiro-and-the-future-of-software-development">Kiro and the future of AI spec-driven software development</a><br>本文介绍了 Kiro，一个旨在通过规范驱动的开发方法来提高 AI 辅助软件开发效率的工具。文章讨论了规范在软件开发中的重要性，并解释了 Kiro 如何通过允许开发人员在规范级别工作来简化流程，从而使开发人员能够更有效地表达他们的意图。文章还讨论了规范驱动的开发方法的三个主要好处：更好的理解、AI 代理的改进指导以及控制基于提示的编码的混乱。</p>
+
+<p><a href="https://solmaz.io/typed-languages-are-better-suited-for-vibecoding">类型语言更适合“VibeCode”</a><br>自从Claude Code推出以来，作者的编程习惯发生了改变。作者发现，由于安全保障，类型语言（如TypeScript、Rust和Go）更适合“VibeCode”。结合AI工具，即使项目规模较大，使用类型语言也能比Python更快更安全。作者预测，Python在公司生产部署中的应用可能会减少。</p>
+
+<p><a href="https://martinfowler.com/articles/exploring-gen-ai/partner-with-ai-and-throw-away-the-code.html">与 AI 合作，抛弃代码</a><br>总结：关于 AI 如何帮助完成非平凡的编程任务的个人经验。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/sst/opencode">sst/opencode</a><br>AI coding agent, built for the terminal.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/coroot/coroot">coroot/coroot</a><br>Coroot is an open-source APM &amp; Observability tool, a DataDog and NewRelic alternative. Metrics, logs, traces, continuous profiling, and SLO-based alerting, supercharged with predefined dashboards and inspections.</p>
+
+<p><a href="https://github.com/sky22333/hubproxy">sky22333/hubproxy</a><br>基于Go的自托管轻量级、高性能的多功能代理加速服务，提供 Docker 镜像加速、GitHub 加速、下载离线镜像等功能。单域名实现所有功能，支持仓库审计。流式转发，无缓存。</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/hypermodeinc/dgraph">hypermodeinc/dgraph</a><br>high-performance graph database for real-time use cases</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/owasp-amass/amass">owasp-amass/amass</a><br>In-depth attack surface mapping and asset discovery</p>
+
+<p><a href="https://github.com/slackhq/nebula">slackhq/nebula</a><br>A scalable overlay networking tool with a focus on performance, simplicity and security</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

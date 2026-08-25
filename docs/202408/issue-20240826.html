@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240826.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-26</span>
+</p>
+<p>每日一谚：Avoid tight coupling between modules </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/nLgg18iG3ZIt-ojHqPuqRA">IEEE Spectrum 2024排行榜：Rust和TypeScript崛起，Go语言表现如何？</a><br>编程语言排行榜分析</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/12CYni0M0Ek3p_lYfGhz4g">Go 1.18之后的语法新特性Quiz，你能作对几个？</a><br>Go 1.18之后的新语法知多少</p> 
+
+<p><a href="https://eltonminetto.dev/en/post/2024-08-24-resilience-in-communication-between-microservices-using-the-failsafe-go-lib/">使用 failsafe-go lib 在微服务之间进行通信的弹性</a><br>源文档深入探讨了如何使用 failsafe-go 库增强微服务之间通信的弹性。它首先定义弹性及其在预期和意外条件下维护系统运行的重要性。本文档进一步深入探讨了 failsafe-go 在提高通信弹性方面的应用，从两个 Go 服务（“serviceA”和“serviceB”）的基本设置开始。然后，它介绍并解释了各种弹性策略的实施，例如超时、熔断、重试和回退。本文档最后讨论了策略组合，演示了如何组合这些策略以创建更具弹性的应用程序。</p> 
+
+<p><a href="https://blog.joshsoftware.com/2024/08/26/guide-to-json-marshal-unmarshal-and-encode-decode/">JSON marshal/unmarshal和编码/解码指南</a><br>该博客文章提供了在 Go 中理解和使用 JSON 编组/解编组和编码/解码函数的深入指南。它解释了如何将 Go 数据结构转换为 JSON，反之亦然，以及如何有效地写入和读取 JSON 数据。作者将最适合中小型数据集和完整数据操作的编组/解组函数与更适合实时处理大型数据集或流数据的编组/解码函数的使用进行了对比。此外，该博文还包括一些实际示例，例如对 API 的响应进行编码和解码 API 响应，以说明这些概念。该指南旨在通过掌握这些 JSON 处理技术来帮助开发人员编写更高效且可扩展的 Go 应用程序。</p> 
+
+<p><a href="https://dev.to/nilebits/how-to-create-your-first-mac-app-using-go-4jcc">How to Create Your First Mac App Using Go</a><br>This comprehensive guide provides an in-depth look at creating a Mac app using the Go programming language, highlighting its simplicity, performance, and cross-platform capabilities. It begins by detailing the necessary setup, including installing Go, Xcode Command Line Tools, and the Gio library for GUI development. The tutorial then guides users through building a basic &#34;Hello World&#34; app and subsequently enhances it by adding interactive elements like buttons and text input fields. Further, it introduces advanced features such as a dropdown menu and discusses the process of packaging the app as a standalone Mac application, including code signing and notarization. The guide concludes with resources for further learning and exploration of Go and Gio for Mac app development.</p> 
+
+<p><a href="https://www.theinsaneapp.com/2024/08/how-to-optimize-your-software-development-workflow.html">如何优化您的软件开发工作流程</a><br>TheInsaneApp 的文章提供了有关如何优化软件开发工作流程的全面指南。它强调了采用敏捷方法（如 Scrum 或 Kanban）来增强迭代开发和对变化的响应能力的重要性。实施持续集成和持续部署 （CI/CD） 管道对于自动化集成和部署流程也至关重要，从而减少手动错误并加快发布周期。讨论了自动化工具在简化重复性任务和促进协作方面的作用，以及有效使用版本控制系统来跟踪更改和促进团队协作的重要性。最后，本文强调了优先考虑代码审查对于提高代码质量、知识共享和团队内部指导的价值。</p> 
+
+<p><a href="https://blog.bitsrc.io/5-misconceptions-about-monorepos-fcc284ded064">关于 monorepos 的 5 个误解</a><br>Ashan Fernando 的文章解决并揭穿了关于 monorepo 的五个常见误解，强调它们并非天生难以扩展、大公司独有或容易构建时间长。Fernando 澄清说，monorepos 对各种规模的公司都有好处，可以增强协作并简化依赖管理。他解释说，虽然 monorepo 会使依赖项管理复杂化是一个神话，但使用像 Bit 这样的正确工具，它们实际上可以简化流程。此外，Fernando 认为，合并冲突并非 monorepo 所独有，而是可能发生在任何开发结构中，适当的治理可以缓解它们。本文可作为了解使用 monorepo 的实际优势和挑战的指南，倡导使用适当的策略和工具。</p> 
+
+<p><a href="https://www.piglei.com/articles/programmer-reading-list-1/">程序员阅读清单：我喜欢的 100 篇技术文章（1-20）</a><br>《程序员阅读清单:我喜欢的100篇技术文章》是一篇由作者撰写的系列文章,主要关注程序员通识、软件工程、后端开发、技术写作、Python语言、Go语言等领域。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/how-to-fix-eslint-violations-with-ai-assistance/">如何使用 AI 协助修复 ESLint 冲突</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，这通常是由于发出请求的客户端缺乏权限。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明，尝试访问服务器上的特定资源的用户未被授予执行此操作所需的权限。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2024/Aug/24/pipe-syntax-in-sql/#atom-everything">SQL 有问题。我们可以修复它们：SQL 中的 Pipe 语法</a><br>本文讨论了 Google 关于使用管道表示法的新 SQL 查询语法的研究论文，旨在解决 SQL 查询中子句顺序的混淆。Google 自 2 月以来一直在实施这种替代语法，在 Google Research 的一篇博文中强调了这一观点，并已在 Google 内部拥有大量用户。源文档的作者 Claude 分享了他使用 Google 的 AI Studio 将研究论文的 PDF 转换为 HTML 的经验，尽管遇到了一些限制和问题。他还批评了在研究论文中使用 PDF 并倡导更好的 Web 实践，例如将研究发布为网页或将其转换为 HTML。</p>
+
+<p><a href="https://simonwillison.net/2024/Aug/26/gemini-bounding-box-visualization/#atom-everything">Gemini 边界框可视化</a><br>Simon Willison 的博客文章介绍了使用 Claude 3.5 Sonnet 开发的 Gemini 边界框可视化工具。该工具将图像中对象周围的边界框可视化，这是最初在研究 Gemini 的视觉 API 时发现的功能。该博文详细介绍了如何使用该工具，包括选择图像、输入提示以及可视化原始图像上的边界框。Willison 还讨论了 Gemini 的 API 与 Claude 的工具的集成，从而能够创建一个浏览器应用程序，该应用程序可以提示 Gemini 并直接在网页上显示结果。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/Permify/permify">Permify/permify</a><br>一种开源授权即服务，其灵感来自 Google Zanzibar，旨在为任何应用程序构建和管理精细且可扩展的授权系统。</p>
+
+<p><a href="https://github.com/xvzc/SpoofDPI">xvzc/SpoofDPI</a><br>用 Go 编写的简单快速的反审查工具</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>适用于Windows、macOS和Linux的跨平台备份工具，具有快速、增量备份、客户端端到端加密、压缩和重复数据删除功能。包括 CLI 和 GUI。</p>
+
+<p><a href="https://github.com/halfrost/LeetCode-Go">halfrost/LeetCode-Go</a><br>✅ Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode 题解</p>
+
+<p><a href="https://github.com/jeessy2/ddns-go">jeessy2/ddns-go</a><br>简单易用的 DDNS。支持阿里云、腾讯云、dnspod、Cloudflare、回调、华为云、百度云、Porkbun、GoDaddy、Namecheap、NameSilo...</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 快速简单的视频下载库和用 Go 编写的 CLI 工具</p>
+
+<p><a href="https://github.com/matrix-org/dendrite">matrix-org/dendrite</a><br>Dendrite 是用 Go！</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>后端大师课：用 Go 构建一个简单的银行服务</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速的分布式存储系统，适用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 磁盘查找、云分层。Filer 支持云驱动器、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+<p><a href="https://github.com/siderolabs/talos">siderolabs/talos</a><br>Talos Linux 是为 Kubernetes 构建的现代 Linux 发行版。</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源的轻量级笔记服务。轻松捕捉和分享您的精彩想法。</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>适用于去中心化 Web 🌈💎✨ 的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>快速、安全、高效的备份程序</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>世界上最快的网站构建框架。</p>
+
+<p><a href="https://github.com/a-h/templ">a-h/templ</a><br>一种用于在 Go 中编写 HTML 用户界面的语言。</p>
+
+<p><a href="https://github.com/rabilrbl/jiotv_go">rabilrbl/jiotv_go</a><br>在您的所有设备上解锁 JioTV 的魔力，无需 JioTV 应用程序。在 Golang 中用爱精心打造，将速度和效率完美融合！🌟✨</p>
+
+<p><a href="https://github.com/reviewdog/reviewdog">reviewdog/reviewdog</a><br>🐶 与任何代码分析工具集成的自动化代码审查工具，无论编程语言如何</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>使用 Gitleaks 🔑 保护和发现机密</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

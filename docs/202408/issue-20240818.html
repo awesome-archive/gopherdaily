@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240818.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-18</span>
+</p>
+<p>每日一谚：The bigger the interface, the weaker the abstraction </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.jvt.me/posts/2024/08/16/gophercon-uk-2024/">GopherCon UK 2024回顾</a><br></p> 
+
+<p><a href="https://t.zsxq.com/xYdtA">Go 1.23中值得关注的那些变化(sponsor)</a><br></p> 
+
+<p><a href="https://thekoreanguy.medium.com/how-to-use-iter-in-go-1-23-99f8bb65c6db">如何在Go 1.23中使用iter</a><br>该文档讨论了 Go 中迭代器的概念，它在 1.23 版的 &#39;iter&#39; 包中的实现，以及如何使用它来处理或遍历集合的元素，例如数组、列表或映射。</p> 
+
+<p><a href="https://kokada.capivaras.dev/blog/an-unordered-list-of-things-i-miss-in-go/">我在Go中错过的那些功能</a><br>作者 kodak 分享了他对 Go 的赞赏，但也强调了该语言可以改进的地方，包括标准库中缺少有序映射、函数的默认参数、可空性以及 Lambda 的使用。</p> 
+
+<p><a href="https://harrisoncramer.me/mocking-interfaces-in-go/">在Go中模拟接口</a><br>这篇博文讨论了在 Go 中使用 Uber 的 gomock 工具从外部库中模拟出功能，并提供了一个示例，说明如何使用它来简化测试和减少代码重复。</p> 
+
+<p><a href="https://alovak.com/2024/08/15/mastering-iso-8583-messages-with-golang/">使用 Golang 掌握 ISO 8583 消息</a><br>Pavel Gabriel 是 Moov-io/iso8583 包的作者和维护者，他提供了如何使用 Moov-IO/iso8583 项目将 ISO 8582 消息规范转换为 Go 代码、构建和解析二进制消息、验证规范的正确性以及解决问题的指南。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://promlabs.com/blog/2024/08/17/smaller-is-better-why-you-should-avoid-large-multi-target-exporters-in-prometheus/">越小越好：为什么在 Prometheus 中应避免使用大型多目标导出器</a><br>promlabs 的博客文章建议不要使用单个大型导出器来监控 Prometheus 的多个服务或设备，并强调了其缺点，例如操作和扩展瓶颈、无法有选择地抓取指标以及失去目标健康监控功能。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/08/16/sso-and-rbac-a-secure-access-strategy-for-your-kubernetes/">SSO 和 RBAC：Kubernetes 的安全访问策略</a><br>本文讨论了如何使用单点登录 （SSO） 和基于资源的访问控制 （RBAC） 来保护 Kubernetes 环境，从而为管理跨多个集群的访问提供经济高效、可扩展且安全的解决方案。</p>
+
+<p><a href="https://searchengineland.com/how-google-search-ranking-works-445141">Google 搜索排名的工作原理</a><br>马里奥·菲舍尔（Mario Fischer）的文章解释了Google复杂的排名系统，包括Twiddlers和NavBoost等组件，并强调获得高排名不仅与内容质量有关，而且还要考虑搜索行为，用户行为和SEO措施等因素。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://adalkiran.github.io/llama-nuts-and-bolts/">Llama Nuts and Bolts</a><br>The document is a documentation website for the &#34;Llama nuts and bolts&#34; project, a Go implementation of the project, designed to provide a comprehensive understanding of the Llama 3.1 8B-Instruct model and its components, without using external dependencies or libraries, and aims to provide a deeper understanding of the technology&#39;s internal layers and operations.</p>
+
+<p><a href="https://www.exponentialview.co/p/eric-schmidts-ai-prophecy">Eric Schmidt’s AI prophecy: The next two years will shock you</a><br>Eric Schmidt, former Google CEO, predicts that the next two years will be &#34;unprecedented uncertainty&#34;, &#34;unpreceded speed&#34;, &#34;unrelenting disruption&#34;, and &#34;unpreceded scale&#34; due to the rapid advancements in AI, including the development of large context windows, AI agents that can learn and improve themselves, and text-to-action capabilities.</p>
+
+<p><a href="https://magazine.sebastianraschka.com/p/understanding-encoder-and-decoder">了解编码器和解码器 LLM</a><br>Sebastian Raschka 解释了编码器式和解码器式大型语言模型 （LLM） 之间的区别，它们在学习嵌入以进行预测建模、生成新文本以及它们在各种自然语言处理任务（包括翻译和摘要）中的应用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类。它提供了一个模块化框架，用于使用一组可以在任何地方使用的众包 AI 提示来解决特定问题。</p>
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>使用基于 SQL 的实时响应性直接替代 Redis。</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>歇斯底里是一个功能强大、闪电般快速且抗审查的代理。</p>
+
+<p><a href="https://github.com/rusq/slackdump">rusq/slackdump</a><br>无需管理员权限即可在本地保存或导出您的私人和公共 Slack 消息、线程、文件和用户。</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证和分析泄露的凭据</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>轻松安全地将内容从一台计算机发送到另一🐊 📦台计算机</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>为小地方使用编译器。微控制器、WebAssembly （WASM/WASI） 和命令行工具。基于 LLVM。</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，穿透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/aandrew-me/tgpt">aandrew-me/tgpt</a><br>终端中的 AI 聊天机器人，无需 API 密钥</p>
+
+<p><a href="https://github.com/marcel-dempers/docker-development-youtube-series">marcel-dempers/docker-development-youtube-series</a><br></p>
+
+<p><a href="https://github.com/gogf/gf">gogf/gf</a><br>GoFrame 是 Golang 的一个模块化、功能强大、高性能的企业级应用开发框架。</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和 2FA 的最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/bwmarrin/discordgo">bwmarrin/discordgo</a><br>（戈朗）Discord 的 Go 绑定</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>一个极快的网络打包器</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>适用于 Web 应用的 Single Sign-On Multi-Factor 门户</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kind">kubernetes-sigs/kind</a><br>Kubernetes IN Docker - 用于测试 Kubernetes 的本地集群</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>用于 git 命令的简单终端 UI</p>
+
+<p><a href="https://github.com/pulumi/pulumi">pulumi/pulumi</a><br>Pulumi - 任何编程语言🚀的基础设施即代码</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，具有自动 HTTPS 功能</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>关于数千 （！） 个加密代币的全面、最新的信息集合。</p>
+
+<p><a href="https://github.com/XrayR-project/XrayR">XrayR-project/XrayR</a><br>A Xray backend framework that can easily support many panels. 一个基于Xray的后端框架，支持V2ay,Trojan,Shadowsocks协议，极易扩展，支持多面板对接</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

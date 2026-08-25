@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202502/issue-20250205.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250205</span>
+</p>
+<p>每日一谚：Favor composition over inheritance. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/02/05/go-encoding-json-v2-proposal-json-processing-new-engine">Go encoding/json/v2提案：JSON处理新引擎</a><br>对json/v2提案进行的全面梳理与介绍</p> 
+
+<p><a href="https://medium.com/@monigrancharov/those-annoying-golang-floats-d65b20ea82f3">那些恼人的Go浮点数</a><br>最近在工作中处理一个相当简单的任务时，我偶然发现了一个奇怪且意想不到的问题。我正在对一些浮点数求和，期望得到一个“精确”的总值。令我惊讶的是，运行单元测试后，结果并非预期的那样。我得到了 13.0000000034，而不是预期的 13.00。本文将介绍我遇到的问题以及如何使用 Go 语言解决它。</p> 
+
+<p><a href="https://socket.dev/blog/malicious-package-exploits-go-module-proxy-caching-for-persistence">Go供应链攻击：恶意软件包利用Go模块代理缓存实现持久化</a><br>Socket研究人员发现Go生态系统中存在一个恶意代码模仿软件包，它模仿广泛使用的BoltDB数据库模块（github.com/boltdb/bolt），该模块被Shopify和Heroku等许多组织所信任。该恶意软件包（github.com/boltdb-go/bolt）包含一个后门，允许远程代码执行，使攻击者能够通过命令和控制（C2）服务器控制受感染的系统。恶意软件包在被Go模块镜像（Go CLI工具链从中下载）缓存后，GitHub上的git标签被战略性地更改以删除恶意软件痕迹，从而将其隐藏在手动代码审查之外。截至本文发表之时，该恶意软件包仍可在Go模块代理上访问。我们已请求将其从模块镜像中删除，并报告了用于分发该带有后门的boltdb-go软件包的攻击者的GitHub存储库和帐户。此次攻击是首次记录的恶意行为者利用Go模块镜像对模块进行无限期缓存的案例之一。虽然此前没有公开报道过类似案例，但这起事件凸显了未来需要提高对类似持久性策略的认识。由于不可变模块既提供安全优势又可能成为滥用载体，因此开发人员和安全团队应监控利用缓存的模块版本规避检测的攻击。</p> 
+
+<p><a href="https://blog.vegasecurity.com/posts/log_search_engines">比音速更快地搜索日志</a><br>了解 Apache Lucene 和 tantivy 等日志搜索引擎的工作原理。本文探讨了日志搜索引擎的底层机制，包括倒排索引、Trie 树、FST（有限状态转换器）、DAWG（有向无环词图）等数据结构，以及如何进行短语搜索和文档排序等。文章还比较了不同数据结构的优缺点，并简要介绍了 Elasticsearch 和 Quickwit 等分布式搜索引擎。</p> 
+
+<p><a href="https://dev.to/siddhantkcode/how-we-slashed-ci-build-time-using-gos-cache-500f">我们如何使用 Go 的缓存来大幅缩短 CI 构建时间</a><br>我们的 CI 管道的集成测试运行缓慢。主要瓶颈不是测试本身，而是编译源代码所需的时间。为了解决这个问题，我们利用 GitHub Actions 的缓存功能来保存和重用 Go 构建缓存，从而显著缩短了 CI 执行时间。这篇文章介绍了优化 GitHub Actions 工作流程的过程、面临的挑战以及围绕缓存构建工件的操作障碍。此外，我们还将这些发现推广到大型构建管道及其对 CI/CD 性能的影响。</p> 
+
+<p><a href="https://blog.nobugware.com/post/2025/using-qt-qml-grpc-to-talk-to-your-app">构建跨语言应用程序：无需 C&#43;&#43; 直接从 QML 到 gRPC</a><br>最近的 Qt 更新允许你直接从 QML 进行 gRPC 调用，从而无需 C&#43;&#43; 即可从 UI 与 gRPC 交互。本文介绍了如何使用 Qt QML 作为 UI 部分，并通过 gRPC 使用 Go 作为后端，构建一个跨语言应用程序，其中前端 UI 完全使用 QML 实现，后端可以使用任何其他语言（例如 Go）。文章还讨论了构建过程中的挑战和注意事项。</p> 
+
+<p><a href="https://danp.net/posts/pgx-tx-copy">pgx、database/sql 事务和 COPY</a><br>文章讲述了作者团队将 Go PostgreSQL 驱动程序从 lib/pq 迁移到 pgx 的过程中遇到的问题：如何在事务中使用 COPY 命令。lib/pq 对 COPY 命令有内置支持，但在 pgx 的 database/sql 兼容层中则没有。文章给出了使用 pgx.Conn.CopyFrom 在事务中执行 COPY 命令的解决方案，并强调了在 Raw 函数中不能使用 tx 对象，因为底层会产生锁冲突。</p> 
+
+<p><a href="https://destel.dev/blog/real-time-batching-in-go">Go 语言中的实时批处理</a><br>本文探讨了如何在不牺牲延迟或代码清晰度的情况下，将实时更新流转换为高效的数据库批处理。深入研究构建一个只需运行的透明批处理层。文章通过一个更新用户上次活动时间的示例，展示了如何使用 Go 语言的通道、goroutine 和 rill 库来实现实时批处理，并处理错误和上下文取消。此外，文章还讨论了其他处理频繁更新的方法，例如使用 Redis 或外部队列。</p> 
+
+<p><a href="https://dev.ribic.ba/recover-panics-goroutines">在你启动的所有 Goroutine 中恢复panic</a><br>文章讨论了在 Go 语言中处理 Goroutine 恐慌的重要性。作者指出，除了使用 HTTP 多路复用器创建的 Goroutine 外，手动创建的 Goroutine 也可能发生恐慌，导致应用程序崩溃。文章提供了一个名为 CatchPanic 的辅助函数，用于集中式恐慌恢复和日志记录，并演示了如何使用此函数安全地包装 Goroutine，从而防止应用程序因 Goroutine 恐慌而崩溃。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.salesforce.com/how-slack-ai-processes-billions-of-messages-to-reduce-information-overload-with-ai-powered-search-and-summarization/">Slack AI 如何通过 AI 搜索和摘要功能处理数十亿条消息以减少信息过载</a><br>本文介绍了 Slack AI 团队如何通过 AI 搜索和摘要功能处理数十亿条消息来提高用户效率。文章重点介绍了团队如何整合 Slack AI 与 Agentforce，优化 AI 搜索和摘要的规模，以及在处理数十亿条消息的同时降低基础设施成本。文章还探讨了团队在构建 Slack AI 功能时面临的重大工程挑战，以及他们如何通过持续研究使 Slack AI 更加主动和智能。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/02/04/japans-cncf-devstats-2024/">2024年日本CNCF DevStats汇总 | CNCF</a><br>来自日本云原生社区的Toru Komatsu(@utam0k)和Hiroshi Hayakawa(@hhiroshell)分享了2024年日本工程师对CNCF项目的贡献数据。文章重点介绍了对CNCF项目贡献最大的10位日本工程师以及所有CNCF项目中贡献最大的20位日本工程师，并附带图表展示了Kubernetes、fluentd、Argo、Containerd和Cilium项目的贡献情况。文章最后展望了2025年的发展，并鼓励更多日本工程师参与贡献。</p>
+
+<p><a href="https://engineering.fb.com/2025/02/04/security/data-logs-the-latest-evolution-in-metas-access-tools/">Meta 数据日志：Meta 访问工具的最新发展</a><br>Meta 分享了如何构建对数据日志的支持，数据日志为用户提供关于他们如何使用 Meta 产品的更多数据。文章探讨了 Meta 考虑的初始系统设计、当前架构概述以及 Meta 在使数据易于访问和理解方面考虑的一些重要原则。数据日志是 Meta 提供用户访问其平台数据的最新示例，Meta 长期以来一直致力于为用户提供数据透明度和控制权。</p>
+
+<p><a href="https://chriskiehl.com/article/thoughts-after-10-years">十年软件开发生涯中我改变想法的主题</a><br>作者回顾了十年软件开发生涯中改变想法的主题，包括对简单性、复杂性管理、编程语言选择（例如Java）、REPL工具、前端开发、数据库选择（例如DynamoDB）、对象和函数式编程、管理、软件工程中的沟通、微服务、以及代码风格等方面的看法。文章列举了作者现在相信但过去会质疑的观点，以及一路走来形成的一些新观点，并指出了那些至今仍未改变看法的主题。作者认为简单并非易事，需要持续努力；管理和理解复杂性并无值得骄傲之处；在团队经验水平参差不齐的情况下，类型化语言至关重要；Java 因为其枯燥而成为一种优秀的语言；大多数编程应该在编写代码之前完成；前端开发令人沮丧；优雅并非真正的衡量标准；好的管理至关重要；DynamoDB 对于合适的负载来说是一个不错的数据库；对象擅长其擅长的领域，盲目坚持函数式编程是愚蠢的；软件工程主要是关于沟通；查询规划器难以捉摸；需要给年轻的开发者空间去探索和犯错；需要积极投资于提升软技能；大多数应用开发中几乎不存在抽象；而库开发则关乎抽象；ORM 在所有语言和所有实现中都是魔鬼；函数式编程的问题在于函数式程序员；长期来看，构建无服务器函数会让你后悔；类型是我们对世界的断言；分布式锁仍然非常困难；形式化建模和分析是一项重要的技能；隔离性是良好集成套件最重要的属性。作者还坚持认为，关注代码风格、代码规范等细枝末节的人仍然是疯狂的怪人；代码覆盖率与代码质量无关；单体架构仍然相当不错；很难超越数十年来关系数据库的研究和改进；微服务需要论证；大多数项目（即使在 AWS 内部！）不需要“扩展”，并且伪装成这样会造成损害；大多数项目经理可以消失而不会产生任何影响或效率净增益。</p>
+
+<p><a href="https://zverok.space/blog/2025-01-27-7things-euruko.html">25年开发经验总结的七件事</a><br>本文是2024年9月在EuRuKo会议上发表的主题演讲的松散记录，视频链接可见文中。演讲主题围绕作者25年的软件开发经验，以及作为一名在乌克兰武装部队服役的乌克兰人，在战争期间的经历展开。文章重点阐述了七个观点：1. 你会超越任何框架；2. 模式和方法论会失效；3. 规模只会随着时间增长；4. 注意故事；5. 目标是真理和清晰；6. 这可能是一次孤独的经历；7. 永不放弃追求真理。文章结合代码示例和个人经历，深入浅出地探讨了软件开发中的各种挑战和应对方法，并呼吁大家支持乌克兰。</p>
+
+<p><a href="https://blog.reverberate.org/2025/02/03/no-panic-rust.html">无panic Rust：一种适用于系统编程的优秀技术</a><br>Rust 能否取代 C？多年来，这个问题一直萦绕在我的心头，因为我创建了并现在担任 upb（一个用于 Protocol Buffers 的 C 库）的技术主管。……最近我发现了一种技术，它极大地改变了我的想法。我称之为“无恐慌 Rust”，虽然这项技术显然并非新颖，但我找不到任何关于其工作原理或解决问题的深入讨论。这篇文章是我试图填补这一空白的尝试。我相信无恐慌 Rust 是使 Rust 成为低级系统编程引人注目的选择的关键。我现在对将 upb 移植到 Rust 的可能性持乐观态度。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Feb/5/o3-mini-documentation/#atom-everything">o3-mini 擅长编写内部文档</a><br>作者想回顾 Datasette 权限系统的工作原理。虽然已经有详尽的手写文档，但作者尝试使用大型语言模型 (LLM) o3-mini 对代码库进行分析以获取更多见解。作者使用 `files-to-prompt` 工具和 LLM，将 Datasette 代码库 (排除测试和文档) 作为输入，并提示 o3-mini 以 Markdown 格式编写权限系统工作原理的详尽文档。结果令人印象深刻，生成的文档质量很高，与作者已有的文档相符，证明了该方法在几秒钟内以低成本生成内部文档的价值。</p>
+
+<p><a href="https://redis.io/blog/whats-the-best-embedding-model-for-semantic-caching">语义缓存的最佳嵌入模型是什么？- Redis</a><br>语义缓存正在改变我们优化依赖于大型语言模型的系统的方式。通过使用向量嵌入，它能够实现更快的查询。</p>
+
+<p><a href="https://jax-ml.github.io/scaling-book">如何扩展你的模型</a><br>大型语言模型（LLM）的训练常常感觉像是炼金术，但理解和优化模型的性能并不一定如此。本书旨在揭开在TPU上扩展语言模型的科学奥秘：TPU如何工作以及它们如何相互通信，LLM如何在真实的硬件上运行，以及如何在训练和推理过程中并行化你的模型，以便它们能够高效地在超大规模上运行。如果你曾经想过“训练这个LLM应该花费多少”或“我自己需要多少内存来服务这个模型”或“什么是AllGather”，我们希望本书对你有所帮助。</p>
+
+<p><a href="https://www.seangoedecke.com/how-i-use-llms">我如何将大型语言模型用作资深工程师</a><br>本文作者分享了其作为资深工程师如何日常使用大型语言模型（LLM）的经验。他主要使用LLM进行代码编写（包括生产代码和一次性代码）、学习新领域、调试、校对等任务。他强调了LLM的优势，例如提高效率和学习速度，但也指出了其局限性，例如在处理复杂逻辑和编写正式文档方面的不足。作者建议将LLM作为辅助工具，而不是完全依赖它，并且在使用LLM生成的代码时应进行代码审查。</p>
+
+<p><a href="https://addyo.substack.com/p/why-i-use-cline-for-ai-engineering">我为什么在 AI 工程中使用 Cline</a><br>本文作者 Addy Osmani 在评估了众多 AI 编码助手工具后，分享了他选择 Cline 的原因。Cline 是一款免费的 VSCode 插件，它与其他工具不同，它更像一个系统级工具，可以与整个开发环境交互，这在处理复杂的调试场景、大规模重构或集成测试时尤其有效。文章详细介绍了 Cline 的核心功能，例如灵活的上下文管理、模型灵活性、检查点系统以及计算机使用功能，并将其与 Cursor、WindSurf 和 GitHub Copilot 等其他工具进行了比较。作者总结道，对于构建复杂系统的团队来说，Cline 值得认真考虑，因为它尊重现有的工作流程，提供了必要的控制和可见性，并且可以根据需要进行扩展和定制。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/monasticacademy/httptap">monasticacademy/httptap</a><br>View HTTP/HTTPS requests made by any Linux program</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>Connect, secure, control, and observe services.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/kubernetes/client-go">kubernetes/client-go</a><br>Go client for Kubernetes.</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>A database migration tool. Supports SQL migrations and Go functions.</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/gorilla/websocket">gorilla/websocket</a><br>Package gorilla/websocket is a fast, well-tested and widely used WebSocket implementation for Go.</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>Prometheus instrumentation library for Go applications</p>
+
+<p><a href="https://github.com/Azure/azure-sdk-for-go">Azure/azure-sdk-for-go</a><br>This repository is for active development of the Azure SDK for Go. For consumers of the SDK we recommend visiting our public developer docs at:</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/containrrr/watchtower">containrrr/watchtower</a><br>A process for automating Docker container base image updates.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

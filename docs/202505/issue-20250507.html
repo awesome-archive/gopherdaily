@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250507.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250507</span>
+</p>
+<p>每日一谚：Write code that is easy to optimize, not code that needs to be optimized </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/hwK7kXI5xSez2iQTgs5EpQ">代码覆盖率新玩法：Russ Cox教你用差异化分析加速Go调试</a><br>Go团队的前技术负责人 Russ Cox 近期分享了一个虽然古老但极其有效的调试技术——**差异化覆盖率 (Differential Coverage)**。该技术通过比较成功和失败测试用例的代码覆盖率，巧妙地“高亮”出最可能包含Bug的代码区域，从而显著加速调试进程。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/TkMqLGeanQxPx_Sx-_5h3A">解读“Cheating the Reaper”：在Go中与GC共舞的Arena黑科技</a><br>最近，一篇名为 Cheating the Reaper in Go (在 Go 中欺骗死神/收割者) 的文章在技术圈引起了不小的关注。作者 mcyoung 以其深厚的底层功底，展示了如何利用unsafe包和对 Go GC 内部运作机制的深刻理解，构建了一个**非官方的、实验性的**高性能内存分配器——Arena。</p> 
+
+<p><a href="https://socket.dev/blog/wget-to-wipeout-malicious-go-modules-fetch-destructive-payload">wget到Wipeout：恶意Go模块获取破坏性有效载荷</a><br>Socket的安全研究团队发现三个危险的Go模块包含模糊处理过的磁盘擦除恶意软件，可能导致数据完全丢失。这些模块利用Go生态系统的开放性，通过混淆技术下载并执行远程有效载荷，最终擦除`/dev/sda`上的所有数据，使系统无法启动且无法恢复。该研究强调了主动、分层防御在软件供应链中的重要性，并建议使用Socket等安全工具来主动阻止恶意软件包。</p> 
+
+<p><a href="https://wundergraph.com/blog/golang-sync-pool">Go语言 sync.Pool 不是万能药</a><br>深入探讨 Go 语言的 sync.Pool，分析其优势、缺陷以及何时使用（或不使用）它。</p> 
+
+<p><a href="https://medium.com/@karthikraju391/building-a-scalable-chat-server-in-golang-and-nats-9faf68b61d9f">使用go和nats构建一个可扩展的chat server</a><br></p> 
+
+<p><a href="https://dev.to/leapcell/from-java-to-go-why-composition-is-preferred-over-inheritance-17h4">从 Java 到 Go：为什么组合优于继承</a><br>本文探讨了为什么像 Rust 和 Go 这样的现代编程语言更倾向于使用组合而不是继承。文章从继承和组合的特点、继承在实际应用中可能导致的问题以及组合如何解决这些问题三个方面进行了深入分析，并通过一个具体的车辆设计示例，逐步优化设计，最终展现了组合的优势。文章还介绍了Leapcell，一个用于托管Rust项目的无服务器平台。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.haproxy.com/blog/state-of-ssl-stacks">SSL技术栈的状态</a><br></p>
+
+<p><a href="https://www.docker.com/blog/whats-next-for-mcp-security/">MCP协议加固: 更安全的AI智能体容器</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/05/07/technology-where-i-belong/">Technology Where I Belong</a><br></p>
+
+<p><a href="https://kubernetes.io/blog/2025/05/06/kubernetes-v1-33-fine-grained-supplementalgroups-control-beta/">Kubernetes v1.33: Fine-grained SupplementalGroups Control Graduates to Beta</a><br></p>
+
+<p><a href="https://educatedguesswork.org/posts/memory-management-1">内存管理系列1</a><br></p>
+
+<p><a href="https://www.architecture-weekly.com/p/why-we-should-learn-multiple-programming">为什么我们应该学习多种编程语言</a><br></p>
+
+<p><a href="https://sia.codes/posts/web-perf-tips-2025">2025 Web性能技巧</a><br></p>
+
+<p><a href="https://www.swequiz.com/blog/5-core-distributed-concepts-every-developer-should-know">每个开发者都应该知道的5个核心分布式概念</a><br>随着现代应用程序的不断发展，分布式系统已成为技术堆栈的基础部分。无论您是构建云原生应用程序、微服务架构，还是只是使用分布式数据库，了解分布式系统背后的核心概念对于每个开发人员来说都是必不可少的。以下是每个开发人员都应该了解的五个核心概念，以便有效地设计、开发和调试分布式系统。文章详细解释了CAP定理、可扩展性、容错性、延迟和网络通信以及分布式共识这五个核心概念，并结合实际案例进行说明。</p>
+
+<p><a href="https://blog.yaakov.online/replacing-kubernetes-with-systemd">用 systemd 替换 Kubernetes</a><br>本文讲述了过度使用 Kubernetes 的经历，以及 systemd 如何实际完成大部分 Kubernetes 的功能。作者在 2018 年开始使用 Kubernetes，发现它虽然功能强大，但在小型设备上资源消耗过大，运行噪音和热量也难以接受。即使在云端，Kubernetes 也占用大量内存和 CPU 资源。作者尝试了多种替代方案，最终发现 Podman 结合 systemd 和用户持久登录，可以实现类似 Kubernetes 的容器自动化，同时显著降低资源消耗和复杂性，并且降低了计算成本。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/6/whats-the-carbon-footprint-of-using-chatgpt/#atom-everything">ChatGPT 的碳足迹是多少？</a><br>本文探讨了使用 ChatGPT 的碳足迹问题。文章参考了 Andy Masley 的备忘单和 Hannah Ritchie 的研究结果，Hannah Ritchie 是 Our World in Data 的研究主管，牛津大学高级研究员，她在能源和可持续发展方面拥有很高的权威性。文章指出，虽然个体用户使用 ChatGPT 的碳足迹可以忽略不计，但整体用户需求仍然驱动着对大型数据中心和新能源的巨大投资。文章还探讨了高强度使用模式下，例如每天使用 100 美元的代币，其潜在的能源影响，并以此警示大规模 AI 应用的潜在环境风险。</p>
+
+<p><a href="https://cra.mr/mcp-is-not-good-yet">MCP 还不够好</a><br>本文作者对最近围绕 MCP（模型上下文协议）服务器的讨论感到担忧。虽然很多人认为 MCP 非常棒，但作者认为它目前还不够成熟。文章列举了几个问题，例如 OAuth 认证功能不完善、连接经常失败、客户端配置方式繁多以及工具调用错误等。作者认为，尽管 MCP 的未来潜力巨大，但目前它还处于早期阶段，不适合大规模应用。</p>
+
+<p><a href="https://blog.google/products/gemini/gemini-2-5-pro-updates">使用更新后的 Gemini 2.5 Pro 构建丰富互动的网络应用程序</a><br>我们更新的 Gemini 2.5 Pro 版本改进了编码能力。</p>
+
+<p><a href="https://sund.site/posts/2025/do-not-vibe-testing">为什么不应该让AI生成单元测试</a><br>作者对使用AI生成单元测试来提高效率和质量的观点表示怀疑。文章指出，单元测试是需求的具象化，其核心在于测试边界条件，而AI通常难以自动推断边界条件。提高测试覆盖率并不等同于提高测试效率和质量。作者认为，AI辅助人类生成测试可以节省时间，但AI生成单元测试的理念存在风险，如同先开枪后画靶子，最终需要有人来检验AI生成的测试是否正确。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/heroiclabs/nakama">heroiclabs/nakama</a><br>Distributed server for social and realtime games and apps.</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/zeromicro/go-zero">zeromicro/go-zero</a><br>A cloud-native Go microservices framework with cli tool for productivity.</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/derailed/popeye">derailed/popeye</a><br>👀 A Kubernetes cluster resource sanitizer</p>
+
+<p><a href="https://github.com/rzane/docker2exe">rzane/docker2exe</a><br>Convert a Docker image to an executable</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/tmrts/go-patterns">tmrts/go-patterns</a><br>Curated list of Go design patterns, recipes and idioms</p>
+
+<p><a href="https://github.com/teamhanko/hanko">teamhanko/hanko</a><br>The Complete Authentication and User Management Solution for the Passkey Era. Open Source Alternative to Clerk, Auth0, et al.</p>
+
+<p><a href="https://github.com/chaitin/SafeLine">chaitin/SafeLine</a><br>SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/rancher/rke2">rancher/rke2</a><br></p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/future-architect/vuls">future-architect/vuls</a><br>Agent-less vulnerability scanner for Linux, FreeBSD, Container, WordPress, Programming language libraries, Network devices</p>
+
+<p><a href="https://github.com/containerd/containerd">containerd/containerd</a><br>An open and reliable container runtime</p>
+
+<p><a href="https://github.com/charmbracelet/gum">charmbracelet/gum</a><br>A tool for glamorous shell scripts 🎀</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/mailru/easyjson">mailru/easyjson</a><br>Fast JSON serializer for golang.</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

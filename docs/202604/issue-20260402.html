@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260402.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260402</span>
+</p>
+<p>每日一谚：Use goroutines. Don&#39;t overuse goroutines. Finding the balance is the art of Go. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/02/2026-programming-language-saturation-rankings-go-rust-winners">2026 编程语言“饱和度”榜单出炉：JavaScript/Python 已“烂大街”，Go/Rust 成最大赢家？</a><br>就在半个多月前，X 平台上的一位技术博主 Mojisola Alegbe，基于 Stack Overflow、GitHub Trends、JetBrains 等多方数据，整理并发布了一份极其残酷的私房版《2026 编程语言“饱和度”榜单》。这篇推文就像一颗深水炸弹，在短短几天内获得了 **41.2 万**的惊人阅读量。大批开发者涌入评论区，有人哀嚎，有人庆幸，有人愤怒，有人不屑。这张榜单之所以能引爆全网，因为它赤裸裸地揭示了我们这个行业最真实的“供需关系”和“内卷现状”。</p> 
+
+<p><a href="https://sazak.io/articles/tracing-goroutines-in-realtime-with-ebpf-2026-03-31">使用 eBPF 实现 Go 协程的实时追踪</a><br>本文是“实用 eBPF”系列教程的一部分，重点探讨了如何利用 eBPF 技术对 Go 语言中的 Goroutine 进行实时追踪。文章详细介绍了在不侵入应用程序代码的前提下，通过 eBPF 捕获和监控协程运行状态的实践方法。对于希望深入了解 Go 运行时性能分析、调试以及 eBPF 高级应用的开发者而言，这是一篇极具参考价值的技术指南。</p> 
+
+<p><a href="https://vjerci.com/writings/clean/separation-of-concerns/">Go 语言架构实践：关注点分离原则</a><br>本文介绍了在 Go 语言中实现“关注点分离”的核心理念。作者指出，良好的系统架构应确保不同模块互不干扰，从而降低维护成本并提升系统的可扩展性。通过对比反面示例（将所有逻辑堆砌在单一函数中）与推荐的结构，文章强调了利用结构体（struct）和接口（interface）进行代码解耦的重要性，旨在帮助开发者摆脱混乱的代码组织方式，构建更健壮的软件系统。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/04/02/gitops-policy-as-code-securing-kubernetes-with-argo-cd-and-kyverno/">GitOps 安全实践：利用 Argo CD 与 Kyverno 实现策略即代码</a><br>本文介绍了如何通过 Argo CD 与 Kyverno 的结合，在 Kubernetes 环境中实现“策略即代码”（Policy-as-Code）。文章探讨了 Kyverno 作为准入控制器的核心作用，包括验证、变更、生成及清理资源等功能。通过将策略纳入 GitOps 工作流，开发团队能够在部署阶段自动执行安全合规检查，有效防止配置错误和安全漏洞，从而构建一个更加安全、可治理的声明式基础设施环境。</p>
+
+<p><a href="https://r12a.github.io/scripts/tutorial/part2">汉字系统与Unicode编码概览</a><br>本文简要介绍了汉字书写系统的演变与应用。重点阐述了繁体中文与简体中文的区别，指出简体中文通过简化笔画和合并字符来提升书写效率。文章强调，汉字作为表意文字，在不同方言区具有通用性。此外，文中还提到了粤语特有字符、注音符号（Bopomofo）以及Unicode编码在支持数万汉字字符中的重要作用，为理解汉字在现代数字环境下的呈现提供了基础背景。</p>
+
+<p><a href="https://quad9.net/news/blog/quad9-enables-dns-over-http-3-and-dns-over-quic/">Quad9 全球解析器正式支持 DoH3 与 DoQ 协议</a><br>公共 DNS 服务商 Quad9 宣布在其全球网络中全面启用 DNS over HTTP/3 (DoH3) 与 DNS over QUIC (DoQ)。这两项技术均基于 QUIC 协议构建，相比传统的 TCP&#43;TLS 方案，QUIC 将加密作为核心要求，并强制使用安全性更高的 TLS 1.3。该升级不仅进一步强化了查询过程的隐私保护，减少了网络路径上的元数据泄露，还通过优化握手流程显著降低了连接延迟，为用户提供更快速、更安全的 DNS 解析体验。</p>
+
+<p><a href="https://medium.com/@karthik.joshi103/backend-from-first-principles-036209a3049c">后端开发的核心原理与构建思路</a><br>本文从第一性原理出发，深入探讨了后端系统的本质。作者指出，后端的核心任务是处理状态、实现业务逻辑以及在分布式环境下保障可靠性。文章解析了数据存储、网络通信、并发处理及系统架构设计的底层逻辑，强调了理解协议、数据一致性与系统伸缩性的重要性。通过剥离复杂的框架与工具，作者帮助开发者回归技术本质，从而更好地应对复杂系统的构建与维护挑战。</p>
+
+<p><a href="https://medium.com/@karthik.joshi103/backend-from-first-principles-91eaf3720e38">后端开发原理指南：从零构建高效系统</a><br>本文从第一性原理出发，深入浅出地解析了后端开发的核心逻辑。文章探讨了后端系统的本质，即处理客户端请求、数据持久化及业务逻辑实现。作者详细阐述了API设计、数据库选型、服务器架构、安全性保障及系统扩展性等关键要素，旨在帮助开发者跳过复杂的框架包装，理解后端架构的底层基石，从而构建出更加健壮、高效且具备可维护性的软件系统。</p>
+
+<p><a href="https://vitalik.eth.limo/general/2026/04/02/secure_llms.html">构建安全自主的本地 LLM 环境</a><br>随着 AI 从简单的聊天机器人向能够调用工具的自主智能体（如 OpenClaw）演进，其安全与隐私风险日益凸显。本文探讨了在保障隐私的前提下，构建本地化、自主可控的 AI 运行环境的必要性。作者指出，当前开源 AI 生态系统在安全性方面存在严重缺失，智能体被授予过高权限可能导致系统失控。文章旨在呼吁关注 AI 安全架构，并为建立更安全的本地化 AI 使用范式提供初步探索方向。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://zhanghandong.github.io/harness-engineering-from-cc-to-ai-coding">《驾驭工程》：从 Claude Code 源码到 AI 编码实践</a><br>本书由张汉东发起，旨在通过系统化的工程流程，将 Claude Code 的 TypeScript 源码转化为一本深入浅出的技术指南。作者未简单依赖 AI 生成，而是通过制定详细的大纲、编写章节规格说明（spec）及执行计划，确保了内容的专业性与深度。该书不仅是作者学习 Claude Code 的记录，更是一个开源项目，旨在通过社区共建，帮助开发者深入理解 AI 编码工具的底层设计与最佳实践。</p>
+
+<p><a href="https://x.com/GoogleCloudTech/status/2038778093104779537?s=20">如何打造兼顾人类与 AI 智能体的 CLI 工具</a><br>随着 AI 智能体的普及，传统的命令行工具（CLI）设计面临挑战：交互式界面虽利于人类使用，却难以被自动化程序解析。本文提出了一种兼顾两者的核心哲学：将数据与呈现分离。通过将 CLI 的逻辑层设计为数据引擎，根据调用者身份提供不同反馈——为人类提供交互式 UI（TUI），为 AI 智能体提供结构化数据（如 NDJSON）。这种设计模式确保了 CLI 在提升用户体验的同时，也具备了良好的机器可读性。</p>
+
+<p><a href="https://x.com/Hesamation/status/2039381120127496362?s=20">深度解析：Claude Code 的五层内存架构</a><br>本文通过对 Claude Code 泄露源码的深入分析，揭示了其高效的内存管理机制。与传统的“全量存储”不同，Claude Code 采用了一套精心设计的五层内存架构，旨在平衡性能与成本。这种架构通过分层管理用户偏好和上下文信息，使智能体能够智能地决定“保留什么”与“遗忘什么”，从而在保持身份连贯性的同时大幅提升任务处理表现。</p>
+
+<p><a href="https://slide.shannon.run/1">大型语言模型推理的算力挑战与优化策略</a><br>本文深入探讨了大型语言模型（LLM）在推理阶段面临的算力瓶颈与挑战。文章分析了模型参数量增长对内存带宽和计算资源的需求，详细介绍了KV Cache管理、量化技术（Quantization）以及算子融合等关键优化手段。通过这些技术，可以在保证模型输出质量的前提下，显著降低推理延迟并提升吞吐量。作者强调，针对不同部署场景选择合适的优化路径，对于实现高效、低成本的AI应用落地至关重要。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/safing/portmaster">safing/portmaster</a><br>🏔 Love Freedom - ❌ Block Mass Surveillance</p>
+
+<p><a href="https://github.com/electrikmilk/cherri">electrikmilk/cherri</a><br>Siri Shortcuts Programming Language 🍒</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.</p>
+
+<p><a href="https://github.com/5rahim/seanime">5rahim/seanime</a><br>Open-source media server with a web interface and desktop app for anime and manga.</p>
+
+<p><a href="https://github.com/harness/harness">harness/harness</a><br>Harness Open Source is an end-to-end developer platform with Source Control Management, CI/CD Pipelines, Hosted Developer Environments, and Artifact Registries.</p>
+
+<p><a href="https://github.com/masterking32/MasterDnsVPN">masterking32/MasterDnsVPN</a><br>Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, SOCKS5 multiplexing, resolver load balancing, and high packet-loss stability.</p>
+
+<p><a href="https://github.com/CJackHwang/ds2api">CJackHwang/ds2api</a><br>Deepseek客户端对话转API，高性能，多账号轮询，包含完整后台管理系统，支持纯vercel、docker部署使用。兼容Openclaw🦞、Roocode、Claudecode、Kilocode等工具</p>
+
+<p><a href="https://github.com/octelium/octelium">octelium/octelium</a><br>A next-gen FOSS self-hosted unified zero trust secure access platform that can operate as a remote access VPN, a ZTNA platform, API/AI/MCP gateway, a PaaS, an ngrok-alternative and a homelab infrastru</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>Video translation and dubbing tool powered by LLMs. The video translator offers 100 language translations and one-click full-process deployment. The video translation output is optimized for platforms</p>
+
+<p><a href="https://github.com/0xERR0R/blocky">0xERR0R/blocky</a><br>Fast and lightweight DNS proxy as ad-blocker for local network with many features</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

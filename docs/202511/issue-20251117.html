@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251117.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251117</span>
+</p>
+<p>每日一谚：test coverage != bug free </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/17/go-testing-journey">你的Go测试，还停留在“演员对台词”吗？</a><br>周五下午五点，你刚刚修复了一个看似无关紧要的 bug，怀着对周末的憧憬，合并了你的代码。CI/CD 流水线一片绿灯，部署顺利完成。 突然，运维在工作群里 @ 了你：“紧急！新版本上线后，核心的用户注册功能好像挂了！” 你心里猛地一沉，这个功能你根本没动过，只是修改了它依赖的一个底层工具函数。冷汗开始从额头渗出，你下意识地喃喃自语：“不可能啊，我的单元测试明明都通过了……” 这个场景，或许你我或多或少都经历过。它引出了一个直击所有工程师灵魂的问题：为什么我们辛辛苦苦写的测试，没能挡住这次线上事故？</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/nr1eSRrHt6fZN_iQwzxCsg">你的 Kubernetes 知识在“冰山”的第几层？—— 一份给 Gopher 的 K8s 进阶“航海图”</a><br>对于我们 Gopher 而言，这张图有着非凡的意义。因为 Kubernetes 这座宏伟的“冰山”，其根基、其骨架、其每一寸血肉，几乎都是用 Go 语言铸就 的。因此，这张图不仅是一份 K8s 的学习地图，更是一份 Go 开发者在云原生时代，从“工具使用者”蜕变为“生态构建者”的进阶航海图</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/b9DyVMiCCp_zkP9XYYOJhA">【Go模块构建与依赖管理】11 构建模式的魔力: 从静态库、动态库到 Go 插件</a><br></p> 
+
+<p><a href="https://pears.one/profiling-go-programs">Go程序的性能剖析</a><br></p> 
+
+<p><a href="https://linuxcontainers.org/incus-os">Go实现的不可变OS</a><br>IncusOS 是一款专为安全可靠地运行 Incus 而设计的不可更改操作系统。它采用 UEFI 安全启动和 TPM 等现代安全功能，提供安全的启动体验和无缝的全盘加密。</p> 
+
+<p><a href="https://blog.enamya.me/posts/bcrypt-limitation">为什么 bcrypt 对于密码哈希可能不安全？</a><br>简而言之：bcrypt 忽略前 72 字节之后的任何字节，这是由于 bcrypt 基于 Blowfish 密码，而 Blowfish 密码具有此限制。bcrypt 几十年来一直是常用的密码哈希算法，它设计缓慢，内置加盐，并保护了无数系统免受暴力攻击。但尽管它享有良好的声誉，但它也有一些隐藏的限制值得了解。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://news.alvaroduran.com/p/raft-consensus-in-2000-words">用2000字解释Raft共识</a><br>理解可理解的共识协议。共识是当多个服务器联合起来保持单个系统运行的时候。许多人对分布式系统的需求感到困惑。为什么要这么做，当今的单台机器的性能是几年前的两倍，并且在几年后将翻一番？因为机器可能会宕机。如果没有某种备份，您的整个系统就会随之宕机。当然，缺点是多台机器难以保持一致性。其中一台可能已经保存了一些数据，但在复制它（即将副本发送给其他机器）的过程中，它可能会突然崩溃，并且这些数据现在丢失或无法访问。如果没有这部分数据，您会发现自己得到的不是一个宕机的系统，而是一个给出错误答案的系统。这就是共识的意义所在：它是一种确保持续服务的方式，其&lt;em&gt;可扩展性更高&lt;/em&gt;且&lt;em&gt;浪费更少&lt;/em&gt;，而不是仅仅有一个闲置的备份“以防万一”。共识算法允许一组机器作为一个整体运行，并且对其中一些机器宕机或断开连接具有鲁棒性。Raft 就是这样的算法之一。本周是我“从股票市场到分类账”系列的插曲，我将用大约 2,000 个字来解释 Raft 共识算法的工作原理。您可以在&lt;a href=&#34;https://raft.github.io/raft.pdf&#34;&gt;这里&lt;/a&gt;找到该论文，如果你想深入研究的话，但我的目标是向你证明，共识比你想象的更容易理解，并且它不需要任何特殊的背景知识就能完全理解它。</p>
+
+<p><a href="https://nicula.xyz/2025/03/10/bypassing-the-branch-predictor.html">绕过分支预测器</a><br>作者探讨了如何绕过分支预测器，以优化程序性能。文章首先介绍了在分支预测器对程序进行“悲观优化”而非“乐观优化”的情况下可能出现的问题。作者提出了几种解决方案，包括低级解决方案（在 x86 处理器上使用指令前缀，但仅适用于旧型号）和高级解决方案（使用模拟交易数据，确保分支预测器优先选择发送路径）。最终，作者推荐了高级解决方案，即使它不能保证 100% 的成功率，但在实际应用中可以带来明显的性能提升。</p>
+
+<p><a href="https://thenewstack.io/moving-from-c-to-rust-clickhouse-has-some-advice">Moving From C&#43;&#43; to Rust? ClickHouse Has Some Advice</a><br>Facing the monumental challenge of maintaining a massive, security-vulnerable C&#43;&#43; codebase, the core ClickHouse team embarked on an incremental migration to Rust. Here&#39;s what they learned.</p>
+
+<p><a href="https://dubroy.com/blog/garbage-collection-is-useful">GC是有用的</a><br></p>
+
+<p><a href="https://david.coffee/cloudflare-zero-trust-tunnels">我终于理解了 Cloudflare Zero Trust 隧道</a><br>在对 Tailscale 在无法正确穿透 NAT/防火墙并建立 p2p 连接的环境中感到沮丧之后，我决定投入一些时间来学习新东西：Cloudflare Zero Trust &#43; Warp。 本文解释了基本概念。</p>
+
+<p><a href="https://nolanlawson.com/2025/11/16/the-fate-of-small-open-source">“小”型开源的命运</a><br>我写过的最受欢迎的 npm 包是 blob-util，它已经有大约 10 年的历史，每周仍然有 500 多万次的下载量。它是一个用于处理 JavaScript 中 Blob 的小型实用程序集合。我写它的原因是我发现 PouchDB 用户对如何使用 Blob 以及如何将它们转换为字符串、ArrayBuffer 等感到困惑。
+
+鉴于现在大约 80% 的开发人员都在日常工作中使用了 AI，blob-util 几乎肯定是大多数开发人员很乐意让 LLM 为他们生成的东西。</p>
+
+<p><a href="https://continuousarchitecture.com/2025/11/04/a-decade-of-ca">持续架构：十年设计变革</a><br>自从大约十年前首次引入持续架构以来，很高兴看到这么多人开始认识到重点是架构工作，而不是架构师。许多架构师也已转型为技术领导者和指导者，而不是试图自己做出和管理每一个技术决策。正如架构最好作为持续的过程进行一样，我们进行架构的方式也发生了演变。十年后，现在是时候提醒我们自己持续架构的起源、它提出的原则以及它们经受时间考验的程度了。</p>
+
+<p><a href="https://hazyresearch.stanford.edu/blog/2025-11-09-amd-brr">AMD GPUs go brrr</a><br>本文介绍了 HipKittens，这是一个用于 AMD GPU 的编程原语集合，旨在帮助开发人员充分发挥硬件性能，重点介绍了优化的内存访问、以 AMD 为中心的处理器内波调度模式以及处理器间芯片感知网格调度等关键见解。 核心内容包括：AMD GPU 架构分析、HK 内存访问模式、处理器内调度模式和处理器间调度模式。最后，作者指出，实现人工智能的全部潜力需要多样化、开放的硬件，让 AMD GPU 真正变得易于访问。</p>
+
+<p><a href="https://cefboud.com/posts/tcp-deep-dive-internals">互联网很酷。感谢您，TCP</a><br>对互联网工作主力 TCP 的探索。这次深入研究包括详细的示例和逐步演练。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Nov/16/andrej-karpathy/#atom-everything">Andrej Karpathy 的一句话</a><br>现在，借助人工智能，我们能够编写以前无法手动编写的新程序。 我们通过指定目标（例如分类准确性、奖励函数），并通过梯度下降搜索程序空间来找到能够很好地实现该目标的神经网络。
+
+这是我很久以前的《软件2.0》博文。 在这种新的编程范式中，新的最具预测性的特征是可验证性。 如果一项任务/工作是可验证的，那么它就可以直接或通过强化学习进行优化，并且可以训练神经网络使其表现出色。 这与人工智能在某种程度上可以“练习”某事有关。
+
+环境必须是可重置的（您可以开始新的尝试），高效的（可以进行很多尝试）和可奖励的（有一些自动化流程来奖励任何特定的尝试）。</p>
+
+<p><a href="https://www.seangoedecke.com/ai-products">只有三种 AI 产品真正有效</a><br>根据我的统计，有三种成功的语言模型产品：
+
+*   像 ChatGPT 这样的聊天机器人，被数百万用户用于各种任务。
+*   像 Copilot 或 Cursor Tab 这样的补全编码产品非常小众，但可以立即获得价值。
+*   像 Claude Code、Codex、Cursor 和 Copilot Agent 模式这样的 Agentic 产品，在过去六个月才真正开始工作。
+
+除此之外，还有两种基于 LLM 的产品尚未起作用，但可能很快就会出现：
+
+*   LLM 生成的 Feed。
+*   基于 AI 生成内容的电子游戏。
+
+几乎所有 AI 产品都只是聊天机器人（例如，AI 驱动的客户支持）。这些产品不得不与 ChatGPT 竞争，ChatGPT 是一款出色的通用产品，并且无法使用强大的工具，因为用户将能够轻松绕过该模型。
+
+Agentic 产品是新产品，并且在编码方面取得了巨大的成功。至于它们在其他领域会是什么样子，还有待观察，但我们几乎肯定会在法律等领域看到特定领域的调研 Agent。编码中的调研 Agent 也取得了一些成功（例如，代码审查或自动化安全扫描产品）。
+
+无限 AI 生成的 Feed 尚未取得成功，但目前正投入数百万美元。OpenAI 的 Sora 会成为 Twitter 或 Instagram 的真正竞争对手吗，或者这些公司会发布自己的 AI 生成的 Feed 产品？
+
+AI 生成的游戏听起来可能是一个好主意，但仍然没有明确的策略来将 LLM 融入电子游戏。纯世界模型——整个游戏逐帧生成——很酷的演示，但距离成为产品还有很长的路要走。
+
+我还没有提到的一件事是图像生成。这是聊天机器人产品的一部分，还是一个工具本身？坦率地说，我认为 AI 图像生成仍然更像是一个玩具而不是一个产品，但它肯定被大量使用。如果他们能够成功地区别于 ChatGPT 中内置的图像生成，这里可能会有一些有前景的产品领域。</p>
+
+<p><a href="https://www.kbb.com/car-advice/test-driving-car-checklist">测试自动驾驶的checklist</a><br></p>
+
+<p><a href="https://mariozechner.at/posts/2025-11-02-what-if-you-dont-need-mcp">如果根本不需要 MCP 怎么办？</a><br>在经历了几个月的 agentic 编码狂潮之后，Twitter 仍然充斥着关于 MCP 服务器的讨论。我之前做了一些非常轻量级的基准测试，以查看 Bash 工具或 MCP 服务器是否更适合特定任务。TL;DR：如果你小心，两者都可以高效。但问题是，许多最流行的 MCP 服务器对特定任务效率低下。它们需要涵盖所有基础，这意味着它们提供了大量带有冗长描述的工具，消耗了大量的上下文。此外，扩展现有的 MCP 服务器也很困难。MCP 服务器也无法组合。我喜欢简单的事物。Agent 可以很好地运行 Bash 和编写代码。Bash 和代码是可组合的。所以，还有什么比让你的 agent 调用 CLI 工具和编写代码更简单的呢？让我用一个常见的 MCP 服务器用例来说明这一点：浏览器开发工具。</p>
+
+<p><a href="https://marmelab.com/blog/2025/11/12/spec-driven-development-waterfall-strikes-back.html">规范驱动开发：瀑布模型反击战</a><br>规范驱动开发 (SDD) 试图恢复在编码前进行大量文档记录的旧观念——这让人回想起瀑布时代。虽然它承诺为 AI 驱动的编程提供结构，但它有可能将敏捷性埋在 Markdown 的层层之下。这篇文章探讨了为什么更具迭代性和自然语言的方法可能更适合现代开发。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

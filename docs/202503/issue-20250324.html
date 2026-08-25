@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250324.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250324</span>
+</p>
+<p>每日一谚：Only use a buffered channel if you know the exact buffer size. Or, you would be only gambling with a ticking time bomb. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/03/24/understand-methodname-scope">Go方法名的作用域：包级，但需间接调用</a><br>在Go语言中，作用域（Scope）决定了标识符（如变量、常量、函数、方法等）的可见范围。对于函数，我们熟知其包级作用域：包内任意位置可直接调用，首字母大写则可在包外调用。但对于方法名（Method Name），虽然其作用域同样是包级的，却需要间接调用——必须通过其关&gt;联类型（接收者类型）的实例来调用。本文将深入探讨这一关键区别，揭示Go方法名作用域的本质。</p> 
+
+<p><a href="https://ldez.github.io/blog/2025/03/23/golangci-lint-v2">golangci-lint v2发布</a><br>我很高兴地宣布 v2 的发布！我希望这些功能能够增强您的开发体验。此主要版本标志着 golangci-lint 发展中的一个激动人心的新篇章。此版本对配置结构、文件路径管理、问题排除和格式化工具进行了改进。还引入了新的 `golangci-lint fmt` 命令和迁移命令 `golangci-lint migrate` 以简化升级过程。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/03/24/reimagining-log-management-tools-and-software-the-impact-of-ai-and-genai/">重新构想日志管理工具和软件：AI 和生成式 AI 的影响</a><br>当今分布式、云原生系统以高速度生成日志，使得从中获得可操作的见解变得越来越困难。AI 和生成式 AI (GenAI) 技术（特别是大型语言模型 (LLM)）正在通过使团队能够筛选这些数据、识别异常并提供实时、上下文丰富的智能来简化故障排除，从而改变日志管理工具。通过应用基于转换器的架构（它依赖于称为注意机制的专门流程来突出日志数据中最有意义的部分），这些模型擅长解析非结构化文本（如日志消息）、理解上下文，甚至生成对潜在问题的易于理解的摘要或解释。在这篇文章中，我们将探讨 AI 驱动的方法如何将日志管理工具转变为“智能助手”，从而实现更快、更主动的事故解决。我们将研究 GenAI 技术如何利用注意机制和语言建模来处理不仅仅是异常检测，还包括日志和用户查询的解释，最终弥合原始机器数据和可操作见解之间的差距。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/03/23/introducing-jobset/">Kubernetes 博客：JobSet 简介</a><br>本文介绍 JobSet，这是一个用于表示分布式作业的开源 API。JobSet 的目标是为 Kubernetes 上的分布式机器学习训练和高性能计算工作负载提供统一的 API。Kubernetes 社区最近对 Kubernetes 批处理生态系统的增强吸引了机器学习工程师，他们发现它非常适合运行分布式训练工作负载的需求。JobSet 利用 Job API 作为构建块来构建更丰富的 API，以应对大规模分布式高性能计算和机器学习用例。</p>
+
+<p><a href="https://thenewstack.io/rethinking-system-architecture-the-rise-of-distributed-intelligence-with-ebpf">重新思考系统架构：eBPF 推动的分布式智能崛起</a><br>将计算更靠近数据是一个由来已久的话题；而现在的新趋势是将系统智能也更靠近数据。本文探讨了这种趋势的缘起、eBPF 在推动系统架构革新中的核心作用，以及数据与智能之间更紧密往复循环的意义。文章涵盖了集中式智能模型的不足（数据传输开销、延迟、可扩展性挑战以及上下文信息丢失），以及eBPF 如何在网络、可观察性和安全方面克服这些限制，并提高效率。</p>
+
+<p><a href="https://www.dbos.dev/blog/new-three-tier-application">新型三层应用程序</a><br>文章探讨了如何管理分布式后端架构的复杂性，探索了编排服务和确保持久执行的不同方法。从最初的、简单的三层架构（数据源层、领域层、表示层）发展到如今的微服务架构，后端变得越来越复杂，需要一个新的编排层来协调分布式微服务并向前端提供简单的API，以保证代码在出现故障时也能正确执行。文章比较了两种构建编排层的方法：自己动手和使用专用的外部编排器，并最终介绍了DBOS Transact——一个轻量级的编排库，它可以添加到任何程序中，将编排功能与应用层和数据库层相结合，从而简化了复杂性。</p>
+
+<p><a href="https://annievella.com/posts/the-software-engineering-identity-crisis">软件工程的认同危机</a><br>许多软件工程师最初选择这个职业是因为他们认同“构建”而非“管理”。然而，AI 编码助手的出现正在挑战这种认同。我们正在从创造者转变为协调者，从构建者转变为监督者，从工程师转变为类似管理者的角色。文章探讨了AI对软件工程师身份认同的影响，以及如何适应这种转变。</p>
+
+<p><a href="https://lmika.org/2025/03/18/dont-be-afraid-of-types.html">别害怕类型</a><br>在代码库中，我发现对创建新类型有一种轻微的抵触情绪。这种现象在我早期使用 Java 项目时就存在，如今在偶尔的 Go 项目中仍然存在。函数体中有很多局部变量，函数有很多参数或返回很多结果，对现有类型的扩展而不是创建新类型。这是一种奇怪的现象。
+
+我不明白为什么会出现这种情况。可能是害怕感觉自己篡改了代码库的“宏伟设计”。这很可能是真的，因为在我刚开始当开发人员时就有这种感觉。害怕在 Java 中创建新类，认为自己正在为项目引入一个新概念，其他人以后必须处理。_我可以随意添加动词，但我凭什么_去引入一个新的名词？_</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Mar/23/semantic-diffusion/#atom-everything">语义扩散</a><br>作者在抱怨“氛围编程”（vibe coding）的定义被扭曲为“任何时候使用大型语言模型编写代码”时，了解了“语义扩散”（Semantic Diffusion）这个术语。他认为，这个术语的本意是指“在不检查大型语言模型生成的代码的情况下编写代码”。作者认为“氛围编程”的定义正在经历语义扩散，其含义变得模糊不清，这与Martin Fowler在2006年提出的语义扩散的定义相符。作者还以自身创造的“提示注入”（prompt injection）为例，说明了这种含义稀释现象的普遍性。最后，文章引用了Andrej Karpathy（创造“氛围编程”一词的人）的回应，并附带了一张GIF图作为该术语的官方图解。</p>
+
+<p><a href="https://pt.plus/03-24-25-patching-ai">03.24.25: 给 AI 打补丁</a><br>文章探讨了AI模型在实际应用中的局限性，特别是其在复杂系统优化方面的不足。作者以Meta公司一个工程师通过修改一行代码节省15000台服务器的案例为例，指出AI目前难以在复杂环境中找到并解决关键问题。文章分析了强化学习在解决此类问题中的挑战，并指出AI需要更好的数据、更强的安全决策能力以及更好的“补丁”机制，例如专业判断增强工具、结构化验证流程和最佳人机分工模式，来弥补其在判断力、可靠性和安全性上的缺陷。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/Y2LTysLiL7WPvSeLEZKokg">最新「大模型简史」整理！从Transformer（2017）到DeepSeek-R1（2025）</a><br>本文详细回顾了大型语言模型从2017年Transformer架构的出现到2025年DeepSeek-R1的发展历程，涵盖了BERT、GPT系列、多模态模型、推理模型等关键进展，展示了LLMs在规模、性能、成本和多模态能力上的巨大进步，以及对AI领域和社会的深远影响。</p>
+
+<p><a href="https://mp.weixin.qq.com/s/ewlXaLEig2ReC5vF3uxEQw">AIBrix 深度解读：字节跳动大模型推理的云原生实践</a><br>AIBrix 作为首个基于 Kubernetes 的企业级推理系统项目，正好填补了业界在“系统层”上的空白。它通过优化资源调度、自适应扩缩容、缓存感知路由以及异构计算管理等多项能力，为企业级大模型的大规模部署提供高效、低成本、可扩展的解决方案。AIBrix 与 vLLM 等推理引擎深度协同，持续优化推理效率，并融合多项前沿研究成果，推动大模型推理走向更加高效、可落地的生产化阶段。</p>
+
+<p><a href="https://ankitmaloo.com/bitter-lesson">痛苦的教训：重新思考我们如何构建 AI 系统</a><br>这篇文章探讨了 Richard Sutton 的一篇具有开创性的论文《痛苦的教训》，该论文指出，随着计算能力的提高而性能提升的系统优于那些不具备此特性的系统。作者以构建客户服务自动化系统为例，比较了基于规则的方法、有限计算能力的智能体和可扩展解决方案三种方法，论证了计算能力在 AI 系统发展中的重要性。文章强调了强化学习 (RL) 在未来 AI 发展中的作用，以及 AI 工程师在构建能够有效利用大量计算资源的系统方面所扮演的关键角色。作者建议 AI 工程师应该专注于构建可扩展的系统，而非过度优化算法，并指出在 AI 领域，拥有强大计算能力的公司将占据竞争优势。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub’s official command line tool</p>
+
+<p><a href="https://github.com/daeuniverse/dae">daeuniverse/dae</a><br>eBPF-based Linux high-performance transparent proxy solution.</p>
+
+<p><a href="https://github.com/quii/learn-go-with-tests">quii/learn-go-with-tests</a><br>Learn Go with test-driven development</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/charmbracelet/huh">charmbracelet/huh</a><br>Build terminal forms and prompts 🤷🏻‍♀️</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/twpayne/chezmoi">twpayne/chezmoi</a><br>Manage your dotfiles across multiple diverse machines, securely.</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>An open-source, lightweight note-taking solution. The pain-less way to create your meaningful notes. Your Notes, Your Way.</p>
+
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core</a><br>A platform for building proxies to bypass network restrictions.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go, the easiest way to write LLM-based programs in Go</p>
+
+<p><a href="https://github.com/garethgeorge/backrest">garethgeorge/backrest</a><br>Backrest is a web UI and orchestrator for restic backup.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

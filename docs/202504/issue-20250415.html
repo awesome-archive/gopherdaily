@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250415.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250415</span>
+</p>
+<p>每日一谚：Design the architecture, name the components, document the details. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/mQehW07uSvfMkSMfcrSEsA">11个现代Go特性：用gopls/modernize让你的代码焕然一新</a><br>如何用Go官方工具一键升级到Go现代代码风格</p> 
+
+<p><a href="https://dev.to/shrsv/how-go-interfaces-help-build-clean-testable-systems-3163">Go 接口如何帮助构建简洁且可测试的系统</a><br>Go 接口是创建简洁、模块化且可测试代码的绝佳方式。它们帮助你解耦组件、简化测试并启用依赖注入，而不会增加复杂性。本文将深入探讨 Go 接口如何支持简洁的架构，并通过实际示例、代码片段、表格和清晰的解释来阐明其作用。  重点涵盖标准化命名约定、详细的存储库示例以及在大型项目中组织接口的技巧。</p> 
+
+<p><a href="https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part2.html">Go语言调度：第二部分 - Go调度器</a><br>本博文是探索 Go 调度器机制和语义的三部分系列的第二部分。尽管发表于 2018 年，但其内容在今天仍然适用，因为 Go 调度器的设计继续影响着高效且可扩展的并发系统的开发。在本博文中，我们将深入探讨 Go 调度器的内部工作原理，讨论其组件（例如全局运行队列 (GRQ) 和局部运行队列 (LRQ)），以及其行为，包括上下文切换、工作窃取以及同步和异步系统调用的处理。通过理解这些概念，开发人员可以在 Go 应用程序中做出关于并发和优化的明智决策。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-04-14-adaptive-encoding/">自适应编码简介</a><br>数据库如何实际编码磁盘上的值非常重要。我们探讨了Dolt以改进性能的不同数据编码方式。Dolt 使用自适应编码来优化对文本和二进制列的处理，有效地处理大小字符串。虽然标准版 Dolt 仍在使用内联编码或地址编码，但引擎的改进使其能够从自适应编码中受益，从而提高查询速度。</p> 
+
+<p><a href="https://blog.ctx42.com/p/crafting-testing-module-step-3-testing-the-testers">编写测试模块：第 3 步 - 测试测试器</a><br>本文探讨了如何在不触发实际错误的情况下测试 affirm 包的断言辅助函数。作者解释了测试测试工具的原因，并阐述了测试 affirm 包断言函数的挑战，以及如何通过使用 core 包中的 T 接口和 Spy 结构体来解决这些挑战。</p> 
+
+<p><a href="https://www.calhoun.io/using-signals-with-go">使用 Go 信号 - Calhoun.io</a><br>本文探讨了信号是什么以及如何在 Go 程序中监听信号。我们还探讨了一些常见的陷阱，例如在完成监听信号后忘记停止监听。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/lNmztKNmlWT-D9aEpmurmw">InfluxDB 3.0 GA：四年Rust重构，是新生还是挑战？</a><br>一项技术的重大革新，带来了新特性，但也可能改变了其原有的核心优势（如特定技术社区的亲和度）或在某些方面带来新的挑战（如短期内的性能 表现）。InfluxDB 3.0 的案例，生动地展示了技术选型、重构决策背后复杂的权衡，以及对用户社区可能产生的深远影响</p>
+
+<p><a href="https://tailscale.com/blog/10000-times-faster">速度提升 10000 倍，简化 10000 倍：为什么今天的解决方案不需要互联网规模的复杂性</a><br>Tailscale 首席执行官兼联合创始人 Avery Pennarun 在这篇文章中指出，如今的硬件性能已经有了巨大的提升，大多数企业不需要像谷歌那样复杂的互联网规模基础设施。文章建议开发者利用现代硬件的强大功能，采用更简洁的架构，例如边缘计算，来构建更高效、更易维护的软件系统，避免过度工程带来的复杂性和脆弱性。</p>
+
+<p><a href="https://www.haproxy.com/blog/choosing-the-right-transport-protocol-tcp-vs-udp-vs-quic">选择正确的传输协议：TCP 与 UDP 与 QUIC</a><br>本文提供了一个决策框架，详细分析了 TCP、UDP 和 QUIC 的优缺点以及理想用例，以帮助用户为其系统选择合适的协议。它涵盖了协议概述、决策框架、决策树以及 HAProxy 如何支持这些协议。文章还强调了 QUIC 的兴起及其在现代网络应用中的重要性。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/04/14/what-llms-can-do-for-sres-in-cloud-native-infrastructure/">大型语言模型 (LLM) 如何帮助云原生基础设施中的站点可靠性工程师 (SRE)</a><br>云原生基础设施持续扩展，随之而来的是运营开销的增加。Kubernetes 已经成为现代平台的基石，但是随着集群规模超过 100 个节点和数千个工作负载，运营负担可能会非常沉重。大型语言模型 (LLM) 可以帮助站点可靠性工程师 (SRE) 更有效地管理现代基础设施，例如解释复杂的日志和系统事件、总结根本原因、辅助决策以及建议或自动化配置更改。这并非要取代 SRE，而是要支持和增强他们的能力，最终目标是让工程师能够更有效地管理基础设施，减少运营开销，并专注于更重要的任务。</p>
+
+<p><a href="https://www.joshwcomeau.com/blog/the-post-developer-era">后开发者时代</a><br>两年前，即2023年3月，作者发表了一篇名为《前端开发的终结》的博文。这正值OpenAI发布GPT-4演示之后，当时的普遍反应是人类软件开发人员即将被淘汰，软件很快将完全由机器编写。
+作者对这些说法持怀疑态度，并在该博文中阐述了为什么他认为在可预见的未来，软件开发仍需要人类。他的假设是，大型语言模型（LLM）将增强人类开发人员，而不是取代他们。
+两年多过去了，作者重新审视了这些早期的预测，并试图了解事情的发展方向。文章探讨了公司对AI工具的采用情况、AI工具的局限性以及当前的就业市场状况，并对未来进行了展望，认为我们距离软件开发完全自动化还有很长的路要走。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/14/gpt-4-1/#atom-everything">GPT-4.1：OpenAI发布的三款百万级token输入模型，其中包括迄今为止最便宜的模型</a><br>OpenAI发布了三款新的模型：GPT-4.1、GPT-4.1 mini和GPT-4.1 nano。这些模型目前仅通过API提供，无法通过ChatGPT界面访问。所有三个模型都能够处理1,047,576个token的输入和32,768个token的输出，截止日期均为2024年5月31日。它们在编码基准测试中的得分高于GPT-4o和GPT-4.5，并且在长文本上下文基准测试中也表现出色。文章还介绍了作者更新的llm-openai插件，以及GPT-4.1 nano的定价优势，并对这些新模型进行了总结和讨论。</p>
+
+<p><a href="https://blog.sshh.io/p/everything-wrong-with-mcp">MCP 的一切问题</a><br>本文探讨了模型上下文协议 (MCP) 的一些问题，该协议已快速成为将第三方数据和工具与基于大型语言模型 (LLM) 的聊天和代理集成的实际标准。文章列举了 MCP 的一些安全漏洞和局限性，包括协议安全问题（例如，身份验证机制的不足、本地运行恶意代码的可能性、服务器对输入的信任度过高等）、UI/UX 限制（例如，缺乏工具风险级别和成本的概念、传输非结构化文本等）、LLM 安全问题（例如，更强大的提示注入攻击、意外暴露敏感数据、破坏传统数据访问控制模型等）以及 LLM 本身的一些局限性（例如，对可靠的基于 LLM 的助手、工具的助手不可知性和检索处理的依赖等）。作者认为，解决这些问题需要在协议、应用程序和用户三个方面共同努力。</p>
+
+<p><a href="https://www.geoffreylitt.com/2025/04/12/how-i-made-a-useful-ai-assistant-with-one-sqlite-table-and-a-handful-of-cron-jobs">Stevens：使用单个SQLite数据库和少量cron作业构建可编程AI助手</a><br>本文介绍了作者如何使用简单的架构构建一个AI助手：一个包含记忆的SQLite数据库和少量用于数据摄取和更新发送的cron作业，所有这些都托管在Val.town上。该助手名为Stevens，每天早上会向作者及其妻子发送简报，包括日程安排、天气预报、邮件和提醒等。用户也可以通过Telegram与Stevens进行即时互动。系统易于扩展，可以通过添加新的导入程序来集成更多数据源，例如日历、天气预报、邮件等。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>An opinionated GoLang framework for accelerated microservice development. Built in support for databases and observability.</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>A database migration tool. Supports SQL migrations and Go functions.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/Azure/azure-sdk-for-go">Azure/azure-sdk-for-go</a><br>This repository is for active development of the Azure SDK for Go. For consumers of the SDK we recommend visiting our public developer docs at:</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>Database migrations. CLI and Golang library.</p>
+
+<p><a href="https://github.com/pingcap/tidb">pingcap/tidb</a><br>TiDB - the open-source, cloud-native, distributed SQL database designed for modern applications.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases, designed and built with enterprise-quality and production-grade usage in mind.</p>
+
+<p><a href="https://github.com/stakater/Reloader">stakater/Reloader</a><br>A Kubernetes controller to watch changes in ConfigMap and Secrets and do rolling upgrades on Pods with their associated Deployment, StatefulSet, DaemonSet and DeploymentConfig – [✩Star] if you&#39;re using it!</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/alecthomas/kong">alecthomas/kong</a><br>Kong is a command-line parser for Go</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/coreybutler/nvm-windows">coreybutler/nvm-windows</a><br>A node.js version management utility for Windows. Ironically written in Go.</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

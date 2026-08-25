@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202505/issue-20250516.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250516</span>
+</p>
+<p>每日一谚：Measure before optimizing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/05/16/how-rune-came">揭秘Go语言中的rune：一段跨越30年的Plan 9往事与UTF-8的诞生传奇</a><br>最近，Connor Taffe的一篇精彩博文以及Go语言之父 Rob Pike 的亲自确认，为我们揭开了一段跨越三十余年，从 Plan 9 操作系统到 UTF-8 编码诞生，再到 Go 语言的历史传奇 。今天，就让我们一起，深入 rune 背后的故事</p> 
+
+<p><a href="https://mfbmina.dev/en/posts/golang-rate-token-bucket">探索 Rate 包和令牌桶算法</a><br>在之前的断路器文章中，我提到现在应用程序需要与其他应用程序通信是很常见的，因此流量控制策略变得至关重要。最近我发现了令牌桶，这是一种基于令牌来控制流量的策略。
+想象一下，你拥有 5 张游乐设施的票，每小时你都会得到一张新票，但你最多只能拥有 5 张。每次你乘坐游乐设施时，都会使用一张票。因此，如果你用完了所有票，你就无法再乘坐，直到你获得一张新票为止。这是一个非常有趣的算法，PIX（一种巴西的即时支付方式）就使用了它，以防止攻击者抓取所有用户的数据。</p> 
+
+<p><a href="https://www.jvt.me/posts/2025/05/15/oapi-codegen-2024">回顾 `oapi-codegen` 过去一年</a><br>本文回顾了 `oapi-codegen` 项目过去一年的进展，适逢维护者月，并继续寻求赞助。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/let-your-database-recommend-indexes-index-tuning-tidb/">让数据库推荐索引：TiDB 中更智能的调优</a><br>TiDB 8.5 通过提供基于成本的智能索引建议进一步提升了索引调优——无需额外工具。本文介绍了 TiDB 8.5 中新的 RECOMMEND INDEX SQL 命令，该命令可以直接在工作流程中提供智能的、基于成本的索引建议，无需脚本、猜测或额外工具。它分析实际工作负载（无论是 OLTP、OLAP 还是混合型），并推荐可带来显著影响的索引。还介绍了该命令的两种主要使用方法以及如何微调顾问以匹配您的工作负载和环境。</p>
+
+<p><a href="https://www.docker.com/blog/docker-at-microsoft-build-2025/">Docker 在 Microsoft Build 2025 大会上的精彩亮相 | Docker</a><br>Docker 将在 2025 年的微软 Build 大会上展示其最新产品，融合开发者体验、安全性和 AI 创新。无论您是在西雅图会议中心亲临现场，还是在线观看，您都将见证 Docker 如何重新定义团队构建、保护和扩展现代应用程序的方式。Docker 致力于简化容器安全，并与 Microsoft Defender、Azure Container Registry 和 AKS 等工具集成，从而使构建安全的、可用于生产的应用程序变得更加容易。本次大会还将探索 Docker 如何通过在一个熟悉的环境中整合模型和 MCP 工具来简化代理式 AI 的开发。此外，Docker 还将在大会期间举办一场晚间活动，庆祝其最新工具的发布。</p>
+
+<p><a href="https://blog.dropbox.com/topics/work-culture/ai-be-a-better-boss-leadership-people-managers">AI能否帮助你成为更好的老板？</a><br>人工智能工具正成为实时指导、语气检查、偏差检测和模拟反馈练习的首选资源，随时随地可用，而且完全没有评判。</p>
+
+<p><a href="https://engineering.fb.com/2025/05/15/developer-tools/open-sourcing-pyrefly-a-faster-python-type-checker-written-in-rust/">Open-sourcing Pyrefly: A faster Python type checker written in Rust</a><br></p>
+
+<p><a href="https://ahelwer.ca/post/2025-05-15-tla-dev-status">tla&#43;的当前状态</a><br></p>
+
+<p><a href="https://www.thecoder.cafe/p/complex-systems">在谷歌工作的经验：关于复杂系统的思考</a><br>本文探讨了复杂系统与复杂问题的关键区别，以及如何有效应对复杂系统中的挑战。作者结合在谷歌和优步竞争对手的工作经验，阐述了复杂系统的五个主要特征：涌现行为、延迟后果、局部与全局优化、滞后现象和非线性。文章还介绍了应对复杂系统的策略，包括可逆性决策、超越短期指标、创新思维、受控部署、可观测性、模拟和强大的团队协作。</p>
+
+<p><a href="https://dynomight.net/numpy">我不喜欢 NumPy</a><br>本文作者表达了对NumPy库的复杂性和难以理解的感受。文章以一个简单的线性方程组求解为例，展示了当问题稍微复杂一些时，NumPy 的使用方法变得非常难以理解和掌握，需要运用各种维度调整技巧和函数（如np.tensordot和np.einsum），这使得代码难以阅读和维护。作者认为NumPy 的广播机制和索引方式也存在问题，使得代码难以理解和编写。文章最后，作者表示将介绍一种改进的NumPy库，以解决这些问题。</p>
+
+<p><a href="https://blog.pragmaticengineer.com/stack-overflow-is-almost-dead">Stack Overflow 几乎已死</a><br>Stack Overflow 每月收到的问题数量已降至 2009 年上线时的水平。本文回顾了其缓慢然后加速的衰落过程，并分析了导致其衰落的原因，包括2014年开始的严格的版主政策，2020年疫情期间的短暂繁荣，以及2022年ChatGPT出现后带来的冲击。作者认为，即使没有大型语言模型，Stack Overflow 也可能最终走向衰落，但 LLMs 无疑加速了这一进程。</p>
+
+<p><a href="https://github.blog/developer-skills/application-development/github-issues-search-now-supports-nested-queries-and-boolean-operators-heres-how-we-rebuilt-it">GitHub Issues 搜索现已支持嵌套查询和布尔运算符：我们是如何（重新）构建它的</a><br>最初，Issues 搜索仅限于简单的扁平查询结构。但借助高级搜索语法，您现在可以使用逻辑 AND/OR 运算符和嵌套括号构建搜索，从而精确找到您关心的问题集。构建此功能带来了重大挑战：确保与现有搜索的向后兼容性，在高查询量下保持性能，以及为嵌套搜索设计用户友好的体验。我们很高兴带您了解幕后故事，分享我们如何将这个期待已久的特性从构思变为产品。</p>
+
+<p><a href="https://jmmv.dev/2023/06/fast-machines-slow-machines.html">快速机器，慢速机器</a><br>作者在推特上发布了一组对比视频，一个运行Windows NT 3.51的旧电脑和一个运行Windows 11的新电脑，比较了它们打开和关闭命令提示符、文件资源管理器、记事本和画图软件的速度。结果显示，旧电脑的应用程序打开速度非常快，而新电脑则明显滞后。作者质疑了在一些简单任务上，现代电脑的速度反而不如以前。文章进一步探讨了现代电脑界面延迟的问题，认为现代操作系统和应用程序的延迟非常糟糕，并且越来越严重。文章也分析了自2000年代以来计算机的进步，例如图形、显示器、网络和I/O方面的改进，并指出这些进步并没有改善UI延迟问题。作者认为，导致延迟的原因可能是软件膨胀、框架和抽象层、对开发人员时间的优先级高于性能以及对托管和解释型语言的大量采用。最后，作者表达了对未来电脑性能的担忧，认为如果继续沿用目前的模式，硬件的进步很快会被软件的膨胀所吞噬。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/May/16/python-at-meta/#atom-everything">Meta内部的Python</a><br>Meta公司在PyCon US 2025的开幕致辞中宣布，如果考虑公司所有不同的职能领域，Python现在是Meta公司使用最广泛的语言。他们还有3000多名Python开发者每天都在使用这门语言。文章还提到了PyCon US 2025的现场字幕是由White Coat Captioning提供的。</p>
+
+<p><a href="https://ollama.com/blog/multimodal-models">Ollama 的多模态模型新引擎</a><br>Ollama 现在通过其新引擎支持多模态模型，首先支持新的视觉多模态模型，包括 Meta Llama 4、Google Gemma 3、Qwen 2.5 VL、Mistral Small 3.1 等。该新引擎提高了 Ollama 本地推理的可靠性和准确性，并为支持未来的更多模态（例如语音、图像生成、视频生成等）奠定了基础。新引擎具有模型模块化、精度改进（图像缓存、内存估计和 KV 缓存优化等）、内存管理等特点，并计划未来支持更长的上下文大小、支持思考/推理、工具调用以及启用计算机使用等功能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/git-bug/git-bug">git-bug/git-bug</a><br>Distributed, offline-first bug tracker embedded in git</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/kubernetes-sigs/external-dns">kubernetes-sigs/external-dns</a><br>Configure external DNS servers dynamically from Kubernetes resources</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>A simple zero-config tool to make locally trusted development certificates with any names you&#39;d like.</p>
+
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/yuin/goldmark">yuin/goldmark</a><br>🏆 A markdown parser written in Go. Easy to extend, standard(CommonMark) compliant, well structured.</p>
+
+<p><a href="https://github.com/klauspost/compress">klauspost/compress</a><br>Optimized Go Compression Packages</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/google/uuid">google/uuid</a><br>Go package for UUIDs based on RFC 4122 and DCE 1.1: Authentication and Security Services.</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>Repo for learning observability</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>A Modern Testing Framework for Go</p>
+
+<p><a href="https://github.com/cockroachdb/cockroach">cockroachdb/cockroach</a><br>CockroachDB — the cloud native, distributed SQL database designed for high availability, effortless scale, and control over data placement.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

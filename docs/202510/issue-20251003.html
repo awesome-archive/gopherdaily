@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202510/issue-20251003.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251003</span>
+</p>
+<p>每日一谚：Inheritance is the root of all evil, use composition as much as possible </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://bitfieldconsulting.com/posts/starving">饥饿、睡眠和屈服：理解 Go 的调度程序</a><br>并发的问题是，当同时发生多件事时，我们并不总是能够轻易地知道到底发生了什么。用 Go 编写并发程序很容易，但理解这些程序的行为（或者更常见的是，错误行为）则是另一回事。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/6DfmYsr9eBlwmP0599tu2A">【Go开发者的数据库设计之道】03 工程实践篇：为你的表结构注入“现代灵魂”</a><br>在这一讲，我们将为上一讲产出的“理论骨架”注入“现代灵魂”。我们将逐一审视并解决上述三个核心工程问题： 1.  软删除 (Soft Deletes): 我们将探讨物理删除的巨大风险，并手把手教你如何用 `deleted_at` 字段实现优雅、安全的数据删除。 2.  审计字段 (Audit Fields): 我们将学习如何利用 `created_at` 和 `updated_at` 为数据装上“黑匣子”，让每一次变更都有迹可循。 3.  主键的终极拷问：我们将深入对比自增 ID 和 UUID 这两大“门派”的优劣，并为你提供一个清晰的决策框架，帮助你在未来的项目中做出明智的选择。 </p> 
+
+<p><a href="https://mrinalxdev.github.io/mrinalxblogs/blogs/redis.html">Redis 101 : From a Beginners POV</a><br>本文介绍了Redis的基础知识，包括其作为缓存、速率限制器、消息代理和数据库的应用。文章解释了Redis的快速原因，包括内存数据存储、单线程命令执行和高度优化的C代码和数据结构。此外，文章还讨论了Redis的持久性机制，如RDB和AOF，以及在生产中的实际应用案例，如缓存层和数据库。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/ai-science-agents-research-workflows/">How AI Science Agents Transform Research Workflows | Docker</a><br>See how AI science agents automate literature search, ADMET, and analysis in containerized, reproducible workflows—from laptop to cloud—with Docker.</p>
+
+<p><a href="https://yusufaytas.com/why-over-engineering-happens">为何过度工程总是发生</a><br></p>
+
+<p><a href="https://blog.railway.com/p/product-planning-improvement">为什么大多数产品规划都很糟糕以及如何解决它</a><br>我们尝试了 OKR，但它制造的仪式感多于清晰度。我们的解决方案：问题驱动开发，一个为期 4 天的季度流程，侧重于识别问题（而非解决方案），团队协作确定优先级，并公开承诺。即使我们的用户规模增长到 170 万以上，它也使我们保持了快速的发布速度。</p>
+
+<p><a href="https://kriztalz.sh/traceroute-visualizer">Traceroute Visualizer - 地图和分析网络路径</a><br>使用交互式地图可视化网络traceroute路径。分析网络跃点、延迟和地理路由，用于故障排除和安全研究。</p>
+
+<p><a href="https://singhkays.com/blog/netflix-av1-decode">解码 Netflix 的 AV1 流：这是我发现的 10 件事</a><br>一个周末项目，结果发现 Netflix 正在悄然通过 AV1 彻底改变流媒体效率。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Oct/3/cameo-prompt-injections/#atom-everything">Sora 2 提示词注入</a><br>事实证明 Sora 2 容易受到提示词注入的攻击！当您加入 Sora 时，您可以选择创建自己的“cameo”——您自己的虚拟视频再现。Theo Browne注意到，您可以在您的“Cameo 偏好”中设置一个文本提示词来影响您的外观，但该文本似乎被连接到整个视频提示词中，这意味着您可以使用它来颠覆任何选择您的 cameo 在他们的视频中使用的人的提示词！</p>
+
+<p><a href="https://www.answer.ai/posts/2025-10-01-solveit-full.html">推出 Solveit，AI 疲劳的解药</a><br>现在您可以注册 Solveit 课程，该课程教授如何使用快速的短迭代来解决问题（包括编码、写作、系统管理和研究），并提供一个使这种方法更容易、更有效的平台。</p>
+
+<p><a href="https://www.nicolasbustamante.com/p/the-rag-obituary-killed-by-agents">The RAG Obituary: Killed by Agents, Buried by Context Windows</a><br>我一直在 AI 和搜索领域工作了十年。 首先，我建立了欧洲最大的法律搜索引擎 Doctrine，现在我正在构建 Fintool，这是一个由 AI 驱动的金融研究平台，可帮助机构投资者分析公司、筛选股票和做出投资决策。
+
+在用检索增强生成 (RAG) 系统构建、优化和扩展 LLM 三年后，我相信我们正在见证基于 RAG 的架构的黄昏。 随着上下文窗口的爆发和基于代理的架构的成熟，我的有争议的观点是，我们花了这么多时间构建和优化的当前 RAG 基础设施正在衰落。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/microsoft/typescript-go">microsoft/typescript-go</a><br>Staging repo for development of native port of TypeScript</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+<p><a href="https://github.com/derailed/k9s">derailed/k9s</a><br>🐶 Kubernetes CLI To Manage Your Clusters In Style!</p>
+
+<p><a href="https://github.com/openfga/openfga">openfga/openfga</a><br>A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar</p>
+
+<p><a href="https://github.com/rook/rook">rook/rook</a><br>Storage Orchestration for Kubernetes</p>
+
+<p><a href="https://github.com/uber-go/mock">uber-go/mock</a><br>GoMock is a mocking framework for the Go programming language.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/envoyproxy/gateway">envoyproxy/gateway</a><br>Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/NVIDIA/gpu-operator">NVIDIA/gpu-operator</a><br>NVIDIA GPU Operator creates, configures, and manages GPUs in Kubernetes</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>Cloud Native Policy Management</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/ethereum-optimism/optimism">ethereum-optimism/optimism</a><br>Optimism is Ethereum, scaled.</p>
+
+<p><a href="https://github.com/vitessio/vitess">vitessio/vitess</a><br>Vitess is a database clustering system for horizontal scaling of MySQL.</p>
+
+<p><a href="https://github.com/charlie0129/batt">charlie0129/batt</a><br>Control and limit battery charging on Apple Silicon MacBooks.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

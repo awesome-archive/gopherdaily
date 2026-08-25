@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250420.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250420</span>
+</p>
+<p>每日一谚：return early, return often </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://poltora.dev/iterators-in-go">Go语言中迭代器的使用场景及原因</a><br>迭代器是一种语言特性，允许遍历集合或数据流的元素，而无需一次性将所有内容加载到内存中。Go 语言在去年引入了迭代器，引发了很大的反响：许多开发者不喜欢这种改变，不明白为什么需要迭代器或者在哪里使用它们。最常见的抱怨是迭代器使语言变得更复杂——而简洁性一直是 Go 语言理念的基石。本文探讨了迭代器在实际应用中的几个主要场景，包括延迟数据读取（例如数据库逐行读取）、处理分页API以及构建数据管道。</p> 
+
+<p><a href="https://www.dolthub.com/blog/2025-04-18-optimizing-heap-allocations">Go语言堆分配优化：案例研究</a><br>本文介绍了一个 Go 语言程序的性能优化案例。作者在开发 Dolt 数据库时，发现一个看似无害的重构导致性能下降 30%。通过分析，作者找到了问题根源：由于使用了值接收器，导致不必要的内存堆分配。本文详细解释了 Go 语言的内存分配机制，以及如何通过使用指针接收器来避免不必要的堆分配，从而提高性能。</p> 
+
+<p><a href="https://jerf.org/iri/post/2025/go_layered_design">Go语言的分层设计</a><br>这篇文章描述了作者在 Go 语言中设计程序的方式。Go 语言禁止包之间循环引用，这篇文章探讨了如何在 Go 中运用分层设计来避免循环依赖，并对几种常见的解决循环依赖的方法进行了详细的分析和比较。作者认为，分层设计本身就是一种合理且足够的设计方法，它与函数式编程思想相契合，并且能提高代码的可理解性和可维护性。文章还讨论了如何在 Go 的分层设计之上使用其他架构模式，以及如何通过重构来消除循环依赖。最后，作者对比了这种设计方法与其他设计方法的差异，并强调了这种方法在实际应用中的优势，例如方便代码的模块化和微服务化。</p> 
+
+<p><a href="https://dev.to/pixperk/dont-cry-about-pointers-anymore-deep-dive-with-c-go-and-rust-3jhk">别再为指针而哭泣了——C、Go和Rust的深度剖析</a><br>本文深入探讨了指针的概念、作用以及在C、Go和Rust三种语言中的应用差异。文章首先解释了指针的基本概念，然后对比了三种语言中指针的声明、动态内存分配、堆栈分配、值传递和引用传递等方面的区别，并重点介绍了Go语言的垃圾回收机制和Rust语言的内存所有权模型。最后，文章总结了三种语言中指针的优缺点，并给出了选择使用哪种语言的建议。</p> 
+
+<p><a href="https://dev.to/pottekkat/building-a-model-context-protocol-mcp-server-in-go-4314">使用 Go 构建模型上下文协议 (MCP) 服务器</a><br>模型上下文协议 (MCP) 服务器允许大型语言模型 (LLM)（MCP 主机/客户端）以标准方式访问提示、资源和工具，从而允许您在 LLM 之上构建代理和复杂的流程。虽然还没有官方的 Go SDK，但社区构建的 mark3labs/mcp-go 已经越来越受到 Go 开发者的欢迎。本文快速介绍了如何使用 MCP Go SDK 为 DiceDB（类似于 Redis 的内存键值存储）设置 MCP 服务器。</p> 
+
+<p><a href="https://itnext.io/build-a-mcp-server-using-go-to-connect-ai-agents-with-databases-1175e3be3b8c">使用 Go 构建 MCP 服务器以连接 AI 代理和数据库</a><br>本文介绍了如何使用 Go SDK 和 mcp-go 构建一个用于 Azure Cosmos DB 的 MCP 服务器示例。该服务器提供与 Azure Cosmos DB 交互的工具，包括列出数据库、列出容器、读取容器元数据、创建容器、向容器添加项目、读取项目和执行查询等功能。文章还提供了一个使用 VS Code Insiders 代理模式的演示视频，并讲解了如何运行服务器以及配置 Azure Cosmos DB 的 RBAC 权限和身份验证。</p> 
+
+<p><a href="https://dev.to/shrsv/designing-go-apis-the-standard-library-way-accept-interfaces-return-structs-410k">Go 标准库方式设计 Go API：接受接口，返回结构体</a><br>Go 的标准库是简洁实用 API 设计的典范。其核心原则之一是“接受接口，返回结构体”。这种方法确保输入的灵活性、输出的丰富功能以及易于测试和扩展的代码。本文将深入探讨这一原则的含义、工作原理以及如何在编写更好的 Go API 时应用它。文中包含实际示例、标准库见解和避免常见陷阱的技巧，以便你立即在项目中运用这些见解。</p> 
+
+<p><a href="https://laurentsv.com/blog/2024/10/19/no-nonsense-go-package-layout.html">Go 项目布局的实用指南</a><br>本文探讨了 Go 项目的布局问题，指出许多关于 Go 项目布局的博客和示例都过时或过于复杂。作者强调 Go 的核心哲学是简洁性，建议在实际需要之前不要过度关注项目结构。文章批判了所谓的“golang-standards”项目布局，并提出了作者自己的观点，包括主函数的位置、`internal/` 目录的使用、`pkg/` 目录的过时性以及 `util/` 目录的替代方案。作者建议根据项目实际情况选择合适的布局方式，避免过度设计，并提供了几个项目示例作为参考。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://transactional.blog/sigmod-contest/2025.html">内存连接流水线 (2025)</a><br>本文档介绍了 2025 年 SIGMOD 编程竞赛的内存连接流水线任务。任务要求参赛者实现一个高效的连接算法来加速连接流水线的执行时间。具体来说，需要实现 `execute` 函数，该函数接收一个计划和上下文作为输入，并返回一个列式表。可选地，还可以实现 `build_context` 和 `destroy_context` 函数来准备和销毁全局上下文。文档详细描述了输入计划、数据格式以及评价指标。提供了快速入门指南，包括下载数据集、构建项目和运行测试的步骤。还包含数据集和评价的详细信息。</p>
+
+<p><a href="https://blog.zeptonow.com/everything-was-fine-until-kubernetes-said-no-more-cpu-3768cda76326">一切都很顺利，直到 Kubernetes 说“没有更多 CPU”</a><br>今年早些时候，我们开始将我们最繁忙的 Python 服务之一重新架构到 Go。目标很简单：更快的性能和更好的可扩展性。我们推出了一项新服务，重写了核心逻辑，将其容器化，并使用简洁的接口和现代化的基础设施进行了部署。它运行得非常出色——直到它不再运行。该服务在负载下开始运行缓慢。延迟激增，仪表板误导了我们，根本原因静静地隐藏在一个角落——CPU 节流，这个我们从未邀请过却不知何故获得了生产访问权限的狡猾的小精灵。我们摆脱了一个巨大的 Python 单体——它很旧、很慢，坦率地说，它已经厌倦了——并启动了一项具有自己 API 的闪亮的新服务。编写简洁明了的代码。Go、TDD、良好的实践、容器、CI/CD，所有的一切。然后，两周后，服务开始运行缓慢。我们增加了更多的 Pod，但这并没有解决问题。延迟仍然很高。然后我们意识到问题出在自动缩放器上，它基于 Pod CPU 而不是容器 CPU 进行缩放。通过对自动缩放器进行调整，让它追踪应用程序容器，情况有所好转。但服务仍然感觉迟缓，尤其是在边缘。这时我们意识到：这不仅仅是缩放问题。更深层次的问题正在抑制应用程序的运行能力。事实证明，容器受到了 CPU 节流的严重影响。它没有使用更多 CPU，因为它不允许这样做。Go 运行时与 CPU 切片竞争，就好像在商场进行黑色星期五大促销一样。即使从外部看来应用程序看起来处于空闲状态，内部它就像一个饥饿的蹒跚学步的孩子在发脾气，因为有人说“不再有屏幕时间”。最后，我们给容器提供了更实际的 CPU 请求和限制，并显式地设置了 GOMAXPROCS 以匹配容器实际拥有的 CPU 数量，而不是 Go 运行时认为它拥有的数量。我们还向仪表板添加了节流指标。通过提高效率，我们看到每天的成本下降，效率提高，延迟降低，客户又开始笑了。 </p>
+
+<p><a href="https://blog.diatomlabs.com/creating-aws-architecture-diagrams-with-python-and-cursor-a-step-by-step-guide-c88a0aa16298">使用 Python 和 Cursor 创建 AWS 架构图：循序渐进指南</a><br>本教程将指导您如何使用 Python 的 Diagrams 库和 Cursor 编辑器快速创建专业的云架构图。我们将为一家名为 Innovate Inc. 的虚构初创公司构建一个全面的 AWS 多账户架构图，遵循他们的需求并迭代改进可视化效果。</p>
+
+<p><a href="https://www.swequiz.com/blog/every-caching-strategy-explained-in-5-minutes">5分钟内讲解所有缓存策略</a><br>本文讲解了五种主要的缓存策略：缓存旁路（延迟加载）、直读缓存、直写缓存、写回缓存和绕写缓存。每种策略都详细解释了其工作原理、适用场景以及优缺点。文章最后还通过一个关于实时排行榜服务的案例，讲解了如何根据应用场景选择合适的缓存策略。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://addyo.substack.com/p/vibe-coding-is-not-an-excuse-for">氛围式编程并非低质量工作的借口</a><br>本文探讨了 AI 辅助开发的利弊。AI 可以降低编程门槛，提高效率，但不能保证代码质量。作者建议将 AI 视为经验不足的初级开发者，生成的代码必须经过严格审查、重构和测试，确保代码质量和可维护性。文章还列举了 AI 编程适用和不适用的场景，并提出了七条高质量 AI 编程的规则。</p>
+
+<p><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code最佳实践</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Golang.</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring hub with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+
+<p><a href="https://github.com/usual2970/certimate">usual2970/certimate</a><br>开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+
+<p><a href="https://github.com/opentofu/opentofu">opentofu/opentofu</a><br>OpenTofu lets you declaratively manage your cloud infrastructure.</p>
+
+<p><a href="https://github.com/lima-vm/lima">lima-vm/lima</a><br>Linux virtual machines, with a focus on running containers</p>
+
+<p><a href="https://github.com/Kethsar/ytarchive">Kethsar/ytarchive</a><br>Garbage Youtube livestream downloader</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/ncruces/go-sqlite3">ncruces/go-sqlite3</a><br>Go bindings to SQLite using wazero</p>
+
+<p><a href="https://github.com/WireGuard/wireguard-go">WireGuard/wireguard-go</a><br>Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference</p>
+
+<p><a href="https://github.com/OWASP/Go-SCP">OWASP/Go-SCP</a><br>Golang Secure Coding Practices guide</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/rqlite/rqlite">rqlite/rqlite</a><br>The lightweight, user-friendly, distributed relational database built on SQLite.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

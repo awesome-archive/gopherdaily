@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202606/issue-20260623.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260623</span>
+</p>
+<p>每日一谚：Go&#39;s struct composition is flexible. Use it to share behavior, not state.  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/06/23/ai-divide-developers-into-lazy-juniors-and-the-burnedout-seniors">AI 正在撕裂研发团队：狂欢的“托管派”与心碎的“守夜人”</a><br>硅谷投资人、前 Google 工程师 Deedy Das 发文称由管理层激进推行的“代币最大化（Tokenmaxing）”和 AI 辅助，并没有消灭技术债，反而正在将研发团队割裂为两个截然对立的阶级——狂欢的“托管派(The Lazy )”与心碎崩溃的“代码守夜人(The craftsmen)”。</p> 
+
+<p><a href="https://unisondb.io/blog/object-store-wal-replication-in-unisondb/">UnisonDB 中的对象存储 WAL 复制</a><br>UnisonDB 为边缘和多区域副本添加了对象存储 WAL 复制。写入者一次性发布不可变的 WAL 段，而副本则从编目的 LSN 范围中追赶。</p> 
+
+<p><a href="https://tracewayapp.com/blog/system-design-of-a-symbolicator">构建世界级符号化工具的系统设计</a><br>数据的形式可以使服务变得快速或缓慢。</p> 
+
+<p><a href="https://brandur.org/minimum-viable-unit">可销售软件的最小可行单元</a><br>上周我写了关于离开 Stainless 的文章，以及我打算将我的副项目 River 发展成一个小型可持续企业的意图。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://colobu.com/2026/06/23/2026-06-23-how-to-write-design-doc/">如何写好设计文档？</a><br>从简单到复杂，渐进式教学。泛型文档从 `Print` 这种最简单的例子起步，逐步引到泛型图、 `Map`、约束类型推导等复杂场景；它甚至专门提醒读者别把这里的 &#34;generic&#34; 和别的语言混为一谈。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/06/22/telemetry-that-matters-designing-sustainable-high-impact-observability-pipelines/">有意义的遥测：设计可持续的高影响力可观测性管道</a><br>智能采样：远离纯随机采样，这可能会意外丢弃关键错误信号。实施基于尾部或基于模式的采样，以确保丢弃无聊的成功请求，同时捕获 100% 的异常或故障。</p>
+
+<p><a href="https://engineering.fb.com/2026/06/22/video-engineering/adopting-av1-for-real-time-communication-rtc-meta/">大规模采用 AV1 进行实时通信 (RTC)</a><br>切换到更先进的视频编解码器的动机很简单——它在使用更少带宽的同时提供相同的视觉质量。在离线测试中，我们观察到与 H.264 相比，AV1 至少减少了 20% 的比特率。</p>
+
+<p><a href="https://blog.andr2i.com/posts/2026-06-22-optimization-catalog-how-4-bytes-of-padding-make-array-clearing-49-faster">优化目录：4 字节的填充如何使数组清除速度快 49%</a><br>一个我通过艰难方式学到的惊人对齐怪事：在 Intel 上添加 4 字节的结构填充使 Go 的数组清除速度快了 49%，这都归功于 REP STOSQ。</p>
+
+<p><a href="https://mitchellh.com/writing/zig-donation-2026">再次向 Zig 软件基金会承诺 400,000 美元</a><br>我的家庭再次向 Zig 软件基金会 (ZSF) 承诺 400,000 美元。</p>
+
+<p><a href="https://matklad.github.io/2026/04/20/test-case-minimization.html">256 行或更少：测试用例最小化</a><br>基于属性的测试和模糊测试是一个深入且科学密集型的主题。那里有足够的高级技术，可以支持几个博士学位、一个 PBT 守护进程和一个客户端-服务器架构。</p>
+
+<p><a href="https://slicker.me/git/submodules-vs-subtrees-vs-monorepos.html">Git 子模块与子树与单仓库</a><br>Git 存储库是一个对象数据库和一个提交图。一旦代码库需要在其中包含另一个项目的代码——共享库、vendored 依赖、内部服务——恰好有三个结构化的答案：将历史保持在外部并引用它（子模块），保持...</p>
+
+<p><a href="https://hawksley.dev/blog/-ld-explained-for-personal-websites/">个人网站的 JSON-LD 解释</a><br>JSON-LD，也称为 JSON 链接数据，是一种为网页添加结构化数据的格式。它可以帮助网络爬虫理解您网站的语义结构，使您有资格获得更丰富的链接预览，甚至可能提高您的搜索排名。</p>
+
+<p><a href="https://fosterelli.co/developers-dont-understand-cors">开发者不理解 CORS</a><br>全栈咨询工作最好的事情之一是，我可以与来自不同规模和行业公司的众多不同技能水平的开发者合作。</p>
+
+<p><a href="https://blog.cloudflare.com/cloudflare-one-stack/">推出 Cloudflare One 堆栈：基于智能体的部署</a><br>Cloudflare One 堆栈：基于智能体的部署。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/06/17/why-cloud-native-belongs-at-the-heart-of-agentic-ai-lessons-from-building-a-multi-agent-security-platform-on-kubernetes/">为什么云原生应该位于智能体式 AI 的核心：在 Kubernetes 上构建多智能体安全平台的经验教训</a><br>2026 年 6 月 17 日发布，作者 Willem Berroubache，Orange Innovation 首席安全架构师和 CNCF 金色 Kubestronaut。3 月，我在阿姆斯特丹的 KubeCon &#43; CloudNativeCon Europe 2026 上发表演讲。</p>
+
+<p><a href="https://www.elastic.co/search-labs/blog/agent-memory-elasticsearch">Elasticsearch 上的智能体内存：混合检索和 DLS</a><br>Agent Builder 现在已正式发布。开始使用 [Elastic Cloud Trial]，并在此处查看 Agent Builder 的文档。</p>
+
+<p><a href="https://www.oreilly.com/radar/kubernetes-in-the-age-of-ai">AI 时代的 Kubernetes</a><br></p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything">提示注入作为角色混淆</a><br>除非 LLM 实现真正的角色感知，否则我们认为注入防御将是一场永无止境的打地鼠游戏。角色边界的连续性为注入打开了威胁，这些注入旨在通过看似无害的文本微妙地改变 LLM 状态，合法且大规模。</p>
+
+<p><a href="https://www.digitalocean.com/blog/inference-router-architecture">我们如何构建 DigitalOcean 推理路由器</a><br></p>
+
+<p><a href="https://dayafter.substack.com/p/the-universe-just-wants-to-learn">宇宙只是想学习</a><br>DNA 和神经网络的权重是相似类型的对象吗？</p>
+
+<p><a href="https://www.seangoedecke.com/big-tech-needs-big-egos/">大科技工程师需要大自我</a><br>软件工程师中普遍认为，大自我在科技中没有立足之地。</p>
+
+<p><a href="https://stackoverflow.blog/2026/06/10/announcing-stack-overflow-for-agents/">宣布 Stack Overflow for Agents</a><br>十五多年来，Stack Overflow 一直是人类开发者的世界数字水冷却器。它是我们在凌晨 2:00 生产环境着火时去的地方。</p>
+
+<p><a href="https://blog.cloudflare.com/build-your-own-vulnerability-harness/">构建您自己的漏洞工具</a><br>构建您自己的漏洞工具。</p>
+
+<p><a href="https://newsletter.posthog.com/p/why-were-bullish-on-loops">为什么我们对 loops 感到乐观</a><br>WTF 是 loops，为什么每个人都在争论它们，以及它们为什么实际上很重要？</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/kunchenguid/no-mistakes">kunchenguid/no-mistakes</a><br>git push no-mistakes</p>
+
+<p><a href="https://github.com/everywall/ladder">everywall/ladder</a><br>Selfhosted alternative to 12ft.io. and 1ft.io. Proxy to remove CORS headers and modify HTML</p>
+
+<p><a href="https://github.com/haierkeys/fast-note-sync-service">haierkeys/fast-note-sync-service</a><br>High-performance, low-latency note synchronization, online management, and remote REST API service platform.</p>
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
+
+<p><a href="https://github.com/esengine/DeepSeek-Reasonix">esengine/DeepSeek-Reasonix</a><br>DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

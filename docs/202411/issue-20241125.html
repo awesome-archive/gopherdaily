@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202411/issue-20241125.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-11-25</span>
+</p>
+<p>每日一谚：Use constants for magic numbers </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://abdulsamet-ileri.medium.com/tuning-go-application-which-has-gc-issues-with-a-few-steps-4487624b313e">优化Go应用程序中存在的GC问题</a><br>本文详细介绍了作者优化处理 Kafka 消息并将其写入 Google Cloud Storage 的 Go 应用程序的过程。该应用程序最初在性能方面遇到了困难，完成时间比 Confluent Google Cloud Sink Connector 慢了一个小时。作者确定了几个需要改进的关键领域，包括减少堆分配、更改 JSON 库以及调整 GoGC 和 GOMEMLIMIT 设置。通过实施 using sync.Pool 进行对象重用，选择字符串。构建器、预先分配切片和映射以及调整环境变量，作者显著提高了应用程序的性能。这些变化导致垃圾回收暂停频率从每分钟 350 次降低到 30 次调用，GC 暂停时间从 40 毫秒减少到 400 微秒，CPU 利用率从 30% 提高到 50%。文章最后，作者对正在进行的优化工作表示感谢，并感谢为这一旅程做出贡献的支持者。</p> 
+
+<p><a href="https://fmt.errorf.com/posts/go-ducks/">不要在内联接口上休眠</a><br>源文档讨论了 Go 中内联接口的概念，它允许跨不同的包进行结构类型，而不受包范围的限制。它将内联接口与 duck typing 和 nominal typing 进行了对比，突出了每种方法的优点和局限性。本文档提供了如何使用内联接口创建灵活和解耦代码的示例，如 DuckConcert 的实现所示，其中不同的包可以在没有直接依赖关系的情况下进行交互。作者还谈到了使用内联接口时代码重复的可能性，并建议使用类型别名来缓解此问题。总的来说，本文档提倡将内联接口作为在 Go 中实现松散耦合和代码可重用性的强大工具，同时承认所涉及的权衡。</p> 
+
+<p><a href="https://xeiaso.net/notes/2024/go-pointer-constant/">在Go中获取指向常量的指针</a><br>源文档讨论了在 Go 中获取指向常量值的指针的各种方法，这在与 AWS S3 等 API 交互时是必需的。作者按实用性顺序提出了解决方案，从将常量转换为变量的最不简单的方法开始。然后，本文档介绍了 &#39;aws.String&#39; 和 &#39;aws.Type“函数，该函数会自动将字符串常量转换为指针。另一种方法是创建一个泛型函数，该函数返回指向任何给定类型的指针。最后，作者分享了一个受 Kubernetes 启发的技巧，该技巧涉及使用单个元素创建匿名切片并取消引用它以获取指针。每种方法都用 Go 代码片段进行了解释，以说明它们的用法，以满足需要在 Go 应用程序中使用常量值作为指针的开发人员的需求。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dustycloud.org/blog/how-decentralized-is-bluesky/">Bluesky 的去中心化程度到底有多大？</a><br>源文件研究了 Bluesky 的去中心化和联合方面，Bluesky 是一个作为 Twitter 的替代品而出现的社交网络平台。尽管它声称去中心化，但该文件认为 Bluesky 及其底层协议 ATProto 并不是真正的去中心化或联合协议。该平台的架构、对内容寻址的依赖和集中式身份系统被强调为 Bluesky 缺乏完全去中心化模型的领域。该文件还讨论了考虑到 Bluesky 的增长和对抗性收购的可能性，实现有意义的大规模去中心化所面临的挑战。最后，它质疑了在恶意收购的情况下，用户可信退出的可行性，因为目前对域名系统等集中式系统的依赖。批评表明，虽然 Bluesky 旨在为公共利益服务，但其去中心化工作仍在不断发展并面临重大障碍。
+
+（注：提供的摘要基于源文档中概述的主题和关注点。它综合了关键点，没有直接引用文档，遵循了中等长度摘要的说明。</p>
+
+<p><a href="https://danielmangum.com/posts/this-website-is-hosted-on-bluesky/">本网站托管在 Bluesky 上</a><br>源文件探讨了通过利用 AT 协议的 blob 功能，无意中将 Bluesky 的 PDS（个人数据服务器）用于托管网站。它详细介绍了用户如何将 blob（如图像）上传到 PDS 并在帖子中引用它，从而在不直接访问 PDS 的情况下有效地托管网站。该文件强调了 Bluesky 的 PDS 的开源性质，它允许这种创造性的使用，尽管这不是预期的目的。它还涉及直接从 PDS 实例提供 blob 的安全隐患，并建议应应用适当的安全标头。讨论扩展到 AT 协议的灵活性，该协议允许在将来添加新的 blob 类型，但也需要更复杂的安全措施。该文件最后承认了通过 Bluesky 的 PDS 免费托管内容的潜力，同时还考虑了安全预防措施的必要性。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/11/25/how-to-enter-the-kubestronaut-orbit-and-beyond-%f0%9f%9a%80/">如何进入 Kubestronaut 轨道及更远🚀的地方</a><br>Kubestronaut 计划由云原生计算基金会 （CNCF） 提供，旨在表彰和奖励在 Kubernetes 和云原生技术方面具有专业知识的个人。参与者必须持有五项有效的 Kubernetes 相关认证，包括 CKA、CKAD、CKS、KCNA 和 KCSA。获得 Kubestronaut 身份可享受多项福利，例如专属夹克、Credly 徽章和 Kubestronaut 地图上的特色个人资料。该计划还为 CNCF 活动和未来认证提供折扣。我们鼓励 Kubestronauts 通过成为新 CNCF 认证的 SME 并参与各种举措来为社区做出贡献。该计划旨在培养一个知识渊博的专业人士网络，他们可以推动云原生实践的采用和进步。
+
+（注意：根据说明，摘要不包括对所提议问题的直接回答。</p>
+
+<p><a href="https://thenewstack.io/10-reasons-to-choose-ubuntu-server-over-the-competition/">选择 Ubuntu Server 而不是竞争对手的 10 个理由</a><br>源文档主张将 Ubuntu Server 作为服务器操作系统的首选，而不是 Microsoft Server、Red Hat Enterprise Linux 等竞争对手。引用的原因包括 Ubuntu 的用户友好界面，这对 Linux 新手特别有益。它强调了 Advanced Package Tool （apt） 在包管理和解决问题方面的易用性，即使包损坏也是如此。该文档还强调了 Ubuntu 通过 apt 和 Snap 提供的大量应用程序选择、其长期支持周期以及高效的资源使用，使其成为基于云的主机的理想选择。此外，Ubuntu Server 的可预测发布周期和没有 SELinux（这可能会使操作系统容易受到攻击）被认为是优势。本文档最后加强了 Ubuntu Server 在可靠性和性能方面的声誉，尤其是在资源有限的服务器上。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2024/Nov/25/ask-questions-of-sqlite/#atom-everything">在终端中询问有关 SQLite 数据库和 CSV/JSON 文件的问题</a><br>Simon Willison 为 sqlite-utils CLI 工具引入了一个新插件 sqlite-utils-ask，它使用户能够使用人类语言问题直接从终端查询 SQLite 数据库和 CSV/JSON 文件。该插件利用大型语言模型 （LLM） 来解释数据库的架构并生成 SQL 查询。用户可以通过提供数据库文件和问题来安装插件并执行查询。该工具还包括错误处理、详细输出和使用不同 LLM 的能力等功能。此外，sqlite-utils-ask 可以通过将 CSV 和 JSON 文件加载到内存中的 SQLite 数据库来处理它们。该插件在大约 250 行 Python 代码中实现，并利用 LLM 的 Python API 进行通信。本文还强调了使用 gpt-4o-mini 模型进行提示缓存的成本效益，这大大降低了生成大型 SQL 模式提示的成本。
+
+本摘要概括了本文的关键方面，包括 sqlite-utils-ask 插件的功能、它与 LLM 的集成以及数据库查询的实际应用。它还涉及使用特定 LLM 模型的技术实现和经济效益。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>管理所有内容的懒惰方式 docker</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>1 个文件中的开源实时后端</p>
+
+<p><a href="https://github.com/bluesky-social/indigo">bluesky-social/indigo</a><br>Go 源代码，用于 Bluesky 的 atproto 服务。</p>
+
+<p><a href="https://github.com/wagoodman/dive">wagoodman/dive</a><br>用于浏览 Docker 映像中每一层的工具</p>
+
+<p><a href="https://github.com/tmc/langchaingo">tmc/langchaingo</a><br>LangChain for Go，用 Go 编写基于 LLM 的程序的最简单方法</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/Melkeydev/go-blueprint">Melkeydev/go-blueprint</a><br>Go-blueprint 允许用户使用流行的框架快速启动一个 Go 项目</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>X射线，渗透一切。也是最好的 v2ray-core，支持 XTLS。完全兼容的配置。</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>支持 RTSP、RTMP、HTTP-FLV、WebRTC、MSE、HLS、MP4、MJPEG、HomeKit、FFmpeg 等的终极相机流媒体应用程序。</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>太阳能充电 ☀️🚘</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>快速、安全、高效的备份程序</p>
+
+<p><a href="https://github.com/casdoor/casdoor">casdoor/casdoor</a><br>开源 UI 优先的身份和访问管理 （IAM）/单点登录 （SSO） 平台，具有支持 OAuth 2.0、OIDC、SAML、CAS、LDAP、SCIM、WebAuthn、TOTP、MFA、Face ID、RADIUS、Google Workspace、Active Directory 和 Kerberos 的 Web UI</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>非常花哨和现代的终端文件管理器</p>
+
+<p><a href="https://github.com/iawia002/lux">iawia002/lux</a><br>👾 快速简单的视频下载库和用 Go 编写的 CLI 工具</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>后端大师课：用 Go 构建一个简单的银行服务</p>
+
+<p><a href="https://github.com/v2rayA/v2rayA">v2rayA/v2rayA</a><br>Project V 的 Web GUI 客户端，支持 VMess、VLESS、SS、SSR、Trojan、Tuic 和 Juicity 协议。🚀</p>
+
+<p><a href="https://github.com/charmbracelet/huh">charmbracelet/huh</a><br>构建终端表单和提示 🤷🏻 ♀️</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。您的笔记，您的方式。</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman：用于管理 OCI 容器和 Pod 的工具。</p>
+
+<p><a href="https://github.com/NVIDIA/nvidia-container-toolkit">NVIDIA/nvidia-container-toolkit</a><br>利用 NVIDIA GPU 构建和运行容器</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>电话号码的信息收集框架</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

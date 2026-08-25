@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202408/issue-20240812.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-08-12</span>
+</p>
+<p>每日一谚：Fail fast, fail loudly </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.maragu.dev/blog/go-is-my-hammer-and-everything-is-a-nail">Go是我的锤子，一切都是钉子</a><br>Markus 是一名独立开发人员，尽管为这项工作选择正确的工具是普遍的智慧，但由于其多功能性、易用性和知识深度，他使用 Go 作为他的主要编程语言。</p> 
+
+<p><a href="https://dev.to/oyedeletemitope/top-golang-blogs-for-learning-and-building-303i">用于学习和构建的顶级Go博客</a><br>本文列出了 10 个 Golang 博客，这些博客为学习和构建 Golang 提供了全面的资源，包括官方 Go 博客、Treyio 博客、Dev.to、A Journey With Go、Go by Example、Ardan Labs、gopheracademy、Golang Weekly、Dave Cheney 的博客和 Applied Go，所有这些都旨在帮助开发者理解和构建 Golang。</p> 
+
+<p><a href="https://withinboredom.info/2024/08/12/optimizing-cgo-handles/">优化CGO handle</a><br>这篇博客文章讨论了 FrankenPHP（一种用 Go 编写的 PHP SAPI）中 CGO 句柄的优化，通过使用原子指针和切片来提高并发性能和延迟，从而导致每秒请求数显着增加。</p> 
+
+<p><a href="https://dev.to/lukeocodes/time-to-leave-time-to-rebuild-making-twitter20-4jgc">是时候离开了吗？是时候重建了！制作Twitter2.0</a><br>该文件讨论了一种新的社交网络Twitter2.0的开发，其功能包括导入Twitter的archive.zip文件，轻松注册，类似的用户功能，道德货币化，用于内容识别的AI以及使用Onfido或SMART身份服务。</p> 
+
+<p><a href="https://dev.to/rocklinda/benchmarking-csv-file-processing-golang-vs-nestjs-vs-php-vs-python-332e">对 CSV 文件处理进行基准测试：Golang vs NestJS vs PHP vs Python</a><br>本文使用具有 100 万行的合成 CSV 文件，对四种流行的编程语言 Golang、NodeJS 与 NestJS、PHP 和 Python 在 MacBook Pro M1 上的性能进行了基准测试，并得出结论，Golang 提供了最佳的性能速度和内存效率。</p> 
+
+<p><a href="https://tpaschalis.me/lock-striping/">在go中实现lock striping</a><br>本文讨论了锁条带化（Lock Striping），这是一种用于减少并发代码中锁争用的技术，通过将映射分片为 N 个条带/子映射/桶，每个条带/子映射/桶都有自己的锁，并在“prometheus”库的“stripSeries”结构中提供了一个真实示例。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://bloggeek.me/reducing-latency-webrtc/">减少 WebRTC 中的延迟</a><br>该文档讨论了减少 WebRTC 应用程序中延迟的重要性、它对实时通信的影响，以及它影响的各种用例，例如视频会议、游戏和对话式 AI。</p>
+
+<p><a href="https://blog.screenshotbot.io/2024/08/10/building-a-highly-available-web-service-without-a-database/">在没有数据库的情况下构建高可用性Web服务</a><br>screenshotbot 的 CEO Arnold Noronha 讨论了一种新的 Web 开发架构，该架构使用 RAM 作为数据库，利用 Raft 共识算法和 Common Lisp，从而实现更简单、更高效和高可用性的 Web 服务。</p>
+
+<p><a href="https://opentelemetry.io/blog/2024/prometheus-compatibility-survey/">来自 Prometheus 兼容性调查的见解</a><br>OpenTelemetry 和 Prometheus 社区进行了一项调查，以了解用户对指标名称和指标中单位包含的偏好，大多数人更喜欢在指标名称中保留点，而少数人希望包含单位，最常见的挑战是 OpenTelemetry 工具的不稳定性和转换逻辑的混淆。</p>
+
+<p><a href="https://adil.medium.com/how-to-fix-conntrack-table-full-dropping-packets-in-kubernetes-07f561a432aa">How to fix conntrack: table full, dropping packets in Kubernetes?</a><br>The article discusses the issue of &#34; Conntrack &#34;, a component of the Linux kernel&#39;s Netfilter framework, running out of capacity in Kubernetes, and suggests solutions such as increasing the limit, modifying the max value via a daemonset, reducing DNS connections, or sending sequential DNS requests.</p>
+
+<p><a href="https://www.docker.com/blog/adding-the-eslint-tool-to-an-ai-assistant/">将 ESLint 工具添加到 AI 助手：改进 JS/TS 项目的建议</a><br>源文档是一条消息，指示来自系统的“403 Forbidden”错误消息，特别是来自服务器端，特别是来自“ns”（Nix）模块。</p>
+
+<p><a href="https://kubernetes.io/blog/2024/08/12/feature-gates-in-client-go/">在 Client-Go 中引入功能特性门控：增强灵活性和控制力</a><br>Kubernetes 组件为客户端引入了功能门控，通过使开发人员和用户能够以熟悉的方式启用或禁用功能，并记录所有已知功能的状态以供检查，从而增强了灵活性和对功能采用的控制。</p>
+
+<p><a href="https://medium.com/@jake.page91/simplify-kubernetes-monitoring-kube-prometheus-stack-made-easy-with-glasskube-630d4f291de3">简化 Kubernetes 监控：使用 Glasskube 让 Kube-prometheus-stack 变得简单</a><br>Jake Page 解释了如何使用 Glasskube 通过 Kube-Prometheus-Stack 简化 Kubernetes 监控，从而简化了 Kubernetes 集群监控解决方案的配置、生命周期管理和安装。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://huggingface.co/blog/unified-tool-use">统一工具使用</a><br>该文档讨论了在几个流行的模型（包括 Mistral、CoHere、Nous Research 和 Lama）中引入统一的工具使用 API，该 API 简化了聊天中工具的使用，解决了文档稀疏和不一致的问题，并引入了聊天模板以支持工具使用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/TheAlgorithms/Go">TheAlgorithms/Go</a><br>在 Go 中为初学者实现的算法和数据结构，遵循最佳实践。</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/alist-org/alist">alist-org/alist</a><br>🗂️A file list/WebDAV program that supports multiple storages, powered by Gin and Solidjs. / 一个支持多存储的文件列表/WebDAV程序，使用 Gin 和 Solidjs。</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>Sonne tanken ☀️🚘</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>在本地运行 Kubernetes</p>
+
+<p><a href="https://github.com/lxc/incus">lxc/incus</a><br>强大的系统容器和虚拟机管理器</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一种开源的轻量级笔记服务。轻松捕捉和分享您的精彩想法。</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>精选的优秀 Go 框架、库和软件列表</p>
+
+<p><a href="https://github.com/photoprism/photoprism">photoprism/photoprism</a><br>用于去中心化网络🌈💎✨的 AI 驱动的照片应用程序</p>
+
+<p><a href="https://github.com/go-gost/gost">go-gost/gost</a><br>GO Simple Tunnel - 用golang编写的简单隧道</p>
+
+<p><a href="https://github.com/techschool/simplebank">techschool/simplebank</a><br>后端大师班：用 Go 构建一个简单的银行服务</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>电话号码的信息收集框架</p>
+
+<p><a href="https://github.com/base-org/withdrawer">base-org/withdrawer</a><br>Golang 实用程序，用于证明和完成从 op-stack 链中提款。</p>
+
+<p><a href="https://github.com/hr3lxphr6j/bililive-go">hr3lxphr6j/bililive-go</a><br>一个直播录制工具</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>基于简单 YAML 的 DSL 的快速可定制漏洞扫描器。</p>
+
+<p><a href="https://github.com/rqlite/rqlite">rqlite/rqlite</a><br>基于 SQLite 构建的轻量级、用户友好型分布式关系数据库。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源连续文件同步</p>
+
+<p><a href="https://github.com/hashicorp/nomad">hashicorp/nomad</a><br>Nomad 是一个易于使用、灵活且高性能的工作负载编排器，可以部署微服务、批处理、容器化和非容器化应用程序的混合。Nomad 易于操作和扩展，并具有原生 Consul 和 Vault 集成。</p>
+
+<p><a href="https://github.com/v2ray/v2ray-core">v2ray/v2ray-core</a><br>一个用于构建代理以绕过网络限制的平台。</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 命令行模糊查找器</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel 客户端（以前称为 Argo Tunnel）</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

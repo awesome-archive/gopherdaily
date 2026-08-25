@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202608/issue-20260817.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260817</span>
+</p>
+<p>每日一谚：Avoid using pointers to slices, maps, or channels. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/08/17/go-issue-3939-string-int-proposal-revival">Go 语言史上“钉子户”提案重启：一场关于 string(int) 的 14 年拉锯战</a><br>一个由 Go 语言联合创始人 Rob Pike 在 2012 年提出的语言变更提案 #3939，建议移除 Go 中容易引发歧义的 `string(int)` 转&gt;换语法。这一提案历经十余年讨论悬而未决，Go 团队此前只以 `go vet` 告警的方式做了折中处理。近日，在 Robert Griesemer 主持的语言变更&gt;评审会议纪要（issue #33892）中，该提案被正式标记为“移交常规提案委员会重新审议”，意味着这一 Go 语言中最古老的悬而未决的提案之一，可 能迎来实质性进展。本文回顾这一提案的来龙去脉、Go 团队过去十余年的应对策略，以及此次重启审议可能带来的影响。</p> 
+
+<p><a href="https://tonybai.com/2026/08/15/rust-rewrite-blazingly-fast-or-hyped-rustikon-2026">Rust重写运动，到底是真香还是被吹爆？</a><br>Rustikon 2026大会上，两位资深Rust开发者用uutils、PNG库等真实项目的实测数据，systematic地拆解了“用Rust重写”这场运动： 哪些性能提升是真的，哪些是重写本身带来的，重写要付出哪些隐藏代价，又有哪些项目最终放弃了Rust。是否该重写，他们给出了一份冷静的判断清单。</p> 
+
+<p><a href="https://func25.dev/posts/go-sync-nocopy/">Go如何使用sync.noCopy检测结构体复制</a><br>如果您读过`sync`包的源代码，您可能已经注意到几个结构体包含一个类型为`noCopy`的不寻常字段，例如`sync.Mutex`、`sync.Once`和`sync`。</p> 
+
+<p><a href="https://labs.iximiuz.com/tutorials/go-as-systems-programming-language-a667d22b">使用Go进行系统编程</a><br>本教程由社区作者创建，内容由iximiuz Labs团队尽力审查。这是一篇关于使用Go进行系统编程的教程，最后更新于2026年8月4日。</p> 
+
+<p><a href="https://x.com/lemire/status/2088733449704096177">Go 1.27大幅降低内存分配开销</a><br></p> 
+
+<p><a href="https://shivanshuag.com/blog/what-garbage-collection-actually-costs/">垃圾收集的实际成本</a><br>每个计算机程序都需要内存。内存是有限的，因此长时间运行的程序需要在需要时从操作系统借用内存，并在不再需要时释放它。有趣的部分是谁回收那部分内存，以及何时回收。</p> 
+
+<p><a href="https://blog.oxplot.com/tinygo-in-zed/">TinyGo 在 Zed 中</a><br>我将我的嵌入式Go工作迁移到了[Zed]。它超级快速、令人愉悦，并且默认安全性越来越高。对我来说，它胜过杂乱的VS Code：更少的层次、更少的界面碎片，没有我的文本编辑器是戴着工具带的浏览器的感觉。</p> 
+
+<p><a href="https://tonybai.com/2026/08/16/taxi-drivers-alzheimers-rust-programmers-mental-map">出租车司机极少得阿尔兹海默症，那手写 Rust 代码的程序员呢？我大胆推了一个脑洞</a><br>一项覆盖 900 万份死亡证明的研究显示，出租车司机患阿尔兹海默症的比例远低于其他职业，关键在于其大脑中不断实时计算与更新的“空间地图”。这引发了一个有趣的脑洞：手写 Rust 代码时，程序员同样被所有权、借用与生命周期机制强迫在脑内维系着一张复杂的动态内存 关系图。这种高强度的“心智建图”能否成为一种认知锻炼？本文将这项医学统计与 Rust 编程的心智模式进行深度对比拆解，探究认知复杂性对大脑 健康的潜在价值。</p> 
+
+<p><a href="https://speakerdeck.com/ramalho/sets-in-go">Go中的集合 - Speaker Deck</a><br>这是Luciano Ramalho关于Go中集合的演讲。演讲者讨论了如何在Go语言中实现和使用集合数据结构。</p> 
+
+<p><a href="https://arthurbrugiere.fr/blog/2026/08/headscale-to-netbird-benchmark/">我对Headscale和NetBird进行了基准测试，然后进行了迁移</a><br>这篇文章比较了Headscale和NetBird的性能，并分享了作者从Headscale迁移到NetBird的经验。文章涵盖了Linux、服务器和网格网络等主题。</p> 
+
+<p><a href="https://www.jvt.me/posts/2026/08/14/gophercon-uk-2026/">GopherCon 英国 2026见闻</a><br>这是Jamie Tanna关于GopherCon英国2026的文章。文章介绍了即将举行的GopherCon英国会议的相关信息。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://slicker.me/zig/comptime.html">使用Zig的comptime进行元编程</a><br>这是关于使用Zig的`comptime`进行元编程的文章。Zig没有预处理器、模板语言或单独的constexpr方言，任何Zig代码都可以使用`comptime`关键字强制在编译时运行。</p>
+
+<p><a href="https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/">从Rust到Zig的感受</a><br>这篇文章分享了作者从Rust转向Zig的体验。作者作为一名有7年经验的Rust开发者，主要在开源项目上工作，对Rust语言及其生态系统有深入理解。</p>
+
+<p><a href="https://www.allthingsdistributed.com/2026/08/on-building-scalable-control-planes.html">关于构建可扩展的控制平面 | All Things Distributed</a><br>这篇文章讨论了如何构建可扩展的控制平面。作者Zak van der Merwe在AWS整个职业生涯都在构建控制平面，分享了他在这一领域的经验和见解。</p>
+
+<p><a href="https://rustdesk.com/blog/unattended-remote-access-wayland/">在Wayland上使用RustDesk进行无人值守远程访问 — RustDesk</a><br>Wayland支持一直是Linux远程桌面中最困难的部分之一。RustDesk现在可以在Wayland上提供真正的无人值守访问，无需远程机器上的人员批准每个会话，也支持多显示器设置。</p>
+
+<p><a href="https://epage.github.io/blog/2026/08/cargo-vision/">Cargo的愿景</a><br>根据Stack Overflow的调查，cargo是最受欢迎的开发工具。许多人选择Rust是因为Cargo。</p>
+
+<p><a href="https://www.vectorware.com/blog/simd-on-gpu/">GPU上的Rust SIMD - VectorWare</a><br>VectorWare正在构建第一个GPU原生软件公司。他们成功地在GPU上使用了Rust的可移植SIMD，这是一个重要的技术突破。</p>
+
+<p><a href="https://blog.brokk.ai/its-time-to-rip-off-the-band-aid-and-stop-performing-code-reviews/">是时候停止进行人类代码审查了</a><br>这篇文章探讨了为什么我们应该停止进行传统的代码审查。作者今年年初花了一个月时间构建了当时可能是世界上最好的AI辅助代码审查工具，分享了他对代码审查的看法。</p>
+
+<p><a href="https://dmitry.gr/?r=06.%20Thoughts&amp;proj=12.%20RV">RISC-V：他们本应该做得更好</a><br>这篇文章批评了RISC-V设计中的某些决策。作者讨论了RISC-V的&#34;为所有人提供一切&#34;和&#34;可选性&#34;等设计理念，认为他们本应该做得更好。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/">Qwen 3.8 27B很出色，但它默认会过度思考问题</a><br>用户要求一个圆形的SVG绘图，这是一个简单的请求。但作者希望制作一个精心设计的作品，超越简单的`&lt;circle&gt;`元素，创建一个具有特色的独立SVG文件，可能是一个带有微妙动画和分层环的几何&#34;圆形研究&#34;。</p>
+
+<p><a href="https://circleci.com/blog/agents-md-vs-skills/">AGENTS.md与技能：如何引导编码智能体</a><br>这篇文章比较了AGENTS.md和技能两种方法，讨论了如何引导编码代理。文章探讨了在AI辅助编程中如何有效地指导AI工具完成编码任务。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Multi Account, Webhooks, and MCP, and Chatwoot. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+
+<p><a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview</a><br>Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents.</p>
+
+<p><a href="https://github.com/harness/harness">harness/harness</a><br>Harness Open Source is an end-to-end developer platform with Source Control Management, CI/CD Pipelines, Hosted Developer Environments, and Artifact Registries.</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/ViRb3/wgcf">ViRb3/wgcf</a><br>🚤 Cross-platform, unofficial CLI for Cloudflare Warp</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

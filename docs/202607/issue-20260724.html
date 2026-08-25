@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260724.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260724</span>
+</p>
+<p>每日一谚：Simple, Poetic, Pithy </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.gaborkoos.com/posts/2026-07-24-Golang-Maps-How-Swiss-Tables-Replaced-the-Old-Bucket-Design/">Go中的map：swisstable如何取代了旧的桶式设计</a><br>这篇帖子重点讨论了 Go 运行时map设计实现中的具体变化，以及这些选择为何重要，同时还探讨了仍然存在的一些权衡问题。</p> 
+
+<p><a href="https://tonybai.com/2026/07/24/tokio-topcoat-rust-fullstack-framework/">重磅！Tokio官方发布全栈框架Topcoat：不用WASM，AI时代Rust也能“糊”网页了</a><br>Rust 异步生态核心团队 tokio-rs 宣布推出模块化全栈响应式 Web 框架 Topcoat。与传统依赖 WebAssembly（WASM）的 Rust 前端框架不同，Topcoat 选择了“服务端渲染优先 &#43; 客户端轻量指令”的务实路线，允许开发者在保持 Rust 类型安全的同时，通过简单的 `$(...)` 宏将交互逻辑直接转化为跨编译的 JavaScript，获得类似 Phoenix LiveView 和 HTMX 的低心智负担开发体验。框架主打“行为本地化”设计原则，内置了请求级数据缓存、基于模块路径的约定路由以及代码级 Tailwind UI 组件。Tokio 创始人 Carl Lerche 表示，在 AI 编程大幅降低语言门槛的当下，Topcoat 的核心价值是帮助已使用 Rust 的工程团队摆脱多语言和多工具链撕裂的痛点，填补 Rust 从底层系统向全栈 Web 应用渗透的“最后一公里”。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/24/my-lfx-mentorship-journey-with-kgateway/">我在kgateway的LFX导师之旅</a><br>BackendConfigPolicy没有合并语义，因此当多个策略针对同一后端时，行为不一致。BCP/BTP冲突解决方案已实现。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/24/opentelemetry-has-graduated-now-what/">OpenTelemetry已毕业...接下来呢？</a><br>对于终端用户而言，这一毕业信号表明OTel远非&#34;新兴标准&#34;。其贡献者健康度、安全性和质量标准、治理流程以及广泛采用已被评估为达到任何规模企业所需的水平。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/23/when-kubeflow-meets-cilium-debugging-60-idle-gpus-in-kubernetes/">当Kubeflow遇见Cilium：调试Kubernetes中60%的空闲GPU</a><br>区域边界网络策略完全拒绝连接，导致工作节点无法访问协调器，训练无法启动。同时存在跨区域延迟问题。</p>
+
+<p><a href="https://lukekanies.com/writing/building-on-atproto/">在ATProto上构建</a><br>作者每周二早上努力发布文章，读者可以通过订阅接收所有写作内容。</p>
+
+<p><a href="https://soteria-tools.com/blog/meta-garbage-collection">元垃圾收集：使用OCaml的GC来收集Rust的垃圾</a><br>在Soteria Rust中，我们通过元垃圾收集解决了Rust别名模型跟踪的二次方成本问题。</p>
+
+<p><a href="https://unity.com/blog/meet-the-unity-cli">认识Unity CLI：从终端管理Unity</a><br>Unity CLI允许开发人员从终端直接管理Unity项目，提高了开发效率和便利性。</p>
+
+<p><a href="https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html">保护我们的FLOSS Commons免受LLM侵害</a><br>Codeberg e. V.成员投票通过了关于人工智能和大语言模型的两项动议，承诺不使用用户数据训练LLM，并解释了使用条款变更对&#34;vibe-coded&#34;项目的意义。</p>
+
+<p><a href="https://www.infoq.com/news/2026/07/github-issues-navigation/">GitHub通过重新思考客户端架构将即时导航从4%提高到22% - InfoQ</a><br>GitHub通过重新设计客户端架构，将即时导航性能从4%提升到22%，显著改善了用户体验。</p>
+
+<p><a href="https://corrode.dev/blog/hardening-rust/">为生产环境加固Rust代码</a><br>即使谨慎编程也不够，有效的代码也可能在运行时以难以预测和控制的方式失败。防御性编程模式可以帮助缓解这些问题。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything">首个已知的失控AI智能体 - 或是一场非常糟糕的营销噱头？</a><br>他们可能同时运行了大量基准测试，使用接近无限的token预算，以获取尽可能多的样本来评估模型在特定基准测试中的表现。</p>
+
+<p><a href="https://nealstephenson.substack.com/p/writing-by-hand-is-good-for-your">手写对大脑有益 - 这是如何做到的</a><br>手写可以增强大脑的认知功能，提高记忆力和创造力。Neal Stephenson分享了他的手写实践方法和建议。</p>
+
+<p><a href="https://www.hardresetmedia.com/p/the-ai-productivity-illusion">AI生产力错觉</a><br>生产力不仅仅是快速完成任务，还包括创造价值、解决问题和实现长期目标。AI工具可能带来效率提升，但真正的生产力提升需要更深层次的思考。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Open-source &amp; free — Battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, threa</p>
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>Easily and securely send things from one computer to another 🐊 📦</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br></p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a distributed storage system for object storage (S3), file systems, and Iceberg tables, designed to handle billions of files with O(1) disk access and effortless horizontal scaling.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/infiniflow/ragflow">infiniflow/ragflow</a><br>RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

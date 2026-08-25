@@ -1,0 +1,130 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260515.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260515</span>
+</p>
+<p>每日一谚：Go&#39;s tooling is excellent. Use go vet, gofmt, golint, and staticcheck. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blainsmith.com/articles/just-fucking-use-go/">就用 Go 语言好了，别他妈的废话了</a><br>你知道有什么语言能在两秒钟内编译完成，生成一个可执行的二进制文件？而且，即使是在凌晨 3 点时，npm 上的某个依赖被移除，它也照样能正常运行。Go 语言就是这样的。就像 HTML 从互联网诞生之初就一直存在，等着人们不再把前端开发搞得过于复杂一样，Go 语言也已经在那儿待了十多年，等着人们不再把后端开发搞得过于复杂。</p> 
+
+<p><a href="https://ryelang.org/blog/posts/whitelist-config-with-rye/">通过在 Go 中嵌入 Rye 来支持配置功能</a><br>我们将探讨如何将 Rye 语言嵌入到 Go 应用程序中，以及为什么尽管它是一种通用语言，但其基于能力的模型使其非常适合配置。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/14/when-ai-agents-become-contributors-how-kubestellar-reached-81-pr-acceptance/">当 AI 智能体成为贡献者：KubeStellar 如何达到 81% 的 PR 通过率</a><br>12 月中旬，我开始从零构建 KubeStellar 控制台。这是一个用于 Kubernetes 的多集群管理仪表板，位于云原生计算基金会（CNCF）沙箱中的 KubeStellar 项目内。技术栈后端是 Go，前端是 React 和 TypeScript，打包工具是 Helm。没有团队。只有我和两个在并行终端会话中运行的 AI 编码智能体。前两周是每个人在这个领域似乎都会描述的蜜月期。智能体产出代码的速度比我阅读的速度还要快。我原本预算需要三天完成的事情在两小时内就出现了。我心里列了一份我一直想构建的功能清单，然后一个接一个地把它们叫了出来。然后问题出现了。构建失败的方式很难追踪。前一天的架构选择被悄悄覆盖。范围在未经询问的情况下扩大了。智能体不断触碰我没有指向它的文件，级联问题是最糟糕的——修复一个问题，然后另外三个又坏了。我开始花更多时间在撤销而不是审查上。承诺的 10 倍效率开始感觉像是净负数，我决定放弃整个方法。&gt; 构建 KubeStellar 控制台时使用编码智能体的惊喜，不在于模型能力的程度，而在于周围代码库必须执行的繁重工作。那种从欣快到极度沮丧的弧线似乎是普遍存在的。行业通常的建议是赋予智能体更多的自主权：让它运行更长时间，接触更多文件，并进行自我纠正。根据我的经验，这往往会使故障模式变得更糟，而不是更好。杠杆作用向相反方向发展。AI 辅助代码库的智能更多地不在于模型，而在于代码库环绕其构建的循环。如果你想让智能体做更多事情，周围的代码必须进行衡量。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/05/14/kubernetes-v1-36-deprecation-and-removal-of-service-externalips/">Kubernetes v1.36：弃用并移除 Service ExternalIPs</a><br>Service 的 .spec.externalIPs 字段是早期尝试为非云集群提供类似云负载均衡器功能的一种手段。不幸的是，该 API 假设集群中的每个用户都是完全受信任的，在任何并非如此的情况下，它会像 CVE-2020-8554 中描述的那样引发各种安全漏洞。自 Kubernetes 1.21 以来，Kubernetes 项目一直建议所有用户禁用 .spec.externalIPs。为了使其更容易，Kubernetes 还添加了一个准入控制器（DenyServiceExternalIPs），可以启用该控制器来执行此操作。当时，SIG Network 认为默认阻止该功能是一个太大的破坏性变更。然而，安全问题依然存在，作为一个项目，我们对该功能“默认不安全”的状态越来越不满。此外，现在已经有几种更好的替代方案可供需要类似负载均衡器功能的非云集群选择。因此，Service 的 .spec.externalIPs 字段在 Kubernetes 1.36 中已正式弃用。我们预计 Kubernetes 的未来一个小版本将从 kube-proxy 中删除该行为的实现，并将更新 Kubernetes 一致性标准，要求符合标准的实现**不得**提供该支持。## 关于术语的说明，以及尚未被弃用的内容“外部 IP” (external IP) 在 Kubernetes 中有些被过度使用了：- Service API 有一个 .spec.externalIPs 字段，可用于添加 Service 将响应的额外 IP 地址。- Node API 的 .status.addresses 字段可以列出几种不同类型的地址，其中一种称为 ExternalIP。- kubectl 工具在以默认输出格式显示 LoadBalancer 类型 Service 的信息时，会显示负载均衡器的地址。</p>
+
+<p><a href="http://antirez.com/news/165">关于 DS4 的几句话</a><br>我没想到 DwarfStar 4 (https://github.com/antirez/ds4) 会这么快变得如此受欢迎。很明显，市场需要一种专注于单模型集成的本地 AI 体验，并且几件事同时发生了：一个准前沿模型的发布，它足够大且速度足够快，足以改变本地推理的游戏规则；它在 2/8 位的极度非对称量化配方下工作得非常好，因此 96GB 或 128GB 的 RAM 足以运行它。当然，还有近年来本地 AI 运动所产生的所有经验，由于 GPT 5.5 的存在，这些经验可以更迅速地被利用（否则你不可能在一周内构建 DS4——即使有所有这些帮助，你也需要知道如何与大模型温和地交流）。上周很有趣也很累，我平均每天工作 14 小时。我正常的平均水平自 Redis 早期以来是 4/6 小时，但 Redis 的最初几个月就是这样。那么，接下来是什么？这是一个以 DeepSeek v4 Flash 开始并结束的项目吗？不，模型会随着时间而改变。在我的设想中，这个领域将被当前最好的开放权重模型所占据，这些模型在高端 Mac 或“盒装 GPU”设备（如 DGX Spark 和其他类似设置）上具有 *实际的速度*。我敢打赌，下一个竞争者就是 DeepSeek v4 Flash 本身，它将在新检查点中发布，希望有一个专门针对编码调整的版本，谁知道呢，也许还有其他专家变体（不是 MoE 专家意义上的）。对于本地推理，拥有 ds4-coding、ds4-legal、ds4-medical 模型毕竟是非常合理的。你只需根据问题加载你需要的模型。这是我玩本地推理以来（我从一开始就开始玩）第一次发现自己使用本地模型来处理通常会询问 Claude / GPT 的严肃事情。我认为，这确实是一件大事。这也是我第一次通过向量导向享受到一种 LLM 可以更自由使用的体验。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/14/not-so-locked-in/#atom-everything">不再被深度锁定</a><br>这段关于 Bun 从 Zig 迁移到 Rust 的 Mitchell Hashimoto 引用，让我想起了上周我在会议上的一次类似谈话。我与一位为中型科技公司工作的人交谈，该公司拥有一对传统/传奇的 iPhone 和 Android 应用程序。他们告诉我，他们刚刚完成了由编码智能体驱动的两个应用程序到 React Native 的重写。我问他们为什么选择这样做，因为编码智能体大概会降低维护单独 iPhone 和 Android 应用程序的成本。他们说 React Native 在过去几年里有了很大改进，涵盖了他们的应用程序需要做的所有事情。而且……如果事实证明这是一个错误的决定，他们将来可以 **直接移植回原生**。正如 Mitchell 所说：&gt; 编程语言过去是锁定（LOCK IN）的，而现在正日益不再如此。标签：[react](https://simonwillison.net/tags/react), [coding-agents](https://simonwillison.net/tags/coding-agents), [ai-assisted-programming](https://simonwillison.net/tags/ai-assisted-programming), [generative-ai](https://simonwillison.net/tags/generative-ai), [ai](https://simonwillison.net/tags/ai), [llms](https://simonwillison.net/tags/llms)</p>
+
+<p><a href="https://www.langchain.com/blog/introducing-smithdb">介绍 smithdb</a><br>了解[文档](https://docs.langchain.com/)公司[定价](/pricing)[尝试 LangSmith](https://smith.langchain.com/) [获取演示](/contact-sales)[尝试 LangSmith](https://smith.langchain.com/)[获取演示](/contact-sales)LangSmith# 我们构建了 SmithDB，即智能体可观测性的数据层Ankush Gola2026 年 5 月 13 日## 关键点- **智能体跟踪数据已超过传统可观测性存储的承载能力** —— 现代智能体跟踪包含数百个嵌套跨度 (spans)、多模态内容以及持续运行数小时的跨度，这产生的海量数据和查询模式是通用数据库从未被设计用于处理的。- **SmithDB 在每个关键可观测性工作负载中提供行业领先的性能** —— 跟踪树加载的 P50 延迟为 92ms，全文搜索为 400ms，运行过滤为 82ms，使得核心 LangSmith 体验比以前快 15 倍。- **为企业需求构建的可移植、可扩展架构** —— 由具有无状态摄取和查询服务的对象存储提供支持，SmithDB 通过增加计算资源而不是管理本地磁盘来进行扩展，使其在自托管和多云环境中部署变得简单。我们正在推出 SmithDB，我们专门构建的用于智能体可观测性的分布式数据库，它现在支持核心 LangSmith 工作负载。SmithDB 为 LangSmith 在关键可观测性工作负载上提供了行业领先的性能，提供了客户数据无论存放在哪里都能运行的可移植性，以及支持传统可观测性存储所不具备的智能体原生查询模式的灵活性。</p>
+
+<p><a href="https://om.co/2026/05/13/ai-is-the-new-netflix/">AI 是新Netflix</a><br>[跳转到内容](#content)[2026 年 5 月 13 日](https://om.co/2026/05/13/ai-is-the-new-netflix/)在我 2008 年的 NewTeeVee 会议上，我问当时的 Netflix 首席执行官 Reed Hastings，流媒体视频是否会成为宽带的第一个杀手级应用。这似乎显而易见：视频会消耗容量。最终确实如此。流媒体成了让人们关心下行速度、推动升级周期并重塑运营商规划容量方式的动力。现在我认为我们正在观看同一部电影的重播。**_AI 正在成为下一个宽带时代的杀手级应用。不是因为它的下载内容，而是因为它的上传内容。_**如果你一直关注我关于宽带流量如何变化的文章（[3 月份关于上传国家的文章](https://om.co/2026/03/25/we-are-now-an-upload-broadband-nation/) 和 [本月早些时候关于 AI 互联网的文章](https://om.co/2026/05/04/say-hello-to-the-internet-of-ai/)），你就知道我一直在关注这一点。2026 年第一季度的报告增加了更多的分量。今年早些时候，当我写到光纤上行平均值首次超过 100 GB 时，我称之为转折点。新数据证实了这一点，并显示了行为改变的早期迹象。**云同步消耗上行数据**使用来自 Aispire.ai 的应用层数据，OpenVault 确定了是什么在推动上行浪潮。云同步现在是每个速度层级中占主导地位的上行类别，占所有分类上传量的 15% 到 16%。过去 18 个月发生变化的是正在同步的内容性质。ChatGPT 推理模型、Microsoft 365 Copilot、Apple Intelligence 和智能体 AI 工作流正在生成 2023 年未曾大规模存在的上行流量。所有这些都在后台流向云端。**IoT**（摄像头、传感器、门铃）现在的上传量是下载量的 7 倍。你的门铃不会向你流式传输视频；它向云端流式传输。**联网汽车**发送的数据是下载量的 3 倍。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志及其他任意数据的代理。</p>
+
+<p><a href="https://github.com/pranshuparmar/witr">pranshuparmar/witr</a><br>为什么这在运行？</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria 是一个强大、闪电般快速且具有抗审查能力的代理。</p>
+
+<p><a href="https://github.com/CJackHwang/ds2api">CJackHwang/ds2api</a><br>兼容 DeepSeek 的中间件接口：一个 Go 语言技术探索项目，专注于高并发协议适配。它作为转换多种 Web 协议的参考实现。</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>开源 LLM 知识平台：将原始文档转化为可查询的 RAG、自主推理智能体和自动维护的维基。</p>
+
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>为任何本地 OpenAI/Anthropic 兼容服务器（llama.cpp、vllm 等）提供可靠的模型切换。</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>生产级容器调度与管理。</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>云原生和边缘原生消息系统 NATS.io 的高性能服务器。</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>查找、验证并分析泄露的凭据。</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub 官方的 MCP 服务器。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

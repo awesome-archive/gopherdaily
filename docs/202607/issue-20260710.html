@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260710.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260710</span>
+</p>
+<p>每日一谚：Documentation is for users </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/10/zig-founder-andrew-kelley-thoughts-bun-rust-rewrite">Bun 重写为 Rust 后，Zig 之父罕见开炮：“我们早就等着看你重写”</a><br>在 Bun 官方发布“AI 将数十万行 Zig 代码重写为 Rust”的公关长文后，Zig 语言创始人 Andrew Kelley 撰写了一篇火药味十足的万字博文予以强硬回击。文章首度披露了双方长达五年、因风投介入与价值观分歧而最终破裂的“塑料兄弟情”。Kelley 直言，Zig 团队早就将充斥着技术债和“糊弄式代码”的 Bun 视为生态的“净负资产”，对这次脱钩感到“如释重负”。同时，Kelley 从技术层面对 Bun 的官方博文提出了五大尖锐质疑：指控其对模糊测试（Fuzzing）的描述纯属捏造，驳斥其“风格指南无用论”，并指出 LTO 优化其实早在 Zig 时代就已存在，直击所谓“重写 带来质变”的技术漏洞。这场开源社区的顶级交锋，深刻揭示了当由极客驱动的底层技术遭遇资本催熟的初创公司时，必将面临的技术妥协与生态撕裂。</p> 
+
+<p><a href="https://tonybai.com/2026/07/10/the-new-ai-stack-model-harness-loop-agent/">全新 AI 技术栈：模型、Harness、Loop 与自我进化的智能体</a><br>在当前的 AI 浪潮中，人们往往陷入“只要模型更聪明，产品就会更好”的误区。本文基于技术专家 Rahul 的前沿长文，深度拆解了真正决定 AI 生产力的“全新 AI 4 层技术栈”。文章指出，基础模型仅仅是被动的“CPU”，而包裹在模型外围的“驾驭框架（Harness）”才是决定系统 成败的“操作系统”。通过构建极简循环、将文件系统作为长期记忆、派发异步子智能体以及精细的上下文工程，开发者才能真正发挥大模型的杠杆效 应。更令人震撼的是，文章揭示了最前沿的 Self-Harness（自主框架优化）和达尔文-哥德尔机（DGM）技术——AI 已经学会通过分析日志、提出修补 并运行测试，在完全不触碰模型权重的前提下，自主重写和进化其系统源码。这篇重磅文章彻底颠覆了“拼提示词”的旧思路，为 AI 时代的开发者指 明了向“系统架构师”转型的终极路径。</p> 
+
+<p><a href="https://www.davidsobsessions.com/p/one-year-of-gomobile/">使用Go开发移动应用</a><br>过去一年我一直在使用Go Mobile开发Digital Carrot，总体体验非常积极。本文旨在总结我在整个过程中学到的所有经验。</p> 
+
+<p><a href="https://entire.io/blog/an-entirely-new-git-hosting-network">一个全新的Git分布式托管网络</a><br>Git从设计之初就是去中心化的。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/09/navigating-the-ingress-nginx-retirement/">应对ingress-NGINX的退役</a><br>如果团队时间严重不足且缺乏重构的工程周期，迁移到Contour可以为规划和现代化争取额外时间。但这只是临时措施，Ingress API已冻结功能。</p>
+
+<p><a href="https://nesbitt.io/2026/07/09/unboxed-zig.html">解密：Zig</a><br>Zig通过设计确保锁定文件保证。清单为每个直接依赖项固定200位SHA-256值，每个依赖项又固定自己的依赖，因此整个树由内容固定。</p>
+
+<p><a href="https://usewire.io/engineering/why-were-moving-wire-off-cloudflare-durable-objects/">为什么我们将Wire从Cloudflare Durable Objects迁移</a><br>Wire是AI智能体的上下文容器：通过MCP查询的已处理知识（条目、嵌入、知识和来源图）的隔离存储。</p>
+
+<p><a href="https://entire.io/blog/how-version-control-will-evolve-for-the-agent-boom">版本控制将如何适应智能体热潮 · Entire</a><br>开发者采用Git已有二十多年历史，它至今仍是迄今为止最流行的版本控制系统，未来二十年仍将继续存在。</p>
+
+<p><a href="https://malisper.me/the-four-horsemen-behind-thousands-of-postgres-outages/">导致数千次Postgres宕机的四大因素</a><br>Postgres很优秀，但存在一些常见问题，这些问题很容易导致Postgres服务中断。</p>
+
+<p><a href="https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/">GitHub如何为每个仓库提供持久所有者</a><br>GitHub为每个仓库引入了持久所有者机制，增强了仓库管理的安全性和稳定性。</p>
+
+<p><a href="https://blog.rust-lang.org/2026/07/09/Rust-1.97.0/">发布Rust 1.97.0 | Rust博客</a><br>Rust团队很高兴宣布Rust新版本1.97.0。Rust是一种编程语言，赋能每个人构建可靠高效的软件。</p>
+
+<p><a href="https://www.howtogeek.com/why-developers-are-ditching-github-for-codeberg-and-self-hosting-alternatives/">为什么开发者放弃GitHub转向Codeberg和自托管替代方案</a><br>越来越多的开发者选择从GitHub迁移到Codeberg和自托管平台，寻求更开放的代码托管环境。</p>
+
+<p><a href="https://blog.cloudflare.com/meerkat-introduction/">介绍Meerkat：全球共识实验</a><br>Meerkat是一个实验性的全球共识系统，旨在探索分布式网络中的新型协作机制。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything">新的GPT-5.6家族：Luna、Terra、Sol</a><br>我们训练GPT-5.6以从每个token中获得更有用的输出。在55个领域长期专业工作流程评估中，GPT-5.6 Sol创下53.6的新高。</p>
+
+<p><a href="https://www.pangram.com/blog/ai-in-your-feed">AI内容在社交媒体上无处不在，尤其是在LinkedIn</a><br>AI生成内容已渗透到社交媒体的各个角落，LinkedIn平台上的AI内容尤为突出。</p>
+
+<p><a href="https://toot-books.pages.dev/blog/glm-5-2-vat-benchmark">GLM 5.2以不到1%的成本达到接近人类记账员的准确性</a><br>GLM 5.2在记账任务上表现出色，以不到1%的成本达到了接近人类记账员的准确性。</p>
+
+<p><a href="https://thetruthasiseeitnow.com/ai-slop-starts-with-the-codebase-itself/">AI低质量内容源于代码库本身</a><br>AI输出的质量不仅取决于提示，还取决于模型从训练数据中已有的知识和您提供的上下文。对于编码任务，大部分上下文就是代码库本身。</p>
+
+<p><a href="https://www.ben-evans.com/benedictevans/2026/7/9/ways-to-think-about-token-pricing">关于token定价的思考方式</a><br>关于token价格，我们能确定的两件事是：我们正处于供应短缺状态，且市场不稳定。所有变量都在发挥作用，市场将在未来几年内调整至新的均衡。</p>
+
+<p><a href="https://www.langchain.com/blog/agent-evaluation-readiness-checklist">智能体评估准备清单</a><br>智能体评估需要考虑可观察性和评估指标，确保智能体系统在各种场景下的性能表现。</p>
+
+<p><a href="https://stack72.dev/the-great-divergence-in-software-engineering/">软件工程中的巨大分化</a><br>2026年半年以来，有效使用AI的团队与仍在评估AI的团队之间的差距不再是起步优势，而是完全不同的工作方式，且差距每周都在扩大。</p>
+
+<p><a href="https://openclaw.ai/blog/introducing-openclaw-foundation">介绍OpenClaw基金会</a><br>六个月前，OpenClaw只是Peter在奥地利的一个Discord服务器。如今，它已成为一个拥有4名成员的全球性运动。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/binwiederhier/ntfy">binwiederhier/ntfy</a><br>Send push notifications to your phone or desktop using PUT/POST</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/containers/kubernetes-mcp-server">containers/kubernetes-mcp-server</a><br>Model Context Protocol (MCP) server for Kubernetes and OpenShift</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/entireio/cli">entireio/cli</a><br>📜 Entire CLI hooks into your Git workflow to capture AI agent sessions as you work. Sessions are indexed alongside commits, creating a searchable record of how code was written in your repo.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/velero-io/velero">velero-io/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

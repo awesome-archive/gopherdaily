@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202508/issue-20250822.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250822</span>
+</p>
+<p>每日一谚：Idiomatic Go Code is Simple to understand, Easy to change, Mostly Direct and Concrete and Abstract enough to be composable </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/08/22/go-simd-package-preview">解锁CPU终极性能：Go原生SIMD包预览版初探</a><br>今年6月份，漫长的等待终于迎来了曙光。Go Runtime 负责人 Cherry Mui提出了在Go标准库中增加simd包的官方提案#73787，这才过去两个月左右时间，Cherry Mui就给我们带来惊喜！其主导的SIMD 官方提案迈出了决定性的一步：第一个可供尝鲜的预览版实现已登陆 dev.simd 分支！这不再是纸上的设计，而是开发者可以立刻下载、编译、运行的真实代码。</p> 
+
+<p><a href="https://preslav.me/2025/08/12/introducing-gomjml">介绍 gomjml：面向 Go 开发者的 MJML</a><br>gomjml 是 MJML 电子邮件框架的 Go 本地实现，使 Go 开发人员的响应式电子邮件设计更快、更容易。</p> 
+
+<p><a href="https://sevalla.com/blog/scaffolding-go-services-with-blueprint">使用 Go Blueprint 构建生产就绪的 Go 服务</a><br>了解 Go Blueprint 如何改变你的 Go 开发工作流程——从繁琐的样板项目设置到在几分钟内交付生产就绪的微服务。</p> 
+
+<p><a href="https://flak.tedunangst.com/post/slog-is-aptly-named">slog 的命名恰如其分</a><br>作者分享了从 go 的 log 包切换到 slog 包的经历，并描述了在使用过程中遇到的问题，包括格式化字符串的问题、调试消息的处理以及与 syslog 的集成问题。总结了 slog 的一些设计原则，如默认值和可编辑性。最终，作者开发了一个 hacky wrapper，用于处理 log 和 syslog 之间的消息，以满足其需求。</p> 
+
+<p><a href="https://newsletter.appliedgo.net/archive/2025-08-17-commit-messages-that-write-themselves">Commit Messages That Write Themselves</a><br>“提交消息自我编写”你好，最终的 🌴 暑假 🌴 正在您的收件箱中！在本期中，我将结束人工智能系列，并期待再次发送常规期刊！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/how-to-build-an-ai-tutor-with-model-runner/">Building an AI Tutor with Model Runner | Docker</a><br>Get inspired to build an AI tutor with this proof of concept project designed to reduce context-switching and improve the dev experience with Model Runner.</p>
+
+<p><a href="https://endler.dev/2025/how-to-review-code">代码评审指南</a><br>我审阅别人的代码已经有一段时间了，确切地说，已经超过了二十年。 如今，我大约 50-70% 的时间都花在以某种形式审阅代码上，而这是我除了系统设计之外的工作。</p>
+
+<p><a href="https://jyn.dev/the-core-of-rust">Rust 的核心</a><br>这篇文章探讨了 Rust 语言的核心，强调了其设计中的各个概念如何协同工作，以及学习 Rust 时需要同时掌握的复杂知识点。文章认为，虽然 Rust 学习曲线陡峭，但其特性之间的内在联系使其成为一个强大而富有表现力的语言。</p>
+
+<p><a href="https://emersion.fr/blog/2025/using-podman-compose-and-buildkit">使用 Podman、Compose 和 BuildKit</a><br>作者介绍了使用 Podman、Compose 和 BuildKit 的经验。由于 Docker 与 nftables 配合不好，并且作者更喜欢无根 &#43; 无守护进程的方法，所以使用了 Podman。文章介绍了两种使用 Podman 支持 Docker Compose 项目的方法以及它们的缺点。最终，作者开发了一个名为 Bakah 的小工具，用于将 Compose 项目转换为 JSON 描述，从而实现更灵活的构建方式。</p>
+
+<p><a href="https://medium.com/@kkrzywicki/how-to-easily-migrate-ingress-to-gateway-api-1d479639c43e">如何在 Kubernetes 中轻松地将入口迁移到网关 API</a><br>将网关API控制器和入口控制器链接到一个端点
+
+问题
+网关API迁移指南中描述的迁移步骤在我看来有点天真，尤其是在多租户或企业环境中使用gitops方法时。这种方法适用于小型设置或那些可以容忍停机时间和临时问题的环境。在企业环境中，这不容易接受。</p>
+
+<p><a href="https://isovalent.com/blog/post/isovalent-load-balancer-technical-deep-dive">技术深度剖析：Isovalent 负载均衡器</a><br>Isovalent 负载均衡器通过 eBPF、Envoy、GitOps 工作流程和深度可观察性提供高性能的 L3–L7 流量管理。以下是技术深度剖析！</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://giansegato.com/essays/probabilistic-era">在概率时代构建 AI 产品</a><br>AI 将产品从确定性功能转变为概率系统。 这需要扩展旧的模式（SLO、漏斗、孤立的财务），并根据轨迹、最小可行智能阈值和数据作为公司运营系统进行推理。</p>
+
+<p><a href="https://github.blog/ai-and-ml/generative-ai/junior-developers-arent-obsolete-heres-how-to-thrive-in-the-age-of-ai">初级开发人员不会过时：如何在人工智能时代蓬勃发展</a><br>初级开发人员的角色正在发生变化。如果你正处于职业生涯的这个阶段，这里有一些方法可以让你跟上并脱颖而出。</p>
+
+<p><a href="https://www.philschmid.de/gemini-cli-cheatsheet">Google Gemini CLI Cheatsheet</a><br>This cheatsheet provides a quick reference for installing, configuring, and using the Gemini CLI, with a focus on users authenticating via a Gemini API key.</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/edoardottt/cariddi">edoardottt/cariddi</a><br>Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more</p>
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/prometheus/node_exporter">prometheus/node_exporter</a><br>Exporter for machine metrics</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>Complete container management platform</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Unit, API &amp; Integration Testing Agent for Developers. Generate tests, mocks/stubs for your APIs that actually work!</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/samber/lo">samber/lo</a><br>💥 A Lodash-style Go library based on Go 1.18&#43; Generics (map, filter, contains, find...)</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/nats-io/nats.go">nats-io/nats.go</a><br>Golang client for NATS, the cloud native messaging system.</p>
+
+<p><a href="https://github.com/urfave/cli">urfave/cli</a><br>A declarative, simple, fast, and fun package for building command line tools in Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

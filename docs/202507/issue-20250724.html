@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202507/issue-20250724.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250724</span>
+</p>
+<p>每日一谚：Using Unexported Empty Struct as Context Key </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/07/24/deadlock-detection-by-gc">Goroutine泄漏防不胜防？Go GC或将可以检测“部分死锁”，已在Uber生产环境验证</a><br>这些难以追踪的“部分死锁”在长周期服务中如同定时炸弹。现在，一项革命性的Go提案（#74609）带来了希望：通过赋予垃圾收集器（GC）“新技能”，使其能够直接在运行时检测出这些永久阻塞的 goroutine。</p> 
+
+<p><a href="https://tonybai.com/2025/07/24/go-at-american-express-today">美国运通复盘 Go 语言实践：从依赖管理到并发模型，七大经验教训全解析</a><br>近日，运通公司工程团队发布了一篇回顾性文章，系统性地总结了近10年 Go 语言 企业级应用的七大关键经验。本文将和大家一起解读这些来自金融科技巨头的宝贵洞察，涵盖从 Go Modules 的演进、并发模型的挑战，到构建“黄金框架”以及培育千人内部社区的最佳实践。</p> 
+
+<p><a href="https://devblogs.microsoft.com/cosmosdb/integration-testing-for-go-applications-using-testcontainers-and-containerized-databases">使用testcontainer和容器化数据库进行Go应用的集成测试</a><br></p> 
+
+<p><a href="https://opensource.googleblog.com/2025/07/stop-leaked-credentials-in-their-tracks-with-veles-our-new-open-source-secret-scanner.html">使用 Veles（我们新的开源密钥扫描器）阻止密钥泄露</a><br>在当今复杂的软件供应链中，单个泄露的凭据（API 密钥、服务帐户令牌、密码）就可能成为攻击者入侵您的系统所需的一切。这些密钥可能会意外地提交到源代码存储库、嵌入到容器镜像中或附加到支持工单中，从而造成严重且通常是隐形的风险。为了帮助开发人员和安全团队主动查找和修复这些漏洞，我们很高兴地宣布推出 Veles，这是 Google 推出的一款新的开源密钥和凭据扫描器。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-07-23-conjoin-means-bugs">连接意味着错误</a><br>Dolt 是世界上第一个具有 Git 风格版本控制的 SQL 数据库。它是一个分布式数据库，允许您像使用代码一样克隆、分支和合并数据库。本文介绍了 Dolt 的内部细节“连接”过程，解释了为什么需要它以及它是如何工作的，并探讨了在实现 Archives（下一代存储格式）时遇到的挑战。</p>
+
+<p><a href="https://www.docker.com/blog/finding-the-right-ai-developer-tools-mcp-catalog/">Docker MCP Catalog: Finding the Right AI Tools for Your Project</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/07/23/project-spotlight-kgateway/">Kgateway：Kubernetes、AI 和 Agent 的下一代网关 | CNCF</a><br>Kgateway 虽然是 CNCF 的新成员，但它并非市场上的新面孔：它诞生于 2018 年，最初名为“Gloo”，旨在为 Kubernetes 提供现代化的 API 管理。Gloo 在云原生领域从单体架构向微服务架构的首次重大演进中建立了庞大的用户群。如今，在 2025 年，随着用户从 API 转向 Agent，新的工作负载需要新的连接功能，新的演进正在发生。Kgateway 结合了过去的坚实基础和创新，使其成为未来首选的网关，它具有用于调用和服务大型语言模型 (LLM) 的新功能，并增强了代理式 AI 的使用。</p>
+
+<p><a href="https://engineering.fb.com/2025/07/23/security/policy-zones-meta-purpose-limitation-batch-processing-systems/">策略区域：Meta 如何在大规模批处理系统中执行目的限制</a><br>Meta 开发了隐私感知基础设施 (PAI) 和策略区域来执行对数据的目的限制，尤其是在大规模批处理系统中。策略区域与 Meta 的艾字节级数据仓库和处理系统集成，使用运行时强制和 SQL 解析在每天数百万的数据流中传播和执行隐私注释，每小时执行数万亿的用户同意检查，并通过每小时传输多个 PB 数据的流处理系统。Meta 还构建了工具来帮助工程师使用策略区域，以便他们可以快速响应隐私要求。这些工具使我们能够在批处理系统中的数据资产和处理器中部署策略区域。策略区域技术在大规模批处理系统中使用，以满足我们在 Meta 的应用程序系列中对用户的隐私承诺。</p>
+
+<p><a href="https://joeldare.com/why-im-writing-pure-html-and-css-in-2025">为什么我在2025年仍然使用纯HTML和CSS</a><br>本文作者Joel Dare阐述了他在2025年仍然坚持使用纯HTML和CSS构建网页的原因。他认为这种方法可以构建加载速度快、部署方便、无需安全更新的网页，并且能节省大量时间。纯HTML和CSS具有诸多优势，例如：易于构建、代码永不过时、网页体积小巧快速、部署灵活（甚至可以免费托管）、自动获得更好的SEO和无障碍性、无需安全补丁，以及没有复杂的构建步骤。作者鼓励读者尝试使用纯HTML和CSS构建网站，并提供了免费的五天速成课程。</p>
+
+<p><a href="https://railsatscale.com/2025-07-19-ai-coding-agents-are-removing-programming-language-barriers">AI编码Agent正在消除编程语言障碍</a><br>作者在十年间只使用Ruby进行开发，但在2025年，借助AI编码工具（如Cursor和Claude Code），他开始参与C、C&#43;&#43;和Rust等低级系统项目。文章阐述了AI如何帮助作者克服学习新语言的障碍，并将其比作一位具有互补技能的编程搭档，从而加速学习过程，降低了多语言编程的门槛。</p>
+
+<p><a href="https://blog.mggross.com/intercepting-syscalls">可靠的系统调用拦截</a><br>本文介绍了一种更优雅的方式来拦截Linux系统调用，即使用seccomp用户通知，并利用BPF进行高效的系统调用拦截。作者以其开发的工具copycat为例，阐述了如何动态拦截open()之类的系统调用，并根据规则返回所需文件或其他模拟文件。文章详细解释了seccomp用户通知的机制、BPF过滤器的编写以及处理拦截到的系统调用的方法，包括处理大型参数和文件描述符注入等问题。最后，作者强调seccomp用户通知不应用于安全策略决策，因为它存在TOCTOU攻击的风险，但它仍然是低性能开销下拦截系统调用的好工具。</p>
+
+<p><a href="https://technicalwriting.dev/ai/agents">AI智能体文档</a><br>本文档探讨了AI代理的文档编写。作者讨论了AI代理文档与内部工程文档的区别，以及是否需要将两者分开维护。文章还介绍了AI代理文档的实现方式，包括项目代理文档、子目录代理文档和用户代理文档。最后，作者提出了几种可能的解决方案，以解决AI代理文档和内部工程文档之间的同步问题。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://hazelweakly.me/blog/stop-building-ai-tools-backwards">停止反向构建 AI 工具</a><br>本文探讨了 AI 工具构建中存在的问题，指出当前许多 AI 工具的构建方式是反向的，即侧重于 AI 自动完成任务，而忽略了人类学习和协作的本质。作者认为，有效的 AI 工具应该以人为本，辅助人类学习和协作，而不是替代人类。文章提出了一种基于“解释、演示、指导、增强”的 AI 工具构建方法，并以事件管理和代码生成为例，说明如何构建更有效的 AI 工具。作者强调，AI 工具应成为人类能力的放大器，而不是替代品，并呼吁行业重视人机协作，构建真正以人为本的 AI 工具。</p>
+
+<p><a href="https://www.builder.io/blog/code-review-ai">AI辅助代码审查</a><br></p>
+
+<p><a href="https://github.blog/changelog/2025-07-23-github-spark-in-public-preview-for-copilot-pro-subscribers">Github Spark发布</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aaPanel/BillionMail">aaPanel/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/cosmos/cosmos-sdk">cosmos/cosmos-sdk</a><br>⛓️ A Framework for Building High Value Public Blockchains ✨</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/projectcalico/calico">projectcalico/calico</a><br>Cloud native networking and network security</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a><br>AI powered Kubernetes Assistant</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq is a portable command-line YAML, JSON, XML, CSV, TOML and properties processor</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Cost monitoring for Kubernetes workloads and cloud costs</p>
+
+<p><a href="https://github.com/charmbracelet/bubbletea">charmbracelet/bubbletea</a><br>A powerful little TUI framework 🏗</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>A toolkit to run Ray applications on Kubernetes</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/ibnaleem/gosearch">ibnaleem/gosearch</a><br>🔍 Search anyone&#39;s digital footprint across 300&#43; websites</p>
+
+<p><a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a><br>Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale.</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>⛑ Automated developer-oriented status page</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

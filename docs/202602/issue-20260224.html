@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202602/issue-20260224.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260224</span>
+</p>
+<p>每日一谚：interface{} says nothing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/02/24/go-vs-node-js-performance-rewrite-rashomon">性能之战的“罗生门”：Go 重写 Node.js 项目，究竟赢在了哪里？</a><br>近日，在 GitHub 的某个开源项目reverse-shell中，开发者公布了一份极其详尽的 Go 重写版 vs 原生 Node.js 版 的性能基准测试报告。面对这份数据，Go 的拥趸看到了内存消耗的断崖式下降，而 Node.js 的铁粉则指着热启动（ Warm Path）的耗时反击：“看，V8 引擎依然能打！”</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-memory-allocator">深入理解Go运行时：内存分配器</a><br>This article explores how Go&#39;s memory allocator works, acting as a warehouse manager between the program and the operating system. It details the process of memory acquisition (arenas, pages), object allocation via spans categorized into size classes (8B to 32KB) and span classes (scan/noscan), and the three-level hierarchy (mcache, mcentral, mheap) designed to minimize lock contention during concurrent allocations. It also covers integration with the garbage collector (using dual bitmaps for reclamation) and the role of the scavenger in returning unused physical memory to the OS.</p> 
+
+<p><a href="https://encore.dev/blog/golang-ai">AI 智能体想如何编写 Go 代码</a><br>给 AI 智能体一个空白的 Go 项目，它会写出 150 行样板代码。给它约定，它会写出 30 行业务逻辑。发生了什么，你能做些什么？</p> 
+
+<p><a href="https://www.modular.com/blog/the-claude-c-compiler-what-it-reveals-about-the-future-of-software">Modular：Claude C 编译器：它揭示了软件的未来</a><br>编译器在计算机科学中占有特殊地位。它们是计算机科学教育中的规范性课程，构建一个编译器是工程师的成人礼。Anthropic发布的Claude C 编译器（CCC）表明AI已经超越编写小型代码片段，开始参与到大型系统的工程实践中，并在跨子系统维护架构的连贯性方面取得了进展。CCC的设计遵循经典的编译架构，显示出AI已经能够内化和应用数十年的编译器工程共识，但其设计中的缺陷也暗示了当前AI系统在开放式泛化能力上的局限性。这一里程碑标志着AI从“代码补全”转向“工程参与”，未来的竞争优势将更多地依赖于架构设计、创新和生态系统，而非孤立的代码库。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-02-23-how-to-write-a-system-prompt/">如何编写系统提示词</a><br>Dolt Workbench 中的智能体模式依赖于精心构建的系统提示词，该提示词定义了智能体的角色和能力。在本文中，我们将讨论系统提示词的危险性，以及我们今天所使用的提示词是如何形成的。作者认为，上下文工程比提示词工程更重要，应尽可能将系统上下文（如当前数据库连接信息、工具可用性等）从系统提示词中移除，转而通过工具或应用程序逻辑来管理，以避免提示词臃肿和智能体行为的不可预测性。避免在系统提示词中使用否定性指令（“不要做某事”），而应通过工具或应用层逻辑来强制执行约束。</p>
+
+<p><a href="https://www.docker.com/blog/gordon-dockers-ai-agent-just-got-an-update/">Gordon：理解容器的 Docker AI 智能体</a><br>介绍 Gordon，Docker Desktop 中内置的 AI 智能体，它能理解您的容器、镜像和环境，并在您的批准下帮助您进行调试、生成 Dockerfile 和执行修复。Gordon 现在可以在 Docker Desktop 4.61 (Beta) 中使用，并可通过 CLI 运行（docker ai）。</p>
+
+<p><a href="https://netflixtechblog.com/mediafm-the-multimodal-ai-foundation-for-media-understanding-at-netflix-e8c28df82e2d">MediaFM: The Multimodal AI Foundation for Media Understanding at Netflix</a><br></p>
+
+<p><a href="https://maurycyz.com/misc/sandbox_llms/">对大语言模型“智能体”要保持谨慎</a><br>博主警告用户不要授予“智能体AI”对计算机、账户或钱包的访问权限。他认为这些所谓的“智能体”本质上只是带 shell 访问权限的LLM，而LLM是加权随机数生成器，其行为不可预测，并举例说明了LLM可能导致数据丢失、账户被删除甚至基础设施中断的真实案例。他建议如果一定要使用这些工具，应在虚拟机中运行，并仔细审查其生成的代码，同时警惕LLM会撒谎称自己没有执行有害操作的倾向。最后，他强调应避免让它们访问互联网。</p>
+
+<p><a href="https://www.joanwestenberg.com/agentic-swarms-are-an-org-chart-delusion/">Agentic Swarms Are an Org-Chart Delusion</a><br>The &#34;agentic swarm&#34; vision of productivity is comfortingly familiar, but should be an immediate red flag. This model simply replaces the bottom layers of the existing corporate hierarchy with AI agents supervised by humans, effectively reinventing middle management. The author argues this is a sustaining innovation, not true disruption. AI is a fundamentally disruptive technology because it collapses specialized roles (like marketing, sales, development) that evolved due to human cognitive limitations. With AI, a single practitioner can fluidly execute tasks across these domains, shifting focus from managing specialized roles (org charts) to achieving outcomes. The future lies in unified execution, where the unit of production becomes the individual augmented by general-purpose cognitive tools, not in managing swarms of specialized bots.</p>
+
+<p><a href="https://nesbitt.io/2026/02/23/where-do-specifications-fit-in-the-dependency-tree.html">规范在依赖树中的位置？</a><br>RFC 9110 是一个拥有数千个传递性依赖项的“幽灵依赖项”。文章探讨了编程语言规范、协议标准和编码规则等规范在软件依赖关系中是如何被忽视的，它们通常不出现在任何清单、锁定文件或 SBOM 中。作者通过 Spack 包管理器的历史、TLS/Unicode 规范的演变、Web 标准测试套件的作用以及不同规范（如 IETF RFC、W3C、WHATWG）的命名和版本控制差异，论证了将规范视为显式、可追踪的依赖项的必要性，并指出这可以帮助更好地管理兼容性和避免兼容性陷阱。</p>
+
+<p><a href="https://izihawa.github.io/summa/blog/how-search-engines-work">搜索引擎的工作原理：基础搜索与倒排索引</a><br>本文深入探讨了搜索引擎的核心机制，重点介绍了如何从理论出发构建文本检索系统。内容涵盖了相关性度量（如TF-IDF和BM25的推导）、倒排索引的实现细节（如术语字典、Posting Lists的压缩和跳跃列表）、查询处理的优化（如MaxScore、WAND和BMW等安全/不安全优化），以及查询预处理和索引分段与分片（Sharding）的策略。最后，文章简要介绍了多阶段搜索与重排序的概念，并回顾了Google早期（1998年）基于Barrel文件的索引结构，强调了性能优化在搜索引擎发展中的重要性。</p>
+
+<p><a href="https://blog.rust-lang.org/2026/02/23/rust-debugging-survey-2026">Rust 调试调查 2026 </a><br>我们正在发起一项 Rust 调试调查（Rust Debugging Survey）。调试 Rust 代码的各种问题经常被提及是困扰 Rust 开发者的最大挑战之一。为了使 Rust 拥有真正出色的调试支持，它应该支持不同调试器（如 GDB、LLDB 或 CDB）的多个版本，实现能高质量展示大多数 Rust 类型的调试器可视化工具，提供对 async 代码的一流支持，并允许在调试器中评估 Rust 表达式。目前 Rust 尚未达到这一水平，要达到这个调试支持水平需要大量工作。该调查旨在帮助我们找到调试 Rust 代码的具体挑战。填写调查大约需要 5 分钟，它是完全匿名的，我们将接受提交直到 2026 年 3 月 13 日星期五。之后，我们将评估结果并在本博客上发布关键见解。</p>
+
+<p><a href="https://ross-spencer.github.io/learn-ipfs">在 Y 分钟内学习 IPFS</a><br>本文档是一个关于星际文件系统 (IPFS) 的速查指南，涵盖了其核心概念和常用命令行操作。内容包括：如何初始化 IPFS 节点、启动 IPFS 守护进程、添加和检索数据（包括通过 cURL 从网关访问）、使用 IPNS 实现可变标识符、数据签名、数据持久化的固定（Pinning）机制、内容寻址 (CID) 的确定性，以及 IPLD（星际链接数据）的基本应用，最后还列出了相关工具和深入阅读的资源。
+
+关键操作示例包括：`./ipfs init` 初始化节点，`./ipfs daemon` 启动服务，`./ipfs add` 添加数据并获取 CID，以及使用 `./ipfs name publish` 发布 IPNS 记录。</p>
+
+<p><a href="https://azure.microsoft.com/en-us/blog/agentic-cloud-operations-a-new-way-to-run-the-cloud">Agentic cloud operations and Azure Copilot for AI‑driven workloads</a><br>探讨 Agentic 云操作（Agentic cloud operations）和 Azure Copilot 如何为现代云环境带来智能和持续优化。文章介绍了这种新型操作模式如何通过利用 AI 智能体将上下文智能融入日常工作流程，从而实现跨开发、迁移和运维生命周期的协调行动，最终提高性能、降低风险并实现云运维的持续改进。Azure Copilot 被定位为实现 Agentic 云操作的智能体式界面。</p>
+
+<p><a href="https://www.docker.com/blog/state-of-agentic-ai-key-findings">State of Agentic AI Report: Key Findings</a><br>基于Docker对800多名全球领导者的调查报告，本博客概述了在组织内部推广Agentic AI的关键发现，包括生产采用情况、主要障碍、MCP就绪情况、锁定担忧以及容器的重要性。报告强调了建立信任层（安全的内容访问、安全运行时、标准化编排和可移植包）对于将Agentic AI从本地生产力扩展到企业级成果至关重要，其中容器化仍然是基础设施的基础。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/02/19/state-of-cloud-native-2026-cncf-ctos-insights-and-predictions">2026年云原生现状：CNCF首席技术官的见解与预测</a><br>在云原生计算基金会（CNCF）成立十周年之际，我们与CNCF的首席技术官兼联合创始人Chris Aniszczyk进行了一次深入的对话，探讨了2026年云原生的现状以及未来的发展趋势。讨论内容涵盖了Kubernetes如何从一个编排工具演变为事实上的操作系统，可观测性、安全性和AI的融合，AI工作负载的FinOps实践，以及一项有争议的预测：到2026年底，AI系统将成为许多开源项目的主要贡献者之一。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Feb/23/ladybird-adopts-rust/#atom-everything">Ladybird 采用 Rust，并获得了人工智能的帮助</a><br>一篇关于 Andreas Kling 分享的精彩案例研究，展示了如何利用 AI 编码智能体进行雄心勃勃的编码项目，特别是涉及关键代码时。Ladybird 浏览器在 Swift 的跨平台支持未能如愿成熟后，转而采用 Rust 语言，并首先通过 AI 辅助移植了一个关键库——LibJS（Ladybird 的 JavaScript 引擎）。作者使用 Claude Code 和 Codex 进行了翻译，这是一个人类指导的过程，共进行了数百次小提示。整个移植工作仅用了大约两周时间，生成了约 25,000 行 Rust 代码，而手工完成需要数月。他们验证了 Rust 解析器产生的每一个 AST 和字节码都与 C&#43;&#43; 实现的输出完全相同，实现了零回归。拥有像 test262 这样高质量的现有兼容性测试套件，极大地促进了这种规模项目的进展，并且能够与现有受信任的实现进行比较，使得智能体工程更加可靠。</p>
+
+<p><a href="https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows">使用 GitHub Agentic Workflows 自动化仓库任务</a><br>通过在 GitHub Actions 中使用编码智能体（coding agents）来构建自动化工作流，以处理问题分类、文档、代码质量等任务。GitHub Agentic Workflows 现已提供技术预览。</p>
+
+<p><a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">Minions: Stripe’s one-shot, end-to-end coding agents</a><br>Minions是Stripe自研的编码智能体，每周负责合并超过一千个拉取请求。虽然代码由人类审查，但Minions从头到尾编写代码。了解它们的工作原理以及Stripe是如何构建它们的。</p>
+
+<p><a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2">Minions: Stripe’s one-shot, end-to-end coding agents—Part 2</a><br>Minions是Stripe自有的无监督的智能体式编码流程的第二部分。本文深入探讨了它们的构建细节，重点介绍了Stripe特有的部分，包括：使用标准化的“devbox”（云开发环境）确保并行性、可预测性和隔离性；定制开发的Agent框架，专为全自动运行优化；以及使用“蓝图”（结合了工作流的确定性和Agent的灵活性）进行编排，并通过“规则文件”和“模型上下文协议”（MCP）收集上下文信息，最后利用Stripe庞大的测试集进行迭代。</p>
+
+<p><a href="https://newsletter.eng-leadership.com/p/how-openais-codex-team-works-and">OpenAI Codex 团队如何运作及利用人工智能</a><br>这篇文章深入探讨了OpenAI Codex团队的运作方式，重点介绍了他们如何利用AI、团队结构、开发理念以及他们在构建AI驱动产品（如Codex应用、IDE扩展和开源代码智能体）时所采用的方法。文章基于作者与OpenAI Codex工程主管Thibault Sottiaux的对话，强调了该团队的自主性、高速度和AI在工作流程中的核心作用，包括规划、代码审查和入职流程。</p>
+
+<p><a href="https://www.anthropic.com/research/measuring-agent-autonomy">评估智能体自主性</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>✨ Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>⚡️ Open-source AI Gateway — Use any SDK to call 100&#43; LLMs. Built-in failover, load balancing, cost control &amp; end-to-end tracing.</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/NoFxAiOS/nofx">NoFxAiOS/nofx</a><br>AI Trading OS: Multi-AI, multi-exchange trading infrastructure with Strategy Studio.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/TecharoHQ/anubis">TecharoHQ/anubis</a><br>Weighs the soul of incoming HTTP requests to stop AI crawlers</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel offers an intuitive web interface for a Linux server / VPS, making it easy to manage OpenClaw agents, local LLMs, websites, databases, containers, files, and scheduled tasks.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

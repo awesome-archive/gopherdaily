@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251217.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251217</span>
+</p>
+<p>每日一谚：Do not trust user input; validate and sanitize it </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/EId4NzeIDGoOQ5fwhpO0JA">🚀重磅！Go 1.26 RC1 发布：Green Tea GC 登场，语法糖真香！</a><br>距离 2026 年 2 月正式版仅一步之遥！今天，Go 团队正式发布了 Go 1.26 Release Candidate 1 (RC1)。 这意味着 Go 1.26 的核心功能已经定型，诚邀全球开发者尝鲜测试。</p> 
+
+<p><a href="https://tonybai.com/2025/12/17/cloudflare-2025-report-go-language-api-traffic-ai-surge">Cloudflare 2025 年度报告发布——Go 语言再次“屠榜”API 领域，AI 流量激增！</a><br>近日，互联网基础设施巨头 Cloudflare 发布了其备受瞩目的《2025 年度互联网回顾报告》。这份基于其全球庞大网络数据的报告，如同一面镜子，映照出全球互联网在流量、技术、安全和 AI 等领域的最新脉搏。 而对于我们 Go 开发者而言，今年的报告带来了两个极其振奋人心的消息： 1.  Go 语言在自动化 API 客户端领域的王者地位，不仅得以巩固，甚至还在持续扩大领先优势。 2.  AI 相关流量和应用正在以前所未有的速度崛起，而 Go 正是这股浪潮背后不可或缺的基础设施构建者。 </p> 
+
+<p><a href="https://dev.to/lovestaco/high-performance-sqlite-reads-in-a-go-server-4on3">Go 服务器中高性能 SQLite 读取</a><br>本文介绍了在 Go 服务器环境中优化 SQLite 读取性能的多种技术和最佳实践。核心思想是利用 WAL 模式、合理设置缓存大小（cache_size）、启用内存映射 I/O (mmap_size)，并根据场景选择合适的同步和锁定模式。作者强调，SQLite 本身并不慢，关键在于正确的配置，特别是对于读多写少的场景，通过这些优化可以实现极高的读取吞吐量。</p> 
+
+<p><a href="https://tonybai.com/2025/12/17/ai-programming-90-percent-trap-generation-vs-bug-fix">AI 编程的“90% 陷阱”：为什么你生成代码 1 分钟，修 Bug 却要 1 小时？</a><br>在 AI 辅助编程普及的第三年，我观察到一种奇怪的现象，我称之为“AI 时代的开发疲劳”。 很多开发者跟我抱怨：“一开始觉得 AI 简直是神，几秒钟就能生成一个模块。但用久了发现，它生成的代码总是‘乍一看很完美，一跑全是坑’。简单的逻辑还能应付，一旦涉及到复杂的业务重构，它写的代码往往是 90% 可用，剩下 10% 充满了隐蔽的 Bug、过时的库引用和糟糕的结构。结果是：**AI 帮我省了 30 分钟敲代码的时间，我却花了 2 小时去 Review 和填坑。” 这就是典型的“90% 陷阱”。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/JaVxaGeelvU6RGzArtYx-g">【API 设计之道】03 非标行为设计：当 REST 无法描述“取消订单”时怎么办？</a><br></p> 
+
+<p><a href="https://tailscale.com/blog/chat-tails-terminal-chat">Chat-tails：基于 Tailscale 构建的复古终端聊天应用</a><br>为了给他的孩子提供一个与朋友在 Minecraft 游戏中安全聊天的空间，Brian Scott 开发了一款名为 chat-tails 的应用。这款应用采用了类似 IRC 的终端界面，并通过 Tailscale 和 tsnet 实现了安全的连接。chat-tails 的特点是极简和私密性：没有语音聊天、插件、头像或图片（ASCII 艺术除外），所有聊天记录都是短暂的，不便搜索，确保了一个安全的私人交流空间。该应用有两种模式：本地网络模式（Regular Mode）和 Tailscale 模式，后者利用 Tailscale 域名（如 hostname.something.ts.net）和认证密钥，允许 Tailnet 中的任何用户通过 `nc` 或 `telnet` 命令安全接入。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-12-16-dolt-error-types/">Dolt中的错误类型</a><br>本文探讨了Dolt和go-mysql-server为何使用不同的错误类型。Go语言中的`error`是一个通用接口，适用于小型程序，但对于像Dolt这样的复杂系统，需要更精细的错误处理。go-mysql-server使用“Kind”错误来表示不同的错误类别，这不仅有助于组织，也是为了将其内部错误转换为MySQL协议所需的特定错误代码（如SQLError）。Dolt核心逻辑（存储和版本控制）也采用类似模式，如使用Sentinel错误或包含特定元数据的结构体，以满足不同子系统和用户（如CLI用户）的需求。最终目标是确保错误能携带足够的含义，以适应不同上下文中的应用。</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/ErrorsShouldRequireFixing">错误日志级别的含义（系统管理员视角）</a><br>今天关于日志级别的热门观点：如果不是需要修复的问题，那就不是错误，最多只是警告。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.pingcap.com/blog/tidbx-origins-architecture/">TiDB X 的诞生：起源、架构与未来展望</a><br>探索 TiDB X 如何通过为 AI、SaaS 和现代增长而构建的弹性、云原生架构来削减数据库成本。本文深入探讨了 TiDB X 的起源、核心技术原则（如服务导向架构、虚拟集群和计算存储分离），并展望了它如何赋能下一代应用场景，强调 TiDB Cloud 是体验 TiDB X 弹性能力的最佳途径。</p>
+
+<p><a href="https://www.docker.com/blog/develop-deploy-voice-ai-apps/">使用 Docker 开发和部署语音 AI 应用</a><br>本文介绍了如何使用 Docker、EchoKit 平台、模型运行器 (Model Runner) 和 MCP 工具包来构建和部署实时的语音 AI 代理。这些工具简化了语音 AI 软件栈的复杂性，使得 ASR/LLM/TTS 等组件可以在本地或云端运行，并支持自定义知识库和语音风格。文章详细介绍了 EchoKit 服务器的 Docker 部署和配置，包括如何集成 VAD（语音活动检测）以提高识别准确性，以及如何利用 Docker MCP Toolkit 和 Gateway 来实现 LLM 的工具调用功能。最后强调了 Docker 在 AI 部署中的可靠性、安全性和可移植性优势。</p>
+
+<p><a href="https://engineering.salesforce.com/how-ai-enabled-tooling-boosted-code-output-30-while-keeping-quality-and-deployment-safety-intact/">AI驱动的工具如何将代码产出提升30%——同时保持质量和部署安全完好无损</a><br>了解Salesforce在AI驱动编码工具激增后如何扩展开发速度，避免下游瓶颈。文章介绍了Darryn Dieken团队如何通过整合AI工具（如Cursor、Windsurf和Claude Code）来赋能超过85%的工程师，实现代码生产量提升30%，同时强调了在关键生产决策中，人类操作员始终保持最终审批权的风险缓解策略，以确保安全性和可靠性。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/16/how-to-build-a-cost-effective-observability-platform-with-opentelemetry/">如何使用OpenTelemetry构建高性价比的可观测性平台</a><br>管理全球活动（如闪购和在线投票）期间的数百万并发连接需要具有弹性、可扩展的可观测性。STCLab 讨论了他们如何通过迁移到基于OpenTelemetry和LGTM（Loki, Grafana, Tempo, Mimir）堆栈的开源可观测性标准，实现了成本降低72%并获得100%的APM跟踪覆盖率的转变，同时避免了供应商锁定。文章详细介绍了实现多租户架构的关键配置模式和面临的挑战，例如指标爆炸和小型节点上的内存溢出（OOM）问题。</p>
+
+<p><a href="https://www.allthingsdistributed.com/2025/12/a-little-bit-uncomfortable.html">A little bit uncomfortable</a><br>作者Andy Warfield分享了关于恐惧、不适与成长的关系。他坦承自己曾非常害怕公开演讲，并分享了早期经历的挫折。他指出，许多推动个人技能和品格进步的时刻，都伴随着一定程度的不适。这呼应了耶克斯-多德森定律，即适度的压力能提升表现。恐惧是一个很好的信号，表明你正在探索未知领域，真正的成长需要伴随这种不适。作者鼓励领导者关注并帮助他人克服恐惧，并建议读者反思什么事情让他们感到不安，并考虑去迎接它，因为成长往往发生在不适感的边缘。</p>
+
+<p><a href="https://brooker.co.za/blog/2025/12/15/database-for-ssd.html">SSD 数据库是什么样的？</a><br>这篇文章探讨了如果从零开始设计一个专门为本地固态硬盘（SSD）优化的关系型数据库，将会发生哪些变化。作者从“五分钟规则”的缓存大小估算（更新到2025年的成本模型）、数据传输大小的最佳点（32kB左右）、利用现代数据中心网络进行跨可用区（AZ）复制的必要性，以及摒弃传统单机 WAL（Write-Ahead Log）而转向分布式日志以实现持久性和恢复等方面，提出了五个核心观点。总体而言，现代数据库设计应将持久性、可扩展性和高可用性视为分布式问题，并据此优化缓存策略和数据结构交互，同时保留关系模型、ACID特性和SQL等核心概念。</p>
+
+<p><a href="https://duggan.ie/posts/moving-cloudflare-out-of-the-critical-path">将 Cloudflare 移出关键路径</a><br>作者是 Cloudflare 的忠实粉丝，但 11 月 18 日的长时间中断促使他开始思考是否真的需要将 Cloudflare 置于其博客的关键请求路径上。在停机期间，绕过 Cloudflare 的唯一方法是通过 API 禁用请求代理。作者最终采取了此操作，因为他的博客流量不大，并且在源站配置了 Let&#39;s Encrypt SSL，主要依赖 Cloudflare 的缓存和安全功能，但认为可以通过自己的努力（如 fail2ban）来替代安全方面。他更倾向于在自己或读者与服务器之间没有中间代理的架构，尽管在专业场景下可能不会做出此选择。</p>
+
+<p><a href="https://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp">让我们编写一个TCP/IP协议栈，1：以太网和ARP</a><br>编写自己的TCP/IP协议栈可能看起来是一项艰巨的任务。TCP的规范已积累了很多年，但核心规范似乎很紧凑。本系列博客将实现一个最小的用户空间TCP/IP协议栈，从第2层开始，首先关注以太网（Ethernet）和地址解析协议（ARP）。文章介绍了如何使用TUN/TAP设备来拦截网络流量，解析以太网帧格式，并详细描述了ARP协议的结构和解析算法，最终通过ARPing测试成功让Linux内核识别了自定义协议栈的回复并更新了ARP缓存。</p>
+
+<p><a href="https://cocoindex.io/blogs/meeting-notes-graph">使用 CocoIndex 和 LLM 从自动更新的会议记录构建知识图谱</a><br>大多数公司拥有海量的会议记录——这些文档中包含了决策、任务、所有者和关系，构成了一个不断变化的、未被充分利用的知识图谱。本文将提供一个完整的操作指南，演示如何利用 CocoIndex 和大型语言模型（LLM）将 Google Drive 中的会议记录转化为一个实时更新的 Neo4j 知识图谱。该方法通过增量处理、LLM 结构化提取和声明式数据流，实现了企业级知识图谱的低成本、高效率维护。</p>
+
+<p><a href="https://blog.guillaume-gomez.fr/articles/2025-12-15&#43;Rust&#43;GCC&#43;backend%3A&#43;Why&#43;and&#43;how">Rust GCC 后端：原因与实现</a><br>这篇文章探讨了 Rust 编译器使用不同后端（如 LLVM、Cranelift 和 GCC）生成二进制代码的可能性，重点介绍了 GCC 后端的原因和实现细节。作者解释了编译器的工作流程，区分了前端和后端，并说明了为何需要 GCC 后端（例如支持旧处理器）。文章还对比了 GCC 后端（rustc_codegen_gcc）和 gccrs 的区别，并简要介绍了如何通过 libgccjit 实现一个 Rust 后端，包括实现 ConstCodegenMethods 特性中 const_str 方法的示例，以及如何利用 `nonnull()` 属性进行优化。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://danfu.org/notes/agi">是的，通用人工智能（AGI）可以实现——一个计算视角</a><br>实现通用人工智能（AGI）以及更通用的有用人工智能的进步有许多前进的路径。</p>
+
+<p><a href="https://martin.kleppmann.com/2025/12/08/ai-formal-verification.html">预测：人工智能将使形式化验证走向主流</a><br>作者认为，人工智能（AI）将使形式化验证（formal verification）这一长期以来被视为边缘领域的活动，进入软件工程的主流。尽管 Rocq、Isabelle、Lean 等工具已能实现代码的数学证明，但目前由于编写证明极其困难和耗时，形式化验证主要限于研究项目。AI 编码助手，特别是大型语言模型（LLM），在编写实现代码和证明脚本方面正变得越来越强大，这将极大地降低形式化验证的成本。更重要的是，AI 生成的代码需要被验证，因此 AI 创造了对形式化验证的需求。作者认为，证明脚本是 LLM 的一个绝佳应用场景，因为证明检查器会拒绝无效的证明。最终挑战将转移到如何准确定义规范，但这比手工编写证明要容易。作者预测，随着成本降低、需求增加以及 AI 精度的互补，形式化验证将普及，届时文化上的接受将成为主要障碍。</p>
+
+<p><a href="https://www.ashpreetbedi.com/articles/self-learning-researcher">自我学习研究代理，跟踪长期共识</a><br>本文介绍了一种自我学习的研究代理的构建方法，该代理能够捕获当前共识，与过去的运行进行比较，解释变化的原因，并存储干净的快照以供未来运行使用。该代理通过记录经验（结构化的共识快照）而非重新训练模型来实现“自我学习”。核心思想是使用“仅追加的快照”，每个快照包含问题、共识摘要、结构化声明、置信度和来源。在每次运行时，代理进行并行研究，提取共识，与知识库中最近的快照进行比较（差异化），并请求人工确认以保存新的快照。文章提供了生产代码库（基于FastAPI和Postgres）的GitHub链接，以及本地运行和部署到Railway的详细步骤。</p>
+
+<p><a href="https://www.bharath.sh/writing/claude-code-dx">Claude Code 的 DX 太棒了，但这也是个问题</a><br>Claude Code 在开发者体验（DX）方面表现出色，但随着能力的增长，复杂性也在增加。最好的工具应该“消失”，而不是成为需要管理的负担。这篇文章探讨了 Claude Code 的优秀之处，比如感觉像与一位高水平工程师合作、高执行力以及带来的小惊喜，同时也提出了其能力增强可能带来的认知负荷风险，并关注了默认体验、功能的可组合性以及团队是否愿意进行功能精简等方面。</p>
+
+<p><a href="https://leerob.com/agents">编码智能体与复杂性预算</a><br>作者成功地将 cursor.com 从内容管理系统（CMS）迁移到纯代码和 Markdown，仅用了三天时间，花费了 260 美元的代币费用，并利用了数百个编码代理。文章详细阐述了移除 CMS 等抽象层带来的技术复杂性，包括用户管理、内容预览、国际化和 CDN 成本等问题，并展示了如何通过纯代码和 AI 代理来简化这些流程。最终的迁移结果是花费 260.32 美元和 2.97 亿个代币，同时节省了 CDN 使用费用并加快了构建时间。</p>
+
+<p><a href="https://mays.co/optimizing-claude-code">优化Claude Code</a><br></p>
+
+<p><a href="https://magong.se/posts/real-problems-ai-coding-lesswrong">AI 编码的核心问题</a><br>作者分享了五个月使用 AI 编码工具构建生产系统的经验，总结出 AI 编码的三个核心问题：(1) 确保输出符合意图，(2) 保证 AI 可交付内容的质量可信，(3) 构建高效的人机混合团队。文章主要聚焦于后两个问题，并分享了使用 LLM 辅助开发微服务的一些实践和思考，如任务分解、高密度测试和团队规模（“小笼包理论”）。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>End-to-end realtime stack for connecting humans and AI</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/NVIDIA/KAI-Scheduler">NVIDIA/KAI-Scheduler</a><br>KAI Scheduler is an open source Kubernetes Native scheduler for AI workloads at large scale</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>LLM-powered framework for deep document understanding, semantic retrieval, and context-aware answers using RAG paradigm.</p>
+
+<p><a href="https://github.com/wavetermdev/waveterm">wavetermdev/waveterm</a><br>An open-source, cross-platform terminal for seamless workflows</p>
+
+<p><a href="https://github.com/junegunn/fzf">junegunn/fzf</a><br>🌸 A command-line fuzzy finder</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/Altinity/clickhouse-operator">Altinity/clickhouse-operator</a><br>Altinity Kubernetes Operator for ClickHouse creates, configures and manages ClickHouse® clusters running on Kubernetes</p>
+
+<p><a href="https://github.com/Jguer/yay">Jguer/yay</a><br>Yet another Yogurt - An AUR Helper written in Go</p>
+
+<p><a href="https://github.com/sashabaranov/go-openai">sashabaranov/go-openai</a><br>OpenAI ChatGPT, GPT-5, GPT-Image-1, Whisper API clients for Go</p>
+
+<p><a href="https://github.com/openfga/openfga">openfga/openfga</a><br>A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar</p>
+
+<p><a href="https://github.com/vllm-project/semantic-router">vllm-project/semantic-router</a><br>Intelligent Router for Mixture-of-Models</p>
+
+<p><a href="https://github.com/expr-lang/expr">expr-lang/expr</a><br>Expression language and expression evaluation for Go</p>
+
+<p><a href="https://github.com/shopspring/decimal">shopspring/decimal</a><br>Arbitrary-precision fixed-point decimal numbers in Go</p>
+
+<p><a href="https://github.com/pion/webrtc">pion/webrtc</a><br>Pure Go implementation of the WebRTC API</p>
+
+<p><a href="https://github.com/volcano-sh/volcano">volcano-sh/volcano</a><br>A Cloud Native Batch System (Project under CNCF)</p>
+
+<p><a href="https://github.com/go-gorm/gorm">go-gorm/gorm</a><br>The fantastic ORM library for Golang, aims to be developer friendly</p>
+
+<p><a href="https://github.com/qax-os/excelize">qax-os/excelize</a><br>Go language library for reading and writing Microsoft Excel™ (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/cloudnative-pg/cloudnative-pg">cloudnative-pg/cloudnative-pg</a><br>CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241008.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-08</span>
+</p>
+<p>每日一谚：Don&#39;t just check errors, handle them gracefully. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/10/09/resonating-with-thorsten-ball-on-go-in-technical-writing">与Thorsten Ball的共鸣：Go作为教学语言在技术写作中的优越性</a><br>与Thorsten Ball一样，我也为选择Go感到庆幸。看到自己的书籍作品能够持续为读者提供价值，这种成就感是无可比拟的。Go语言在技术写作中展现出的优越性，不仅使我们的书籍能够经受时间的考验，还为整个技术写作领域树立了新的参考标杆</p> 
+
+<p><a href="https://grafana.com/blog/2024/10/08/inside-promql-a-closer-look-at-the-mechanics-of-a-prometheus-query/">PromQL内幕：深入了解Prometheus查询的机制</a><br>这项全面的探索深入探讨了 Prometheus 中 PromQL 查询的复杂工作原理，Prometheus 是一个由 Prometheus 维护人员维护的系统。作者揭开了即时查询和范围查询的机制的神秘面纱，解释了 PromQL 如何使用引擎和解析器处理这些请求，以构建抽象语法树 （AST）。该博客文章详细介绍了执行过程，包括选择器如何与索引匹配、函数和聚合如何运行以及 PromQL 如何处理运算符。此外，它还涵盖了输出过程，其中 PromQL 查询通过其 HTTP API 发送到 Prometheus，以及跟踪和分析以进一步了解查询执行的可能性。</p> 
+
+<p><a href="https://victoriametrics.com/blog/go-sync-map/">Go标准库包sync.Map的实现原理</a><br>本文讨论了 &#39;sync.Map“，这是一种并发安全的 map 实现，可作为特定场景的合适工具。它强调，虽然 &#39;sync.Map&#39; 并不是所有 map 操作的通用替代品，它在读取密集型环境中表现出色，并提供无锁读取操作。但是，它也警告说，由于其内部机制，可能会出现内存膨胀，尤其是在处理频繁删除和恢复键值对时。作者 Phuong Le 主张理解 &#39;sync.Map“及其对内存使用的影响，并在必要时建议像 VictoriaMetrics 这样的替代方案进行服务监控。</p> 
+
+<p><a href="https://rednafi.com/go/circuit_breaker/">在Go中编写熔断器</a><br>本文深入探讨了如何在 Go 中实现断路器模式，这是分布式系统中常见的弹性策略。作者解释了断路器的功能，详细介绍了它的三种状态 - 闭合、打开和半开 - 以及它们之间的转换。通过熔断器执行函数的主要接口是 &#39;Call&#39; 方法，该方法根据当前状态调度请求。本文还介绍了断路器的初始化、不同状态的处理以及防止挂起请求的超时机制的实现。此外，作者还讨论了对 Go 断路器 API 的潜在改进，并提供了处理签名不兼容的函数的解决方法。</p> 
+
+<p><a href="https://eli.thegreenplace.net/2024/linearizability-in-distributed-systems/">分布式系统中的线性一致</a><br>源文档提供了对线性化的深入探索，线性化是分布式系统中的强一致性模型。它解释了线性化给人一种操作对单个对象（例如寄存器）的瞬时效果的错觉，使并发操作看起来是连续的。该文档包括说明有效和无效线性化历史记录的示例，强调了操作顺序的重要性及其对观察到的结果的影响。它进一步阐明了线性化和可序列化性之间的区别，这是另一种适用于涉及多个对象的事务的一致性模型。本文档是理解线性化性及其在保持分布式系统中一致性的重要性的综合指南。</p> 
+
+<p><a href="https://medium.com/@pavelanni/time-travel-with-tinygo-and-raspberry-pi-pico-4188cfd0eb47">Time travel with TinyGo and Raspberry Pi Pico</a><br>The article presents a project named &#34;Time Travel with TinyGo and Raspberry Pi Pico&#34; by Pavel Anni, where he builds a time-travel toy using TinyGo and Raspberry Pi Pico. The device comprises two Raspberry Pi Picos, 7-segment LED displays, rotary encoders, and a DFPlayer Mini for sound effects. The left Pico sets the destination time using rotary encoders, while the right Pico handles the present time and last time departed. When the time-travel button is pressed, the current time becomes the new destination time, and the present time starts ticking. The project also includes a memory feature that saves the times to flash memory, allowing the device to resume from where it left off upon powering up.</p> 
+
+<p><a href="https://teivah.medium.com/premature-abstractions-3132c38189f8">过早的抽象</a><br>Teiva Harsanyi 的文章深入探讨了软件开发中过早抽象的概念，这种做法可能会导致效率低下和浪费精力。Google 的高级软件工程师 Harmanyi 认为，虽然抽象对于简化复杂系统是必要的，但过早地这样做（基于猜测而不是实际需求）可能是有害的。他强调，过早的优化（通常是这种早期抽象的结果）是效率低下的重要来源，可能会对调试和维护产生负面影响。Harsanyi 分享了他之前工作中的一个个人轶事，他投入时间使代码库通用，以满足从未实现的预期未来需求，从而导致开发资源的浪费。这篇文章为软件工程师提供了一个警示故事，以平衡抽象的时机和过度过早抽象的潜在陷阱。</p> 
+
+<p><a href="https://www.p99conf.io/2024/10/07/books-by-p99-conf-speakers/">P99 CONF 演讲者的 14 本书：延迟、WASM、数据库等</a><br>该文档提供了 P99 会议演讲者的精选书籍清单，重点介绍了他们在数据库、延迟、分布式系统等各个领域的专业知识。它还提到了为 P99 与会者提供的特别优惠，包括书籍折扣和赢得书籍包的机会。此外，本文档还简要介绍了其他几本与 P99 演讲者没有直接关系但与技术社区相关的书籍，涵盖 eBPF、WebAssembly、容器安全和高性能 MySQL 等主题。</p> 
+
+<p><a href="https://www.docker.com/blog/leveraging-testcontainers-for-complex-integration-testing-in-mattermost-plugins/">在 Mattermost 插件中利用 Testcontainers 进行复杂的集成测试</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，通常是由于缺少权限或请求被明确禁止。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明用户尝试访问服务器正在保护的资源，但被拒绝访问。该文档不包含除状态代码及其描述之外的任何其他信息。</p> 
+
+<p><a href="https://blog.ipfs.tech/ipfs-check/">改进使用IPFS check的调试</a><br>本文讨论了 IPFS Check 的改进版本，该工具旨在帮助调试 IPFS 主网公共网络上的可检索性问题。大修使该工具更易于使用且功能更强大，从而可以深入了解数据是否可通过内容标识符 （CID） 进行路由和检索。它还提供了有关用于连接到提供商的多地址和网络传输的详细信息，以及是否需要 NAT 遍历。本文进一步解释说，IPFS Check 现在支持仅 CID 检查、IPNI 支持，并提供有关用于连接的网络协议的信息。</p> 
+
+<p><a href="https://blog.frankel.ch/ajax-ssr/5/">使用HTMX增强客户端</a><br>本文比较了在客户端实现异步请求的不同方法，特别关注 HTMX，这是一种不同于传统 AJAX 框架的独特方法。HTMX 与 Thymeleaf 和 Spring Boot 集成以返回 HTML 片段而不是 JSON，通过消除 JavaScript 代码发送请求的需要来简化流程。作者演示了如何使用 HTMX 与服务器端数据交互，例如通过将 HTTP 调用绑定到客户端事件并将配置的 DOM 元素替换为服务器响应来将 todo 标记为完成。本文还强调了 Thymeleaf 和 HTMX 之间的协同作用，允许将页面拆分为片段，以便在客户端和服务器端重用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://wasmer.io/posts/clang-in-browser">使用 WebAssembly 在浏览器中运行 Clang</a><br>Wasser 的创始人兼首席执行官 Syrus Akbary 分享了该公司使用 WebAssembly 在浏览器中运行 Clang 所取得的成就的见解，强调了 Wasmer JS SDK 的重要性以及直接从 JavaScript 编译 C 程序的能力。源文件详细介绍了将 C 代码编译为 WebAssembly 并在 Chrome、Safari 和 Firefox 等浏览器中运行的技术过程，以及在线 IDE 采用 SDK 在浏览器中编译 C 程序的潜力。Akbary 还讨论了未来的前景，包括在 WASIX 中编译原生 Python 库、利用 py2wasm 以及集成 Static Hermes 以从 JS 生成原生 Wasm 文件。该文档为有兴趣将 Wasmer 的功能用于 WebAssembly 项目的开发人员提供了全面的指南。</p>
+
+<p><a href="https://blog.devops.dev/7-effective-ways-to-shrink-docker-images-for-faster-deployments-93ed16c8b577">缩小 Docker 镜像以加快部署速度的 7 种有效方法</a><br>Abhishek Rana 撰写的《缩小 Docker 镜像以加快部署速度的 7 种有效方法》解决了臃肿的 Docker 镜像的关键问题及其对开发管道、部署时间和安全性的影响。本文强调了优化 Docker 镜像以减小其大小的重要性，这可以带来更快、更安全和资源高效的容器化应用程序。Rana 概述了实现此优化的几种技术，旨在提高 Docker 镜像的整体性能。本文还讨论了与大型 Docker 镜像相关的潜在风险，例如传输时间增加、存储成本和易受安全威胁的影响。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/10/07/opentelemetry-collector-everything-a-developer-needs-to-know/">OpenTelemetry Collector：开发人员需要了解的一切</a><br>OpenTelemetry Collector 是 OpenTelemetry 项目的重要组成部分，旨在简化跨各种编程语言和可观测性平台从插桩应用程序中收集、处理和导出遥测数据的过程。它充当与供应商无关的中心，通过其支持针对特定需求的自定义和扩展的可插拔架构提供灵活性。Collector 可以通过三种方式进行部署：独立、sidecar 和代理部署，每种方式都有其独特的优势，适用于不同的使用案例。Adobe 对 OpenTelemetry Collector 的实施凸显了它的多功能性，并计划进一步集成和增强其遥测实践。Middleware 是一个 AI 驱动的平台，通过提供统一的视图来监控和分析收集的遥测数据，从而补充了 OpenTelemetry Collector。</p>
+
+<p><a href="https://www.redhat.com/en/blog/2024-enterprise-trends-cloud-meets-ai">2024 年企业趋势：云与 AI 的结合</a><br>2024 年企业趋势突出了对云技术的重大投资，重点是为将 AI 采用作为关键驱动力做好准备。然而，云蔓延、人工智能、网络安全和云计算方面的技能差距以及合规性和数据主权问题等挑战仍然存在。许多组织正在制定战略，以实现创新的平衡增长，许多组织计划到 2025 年将对云技术的投资增加 21-50%。AI 的采用还受到对数据隐私、安全性和 AI 模型对环境影响的担忧的影响。企业开源解决方案被认为有利于加速创新、增强信任和透明度以及降低 AI 和云计划的成本。</p>
+
+<p><a href="https://thenewstack.io/tetrate-bloomberg-collaborate-on-envoy-based-ai-gateways/">Tetrate 与 Bloomberg 合作开发基于 Envoy 的 AI 网关</a><br>Tetrate 和 Bloomberg 已开展一项合作计划，利用云原生计算基金会 （CNCF） 下的 Envoy Gateway 项目，为 AI 网关开发开放标准。这项工作旨在扩展 Envoy Gateway 的功能，Envoy Gateway 是一种灵活的网络网关，可有效管理内部微服务流量和外部请求，以将大型语言模型 （LLM） 集成到企业应用程序中。拟议的 AI 网关将提供高可用性路由、监控和 LLM 使用情况控制，并为来自多个提供商的请求提供统一接口。该项目旨在为 AI 集成提供社区驱动的开源解决方案，避免供应商锁定和商业许可问题。</p>
+
+<p><a href="https://www.docker.com/blog/using-an-ai-assistant-to-script-tools/">使用 AI Assistant 编写工具脚本</a><br>源文档似乎是来自 Web 服务器（特别是 nginx）的错误消息，指示 403 Forbidden 状态。此 HTTP 状态代码表示服务器理解请求但拒绝授权，通常是由于缺少权限或请求被明确禁止。该消息以简单的格式显示，状态代码和简要说明周围带有星号。此消息的存在表明用户尝试访问服务器正在保护的资源，但被拒绝访问。该文档不包含除状态代码及其描述之外的任何其他信息。</p>
+
+<p><a href="https://medium.com/@achar007/how-to-install-cert-manager-and-create-a-clusterissuer-using-a-private-ca-certificate-53318439c152">如何使用私有CA证书安装Cert-Manager并创建ClusterIssuer</a><br>本指南由 Bharath Achar 撰写，提供了有关安装 Cert-Manager（Kubernetes 包）以及使用私有 CA 证书创建“ClusterIssuer”的全面演练。该过程从通过清单安装 Cert-Manager 开始，并验证其部署是否成功。随后，使用 OpenSSL 将 CA 密钥转换为 PEM 格式，并创建 Kubernetes 密钥来存储 CA 证书和密钥。然后，将“ClusterIssuer”资源配置为使用私有 CA 颁发证书。最后，该指南演示了如何使用 &#39;ClusterIserser&#39; 为域颁发证书，例如 &#39;example.com&#39;。此设置支持在 Kubernetes 中利用 Cert-Manager 和私有 CA 进行自动化证书管理。</p>
+  
+
+<h2>AI</h2>
+
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/prometheus/client_golang">prometheus/client_golang</a><br>适用于 Go 应用程序的 Prometheus 插桩库</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/iam-veeramalla/observability-zero-to-hero">iam-veeramalla/observability-zero-to-hero</a><br>[WIP]：用于学习可观察性的存储库</p>
+
+<p><a href="https://github.com/TheAlgorithms/Go">TheAlgorithms/Go</a><br>在 Go 中为初学者实现的算法和数据结构，遵循最佳实践。</p>
+
+<p><a href="https://github.com/flyteorg/flyte">flyteorg/flyte</a><br>可扩展且灵活的工作流编排平台，可无缝统一数据、ML 和分析堆栈。</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>通用代理平台</p>
+
+<p><a href="https://github.com/rancher/rancher">rancher/rancher</a><br>完整的容器管理平台</p>
+
+<p><a href="https://github.com/docker/cli">docker/cli</a><br>The Docker CLI</p>
+
+<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS 是一个快速的分布式存储系统，适用于 blob、对象、文件和数据湖，适用于数十亿个文件！Blob 存储具有 O（1） 磁盘查找、云分层。Filer 支持云驱动器、跨 DC 双活复制、Kubernetes、POSIX FUSE 挂载、S3 API、S3 网关、Hadoop、WebDAV、加密、纠删码。</p>
+
+<p><a href="https://github.com/go-kratos/kratos">go-kratos/kratos</a><br>适用于云原生时代的终极 Go 微服务框架。</p>
+
+<p><a href="https://github.com/kubernetes/dashboard">kubernetes/dashboard</a><br>适用于 Kubernetes 集群的通用 Web UI</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/kyverno/kyverno">kyverno/kyverno</a><br>云原生策略管理</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git 喝杯茶！轻松的自托管一体化软件开发服务，包括 Git 托管、代码审查、团队协作、包注册表和 CI/CD</p>
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric 是一个开源框架，用于使用 AI 增强人类能力。它提供了一个模块化框架，用于使用一组可在任何地方使用的众包人工智能提示来解决特定问题。</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>具有 10 个微服务的示例云优先应用程序，展示了 Kubernetes、Istio 和 gRPC。</p>
+
+<p><a href="https://github.com/operator-framework/operator-sdk">operator-framework/operator-sdk</a><br>用于构建 Kubernetes 应用程序的 SDK。提供高级 API、有用的抽象和项目基架。</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/gofr-dev/gofr">gofr-dev/gofr</a><br>一个固执己见的 GoLang 框架，用于加速微服务开发。内置对数据库和可观测性的支持。</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>社区托管域列表。为 V2Ray 生成 geosite.dat。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>OpenTelemetry-Go 的扩展集合。</p>
+
+<p><a href="https://github.com/GoogleContainerTools/kaniko">GoogleContainerTools/kaniko</a><br>在 Kubernetes 中构建容器镜像</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>适用于容器的应用程序内核</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>适用于 Azure 资源管理器的 Terraform 提供程序</p>
+
+<p><a href="https://github.com/lib/pq">lib/pq</a><br>用于数据库/sql 的纯 Go Postgres 驱动程序</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

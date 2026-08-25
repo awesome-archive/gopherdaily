@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202605/issue-20260519.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260519</span>
+</p>
+<p>每日一谚：The bigger the interface, weaker the abstraction. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/05/19/ai-era-software-engineer-algorithm-map">代码可以让 AI 写，但设计得由你做：重塑工程师的“算法直觉”</a><br>在 AI 时代，编码（Coding）的成本正在无限趋近于零，但设计（Design）与判断（Judgment）的价值却在指数级上升。很多工程师在刷 LeetCode 时感到痛苦，是因为他们把算法当成了“面试八股文”，考完即忘。但在资深架构师眼里，LeetCode 里的每一个算法模式，都是现代软件工程中的一个微缩模型。我们要把那 2000 多道题，提炼成 15 类核心模式，装进你的武器库。下次遇到工程难题时，我希望你的直觉告诉你的不是“我去问问 AI”，而是“这是一个典型的 Top K 问题，我可以用堆（Heap）模式来解决，顺便让 AI 帮我补全代码细节</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-runtime-select/">理解 Go 运行时：select 语句</a><br>在上一篇文章中，我们介绍了切片、映射和通道，以及它们底层的结构。在这三者中，通道在使用方面可能是最复杂的——而在使用通道时，有一个语言结构非常突出：`select` 语句。这就是我们这篇文章要讨论的内容。或许我在这里有点作弊，因为这篇文章并不严格关于运行时——`select` 介于运行时和编译器之间——但这也正是它成为 Go 中有趣角落的原因：它看起来像 `switch`，表现也像 `switch`，但在底层，它是**编译器**和**运行时**之间协调的舞蹈。这种协调是我希望你从这篇文章中带走的关键点：`select` 不仅仅是一个特性，它是两个。它的一半存在于编译器中——特别是在 `walkSelectCases` 中——它会查看 `select` 的形态，并在大多数常见情况下对其进行重写。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/vWsq3C6NEXcJ1ImDUm4XQA">【AI 时代软件工程师的算法图谱】01 双指针：从数组去重到日志合并</a><br>很多工程师对双指针的印象还停留在 LeetCode 的“两数之和”或者“判断回文串”上。但在实际的工程代码中，尤其是涉及数据流处理、内存管理 、高吞吐日志分析的场景下，双指针是性能优化的第一把手术刀。 它解决的核心问题是：如何在一个线性数据结构（数组、链表、文件流）中，通过维护两个变量（指针/索引），将嵌套循环的 O(N²) 复杂度降 维打击到 O(N)，或者实现原地（In-Place）的数据清洗。</p> 
+
+<p><a href="https://www.codingexplorations.com/blog/understanding-singleflight-in-golang-a-solution-for-eliminating-redundant-work">理解 Golang 中的 singleflight：一种消除冗余工作的方法</a><br>作为开发者，我们经常遇到多个请求同时访问同一资源的情况。这可能导致冗余工作、服务负载增加以及整体效率低下。在 Go 编程语言中，`singleflight` 包为此问题提供了一个强大的解决方案。在这篇文章中，我们将探讨什么是 `singleflight`，它是如何工作的，以及你如何利用它来优化你的 Go 应用程序。什么是 Singleflight？Singleflight 是 Go 语言 `golang.org/x/sync/singleflight` 库中的一种模式及相应包。其主要目的是确保在任何给定时间内，对于昂贵或重复的操作，只有一个调用在执行。当多个 goroutine 请求同一资源时，`singleflight` 确保函数只执行一次，并将结果共享给所有调用者。这种模式在不适合缓存或结果预期会频繁变化的场景中特别有用。Singleflight 是如何工作的？`singleflight` 的机制相对简单。它提供了一个 `Group` 类型，这是 singleflight 机制的核心。`Group` 代表了一类你想要防止重复操作的工作。</p> 
+
+<p><a href="https://grant.dev/posts/built-a-slack-client/">构建一个 Slack 客户端</a><br>Slack 在我的机器上运行得很糟糕。输入 `:wave:` 需要两秒钟才能自动补全。仅仅是一个表情符号就要两秒！风扇在狂转，整个应用感觉迟钝。我的 Slack 几乎是不间断运行的。大多数人也是如此。当我看着那个表情下拉菜单缓慢爬行时，我一直在想……老兄，这只是文本啊。终端处理文本非常出色。我每天依赖的工具——`vim`、`btop`、`tig`、`k9s`——使用起来非常愉快。它们速度极快且响应灵敏，感觉充满活力。与此同时，我每天必须身处其中处理所有对话的应用，却是我机器上最慢的东西。而且它异常臃肿，是一个占用大量内存和磁盘空间的 Electron 打包应用。&gt; **Slack 只是文本。终端处理文本非常出色。所以我为什么要运行 1.5GB 的 Chromium 来阅读它呢？**所有的 TUI Slack 客户端都在哪？我以为已经有人做过这个了。Slack 已经存在十二年了。TUI 生态系统已经成熟多年，两者结合似乎显而易见。但它并不存在。至少没有真正意义上的客户端。只有少数几个项目，大多已被废弃，且非常简陋。没有一个可以日常使用，也没有一个感觉像真正的 Slack 客户端。这种差距很奇怪。诚实的回答是，打磨一个 TUI Slack 客户端可能不值得一个人花费一年的时间。Slack 对大多数人来说或多或少都能用。桌面应用虽然臃肿但功能完整。构建真正替代品的成本很高，而受众却很小。所以没人去做。世界上未被构建的应用不再是因为需求受阻。而是因为是否有人足够关心去解决这个问题。</p> 
+
+<p><a href="https://dev.to/jason_huang_cat/i-built-a-single-file-ai-agent-in-go-zero-dependencies-double-click-to-run-4g9b">我用 Go 构建了一个单文件 AI 智能体，零依赖，双击即可运行</a><br>过去几个月一直在开发一个我很兴奋分享的东西：**OpenAgent**——一个以单个二进制文件形式发布的本地 AI 智能体。没有 Docker。没有 Node.js。没有 Python 环境。只需下载 `.exe` 文件并双击即可。解决的问题：像你们许多人一样，我一直在尝试各种 AI 智能体，从代码生成到自动化繁琐任务。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/05/18/what-kubectl-debug-doesnt-tell-you-the-silent-evidence-gap/">kubectl debug 没有告诉你的事：沉默的证据缺口</a><br>一次 kubectl debug 会话可能包含对故障系统状态的唯一直接观察。然而，一旦会话结束，Kubernetes 不会在其 API 中保留该会话的终止上下文。这不是 kubectl 的 bug——它直接遵循了 Kubernetes 对临时容器的 API 设计。一旦 Pod 状态发生变化，Kubernetes API 就不再公开该调试会话的终止上下文。编码了你的发现的退出代码、会话持续时间、你针对的容器——在后续 Pod 更新后，Kubernetes API 都不会保留这些信息。以下是这种情况的样子，以及它对你的事故响应工作流程意味着什么。</p>
+
+<p><a href="https://www.docker.com/blog/ai-coding-agent-horror-stories-security-risks/">AI 编码智能体恐怖故事：威胁开发者基础设施的安全危机</a><br>这是名为《AI 编码智能体恐怖故事》新系列的第一期，我们将研究 AI 编码智能体生态系统中的关键安全故障，以及 Docker 沙箱如何提供企业级保护来抵御这些威胁。AI 编码智能体无处不在。根据 Anthropic 的《2026 年智能体编码趋势报告》，开发者现在大约 60% 的工作中使用 AI。报告描述了从单一智能体到协同智能体团队的转变，原本需要数小时或数天完成的任务被压缩到了几分钟内。走进 2026 年几乎任何一个工程团队，你都会发现 AI 编码智能体存在于工作流程的某个环节，通常还不止一个。生产力提升的故事是真实的。但那些能在一个下午交付功能的智能体，也可能在几秒钟内删掉你的主目录。让智能体自主重构 1200 万行代码的同一个循环，如果上下文错误，也会自主删除你的生产数据库。</p>
+
+<p><a href="http://antirez.com/news/166">LLM 智能体 EDIT 工具的替代方案</a><br>目前，我正在为我的 DS4 项目开发一个智能体。本地推理词元消耗较多，这是一个极其考验优化的地方。我非常惊讶地发现，现在每个人都在使用的 EDIT 工具强迫大模型（LLM）逐字输出旧版本的文本。这种 CAS（检查并设置）的操作模式是必要的，因为经常会发生编辑冲突（用户也在编辑，或者切换到了不同的分支等等），而且大模型可能会产生幻觉，误认为某一行有特定的内容。这意味着，只使用行号是非常脆弱的。我重新设计了一个基于标签的 EDIT 工具，它仍然是 CAS 风格，但更加节省词元。READ 和 SEARCH 工具返回类似这样的内容：10:Q8fA int count = 10;11:rA3_ if (count &gt; limit) {12:Kq9z count = limit;13:PX0b }这里有行号和标签。标签由 4 个字符组成，平均占用 2.5 个 LLM 词元，代表该行的校验和。现在大模型可以这样进行编辑：{&#34;tool&#34;: &#34;edit&#34;, &#34;path&#34;: &#34;/tmp/example.c&#34;, &#34;line&#34;: 10, &#34;tag&#34;: &#34;Q8fA&#34;, &#34;new&#34;: &#34;int count = 11;&#34;}</p>
+
+<p><a href="https://victoriametrics.com/blog/spotifys-performance-and-control-across-large-monitoring-environments-with-victoriametrics/">Spotify 在大型监控环境中的性能与控制</a><br>Spotify 需要更换其遗留的内部时间序列数据库，以克服导致查询延迟和超时的稳定性和性能限制。</p>
+
+<p><a href="https://rawkode.academy/read/cgroups-from-chaos-to-control">cgroups：从混乱到控制</a><br>Linux 中的一切皆文件……每个 Linux 容器的资源限制也不例外。它们只是存在于特殊目录中的文件。在该目录中，有名为 `memory.max` 和 `cpu.weight` 的文件。当内核决定你的容器占用了太多内存时，它不会咨询守护进程，也不会询问 Kubernetes。它只是读取一个你自己可以用 `echo` 写入的文件中的数字。这就是整个机制。关于 Linux 如何走到这一步，以及沿途长达十年的迂回，这就是 cgroups 的故事。</p>
+
+<p><a href="https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633">Linus Torvalds 称 AI 驱动的漏洞猎人已使 Linux 安全邮件列表“几乎完全无法管理”</a><br>多名研究人员使用相同的工具寻找相同的漏洞，正在造成“不必要的痛苦和毫无意义的工作”。</p>
+
+<p><a href="https://00f.net/2026/05/17/developping-in-the-open/">公开开发</a><br>当人们发现 Bun 的一个分支提到一个实验性计划，即使用大模型将现有的 Zig 代码移植到 Rust 时，他们都疯了。这是一个个人实验，在一个非默认的 Git 分支上，没有在任何地方公开宣布。但这并不重要。Rust 的支持者们开了香槟。Zig 的支持者们感到震惊。实际的 Bun 用户感到困惑。每个人都像幼儿园操场上的孩子一样打架。重写软件通常是重新审视代码工作方式、消除技术债务并产出更好产品的有效途径。特别是当产品的成熟形态已经已知时。你不必重新发现每一个边缘情况、每一个尴尬的功能以及每一个因为原始设计未预见现实而添加的黑科技。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything">五分钟回顾过去六个月的大模型进展</a><br>我在 2026 年美国 PyCon 大会上进行了五分钟的闪电演讲，尝试总结过去六个月大模型（LLM）的发展。六个月是一个非常方便的总结周期，因为它涵盖了我所称的“2025 年 11 月拐点”。11 月是大模型领域的一个关键月份，尤其是对于编程而言。所谓的“最佳”模型在三家大厂商（Anthropic、OpenAI 和 Google）之间易手了五次。</p>
+
+<p><a href="https://www.joanwestenberg.com/i-deleted-my-second-brain-692aa40d59d5f06dd5131e43/">我删除了我的“第二大脑”</a><br>前天晚上，我删除了一切。Obsidian 里的每一条笔记。每一个半成品的想法，每一张卡片盒笔记，每一个精心链接的概念图。我删除了自 2015 年以来同步的所有 Apple Note。我高亮过的每一句引言。我借用、破坏或篡改过的每一个生产力系统的每一个待办事项列表。都没了。在几秒钟内被擦除。随之而来的是：解脱。以及在曾经喧闹的地方出现了一种舒适的宁静。多年来，我一直在构建技术专家和生活黑客所称的“第二大脑”。前提是：捕捉一切，不遗忘任何东西。将你的思考存储在一个巨大且递归的网络档案中，它能在你意识到需要提问之前就回答问题。它承诺清晰、控制、精神杠杆等等。但随着时间的推移，我的第二大脑变成了一座陵墓。是一堆旧自我、旧兴趣、旧强迫症的陈旧集合，像地质层一样堆叠在一起。它没有加速我的思考，反而开始取代思考。它没有辅助记忆，反而将我的好奇心冻结成了静态的类别。</p>
+
+<p><a href="https://cekrem.github.io/posts/if-you-re-running-claude-code-run-it-in-a-box/">如果你正在运行 Claude Code，请把它关在盒子里运行</a><br>让我们谈谈 Claude Code。我不会再告诉你为什么你不应该使用它，而是谈谈如果你必须使用它，你应该如何使用它。换句话说：这篇文章假设你已经思考过工艺方面的问题，重点在于在这个过程中不要炸掉你的生产环境。但仅仅为了总结 Claude Code（或任何最新的花哨工具）的利弊，我觉得它表现出色的一点是：我有一个非常不错（但也相当笨拙和简单）的小技能叫 `tidy-tailwind`。它能在几秒钟内完成格式化，验证成本为零，而且我确实没从手动执行这些任务中学到什么。所以我不用手动去做。这很好！而且它并没有让我变笨。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>高性能、自托管的通讯录和邮件列表管理器，带有现代化的仪表盘。单二进制文件应用。</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 自托管的文件管理和共享系统，支持多种存储提供商。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>快速运行 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 及其他模型。</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - 为你的编码智能体提供的内存升级。</p>
+
+<p><a href="https://github.com/ethereum/EIPs">ethereum/EIPs</a><br>以太坊改进提案 (Ethereum Improvement Proposal) 存储库。</p>
+
+<p><a href="https://github.com/fish2018/pansou">fish2018/pansou</a><br>PanSou 是一款高性能的网盘资源搜索 API 服务，支持 TG 频道和插件搜索。系统设计以性能和可扩展性为核心，支持多频道多插件并发搜索、结果智能排序和网盘链接解析。</p>
+
+<p><a href="https://github.com/qdm12/gluetun">qdm12/gluetun</a><br>一个轻量级 Docker 容器中的 VPN 客户端，适用于多个 VPN 提供商。用 Go 编写，使用 OpenVPN 或 Wireguard，支持 DNS over TLS，并内置了少量智能体服务器。</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>使用 WireGuard 和双重身份验证 (2FA) 最简单、最安全的方式。</p>
+
+<p><a href="https://github.com/wesm/agentsview">wesm/agentsview</a><br>针对编码智能体的本地优先会话智能与分析工具，支持 Claude Code、Codex 及其他 14 种智能体。此外：它是 ccusage 的 100 倍速度替代品！</p>
+
+<p><a href="https://github.com/RezaSi/go-interview-practice">RezaSi/go-interview-practice</a><br>交互式 Go 面试平台 - 提供 30&#43; 编程挑战，具有即时反馈、AI 面试模拟、竞争排行榜和自动测试功能。涵盖从初级到高级的真实工作场景。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

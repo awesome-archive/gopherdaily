@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202409/issue-20240929.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-09-29</span>
+</p>
+<p>每日一谚：Use the `defer` statement for cleanup and error handling </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://medium.com/@okoanton/generic-type-aliases-in-go-1-24-what-they-are-and-why-we-need-them-07ca05539500">Go 1.24中的泛型类型别名</a><br>在 2024 年 9 月的一篇 Medium 博文中，Anton Okolelov 讨论了 Go 1.24 中泛型类型别名的引入，该功能解决了大型项目中重构的复杂性。泛型类型别名允许开发人员为现有类型（包括具有类型参数的类型）创建新名称，而无需更改类型本身。这种进步对于类型在各种包和依赖项目中广泛使用的项目至关重要。Okolelov 解释说，使用 Go 1.23 中的 GOEXPERIMENT=aliastypeparams 标志，开发人员可以试验这个功能，到 Go 1.24 时，它将成为语言的标准部分。这篇文章为在项目中适应新的泛型类型别名的 Go 开发人员提供了宝贵的见解。</p> 
+
+<p><a href="https://dizzy.zone/2024/09/23/Probabilistic-Early-Expiration-in-Go/">Go中的概率提前过期</a><br>本文讨论了缓存系统中一个称为缓存标记的问题，其中由于高访问频率而导致的同时缓存未命中可能导致资源浪费和潜在的拒绝服务。作者提出了一种称为 probabilistic early expiration 的解决方案来缓解这个问题。此技术涉及根据概率重新计算缓存值，该概率由自上次昂贵的操作以来经过的时间确定。该实现使用带有 Redis 缓存的 Go 处理程序，其中处理程序检查缓存命中并使用概率模型来决定是否提前更新缓存值。作者通过使用 Go HTTP 服务器和负载测试工具的实验说明了这种方法的有效性，该实验表明，随着时间的推移，缓存未命中率显著减少。</p> 
+
+<p><a href="https://www.polarsparc.com/xhtml/LocalAI.html">LocalAI快速入门</a><br>LocalAI 是一个基于 Docker 的开源平台，用作 OpenAI 的 API 垫片，使为 OpenAI 开发的应用程序能够与 LocalAI 无缝运行。它通过 Backends（主要是 gRPC 服务器）与各种模型集成，并支持文本生成、文本到音频转换和文本到图像创建等任务。该平台旨在在消费级 CPU 或 GPU 上运行，并在其一体化 Docker 映像中包含一组预配置的模型和后端。对于设置，它需要 Docker、Python 3.x、Jupyter Notebook、curl 和 jq，并涉及以特定二进制格式下载模型（如 Microsoft Phi-3）。此外，LocalAI 通过动手示例演示了其功能，包括生成嵌入、完成用户提示以及从文本创建音频和图像，所有这些都由 OpenAI SDK 提供。</p> 
+
+<p><a href="https://tqdev.com/2024-distributed-metrics-in-php-using-go-and-gob">使用 Go和Gob的PHP分布式指标</a><br>本文深入探讨了如何使用 Go 和 Gob 在 PHP 中收集和组合分布式指标。它介绍了 Go Gob 协议，与其他方法相比，该协议以其效率和易用性而著称。作者解释了 Gob 协议如何更简单、更高效地通过 HTTP 传输指标，与 Prometheus 指标相比，Gob 数据的大小更小。此外，本文还介绍了 Go 中 Statistics 结构体的使用，它有助于聚合来自多个 PHP 服务器的指标。最后，作者提到了一个应用程序，该应用程序可以抓取 Gob 指标并将其插入到数据库中，维护小索引以实现高插入速度。</p> 
+
+<p><a href="https://nakamasato.medium.com/a-guide-to-set-up-safe-and-simple-database-schema-migration-sqlalchemy-workflow-with-atlas-e5d1eb4363d5">使用Atlas设置安全简单的数据库架构迁移 （SQLAlchemy） 工作流程的指南</a><br>Masato Naka 的这篇文章提供了使用 SQLAlchemy 和 Atlas 设置安全高效的数据库架构迁移工作流的综合指南。它首先解释了管理数据库架构更改的重要性，以及 Atlas 如何与 SQLAlchemy 集成来简化这一过程。该指南详细介绍了使用 SQLAlchemy 定义数据库架构、使用必要的环境和迁移文件配置 Atlas 以及生成这些迁移文件的步骤。此外，它还涵盖了为不同环境创建迁移文件以及使用 GitHub Actions 设置持续集成。本文最后强调了将 Atlas 集成到开发工作流程中以简化数据库迁移管理的好处。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://materializedview.io/p/the-new-era-of-flexible-infrastructure">柔性基础设施部署的新时代</a><br>本文讨论了灵活基础设施部署的不断发展形势，强调了提供自我管理、BYOC 和 SaaS 云模型等多样化部署选项的重要性。它深入探讨了 Confluent 对 WarpStream 的战略收购，这使 Confluent 能够增强其产品 FreightClusters 并满足 BYOC 部署需求。本文还强调了实时分析处理 （OLAP） 领域灵活部署的重要性，以 ClickHouse 为示例系统，提供广泛的部署灵活性。此外，它还提到了 PostgreSQL、Neon 和 MotherDuck 等其他公司，这些公司也在各自的产品中适应灵活部署的趋势。</p>
+
+<p><a href="https://blog.cloudflare.com/container-platform-preview/">我们的容器平台已经投入生产，并且配备了GPU</a><br>关于cloudflare的即将投产的容器平台的介绍</p>
+
+<p><a href="https://ea.rna.nl/2024/09/28/like-we-dont-see-air-we-dont-see-the-digital-revolution/">就像我们看不见空气一样，我们也看不见数字革命</a><br>该文深入探讨了数字革命的复杂性，强调其依赖于离散的真/假逻辑，并将其与量子计算的潜力进行对比。文中提到“复杂性危机”的概念，表明数字革命并不是朝着奇点发展，而是正在经历变化速度的放缓。作者建议在这个成熟的数字环境中采取战略行动，包括清理技术债务，并确保强大的IT战略，而不仅仅是基于业务战略。此外，文中还强调了组织内成熟设计文化的重要性，以便在数字惯性面前保持敏捷性。</p>
+
+<p><a href="https://substack.com/@abinoda/p-148270749">衡量开发人员的待完成工作</a><br>DX 的联合创始人 Abi Noda 在一篇发人深省的文章中分享了有关衡量开发人员待完成工作的见解。Noda 强调了了解开发人员在其职业生涯中旨在完成的任务的重要性。本文还为 Noda 提供了一个平台，用于讨论世界级工程组织 DX 提供的工程支持。此外，该帖子强调了公司对个性化内容的承诺，根据读者的兴趣推荐顶级出版物。Noda 的文章是一份更大的时事通讯的一部分，其中包括订阅者数量，鼓励读者订阅更多内容。</p>
+
+<p><a href="https://thenewstack.io/git-set-up-a-local-repository-accessible-by-lan/">Git：设置可通过 LAN 访问的本地存储库</a><br>源文档提供了有关设置只能在局域网 （LAN） 内访问的本地 Git 存储库的全面指南。它首先解释了对此类存储库的需求，特别是供公司网络内的团队成员临时使用。该过程包括创建具有强密码的 Git 用户并添加 SSH 密钥以实现安全访问。在远程计算机上，将创建必要的目录，并在 authorized_keys 文件中填充将访问存储库的用户的 SSH 公钥。最后，存储库初始化为裸存储库，使其准备好在本地计算机上进行克隆。此设置可确保在 LAN 范围内快速安全地部署 Git 存储库以进行团队协作。</p>
+
+<p><a href="https://medium.com/@ruth.kurniawati/promql-core-concepts-an-illustrated-guide-e40a4194aa42">PromQL 核心概念：图解指南</a><br>本文作为解开 PromQL 核心概念的图解指南，有助于理解其用于高级查询编写的独特方面。PromQL 是 Prometheus 的一种查询语言，有助于从其时间序列数据库中查询数据，从而能够检索指标值以进行数据可视化和警报。该指南介绍了 PromQL 查询语言的结构、它与 Prometheus 架构的关系，以及四种主要指标类型：计数器、仪表、摘要和直方图。它进一步深入研究了 PromQL 运算符和函数，提供了如何使用它们进行跨时间序列和时间聚合，以及如何解释即时向量和范围向量的示例。本文还介绍了 Prometheus 的原生直方图类型，旨在解决直方图生成的许多时间序列的问题。</p>
+
+<p><a href="https://medium.com/@Software_Sphere/mastering-data-division-the-differences-between-sharding-and-partitioning-eba20ad81eee">Mastering Data Division: The Differences Between Sharding and Partitioning</a><br>In the article, &#34;Mastering Data Division: The Differences Between Sharding and Partitioning&#34; by Sania, the author delves into the intricacies of data management techniques, specifically focusing on sharding and partitioning. Data sharding is described as a method to enhance database scalability and performance by physically distributing data across different databases or servers, each acting as an independent entity. This approach is exemplified through the case of a global social media platform like Facebook, which uses sharding to manage its vast user base efficiently. On the other hand, data partitioning is presented as a technique where a single table is divided into smaller segments based on a specific column within the same database, aiming to optimize query performance. The article further contrasts the two methods in terms of physical vs. logical distribution, query complexity, fault tolerance, and scalability, providing a comprehensive overview of their applications and implications in database management.</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://medium.com/@bobcristello/llama-3-1-sonar-huge-transforming-digital-architecture-with-cutting-edge-ai-3026f98bfa63">Llama 3.1 Sonar Huge：利用前研AI 实现数字架构转型</a><br>Llama 3.1 Sonar Huge 128K Online 模型是 AI 技术的重大进步，旨在通过提供数据处理和系统智能方面的尖端功能来改变数字架构。它拥有 4050 亿个参数和 128000 个令牌的上下文长度，以其高效处理大量数据量和复杂查询的能力而脱颖而出。该模型还集成了来自社交平台的实时洞察，增强了其知识库和相关性。它的价格为每百万个代币 5 美元，提供了一种经济高效的解决方案，平衡了功能和可负担性，使其可供广泛的用户使用。其独特的文档编制方法和无缝的 API 集成进一步提高了其在实际应用中的实用性和透明度。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/DiceDB/dice">DiceDB/dice</a><br>DiceDB 是一种内存中的实时反应式数据库，支持 Redis 和 SQL，针对现代硬件和构建实时应用程序进行了优化。</p>
+
+<p><a href="https://github.com/ory/kratos">ory/kratos</a><br>市场上最具可扩展性和可自定义性的身份服务器。用更好的 UX 和 DX 替换您的 Homegrown、Auth0、Okta、Firebase。拥有所有筹码：Passkeys、Social Sign In、Multi-Factor Auth、SMS、SAML、TOTP 等。用 Go 编写，云原生、无头、API 优先。作为 Ory Network 上的一项服务提供，并供自托管者使用。</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/apernet/hysteria">apernet/hysteria</a><br>Hysteria 是一个功能强大、快如闪电且抗审查的代理。</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI 工具从现有基础设施生成 terraform 文件（反向 Terraform）。基础设施到代码</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ 与 Subsonic/Airsonic 兼容的 Modern Music Server 和 Streamer</p>
+
+<p><a href="https://github.com/twpayne/chezmoi">twpayne/chezmoi</a><br>安全地管理多台不同计算机上的点文件。</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>启动并运行 Llama 3.2、Mistral、Gemma 2 和其他大型语言模型。</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>用于小地方的 Go 编译器。微控制器、WebAssembly （WASM/WASI） 和命令行工具。基于 LLVM。</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>以太坊协议的 Go 实现</p>
+
+<p><a href="https://github.com/cli/cli">cli/cli</a><br>GitHub 的官方命令行工具</p>
+
+<p><a href="https://github.com/livekit/livekit">livekit/livekit</a><br>WebRTC 的端到端堆栈。SFU 媒体服务器和 SDK。</p>
+
+<p><a href="https://github.com/amir20/dozzle">amir20/dozzle</a><br>Docker 容器的实时日志查看器。</p>
+
+<p><a href="https://github.com/getzep/zep">getzep/zep</a><br>泽普 |AI 堆栈的内存基础</p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>从 SQL 生成类型安全代码</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>支持 RTSP、RTMP、HTTP-FLV、WebRTC、MSE、HLS、MP4、MJPEG、HomeKit、FFmpeg 等的终极相机流媒体应用程序。</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>适用于Windows、macOS和Linux的跨平台备份工具，具有快速、增量备份、客户端端到端加密、压缩和重复数据删除功能。包括 CLI 和 GUI。</p>
+
+<p><a href="https://github.com/usememos/memos">usememos/memos</a><br>一个开源、轻量级的笔记记录解决方案。轻松创建有意义的笔记。</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>全网广告和跟踪器阻止DNS服务器</p>
+
+<p><a href="https://github.com/v2rayA/v2rayA">v2rayA/v2rayA</a><br>Project V 的 Web GUI 客户端，支持 VMess、VLESS、SS、SSR、Trojan、Tuic 和 Juicity 协议。🚀</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细访问控制将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/terrastruct/d2">terrastruct/d2</a><br>D2 是一种现代图表脚本语言，可将文本转换为图表。</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202601/issue-20260130.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260130</span>
+</p>
+<p>每日一谚：Avoid using math/rand, use crypto/rand for keys instead. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/01/30/clawdbot-author-peter-steinberger-full-interview"> “退休”大佬的 AI 复出战：为了“好玩”，他写出了火遍全网的 Moltbot</a><br>在最近的一次深度访谈中，Peter 毫无保留地分享了他开发 Moltbot 的全过程。这不仅是一个 关于工具的故事，更是一份关于“在 AI 时代，个人开发者如何打破大厂垄断，重塑人机交互”的珍贵启示录。</p> 
+
+<p><a href="https://www.jtolio.com/2026/01/tinyemu-go">一个“纯 Go”的 Linux 环境，由 Claude 移植，灵感来自 Fabrice Bellard</a><br>本文介绍了作者如何使用 Claude 将 Fabrice Bellard 的 TinyEMU RISC-V 系统模拟器从 C 语言移植到纯 Go 语言的过程。最终成果是一个可以通过简单 `go run` 命令运行的完整 Linux 环境，无需特殊权限，支持 VirtIO 设备和网络。
+
+作者详细记录了与 Claude 合作的经验，包括最初的设想、使用 &#39;Beads&#39; 工具管理任务的低效体验，以及在项目后期，尤其是在处理模拟器的后 20% 复杂逻辑（如网络堆栈）时遇到的巨大挫折。作者指出，虽然 LLM 提供了新的能力，但在确保代码连贯性、遵循既定目标和处理复杂系统移植方面，仍然存在显著的挑战。
+
+文章最后总结了在与 AI 协作复杂项目时学到的经验，强调了清晰规划、频繁的上下文重置、明确的指示和持续的人工审查的重要性。</p> 
+
+<p><a href="https://oblique.security/blog/type-safe-frontend-apis">Type safe frontend APIs</a><br>Introduction to using Protobuf and Connect for type-safe frontend API calls from the frontend to the backend.</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/hr5Xdhtld6VIw1P4CJT2nw">【分布式系统】12 实战前沿：从数据中心到 ATProto 的去中心化社交网络</a><br></p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2026-01-29-metabase-dolt-agents/">Dolt &#43; Metabase: Agent Edition</a><br>本文探讨了如何将 Dolt（一个具有版本控制功能的数据库）用作 Metabase（一个数据可视化工具）的后端数据库，从而实现所有仪表板和可视化内容的版本控制。文章详细介绍了设置 Metabase 和 Dolt 服务器的步骤，包括如何配置 Metabase 连接到 Dolt，以及如何利用 Dolt 的分支功能来安全地进行修改和迭代。特别强调了使用 `dolt_ignore` 来排除不必要的系统表变更，以及如何通过设置 `@@dolt_transaction_commit` 变量，让 Metabase 的每一次 SQL 提交都自动在 Dolt 中创建一个版本提交。最后，文章展示了一个 AI 代理（如 Claude）如何在一个单独的分支上安全地创建和修改仪表板，然后通过 PR 流程合并到主系统中的实际用例。</p>
+
+<p><a href="https://engineering.salesforce.com/scaling-code-reviews-adapting-to-a-surge-in-ai-generated-code/">扩展代码审查：适应人工智能生成代码的激增</a><br>探索Salesforce如何将代码审查重构为一个系统，旨在保留开发人员的意图，维护可信赖的安全链，并应对AI辅助开发带来的代码量激增的挑战。文章讨论了传统文件级审查模式在AI时代下失效的原因，并介绍了其以意图重建和上下文统一为核心的新架构（Prizm）。该系统异步运行，提供增强的、有针对性的反馈，以在不牺牲质量和安全性的前提下，保持对大规模代码变更的有效审查。</p>
+
+<p><a href="https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/">Ingress NGINX: Kubernetes 转向委员会和安全响应委员会的声明</a><br>Kubernetes 宣布将于 2026 年 3 月淘汰 Ingress NGINX，这是一个对约一半云原生环境至关重要的基础设施组件。此举是在项目多年来因缺乏贡献者和维护者而发出公开警告之后做出的。淘汰后将不再发布任何修复、安全补丁或更新。受影响的用户（约一半）必须立即开始规划迁移到 Gateway API 或其他第三方 Ingress 控制器，否则将面临安全风险。用户应立即检查其集群是否依赖 Ingress NGINX。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jan/30/a-programming-tool-for-the-arts/#atom-everything">我们必须谈谈人工智能作为艺术领域的编程工具</a><br>文章讨论了QLab（一个用于现场戏剧制作的macOS软件）的创建者和CEO Chris Ashworth，他对生成式AI，特别是Claude Code的应用体验。Ashworth起初对AI持怀疑态度，但通过使用Claude Code为一个小众项目快速构建了一个定制的灯光设计应用，他认识到AI作为编程工具的巨大潜力。他强调，AI不能使一个坏程序员变成好程序员，但可以帮助好程序员更快地做出好程序。他将其比作拥有了一屋子的电动工具，对知道如何使用工具的人来说，效率会显著提高，并认为这是一个“改变职业的时刻”。</p>
+
+<p><a href="https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals">AGENTS.md 打败了技能在我们的智能体评估中的表现</a><br>AGENTS.md 中一个压缩的 8KB 文档索引在 Next.js 16 API 评估中达到了 100% 的通过率，而技能的最高通过率为 79%。本文将介绍我们学到的经验以及如何为你的 Next.js 项目设置此功能。</p>
+
+<p><a href="https://ankitmaloo.com/world-models">世界模型 | Ankit Maloo</a><br>一些元素建立在之前的强化学习环境（RL env）帖子之上。另外，请阅读脚注，鉴于内容较多，我将许多澄清移到了底部。
+
+最近各大顶尖实验室都在同时进行一项工作，这并非巧合。Yann LeCun 宣布离开 Meta 创办一家专注于世界模型的公司；Ilya Sutskever 将情感描述为价值函数；Google 发布了 Genie 3（世界模拟方法）；Demis Hassabis 透露大部分时间花在世界模型上；Anthropic 的可解释性研究表明当前模型已具备内部世界表征，但它们是隐性的、不稳定的；OpenAI 和 Veo3 都强调了世界模拟的重要性；Meta 的代码世界模型（CWM）在执行依赖型基准测试中表现出色。
+
+世界模型（World Model）预测下一个状态或观测，目标是理解环境的因果规律。</p>
+
+<p><a href="https://jsulmont.github.io/swarms-ai">为什么AI群体无法构建架构</a><br>本文深入分析了AI智能体群体（AI Swarms）在构建复杂软件架构时面临的结构性限制。文章以Cursor的FastRender项目为例，指出即使AI群体能生成可运行的代码，也常常导致内部组件的冗余和不一致性（如重复实现HTTP客户端），这是群体行为的“自然吸引态”。作者强调，架构的本质是全局不变性（Global Invariants）和长期耦合，而AI群体天生具有局部优化、弱耦合和短期记忆的特点，无法有效进行约束传播。文章探讨了即使引入确定性计算（如Gensyn的Verde），也只能保证“执行保真度”而非“语义等价性”，无法解决异构模型间的协调问题。最终结论是：群体擅长生成候选方案，但强制施加全局一致性的“确定性外壳”（如强类型语言、Schema、测试框架）才是架构的来源。软件工程师的角色正从代码作者转变为约束和验证机制的设计者。</p>
+
+<p><a href="https://research.google/blog/towards-a-science-of-scaling-agent-systems-when-and-why-agent-systems-work">构建智能体系统扩展性的科学：智能体系统何时以及为何有效</a><br>通过对180种智能体配置的对照评估，我们首次推导出AI智能体系统的量化扩展原则，揭示了多智能体协调在可并行化任务上显著提升性能，但在顺序任务上则会降低性能；我们还引入了一个预测模型，该模型能为87%的未见任务识别出最佳架构。</p>
+
+<p><a href="https://v-chandra.github.io/on-device-llms">设备端大语言模型（LLM）：2026年报告</a><br>本文是关于设备端大语言模型（On-Device LLMs）的现状综述，重点介绍了自三年前手机上运行语言模型仅是“玩具演示”到如今数十亿参数模型能实时运行在旗舰设备上的转变。这种转变不仅归功于芯片的进步，更在于对模型构建、压缩和部署方式的重新思考。文章深入探讨了设备端LLM的优势（低延迟、隐私、成本、可用性）以及核心约束（内存带宽和功耗）。随后，详细介绍了实现高效模型的方法，包括模型架构（如深度瘦模型、MoE）、极致量化技术（如4位、2位及更低）、推理优化（如FlashAttention、KV缓存管理、投机解码）和关键的推理框架（如ExecuTorch、llama.cpp）。最后，作者展望了未来的发展方向，如边缘MoE的实用化、测试时计算优化和设备端个性化。</p>
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie">Project Genie: Experimenting with infinite, interactive worlds</a><br>Google is rolling out Project Genie to Google AI Ultra subscribers in the U.S. Project Genie is a research prototype that lets you create, explore and remix interactive worlds. You can use text prompts and images to build environments and navigate them in real time.</p>
+
+<p><a href="https://openclaw.ai/blog/introducing-openclaw">Introducing OpenClaw — OpenClaw Blog</a><br>文章宣布一个名为“OpenClaw”的新名称，该项目从早期的“Clawd”到“Moltbot”，最终确定为OpenClaw。OpenClaw是一个开源的智能体平台，可以在用户常用的聊天应用（如WhatsApp、Telegram等）上运行，强调“你的助手。你的机器。你的规则。”。新版本还增加了对Twitch和Google Chat等新频道的支持，以及对KIMI K2.5和MiMo-V2-Flash等模型的支持。作者Peter Steinberger感谢了社区的贡献，并表示安全仍是首要任务。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/autobrr/qui">autobrr/qui</a><br>A fast, single-binary qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers.</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>AxonHub is a modern AI gateway system that provides a unified OpenAI ( Chat Completion, Responses), Anthropic, Gemini and AI SDK compatible API</p>
+
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/rcourtman/Pulse">rcourtman/Pulse</a><br>Real-time monitoring for Proxmox, Docker, and Kubernetes with AI-powered insights, smart alerts, and a beautiful unified dashboard</p>
+
+<p><a href="https://github.com/kubernetes-retired/dashboard">kubernetes-retired/dashboard</a><br>General-purpose web UI for Kubernetes clusters</p>
+
+<p><a href="https://github.com/opencost/opencost">opencost/opencost</a><br>Cost monitoring for Kubernetes workloads and cloud costs</p>
+
+<p><a href="https://github.com/thanos-io/thanos">thanos-io/thanos</a><br>Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project.</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>The Go language implementation of gRPC. HTTP/2 based RPC</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Multi Account, Webhooks, and MCP, and Chatwoot. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/korotovsky/slack-mcp-server">korotovsky/slack-mcp-server</a><br>The most powerful MCP Slack Server with no permission requirements, Apps support, GovSlack, DMs, Group DMs and smart history fetch logic.</p>
+
+<p><a href="https://github.com/argoproj/argo-workflows">argoproj/argo-workflows</a><br>Workflow Engine for Kubernetes</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251119.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251119</span>
+</p>
+<p>每日一谚： In the world of Go, clarity triumphs over brevity. Embrace clear code, even if it means typing extra lines.  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/19/proposal-remove-cycle-restriction-for-type-parameters">Go 泛型再进化：移除类型参数的循环引用限制</a><br>近日，由 Go 核心团队的 Robert Griesemer 亲自发起的一个关联提案（NO.75883），旨在移除这个约束。在经过一系列的编译器修复和深度讨论后，最终被标记为 likely accept。这意味着，Go 语言规范中关于泛型“类型参数循环引用”的这条限制，即将在未来的版本中(最早Go 1.26)被正式移除。</p> 
+
+<p><a href="#ZgotmplZ">一次 unwrap() 引发的全球宕机：Cloudflare 故障报告背后的 Rust 安全反思</a><br></p> 
+
+<p><a href="https://mp.weixin.qq.com/s/-nXo2cBJ0zVrPWSe0BMgVQ">【Go模块构建与依赖管理】13 终章：常见构建“天坑”与终极排错指南</a><br></p> 
+
+<p><a href="https://blog.alexellis.io/ai-code-review-bot/">我编写了一个 GitHub 代码审查机器人的替代品</a><br>如果 GitHub 自己有原生的代码审查机器人，为什么不直接使用它呢？</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://blog.livekit.io/announcing-agent-builder-a-pathway-to-code/">Agent Builder 发布：通往代码的道路</a><br>今天，我们推出了 Agent Builder，这是一个基于浏览器的体验，让您可以在几分钟内创建、测试和部署生产级的 LiveKit 语音代理，无需任何本地设置。 它们不是原型或沙盒玩具。 您在 Agent Builder 中构建的每个代理都是一个真正的、功能齐全的 LiveKit 代理，在 LiveKit Cloud 上运行，连接到与您在生产中使用的完全相同的语音管道、电话号码、可观察性和客户端 SDK。 从第一次通话开始，您就在交付真实的东西。</p>
+
+<p><a href="https://dolthub.com/blog/2025-11-18-branch-activity-is-slow/">Branch Activity is Slow - Opt In! </a><br>DoltHub.com 团队发现，`dolt_branch_activity` 表对性能有轻微影响，因此已将其禁用。用户可以选择在服务器配置中启用此功能，以获取分支活动信息，但需要权衡性能。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/">从构想到部署：Ignite 2025 展示的 AI 完整生命周期</a><br>到目前为止，大多数人会同意，人工智能正在从根本上改变我们的工作和解决问题的方式。但这项技术仍然常常被认为是我们在工作中增加的，而不是其基本组成部分。 人工智能并不能像在圣代上放樱桃一样，直接放在成品上。相反，负责任和明智地使用人工智能意味着要从各个层面思考如何最有效地使用它，从为人工智能功能提供支持的数据中心到从其功能中受益的人和组织。</p>
+
+<p><a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1">LyftLearn Evolution: Rethinking ML Platform Architecture</a><br></p>
+
+<p><a href="https://www.docker.com/blog/docker-unsloth-build-custom-models-faster/">Docker &#43; Unsloth: Build Custom Models, Faster</a><br></p>
+
+<p><a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/">什么是平台工程?</a><br></p>
+
+<p><a href="https://yusufaytas.com/what-good-execution-looks-like">好的执行是什么样的</a><br></p>
+
+<p><a href="https://alexanderdanilov.dev/en/articles/oop">OOP：编程界最糟糕的事情</a><br>在本文中，我们将尝试理解为什么 OOP 是编程界发生的最糟糕的事情，它是如何变得如此流行的，为什么有经验的 Java (C#、C&#43;&#43; 等) 程序员不能被认为是伟大的工程师，以及为什么 Java 代码不能被认为是好的。</p>
+
+<p><a href="https://medv.io/blog/things-i-dont-like-in-configuration-languages">我讨厌的配置语言</a><br>剧透：我创建了自己的配置语言maml.dev。这里将列出我在互联网上找到的所有标记语言/配置语言，以及我不喜欢它们的地方。</p>
+
+<p><a href="https://authress.io/knowledge-base/articles/2025/11/01/how-we-prevent-aws-downtime-impacts">当AWS宕机时，我们没有宕机</a><br>没有什么可以拥有无限的正常运行时间。但即使 AWS 和其他超大规模企业出现事故时，我们创建了一个能够应对这些中断的架构。以下是我们在 Authress 上的做法。</p>
+
+<p><a href="https://ochagavia.nl/blog/towards-interplanetary-quic-traffic">探索星际 QUIC 流量</a><br>您是否曾问过自己，从“毅力号”火星车下载图片到地球时使用了哪些协议？ 我以前也没想过，直到 2024 年 4 月，我在互联网上偶然看到了一条引人入胜的消息： 我正在寻找一位精通 quic/quinn 的专家来帮助我们完成我们的深空 IP 项目。 将会进行兼职咨询。 如果有兴趣，请私信我。 消息本身很短，而且有些术语化，所以我读了几遍才完全意识到该项目是关于什么的：</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/">使用 Ax 进行高效优化，一个用于自适应实验的开放平台</a><br>我们发布了 Ax 1.0，一个开源平台，它使用机器学习自动引导复杂、资源密集型实验。Ax 在 Meta 得到大规模使用，用于改进 AI 模型、调整生产基础设施，并加速 ML 甚至硬件设计方面的进步。</p>
+
+<p><a href="https://nicholas.carlini.com/writing/2025/are-llms-worth-it.html">大型语言模型值得吗？</a><br>大型语言模型可能会在未来几年内发生变革。但它们带来了一些潜在的严重风险，并且已经在对人们造成伤害。在本文中，我想尝试提出一个问题：“LLM 值得吗？” 考虑到它们的外部性、目前的危害和潜在的最终后果，我们是否应该创建这些模型？</p>
+
+<p><a href="https://blog.google/products/gemini/gemini-3">Gemini 3：隆重推出 Google 最新的 Gemini AI 模型</a><br>今天，我们将发布 Gemini 3 — 这是我们最智能的模型，可以帮助您将任何想法变为现实。</p>
+
+<p><a href="https://cloud.google.com/blog/topics/developers-practitioners/where-to-use-sub-agents-versus-agents-as-tools">ADK 架构：何时使用子代理与工具代理</a><br>当您使用 Agent Development Kit (ADK) 构建复杂的、多代理 AI 系统时，一个关键的架构决策涉及在子代理和工具代理之间进行选择。这个选择从根本上影响着您系统的设计、扩展能力和效率。</p>
+
+<p><a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai">如何使用上下文工程让 Dash 的 AI 更智能</a><br>构建有效的、基于智能体的 AI 不仅仅是增加更多内容，还在于帮助模型专注于最重要的内容。</p>
+
+<p><a href="https://ai.google.dev/gemini-api/docs/gemini-3">Gemini 3 开发者指南 | Gemini API | 适用于开发者的 Google AI</a><br>了解 Gemini 3 的新功能。</p>
+
+<p><a href="https://qz.com/entry-level-hiring-slowing-ai-report">大部分公司将因人工智能而放缓入门级招聘</a><br>根据一项新的研究，全球三分之二的组织预计未来几年将放缓入门级招聘，这标志着人工智能正在重塑劳动力市场基础的又一个明确迹象。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/traefik/traefik">traefik/traefik</a><br>The Cloud Native Application Proxy</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/fatedier/frp">fatedier/frp</a><br>A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</p>
+
+<p><a href="https://github.com/beclab/Olares">beclab/Olares</a><br>Olares: An Open-Source Personal Cloud to Reclaim Your Data</p>
+
+<p><a href="https://github.com/jesseduffield/lazydocker">jesseduffield/lazydocker</a><br>The lazier way to manage everything docker</p>
+
+<p><a href="https://github.com/go-playground/validator">go-playground/validator</a><br>💯Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/go-chi/chi">go-chi/chi</a><br>lightweight, idiomatic and composable router for building Go HTTP services</p>
+
+<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/cloudreve/cloudreve">cloudreve/cloudreve</a><br>🌩 Self-hosted file management and sharing system, supports multiple storage providers</p>
+
+<p><a href="https://github.com/hashicorp/consul">hashicorp/consul</a><br>Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.</p>
+
+<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/jmoiron/sqlx">jmoiron/sqlx</a><br>general purpose extensions to golang&#39;s database/sql</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/Masterminds/squirrel">Masterminds/squirrel</a><br>Fluent SQL generation for golang</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/opencloud-eu/opencloud">opencloud-eu/opencloud</a><br>🌤️This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250630.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250630</span>
+</p>
+<p>每日一谚：Try catch blocks are like goto-reinvented </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://www.zombiezen.com/blog/2025/06/why-go-rocks-for-building-lua-interpreter">为什么 Go 非常适合构建 Lua 解释器</a><br>本文讲述了作者使用 Go 构建自定义 Lua 解释器的经验。文章介绍了 Lua 语言的特点、解释器代码结构（包括词法分析器、解析器和解释器三个 Go 包）、数据表示（使用 Go 接口类型表示 Lua 值）、以及 Lua 代码的运行方式。作者还分享了项目中的一些成功经验和挑战，例如 Go 的内置类型、垃圾回收器和标准库简化了开发过程；使用 PUC-Rio Lua 的解析器代码方便了错误检查；Go 的接口类型与 Lua 值类型的映射很方便；Go 的测试工具和性能分析工具提高了开发效率。但作者也遇到了挑战，例如如何处理错误、如何移植 Lua 标准库（特别是模式匹配）、以及如何处理 Lua 垃圾回收器和终结器等。最后，作者总结了 Go 在构建解释器方面的优势，并分享了项目代码的地址。</p> 
+
+<p><a href="https://maypok86.github.io/otter/blog/cache-evolution">Go缓存库的演变</a><br>本文探讨了Go语言缓存库的演变历程，从早期简单的基于互斥锁的实现，到如今功能强大的库如Ristretto、Theine和Otter。文章详细比较了这些库的优缺点，包括内存分配方式（堆上与堆外）、性能、命中率、并发控制等方面，并对它们的设计理念和实现细节进行了深入分析。作者还分享了自己开发Otter缓存库的经验和教训，并对未来的Go缓存库发展方向提出了展望。</p> 
+
+<p><a href="https://medium.com/@jankammerath/asm-beats-go-its-40-9-or-1-4x-faster-when-calculating-sha256-3898052d8dc7">ASM 比 Go 快 40.9% 或 1.4 倍：SHA256 计算速度对比</a><br>Go 应用程序的运行时性能非常好，可能是现有垃圾收集语言中最快的。Go、Rust、C 和 C&#43;&#43; 编写的应用程序的运行时性能将优于任何解释型语言（如 Python 或 JavaScript），以及中间语言（如 Java 或 C#）。但这是否足够快？以及它还能快多少？本文通过基准测试 SHA256 哈希算法，比较了 ASM（汇编语言）和 Go 的性能差异，结果显示 ASM 的速度显著更快。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://lightmatter.co/blog/a-new-kind-of-computer">光子人工智能加速 - 一种新型计算机 - Lightmatter®</a><br>Lightmatter 在光子人工智能处理方面取得的突破改变了人工智能加速，为下一代计算提供了无与伦比的速度和能源效率！</p>
+
+<p><a href="https://www.theatlantic.com/books/archive/2025/06/invention-of-design-maggie-gram-book-review/683302">“设计思维”的危险</a><br>一篇新的书阐述了设计学科是如何超越其简单的起源，并转变为更宏伟、更矛盾的学科。许多设计师不仅想让世界更美丽，还想让世界变得更好。在这个过程中，他们解决了种族不公和经济不平等等社会问题，但结果喜忧参半。设计在知道自己能做什么和不能做什么时效果最好；设计史充满了未能产生影响的乌托邦项目。格莱姆的书批评了导致设计思维误入歧途的傲慢和技术乐观主义，但也表达了希望，设想该学科最终如何实现其既定理想。</p>
+
+<p><a href="https://probablydance.com/2025/06/19/revisiting-knuths-premature-optimization-paper">重新审视 Knuth 的“过早优化”论文</a><br>本文重新审视了 Knuth 论文《使用 goto 语句的结构化编程》中关于优化的著名引言。作者认为人们常常误解了这句引言的含义，它并非简单的反对所有的小优化，而是强调在进行优化之前，应先通过基准测试确定代码的瓶颈，并专注于那些真正影响程序运行时间的关键部分。文章通过具体的代码示例和性能测试结果，说明了在某些情况下，即使是很小的优化（例如循环展开）也是值得的，并建议程序员在大多数情况下应使用经过良好优化的库函数，例如 STL 或快速的哈希表。</p>
+
+<p><a href="https://depot.dev/blog/container-security-at-scale-building-untrusted-images-safely">大规模容器安全：安全构建不受信任的镜像</a><br>许多SaaS平台需要安全快速地运行客户代码。您可以使用Depot的API来处理繁重的工作，而不是从头开始构建容器基础设施。以下是构建Go工具的方法，该工具可以创建隔离的项目、管理构建并跟踪客户工作负载的指标。</p>
+
+<p><a href="https://felix-knorr.net/posts/2025-06-29-rust-error-handling.html">Felix 的博客 - 关于 Rust 中的错误处理</a><br>本文探讨了 Rust 中错误处理的现状及其替代方案。作者指出，目前标准的错误处理方式——为每个模块或整个 crate 定义一个错误枚举——会导致冗余且难以维护的大型错误枚举。作者提出了使用结构体而不是枚举变体来表示单个错误信息，并介绍了几个相关的 Rust crate，例如 `terrors` 和 `error_set`，以及它们各自的优缺点。文章还比较了不同方法的冗余度，并提到了一个能够自动生成错误枚举的 crate（但未找到链接）。</p>
+
+<p><a href="https://medium.com/@dianatodea/i-played-with-otel-and-i-liked-it-a69af868568b">我玩转了 OpenTelemetry，并且非常喜欢它</a><br>正如我在之前的文章中提到的，2024年我有机会参与一个可观测性项目，在这个项目中，我编写了一个关于OpenTelemetry的概念验证。作为一名站点可靠性工程师（SRE），我看到了一个机会，可以试验最流行的CNCF项目之一，即分布式跟踪，并提供一个开源的替代方案来监控客户应用程序的性能。我也有机会在KCD阿克拉加纳以及OSMC 2024上就此主题发表更深入的演讲。你也可以在我的Github仓库中直接访问我的演示文稿。
+文章还讨论了可观测性架构（包括Prometheus指标、Victoria Metrics、Grafana、ELK和商业APM供应商）、SRE的经验（包括使用OTEL官方文档和Helm图表、以及使用Jaeger Operator for Kubernetes的经验）、开发人员的反馈（包括OTEL文档的一些不足之处以及OTEL在自动化分布式跟踪方面的一些差距），最后总结了使用OpenTelemetry和Jaeger的经验。</p>
+
+<p><a href="https://halb.it/posts/ebpf-fingerprinting-1">使用 eBPF 实现快速 TCP 指纹识别</a><br>本文记录了作者使用 eBPF 在 Go 语言 Web 服务器中实现快速 TCP 指纹识别的过程。TCP 指纹识别是一种用于检测 Web 请求中异常或识别信息的常用技术，尤其在反机器人解决方案中非常重要。本文分为两部分：第一部分介绍 TCP 指纹识别和实现策略；第二部分描述一个概念验证的 Go 语言 Web 服务器的开发过程，该服务器会回显客户端的 TCP 指纹。项目已在 Github 上开源。</p>
+
+<p><a href="https://alanwu.xyz/posts/community">社群是源源不断的动力</a><br>优秀的社群对一个人的动力有着巨大的影响。作者以自身经验为例，探讨了社群如何通过寻求认可和注意力偏差等机制来提升动力，并提出了加入或创建积极社群的建议，帮助人们将动力转化为实际行动。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1025232/fbb2d90d084368e3">如何在内核中编写 Rust 代码：第二部分</a><br>本文探讨了在Linux内核中使用Rust编写驱动程序的差异。作者以Asix AX88796B嵌入式以太网控制器驱动程序为例，比较了Rust版本和C版本的区别，包括语法、类型、API以及错误处理等方面。文章详细解释了Rust宏、trait以及vtable等特性在内核驱动程序开发中的应用，并指出了在从C代码重写到Rust代码时需要注意的一些重要差异。</p>
+
+<p><a href="https://www.rfleury.com/p/untangling-lifetimes-the-arena-allocator">解开生命周期：arena分配器</a><br>本文探讨了在 C 语言中进行高效的动态手动内存管理的替代方案：竞技场分配器。作者批判了传统 C 语言手动内存管理（使用 malloc 和 free）的复杂性和易错性，并提出了竞技场分配器作为一种更简单、更高效的替代方案。竞技场分配器通过将多个分配的生命周期分组到不同的“竞技场”中，简化了内存管理，避免了内存泄漏和复杂的释放操作。文章还讨论了竞技场分配器的各种应用场景，例如帧竞技场和每个线程的临时竞技场，以及如何与更复杂的分配器组合使用。</p>
+
+<p><a href="https://www.wakunguma.com/blog/rust-weird-expr">Rust 中奇怪的表达式</a><br>本文探讨了 Rust 类型系统中一些奇特的特性，这些特性可能会被认为是“有问题的表达式”。文章分析了 Rust 仓库中 `weird-exprs.rs` 测试文件中的几个例子，解释了为什么这些表达式在 Rust 中是有效的，并阐述了它们背后的原理，例如循环、表达式、强制类型转换等。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Jun/29/agentic-coding/#atom-everything">代理编程：基于代理的软件开发的未来</a><br>Armin Ronacher 在一段 37 分钟的 YouTube 视频中分享了他使用 Claude Code 和代理编程方法的经历。文中提到，Claude Code 就像程序员的兴奋剂，激发尝试新事物的热情。文章总结了视频中的一些实用技巧，例如使用 --dangerously-skip-permissions 选项提高效率，使用统一日志简化调试，利用 Gemini CLI 运行子代理，以及设计清晰的错误提示等。</p>
+
+<p><a href="https://thenewstack.io/inside-the-vllm-inference-server-from-prompt-to-response">深入理解vllm推理服务</a><br></p>
+
+<p><a href="https://worksonmymachine.substack.com/p/mcp-an-accidentally-universal-plugin">MCP：一个（意外的）通用插件系统</a><br>本文探讨了 Model Context Protocol (MCP) 的意外用途。最初设计用于提升 AI 助手智能，但其标准化连接方式使得任何应用程序都能连接不同的数据源和工具，从而意外地创造了一个通用的插件生态系统。作者还介绍了他们正在构建的 APM（Actions Per Minute）任务管理应用程序，该应用程序利用 MCP 服务器实现可扩展的插件系统。</p>
+
+<p><a href="https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome">AlphaGenome：用于更好地理解基因组的 AI - Google DeepMind</a><br>介绍了一种新的、统一的 DNA 序列模型，该模型可改进调控变异效应预测，并有望揭示基因组功能的新见解——现在可通过 API 使用。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>API for Whatsapp Web Multi Device Version, Support UI, Webhook &amp; MCP</p>
+
+<p><a href="https://github.com/authelia/authelia">authelia/authelia</a><br>The Single Sign-On Multi-Factor portal for web apps, now OpenID Certified™</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/m1k1o/neko">m1k1o/neko</a><br>A self hosted virtual browser that runs in docker and uses WebRTC.</p>
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/blampe/rreading-glasses">blampe/rreading-glasses</a><br>Corrective lenses for curmudgeonly readars in your life</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/Dyneteq/reconya">Dyneteq/reconya</a><br>Network reconnaissance and asset discovery tool</p>
+
+<p><a href="https://github.com/HavocFramework/Havoc">HavocFramework/Havoc</a><br>The Havoc Framework</p>
+
+<p><a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2/CloudflareSpeedTest</a><br>🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+
+<p><a href="https://github.com/alireza0/s-ui">alireza0/s-ui</a><br>An advanced Web Panel • Built for SagerNet/Sing-Box</p>
+
+<p><a href="https://github.com/aws/karpenter-provider-aws">aws/karpenter-provider-aws</a><br>Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.</p>
+
+<p><a href="https://github.com/navidrome/navidrome">navidrome/navidrome</a><br>🎧☁️ Your Personal Streaming Service</p>
+
+<p><a href="https://github.com/tinygo-org/tinygo">tinygo-org/tinygo</a><br>Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.</p>
+
+<p><a href="https://github.com/gotify/server">gotify/server</a><br>A simple server for sending and receiving messages in real-time per WebSocket. (Includes a sleek web-ui)</p>
+
+<p><a href="https://github.com/apernet/OpenGFW">apernet/OpenGFW</a><br>OpenGFW is a flexible, easy-to-use, open source implementation of GFW (Great Firewall of China) on Linux</p>
+
+<p><a href="https://github.com/restic/restic">restic/restic</a><br>Fast, secure, efficient backup program</p>
+
+<p><a href="https://github.com/Aylur/ags">Aylur/ags</a><br>Scaffolding CLI for Astal&#43;TypeScript</p>
+
+<p><a href="https://github.com/bootdotdev/bootdev">bootdotdev/bootdev</a><br>A CLI used to complete coding challenges and lessons on Boot.dev</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

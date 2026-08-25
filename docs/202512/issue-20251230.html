@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251230.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251230</span>
+</p>
+<p>每日一谚：Using Unexported Empty Struct as Context Key </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/30/high-concurrency-backend-go-vs-rust">高并发后端：坚守 Go，还是拥抱 Rust？</a><br>在高并发后端开发领域，Go 语言曾是当之无愧的“默认选项”。然而，随着 Rust 生态的成熟和性能神话的普及，越来越多的架构师开始动摇：是继续坚守 Go 的高效与简洁，还是拥抱 Rust 的极致性能与零成本抽象？ 近日，r/golang 社区的一场热议将这一抉择摆上了台面。这不仅是语言之争，更是关于工程效率、系统复杂度与团队协作的深度博弈。本文将基于这场高质量的社区讨论，为你 梳理出理性决策的核心逻辑。</p> 
+
+<p><a href="https://tonybai.com/2025/12/30/logging-sucks">Logging 已死？从“调试日记”到“结构化事件”的范式转移</a><br>曾几何时，我们写日志就像写日记：按时间顺序，一行行记录程序跑到了哪儿，发生了什么。但在现代分布式系统中，一个请求可能瞬间穿透几十个 服务，留下成千上万行碎片化的文本。面对这种“信息洪流”，传统的 grep 和字符串搜索变得苍白无力。 正如 Boris Tane 在其深度好文《Logging sucks》中所言，我们正处于一个转折点，正在经历一场范式转移（Paradigm Shift）：我们需要从记录零散的“调试日记”，转向构建高维度的“结构化事件”</p> 
+
+<p><a href="https://dolthub.com/blog/2025-12-29-directories/">理解 Dolt 目录</a><br>Dolt 使用文件系统上的目录来存储数据库，这源于其作为“数据领域的 Git”的起源。这些目录的结构有时会令人困惑。本文将通过一个示例来解释 Dolt 如何处理目录，从 Dolt 的早期发展到当前的功能，特别是在引入 SQL 服务器之后，目录与数据库名称和多数据库服务之间的关系如何演变，以及由此带来的 CLI 和服务器并发的复杂性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://muratbuffalo.blogspot.com/2025/12/rethinking-cost-of-distributed-caches.html">重新思考数据中心服务分布式缓存的成本</a><br>缓存不仅仅是为了降低延迟，它还能节省 CPU 资源！文中通过聚焦于实践中往往占据主导地位的次要因素——计算成本——来具体阐述这一点。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/12/29/how-to-integrate-kairos-architecturally-into-an-edge-ai-platform/">如何将 Kairos 在架构上集成到边缘 AI 平台中</a><br>Aurea Imaging 是一家荷兰初创公司，专门从事农业远程信息处理解决方案。他们选择了一种云原生方法，在边缘部署了 Kubernetes (K3s) 的轻量级发行版，以应对管理全球远程传感设备车队的挑战，尤其是考虑到 NVIDIA Jetson 生态系统的快速发展。他们通过采用 CNCF 沙盒项目 Kairos 实现了这一点，Kairos 允许将 Linux 发行版转换为不可变的操作系统，并简化 Day 2 操作。这消除了“雪花”系统，使 OS 升级（原子性地替换整个 OS 映像）可靠且几乎无需维护，从而保证了长期的产品寿命和可预测的操作。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/12/29/kubernetes-v1-35-introducing-workload-aware-scheduling/">Kubernetes v1.35: 引入工作负载感知调度</a><br>Kubernetes 1.35 版本引入了“工作负载感知调度”的初步改进，旨在将工作负载作为 Kubernetes 的一级公民。主要新特性包括：
+1. **Workload API (v1alpha1)**：用于定义多 Pod 应用程序的调度要求。
+2. **Gang Scheduling（成组调度）**：允许执行“全有或全无”的 Pod 部署策略，防止资源浪费。
+3. **Opportunistic Batching（机会性批量处理）**：一项 Beta 功能，通过识别和批量调度具有相同调度需求的 Pod 来提高调度延迟。</p>
+
+<p><a href="https://me.0xffff.me/welcome_to_the_machine.html">构建人工智能智能体基础设施软件的指南</a><br>随着AI代理成为基础设施软件的主要用户，设计理念需要转变。作者观察到超过90%的新TiDB集群由AI代理创建，并发现AI使用系统的方式与人类开发者截然不同，挑战了我们对数据库使用的传统假设。文章探讨了在用户转变为AI后，软件应具备的关键特性，强调了：1. 忠实于已经被训练到模型中的“心智模型”（如文件系统、SQL），并确保这些模型具有可扩展性；2. 界面设计必须能用自然语言描述、可固化为符号逻辑并提供确定性结果；3. 基础设施需要适应“一次性工作负载”（disposable workloads），实现极端的成本效率，并通过虚拟化提供独占感；4. 业务模式应转向提供接近零边际成本的、可复用的系统能力，而非仅仅出售Token。核心观点是：工程的重点应转向设计AI可以大规模、廉价迭代的基础能力。</p>
+
+<p><a href="https://www.implications.com/p/12-outlooks-for-the-future-2026">2026&#43; 年的 12 个未来展望</a><br>从人才套利和“手艺证明”到硬件壁垒、环境监听、自研软件和零浪费的终结——我们应该期待明年看到什么？其影响是什么？</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Dec/29/shot-scraper/#atom-everything">shot-scraper 1.9</a><br>shot-scraper 1.9 发布。这是我的 shot-scraper 命令行工具的新版本，用于从终端截取屏幕截图和使用 JavaScript 抓取网站。shot-scraper har 命令新增了一个 -x/--extract 选项，可将页面加载的所有资源提取到一组文件中。该位置可通过 -o dir/ 选项控制。同时修复了 shot-scraper accessibility 命令与最新版 Playwright 的兼容性问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/sysadminsmedia/homebox">sysadminsmedia/homebox</a><br>A continuation of HomeBox the inventory and organization system built for the Home User</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!</p>
+
+<p><a href="https://github.com/looplj/axonhub">looplj/axonhub</a><br>AxonHub is a modern AI gateway system that provides a unified OpenAI ( Chat Completion, Responses), Anthropic, Gemini and AI SDK compatible API</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/FiloSottile/age">FiloSottile/age</a><br>A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.</p>
+
+<p><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><br>A curated list of awesome Go frameworks, libraries and software</p>
+
+<p><a href="https://github.com/hajimehoshi/ebiten">hajimehoshi/ebiten</a><br>A dead simple 2D game engine for Go</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/ehang-io/nps">ehang-io/nps</a><br>一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的web管理端。a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/oxc-project/tsgolint">oxc-project/tsgolint</a><br>Type aware linting for oxlint</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

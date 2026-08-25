@@ -1,0 +1,181 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202512/issue-20251222.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251222</span>
+</p>
+<p>每日一谚：Write functions that do one thing and do it well </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/22/alan-donovan-go-code-modernization">AI 还在写“老式 Go”？Alan Donovan 详解 Go 代码的现代化</a><br>在 GopherCon 2025 上，Go 团队核心成员、静态分析工具专家 Alan Donovan 带来了一场题为《Analysis and Transformation Tools for Go Codebase Modernization》的精彩演讲。 他的分享揭示了一个有趣的现象：当我们还在为 AI 生成的代码欢呼时，Go 官方团队却发现 AI 正在固化过时的编程模式。为了应对这一挑战 ，官方正在构建一套强大的自动化工具链，帮助我们将代码库带入 Modern Go 的时代。</p> 
+
+<p><a href="https://tonybai.com/2025/12/20/goroutine-bubble-universe-go-concurrency-new-dimension/">Goroutine “气泡”宇宙——Go 并发模型的新维度</a><br>goroutine 是 Go 并发模型的基石，我们习惯于将其视为一个个轻量、独立的执行单元。然而，近年来，Go 语言中出现了一种新的、微妙的并发概念，Go 核心团队的成员们亲切地称之为 “Goroutine 气泡” (Goroutine Bubbles)。 这种“气泡”，本质上是一种临时的、附加在 goroutine 上的特殊状态。它像一个无形的罩子，让处于其中的 goroutine 及其执行的代码，表现出与 平时不同的行为。</p> 
+
+<p><a href="https://tonybai.com/2025/12/21/go-1-26-cryptographic-storm-vault-compliance-vs-go-security/">Go 1.26 的“加密风暴”：当 Hashicorp Vault 的合规需求，撞上 Go 团队的安全哲学</a><br>近日，一个看似不起眼的 Go 语言issue，在社区引发了一场“地震级”的辩论。这场辩论的主角， 一方是 Go 安全团队的灵魂人物 Filippo Valsorda，另一方则是开源安全巨头 Hashicorp Vault 的核心开发者。 辩论的焦点是：Go 1.26 计划“废除” crypto 包中一系列密钥生成函数（如 rsa.GenerateKey）的 rand io.Reader 参数，使其在默认情况下强 制使用 crypto/rand.Reader 作为唯一的熵源。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/J1t9FL_T7PaxTfRigj9u8w">【API 设计之道】05 列表分页模式：彻底告别 Offset 分页的性能陷阱</a><br></p> 
+
+<p><a href="https://antonz.org/detecting-goroutine-leaks">使用 synctest/pprof 检测 goroutine 泄漏</a><br>探讨了 Go 语言中 goroutine 泄漏的不同类型，并介绍了如何利用 Go 1.24 引入的 synctest 包和 Go 1.26 中实验性的 goroutineleak profile 来检测这些泄漏。文章通过“简单的泄漏”、“范围遍历通道”、“双重发送”、“提前返回”、“取消/超时”和“孤儿”等常见场景，演示了 goleak、synctest 和 pprof 在检测泄漏方面的应用和优势。</p> 
+
+<p><a href="https://words.filippo.io/keyserver-tlog">构建一个透明的密钥服务器</a><br>本文介绍了一步步（代码少于500行）为集中的密钥服务器应用透明日志（Transparency Log, tlog）的方法，以实现密钥的问责制，同时保护用户隐私、防止投毒，并集成见证人（witness）共同签名。最终目标是构建一个既方便用户使用，又能让操作者保持诚实的密钥查找服务，例如用于 age 公钥的查找。该方案集成了现代 tlog 生态系统中的 Tessera 和 Torchwood 工具，在不牺牲用户体验的前提下，增强了中心化服务的可信度。</p> 
+
+<p><a href="https://antonz.org/accepted/modernized-go-fix">Go 功能：现代化的 go fix</a><br>现代化的 `go fix` 命令采用了新的分析器集和与 `go vet` 相同的后端基础设施。
+
+- **目的区别**：`go vet` 用于报告问题，而 `go fix` 主要用于将代码现代化以使用新的语言和库特性，其生成的修复总是安全的。
+- **动机**：将 gopls（Go 语言服务器）中的现代化工具引入命令行，使用户只需一个命令即可安全地更新整个代码库。
+- **新特性**：支持使用 `-NAME` 标志启用或禁用特定分析器，并支持使用 `-fixtool=prog` 标志选择替代的分析工具。
+- **分析器示例**：包括将 `interface{}` 替换为 `any` (`any`)、使用 `b.Loop` 代替旧的基准测试循环 (`bloop`)、使用 `fmt.Appendf` 避免字符串分配 (`fmtappendf`)、移除不必要的循环变量影射 (`forvar`) 等一系列代码现代化修复。</p> 
+
+<p><a href="https://unisondb.io/blog/building-corruption-proof-write-ahead-log-in-go">在 Go 中构建防损坏的预写日志</a><br>学习如何在 Go 中构建一个防崩溃的预写日志 (WAL)，以及为什么仅靠 CRC32 是不够的。我们探讨了 UnisonDB 使用的持久性层，以防止崩溃后发生数据损坏。</p> 
+
+<p><a href="https://basekick.net/blog/liftbridge-joins-basekick-labs">Liftbridge 加入 Basekick Labs：构建物联网数据平台</a><br>我们接管了 Liftbridge 的维护工作，Liftbridge 是一个基于 NATS 构建的轻量级 Kafka 替代品。这里解释了原因，以及它如何融入 Arc 生态系统。</p> 
+
+<p><a href="https://journal.hexmos.com/designing-a-go-etl-pipeline-when-sqlite-allows-only-one-writer-at-a-time">使用 Go 设计 ETL 管道，当 SQLite 一次只允许一个写入者时</a><br>在规模化应用中，ETL 不再仅仅是提取→转换→加载，它演变成了一个系统问题。当你需要处理数千个资产，进行激进的转换，并努力以足够快的速度持久化结果时，如果 SQLite 是你的存储层，这种紧张关系就无法忽视，因为 SQLite 有一条硬性规则：一次只允许一个活跃的写入事务。
+
+本文介绍了一种设计简单 ETL 管道的方法，该管道能够充分利用 CPU 核心进行提取和转换，同时遵守 SQLite 的单写入者限制，避免了锁竞争、重试和吞吐量崩溃。核心思想是将 SQLite 视为一个串行化的接收端，而不是一个并发的参与者。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/19/twilio-say-goodbye-microservices/">再见了，微服务：从 100 多个“问题儿童”到 1 个“超级巨星”的架构回归</a><br>“微服务”——这个在过去十年间统治了软件架构领域的“最佳实践”，承诺给我们带来更高的模块化、更快的迭代速度和更强的团队自治。然而，当一个 团队，深陷于 140 多个服务、140 多个代码仓库、140 多个独立队列的泥潭中，开发速度骤降、缺陷率爆炸、on-call 工程师夜不能寐时，这个“最佳实践”是否已然变成了一个“最大负担”？ 这不是一个假设，而是 Twilio Segment 团队曾亲身经历的“噩梦”。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/12/21/preventing-etcd-zombies/">在升级到 etcd v3.6 时避免出现僵尸集群成员</a><br>关键要点是：在升级到 v3.6 之前，务必升级到 etcd v3.5.26 或更高版本。这样可以确保集群自动修复，并避免出现僵尸成员。本文档解释了在从 etcd v3.5 升级到 v3.6 时可能出现的“僵尸成员”问题，并提供了推荐的升级路径以确保平稳过渡，避免集群数据不一致。</p>
+
+<p><a href="https://abseil.io/fast/hints.html">Google软件性能提示</a><br>本文档汇集了作者（Jeff Dean 和 Sanjay Ghemawat）在优化 Google 软件性能方面积累的经验和技巧，涵盖了性能调优的重要性、估算、测量、API 考量、算法改进、内存表示、减少内存分配、代码大小、并行化、同步、协议缓冲区（Protobuf）使用建议以及 C&#43;&#43; 特定的优化技巧。核心思想是在不显著影响代码可读性和复杂性的情况下，优先选择性能更优的方案，并通过基准测试进行验证。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/12/19/kubernetes-v1-35-in-place-pod-resize-ga">Kubernetes 1.35: In-Place Pod Resize Graduates to Stable</a><br>Kubernetes 1.35 正式发布，标志着 In-Place Pod Resize（原地 Pod 资源调整）功能从 Alpha (v1.27) 和 Beta (v1.33) 阶段正式毕业达到稳定 (GA)。这一里程碑特性允许在不重启 Pod 的情况下修改容器的 CPU 和内存请求/限制，极大地提高了资源利用率和工作负载的灵活性。v1.35 版本带来了内存限制的减少、基于 PriorityClass 的调整优先级排序，以及对 Pod 级别资源的支持（Alpha）。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://tonybai.com/2025/12/20/ai-coding-era-productivity-leap-2025-developer-ecosystem-report">AI 编码时代的生产力跃迁：2025 年开发者生态报告深度解读</a><br>近日，Greptile 发布了《2025 年 AI 编码现状报告》(The State of AI Coding 2025)。这份基于大量真实开发数据的报告，为我们描绘了一个令人兴奋，同时也充满挑战的新世界。AI 不再是一个锦上添花的辅助工具，它正在成为驱动工程效能指数级增长的核心引擎。</p>
+
+<p><a href="https://davidbau.com/archives/2025/12/16/vibe_coding.html">氛围编程</a><br></p>
+
+<p><a href="https://karpathy.bearblog.dev/year-in-review-2025">2025大模型盘点</a><br></p>
+
+<p><a href="https://ngrok.com/blog/prompt-caching">Prompt caching: 10x cheaper LLM tokens, but how? </a><br>这篇文章深入解释了大型语言模型（LLM）中的提示缓存（Prompt Caching）机制，也被称为 KV 缓存，解释了它如何能使 LLM 输入令牌（tokens）的成本降低 10 倍并减少延迟。文章从 LLM 的基本架构（分词器、嵌入层、Transformer 和输出层）开始，逐步剖析了注意力机制的工作原理。核心在于，LLM 在生成每个输出令牌时会重新处理整个输入序列。通过缓存注意力机制中计算出的 K（Key）和 V（Value）矩阵，可以避免重复计算，只处理新输入的令牌，从而实现成本和速度上的优势。文章指出，OpenAI 自动处理缓存，而 Anthropic 提供了更多手动控制的选项。</p>
+
+<p><a href="https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk">开发者关于ADK中多智能体模式的指南</a><br>超越单体智能体。使用谷歌的智能体开发套件（ADK）探索多智能体系统（MAS）的8种设计模式，以构建更智能、更可靠的AI应用程序。</p>
+
+<p><a href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks">衡量人工智能完成长期任务的能力</a><br>我们提出了一种衡量人工智能性能的新指标，即人工智能代理能够完成任务的*长度*。我们表明，在过去 6 年中，这一指标持续呈指数级增长，翻倍时间约为 7 个月。推断这一趋势表明，在不到十年的时间里，我们将看到人工智能代理能够独立完成目前需要人类花费数天或数周才能完成的大部分软件任务。</p>
+
+<p><a href="https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude">你不需要每月花费 100 美元订阅 Claude Code：本地编码模型指南</a><br>本文探讨了本地模型工具的知识以及自行设置本地编码模型的步骤。作者最初假设购买昂贵硬件以运行本地编码模型比订阅每月 100 美元以上的 AI 编码服务更划算，但随后修订了这一观点，认为虽然本地模型能力强大，但在生产环境中，为工作支付额外费用以获得顶级性能是值得的。文章详细介绍了本地模型的优势（如成本、可靠性和可用性）、内存管理（模型大小、上下文窗口、量化）以及设置步骤（使用 MLX 或 Ollama）。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/NexaAI/nexa-sdk">NexaAI/nexa-sdk</a><br>Run the latest LLMs and VLMs across GPU, NPU, and CPU with PC (Python/C&#43;&#43;) &amp; mobile (Android &amp; iOS) support, running quickly with OpenAI gpt-oss, Granite4, Qwen3VL, Gemma 3n and more.</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/danielmiessler/Fabric">danielmiessler/Fabric</a><br>Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/google/adk-go">google/adk-go</a><br>An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</p>
+
+<p><a href="https://github.com/kubernetes/minikube">kubernetes/minikube</a><br>Run Kubernetes locally</p>
+
+<p><a href="https://github.com/Dyneteq/reconya">Dyneteq/reconya</a><br>Network reconnaissance and asset discovery tool</p>
+
+<p><a href="https://github.com/v2fly/domain-list-community">v2fly/domain-list-community</a><br>Community managed domain list. Generate geosite.dat for V2Ray.</p>
+
+<p><a href="https://github.com/yorukot/superfile">yorukot/superfile</a><br>Pretty fancy and modern terminal file manager</p>
+
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+
+<p><a href="https://github.com/bitxeno/atvloadly">bitxeno/atvloadly</a><br>Easily sideload the IPA to AppleTV</p>
+
+<p><a href="https://github.com/wtfutil/wtf">wtfutil/wtf</a><br>The personal information dashboard for your terminal</p>
+
+<p><a href="https://github.com/goreleaser/goreleaser">goreleaser/goreleaser</a><br>Release engineering, simplified</p>
+
+<p><a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/milvus-io/milvus">milvus-io/milvus</a><br>Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search</p>
+
+<p><a href="https://github.com/googleapis/genai-toolbox">googleapis/genai-toolbox</a><br>MCP Toolbox for Databases is an open source MCP server for databases.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/hatchet-dev/hatchet">hatchet-dev/hatchet</a><br>🪓 Run Background Tasks at Scale</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

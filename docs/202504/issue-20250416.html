@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202504/issue-20250416.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250416</span>
+</p>
+<p>每日一谚：Configuration sucks, but so does convention </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/P2uJlG21Y0C6bPn9mibSSA">AI新宠？解读MCP、A2A为何偏爱JSON-RPC 2.0</a><br>解读JSON-RPC这个10多年前定义的“老协议”为何能在AI时代能再次获得青睐</p> 
+
+<p><a href="https://ampcode.com/how-to-build-an-agent">如何使用Go构建一个智能体</a><br>本文介绍了如何用不到400行代码构建一个功能齐全的代码编辑智能体。作者指出，这并不难，只需要一个大型语言模型（LLM）、一个循环和足够的标记。文章详细讲解了构建过程，包括设置Go项目、编写代码与Anthropic API交互，以及创建`read_file`、`list_files`和`edit_file`三个工具，并通过示例演示了如何让代理读取、列出和编辑文件。作者强调，这只是代码编辑代理内循环的本质，而Amp等更复杂的应用则是在此基础上增加了用户界面、更精细的提示工程和更强大的工具集。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2025/04/16/goland-2025-1-is-out/">GoLand 2025.1 正式发布！</a><br>GoLand 2025.1 版本带来了多项令人兴奋的更新，帮助您编写更好的 Go 代码并提高工作效率。此版本引入了对 golangci-lint 的支持，改进了重命名重构和静态分析，更智能地处理工具链指令，并完全支持 Go 1.24。我们还为 JetBrains AI 带来了重大更新。让我们仔细看看有哪些新内容！</p> 
+
+<p><a href="https://medium.com/@nikitaburov/how-to-easily-handle-200k-rps-with-golang-8b62967a01dd">如何轻松使用 Go 语言处理 20 万次每秒的请求</a><br>本文探讨了如何使用单实例 Go 应用程序轻松处理每秒 20 万次请求的高负载系统。作者以推荐信息流服务为例，介绍了如何利用 Go 的并发工具、高效的内存存储和 fasthttp 库实现高性能，并分享了基准测试结果，证明了该方法的有效性。</p> 
+
+<p><a href="https://dev.to/leapcell/concurrency-in-go-vs-rustc-goroutines-vs-coroutines-27f5">Go 与 Rust/C&#43;&#43; 并发性：Goroutines 与协程</a><br>本文深入分析了 Golang、Rust 和 C&#43;&#43; 中协程的实现原理和差异。协程主要分为两种：基于栈的协程（例如 Go 的 Goroutines）和非基于栈的协程（例如 Rust 的 async/await）。文章详细解释了函数调用栈的工作机制，并比较了这两种协程的优缺点。最后，文章推荐了 Leapcell 平台，该平台非常适合部署 Go/Rust 服务。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2025/04/15/kagent-bringing-agentic-ai-to-cloud-native/">Kagent：将自主式 AI 引入云原生</a><br>使用 AI 代理解决云原生操作难题 您的应用程序无法访问，被埋在多个连接跳转中——您如何查明中断的链接？当满足某些条件时，您如何从 Prometheus 生成警报或错误报告？您需要推出新版本的应用程序——您如何使用 Argo Rollouts 执行渐进式推出？当您的应用程序扩展到单个集群或云之外时，您如何安全地启用零信任网络安全？云原生生态系统中有这么多项目，您如何确定哪些项目适合您的需求，并使用正确的配置管理将它们层层叠加？Kagent是一个开源编程框架，旨在帮助DevOps和平台工程师在Kubernetes中运行AI代理，从而解决这些问题。</p>
+
+<p><a href="https://www.docker.com/blog/docker-desktop-for-mac-qemu-virtualization-option-to-be-deprecated-in-90-days/">Docker Desktop for Mac：QEMU虚拟化选项将在90天后弃用 | Docker</a><br>Docker宣布即将弃用在Apple Silicon Mac上Docker Desktop的QEMU虚拟化选项。在向Apple Silicon过渡的早期阶段，QEMU作为我们的遗留虚拟化解决方案，将在今天起90天后（2025年7月14日）完全弃用。此弃用不会影响QEMU在为多平台构建模拟非原生架构中的作用。通过迁移到Apple Virtualization Framework或Docker VMM，您可以确保获得最佳性能。</p>
+
+<p><a href="https://engineering.salesforce.com/how-a-new-ai-architecture-unifies-1000-sources-and-100-million-rows-in-5-minutes/">新型 AI 架构如何在 5 分钟内处理 1 亿行数据</a><br>Salesforce 扩展了元数据和数据处理能力，管理超过 1 亿行数据，同时将设置时间从几周缩短到 5 分钟。本文介绍了 Salesforce 如何通过新的 AI 架构整合来自 1000 多个来源的数据，并实现快速的数据处理。</p>
+
+<p><a href="https://anara.com/papers/fault-tolerance-via-idempotence">通过幂等性实现容错</a><br>这篇由 G. Ramalingam 和 Kapil Vaswani 撰写的论文探讨了构建分布式服务，特别是处理进程故障和通信问题的挑战。他们引入了一种核心语言 λFAIL 来形式化幂等性和无故障性等概念，这些概念对于确保分布式应用程序的正确性至关重要。作者提出了一种幂等性单子，它可以在无需集中协调的情况下自动处理重复请求和故障，从而增强容错能力。该方法在 Windows Azure 上使用 F# 和 C# 实现，结果表明其运行时开销可忽略不计，同时还能实现更声明式的应用程序设计。研究结果表明，去中心化的幂等工作流可以有效地管理复杂的分布式事务，从而提高现代云环境中的可靠性。</p>
+
+<p><a href="https://pgdog.dev/blog/hacking-postgres-wire-protocol">分析Postgres 线程协议</a><br>PgDog是一个网络代理，可以查看Postgres和客户端之间发送的每一个字节。它理解SQL，并且可以在不需要更改应用程序代码的情况下推断查询应该去哪里。本文讨论了我们如何处理Postgres线协议并操作它以同时为多个数据库提供服务。文章涵盖了协议基础、分片函数、参数提取、扩展协议、跨分片查询、分布式COPY以及性能等方面，并介绍了PgDog的未来发展方向。</p>
+
+<p><a href="https://blog.pragmaticengineer.com/tech-hiring-is-this-an-inflection-point">技术招聘：这是一个拐点吗？</a><br>我们可能正在见证远程编码面试的终结，以及面对面面试、试用期和更长试用期的回归。招聘是否正在回归疫情前的常态？本文探讨了远程招聘方法的失效、面对面面试的回归，以及人工智能工具对招聘过程的影响。作者分享了真实案例，说明了 AI 工具如何被滥用，以及公司如何应对这些挑战，例如增加试用期和更重视内部推荐。</p>
+
+<p><a href="https://reconfigured.io/blog/cloudflare-infrastructure-for-ai-applications">为什么 Cloudflare 是构建 AI 应用的完美基础设施</a><br>本文介绍了为什么 Cloudflare 的持久化对象和无服务器架构非常适合构建像 MCP 服务器这样的有状态 AI 应用。作者分享了在 reconfigured 中使用 Cloudflare Workers、持久化对象和 Agents SDK 的实际经验，并解释了为什么 Cloudflare 的定价模式对 AI 工作负载非常有效。</p>
+
+<p><a href="https://borretti.me/article/two-years-of-rust">两年 Rust 开发经验总结</a><br>作者回顾了过去两年使用 Rust 进行 B2B SaaS 产品后端开发的经验，总结了 Rust 的优点（性能、工具、类型安全、错误处理、借用检查器、异步、重构、招聘）和缺点（模块系统、构建性能、模拟、表达能力）。文章详细阐述了 Rust 的优势，例如其高性能上限、优秀的 Cargo 工具、强大的类型系统以及便捷的错误处理机制。同时，作者也指出了 Rust 在模块系统、构建速度和模拟方面的不足，并提出了改进建议。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Apr/15/hamel-husain/#atom-everything">Hamel Husain 的引言</a><br>Hamel Husain 的引言指出，AI 团队最有效的投资并非昂贵的评估面板，而是构建定制界面，让任何人都能检查 AI 的实际运作。他强调定制的重要性，因为每个领域都有独特的需求，现成的工具很难满足。文中以公寓租赁和房地产查询为例，说明了定制界面的必要性，并指出精心设计的界面能显著提升迭代速度。最后，他提到使用 AI 辅助开发工具（如 Cursor 或 Loveable）可以轻松构建这些工具，投资回报率很高。</p>
+
+<p><a href="https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai">JetBrains IDEs 整合 AI：编码代理、更智能的辅助功能和免费层级</a><br>所有 JetBrains AI 工具（包括改进的 AI 助手和新的编码代理 Junie）现已通过单个订阅在我们的 IDE 中提供，并附带免费层级。JetBrains 致力于提升开发效率，并通过更智能、更高效的工具为软件开发带来更多乐趣。借助 AI 来处理基本的编码任务，您可以尽情发挥创造力，专注于代码之外的更宏伟目标。Junie 现已公开提供给所有 IDE 用户，它能够解决原本需要数小时才能完成的任务。改进的 AI 助手也已发布，它包含旨在加速编码工作流程和减少重复性任务的重大改进，在整个开发过程中为开发人员提供支持。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/nektos/act">nektos/act</a><br>Run your GitHub Actions locally 🚀</p>
+
+<p><a href="https://github.com/gofiber/fiber">gofiber/fiber</a><br>⚡️ Express inspired web framework written in Go</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>A Commander for modern Go CLI interactions</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/bluenviron/mediamtx">bluenviron/mediamtx</a><br>Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read, publish, proxy, record and playback video and audio streams.</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>Like Prometheus, but for logs.</p>
+
+<p><a href="https://github.com/openai/openai-go">openai/openai-go</a><br>The official Go library for the OpenAI API</p>
+
+<p><a href="https://github.com/evanw/esbuild">evanw/esbuild</a><br>An extremely fast bundler for the web</p>
+
+<p><a href="https://github.com/prometheus-operator/prometheus-operator">prometheus-operator/prometheus-operator</a><br>Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/usual2970/certimate">usual2970/certimate</a><br>开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.</p>
+
+<p><a href="https://github.com/langgenius/dify-plugin-daemon">langgenius/dify-plugin-daemon</a><br></p>
+
+<p><a href="https://github.com/kgateway-dev/kgateway">kgateway-dev/kgateway</a><br>The Cloud-Native API Gateway and AI Gateway</p>
+
+<p><a href="https://github.com/pressly/goose">pressly/goose</a><br>A database migration tool. Supports SQL migrations and Go functions.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/krillinai/KrillinAI">krillinai/KrillinAI</a><br>A video translation and dubbing tool powered by LLMs, offering professional-grade translations and one-click full-process deployment. It can generate content optimized for platforms like YouTube，TikTok, and Shorts. 基于AI大模型的视频翻译和配音工具，专业级翻译，一键部署全流程，可以生成适配抖音，小红书，哔哩哔哩，视频号，TikTok，Youtube Shorts等形态的内容</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

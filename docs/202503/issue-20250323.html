@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250323.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250323</span>
+</p>
+<p>每日一谚： Avoid defer in loops, or your memory might blow up </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://destel.dev/blog/timeout-middleware-in-go">Go的超时中间件：理论简单，实践复杂</a><br>文章探讨了在 Go HTTP 服务器中实现超时中间件的挑战。虽然简单的超时中间件对于简单的应用来说足够了，但是当需要为不同的端点设置不同的超时时间时，就会遇到问题。文章介绍了一种更健壮、可链式调用的超时中间件，解决了这些挑战，并详细解释了其工作原理和适用场景。</p> 
+
+<p><a href="https://tpaschalis.me/shallow-vs-deep-interfaces">Go语言深层接口与浅层接口的比较</a><br>本文探讨了Go语言中深层接口和浅层接口的概念，并以`io.Reader`和`redis-go`客户端接口为例进行比较。作者认为，最佳模块应在提供强大功能的同时保持简洁的接口，并分析了深层接口（如`io.Reader`）和浅层接口在易用性、可组合性、可维护性等方面的优缺点。文章最后鼓励读者思考如何设计更简洁的API，减少用户的认知负担。</p> 
+
+<p><a href="https://medium.com/@ksandeeptech07/the-golang-mastery-cheatsheet-2593b8358c38">Go语言精通速查表</a><br>这份 Go 语言速查表并非冗长的语法堆砌或肤浅的示例，而是工程师构建真实系统时的实用工具包、策略手册和精确参考。如果你在生产环境中编写 Go 代码，这份速查表将以清晰、简洁且高效的方式满足你的需求。</p> 
+
+<p><a href="https://dev.to/tavernetech/taming-the-gopher-best-practices-for-structured-go-code-2idf">驯服Gopher：Go 结构化代码的最佳实践🐹</a><br>探索组织 Go 代码的最佳实践，使其模块化、易于维护并准备好用于大型项目。涵盖了初学者、编程、DevOps 和 Go 相关内容。</p> 
+
+<p><a href="https://jiekun.dev/posts/2024-summary">2024 年终总结：我在 VictoriaMetrics 的新角色</a><br>这篇文章是在我前往 KubeCon London 之旅之前撰写的。一年前，我第一次在巴黎与 VictoriaMetrics 团队会面。因此，这篇总结回顾了我过去一年所做的事情以及这些事情如何改变了我的生活。起初，我对 VictoriaMetrics 不太了解，我们使用的是 Prometheus 和 Thanos 这两种广为人知的指标监控解决方案。和其他人一样，我们也遇到了一些性能和其他问题，因此我们开始寻找替代方案。在那时，中国已经有一些公司大规模使用 VictoriaMetrics，并有一些案例研究博客文章。我们看到了它们并开始了一个概念验证 (PoC)。这花了几个月的时间，而我作为 PoC 的负责人，在 Slack 和 GitHub 上提出了一些问题。到目前为止，一切都太平常了，每个开发人员都会这样做。我注意到许多问题都是重复的，并且已经在文档中解释过。因此，为了减轻 VictoriaMetrics 工程师的压力（这样他们就有时间来帮助解答我的问题），我开始根据我有限的知识或文档中提供的信息来回答问题。通过这样做，我查阅了许多文档，有时还会阅读源代码以找到答案。这对我个人和社区都非常有帮助：开源社区总是缺乏一线支持者，无论文档写得多好。大多数人在提出问题，而只有少数人在回答。这少数人中的绝大多数是核心开发人员，因为他们了解一切，而极少数是试图互相帮助的一些感兴趣的用户。问题迫使我去阅读和学习。这是熟悉开源项目的好第一步。有时这可能是唯一的方法，因为你可能没有机会在你的日常工作中使用它（例如，一个维护支付服务的 Go 开发人员试图学习 Kubernetes）。我非常感激这些支持工作得到了关注，有时我会看到诸如“谢谢，这解决了我的问题”之类的评论。至少这证明了我的评论有时是有帮助的。事情的发生总是有原因的。VictoriaMetrics 的文档和源代码组织得很好。至少他们在阅读时没有给我带来太多麻烦。我不确定这种“通过回答来学习”的方法是否适用于其他项目。例如，看看 Kubernetes 的问题列表：如果答案可以在文档中找到，那就最理想了。如果你需要深入研究代码，我相信这将会更具挑战性。总而言之，如果你想学习和为开源项目做贡献，选择一个好的项目并从解决实际的用户问题开始是一个好方法，特别是对于那些可能没有机会在日常工作中使用它的开发人员。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2025/03/23/introducing-jobset/">JobSet简介</a><br>本文介绍 JobSet，一个用于表示分布式作业的开源 API。JobSet 的目标是为 Kubernetes 上的分布式机器学习训练和高性能计算工作负载提供统一的 API。Kubernetes 社区最近对 Kubernetes 批处理生态系统的改进吸引了机器学习工程师，他们发现它非常适合运行分布式训练工作负载的需求。JobSet 利用 Job API 作为构建块，通过解决多模板 Pod、作业组、Pod 间通信、启动顺序等问题，构建更强大的 API 以满足大规模分布式 HPC 和 ML 使用案例。</p>
+
+<p><a href="https://blog.codingconfessions.com/p/hardware-aware-coding">机械同情：为CPU性能而编码</a><br>即使是最优雅的算法，当它们与计算机底层硬件对抗时，运行速度也会慢得令人痛苦。平庸和卓越性能之间的区别通常取决于你的代码是与 CPU 架构协同工作，还是与之对抗。本文将使用得来速餐厅的比喻来解释每个开发者都应该知道的三个 CPU 架构概念：指令流水线、内存缓存和推测性执行。你将了解如何通过调整代码来显著提高性能，方法是与这些硬件实际情况保持一致。让我们学习如何编写 CPU 真正想要运行的代码。</p>
+
+<p><a href="https://genna.win/blog/convolution-simd">性能优化以及如何错误地进行优化</a><br>本文讲述了作者在使用 SIMD 指令优化卷积运算时遇到的问题和解决方法。作者最初的实现比未向量化的实现慢两倍多。通过使用各种分析工具，作者发现问题在于过多的分支指令导致 CPU 预测分支失败，以及寄存器溢出。通过减少分支指令，使用两个循环代替一个循环，以及利用编译时单态化技术，作者最终成功优化了卷积运算的性能。文章强调了分支指令对性能的负面影响，以及编译器在优化方面可能出现的问题。</p>
+
+<p><a href="https://blog.alexewerlof.com/p/service-level-terminology">服务级别术语</a><br>本文探讨了服务级别（SLI/SLO/SLA）相关的多个术语，包括服务、提供者、消费者、利益相关者、所有者、故障和指标等，并通过示例和图解进行了说明。</p>
+
+<p><a href="https://generativeprogrammer.com/p/architecture-diagramming-tools-and">架构图工具和 AI 差距</a><br>清晰地传达软件架构是一项挑战。本文介绍了许多旨在简化此过程的工具，并对架构图工具进行了分类，包括专门用于建模软件和系统架构的工具、将代码转换为图表（代码即图表）的工具以及用于草绘、白板或创建说明性图表的通用工具。此外，文章还讨论了新兴的 AI 增强型绘图工具，并推荐了《沟通模式》一书，该书提供了将复杂想法转化为有意义的视觉效果的实用指导。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://sourcegraph.com/blog/revenge-of-the-junior-developer">复仇的初级开发者</a><br>史蒂夫·耶格最新文章探讨了“氛围式编程”及其对开发者职业的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/danielmiessler/fabric">danielmiessler/fabric</a><br>fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.</p>
+
+<p><a href="https://github.com/gohugoio/hugo">gohugoio/hugo</a><br>The world’s fastest framework for building websites.</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens.</p>
+
+<p><a href="https://github.com/usual2970/certimate">usual2970/certimate</a><br>开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.</p>
+
+<p><a href="https://github.com/AdguardTeam/AdGuardHome">AdguardTeam/AdGuardHome</a><br>Network-wide ads &amp; trackers blocking DNS server</p>
+
+<p><a href="https://github.com/plandex-ai/plandex">plandex-ai/plandex</a><br>Open source AI coding agent. Designed for large projects and real world tasks.</p>
+
+<p><a href="https://github.com/garethgeorge/backrest">garethgeorge/backrest</a><br>Backrest is a web UI and orchestrator for restic backup.</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models.</p>
+
+<p><a href="https://github.com/publicsuffix/list">publicsuffix/list</a><br>The Public Suffix List</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/lovelaze/nebula-sync">lovelaze/nebula-sync</a><br>Synchronize configuration of multiple Pi-hole v6.x instances.</p>
+
+<p><a href="https://github.com/ethereum/go-ethereum">ethereum/go-ethereum</a><br>Go implementation of the Ethereum protocol</p>
+
+<p><a href="https://github.com/twpayne/chezmoi">twpayne/chezmoi</a><br>Manage your dotfiles across multiple diverse machines, securely.</p>
+
+<p><a href="https://github.com/simulot/immich-go">simulot/immich-go</a><br>An alternative to the immich-CLI command that doesn&#39;t depend on nodejs installation. It tries its best for importing google photos takeout archives.</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Provision remote development environments via Terraform</p>
+
+<p><a href="https://github.com/cloudflare/cloudflared">cloudflare/cloudflared</a><br>Cloudflare Tunnel client (formerly Argo Tunnel)</p>
+
+<p><a href="https://github.com/daeuniverse/dae">daeuniverse/dae</a><br>eBPF-based Linux high-performance transparent proxy solution.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

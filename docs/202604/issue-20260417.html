@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202604/issue-20260417.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260417</span>
+</p>
+<p>每日一谚：Errors are not exceptions. They are values that should be handled explicitly.  </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/04/17/tiobe-ranking-and-the-decline-of-rust-hype">Rust 还没进前十，TIOBE 就开始唱衰了？</a><br>但就在最近，TIOBE 指数发布了 2026 年 4 月的最新排名。 榜单本身平平无奇，Rust 的排名甚至还从去年同期的 18 位微升到了 今年的16 位。 然而，TIOBE 的 CEO Paul Jansen 亲自撰写的一篇社论，却像一盆冷水，劈头盖脸地浇在了所有 Rustacean（Rust 开发者）的头上。Paul Jansen 用极其明确的措辞，给这门甚至还没来得及摸到前十门槛的语言，提前下了一份“病危通知书”：“Rust 的崛起显示出放缓的迹象。……它进入前十的梦想，现在看来比以前更加遥远了。” </p> 
+
+<p><a href="https://tonybai.com/2026/04/17/the-origins-of-gpu-computing">GPU 计算的起源</a><br>在今天的人工智能时代，GPU 已成为数据中心的核心算力引擎，但它的崛起并非一夜之间的奇迹。ACM通讯文章《The Origins of GPU Computing》回溯了 GPU 计算的三十年发展史，揭示了从并行计算、图形系统到流处理等关键技术如何在政府资助的学术研究中逐步成熟，并最终汇聚成推动深度学习革命的基础设施。文章不仅梳理 了技术脉络，也展示了学界与产业之间如何通过人才与思想的流动，共同塑造了现代 GPU 计算的格局。</p> 
+
+<p><a href="https://www.lighterra.com/papers/modernmicroprocessors/">现代微处理器简史</a><br>警告：本文旨在以非正式且有趣的方式介绍！好吧，你是一位计算机科学毕业生，你在学位期间修过硬件课程，但那可能已经是几年前的事了，从那以后你可能没有真正跟上处理器设计的细节。特别是，你可能没有意识到最近迅速发展的一些关键主题...- 流水线（超标量、乱序执行 OOO、VLIW、分支预测、谓词预测）- 多核和同步多线程（SMT、超线程）- SIMD 向量指令（MMX/SSE/AVX, AltiVec, NEON/SVE）- 缓存和内存层次结构别担心！这篇文章将让你快速跟上进度。很快，你就能像专业人士一样讨论顺序执行与乱序执行、超线程、多核和缓存组织的精妙之处了。但要做好准备——这篇文章简短而切中要点。它直言不讳，节奏非常快（真的）。让我们开始吧...不仅仅是兆赫兹必须澄清的第一个问题是时钟速度和处理器性能之间的区别。它们不是一回事。看看几年前（20 世纪 90 年代末）处理器的结果...表 1 – 1997 年左右的处理器性能。200 MHz 的 MIPS R10000、300 MHz 的 UltraSPARC 和 400 MHz 的 Alpha 21164 在运行大多数程序时的速度大致相同，但它们的时钟速度却相差两倍。300 MHz 的 Pentium II 在许多方面速度也大致相同，但对于科学数值计算等浮点代码，其速度只有前者的一半。在同样的 300 MHz 下，PowerPC G3 在普通整数代码上比其他处理器稍快，但在浮点计算方面仍远落后于前三者。在另一个极端，IBM POWER2 处理器仅需 135 MHz 就在浮点性能上赶上了 400 MHz 的 Alpha 21164。</p> 
+
+<p><a href="https://soppolang.dev/">Soppo语言：可以编译为Go</a><br>SoppoGo，具备了它所缺失的功能。类型安全和人体工程学，具有完全的互操作性。熟悉的语法Soppo 尽可能使用 Go 语法。如果你了解 Go，你已经了解了 Soppo 的大部分内容。直接使用任何 Go 库，保留你现有的工具链，并将 Soppo 逐步引入现有项目中。枚举和模式匹配带有结构变体的标签联合（Tagged unions），以及确保你处理每种情况的模式匹配。编译器会在你的代码运行之前捕获缺失的分支，因此你可以自信地进行重构。使用 `?` 进行错误处理不再有重复的 `if err != nil` 代码块。`?` 运算符简洁地传播错误，同时保持错误处理的明确和可见。在需要时添加自定义处理。Nil 安全空指针解引用是 Go 中运行时恐慌的常见来源。Soppo 在编译时跟踪可空性，因此你在它们进入生产环境之前就能捕获这些错误。在进行 nil 检查后，</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/04/16/the-ai-driven-shift-in-vulnerability-discovery-what-maintainers-and-bug-finders-need-to-know/">漏洞发现的 AI 驱动转型：维护者和漏洞发现者需要了解的内容</a><br>AI 模型最近彻底改变了软件漏洞发现的复杂性、速度和规模。现在，非专家可以轻松地以极少的精力和专业知识发现软件中的真实漏洞。同样，非专家现在也可以轻松地以极少的精力创建令人信服但无效的漏洞报告。这一变化已经让处于报告接收端的开源项目维护者不堪重负。这些维护者通常利用业余时间来弄清楚如何验证报告、修补真实漏洞并发布修复程序。这种现象，加上专有软件中的类似活动，将在近期产生大量的补丁。在这些修复程序的下游，用于维护软件的全球发布、升级和合规系统将承受巨大的压力。在这篇文章中，我们集结各方力量，通过在攻击者发现和利用漏洞之前找到并修复它们，来帮助解决这些问题。发生了什么变化？AI 模型的编码能力正在迅速提高。随着这些编码能力的提升，模型对软件漏洞有了深刻的理解和丰富的历史积累，这使得模型能够查看源代码并发现以前未被发现的漏洞。虽然尖端模型可能具有最强大的功能，但许多商业化模型今天只需简单的提示语（prompt）即可完成这项工作。Anthropic、Google 等许多公司都发布了他们通过这种方式发现漏洞的成功案例。在过去的几个月里，AI 模型的使用大幅增加了报告给软件团队的低质量漏洞的比例。这些是影响较小的漏洞，几乎没有安全风险，但却需要花费大量时间进行调查。事实上，这些发现可能根本不是漏洞。</p>
+
+<p><a href="https://engineering.fb.com/2026/04/16/developer-tools/capacity-efficiency-at-meta-how-unified-ai-agents-optimize-performance-at-hyperscale/">Meta 的容量效率：统一 AI 智能体如何实现超大规模性能优化</a><br>我们正在分享关于 Meta 容量效率计划的见解，我们构建了一个 AI 智能体平台，帮助自动化寻找和修复整个基础设施中的性能问题。通过利用跨统一、标准化工具接口编码的领域专业知识，这些智能体有助于节省电力，并将工程师从解决性能问题中解放出来，从而专注于新产品的创新。我们构建了一个统一的 AI 智能体平台，将资深效率工程师的领域专业知识编码为可重用、可组合的技能。这些智能体现在能够自动化寻找和修复性能问题，回收数百兆瓦（MW）的电力，并将数小时的手动回归调查压缩到几分钟内，使该计划能够在不断增长的产品领域中扩展 MW 的交付，而无需按比例增加人力。在防御方面，Meta 的内部回归检测工具 FBDetect 每周捕获数千个回归；更快的自动化解决方案意味着舰队中浪费的兆瓦数更少。在进攻方面，AI 辅助的机会解决正在每个半年扩展到更多产品领域，处理越来越多的工程师无法手动完成的优化成果。总之，这就是 Meta 的容量效率计划如何在不按比例增加团队的情况下持续增长 MW 交付的原因。最终目标是一个自我维持的效率引擎，由 AI 处理长尾问题。它是如何工作的以及我们正朝着什么方向发展：- 超大规模的效率需要进攻（主动发现优化）和防御（捕获并缓解进入生产环境的回归）；AI 可以加速两者。- 我们构建了一个统一平台，标准化工具接口与编码的领域专业知识相结合，以实现双方调查的自动化。- 这些 AI 系统现在是容量效率计划的基础设施。</p>
+
+<p><a href="https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/">Meta 的后量子密码学迁移：框架、经验与启示</a><br>我们正在分享 Meta 在后量子密码学（PQC）迁移中学到的经验教训，以帮助其他组织在行业向后量子密码学标准过渡时加强其弹性。我们提出了 PQC 迁移级别的概念，以帮助组织内的团队管理其各种用例的 PQC 迁移复杂性。通过概述 Meta 在这项工作中的方法——从风险评估和盘点到部署和护栏——我们希望提供实用的指导，以帮助加速整个社区迈向后量子未来的努力。我们的目标是帮助其他人有效、高效且经济地完成这一过渡，以便他们为未来的加密环境做好准备，届时当今的公钥加密方法可能不再足够。研究表明，量子计算机最终将破解传统的公钥密码学，从而对整个行业的许多数字系统造成安全风险。尽管专家估计这可能在 10-15 年内发生，但老练的攻击者可能今天就在收集加密数据，预见到未来量子计算机能够解密它的那一天——这是一种被称为“存储现在，解密以后”（SNDL）的策略。这意味着即使量子计算机还需要数年时间才能出现，敏感信息也可能最终面临风险。认识到这一威胁，美国国家标准与技术研究院（NIST）和英国国家网络安全中心（NCSC）等组织发布了迁移指南，讨论了目标时间框架。</p>
+
+<p><a href="https://www.docker.com/blog/why-microvms-the-architecture-behind-docker-sandboxes/">为什么选择微型虚拟机（MicroVM）：Docker 沙箱背后的架构</a><br>上周，我们推出了 Docker 沙箱，目标非常明确：提供市场上最强的智能体隔离能力。这篇文章揭示了这一主张、微型虚拟机（microVM）如何实现它，以及我们在这种方法中所做的一些架构选择。其他所有方法的局限性每种沙箱模型都需要你做出牺牲。我们研究了前四种方法。全功能虚拟机（Full VMs）提供强大的隔离，但通用虚拟机并不是为瞬时、会话繁重的智能体工作流设计的。一些为特定工作负载构建的虚拟机可以在现代硬件上更有效地启动，但通用虚拟机的体验（启动慢、资源开销大）促使开发者完全放弃隔离。容器速度快，是现代应用程序的构建方式。但是，对于需要构建和运行自己 Docker 容器的自主智能体（编码智能体通常这样做）来说，你会遇到“Docker-in-Docker”问题，这需要提升权限，从而破坏了你设置的隔离。智能体需要一个真正的 Docker 环境来完成开发工作，而仅靠容器无法干净地提供这一点。WASM/V8 隔离启动速度快，但隔离模型从根本上是不同的。你运行的是隔离环境，而不是操作系统。即使是提供基于隔离环境的沙箱提供商也承认加固 V8 很困难，而且 V8 引擎中的安全漏洞比成熟的 hypervisor（虚拟机管理程序）中更常见。除了安全模型之外，还存在实际差距：你的智能体无法安装系统软件包或运行任意 shell 命令。对于需要真实开发环境的编码智能体来说，WASM 并非首选。不使用任何沙箱当然很快，但也是一种隐患。一个 rm -rf，一个泄露的 .env，一个流氓网络调用，攻击半径就是你的整个机器。为什么选择微型虚拟机（MicroVM）Docker 沙箱在专用微型虚拟机内运行每个智能体会话，并通过虚拟机边界隔离的私有 Docker 守护进程运行。</p>
+
+<p><a href="http://antirez.com/news/163">AI 网络安全不是工作量证明</a><br>工作量证明是一个错误的类比：寻找哈希冲突虽然随着 N 的增加呈指数级困难，但只要有足够的工作量，就保证能找到某个 S 使得 H(S) 满足 N，因此资源能力较强的一方最终会获胜。但漏洞不同：1. 不同的 LLM 执行采取不同的分支，但最终基于代码可能状态的分支会被饱和。2. 如果我们设想对模型在给定代码中搜索漏洞 M 次（M 很大），最终瓶颈不再是“M”（因为代码和 LLM 采样器有意义路径的状态已饱和），而是“I”，即模型的智能水平。OpenBSD SACK 漏洞很容易证明这一点：你可以运行一个劣质模型进行无限数量的 token 采样，它永远不会意识到：如果不检查开始窗口的验证，加上整数溢出，再加上无论如何都会进入节点绝不应为 NULL 的分支，这三者放在一起就会产生漏洞。因此，明天的网络安全不会像工作量证明那样“GPU 多者胜”；相反，更好的模型和对这些模型更快的访问权限将决定胜负。不要相信那些声称弱模型能找到 OpenBSD SACK 漏洞的人。我亲自尝试过。弱模型会产生幻觉（有时因果关系碰巧触发了一个真实问题），认为缺少对窗口开始的验证（理论上因为有 start &lt; end 验证是无害的）和整数溢出问题，却不理解为什么它们放在一起会产生问题。这只是在代码上匹配漏洞类型的模式，完全缺乏真正理解问题并编写利用代码的能力。自己测试一下吧，GPT 120B 开源模型既便宜又好用。顺便说一下，这就是为什么在这个漏洞上，你选择的模型越强（但不足以发现真正的漏洞），它声称存在漏洞的可能性就越小。模型越强，幻觉就越……</p>
+
+<p><a href="https://medium.com/@westoncao/i-let-claude-code-build-a-k8s-operator-for-a-month-it-turned-into-a-conspiracy-theorist-f675c21e8bc6">我让 Claude Code 构建了一个 Kubernetes Operator 一个月，结果它变成了一个阴谋论者 f675c21e8bc6</a><br></p>
+
+<p><a href="https://event-driven.io/en/passive_aggressive_events/">被动攻击型事件</a><br>你是否听过这样的短语：&gt; 只是更新一下，牛奶喝完了。有人喝完了却把空纸盒放回去了。或者&gt; 所以大家都知道，会议在 15 分钟前就开始了。或者&gt; 注意：咖啡机又空了。我敢肯定你要么听过，要么用过这样的短语。我们都知道这背后有一些隐藏的意图。意图不是为了通知，而是为了触发某种行动。形式上，我们是在报告事件以宣布事实，但实际上，我们使用的是被动攻击性的言辞。真正的意图是命令某人。我们不想通知垃圾桶满了，而是想让某人把它倒掉。我们不想通知咖啡机需要补充咖啡豆，而是想让某人去做。被动攻击的语气是最糟糕的。这对沟通的双方都是有害的。通常，直接要求某人去做会更好。同样的规则也适用于事件驱动建模。我们应该不惜一切代价避免被动攻击性的沟通。我们应该提防被动攻击型事件。即那些本应是命令的事件。我过去已经警告过你们不要被事件驱动架构的流行语所愚弄。事件驱动架构是一种集成架构风格。我们正在尝试模拟业务流程以使其顺畅运行。为了实现这一点，我们更喜欢无阻塞的通信流，事情以自己的节奏并行发生。目标是实现自治组件，减少理解它们所需的时间。这有助于随着业务的发展维护甚至替换它们。而事件是实现这一点的赋能工具。它们通知发生了什么，允许其他组件解释。</p>
+
+<p><a href="https://jon.chrt.dev/2026/04/15/things-you-didnt-know-about-indexes.html">你不知道的索引知识</a><br>让我们从你可能已经知道的事情开始。数据库索引类似于你在学校科学课本后面找到的索引。你想找到关于磷的页面？去课本后面，你会找到一份主题的字母列表，旁边是引用它们的页码。假设我们有一个宝可梦数据库表，如下所示：没有索引，查找皮卡丘意味着数据库读取每一行，逐一检查每一行的名称列。在四行数据上，这几乎是瞬间完成的。在千万行数据上，这可能会有问题。那种读取被称为全表扫描，听起来有多快（其实并不快）。但是，如果我们对 name 添加一个索引，我们得到的东西在概念上看起来有点像上面的书本索引：它是有序的，所以现在我们的数据库可以对名称进行二分搜索并找到给定的行，而不是扫描整个表。Postgres 在后台将其存储为 B 树，但其思想与教科书相同：你可以快速搜索的有序数据。所以，让我们把所有东西都索引起来，对吧？索引的成本</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything">Qwen3.6-35B-A3B 在我的笔记本电脑上画的鹈鹕比 Claude Opus 4.7 更好</a><br>对于任何一直（不理智地）认真对待我的“鹈鹕骑自行车基准测试”作为测试模型可靠方法的人，这是今天早上两个大型模型发布版本的鹈鹕画作——来自阿里巴巴的 Qwen3.6-35B-A3B 和来自 Anthropic 的 Claude Opus 4.7。这是 Qwen 3.6 的鹈鹕，使用由 Unsloth 量化的 20.9GB Qwen3.6-35B-A3B-UD-Q4_K_S.gguf 模型，通过 LM Studio（以及 llm-lmstudio 插件）在我的 MacBook Pro M5 上运行生成的。这是我从 Anthropic 全新的 Claude Opus 4.7 获得的鹈鹕画作。我把这一票投给 Qwen 3.6。Opus 竟然把自行车架画错了！我第二次尝试 Opus，传递了 thinking_level: max。它的表现并没有好多少。</p>
+
+<p><a href="https://www.agno.com/blog/harness-engineering-vs-systems-engineering-the-mistake-killing-agentic-software">harness工程与系统工程：扼杀智能体软件的错误</a><br>Agno 徽标。资源文档、定价、关于 Agno尝试 AGENTOS</p>
+
+<p><a href="https://aphyr.com/posts/420-the-future-of-everything-is-lies-i-guess-where-do-we-go-from-here">未来一切皆谎言，我想是这样：我们从这里去向何方</a><br>这是一个很长的文章，所以我把它拆成了一系列文章，列在下面。你也可以阅读完整作品的 PDF 或 EPUB 版本。之前：新工作。一些读者无疑对我不曾花更多篇幅描写机器学习的奇迹感到不满——LLM 在代码生成方面有多么惊人，Suno 能将哼唱的旋律变成精美的歌曲是多么不可思议。但这不是一篇关于驾驶汽车有多快或多方便的文章。我们都知道汽车很快。我试图询问的是城市的形状将会发生什么变化。私家车重塑了街道，几乎消灭了城市马匹及其排泄物，取代了当地交通和城际铁路，孕育了新的建筑类型，分散了城市，创造了郊区蔓延。</p>
+
+<p><a href="https://blog.cloudflare.com/email-for-agents/">Cloudflare 电子邮件服务：现已进入公开测试阶段。为你的智能体做好准备</a><br>电子邮件是世界上最容易访问的界面。它无处不在。不需要自定义聊天应用程序，也不需要为每个渠道定制 SDK。每个人都已经拥有电子邮件地址，这意味着每个人都已经可以与你的应用程序或智能体进行交互。而你的智能体也可以与任何人交互。如果你正在构建一个应用程序，你已经依赖电子邮件进行注册、通知和发票处理。越来越多地，不仅是你的应用程序逻辑需要这个渠道。你的智能体也需要。在私有测试期间，我们与正在构建此类产品的开发者进行了交谈：客户支持智能体、发票处理管道、账户验证流程、多智能体工作流。所有这些都是建立在电子邮件之上的。模式很明确：电子邮件正成为智能体的核心界面，开发者需要专门为此构建的基础设施。Cloudflare 电子邮件服务就是这样一种基础设施。通过电子邮件路由，你可以接收邮件到你的应用程序或智能体。通过电子邮件发送，你可以回复邮件或发送出站邮件，在你的智能体完成工作后通知用户。</p>
+
+<p><a href="https://www.anthropic.com/news/claude-opus-4-7">Claude Opus 4.7</a><br>产品公告隆重推出 Claude Opus 4.72026 年 4 月 16 日我们最新的模型 Claude Opus 4.7 现已全面可用。Opus 4.7 在高级软件工程方面是 Opus 4.6 的显著进步，在最困难的任务上取得了特别的进展。用户报告称，他们能够放心地将最困难的编码工作（以前需要密切监督的工作）移交给 Opus 4.7。Opus 4.7 以严谨和一致的态度处理复杂、长期运行的任务，精确关注指令，并在报告前设计出验证自身输出的方法。该模型还具有明显更好的视觉能力：它能以更高的分辨率查看图像。它在完成专业任务时更有品位和创造力，制作出更高质量的界面、幻灯片和文档。虽然它在广度上不及我们最强大的模型 Claude Mythos Preview，但在各种基准测试中表现优于 Opus 4.6。上周我们宣布了 Project Glasswing，强调了 AI 模型在网络安全方面的风险和益处。我们声明将限制 Claude Mythos Preview 的发布，并首先在能力较弱的模型上测试新的网络安全保障措施。Opus 4.7 是第一个此类模型：其网络能力不如 Mythos Preview 先进（事实上，在其训练过程中，我们试验了区分性减少这些能力的努力）。我们发布的 Opus 4.7 带有自动检测和阻止暗示禁止或高风险网络安全用途的请求的保障措施。我们从这些保障措施的现实部署中学到的知识将有助于……</p>
+
+<p><a href="https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html">使用任何智能体，构建 Android 应用程序的速度提高 3 倍</a><br>Android 开发者博客应用程序和游戏开发者的最新 Android 和 Google Play 新闻。</p>
+
+<p><a href="https://www.maiobarbero.dev/articles/ai-assisted-workflow/">我的AI辅助编程工作流</a><br>你打开聊天框，描述你想要的，对输出进行迭代，然后交付一个或多或少能用的东西。感觉很快。功能在技术上是可以工作的。但是没有人，包括我自己在内，完全理解那里有什么。没有考虑到边界情况，架构在当时看起来合理，但没能经受住下一个功能的考验。一种日益增长的感觉是我构建得更快，但理解得更少。我不断遇到的问题是：如何在不失去使软件可维护的清晰度和意图的情况下获得 AI 辅助的速度优势？简短的回答是，真正的工作发生在编码开始之前。核心思想：书写思考，而非编码思考AI 真正擅长什么？实现。它真正不擅长什么？弄清楚你到底想要什么，捕捉你忘记明确的假设，并告诉你你的问题思维模型何时是错的。那是你的工作。那永远是你的工作。我所做的最有价值的转变是把每一个功能都当作首先是思考问题，其次才是实现问题。工作流旨在强制这种思考在编写任何代码之前发生，并利用 AI 来压力测试它，而不是跳过它。这个工作流已适配为配合 Mark Pocock 的技能一起使用。工作流步骤 1：自由形式计划一切都始于我自己用通俗语言编写的文档，没有任何强制的结构。我描述问题、我对解决方案的初步想法、我意识到的约束，以及我不确定的事情。这不是一个交付成果，除了我没有人会读它。它唯一的目的是把思考从我的脑海中提取出来，形成我可以审视的形式。下游一切的质量完全取决于这一步的质量。模糊的计划产生模糊的产品需求文档（PRD），进而产生模糊的问题。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/steipete/wacli">steipete/wacli</a><br>WhatsApp CLI</p>
+
+<p><a href="https://github.com/openziti/zrok">openziti/zrok</a><br>Secure internet sharing made simple.</p>
+
+<p><a href="https://github.com/juanfont/headscale">juanfont/headscale</a><br>An open source, self-hosted implementation of the Tailscale control server</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/anchore/syft">anchore/syft</a><br>CLI tool and library for generating a Software Bill of Materials from container images and filesystems</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/runkids/skillshare">runkids/skillshare</a><br>📚 Sync skills across all AI CLI tools with one command and simplify team sharing. Supporting Codex, Claude Code, OpenClaw &amp; more</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

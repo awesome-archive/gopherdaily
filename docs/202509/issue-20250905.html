@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202509/issue-20250905.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250905</span>
+</p>
+<p>每日一谚：Go is not theoretically exciting on the surface, but it is very useful in real life. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/09/05/go-proxy-revise-background-refresh-pacing">Go Proxy的“背景刷新”机制，是优化还是“DDoS”？一次社区事件引发的深度复盘</a><br>Go开发者Ted Unangst发表了一篇措辞犀利的博文——《What is the go proxy even doing?》。他用服务器日志作为证据，公开质疑Go官方模块代理（proxy.golang.org）对其个人代码托管服务humungus.tedunangst.com产生了“洪水般”的、看似毫无意义的巨大流量。这次Go团队的前技术leader、核心成员Russ Cox (rsc) 迅速响应，在Go的官方issue追踪系统中创建了两个关键问题（#75120和 #75191），不仅承诺调查并解决问题，更罕见地 、极其详尽地公开了Go Module Proxy的内部工作原理、缓存策略以及导致此次事件的深层原因。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/ZEPqhIwkKB36R2GHq9iIcQ">【AI应用开发第一课】07 Prompt 工程进阶：提升引导效果的“组合拳”</a><br>在面对更复杂、更精细、更具挑战性的任务时，仅仅依赖于清晰的指令有时是不够的。我们需要一套更高级的“组合拳”，来进一步激发 LLM OS 的潜力，引导它完成从“合格”到“卓越”的蜕变。本讲，我们将深入 Prompt 工程的进阶领域，学习两种被业界反复验证、能显著提升 LLM 性能的强大技术</p> 
+
+<p><a href="https://medium.com/@Realblank/go-goroutine-synchronization-a-practical-guide-49705a499fd7">Go Goroutine 同步：实用指南</a><br>Go 提供了两种互补的并发风格：通过通道进行消息传递和通过锁和原子操作同步共享内存。了解规则和工具可以帮助防止生产中的数据竞争、死锁和隐藏的性能下降。</p> 
+
+<p><a href="https://dolthub.com/blog/2025-09-04-remote-authentication">Remote Authentication Explained</a><br>Pushing and Pulling data to remote locations requires you to authenticate. Let&#39;s discuss</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/docker-acquires-mcp-defender-ai-agent-security/">Docker Acquires MCP Defender for Agentic AI Security</a><br>Docker acquires MCP Defender to secure agentic AI. Expect runtime monitoring, policy enforcement, and real-time threat detection across AI tooling.</p>
+
+<p><a href="https://blog.ipfs.tech/2025-delegated-routing-caching/">在浏览器中使用委托路由 HTTP 服务器中的缓存，实现更快的对等检索</a><br>缓存和在 Someguy（委托路由服务器）中主动探测对等点，如何加速浏览器和移动应用程序中的对等内容检索。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/09/04/the-debug-trap-why-smart-engineers-waste-hours-on-trivial-problems/">调试陷阱：为什么聪明的工程师会在琐碎的问题上浪费时间 | CNCF</a><br>上个月，我观察到三位资深工程师花了四个小时调试一个“神秘”的 Kubernetes 问题，结果发现这只是一个 kubectl 版本升级。同一周，另一个团队花了一整夜时间寻找幽灵般的负载均衡器错误，而这源于证书轮换破坏了使用证书固定的移动客户端。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/09/04/kubernetes-v1-34-introducing-psi-metrics-beta/">Kubernetes v1.34: PSI Metrics for Kubernetes Graduates to Beta</a><br>随着 Kubernetes 集群的规模和复杂性的增加，了解各个节点的运行状况和性能变得越来越重要。我们很高兴地宣布，从 Kubernetes v1.34 开始，压力停顿信息 (PSI) 指标已升级到 Beta 版。
+
+什么是压力停顿信息 (PSI)？
+压力停顿信息 (PSI) 是 Linux 内核（4.20 及更高版本）的一个功能，它提供了一种规范的方式来量化基础架构资源的压力，衡量资源需求是否超过当前供应。它超越了简单的资源利用率指标，而是衡量任务由于资源争用而停顿的时间。这是识别和诊断可能影响应用程序性能的资源瓶颈的有效方法。</p>
+
+<p><a href="https://www.bitflux.ai/blog/memory-is-slow-part2">内存很慢，磁盘很快 - 第 2 部分</a><br>直接从磁盘获取数据比在内存中缓存更快。我带来了证据。因为硬件变得更宽而不是更快，旧的方法无法实现。您需要新的工具来使用正在扩展的内容并避免未扩展的内容。</p>
+
+<p><a href="https://stratechery.com/2025/an-interview-with-cloudflare-founder-and-ceo-matthew-prince-about-internet-history-and-pay-per-crawl">对 Cloudflare 创始人兼首席执行官 Matthew Prince 关于互联网历史和按爬取付费的访谈</a><br>与 Cloudflare 创始人兼首席执行官 Matthew Prince 就从头开始创建 Cloudflare，以及为什么现在是时候利用随之而来的力量来制定按爬取付费政策进行的访谈。</p>
+
+<p><a href="https://jfloren.net/b/2025/8/28/0">Reverse engineering Solos smart glasses</a><br>这篇文章介绍了逆向工程Solos智能眼镜的过程。作者通过蓝牙捕获和分析数据，发现眼镜通过蓝牙接收来自智能手机应用程序的位图或矢量图形。作者编写了一个Python脚本，用于将图像文件RLE编码，并通过蓝牙发送到设备，从而在眼镜上显示任意图像。最终，作者成功地在设备上显示了自定义图像，并探讨了该设备的其他潜力，例如麦克风和扬声器功能。</p>
+
+<p><a href="https://trychroma.com/engineering/wal3">wal3：Chroma 的预写日志，构建于对象存储之上</a><br>wal3，Chroma 的预写日志，结合了 30 年前的无锁算法和 S3 最新的条件写入功能。</p>
+
+<p><a href="https://free5gc.org/blog/20250726/index.en">Improving Network Performance with Custom eBPF-based Schedulers</a><br>该文章介绍了如何通过自定义基于 eBPF 的调度器来提高网络性能。作者受到 scx 项目的启发，基于 scx_goland_core 框架开发了 Gthulhu 调度器，该调度器可在云原生环境中运行，并在 Kubernetes 集群中部署。文章还讨论了 Gthulhu 在降低数据平面延迟方面的实验结果，以及如何通过自定义配置进一步优化 GTP5G 调度。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2025/Sep/4/embedding-gemma/#atom-everything">Introducing EmbeddingGemma</a><br>Google 发布了全新的开源 EmbeddingGemma 模型，该模型基于 Gemma 3 架构，训练了 100 多种语言，并且足够小，可以在 200MB 以下的 RAM 中运行。</p>
+
+<p><a href="https://www.productcurious.com/p/a-pms-guide-to-ai-agent-architecture">A PM&#39;s Guide to AI Agent Architecture: Why Capability Doesn&#39;t Equal Adoption</a><br>本指南将带你了解 AI 代理架构的不同层级。你的产品决策决定了用户是信任你的代理还是放弃它。通过阅读完本文，你将理解为什么有些代理感觉“神奇”，而另一些感觉“令人沮丧”，更重要的是，PM 应该如何构建神奇的体验。</p>
+
+<p><a href="https://www.dbos.dev/blog/durable-queues">我如何在 15 年后解决了分布式队列问题</a><br>了解队列如何使云系统中的水平扩展、调度和流量控制更容易，以及如何使它们持久且可观察。</p>
+
+<p><a href="https://www.theatlantic.com/technology/archive/2025/09/high-school-student-ai-education/684088">我是一名高中生。 人工智能正在摧毁我的教育。</a><br>课堂上批判性思维的终结</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/pocketbase/pocketbase">pocketbase/pocketbase</a><br>Open Source realtime backend in 1 file</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">asdf-vm/asdf</a><br>Extendable version manager with support for Ruby, Node.js, Elixir, Erlang &amp; more</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/putyy/res-downloader">putyy/res-downloader</a><br>视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/semaphoreui/semaphore">semaphoreui/semaphore</a><br>Modern UI and powerful API for Ansible, Terraform/OpenTofu/Terragrunt, PowerShell and other DevOps tools.</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/flipped-aurora/gin-vue-admin">flipped-aurora/gin-vue-admin</a><br>🚀Vite&#43;Vue3&#43;Gin拥有AI辅助的基础开发平台，企业级业务AI&#43;开发解决方案，支持TS和JS混用。它集成了JWT鉴权、权限管理、动态路由、显隐可控组件、分页封装、多点登录拦截、资源权限、上传下载、代码生成器、表单生成器和可配置的导入导出等开发必备功能。</p>
+
+<p><a href="https://github.com/fsnotify/fsnotify">fsnotify/fsnotify</a><br>Cross-platform filesystem notifications for Go.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

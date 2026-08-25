@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202503/issue-20250326.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250326</span>
+</p>
+<p>每日一谚：Avoid string concatenation for complex strings, use templates. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://blog.cloudflare.com/open-sourcing-openpubkey-ssh-opkssh-integrating-single-sign-on-with-ssh">Go实现的开源OpenPubkey SSH (OPKSSH)：将单点登录与SSH集成</a><br>OPKSSH (OpenPubkey SSH) 现已作为 OpenPubkey 项目的一部分开源。这使用户和组织能够将 SSH 配置为与 OpenID Connect 等单点登录技术一起使用，从而无需手动管理和配置 SSH 密钥，无需添加除 IdP 之外的任何可信方。</p> 
+
+<p><a href="https://planetscale.com/blog/io-devices-and-latency">IO设备和延迟</a><br>这篇博文以互动的方式回顾了IO设备的历史，并讲解了IO设备延迟如何影响性能。文章涵盖了磁带存储、硬盘驱动器和固态硬盘，并讨论了云存储、计算与存储分离以及本地存储与网络存储之间的差异。最后，文章介绍了 PlanetScale Metal，它使用本地连接的 NVMe 驱动器来运行云数据库，以实现极速查询、低延迟和无限 IOPS。</p> 
+
+<p><a href="https://dev.to/leapcell/deep-dive-into-gos-equality-operator-g40">深入Go语言的等号运算符</a><br>本文深入探讨了 Go 语言中 `==` 等号运算符的细节，涵盖了不同数据类型下的行为、特殊类型的比较规则以及不可比较类型带来的影响。文章详细解释了基本类型、复合类型、引用类型和接口类型的比较规则，并举例说明了各种情况下的比较结果。此外，文章还重点介绍了不可比较类型（例如切片）及其对程序的影响，以及 `map` 类型与不可比较类型之间的关系。 通过本文的阐述，开发者可以更准确地理解和应用 Go 语言中的 `==` 运算符，避免因对其理解不足而导致的编程问题。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://dolthub.com/blog/2025-03-25-announcing-an-llm-powered-sql-assistant-on-dolthub/">DoltHub 上发布了基于大型语言模型的 SQL 助手</a><br>我们很高兴地宣布 DoltHub 上的一项新功能：基于大型语言模型 (LLM) 的 SQL 助手🤖！该助手可以帮助你更轻松地查询数据。它会在你使用 SQL 控制台在数据库上执行查询时提供建议，无论是自然语言查询还是出错的查询，它都会尝试生成有效的 SQL 来完成你的原始输入想要执行的操作。虽然目前该助手在处理复杂查询时容易出现错误，但我们相信随着时间的推移和改进，这项功能将会变得更好。</p>
+
+<p><a href="https://tailscale.com/blog/community-projects">一个稳定的社区项目平台</a><br>今天，我们宣布推出 Tailscale 社区项目——由我们和我们的社区构建的易于使用、可靠的工具。但这篇文章不仅仅是关于新工具的。它还讲述了我们如何走到今天，为什么稳定性比持续升级更重要，以及这对您未来基础设施的意义。</p>
+
+<p><a href="https://www.docker.com/blog/empower-engineering-teams-to-balance-productivity-security-innovation/">赋能工程团队的八种方法 | Docker</a><br>这篇文章探讨了 Docker 如何帮助行业领导者及其开发团队更快地创新、保持安全并交付有影响力的成果。文章重点介绍了如何利用 Docker 的产品套件和 Docker Business 来优化反馈循环，创建一致的开发环境，促进团队协作，降低成本，提升开发者满意度，高效管理基础设施，加强安全性以及加快创新速度。</p>
+
+<p><a href="https://www.cncf.io/blog/2025/03/25/building-secure-kubernetes-edge-images-with-kairos-and-k0s/">使用 Kairos 和 k0s 构建安全的 Kubernetes 边缘镜像</a><br>为什么结合这两个 CNCF 项目可以简化 Kubernetes 在边缘的部署。边缘计算正在迅速改变应用部署的格局……它需要轻量级、安全且易于管理的解决方案，尤其是在 Kubernetes 发行版方面。CNCF 旗下的两个项目 Kairos 和 k0s 为构建安全且不变的 Kubernetes 边缘镜像提供了一个引人注目的解决方案。随着 k0s 最近集成到 Kairos 中，我们的目标是更有效地应对这些挑战。在这篇文章中，我们将探讨为什么这种集成很重要，以及它如何增强边缘部署。</p>
+
+<p><a href="http://notes.eatonphil.com/2025-03-25-phil-eaton-on-technical-blogging.html">Phil Eaton关于技术博客的思考</a><br>这是一篇Phil Eaton关于技术博客的外部文章。文章内容跳转到外部链接，主要内容在Substack平台上。文章末尾提供邮箱和推特联系方式，方便读者反馈。</p>
+
+<p><a href="https://kubernetes.io/blog/2025/03/25/swap-linux-improvements/">Kubernetes 1.32 中 Linux 用户的新增 Swap 功能</a><br>Swap 是 Linux 系统中一项基础且宝贵的特性，它能有效增加节点内存、保护节点免受系统级内存峰值的影响，并防止 Pod 在达到内存限制时崩溃。Kubernetes 1.22 版本引入了 Alpha 版本的 Swap 功能，允许配置 Kubernetes 工作负载在 Linux 节点上的 Swap 内存使用情况。1.28 版本中，该功能升级到 Beta 版本，并进行了许多改进，为即将发布的 GA 版本铺平了道路。此篇文章详细介绍了 Kubernetes 1.32 版本中 Swap 功能的改进，包括如何使用、监控和最佳实践。</p>
+
+<p><a href="https://addyo.substack.com/p/leading-effective-engineering-teams-c9b">在生成式AI时代领导高效的工程团队</a><br>这篇博文基于《领导高效的工程团队》中的理念，探讨了在生成式AI时代，工程领导角色的转变以及取得成功的实用策略。文章分析了团队与生成式AI协作时领导者承担的新责任，以及Cursor、Windsurf、Cline和Copilot等工具如何重塑日常开发工作。文章还探讨了采用AI的挑战和陷阱，例如过度依赖机器生成的代码以及技能流失的风险，并提供了行之有效的解决方案。此外，文章还讨论了如何在AI时代留住和提升人才，并用具体的领导行为来解决工作岗位被取代的担忧。来自领先科技公司的实际案例研究阐明了成功的样貌（以及吸取的教训）。最后，文章展望了工程领导的未来：如何保持对AI进步的领先地位，以及如何培养AI无法替代的人性化特质——创造力、远见和判断力。</p>
+
+<p><a href="https://opensource.microsoft.com/blog/2025/03/26/hyperlight-wasm-fast-secure-and-os-free">Hyperlight Wasm：快速、安全且无需操作系统的 WebAssembly</a><br>本文宣布发布 Hyperlight Wasm：一个 Hyperlight 虚拟机“微型访客”，可以运行用多种编程语言编写的 Wasm 组件工作负载。Hyperlight Wasm 通过结合 Hyperlight 和 WebAssembly，实现了比传统虚拟机更高的安全性和性能，同时减少了整体工作量。文章还提供了一个使用 Rust 语言编写的 UDP echo 示例，演示了如何使用 Hyperlight Wasm。</p>
+
+<p><a href="https://matttproud.com/blog/posts/grpc-method-discipline.html">选择 gRPC 方法类型的流程图</a><br>远程过程调用 (RPC) 基础设施在分布式系统领域是一个福音。我重视 gRPC 的多功能性和可扩展性。其优势在于：跨平台库（通常高性能）、易于版本的原生成熟线格式、客户端和服务器端的请求拦截、表达 RPC 服务方法的多种结构：单向和流式。挑战：选择哪种方法结构？但是，尽管我喜欢这些方面，但最后一个要点存在一个挑战：有多种结构可用于表达 RPC 服务方法：单向和流式。实际上，主要有四种结构选择，根据 gRPC 文档，它们是：单向方法、流式方法系列（服务器流式、客户端流式、双向流式）。如何知道选择哪一个？我的观察是，选择并不那么清晰，特别是对于生态系统的初学者而言。更糟糕的是，这种选择需要结合来自特定领域的要求和本地实际问题的考虑因素。我倾向于认为，除非有充分的理由不这样做，否则大多数事情都应该使用单向方法建模。这基于我优先考虑的一组值（按顺序）：简单性、正确性。为了便于理解，我尝试制作一个流程图来描述我做决定的高层考虑因素。正如你所看到的，这是一个有点庞然大物的东西。我们如何理解这一点？在进行这项练习时，我不希望详尽地解决这个问题，而是希望全面地解决这个问题。也就是说，我会如何向今天的自己，一个初级工程师，提供建议？让我们一起完成流程图。步骤：开始设计 RPC 服务。只要我们在考虑建模，我们就在进行设计活动。为了论证的目的，让我们假设我们要设计一个 RPC 方法并迭代地处理它。你将为设计中的每个 RPC 方法迭代地完成此流程图。步骤：使用单向 RPC 方法。步骤：使用长期运行的操作。长期运行的操作 (LRO) 是单向 RPC 的一种特殊形式。其基本原理是你有一个普通的单向 RPC 方法，它返回一个 google.longrunning.Operation 消息。步骤：使用作业 API 约定。有一种更高级的 LRO 管理形式，其中系统设计人员创建一个符合 AIP-152 作业规范的自定义服务定义。步骤：使用双向流式处理。在这种情况下，你将使用双向流式处理来构建服务定义。在长期运行的 RPC 会话过程中，客户端和服务器都会相互发送片段。</p>
+
+<p><a href="https://hackernoon.com/how-good-is-webrtc-screen-sharing-really-i-put-4-codecs-to-the-test">WebRTC屏幕共享到底有多好？我测试了4种编解码器</a><br>本文作者测试了WebRTC屏幕共享的四种常见编解码器（VP8、VP9、H.264和AV1），使用了滚动文本和高速视频等真实场景内容，并在不同的网络条件下进行测试。结果显示，AV1在动态内容方面提供了最佳质量，但它会占用大量CPU资源。H.264仍然是最有效的全能型编解码器，在大多数平台上都具有硬件加速支持。本文深入探讨了帧率、分辨率、PSNR、QP、CPU使用率等指标，为开发者、研究人员以及任何需要优化实时视频的人提供了实用见解。</p>
+
+<p><a href="https://glasskube.dev/blog/what-is-helm-in-kubernetes">Kubernetes 中的 Helm 是什么？完整指南</a><br>深入了解 Helm 如何简化 Kubernetes 应用程序管理。在本综合教程中，学习有关 Helm 图表、关键命令和最佳实践的知识。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025">Gemini 2.5：我们最智能的 AI 模型</a><br>Gemini 2.5 是我们最智能的 AI 模型，现在它具有思考能力。我们的第一个 2.5 模型 Gemini 2.5 Pro Experimental 在许多基准测试中都取得了显著领先的成绩，展示了强大的推理和代码能力。</p>
+
+<p><a href="https://webrtc.ventures/2025/03/building-livecart-an-ai-powered-live-selling-solution">构建 LiveCart：一款 AI 驱动的直播销售解决方案</a><br>交互式、个性化的视频商务正在重塑在线零售的未来。我们利用 Agora 的实时通信平台、OpenAI 的实时 API 和 Simli 的 AI 驱动头像的力量，创建了 LiveCart——一个新一代的直播销售平台，将观看者转化为购买者。它解决了在线零售商在复制店内购物体验时面临的挑战，例如缺乏个人互动、产品问题得不到解答以及难以扩展个性化客户体验等问题。LiveCart 通过结合实时通信、互动功能和 AI 驱动的销售来克服这些障碍，为卖家和买家提供无缝体验。</p>
+
+<p><a href="https://openai.com/index/introducing-4o-image-generation">GPT-4o图像生成介绍</a><br></p>
+
+<p><a href="https://blog.cloudflare.com/remote-model-context-protocol-servers-mcp">在 Cloudflare 上构建和部署远程模型上下文协议 (MCP) 服务器</a><br>现在，您可以将远程 MCP 服务器构建和部署到 Cloudflare，我们为您处理构建远程 MCP 服务器的难题。与您以前可能使用过的本地 MCP 服务器不同，远程 MCP 服务器可通过互联网访问。人们只需登录并使用熟悉的授权流程向 MCP 客户端授予权限。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>Ingress NGINX Controller for Kubernetes</p>
+
+<p><a href="https://github.com/golangci/golangci-lint">golangci/golangci-lint</a><br>Fast linters runner for Go</p>
+
+<p><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a><br>A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools.</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/getsops/sops">getsops/sops</a><br>Simple and flexible tool for managing secrets</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/cert-manager/cert-manager">cert-manager/cert-manager</a><br>Automatically provision and manage TLS certificates in Kubernetes</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models.</p>
+
+<p><a href="https://github.com/etcd-io/etcd">etcd-io/etcd</a><br>Distributed reliable key-value store for the most critical data of a distributed system</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/NVIDIA/k8s-device-plugin">NVIDIA/k8s-device-plugin</a><br>NVIDIA device plugin for Kubernetes</p>
+
+<p><a href="https://github.com/open-policy-agent/opa">open-policy-agent/opa</a><br>Open Policy Agent (OPA) is an open source, general-purpose policy engine.</p>
+
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy/oauth2-proxy</a><br>A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/Wox-launcher/Wox">Wox-launcher/Wox</a><br>A cross-platform launcher that simply works</p>
+
+<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>Collection of extensions for OpenTelemetry-Go.</p>
+
+<p><a href="https://github.com/alibaba/higress">alibaba/higress</a><br>🤖 AI Gateway | AI Native API Gateway</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>Go implementation of JSON Web Tokens (JWT).</p>
+
+<p><a href="https://github.com/apache/answer">apache/answer</a><br>A Q&amp;A platform software for teams at any scales. Whether it&#39;s a community forum, help center, or knowledge management platform, you can always count on Apache Answer.</p>
+
+<p><a href="https://github.com/chaos-mesh/chaos-mesh">chaos-mesh/chaos-mesh</a><br>A Chaos Engineering Platform for Kubernetes.</p>
+
+<p><a href="https://github.com/AlexxIT/go2rtc">AlexxIT/go2rtc</a><br>Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202410/issue-20241016.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-10-16</span>
+</p>
+<p>每日一谚：Tooling is better than documentation, Documentation is better than nothing </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://threedots.tech/post/go-test-parallelism">优化和可视化Go测试并行性：为什么更多的cpu核不会加快Go测试的速度</a><br>Three Dot Labs 的联合创始人 Robert Laszczak 讨论了优化 Go 测试的技术，包括使用 the&#39;t。Parallel（）&#39; 方法、在多个包中运行测试以及使用测试表，同时还要注意 using&#39;t.Parallel“ 可能会减慢测试速度。</p> 
+
+<p><a href="https://tailscale.com/blog/kubernetes-direct-connections">Kubernetes、直接连接和你</a><br>本文讨论了在 Kubernetes 集群中建立直接连接的挑战，强调了 NAT（网络访问网络）和源 NAT （SNAT） 在阻止这些连接方面的作用，并提出了解决方案，例如确保基础设施端具有公有 IP。</p> 
+
+<p><a href="https://dev.to/neelp03/building-a-file-upload-service-in-go-34fj">在 Go 中构建文件上传服务</a><br>该文档提供了有关如何在 Go 中构建文件上传服务的分步指南，该服务支持本地和云存储，使用基本的 HTTP 服务器、文件上传处理程序、验证和通过 Amazon S3 的云存储。</p> 
+
+<p><a href="https://teivah.medium.com/common-arguments-against-unit-tests-7b802112a495">反对单元测试的常见论点</a><br>Teiva Harsanyi 讨论了单元测试在软件开发中的重要性，揭穿了反对单元测试的常见论点，例如代码太简单、测试是给测试人员的、临时代码不需要测试以及项目不会投入生产。</p> 
+
+<p><a href="https://gustedt.wordpress.com/2024/10/15/the-c23-edition-of-modern-c/">现代C的C23版</a><br>C23 版的 Modern C 是一本关于编程语言的书，现在可以免费下载，其中包含对新 C 标准的更新，包括新的精确位类型、C 库头文件、128 位类型以及枚举类型的改进等功能。</p> 
+
+<p><a href="https://spin.atomicobject.com/c4-diagrams-systems-architecture/">如何在系统架构中使用 C4 图</a><br>本文讨论了 C4 图在软件架构中的使用，强调了它们在弥合通信差距、提供清晰的抽象级别方面的优势和它们的效率潜力，但也强调了它们的局限性和最佳实践。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://icepanel.medium.com/how-to-create-a-deployment-diagram-in-icepanel-cb3842812541">如何在 IcePanel 中创建部署图</a><br>该文档提供了有关如何使用 Groups 和 tags 在 Icepanel 中创建部署图的指南，特别是针对部署在 Google Kubernetes Engine 上的 Architectural Kata 2024 中的 MonitorMe 系统。</p>
+
+<p><a href="https://www.docker.com/blog/introducing-organization-access-tokens/">组织访问令牌简介</a><br>源文档是一条消息，指示来自系统的 &#39; 403 Forbidden &#39; 错误消息，特别是来自服务器端，特别是来自 &#39; ns&#39; （Nix） 模块。</p>
+
+<p><a href="https://blog.devops.dev/optimizing-mariadb-queries-from-300-seconds-to-2-seconds-for-billions-of-records-62ffaa234586">优化 MariaDB 查询：数十亿条记录从 300 秒缩短到 2 秒</a><br>作者讨论了他们为大型项目优化 MariaDB 查询的经验，这使得查询时间不到 2 秒，克服了大型数据集和缺失索引的挑战。</p>
+
+<p><a href="http://security.googleblog.com/2024/10/safer-with-google-advancing-memory.html">Safer with Google: Advancing Memory Safety</a><br>The Google Online Security Blog discusses &#34;Safer with Google: Advancing Memory Safety&#34;, a blog post on October 15, 2024, and provides a list of various security and safety topics covered by the blog, including Android, app security, big data, biomarkers, blackhat, C&#43;&#43;, Chrome, connected devices, diversity, unified learning, fuzzing, gboard, Google play, hacking, interoperability, memory safety, open source, and more.</p>
+
+<p><a href="https://opensource.googleblog.com/2024/10/celebrating-20-years-google-summer-of-code-nurturing-next-generation-contributors.html">庆祝 Google Summer of Code 20 周年</a><br>Google 通过庆祝 Google Summer of Code （GSoC） 计划来庆祝其成立 20 周年，该计划促进了来自 123 个国家/地区的 21,000 多名贡献者的联系，生成了超过 4300 万行代码，并为 1,000 多个开源组织的发展和健康做出了贡献。</p>
+
+<p><a href="https://www.hashicorp.com/blog/terraform-stacks-explained">Terraform Stacks 解释</a><br>该博客文章介绍了 Terraform Stacks 的概念，该功能旨在通过将复杂代码拆分为可管理的部分、提高生产力以及提供一种内置的方式来简化大规模基础设施的配置和管理，而不会带来复杂性。</p>
+
+<p><a href="https://www.redhat.com/en/blog/rhel-vs-rhel-ai-whats-difference">RHEL 与 RHEL AI：有什么区别？</a><br>本文详细比较了 Red Hat Enterprise Linux （RHEL） 和 Red Hat Enterprise Linux AI，重点介绍了这两个平台及其功能以及 Red Hat 的开源保证计划之间的异同，以保护知识产权。</p>
+
+<p><a href="https://thenewstack.io/terraform-beta-supports-multicloud-complex-environments/">Terraform 测试版支持多云、复杂的环境</a><br>Hashicorp 发布了一款名为 Stacks 的 Terraform 测试版产品，它允许客户在单个配置中部署 Kubernetes，从而解决了在多个 Terraform 配置之间拆分基础设施的问题，从而简化了云资源（包括 Kubernetes）的预置和管理。</p>
+
+<p><a href="https://www.styra.com/blog/introducing-policy-sbom/">策略SBOM简介：授权策略的软件物料清单</a><br>Styra 在 Styra 声明式授权服务 （DAS） 中引入了策略 SBOM 功能，提供了一种自动化和系统化的方法来管理 Open Policy Agent （OPA） 和企业 OASIS 策略捆绑包中的策略模块，从而提高已部署授权策略的透明度和可追溯性。</p>
+
+<p><a href="https://scotthelme.ghost.io/are-shorter-certificates-finally-coming/">更短的证书终于来了吗？！</a><br>作者讨论了缩短 HTTPS 证书有效期的可能性，并引用了一项拟议的投票，即在三年内逐渐缩短其生命周期，以实现完全自动化的续订。</p>
+
+<p><a href="https://itnext.io/is-it-just-me-or-do-others-feel-distributed-configuration-is-a-highly-underrated-practice-14db3a6a29b9">是只有我一个人，还是其他人觉得分布式配置是一种被严重低估的做法？</a><br>Benjamin Cane 讨论了分布式配置被低估的价值，这种做法允许在不重新启动应用程序的情况下进行实时配置更改，并倡导在容器革命中应用分布式配置。</p>
+
+<p><a href="https://clementpnn.medium.com/how-i-reduced-the-size-of-a-docker-image-by-99-82-41c0e0a1984a">如何将 Docker 镜像的大小减少 99.82%</a><br>ClementPnn 在 Medium 上的文章演示了如何通过使用多种技术、在 Golang 中使用简单的 Hello World 程序以及使用 UPX 进行二进制压缩，将 Docker 映像的大小减少 99.82%。</p>
+
+<p><a href="https://dolthub.com/blog/2024-10-14-is-mysql-dying/">MySQL 正在消亡吗？</a><br>MySQL 兼容数据库 Dolt 的开发商 DoltHub 的博客文章探讨了 MySQL 是否正在消亡的问题，指出其受欢迎程度的下降和 Postgres 作为 SQL 格式的兴起，以及该公司决定构建 Postgres 风格的 Dolt 版本。</p>
+
+<p><a href="https://thenewstack.io/boost-your-shipping-velocity-with-argo-and-buildpacks-2/">使用 Argo 和 Buildpacks 提高你的交付速度</a><br>New Stack 文章讨论了如何使用 CNCF 孵化项目 Buildpacks 通过跳过 Dockerfile 步骤来提高开发人员的工作效率，使开发人员更容易将代码推送到生产环境并改进反馈循环。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://semaphoreci.medium.com/building-an-ai-enabled-automated-email-summary-system-with-ci-cd-5489f859a844">使用 CI/CD 构建支持 AI 的自动电子邮件摘要系统</a><br>本教程将指导您完成使用 Node.js、Semaphore 和 Anthropologist 的 Claude API 构建支持 AI 的自动电子邮件摘要系统的过程，使用每周时事通讯，并强调定期更新、A/B 测试和维护发件人声誉的重要性。</p>
+
+<p><a href="https://www.instinctools.com/blog/large-action-models/">大型操作模型指南：完成任务的 AI</a><br>大型行动模型 （LAM） 是一种 AI，可以将人类意图转化为行动、独立处理复杂的决策任务、与第三方系统和 IoT 设备集成、解释用户界面、分析结果并从反馈中学习，在医疗保健、银行和供应链管理中具有潜在应用。</p>
+
+<p><a href="https://simonwillison.net/2024/Oct/15/chatgpt-horoscopes/#atom-everything">ChatGPT 会很乐意为你写一份伪装得很薄的星座运势</a><br>Simon Willison 讨论了 ChatGPT 内存功能的局限性，该功能使其能够根据简短的简历说明提供对用户个性的浅层洞察，并强调了理解其上下文和理解巴纳姆效应对于有效使用大型语言模型的重要性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubernetes-sigs/controller-runtime">kubernetes-sigs/controller-runtime</a><br>kubebuilder 的 controller-runtime 子项目 （sig-apimachinery） 的仓库</p>
+
+<p><a href="https://github.com/kubernetes/ingress-nginx">kubernetes/ingress-nginx</a><br>适用于 Kubernetes 的入口 NGINX 控制器</p>
+
+<p><a href="https://github.com/sqlc-dev/sqlc">sqlc-dev/sqlc</a><br>从 SQL 生成类型安全代码</p>
+
+<p><a href="https://github.com/kubernetes-sigs/kind">kubernetes-sigs/kind</a><br>Docker 中的 Kubernetes - 用于测试 Kubernetes 的本地集群</p>
+
+<p><a href="https://github.com/robfig/cron">robfig/cron</a><br>Go 的 cron 库</p>
+
+<p><a href="https://github.com/spf13/cobra">spf13/cobra</a><br>用于现代 Go CLI 交互的 Commander</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥🔥🔥 Web-based linux server management control panel. / 现代化、开源的 Linux 服务器运维管理面板。</p>
+
+<p><a href="https://github.com/google/go-github">google/go-github</a><br>用于访问 GitHub v3 API 的 Go 库</p>
+
+<p><a href="https://github.com/golang-jwt/jwt">golang-jwt/jwt</a><br>JSON Web 令牌 （JWT） 的 Go 实现。</p>
+
+<p><a href="https://github.com/klauspost/compress">klauspost/compress</a><br>优化的 Go 压缩包</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>在容器、Kubernetes、代码存储库、云等中查找漏洞、错误配置、机密、SBOM</p>
+
+<p><a href="https://github.com/abiosoft/colima">abiosoft/colima</a><br>macOS（和 Linux）上的容器运行时，设置最少</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>OpenTelemetry Collector 的 Contrib 存储库</p>
+
+<p><a href="https://github.com/containers/skopeo">containers/skopeo</a><br>使用远程映像注册表 - 检索信息、映像、对内容进行签名</p>
+
+<p><a href="https://github.com/johnfercher/maroto">johnfercher/maroto</a><br>Maroto 创建 PDF 的 maroto 方法。Maroto 受到 Bootstrap 的启发并使用 gofpdf。快速简单。</p>
+
+<p><a href="https://github.com/hashicorp/nomad">hashicorp/nomad</a><br>Nomad 是一个易于使用、灵活且高性能的工作负载编排器，可以部署微服务、批处理、容器化和非容器化应用程序的组合。Nomad 易于操作和扩展，并且具有原生 Consul 和 Vault 集成。</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-contrib">open-telemetry/opentelemetry-go-contrib</a><br>OpenTelemetry-Go 的扩展集合。</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>使用 Go 创建漂亮的应用程序</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO 是一个高性能、与 S3 兼容的对象存储，在 GNU AGPLv3 许可下开源。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry 收集器</p>
+
+<p><a href="https://github.com/istio/istio">istio/istio</a><br>连接、保护、控制和观察服务。</p>
+
+<p><a href="https://github.com/Azure/azure-sdk-for-go">Azure/azure-sdk-for-go</a><br>此存储库用于 Azure SDK for Go 的主动开发。对于 SDK 的使用者，我们建议访问我们的公共开发人员文档，网址为：</p>
+
+<p><a href="https://github.com/json-iterator/go">json-iterator/go</a><br>A high-performance 100% compatible drop-in replacement of &#34;encoding/json&#34;</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

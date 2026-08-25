@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202607/issue-20260722.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20260722</span>
+</p>
+<p>每日一谚：Don&#39;t be clever. Be simple. Six months from now, you&#39;ll thank yourself. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/07/22/go-passkey-record-crypto-passkey-api">Go 密码学维护者放大招：把 Passkey 存成一行字符串，还顺手为 Go 1.28 写好了 API</a><br>Passkey（无密码登录）是应对网络钓鱼的终极方案，但其服务端实现一直因数据结构复杂、各家存储方案互不兼容而令开发者头疼。近日，Go 官方密码学库维护者 Filippo Valsorda 抛出了一项重磅提案：借鉴密码哈希（如 bcrypt）的成熟经验，将繁杂的 WebAuthn 凭证抽象 并压缩为一行标准化的不透明字符串（passkey record），实现数据库无缝迁移与互操作。基于此格式，他还起草了一份有望并入 Go 1.28 标准库的 crypto/passkey 无状态 API，极大地简化了开发者的接入成本。此外，他还提出了一个反直觉的安全洞见：只要不将 Credential ID 作为数据库主键建索引，就能从根本上免疫 ID 碰撞攻击。该提案为大厂与个人开发者提供了一条兼顾极简与安全的 Passkey 落地新路径。</p> 
+
+<p><a href="https://tonybai.com/2026/07/22/jack-dorsey-block-buzz-ai-agent-workspace-opensource">Twitter之父再出手：Block开源Buzz，要让人类和AI Agent「同工同权」</a><br>Block（原Square）7月22日开源发布协作平台Buzz——一个基于Nostr协议、让人类员工与AI Agent在同一工作区内以「同等身份」协&gt;同工作的系统。Buzz为每个Agent分配独立的密码学身份，使其能够像正式团队成员一样发消息、评审代码、跑自动化流程、参与语音会议，所有动&gt;作均被签名并可追 溯，从而解决了「多个Agent共用一个账号、责任无法追溯」的老问题。项目采用Apache-2.0协议开源，支持自托管，也提供Block官方托管服务，同时兼容Claude Code、Codex、goose等主流Agent框架。分析认为，这既是应对「Agent数量爆炸后协调成本失控」的工程解法，也 是Dorsey与Sequoia的Roelof Botha联合提出的「用AI替代科层制」组织理论的具体实践。目前Buzz仍处于早期阶段，relay架构尚未真正去中心化， 移动端和部分工作流审批机制仍在建设中。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/07/21/why-your-agent-needs-access-to-your-documentation/">为什么您的智能体需要访问您的文档</a><br>这种模式特别值得云原生社区关注。在CNCF生态系统中，从Kubernetes和Prometheus到Envoy、Argo和OpenTelemetry，文档是项目与用户之间的主要接口之一，而且往往内容庞大、更新迅速且分布广泛。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/07/21/platform-engineering-for-the-agentic-enterprise-managing-applications-resources-and-ai-agents/">面向智能体企业的平台工程：管理应用程序、资源和AI智能体</a><br>内部开发者平台(IDPs)应运而生以应对这一挑战。平台工程团队创建了共享平台，将最佳实践封装在有主见的工作流、自助服务能力和标准化流程之后，而不是要求每个团队构建自己的运维工具。</p>
+
+<p><a href="https://tailscale.com/blog/welcome-mike-shaver">工程质量的复合效应</a><br>Mike Shaver加入Tailscale，以提升工程质量的规模效应。</p>
+
+<p><a href="https://nesbitt.io/2026/07/21/end-of-options.html">选项结束</a><br>Git、hg和ssh都提供了选项，其文档目的是调用者命名运行命令。`git clone`接受`--upload-pack=&lt;cmd&gt;`来指定服务器端二进制文件，任何`git`调用都接受`-c core.sshCommand=&lt;cmd&gt;`来覆盖连接方式。</p>
+
+<p><a href="https://dark.ronacher.eu/2026/7/21/never-enough/">永不满足</a><br>最近有两则报道，一则指出科技行业从未如此富有，但其员工从未感到如此不安全；另一则则探讨了技术发展的不平衡性。这些故事引发了对技术发展方向的深度思考。</p>
+
+<p><a href="https://shiftmag.dev/it-may-take-longer-to-review-a-pr-than-it-takes-to-write-it-9927/">审查PR的时间可能比编写它的时间更长</a><br>Doist的首席执行官兼创始人Amir Sahefendic表示，现在的成功取决于解决实际问题并构建高质量产品。尽管创建的门槛已经降低，但质量的门槛却在提高。</p>
+
+<p><a href="https://slipway.sh/blog/the-nat-rule-we-couldnt-see">我们看不见的NAT规则：Tailscale、etcd和iptables-legacy</a><br>Slipway令人惊讶地在单台物理机上运行了很长时间。每个Kubernetes节点都是该机器上的虚拟机，它们共享一个内部网桥，跨节点流量实际上从未离开主机。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Jul/21/nativ/#atom-everything">Nativ：在您的Mac上本地运行AI模型</a><br>我对他的新项目感到非常兴奋，该项目将MLX封装在一个完整的macOS桌面应用程序中。它的形状与LM Studio相似，提供了聊天界面和用于访问模型的本地API服务器。</p>
+
+<p><a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything">与Claude Code团队的Cat和Thariq的炉边对话</a><br>Simon询问Thariq关于Claude Code的系统提示因Claude Fable而减少了80%的细节。Thariq解释了他们能够减少哪些内容，以及这种变化如何简化了系统提示。</p>
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/">3.6 Flash、3.5 Flash-Lite和3.5 Flash Cyber</a><br>Google推出了Gemini 3.6 Flash、3.5 Flash-Lite和3.5 Flash Cyber三个新模型。这些模型针对不同应用场景进行了优化，提供了更高效的性能和更广泛的功能。</p>
+
+<p><a href="https://qwen.ai/blog?id=qwen-image-3.0">Qwen image 3.0介绍</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/schollz/croc">schollz/croc</a><br>Easily and securely send things from one computer to another 🐊 📦</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go-compile-instrumentation">open-telemetry/opentelemetry-go-compile-instrumentation</a><br>OpenTelemetry Go Compile Instrumentation</p>
+
+<p><a href="https://github.com/netdata/netdata">netdata/netdata</a><br>The fastest path to AI-powered full stack observability, even for lean teams.</p>
+
+<p><a href="https://github.com/ltaoo/wx_channels_download">ltaoo/wx_channels_download</a><br>微信视频号下载器</p>
+
+<p><a href="https://github.com/Agent-Field/agentfield">Agent-Field/agentfield</a><br>Build, run and scale AI agents like API and microservices</p>
+
+<p><a href="https://github.com/grafana/alloy">grafana/alloy</a><br>OpenTelemetry Collector distribution with programmable pipelines</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/rclone/rclone">rclone/rclone</a><br>&#34;rsync for cloud storage&#34; - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files</p>
+
+<p><a href="https://github.com/AgentWrapper/agent-orchestrator">AgentWrapper/agent-orchestrator</a><br>Agent IDE that enables you to manage fleets of coding agents. It comes with an agentic orchestrator that plans tasks, spawns agents, and autonomously handles CI fixes, merge conflicts, and code review</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

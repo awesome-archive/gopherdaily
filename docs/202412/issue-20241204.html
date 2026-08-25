@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202412/issue-20241204.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">2024-12-04</span>
+</p>
+<p>每日一谚：Do not prematurely abstract </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2024/12/05/exploring-nat-mapping-assignment-and-filtering-behavior-of-docker-default-network">探索Docker默认网络NAT映射的分配与过滤行为</a><br>“纸上得来终觉浅，绝知此事要躬行”，在这篇文章中，作者选取一个具体的NAT实现进行案例研究(Case Study)。在市面上的NAT实现中，Docker容器的网络NAT绝对是最容易获得的一种实现。把Docker默认网络的NAT实现机制作为本篇的研究对象，探索该NAT的分配行为和过滤行为，以确定Docker默认网络的NAT类型</p> 
+
+<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoUnionTypesAndZeroValues">Go中好的联合类型可能需要没有零值的类型</a><br>在本文中，Chris Siebenmann 讨论了 Go 中联合类型的局限性，特别是与“零值”概念相关的限制。Siebenmann 认为，虽然联合类型理论上可以增强对 null 值的处理，但 Go 当前的类型系统缺乏不可空的类型概念，这对于保证值不是零值至关重要。作者建议引入没有零值的类型可以使结果类型更有用，但承认零值深深嵌入到 Go 的设计中，因此不太可能进行此类更改。Siebenmann 还探索了零值联合类型的概念，将它们比作 nil 接口，并得出结论，Go 最好专注于接口，而不是尝试引入复杂的联合类型。本文是 Chris Siebenmann 关于 Go 编程的博客系列的一部分，他在其中研究了各种语言功能及其对开发人员的影响。
+
+（注意：摘要旨在概括文章的关键点，同时保持简洁和连贯。它不包括直接引用或源文件中的具体细节，而是提供了作者主要论点和结论的概述。</p> 
+
+<p><a href="https://dev.to/ramonberrutti/grpc-streaming-best-practices-and-performance-insights-219g">gRPC 流式处理：最佳实践和性能见解</a><br>本文深入探讨了 gRPC 流式处理的细微差别，gRPC 流式处理是一项支持客户端和服务器之间实时通信的功能。它强调最佳实践，例如为需要多个响应的场景保留流式处理，而不是为单个响应就足够的一元请求保留流式处理。本文提供了代码示例和基准测试，以说明使用流式处理进行批处理操作的性能优势，如 &#39;BookStoreBatch&#39; 服务所示，它在处理多个书单方面明显优于 &#39;BookStore&#39; 服务。此外，本文还讨论了双向流在实时事件监控（例如使用传感器）方面的优势，以及它如何允许并发消息处理。文章最后要求读者将这些概念应用于实际场景，例如构建聊天应用程序，并鼓励通过社交媒体平台参与。本文为希望优化其 gRPC 流式处理实现以提高性能和可维护性的开发人员提供了全面的指南。</p> 
+
+<p><a href="https://dev.to/snyk/understanding-command-injection-vulnerabilities-in-go-nbb">了解 Go 中的命令注入漏洞</a><br>源文档讨论了 Go 应用程序中命令注入漏洞的风险，其中攻击者利用未经审查的用户输入在服务器上执行任意命令。它提供了一个示例，其中用户输入直接用于构建 shell 命令，这可能会导致数据泄露、系统泄露或服务中断。为了降低这些风险，该文档建议进行严格的输入验证、清理，并使用安全的 API 或库，而不是直接执行系统命令。它还强调了 Snyk Code 的作用，Snyk Code 是一种集成到 Visual Studio Code 等 IDE 中的静态分析工具，它通过扫描 Go 代码并提供可操作的见解来帮助开发人员识别和修复此类漏洞。该文档强调了安全编码实践的重要性，以及使用 Snyk 等工具在 Go 开发中维护代码安全的好处。</p> 
+
+<p><a href="https://www.bytesizego.com/blog/aoc-day1-golang">AOC 2024，第1天：整数缺少abs（）</a><br>源文档讨论了 Go 中没有内置的整数 &#39;abs（）&#39; 函数，尽管它的实现很简单。作者 Shraddha Agrawal 探讨了为什么 Go 的标准库不包含此功能，考虑到与添加新功能相关的维护成本和兼容性问题。本文档深入探讨了 Go 中实现的 &#39;float64&#39; 的 &#39;abs（）&#39; 函数的复杂性，它遵循 IEEE 754 标准，并涉及位操作以确定数字的符号。历史洞察显示，&#39;abs（）&#39; 函数是从 2008 年推出的更简单的版本演变而来的，多年来进行了后续的优化和错误修复。讨论还涉及一个影响汇编代码生成的 bug，该 bug 后来被修复，从而使用 &#39;if&#39; 语句实现更高效。作者对 &#39;abs（）&#39; 函数的实现和历史的探索让我们全面理解了为什么它不是 Go 标准整数库的一部分。</p> 
+
+<p><a href="https://blog.smidt.dev/posts/0003/">深入了解 eBPF：从头开始构建 Process Tracer！</a><br>故事的展开是作者踏上了使用 eBPF 为 Linux 创建简单流程跟踪器的旅程，最初是出于了解缓慢的 CI 管道的需求。作者深入研究了 eBPF 的世界，探索了它的内核级可观测性能力，并决定在 Go 中实现一个跟踪器，利用 cillium/ebpf 库来避免 CGO。该过程包括为 Go 和 C 代码之间的通信设置环形缓冲区，为进程开始和结束事件定义跟踪点，以及编写 Go 代码来解码这些事件并跟踪执行时间。作者还解决了将此跟踪器与 GitHub Actions 集成的挑战，强调了缺乏对此类指标的内置支持，并为寻求优化其 CI/CD 管道的开发人员提出了潜在的解决方案。在整个故事中，作者的好奇心和提高性能的决心是显而易见的，因为他们驾驭了 eBPF 和嵌入式编程的复杂性以实现他们的目标。
+
+（注意：摘要旨在封装源文档的关键元素，重点关注作者的旅程、eBPF 和 Go 集成的技术方面以及 CI/CD 优化的更广泛背景。</p> 
+
+<p><a href="https://dzone.com/articles/golang-is-it-a-memory-leak">Golang：是内存泄漏吗？</a><br>本文讨论了在 Go（一种静态类型、编译的编程语言）中识别内存泄漏的挑战。作者分享了他们在使用 Merkle Search Trees （MST） 进行数据完整性检查的 Go 应用程序中内存泄漏的经验。尽管该应用程序只存储最少的数据（记录 ID 和哈希），但它出乎意料地为 100 万条记录消耗了 3.5GB 的 RAM。作者探讨了诊断问题的各种方法，包括强制垃圾回收、使用“coredump”和“viewcore”工具以及使用“pprof”进行分析。调查显示，内存泄漏是由于树节点中具有预分配容量的大型数组未得到充分利用。文章最后建议使用 &#39;delve&#39; 调试器直接检查这些对象，从而深入了解内存泄漏的性质。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.responsive.dev/blog/responsive-and-the-future-of-stream-processing">响应式和流处理的未来</a><br>在2024年12月，响应式公司的联合创始人兼首席执行官阿普尔瓦·梅塔回顾了自2023年4月公司成立以来在流处理领域取得的快速进步。Responsive 推出了四项突破性创新：将状态与 Kafka Streams 分离的响应式 SDK、Kafka Streams 的基于策略的自动扩展、用于对象存储原生状态管理的响应式流式存储服务 （RS3） 以及基于所处理事件的新定价模型。这些改进解决了 Kafka Streams 的长期问题，例如嵌入式状态损害了可扩展性和可靠性，并提供了透明、可预测且与价值一致的定价指标。Apurva 强调了开发人员使用这些工具构建更复杂的事件驱动应用程序的潜力，Metronome 采用 Responsive 就证明了这一点。该公司鼓励通过其 SDK 进行探索，并邀请反馈和问题，表明其致力于推进流处理生态系统。</p>
+
+<p><a href="https://martinfowler.com/articles/designing-data-products.html">设计数据产品</a><br>本文概述了一种在组织内设计数据产品的结构化方法，强调了从用例逆向工作以定义明确目标和边界的重要性。它首先将数据产品与数据驱动的应用程序区分开来，强调需要集中范围以避免数据网格概念的稀释。该过程包括识别使用案例、叠加其他使用案例以概括数据产品，以及分配域所有权以确保清晰度和问责制。本文还强调了定义服务级别目标 （SLO） 以指导架构和实现的重要性。通过遵循这种有条不紊的方法，组织可以有效地识别和开发具有凝聚力、可组合性和有价值的数据产品，从而支持战略业务目标。</p>
+
+<p><a href="https://www.diagrid.io/blog/fault-tolerant-microservices-made-easy-with-dapr-resiliency">通过 Dapr 弹性轻松实现容错微服务</a><br>Diagrid 博客的博客文章讨论了如何使用 Dapr 增强微服务的弹性，Dapr 是一种简化弹性策略实施的工具。它强调了处理网络故障的重要性，以及由于网络延迟和不可预测的故障而导致的传统进程内方法调用的限制。该博文介绍了 Dapr 的弹性策略，这些策略提供了一种统一的方法来跨不同的编程语言和框架配置超时、重试和断路器。Diagrid Conductor 作为一种工具提供，可简化设置这些配置的过程，为生产环境提供可视化辅助和全面检查。本文强调了需要一种整体的弹性方法，包括服务器端速率限制和客户端策略，以防止各种类型的服务过载和行为不当的客户端。建议使用 Conductor 的持续建议和最佳实践来维护生产就绪的 Dapr 安装。
+
+（注意：摘要经过精心设计，以封装源文档的关键点，同时保持简洁和连贯性。它不包括直接引用或传达主要信息所需的特定细节。</p>
+
+<p><a href="https://www.docker.com/blog/what-does-docker-do/">超越容器：揭示 Docker 在云原生开发中的全部潜力</a><br>源文档表示当用户尝试访问他们无权查看的资源或页面时，通常由 Web 服务器（特别是 Nginx）显示的错误消息。“403 Forbidden”状态代码表示服务器理解请求但拒绝授权，通常是由于身份验证凭据不正确或不充分。此错误清楚地表明，当服务器运行时，用户的访问权限未得到充分配置或识别。该文档虽然简短，但强调了 Web 管理中遇到的一个常见问题，并强调了适当的访问控制设置的重要性，以确保用户与 Web 资源进行安全和授权的交互。</p>
+
+<p><a href="https://blog.devops.dev/leaderboard-system-build-a-scalable-design-for-millions-of-users-810c582cf381">排行榜系统 - 为数百万用户构建可扩展的设计</a><br>Sanim Khan 的文章概述了一种设计能够处理数百万用户的可扩展排行榜系统的综合方法。它首先使用 MySQL 或 PostgreSQL 等关系数据库管理系统 （RDBMS） 建立一个简单的基础，该系统适用于较小的用户群，但随着用户数量的增加，可能会面临性能问题。为了解决这个问题，该指南建议集成 Redis 缓存以加快读取速度，这可以显著减少数据库负载并缩短响应时间。
+
+下一步涉及通过利用时间序列数据库（如 InfluxDB 或 DynamoDB）以及后台作业计划程序来定期更新排行榜数据，从而支持历史排行榜。这可确保用户可以跟踪其随时间推移的进度。
+
+为了实现可扩展性，本文建议过渡到 DynamoDB 或 Cassandra 等 NoSQL 数据库，该数据库旨在处理高写入量并提供水平可扩展性。此外，该指南还强调了通过使用负载均衡器和分布式缓存实现容错和可扩展性的重要性。
+
+为了提高用户参与度，本文建议使用通知服务和推送通知提供程序添加实时通知，它们可以提醒用户排名变化。最后，持续监控和优化至关重要，可以使用 Prometheus 和 Grafana 等工具进行监控，并使用自动扩展来根据流量动态调整资源。
+
+该指南最后强调了智能警报的必要性，以避免警报疲劳并确保运营团队可以专注于关键问题。总之，本文提供了构建强大、可扩展的排行榜系统以保持性能和用户参与度的分步蓝图。</p>
+
+<p><a href="https://philipotoole.com/new-configuration-guide-for-rqlite/">rqlite 的新配置指南</a><br>源文档介绍了新发布的 rqlite 配置指南，rqlite 是一个轻量级且用户友好的开源分布式关系数据库，用 Go 编写，并使用 SQLite 作为其存储引擎。认识到需要在默认设置之外进行操作自定义，本指南旨在帮助用户针对特定用例微调 rqlite。本文档的结构迎合了那些对数据库操作和 rqlite 感兴趣的人，如关联的标记所示。它还包括一个供读者发表评论的机制，建议交互式社区方面。该指南被定位为那些希望优化 rqlite 性能和功能的用户的宝贵资源。
+
+（注意：提供的摘要不包含源文件的任何直接摘录，而是将其关键点综合成一个连贯的叙述。</p>
+
+<p><a href="https://www.cncf.io/blog/2024/12/03/top-6-cloud-computing-trends-for-2025/">2025 年的 6 大云计算趋势</a><br>源文档概述了行业专家和技术专业人士确定的 2025 年云计算的六大关键趋势。第一个趋势强调 AI 作为云转型的核心驱动力的作用，优化运营并使企业能够实现前所未有的效率和成本节约。第二个趋势侧重于边缘计算和云计算的集成，AI 工作负载在两者之间动态转移，以利用各自的优势。第三个趋势凸显了寻求灵活性和避免供应商锁定的企业越来越多地采用混合云和多云战略。第四个趋势是无服务器计算，它以其简化基础设施管理的能力而著称，从而实现更快的部署和可扩展性。第五个趋势预测了量子计算通过云服务成为主流，为各个行业提供开创性应用。最后，本文档介绍了 DevEdgeOps，这是一种将 DevOps 原则与边缘计算的独特需求相结合的专业方法。这些趋势共同代表了云计算比以往任何时候都更加智能、集成、灵活、高效和创新的未来。
+
+（注：提供的摘要基于源文档的内容，旨在捕捉 2025 年云计算六大趋势的精髓。它不包括直接引用或文档中的具体细节，而是综合了关键点。</p>
+
+<p><a href="https://blog.heroku.com/next-generation-heroku-platform">下一代 Heroku 平台</a><br>Heroku 正在推出其下一代平台即服务 （PaaS），旨在满足大规模云原生和 AI 应用程序交付不断变化的需求。这个新平台旨在通过集成 EKS、ECR 和 AWS Bedrock 等关键 AWS 服务来简化开发人员体验并简化团队的操作。该版本解决了专业知识差距、安全问题和 AI 集成复杂性等挑战，提供了托管推理和固执己见的简化。提供试点访问权限，预计将于 2025 年初正式发布。Heroku 对创新的承诺在其支持超过 6500 万个应用程序和每天处理 650 亿个请求的历史中得到了体现，下一代平台将进一步增强云中的开发人员和企业的能力。
+
+（注意：摘要旨在概括源文档的关键点，重点介绍下一代平台的发布、其功能及其对开发人员和企业的影响。它不包括特定的 URL、直接引用或原始文档的结构。</p>
+
+<p><a href="https://dolthub.com/blog/2024-12-03-ssl-mode/">Dolt SSL 身份验证</a><br>DoltHub 的博客文章详细介绍了在 Dolt（一种创新的版本控制 SQL 数据库）中实现传输层安全性 （TLS） 以进行 SSL 身份验证。它指导用户配置“config.yaml”文件以启用 TLS/SSL，指定必要的字段，例如“tls_key”、“tls_cert”和“require_secure_transport”。该博文包含使用更新的配置启动服务器并使用 &#39;mysql&#39; 客户端验证连接的说明。此外，它还提供用于获取密钥和证书以进行测试的资源，包括指向包含示例文件的存储库的链接。该博文最后强调了 Dolt 对 TLS 身份验证的支持，并邀请读者加入社区以获得进一步的帮助和更新。</p>
+
+<p><a href="https://thenewstack.io/pinecone-revamps-retrieval-capabilities-for-its-vector-database-platform/">Pinecone 改进其 Vector Database Platform 的检索功能</a><br>云原生向量数据库平台 Pinecone 对其 AI 检索功能进行了重大增强，包括重新排序模型、稀疏向量嵌入模型和新的稀疏向量索引。这些进步是 Pinecone 级联搜索方法的一部分，旨在通过比传统混合搜索方法更有效地组合密集和稀疏向量搜索结果来改进搜索结果。重新排名模型和 Pinecone 基础设施上托管的专有稀疏嵌入模型的集成简化了用户体验，使其更容易利用大型语言模型 （LLM） 并使其使用大众化。此外，Pinecone 还通过 RBAC、客户管理的加密密钥和审计日志增强了其安全功能，并引入了适用于 AWS PrivateLink 的私有终端节点，它允许在没有公共互联网遍历的情况下进行安全连接。这些更新使 Pinecone 成为高效、安全向量数据库搜索的领先平台，尤其是在 AI 和 LLM 的背景下。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.newsletter.swirlai.com/p/what-is-ai-engineering">什么是 AI 工程？</a><br>Aurimas Griciunas 的文章深入探讨了 AI 工程师在大型语言模型 （LLM） 环境中不断变化的角色，以及它们与业务解决方案的集成。Griciunas 概述了 AI 系统的进展，强调了向训练后阶段的转变和更复杂的多智能体系统的开发。AI 工程师被描述为将软件工程和机器学习专业知识相结合，以构建强大的 AI 系统来解决实际问题的专业人员。本文强调了 AI 工程师需要具备研究、数据工程和代理操作技能的组合，以应对非确定性系统的挑战，并确保可观察性和持续改进。Griciunas 还讨论了 AI 工程师在指导组织完成 LLM 集成方面的重要性，倡导采用深思熟虑的方法而不是盲目采用。AI 工程师的日常职责不仅包括技术开发，还包括组织内的战略决策和指导。本文为那些希望进入 AI 工程领域或在这个快速发展的领域中提升技能的人提供了全面的指南。</p>
+
+<p><a href="https://www.aitidbits.ai/p/open-source-agents">用于构建 AI 代理的开源工具包</a><br>此源文档概述了开发人员创建 AI 代理的开源生态系统，重点介绍了构建功能强大且高效的 AI 代理所必需的各种框架、工具和库。它介绍了几个关键框架，例如 CrewAI、Phidata 和 AutoGPT，这些框架有助于编排和管理 AI 代理，包括那些能够角色扮演和自动化复杂工作流程的代理。该文件还强调了语音界面的重要性，引用了 Ultravox 和 Moshi 等用于实时语音交互的工具，并强调了文档理解功能的必要性，并引用了 DocOwl2 进行无 OCR 文档处理。内存管理通过 Mem0 和 Letta 等工具解决，这些工具使代理能够在对话中维护上下文。此外，本文档还讨论了 Voice Lab 和 AgentVerse 等测试和模拟工具的重要性，这些工具对于评估代理性能和确保可靠性至关重要。该摘要概括了本文档对开源资源的重点，这些资源使开发人员能够创建能够与用户交互并在各种应用程序中处理信息的高级 AI 代理。</p>
+
+<p><a href="https://opensource.googleblog.com/2024/12/a-robust-open-ecosystem-accelerating-ai-infrastructure.html">面向所有人的强大开放生态系统：加速 AI 基础设施</a><br>Google 开源博客宣布将 JAX（一种用于机器学习的高性能阵列计算库）与 AWS Trainium（一种用于加速 AI 基础设施的新平台）集成。此次合作凸显了开源社区对灵活性和协作的承诺，使 JAX 能够在各种硬件上运行，如 CPU、GPU、TPU 以及现在的 AWS Trainium。适用于 AWS Trainium 的 JAX Neuron 插件允许将其用作本机设备，展示了软件设计中抽象和模块化的强大功能。这个多平台生态系统不仅促进了开放式协作，还加速了 AI 开放标准的开发。该博客文章强调了这种集成对机器学习开发人员和用户的好处，他们现在可以在各种平台上利用 JAX 的可移植性和性能。
+
+（注意：摘要旨在概括源文档的关键点，重点介绍公告、JAX 与 AWS Trainium 的集成、开源原则的重要性以及对 AI 社区的影响。它不包括文档中的直接引用或特定格式。</p>
+
+<p><a href="https://medium.com/@reloaduxwork/the-future-of-ui-ux-design-and-ai-crafting-the-next-generation-of-digital-experiences-38d46303b349">UI/UX 设计和 AI 的未来：打造下一代数字体验</a><br>reloadux Official 的文章深入探讨了人工智能 （AI） 对 UI/UX 设计的变革性影响，重点介绍了 AI 如何彻底改变个性化、工作流程效率、预测性设计以及语音和手势界面等新的交互范式。它强调了 AI 集成的好处，例如改进的可访问性、动态适应和增强的数据洞察力，同时也承认了挑战，包括需要考虑道德和保持人类创造力。这篇文章为设计师提供了可行的建议，让他们通过学习新工具、理解数据、专注于策略和保持道德来拥抱 AI。UI/UX 设计的未来被设想为人类创造力和 AI 创新之间的协同作用，有望带来更具吸引力和个性化的数字体验。
+
+（注意：该摘要旨在封装所提供源文档中的关键主题和信息，重点关注 AI 在 UI/UX 设计中的作用以及对设计人员和用户的影响。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/FiloSottile/mkcert">FiloSottile/mkcert</a><br>一个简单的零配置工具，可以使用你想要的任何名称制作本地信任的开发证书。</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-go">open-telemetry/opentelemetry-go</a><br>OpenTelemetry Go API 和 SDK</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Kubernetes 的声明式持续部署</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>适用于 NATS.io、云和边缘原生消息传递系统的高性能服务器。</p>
+
+<p><a href="https://github.com/docker/buildx">docker/buildx</a><br>Docker CLI 插件，用于使用 BuildKit 扩展构建功能</p>
+
+<p><a href="https://github.com/fyne-io/fyne">fyne-io/fyne</a><br>受 Material Design 启发的 Go 跨平台 GUI 工具包</p>
+
+<p><a href="https://github.com/ray-project/kuberay">ray-project/kuberay</a><br>在 Kubernetes 上运行 Ray 应用程序的工具包</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>开源持续文件同步</p>
+
+<p><a href="https://github.com/amir20/dozzle">amir20/dozzle</a><br>Docker 容器的实时日志查看器。</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>适用于 Go 的 PostgreSQL 驱动程序和工具包</p>
+
+<p><a href="https://github.com/golang-migrate/migrate">golang-migrate/migrate</a><br>数据库迁移。CLI 和 Golang 库。</p>
+
+<p><a href="https://github.com/minio/minio">minio/minio</a><br>MinIO 是一个高性能、与 S3 兼容的对象存储，在 GNU AGPLv3 许可下开源。</p>
+
+<p><a href="https://github.com/netbirdio/netbird">netbirdio/netbird</a><br>通过 SSO、MFA 和精细访问控制将您的设备连接到基于 WireGuard® 的安全覆盖网络。</p>
+
+<p><a href="https://github.com/distribution/distribution">distribution/distribution</a><br>用于打包、运输、存储和交付容器内容的工具包</p>
+
+<p><a href="https://github.com/grpc/grpc-go">grpc/grpc-go</a><br>gRPC 的 Go 语言实现。基于 HTTP/2 的 RPC</p>
+
+<p><a href="https://github.com/projectdiscovery/katana">projectdiscovery/katana</a><br>下一代爬行和爬取框架。</p>
+
+<p><a href="https://github.com/ddev/ddev">ddev/ddev</a><br>基于 Docker 的本地 PHP&#43;Node.js Web 开发环境</p>
+
+<p><a href="https://github.com/kubernetes/autoscaler">kubernetes/autoscaler</a><br>自动扩展 Kubernetes 组件</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq 是一个可移植的命令行 YAML、JSON、XML、CSV、TOML 和属性处理器</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>用于收集、处理、聚合和写入指标、日志和其他任意数据的代理。</p>
+
+<p><a href="https://github.com/grafana/loki">grafana/loki</a><br>与 Prometheus 类似，但用于日志。</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>一个带有常见断言和 mock 的工具包，可与标准库很好地配合</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

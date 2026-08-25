@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202506/issue-20250603.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20250603</span>
+</p>
+<p>每日一谚：Write Go code as Gophers write code </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/06/03/lightweight-anonymous-func-syntax">Go的简洁性之辩：轻量级匿名函数提案为何七年悬而未决？</a><br>自2017年提出以来，Go语言关于引入轻量级匿名函数语法的提案一直是社区讨论的焦点。该提案旨在提供一种更简洁的方式来定义匿名函数，尤其是当函数类型可以从上下文推断时，从而减少样板代码，提升代码的可读性和编 写效率。然而，历经七年多的广泛讨论、多种语法方案的提出与激辩，以及来自核心团队成员的实验与分析，截至 2025年5 月底，官方对该提案的最新立场是“可能被拒绝 (likely declined)”，尽管问题仍保持开放以供未来考虑。近期该issue又冲上Go issue热度榜，让我有了对该提案做一个简单解读的冲动。在本文中，我将和大家一起探讨该提案的核心动机、社区的主要观点与分歧、面临的挑战，以及这一最新倾向对 Go 语言和开发者 的潜在影响。</p> 
+
+<p><a href="https://prateeksurana.me/blog/guide-to-go-for-javascript-developers">JavaScript 开发人员的 Go 指南</a><br>这份指南旨在帮助 JavaScript 开发人员通过直接比较两种语言的基本概念来学习 Go。文章涵盖了 Go 的基本概念，并将其与 JavaScript/TypeScript 中的类似概念进行了比较，并分享了一些 JavaScript 开发人员需要适应的技巧。文章内容包括编译和执行、包、变量、结构体和类型、零值、指针、函数、数组和切片、映射、比较、方法和接口、错误处理以及并发等方面。</p> 
+
+<p><a href="https://medium.com/goturkiye/you-are-misusing-interfaces-in-go-architecture-smells-wrong-abstractions-da0270192808">你在 Go 中误用了接口 - 架构代码坏味道：错误的抽象</a><br>接口在软件架构中扮演着至关重要的角色，其强大的抽象能力是其成为架构核心原则的原因之一。本文探讨了 Go 应用程序中接口使用的一些问题，指出在每个结构体定义前都使用接口是一种错误的做法，这是一种过早优化，通常是没有必要的。文章建议在使用接口前，应先思考以下几个问题：是否能不用接口？需要抽象哪个部分？依赖关系应该朝哪个方向？想要测试什么？并以示例代码演示了如何在 Go 中正确使用接口进行抽象，避免不必要的耦合，提升代码的可测试性和可维护性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2025/06/03/start-sidecar-first/">优先启动 Sidecar：如何避免问题</a><br>本文介绍了如何确保 Sidecar 容器在主应用程序之前启动。Kubernetes 的 v1.29.0 版本增加了对 Sidecar 容器的原生支持，但启动顺序并非总是如预期的那样。文章探讨了 readiness 探针、startup 探针和 postStart 生命周期钩子等方法，并分析了它们在确保 Sidecar 优先启动方面的有效性，以及在 Sidecar 未准备好时如何避免主应用程序错误。</p>
+
+<p><a href="https://rachelbythebay.com/w/2025/05/31/sync">rsync 的默认设置并不总是足够</a><br>rsync 是一款非常有用的工具，可以节省您复制已拥有数据的时间和精力。但是，为了提高效率，它可能会错过某些更改。rsync 通常查看候选文件的大小和修改时间，如果两端相同，则结束任何考虑。它不会得到进一步的关注，并继续进行其他操作。本文作者发现，即使文件大小和修改时间相同，文件的哈希值也可能不同，这表明rsync 默认设置可能不足以检测所有更改，尤其是在使用SSD进行备份时。作者建议使用 rsync 的 -I 和 -c 选项强制进行校验和检查，以确保备份的完整性。第一次进行强制校验和运行时，可以使用 --dry-run 选项查看更改，然后再执行任何操作。</p>
+
+<p><a href="https://www.epicweb.dev/do-not-assert-on-requests">不要直接断言请求 (试试这种方法)</a><br>在多年构建 Mock Service Worker 的过程中，出现过一类问题，似乎总是让开发者感到困惑：如何确保我的应用执行了此请求并使用了该有效负载？如何确保我的应用完全发送了该请求？如何知道服务器是否返回了正确的响应？所有这些都是你在测试 UI 时会问自己的有效问题，但直接断言 API 请求永远不是任何问题的答案。本文探讨了更好的方法：测试用户界面的结果，而不是 API 请求。在设置中模拟网络调用，但断言用户实际看到和体验的内容，而不是实现细节。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://addyo.substack.com/p/the-prompt-engineering-playbook-for">程序员的提示工程速查手册</a><br>程序员越来越依赖 AI 编码助手来加快日常工作流程。这些工具可以自动完成函数、建议错误修复，甚至生成整个模块或 MVP。然而，正如许多人所了解到的那样，AI 输出的质量在很大程度上取决于你提供的提示的质量。换句话说，提示工程已成为一项必备技能。措辞不当的请求可能会产生无关或通用的答案，而精心设计的提示可以产生周到、准确甚至富有创意的代码解决方案。本文将实用地探讨如何系统地为常见开发任务设计有效的提示。</p>
+
+<p><a href="https://resobscura.substack.com/p/ai-makes-the-humanities-more-important">AI使人文科学更重要，但也更怪异</a><br>本文探讨了生成式AI对人文科学研究和教学的变革性影响。作者认为，AI增强了人文技能的价值，但同时也带来了挑战，例如评估学生写作的难度增加以及学生对学习努力的重视程度降低。作者还分享了自己开发的基于AI的教学游戏，并呼吁人文教育工作者积极参与AI工具的开发和应用，以更好地服务于教学和学习。</p>
+
+<p><a href="https://byteatatime.dev/posts/cursor-prompt-analysis">Cursor 系统提示的 9 个经验教训</a><br>Cursor 的 AI 编码助手令人瞩目，因为它感觉像一个真正有帮助的结对程序员。本文作者通过拦截 Cursor 的 API 调用，分析了 Cursor 的提示机制，并总结了 9 个关于如何有效利用系统提示的经验教训，包括赋予 AI 特定的角色和个性、使用 XML 标签组织信息、让 AI 具有自主性、指导 AI 如何描述其操作、设置实际限制、使用两个用户提示来注入自定义规则和项目上下文、以及设计高效的数据检索工具等。</p>
+
+<p><a href="https://culture.ghost.io/genai-is-our-polyester">生成式AI是我们的涤纶</a><br>理解生成式AI艺术与美学的最佳方式，是思考之前的“合成物”是如何在长期内失去价值的。文章以20世纪上半叶，白领阶层穿着易皱的棉质或亚麻衬衫为例，引出杜邦公司发明涤纶的背景，以及涤纶从最初的效率解决方案到后来的文化反弹，最终被认为低俗的过程。作者认为，生成式AI艺术也面临类似的命运：虽然目前被用于降低创作效率，但其产生的作品已经被认为俗套且与低端机构相关联，最终会因为其内在的低价值和对社会信息结构的破坏而被抛弃，如同涤纶一样。文章最后表达了对人类创造力的信心，相信人类最终会回归对非合成文化的追求。</p>
+
+<p><a href="https://www.infoworld.com/article/3993482/ai-didnt-kill-stack-overflow.html">AI并没有终结Stack Overflow</a><br>将人工智能视为Stack Overflow的终结者很容易，但更准确的说法是AI给了它最后一击。真正发生的事情是人类社区的寓言，以及自我治理实验的奇异失败。Stack Overflow曾经是互联网的高级工程师，是开发者们解决难题的后盾。它是一个技术共享的空间，开源编程的精神和态度在那里蓬勃发展。然而，Stack Overflow的自我监管模式最终走向了压迫性的基调，其领导者系统性地破坏了平台的优秀品质。当大型语言模型（LLM）出现时，Stack Overflow 已经运行在一个枯燥的交易式问答模式中。当生成式AI出现时，曾经可能拯救它的东西——人性元素——已经被剥夺殆尽了。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/aquasecurity/kube-bench">aquasecurity/kube-bench</a><br>Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/terraformer">GoogleCloudPlatform/terraformer</a><br>CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code</p>
+
+<p><a href="https://github.com/jackc/pgx">jackc/pgx</a><br>PostgreSQL driver and toolkit for Go</p>
+
+<p><a href="https://github.com/googleapis/go-genai">googleapis/go-genai</a><br>Google Gen AI Go SDK provides an interface for developers to integrate Google&#39;s generative models into their Go applications.</p>
+
+<p><a href="https://github.com/prometheus/blackbox_exporter">prometheus/blackbox_exporter</a><br>Blackbox prober exporter</p>
+
+<p><a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a><br>Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/slackhq/nebula">slackhq/nebula</a><br>A scalable overlay networking tool with a focus on performance, simplicity and security</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-aws">hashicorp/terraform-provider-aws</a><br>The AWS Provider enables Terraform to manage AWS resources.</p>
+
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+<p><a href="https://github.com/swaggo/swag">swaggo/swag</a><br>Automatically generate RESTful API documentation with Swagger 2.0 for Go.</p>
+
+<p><a href="https://github.com/temporalio/temporal">temporalio/temporal</a><br>Temporal service</p>
+
+<p><a href="https://github.com/containers/podman">containers/podman</a><br>Podman: A tool for managing OCI containers and pods.</p>
+
+<p><a href="https://github.com/tulir/whatsmeow">tulir/whatsmeow</a><br>Go library for the WhatsApp web multidevice API</p>
+
+<p><a href="https://github.com/bitnami-labs/sealed-secrets">bitnami-labs/sealed-secrets</a><br>A Kubernetes controller and tool for one-way encrypted Secrets</p>
+
+<p><a href="https://github.com/opencontainers/image-spec">opencontainers/image-spec</a><br>OCI Image Format</p>
+
+<p><a href="https://github.com/bufbuild/protoc-gen-validate">bufbuild/protoc-gen-validate</a><br>Protocol Buffer Validation - replaced by https://github.com/bufbuild/protovalidate</p>
+
+<p><a href="https://github.com/TykTechnologies/tyk">TykTechnologies/tyk</a><br>Tyk Open Source API Gateway written in Go, supporting REST, GraphQL, TCP and gRPC protocols</p>
+
+<p><a href="https://github.com/aws/aws-sdk-go-v2">aws/aws-sdk-go-v2</a><br>AWS SDK for the Go programming language.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

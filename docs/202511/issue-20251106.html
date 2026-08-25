@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202511/issue-20251106.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20251106</span>
+</p>
+<p>每日一谚：Do not reuse variables that you sent through a channel. Respect the new owner. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2025/11/06/proposal-simd-cpu-feature-vet-check">连 Rob Pike 都感到“担忧”：Go 1.26 SIMD 引入的新复杂性与应对之道</a><br>Go 1.26 将于11月份功能特性冻结，其最令人期待的实验特性之一，无疑是 simd 包的引入。它承诺为 Go 开发者解锁 SIMD (Single Instruction, Multiple Data) 的强大能力 ，让我们能编写出榨干现代 CPU 向量化计算潜能的高性能代码。然而，在这片兴奋的浪潮之下，一个不和谐的声音却悄然响起，而这个声音，来自 Go 语言的联合创始人之一——Rob Pike</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/Mdd3A52YgmNaVh_HWrkt9g">【Go模块构建与依赖管理】05 模块的生命周期：作者与使用者的工作流</a><br></p> 
+
+<p><a href="https://www.honeycomb.io/blog/how-we-saved-70-cpu-60-memory-refinery">如何在 Refinery 的 Go 代码中节省 70% 的 CPU 和 60% 的内存，无需 Rust</a><br>我们刚刚发布了 Refinery 3.0，这是一个专注于性能的更新，它显著提高了 Refinery 的 CPU 和内存效率。</p> 
+
+<p><a href="https://packagemain.tech/p/how-to-implement-the-outbox-pattern-in-golang">如何在 Go 和 Postgres 中实现 Outbox 模式</a><br>如何以及为什么使用 Outbox 模式来构建一个强大的事件驱动系统。</p> 
+
+<p><a href="https://grafana.com/blog/2025/11/03/grafana-mimir-3-0-release-all-the-latest-updates">Grafana Mimir 3.0 release: performance improvements, a new query engine, and more</a><br>Grafana Mimir 3.0 marks a new era for the open source time series database, delivering dramatic improvements in both reliability and performance.</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://shnatsel.medium.com/the-state-of-simd-in-rust-in-2025-32c263e5f53d">2025 年 Rust 中 SIMD 的状态</a><br>如果你已经熟悉 SIMD，那么下表就是你所需要的。如果你不熟悉，你将在本文结束时理解这张表！</p>
+
+<p><a href="https://blog.wilsonl.in/blobd">构建blobd：单机对象存储，亚毫秒级读取和15 GB/s上传</a><br>深入探讨blobd，一种对象存储，旨在利用异步Rust、io_uring和原子写入实现持续低延迟读取。</p>
+
+<p><a href="https://seemann.io/posts/2024-10-26---p2p-quic">QUIC的p2p愿景</a><br>本文探讨了如何利用QUIC协议提供全面的NAT穿越解决方案，涵盖从地址发现到UDP代理，可能简化并改进传统的p2p网络方法。</p>
+
+<p><a href="https://www.theseedsofscience.pub/p/why-arent-smart-people-happier">为什么聪明人不快乐？</a><br>作者：Adam Mastroianni</p>
+
+<p><a href="https://waspdev.com/articles/2025-11-04/some-software-bloat-is-ok">Some software bloat is OK</a><br>在快速的CPU、千兆字节的RAM和数兆字节的存储空间时代，软件效率已经成为一件被忽视的事情。许多人认为，由于处理器速度快且内存便宜，如今优化软件的理由减少了。他们声称我们应该关注其他事情，例如开发人员的效率、可维护性、快速原型设计等。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://blogs.microsoft.com/blog/2025/11/05/beware-of-double-agents-how-ai-can-fortify-or-fracture-your-cybersecurity/">警惕双重间谍：人工智能如何加强或破坏您的网络安全</a><br>人工智能正迅速成为我们世界的支柱，承诺带来前所未有的生产力和创新。但随着各组织部署人工智能代理来解锁新的机遇并推动增长，他们也面临着新一代的网络安全威胁。微软有很多《星际迷航》的粉丝，包括我。我们的一位工程领导送给我一个真人大小的 Data 纸板立牌，它潜伏在我的办公室门旁边。因此，当我看着那个剪影时，我在思考伟大的 AI 安全困境：人工智能将成为我们最好的朋友还是我们最糟糕的噩梦？从《星际迷航》宇宙中 android 军官 Data 及其邪恶双胞胎 Lore 的二元性中汲取灵感，今天的 AI 代理可以加强您的网络安全防御 — 或者，如果管理不善，就会破坏它们。</p>
+
+<p><a href="https://www.augmentcode.com/blog/developers-are-choosing-older-ai-models-and-16b-tokens-of-data-explain-why">开发者正在选择旧的 AI 模型 - 数据解释了原因</a><br>在 Augment Code，我们并行运行多个前沿模型。这使我们能够从独特的角度了解不同模型在实际编码工作流程中的表现。使用模式表明，开发人员不再仅仅追逐最新的模型；他们正在将模型与特定任务配置文件进行匹配。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference</p>
+
+<p><a href="https://github.com/prometheus/alertmanager">prometheus/alertmanager</a><br>Prometheus Alertmanager</p>
+
+<p><a href="https://github.com/charmbracelet/glow">charmbracelet/glow</a><br>Render markdown on the CLI, with pizzazz! 💅🏻</p>
+
+<p><a href="https://github.com/kubernetes-sigs/gateway-api">kubernetes-sigs/gateway-api</a><br>Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs.</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/jesseduffield/lazygit">jesseduffield/lazygit</a><br>simple terminal UI for git commands</p>
+
+<p><a href="https://github.com/OpenCSGs/csghub-server">OpenCSGs/csghub-server</a><br>csghub-server is the backend server for CSGHub which helps user to manage datasets, modes, and also run Model Inference, Finetune and Application Spaces.</p>
+
+<p><a href="https://github.com/actions/actions-runner-controller">actions/actions-runner-controller</a><br>Kubernetes controller for GitHub Actions self-hosted runners</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/vmware-tanzu/velero">vmware-tanzu/velero</a><br>Backup and migrate Kubernetes applications and their persistent volumes</p>
+
+<p><a href="https://github.com/stretchr/testify">stretchr/testify</a><br>A toolkit with common assertions and mocks that plays nicely with the standard library</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/TykTechnologies/tyk">TykTechnologies/tyk</a><br>Tyk Open Source API Gateway written in Go, supporting REST, GraphQL, TCP and gRPC protocols</p>
+
+<p><a href="https://github.com/1Panel-dev/1Panel">1Panel-dev/1Panel</a><br>🔥 1Panel provides an intuitive web interface and MCP Server to manage websites, files, containers, databases, and LLMs on a Linux server.</p>
+
+<p><a href="https://github.com/syncthing/syncthing">syncthing/syncthing</a><br>Open Source Continuous File Synchronization</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/aldinokemal/go-whatsapp-web-multidevice">aldinokemal/go-whatsapp-web-multidevice</a><br>GOWA - WhatsApp REST API with support for UI, Webhooks, and MCP. Built with Golang for efficient memory use.</p>
+
+<p><a href="https://github.com/onsi/ginkgo">onsi/ginkgo</a><br>A Modern Testing Framework for Go</p>
+
+<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
+
+<p><a href="https://github.com/fullstorydev/grpcurl">fullstorydev/grpcurl</a><br>Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers</p>
+
+<p><a href="https://github.com/mudler/edgevpn">mudler/edgevpn</a><br>⛵ The immutable, decentralized, statically built p2p VPN without any central server and automatic discovery! Create decentralized introspectable tunnels over p2p with shared tokens</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
